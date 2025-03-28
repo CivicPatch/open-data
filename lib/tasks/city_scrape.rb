@@ -109,7 +109,7 @@ namespace :city_scrape do
     city_path = CityScrape::CityManager.get_city_path(state, city_entry)
 
     city_data["people"] = city_data["people"].map.with_index do |person, index|
-      return person unless person["website"].present? && Scrapers::Common.missing_contact_info?(person)
+      next person unless person["website"].present? && Scrapers::Common.missing_contact_info?(person)
 
       puts "Processing #{person["name"]}"
       candidate_dir = File.join(city_path, "city_scrape_sources", "member_info_#{index}")
