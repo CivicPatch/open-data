@@ -1,0 +1,182 @@
+ [Skip to main content](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)   ![Home](images/4b3acf3a7f52299e57fafb27d83b9d938f1038ada885b008b1d9aa979b1db320.png)  
+
+## Main navigation
+
+ *  About About sub-navigation   
+
+Federal Way is a fast-growing city  *Centered on Opportunity*. The current population is 102,000 in one of the most diverse communities in Washington state.  
+
+   *  [Directions to City Hall](https://www.cityoffederalway.com/page/directions-city-hallcourtpolice)  
+   *  [Calendar of Events](https://www.cityoffederalway.com/calendar)  
+   *  [Bids](https://www.cityoffederalway.com/bids)  
+   *  [Employment Opportunities](https://www.governmentjobs.com/careers/federalway)  
+   *  [Press Releases](https://www.cityoffederalway.com/page/press-releases)   [Contact Us](https://www.cityoffederalway.com/page/contact-us)   [Join Mailing List(s)](https://www.cityoffederalway.com/page/e-newsletter-sign)   [News](https://www.cityoffederalway.com/page/press-releases)  
+ *  Government Government sub-navigation   
+
+Mayor Jim Ferrell, our dedicated City Councilmembers and Municipal Court Judges represent the City of Federal Way.   
+
+   *  [Mayor's Office](https://www.cityoffederalway.com/mayors-office)  
+   *  [City Council](https://www.cityoffederalway.com/city-council)  
+   *  [Municipal Court](https://www.cityoffederalway.com/municipal-court)  
+   *  [Boards & Commissions](https://www.cityoffederalway.com/boards-commissions)  
+   *  [City Departments](https://www.cityoffederalway.com/page/departments)   [Get Involved](https://engagefw.com/)   [Agendas & Minutes](https://www.cityoffederalway.com/page/agendas-and-minutes)   [Contact Us](https://www.cityoffederalway.com/page/contact-us)  
+ *  Business Business sub-navigation   
+
+Federal Way is conveniently located between Seattle and Portland, Oregon, and is open for business!   
+
+   *  [Economic Development](https://www.cityoffederalway.com/economic-development)  
+   *  [Business Tools](https://www.cityoffederalway.com/page/business-tools)  
+   *  [Demographics](https://www.cityoffederalway.com/page/demographics)   [Get a Business License](https://www.cityoffederalway.com/page/business-license)   [Downtown Redevelopment](https://www.cityoffederalway.com/page/downtown-redevelopment)   [Contact Us](https://www.cityoffederalway.com/economic-development)  
+ *  Community Community sub-navigation   
+
+The Federal Way community features 32 parks, award-winning restaurants along Pacific Highway and 320th, and family-friendly activities. It’s centrally located in Puget Sound, with breathtaking views of Mount Rainier.  
+
+   *  [Transportation & Road Conditions](https://www.cityoffederalway.com/page/roadway-conditions)  
+   *  [Parks & Recreation](https://www.cityoffederalway.com/parks)  
+   *  [Engage Federal Way](https://engagefw.com/)  
+   *  [Eyes on Federal Way](https://www.cityoffederalway.com/page/eyes-federal-way-0)  
+   *  [Federal Way Community Center](https://itallhappenshere.org/)  
+   *  [Performing Arts & Event Center](https://fwpaec.org/)  
+   *  [Be Prepared](https://www.cityoffederalway.com/emergency-management)   [Visit Federal Way](https://visitfw.org/)   [Calendar of Events](https://www.cityoffederalway.com/calendar/month)   [Volunteer](https://www.cityoffederalway.com/page/volunteering-federal-way)  
+ *  Services Services sub-navigation 
+   *  [Public Works](https://www.cityoffederalway.com/public-works)  
+   *  [Entrance Sign](https://www.cityoffederalway.com/sites/default/files/2024-02/EntranceSignDisplayApplicationForm.pdf)  
+   *  [Boards and Commissions](https://www.cityoffederalway.com/page/boards-commissions)  
+   *  [Jobs](https://www.governmentjobs.com/careers/federalway)  
+   *  [Pay](https://www.cityoffederalway.com/page/pay)   [Social Services](https://www.cityoffederalway.com/page/community-social-services)   [Service Request](https://www.cityoffederalway.com/page/eyes-federal-way-0)   [Public Records](https://www.cityoffederalway.com/page/public-records)  
+ *  Police Police sub-navigation   
+
+The Federal Way Police Department is nationally accredited to protect and serve our community.  
+
+   *  [Your Federal Way Police Department](https://www.cityoffederalway.com/police-0)  
+   *  [Animal Services](https://www.cityoffederalway.com/page/animal-services-unit)  
+   *  [Resources](https://www.cityoffederalway.com/page/police-resources)  
+   *  [Services](https://www.cityoffederalway.com/page/police-service-request)   [File a Police Report](https://www.cityoffederalway.com/page/file-police-report-online)   [Concealed Pistol License Info](https://www.cityoffederalway.com/page/concealed-pistol-license-cpl-appointment-request-form-0)   [Request Police Record](https://federalway.justfoia.com/publicportal/home/newrequest)  
+
+## Secondary Links
+
+ *  [Visit Federal Way](https://visitfw.org/) 
+ *  [Resources](https://www.cityoffederalway.com/page/resources-and-help) 
+ *  [News](https://www.cityoffederalway.com/page/federal-way-citywide-news) 
+ *  [Jobs](https://www.governmentjobs.com/careers/federalway) 
+ *  [Contact](https://www.cityoffederalway.com/page/contact-us) 
+ Search  [English](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)   [![en]()English](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)  [![zh-CN]()简体中文](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)  [![fr]()Français](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)  [![de]()Deutsch](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)  [![it]()Italiano](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)  [![ja]()日本語](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)  [![ko]()한국어](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)  [![pt]()Português](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)  [![ru]()Русский](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)  [![es]()Español](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)  [![tl]()Filipino](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)  [![uk]()Українська](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)  [![vi]()Tiếng Việt](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)  [![fa]()فارسی](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)  [![so]()Afsoomaali](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)  [![ps]()پښتو](https://www.cityoffederalway.com/page/councilmember-jack-dovey/)  Menu 
+
+# 
+
+# Councilmember Jack Dovey
+
+ [Email Councilmember Dovey](mailto:jack.dovey@federalwaywa.gov) 
+
+ __Current Council Committees__ 
+
+ * Chair: Land Use Transportation Committee (LUTC)
+ * Member: Finance Economic Development Regional Affairs Committee (FEDRAC)
+
+  __Past Governmental Experience__   
+
+  __2007-2011__  
+
+ Elected to Federal Way City Council and Served as Mayor 
+
+ *  Served as Mayor 2007 to 2009 
+ *  Chaired Lodging Tax Committee 
+ *  Served on Land Use and Transportation Committee 
+ *  Chaired the Score Regional Jail Group Developed the budget and capital plan to build the new south end regional jail.  Board was made up of 7 South-end Mayors. 
+ *  Served on Board of Directors of Enterprise Seattle 
+ *  Served on the Board of the Puget Sound Regional Council 
+
+  __2003 to 2007__  
+
+ Elected to Federal Way City Council 
+
+ *  Chaired Land Use and Transportation Committee 
+ *  Served on Finance Committee Worked on Federal Way’s budget, oversaw Federal Way’s fourth large capital project. 
+ *  Served on the Board of Directors of Enterprise Seattle 
+
+  __2002 to 2003__  
+
+ Appointed as Federal Way City Councilman 
+
+ *  Served on the Finance Committee, oversaw the building of the Federal Way City Hall 
+ *  Served on the Human Services Public Safety Committee. 
+
+  __1996 to 2000 __  
+
+ Elected to Federal Way City Council 
+
+ *  Chaired Human Services and Public Safety Committee 
+ *  Chaired Parks and Recreation Committee 
+ *  Served on Finance Committee 
+ *  Active in developing the budget, forming the Police Department, and overseeing the first two large capital projects in Federal Way. 
+
+  __1995 to 1996__  
+
+ Appointed as Federal Way City Councilman 
+
+ *  Served on the Finance Committee 
+ *  Served on the Human Services Public Safety Committee 
+
+  __Education__  
+
+ *  Oregon State University, Corvallis, Oregon 
+ *  Bachelor of Science - Geography, with emphasis on transportation and urban planning 
+ *  Graduated from Decatur High School, Federal Way, Washington 
+
+  __Business__  
+
+ Jack is the founder and CEO of Innovative Intelligent Products LLC.  The company manufactures products for the telecommunications and trucking industries. 
+
+  __Other interests:__  
+
+ Ski instructor at Crystal Mountain for 13 years, cross country bicycle riding, Mentoring Federal Way students, Member of Federal Way, Rotary, Avid reader of history books, as past president of the Federal Way Caregiving Network, and an Eagle Scout. 
+
+  __Personal__  
+
+ Jack Dovey moved to Federal Way in 1968.  He and his wife Jennifer were married in 1976 and raised their 2 children in Federal Way.  Their son Jackson lives in San Jose California with his wife Alyssa and their two daughters.  Their daughter Jeneca lives in Frankfurt Germany with her husband Jared and their two sons. 
+
+ Jack and Jennifer have been active in their local Federal Way church since 1984. 
+
+ Toggle Dark mode Grow text Shrink text 
+
+## City Council Action Links
+
+ *   [Upcoming Meetings](https://www.cityoffederalway.com/page/agendas-and-minutes) 
+ *   [Citizen Commissions](https://www.cityoffederalway.com/page/boards-commissions) 
+ *   [Agendas & Minutes](https://www.cityoffederalway.com/page/agendas-and-minutes) 
+ *   [Search Federal Way Revised Code](https://www.codepublishing.com/WA/FederalWay/) 
+ *   [Council Rules of Procedure](https://docs.cityoffederalway.com/WebLink/Browse.aspx?id=1911791&dbid=0&repo=cityoffederalway) 
+ *   [Council Committee - FEDRAC](https://www.cityoffederalway.com/page/finance-economic-development-regional-affairs-committee-fedrac) 
+ *   [Council Committee - LTAC](https://www.cityoffederalway.com/page/lodging-tax-advisory-committee) 
+ *   [Council Committee - LUTC](https://www.cityoffederalway.com/page/LUTC) 
+ *   [Council Committee - PRHSPSC](https://www.cityoffederalway.com/page/parks-recreation-human-services-public-safety-committee-prhsps) 
+
+ [__Join us__](https://www.cityoffederalway.com/page/e-newsletter-sign) to stay informed about the events and activities happening in and around the City of Federal Way!
+
+## Secondary Links - Footer
+
+ *  [Visit Federal Way](https://visitfw.org/) 
+ *  [Resources](https://www.cityoffederalway.com/page/resources-and-help) 
+ *  [News](https://www.cityoffederalway.com/page/federal-way-citywide-news) 
+ *  [Jobs](https://www.governmentjobs.com/careers/federalway) 
+ *  [Contact](https://www.cityoffederalway.com/page/contact-us) 
+
+ ![City of Federal Way - Centered on Opportunity](images/77bc4bc229c3ae6fdb842f76323dc5ca6e1f3b9312d552f7362fa9471f341fc7.png) 
+
+## Social Media Links
+
+ *  [X (Twitter)](https://twitter.com/wafederalway) 
+ *  [Facebook](https://www.facebook.com/CityofFederalWay) 
+ *  [Instagram](https://www.instagram.com/fedwaywa/) 
+ *  [LinkedIn](https://www.linkedin.com/company/city-of-federal-way/) 
+ *  [YouTube](https://www.youtube.com/user/FWcommunications) 
+
+33325 8th Avenue South, Federal Way, WA 98003, 253.835.7000
+
+## Footer
+
+ *  © Copyright 2024 City of Federal Way 
+ *  [Accessibility Statement](https://www.cityoffederalway.com/page/website-accessibility-statement) 
+ *  [Privacy Policy](https://www.cityoffederalway.com/page/website-privacy-policy) 
+ *  [Employee Resources](https://www.cityoffederalway.com/page/employee-resources) 
+ 
