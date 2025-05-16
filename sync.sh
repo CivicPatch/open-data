@@ -1,5 +1,8 @@
 #!/bin/bash
 
+git checkout main
+git pull origin main
+
 mkdir tmp
 
 git clone --depth 1 --no-checkout https://github.com/CivicPatch/civicpatch-tools.git tmp
@@ -21,10 +24,10 @@ rm -rf tmp
 git add data/
 git add data_source/
 
-if git diff --quiet; then
+if git diff --quiet --staged; then
   echo "No changes to commit"
 else
   DATE=$(date +%Y-%m-%d)
   git commit -m "Sync from CivicPatch - $DATE"
-  git push
+  git push origin main
 fi
