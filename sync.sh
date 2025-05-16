@@ -1,0 +1,30 @@
+#!/bin/bash
+
+mkdir tmp
+
+git clone --depth 1 --no-checkout https://github.com/CivicPatch/civicpatch-tools.git tmp
+cd tmp
+git sparse-checkout init --cone
+git sparse-checkout set civpatch/data civpatch/data_source
+git checkout
+
+cd ..
+
+# Copy the files under tmp/data & tmp/data_source into the data & data_source folders
+cp -r tmp/civpatch/data/* data/
+cp -r tmp/civpatch/data_source/* data_source/
+
+# Remove the tmp folder
+rm -rf tmp
+
+# If there are any changes, commit them
+git add data/
+git add data_source/
+
+if git diff --quiet; then
+  echo "No changes to commit"
+else
+  DATE=$(date +%Y-%m-%d)
+  git commit -m "Sync from CivicPatch - $DATE"
+  git push
+fi

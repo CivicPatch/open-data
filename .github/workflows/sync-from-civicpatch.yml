@@ -15,24 +15,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mkdir tmp
-          git clone https://github.com/CivicPatch/civicpatch-tools.git tmp
-
-          # Copy the files under tmp/data & tmp/data_source into the data & data_source folders
-          cp -r tmp/civicpatch/data/* data/
-          cp -r tmp/civicpatch/data_source/* data_source/
-
-          # Remove the tmp folder
-          rm -rf tmp
-
-          # If there are any changes, commit them
-          git add data/
-          git add data_source/
-
-          if git diff --quiet; then
-            echo "No changes to commit"
-          else
-            DATE=$(date +%Y-%m-%d)
-            git commit -m "Sync from CivicPatch - $DATE"
-            git push
-          fi
+          
