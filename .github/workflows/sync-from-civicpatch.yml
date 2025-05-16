@@ -1,0 +1,38 @@
+name: Sync from CivicPatch
+
+on:
+  schedule:
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get changed data folders
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir tmp
+          git clone https://github.com/CivicPatch/civicpatch-tools.git tmp
+
+          # Copy the files under tmp/data & tmp/data_source into the data & data_source folders
+          cp -r tmp/data/* data/
+          cp -r tmp/data_source/* data_source/
+
+          # Remove the tmp folder
+          rm -rf tmp
+
+          # If there are any changes, commit them
+          git add data/
+          git add data_source/
+
+          if git diff --quiet; then
+            echo "No changes to commit"
+          else
+            DATE=$(date +%Y-%m-%d)
+            git commit -m "Sync from CivicPatch - $DATE"
+            git push
+          fi
