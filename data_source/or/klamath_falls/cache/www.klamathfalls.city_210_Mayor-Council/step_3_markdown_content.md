@@ -1,0 +1,110 @@
+ 
+
+Loading
+
+  [Skip to Main Content](https://www.klamathfalls.city/210/Mayor-Council/)   ![Klamath Falls OR Homepage](images/8c9068529b9816ae92a216c52ee29cf7d647e8ff4c6e17f605ad5da2d205be41.png)  Search 
+
+ 1.  [Departments](https://www.klamathfalls.city/149/Departments) 
+ 1.  [Our City](https://www.klamathfalls.city/27/Our-City) 
+ 1.  [Live](https://www.klamathfalls.city/101/Live) 
+ 1.  [Work](https://www.klamathfalls.city/35/Work) 
+ 1.  [Play](https://www.klamathfalls.city/31/Play) 
+ 1.  [I Want To](https://www.klamathfalls.city/9/I-Want-To) 
+  ![](images/13a5099334253f0e7256c9fad2720a46279eaf34d4afac67bf8aefcd23414d4d.jpg)  
+
+ 1.  [Home](https://www.klamathfalls.city/) 
+ 1.  [Our City](https://www.klamathfalls.city/27/Our-City) 
+ 1. Mayor & Council
+
+# Mayor & Council
+
+ __Meetings and Work Sessions__ 
+
+ Monthly Meetings 
+
+Held on the 1st and 3rd Monday of each month at 7pm, unless Monday is a legal Holiday, and then subsequently held on the following Tuesday at 7pm.
+
+ Location : City Hall Annex Building - Council Chambers, 500 Klamath Avenue, Klamath Falls, OR 97601
+
+ Work Sessions 
+
+Held as scheduled and based on need. Typically scheduled on the same day and held prior to regular monthly meetings.
+
+ __Agendas and Minutes__ 
+
+Agendas are available on the Tuesday prior to the scheduled meeting. Minutes are available upon request and on-line at the link listed below following Council’s approval.
+
+ [View Most Recent Agendas and Minutes](https://go.boarddocs.com/or/cokf/Board.nsf/Public) 
+
+### Carol Westfall, Mayor
+
+  ![Westfall, Carol](images/c7eb3401fcc27379ee5476fb4a93b302d47097ecc6c7e4aa3dece8adc8b02423.jpg)  
+
+### Phil Studenberg, Ward 1
+
+  ![Studenberg, Phil](images/9b996f068189065ba5ea464b7399e3d7567b0136d5e64953e6eba6b56b8ce356.jpg)  
+
+### Ward 2 - Michael Angeli
+
+  ![IMG_0583](images/d1dfce5416fd05d28d67b98c1b0e258e014ac4a13fcab2a3b7f79625df74103a.jpg)  
+
+### Terra Russo, Ward 3
+
+  ![T Russo](images/fba0a9b1925c95ea02d1f1978552628ca85934c6e737a9ae96ba8ae04af92b75.jpg)  
+
+### Abbie McClung, Ward 4
+
+  ![Abbie McClung - Ward 4](images/6c26552798504b74dc7f92227799d786b6f6f698cca04a60f52d83ec8fbfd053.jpg)  
+
+### Kelsey Mueller Wendt, Ward 5
+
+  ![Kelsey Mueller Wendt - Ward 5](images/a29950e214141953458767282233704cb01c4c6f581b86cb4f1bac19e7a433a4.jpg)  
+
+ 1.   [Meeting Procedures](https://www.klamathfalls.city/212/Meeting-Procedures)  
+ 1.   [Vision & Mission](https://www.klamathfalls.city/237/Vision-Mission)  
+  [City Code](https://ecode360.com/KL4949)   [Public Records Request](https://cityofklamathfallsor.nextrequest.com/)   [Municipal Court](https://www.klamathfalls.city/216/Municipal-Court)   [Do I live in the City?](https://maps.cityofkfalls.com/portal/apps/experiencebuilder/experience/?id=77dbe726a13945bdb693c6f9f923580a)   [Video Tour of Klamath Falls](https://www.elocallink.tv/m/v/Redesign4/?pid=w7w1p4Q7x41&fp=orklam23_wel_rev_iwd)   [Agendas & Minutes](https://go.boarddocs.com/or/cokf/Board.nsf/Public)   [Employment](https://www.klamathfalls.city/204/Employment-Opportunities)   [UB Online Payments](https://www.online-billpay.com/?companyname=KLAMATH_FALLS)   [Police](https://www.klamathfalls.city/236/Police)   [Bids & Proposals](https://www.bidexpress.com/businesses/72070/home)   [GIS Maps](https://www.klamathfalls.city/371/GIS-Maps)  
+
+ 1.    
+
+ ![Footer Klamath Falls OR Homepage](images/a4264ba886a657f6d535566b2b9a1955eb54fcc241bee487573d74c7288f7441.png)    
+
+### Contact Us
+
+ 1.    
+
+City Of Klamath Falls   
+
+500 Klamath Avenue   
+
+Klamath Falls, OR 97601   
+
+Phone: 541-883-5316   
+
+###  [Popular Links](https://www.klamathfalls.city/QuickLinks.aspx?CID=15) 
+
+ 1.  [Home](https://www.klamathfalls.city/)  
+ 1.  [Site Map](https://www.klamathfalls.city/sitemap)  
+ 1.  [Accessibility](https://www.klamathfalls.city/accessibility)  
+ 1.  [Copyright Notices](https://www.klamathfalls.city/site/copyright)  
+ 1.  [Privacy Policy](https://www.klamathfalls.city/privacy)  
+ /QuickLinks.aspx 
+
+###  [FAQs](https://www.klamathfalls.city/QuickLinks.aspx?CID=30) 
+
+ 1.  [Klamath Falls Burning Information](https://www.klamathcounty.org/383/Air-Quality)  
+ 1.  [Road Conditions](https://www.tripcheck.com/Pages/Road-Conditions?curRegion=7&mainNav=RoadConditions)  
+ 1.  [Sex Offenders](https://sexoffenders.oregon.gov/ConditionsOfUse)  
+ 1.  [Oregon Revised Statutes](https://www.oregonlegislature.gov/bills_laws/Pages/ORS.aspx)  
+ 1.  [Federal Bureau of Investigation (FBI) 10 Most Wanted](https://www.fbi.gov/wanted/topten)  
+ /QuickLinks.aspx 
+
+###  [Site Links](https://www.klamathfalls.city/QuickLinks.aspx?CID=15) 
+
+ 1.  [Home](https://www.klamathfalls.city/)  
+ 1.  [Site Map](https://www.klamathfalls.city/sitemap)  
+ 1.  [Accessibility](https://www.klamathfalls.city/accessibility)  
+ 1.  [Copyright Notices](https://www.klamathfalls.city/site/copyright)  
+ 1.  [Privacy Policy](https://www.klamathfalls.city/privacy)  
+ /QuickLinks.aspx Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)  Loading Loading Do Not Show Again Close Select LanguageAbkhazAcehneseAcholiAfarAfrikaansAlbanianAlurAmharicArabicArmenianAssameseAvarAwadhiAymaraAzerbaijaniBalineseBaluchiBambaraBaouléBashkirBasqueBatak KaroBatak SimalungunBatak TobaBelarusianBembaBengaliBetawiBhojpuriBikolBosnianBretonBulgarianBuryatCantoneseCatalanCebuanoChamorroChechenChichewaChinese (Simplified)Chinese (Traditional)ChuukeseChuvashCorsicanCrimean Tatar (Cyrillic)Crimean Tatar (Latin)CroatianCzechDanishDariDhivehiDinkaDogriDombeDutchDyulaDzongkhaEsperantoEstonianEweFaroeseFijianFilipinoFinnishFonFrenchFrench (Canada)FrisianFriulianFulaniGaGalicianGeorgianGermanGreekGuaraniGujaratiHaitian CreoleHakha ChinHausaHawaiianHebrewHiligaynonHindiHmongHungarianHunsrikIbanIcelandicIgboIlocanoIndonesianInuktut (Latin)Inuktut (Syllabics)IrishItalianJamaican PatoisJapaneseJavaneseJingpoKalaallisutKannadaKanuriKapampanganKazakhKhasiKhmerKigaKikongoKinyarwandaKitubaKokborokKomiKonkaniKoreanKrioKurdish (Kurmanji)Kurdish (Sorani)KyrgyzLaoLatgalianLatinLatvianLigurianLimburgishLingalaLithuanianLombardLugandaLuoLuxembourgishMacedonianMadureseMaithiliMakassarMalagasyMalayMalay (Jawi)MalayalamMalteseMamManxMaoriMarathiMarshalleseMarwadiMauritian CreoleMeadow MariMeiteilon (Manipuri)MinangMizoMongolianMyanmar (Burmese)Nahuatl (Eastern Huasteca)NdauNdebele (South)Nepalbhasa (Newari)NepaliNKoNorwegianNuerOccitanOdia (Oriya)OromoOssetianPangasinanPapiamentoPashtoPersianPolishPortuguese (Brazil)Portuguese (Portugal)Punjabi (Gurmukhi)Punjabi (Shahmukhi)QuechuaQʼeqchiʼRomaniRomanianRundiRussianSami (North)SamoanSangoSanskritSantali (Latin)Santali (Ol Chiki)Scots GaelicSepediSerbianSesothoSeychellois CreoleShanShonaSicilianSilesianSindhiSinhalaSlovakSlovenianSomaliSpanishSundaneseSusuSwahiliSwatiSwedishTahitianTajikTamazightTamazight (Tifinagh)TamilTatarTeluguTetumThaiTibetanTigrinyaTivTok PisinTonganTshilubaTsongaTswanaTuluTumbukaTurkishTurkmenTuvanTwiUdmurtUkrainianUrduUyghurUzbekVendaVenetianVietnameseWarayWelshWolofXhosaYakutYiddishYorubaYucatec MayaZapotecZulu Powered by  [![Google Translate](images/3f3f3a8d0882c4edd13c1755632554f3042dd0f45af91da1e753b94d76c2513f.png)Translate](https://translate.google.com/)  
+
+ Original text Rate this translation Your feedback will be used to help improve Google Translate 
