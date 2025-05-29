@@ -1,5 +1,12 @@
 #!/bin/bash
 
+set -e
+
+git config --global user.email "civicpatch-pipeline@civicpatch.org"
+git config --global user.name "CivicPatch Pipeline"
+
+git config 
+
 git checkout main
 git pull origin main
 
