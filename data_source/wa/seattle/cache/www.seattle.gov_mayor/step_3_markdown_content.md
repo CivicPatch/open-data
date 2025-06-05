@@ -45,7 +45,22 @@ Seattle, WA 98124-4749
 
 ## Press Releases
 
- Mayor's Office Press Releases  [City of Seattle, TAAF, Amazon, and CIDBIA Announce New Ambassadors Program to Improve Neighborhood Safety and Support Economic Revitalization in the Chinatown-International District](https://content.govdelivery.com/bulletins/gd/WASEATTLE-3e07033?wgt_ref=WASEATTLE_WIDGET_93)  
+ Mayor's Office Press Releases  [TOMORROW: City of Seattle to Raise LGBTQ+ Pride Flag at City Hall](https://content.govdelivery.com/bulletins/gd/WASEATTLE-3e2bc7a?wgt_ref=WASEATTLE_WIDGET_93)  
+
+ * 05/30/2025 12:00 PM PDT
+  [Mayor Harrell Calls on County Assessor John Arthur Wilson to Resign](https://content.govdelivery.com/bulletins/gd/WASEATTLE-3e2b152?wgt_ref=WASEATTLE_WIDGET_93)  
+
+ * 05/29/2025 12:23 PM PDT
+  [Mayor Harrell Announces New Summer Safety Strategy to Enhance Security, Reduce Crime in Seattle Parks and Public Spaces](https://content.govdelivery.com/bulletins/gd/WASEATTLE-3e17f4c?wgt_ref=WASEATTLE_WIDGET_93)  
+
+ * 05/21/2025 11:15 AM PDT
+  [Mayor Harrell to Nominate Chief Barnes for City Council Confirmation Following a Record-Setting First 100 Days ](https://content.govdelivery.com/bulletins/gd/WASEATTLE-3e14651?wgt_ref=WASEATTLE_WIDGET_93)  
+
+ * 05/20/2025 11:11 AM PDT
+  [Rita Meher and Tasveer Film Festival and Market Honored with 2025 Mayor’s Film Award for Outstanding Achievement in Film](https://content.govdelivery.com/bulletins/gd/WASEATTLE-3e0a971?wgt_ref=WASEATTLE_WIDGET_93)  
+
+ * 05/15/2025 07:45 PM PDT
+  [City of Seattle, TAAF, Amazon, and CIDBIA Announce New Ambassadors Program to Improve Neighborhood Safety and Support Economic Revitalization in the Chinatown-International District](https://content.govdelivery.com/bulletins/gd/WASEATTLE-3e07033?wgt_ref=WASEATTLE_WIDGET_93)  
 
  * 05/14/2025 12:34 PM PDT
   [TODAY: Mayor Harrell to Announce New Actions and Investments to Promote Safety and Economic Revitalization in Seattle’s Chinatown-International District](https://content.govdelivery.com/bulletins/gd/WASEATTLE-3e03ef5?wgt_ref=WASEATTLE_WIDGET_93)  
@@ -90,21 +105,6 @@ Seattle, WA 98124-4749
   [Mayor Harrell Celebrates Significant Increase in Police Hiring in 2025](https://content.govdelivery.com/bulletins/gd/WASEATTLE-3de062e?wgt_ref=WASEATTLE_WIDGET_93)  
 
  * 04/28/2025 01:13 PM PDT
-  [TOMORROW: City Leaders Celebrate Grand Opening of South Park Plaza](https://content.govdelivery.com/bulletins/gd/WASEATTLE-3ddaf64?wgt_ref=WASEATTLE_WIDGET_93)  
-
- * 04/25/2025 02:00 PM PDT
-  [Monday: Mayor Harrell Celebrates Significant Increase in Police Hiring in 2025 ](https://content.govdelivery.com/bulletins/gd/WASEATTLE-3ddaeef?wgt_ref=WASEATTLE_WIDGET_93)  
-
- * 04/25/2025 01:33 PM PDT
-  [City of Seattle Moves Fort Lawton Redevelopment Forward by Selecting Chief Seattle Club to Develop up to 100 Units of Permanent Supportive Housing](https://content.govdelivery.com/bulletins/gd/WASEATTLE-3dd8c0c?wgt_ref=WASEATTLE_WIDGET_93)  
-
- * 04/25/2025 12:00 PM PDT
-  [Mayor Bruce Harrell Announces Legislation to Build Light Rail Faster and Support Smooth Construction](https://content.govdelivery.com/bulletins/gd/WASEATTLE-3dda807?wgt_ref=WASEATTLE_WIDGET_93)  
-
- * 04/25/2025 10:59 AM PDT
-  [Mayor Harrell Proposes Infrastructure Cost-Sharing Legislation to Remove Barriers to Housing and Growth](https://content.govdelivery.com/bulletins/gd/WASEATTLE-3dd56ef?wgt_ref=WASEATTLE_WIDGET_93)  
-
- * 04/23/2025 02:00 PM PDT
 
 Receive Email Updates
 
@@ -116,23 +116,23 @@ Copy the code below and paste it into your blog or Web page:
 
 ##  [Latest News - Mayor's Blog](https://harrell.seattle.gov) 
 
-  [City of Seattle, TAAF, Amazon, and CIDBIA Announce New Ambassadors Program to Improve Neighborhood Safety and Support Economic Revitalization in the Chinatown-International District 
+  [Mayor Harrell Calls on County Assessor John Arthur Wilson to Resign 
 
-Mayor Harrell announces a combined $1 million investme...
+Seattle – Today, Mayor Bruce Harrell released the following statement: “I am appalled by the stories of Cou...
 
- Posted May. 14  ![](https://harrell.seattle.gov/wp-content/uploads/sites/23/2025/05/DSC1702-150x150.jpg)](https://harrell.seattle.gov/2025/05/14/city-of-seattle-taaf-amazon-and-cidbia-announce-new-ambassadors-program-to-improve-neighborhood-safety-and-support-economic-revitalization-in-the-chinatown-international-district)   [Mayor Harrell Signs Suite of Downtown Activation Plan Legislation to Fill Vacant Storefronts, Extend Housing Permits 
+ Posted May. 29](https://harrell.seattle.gov/2025/05/29/mayor-harrell-calls-on-county-assessor-john-arthur-wilson-to-resign)   [Statements from Prominent Seattle Christian and Faith Leaders 
 
-Seattle – Today, Mayor Bruce Harrell joined Councilmem...
+Seattle – Today, a diverse group of Seattle Christian and Faith leaders made the following statements: Pastor Ca...
 
- Posted May. 06  ![Mayor Harrell signs Downtown Activation Plan legislation with leaders and community stakeholders behind him.](https://harrell.seattle.gov/wp-content/uploads/sites/23/2025/05/20250506_172833100_iOS-1-150x150.jpg)](https://harrell.seattle.gov/2025/05/06/mayor-harrell-signs-suite-of-downtown-activation-plan-legislation-to-fill-vacant-storefronts-extend-housing-permits)   [Nearly 5,000 Seattle Child Care Staff Receiving Retention Payments 
+ Posted May. 27](https://harrell.seattle.gov/2025/05/27/statements-from-prominent-seattle-christian-and-faith-leaders)   [Mayor Harrell Statement on Extreme Right-Wing Rally at Cal Anderson Park 
 
-Seattle has invested $16 million in child care workfor...
+Seattle – Today, Mayor Bruce Harrell released the following statement:  “Seattle is proud of our reputation...
 
- Posted May. 01  ![SPP educators and students](https://harrell.seattle.gov/wp-content/uploads/sites/23/2024/09/SPP-Classroom-2-150x150.jpg)](https://harrell.seattle.gov/2025/05/01/nearly-5000-seattle-child-care-staff-receiving-retention-payments)   [Mayor Harrell Celebrates Significant Increase in Police Hiring in 2025 
+ Posted May. 24](https://harrell.seattle.gov/2025/05/24/mayor-harrell-statement-on-extreme-right-wing-rally-at-cal-anderson-park)   [Mayor Harrell Announces New Summer Safety Strategy to Enhance Security, Reduce Crime in Seattle Parks and Public Spaces 
 
-Seattle has hired 60 officers in 2025, a 500% improvem...
+Seattle – Today, Mayor Bruce Harrell released new deta...
 
- Posted Apr. 28  ![Seattle skyline with Space Needle and snow covered mountains](https://harrell.seattle.gov/wp-content/uploads/sites/23/2024/10/271660677_10227508063912477_4799005216720843206_n-150x150.jpg)](https://harrell.seattle.gov/2025/04/28/mayor-harrell-celebrates-significant-increase-in-police-hiring-in-2025)  
+ Posted May. 21  ![Person paddleboarding on Elliott Bay](https://harrell.seattle.gov/wp-content/uploads/sites/23/2023/12/DSC_6955-Edit-150x150.jpg)](https://harrell.seattle.gov/2025/05/21/mayor-harrell-announces-new-summer-safety-strategy-to-enhance-security-reduce-crime-in-seattle-parks-and-public-spaces)  
 
 ## Requests and Services
 
@@ -177,10 +177,10 @@ Sign up for the latest updates from Mayor Bruce Harrell
  1.  [Police Jobs](https://www.seattle.gov/police/police-jobs) 
  1.  [Pay My Ticket](https://www.seattle.gov/courts/tickets-and-payments/pay-my-ticket) 
  1.  [Adopt a Pet](https://www.seattle.gov/animal-shelter/find-an-animal/adopt) 
- 1.  [Utility Bills & Payments](https://www.seattle.gov/utilities/your-services/accounts-and-payments/bills-and-payments) 
+ 1.  [Look Up Collection Day](https://www.seattle.gov/utilities/your-services/collection-and-disposal/your-collection-day/look-up-collection-day) 
 
 Seattle's Mayor is the head of the Executive department. The Mayor directs and controls all City offices and departments except where that authority is granted to another office by the City Charter.
 
 ## Policies
 
-  [About Our Digital Properties](https://www.seattle.gov/about-our-digital-properties)   [Privacy Policy](https://www.seattle.gov/tech/data-privacy/privacy-statement)   [Title II: Americans with Disabilities Act](https://www.seattle.gov/americans-with-disabilities-act)   [Title VI: Civil Rights Act](https://www.seattle.gov/civilrights/laws-we-enforce/title-vi-civil-rights-act)   [Sitemap](https://www.seattle.gov/sitemap)   ![](https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg)  Original text Rate this translation Your feedback will be used to help improve Google Translate 
+  [About Our Digital Properties](https://www.seattle.gov/about-our-digital-properties)   [Privacy Policy](https://www.seattle.gov/tech/data-privacy/privacy-statement)   [Title II: Americans with Disabilities Act](https://www.seattle.gov/americans-with-disabilities-act)   [Title VI: Civil Rights Act](https://www.seattle.gov/civilrights/laws-we-enforce/title-vi-civil-rights-act)   [Sitemap](https://www.seattle.gov/sitemap)  Original text Rate this translation Your feedback will be used to help improve Google Translate 

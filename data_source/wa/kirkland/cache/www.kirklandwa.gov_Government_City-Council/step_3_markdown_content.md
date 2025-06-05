@@ -1,7 +1,7 @@
-  [Skip to main content](https://www.kirklandwa.gov/Government/City-Council/)  opens in new tab or window  ![City of Kirkland - Logo](images/4a65b8e8b38a3862675a61182b11b5d50ed48e50500cf7bee40b0bfd055dcd36.jpg)   ![QR code to access this page](images/738909aabe334ea5174c3824ea2e74784207526d0d85493b36bda2aa5856f0ec.jpg)  Quick Links: Quick Links  **  
+  [Skip to main content](https://www.kirklandwa.gov/Government/City-Council/)  opens in new tab or window Quick Links: Quick Links  **  
 
  *  [Contact Us](https://www.kirklandwa.gov/Government/Contact-Us) 
- *  [Facebook](https://www.facebook.com/kirklandwa.gov/) 
+ *  [Facebook](https://www.facebook.com/kirklandwa.gov) 
  *  [X](https://x.com/kirklandgov) 
  *  [Land Acknowledgement](https://www.kirklandwa.gov/Government/City-Managers-Office/Local-Land-Acknowledgement) 
   [English (United States)Select this as your preferred language](https://www.kirklandwa.gov/Government/City-Council?oc_lang=en-US)  [SpanishSelect this as your preferred language](https://www.kirklandwa.gov/Government/City-Council?oc_lang=es)  [Chinese (Simplified)Select this as your preferred language](https://www.kirklandwa.gov/Government/City-Council?oc_lang=zh-CN)  [RussianSelect this as your preferred language](https://www.kirklandwa.gov/Government/City-Council?oc_lang=ru)  [VietnameseSelect this as your preferred language](https://www.kirklandwa.gov/Government/City-Council?oc_lang=vi)  [PersianSelect this as your preferred language](https://www.kirklandwa.gov/Government/City-Council?oc_lang=fa)  [PortugueseSelect this as your preferred language](https://www.kirklandwa.gov/Government/City-Council?oc_lang=pt)  [HindiSelect this as your preferred language](https://www.kirklandwa.gov/Government/City-Council?oc_lang=hi)  [TeluguSelect this as your preferred language](https://www.kirklandwa.gov/Government/City-Council?oc_lang=te)  [KoreanSelect this as your preferred language](https://www.kirklandwa.gov/Government/City-Council?oc_lang=ko)  English (United States)  **  is your current preferred language. 
@@ -76,35 +76,33 @@ Select the Escape key to close the menu. Focus will then be set to the first men
 
 # City Council
 
-  ![2024 City Council](images/dbaca73f6cdc56df71a94fd7b6f46c25299f4b6d8ef171c2ce30e802f674a6d9.jpg) 
+  ![2024 City Council](https://www.kirklandwa.gov/files/sharedassets/public/v/3/city-council/images/2024-city-council.jpg?w=600&h=374) 
 
  The City Council is Kirkland’s governing body and is comprised of seven non-partisan members who are  [elected](https://www.kingcounty.gov/depts/elections.aspx)  by the registered voters of Kirkland to serve “at large” (not representing a district or ward). Councilmembers are elected every two years to serve four-year terms. The Mayor and Deputy Mayor are elected among the members to serve two-year terms. 
 
 ## Next City Council Meeting    
 
-  [April 15, 2025 Meeting Agenda](https://www.kirklandwa.gov/Government/City-Council/Council-Meeting-Minutes-and-Agendas/2025-Kirkland-City-Council-Meetings/April-15-2025-Kirkland-City-Council-Meeting/Agenda-April-15-2025-Kirkland-City-Council-Regular-Meeting)      [Council Meeting Zoom Link](https://kirklandwa-gov.zoom.us/j/83949948115)  
+  [June 5, 2025 Special Meeting Agenda](https://www.kirklandwa.gov/Government/City-Council/Council-Meeting-Minutes-and-Agendas/2025-Kirkland-City-Council-Meetings/June-5-2025-Kirkland-City-Council-Special-Meeting/Agenda-June-5-2025-Kirkland-City-Council-Special-Meeting)     Council Meeting Zoom Link 
 
  
 
-  [**(show below)## Virtual Meeting Information(show below)]()  
+  **  (show below) 
 
- __Tuesday, April 15, 2025 REGULAR MEETING -__   __Virtual Meeting Information: __ Community members may join the Zoom meeting via telephone by calling US: +1  [253-215-8782]()  (Toll free) or +1  [206-337-9723]()  (Toll free) using  __Webinar ID:__   839-4994-8115  and/or via computer   __ [here](https://kirklandwa-gov.zoom.us/j/83949948115)__ . No passcode needed for Zoom access to meeting. 
+## Virtual Meeting Information
 
- __ [Watch the Meeting Live via Zoom Here.](https://kirklandwa-gov.zoom.us/j/83949948115)__ 
+ (show below) 
 
- __Council will accept live spoken commentary under 'Items from the Audience' or ‘Public Hearings’ at regular meetings via Zoom audio/video on a computer or telephone connection.  The connection links are provided on each individual meeting agenda__. The virtual meeting will be broadcast live on KGOV channel 21 and live-streamed on the City's website. Comments will be subject to the Council protocols mentioned above. Please call (425) 587-3190 and leave a message before 5 p.m. on the day of the Council meeting with any questions; City Clerk's Office staff will endeavor to return your call.
-
- [Watch the Meeting Live Here](https://kirkland.granicus.com/player/camera/7?publish_id=1308&redirect=true)  [ on KGOV](https://kirkland.granicus.com/player/camera/7?publish_id=1308&redirect=true) 
-
- __ *More ways to watch! *__ Kirkland City Council meetings are streamed live on City of Kirkland  [YouTube](https://www.youtube.com/user/KirklandTelevision/featured)  and  [Facebook](https://www.facebook.com/kirklandwa.gov)  in addition to the live stream on the  [City website](http://www.kirklandwa.gov/depart/council/Meetings/WatchCouncilMeetings.htm). Meetings are also televised on Comcast Cable Channel 21 and Ziply Cable Channel.
+ __Thursday, June 5, 2025 SPECIAL MEETING -__  The next City Council Special Meeting is on Thursday, June 5, 2025 at 4:30 p.m. in the Council Chamber at City Hall (123 5th Avenue, Kirkland, WA 98052). This meeting is on-site, in-person only.
 
  
 
- 
+ ____ 
 
- __ [](https://kirklandwa-gov.zoom.us/j/89752026984)__ 
+  **  (show below) 
 
-  [**(show below)## Public Comment Instructions (in-person & virtual)(show below)]()  
+## Public Comment Instructions (in-person & virtual)
+
+ (show below) 
 
 Council will accept live spoken commentary under 'Items from the Audience' or ‘Public Hearings’ at regular meetings both via Zoom audio/video on a computer or telephone connection, and in person. The Zoom connection links are provided on each individual meeting agenda. The virtual meeting will be broadcast live on KGOV channel 21 and live-streamed on the City's website. Comments will be subject to the Council protocols mentioned above.
 
@@ -124,7 +122,11 @@ For issues that are not quasi-judicial or set for a public hearing:
 
 The City Council is allowing digital presentations on a pilot basis beginning with the November 6, 2024, public hearings. To be shown by the public on November 6, a presentation must be received by the City Clerk’s Office by Wednesday, November 6^(th) at 11 a.m. Please send digital presentations to [CityClerk@kirklandwa.gov](mailto:CityClerk@kirklandwa.gov). 
 
-  [**(show below)## About Council Meetings (available in-person and continued virtual and online options)(show below)]()  
+  **  (show below) 
+
+## About Council Meetings (available in-person and continued virtual and online options)
+
+ (show below) 
 
  __Council Meetings Streamed Online__ 
 
@@ -154,11 +156,11 @@ Whenever a group wishes to address the Council on a subject, the Mayor will norm
 
 The City of Kirkland is committed to sustaining strong relations with neighborhood associations and residents.
 
- [Kirkland's Neighborhood Associations](https://www.kirklandwa.gov/Government/City-Managers-Office/Neighborhood-Services)  serve as an important communications link between the City and its residents. They also provide an effective way for neighbors to improve the quality of life in Kirkland’s Neighborhoods. There are currently eleven associations meeting on a regular basis. For additional information on organizing, Programs, and upcoming meetings check the  [Neighborhood Services Web Page](https://www.kirklandwa.gov/Government/City-Managers-Office/Neighborhood-Services). Stay connected to Kirkland by subscribing to Neighborhood E-Bulletins by going to  [www.kirklandwa.gov](https://www.kirklandwa.gov/)  and click on the Kirkland Email Alerts icon.
+ [Kirkland's Neighborhood Associations](https://www.kirklandwa.gov/Government/City-Managers-Office/Neighborhood-Services)  serve as an important communications link between the City and its residents. They also provide an effective way for neighbors to improve the quality of life in Kirkland’s Neighborhoods. There are currently eleven associations meeting on a regular basis. For additional information on organizing, Programs, and upcoming meetings check the  [Neighborhood Services Web Page](https://www.kirklandwa.gov/Government/City-Managers-Office/Neighborhood-Services). Stay connected to Kirkland by subscribing to Neighborhood E-Bulletins by going to  [www.kirklandwa.gov](https://www.kirklandwa.gov)  and click on the Kirkland Email Alerts icon.
 
  __Volunteer Program__ 
 
-The City operates a  [volunteer program](https://www.kirklandwa.gov/Government/City-Managers-Office/Volunteer-Opportunities) , which allows the City to take advantage of the extraordinary reserve of knowledge, talent, and skill possessed by volunteers within our community. The City's volunteer program involves interested residents in local government by providing the opportunity to perform work of value to the community. To learn more about available volunteer opportunities with the City of Kirkland, please contact the City's Volunteer Services Coordinator at [425-587-3012]().
+The City operates a  [volunteer program](https://www.kirklandwa.gov/Government/City-Managers-Office/Volunteer-Opportunities) , which allows the City to take advantage of the extraordinary reserve of knowledge, talent, and skill possessed by volunteers within our community. The City's volunteer program involves interested residents in local government by providing the opportunity to perform work of value to the community. To learn more about available volunteer opportunities with the City of Kirkland, please contact the City's Volunteer Services Coordinator at425-587-3012.
 
  
 
@@ -174,9 +176,13 @@ The City operates a  [volunteer program](https://www.kirklandwa.gov/Government/C
 
 ## Meet the Council
 
-  [**(show below)## Mayor Kelli Curtis(show below)]()  
+  **  (show below) 
 
- ![Kelli Curtis](images/0ef00e6debb931607ba39d60789c96bca3d6266adb5dbb8aa1f996a4c60ff82d.jpg) 
+## Mayor Kelli Curtis
+
+ (show below) 
+
+ ![Kelli Curtis](https://www.kirklandwa.gov/files/sharedassets/public/v/2/city-council/images/kelli-curtis.jpg?w=334&h=506) 
 
  __Mayor Kelli Curtis
 
@@ -184,7 +190,7 @@ Position #2
 
 Term Expires December 31, 2027__ 
 
- __External Committee Assignments:__ Association of Washington Cities (AWC) Statement of Policy Committee, AWC Large City Advisory Committee, Puget Sound Regional Council (PSRC) Executive Board, Sound City Association (SCA) King County Growth Management Planning Council (GMPC) (Caucus Chair), SCA Public Issues Committee (PIC), SCA Large City Mayors.
+ __External Committee Assignments:__ Association of Washington Cities (AWC) Statement of Policy Committee, AWC Large City Advisory Committee, Puget Sound Regional Council (PSRC) Executive Board, Sound City Association (SCA) King County Growth Management Planning Council (GMPC) (Caucus Vice Chair), SCA Public Issues Committee (PIC), SCA Large City Mayors.
 
  __Councilmember Curtis__ received a Certificate of Municipal Leadership (CML) from the Association of Washington Cities (AWC) in March 2021. She also received a Certificate of Training for "A Short Course on Local Planning" from the Washington State Department of Commerce in May 2023. She earned her Advanced Certificate of Municipal Leadership (ACML) from AWC in June of 2023.
 
@@ -196,7 +202,11 @@ Curtis attended the University of Washington, graduating with a Bachelor of Arts
 
 Mayor Curtis can be reached at kcurtis@kirklandwa.gov or 425-587-3532. For scheduling assistance, please contact Amy Bolen, Executive Assistant, at abolen@kirklandwa.gov, or 425-587-3007.
 
-  [**(show below)## Deputy Mayor Jay Arnold(show below)]()   __ ![Jay Arnold](images/4769ce0b159985abc6a188e272ca78631d86f58cfda643e60a8088a97ec360b4.jpg) Deputy Mayor Jay Arnold__  
+  **  (show below) 
+
+## Deputy Mayor Jay Arnold
+
+ (show below)  __ ![Jay Arnold](https://www.kirklandwa.gov/files/sharedassets/public/v/3/city-council/images/jay-arnold.jpg?w=300&h=450) Deputy Mayor Jay Arnold__  
 
  __Position #1
 
@@ -222,11 +232,15 @@ Deputy Mayor Arnold runs his own web development business and also works as a Te
 
 Deputy Mayor Arnold and his wife, Mary Beth Binns, live in the Norkirk neighborhood. They have three teenage daughters.
 
-Deputy Mayor Arnold can be reached at  [jarnold@kirklandwa.gov](mailto:)  or  [425-587-3535]().  For scheduling assistance, please contact Amy Bolen, Executive Assistant, at  [abolen@kirklandwa.gov](mailto:) , or  [425-587-3007]().
+Deputy Mayor Arnold can be reached at  [jarnold@kirklandwa.gov](mailto:)  or 425-587-3535.  For scheduling assistance, please contact Amy Bolen, Executive Assistant, at  [abolen@kirklandwa.gov](mailto:) , or 425-587-3007.
 
-  [**(show below)## Councilmember Neal Black(show below)]()  
+  **  (show below) 
 
- __ ![Neal Black](images/f6375a653230a8cfdc9946f7e5715e12785a98060afed5fc7d578953d80c2f16.jpg) Councilmember Neal Black
+## Councilmember Neal Black
+
+ (show below) 
+
+ __ ![Neal Black](https://www.kirklandwa.gov/files/sharedassets/public/v/2/city-council/images/neal-black.jpg?w=300&h=450) Councilmember Neal Black
 
 Position #5
 
@@ -234,65 +248,73 @@ Term Expires December 31, 2025__
 
 Councilmember Neal Black has served on the Kirkland City Council since November 2019. He has lived in the Central Houghton neighborhood since 2003 and has lived in Kirkland since 1998.
 
- __Current Council Work Group Assignments:__ Legislative Work Group, Transportation Ad Hoc Work Group
+ __Current Council Work Group Assignments:__ Legislative Work Group (Chair), Transportation Ad Hoc Work Group
 
  __City Committee Assignments:__ Disability Board
 
- __External Committee Assignments:__ Eastside Transportation Partnership Representative, King County Cities Climate Collaboration Outreach Committee Representative, Regional Crisis Response Agency Principles Assembly Delegate, NORCOM Principals Assembly Delegate Alternate, WRIA8 Salmon Recovery Council Alternate
+ __External Committee Assignments:__ Eastside Transportation Partnership, King County Cities Climate Collaboration Outreach Committee, Regional Crisis Response Agency Principles Assembly, NORCOM Principals Assembly (Alternate), WRIA8 Salmon Recovery Council (Alternate)
 
- __Regionally Appointed Committee Assignments: __ Regional Law, Safety, and Justice Committee Representative and Vice Chair; King County Regional Transit Committee Alternate
+ __Regionally Appointed Committee Assignments: __ Regional Law, Safety, and Justice Committee (Chair); King County Regional Transit Committee, Domestic Violence Initiative Regional Task Force
 
-Councilmember Black received a Certificate of Municipal Leadership from the Association of Washington Cities (AWC) in May, 2023. 
+ Councilmember Black received a Certificate of Municipal Leadership from the Association of Washington Cities (AWC) in May 2023.  
 
  __About Councilmember Neal Black: __  Councilmember Black is a long-time resident of Kirkland having lived in the Lakeview neighborhood, the Everest neighborhood, and now the Central Houghton neighborhood.  For 10 years he was a fixture at Everest Park where he coached Kirkland American Little League baseball. 
 
 Councilmember Black has a Bachelor of Science degree in Civil Engineering from Stanford University and a Juris Doctor degree from Georgetown University.  He is a licensed member of the bar in Washington and Oregon.  He has taught intellectual property and business law courses at the University of Washington School of Law (2009-2016), Seattle University School of Law (2008), and the Seattle University Albers School of Business and Economics (2007) as an adjunct professor and part-time lecturer.
 
-For over 10 years, Councilmember Black has been a partner at the law firm Adkins Black, where he advises clients in the software technology and interactive entertainment software industries.  Before joining Adkins Black, he was Vice President and General Counsel of Square Enix, a global developer and publisher of interactive entertainment software.  He also previously served as Vice President and General Counsel of Emergent Payments, a provider of digital payment solutions for the interactive entertainment software industry.  He began his legal career as an associate at the Seattle law firm of Perkins Coie in 1998.
+For over 10 years, Councilmember Black has been a partner at the law firm Phinney Black, where he advises clients in the software technology and interactive entertainment software industries.  Before joining Phinney Black, he was Vice President and General Counsel of Square Enix, a global developer and publisher of interactive entertainment software.  He also previously served as Vice President and General Counsel of Emergent Payments, a provider of digital payment solutions for the interactive entertainment software industry.  He began his legal career as an associate at the Seattle law firm of Perkins Coie in 1998.
 
-Councilmember Black has been involved in public policy and related community service for over 25 years.  From 2014-2019, he was the chair of the Public Policy Committee of the King County Bar Association, where he is now a member of the Board of Trustees, addressing issues associated with diversity in the legal profession and equal access to justice.  Prior to that, from 2007 to 2009, he was a member of the Board of Trustees of Washington Ceasefire, which at that time was the leading organization in Washington advocating for common sense gun safety legislation.  Councilmember Black has also worked on public policy for the White House Office on Environmental Policy (1994), the California State Assembly Natural Resources Committee (1993), the US Department of Justice Environmental Enforcement Division (1997), and the Environmental Defense Fund (1996) as a law clerk and intern. 
+Councilmember Black has been involved in community service and public policy for nearly 32 years.  From 2014-2019, he was the chair of the Public Policy Committee of the King County Bar Association, where he is now a member of the Board of Trustees, addressing issues associated with diversity in the legal profession and equal access to justice.  He is also a current member of the Board of Directors of the Pacific Science Center and, in 2025, was appointed to the Board of Directors of the King County Housing Authority. From 2007 to 2009, he was a member of the Board of Trustees of Washington Ceasefire, which at that time was the leading organization in Washington advocating for common sense gun safety legislation.  Councilmember Black has also worked on public policy for the White House Office on Environmental Policy (1994), the California State Assembly Natural Resources Committee (1993), the US Department of Justice Environmental Enforcement Division (1997), and the Environmental Defense Fund (1996) as a law clerk and intern. 
 
 Councilmember Black received the *2023 Friend of the Legal Profession Award* from the King County Bar Association. The award recognizes Councilmember Black’s role with a small team of King County lawyers who worked nationally to successfully encourage the American legal profession, through the American Bar Association, to adopt an official position that encourages the Justices of the US Supreme Court to adopt their own binding code of ethics.
 
 Councilmember Black was born on Adak Island, near the southwestern tip of Alaska's Aleutian Islands.  He grew up in a small town in Central Oregon, and since 1998 has lived in Kirkland with his wife, two sons, and their pet Havanese.
 
-Councilmember Black may be reached at  [nblack@kirklandwa.gov](mailto:)  or  [425-587-3]()  [544](). For scheduling assistance, please contact Amy Bolen, Executive Assistant, at  [abolen@kirklandwa.gov](mailto:) , or  [425-587-3007]().
+Councilmember Black may be reached at  [nblack@kirklandwa.gov](mailto:)  or 425-587-3544. For scheduling assistance, please contact Amy Bolen, Executive Assistant, at  [abolen@kirklandwa.gov](mailto:) , or 425-587-3007.
 
-  [**(show below)## Councilmember Amy Falcone(show below)]()  
+  **  (show below) 
 
- ![](images/b648575018a486a35331b5334ac46e15e4a3f0e84f8439d8047db2d41656b083.jpg)  __Councilmember Amy Falcone
+## Councilmember Amy Falcone
+
+ (show below)  __ ![Amy Falcone](https://www.kirklandwa.gov/files/sharedassets/public/v/3/city-council/images/amy-falcone-2024.jpg?w=300&h=450)__ 
+
+ __ __Councilmember Amy Falcone
 
 Position #6
 
-Term Expires December 31, 2027__ 
+Term Expires December 31, 2027____ 
 
 Councilmember Amy Falcone was elected to Position 6 on the Kirkland City Council in November of 2019, after serving as a founding member and Co-Chair of Kirkland’s Human Services Commission.
 
- __Current Council Work Group Assignments:__ Lake Washington School District Coordinating Committee, City Committee Assignments, Tourism Development Committee
+ __Council Committees:__  Lake Washington School District Coordinating Committee, Tourism Development Committee (Vice Chair)
 
- __External Committee Assignments:__ Eastside Human Services Forum Board, Regional Crisis Response Agency Principles Assembly Alternate, WRIA8 Salmon Recovery Council
+ __External Committees/Boards:__  Eastside Human Services Forum Board, Regional Crisis Response Agency (RCR) Principals Assembly Alternate, WRIA8 Salmon Recovery Council
 
- __Regionally Appointed Committee Assignments:__ Association of Washington Cities DEIB Cabinet, King Conservation District Advisory Committee Alternate, King County Affordable Housing Committee, Sound Cities Association Board of Directors, Sound Cities Association Equity and Inclusion Cabinet
+ __Regional Committees/Boards:__   King Conservation District Advisory Committee (SCA Caucus Chair), King County Affordable Housing Committee (SCA Caucus Chair), King County Board of Health Alternate, Association of Washington Cities (AWC) DEIB Cabinet, Sound Cities Association Board of Directors (Executive Board Member), Sound Cities Association Equity and Inclusion Cabinet
 
-Councilmember Falcone received a Certificate of Municipal Leadership from the Association of Washington Cities (AWC) in March, 2021. She also received a Certificate of Training for "A Short Course on Local Planning" from the Washington State Department of Commerce in May, 2023.
+Councilmember Falcone received an Advanced Certificate of Municipal Leadership from AWC in 2023 and a Certificate of Municipal Leadership from AWC in 2021. She also received a Certificate of Training for "A Short Course on Local Planning" from the Washington State Department of Commerce in 2023.
+
+ __Statewide Committees/Boards:__   Governor-appointment to Washington State Affordable Housing Advisory Board (AHAB)
 
  __About Councilmember Falcone:__   Prior to being elected to the Kirkland City Council, Councilmember Falcone served as a founding member and Co-Chair of the Kirkland Human Services Commission. In that role she successfully advocated for increased city funding to support the basic needs of community members, with a focus on equity and on enhancing preventative programs such as legal aid to help keep neighbors housed. She brings this same focus on equity and supporting our most vulnerable neighbors to her work on City Council, where she seeks to bring a lens of equity and sustainability to all of the city’s work.
 
 A Kirkland resident since 2014, Amy lives in the Finn Hill neighborhood with her husband and three children.  She and her husband fell in love with Kirkland when they moved to the Pacific Northwest, particularly enamored by the City's lush park system, vibrant downtown core and vital sense of community.  Since deciding on Kirkland as her family's forever home, Amy has devoted herself to serving the community in a variety of ways. 
 
-She is the current PTO Co-President at LWSD’s Environmental and Adventure School. She also sits on the PTA board at Thoreau Elementary School, where she has served in various positions such as PTA President, Legislative Advocacy Chair, Fundraising Chair, Spring Carnival Chair and other board roles. Her extensive volunteerism at the school earned her the 2017 Golden Acorn Award, a prestigious Washington State PTA award given for exemplary and outstanding volunteerism. Elected to the Finn Hill Neighborhood Alliance (FHNA) board of directors in 2016, Amy represented Finn Hill on the Kirkland Neighborhood Safety Panel for four years, helping to secure city funding for safety improvements to facilitate better walking, rolling, and biking routes for neighbors across the city. She additionally served as events committee chair and treasurer on the FHNA. 
+She has served as PTO Co-President at LWSD’s Environmental and Adventure School. She also served on the PTA board at Thoreau Elementary School in various positions such as PTA President, Legislative Advocacy Chair, Fundraising Chair, Spring Carnival Chair and other board roles. Her extensive volunteerism at the school earned her the 2017 Golden Acorn Award, a prestigious Washington State PTA award given for exemplary and outstanding volunteerism. Elected to the Finn Hill Neighborhood Alliance (FHNA) board of directors in 2016, Amy represented Finn Hill on the Kirkland Neighborhood Safety Panel for four years, helping to secure city funding for safety improvements to facilitate better walking, rolling, and biking routes for neighbors across the city. She additionally served as events committee chair and treasurer on the FHNA. 
 
-Councilmember Falcone holds a Master of Arts Degree in Sociology and a Bachelor of Arts Degree in Biology from Temple University in Philadelphia, PA, where she also taught undergraduate statistics.  Amy spent over a decade in social science research, focused on a variety of issues, including career equity of women and LGBTQIA military service members, military families, social science research methodology, and much more.
+Councilmember Falcone holds a Master of Arts Degree in Sociology and a Bachelor of Arts Degree in Biology from Temple University in Philadelphia, PA, where she also taught undergraduate statistics.  Amy spent over a decade in social science research, focused on a variety of issues, including career equity of women and 2SLGBTQIA+ military service members, military families, social science research methodology, and much more.
 
-Councilmember Amy Falcone can be reached at  [afalcone@kirklandwa.gov](mailto:)  or  [425-587-3526]().  For scheduling assistance, please contact Amy Bolen, Executive Assistant, at  [425-587-3007]().
+  **  (show below) 
 
-  [**(show below)## Councilmember Jon Pascal(show below)]()  
+## Councilmember Jon Pascal
 
- __ ![Jon Pascal](images/698779dce29834e3a63522e3b130878ccd6e0bd4486a8f3b69cc57694eb71624.jpg) Councilmember Jon Pascal
+ (show below) 
+
+ __ __ ![Jon Pascal](https://www.kirklandwa.gov/files/sharedassets/public/v/2/city-council/images/jon-pascal.jpg?w=300&h=450) Councilmember Jon Pascal
 
 Position # 7
 
-Term Expires December 31, 2025__ 
+Term Expires December 31, 2025____ 
 
 Councilmember Jon Pascal was first elected to Position 7 on the Kirkland City Council in November 2017, having previously been appointed to Position 2 when the seat was vacated in December 2016. He was re-elected to his second term in 2021 and will serve a four-year position which will expire in December 2025. Councilmember Pascal is a long-time resident of Kirkland having lived in both the Finn Hill neighborhood and now in the Juanita neighborhood.
 
@@ -300,7 +322,7 @@ Councilmember Jon Pascal was first elected to Position 7 on the Kirkland City Co
 
  __External Committee Assignments:__ Cascade Water Alliance Board Alternate, Cascade Water Alliance Resource Management Committee, Eastrail Regional Advisory Council Alternate, King County EMS Advisory Committee Alternate, NORCOM Principals Assembly Delegate
 
- __Statewide Appointed Assignments:__  [Cooper Jones Active Transportation Safety Council](https://wtsc.wa.gov/safe-driving/active-transportation-safety-council/) , Washington State [Transportation Improvement Board](http://www.tib.wa.gov/) 
+ __Statewide Appointed Assignments:__  [Cooper Jones Active Transportation Safety Council](https://wtsc.wa.gov/safe-driving/active-transportation-safety-council) , Washington State [Transportation Improvement Board](https://www.tib.wa.gov) 
 
  __About Councilmember Pascal:__ Councilmember Pascal has actively volunteered his time on various City of Kirkland Commissions, organizations, and stakeholder groups since moving to Kirkland in 2001. He was first appointed by the Kirkland City Council to the Transportation Commission and served eight years as a Commissioner, two of those years as Chair. During that time, he led the effort to develop the Commission's Transportation Conversations policy document and helped develop the City's Active Transportation Plan and Complete Streets Ordinance. In 2009 he was appointed to the Planning Commission where he served for 6 years and assisted in reconciling and updating land use regulations after the annexation of Juanita, Finn Hill, and Kingsgate neighborhoods.
 
@@ -310,37 +332,45 @@ His passion for improving transportation safety and mobility has led to his part
 
 Councilmember Pascal is a principal and part owner of Transpo Group, a transportation planning and engineering services company headquartered in Kirkland's Totem Lake area. He regularly works as a consultant for public agencies, advising on transportation studies and capital projects throughout the region and state. Councilmember Pascal is a proud alumnus of the University of Washington where he obtained a Bachelor of Science degree in Forestry and a Master of Science degree in Engineering. He was born and raised in Bellevue. Councilmember Pascal and his wife Kristin have two children.
 
-Councilmember Pascal can be reached at [jpascal@kirklandwa.gov](mailto:jpascal@kirklandwa.gov) or [425-587-3530](). He is generally available to meet with constituents on Fridays. For scheduling assistance, please contact Amy Bolen, Executive Assistant, at [abolen@kirklandwa.gov](mailto:abolen@kirklandwa.gov) , or [425-587-3007]().
+Councilmember Pascal can be reached at [jpascal@kirklandwa.gov](mailto:jpascal@kirklandwa.gov) or425-587-3530. He is generally available to meet with constituents on Fridays. For scheduling assistance, please contact Amy Bolen, Executive Assistant, at [abolen@kirklandwa.gov](mailto:abolen@kirklandwa.gov) , or425-587-3007.
 
-  [**(show below)## Councilmember Penny Sweet(show below)]()  
+  **  (show below) 
 
- __ ![Penny Sweet](images/ff55d5785f6c9cbfe94627bae2598dbb882f78db1c6936980b8e06bc3ef87299.jpg) Councilmember Penny Sweet__  __Position #3__  __Term Expires December 31, 2025__ 
+## Councilmember Penny Sweet
 
-Councilmember Sweet began her first term on the Kirkland City Council in January 2010. She served as Deputy Mayor  from 2010-2011, and 2014-2015. The Kirkland City Council selected Councilmember Penny Sweet to serve as Mayor for the remainder of 2019, and again in 2021-2023. She has lived in Kirkland since 1985 and served as the Chair of the Market Neighborhood Association from 2007–2009.
+ (show below) 
 
- __Current Council Work Group Assignments:__ Legislative Work Group
+ __ ![Penny Sweet](https://www.kirklandwa.gov/files/sharedassets/public/v/2/city-council/images/penny-sweet.jpg?w=300&h=450)__ 
 
- __City Committee Assignments:__ Tourism Development Committee
+ __ __Councilmember Penny Sweet__  ____  __Position #3__  ____  __Term Expires December 31, 2025____ 
 
- __External Committee Assignments:__ Cascade Water Alliance Board, Cascade Water Alliance Public Affairs Committee, Cascade Water Alliance Finance & Management Committee, Eastside Transportation Partnership Alternate, King County EMS Advisory Committee, Metropolitan Water Pollution Abatement Advisory Committee, Metropolitan Solid Waste Advisory Committee
+Councilmember Sweet began her first term on the Kirkland City Council in January 2010. She served as Deputy Mayor from 2010-2011, and 2014-2015. The Kirkland City Council selected Councilmember Penny Sweet to serve as Mayor for the remainder of 2019, and again in 2021-2023. She has lived in Kirkland since 1985 and served as the Chair of the Market Neighborhood Association from 2007–2009.
 
- __Regionally Appointed Committee Assignments:__ HealthierHere Governing Board Alternate, King County Board of Health
+ __ __Current Council Work Group Assignments:__  __  Legislative Work Group 
+
+ __City Committee Assignments:__  Tourism Development Committee
+
+ __External and Regional Committee Assignments:__  Cascade Water Alliance Board, Cascade Water Alliance Public Affairs Committee, Cascade Water Alliance Finance & Management Committee, Eastside Transportation Partnership Alternate, King County EMS Advisory Committee, Metropolitan Water Pollution Abatement Advisory Committee, Metropolitan Solid Waste Advisory Committee, Regional Water Quality Committee
 
  __About Councilmember Sweet:__  Councilmember Sweet grew up in Seattle where she attended Roosevelt High School and Shoreline Community College before beginning a career in Health Care. She participated in numerous management and leadership courses throughout her career concentrating on customer service, process and quality improvement and leadership. She trained with the Baptist Health Care Leadership Institute, the University of Washington School of Business, Antioch University and is a graduate of the inaugural class of Leadership Eastside in 2008.
 
 She retired in 2007 as an Associate Director of Business Operations for Group Health Cooperative. Over the course of her 31-year career with Group Health, she managed business operations for five outpatient medical centers in Everett and Monroe and for the Hospitals and Specialty Centers in Seattle and Redmond since 1998. She was a member of the Group Health Community Action Teams in Seattle and on the Eastside responsible for outreach and building community relations.
 
-Councilmember Sweet moved to Kirkland in 1985 where she and her husband, Representative Larry Springer, have owned and operated The Grape Choice, a retail wine shop in downtown Kirkland for 34 years. She is a member of the Chamber of Commerce and sits on its Public Policy Committee. She is on the Board of Directors of the Kirkland Downtown Association. She was a member of the Kirkland Downtown Action Team. She is a member of Kirkland Art Center where she served on the Board of Directors from 1987 until 1991. She served on the Kirkland Library Arts Committee and is a member of FOLK (Friends of the Library of Kirkland). She is a lifetime member of the Kirkland Heritage Society and a member of The Audubon Society and The Sierra Club.
+Councilmember Sweet moved to Kirkland in 1984 where she and her husband, Representative Larry Springer, owned and operated The Grape Choice, a retail wine shop in downtown Kirkland for 40 years. She is a member of the Chamber of Commerce.. She is on the Board of Directors of the Kirkland Downtown Association. She was a member of the Kirkland Downtown Action Team. She is a member of Kirkland Art Center where she served on the Board of Directors from 1987 until 1991. She served on the Kirkland Library Arts Committee and is a member of FOLK (Friends of the Library of Kirkland). She is a lifetime member of the Kirkland Heritage Society and a member of The Audubon Society and The Sierra Club. She served on the board of Hopelink from 2018 until 2024, serving as board chair in 2022.
 
-In 1999 she founded Celebrate Kirkland, Inc., a non-profit organization that created and organizes Kirkland's annual 4th of July celebration. Since aligning Celebrate Kirkland with the Kirkland Downtown Association, she has continued to chair the event as she has for 20 years. In 2004 and 2005 she served as chair of events on the Kirkland Centennial Steering Committee.
+In 1999 she founded Celebrate Kirkland, Inc., a non-profit organization that created and organized Kirkland's annual 4th of July celebration. She aligned Celebrate Kirkland with the Kirkland Downtown Association and continued to chair the event until 2022 when the city took over the event. In 2004 and 2005 she served as chair of events on the Kirkland Centennial Steering Committee.
 
 In 2000, Councilmember Sweet was the recipient of the Anne G. Owen Award for Community Service presented by the Kirkland Chamber of Commerce. She has been recognized by the Kirkland Chamber as a “Friend of Kirkland” in 2000 and in 2005 received the President’s Award. In 2016 she was awarded the William C. Woods "Above & Beyond" Award by the Chamber for outstanding community leadership.
 
-Councilmember Sweet can be reached at  [psweet@kirklandwa.gov](mailto:) , or  [425-587-3534]().  For scheduling assistance, please contact Amy Bolen, Executive Assistant,  [abolen@kirklandwa.gov](mailto:) , or  [425-587-3007]().
+Councilmember Sweet can be reached at  [psweet@kirklandwa.gov](mailto:psweet@kirklandwa.gov) , or 425-587-3534. For scheduling assistance, please contact Amy Bolen, Executive Assistant,  [abolen@kirklandwa.gov](mailto:abolen@kirklandwa.gov) , or 425-587-3007.
 
-  [**(show below)## Councilmember John Tymczyszyn(show below)]()  
+  **  (show below) 
 
- ![John Tymczyszyn](images/1c4bbf09acdac719a9a68d819f168004bbe205bfdd68eb8b18db3d18891ac4c6.jpg)  __Councilmember John Tymczyszyn__ 
+## Councilmember John Tymczyszyn
+
+ (show below) 
+
+ ![John Tymczyszyn](https://www.kirklandwa.gov/files/sharedassets/public/v/1/city-council/images/john-tymczyszyn.jpg?w=300&h=450)  __Councilmember John Tymczyszyn__ 
 
  __Position #4
 
@@ -364,43 +394,59 @@ John then attended the Seattle University School of Law and served in the crimin
 
 John and his wife, Tracey, a middle school principal, live in the Houghton neighborhood with their children, Jack, Molly and Teddy.
 
- Councilmember John Tymczyszyn can be reached at  [JohnT@Kirklandwa.gov](mailto:JohnT@Kirklandwa.gov).  For scheduling assistance, please contact Amy Bolen, Executive Assistant, at [abolen@kirklandwa.gov](mailto:abolen@kirklandwa.gov) or  [425-587-3007](). 
+ Councilmember John Tymczyszyn can be reached at  [JohnT@Kirklandwa.gov](mailto:JohnT@Kirklandwa.gov).  For scheduling assistance, please contact Amy Bolen, Executive Assistant, at [abolen@kirklandwa.gov](mailto:abolen@kirklandwa.gov) or 425-587-3007. 
 
 ***
 
- About the Council 
+ __ About the Council__ 
 
-  [**(show below)## Vision Statement and Comprehensive Plan(show below)]()  
+  **  (show below) 
 
-Kirkland is one of the most livable cities in America. We are a vibrant, attractive, green and welcoming place to live, work and play. We value Civic engagement, innovation and diversity. We are respectful, fair, and inclusive. We honor our rich heritage while embracing the future. Kirkland strives to preserve and enhance the environment for our enjoyment and future generations.
+##  __Vision Statement and Comprehensive Plan__ 
 
-Read more about the [2023-2024 Work Program and the Council's Goals](https://www.kirklandwa.gov/Government/City-Council/City-Work-Program). 
+ (show below) 
 
-  [**(show below)## Form of Government(show below)]()  
+ __Kirkland is one of the most livable cities in America. We are a vibrant, attractive, green and welcoming place to live, work and play. We value Civic engagement, innovation and diversity. We are respectful, fair, and inclusive. We honor our rich heritage while embracing the future. Kirkland strives to preserve and enhance the environment for our enjoyment and future generations.__ 
 
-Kirkland operates under the “council-manager” form of government which means all legislative and policy-making powers are vested in the City Council. Policy-making often takes the form of passing  [ordinances or resolutions](https://www.kirklandwa.gov/Government/Departments/Finance-and-Administration/Resolutions-and-Ordinances). The Council employs a professionally-trained public administrator, the  [City Manager](https://kirkland.prelive.opencities.com/Departments/City-Managers-Office/About-the-City-Managers-Office/Meet-the-City-Manager) , to carry out the policies it develops.
+ __Read more about the [2023-2024 Work Program and the Council's Goals](https://www.kirklandwa.gov/Government/City-Council/City-Work-Program). __ 
 
-In a “council-manager” form of government, the Mayor’s responsibilities are primarily to preside at council meetings, and act as head of the city for ceremonial purposes and for purposes of military law. The Mayor votes as a Councilmember and does not have any veto power. (RCW 35.18.190; RCW 35A.13.030 Optional Municipal Code cities.)
+  **  (show below) 
 
-Among many of its duties, the City Council adopts a  [Biennial Budget](https://www.kirklandwa.gov/Government/Departments/Finance-and-Administration/Budget-Information) , approves the  [Six Year Capital Improvement Program](https://www.kirklandwa.gov/Government/Departments/Public-Works-Department/Construction-Projects)  [,](https://www.kirklandwa.gov/depart/Public_Works/Construction_Projects/Capital_Improvements.htm)  and adopts  [ordinances and resolutions](https://www.kirklandwa.gov/Government/Departments/Finance-and-Administration/Resolutions-and-Ordinances). The City Council conducts interviews of interested and eligible applicants and appoints them as members on several  [advisory boards and commissions](https://kirkland.prelive.opencities.com/Government/Boards-and-Commissions) 
+##  __Form of Government__ 
 
-The City Council meets the first and third Tuesday of each month with a Study Session followed by a Regular Meeting. Council  [meetings are broadcast live and on-demand](https://www.kirklandwa.gov/Government/City-Council/Council-Meeting-Minutes-and-Agendas/Watch-City-Council-Meetings)  from the City’s webpage. You can subscribe to receive City Council meeting agendas via email by  [visiting the "E-Bulletin" webpage](https://kirkland.prelive.opencities.com/Government/Departments/E-Bulletins).
+ (show below) 
 
-  [**(show below)## Code of Ethics and Conduct(show below)]()  
+ __Kirkland operates under the “council-manager” form of government which means all legislative and policy-making powers are vested in the City Council. Policy-making often takes the form of passing  [ordinances or resolutions](https://www.kirklandwa.gov/Government/Departments/Finance-and-Administration/Resolutions-and-Ordinances). The Council employs a professionally-trained public administrator, the  [City Manager](https://kirkland.prelive.opencities.com/Departments/City-Managers-Office/About-the-City-Managers-Office/Meet-the-City-Manager) , to carry out the policies it develops.__ 
 
-In February 2012, the City Council approved  [Ordinance 4348](https://www.kirklandwa.gov/files/sharedassets/public//finance-and-administration/city-clerks-office/ordinance-o-4348.pdf) which established a Code of Ethics for elected and appointed officials of the City of Kirkland.
+ __In a “council-manager” form of government, the Mayor’s responsibilities are primarily to preside at council meetings, and act as head of the city for ceremonial purposes and for purposes of military law. The Mayor votes as a Councilmember and does not have any veto power. (RCW 35.18.190; RCW 35A.13.030 Optional Municipal Code cities.)__ 
 
- __Related Links:__ 
+ __Among many of its duties, the City Council adopts a  [Biennial Budget](https://www.kirklandwa.gov/Government/Departments/Finance-and-Administration/Budget-Information) , approves the  [Six Year Capital Improvement Program](https://www.kirklandwa.gov/Government/Departments/Public-Works-Department/Construction-Projects)  [,](https://www.kirklandwa.gov/depart/Public_Works/Construction_Projects/Capital_Improvements.htm)  and adopts  [ordinances and resolutions](https://www.kirklandwa.gov/Government/Departments/Finance-and-Administration/Resolutions-and-Ordinances). The City Council conducts interviews of interested and eligible applicants and appoints them as members on several  [advisory boards and commissions](https://kirkland.prelive.opencities.com/Government/Boards-and-Commissions)__ 
+
+ __The City Council meets the first and third Tuesday of each month with a Study Session followed by a Regular Meeting. Council  [meetings are broadcast live and on-demand](https://www.kirklandwa.gov/Government/City-Council/Council-Meeting-Minutes-and-Agendas/Watch-City-Council-Meetings)  from the City’s webpage. You can subscribe to receive City Council meeting agendas via email by  [visiting the "E-Bulletin" webpage](https://kirkland.prelive.opencities.com/Government/Departments/E-Bulletins).__ 
+
+  **  (show below) 
+
+##  __Code of Ethics and Conduct__ 
+
+ (show below) 
+
+ __In February 2012, the City Council approved  [**Ordinance 4348(, 0B)](https://www.kirklandwa.gov/files/sharedassets/public//finance-and-administration/city-clerks-office/ordinance-o-4348.pdf) which established a Code of Ethics for elected and appointed officials of the City of Kirkland.__ 
+
+ __ __Related Links:____ 
 
  [**Code-of-Ethics(PDF, 730KB)](https://www.kirklandwa.gov/files/sharedassets/public/v/1/boards-and-commissions/code-of-ethics.pdf) 
 
  [**Code-of-Conduct(PDF, 64KB)](https://www.kirklandwa.gov/files/sharedassets/public/v/1/boards-and-commissions/code-of-conduct.pdf) 
 
- [Kirkland Municipal Code](http://www.codepublishing.com/wa/kirkland/) ,  [Chapter 3.14, Code of Ethics](https://www.codepublishing.com/WA/Kirkland/html/Kirkland03/Kirkland0314.html) 
+ [Kirkland Municipal Code](https://www.codepublishing.com/wa/kirkland) ,  [Chapter 3.14, Code of Ethics](https://www.codepublishing.com/WA/Kirkland/html/Kirkland03/Kirkland0314.html) 
 
- [State Code of Ethics for Municipal Officers, Chapter 42.23 RCW](http://apps.leg.wa.gov/RCW/default.aspx?cite=42.23) 
+ [State Code of Ethics for Municipal Officers, Chapter 42.23 RCW](https://apps.leg.wa.gov/RCW/default.aspx?cite=42.23) 
 
-  [**(show below)## Eligibility and Campaign Contribution(show below)]()  
+  **  (show below) 
+
+## Eligibility and Campaign Contribution
+
+ (show below) 
 
  __City Council Eligibility Requirements__ To be eligible to file for candidacy for the Kirkland City Council, you must be a registered voter at the time of filing (with  [King County Elections](https://www.kingcounty.gov/depts/elections.aspx) ) and have lived in Kirkland city limits for at least one year prior to the election.
 
@@ -408,7 +454,7 @@ In February 2012, the City Council approved  [Ordinance 4348](https://www.kirkla
 
 The Kirkland City Council approved  [Ordinance No. 4190](https://kirkland.prelive.opencities.com/files/sharedassets/public/kirkland-city-council/kirkland-municipal-code-3.12.pdf)  which sets dollar limits on  the size of contributions a Kirkland City Council candidate may receive during an election cycle.  The Ordinance is codified as Kirkland Municipal Code Chapter 3.12 and relies largely on the relevant definitions found in state law and on the interpretations of these definitions provided by rule or order of the Washington State Public Disclosure Commission.
 
-Effective June 1, 2010, state campaign contribution limits now apply to City Council candidates. For information, visit the  [PDC website](https://www.pdc.wa.gov/)  or call toll free 1-877-601-2828.
+Effective June 1, 2010, state campaign contribution limits now apply to City Council candidates. For information, visit the  [PDC website](https://www.pdc.wa.gov)  or call toll free 1-877-601-2828.
 
 ***
 
@@ -434,12 +480,16 @@ Yes.  There are exceptions to the contributions dollar limit for: contributions 
 
  __ Related Links__ 
 
- *  [Washington State Public Disclosure Commission](http://www.pdc.wa.gov/) 
- *  [King County Elections](http://www.kingcounty.gov/elections.aspx) 
- *  [Revised Code of Washington](http://apps.leg.wa.gov/RCW/) 
-  [**(show below)## Serving on the City Council(show below)]()  
+ *  [Washington State Public Disclosure Commission](https://www.pdc.wa.gov) 
+ *  [King County Elections](https://www.kingcounty.gov/elections.aspx) 
+ *  [Revised Code of Washington](https://apps.leg.wa.gov/RCW) 
+  **  (show below) 
 
- ![Serving-on-City-Council-image.jpg](images/3e8624280fc52b7530e6609a8cce771659b367195b79b0d8da4b6ab954c6a4db.jpg) 
+## Serving on the City Council
+
+ (show below) 
+
+ ![Serving-on-City-Council-image.jpg](https://www.kirklandwa.gov/files/sharedassets/public/v/1/hr/kirkland-city-council/city-council-images/serving-on-city-council-image.jpg?w=400&h=533) 
 
  Four City Council seats will be up for election in 2025 (positions 1, 3, 5, & 7 for four-year terms ending 12/31/2029).    For all elections related information, including filing period methods and dates, please visit  [King County Elections webpage](https://www.kingcounty.gov/depts/elections/for-candidates.aspx). 
 
@@ -453,17 +503,21 @@ Individuals interested in serving on the City Council may find the following inf
  * Understand the  [salaries and benefits for Council members](https://kirkland.prelive.opencities.com/files/sharedassets/public/kirkland-city-council/mayor-and-councilmember-handbook.pdf) 
  * Talk with any former or current Council members to ask questions about their experience serving on the City Council. Please note that written communications with City Council members related to City business (including application/appointment processes) on any platform or media are public records and subject to disclosure upon request under the Washington State Public Records Act, Chapter 42.56 RCW.
  * Read information related to the  [City of Kirkland campaign sign regulations](https://kirkland.prelive.opencities.com/files/sharedassets/public/kirkland-city-council/kirkland-municipal-code-3.12.pdf). 
-  [**(show below)## Salary Commission(show below)]()  
+  **  (show below) 
+
+## Salary Commission
+
+ (show below) 
 
 The [Salary Commission](https://kirkland.prelive.opencities.com/Government/Departments/Finance-and-Administration/Salary-Commission)  is made up of three community members who are appointed for staggered terms by the Mayor with the approval of the City Council.
 
 ## Stay Updated
 
- [Watch Council Live](http://kirkland.granicus.com/player/camera/7?publish_id=1308&redirect=true) 
+ [Watch Council Live](https://kirkland.granicus.com/player/camera/7?publish_id=1308&redirect=true) 
 
  *  (During council sessions)* 
 
- [**City Council Agenda Calendar(PDF, 251KB)](https://www.kirklandwa.gov/files/sharedassets/public/v/97/city-council/agenda-calendar/ccsched.pdf) 
+ [**City Council Agenda Calendar(PDF, 253KB)](https://www.kirklandwa.gov/files/sharedassets/public/v/104/city-council/agenda-calendar/ccsched.pdf) 
 
  *This calendar is subject to frequent change. It does not constitute legal notice. * 
 
@@ -483,11 +537,11 @@ The [Salary Commission](https://kirkland.prelive.opencities.com/Government/Depar
 
   __For assistance with Council scheduling__  
 
-Amy Bolen, Executive Assistant
+Abby Harrod, Interim Executive Assistant
 
- [425-587-3007]() 
+425-587-3016
 
- [abolen@kirklandwa.gov](mailto:abolen@kirklandwa.gov) 
+ [aharrod@kirklandwa.gov](mailto:aharrod@kirklandwa.gov) 
 
  __ __ 
 
@@ -495,7 +549,7 @@ Amy Bolen, Executive Assistant
 
 City Clerk's Office
 
- [425-587-3190]() 
+425-587-3190
 
  [cityclerk@kirklandwa.gov](mailto:cityclerk@kirklandwa.gov) 
 
@@ -515,11 +569,11 @@ City Clerk's Office
 
 ## Legislation
 
- [King County District 1](http://www.kingcounty.gov/Dembowski.aspx) 
+ [King County District 1](https://www.kingcounty.gov/Dembowski.aspx) 
 
- [King County District 6](http://www.kingcounty.gov/Hague.aspx)  [1st, 45th & 48th State Legislative Districts](http://leg.wa.gov/) 
+ [King County District 6](https://www.kingcounty.gov/Hague.aspx)  [1st, 45th & 48th State Legislative Districts](https://leg.wa.gov) 
 
- [1st Congressional District](http://www.house.gov/)  
+ [1st Congressional District](https://www.house.gov)  
 
 ## Proclamations & Commendations
 
@@ -535,7 +589,7 @@ City Clerk's Office
  *  [**Facebook](https://www.facebook.com/sharer/sharer.php?u=https://www.kirklandwa.gov/Government/City-Council) 
  *  [**X](https://twitter.com/share?url=https://www.kirklandwa.gov/Government/City-Council) 
  *  [**Email](mailto:?Body=https%3a%2f%2fwww.kirklandwa.gov%2fGovernment%2fCity-Council) 
- *  [**Print](https://www.kirklandwa.gov/Government/City-Council/) 
+ *  [**Print](https://www.kirklandwa.gov/Government/City-Council) 
   [**Back to top](https://www.kirklandwa.gov/Government/City-Council/)  
 
 ### Contact Us
@@ -546,19 +600,19 @@ City Clerk's Office
 
 Kirkland, Washington 98033
 
- [425-587-3000]() 
+425-587-3000
 
  __POLICE DEPARTMENT__ 11750 NE 118th Street
 
 Kirkland, Washington 98034
 
-  [425-587-3400]()  
+ 425-587-3400 
 
  __MUNICIPAL COURT__ 11740 NE 118th Street
 
 Kirkland, Washington 98034
 
- [425-587-3160]() 
+425-587-3160
 
 TTY Relay: 711
 
@@ -571,7 +625,7 @@ Report an issue to the City through [Our Kirkland](https://www.kirklandwa.gov/Go
  *  [**Facebook](https://www.facebook.com/kirklandwa.gov) 
  *  [**Instagram](https://www.instagram.com/kirklandgov/?hl=en) 
  *  [**X](https://x.com/Kirkland) 
- *  [**YouTube](http://www.youtube.com/user/KirklandTelevision) 
+ *  [**YouTube](https://www.youtube.com/user/KirklandTelevision) 
  *  [**Kirkland Video](https://www.kirklandwa.gov/Government/Departments/Information-Technology/Kirkland-Television/On-Demand-Videos) 
 
 ### Hours
@@ -582,7 +636,7 @@ City Hall is closed on Washington State holidays.
 
  
 
-  [Website Disclaimer](https://www.kirklandwa.gov/Site-Footer/Website-Disclaimer)  | [Privacy & Security](https://www.kirklandwa.gov/Site-Footer/Site-Privacy-and-Security-Notice)  | [Translation Disclaimer](https://www.kirklandwa.gov/Site-Footer/Translation-Disclaimer)  | [Kirkland ADA Information](https://www.kirklandwa.gov/Site-Footer/Americans-with-Disabilities-Act-ADA-Notice)  | [Linking Policy](https://www.kirklandwa.gov/Site-Footer/Linking-Policy)  | [Title VI: Non-Discrimination](https://www.kirklandwa.gov/Site-Footer/Title-VI-Non-Discrimination)  © 2025 City of Kirkland |  Powered by [Granicus](https://granicus.com/solution/govaccess/opencities/)  Houghton Beach Park Swimming Area Closed The Houghton Beach Park swimming area is closed for at least one week due to elevated bacteria levels. People and pets should not swim, drink lake water, or engage in other water activities at Houghton Beach Park. The rest of the park is open. For more information visit King County's Lake Swimming Beach Program website. 
+  [Website Disclaimer](https://www.kirklandwa.gov/Site-Footer/Website-Disclaimer)  | [Privacy & Security](https://www.kirklandwa.gov/Site-Footer/Site-Privacy-and-Security-Notice)  | [Translation Disclaimer](https://www.kirklandwa.gov/Site-Footer/Translation-Disclaimer)  | [Kirkland ADA Information](https://www.kirklandwa.gov/Site-Footer/Americans-with-Disabilities-Act-ADA-Notice)  | [Linking Policy](https://www.kirklandwa.gov/Site-Footer/Linking-Policy)  | [Title VI: Non-Discrimination](https://www.kirklandwa.gov/Site-Footer/Title-VI-Non-Discrimination)  © 2025 City of Kirkland |  Powered by [Granicus](https://granicus.com/solution/govaccess/opencities)  Houghton Beach Park Swimming Area Closed The Houghton Beach Park swimming area is closed for at least one week due to elevated bacteria levels. People and pets should not swim, drink lake water, or engage in other water activities at Houghton Beach Park. The rest of the park is open. For more information visit King County's Lake Swimming Beach Program website. 
 
  [King County Lake Swimming Beach Data Program](https://green2.kingcounty.gov/swimbeach/default.aspx) 
 

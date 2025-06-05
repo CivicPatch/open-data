@@ -1,4 +1,4 @@
-  ![Mark Solomon - District 2]()   ![Mark Solomon - District 2]()   ![Mark Solomon - District 2]()  This is an official government website. Here's how you know  __Official websites use.gov__ 
+ This is an official government website. Here's how you know  __Official websites use.gov__ 
 
 Website addresses ending in.gov belong to official government organizations in the United States.  __Secure.gov websites use HTTPS__ 
 
@@ -6,7 +6,7 @@ A lock () or https:// means you've safely connected to the.gov website. Only sha
 
 Seattle
 
-  ![Google Translate logo]()  English 
+ English 
 
  * English
  * Español
@@ -515,13 +515,7 @@ Cancel
        *  [Select Committee on the Families, Education, Preschool, and Promise (FEPP) Levy](https://seattle.gov/council/committees/fepp-levy) 
        *  [Select Committee on Federal Administration and Policy Changes](https://seattle.gov/council/committees/select-committee-on-federal-administration-and-policy-changes) 
        *  [Select Committee on the Comprehensive Plan](https://seattle.gov/council/committees/select-committee-on-the-comprehensive-plan) 
-       *  [Select Budget Committee](https://seattle.gov/council/committees/select-budget-committee) 
-         *  [Mayor's 2023-2024 Proposed Budget](https://www.seattle.gov/city-budget-office/budget-archives/2023-2024-proposed-budget) 
-         *  [Mayor's 2023-2028 Proposed Capital Improvement Program](https://www.seattle.gov/city-budget-office/capital-improvement-program-archives/2023-2028-proposed-cip) 
-         *  [Budget Glossary of Terms](https://seattle.gov/council/committees/select-budget-committee/glossary-of-terms) 
        *  [Budget](https://seattle.gov/x11967.xml) 
-       *  [Select Committee on Citywide Mandatory Housing Affordability](https://seattle.gov/council/committees/citywidemha) 
-         *  [Citywide MHA Amendments](https://seattle.gov/council/committees/citywidemha/citywide-mha-amendments) 
        *  [Finance, Native Communities & Tribal Governments](https://seattle.gov/council/committees/finance-native-communities-and-tribal-governments) 
        *  [Governance, Accountability & Economic Development](https://seattle.gov/council/committees/governance-accountability-and-economic-development) 
        *  [Housing & Human Services](https://seattle.gov/council/committees/housing-and-human-services) 
@@ -531,9 +525,7 @@ Cancel
        *  [Public Safety](https://seattle.gov/council/committees/public-safety) 
        *  [Sustainability, City Light, Arts & Culture](https://seattle.gov/council/committees/sustainability-city-light-arts-and-culture) 
        *  [Transportation](https://seattle.gov/council/committees/transportation) 
-       *  [Select Committee on the 2024 Transportation Levy](https://seattle.gov/council/committees/select-committee-on-the-2024-transportation-levy) 
        *  [Select Labor Committee for 2024-25](https://seattle.gov/council/committees/select-labor-committee-for-2024-25) 
-       *  [2024 Select Budget Committee](https://seattle.gov/council/committees/2024-select-budget-committee) 
        *  [2025 Select Budget Committee](https://seattle.gov/council/committees/2025-select-budget-committee) 
      *  [Agenda Sign Up](https://seattle.gov/council/committees/agenda-sign-up) 
      *  [Public Comment](https://seattle.gov/council/committees/public-comment) 
@@ -589,7 +581,88 @@ Seattle, WA 98104
 
 PO Box 34025
 
-Seattle, WA 98124-4025  [See All Members](https://seattle.gov/council/meet-the-council)  
+Seattle, WA 98124-4025  [See All Members](https://seattle.gov/council/meet-the-council) 
+
+ *   [Newsletter Signup](https://seattle.gov/council/meet-the-council/newsletter-signup)  
+ *   [Find Your District and Councilmembers](https://seattle.gov/council/meet-the-council/find-your-district-and-councilmembers)  
+ *   [Visiting City Hall](https://seattle.gov/council/meet-the-council/visiting-city-hall)  
+ *   [Visitor Sign In Sheets](https://seattle.gov/council/meet-the-council/visitor-sign-in-sheets)  
+ *   [Rob Saka](https://seattle.gov/council/saka)  Toggle children of Rob Saka 
+   *   [About Rob](https://seattle.gov/council/meet-the-council/rob-saka/about-rob)  
+   *   [Staff](https://seattle.gov/council/meet-the-council/rob-saka/staff)  
+   *   [Committees & Calendar](https://seattle.gov/council/meet-the-council/rob-saka/committees-and-calendar)  
+   *   [Request a Meeting](https://forms.office.com/Pages/ResponsePage.aspx?id=RR7meOtrCUCPmTWdi1T0G4F4Xp8Qwp1Jlw6kY-dCCslUOVM0MEExWTNVT0dJQkU5TExHS0FMNjlHTi4u)  
+   *   [Newsletter Archives](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=026c7aa0f5)  
+   *   [Newsletter Sign Up](https://seattle.us12.list-manage.com/subscribe?u=11a79978ca7225050bfabf7ad&id=026c7aa0f5)  
+   *   [Rob's Blog](https://saka.seattle.gov)  
+ *   [Mark Solomon](https://seattle.gov/council/solomon)  Toggle children of Mark Solomon 
+   *   [Staff](https://seattle.gov/council/meet-the-council/mark-solomon/staff)  
+   *   [Committees & Calendar](https://seattle.gov/council/meet-the-council/mark-solomon/committees-and-calendar)  
+   *   [Newsletter Archive](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=e205296124)  
+   *   [Newsletter Sign Up](https://seattle.us12.list-manage.com/subscribe?u=11a79978ca7225050bfabf7ad&id=e205296124)  
+   *   [Mark's Blog](https://council.seattle.gov/solomon)  
+   *   [About Mark](https://seattle.gov/council/meet-the-council/mark-solomon/about-mark)  
+ *   [Joy Hollingsworth](https://seattle.gov/council/hollingsworth)  Toggle children of Joy Hollingsworth 
+   *   [About Joy](https://seattle.gov/council/meet-the-council/joy-hollingsworth/about-joy)  
+   *   [Staff](https://seattle.gov/council/meet-the-council/joy-hollingsworth/staff)  
+   *   [Committees & Calendar](https://seattle.gov/council/meet-the-council/joy-hollingsworth/committees-and-calendar)  
+   *   [Newsletter Archive](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=95e60b79b0)  
+   *   [Newsletter Sign Up](https://seattle.us12.list-manage.com/subscribe?u=11a79978ca7225050bfabf7ad&id=95e60b79b0)  
+   *   [Joy's Blog](https://hollingsworth.seattle.gov)  
+ *   [Maritza Rivera](https://seattle.gov/council/rivera)  Toggle children of Maritza Rivera 
+   *   [About Maritza](https://seattle.gov/council/meet-the-council/maritza-rivera/about-maritza)  
+   *   [Staff](https://seattle.gov/council/meet-the-council/maritza-rivera/staff)  
+   *   [Committees & Calendar](https://seattle.gov/council/meet-the-council/maritza-rivera/committees-and-calendar)  
+   *   [News Releases](https://seattle.gov/council/meet-the-council/maritza-rivera/news-releases)  
+   *   [Newsletter Archive](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=307be6bfce)  
+   *   [Newsletter Sign Up](https://seattle.us12.list-manage.com/subscribe?u=11a79978ca7225050bfabf7ad&id=307be6bfce)  
+   *   [Maritza's Blog](https://rivera.seattle.gov)  
+ *   [Cathy Moore](https://seattle.gov/council/moore)  Toggle children of Cathy Moore 
+   *   [About Cathy](https://seattle.gov/council/meet-the-council/cathy-moore/about-cathy)  
+   *   [Staff](https://seattle.gov/council/meet-the-council/cathy-moore/staff)  
+   *   [Committees & Calendar](https://seattle.gov/council/meet-the-council/cathy-moore/committees-and-calendar)  
+   *   [Request a Meeting](https://outlook.office365.com/owa/calendar/CouncilmemberCathyMooreDistrict5@seattlegov.onmicrosoft.com/bookings)  
+   *   [Newsletter Archive](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=75c0562362)  
+   *   [Newsletter Sign Up](https://seattle.us12.list-manage.com/subscribe?u=11a79978ca7225050bfabf7ad&id=75c0562362)  
+   *   [Cathy's Blog](https://moore.seattle.gov)  
+ *   [Dan Strauss](https://seattle.gov/council/strauss)  Toggle children of Dan Strauss 
+   *   [About Dan](https://seattle.gov/council/meet-the-council/dan-strauss/about-dan)  
+   *   [Staff](https://seattle.gov/council/meet-the-council/dan-strauss/staff)  
+   *   [Committees & Calendar](https://seattle.gov/council/meet-the-council/dan-strauss/committees-and-calendar)  
+   *   [Request a Meeting](https://outlook.office365.com/book/OfficeofCouncilmemberDanStraussOfficeHours@seattle.gov)  
+   *   [District 6 Town Halls](https://seattle.gov/council/meet-the-council/dan-strauss/district-6-town-halls)  
+   *   [Newsletter Archive](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=d57b26f739)  
+   *   [Newsletter Sign Up](https://seattle.us12.list-manage.com/subscribe?u=11a79978ca7225050bfabf7ad&id=d57b26f739)  
+   *   [Video Updates](https://seattle.gov/council/meet-the-council/dan-strauss/video-updates)  
+   *   [Dan's Blog](https://strauss.seattle.gov)  
+ *   [Robert Kettle](https://seattle.gov/council/kettle)  Toggle children of Robert Kettle 
+   *   [About Robert](https://seattle.gov/council/meet-the-council/robert-kettle/about-robert)  
+   *   [Staff](https://seattle.gov/council/meet-the-council/robert-kettle/staff)  
+   *   [Committees & Calendar](https://seattle.gov/council/meet-the-council/robert-kettle/committees-and-calendar)  
+   *   [Newsletter Archive](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=689952e8cd)  
+   *   [Newsletter Sign Up](https://seattle.us12.list-manage.com/subscribe?u=11a79978ca7225050bfabf7ad&id=689952e8cd)  
+   *   [Request a Meeting](https://outlook.office365.com/book/CMKettleTeamMeetings@seattlegov.onmicrosoft.com/s/_G0Y_al2iEi-8DdMN9h-yg2)  
+   *   [Robert's Blog](https://kettle.seattle.gov)  
+   *   [Good Governance Pledge](https://seattle.gov/council/meet-the-council/robert-kettle/good-governance-pledge)  
+ *   [Alexis Mercedes Rinck](https://seattle.gov/council/rinck)  Toggle children of Alexis Mercedes Rinck 
+   *   [About Alexis](https://seattle.gov/council/meet-the-council/alexis-mercedes-rinck/about-alexis)  
+   *   [Staff](https://seattle.gov/council/meet-the-council/alexis-mercedes-rinck/staff)  
+   *   [Committees & Calendar](https://seattle.gov/council/meet-the-council/alexis-mercedes-rinck/committees-and-calendar)  
+   *   [Newsletter Archive](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=f60af58778)  
+   *   [Newsletter Sign Up](https://eepurl.com/i47iEs)  
+   *   [Alexis' Blog](https://council.seattle.gov/rinck)  
+   *   [Federal Changes and City Protections](https://seattle.gov/council/meet-the-council/alexis-mercedes-rinck/federal-changes-and-city-protections)  
+ *   [Sara Nelson](https://seattle.gov/council/meet-the-council/sara-nelson)  Toggle children of Sara Nelson 
+   *   [About Sara](https://seattle.gov/council/meet-the-council/sara-nelson/about-sara)  
+   *   [Staff](https://seattle.gov/council/meet-the-council/sara-nelson/staff)  
+   *   [Drug Possession and Public Use Legislation](https://seattle.gov/council/meet-the-council/sara-nelson/drug-possession-and-public-use-legislation)  
+   *   [Seattle Film Commission](https://seattle.gov/council/meet-the-council/sara-nelson/seattle-film-commission)  
+   *   [Helping Small Businesses](https://seattle.gov/council/meet-the-council/sara-nelson/helping-small-businesses)  
+   *   [Committees & Calendar](https://seattle.gov/council/meet-the-council/sara-nelson/committees-and-calendar)  
+   *   [Newsletter Sign Up](https://seattle.us12.list-manage.com/subscribe?u=11a79978ca7225050bfabf7ad&id=974e33336d)  
+   *   [Sara's Newsletters](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=974e33336d)  
+   *   [Sara's Blog](https://nelson.seattle.gov)  
+   *   [News Releases](https://seattle.gov/council/meet-the-council/sara-nelson/news-releases)  
 
 ## Staff
 
@@ -597,7 +670,7 @@ Seattle, WA 98124-4025  [See All Members](https://seattle.gov/council/meet-the-c
 
 ### Mark Solomon
 
-  [![Sarah Mayes](https://seattle.gov/images/images/Council/Members/Solomon/sarah.mayes.png)### Sarah MayesChief of Staff](https://seattle.gov/council/meet-the-council/mark-solomon/staff)   [![Murphy Bush](https://seattle.gov/images/images/Council/Members/Solomon/murphy-bush-a_165912.png)### Murphy BushDirector of Outreach and Operations](https://seattle.gov/council/meet-the-council/mark-solomon/staff)   [![Thaddaeus Gregory](https://seattle.gov/images/images/Council/Members/Solomon/thaddaeus-gregory.png)### Thaddaeus GregoryPolicy Director](https://seattle.gov/council/meet-the-council/mark-solomon/staff)   [![Murphy Bush](https://seattle.gov/images/images/Council/Members/Solomon/christine-hendrickson.png)### Christine HendricksonCommunications Director](https://seattle.gov/council/meet-the-council/mark-solomon/staff)   [Staff](https://seattle.gov/council/meet-the-council/mark-solomon/staff)  
+  [![Sarah Mayes](https://seattle.gov/images/images/Council/Members/Solomon/sarah.mayes.png)### Sarah MayesChief of Staff](https://seattle.gov/council/meet-the-council/mark-solomon/staff)   [![Murphy Bush](https://seattle.gov/images/images/Council/Members/Solomon/murphy-bush-a_165912.png)### Murphy BushDirector of External Affairs](https://seattle.gov/council/meet-the-council/mark-solomon/staff)   [![Thaddaeus Gregory](https://seattle.gov/images/images/Council/Members/Solomon/thaddaeus-gregory.png)### Thaddaeus GregoryPolicy Director](https://seattle.gov/council/meet-the-council/mark-solomon/staff)   [![Christine Hendrickson](https://seattle.gov/images/images/Council/Members/Solomon/christine-hendrickson.png)### Christine HendricksonOutreach and Communications Director](https://seattle.gov/council/meet-the-council/mark-solomon/staff)   [Staff](https://seattle.gov/council/meet-the-council/mark-solomon/staff)  
 
 ## Calendar
 
@@ -605,4 +678,4 @@ Seattle, WA 98124-4025  [See All Members](https://seattle.gov/council/meet-the-c
 
 ## Policies
 
-  [About Our Digital Properties](https://seattle.gov/about-our-digital-properties)   [Privacy Policy](https://seattle.gov/tech/data-privacy/privacy-statement)   [Title II: Americans with Disabilities Act](https://seattle.gov/americans-with-disabilities-act)   [Title VI: Civil Rights Act](https://seattle.gov/civilrights/laws-we-enforce/title-vi-civil-rights-act)   [Sitemap](https://www.seattle.gov/sitemap)   ![](https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg)  Original text Rate this translation Your feedback will be used to help improve Google Translate 
+  [About Our Digital Properties](https://seattle.gov/about-our-digital-properties)   [Privacy Policy](https://seattle.gov/tech/data-privacy/privacy-statement)   [Title II: Americans with Disabilities Act](https://seattle.gov/americans-with-disabilities-act)   [Title VI: Civil Rights Act](https://seattle.gov/civilrights/laws-we-enforce/title-vi-civil-rights-act)   [Sitemap](https://www.seattle.gov/sitemap)  Original text Rate this translation Your feedback will be used to help improve Google Translate 
