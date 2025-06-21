@@ -1,30 +1,34 @@
-  ![Loading](images/767e662857692fc9c27d3796e82c237f3b568b284afd2bf12c26c204271ba024.gif) 
-
 Loading
 
-  [Skip to Main Content](https://www.mountvernonwa.gov/91/Mayor/#cc3a25e4e6-1a28-459a-a74a-fa4dc2a09462)  
+[Skip to Main Content](https://www.mountvernonwa.gov/91/Mayor/)
 
- [Create a Website Account](https://www.mountvernonwa.gov/MyAccount/ProfileCreate)  - Manage notification subscriptions, save form progress and more.    
+[Firework Information](https://www.mountvernonwa.gov/AlertCenter.aspx) [All Fireworks are Illegal in the City of Mount Vernon Read On...](https://www.mountvernonwa.gov/1117/Firework-Information)
 
- *  [Website Sign In](https://www.mountvernonwa.gov/MyAccount) 
-  [![Search button](images/460e3bd2c7f9f64e03d1d72318530f95e17020e20d7523602edbdded422718db.png)](https://www.mountvernonwa.gov/Search/Results) Search 
+[Create a Website Account](https://www.mountvernonwa.gov/MyAccount/ProfileCreate) - Manage notification subscriptions, save form progress and more.   
 
- 1.  [Your Government](https://www.mountvernonwa.gov/27/Your-Government) 
- 1.  [Departments](https://www.mountvernonwa.gov/8/Departments) 
- 1.  [City Services](https://www.mountvernonwa.gov/31/City-Services) 
- 1.  [Doing Business](https://www.mountvernonwa.gov/35/Doing-Business) 
- 1.  [Our Community](https://www.mountvernonwa.gov/9/Our-Community) 
-  [![City of Mount Vernon](images/4a26b0b3c068e5f94b5b6d7e04bc212c44970503b1197fbd070f0f1317373571.png)](https://www.mountvernonwa.gov)   ![](images/d954323d44a96bddd26b7182e3109facb269ac8e0f9327915489edbf34ed00f2.jpg)  
+- [Website Sign In](https://www.mountvernonwa.gov/MyAccount)
 
- 1.  [Home](https://www.mountvernonwa.gov) 
- 1.  [Your Government](https://www.mountvernonwa.gov/27/Your-Government) 
- 1. Mayor
+![Search button](https://www.mountvernonwa.gov/ImageRepository/Document?documentID=14224) Search
+
+1. [Your Government](https://www.mountvernonwa.gov/27/Your-Government)
+2. [Departments](https://www.mountvernonwa.gov/8/Departments)
+3. [City Services](https://www.mountvernonwa.gov/31/City-Services)
+4. [Doing Business](https://www.mountvernonwa.gov/35/Doing-Business)
+5. [Our Community](https://www.mountvernonwa.gov/9/Our-Community)
+
+![City of Mount Vernon](https://www.mountvernonwa.gov/ImageRepository/Document?documentID=14205)
+
+![](https://www.mountvernonwa.gov/ImageRepository/Document?documentID=14202)
+
+1. [Home](https://www.mountvernonwa.gov)
+2. [Your Government](https://www.mountvernonwa.gov/27/Your-Government)
+3. Mayor
 
 # Mayor
 
 ## Mayor Peter Donovan
 
-  ![Mayor Donovan](images/f48de2110b06ffa093264f45b196efb8b7ee90d848fcc3e8bfb4170c9059ac2b.jpg)  Mayor Donovan began his first term on January 1, 2024. Prior to becoming mayor, Peter served the residents of Mount Vernon for seven years in the Mayor’s Office. He is committed to ensuring that local city government is efficient, accessible, dignified, and inclusive.
+![Mayor Donovan](https://www.mountvernonwa.gov/ImageRepository/Document?documentId=15577)Mayor Donovan began his first term on January 1, 2024. Prior to becoming mayor, Peter served the residents of Mount Vernon for seven years in the Mayor’s Office. He is committed to ensuring that local city government is efficient, accessible, dignified, and inclusive.
 
 A lifelong resident of Skagit County, Mayor Donovan loves what the city of Mount Vernon has to offer its residents and visitors. He and his wife have enjoyed raising their four children here; and he hopes to put the city on track to be a place where his children can afford to return, if they choose, to start their own families, afford their first home, and launch their own careers.
 
@@ -34,86 +38,104 @@ The City of Mount Vernon is a code city and a Mayor/Council form of government. 
 
 Mayor Donovan holds a Bachelor’s Degree in Communications/Public Relations from Washington State University; and a Master’s Degree in Business Administration.
 
-###  [Contact Us](https://www.mountvernonwa.gov/Directory.aspx) 
+### [Contact Us](https://www.mountvernonwa.gov/Directory.aspx)
 
- 1.    
+1. #### Peter Donovan
+   
+   Mayor
+   
+   [Email](mailto:mvmayor@mountvernonwa.gov)
+   
+   Phone: (360) 336-6211
+2. **Physical Address**  
+   910 Cleveland Avenue  
+   City Hall, 2nd Floor  
+   Mount Vernon, WA 98273
+   
+   ### Office Hours
+   
+   Monday - Friday  
+   8:30 a.m. - 4:30 p.m.
+   
+   [Directory](https://www.mountvernonwa.gov/directory.aspx?did=6)
 
-#### Peter Donovan   
+### [FAQs](https://www.mountvernonwa.gov/Faq.aspx?TID=27%2C26)
 
- Mayor  [Email](mailto:mvmayor@mountvernonwa.gov)  Phone: [(360) 336-6211]()     
+1. [Who do I call regarding a trash pickup or recycling issue?](https://www.mountvernonwa.gov/Faq.aspx?QID=118)
+2. [How do I register to vote?](https://www.mountvernonwa.gov/Faq.aspx?QID=78)
 
- 1.   __Physical Address__    
+[View All FAQs](https://www.mountvernonwa.gov/Faq.aspx?TID=27%2C26)
 
- 910 Cleveland Avenue    
+/FAQ.aspx
 
- City Hall, 2nd Floor    
+1. [Mission &amp; Vision](https://www.mountvernonwa.gov/681/Mission-Vision)
+2. [Mayor's Coffee Hour](https://www.mountvernonwa.gov/94/Mayors-Coffee-Hour)
+3. [Newsletter](https://www.mountvernonwa.gov/95/Newsletter)
+4. [Organizational Structure](https://www.mountvernonwa.gov/96/Organizational-Structure)
+5. [Press Releases](https://www.mountvernonwa.gov/Archive.aspx?AMID=51)
+6. [Mount Vernon Library Commons Project](https://www.mountvernonwa.gov/933/Mount-Vernon-Library-Commons-Project)
+7. [Mount Vernon Affordable Housing Grant](https://www.mountvernonwa.gov/1309/Mount-Vernon-Affordable-Housing-Grant)
 
- Mount Vernon , WA 98273    
+[Agendas &amp; Minutes](https://www.mountvernonwa.gov/agendacenter)
 
-### Office Hours   
+[Employment](https://www.governmentjobs.com/careers/mtvernonwa)
 
-Monday - Friday   
+[Video Center](https://www.youtube.com/channel/UCUob_hcQUmd4S93YkletdrA)
 
-8:30 a.m. - 4:30 p.m.   
+[Online Permitting](https://ci-mountvernon-wa.smartgovcommunity.com/Public/Home)
 
-  [Directory](https://www.mountvernonwa.gov/directory.aspx?did=6)     
+[Public Library](https://www.mountvernonwa.gov/175/Library)
 
-###  [FAQs](https://www.mountvernonwa.gov/Faq.aspx?TID=27,26) 
-
- 1.  [Who do I call regarding a trash pickup or recycling issue?](https://www.mountvernonwa.gov/Faq.aspx?QID=118) 
- 1.  [How do I register to vote?](https://www.mountvernonwa.gov/Faq.aspx?QID=78) 
-  [View All FAQs](https://www.mountvernonwa.gov/Faq.aspx?TID=27,26)  /FAQ.aspx 
-
- 1.   [Mission & Vision](https://www.mountvernonwa.gov/681/Mission-Vision)  
- 1.   [Mayor's Coffee Hour](https://www.mountvernonwa.gov/94/Mayors-Coffee-Hour)  
- 1.   [Newsletter](https://www.mountvernonwa.gov/95/Newsletter)  
- 1.   [Organizational Structure](https://www.mountvernonwa.gov/96/Organizational-Structure)  
- 1.   [Press Releases](https://www.mountvernonwa.gov/Archive.aspx?AMID=51)  
- 1.   [Mount Vernon Library Commons Project](https://www.mountvernonwa.gov/933/Mount-Vernon-Library-Commons-Project)  
- 1.   [Mount Vernon Affordable Housing Grant](https://www.mountvernonwa.gov/1309/Mount-Vernon-Affordable-Housing-Grant)  
-  [Agendas & Minutes](https://www.mountvernonwa.gov/agendacenter)   [Employment](http://www.governmentjobs.com/careers/mtvernonwa)   [Video Center](https://www.youtube.com/channel/UCUob_hcQUmd4S93YkletdrA)   [Online Permitting](https://ci-mountvernon-wa.smartgovcommunity.com/Public/Home)   [Public Library](https://www.mountvernonwa.gov/175/Library)   [Utility Billing](https://ipn.paymentus.com/cp/cmv)  
+[Utility Billing](https://ipn.paymentus.com/cp/cmv)
 
 ### Contact Us
 
- 1.    
-
-City of Mount Vernon   
-
-910 Cleveland Avenue   
-
-Mount Vernon, WA 98273   
-
-Phone:  [360-336-6211]()    
-
-Fax:  [360-336-0623]()    
-
- [Email Us](mailto:mvmayor@mountvernonwa.gov)    
-
- [More contact info >](https://www.mountvernonwa.gov/Directory.aspx)    
+1. City of Mount Vernon  
+   910 Cleveland Avenue  
+   Mount Vernon, WA 98273
+   
+   Phone: 360-336-6211  
+   Fax: 360-336-0623  
+   [Email Us](mailto:mvmayor@mountvernonwa.gov)  
+   [More contact info &gt;](https://www.mountvernonwa.gov/Directory.aspx)
 
 ### Follow
 
-  [Twitter](https://twitter.com/mountvernonwa)   [Facebook](https://www.facebook.com/Mt-Vernon-WA-154457071245372/)   [Instagram](https://www.mountvernonwa.gov/facebook)   [YouTube](https://www.youtube.com/channel/UCUob_hcQUmd4S93YkletdrA)  
+[Twitter](https://twitter.com/mountvernonwa)
 
-###  [Quick Links](https://www.mountvernonwa.gov/QuickLinks.aspx?CID=11) 
+[Facebook](https://www.facebook.com/Mt-Vernon-WA-154457071245372)
 
- 1.  [Mount Vernon Chamber of Commerce](http://www.mountvernonchamber.com/)  
- 1.  [Economic Development Alliance of Skagit County (EDASC)](http://www.skagit.org/)  
- 1.  [Skagit County Tourism](http://www.visitskagitvalley.com/)  
- 1.  [Mount Vernon Downtown Association](http://www.mountvernondowntown.org/)  
- 1.  [Port of Skagit County](http://www.portofskagit.com/)  
- 1.  [Skagit County](http://www.skagitcounty.net/Departments/Home)  
- 1.  [Notify Me](https://www.mountvernonwa.gov/list.aspx)  
- /QuickLinks.aspx 
+[Instagram](https://www.mountvernonwa.gov/facebook)
 
-###  [Site Links](https://www.mountvernonwa.gov/QuickLinks.aspx?CID=105) 
+[YouTube](https://www.youtube.com/channel/UCUob_hcQUmd4S93YkletdrA)
 
- 1.  [ADA Notice](https://mountvernonwa.gov/936/ADA-Notice)  
- 1.  [Google Translate](https://mountvernonwa-gov.translate.goog/?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=en)  
- 1.  [Site Map](https://www.mountvernonwa.gov/sitemap)  
- 1.  [Contact Us](https://www.mountvernonwa.gov/directory.aspx)  
- 1.  [Accessibility](https://www.mountvernonwa.gov/Accessibility)  
- 1.  [Copyright Notices](https://www.mountvernonwa.gov/site/copyright)  
- /QuickLinks.aspx Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)  Loading Loading Do Not Show Again Close 
+### [Quick Links](https://www.mountvernonwa.gov/QuickLinks.aspx?CID=11)
 
-  []()  []()  
+1. [Mount Vernon Chamber of Commerce](https://www.mountvernonchamber.com)
+2. [Economic Development Alliance of Skagit County (EDASC)](https://www.skagit.org)
+3. [Skagit County Tourism](https://www.visitskagitvalley.com)
+4. [Mount Vernon Downtown Association](https://www.mountvernondowntown.org)
+5. [Port of Skagit County](https://www.portofskagit.com)
+6. [Skagit County](https://www.skagitcounty.net/Departments/Home)
+7. [Notify Me](https://www.mountvernonwa.gov/list.aspx)
+
+/QuickLinks.aspx
+
+### [Site Links](https://www.mountvernonwa.gov/QuickLinks.aspx?CID=105)
+
+1. [ADA Notice](https://mountvernonwa.gov/936/ADA-Notice)
+2. [Google Translate](https://mountvernonwa-gov.translate.goog/?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=en)
+3. [Site Map](https://www.mountvernonwa.gov/sitemap)
+4. [Contact Us](https://www.mountvernonwa.gov/directory.aspx)
+5. [Accessibility](https://www.mountvernonwa.gov/Accessibility)
+6. [Copyright Notices](https://www.mountvernonwa.gov/site/copyright)
+
+/QuickLinks.aspx
+
+Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)
+
+Loading
+
+Loading
+
+Do Not Show Again Close
