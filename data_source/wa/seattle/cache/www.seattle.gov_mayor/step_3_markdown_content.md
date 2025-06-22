@@ -539,6 +539,8 @@ Receive the latest updates from the Mayor’s Office as they happen – directly
 
 ## A Message from Mayor Harrell
 
+![Mayor Bruce Harrell](https://www.seattle.gov/images/MayorHarrell/Home/headshotwebcrop.jpg "images/MayorHarrell/Home/headshotwebcrop.jpg")
+
 Seattle is a global destination and leader in industry, innovation, and creativity. As your Mayor, I am committed to uniting our diverse communities around shared priorities and meaningful progress on our biggest challenges. Through our focus on a back-to-basics approach like restoring public safety, helping people move indoors, keeping parks open and welcoming, and fixing potholes, we can build a strong foundation and bright future for our city and our families.
 
 We recognize change does not come quickly or easily. But improvement is possible if we act boldly, intentionally – and together. We can change the course of our city if we are willing to work collaboratively, to turn common ground into common cause, to think – and act – big.

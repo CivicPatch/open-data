@@ -1,3 +1,5 @@
+![Councilmember Sara Nelson - Position 9, Citywide](https://seattle.gov/images/images/Council/Members/Nelson/nelson_300x300.jpg)
+
 This is an official government website. Here's how you know
 
 **Official websites use .gov**  
@@ -675,14 +677,14 @@ Seattle, WA 98124-4025
   - [Request a Meeting](https://forms.office.com/Pages/ResponsePage.aspx?id=RR7meOtrCUCPmTWdi1T0G4F4Xp8Qwp1Jlw6kY-dCCslUOVM0MEExWTNVT0dJQkU5TExHS0FMNjlHTi4u "Request a Meeting")
   - [Newsletter Archives](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=026c7aa0f5 "Newsletter Archives")
   - [Newsletter Sign Up](https://seattle.us12.list-manage.com/subscribe?u=11a79978ca7225050bfabf7ad&id=026c7aa0f5 "Newsletter Sign Up")
-  - [Rob's Blog](https://saka.seattle.gov "Rob's Blog")
+  - [Rob's Blog](https://saka.seattle.gov "undefined Blog")
 - [Mark Solomon](https://seattle.gov/council/solomon "Mark Solomon") Toggle children of Mark Solomon
   
   - [Staff](https://seattle.gov/council/meet-the-council/mark-solomon/staff "Councilmember Mark Solomon's Staff")
   - [Committees &amp; Calendar](https://seattle.gov/council/meet-the-council/mark-solomon/committees-and-calendar "Mark's Committees & Calendar")
   - [Newsletter Archive](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=e205296124 "Newsletter Archive")
   - [Newsletter Sign Up](https://seattle.us12.list-manage.com/subscribe?u=11a79978ca7225050bfabf7ad&id=e205296124 "Newsletter Sign Up")
-  - [Mark's Blog](https://council.seattle.gov/solomon "Mark's Blog")
+  - [Mark's Blog](https://council.seattle.gov/solomon "undefined Blog")
   - [About Mark](https://seattle.gov/council/meet-the-council/mark-solomon/about-mark "About Councilmember Mark Solomon")
 - [Joy Hollingsworth](https://seattle.gov/council/hollingsworth "Joy Hollingsworth") Toggle children of Joy Hollingsworth
   
@@ -691,16 +693,16 @@ Seattle, WA 98124-4025
   - [Committees &amp; Calendar](https://seattle.gov/council/meet-the-council/joy-hollingsworth/committees-and-calendar "Joy's Committees & Calendar")
   - [Newsletter Archive](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=95e60b79b0 "Newsletter Archive")
   - [Newsletter Sign Up](https://seattle.us12.list-manage.com/subscribe?u=11a79978ca7225050bfabf7ad&id=95e60b79b0 "Newsletter Sign Up")
-  - [Joy's Blog](https://hollingsworth.seattle.gov "Joy's Blog")
+  - [Joy's Blog](https://hollingsworth.seattle.gov "undefined Blog")
 - [Maritza Rivera](https://seattle.gov/council/rivera "Maritza Rivera") Toggle children of Maritza Rivera
   
   - [About Maritza](https://seattle.gov/council/meet-the-council/maritza-rivera/about-maritza "About Councilmember Maritza Rivera")
   - [Staff](https://seattle.gov/council/meet-the-council/maritza-rivera/staff "Councilmember Maritza Rivera's Staff")
   - [Committees &amp; Calendar](https://seattle.gov/council/meet-the-council/maritza-rivera/committees-and-calendar "Maritza's Committees & Calendar")
-  - [News Releases](https://seattle.gov/council/meet-the-council/maritza-rivera/news-releases "News Releases")
+  - [News Releases](https://seattle.gov/council/meet-the-council/maritza-rivera/news-releases "undefined News Releases")
   - [Newsletter Archive](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=307be6bfce "Newsletter Archive")
   - [Newsletter Sign Up](https://seattle.us12.list-manage.com/subscribe?u=11a79978ca7225050bfabf7ad&id=307be6bfce "Newsletter Sign Up")
-  - [Maritza's Blog](https://rivera.seattle.gov "Maritza's Blog")
+  - [Maritza's Blog](https://rivera.seattle.gov "undefined Blog")
 - [Cathy Moore](https://seattle.gov/council/moore "Cathy Moore") Toggle children of Cathy Moore
   
   - [About Cathy](https://seattle.gov/council/meet-the-council/cathy-moore/about-cathy "About Councilmember Cathy Moore")
@@ -709,7 +711,7 @@ Seattle, WA 98124-4025
   - [Request a Meeting](https://outlook.office365.com/owa/calendar/CouncilmemberCathyMooreDistrict5@seattlegov.onmicrosoft.com/bookings "Request a Meeting")
   - [Newsletter Archive](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=75c0562362 "Newsletter Archive")
   - [Newsletter Sign Up](https://seattle.us12.list-manage.com/subscribe?u=11a79978ca7225050bfabf7ad&id=75c0562362 "Newsletter Sign Up")
-  - [Cathy's Blog](https://moore.seattle.gov "Cathy's Blog")
+  - [Cathy's Blog](https://moore.seattle.gov "undefined Blog")
 - [Dan Strauss](https://seattle.gov/council/strauss "Dan Strauss") Toggle children of Dan Strauss
   
   - [About Dan](https://seattle.gov/council/meet-the-council/dan-strauss/about-dan "About Councilmember Dan Strauss")
@@ -719,7 +721,7 @@ Seattle, WA 98124-4025
   - [Request a Meeting](https://outlook.office365.com/book/OfficeofCouncilmemberDanStraussOfficeHours@seattle.gov "Request a Meeting")
   - [Newsletter Archive](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=d57b26f739 "Newsletter Archive")
   - [Newsletter Sign Up](https://seattle.us12.list-manage.com/subscribe?u=11a79978ca7225050bfabf7ad&id=d57b26f739 "Newsletter Sign Up")
-  - [Dan's Blog](https://strauss.seattle.gov "Dan's Blog")
+  - [Dan's Blog](https://strauss.seattle.gov "undefined Blog")
 - [Robert Kettle](https://seattle.gov/council/kettle "Robert Kettle") Toggle children of Robert Kettle
   
   - [About Robert](https://seattle.gov/council/meet-the-council/robert-kettle/about-robert "About Councilmember Robert Kettle")
@@ -728,7 +730,7 @@ Seattle, WA 98124-4025
   - [Request a Meeting](https://outlook.office365.com/book/CMKettleTeamMeetings@seattlegov.onmicrosoft.com/s/_G0Y_al2iEi-8DdMN9h-yg2 "Request a Meeting")
   - [Newsletter Archive](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=689952e8cd "Newsletter Archive")
   - [Newsletter Sign Up](https://seattle.us12.list-manage.com/subscribe?u=11a79978ca7225050bfabf7ad&id=689952e8cd "Newsletter Sign Up")
-  - [Robert's Blog](https://kettle.seattle.gov "Robert's Blog")
+  - [Robert's Blog](https://kettle.seattle.gov "undefined Blog")
   - [Good Governance Pledge](https://seattle.gov/council/meet-the-council/robert-kettle/good-governance-pledge "Good Governance Pledge")
 - [Alexis Mercedes Rinck](https://seattle.gov/council/rinck "Alexis Mercedes Rinck") Toggle children of Alexis Mercedes Rinck
   
@@ -737,7 +739,7 @@ Seattle, WA 98124-4025
   - [Committees &amp; Calendar](https://seattle.gov/council/meet-the-council/alexis-mercedes-rinck/committees-and-calendar "Alexis' Committees & Calendar")
   - [Newsletter Archive](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=f60af58778 "Newsletter Archive")
   - [Newsletter Sign Up](https://eepurl.com/i47iEs "Newsletter Sign Up")
-  - [Alexis' Blog](https://council.seattle.gov/rinck "Alexis' Blog")
+  - [Alexis' Blog](https://council.seattle.gov/rinck "undefined Blog")
   - [Federal Changes and City Protections](https://seattle.gov/council/meet-the-council/alexis-mercedes-rinck/federal-changes-and-city-protections "Protecting our community from changes at the federal level")
 - [Sara Nelson](https://seattle.gov/council/meet-the-council/sara-nelson "Sara Nelson") Toggle children of Sara Nelson
   
@@ -749,10 +751,12 @@ Seattle, WA 98124-4025
   - [Committees &amp; Calendar](https://seattle.gov/council/meet-the-council/sara-nelson/committees-and-calendar "Sara's Committees & Calendar")
   - [Sara's Newsletters](https://us12.campaign-archive.com/home/?u=11a79978ca7225050bfabf7ad&id=974e33336d "Sara's Newsletters")
   - [Newsletter Sign Up](https://seattle.us12.list-manage.com/subscribe?u=11a79978ca7225050bfabf7ad&id=974e33336d "Newsletter Sign Up")
-  - [Sara's Blog](https://nelson.seattle.gov "Sara's Blog")
-  - [News Releases](https://seattle.gov/council/meet-the-council/sara-nelson/news-releases "News Releases")
+  - [Sara's Blog](https://nelson.seattle.gov "undefined Blog")
+  - [News Releases](https://seattle.gov/council/meet-the-council/sara-nelson/news-releases "undefined News Releases")
 
 ## Staff
+
+![Councilmember Sara Nelson](https://seattle.gov/images//images/Council/Members/Nelson/nelson_300x300.jpg "Councilmember Sara Nelson")
 
 ### Sara Nelson
 
@@ -760,13 +764,13 @@ Councilmember Sara Nelson is a small business owner, former public servant, and 
 
 [About Sara](https://seattle.gov/council/meet-the-council/sara-nelson/about-sara)
 
-[**Jeremy Mohn**  
+[![Jeremy Mohn](https://seattle.gov/images/images/Council/Members/Nelson/jeremy-mohn.jpg) **Jeremy Mohn**  
 Chief of Staff](https://seattle.gov/council/meet-the-council/sara-nelson/staff)
 
-[**Taemin Um**  
+[![Taemin Um](https://seattle.gov/images/images/Council/Members/Nelson/taemin-um.jpg) **Taemin Um**  
 Legislative Assistant](https://seattle.gov/council/meet-the-council/sara-nelson/staff)
 
-[**Erik Nielsen**  
+[![Erik Nielsen portrait](https://seattle.gov/images/images/Council/Members/Nelson/Erik-Nielsen-SN.jpg) **Erik Nielsen**  
 Policy Director](https://seattle.gov/council/meet-the-council/sara-nelson/staff)
 
 [Staff](https://seattle.gov/council/meet-the-council/sara-nelson/staff)

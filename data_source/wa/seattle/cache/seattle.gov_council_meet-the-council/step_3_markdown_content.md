@@ -653,6 +653,8 @@ Cancel
 
 Contact all Councilmembers by emailing [council@seattle.gov](mailto:council@seattle.gov "council@seattle.gov - mailto:council@seattle.gov")
 
+![Councilmember Rob Saka](https://seattle.gov/images/Council/Members/SquareHeadshots/saka_300.jpg)
+
 ## [Rob Saka](https://seattle.gov/council/saka "Rob Saka - x153190.xml")
 
 District 1 // West Seattle, South Park, Georgetown, Pioneer Square
@@ -670,6 +672,8 @@ District 1 // West Seattle, South Park, Georgetown, Pioneer Square
 - [Logan Duling](mailto:logan.duling@seattle.gov)
 
 [Get Rob's Email Updates](https://seattle.gov/council/meet-the-council/newsletter-signup "Get Rob's Email Updates - x100772.xml") [Visit Rob's Website](https://seattle.gov/council/saka "Visit Rob's Website - x153190.xml")
+
+![Councilmember Mark Solomon](https://seattle.gov/images/Council/Members/Solomon/mark-solomon.jpg)
 
 ## [Mark Solomon](https://seattle.gov/council/solomon "Mark Solomon - x162584.xml")
 
@@ -689,6 +693,8 @@ District 2 // Yesler Terrace to Rainier Beach
 
 [Get Mark's Email Updates](https://seattle.gov/council/meet-the-council/newsletter-signup "Get Mark's Email Updates - x100772.xml") [Visit Mark's Website](https://seattle.gov/council/solomon "Visit Mark's Website")
 
+![Councilmember Joy Hollingsworth](https://seattle.gov/images/Council/Members/SquareHeadshots/hollingsworth_300.jpg)
+
 ## [Joy Hollingsworth](https://seattle.gov/council/hollingsworth "Joy Hollingsworth - x153294.xml")
 
 District 3 // Central Seattle
@@ -706,6 +712,8 @@ District 3 // Central Seattle
 
 [Get Joy's Email Updates](https://seattle.gov/council/meet-the-council/newsletter-signup "Get Joy's Email Updates - x100772.xml") [Visit Joy's Website](https://seattle.gov/council/hollingsworth "Visit Joy's Website")
 
+![Councilmember Maritza Rivera](https://seattle.gov/images/Council/Members/SquareHeadshots/rivera_300.jpg)
+
 ## [Maritza Rivera](https://seattle.gov/council/rivera "Maritza Rivera- x153300")
 
 District 4 // Northeast Seattle
@@ -721,6 +729,8 @@ District 4 // Northeast Seattle
 - [Nicole Muñoz-Casalduc](mailto:nicole.munoz-casalduc@seattle.gov)
 
 [Get Maritza's Email Updates](https://seattle.gov/council/meet-the-council/newsletter-signup "Get Maritza's Email Updates") [Visit Maritza's Website](https://seattle.gov/council/rivera "Visit Maritza's Website - x153300.xml")
+
+![Councilmember Cathy Moore](https://seattle.gov/images/Council/Members/SquareHeadshots/moore_300.jpg)
 
 ## [Cathy Moore](https://seattle.gov/council/moore "Cathy Moore - x153306.xml")
 
@@ -739,6 +749,8 @@ District 5 // North Seattle
 - [Henry Pollet](mailto:henry.pollet@seattle.gov)
 
 [Get Cathy's Email Updates](https://seattle.gov/council/meet-the-council/newsletter-signup "Get Cathy's Email Updates - subscribe") [Visit Cathy's Website](https://seattle.gov/council/moore "Visit Cathy's Website - x153306.xml")
+
+![Councilmember Dan Strauss](https://seattle.gov/images/Council/Members/Strauss/Struass-2022-headshot_square.jpg "images/Council/Members/Strauss/Struass-2022-headshot_square.jpg")
 
 ## [Dan Strauss](https://seattle.gov/council/strauss "Dan Strauss - x109975.xml")
 
@@ -759,6 +771,8 @@ District 6 // Northwest Seattle
 
 [Get Dan's Email Updates](https://seattle.gov/council/meet-the-council/newsletter-signup "Get Dan's Email Updates - subscribe") [Visit Dan's Website](https://seattle.gov/council/strauss "Visit Dan's Website - x109975.xml")
 
+![Councilmember Robert Kettle](https://seattle.gov/images/Council/Members/SquareHeadshots/kettle_300.jpg "images/Council/Members/Lewis/Lewis-2022-Headshot_square.jpg")
+
 ## [Robert Kettle](https://seattle.gov/council/kettle "Robert Kettle - x153312.xml")
 
 District 7 // Downtown to Magnolia
@@ -775,6 +789,8 @@ District 7 // Downtown to Magnolia
 - [Brent Lo](mailto:Brent.Lo@seattle.gov)
 
 [Get Robert's Email Updates](https://seattle.gov/council/meet-the-council/newsletter-signup "Get Robert's Email Updates - x100772.xml") [Visit Robert's Website](https://seattle.gov/council/kettle "Visit Robert's Website - x153312.xml")
+
+![Alexis Mercedes Rinck](https://seattle.gov/images/Council/Members/SquareHeadshots/rinck_300.jpg)
 
 ## [Alexis Mercedes Rinck](https://seattle.gov/council/rinck "Alexis Mercedes Rinck - x161351.xml")
 
@@ -793,6 +809,8 @@ Position 8 // Citywide
 - [Kenney Tran](mailto:kenney.tran@seattle.gov)
 
 [Get Alexis' Email Updates](https://seattle.gov/council/meet-the-council/newsletter-signup "Get Alexis' Email Updates - subscribe") [Visit Alexis' Website](https://seattle.gov/council/rinck "Visit Alexis' Website - x161351.xml")
+
+![Councilmember Sara Nelson](https://seattle.gov/images/Council/Members/Nelson/nelson_300x300.jpg)
 
 ## [Sara Nelson](https://seattle.gov/council/meet-the-council/sara-nelson "Sara Nelson - - x134233.xml")
 
