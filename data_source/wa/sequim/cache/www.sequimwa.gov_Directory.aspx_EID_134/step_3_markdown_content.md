@@ -1,6 +1,6 @@
 Loading
 
-[Skip to Main Content](https://www.sequimwa.gov/Directory.aspx?EID=134%2F)
+[Skip to Main Content](https://www.sequimwa.gov/directory.aspx?EID=134%2F)
 
 [Create a Website Account](https://www.sequimwa.gov/MyAccount/ProfileCreate) - Manage notification subscriptions, save form progress and more.   
 
@@ -18,7 +18,7 @@ Search
 
 <!--THE END-->
 
-![](https://www.sequimwa.gov/ImageRepository/Document?documentID=21898)
+![](https://www.sequimwa.gov/ImageRepository/Document?documentID=22417)
 
 1. [Home](https://www.sequimwa.gov)
 2. Staff Directory
@@ -93,7 +93,7 @@ Having lived in Kitsap and Clallam County for all but 6 of her nearly 40 years o
 
 Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)
 
-![](https://www.sequimwa.gov/ImageRepository/Document?documentID=21901)
+![](https://www.sequimwa.gov/ImageRepository/Document?documentID=23704)
 
 Loading
 
