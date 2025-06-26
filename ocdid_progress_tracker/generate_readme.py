@@ -41,27 +41,50 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
         scraped = state_data.get("civicpatch_scraped", 0)
         scraped_percentage = state_data.get("civicpatch_scraped_percentage", 0.0)
         google_count = state_data.get("google_civics_municipality_count", 0)
-        missing_in_civicpatch = state_data.get("missing_in_civicpatch", [])
-        missing_in_google = state_data.get("missing_in_google", [])
+        missing_in_civicpatch = state_data.get("missing_in_civicpatch", {})
+        missing_in_google = state_data.get("missing_in_google", {})
 
         # Add to the progress table
-        progress_table += f"| {state} | {civicpatch_count} | {scrapeable} | {scraped} | {scraped_percentage:.2f}% | {google_count} | {len(missing_in_civicpatch)} | {len(missing_in_google)} |\n"
+        progress_table += f"| {state} | {civicpatch_count} | {scrapeable} | {scraped} | {scraped_percentage:.2f}% | {google_count} | {len(missing_in_civicpatch.get('places', []))} | {len(missing_in_google.get('places', []))} |\n"
 
         # Add collapsible section for missing OCD IDs
         missing_ocdids += f"### {state}\n\n"
         missing_ocdids += f"<details>\n"
         missing_ocdids += f"<summary>missing entries</summary>\n\n"
-        missing_ocdids += "**Missing in CivicPatch:**\n\n"
-        if missing_in_civicpatch:
-            for entry in missing_in_civicpatch:
+
+        # Missing in CivicPatch
+        missing_ocdids += "#### Missing in CivicPatch:\n\n"
+        missing_ocdids += "**Places:**\n"
+        places = missing_in_civicpatch.get("places", [])
+        if places:
+            for entry in places:
                 missing_ocdids += f"- {entry['ocdid']}\n"
         else:
             missing_ocdids += "None\n"
 
-        missing_ocdids += "\n**Missing in Google:**\n\n"
-        if missing_in_google:
-            for entry in missing_in_google:
+        missing_ocdids += "\n**Divisions:**\n"
+        divisions = missing_in_civicpatch.get("divisions", [])
+        if divisions:
+            for division in divisions:
+                missing_ocdids += f"- {division}\n"
+        else:
+            missing_ocdids += "None\n"
+
+        # Missing in Google
+        missing_ocdids += "#### Missing in Google:\n\n"
+        missing_ocdids += "**Places:**\n"
+        places = missing_in_google.get("places", [])
+        if places:
+            for entry in places:
                 missing_ocdids += f"- {entry['ocdid']}\n"
+        else:
+            missing_ocdids += "None\n"
+
+        missing_ocdids += "\n**Divisions:**\n"
+        divisions = missing_in_google.get("divisions", [])
+        if divisions:
+            for division in divisions:
+                missing_ocdids += f"- {division}\n"
         else:
             missing_ocdids += "None\n"
 
