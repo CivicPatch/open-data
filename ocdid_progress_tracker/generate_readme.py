@@ -15,7 +15,7 @@ Every day at 9AM PST, this repo syncs the data/ and data_source/ folders from th
 
 All Google OCDIDs are gathered from these [set of files](https://drive.google.com/drive/folders/15DHdG3D4-IWeuAj5k-fTMUFVEkrYDGqn)
 
-| State | CivicPatch Count | Scrapeable | Scraped | Scraped % | Google Count | Missing in CivicPatch | Missing in Google |
+| State | CivicPatch Count | Scrapeable | Scraped | Scraped % | Google Count | Missing Places in CivicPatch | Missing Places in Google |
 |-------|------------------|------------|---------|-----------|--------------|-----------------------|-------------------|
 {progress_table}
 
