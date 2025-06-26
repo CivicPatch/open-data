@@ -26,4 +26,31 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          ./sync.sh
+          ./.github/scripts/sync.sh
+
+  analyze:
+    runs-on: ubuntu-latest
+    needs: sync
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Analyze changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3
+          git config --global user.email "civicpatch-pipeline@civicpatch.org"
+          git config --global user.name "CivicPatch Pipeline"
+
+          git add .
+          git commit -m "Analyze changes from CivicPatch" || echo "No changes to commit"
+          git push origin main || echo "No changes to push"
