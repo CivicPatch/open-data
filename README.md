@@ -18,6 +18,9 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 
 ### nh
 
+<details>
+<summary>missing entries</summary>
+
 **Missing in CivicPatch:**
 
 - ocd-division/country:us/state:nh/place:greens_grant
@@ -49,7 +52,12 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 - ocd-division/country:us/state:nh/place:pinkhams
 - ocd-division/country:us/state:nh/place:chandlers
 
+</details>
+
 ### or
+
+<details>
+<summary>missing entries</summary>
 
 **Missing in CivicPatch:**
 
@@ -59,7 +67,12 @@ None
 
 None
 
+</details>
+
 ### wa
+
+<details>
+<summary>missing entries</summary>
 
 **Missing in CivicPatch:**
 
@@ -71,6 +84,11 @@ None
 - ocd-division/country:us/state:wa/place:krupp_(marlin)
 - ocd-division/country:us/state:wa/place:st._john
 
+</details>
+
 ## Additional Information
 
-- **Future Goals**: Expand coverage to all municipalities in the United States.
+- **Future Goals**:
+    - [ ] Top 100 cities in Colorado
+    - [ ] Top 100 cities in Oregon
+    - [ ] Top 100 most populous cities in the US

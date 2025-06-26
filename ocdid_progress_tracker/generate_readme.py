@@ -26,8 +26,8 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 ## Additional Information
 
 - **Future Goals**:
-    - [ ] Top 100 cities in Oregon
     - [ ] Top 100 cities in Colorado
+    - [ ] Top 100 cities in Oregon
     - [ ] Top 100 most populous cities in the US
 """
 
@@ -47,8 +47,10 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
         # Add to the progress table
         progress_table += f"| {state} | {civicpatch_count} | {scrapeable} | {scraped} | {scraped_percentage:.2f}% | {google_count} | {len(missing_in_civicpatch)} | {len(missing_in_google)} |\n"
 
-        # Add missing OCD IDs section
+        # Add collapsible section for missing OCD IDs
         missing_ocdids += f"### {state}\n\n"
+        missing_ocdids += f"<details>\n"
+        missing_ocdids += f"<summary>missing entries</summary>\n\n"
         missing_ocdids += "**Missing in CivicPatch:**\n\n"
         if missing_in_civicpatch:
             for entry in missing_in_civicpatch:
@@ -63,7 +65,7 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
         else:
             missing_ocdids += "None\n"
 
-        missing_ocdids += "\n"
+        missing_ocdids += "\n</details>\n\n"
 
     # Replace placeholders in the template
     readme_content = template.replace("{progress_table}", progress_table.strip())
