@@ -38,8 +38,9 @@ def count_municipalities():
                 civicpatch_count = len(municipalities)
                 # Generate OCD IDs for CivicPatch names
                 for m in municipalities:
+                    hardcoded_ocdid = m.get("ocdid")
                     name = m.get("name", "").lower().replace(" ", "_")
-                    ocdid = f"ocd-division/country:us/state:{state.lower()}/place:{name}"
+                    ocdid = hardcoded_ocdid or f"ocd-division/country:us/state:{state.lower()}/place:{name}"
                     civicpatch_ocdids.add(ocdid)
                     civicpatch_names.add(name)
                     if m.get("website") and m.get("website").strip():
