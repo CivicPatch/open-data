@@ -94,7 +94,6 @@ def count_municipalities():
                             name = municipality_folder.split("_")[0]
                             formatted_division = division.replace(" ", ":").lower()
                             formatted_division = formatted_division.replace("district", "council_district")
-                            print(f"Processing division: {formatted_division} for state: {state}, municipality: {name}")
                             ocdid = "ocd-division/country:us/state:{state}/place:{name}/{division}".format(state=state.lower(), name=name, division=formatted_division)
                             # Check if the OCD ID is a hyperlocal division for the state
                             if formatted_division.startswith("council_district:") or formatted_division.startswith("ward:"):
