@@ -1,4 +1,5 @@
 import json
+import os
 
 def generate_readme(progress_file, output_file):
     with open(progress_file, "r") as file:
@@ -101,6 +102,11 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
     print(f"README.md generated at {output_file}")
 
 if __name__ == "__main__":
-    progress_file = "/Users/michelle/CivicPatch/open-data/progress.json"
-    output_file = "/Users/michelle/CivicPatch/open-data/README.md"
+    file_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Move up one level to access the parent directory
+    project_root = os.path.dirname(file_dir)
+
+    progress_file = f"{project_root}/progress.json"
+    output_file = f"{project_root}/README.md"
     generate_readme(progress_file, output_file)
