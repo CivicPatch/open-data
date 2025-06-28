@@ -2,12 +2,19 @@ import os
 import json
 import yaml
 
+def generate_ocdid(state, municipality):
+    hardcoded_ocdid = municipality.get("ocdid")
+    municipality_name = municipality.get("name", "").lower().replace(" ", "_")
+    ocdid = hardcoded_ocdid or f"ocd-division/country:us/state:{state.lower()}/place:{municipality_name}"
+    return ocdid
+
 def count_municipalities():
     # Resolve the absolute path to the data_source and google_data directories
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     data_source_path = os.path.join(project_root, "data_source")
     data_path = os.path.join(project_root, "data")
     google_data_path = os.path.join(project_root, "ocdid_progress_tracker/google_data")
+    civicpatch_municipalities = {}
     
     print(f"Resolved data source path: {data_source_path}")
     print(f"Resolved Google data path: {google_data_path}")
@@ -30,19 +37,16 @@ def count_municipalities():
         civicpatch_scrapeable_count = 0
         civicpatch_scraped_count = 0
         civicpatch_ocdids = set()
-        civicpatch_names = set()
         if os.path.isfile(municipalities_file):
             with open(municipalities_file, "r") as file:
                 data = json.load(file)
                 municipalities = data.get("municipalities", [])
+                civicpatch_municipalities[state] = municipalities
                 civicpatch_count = len(municipalities)
                 # Generate OCD IDs for CivicPatch names
                 for m in municipalities:
-                    hardcoded_ocdid = m.get("ocdid")
-                    name = m.get("name", "").lower().replace(" ", "_")
-                    ocdid = hardcoded_ocdid or f"ocd-division/country:us/state:{state.lower()}/place:{name}"
+                    ocdid = generate_ocdid(state, m)
                     civicpatch_ocdids.add(ocdid)
-                    civicpatch_names.add(name)
                     if m.get("website") and m.get("website").strip():
                         civicpatch_scrapeable_count += 1
                     # If meta_sources === [state_source, gemini, openai]
@@ -80,10 +84,18 @@ def count_municipalities():
         # Under the data folder, for every folder under the state except for .maps,
         # grab the people.yml file
         civicpatch_hyperlocal_divisions = set()
-        for municipality_folder in os.listdir(os.path.join(data_path, state)):
-            if municipality_folder.startswith("."):
+        for municipality in civicpatch_municipalities.get(state, []):
+            counties = municipality.get("counties", [])
+            municipality_name = municipality.get("name", "").lower().replace(" ", "_")
+            municipality_folder_path = os.path.join(data_path, state, municipality_name)
+            if len(counties) > 1:
+                # If there are multiple counties, the folder name must contain the geoid
+                municipality_folder_path = f"{municipality_folder_path}_{municipality.get('geoid', '')}"
+            if not municipality_folder_path:
                 continue
-            people_file = os.path.join(data_path, state, municipality_folder, "people.yml")
+
+            people_file = os.path.join(municipality_folder_path, "people.yml")
+            municipality_ocdid = generate_ocdid(state, municipality)
             if os.path.isfile(people_file):
                 with open(people_file, "r") as file:
                     people_data = yaml.safe_load(file)
@@ -91,14 +103,14 @@ def count_municipalities():
                         divisions = person.get("divisions", [])
                         if not divisions:
                             continue
+
                         for division in divisions:
-                            name = municipality_folder.split("_")[0]
                             formatted_division = division.replace(" ", ":").lower()
                             formatted_division = formatted_division.replace("district", "council_district")
-                            ocdid = "ocd-division/country:us/state:{state}/place:{name}/{division}".format(state=state.lower(), name=name, division=formatted_division)
+                            division_ocdid = f"{municipality_ocdid}/{formatted_division}"
                             # Check if the OCD ID is a hyperlocal division for the state
                             if formatted_division.startswith("council_district:") or formatted_division.startswith("ward:"):
-                                civicpatch_hyperlocal_divisions.add(ocdid)
+                                civicpatch_hyperlocal_divisions.add(division_ocdid)
 
         missing_in_civicpatch_divisions = google_civics_hyperlocal_divisions - civicpatch_hyperlocal_divisions
         missing_in_google_divisions = civicpatch_hyperlocal_divisions - google_civics_hyperlocal_divisions
