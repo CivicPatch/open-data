@@ -72,6 +72,9 @@ def count_municipalities():
                         if ocdid not in civicpatch_ocdids:
                             missing_in_civicpatch.append({"ocdid": ocdid})
                     elif division_type.startswith("ward:") or division_type.startswith("council_district:"):
+                        # TODO: do we need to include these?
+                        # municipalities can be covered by counties but i think only if
+                        # they are unincorporated
                         has_place = ocdid.startswith(f"ocd-division/country:us/state:{state.lower()}/place:")
                         if has_place:
                             google_civics_hyperlocal_divisions.add(ocdid)
