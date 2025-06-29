@@ -1,6 +1,6 @@
 Loading
 
-[Skip to Main Content](https://www.crgov.com/directory.aspx?eid=21%2F)
+[Skip to Main Content](https://www.crgov.com/directory.aspx?EID=21%2F)
 
 ![Home page](https://www.crgov.com/ImageRepository/Document?documentID=39223)
 
@@ -12,7 +12,7 @@ Loading
 
 Search
 
-![](https://www.crgov.com/ImageRepository/Document?documentID=39225)
+![](https://www.crgov.com/ImageRepository/Document?documentID=39227)
 
 1. [Home](https://www.crgov.com)
 2. Staff Directory
@@ -487,7 +487,7 @@ Fax: 303-660-1024
 
 Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)
 
-[![Google Translate Icon](https://www.crgov.com/Assets/Images/GoogleTranslate.gif)Enable Google Translate](https://www.crgov.com/directory.aspx?eid=21%2F "Enable Google Translate")
+[![Google Translate Icon](https://www.crgov.com/Assets/Images/GoogleTranslate.gif)Enable Google Translate](https://www.crgov.com/directory.aspx?EID=21%2F "Enable Google Translate")
 
 Loading
 
