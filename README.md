@@ -10,7 +10,7 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 
 | State | CivicPatch Count | Scrapeable | Scraped | Scraped % | Google Count | Missing Places in CivicPatch | Missing Places in Google |
 |-------|------------------|------------|---------|-----------|--------------|-----------------------|-------------------|
-| co | 272 | 216 | 25 | 11.57% | 269 | 1 | 4 |
+| co | 272 | 216 | 41 | 18.98% | 269 | 1 | 4 |
 | wa | 281 | 219 | 176 | 80.37% | 281 | 2 | 2 |
 | nh | 256 | 229 | 8 | 3.49% | 242 | 6 | 19 |
 | or | 241 | 222 | 0 | 0.00% | 0 | 0 | 0 |
@@ -52,9 +52,9 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in Google:
 
 **Places:**
-- ocd-division/country:us/state:co/place:raymer_(new_raymer)
 - ocd-division/country:us/state:co/place:denver
 - ocd-division/country:us/state:co/place:carbonate
+- ocd-division/country:us/state:co/place:raymer_(new_raymer)
 - ocd-division/country:us/state:co/place:broomfield
 
 **Divisions:**
@@ -88,9 +88,42 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 - ocd-division/country:us/state:co/place:englewood/council_district:2
 - ocd-division/country:us/state:co/place:englewood/council_district:3
 - ocd-division/country:us/state:co/place:englewood/council_district:4
+- ocd-division/country:us/state:co/place:evans/ward:1
+- ocd-division/country:us/state:co/place:evans/ward:2
+- ocd-division/country:us/state:co/place:evans/ward:3
+- ocd-division/country:us/state:co/place:fort_morgan/ward:1
+- ocd-division/country:us/state:co/place:fort_morgan/ward:2
+- ocd-division/country:us/state:co/place:fort_morgan/ward:3
 - ocd-division/country:us/state:co/place:fountain/ward:1
 - ocd-division/country:us/state:co/place:fountain/ward:2
 - ocd-division/country:us/state:co/place:fountain/ward:3
+- ocd-division/country:us/state:co/place:golden/council_district:1
+- ocd-division/country:us/state:co/place:golden/council_district:2
+- ocd-division/country:us/state:co/place:golden/ward:1
+- ocd-division/country:us/state:co/place:golden/ward:2
+- ocd-division/country:us/state:co/place:golden/ward:3
+- ocd-division/country:us/state:co/place:golden/ward:4
+- ocd-division/country:us/state:co/place:greenwood_village/council_district:1
+- ocd-division/country:us/state:co/place:greenwood_village/council_district:2
+- ocd-division/country:us/state:co/place:greenwood_village/council_district:3
+- ocd-division/country:us/state:co/place:greenwood_village/council_district:4
+- ocd-division/country:us/state:co/place:lone_tree/council_district:1
+- ocd-division/country:us/state:co/place:lone_tree/council_district:2
+- ocd-division/country:us/state:co/place:louisville/ward:1
+- ocd-division/country:us/state:co/place:louisville/ward:2
+- ocd-division/country:us/state:co/place:louisville/ward:3
+- ocd-division/country:us/state:co/place:montrose/council_district:1
+- ocd-division/country:us/state:co/place:montrose/council_district:2
+- ocd-division/country:us/state:co/place:montrose/council_district:3
+- ocd-division/country:us/state:co/place:montrose/council_district:4
+- ocd-division/country:us/state:co/place:monument/council_district:1
+- ocd-division/country:us/state:co/place:monument/council_district:2
+- ocd-division/country:us/state:co/place:steamboat_springs/council_district:1
+- ocd-division/country:us/state:co/place:steamboat_springs/council_district:2
+- ocd-division/country:us/state:co/place:steamboat_springs/council_district:3
+- ocd-division/country:us/state:co/place:sterling/ward:1
+- ocd-division/country:us/state:co/place:sterling/ward:2
+- ocd-division/country:us/state:co/place:sterling/ward:3
 - ocd-division/country:us/state:co/place:wheat_ridge/council_district:1
 - ocd-division/country:us/state:co/place:wheat_ridge/council_district:2
 - ocd-division/country:us/state:co/place:wheat_ridge/council_district:3
@@ -224,12 +257,12 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in CivicPatch:
 
 **Places:**
-- ocd-division/country:us/state:nh/place:pinkhams_grant
+- ocd-division/country:us/state:nh/place:millsfield
 - ocd-division/country:us/state:nh/place:greens_grant
-- ocd-division/country:us/state:nh/place:hart~s_location
+- ocd-division/country:us/state:nh/place:pinkhams_grant
 - ocd-division/country:us/state:nh/place:wentworth~s_location
 - ocd-division/country:us/state:nh/place:hale~s_location
-- ocd-division/country:us/state:nh/place:millsfield
+- ocd-division/country:us/state:nh/place:hart~s_location
 
 **Divisions:**
 - ocd-division/country:us/state:nh/place:berlin/ward:1
@@ -331,25 +364,25 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in Google:
 
 **Places:**
-- ocd-division/country:us/state:nh/place:hadleys
-- ocd-division/country:us/state:nh/place:ervings
-- ocd-division/country:us/state:nh/place:low_and_burbanks
-- ocd-division/country:us/state:nh/place:crawfords
-- ocd-division/country:us/state:nh/place:dixs
-- ocd-division/country:us/state:nh/place:second_college
 - ocd-division/country:us/state:nh/place:beans
-- ocd-division/country:us/state:nh/place:chandlers
-- ocd-division/country:us/state:nh/place:pinkhams
-- ocd-division/country:us/state:nh/place:hart's_location
-- ocd-division/country:us/state:nh/place:odell
-- ocd-division/country:us/state:nh/place:sargents
-- ocd-division/country:us/state:nh/place:thompson_and_meserves
-- ocd-division/country:us/state:nh/place:kilkenny
-- ocd-division/country:us/state:nh/place:atkinson_and_gilmanton_academy
-- ocd-division/country:us/state:nh/place:cutts
-- ocd-division/country:us/state:nh/place:martins
-- ocd-division/country:us/state:nh/place:success
 - ocd-division/country:us/state:nh/place:greens
+- ocd-division/country:us/state:nh/place:ervings
+- ocd-division/country:us/state:nh/place:odell
+- ocd-division/country:us/state:nh/place:atkinson_and_gilmanton_academy
+- ocd-division/country:us/state:nh/place:second_college
+- ocd-division/country:us/state:nh/place:thompson_and_meserves
+- ocd-division/country:us/state:nh/place:hadleys
+- ocd-division/country:us/state:nh/place:dixs
+- ocd-division/country:us/state:nh/place:chandlers
+- ocd-division/country:us/state:nh/place:success
+- ocd-division/country:us/state:nh/place:pinkhams
+- ocd-division/country:us/state:nh/place:sargents
+- ocd-division/country:us/state:nh/place:hart's_location
+- ocd-division/country:us/state:nh/place:crawfords
+- ocd-division/country:us/state:nh/place:kilkenny
+- ocd-division/country:us/state:nh/place:cutts
+- ocd-division/country:us/state:nh/place:low_and_burbanks
+- ocd-division/country:us/state:nh/place:martins
 
 **Divisions:**
 None
