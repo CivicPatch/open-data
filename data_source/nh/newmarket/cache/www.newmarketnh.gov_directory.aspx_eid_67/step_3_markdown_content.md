@@ -1,75 +1,93 @@
- 
-
 Loading
 
-  [Skip to Main Content](#contentarea)   ![Newmarket, NH](https://www.newmarketnh.gov/ImageRepository/Document?documentID=27)  
+[Skip to Main Content](https://www.newmarketnh.gov/directory.aspx?eid=67%2F)
 
- [Create a Website Account](/MyAccount/ProfileCreate)  - Manage notification subscriptions, save form progress and more.    
+![Newmarket, NH](https://www.newmarketnh.gov/ImageRepository/Document?documentID=27)
 
- *  [Website Sign In](/MyAccount) 
-  ![Newmarket New Hampshire Home Page](https://www.newmarketnh.gov/ImageRepository/Document?documentID=72)  
+[Create a Website Account](https://www.newmarketnh.gov/MyAccount/ProfileCreate) - Manage notification subscriptions, save form progress and more.   
 
- 1.  [Government](/27/Government) 
- 1.  [Departments](/31/Departments) 
- 1.  [Services](/101/Services) 
- 1.  [How Do I...](/9/How-Do-I) 
- Search  ![](https://www.newmarketnh.gov/ImageRepository/Document?documentID=69)  
+- [Website Sign In](https://www.newmarketnh.gov/MyAccount)
 
- 1.  [Home](/) 
- 1. Staff Directory
-  ![Jeo LaMattina](https://www.newmarketnh.gov/ImageRepository/Document?documentID=614)  
+![Newmarket New Hampshire Home Page](https://www.newmarketnh.gov/ImageRepository/Document?documentID=72)
+
+1. [Government](https://www.newmarketnh.gov/27/Government)
+2. [Departments](https://www.newmarketnh.gov/31/Departments)
+3. [Services](https://www.newmarketnh.gov/101/Services)
+4. [How Do I...](https://www.newmarketnh.gov/9/How-Do-I)
+
+Search
+
+![](https://www.newmarketnh.gov/ImageRepository/Document?documentID=71)
+
+1. [Home](https://www.newmarketnh.gov)
+2. Staff Directory
+
+![Jeo LaMattina](https://www.newmarketnh.gov/ImageRepository/Document?documentID=614 "Jeo LaMattina")
 
 # Joe LaMattina
 
-   [Town Council](/Directory.aspx?DID=11) 
+ 
 
-Title: Councilor
+[Town Council](https://www.newmarketnh.gov/Directory.aspx?DID=11)  
+Title: Councilor  
+Phone: 603-659-5467  
+[Email Joe LaMattina](mailto:jlamattina@newmarketnh.gov)
 
-Phone:603-659-5467
+[Return to Staff Directory](https://www.newmarketnh.gov/Directory.aspx)
 
- [Email Joe LaMattina](mailto:jlamattina@newmarketnh.gov)  
+[Online Payments](https://www.newmarketnh.gov/391/Pay-My-Bill)
 
- [Return to Staff Directory](/Directory.aspx) 
+[Forms &amp; Permits](https://www.newmarketnh.gov/446)
 
-  [Online Payments](/391/Pay-My-Bill)   [Forms & Permits](/446)   [Minutes & Agendas](https://newmarketnh.portal.civicclerk.com/)   [Subscribe to Alerts / News](/464/Subscribe-to-Alerts-News)  
+[Minutes &amp; Agendas](https://newmarketnh.portal.civicclerk.com)
+
+[Subscribe to Alerts / News](https://www.newmarketnh.gov/464/Subscribe-to-Alerts-News)
 
 ### Contact Us
 
- 1.    
+1. **Town of Newmarket**  
+   186 Main Street  
+   Newmarket, NH 03857  
+   Phone: 603-659-3617  
+   [Town Hall Office Hours](https://www.newmarketnh.gov/DocumentCenter/View/1160/Office-Hours)
 
- __Town of Newmarket__    
+### [Quick Links](https://www.newmarketnh.gov/QuickLinks.aspx?CID=15)
 
-186 Main Street   
+1. [FAQs](https://www.newmarketnh.gov/FAQ.aspx)
+2. [Job Opportunities](https://www.newmarketnh.gov/Jobs.aspx)
+3. [Events](https://www.newmarketnh.gov/calendar.aspx?CID=14%2C22)
+4. [News](https://www.newmarketnh.gov/CivicAlerts.aspx)
+5. [Website Notifications](https://www.newmarketnh.gov/list.aspx)
 
-Newmarket, NH 03857   
+/QuickLinks.aspx
 
-Phone:603-659-3617   
+### [Helpful Links](https://www.newmarketnh.gov/QuickLinks.aspx?CID=16)
 
- [Town Hall Office Hours](/)    
+1. [Home](https://www.newmarketnh.gov)
+2. [Site Map](https://www.newmarketnh.gov/sitemap)
+3. [Contact Us](https://www.newmarketnh.gov/directory.aspx)
+4. [Accessibility](https://www.newmarketnh.gov/accessibility)
+5. [Copyright Notices](https://www.newmarketnh.gov/copyright)
+6. [Privacy Policy](https://www.newmarketnh.gov/site/privacy)
 
-###  [Quick Links](/QuickLinks.aspx?CID=15) 
+/QuickLinks.aspx
 
- 1.  [FAQs](/FAQ.aspx)  
- 1.  [Job Opportunities](https://www.newmarketnh.gov/Jobs.aspx)  
- 1.  [Events](https://www.newmarketnh.gov/calendar.aspx?CID=14,22)  
- 1.  [News](/CivicAlerts.aspx)  
- 1.  [Website Notifications](/list.aspx)  
- /QuickLinks.aspx 
+Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)
 
-###  [Helpful Links](/QuickLinks.aspx?CID=16) 
+Loading
 
- 1.  [Home](/)  
- 1.  [Site Map](/sitemap)  
- 1.  [Contact Us](/directory.aspx)  
- 1.  [Accessibility](/accessibility)  
- 1.  [Copyright Notices](/copyright)  
- 1.  [Privacy Policy](/site/privacy)  
- /QuickLinks.aspx 
+Loading
 
- 1.    
+Do Not Show Again Close
 
- Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)  Loading Loading Do Not Show Again Close Select LanguageAbkhazAcehneseAcholiAfarAfrikaansAlbanianAlurAmharicArabicArmenianAssameseAvarAwadhiAymaraAzerbaijaniBalineseBaluchiBambaraBaouléBashkirBasqueBatak KaroBatak SimalungunBatak TobaBelarusianBembaBengaliBetawiBhojpuriBikolBosnianBretonBulgarianBuryatCantoneseCatalanCebuanoChamorroChechenChichewaChinese (Simplified)Chinese (Traditional)ChuukeseChuvashCorsicanCrimean Tatar (Cyrillic)Crimean Tatar (Latin)CroatianCzechDanishDariDhivehiDinkaDogriDombeDutchDyulaDzongkhaEsperantoEstonianEweFaroeseFijianFilipinoFinnishFonFrenchFrench (Canada)FrisianFriulianFulaniGaGalicianGeorgianGermanGreekGuaraniGujaratiHaitian CreoleHakha ChinHausaHawaiianHebrewHiligaynonHindiHmongHungarianHunsrikIbanIcelandicIgboIlocanoIndonesianInuktut (Latin)Inuktut (Syllabics)IrishItalianJamaican PatoisJapaneseJavaneseJingpoKalaallisutKannadaKanuriKapampanganKazakhKhasiKhmerKigaKikongoKinyarwandaKitubaKokborokKomiKonkaniKoreanKrioKurdish (Kurmanji)Kurdish (Sorani)KyrgyzLaoLatgalianLatinLatvianLigurianLimburgishLingalaLithuanianLombardLugandaLuoLuxembourgishMacedonianMadureseMaithiliMakassarMalagasyMalayMalay (Jawi)MalayalamMalteseMamManxMaoriMarathiMarshalleseMarwadiMauritian CreoleMeadow MariMeiteilon (Manipuri)MinangMizoMongolianMyanmar (Burmese)Nahuatl (Eastern Huasteca)NdauNdebele (South)Nepalbhasa (Newari)NepaliNKoNorwegianNuerOccitanOdia (Oriya)OromoOssetianPangasinanPapiamentoPashtoPersianPolishPortuguese (Brazil)Portuguese (Portugal)Punjabi (Gurmukhi)Punjabi (Shahmukhi)QuechuaQʼeqchiʼRomaniRomanianRundiRussianSami (North)SamoanSangoSanskritSantali (Latin)Santali (Ol Chiki)Scots GaelicSepediSerbianSesothoSeychellois CreoleShanShonaSicilianSilesianSindhiSinhalaSlovakSlovenianSomaliSpanishSundaneseSusuSwahiliSwatiSwedishTahitianTajikTamazightTamazight (Tifinagh)TamilTatarTeluguTetumThaiTibetanTigrinyaTivTok PisinTonganTshilubaTsongaTswanaTuluTumbukaTurkishTurkmenTuvanTwiUdmurtUkrainianUrduUyghurUzbekVendaVenetianVietnameseWarayWelshWolofXhosaYakutYiddishYorubaYucatec MayaZapotecZulu Powered by  [![Google Translate](https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png)Translate](https://translate.google.com)  
+Select LanguageAbkhazAcehneseAcholiAfarAfrikaansAlbanianAlurAmharicArabicArmenianAssameseAvarAwadhiAymaraAzerbaijaniBalineseBaluchiBambaraBaouléBashkirBasqueBatak KaroBatak SimalungunBatak TobaBelarusianBembaBengaliBetawiBhojpuriBikolBosnianBretonBulgarianBuryatCantoneseCatalanCebuanoChamorroChechenChichewaChinese (Simplified)Chinese (Traditional)ChuukeseChuvashCorsicanCrimean Tatar (Cyrillic)Crimean Tatar (Latin)CroatianCzechDanishDariDhivehiDinkaDogriDombeDutchDyulaDzongkhaEsperantoEstonianEweFaroeseFijianFilipinoFinnishFonFrenchFrench (Canada)FrisianFriulianFulaniGaGalicianGeorgianGermanGreekGuaraniGujaratiHaitian CreoleHakha ChinHausaHawaiianHebrewHiligaynonHindiHmongHungarianHunsrikIbanIcelandicIgboIlocanoIndonesianInuktut (Latin)Inuktut (Syllabics)IrishItalianJamaican PatoisJapaneseJavaneseJingpoKalaallisutKannadaKanuriKapampanganKazakhKhasiKhmerKigaKikongoKinyarwandaKitubaKokborokKomiKonkaniKoreanKrioKurdish (Kurmanji)Kurdish (Sorani)KyrgyzLaoLatgalianLatinLatvianLigurianLimburgishLingalaLithuanianLombardLugandaLuoLuxembourgishMacedonianMadureseMaithiliMakassarMalagasyMalayMalay (Jawi)MalayalamMalteseMamManxMaoriMarathiMarshalleseMarwadiMauritian CreoleMeadow MariMeiteilon (Manipuri)MinangMizoMongolianMyanmar (Burmese)Nahuatl (Eastern Huasteca)NdauNdebele (South)Nepalbhasa (Newari)NepaliNKoNorwegianNuerOccitanOdia (Oriya)OromoOssetianPangasinanPapiamentoPashtoPersianPolishPortuguese (Brazil)Portuguese (Portugal)Punjabi (Gurmukhi)Punjabi (Shahmukhi)QuechuaQʼeqchiʼRomaniRomanianRundiRussianSami (North)SamoanSangoSanskritSantali (Latin)Santali (Ol Chiki)Scots GaelicSepediSerbianSesothoSeychellois CreoleShanShonaSicilianSilesianSindhiSinhalaSlovakSlovenianSomaliSpanishSundaneseSusuSwahiliSwatiSwedishTahitianTajikTamazightTamazight (Tifinagh)TamilTatarTeluguTetumThaiTibetanTigrinyaTivTok PisinTonganTshilubaTsongaTswanaTuluTumbukaTurkishTurkmenTuvanTwiUdmurtUkrainianUrduUyghurUzbekVendaVenetianVietnameseWarayWelshWolofXhosaYakutYiddishYorubaYucatec MayaZapotecZulu
+
+Powered by [![Google Translate](https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png)Translate](https://translate.google.com)
 
 ### Live Edit
 
- Original text Rate this translation Your feedback will be used to help improve Google Translate 
+Original text
+
+Rate this translation
+
+Your feedback will be used to help improve Google Translate

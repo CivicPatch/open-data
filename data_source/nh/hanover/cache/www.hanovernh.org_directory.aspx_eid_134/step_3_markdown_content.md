@@ -1,84 +1,106 @@
- 
-
 Loading
 
-  [Skip to Main Content](#contentarea)  
+[Skip to Main Content](https://www.hanovernh.org/directory.aspx?eid=134%2F)
 
- [Create a Website Account](/MyAccount/ProfileCreate)  - Manage notification subscriptions, save form progress and more.    
+[Create a Website Account](https://www.hanovernh.org/MyAccount/ProfileCreate) - Manage notification subscriptions, save form progress and more.   
 
- *  [Website Sign In](/MyAccount) 
-  ![Homepage](https://www.hanovernh.org/ImageRepository/Document?documentID=66)  Search 
+- [Website Sign In](https://www.hanovernh.org/MyAccount)
 
- 1.  [Government](/27/Government) 
- 1.  [Departments](/101/Departments) 
- 1.  [Community](/31/Community) 
- 1.  [Business](/35/Business) 
- 1.  [How Do I...](/9/How-Do-I) 
+![Homepage](https://www.hanovernh.org/ImageRepository/Document?documentID=66)
 
- 1.  [Agendas & Minutes](/AgendaCenter)  
+Search
 
- 1.  [Emergency Alerts](https://gcsohandisp.genasys.com/portal/en)  
+1. [Government](https://www.hanovernh.org/27/Government)
+2. [Departments](https://www.hanovernh.org/101/Departments)
+3. [Community](https://www.hanovernh.org/31/Community)
+4. [Business](https://www.hanovernh.org/35/Business)
+5. [How Do I...](https://www.hanovernh.org/9/How-Do-I)
 
- 1.  [Calendar](/Calendar.aspx)  
+<!--THE END-->
 
- 1.  [Forms](/FormCenter)  
- /QuickLinks.aspx  ![](https://www.hanovernh.org/ImageRepository/Document?documentID=69)  
+1. [Agendas &amp; Minutes](https://www.hanovernh.org/AgendaCenter)
 
- 1.  [Home](/) 
- 1. Staff Directory
+<!--THE END-->
+
+1. [Emergency Alerts](https://gcsohandisp.genasys.com/portal/en)
+
+<!--THE END-->
+
+1. [Calendar](https://www.hanovernh.org/Calendar.aspx)
+
+<!--THE END-->
+
+1. [Forms](https://www.hanovernh.org/FormCenter)
+
+/QuickLinks.aspx
+
+![](https://www.hanovernh.org/ImageRepository/Document?documentID=67)
+
+1. [Home](https://www.hanovernh.org)
+2. Staff Directory
 
 # Jennie Chamberlain
 
-   [Selectboard](/Directory.aspx?DID=46) 
+ 
 
-Title: Selectboard Member
+[Selectboard](https://www.hanovernh.org/Directory.aspx?DID=46)  
+Title: Selectboard Member  
+[Jennie.Chamberlain@hanovernh.org](mailto:Jennie.Chamberlain@hanovernh.org)
 
- [Jennie.Chamberlain@hanovernh.org](mailto:Jennie.Chamberlain@hanovernh.org)  
+[Return to Staff Directory](https://www.hanovernh.org/Directory.aspx)
 
- [Return to Staff Directory](/Directory.aspx) 
+[Agendas &amp; Minutes](https://www.hanovernh.org/AgendaCenter)
 
-  [Agendas & Minutes](/AgendaCenter)   [GIS](https://www.axisgis.com/hanovernh)   [Pay Online](https://www.invoicecloud.com/portal/(S(ggdjphyz1lnevkuejlyyj2hp))/2/Site.aspx?G=74dba894-3b46-406b-8da6-1adc4ae0f4d4)   [Sign Up](/list.aspx)   [Hanover Master Plan](https://hanovernhmasterplan.com/)   [Parking](/243/Parking)  
+[GIS](https://www.axisgis.com/hanovernh)
 
- 1.    
+[Pay Online](https://www.invoicecloud.com/portal/%28S%28ggdjphyz1lnevkuejlyyj2hp%29%29/2/Site.aspx?G=74dba894-3b46-406b-8da6-1adc4ae0f4d4)
+
+[Sign Up](https://www.hanovernh.org/list.aspx)
+
+[Hanover Master Plan](https://hanovernhmasterplan.com)
+
+[Parking](https://www.hanovernh.org/243/Parking)
 
 ### Hanover Town Hall
 
- 1.    
+1. P.O. Box 483   
+   41 South Main Street  
+   Hanover, NH 03755
+   
+   Monday through Friday  
+   8:30 am to 4:30 pm
+   
+   Phone: 603-643-4123  
+   [Email Us](mailto:info@hanovernh.org)
 
-P.O. Box 483    
+### [Quick Links](https://www.hanovernh.org/QuickLinks.aspx?CID=15)
 
-41 South Main Street   
+1. [Parking](https://www.hanovernh.org/243/Parking)
+2. [Building Code](https://www.hanovernh.org/191/Building-Code)
+3. [Career Opportunities](https://www.hanovernh.org/233/Career-Opportunities)
+4. [Animal Control](https://www.hanovernh.org/270/Animal-Control)
+5. [Public Works](https://www.hanovernh.org/278/Public-Works)
 
-Hanover, NH 03755   
+/QuickLinks.aspx
 
-Monday through Friday   
+### [Site Links](https://www.hanovernh.org/QuickLinks.aspx?CID=16)
 
-8:30 am to 4:30 pm   
+1. [Home](https://www.hanovernh.org)
+2. [Site Map](https://www.hanovernh.org/sitemap)
+3. [Contact Us](https://www.hanovernh.org/directory.aspx)
+4. [Accessibility](https://www.hanovernh.org/accessibility)
+5. [Copyright Notices](https://www.hanovernh.org/copyright)
+6. [Privacy Policy](https://www.hanovernh.org/privacy)
+7. [Employee Portal](https://www.hanovernh.org/72/Han---Employees)
 
-Phone:603-643-4123   
+/QuickLinks.aspx
 
- [Email Us](mailto:info@hanovernh.org)    
+Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)
 
-###  [Quick Links](/QuickLinks.aspx?CID=15) 
+Loading
 
- 1.  [Parking](/243/Parking)  
- 1.  [Building Code](/191/Building-Code)  
- 1.  [Career Opportunities](/233/Career-Opportunities)  
- 1.  [Animal Control](/270/Animal-Control)  
- 1.  [Public Works](/278/Public-Works)  
- /QuickLinks.aspx 
+Loading
 
-###  [Site Links](/QuickLinks.aspx?CID=16) 
-
- 1.  [Home](/)  
- 1.  [Site Map](/sitemap)  
- 1.  [Contact Us](/directory.aspx)  
- 1.  [Accessibility](/accessibility)  
- 1.  [Copyright Notices](/copyright)  
- 1.  [Privacy Policy](/privacy)  
- 1.  [Employee Portal](/72/Han---Employees)  
- /QuickLinks.aspx Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)  Loading Loading Do Not Show Again Close 
+Do Not Show Again Close
 
 ### Live Edit
-
- 

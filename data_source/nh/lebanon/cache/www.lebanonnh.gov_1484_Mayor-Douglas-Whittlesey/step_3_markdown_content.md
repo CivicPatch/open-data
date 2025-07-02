@@ -1,67 +1,102 @@
- 
-
 Loading
 
-  [Skip to Main Content](#cc0c438c27-1067-4c0c-847d-a6ecf1d336f3)   ![Lebanon, NH](https://www.lebanonnh.gov/ImageRepository/Document?documentID=11893)  
+[Skip to Main Content](https://www.lebanonnh.gov/1484/Mayor-Douglas-Whittlesey/)
 
- [Create a Website Account](/MyAccount/ProfileCreate)  - Manage notification subscriptions, save form progress and more.    
+[Create a Website Account](https://www.lebanonnh.gov/MyAccount/ProfileCreate) - Manage notification subscriptions, save form progress and more.   
 
- *  [Website Sign In](/MyAccount) 
-  ![Homepage](https://www.lebanonnh.gov/ImageRepository/Document?documentID=12264)  
+- [Website Sign In](https://www.lebanonnh.gov/MyAccount)
 
- 1.  [Your Government](/27/Your-Government) 
- 1.  [Resident Resources](/101/Resident-Resources) 
- 1.  [Business Resources](/35/Business-Resources) 
- 1.  [Life in Lebanon](/31/Life-in-Lebanon) 
- 1.  [How Do I?](/9/How-Do-I) 
-  ![Search](https://www.lebanonnh.gov/ImageRepository/Document?documentID=11895) Search  ![](https://www.lebanonnh.gov/ImageRepository/Document?documentID=12744)  
+![City of Lebanon, New Hampshire logo with city seal replacing the letter O.](https://www.lebanonnh.gov/ImageRepository/Document?documentID=20893)
 
- 1.  [Home](/) 
- 1.  [Your Government](/27/Your-Government) 
- 1.  [Boards & Committees](/245/Boards-Committees) 
- 1.  [City Council](/337/City-Council) 
- 1. Mayor Douglas Whittlesey
+1. [Your Government](https://www.lebanonnh.gov/27/Your-Government)
+2. [Resident Resources](https://www.lebanonnh.gov/101/Resident-Resources)
+3. [Business Resources](https://www.lebanonnh.gov/35/Business-Resources)
+4. [Life in Lebanon](https://www.lebanonnh.gov/31/Life-in-Lebanon)
+5. [How Do I?](https://www.lebanonnh.gov/9/How-Do-I)
+
+Search
+
+1. [Subscribe](https://www.lebanonnh.gov/1239)
+
+<!--THE END-->
+
+1. [LebAnswers](https://www.lebanonnh.gov/1750)
+
+<!--THE END-->
+
+1. [Agendas, Minutes, and Meetings](https://www.lebanonnh.gov/agendas)
+
+<!--THE END-->
+
+1. [Landfill](https://www.lebanonnh.gov/450)
+
+<!--THE END-->
+
+1. [Traffic Advisories](https://lebanonnh.gov/1392/Traffic-Advisories)
+
+/QuickLinks.aspx
+
+![](https://www.lebanonnh.gov/ImageRepository/Document?documentID=20898)
+
+01. [Agendas and Minutes](https://lebanonnh.portal.civicclerk.com/?category_id=26)
+02. [City Council Resolutions](https://www.lebanonnh.gov/1836/City-Council-Resolutions)
+03. [Mayor Douglas Whittlesey](https://www.lebanonnh.gov/1484/Mayor-Douglas-Whittlesey)
+04. [Assistant Mayor Devin R. Wilkie](https://www.lebanonnh.gov/1483/Assistant-Mayor-Devin-R-Wilkie)
+05. [Councilor Timothy J. McNamara](https://www.lebanonnh.gov/847/Councilor-Timothy-J-McNamara)
+06. [Councilor Erling Heistad](https://www.lebanonnh.gov/850/Councilor-Erling-Heistad)
+07. [Councilor George Sykes](https://www.lebanonnh.gov/1017/Councilor-George-Sykes)
+08. [Councilor Chris Simon](https://www.lebanonnh.gov/844/Councilor-Chris-Simon)
+09. [Councilor Karen Zook](https://www.lebanonnh.gov/1178/Councilor-Karen-Zook)
+10. [Councilor Nicole Ford Burley](https://www.lebanonnh.gov/1855/Councilor-Nicole-Ford-Burley)
+11. [Councilor Laurel Stavis](https://www.lebanonnh.gov/1856/Councilor-Laurel-Stavis)
+
+<!--THE END-->
+
+1. [Home](https://www.lebanonnh.gov)
+2. [Your Government](https://www.lebanonnh.gov/27/Your-Government)
+3. [Boards &amp; Committees](https://www.lebanonnh.gov/245/Boards-Committees)
+4. [City Council](https://www.lebanonnh.gov/337/City-Council)
+5. Mayor Douglas Whittlesey
 
 # Mayor Douglas Whittlesey
 
- 1.  ![Doug Whittlesey](https://www.lebanonnh.gov/ImageRepository/Document?documentID=14113)    
-
-#### Douglas Whittlesey   
-
- Mayor, Councilor, Ward 1 (Term expires 3/23)  [Email Mayor Whittlesey](mailto:doug.whittlesey@lebanonnh.gov)     
-
- __Address__ :   
-
-17 Green Street West   
-
-West Lebanon, NH 03784   
-
- __Elected to Council:__   2021   
-
- __Served as Mayor__ : 2025 - Present   
-
- __Board/Committee Representative:__    
-
-    *  [Economic Development Commission](/1328) 
-    *  [Joint School District/City Council Task Force](/652) 
-    *  [Planning Board](/577) (alternate)    
+1. ![Doug Whittlesey](https://www.lebanonnh.gov/ImageRepository/Document?documentID=14113 "Doug Whittlesey")
+   
+   #### Douglas Whittlesey
+   
+   Mayor, Councilor, Ward 1 (Term expires 3/23)
+   
+   [Email Mayor Whittlesey](mailto:doug.whittlesey@lebanonnh.gov)
+   
+   **Address:**  
+   c/o City Hall  
+   51 N. Park Street  
+   Lebanon, NH 03766
+   
+   **Elected to Council:**  2021  
+   **Served as Mayor**: 2025 - Present
+   
+   **Board/Committee Representative:**
+   
+   - [Economic Development Commission](https://www.lebanonnh.gov/1328)
+   - [Joint School District/City Council Task Force](https://www.lebanonnh.gov/652)
 
 ### Educational/ Professional Background
 
- * Master of Accounting, Honors, University of North Carolina
- * Master of Business Administration, Honors, University of North Carolina
- * Bachelor of Arts, Cum Laude, Hamilton College
- * Certified Public Accountant, 2022
- * Greenbelt, Lean Six Sigma, 2014
- * Chartered Financial Analyst, 2011
+- Master of Accounting, Honors, University of North Carolina
+- Master of Business Administration, Honors, University of North Carolina
+- Bachelor of Arts, Cum Laude, Hamilton College
+- Certified Public Accountant, 2022
+- Greenbelt, Lean Six Sigma, 2014
+- Chartered Financial Analyst, 2011
 
-Doug Whittlesey is a seasoned financial professional with over two decades of comprehensive experience in diverse sectors, including both for-profit and not-for-profit healthcare finance and accounting, research financial management, and investment management. In his various professional roles, Doug has led budgetary, accounting, and financial planning & analysis functions and teams for both large and small organizations.
+Doug Whittlesey is a seasoned financial professional with over two decades of comprehensive experience in diverse sectors, including both for-profit and not-for-profit healthcare finance and accounting, research financial management, and investment management. In his various professional roles, Doug has led budgetary, accounting, and financial planning &amp; analysis functions and teams for both large and small organizations.
 
-###  What motivated you to serve on the City Council? 
+### What motivated you to serve on the City Council?
 
- With the retirement of one of our long-serving Ward 1 Councilors, I thought joining the Council would be a great opportunity to serve my community. I felt that I could leverage my experience in finance and accounting to contribute to the growth and vibrance of our City. 
+With the retirement of one of our long-serving Ward 1 Councilors, I thought joining the Council would be a great opportunity to serve my community. I felt that I could leverage my experience in finance and accounting to contribute to the growth and vibrance of our City.
 
-###  What are your focus areas or priorities while serving on City Council? 
+### What are your focus areas or priorities while serving on City Council?
 
 I continue to focus on the financial sustainability of the City while ensuring we continue to meet our infrastructure and service needs. This cuts across all areas of the City, but with a primary focus on housing, annual budgets, and tax appropriations.
 
@@ -69,62 +104,60 @@ I continue to focus on the financial sustainability of the City while ensuring w
 
 Lebanon, to me, is the quintessential New England city with a vibrant, thriving community. The City has a wonderful close-knit feel as well as an excellent school system.
 
- 1.   [Agendas and Minutes](https://lebanonnh.portal.civicclerk.com/?category_id=26)  
- 1.   [City Council Resolutions](/1836/City-Council-Resolutions)  
- 1.   [Mayor Douglas Whittlesey](/1484/Mayor-Douglas-Whittlesey)  
- 1.   [Assistant Mayor Devin R. Wilkie](/1483/Assistant-Mayor-Devin-R-Wilkie)  
- 1.   [Councilor Timothy J. McNamara](/847/Councilor-Timothy-J-McNamara)  
- 1.   [Councilor Erling Heistad](/850/Councilor-Erling-Heistad)  
- 1.   [Councilor George Sykes](/1017/Councilor-George-Sykes)  
- 1.   [Councilor Chris Simon](/844/Councilor-Chris-Simon)  
- 1.   [Councilor Karen Zook](/1178/Councilor-Karen-Zook)  
- 1.   [Councilor Nicole Ford Burley](/1855/Councilor-Nicole-Ford-Burley)  
- 1.   [Councilor Laurel Stavis](/1856/Councilor-Laurel-Stavis)  
-  [Agendas &
+[Agendas &amp;  
+Minutes](https://www.lebanonnh.gov/agendas)
 
-Minutes](/agendas)   [Maps & Property
+[Maps &amp; Property  
+Information](https://www.lebanonnh.gov/661/Maps-Property-Information)
 
-Information](/661/Maps-Property-Information)   [Forms, Permits,
+[Forms, Permits,  
+&amp; Applications](https://www.lebanonnh.gov/714/Forms-Permits-and-Applications)
 
-and Applications](/714/Forms-Permits-and-Applications)   [Ask LebNH or
+[Ask LebNH or  
+Report an Issue](https://www.lebanonnh.gov/1518)
 
-Report an Issue](/1518)   [Subscribe to LebNews
+[Subscribe to  
+LebNews &amp;  
+LebAlerts](https://www.lebanonnh.gov/1239/Alerts-Notifications)
 
-and LebAlerts](/1239/Alerts-Notifications)   [Pay Your
-
-Bill Online](/pay)  
-
- 1.   ![City of Lebanon](https://www.lebanonnh.gov/ImageRepository/Document?documentID=11897)  
+[Pay Your  
+Bill Online](https://www.lebanonnh.gov/pay)
 
 ### Contact Us
 
- 1.  City of Lebanon    
+1. City of Lebanon
+2. City Hall
+3. 51 N Park Street
+4. Lebanon, NH 03766
+5. [City Directory &amp; Hours](https://www.lebanonnh.gov/directory)
 
- City Hall    
+### [Quick Links](https://www.lebanonnh.gov/QuickLinks.aspx?CID=31)
 
- 51 N Park Street    
+1. [Ask LebNH](https://www.lebanonnh.gov/ask)
+2. [Pay Online](https://www.lebanonnh.gov/732)
+3. [Sign Up for Alerts](https://www.lebanonnh.gov/subscribe)
+4. [View Employment Listings](https://www.lebanonnh.gov/jobs.aspx)
+5. [City Homepage](https://lebanonnh.gov)
 
- Lebanon, NH 03766    
+/QuickLinks.aspx
 
-  [City Directory & Hours](/directory.aspx)  
+### [Site Links](https://www.lebanonnh.gov/QuickLinks.aspx?CID=32)
 
-###  [Helpful Links](/QuickLinks.aspx?CID=31) 
+1. [Accessibility](https://www.lebanonnh.gov/Accessibility)
+2. [Copyright Notices](https://www.lebanonnh.gov/site/copyright)
+3. [Privacy Policy](https://www.lebanonnh.gov/privacy)
+4. [Social Media Policy](https://view.publitas.com/city-of-lebanon/socialmediapolicy)
 
- 1.  [Ask LebNH](/ask)  
- 1.  [Information for New Residents](/615/New-Residents-to-Lebanon)  
- 1.  [Pay Online](/732)  
- 1.  [Sign Up for Alerts](/subscribe)  
- 1.  [View Employment Listings](/jobs.aspx)  
- /QuickLinks.aspx 
+/QuickLinks.aspx
 
-###  [Site Links](/QuickLinks.aspx?CID=32) 
+Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)
 
- 1.  [Accessibility](/Accessibility)  
- 1.  [Copyright Notices](/site/copyright)  
- 1.  [Privacy Policy](/privacy)  
- 1.  [Social Media Policy](https://view.publitas.com/city-of-lebanon/socialmediapolicy)  
- /QuickLinks.aspx Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)  Loading Loading Do Not Show Again Close 
+Loading
 
-Hi! 👋 How can I help?
+Loading
 
- PageAssist Discover your personalization options  ![PageAssist Loading](https://cdn.monsido.com/page-assist/v2/assets/img/default-spinner.png)  
+Do Not Show Again Close
+
+How can we help you?
+
+PageAssist Discover your personalization options
