@@ -1,0 +1,457 @@
+[Skip to main content](https://www.allenstownnh.gov/people/kathleen-pelissier/)
+
+![Allenstown NH](https://www.allenstownnh.gov/sites/all/themes/custom/sites/allenstownnh/vts_allenstownnh/logo.png)
+
+[Home](https://www.allenstownnh.gov)
+
+Keywords
+
+[Facebook](https://www.facebook.com/Town-of-Allenstown-1942448925877087)
+
+- [About Us](https://www.allenstownnh.gov/about-our-town)
+- [Departments](https://www.allenstownnh.gov/departments)
+  
+  - [Assessing Department](https://www.allenstownnh.gov/assessing-department)
+    
+    - [2022 Cyclical Revaluation Report/Manual](https://www.allenstownnh.gov/assessing-department/files/2022-cyclical-revaluation-reportmanual)
+    - [Veteran's Tax Exemption](https://www.allenstownnh.gov/assessing-department/files/veterans-tax-exemption)
+    - [2016 MS 1 Summary of Evaluation Inventory](https://www.allenstownnh.gov/assessing-department/files/2016-ms-1-summary-of-evaluation-inventory)
+    - [2017 Cyclical Revaluation of Property Report](https://www.allenstownnh.gov/assessing-department/files/2017-cyclical-revaluation-of-property-report)
+    - [2017 MS 1 Summary of Evaluation Inventory](https://www.allenstownnh.gov/assessing-department/files/2017-ms-1-summary-of-evaluation-inventory)
+    - [Abatement Application Appeal to BTLA](https://www.allenstownnh.gov/assessing-department/links/abatement-application-appeal-to-btla)
+    - [Abatement Application to Municipality](https://www.allenstownnh.gov/assessing-department/files/abatement-application-to-municipality)
+    - [Assessing Address Change Form](https://www.allenstownnh.gov/assessing-department/files/assessing-address-change-form)
+    - [Dates &amp; Deadlines](https://www.allenstownnh.gov/assessing-department/pages/dates-deadlines)
+    - [Elderly Exemption Application \*(Updated for 2023 Change)](https://www.allenstownnh.gov/assessing-department/files/elderly-exemption-application-updated-for-2023-change)
+    - [NH Department of Revenue](https://www.allenstownnh.gov/assessing-department/links/nh-department-of-revenue)
+    - [Notice of Intent to Cut Wood or Timber](https://www.allenstownnh.gov/assessing-department/files/notice-of-intent-to-cut-wood-or-timber)
+    - [Notice of Intent to Excavate](https://www.allenstownnh.gov/assessing-department/files/notice-of-intent-to-excavate)
+    - [Permanent Application for Property Tax Credit &amp; Exemptions](https://www.allenstownnh.gov/assessing-department/files/permanent-application-for-property-tax-credit-exemptions)
+    - [Tax Abatement Request Form - Damaged Buildings](https://www.allenstownnh.gov/assessing-department/files/tax-abatement-request-form-damaged-buildings)
+    - [Town Clerk / Tax Collector](https://www.allenstownnh.gov/assessing-department/links/town-clerk-tax-collector)
+  - [Building Inspector](https://www.allenstownnh.gov/building-inspector)
+    
+    - [Community Revitalization Tax Relief Incentive](https://www.allenstownnh.gov/building-inspector/links/community-revitalization-tax-relief-incentive)
+    - [Inspection Stages](https://www.allenstownnh.gov/building-inspector/pages/inspection-stages)
+    - [Permit Fees - Various](https://www.allenstownnh.gov/building-inspector/files/permit-fees-various)
+    - [Permits Various](https://www.allenstownnh.gov/building-inspector/pages/permits-various)
+    - [Planning Board](https://www.allenstownnh.gov/building-inspector/links/planning-board)
+    - [Planning Policies](https://www.allenstownnh.gov/building-inspector/links/planning-policies)
+    - [ZBA Appeal Form](https://www.allenstownnh.gov/building-inspector/links/zba-appeal-form)
+  - [Emergency Management](https://www.allenstownnh.gov/emergency-management)
+    
+    - [COVID19 (Corona Virus) - State of New Hampshire](https://www.allenstownnh.gov/emergency-management/links/covid19-corona-virus-state-of-new-hampshire)
+    - [COVID19 - Center for Disease Control](https://www.allenstownnh.gov/emergency-management/links/covid19-center-for-disease-control)
+    - [Disaster Planning Kit](https://www.allenstownnh.gov/emergency-management/links/disaster-planning-kit)
+    - [Disaster Recovery Plan](https://www.allenstownnh.gov/emergency-management/files/disaster-recovery-plan)
+    - [Emergency Shelters](https://www.allenstownnh.gov/emergency-management/links/emergency-shelters)
+    - [Evacuation Routes](https://www.allenstownnh.gov/emergency-management/links/evacuation-routes)
+    - [FEMA](https://www.allenstownnh.gov/emergency-management/links/fema)
+    - [Food Safety](https://www.allenstownnh.gov/emergency-management/pages/food-safety)
+    - [Generator Safety](https://www.allenstownnh.gov/emergency-management/links/generator-safety)
+    - [Hazard Mitigation Plan 2021](https://www.allenstownnh.gov/emergency-management/files/hazard-mitigation-plan-2021)
+    - [Helpful Links](https://www.allenstownnh.gov/emergency-management/pages/helpful-links)
+    - [Pets and Emergencies](https://www.allenstownnh.gov/emergency-management/links/pets-and-emergencies)
+    - [Power Outages](https://www.allenstownnh.gov/emergency-management/pages/power-outages)
+    - [Preparing for an Emergency](https://www.allenstownnh.gov/emergency-management/links/preparing-for-an-emergency)
+    - [Reducing the Damage of Repeated Flooding in Allenstown, NH](https://www.allenstownnh.gov/emergency-management/links/reducing-the-damage-of-repeated-flooding-in-allenstown-nh)
+    - [Shelter Volunteer Participation Form](https://www.allenstownnh.gov/emergency-management/files/shelter-volunteer-participation-form)
+    - [Suncook River Fluvial Geomorphic Assessment](https://www.allenstownnh.gov/emergency-management/files/suncook-river-fluvial-geomorphic-assessment)
+  - [Family Services Department](https://www.allenstownnh.gov/family-services-department)
+    
+    - [AA Meetings](https://www.allenstownnh.gov/welfare-department/links/aa-meetings)
+    - [Community Action Program - Fuel and Electrical Assistance](https://www.allenstownnh.gov/welfare-department/links/community-action-program-fuel-and-electrical-assistance)
+    - [Community Bridges - Vocational and Residential Programs](https://www.allenstownnh.gov/welfare-department/links/community-bridges-vocational-and-residential-programs)
+    - [Cremation/Burial Assistance Application](https://www.allenstownnh.gov/welfare-department/files/cremationburial-assistance-application)
+    - [Extreme Heat Fact Sheet](https://www.allenstownnh.gov/welfare-department/links/extreme-heat-fact-sheet)
+    - [Families in Transition](https://www.allenstownnh.gov/welfare-department/links/families-in-transition)
+    - [Food Pantries and Soup Kitchens](https://www.allenstownnh.gov/welfare-department/pages/food-pantries-and-soup-kitchens)
+    - [General Assistance Application](https://www.allenstownnh.gov/welfare-department/files/welfare-application)
+    - [General Assistance Fillable Application](https://www.allenstownnh.gov/welfare-department/files/welfare-fillable-application)
+    - [Granite State Independent Living Program](https://www.allenstownnh.gov/welfare-department/links/granite-state-independent-living-program)
+    - [Home Help NH](https://www.allenstownnh.gov/welfare-department/links/home-help-nh)
+    - [Job Corps - Employment Training for Teens Ages 16-24 Years Old](https://www.allenstownnh.gov/welfare-department/links/job-corps-employment-training-for-teens-ages-16-24-years-old)
+    - [NH Elderly Services](https://www.allenstownnh.gov/welfare-department/links/nh-elderly-services)
+    - [NH Homeless Shelters](https://www.allenstownnh.gov/welfare-department/links/nh-homeless-shelters)
+    - [NH State Health and Human Services](https://www.allenstownnh.gov/welfare-department/links/nh-state-health-and-human-services)
+    - [Prescription Assistance Programs](https://www.allenstownnh.gov/welfare-department/pages/prescription-assistance-programs)
+    - [Riverbend Mental Health](https://www.allenstownnh.gov/welfare-department/links/riverbend-mental-health)
+    - [Social Security Office](https://www.allenstownnh.gov/welfare-department/links/social-security-office)
+  - [Finance Department](https://www.allenstownnh.gov/finance-department)
+    
+    - [Expenditure Report - 6.30.25](https://www.allenstownnh.gov/finance-department/files/expenditure-report-63025)
+    - [2014 Tax Rate Setting Forms](https://www.allenstownnh.gov/finance-department/pages/2014-tax-rate-setting-forms)
+    - [2015 Tax Rate Setting Forms](https://www.allenstownnh.gov/finance-department/pages/2015-tax-rate-setting-forms)
+    - [2016 Tax Rate Setting Forms](https://www.allenstownnh.gov/finance-department/pages/2016-tax-rate-setting-forms)
+    - [Audit Reports](https://www.allenstownnh.gov/finance-department/pages/audit-reports)
+    - [Transfer / Disposal Form for Furniture, Equipment and Vehicles](https://www.allenstownnh.gov/finance-department/links/transfer-disposal-form-for-furniture-equipment-and-vehicles)
+    - [Treasurer Responsibilities](https://www.allenstownnh.gov/finance-department/pages/treasurer-responsibilities)
+  - [Fire Department](https://www.allenstownnh.gov/allenstown-fire-department)
+    
+    - ["Five Bugles"](https://www.allenstownnh.gov/allenstown-fire-department/pages/five-bugles)
+    - [Ambulance Billing Questions](https://www.allenstownnh.gov/fire-department/pages/ambulance-billing-questions)
+    - [Apparatus](https://www.allenstownnh.gov/fire-department/pages/apparatus)
+    - [Brush and Campfires - Permitted Burning](https://www.allenstownnh.gov/allenstown-fire-department/pages/burning-permits)
+    - [EMS Community Outreach](https://www.allenstownnh.gov/fire-department/pages/ems-community-outreach)
+    - [Employment Application](https://www.allenstownnh.gov/fire-department/webforms/employment-application)
+    - [Fire &amp; EMS Training](https://www.allenstownnh.gov/fire-department/pages/fire-ems-training)
+    - [Fire Cadet Program](https://www.allenstownnh.gov/fire-department/pages/fire-cadet-program)
+    - [FireMed Healthcare/Fire Educators](https://www.allenstownnh.gov/fire-department/links/firemed-healthcarefire-educators)
+    - [Installation Permits &amp; Fire Inspections](https://www.allenstownnh.gov/fire-department/links/installation-permits-fire-inspections)
+    - [KNOX - "Knox Box" Applications](https://www.allenstownnh.gov/fire-department/links/knox-knox-box-applications)
+    - [Links of Interest](https://www.allenstownnh.gov/fire-department/pages/links-of-interest)
+    - [Listen to Fire Alarm LIVE!](https://www.allenstownnh.gov/fire-department/links/listen-to-fire-alarm-live)
+    - [Resident "Live-In" Student Program](https://www.allenstownnh.gov/fire-department/pages/resident-live-in-student-program)
+    - [Staff Members](https://www.allenstownnh.gov/fire-department/pages/staff-members)
+  - [Health Department](https://www.allenstownnh.gov/health-department)
+    
+    - [Brrrr - It's Cold Out There - Tips to Protect Yourself in Cold Weather](https://www.allenstownnh.gov/health-department/files/brrrr-its-cold-out-there-tips-to-protect-yourself-in-cold-weather)
+    - [COVID19 New Hampshire](https://www.allenstownnh.gov/health-department/links/covid19-new-hampshire)
+    - [Capital Area Public Health Network](https://www.allenstownnh.gov/health-department/links/capital-area-public-health-network)
+    - [Federal Agencies](https://www.allenstownnh.gov/health-department/pages/federal-agencies)
+    - [NH Alcohol and Drug Treatment Locator](https://www.allenstownnh.gov/health-department/links/nh-alcohol-and-drug-treatment-locator)
+    - [NH Food Protection Section](https://www.allenstownnh.gov/health-department/links/nh-food-protection-section)
+    - [NH State Agencies](https://www.allenstownnh.gov/health-department/pages/nh-state-agencies)
+    - [Rabies](https://www.allenstownnh.gov/health-department/files/rabies)
+    - [Sun Exposure and Skin Cancer](https://www.allenstownnh.gov/health-department/files/sun-exposure-and-skin-cancer)
+    - [Time To Get Your Flu Shot](https://www.allenstownnh.gov/health-department/files/time-to-get-your-flu-shot)
+    - [U.S. Government Recalls](https://www.allenstownnh.gov/health-department/links/us-government-recalls)
+    - [Zika Virus Information](https://www.allenstownnh.gov/health-department/links/zika-virus-information)
+  - [Highway Department](https://www.allenstownnh.gov/highway-department-and-solid-waste-trash-disposal)
+    
+    - [2025 Spring Cleanup and Yard Waste Collection Guidelines](https://www.allenstownnh.gov/highway-department/pages/yard-waste-collection-guidelines)
+    - [2025 Yard Waste Collection Schedule](https://www.allenstownnh.gov/highway-department/files/2018-yard-waste-collection-schedule)
+    - [Composting](https://www.allenstownnh.gov/highway-department/files/composting)
+    - [Disposal Tips for Sharps](https://www.allenstownnh.gov/highway-department/files/disposal-tips-for-sharps)
+    - [Disposal of Construction &amp; Demolition Debris](https://www.allenstownnh.gov/highway-department/pages/disposal-of-construction-demolition-debris)
+    - [Disposing of Unneeded Medication](https://www.allenstownnh.gov/highway-department/files/disposing-of-unneeded-medication)
+    - [Driveway Permit Application](https://www.allenstownnh.gov/highway-department/files/driveway-permit-application)
+    - [Driveway Regulations](https://www.allenstownnh.gov/highway-department/files/driveway-regulations)
+    - [Excavation Permit Application - Roadway](https://www.allenstownnh.gov/highway-department/files/excavation-permit-application-roadway)
+    - [Landfill Groundwater Management Permit 2016-2017](https://www.allenstownnh.gov/highway-department/files/landfill-groundwater-management-permit-2016-2017)
+    - [Landfill Groundwater Permit and Testing Requirements 2018](https://www.allenstownnh.gov/highway-department/files/landfill-groundwater-permit-and-testing-requirements-2018)
+    - [MS4 - Storm Water Pollution Controls and Education - Think Blue Suncook](https://www.allenstownnh.gov/highway-department-and-solid-waste-trash-disposal/links/ms4-storm-water-pollution-controls-and)
+    - [Notice from National Pollutant Discharge Elimination System (NPDES) Permit ID: NHR041039, Town of Allenstown, NH](https://www.allenstownnh.gov/highway-department-and-solid-waste-trash-disposal/pages/notice-from-national-pollutant-discharge)
+    - [PFAS Related Information](https://www.allenstownnh.gov/highway-department/files/pfas-related-information)
+    - [RECYCLING GUIDE](https://www.allenstownnh.gov/highway-department-and-solid-waste-trash-disposal/files/recycling-guide)
+    - [Report a Pothole](https://www.allenstownnh.gov/highway-department/files/report-a-pothole)
+    - [Reporting Roadway Insufficiency](https://www.allenstownnh.gov/highway-department/files/reporting-roadway-insufficiency)
+    - [Snowplows &amp; Mailboxes](https://www.allenstownnh.gov/highway-department/pages/snowplows-mailboxes)
+    - [Solid Waste](https://www.allenstownnh.gov/highway-department/pages/solid-waste)
+    - [Storm Water](https://www.allenstownnh.gov/highway-department/pages/storm-water)
+    - [Transfer Station](https://www.allenstownnh.gov/highway-department/pages/transfer-station)
+    - [Transfer Station Fee Schedule](https://www.allenstownnh.gov/highway-department-and-solid-waste-trash-disposal/pages/transfer-station-fee-schedule)
+  - [Human Resources](https://www.allenstownnh.gov/human-resources)
+    
+    - [2024 MRI - Salary Survey &amp; Compensation Study](https://www.allenstownnh.gov/human-resources/files/2024-mri-salary-survey-compensation-study)
+    - [Employment Application](https://www.allenstownnh.gov/human-resources/links/employment-application)
+    - [Harpers Payroll Login](https://www.allenstownnh.gov/human-resources/links/harpers-payroll-login)
+    - [Helpful Links](https://www.allenstownnh.gov/human-resources/pages/helpful-links)
+    - [Human Resources Forms and Documents](https://www.allenstownnh.gov/personnel/pages/forms-and-documents)
+    - [Nationwide Supplemental Retirement Plan](https://www.allenstownnh.gov/human-resources/pages/nationwide-supplemental-retirement-plan)
+    - [Payroll Policy](https://www.allenstownnh.gov/human-resources/files/payroll-policy)
+    - [Personnel Policy July 2024](https://www.allenstownnh.gov/human-resources/files/personnel-policy-july-2024)
+    - [Short Term Disability](https://www.allenstownnh.gov/human-resources/files/short-term-disability)
+  - [Library](https://www.allenstownnh.gov/library-0)
+  - [Police Department](https://www.allenstownnh.gov/police-department)
+    
+    - [Downloadable Forms](https://www.allenstownnh.gov/police-department/links/downloadable-forms)
+    - [Employment](https://www.allenstownnh.gov/police-department/pages/employment)
+    - [Links of Interest](https://www.allenstownnh.gov/police-department/pages/links-of-interest)
+    - [Victims of Domestic Violence and Sexual Abuse](https://www.allenstownnh.gov/police-department/links/victims-of-domestic-violence-and-sexual-abuse)
+    - [Winter Parking Ban](https://www.allenstownnh.gov/police-department/pages/winter-parking-ban)
+  - [Sewer Department](https://www.allenstownnh.gov/sewer-department)
+    
+    - [2025 Holiday Schedule](https://www.allenstownnh.gov/sewer-department/files/2025-holiday-schedule)
+    - [Contact Us](https://www.allenstownnh.gov/sewer-department/links/contact-us)
+    - [Forms](https://www.allenstownnh.gov/sewer-department/pages/forms)
+    - [Inter-Municipal Agreement Sewer Services between Allenstown and Pembroke 2024](https://www.allenstownnh.gov/sewer-department/files/inter-municipal-agreement-sewer-services-between-allenstown-and-pembroke-2024)
+    - [Plant Process](https://www.allenstownnh.gov/sewer-department/pages/plant-process)
+    - [Septage Haulers](https://www.allenstownnh.gov/sewer-department/pages/septage-haulers-0)
+    - [Sewer Commission](https://www.allenstownnh.gov/sewer-department/links/sewer-commission)
+    - [Sewer Department](https://www.allenstownnh.gov/sewer-department/links/sewer-department)
+    - [Sewer Use Ordinance](https://www.allenstownnh.gov/sewer-department/files/sewer-use-ordinance)
+    - [Sewer User Fee Schedule](https://www.allenstownnh.gov/sewer-department/files/sewer-user-fee-schedule)
+    - [Sewer Users and Billing Information](https://www.allenstownnh.gov/sewer-department/pages/sewer-users-and-billing-information)
+  - [Town Administrator](https://www.allenstownnh.gov/town-administrator)
+    
+    - [2024 Town Report](https://www.allenstownnh.gov/town-administrator/files/2024-town-report)
+    - [2012 Town Report](https://www.allenstownnh.gov/town-administrator/files/2012-town-report)
+    - [2013 Town Report](https://www.allenstownnh.gov/town-administrator/files/2013-town-report)
+    - [2014 Town Report](https://www.allenstownnh.gov/town-administrator/files/2014-town-report)
+    - [2015 Town Report](https://www.allenstownnh.gov/town-administrator/files/2015-town-report)
+    - [2016 Town Report](https://www.allenstownnh.gov/town-administrator/files/2016-town-report)
+    - [2017 Town Report](https://www.allenstownnh.gov/town-administrator/files/2017-town-report)
+    - [2018 Town Report](https://www.allenstownnh.gov/town-administrator/pages/2018-town-report)
+    - [2019 Town Report](https://www.allenstownnh.gov/town-administrator/links/2019-town-report)
+    - [2020 Town Report](https://www.allenstownnh.gov/town-administrator/files/2020-town-report)
+    - [2021 Town Report](https://www.allenstownnh.gov/town-administrator/files/2021-town-report)
+    - [2022 Town Report](https://www.allenstownnh.gov/town-administrator/files/2022-town-report)
+    - [2023 Town Report](https://www.allenstownnh.gov/town-administrator/files/2023-town-report)
+    - [Capital Improvements Plan](https://www.allenstownnh.gov/town-administrator/links/capital-improvements-plan)
+    - [Downtown Re-development- Charrette](https://www.allenstownnh.gov/town-administrator/pages/downtown-re-development-charrette)
+    - [NH Municipal Association](https://www.allenstownnh.gov/town-administrator/links/nh-municipal-association)
+    - [Policies](https://www.allenstownnh.gov/town-administrator/pages/policies)
+    - [Right to Know Request](https://www.allenstownnh.gov/town-administrator/pages/right-to-know-request)
+    - [Useful Links](https://www.allenstownnh.gov/town-administrator/pages/useful-links)
+  - [Town Clerk / Tax Collector](https://www.allenstownnh.gov/town-clerk-tax-collector)
+    
+    - [\*Town Municipal Elections Results](https://www.allenstownnh.gov/town-clerk-tax-collector/pages/town-municipal-elections-results)
+    - [Application for Absentee Ballot](https://www.allenstownnh.gov/town-clerk-tax-collector/files/application-for-absentee-ballot)
+    - [Assessing, Abatements, Current Use, Exemptions, Tax Appeals](https://www.allenstownnh.gov/town-clerk-tax-collector/links/assessing-abatements-current-use-exemptions-tax-appeals)
+    - [Boat Registration](https://www.allenstownnh.gov/town-clerk-tax-collector/pages/boat-registration)
+    - [Building Permits](https://www.allenstownnh.gov/town-clerk-tax-collector/pages/building-permits)
+    - [Dog Licenses](https://www.allenstownnh.gov/town-clerk-tax-collector/pages/dog-licenses)
+    - [Elections Information](https://www.allenstownnh.gov/town-clerk-tax-collector/pages/elections-information-1)
+    - [Forms](https://www.allenstownnh.gov/town-clerk-tax-collector/pages/forms)
+    - [Marriage Licenses](https://www.allenstownnh.gov/town-clerk-tax-collector/pages/marriage-licenses)
+    - [Motor Vehicle Transactions](https://www.allenstownnh.gov/town-clerk-tax-collector/pages/motor-vehicle-transactions)
+    - [NH DMV website](https://www.allenstownnh.gov/town-clerk-tax-collector/links/nh-dmv-website)
+    - [New Resident and General Town Information and Directory](https://www.allenstownnh.gov/town-clerk-tax-collector/pages/new-resident-and-general-town-information-and-directory)
+    - [OHRV Registrations and Hunting &amp; Fishing Licenses - Not Available at Allenstown Town Hall at this time.](https://www.allenstownnh.gov/town-clerk-tax-collector/pages/ohrv-registrations-and-hunting-fishing-licenses-not-available-at)
+    - [Police Fines and Citations](https://www.allenstownnh.gov/town-clerk-tax-collector/pages/police-fines-and-citations)
+    - [Property Taxes and Assessed Values](https://www.allenstownnh.gov/town-clerk-tax-collector/pages/property-taxes-and-assessed-values)
+    - [Tax Rate History](https://www.allenstownnh.gov/town-clerk-tax-collector/pages/tax-rate-history)
+    - [Vital Records](https://www.allenstownnh.gov/town-clerk-tax-collector/pages/vital-records)
+    - [Voter Information Look Up](https://www.allenstownnh.gov/town-clerk-tax-collector/pages/voter-information-look-up)
+- [Boards &amp; Committees](https://www.allenstownnh.gov/boards)
+  
+  - [Community Power Committee](https://www.allenstownnh.gov/home/community-power-aggregation-committee)
+    
+    - [Community Power - Questions and Answers About the Program](https://www.allenstownnh.gov/home/allenstown-community-power-aggregation-committee/files/community-power-questions-and-answers)
+    - [Community Power Aggregation Committee](https://www.allenstownnh.gov/home/community-power-aggregation-committee)
+    - [Community Power Plan](https://www.allenstownnh.gov/home/allenstown-community-power-aggregation-committee/files/community-power-plan)
+    - [Community Power Plan Public Hearing Notice 01-23-2023](https://www.allenstownnh.gov/home/allenstown-community-power-aggregation-committee/files/community-power-plan-public-hearing)
+    - [Community Power Quick Facts](https://www.allenstownnh.gov/home/allenstown-community-power-aggregation-committee/files/community-power-quick-facts)
+    - [Community Power Survey](https://www.allenstownnh.gov/home/allenstown-community-power-aggregation-committee/files/community-power-survey)
+  - [Economic Development Committee](https://www.allenstownnh.gov/economic-development)
+    
+    - [Spotlight on Business](https://www.allenstownnh.gov/economic-development/links/spotlight-on-business)
+    - [116 Acres on Deerfield Road Preserved](https://www.allenstownnh.gov/economic-development/pages/116-acres-on-deerfield-road-preserved)
+    - [Clearing Land for the New School](https://www.allenstownnh.gov/economic-development/pages/clearing-land-for-the-new-school)
+    - [Rebuilding the Route 28 Bridge](https://www.allenstownnh.gov/economic-development/pages/rebuilding-the-route-28-bridge)
+    - [3. Second Annual Halloween Lighting Contest](https://www.allenstownnh.gov/economic-development/links/3-second-annual-halloween-lighting-contest)
+    - [A Sign for Blueberry Express Park](https://www.allenstownnh.gov/economic-development/pages/a-sign-for-blueberry-express-park)
+    - [Aerial Slideshows of Hillsbrook Village](https://www.allenstownnh.gov/economic-development/pages/aerial-slideshows-of-hillsbrook-village)
+    - [Allenstown Economic Development](https://www.allenstownnh.gov/economic-development/pages/allenstown-economic-development)
+    - [An Historic Old Mill Finds New Life](https://www.allenstownnh.gov/economic-development/pages/an-historic-old-mill-finds-new-life)
+    - [Banner for a Civil War Hometown Hero](https://www.allenstownnh.gov/economic-development/pages/banner-for-a-civil-war-hometown-hero)
+    - [Business Directory Request Form](https://www.allenstownnh.gov/economic-development/webforms/business-directory-request-form)
+    - [Business Tax Exemption Application and Law](https://www.allenstownnh.gov/economic-development/files/business-tax-exemption-application-and-law)
+    - [Community Revitalization Tax Relief Incentive](https://www.allenstownnh.gov/economic-development-committee/pages/community-revitalization-tax-relief-incentive)
+    - [Consumer Price Index](https://www.allenstownnh.gov/economic-development-committee/links/consumer-price-index)
+    - [Downtown Allenstown Public Utilities Service Area Map 12-09](https://www.allenstownnh.gov/economic-development-committee/files/downtown-allenstown-public-utilities-service-area-map-12-09)
+    - [Downtown Re-Development](https://www.allenstownnh.gov/economic-development-committee/pages/downtown-re-development)
+    - [Economic Development Business Successes](https://www.allenstownnh.gov/economic-development/pages/economic-development-business-successes)
+    - [Economic Development Committee Overview](https://www.allenstownnh.gov/economic-development-committee/pages/economic-development-committee)
+    - [Economic Development Community Initiatives](https://www.allenstownnh.gov/economic-development/pages/economic-development-community-initiatives)
+    - [Economic Development Intial Projects](https://www.allenstownnh.gov/economic-development/pages/economic-development-intial-projects)
+    - [Economic Development Resources](https://www.allenstownnh.gov/economic-development-committee/links/economic-development-resources)
+    - [Economic Revitalization Zone](https://www.allenstownnh.gov/economic-development-committee/pages/economic-revitalization-zone)
+    - [Help for Your Business](https://www.allenstownnh.gov/economic-development/pages/help-for-your-business)
+    - [Hometown Heroes Banners](https://www.allenstownnh.gov/economic-development/pages/hometown-heroes-banners)
+    - [ICE RINK RULES and REGULATIONS at Armand R Dupont School](https://www.allenstownnh.gov/economic-development/pages/ice-rink-rules-and-regulations-at-armand-r-dupont-school)
+    - [Ice Rink Slide Show](https://www.allenstownnh.gov/economic-development/slideshows/ice-rink-slide-show)
+    - [Jennifer Mitchell Concert and Cruise Night](https://www.allenstownnh.gov/economic-development/pages/jennifer-mitchell-concert-and-cruise-night)
+    - [Jennifer Mitchell Concert, JUne 23, 2024](https://www.allenstownnh.gov/economic-development/links/jennifer-mitchell-concert-june-23-2024)
+    - [NH Department of Labor Unemployment Statistics](https://www.allenstownnh.gov/economic-development-committee/links/nh-department-of-labor-unemployment-statistics)
+    - [NHES Community Profile](https://www.allenstownnh.gov/economic-development-committee/links/nhes-community-profile)
+    - [New Suncook Pond Pump Station Operational](https://www.allenstownnh.gov/economic-development/pages/new-suncook-pond-pump-station-operational)
+    - [New Town Welcome Signs Add Visual Impact](https://www.allenstownnh.gov/economic-development/pages/new-town-welcome-signs-add-visual-impact)
+    - [Old Time Baseball in Allenstown](https://www.allenstownnh.gov/economic-development/pages/old-time-baseball-in-allenstown)
+    - [Registered Homes for the 2024 Christmas Lighting Contest](https://www.allenstownnh.gov/economic-development/slideshows/registered-homes-for-the-2024-christmas-lighting-contest)
+    - [Registered Homes for the 2024 Halloween Lighting Contest](https://www.allenstownnh.gov/economic-development/slideshows/registered-homes-for-the-2024-halloween-lighting-contest)
+    - [Senior Living Coming to Town](https://www.allenstownnh.gov/economic-development/pages/senior-living-coming-to-town)
+    - [Slideshow of Conversion of China Mill](https://www.allenstownnh.gov/economic-development/pages/slideshow-of-conversion-of-china-mill)
+    - [Traffic Counts](https://www.allenstownnh.gov/economic-development-committee/files/traffic-counts-1)
+  - [Board of Selectmen](https://www.allenstownnh.gov/board-of-selectmen)
+    
+    - [2023 Harriman Report - AES Feasibility Study](https://www.allenstownnh.gov/board-of-selectmen/files/2023-harriman-report-aes-feasibility-study)
+    - [2025 Board of Selectmen Meeting Schedule](https://www.allenstownnh.gov/board-of-selectmen/files/2025-board-of-selectmen-meeting-schedule)
+    - [AES Advisory Committee](https://www.allenstownnh.gov/board-of-selectmen/pages/aes-advisory-committee)
+    - [Agenda Request Form](https://www.allenstownnh.gov/board-of-selectmen/pages/agenda-request-form)
+    - [Auditors Reports](https://www.allenstownnh.gov/board-of-selectmen/links/auditors-reports)
+    - [BOS Rules of Procedure](https://www.allenstownnh.gov/board-of-selectmen/files/bos-rules-of-procedure)
+    - [Petition Warrant Article Form](https://www.allenstownnh.gov/board-of-selectmen/pages/petition-warrant-article-form)
+  - [Budget Committee](https://www.allenstownnh.gov/budget-committee)
+    
+    - [2024-2025 Budget Committee Meeting Schedule](https://www.allenstownnh.gov/budget-committee/pages/2024-2025-budget-committee-meeting-schedule)
+    - [Budget Committee Members](https://www.allenstownnh.gov/budget-committee/pages/budget-committee-members)
+    - [Duties and Responsibilities of the Budget Committee](https://www.allenstownnh.gov/budget-committee/files/duties-and-responsibilities-of-the-budget-committee)
+  - [Cemetery Trustees](https://www.allenstownnh.gov/cemetery-trustees)
+    
+    - [Forms](https://www.allenstownnh.gov/cemetery-trustees/pages/forms)
+    - [Powers and Duties](https://www.allenstownnh.gov/cemetery-trustees/files/powers-and-duties)
+    - [Trust Fund Trustees](https://www.allenstownnh.gov/cemetery-trustees/links/trust-fund-trustees)
+  - [Conservation Commission](https://www.allenstownnh.gov/conservation-commission)
+    
+    - [Composition of Commission](https://www.allenstownnh.gov/conservation-commission/pages/composition-of-commission)
+    - [Powers](https://www.allenstownnh.gov/conservation-commission/pages/powers)
+    - [SCA New Hampshire](https://www.allenstownnh.gov/conservation-commission/files/sca-new-hampshire)
+    - [Suncook River Fluvial Geomorphic](https://www.allenstownnh.gov/conservation-commission/files/suncook-river-fluvial-geomorphic)
+    - [Trees - Emerald Ash Borer](https://www.allenstownnh.gov/conservation-commission/links/trees-emerald-ash-borer)
+    - [UNH Cooperative Extension](https://www.allenstownnh.gov/conservation-commission/links/unh-cooperative-extension)
+  - [Old Allenstown Meeting House Steering Committee](https://www.allenstownnh.gov/old-allenstown-meeting-house-committee)
+    
+    - [Mailing Information](https://www.allenstownnh.gov/old-allenstown-meeting-house-steering-committee/pages/mailing-information)
+    - [NHDR Article OAMH](https://www.allenstownnh.gov/old-allenstown-meeting-house-committee/files/nhdr-article-oamh)
+    - [OAMH 2014 LCHIP Monitoring Report](https://www.allenstownnh.gov/old-allenstown-meeting-house-committee/files/oamh-2014-lchip-monitoring-report)
+    - [OAMH 2015 LCHIP Monitoring Report](https://www.allenstownnh.gov/old-allenstown-meeting-house-committee/files/oamh-2015-lchip-monitoring-report)
+    - [OAMH Historic Structure Report](https://www.allenstownnh.gov/old-allenstown-meeting-house-committee/files/oamh-historic-structure-report)
+    - [OAMH NHPA Narrative](https://www.allenstownnh.gov/old-allenstown-meeting-house-committee/files/oamh-nhpa-narrative)
+    - [OAMH Photos 1](https://www.allenstownnh.gov/old-allenstown-meeting-house-committee/files/oamh-photos-1)
+    - [OAMH Photos 2](https://www.allenstownnh.gov/old-allenstown-meeting-house-committee/files/oamh-photos-2)
+    - [Suncook Walking Tour Brochure](https://www.allenstownnh.gov/old-allenstown-meeting-house-committee/files/suncook-walking-tour-brochure)
+  - [Parks &amp; Recreation Commission](https://www.allenstownnh.gov/parks-recreation-commission)
+    
+    - [Boys &amp; Girls Club](https://www.allenstownnh.gov/parks-recreation-commission/links/boys-girls-club)
+    - [Building Use Application](https://www.allenstownnh.gov/parks-recreation-commission/files/building-use-application)
+    - [Contact Us](https://www.allenstownnh.gov/parks-recreation-commission/links/contact-us)
+    - [Facility/Community Center Use Policy](https://www.allenstownnh.gov/parks-recreation-commission/links/facilitycommunity-center-use-policy)
+    - [Senior Center Anniversary](https://www.allenstownnh.gov/parks-recreation-commission/files/senior-center-anniversary)
+    - [Suncook Little League](https://www.allenstownnh.gov/parks-recreation-commission/links/suncook-little-league)
+    - [Suncook Soccer](https://www.allenstownnh.gov/parks-recreation-commission/links/suncook-soccer)
+    - [Suncook Softball](https://www.allenstownnh.gov/parks-recreation-commission/links/suncook-softball)
+    - [Volunteers Park Use Application Form](https://www.allenstownnh.gov/parks-recreation-commission/files/volunteers-park-use-application-form)
+    - [Youth Basketball and other Programs](https://www.allenstownnh.gov/parks-recreation-commission/links/youth-basketball-and-other-programs)
+  - [Planning Board](https://www.allenstownnh.gov/planning-board)
+    
+    - [Allenstown Planning Board - Application Process Guidance](https://www.allenstownnh.gov/planning-board/files/allenstown-planning-board-application-process-guidance)
+    - [Allenstown Planning Board - Escrow &amp; Performance Bond Policy](https://www.allenstownnh.gov/planning-board/files/allenstown-planning-board-escrow-performance-bond-policy)
+    - [Applications-Forms-Regulations-Checklists](https://www.allenstownnh.gov/planning-board/pages/applications-forms-regulations-checklists)
+    - [Building Inspector](https://www.allenstownnh.gov/planning-board/links/building-inspector)
+    - [Capital Improvements Plan 2013 to 2018](https://www.allenstownnh.gov/https://www.allenstownnh.gov/planning-board/pages/capital-improvements-plan-0)
+    - [Capital Improvements Plan 2021 to 2026](https://www.allenstownnh.gov/planning-board/pages/capital-improvements-plan-2021-to-2026)
+    - [Commercial or Multi-Family Developments or Redevelopment](https://www.allenstownnh.gov/planning-board/pages/commercial-or-multi-family-developments-or-redevelopment)
+    - [Community Revitalization Tax Relief Incentive Whole Application](https://www.allenstownnh.gov/planning-board/links/community-revitalization-tax-relief-incentive-whole-application)
+    - [Construction on Class VI Roads Policy](https://www.allenstownnh.gov/planning-board/files/construction-on-class-vi-roads-policy)
+    - [Dividing Land](https://www.allenstownnh.gov/planning-board/pages/dividing-land)
+    - [Downtown Public Utilities Service Area Map](https://www.allenstownnh.gov/planning-board/links/downtown-public-utilities-service-area-map)
+    - [Excavation Activities](https://www.allenstownnh.gov/planning-board/pages/excavation-activities)
+    - [Excavation Regulations](https://www.allenstownnh.gov/planning-board/files/excavation-regulations-2)
+    - [Master Plan 2016](https://www.allenstownnh.gov/planning-board/files/master-plan-2016)
+    - [Master Plan Community Survey](https://www.allenstownnh.gov/planning-board/links/master-plan-community-survey)
+    - [Notice of Land Use Board Fees for Planning and Zoning Board](https://www.allenstownnh.gov/planning-board/files/notice-of-land-use-board-fees-for-planning-and-zoning-board)
+    - [Pelissier Boat Launch Ordinance -2024](https://www.allenstownnh.gov/planning-board/files/pelissier-boat-launch-ordinance-2024)
+    - [Planning Board By-Laws and Rules of Procedures](https://www.allenstownnh.gov/planning-board/pages/planning-board-by-laws-and-rules-of-procedures)
+    - [Policies](https://www.allenstownnh.gov/planning-board/pages/policies)
+    - [Proposed 162-N Tax Incentive Zone](https://www.allenstownnh.gov/planning-board/links/proposed-162-n-tax-incentive-zone)
+    - [Site Plan Regulations](https://www.allenstownnh.gov/planning-board/files/site-plan-regulations-3)
+    - [Subdivision Regulations](https://www.allenstownnh.gov/planning-board/files/subdivision-regulations-0)
+    - [Suncook Village Commission](https://www.allenstownnh.gov/planning-board/files/suncook-village-commission)
+    - [Town Ordinances (see also Zoning Ordinance)](https://www.allenstownnh.gov/planning-board/pages/town-ordinances)
+    - [Traffic Counts](https://www.allenstownnh.gov/planning-board/files/traffic-counts-0)
+    - [Voluntary Lot Merger Process](https://www.allenstownnh.gov/planning-board/pages/voluntary-lot-merger-process)
+    - [Zoning Map 2019 (08/2019)](https://www.allenstownnh.gov/planning-board/files/zoning-map-2017)
+    - [Zoning Ordinance 2024](https://www.allenstownnh.gov/planning-board/files/zoning-ordinance-2017)
+  - [Sewer Commission](https://www.allenstownnh.gov/sewer-department/sewer-commission)
+    
+    - [Contact Us](https://www.allenstownnh.gov/sewer-commission/links/contact-us)
+    - [EPA New England](https://www.allenstownnh.gov/sewer-commission/links/epa-new-england)
+    - [Forms](https://www.allenstownnh.gov/sewer-commission/links/forms)
+    - [Online Payments](https://www.allenstownnh.gov/sewer-commission/pages/online-payments)
+    - [Septage Haulers](https://www.allenstownnh.gov/sewer-commission/links/septage-haulers)
+    - [Sewer Department](https://www.allenstownnh.gov/sewer-commission/links/sewer-department)
+    - [Sewer User Fee Schedule](https://www.allenstownnh.gov/sewer-department/sewer-commission/files/sewer-user-fee-schedule)
+  - [Trust Funds Trustees](https://www.allenstownnh.gov/trust-funds-trustees)
+    
+    - [Cemetery Trustees](https://www.allenstownnh.gov/trust-funds-trustees/links/cemetery-trustees)
+    - [Trust Fund Statements](https://www.allenstownnh.gov/trust-funds-trustees/pages/trust-fund-statements)
+  - [Zoning Board of Adjustment](https://www.allenstownnh.gov/zoning-board-of-adjustment)
+    
+    - [2022 ZONING ORDINANCE](https://www.allenstownnh.gov/zoning-board-of-adjustment/files/2022-zoning-ordinance)
+    - [Appeal Application Checklist - Need to Review This Checklist for complete Application](https://www.allenstownnh.gov/zoning-board-of-adjustment/files/appeal-application-checklist-need-to-review-this-checklist-for)
+    - [Application - Administrative Appeal](https://www.allenstownnh.gov/zoning-board-of-adjustment/files/application-administrative-appeal)
+    - [Application - Special Exception](https://www.allenstownnh.gov/zoning-board-of-adjustment/files/application-special-exception)
+    - [Application - Variance](https://www.allenstownnh.gov/zoning-board-of-adjustment/files/application-variance)
+    - [Application Cover Sheet - Used for all Applications](https://www.allenstownnh.gov/zoning-board-of-adjustment/files/application-cover-sheet-used-for-all-applications)
+    - [Planning Policies](https://www.allenstownnh.gov/zoning-board-of-ajustment/links/planning-policies)
+    - [ZBA Application for Appeal](https://www.allenstownnh.gov/zoning-board-of-adjustment/files/zba-application-for-appeal)
+- [Forms &amp; Documents](https://www.allenstownnh.gov/files)
+- [Economic Development](https://www.allenstownnh.gov/economic-development)
+  
+  - [Hometown Heroes Banners](https://www.allenstownnh.gov/economic-development/pages/hometown-heroes-banners)
+  - [Spotlight on Business](https://www.allenstownnh.gov/spotlight-on-buisness)
+- [Business Directory](https://www.allenstownnh.gov/business-directory/by-category)
+  
+  - [Alphabetic Listing](https://www.allenstownnh.gov/business-directory/by-alpha/all)
+  - [Category Listing](https://www.allenstownnh.gov/business-directory/by-category)
+  - [Request Form](https://www.allenstownnh.gov/economic-development/webforms/business-directory-request-form "This form ")
+- [Recycling and Solid Waste](https://www.allenstownnh.gov/highway-department/pages/solid-waste)
+- [TextMyGov](https://www.allenstownnh.gov/home/pages/textmygov)
+- [Town Clerk/Tax Collector](https://www.allenstownnh.gov/town-clerk-tax-collector)
+- [Town Ordinances](https://www.allenstownnh.gov/planning-board/pages/town-ordinances)
+
+![Print](https://www.allenstownnh.gov/sites/all/modules/contrib/print/icons/print_icon.png "Print")
+
+## You are here
+
+1. [Home](https://www.allenstownnh.gov) ››
+2. [Board of Selectmen](https://www.allenstownnh.gov/board-of-selectmen)
+
+# Kathleen Pelissier
+
+E-mail:
+
+[Contact Kathleen Pelissier](https://www.allenstownnh.gov/users/krogers/contact)
+
+### Board Memberships
+
+Board/CommitteeJob titleMembership StatusThis contact is
+
+Board/CommitteeJob titleMembership StatusThis contact is
+
+[Board of Selectmen](https://www.allenstownnh.gov/board-of-selectmen)
+
+Selectwoman
+
+Active Membership
+
+Elected
+
+[Library](https://www.allenstownnh.gov/library-0)
+
+Library Board Member
+
+Active Membership
+
+Elected
+
+[Planning Board](https://www.allenstownnh.gov/planning-board)
+
+Active Membership
+
+- [2023 Harriman Report - AES Feasibility Study](https://www.allenstownnh.gov/board-of-selectmen/files/2023-harriman-report-aes-feasibility-study)
+- [2025 Board of Selectmen Meeting Schedule](https://www.allenstownnh.gov/board-of-selectmen/files/2025-board-of-selectmen-meeting-schedule)
+- [AES Advisory Committee](https://www.allenstownnh.gov/board-of-selectmen/pages/aes-advisory-committee)
+- [Agenda Request Form](https://www.allenstownnh.gov/board-of-selectmen/pages/agenda-request-form)
+- [Auditors Reports](https://www.allenstownnh.gov/board-of-selectmen/links/auditors-reports)
+- [BOS Rules of Procedure](https://www.allenstownnh.gov/board-of-selectmen/files/bos-rules-of-procedure)
+- [Petition Warrant Article Form](https://www.allenstownnh.gov/board-of-selectmen/pages/petition-warrant-article-form)
+
+## Contact Info
+
+Phone:
+
+(603) 485-4276 ext. 112
+
+Address:
+
+16 School Street
+
+Allenstown, NH 03275
+
+United States
+
+See map: [Google Maps](https://maps.google.com/?q=16%20School%20Street%2C%20Allenstown%2C%20NH%2C%2003275%2C%20us)
+
+## Key Contacts
+
+[John Harrington, Jr.](https://www.allenstownnh.gov/user/2213/contact)
+
+(603) 485-4276 ext 112
+
+Town of Allenstown, 16 School Street, Allenstown, NH 03275 Phone: (603) 485-4276  
+[Website Disclaimer &amp; Privacy Policy](https://www.allenstownnh.gov/website-disclaimer-and-privacy-policy)  |  [Government Websites by CivicPlus ®](https://www.civicplus.com)
+
+- [Login](https://www.allenstownnh.gov/user/login?current=node%2F54076)

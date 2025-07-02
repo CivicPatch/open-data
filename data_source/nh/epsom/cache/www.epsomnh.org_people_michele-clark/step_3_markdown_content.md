@@ -1,0 +1,201 @@
+[Skip to main content](https://www.epsomnh.org/people/michele-clark/)
+
+![Epsom NH](https://www.epsomnh.gov/sites/all/themes/custom/sites/epsomnh/vts_epsomnh/logo.png)
+
+[Home](https://www.epsomnh.gov)
+
+Keywords
+
+[Facebook](https://www.facebook.com/epsomnh.org)
+
+- [Home](https://www.epsomnh.org)
+- [About Us »](https://www.epsomnh.org/about-us)
+  
+  - ## About Epsom, NH
+    
+    Established in 1727, Epsom offers a rural feel with its farm lands and warm community feeling. Our town derives its name from a market town in England. It is bounded on the north by Pittsfield, south by Allenstown...
+    
+    [**Read More About the Town of Epsom, NH**](https://www.epsomnh.gov/about-us)
+    
+    - [Citizen of the Year](https://www.epsomnh.org/about-us/pages/citizen-year)
+    - [History](https://www.epsomnh.gov/about-us/pages/history)
+    - [Legislators](https://www.epsomnh.gov/about-us/links/legislators)
+    - [Service Organizations](https://www.epsomnh.gov/about-us/pages/service-organizations)
+    - [Local Businesses](https://www.epsomnh.org/about-us/pages/local-businesses)
+    
+    ![Town Hall](https://www.epsomnh.gov/sites/g/files/vyhlif4396/f/resize/imce/town_hall_w_flag_1-500x458.jpg)
+- [Departments »](https://www.epsomnh.org/departments)
+  
+  - ## Departments
+    
+    - [Administration](https://www.epsomnh.org/administration)
+    - [Assessing](https://www.epsomnh.org/assessing)
+    - [Emergency Management](https://www.epsomnh.org/emergency-management)
+    - [Fire &amp; Rescue](https://www.epsomnh.org/fire-rescue)
+    
+    <!--THE END-->
+    
+    - [Health Department](https://www.epsomnh.org/health-department)
+    - [Highway Department](https://www.epsomnh.org/highway-department)
+    - [Library](https://www.epsomnh.org/library)
+    - [Police Department](https://www.epsomnh.org/police-department)
+    - [Schools-SAU-School Board](https://www.epsomnh.org/schools-sau-school-board)
+    
+    <!--THE END-->
+    
+    - [Town Clerk / Tax Collector](https://www.epsomnh.org/town-clerk-tax-collector)
+    - [Waste &amp; Recycling BCEP](https://www.epsomnh.org/waste-recycling)
+    - [Welfare](https://www.epsomnh.org/welfare)
+    - [Zoning Compliance](https://www.epsomnh.org/zoning-compliance)
+    
+     [All Departments](https://www.epsomnh.org/departments)
+- [Boards &amp; Committees »](https://www.epsomnh.org/boards)
+  
+  - ## Boards &amp; Committees
+    
+    - [Board of Selectmen](https://www.epsomnh.org/board-selectmen)
+    - [Budget Committee](https://www.epsomnh.org/budget-committee)
+    - [Cemetery Trustees](https://www.epsomnh.org/cemetery-trustees)
+    - [Conservation Commission](https://www.epsomnh.org/conservation-commission)
+    - [Economic Development Committee](https://www.epsomnh.org/economic-development-committee)
+    
+    <!--THE END-->
+    
+    - [Epsom Library Trustees](https://www.epsomlibrary.com/trustees)
+    - [Hazard Mitigation Committee](https://www.epsomnh.org/hazard-mitigation-committee)
+    - [Heritage Commission](https://www.epsomnh.org/heritage-commission)
+    - [Joint Loss Safety Management Committee](https://www.epsomnh.org/joint-loss-safety-management-committee)
+    - [Old Meetinghouse Revitalization Committee](https://www.epsomnh.org/old-meeting-house-revitalization-committee)
+    - [Parks &amp; Recreation Commission](https://www.epsomnh.org/parks-recreation-commission)
+    
+    <!--THE END-->
+    
+    - [Planning Board](https://www.epsomnh.org/planning-board)
+    - [Tricentennial Steering Committee](https://www.epsomnh.org/tricentennial-steering-committee)
+    - [Trustees of the Trust Funds](https://www.epsomnh.org/trustees-trust-funds)
+    - [Voting &amp; Elections](https://www.epsomnh.org/voting-elections)
+    - [Zoning Board of Adjustment](https://www.epsomnh.org/zoning-board-adjustment)
+    
+     [All Boards &amp; Committees](https://www.epsomnh.org/boards)
+- [Find It Fast »](https://www.epsomnh.org/where)
+  
+  - ## Government
+    
+    - [All Departments &amp; Boards](https://www.epsomnh.gov/contacts-directory)
+    - [Voting &amp; Elections](https://www.epsomnh.gov/voting-elections)
+    
+    ## Latest from Epsom
+    
+    - [Calendar / Meetings](https://www.epsomnh.gov/home/links/calendar)
+    - [Facebook](https://www.facebook.com/epsomnh.org)
+    - [Town News](https://www.epsomnh.gov/node/1/news)
+    - [Subscribe to E-Alerts](https://www.epsomnh.gov/subscribe)
+    
+    ## Online Resources
+    
+    - [Applications &amp; Forms](https://www.epsomnh.org/files)
+    - [Frequently Asked Questions](https://www.epsomnh.gov/faqs)
+    - [O](https://www.epsomnh.gov/home/pages/online-services)[nline Services](https://www.epsomnh.org/home/pages/online-services)
+    - [Submit Questions / Comments](https://www.epsomnh.gov/home/webforms/questions-comments)
+    - [Website Keyword Search](https://www.epsomnh.gov/advanced-search)  |  [Topics A-Z](https://www.epsomnh.gov/where)
+
+![Print](https://www.epsomnh.gov/sites/all/modules/contrib/print/icons/print_icon.png "Print")
+
+## You are here
+
+1. [Home](https://www.epsomnh.org) ››
+2. [Heritage Commission](https://www.epsomnh.org/heritage-commission)
+
+# Michele Clark
+
+### Board Memberships
+
+Board/CommitteeJob titleMembership StatusThis contact is
+
+Board/CommitteeJob titleMembership StatusThis contact is
+
+[Heritage Commission](https://www.epsomnh.org/heritage-commission)
+
+Selectmen's Representative
+
+Active Membership
+
+Appointed
+
+[Conservation Commission](https://www.epsomnh.org/conservation-commission)
+
+Selectmen's Representative
+
+Active Membership
+
+Appointed
+
+[Economic Development Committee](https://www.epsomnh.org/economic-development-committee)
+
+Selectmen's Representative
+
+Active Membership
+
+Appointed
+
+[Emergency Management](https://www.epsomnh.org/emergency-management)
+
+Selectmen's Representative
+
+Active Membership
+
+Appointed
+
+[Fire &amp; Rescue](https://www.epsomnh.org/fire-rescue)
+
+Selectmen's Representative
+
+Active Membership
+
+Appointed
+
+[Joint Loss Safety Management Committee](https://www.epsomnh.org/joint-loss-safety-management-committee)
+
+Selectmen's Representative
+
+Active Membership
+
+Appointed
+
+[Board of Selectmen](https://www.epsomnh.org/board-selectmen)
+
+Member
+
+Active Membership
+
+Elected
+
+- [Heritage Commission Fact Sheet](https://www.epsomnh.org/heritage-commission/files/heritage-commission-fact-sheet)
+- [Mission Statement](https://www.epsomnh.org/heritage-commission/files/mission-statement-1)
+- [NH Preservation Alliance Preservation Handbook](https://www.epsomnh.org/heritage-commission/files/nh-preservation-alliance-preservation-handbook)
+- [Powers &amp; Duties: RSA 674:44-b](https://www.epsomnh.org/heritage-commission/files/powers-duties-rsa-67444-b)
+- [RSA 79-D Historic Barn Easement Information and Application](https://www.epsomnh.org/heritage-commission/pages/rsa-79-d-historic-barn-easement-information-and-application)
+- [Resources](https://www.epsomnh.org/heritage-commission/pages/resources)
+- [Rules of Procedure](https://www.epsomnh.org/heritage-commission/pages/rules-procedure)
+
+## Contact Info
+
+Phone:
+
+(603)736-9002
+
+Address:
+
+1598 Dover Road
+
+Epsom, NH 03234
+
+United States
+
+See map: [Google Maps](https://maps.google.com/?q=1598%20Dover%20Road%2C%20Epsom%2C%20NH%2C%2003234%2C%20us)
+
+Selectmen's Office / Town Office  •  1598 Dover Road  •  Epsom, NH 03234  
+Phone:  (603) 736-9002  
+[Hours](https://www.epsomnh.gov/home/pages/hours)    [Website Disclaimer](https://www.epsomnh.gov/home/pages/website-disclaimer)    [Government Websites by CivicPlus ®](https://www.civicplus.com)
+
+- [Login](https://www.epsomnh.org/user/login?current=node%2F26156)
