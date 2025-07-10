@@ -1,212 +1,257 @@
- [Skip to main content](https://www.portland.gov/council/districts/3/angelita-morillo/#main-content)  Portland is a Sanctuary City 
+[Skip to main content](https://www.portland.gov/council/districts/3/angelita-morillo/)
 
-  __Find sanctuary city resources from the City of Portland's__   [__Immigrant & Refugee Program__](https://www.portland.gov/civic/immigrants)   __, including free legal services and state resources for reporting hate crimes, bias incidents, discrimination, and violations of Oregon's sanctuary laws.__  
+Portland is a Sanctuary City
 
-  [![Official City of Portland seal. The image depicts Portlandia holding her trident backdropped by mountain and river, accompanied by the text 'City of Portland, Oregon 1851'](images/ae5efd012d9a0b21c1fd870c6701858825b0686c4c1d12497ed2ec139a396aac.png)](https://www.portland.gov)  Search Search 
+[**Learn more**](https://www.portland.gov/civic/immigrants "https://www.portland.gov/civic/immigrants")**.**
 
- Menu 
+![](https://www.portland.gov/themes/custom/cloudy/images/brand/seal-logo.png)
+
+Search
+
+Search
+
+Search
+
+Menu
 
 ## General Information
 
- *  [Advisory Groups Groups, boards, and commissions.**](https://www.portland.gov/advisory-groups) 
- *  [Bureaus and Offices City departments.**](https://www.portland.gov/bureaus-offices) 
- *  [Calendar of Events Events, public meetings, and hearings.**](https://www.portland.gov/events) 
- *  [Charter, Code, Policies Official City documents.**](https://www.portland.gov/charter-code-policies) 
- *  [City Council Districts, officials, meetings, and news.**](https://www.portland.gov/council) 
- *  [Construction Projects Building, transportation, maintenance, and sewer projects.**](https://www.portland.gov/construction) 
- *  [Find a Park Parks, facilities, and reservations.**](https://www.portland.gov/parks/search) 
- *  [Neighborhoods Neighborhood directory.**](https://www.portland.gov/neighborhoods) 
- *  [News Articles, blogs, press releases, public notices, and newsletters.**](https://www.portland.gov/news) 
- *  [Projects Planning, outreach and education, strategic, and technology projects.**](https://www.portland.gov/projects) 
- *  [Services and Resources Service and resource directory.**](https://www.portland.gov/services) 
- *  [Jobs with the City Opportunities posted to governmentjobs.com**](https://www.governmentjobs.com/careers/portlandor) 
+- [Advisory Groups Groups, boards, and commissions.](https://www.portland.gov/advisory-groups)
+- [Bureaus and Offices City departments.](https://www.portland.gov/bureaus-offices)
+- [Calendar of Events Events, public meetings, and hearings.](https://www.portland.gov/events)
+- [Charter, Code, Policies Official City documents.](https://www.portland.gov/charter-code-policies)
+- [City Council Districts, officials, meetings, and news.](https://www.portland.gov/council)
+- [Construction Projects Building, transportation, maintenance, and sewer projects.](https://www.portland.gov/construction)
+- [Find a Park Parks, facilities, and reservations.](https://www.portland.gov/parks/search)
+- [Neighborhoods Neighborhood directory.](https://www.portland.gov/neighborhoods)
+- [News Articles, blogs, press releases, public notices, and newsletters.](https://www.portland.gov/news)
+- [Projects Planning, outreach and education, strategic, and technology projects.](https://www.portland.gov/projects)
+- [Services and Resources Service and resource directory.](https://www.portland.gov/services)
+- [Jobs with the City Opportunities posted to governmentjobs.com](https://www.governmentjobs.com/careers/portlandor)
 
- 1.  [Home](https://www.portland.gov) 
- 1.  [Portland City Council](https://www.portland.gov/council) 
- 1.  [Council districts](https://www.portland.gov/council/districts) 
- 1.  [District 3](https://www.portland.gov/council/districts/3) 
-  ![Angelita Morillo (square)](images/0037edbaac43b064a5abbbafcb54d8565ca1285fc1ea427764cab7bff5731597.jpg)  
+<!--THE END-->
+
+1. [Home](https://www.portland.gov)
+2. [Portland City Council](https://www.portland.gov/council)
+3. [Council districts](https://www.portland.gov/council/districts)
+4. [District 3](https://www.portland.gov/council/districts/3)
+
+![](https://www.portland.gov/sites/default/files/styles/1_1_160w/public/2025/Morillo---IMG_9092---square---web.jpg?h=89151e41&itok=W8r-DV0i)
 
 # Councilor Angelita Morillo
 
- City Councilor  ** Pronouns She/They  ** Languages spoken English, Spanish  ** District  [District 3](https://www.portland.gov/council/districts/3)  I'm one of three councilors representing District 3 (inner Southeast Portland, reaching north to Sandy Blvd. and east to I-205.). As a Paraguayan immigrant and Portlander who has experienced homelessness here, I know how important it is to have those impacted by the issues in decision making spaces. 
+City Councilor
 
-***
+Pronouns
 
- *   
+She/They
 
-## Current position  
+Languages spoken
 
-  **   __City Councilor:__ Elected as City Councilor for [District 3](https://www.portland.gov/council/districts/3) in November 2024 and began their term of office in January 2025. 
+English, Spanish
+
+District
+
+[District 3](https://www.portland.gov/council/districts/3)
+
+I'm one of three councilors representing District 3 (inner Southeast Portland, reaching north to Sandy Blvd. and east to I-205.). As a Paraguayan immigrant and Portlander who has experienced homelessness here, I know how important it is to have those impacted by the issues in decision making spaces.
+
+* * *
+
+- ## Current position
+  
+  **City Councilor:** Elected as City Councilor for [District 3](https://www.portland.gov/council/districts/3) in November 2024 and began their term of office in January 2025.
 
 ## Get in touch
 
 ### Councilor Angelita Morillo
 
-  [Contact Councilor Angelita Morillo](https://www.portland.gov/help/contact-elected-official?request_purpose=Provide%20comment%20or%20feedback%20to%20a%20specific%20elected%20official&request_recipient=Councilor%20Angelita%20Morillo)   [councilor.morillo@portlandoregon.gov](mailto:councilor.morillo@portlandoregon.gov)  
+[Contact Councilor Angelita Morillo](https://www.portland.gov/help/contact-elected-official?request_purpose=Provide%20comment%20or%20feedback%20to%20a%20specific%20elected%20official&request_recipient=Councilor%20Angelita%20Morillo)
+
+[councilor.morillo@portlandoregon.gov](mailto:councilor.morillo@portlandoregon.gov)
 
 ### Follow on Social Media
 
-  [councilorangelitamorillo](https://www.instagram.com/councilorangelitamorillo)   [councilorangelitamorillo](https://bsky.app/profile/councilormorillo.bsky.social)  
+[councilorangelitamorillo](https://www.instagram.com/councilorangelitamorillo)
 
- *  [News](https://www.portland.gov/council/districts/3/angelita-morillo/news) 
- *  [Events](https://www.portland.gov/council/districts/3/angelita-morillo/events) 
+[councilorangelitamorillo](https://bsky.app/profile/councilormorillo.bsky.social)
 
-***
+[News](https://www.portland.gov/council/districts/3/angelita-morillo/news) [Events](https://www.portland.gov/council/districts/3/angelita-morillo/events)
+
+* * *
 
 ## Featured content
 
-  ![newsletter banner](images/a6dd8540f7c1a568ce2bc9a65fa79d8fd5ed14b3ca8f9b6e8026a140f07bcd3b.png)  
+![newsletter banner](https://www.portland.gov/sites/default/files/styles/2_1_600w/public/2025/GovDelivery-sign-up-banner-9_0.png?itok=k2_0ZcUf)
 
-###  [Sign up for Councilor Morillo's Newsletter](https://www.portland.gov/council/districts/3/angelita-morillo/newsletter) 
+### [Sign up for Councilor Morillo's Newsletter](https://www.portland.gov/council/districts/3/angelita-morillo/newsletter)
 
-  ![Icon of a newspaper against a purple background](images/23fc8aa67341bf7cb54cb814cee2d7e344fb191957a1512567aa1fe25d548c0d.png)  
+![Councilor Morillo does an interview with KOIN journalists](https://www.portland.gov/sites/default/files/styles/2_1_600w/public/2025/B768A550-EA5F-450A-9E4F-EF88C23807E7.jpg?h=d6eaebd8&itok=h7LveKFN)
 
-###  [Public Statements, News, and Newsletters](https://www.portland.gov/council/districts/3/angelita-morillo/public-statements-news-and-newsletters) 
+### [Councilor Morillo in the News](https://www.portland.gov/council/districts/3/angelita-morillo/morillo-news)
 
-  ![Image of calendar sitting on a desk](images/e70a407b2203cf59974c7ae2abbe182d249ff87636ace356a560000da782ae86.jpg)  
+![AM W/ Constituents](https://www.portland.gov/sites/default/files/styles/2_1_600w/public/2025/Morillo-w.constituents.jpg?itok=y7ZBGb7q)
 
-###  [Councilor Morillo's Calendar](https://www.portland.gov/council/districts/3/angelita-morillo/morillocalendar) 
+### [Councilor Morillo's Calendar](https://www.portland.gov/council/districts/3/angelita-morillo/morillocalendar)
 
-***
+* * *
 
 ## Committee assignments
 
- *    
+- ### [Transportation and Infrastructure Committee](https://www.portland.gov/council/agenda/transportation-and-infrastructure-committee)
+  
+  Vice Chair
+- ### [Homelessness and Housing Committee](https://www.portland.gov/council/agenda/homelessness-and-housing-committee)
+- ### [Community and Public Safety Committee](https://www.portland.gov/council/agenda/community-and-public-safety-committee)
+- ### [Climate, Resilience, and Land Use Committee](https://www.portland.gov/council/agenda/climate-resilience-and-land-use-committee)
+  
+  Co-Chair
 
-###  [Transportation and Infrastructure Committee](https://www.portland.gov/council/agenda/transportation-and-infrastructure-committee)   
-
-Vice Chair  
-
- *    
-
-###  [Homelessness and Housing Committee](https://www.portland.gov/council/agenda/homelessness-and-housing-committee)   
-
- *    
-
-###  [Community and Public Safety Committee](https://www.portland.gov/council/agenda/community-and-public-safety-committee)   
-
- *    
-
-###  [Climate, Resilience, and Land Use Committee](https://www.portland.gov/council/agenda/climate-resilience-and-land-use-committee)   
-
-Co-Chair  
-
-***
+* * *
 
 ## News
 
-###  [Remembering Dan Handelman](https://www.portland.gov/council/districts/3/angelita-morillo/news/2025/4/10/remembering-dan-handelman) 
-
- April 10, 2025 4:32 pm Press release 
-
-***
-
-###  [Portland City Council Passes a Resolution to Investigate Zenith Energy Franchise Agreement](https://www.portland.gov/council/districts/4/mitch-green/news/2025/3/20/portland-city-council-passes-resolution-investigate) 
-
-Councilor Mitch Green issues a statement about his first resolution passed by a committee and Council
-
- March 20, 2025 11:21 am News article 
-
-***
-
-###  [In the news: New Housing Committee Takes on Portland's Affordability Crisis](https://www.portland.gov/council/districts/3/angelita-morillo/news/2025/2/18/news-new-housing-committee-takes-portlands) 
+### [New Housing Committee Takes on Portland's Affordability Crisis](https://www.portland.gov/council/districts/3/angelita-morillo/news/2025/2/18/new-housing-committee-takes-portlands)
 
 City Councilor Angelita Morillo says she'll introduce a policy to ban anti-competitive rental price-fixing software.
 
- February 18, 2025 12:39 pm News article 
+February 18, 2025 12:39 pm News article
 
-***
+* * *
 
-###  [In the news: Portland City Council members aim to wrestle back control over Zenith from city staff](https://www.portland.gov/council/districts/3/angelita-morillo/news/2025/2/2/news-portland-city-council-members-aim-wrestle) 
+### [Portland City Council members aim to wrestle back control over Zenith from city staff](https://www.portland.gov/council/districts/3/angelita-morillo/news/2025/2/2/portland-city-council-members-aim-wrestle-back)
 
 Two new members of the Portland City Council are seeking to insert the council into Zenith Energy’s continued operations along the Willamette River by seeking two formal investigations and a freeze on city approval for the company.
 
- February 2, 2025 5:46 pm News article 
+February 2, 2025 5:46 pm News article
 
-  ![Oil Train ](images/1b1b3bc2bc76a9b8c695693afdfec7c58b91d35e30e93b48231e58f834485b93.png)  
+![Oil Train ](https://www.portland.gov/sites/default/files/styles/2_1_600w/public/2025/Screenshot-2025-02-02-174320.png?itok=s_UXJIp6)
 
-***
+* * *
 
-  [More news](https://www.portland.gov/council/districts/3/angelita-morillo/news)  
+### [Councilor Morillo wants SE Cesar Chavez Blvd safety concerns on transportation committee agenda](https://www.portland.gov/council/districts/3/angelita-morillo/news/2025/2/2/councilor-morillo-wants-se-cesar-chavez-blvd)
 
-***
+A tragic collision between a driver and someone walking on SE Cesar Chavez Blvd over the weekend has re-ignited discussions about how to make the street safer. It also might be the first test of how Portland’s new form of government responds to high profile road fatalities.
+
+February 2, 2025 5:15 pm News article
+
+![Angelita Morillo - Bike Loud](https://www.portland.gov/sites/default/files/styles/2_1_600w/public/2025/Screenshot-2025-02-02-172103.png?itok=uBi9B3Qt)
+
+* * *
+
+### [Portland politician skewers Oregon Democrat Janelle Bynum over Laken Riley Act vote](https://www.portland.gov/council/districts/3/angelita-morillo/news/2025/2/2/portland-politician-skewers-oregon-democrat)
+
+A Portland City Councilor on Wednesday unleashed a torrent of criticism and invective against Oregon U.S. Rep. Janelle Bynum for being among several dozen House Democrats last week to back a Republican-sponsored bill targeting undocumented immigrants accused of certain crimes.
+
+February 2, 2025 3:49 pm News article
+
+![Angelita Morillo](https://www.portland.gov/sites/default/files/styles/2_1_600w/public/2025/OIP--3-.jpg?itok=6m88H6pE)
+
+* * *
+
+[More news](https://www.portland.gov/council/districts/3/angelita-morillo/news)
+
+* * *
 
 ## Events
 
-###  [Climate, Resilience, and Land Use Committee Meeting](https://www.portland.gov/auditor/council-clerk/events/2025/4/24/climate-resilience-and-land-use-committee-meeting) 
+### [City Council Executive Session](https://www.portland.gov/auditor/council-clerk/events/2025/7/9/city-council-executive-session)
 
-  **  April 24, 2025 9:30 am – 11:30 am Council Committee Meeting Available Online 
+July 9, 2025 8:30 am – 11:00 am
 
-***
+Council Executive Session
 
-###  [City Council Meeting](https://www.portland.gov/auditor/council-clerk/events/2025/5/7/city-council-meeting) 
+* * *
+
+### [Climate, Resilience, and Land Use Committee Meeting](https://www.portland.gov/auditor/council-clerk/events/2025/7/10/climate-resilience-and-land-use-committee-meeting)
+
+July 10, 2025 9:30 am – 11:30 am
+
+Council Committee Meeting
+
+Available Online
+
+* * *
+
+### [Community and Public Safety Committee Meeting](https://www.portland.gov/auditor/council-clerk/events/2025/7/15/community-and-public-safety-committee-meeting)
+
+Rescheduled from June 10, 2025
+
+July 15, 2025 2:30 pm – 4:30 pm
+
+Rescheduled
+
+Council Committee Meeting
+
+Available Online
+
+* * *
+
+### [City Council Meeting](https://www.portland.gov/auditor/council-clerk/events/2025/7/16/city-council-meeting)
 
 Council holds regular meetings at 9:30 a.m. on the first Wednesday and 6:00 p.m. on the third Wednesday of each month. If there is sufficient business, additional meetings are held the following Wednesday or Thursday at 2:00 p.m.
 
-  **  May 7, 2025 9:30 am – 12:30 pm Council Meeting Available Online 
+July 16, 2025 6:00 pm – 9:00 pm
 
-***
+Council Meeting
 
-###  [Transportation and Infrastructure Committee Meeting](https://www.portland.gov/auditor/council-clerk/events/2025/5/12/transportation-and-infrastructure-committee-meeting) 
+Available Online
 
-  **  May 12, 2025 9:30 am – 11:30 am Council Committee Meeting Available Online 
+* * *
 
-***
+[More events](https://www.portland.gov/council/districts/3/angelita-morillo/events)
 
-###  [Homelessness and Housing Committee Meeting](https://www.portland.gov/auditor/council-clerk/events/2025/5/13/homelessness-and-housing-committee-meeting) 
-
-  **  May 13, 2025 12:00 pm – 2:00 pm Council Committee Meeting Available Online 
-
-***
-
-  [More events](https://www.portland.gov/council/districts/3/angelita-morillo/events)  
-
-***
+* * *
 
 ## Voting record
 
-|Agenda|Council document|Vote|
-|---|---|---|
-|[April 23, 2025](https://www.portland.gov/council/agenda/2025/4/23#relation-19692)|[Direct funding for the Workforce Pre-Apprenticeship Program and a SummerWorks Youth Employment Initiative](https://www.portland.gov/council/documents/resolution/adopted/37704)|Yea|
-|[April 16, 2025](https://www.portland.gov/council/agenda/2025/4/16#relation-19558)|[*Adopt the FY 2024-25 Technical Adjustment Ordinance and make other budget-related changes](https://www.portland.gov/council/documents/ordinance/passed/192047)|Nay|
-|[April 16, 2025](https://www.portland.gov/council/agenda/2025/4/16#relation-19556)|[Approve Council Minutes for March 5-20, 2025](https://www.portland.gov/council/documents/report/accepted/2025-158)|Yea|
-|[April 16, 2025](https://www.portland.gov/council/agenda/2025/4/16#relation-19582)|[*Authorize Letter of Agreement with the Laborers’ International Union of North America, Local 483 – Recreation to amend wage scale premium for Recreation Associates leading trip excursions with Adaptive and Lifelong Recreation](https://www.portland.gov/council/documents/ordinance/passed/192045)|Yea|
+Agenda Council document Vote [June 25, 2025](https://www.portland.gov/council/agenda/2025/6/25) [\*Amend Code to consolidate noise enforcement and improve fairness and consistency in noise regulation (repeal Code Sections 14A.30.010 and 14A.30.020; amend Code Section 14B.120.020)](https://www.portland.gov/council/documents/ordinance/passed/192081) Yea [June 25, 2025](https://www.portland.gov/council/agenda/2025/6/25) [Support and expand Portland Street Response as a co-equal branch of the first responder system and establish the Portland Street Response Committee](https://www.portland.gov/council/documents/resolution/adopted/37709) Yea [June 25, 2025](https://www.portland.gov/council/agenda/2025/6/25) [\*Repeal one-year extension of funding for Portland Children’s Levy for FY 2025-26 and approve funding recommendations of Children’s Levy Allocation Committee for July 1, 2025 – June 30, 2028 (repeal Ordinance 192065)](https://www.portland.gov/council/documents/ordinance/passed/192080) Yea [June 18, 2025](https://www.portland.gov/council/agenda/2025/6/18) [\*Amend Building Regulations Code to adopt State of Oregon 2025 Edition of Oregon Energy Efficiency Specialty Code (amend Code Section 24.10.040)](https://www.portland.gov/council/documents/ordinance/passed/192077) Yea
 
-  [More voting records](https://www.portland.gov/council/districts/3/angelita-morillo/votes)  
+[More voting records](https://www.portland.gov/council/districts/3/angelita-morillo/votes)
 
-See something we could improve on this page?  [Give website feedback](https://www.portland.gov/feedback).
+See something we could improve on this page? [Give website feedback](https://www.portland.gov/feedback).
 
-The City of Portland ensures meaningful access to City programs, services, and activities to comply with Civil Rights Title VI and ADA Title II laws and reasonably provides: translation, interpretation, modifications, accommodations, alternative formats, auxiliary aids and services. Request these services [online](https://www.portland.gov/311/ada-request) or call [503-823-4000]() , Relay Service: [711]().
+The City of Portland ensures meaningful access to City programs, services, and activities to comply with Civil Rights Title VI and ADA Title II laws and reasonably provides: translation, interpretation, modifications, accommodations, alternative formats, auxiliary aids and services. [Request an ADA accommodation](https://www.portland.gov/311/ada-request) or call 503-823-4000, Relay Service: 711.
 
- [503-823-4000]()   Traducción e Interpretación | Biên Dịch và Thông Dịch | 口笔译服务 | Устный и письменный перевод | Turjumaad iyo Fasiraad | Письмовий і усний переклад | Traducere și interpretariat | Chiaku me Awewen Kapas | अनुवादन तथा व्याख्या
+503-823-4000  Traducción e Interpretación | Biên Dịch và Thông Dịch | 口笔译服务 | Устный и письменный перевод | Turjumaad iyo Fasiraad | Письмовий і усний переклад | Traducere și interpretariat | Chiaku me Awewen Kapas | अनुवादन तथा व्याख्या
 
-  [Explore all services](https://www.portland.gov/services)  
+[Explore all services](https://www.portland.gov/services)
 
 ## General information
 
-  [311@portlandoregon.gov](mailto:311@portlandoregon.gov)   [311]()  Information and Customer Service  [503-823-4000]()   [711]()  Oregon Relay Service 
+[311@portlandoregon.gov](mailto:311@portlandoregon.gov)
+
+311 Information and Customer Service
+
+503-823-4000
+
+711 Oregon Relay Service
 
 ## Follow on Social Media
 
-  [PortlandORGov](https://www.facebook.com/PortlandORGov)   [PortlandGov](https://x.com/PortlandGov)   [PortlandGov](https://www.instagram.com/PortlandGov)  
+[PortlandORGov](https://www.facebook.com/PortlandORGov)
+
+[PortlandGov](https://x.com/PortlandGov)
+
+[PortlandGov](https://www.instagram.com/PortlandGov)
 
 ## Terms, policies
 
- *  [ADA Accommodation](https://www.portland.gov/311/ada-request) 
- *  [Captioning, transcription](https://www.portland.gov/captioning-transcription-policy) 
- *  [Privacy policy](https://www.portland.gov/help/about/privacy) 
+- [ADA Accommodation](https://www.portland.gov/311/ada-request "Request accommodations under the Americans with Disabilities Act")
+- [Captioning, transcription](https://www.portland.gov/captioning-transcription-policy "Policies regarding the captioning and transcription of video and audio")
+- [Privacy policy](https://www.portland.gov/help/about/privacy)
 
 ## Portland.gov
 
- *  [About this Website](https://www.portland.gov/help/about) 
- *  [Employee Portal](https://employees.portland.gov/) 
-  [Editor log in](https://www.portland.gov/user/login?destination=/council/districts/3/angelita-morillo)  
+- [About this Website](https://www.portland.gov/help/about)
+- [Employee Portal](https://employees.portland.gov "Employee information on employees.portland.gov")
+
+[Editor log in](https://www.portland.gov/user/login?destination=%2Fcouncil%2Fdistricts%2F3%2Fangelita-morillo)
 
 ## City of Portland, Oregon
 
- ![Official City of Portland seal. The image depicts Portlandia holding her trident backdropped by mountain and river, accompanied by the text 'City of Portland, Oregon 1851'](images/a381c6a792c8ae85c9324d98c59ee8544c1d2e04603703ccda90f7dc330ad145.png) 
+![Official City of Portland seal. The image depicts Portlandia holding her trident backdropped by mountain and river, accompanied by the text 'City of Portland, Oregon 1851'](https://www.portland.gov/themes/custom/cloudy/images/city-seal.png)
 
 © Copyright 2018-2025
 
-  [Back to top](https://www.portland.gov/council/districts/3/angelita-morillo/#header)  
+[Back to top](https://www.portland.gov/council/districts/3/angelita-morillo/)

@@ -1,482 +1,537 @@
-  [Skip to main content](https://www.wilsonvilleoregon.gov/directory-listing/adam-cunningham/)   [![Home](images/2cb0036bc5e62ba5a931d272a5207af35941997177ac339d967cb280cf09a38d.png)Starter Site State](https://www.wilsonvilleoregon.gov/)  
+[Skip to main content](https://www.wilsonvilleoregon.gov/directory-listing/adam-cunningham/)
 
- *  ![phone icon](images/6414af080cca7068ebc338cdb3712a43e2ef6bc4406fa32f73f46b9eea873e5d.png) 503-682-1011
- *  ![contact icon](images/9fe62118f70d35269f2d3fec144a05dae81717f38030dbc3e28bfbb1862f224f.png)  [Contact](https://www.wilsonvilleoregon.gov/contact) 
- *  ![mail icon](images/6991441cf134fd22b97b21e31f3716ef37fe0f49aed873f71588194475eed9e1.png)  [Subscribe](https://www.wilsonvilleoregon.gov/subscribe) 
- *  ![translate icon](images/fb5d7a5c47bdac65d6f45a065774de180eda0e143aaf758b09e224d5e70a9a82.png) Translate 
-   * X
-   *  [Afrikaans](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=af) 
-   *  [Albanian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=sq) 
-   *  [Amharic](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=am) 
-   *  [Arabic](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ar) 
-   *  [Armenian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=hy) 
-   *  [Azerbaijani](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=az) 
-   *  [Basque](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=eu) 
-   *  [Belarusian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=be) 
-   *  [Bengali](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=bn) 
-   *  [Bosnian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=bs) 
-   *  [Bulgarian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=bg) 
-   *  [Catalan](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ca) 
-   *  [Cebuano](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ceb) 
-   *  [Chichewa](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ny) 
-   *  [Chinese (Simplified)](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=zh) 
-   *  [Chinese (Traditional)](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=%09zh-TW) 
-   *  [Corsican](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=co) 
-   *  [Croatian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=hr) 
-   *  [Czech](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=cs) 
-   *  [Danish](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=da) 
-   *  [Dutch](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=nl) 
-   *  [Esperanto](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=eo) 
-   *  [Estonian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=et) 
-   *  [Filipino](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=tl) 
-   *  [Finnish](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=fi) 
-   *  [French](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=fr) 
-   *  [Frisian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=fy) 
-   *  [Galician](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=gl) 
-   *  [Georgian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ka) 
-   *  [German](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=de) 
-   *  [Greek](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=el) 
-   *  [Gujarati](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=gu) 
-   *  [Haitian Creole](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ht) 
-   *  [Hausa](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ha) 
-   *  [Hawaiian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=haw) 
-   *  [Hebrew](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=hi) 
-   *  [Hindi](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=hi) 
-   *  [Hmong](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=hmn) 
-   *  [Hungarian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=hu) 
-   *  [Icelandic](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=is) 
-   *  [Igbo](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ig) 
-   *  [Indonesian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=id) 
-   *  [Irish](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ga) 
-   *  [Italian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=it) 
-   *  [Japanese](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ja) 
-   *  [Javanese](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=jv) 
-   *  [Kannada](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=kn) 
-   *  [Kazakh](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=kk) 
-   *  [Khmer](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=km) 
-   *  [Kinyarwanda](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=rw) 
-   *  [Korean](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ko) 
-   *  [Kurdish (Kurmanji)](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ku) 
-   *  [Kyrgyz](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ky) 
-   *  [Lao](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=lo) 
-   *  [Latin](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=la) 
-   *  [Latvian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=lv) 
-   *  [Lithuanian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=lt) 
-   *  [Luxembourgish](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=lb) 
-   *  [Macedonian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=mk) 
-   *  [Malagasy](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=mg) 
-   *  [Malay](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ms) 
-   *  [Malayalam](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ml) 
-   *  [Maltese](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=mt) 
-   *  [Maori](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=mi) 
-   *  [Marathi](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=mr) 
-   *  [Mongolian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=mn) 
-   *  [Myanmar (Burmese)](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=my) 
-   *  [Nepali](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ne) 
-   *  [Norwegian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=no) 
-   *  [Odia (Oriya)](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=or) 
-   *  [Pashto](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ps) 
-   *  [Persian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=fa) 
-   *  [Polish](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=pl) 
-   *  [Portuguese](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=pt) 
-   *  [Punjabi](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=pa) 
-   *  [Romanian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ro) 
-   *  [Russian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ru) 
-   *  [Samoan](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=sm) 
-   *  [Scots Gaelic](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=sg) 
-   *  [Serbian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=sr) 
-   *  [Sesotho](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=st) 
-   *  [Shona](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=sn) 
-   *  [Sindhi](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=sd) 
-   *  [Sinhala](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=si) 
-   *  [Slovak](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=sk) 
-   *  [Slovenian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=sl) 
-   *  [Somali](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=so) 
-   *  [Spanish](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=es) 
-   *  [Sundanese](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=su) 
-   *  [Spanish](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=es) 
-   *  [Swahili](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=sw) 
-   *  [Swedish](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=sv) 
-   *  [Tajik](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=tg) 
-   *  [Tamil](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ta) 
-   *  [Tatar](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=tt) 
-   *  [Telugu](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=te) 
-   *  [Thai](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=th) 
-   *  [Turkish](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=tr) 
-   *  [Turkmen](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=tk) 
-   *  [Ukrainian](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=uk) 
-   *  [Urdu](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ur) 
-   *  [Uyghur](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=ug) 
-   *  [Uzbek](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=uz) 
-   *  [Vietnamese](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=vi) 
-   *  [Welsh](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=cy) 
-   *  [Xhosa](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=xh) 
-   *  [Yiddish](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=yi) 
-   *  [Yoruba](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=yo) 
-   *  [Zulu](https://translate.google.com/translate?hl=en&sl=en&u=https://www.ci.wilsonville.or.us/directory-listing/adam-cunningham/&tl=zu)  
+[![Home](https://www.wilsonvilleoregon.gov/sites/all/themes/aha_compass/logo.png)  
+\
+Starter Site State](https://www.wilsonvilleoregon.gov "Home")
 
- *  ![Community Engagement](images/350f94c08998c9162b2d6dec1eb3dc436c6f82f618281109c8d0d413b06209d8.png) 
- *  ![Facebook](images/6864b6b2e654ec03f373c7a16c0af58f0ba90c6b4102d8c19d6af78b295cff26.png) 
- *  ![Twitter](images/f4b88d1e6c0538bdf5ed744ab5e83d5404b998a4477191742e6eb8f733effdb9.png) 
- *  ![Youtube](images/5e206833a1eafc0d40f73bfb1091811f1b038ac2690edef6a44687f209a3d2a0.png) 
+- ![phone icon](https://www.wilsonvilleoregon.gov/sites/all/themes/aha_compass/images/header/phone.png) 503-682-1011
+- ![contact icon](https://www.wilsonvilleoregon.gov/sites/all/themes/aha_compass/images/header/contact.png) [Contact](https://www.wilsonvilleoregon.gov/contact)
+- ![mail icon](https://www.wilsonvilleoregon.gov/sites/all/themes/aha_compass/images/header/subscribe.png) [Subscribe](https://www.wilsonvilleoregon.gov/subscribe)
+- ![translate icon](https://www.wilsonvilleoregon.gov/sites/all/themes/aha_compass/images/header/translate.png) Translate
+  
+  - X
+  - [Afrikaans](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=af)
+  - [Albanian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=sq)
+  - [Amharic](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=am)
+  - [Arabic](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ar)
+  - [Armenian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=hy)
+  - [Azerbaijani](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=az)
+  - [Basque](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=eu)
+  - [Belarusian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=be)
+  - [Bengali](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=bn)
+  - [Bosnian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=bs)
+  - [Bulgarian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=bg)
+  - [Catalan](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ca)
+  - [Cebuano](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ceb)
+  - [Chichewa](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ny)
+  - [Chinese (Simplified)](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=zh)
+  - [Chinese (Traditional)](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=%09zh-TW)
+  - [Corsican](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=co)
+  - [Croatian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=hr)
+  - [Czech](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=cs)
+  - [Danish](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=da)
+  - [Dutch](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=nl)
+  - [Esperanto](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=eo)
+  - [Estonian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=et)
+  - [Filipino](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=tl)
+  - [Finnish](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=fi)
+  - [French](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=fr)
+  - [Frisian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=fy)
+  - [Galician](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=gl)
+  - [Georgian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ka)
+  - [German](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=de)
+  - [Greek](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=el)
+  - [Gujarati](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=gu)
+  - [Haitian Creole](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ht)
+  - [Hausa](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ha)
+  - [Hawaiian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=haw)
+  - [Hebrew](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=hi)
+  - [Hindi](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=hi)
+  - [Hmong](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=hmn)
+  - [Hungarian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=hu)
+  - [Icelandic](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=is)
+  - [Igbo](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ig)
+  - [Indonesian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=id)
+  - [Irish](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ga)
+  - [Italian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=it)
+  - [Japanese](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ja)
+  - [Javanese](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=jv)
+  - [Kannada](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=kn)
+  - [Kazakh](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=kk)
+  - [Khmer](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=km)
+  - [Kinyarwanda](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=rw)
+  - [Korean](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ko)
+  - [Kurdish (Kurmanji)](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ku)
+  - [Kyrgyz](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ky)
+  - [Lao](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=lo)
+  - [Latin](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=la)
+  - [Latvian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=lv)
+  - [Lithuanian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=lt)
+  - [Luxembourgish](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=lb)
+  - [Macedonian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=mk)
+  - [Malagasy](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=mg)
+  - [Malay](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ms)
+  - [Malayalam](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ml)
+  - [Maltese](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=mt)
+  - [Maori](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=mi)
+  - [Marathi](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=mr)
+  - [Mongolian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=mn)
+  - [Myanmar (Burmese)](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=my)
+  - [Nepali](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ne)
+  - [Norwegian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=no)
+  - [Odia (Oriya)](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=or)
+  - [Pashto](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ps)
+  - [Persian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=fa)
+  - [Polish](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=pl)
+  - [Portuguese](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=pt)
+  - [Punjabi](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=pa)
+  - [Romanian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ro)
+  - [Russian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ru)
+  - [Samoan](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=sm)
+  - [Scots Gaelic](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=sg)
+  - [Serbian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=sr)
+  - [Sesotho](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=st)
+  - [Shona](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=sn)
+  - [Sindhi](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=sd)
+  - [Sinhala](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=si)
+  - [Slovak](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=sk)
+  - [Slovenian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=sl)
+  - [Somali](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=so)
+  - [Spanish](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=es)
+  - [Sundanese](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=su)
+  - [Spanish](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=es)
+  - [Swahili](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=sw)
+  - [Swedish](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=sv)
+  - [Tajik](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=tg)
+  - [Tamil](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ta)
+  - [Tatar](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=tt)
+  - [Telugu](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=te)
+  - [Thai](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=th)
+  - [Turkish](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=tr)
+  - [Turkmen](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=tk)
+  - [Ukrainian](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=uk)
+  - [Urdu](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ur)
+  - [Uyghur](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=ug)
+  - [Uzbek](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=uz)
+  - [Vietnamese](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=vi)
+  - [Welsh](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=cy)
+  - [Xhosa](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=xh)
+  - [Yiddish](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=yi)
+  - [Yoruba](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=yo)
+  - [Zulu](https://translate.google.com/translate?hl=en&sl=en&u=https%3A%2F%2Fwww.ci.wilsonville.or.us%2Fdirectory-listing%2Fadam-cunningham%2F&tl=zu)
 
- *  Residents   
+<!--THE END-->
 
-Column 1  
+- ![Community Engagement](https://www.wilsonvilleoregon.gov/sites/all/themes/aha_compass/images/social-icons/community-engagement.png)
+- ![Facebook](https://www.wilsonvilleoregon.gov/sites/all/themes/aha_compass/images/social-icons/facebook.png)
+- ![Twitter](https://www.wilsonvilleoregon.gov/sites/all/themes/aha_compass/images/social-icons/twitter.png)
+- ![Youtube](https://www.wilsonvilleoregon.gov/sites/all/themes/aha_compass/images/social-icons/youtube.png)
 
-   *  __ [About Wilsonville](https://www.wilsonvilleoregon.gov/residents/page/about-wilsonville)__ 
-   *  [Annual Reports](https://www.wilsonvilleoregon.gov/residents/page/city-wilsonville-annual-reports) 
-   *  [Awards and Recognition](https://www.wilsonvilleoregon.gov/residents/page/awards-recognition) 
-   *  [Bike & Ped Connectivity Plan](https://www.wilsonvilleoregon.gov/residents/page/bike-ped-connectivity-plan) 
-   *  [Community Survey](https://www.wilsonvilleoregon.gov/residents/page/community-survey) 
-   *  [Heritage Trees](https://www.wilsonvilleoregon.gov/planning/page/heritage-tree-program) 
-   *  [History](https://www.wilsonvilleoregon.gov/residents/page/history-wilsonville) 
-   *  [Homeowners Associations](https://www.wilsonvilleoregon.gov/residents/page/homeowners-associations) 
-   *  [Public Art](https://www.wilsonvilleoregon.gov/residents/page/public-art) 
-   *  [Schools](http://www.wlwv.k12.or.us/site/default.aspx?PageID=1) 
-   *  [Weather](https://www.accuweather.com/en/us/wilsonville-or/97070/weather-forecast/40844_pc) 
-   *  [__Americans With Disabilities Act (ADA)__](https://www.wilsonvilleoregon.gov/residents/page/americans-disabilities-act-ada) 
-   *  [__Building__](https://www.wilsonvilleoregon.gov/building) 
-   *  [Forms, Permits, & Applications](https://www.wilsonvilleoregon.gov/building/page/forms-0) 
-   *  [Inspection Information](https://www.wilsonvilleoregon.gov/building/page/inspections) 
-   *  __ [City Projects Directory](https://www.wilsonvilleoregon.gov/projects)__   
+<!--THE END-->
 
-Column 2  
+- Residents
+  
+  Column 1
+  
+  - [**About Wilsonville**](https://www.wilsonvilleoregon.gov/residents/page/about-wilsonville)
+  - [Annual Reports](https://www.wilsonvilleoregon.gov/residents/page/city-wilsonville-annual-reports)
+  - [Awards and Recognition](https://www.wilsonvilleoregon.gov/residents/page/awards-recognition)
+  - [Bike &amp; Ped Connectivity Plan](https://www.wilsonvilleoregon.gov/residents/page/bike-ped-connectivity-plan)
+  - [Community Survey](https://www.wilsonvilleoregon.gov/residents/page/community-survey)
+  - [Heritage Trees](https://www.wilsonvilleoregon.gov/planning/page/heritage-tree-program)
+  - [History](https://www.wilsonvilleoregon.gov/residents/page/history-wilsonville)
+  - [Homeowners Associations](https://www.wilsonvilleoregon.gov/residents/page/homeowners-associations)
+  - [Public Art](https://www.wilsonvilleoregon.gov/residents/page/public-art)
+  - [Schools](https://www.wlwv.k12.or.us/site/default.aspx?PageID=1)
+  - [Weather](https://www.accuweather.com/en/us/wilsonville-or/97070/weather-forecast/40844_pc)
+  - [**Americans With Disabilities Act (ADA)**](https://www.wilsonvilleoregon.gov/residents/page/americans-disabilities-act-ada)
+  - [**Building**](https://www.wilsonvilleoregon.gov/building)
+  - [Forms, Permits, &amp; Applications](https://www.wilsonvilleoregon.gov/building/page/forms-0)
+  - [Inspection Information](https://www.wilsonvilleoregon.gov/building/page/inspections)
+  - [**City Projects Directory**](https://www.wilsonvilleoregon.gov/projects)
+  
+  Column 2
+  
+  - [**Citizen Complaint or Request - Ask the City!**](https://www.wilsonvilleoregon.gov/residents/page/ask-city)
+  - [**Community Grants**](https://www.wilsonvilleoregon.gov/parksrec/page/grant-programs)
+  - [**Emergency Preparedness**](https://www.wilsonvilleoregon.gov/ready)
+  - [**Events**](https://www.wilsonvilleoregon.gov/calendar)
+  - [City Calendar](https://www.wilsonvilleoregon.gov/calendar)
+  - [Area Events](https://explorewilsonville.com/events)
+  - [**Get Involved**](https://www.wilsonvilleoregon.gov/residents/page/get-involved)
+  - [Civics Academy](https://www.wilsonvilleoregon.gov/residents/page/wilsonville-civics-academy)
+  - [Let's Talk, Wilsonville!](https://www.letstalkwilsonville.com)
+  - [Volunteer](https://www.wilsonvilleoregon.gov/residents/page/volunteer)
+  - [**Library**](https://www.wilsonvilleoregon.gov/lib)
+  - [**Mayor and City Council**](https://www.wilsonvilleoregon.gov/citycouncil/page/meet-your-mayor-council)
+  
+  Column 3
+  
+  - [**Maps**](https://www.wilsonvilleoregon.gov/itgis/page/geographic-information-systems-gis-mapping)
+  - [Snow and Ice Control Plan](https://www.wilsonvilleoregon.gov/publicworks/page/snow-and-ice-control-plan-maps)
+  - [Street Sweeping Schedule &amp; Map](https://www.wilsonvilleoregon.gov/publicworks/page/street-sweeping-schedule-map)
+  - [**News &amp; Notices**](https://www.wilsonvilleoregon.gov/news)
+  - [Boones Ferry Messenger](https://www.wilsonvilleoregon.gov/residents/page/boones-ferry-messenger)
+  - [Current News](https://www.wilsonvilleoregon.gov/news)
+  - [Public Hearing Notices](https://www.wilsonvilleoregon.gov/residents/page/public-hearing-notices)
+  - [Subscribe to Email Notifications](https://www.wilsonvilleoregon.gov/subscribe)
+  - [Wilsonville TV](https://www.wilsonvilleoregon.gov/administration/page/wilsonville-tv)
+  - [**Notary Public**](https://www.wilsonvilleoregon.gov/legal/page/notary-public)
+  - [**Parks and Recreation**](https://www.wilsonvilleoregon.gov/parksrec)
+  - [**Pay Online**](https://www.wilsonvilleoregon.gov/residents/page/pay-online)
+  - [Traffic Ticket](https://www.municipalonlinepayments.com/wilsonvilleor)
+  - [Transit Bus Pass](https://www.wilsonvilleoregon.gov/transit/page/fares)
+  - [Recreation Programs](https://apm.activecommunities.com/cityofwilsonville/Home)
+  - [Utility/Water/Sewer Bill](https://www.invoicecloud.com/portal/%28S%28iwm1bhye2iuizrbcfkhdn2uj%29%29/2/Site2.aspx?G=0e8138f3-2c35-4fc8-8226-dd7e7c3931ee)
+  
+  Column 4
+  
+  - [**Public Records Request**](https://www.wilsonvilleoregon.gov/administration/page/public-records)
+  - **Public Safety**
+  - [Emergency Management](https://www.wilsonvilleoregon.gov/publicworks/page/emergency-management)
+  - [Police/Fire Emergency - 911](https://www.wilsonvilleoregon.gov/police)
+  - [Police Non-Emergency - 503-655-8211](https://www.wilsonvilleoregon.gov/police)
+  - [**Ride Clackamas**](https://rideclackamas.org)
+  - [**SMART Transit**](https://www.wilsonvilleoregon.gov/transit)
+  - [**Tourism &amp; Visitor Info**](https://explorewilsonville.com)
+  - [**Traffic Cameras**](https://www.wilsonvilleoregon.gov/residents/page/traffic-cameras)
+  - **Utilities**
+  - [City Utilities](https://www.wilsonvilleoregon.gov/utility-billing)
+  - [Backflow Program](https://www.wilsonvilleoregon.gov/publicworks/page/backflow-prevention)
+  - [Garbage and Recycling Services](https://www.wilsonvilleoregon.gov/residents/page/garbage-and-recycling-services)
+  - [Other Local Utilities](https://www.wilsonvilleoregon.gov/residents/page/local-utility-services)
+- Government
+  
+  Column 1
+  
+  - [**Agendas, Minutes, and Meeting Packets**](https://www.wilsonvilleoregon.gov/meetings)
+  - [**Boards and Committees**](https://www.wilsonvilleoregon.gov/bc)
+  - [Apply for a Board or Commission](https://www.wilsonvilleoregon.gov/bc/page/apply-board-or-commission)
+  - [Arts, Culture, and Heritage Commission](https://www.wilsonvilleoregon.gov/bc-achc)
+  - [Budget Committee](https://www.wilsonvilleoregon.gov/bc-bc)
+  - [City Council](https://www.wilsonvilleoregon.gov/citycouncil)
+  - [Development Review Board](https://www.wilsonvilleoregon.gov/bc/page/development-review-board)
+  - [Diversity, Equity and Inclusion (DEI) Committee](https://www.wilsonvilleoregon.gov/bc-diversity)
+  - [Kitakata Sister City Advisory Board](https://www.wilsonvilleoregon.gov/bc-kscab)
+  - [Library Board](https://www.wilsonvilleoregon.gov/bc-lib)
+  - [Parks and Recreation Advisory Board](https://www.wilsonvilleoregon.gov/bc-pr)
+  - [Planning Commission](https://www.wilsonvilleoregon.gov/bc-pc)
+  - [Tourism Promotion Committee](https://www.wilsonvilleoregon.gov/bc-tp)
+  - [Wilsonville - Metro Community Enhancement Committee](https://www.wilsonvilleoregon.gov/bc-mce)
+  - [Urban Renewal Agency](https://www.wilsonvilleoregon.gov/bc-ur)
+  
+  Column 2
+  
+  - [**City Recorder**](https://www.wilsonvilleoregon.gov/administration/page/city-recorder)
+  - [City Code and Charter](https://www.wilsonvilleoregon.gov/administration/page/city-charter-and-code)
+  - [Elections](https://www.wilsonvilleoregon.gov/administration/page/elections)
+  - [Ordinances](https://www.wilsonvilleoregon.gov/ordinances)
+  - [Public Records Request](https://www.wilsonvilleoregon.gov/administration/page/public-records)
+  - [Resolutions](https://www.wilsonvilleoregon.gov/resolutions?type=1)
+  - [Urban Renewal Resolutions](https://www.wilsonvilleoregon.gov/resolutions?type=2)
+  - [**Mayor &amp; Council**](https://www.wilsonvilleoregon.gov/citycouncil/page/meet-your-mayor-council)
+  - [**Public Hearing Notices**](https://www.wilsonvilleoregon.gov/residents/page/public-hearing-notices)
+  - **Task Force**
+  - [Housing Our Future Task Force](https://www.wilsonvilleoregon.gov/bc-hoftf)
+  - [Urban Renewal Task Force](https://www.ci.wilsonville.or.us/bc-urtf)
+  - [**Wilsonville TV**](https://www.wilsonvilleoregon.gov/administration/page/wilsonville-tv)
+  - [YouTube](https://www.youtube.com/user/CityofWilsonville/videos)
+  
+  Column 3
+  
+  - **Departments A-L**
+  - [Administration](https://www.wilsonvilleoregon.gov/administration)
+  - [Building](https://www.wilsonvilleoregon.gov/building)
+  - [Community Development](https://www.wilsonvilleoregon.gov/comm-dev)
+  - [Economic Development](https://www.wilsonvilleoregon.gov/economic)
+  - [Engineering](https://www.wilsonvilleoregon.gov/engineering)
+  - [Finance](https://www.wilsonvilleoregon.gov/finance)
+  - [GIS &amp; Mapping](https://www.wilsonvilleoregon.gov/itgis/page/geographic-information-systems-gis-mapping)
+  - [Human Resources](https://www.wilsonvilleoregon.gov/hr)
+  - [Information Technology](https://www.wilsonvilleoregon.gov/itgis)
+  - [Library](https://www.wilsonvilleoregon.gov/lib)
+  - [Legal​](https://www.wilsonvilleoregon.gov/legal)
+  
+  Column 4
+  
+  - **Departments M-Z**
+  - [Municipal/Traffic Court](https://www.wilsonvilleoregon.gov/mtcourt)
+  - [Natural Resources](https://www.wilsonvilleoregon.gov/natural)
+  - [Parks &amp; Recreation](https://www.wilsonvilleoregon.gov/parksrec)
+  - [Planning](https://www.wilsonvilleoregon.gov/planning)
+  - [Police](https://www.wilsonvilleoregon.gov/police)
+  - [Public Works](https://www.wilsonvilleoregon.gov/publicworks)
+  - [SMART Transit](https://www.wilsonvilleoregon.gov/transit)
+  - [Urban Renewal](https://www.wilsonvilleoregon.gov/renewal)
+  - [Utility Billing](https://www.wilsonvilleoregon.gov/utility-billing)
+- Business
+  
+  Column 1
+  
+  - [**Bids and RFPs**](https://www.wilsonvilleoregon.gov/rfps)
+  - [**Building**](https://www.wilsonvilleoregon.gov/building)
+  - [Bulk Water Meters](https://www.wilsonvilleoregon.gov/publicworks/page/bulk-water-meters)
+  - [Inspection Info](https://www.wilsonvilleoregon.gov/building/page/inspections)
+  - [Schedule Inspection Online](https://www.wilsonvilleoregon.gov/comm-dev/page/online-portal)
+  - [View Permit Info Online](https://www.wilsonvilleoregon.gov/comm-dev/page/online-portal)
+  - [Permits, Applications, and Forms](https://www.wilsonvilleoregon.gov/forms?field_microsite_tid=25&field_microsite_tid_1=All&keys=)
+  - [**Chamber of Commerce**](https://www.wilsonvilleoregon.gov/economic/page/chamber-commerce)
+  - [**Commuter Programs**](https://www.wilsonvilleoregon.gov/transit/page/commuter-programs)
+  - [**Comprehensive Plan**](https://www.wilsonvilleoregon.gov/planning/page/comprehensive-plan)
+  - [**Development Code**](https://www.wilsonvilleoregon.gov/planning/page/development-code)
+  
+  Column 2
+  
+  - [**Development Process Guidelines**](https://www.wilsonvilleoregon.gov/comm-dev/page/development-process-guidelines)
+  - [1. Pre-Application Meeting](https://www.wilsonvilleoregon.gov/comm-dev/page/1-pre-application-meeting)
+  - [2. Planning Requirements](https://www.wilsonvilleoregon.gov/comm-dev/page/2-planning-requirements-and-process)
+  - [3. Natural Resources](https://www.wilsonvilleoregon.gov/comm-dev/page/3-natural-resources-process-guidelines)
+  - [4. Engineering Requirements](https://www.wilsonvilleoregon.gov/comm-dev/page/4-engineering-requirements)
+  - [5. Building Requirements](https://www.wilsonvilleoregon.gov/building/page/5-building-requirements)
+  - [6. Final Inspections &amp; Approvals](https://www.wilsonvilleoregon.gov/building/page/6-final-inspections-approvals)
+  - [**Documents, Reports, Master Plans, &amp; Maps**](https://www.wilsonvilleoregon.gov/comm-dev/page/documents-reports-master-plans-and-maps)
+  - [**Economic Development**](https://www.wilsonvilleoregon.gov/economic)
+  - [Why Wilsonville?](https://www.wilsonvilleoregon.gov/economic/page/why-wilsonville-0)
+  - [Small Business Resources](https://www.wilsonvilleoregon.gov/economic/page/small-business-resources-0)
+  - [Incentives](https://www.wilsonvilleoregon.gov/economic/page/incentives)
+  - [News](https://www.wilsonvilleoregon.gov/economic/page/economic-development-news)
+  
+  Column 3
+  
+  - [**Online Permitting &amp; Licensing Portal**](https://www.wilsonvilleoregon.gov/comm-dev/page/online-portal)
+  - [**Payment Options**](https://www.wilsonvilleoregon.gov/comm-dev/page/payment-options)
+  - [**Permits, Applications, and Forms**](https://www.wilsonvilleoregon.gov/forms)
+  - [**Projects Around the City**](https://www.wilsonvilleoregon.gov/projects)
+  - **Start a Business**
+  - [Business Licenses](https://www.wilsonvilleoregon.gov/finance/page/business-license)
+  - [City Utilities](https://www.wilsonvilleoregon.gov/utility-billing)
+  - [Other Local Utilities](https://www.wilsonvilleoregon.gov/residents/page/local-utility-services)
+  - [Transient Lodging Tax](https://www.wilsonvilleoregon.gov/finance/page/transient-lodging-tax)
+  - [Transit Tax Information](https://www.wilsonvilleoregon.gov/finance/page/transit-payroll-tax-information)
+  
+  Column 4
+  
+  - [**Visit Wilsonville**](https://explorewilsonville.com)
+  - [Where to Eat](https://explorewilsonville.com/eat-drink)
+  - [Where to Stay](https://explorewilsonville.com/stay)
+  - [**Zoning Map**](https://www.wilsonvilleoregon.gov/planning/page/zoning-map)
+- Resources
+  
+  Column 1
+  
+  - **Apply For**
+  - [Boards &amp; Commissions](https://www.wilsonvilleoregon.gov/bc/page/apply-board-or-commission)
+  - [Grants](https://www.wilsonvilleoregon.gov/parksrec/page/grant-programs)
+  - [Job Opportunities](https://www.wilsonvilleoregon.gov/hr/page/apply-now)
+  - [Permits &amp; Licenses](https://www.wilsonvilleoregon.gov/comm-dev/page/online-portal)
+  - [Sidewalk Repair Reimbursement](https://www.wilsonvilleoregon.gov/residents/page/sidewalk-repair-reimbursement-program)
+  - [**Contact the City**](https://www.ci.wilsonville.or.us/contact)
+  - [Submit a Request or Concern](https://www.wilsonvilleoregon.gov/residents/page/ask-city)
+  - [City Offices](https://www.ci.wilsonville.or.us/contact)
+  - [Mayor and City Council](https://www.wilsonvilleoregon.gov/citycouncil/page/meet-your-mayor-council)
+  - [Police](https://www.wilsonvilleoregon.gov/police)
+  - [Staff Directory](https://www.wilsonvilleoregon.gov/directory)
+  - **Downloads**
+  - [Agendas and Minutes](https://www.wilsonvilleoregon.gov/meetings)
+  - [City Budget](https://www.wilsonvilleoregon.gov/finance/page/budget)
+  - [City Charter and Code](https://www.wilsonvilleoregon.gov/administration/page/city-charter-and-code)
+  - [Documents and Reports](https://www.wilsonvilleoregon.gov/documents)
+  - [Ordinances and Resolutions](https://www.wilsonvilleoregon.gov/ordinances)
+  - [Permits, Applications, and Forms](https://www.wilsonvilleoregon.gov/forms)
+  
+  Column 2
+  
+  - [**Emergency Preparedness**](https://www.wilsonvilleoregon.gov/ready)
+  - **Events and Meetings**
+  - [Agendas and Minutes](https://www.wilsonvilleoregon.gov/meetings)
+  - [City Calendar](https://www.wilsonvilleoregon.gov/calendar)
+  - [**FAQs - Ask the City!**](https://www.wilsonvilleoregon.gov/residents/page/ask-city)
+  - [**Let's Talk, Wilsonville!**](https://www.letstalkwilsonville.com)
+  - **News**
+  - [City News](https://www.wilsonvilleoregon.gov/news)
+  - [Boones Ferry Messenger](https://www.wilsonvilleoregon.gov/residents/page/boones-ferry-messenger)
+  - [Email Subscriptions](https://www.wilsonvilleoregon.gov/subscribe)
+  - **Pay**
+  - [Bus Pass](https://www.wilsonvilleoregon.gov/transit/page/fares)
+  - [Traffic Ticket](https://www.municipalonlinepayments.com/wilsonvilleor)
+  - [Pay Utility/Water/Sewer Bill](https://www.wilsonvilleoregon.gov/utility-billing)
+  - [Payment Options](https://www.wilsonvilleoregon.gov/comm-dev/page/payment-options)
+  
+  Column 3
+  
+  - **Register**
+  - [Recreation Classes](https://apm.activecommunities.com/cityofwilsonville/Home)
+  - [Vote](https://www.wilsonvilleoregon.gov/administration/page/elections)
+  - **Report**
+  - [Complaint or Concern](https://www.wilsonvilleoregon.gov/residents/page/ask-city)
+  - [Graffiti](https://www.wilsonvilleoregon.gov/publicworks/page/graffiti-and-vandalism)
+  - [Stormwater Spill](https://www.wilsonvilleoregon.gov/natural/page/report-spill)
+  - [Streetlight Outage](https://portlandgeneral.com/outages-safety/report-a-streetlight-problem)
+  - [Traffic Concerns](https://www.wilsonvilleoregon.gov/residents/page/traffic-concerns)
+  - [Web Problem](mailto:webmaster@ci.wilsonville.or.us)
+  - **Request**
+  - [Backflow Testing](https://www.wilsonvilleoregon.gov/publicworks/page/backflow-prevention)
+  - [Building Inspections](https://www.wilsonvilleoregon.gov/building/page/inspections)
+  - [Notary Services](https://www.wilsonvilleoregon.gov/legal/page/notary-public)
+  - [Public Records](https://www.wilsonvilleoregon.gov/administration/page/public-records)
+  - [Water/Sewer Service](https://www.wilsonvilleoregon.gov/utility-billing/page/start-stop-or-move)
+  - **Reserve**
+  - [Library Facilities](https://www.wilsonvilleoregon.gov/lib/page/meeting-rooms)
+  - [Parks Facilities](https://www.wilsonvilleoregon.gov/parksrec/page/facility-reservations)
+  
+  Column 4
+  
+  - [**Ride the Bus**](https://www.wilsonvilleoregon.gov/transit)
+  - [**Tourism &amp; Visitor Information**](https://explorewilsonville.com)
+  - [Area Events](https://explorewilsonville.com/events)
+  - [Local Attractions](https://explorewilsonville.com/itineraries)
+  - [Ride Clackamas-Bus Trip Planning](https://rideclackamas.org)
+  - [Where to Stay](https://explorewilsonville.com/stay)
+  - [Where to Eat](https://explorewilsonville.com/eat-drink)
+  - [**Volunteer**](https://www.wilsonvilleoregon.gov/residents/page/volunteer)
+  - **View**
+  - [City Projects Directory](https://www.wilsonvilleoregon.gov/projects)
+  - [Recorded Meetings](https://www.youtube.com/user/CityofWilsonville/videos)
+  - [Traffic Cameras](https://www.wilsonvilleoregon.gov/residents/page/traffic-cameras)
+  - [Maps](https://www.wilsonvilleoregon.gov/itgis/page/geographic-information-systems-gis-mapping)
+  - [WilsonvilleMaps.com](https://www.wilsonvillemaps.com)
+  - [Wilsonville TV](https://www.wilsonvilleoregon.gov/administration/page/wilsonville-tv)
 
-   *  [__Citizen Complaint or Request - Ask the City!__](https://www.wilsonvilleoregon.gov/residents/page/ask-city) 
-   *  [__Community Grants__](https://www.wilsonvilleoregon.gov/parksrec/page/grant-programs) 
-   *  [__Emergency Preparedness__](https://www.wilsonvilleoregon.gov/ready) 
-   *  [__Events__](https://www.wilsonvilleoregon.gov/calendar) 
-   *  [City Calendar](https://www.wilsonvilleoregon.gov/calendar) 
-   *  [Area Events](https://explorewilsonville.com/events/) 
-   *  [__Get Involved__](https://www.wilsonvilleoregon.gov/residents/page/get-involved) 
-   *  [Civics Academy](https://www.wilsonvilleoregon.gov/residents/page/wilsonville-civics-academy) 
-   *  [Let's Talk, Wilsonville!](https://www.letstalkwilsonville.com/) 
-   *  [Volunteer](https://www.wilsonvilleoregon.gov/residents/page/volunteer) 
-   *  [__Library__](https://www.wilsonvilleoregon.gov/lib) 
-   *  __ [Mayor and City Council](https://www.wilsonvilleoregon.gov/citycouncil/page/meet-your-mayor-council)__   
+Search form
 
-Column 3  
-
-   *  __ [Maps](https://www.wilsonvilleoregon.gov/itgis/page/geographic-information-systems-gis-mapping)__ 
-   *  [Snow and Ice Control Plan](https://www.wilsonvilleoregon.gov/publicworks/page/snow-and-ice-control-plan-maps) 
-   *  [Street Sweeping Schedule & Map](https://www.wilsonvilleoregon.gov/publicworks/page/street-sweeping-schedule-map) 
-   *  [__News & Notices__](https://www.wilsonvilleoregon.gov/news) 
-   *  [Boones Ferry Messenger](https://www.wilsonvilleoregon.gov/residents/page/boones-ferry-messenger) 
-   *  [Current News](https://www.wilsonvilleoregon.gov/news) 
-   *  [Public Hearing Notices](https://www.wilsonvilleoregon.gov/residents/page/public-hearing-notices) 
-   *  [Subscribe to Email Notifications](https://www.wilsonvilleoregon.gov/subscribe) 
-   *  [Wilsonville TV](https://www.wilsonvilleoregon.gov/administration/page/wilsonville-tv) 
-   *  [__Notary Public__](https://www.wilsonvilleoregon.gov/legal/page/notary-public) 
-   *  [__Parks and Recreation__](https://www.wilsonvilleoregon.gov/parksrec) 
-   *  [__Pay Online__](https://www.wilsonvilleoregon.gov/residents/page/pay-online) 
-   *  [Traffic Ticket](https://www.municipalonlinepayments.com/wilsonvilleor) 
-   *  [Transit Bus Pass](https://www.wilsonvilleoregon.gov/transit/page/fares) 
-   *  [Recreation Programs](https://apm.activecommunities.com/cityofwilsonville/Home) 
-   *  [Utility/Water/Sewer Bill](https://www.invoicecloud.com/portal/(S(iwm1bhye2iuizrbcfkhdn2uj))/2/Site2.aspx?G=0e8138f3-2c35-4fc8-8226-dd7e7c3931ee)   
-
-Column 4  
-
-   *  [__Public Records Request__](https://www.wilsonvilleoregon.gov/administration/page/public-records) 
-   *  __Public Safety__ 
-   *  [Emergency Management](https://www.wilsonvilleoregon.gov/publicworks/page/emergency-management) 
-   *  [Police/Fire Emergency - 911](https://www.wilsonvilleoregon.gov/police) 
-   *  [Police Non-Emergency - 503-655-8211](https://www.wilsonvilleoregon.gov/police) 
-   *  __ [Ride Clackamas](https://rideclackamas.org/)__ 
-   *  [__SMART Transit__](https://www.wilsonvilleoregon.gov/transit) 
-   *  [__Tourism & Visitor Info__](https://explorewilsonville.com/) 
-   *  [__Traffic Cameras__](https://www.wilsonvilleoregon.gov/residents/page/traffic-cameras) 
-   *  __Utilities__ 
-   *  [City Utilities](https://www.wilsonvilleoregon.gov/utility-billing) 
-   *  [Backflow Program](https://www.wilsonvilleoregon.gov/publicworks/page/backflow-prevention) 
-   *  [Garbage and Recycling Services](https://www.wilsonvilleoregon.gov/residents/page/garbage-and-recycling-services) 
-   *  [Other Local Utilities](https://www.wilsonvilleoregon.gov/residents/page/local-utility-services)  
- *  Government   
-
-Column 1  
-
-   *  __ [Agendas, Minutes, and Meeting Packets](https://www.wilsonvilleoregon.gov/meetings)__ 
-   *  __ [Boards and Committees](https://www.wilsonvilleoregon.gov/bc)__ 
-   *  [Apply for a Board or Commission](https://www.wilsonvilleoregon.gov/bc/page/apply-board-or-commission) 
-   *  [Arts, Culture, and Heritage Commission](https://www.wilsonvilleoregon.gov/bc-achc) 
-   *  [Budget Committee](https://www.wilsonvilleoregon.gov/bc-bc) 
-   *  [City Council](https://www.wilsonvilleoregon.gov/citycouncil) 
-   *  [Development Review Board](https://www.wilsonvilleoregon.gov/bc/page/development-review-board) 
-   *  [Diversity, Equity and Inclusion (DEI) Committee](https://www.wilsonvilleoregon.gov/bc-diversity) 
-   *  [Kitakata Sister City Advisory Board](https://www.wilsonvilleoregon.gov/bc-kscab) 
-   *  [Library Board](https://www.wilsonvilleoregon.gov/bc-lib) 
-   *  [Parks and Recreation Advisory Board](https://www.wilsonvilleoregon.gov/bc-pr) 
-   *  [Planning Commission](https://www.wilsonvilleoregon.gov/bc-pc) 
-   *  [Tourism Promotion Committee](https://www.wilsonvilleoregon.gov/bc-tp) 
-   *  [Wilsonville - Metro Community Enhancement Committee](https://www.wilsonvilleoregon.gov/bc-mce) 
-   *  [Urban Renewal Agency](https://www.wilsonvilleoregon.gov/bc-ur)   
-
-Column 2  
-
-   *  [__City Recorder__](https://www.wilsonvilleoregon.gov/administration/page/city-recorder) 
-   *  [City Code and Charter](https://www.wilsonvilleoregon.gov/administration/page/city-charter-and-code) 
-   *  [Elections](https://www.wilsonvilleoregon.gov/administration/page/elections) 
-   *  [Ordinances](https://www.wilsonvilleoregon.gov/ordinances) 
-   *  [Public Records Request](https://www.wilsonvilleoregon.gov/administration/page/public-records) 
-   *  [Resolutions](https://www.wilsonvilleoregon.gov/resolutions?type=1) 
-   *  [Urban Renewal Resolutions](https://www.wilsonvilleoregon.gov/resolutions?type=2) 
-   *  [__Mayor & Council__](https://www.wilsonvilleoregon.gov/citycouncil/page/meet-your-mayor-council) 
-   *  [__Public Hearing Notices__](https://www.wilsonvilleoregon.gov/residents/page/public-hearing-notices) 
-   *  __Task Force__ 
-   *  [Housing Our Future Task Force](https://www.wilsonvilleoregon.gov/bc-hoftf) 
-   *  [Urban Renewal Task Force](https://www.ci.wilsonville.or.us/bc-urtf) 
-   *  [__Wilsonville TV__](https://www.wilsonvilleoregon.gov/administration/page/wilsonville-tv) 
-   *  [YouTube](https://www.youtube.com/user/CityofWilsonville/videos)   
-
-Column 3  
-
-   *  __Departments A-L__ 
-   *  [Administration](https://www.wilsonvilleoregon.gov/administration) 
-   *  [Building](https://www.wilsonvilleoregon.gov/building) 
-   *  [Community Development](https://www.wilsonvilleoregon.gov/comm-dev) 
-   *  [Economic Development](https://www.wilsonvilleoregon.gov/economic) 
-   *  [Engineering](https://www.wilsonvilleoregon.gov/engineering) 
-   *  [Finance](https://www.wilsonvilleoregon.gov/finance) 
-   *  [GIS & Mapping](https://www.wilsonvilleoregon.gov/itgis/page/geographic-information-systems-gis-mapping) 
-   *  [Human Resources](https://www.wilsonvilleoregon.gov/hr) 
-   *  [Information Technology](https://www.wilsonvilleoregon.gov/itgis) 
-   *  [Library](https://www.wilsonvilleoregon.gov/lib) 
-   *  [Legal​](https://www.wilsonvilleoregon.gov/legal)   
-
-Column 4  
-
-   *  __Departments M-Z__ 
-   *  [Municipal/Traffic Court](https://www.wilsonvilleoregon.gov/mtcourt) 
-   *  [Natural Resources](https://www.wilsonvilleoregon.gov/natural) 
-   *  [Parks & Recreation](https://www.wilsonvilleoregon.gov/parksrec) 
-   *  [Planning](https://www.wilsonvilleoregon.gov/planning) 
-   *  [Police](https://www.wilsonvilleoregon.gov/police) 
-   *  [Public Works](https://www.wilsonvilleoregon.gov/publicworks) 
-   *  [SMART Transit](https://www.wilsonvilleoregon.gov/transit) 
-   *  [Urban Renewal](https://www.wilsonvilleoregon.gov/renewal) 
-   *  [Utility Billing](https://www.wilsonvilleoregon.gov/utility-billing)  
- *  Business   
-
-Column 1  
-
-   *  __ [Bids and RFPs](https://www.wilsonvilleoregon.gov/rfps)__ 
-   *  __ [Building](https://www.wilsonvilleoregon.gov/building)__ 
-   *  [Bulk Water Meters](https://www.wilsonvilleoregon.gov/publicworks/page/bulk-water-meters) 
-   *  [Inspection Info](https://www.wilsonvilleoregon.gov/building/page/inspections) 
-   *  [Schedule Inspection Online](https://www.wilsonvilleoregon.gov/comm-dev/page/online-portal) 
-   *  [View Permit Info Online](https://www.wilsonvilleoregon.gov/comm-dev/page/online-portal) 
-   *  [Permits, Applications, and Forms](https://www.wilsonvilleoregon.gov/forms?field_microsite_tid=25&field_microsite_tid_1=All&keys=) 
-   *  __ [Chamber of Commerce](https://www.wilsonvilleoregon.gov/economic/page/chamber-commerce)__ 
-   *  __ [Commuter Programs](https://www.wilsonvilleoregon.gov/transit/page/commuter-programs)__ 
-   *  [__Comprehensive Plan__](https://www.wilsonvilleoregon.gov/planning/page/comprehensive-plan) 
-   *  __ [Development Code](https://www.wilsonvilleoregon.gov/planning/page/development-code)__   
-
-Column 2  
-
-   *  __ [Development Process Guidelines](https://www.wilsonvilleoregon.gov/comm-dev/page/development-process-guidelines)__ 
-   *  [1. Pre-Application Meeting](https://www.wilsonvilleoregon.gov/comm-dev/page/1-pre-application-meeting) 
-   *  [2. Planning Requirements](https://www.wilsonvilleoregon.gov/comm-dev/page/2-planning-requirements-and-process) 
-   *  [3. Natural Resources](https://www.wilsonvilleoregon.gov/comm-dev/page/3-natural-resources-process-guidelines) 
-   *  [4. Engineering Requirements](https://www.wilsonvilleoregon.gov/comm-dev/page/4-engineering-requirements) 
-   *  [5. Building Requirements](https://www.wilsonvilleoregon.gov/building/page/5-building-requirements) 
-   *  [6. Final Inspections & Approvals](https://www.wilsonvilleoregon.gov/building/page/6-final-inspections-approvals) 
-   *  [__Documents, Reports, Master Plans, & Maps__](https://www.wilsonvilleoregon.gov/comm-dev/page/documents-reports-master-plans-and-maps) 
-   *  __ [Economic Development](https://www.wilsonvilleoregon.gov/economic)__ 
-   *  [Why Wilsonville?](https://www.wilsonvilleoregon.gov/economic/page/why-wilsonville-0) 
-   *  [Small Business Resources](https://www.wilsonvilleoregon.gov/economic/page/small-business-resources-0) 
-   *  [Incentives](https://www.wilsonvilleoregon.gov/economic/page/incentives) 
-   *  [News](https://www.wilsonvilleoregon.gov/economic/page/economic-development-news)   
-
-Column 3  
-
-   *  [__Online Permitting & Licensing Portal__](https://www.wilsonvilleoregon.gov/comm-dev/page/online-portal) 
-   *  [__Payment Options__](https://www.wilsonvilleoregon.gov/comm-dev/page/payment-options) 
-   *  __ [Permits, Applications, and Forms](https://www.wilsonvilleoregon.gov/forms)__ 
-   *  __ [Projects Around the City](https://www.wilsonvilleoregon.gov/projects)__ 
-   *  __Start a Business__ 
-   *  [Business Licenses](https://www.wilsonvilleoregon.gov/finance/page/business-license) 
-   *  [City Utilities](https://www.wilsonvilleoregon.gov/utility-billing) 
-   *  [Other Local Utilities](https://www.wilsonvilleoregon.gov/residents/page/local-utility-services) 
-   *  [Transient Lodging Tax](https://www.wilsonvilleoregon.gov/finance/page/transient-lodging-tax) 
-   *  [Transit Tax Information](https://www.wilsonvilleoregon.gov/finance/page/transit-payroll-tax-information)   
-
-Column 4  
-
-   *  [__Visit Wilsonville__](https://explorewilsonville.com/) 
-   *  [Where to Eat](https://explorewilsonville.com/eat-drink/) 
-   *  [Where to Stay](https://explorewilsonville.com/stay/) 
-   *  __ [Zoning Map](https://www.wilsonvilleoregon.gov/planning/page/zoning-map)__  
- *  Resources   
-
-Column 1  
-
-   *  __Apply For__ 
-   *  [Boards & Commissions](https://www.wilsonvilleoregon.gov/bc/page/apply-board-or-commission) 
-   *  [Grants](https://www.wilsonvilleoregon.gov/parksrec/page/grant-programs) 
-   *  [Job Opportunities](https://www.wilsonvilleoregon.gov/hr/page/apply-now) 
-   *  [Permits & Licenses](https://www.wilsonvilleoregon.gov/comm-dev/page/online-portal) 
-   *  [Sidewalk Repair Reimbursement](https://www.wilsonvilleoregon.gov/residents/page/sidewalk-repair-reimbursement-program) 
-   *  [__Contact the City__](https://www.ci.wilsonville.or.us/contact) 
-   *  [Submit a Request or Concern](https://www.wilsonvilleoregon.gov/residents/page/ask-city) 
-   *  [City Offices](https://www.ci.wilsonville.or.us/contact) 
-   *  [Mayor and City Council](https://www.wilsonvilleoregon.gov/citycouncil/page/meet-your-mayor-council) 
-   *  [Police](https://www.wilsonvilleoregon.gov/police) 
-   *  [Staff Directory](https://www.wilsonvilleoregon.gov/directory) 
-   *  __Downloads__ 
-   *  [Agendas and Minutes](https://www.wilsonvilleoregon.gov/meetings) 
-   *  [City Budget](https://www.wilsonvilleoregon.gov/finance/page/budget) 
-   *  [City Charter and Code](https://www.wilsonvilleoregon.gov/administration/page/city-charter-and-code) 
-   *  [Documents and Reports](https://www.wilsonvilleoregon.gov/documents) 
-   *  [Ordinances and Resolutions](https://www.wilsonvilleoregon.gov/ordinances) 
-   *  [Permits, Applications, and Forms](https://www.wilsonvilleoregon.gov/forms)   
-
-Column 2  
-
-   *  [__Emergency Preparedness__](https://www.wilsonvilleoregon.gov/ready) 
-   *  __Events and Meetings__ 
-   *  [Agendas and Minutes](https://www.wilsonvilleoregon.gov/meetings) 
-   *  [City Calendar](https://www.wilsonvilleoregon.gov/calendar) 
-   *  [__FAQs - Ask the City!__](https://www.wilsonvilleoregon.gov/residents/page/ask-city) 
-   *  [__Let's Talk, Wilsonville!__](https://www.letstalkwilsonville.com/) 
-   *  __News__ 
-   *  [City News](https://www.wilsonvilleoregon.gov/news) 
-   *  [Boones Ferry Messenger](https://www.wilsonvilleoregon.gov/residents/page/boones-ferry-messenger) 
-   *  [Email Subscriptions](https://www.wilsonvilleoregon.gov/subscribe) 
-   *  __Pay__ 
-   *  [Bus Pass](https://www.wilsonvilleoregon.gov/transit/page/fares) 
-   *  [Traffic Ticket](http://www.municipalonlinepayments.com/wilsonvilleor) 
-   *  [Pay Utility/Water/Sewer Bill](https://www.wilsonvilleoregon.gov/utility-billing) 
-   *  [Payment Options](https://www.wilsonvilleoregon.gov/comm-dev/page/payment-options)   
-
-Column 3  
-
-   *  __Register__ 
-   *  [Recreation Classes](https://apm.activecommunities.com/cityofwilsonville/Home) 
-   *  [Vote](https://www.wilsonvilleoregon.gov/administration/page/elections) 
-   *  __Report__ 
-   *  [Complaint or Concern](https://www.wilsonvilleoregon.gov/residents/page/ask-city) 
-   *  [Graffiti](https://www.wilsonvilleoregon.gov/publicworks/page/graffiti-and-vandalism) 
-   *  [Stormwater Spill](https://www.wilsonvilleoregon.gov/natural/page/report-spill) 
-   *  [Streetlight Outage](https://portlandgeneral.com/outages-safety/report-a-streetlight-problem) 
-   *  [Traffic Concerns](https://www.wilsonvilleoregon.gov/residents/page/traffic-concerns) 
-   *  [Web Problem](mailto:webmaster@ci.wilsonville.or.us) 
-   *  __Request__ 
-   *  [Backflow Testing](https://www.wilsonvilleoregon.gov/publicworks/page/backflow-prevention) 
-   *  [Building Inspections](https://www.wilsonvilleoregon.gov/building/page/inspections) 
-   *  [Notary Services](https://www.wilsonvilleoregon.gov/legal/page/notary-public) 
-   *  [Public Records](https://www.wilsonvilleoregon.gov/administration/page/public-records) 
-   *  [Water/Sewer Service](https://www.wilsonvilleoregon.gov/utility-billing/page/start-stop-or-move) 
-   *  __Reserve__ 
-   *  [Library Facilities](https://www.wilsonvilleoregon.gov/lib/page/meeting-rooms) 
-   *  [Parks Facilities](https://www.wilsonvilleoregon.gov/parksrec/page/facility-reservations)   
-
-Column 4  
-
-   *  [__Ride the Bus__](https://www.wilsonvilleoregon.gov/transit) 
-   *  [__Tourism & Visitor Information__](https://explorewilsonville.com/) 
-   *  [Area Events](https://explorewilsonville.com/events/) 
-   *  [Local Attractions](https://explorewilsonville.com/itineraries/) 
-   *  [Ride Clackamas-Bus Trip Planning](https://rideclackamas.org/) 
-   *  [Where to Stay](https://explorewilsonville.com/stay/) 
-   *  [Where to Eat](https://explorewilsonville.com/eat-drink/) 
-   *  __ [Volunteer](https://www.wilsonvilleoregon.gov/residents/page/volunteer)__ 
-   *  __View__ 
-   *  [City Projects Directory](https://www.wilsonvilleoregon.gov/projects) 
-   *  [Recorded Meetings](https://www.youtube.com/user/CityofWilsonville/videos) 
-   *  [Traffic Cameras](https://www.wilsonvilleoregon.gov/residents/page/traffic-cameras) 
-   *  [Maps](https://www.wilsonvilleoregon.gov/itgis/page/geographic-information-systems-gis-mapping) 
-   *  [WilsonvilleMaps.com](http://www.wilsonvillemaps.com/) 
-   *  [Wilsonville TV](https://www.wilsonvilleoregon.gov/administration/page/wilsonville-tv)  
- Search form Search 
+Search
 
 # Adam Cunningham
 
-  ![Adam Cunningham](images/7eda2ac942334ba09ef2403d13f3ae13bb8f1baa358f5978ac7b69111828e19a.jpg)  Position:  Councilor Term Date:  January, 2025 to December, 2028 Phone Number:  971-917-4340 Email:   [cunningham@wilsonvilleoregon.gov](mailto:cunningham@wilsonvilleoregon.gov)  
+![Adam Cunningham](https://www.wilsonvilleoregon.gov/sites/default/files/styles/full_node_primary/public/imageattachments/directory/129290/02._adam_cropped.jpg?itok=nveWUyHt)
 
- Adam Cunningham was elected to the Wilsonville City Council in 2024. 
+Position: 
 
- A Wilsonville resident since 2016, Adam most recently worked as a law enforcement instructor at the Oregon Department of Public Safety Standards and Training in Salem, where he instructed officers on mental health crisis response, de-escalation, and officer resiliency. Previously, he served his country as a Sergeant in the United States Marine Corps and was a police officer in El Cajon, Calif., where he worked in the Patrol Division and helped train new officers as a Field Training Officer. He earned his Bachelor’s degree in Social and Criminal Justice from Ashford University. 
+Councilor
 
- Adam has served on the Wilsonville Little League Board of Directors for eight years in a variety of roles. He has been fortunate to coach both of his sons through their Little League years while also serving an umpire. In 2023, Adam umpired in the Oregon State Little League Playoffs, hosted in Wilsonville. 
+Term Date: 
 
- Since moving to Oregon, Adam has become a deer and elk hunter after growing up in Southern California as an upland bird hunter. Adam, his wife, and their sons have become solar eclipse chasers since experiencing totality in Bend in 2017. They experienced another eclipse in Texas in 2024 and are looking for their next opportunity to get into the path of totality. 
+January, 2025 to December, 2028
 
-###  Board & Committee Assignments 
+Phone Number: 
 
- * Washington County Coordinating Committee (WCCC) - Alternate
- * Willamette Intake Facilities Commission Board of TVWD - Alternate
- * Regional Water Providers Consortium Board
- City Hall 29799 SW Town Center Loop E Wilsonville, OR 97070 See map: [Google Maps](http://maps.google.com/?q=29799+SW+Town+Center+Loop+E,+Wilsonville,+OR,+97070,+us)   ![](images/ae0bd4e0a0493699b74fbeb3cc4521fd80f8e6085a804de3fe6ebdb2e5eb3388.png)   ![](images/4831408690878efc073c9da95a618f82e033d04ae02ee96cba7ceb32c85d0583.png)   ![](images/8d14c9c945304e0a2d48201a50f6529a39e5fe19ced422521bde31e9219c9c55.png)   ![](images/b5dd8aef422a3755008ed4f59cc529b15eb6df02ca6652ae1fd2a8e0aabebec8.png)   ![](images/d706cfc298f766c775a53f386445f5d89299e4d6e83eeec7f4e0a7ce556296af.png)   ![](images/e0965bc50569d2728c1f423a5651ac3cf45835e5839d6c22b2f622eadcb7c03a.png)   ![](images/56ca1f38b3fdd6a20fb963ce2a6cf8c367e63564eb4bf09eaec1d28d01f3fd9e.png)  Base Layer OSM Mapnik
+971-917-4340
 
- Overlays  ![](images/9e7997c1fee4614210afae00bbc80824f1a00d9f63751c116eb6c46f7f859b2b.png)   ![](images/d76b392b3c316478cc005ad35bd414003238cf9e578d72e86371f0cd3a7d9d06.png)  © [CCBYSA](http://creativecommons.org/licenses/by-sa/2.0/)  [© OpenStreetMap contributors](http://www.openstreetmap.org/copyright)  
+Email: 
 
- *  ![Printer-friendly version](images/6d8a0275c3f95fea5b539e6e1eb3c87872840e16283455bdaceedf31a5d4780d.png) 
+[cunningham@wilsonvilleoregon.gov](mailto:cunningham@wilsonvilleoregon.gov)
 
-City Council|Contact|Position|
-|---|---|
-|[Shawn O'Neil](https://www.wilsonvilleoregon.gov/directory-listing/shawn-oneil)|Mayor|
-|[Caroline Berry](https://www.wilsonvilleoregon.gov/directory-listing/caroline-berry)|Council President|
-|[Katie Dunwell](https://www.wilsonvilleoregon.gov/directory-listing/katie-dunwell)|Councilor|
-|[Adam Cunningham](https://www.wilsonvilleoregon.gov/directory-listing/adam-cunningham)|Councilor|
-|[Anne Shevlin](https://www.wilsonvilleoregon.gov/directory-listing/anne-shevlin)|Councilor|
+Adam Cunningham was elected to the Wilsonville City Council in 2024.
 
- [View Full Staff Directory](https://www.wilsonvilleoregon.gov/directory) 
+A Wilsonville resident since 2016, Adam most recently worked as a law enforcement instructor at the Oregon Department of Public Safety Standards and Training in Salem, where he instructed officers on mental health crisis response, de-escalation, and officer resiliency. Previously, he served his country as a Sergeant in the United States Marine Corps and was a police officer in El Cajon, Calif., where he worked in the Patrol Division and helped train new officers as a Field Training Officer. He earned his Bachelor’s degree in Social and Criminal Justice from Ashford University.
 
-  ![](images/ab5314affea2908d9d1d48192927b2287dcc1864718987803c26fba0d5b54a47.gif)   [Select Language![](images/ab5314affea2908d9d1d48192927b2287dcc1864718987803c26fba0d5b54a47.gif)​![](images/ab5314affea2908d9d1d48192927b2287dcc1864718987803c26fba0d5b54a47.gif)▼](https://www.wilsonvilleoregon.gov/directory-listing/adam-cunningham/)  
+Adam has served on the Wilsonville Little League Board of Directors for eight years in a variety of roles. He has been fortunate to coach both of his sons through their Little League years while also serving an umpire. In 2023, Adam umpired in the Oregon State Little League Playoffs, hosted in Wilsonville.
 
-## Top Requests
+Since moving to Oregon, Adam has become a deer and elk hunter after growing up in Southern California as an upland bird hunter. Adam, his wife, and their sons have become solar eclipse chasers since experiencing totality in Bend in 2017. They experienced another eclipse in Texas in 2024 and are looking for their next opportunity to get into the path of totality.
 
- *  [Job Opportunities](https://www.wilsonvilleoregon.gov/hr/page/apply-now) 
- *  [Utility Billing](https://www.wilsonvilleoregon.gov/utility-billing) 
- *  [Bids & Proposals](https://www.wilsonvilleoregon.gov/rfps) 
- *  [Permits & Licenses](https://www.wilsonvilleoregon.gov/comm-dev/page/online-portal) 
- *  [Police](https://www.wilsonvilleoregon.gov/police) 
- *  [Mayor & City Council](https://www.wilsonvilleoregon.gov/citycouncil/page/meet-your-mayor-council) 
- *  [City Projects](https://www.wilsonvilleoregon.gov/projects) 
- *  [Contact Us](https://www.wilsonvilleoregon.gov/contact) 
+### Board &amp; Committee Assignments
 
-## Current Info
+- Washington County Coordinating Committee (WCCC) - Alternate
+- Willamette Intake Facilities Commission Board of TVWD - Alternate
+- Regional Water Providers Consortium Board
 
- *  [Agendas & Minutes](https://www.wilsonvilleoregon.gov/meetings) 
- *  [Boones Ferry Messenger](https://www.wilsonvilleoregon.gov/residents/page/boones-ferry-messenger) 
- *  [Calendar](https://www.wilsonvilleoregon.gov/calendar) 
- *  [Let's Talk, Wilsonville!](https://www.letstalkwilsonville.com/) 
- *  [News](https://www.wilsonvilleoregon.gov/news) 
- *  [Public Hearing Notices](https://www.wilsonvilleoregon.gov/residents/page/public-hearing-notices) 
- *  [Social Media](https://www.wilsonvilleoregon.gov/residents/page/social-media-hub) 
- *  [Subscribe](https://www.wilsonvilleoregon.gov/newsletter/subscriptions) 
- *  [Wilsonville TV](https://www.wilsonvilleoregon.gov/administration/page/wilsonville-tv) 
-
-## City Info
-
-Phone: 503-682-1011
-
-Fax: 503-682-1015
-
-After hours emergency:
-
-503-682-1231
-
- [Email](mailto:webmaster@ci.wilsonville.or.us) 
-
- [Staff Directory](https://www.wilsonvilleoregon.gov/directory) 
-
-City Hall Address:
+City Hall
 
 29799 SW Town Center Loop E
 
 Wilsonville, OR 97070
 
- [Staff Login](https://www.wilsonvilleoregon.gov/login) 
+See map: [Google Maps](https://maps.google.com/?q=29799%20SW%20Town%20Center%20Loop%20E%2C%20Wilsonville%2C%20OR%2C%2097070%2C%20us)
+
+![](https://www.wilsonvilleoregon.gov/sites/all/modules/openlayers/themes/default_dark/img/north-mini.png)
+
+![](https://www.wilsonvilleoregon.gov/sites/all/modules/openlayers/themes/default_dark/img/west-mini.png)
+
+![](https://www.wilsonvilleoregon.gov/sites/all/modules/openlayers/themes/default_dark/img/east-mini.png)
+
+![](https://www.wilsonvilleoregon.gov/sites/all/modules/openlayers/themes/default_dark/img/south-mini.png)
+
+![](https://www.wilsonvilleoregon.gov/sites/all/modules/openlayers/themes/default_dark/img/zoom-plus-mini.png)
+
+![](https://www.wilsonvilleoregon.gov/sites/all/modules/openlayers/themes/default_dark/img/zoom-world-mini.png)
+
+![](https://www.wilsonvilleoregon.gov/sites/all/modules/openlayers/themes/default_dark/img/zoom-minus-mini.png)
+
+Base Layer
+
+OSM Mapnik
+
+Overlays
+
+![](https://www.wilsonvilleoregon.gov/sites/all/modules/openlayers/themes/default_dark/img/layer-switcher-maximize.png)
+
+![](https://www.wilsonvilleoregon.gov/sites/all/modules/openlayers/themes/default_dark/img/layer-switcher-minimize.png)
+
+©[CCBYSA](https://creativecommons.org/licenses/by-sa/2.0) [© OpenStreetMap contributors](https://www.openstreetmap.org/copyright)
+
+- ![Printer-friendly version](https://www.wilsonvilleoregon.gov/sites/all/modules/print/icons/print_icon.png "Printer-friendly version")
+
+City Council Contact Position [Shawn O'Neil](https://www.wilsonvilleoregon.gov/directory-listing/shawn-oneil) Mayor [Caroline Berry](https://www.wilsonvilleoregon.gov/directory-listing/caroline-berry) Council President [Katie Dunwell](https://www.wilsonvilleoregon.gov/directory-listing/katie-dunwell) Councilor [Adam Cunningham](https://www.wilsonvilleoregon.gov/directory-listing/adam-cunningham) Councilor [Anne Shevlin](https://www.wilsonvilleoregon.gov/directory-listing/anne-shevlin) Councilor
+
+[View Full Staff Directory](https://www.wilsonvilleoregon.gov/directory)
+
+![](https://www.google.com/images/cleardot.gif)[Select Language![](https://www.google.com/images/cleardot.gif)​![](https://www.google.com/images/cleardot.gif)▼](https://www.wilsonvilleoregon.gov/directory-listing/adam-cunningham)
+
+## Top Requests
+
+- [Job Opportunities](https://www.wilsonvilleoregon.gov/hr/page/apply-now)
+- [Utility Billing](https://www.wilsonvilleoregon.gov/utility-billing)
+- [Bids &amp; Proposals](https://www.wilsonvilleoregon.gov/rfps)
+- [Permits &amp; Licenses](https://www.wilsonvilleoregon.gov/comm-dev/page/online-portal)
+- [Police](https://www.wilsonvilleoregon.gov/police)
+- [Mayor &amp; City Council](https://www.wilsonvilleoregon.gov/citycouncil/page/meet-your-mayor-council)
+- [City Projects](https://www.wilsonvilleoregon.gov/projects)
+- [Contact Us](https://www.wilsonvilleoregon.gov/contact)
+
+## Current Info
+
+- [Agendas &amp; Minutes](https://www.wilsonvilleoregon.gov/meetings)
+- [Boones Ferry Messenger](https://www.wilsonvilleoregon.gov/residents/page/boones-ferry-messenger "City Newsletter")
+- [Calendar](https://www.wilsonvilleoregon.gov/calendar)
+- [Let's Talk, Wilsonville!](https://www.letstalkwilsonville.com)
+- [News](https://www.wilsonvilleoregon.gov/news)
+- [Public Hearing Notices](https://www.wilsonvilleoregon.gov/residents/page/public-hearing-notices)
+- [Social Media](https://www.wilsonvilleoregon.gov/residents/page/social-media-hub)
+- [Subscribe](https://www.wilsonvilleoregon.gov/newsletter/subscriptions)
+- [Wilsonville TV](https://www.wilsonvilleoregon.gov/administration/page/wilsonville-tv)
+
+## City Info
+
+Phone: 503-682-1011  
+Fax: 503-682-1015  
+After hours emergency:  
+503-682-1231
+
+[Email](mailto:webmaster@ci.wilsonville.or.us)  
+[Staff Directory](https://www.wilsonvilleoregon.gov/directory)  
+City Hall Address:  
+29799 SW Town Center Loop E  
+Wilsonville, OR 97070
+
+[Staff Login](https://www.wilsonvilleoregon.gov/login)
 
 ## SITE INFO
 
- *  [Home - City of Wilsonville](https://www.ci.wilsonville.or.us/) 
- *  [Home - Economic Development](https://www.wilsonvilleecdev.com/) 
- *  [Home - Parks & Rec](https://www.wilsonvilleparksandrec.com/) 
- *  [Home - Public Library](https://www.wilsonvillelibrary.org/) 
- *  [Home - Transit (SMART)](https://www.ridesmart.com/) 
- *  [Sitemap](https://www.wilsonvilleoregon.gov/sitemap) 
- *  [Privacy Policy & Disclaimer](https://www.wilsonvilleoregon.gov/administration/page/privacy-policy-and-disclaimer) 
- *  [Accessibility](https://www.wilsonvilleoregon.gov/administration/page/accessibility) 
-  [a municode design](http://www.ahaconsulting.com/)  Original text Rate this translation Your feedback will be used to help improve Google Translate  ![placeholder](images/2cb0036bc5e62ba5a931d272a5207af35941997177ac339d967cb280cf09a38d.png)  
+- [Home - City of Wilsonville](https://www.ci.wilsonville.or.us)
+- [Home - Economic Development](https://www.wilsonvilleecdev.com)
+- [Home - Parks &amp; Rec](https://www.wilsonvilleparksandrec.com)
+- [Home - Public Library](https://www.wilsonvillelibrary.org)
+- [Home - Transit (SMART)](https://www.ridesmart.com)
+- [Sitemap](https://www.wilsonvilleoregon.gov/sitemap)
+- [Privacy Policy &amp; Disclaimer](https://www.wilsonvilleoregon.gov/administration/page/privacy-policy-and-disclaimer)
+- [Accessibility](https://www.wilsonvilleoregon.gov/administration/page/accessibility)
+
+[a municode design](https://www.ahaconsulting.com)
+
+Original text
+
+Rate this translation
+
+Your feedback will be used to help improve Google Translate
+
+![placeholder](https://www.wilsonvilleoregon.gov/sites/all/themes/aha_compass/logo.png)
