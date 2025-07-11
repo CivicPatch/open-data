@@ -1,39 +1,40 @@
- 
-
 Loading
 
-  [Skip to Main Content](https://www.centralpointoregon.gov/directory.aspx?eid=35/)  
+[Skip to Main Content](https://www.centralpointoregon.gov/directory.aspx?eid=35%2F)
 
- [Create a Website Account](https://www.centralpointoregon.gov/MyAccount/ProfileCreate)  - Manage notification subscriptions, save form progress and more.    
+[Create a Website Account](https://www.centralpointoregon.gov/MyAccount/ProfileCreate) - Manage notification subscriptions, save form progress and more.   
 
- *  [Website Sign In](https://www.centralpointoregon.gov/MyAccount) 
-  ![Central Point Oregon Homepage](images/54fd8c66c825b66883fce4c8ba0f03bbc7ec9e04d3e0664d82833cbc5c0b4b3c.png)  
+- [Website Sign In](https://www.centralpointoregon.gov/MyAccount)
 
- 1.  [Government](https://www.centralpointoregon.gov/27/Government) 
- 1.  [Community](https://www.centralpointoregon.gov/31/Community) 
- 1.  [Business](https://www.centralpointoregon.gov/35/Business) 
- 1.  [How Do I...](https://www.centralpointoregon.gov/9/How-Do-I) 
- Search  ![](images/7d037e8f4d555ff51156c1ee2946b946dc62419e5e54f1936c8aa74090299bf7.jpg)  
+![Central Point Oregon Homepage](https://www.centralpointoregon.gov/ImageRepository/Document?documentID=253)
 
- 1.  [Home](https://www.centralpointoregon.gov/) 
- 1. Staff Directory
-  ![Neil-Olsen_04-2025_9089](images/e349b9a6517cc4ae344e797cc34370302e0cf0fe2eab14341ec8a1d8d3e23b52.jpg)  
+1. [Government](https://www.centralpointoregon.gov/27/Government)
+2. [Community](https://www.centralpointoregon.gov/31/Community)
+3. [Business](https://www.centralpointoregon.gov/35/Business)
+4. [How Do I...](https://www.centralpointoregon.gov/9/How-Do-I)
+
+Search
+
+![](https://www.centralpointoregon.gov/ImageRepository/Document?documentID=252)
+
+1. [Home](https://www.centralpointoregon.gov)
+2. Staff Directory
+
+![Neil-Olsen_04-2025_9089](https://www.centralpointoregon.gov/ImageRepository/Document?documentID=1075 "Neil-Olsen_04-2025_9089")
 
 # Dr. Neil Olsen
 
-   [City Council](https://www.centralpointoregon.gov/Directory.aspx?DID=21) 
+ 
 
-Title: Council Member Ward I
-
-Phone:541-664-7935
-
-Additional Phone: Fax: 541-664-6384
-
- [Email Neil Olsen](mailto:neil.olsen@centralpointoregon.gov)  
+[City Council](https://www.centralpointoregon.gov/Directory.aspx?DID=21)  
+Title: Council Member Ward I  
+Phone: 541-664-7935  
+Additional Phone: Fax: 541-664-6384  
+[Email Neil Olsen](mailto:neil.olsen@centralpointoregon.gov)
 
 ## Term
 
-Elected 2018 & 2022. Current term ends December 31, 2026.
+Elected 2018 &amp; 2022. Current term ends December 31, 2026.
 
 ## Biography
 
@@ -47,53 +48,89 @@ He has been an active member of Central Point's CERT team since shortly after th
 
 Occupation:
 
- * Family Medical Doctor
+- Family Medical Doctor
 
 Educational Background:
 
- * Washington State
- * United States Air Force
+- Washington State
+- United States Air Force
 
 Committee Attendance:
 
- * Central Point Planning Commission
-  
+- Central Point Planning Commission
 
- [Return to Staff Directory](https://www.centralpointoregon.gov/Directory.aspx) 
+ 
 
-  [Online Services](https://www.centralpointoregon.gov/290/Online-Resources)   [Parks & Recreation](https://www.centralpointoregon.gov/188/Parks-Recreation)   [Public Safety](https://www.centralpointoregon.gov/203/Police)   [Agendas & Minutes](https://www.centralpointoregon.gov/129/Agendas-Minutes)   [Job Opportunities](https://www.centralpointoregon.gov/jobs)   [Emergency Preparedness](https://jacksoncountyor.gov/departments/emergency_management/jackson_alerts_.php)  
+[Return to Staff Directory](https://www.centralpointoregon.gov/Directory.aspx)
 
- 1.    
+[Online Services](https://www.centralpointoregon.gov/290/Online-Resources)
 
- 1.    
+[Parks &amp; Recreation](https://www.centralpointoregon.gov/188/Parks-Recreation)
 
- __City of Central Point__    
+[Public Safety](https://www.centralpointoregon.gov/203/Police)
 
- 1.    
+[Agendas &amp; Minutes](https://www.centralpointoregon.gov/129/Agendas-Minutes)
 
-140 S 3^(rd) Street   
+[Job Opportunities](https://www.centralpointoregon.gov/jobs)
 
- 1.    
+[Emergency Preparedness](https://jacksoncountyor.gov/departments/emergency_management/jackson_alerts_.php)
 
-Central Point, OR 97502   
+<!--THE END-->
 
- 1.    
+1. **City of Central Point**
 
-P. 541-664-3321   
+<!--THE END-->
 
- 1.  [Home](https://www.centralpointoregon.gov/)  
+1. 140 S 3rd Street
 
- 1.  [Site Map](https://www.centralpointoregon.gov/sitemap)  
+<!--THE END-->
 
- 1.  [Contact Us](https://www.centralpointoregon.gov/142/Contact-Us)  
+1. Central Point, OR 97502
 
- 1.  [Accessibility](https://www.centralpointoregon.gov/site/accessibility)  
+<!--THE END-->
 
- 1.  [Copyright Notices](https://www.centralpointoregon.gov/copyright)  
- /QuickLinks.aspx Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)  Loading Loading Do Not Show Again Close Select LanguageAbkhazAcehneseAcholiAfarAfrikaansAlbanianAlurAmharicArabicArmenianAssameseAvarAwadhiAymaraAzerbaijaniBalineseBaluchiBambaraBaouléBashkirBasqueBatak KaroBatak SimalungunBatak TobaBelarusianBembaBengaliBetawiBhojpuriBikolBosnianBretonBulgarianBuryatCantoneseCatalanCebuanoChamorroChechenChichewaChinese (Simplified)Chinese (Traditional)ChuukeseChuvashCorsicanCrimean Tatar (Cyrillic)Crimean Tatar (Latin)CroatianCzechDanishDariDhivehiDinkaDogriDombeDutchDyulaDzongkhaEsperantoEstonianEweFaroeseFijianFilipinoFinnishFonFrenchFrench (Canada)FrisianFriulianFulaniGaGalicianGeorgianGermanGreekGuaraniGujaratiHaitian CreoleHakha ChinHausaHawaiianHebrewHiligaynonHindiHmongHungarianHunsrikIbanIcelandicIgboIlocanoIndonesianInuktut (Latin)Inuktut (Syllabics)IrishItalianJamaican PatoisJapaneseJavaneseJingpoKalaallisutKannadaKanuriKapampanganKazakhKhasiKhmerKigaKikongoKinyarwandaKitubaKokborokKomiKonkaniKoreanKrioKurdish (Kurmanji)Kurdish (Sorani)KyrgyzLaoLatgalianLatinLatvianLigurianLimburgishLingalaLithuanianLombardLugandaLuoLuxembourgishMacedonianMadureseMaithiliMakassarMalagasyMalayMalay (Jawi)MalayalamMalteseMamManxMaoriMarathiMarshalleseMarwadiMauritian CreoleMeadow MariMeiteilon (Manipuri)MinangMizoMongolianMyanmar (Burmese)Nahuatl (Eastern Huasteca)NdauNdebele (South)Nepalbhasa (Newari)NepaliNKoNorwegianNuerOccitanOdia (Oriya)OromoOssetianPangasinanPapiamentoPashtoPersianPolishPortuguese (Brazil)Portuguese (Portugal)Punjabi (Gurmukhi)Punjabi (Shahmukhi)QuechuaQʼeqchiʼRomaniRomanianRundiRussianSami (North)SamoanSangoSanskritSantali (Latin)Santali (Ol Chiki)Scots GaelicSepediSerbianSesothoSeychellois CreoleShanShonaSicilianSilesianSindhiSinhalaSlovakSlovenianSomaliSpanishSundaneseSusuSwahiliSwatiSwedishTahitianTajikTamazightTamazight (Tifinagh)TamilTatarTeluguTetumThaiTibetanTigrinyaTivTok PisinTonganTshilubaTsongaTswanaTuluTumbukaTurkishTurkmenTuvanTwiUdmurtUkrainianUrduUyghurUzbekVendaVenetianVietnameseWarayWelshWolofXhosaYakutYiddishYorubaYucatec MayaZapotecZulu Powered by  [![Google Translate](images/3f3f3a8d0882c4edd13c1755632554f3042dd0f45af91da1e753b94d76c2513f.png)Translate](https://translate.google.com/)  
+1. P. 541-664-3321
+
+<!--THE END-->
+
+1. [Home](https://www.centralpointoregon.gov)
+
+<!--THE END-->
+
+1. [Site Map](https://www.centralpointoregon.gov/sitemap)
+
+<!--THE END-->
+
+1. [Contact Us](https://www.centralpointoregon.gov/142/Contact-Us)
+
+<!--THE END-->
+
+1. [Accessibility](https://www.centralpointoregon.gov/site/accessibility)
+
+<!--THE END-->
+
+1. [Copyright Notices](https://www.centralpointoregon.gov/copyright)
+
+/QuickLinks.aspx
+
+Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)
+
+Loading
+
+Loading
+
+Do Not Show Again Close
+
+Select LanguageAbkhazAcehneseAcholiAfarAfrikaansAlbanianAlurAmharicArabicArmenianAssameseAvarAwadhiAymaraAzerbaijaniBalineseBaluchiBambaraBaouléBashkirBasqueBatak KaroBatak SimalungunBatak TobaBelarusianBembaBengaliBetawiBhojpuriBikolBosnianBretonBulgarianBuryatCantoneseCatalanCebuanoChamorroChechenChichewaChinese (Simplified)Chinese (Traditional)ChuukeseChuvashCorsicanCrimean Tatar (Cyrillic)Crimean Tatar (Latin)CroatianCzechDanishDariDhivehiDinkaDogriDombeDutchDyulaDzongkhaEsperantoEstonianEweFaroeseFijianFilipinoFinnishFonFrenchFrench (Canada)FrisianFriulianFulaniGaGalicianGeorgianGermanGreekGuaraniGujaratiHaitian CreoleHakha ChinHausaHawaiianHebrewHiligaynonHindiHmongHungarianHunsrikIbanIcelandicIgboIlocanoIndonesianInuktut (Latin)Inuktut (Syllabics)IrishItalianJamaican PatoisJapaneseJavaneseJingpoKalaallisutKannadaKanuriKapampanganKazakhKhasiKhmerKigaKikongoKinyarwandaKitubaKokborokKomiKonkaniKoreanKrioKurdish (Kurmanji)Kurdish (Sorani)KyrgyzLaoLatgalianLatinLatvianLigurianLimburgishLingalaLithuanianLombardLugandaLuoLuxembourgishMacedonianMadureseMaithiliMakassarMalagasyMalayMalay (Jawi)MalayalamMalteseMamManxMaoriMarathiMarshalleseMarwadiMauritian CreoleMeadow MariMeiteilon (Manipuri)MinangMizoMongolianMyanmar (Burmese)Nahuatl (Eastern Huasteca)NdauNdebele (South)Nepalbhasa (Newari)NepaliNKoNorwegianNuerOccitanOdia (Oriya)OromoOssetianPangasinanPapiamentoPashtoPersianPolishPortuguese (Brazil)Portuguese (Portugal)Punjabi (Gurmukhi)Punjabi (Shahmukhi)QuechuaQʼeqchiʼRomaniRomanianRundiRussianSami (North)SamoanSangoSanskritSantali (Latin)Santali (Ol Chiki)Scots GaelicSepediSerbianSesothoSeychellois CreoleShanShonaSicilianSilesianSindhiSinhalaSlovakSlovenianSomaliSpanishSundaneseSusuSwahiliSwatiSwedishTahitianTajikTamazightTamazight (Tifinagh)TamilTatarTeluguTetumThaiTibetanTigrinyaTivTok PisinTonganTshilubaTsongaTswanaTuluTumbukaTurkishTurkmenTuvanTwiUdmurtUkrainianUrduUyghurUzbekVendaVenetianVietnameseWarayWelshWolofXhosaYakutYiddishYorubaYucatec MayaZapotecZulu
+
+Powered by [![Google Translate](https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png)Translate](https://translate.google.com)
 
 Welcome to smart search, how can I help?
 
 ### Live Edit
 
- Original text Rate this translation Your feedback will be used to help improve Google Translate 
+Original text
+
+Rate this translation
+
+Your feedback will be used to help improve Google Translate

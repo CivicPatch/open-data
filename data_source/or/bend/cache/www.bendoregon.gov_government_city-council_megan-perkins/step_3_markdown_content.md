@@ -1,123 +1,160 @@
- Select LanguageAbkhazAcehneseAcholiAfarAfrikaansAlbanianAlurAmharicArabicArmenianAssameseAvarAwadhiAymaraAzerbaijaniBalineseBaluchiBambaraBaouléBashkirBasqueBatak KaroBatak SimalungunBatak TobaBelarusianBembaBengaliBetawiBhojpuriBikolBosnianBretonBulgarianBuryatCantoneseCatalanCebuanoChamorroChechenChichewaChinese (Simplified)Chinese (Traditional)ChuukeseChuvashCorsicanCrimean Tatar (Cyrillic)Crimean Tatar (Latin)CroatianCzechDanishDariDhivehiDinkaDogriDombeDutchDyulaDzongkhaEsperantoEstonianEweFaroeseFijianFilipinoFinnishFonFrenchFrench (Canada)FrisianFriulianFulaniGaGalicianGeorgianGermanGreekGuaraniGujaratiHaitian CreoleHakha ChinHausaHawaiianHebrewHiligaynonHindiHmongHungarianHunsrikIbanIcelandicIgboIlocanoIndonesianInuktut (Latin)Inuktut (Syllabics)IrishItalianJamaican PatoisJapaneseJavaneseJingpoKalaallisutKannadaKanuriKapampanganKazakhKhasiKhmerKigaKikongoKinyarwandaKitubaKokborokKomiKonkaniKoreanKrioKurdish (Kurmanji)Kurdish (Sorani)KyrgyzLaoLatgalianLatinLatvianLigurianLimburgishLingalaLithuanianLombardLugandaLuoLuxembourgishMacedonianMadureseMaithiliMakassarMalagasyMalayMalay (Jawi)MalayalamMalteseMamManxMaoriMarathiMarshalleseMarwadiMauritian CreoleMeadow MariMeiteilon (Manipuri)MinangMizoMongolianMyanmar (Burmese)Nahuatl (Eastern Huasteca)NdauNdebele (South)Nepalbhasa (Newari)NepaliNKoNorwegianNuerOccitanOdia (Oriya)OromoOssetianPangasinanPapiamentoPashtoPersianPolishPortuguese (Brazil)Portuguese (Portugal)Punjabi (Gurmukhi)Punjabi (Shahmukhi)QuechuaQʼeqchiʼRomaniRomanianRundiRussianSami (North)SamoanSangoSanskritSantali (Latin)Santali (Ol Chiki)Scots GaelicSepediSerbianSesothoSeychellois CreoleShanShonaSicilianSilesianSindhiSinhalaSlovakSlovenianSomaliSpanishSundaneseSusuSwahiliSwatiSwedishTahitianTajikTamazightTamazight (Tifinagh)TamilTatarTeluguTetumThaiTibetanTigrinyaTivTok PisinTonganTshilubaTsongaTswanaTuluTumbukaTurkishTurkmenTuvanTwiUdmurtUkrainianUrduUyghurUzbekVendaVenetianVietnameseWarayWelshWolofXhosaYakutYiddishYorubaYucatec MayaZapotecZulu Powered by  [![Google Translate](https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png)Translate](https://translate.google.com/)   [Skip to Main Content](https://www.bendoregon.gov/government/city-council/megan-perkins/)  
+Select LanguageAbkhazAcehneseAcholiAfarAfrikaansAlbanianAlurAmharicArabicArmenianAssameseAvarAwadhiAymaraAzerbaijaniBalineseBaluchiBambaraBaouléBashkirBasqueBatak KaroBatak SimalungunBatak TobaBelarusianBembaBengaliBetawiBhojpuriBikolBosnianBretonBulgarianBuryatCantoneseCatalanCebuanoChamorroChechenChichewaChinese (Simplified)Chinese (Traditional)ChuukeseChuvashCorsicanCrimean Tatar (Cyrillic)Crimean Tatar (Latin)CroatianCzechDanishDariDhivehiDinkaDogriDombeDutchDyulaDzongkhaEsperantoEstonianEweFaroeseFijianFilipinoFinnishFonFrenchFrench (Canada)FrisianFriulianFulaniGaGalicianGeorgianGermanGreekGuaraniGujaratiHaitian CreoleHakha ChinHausaHawaiianHebrewHiligaynonHindiHmongHungarianHunsrikIbanIcelandicIgboIlocanoIndonesianInuktut (Latin)Inuktut (Syllabics)IrishItalianJamaican PatoisJapaneseJavaneseJingpoKalaallisutKannadaKanuriKapampanganKazakhKhasiKhmerKigaKikongoKinyarwandaKitubaKokborokKomiKonkaniKoreanKrioKurdish (Kurmanji)Kurdish (Sorani)KyrgyzLaoLatgalianLatinLatvianLigurianLimburgishLingalaLithuanianLombardLugandaLuoLuxembourgishMacedonianMadureseMaithiliMakassarMalagasyMalayMalay (Jawi)MalayalamMalteseMamManxMaoriMarathiMarshalleseMarwadiMauritian CreoleMeadow MariMeiteilon (Manipuri)MinangMizoMongolianMyanmar (Burmese)Nahuatl (Eastern Huasteca)NdauNdebele (South)Nepalbhasa (Newari)NepaliNKoNorwegianNuerOccitanOdia (Oriya)OromoOssetianPangasinanPapiamentoPashtoPersianPolishPortuguese (Brazil)Portuguese (Portugal)Punjabi (Gurmukhi)Punjabi (Shahmukhi)QuechuaQʼeqchiʼRomaniRomanianRundiRussianSami (North)SamoanSangoSanskritSantali (Latin)Santali (Ol Chiki)Scots GaelicSepediSerbianSesothoSeychellois CreoleShanShonaSicilianSilesianSindhiSinhalaSlovakSlovenianSomaliSpanishSundaneseSusuSwahiliSwatiSwedishTahitianTajikTamazightTamazight (Tifinagh)TamilTatarTeluguTetumThaiTibetanTigrinyaTivTok PisinTonganTshilubaTsongaTswanaTuluTumbukaTurkishTurkmenTuvanTwiUdmurtUkrainianUrduUyghurUzbekVendaVenetianVietnameseWarayWelshWolofXhosaYakutYiddishYorubaYucatec MayaZapotecZulu
+
+Powered by [![Google Translate](https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png)Translate](https://translate.google.com)
+
+[Skip to Main Content](https://www.bendoregon.gov/government/city-council/megan-perkins/)
 
 # City of Bend
 
- [Home](https://www.bendoregon.gov/home)  [Menu]()   [About](https://www.bendoregon.gov/services/about)  [City Projects](https://www.bendoregon.gov/services/city-projects)  [Programs & Initiatives](https://www.bendoregon.gov/services/programs-and-initiatives)  [Council Meetings](https://www.bendoregon.gov/government/city-council/city-council-meeting-agendas-video)  [Jobs](https://www.governmentjobs.com/careers/bend)  Search [Go]()  
+[Home](https://www.bendoregon.gov/home) [Menu](https:void%280%29;)
 
- *  [Home](https://www.bendoregon.gov/home) 
- *  [Services](https://www.bendoregon.gov/services)  
-   *  [Business](https://www.bendoregon.gov/services/business) 
-   *  [City Maps & Data](https://www.bendoregon.gov/services/city-maps) 
-   *  [Complaints & Service Requests](https://www.bendoregon.gov/services/complaints-and-service-requests) 
-   *  [Development & Permitting](https://www.bendoregon.gov/services/development-permitting) 
-   *  [Event Permits](https://www.bendoregon.gov/services/event-permits) 
-   *  [Housing & Houselessness](https://www.bendoregon.gov/services/affordable-housing) 
-   *  [Parking](https://www.bendoregon.gov/services/parking) 
-   *  [Police Reports](https://www.bendoregon.gov/services/police-reports) 
-   *  [Service Request](https://www.bendoregon.gov/services/service-request) 
-   *  [Street Plowing](https://www.bendoregon.gov/services/street-plowing) 
-   *  [Utility Billing](https://www.bendoregon.gov/services/utility-billing) 
-   *  [ALL SERVICES >](https://www.bendoregon.gov/services/all-services)  
- *  [Events](https://www.bendoregon.gov/events) 
- *  [Directory](https://www.bendoregon.gov/directory) 
- *  [Government](https://www.bendoregon.gov/government)  
-   *  [City Codes, Policies, Ordinances, and Resolutions](https://www.bendoregon.gov/government/city-codes-policies-ordinances-and-resolutions) 
-   *  [City Council](https://www.bendoregon.gov/government/city-council) 
-   *  [Departments](https://www.bendoregon.gov/government/departments) 
-   *  [Committees](https://www.bendoregon.gov/government/committees)  
- *  [News](https://www.bendoregon.gov/news) 
- *  [I want to](https://www.bendoregon.gov/i-want-to)  
-   *  [Apply](https://www.bendoregon.gov/i-want-to/apply) 
-   *  [Contact](https://www.bendoregon.gov/i-want-to/contact) 
-   *  [File](https://www.bendoregon.gov/i-want-to/file) 
-   *  [Learn](https://www.bendoregon.gov/i-want-to/learn) 
-   *  [Pay](https://www.bendoregon.gov/i-want-to/pay) 
-   *  [Register](https://www.bendoregon.gov/i-want-to/register) 
-   *  [Report](https://www.bendoregon.gov/i-want-to/report) 
-   *  [Request](https://www.bendoregon.gov/i-want-to/request)  
- []()  
+[About](https://www.bendoregon.gov/services/about) [City Projects](https://www.bendoregon.gov/services/city-projects) [Programs &amp; Initiatives](https://www.bendoregon.gov/services/programs-and-initiatives) [Council Meetings](https://www.bendoregon.gov/government/city-council/city-council-meeting-agendas-video) [Jobs](https://www.governmentjobs.com/careers/bend)
 
- [Government](https://www.bendoregon.gov/government) » [City Council](https://www.bendoregon.gov/government/city-council) 
+Search [Go](https:void%280%29;)
 
-#  Megan Perkins 
+- [Home](https://www.bendoregon.gov/home "Click to open Home")
+- [Services](https://www.bendoregon.gov/services "Click to open Services")
+  
+  - [Business](https://www.bendoregon.gov/services/business "Doing Business in Bend")
+  - [City Maps &amp; Data](https://www.bendoregon.gov/services/city-maps "City Maps")
+  - [Complaints &amp; Service Requests](https://www.bendoregon.gov/services/complaints-and-service-requests "Complaints and Service Requests")
+  
+  <!--THE END-->
+  
+  - [Development &amp; Permitting](https://www.bendoregon.gov/services/development-permitting "Click to open Development & Permitting")
+  - [Event Permits](https://www.bendoregon.gov/services/event-permits "Permitting for Events")
+  - [Housing &amp; Houselessness](https://www.bendoregon.gov/services/affordable-housing "Click to open Housing & Houselessness")
+  
+  <!--THE END-->
+  
+  - [Parking](https://www.bendoregon.gov/services/parking "Parking In Bend")
+  - [Police Reports](https://www.bendoregon.gov/services/police-reports "Click to open Police Reports")
+  - [Service Request](https://www.bendoregon.gov/services/service-request "Click to open Service Request")
+  
+  <!--THE END-->
+  
+  - [Street Plowing](https://www.bendoregon.gov/services/street-plowing "Click to open Street Plowing")
+  - [Water Services Billing](https://www.bendoregon.gov/services/water-services-billing "Click to open Water Services Billing")
+  - [ALL SERVICES &gt;](https://www.bendoregon.gov/services/all-services "All Services")
+- [Events](https://www.bendoregon.gov/events "Meetings and Events Calendar")
+- [Directory](https://www.bendoregon.gov/directory "Click to open Directory")
+- [Government](https://www.bendoregon.gov/government "Click to open Government")
+  
+  - [City Codes, Policies, Ordinances, and Resolutions](https://www.bendoregon.gov/government/city-codes-policies-ordinances-and-resolutions "Click to open City Codes, Policies, Ordinances, and Resolutions")
+  
+  <!--THE END-->
+  
+  - [City Council](https://www.bendoregon.gov/government/city-council "Click to open City Council")
+  
+  <!--THE END-->
+  
+  - [Departments](https://www.bendoregon.gov/government/departments "Click to open Departments")
+  
+  <!--THE END-->
+  
+  - [Committees](https://www.bendoregon.gov/government/committees "Committees, Boards & Commissions")
+- [News](https://www.bendoregon.gov/news "News from the City of Bend")
+- [I want to](https://www.bendoregon.gov/i-want-to "Click to open I want to")
+  
+  - [Apply](https://www.bendoregon.gov/i-want-to/apply "Click to open Apply")
+  - [Contact](https://www.bendoregon.gov/i-want-to/contact "Click to open Contact")
+  
+  <!--THE END-->
+  
+  - [File](https://www.bendoregon.gov/i-want-to/file "Click to open File")
+  - [Learn](https://www.bendoregon.gov/i-want-to/learn "Click to open Learn")
+  
+  <!--THE END-->
+  
+  - [Pay](https://www.bendoregon.gov/i-want-to/pay "Click to open Pay")
+  - [Register](https://www.bendoregon.gov/i-want-to/register "Click to open Register")
+  
+  <!--THE END-->
+  
+  - [Report](https://www.bendoregon.gov/i-want-to/report "Click to open Report")
+  - [Request](https://www.bendoregon.gov/i-want-to/request "Click to open Request")
+
+[Government](https://www.bendoregon.gov/government) » [City Council](https://www.bendoregon.gov/government/city-council)
+
+# Megan Perkins
 
 Megan was elected to the Bend City Council in 2020 and reelected in 2024.
 
-***
+* * *
 
- __Council Position:__ 
-
+**Council Position:**  
 3rd
 
- __Term Ends:__ 
-
+**Term Ends:**  
 2028
 
 ## Contact
 
- *  [Megan Perkins](https://www.bendoregon.gov/Home/Components/StaffDirectory/StaffDirectory/378/36?backlist=/government/city-council/megan-perkins)   
+- [Megan Perkins](https://www.bendoregon.gov/Home/Components/StaffDirectory/StaffDirectory/378/36?backlist=%2Fgovernment%2Fcity-council%2Fmegan-perkins)
+  
+  Mayor Pro Tem
+  
+  - 541-749-7619
+  - [mperkins@bendoregon.gov](https:void%280%29; "Click to send message to this staff member")
 
-Mayor Pro Tem  
-
-   * 541-749-7619
-   *  [mperkins@bendoregon.gov]() 
- [](https://www.bendoregon.gov/services/advanced-components/staff-directory)  
-
- ![Megan is of light complexion and has shoulder length blonde hair.](images/b93b4304d38417727fe3c37d542d76377ef5d1e0b59f8d462be743bfcb39ca54.jpg) Megan is a 6th generation Oregonian who loves living in Bend with her husband, three children, whoodle, two bunnies and a snake. She wants to continue her focus on building a safe, accessible, equitable and affordable city for all on Council during her second term.
+![Megan is of light complexion and has shoulder length blonde hair.](https://www.bendoregon.gov/home/showpublishedimage/17574/638720963951470000)Megan is a 6th generation Oregonian who loves living in Bend with her husband, three children, whoodle, two bunnies and a snake. She wants to continue her focus on building a safe, accessible, equitable and affordable city for all on Council during her second term.
 
 ## Education
 
- *  __George Washington University__ , MA in Political Management
- *  __The Colorado College__ , BA in Political Science
+- **George Washington University**, MA in Political Management
+- **The Colorado College**, BA in Political Science
 
 ## Professional and Volunteer Experience
 
- *  __Embrace Bend, __ Co-founder and Board Member
- * Background consists of roles in state and federal government and with regional non-profits
- * Megan loves volunteering locally especially for organizations who work with children and the homeless. She has also worked with Central Oregon Moms Demand Action, Girl Scouts of Oregon and Southern Washington, and the Summit West Neighborhood Association
+- **Embrace Bend,** Co-founder and Board Member
+- Background consists of roles in state and federal government and with regional non-profits
+- Megan loves volunteering locally especially for organizations who work with children and the homeless. She has also worked with Central Oregon Moms Demand Action, Girl Scouts of Oregon and Southern Washington, and the Summit West Neighborhood Association
 
 ## 2025-2027 Council Liaison Assignments
 
- *  [## Community Building Subcommittee](https://www.bendoregon.gov/government/city-council/council-subcommittees/community-building) 
- *  [## Bend Economic Development Advisory Board (BEDAB)](https://www.bendoregon.gov/government/committees/bend-economic-development-advisory-board) 
- *  [## Human Rights & Equity Commission (HREC)](https://www.bendoregon.gov/government/committees/human-rights-and-equity-commission) 
- *  [## Central Oregon Intergovernmental Council, Regional Housing Council - Primary](https://www.coic.org/housing/rhc/) 
- *  [## Coordinated Houseless Response Office (CHRO)](https://www.deschutes.org/community/page/coordinated-houseless-response-office) 
- *  [## Central Oregon Cities Organization (COCO)](https://www.redmondoregon.gov/government/coco-central-oregon-cities-organization) 
- *  [## Downtown Bend Business Association (DBBA)](https://www.downtownbend.org/) 
- *  [## Economic Development for Central Oregon (EDCO)](https://www.edcoinfo.com/) 
- *  [## Boyd Acres Neighborhood District](https://www.bendoregon.gov/government/departments/communications-engagement/neighborhood-districts) 
- *  [## Southwest Bend Neighborhood District](https://www.bendoregon.gov/government/departments/communications-engagement/neighborhood-districts) 
- *  [## Deschutes Collaborative Forest Project Steering Committee](https://deschutescollaborativeforest.org/) 
+- [**Community Building Subcommittee**](https://www.bendoregon.gov/government/city-council/council-subcommittees/community-building)
+- [**Bend Economic Development Advisory Board (BEDAB)**](https://www.bendoregon.gov/government/committees/bend-economic-development-advisory-board)
+- [**Human Rights &amp; Equity Commission (HREC)**](https://www.bendoregon.gov/government/committees/human-rights-and-equity-commission)
+- [**Central Oregon Intergovernmental Council, Regional Housing Council - Primary**](https://www.coic.org/housing/rhc)
+- [**Coordinated Houseless Response Office (CHRO)**](https://www.deschutes.org/community/page/coordinated-houseless-response-office)
+- [**Central Oregon Cities Organization (COCO)**](https://www.redmondoregon.gov/government/coco-central-oregon-cities-organization)
+- [**Downtown Bend Business Association (DBBA)**](https://www.downtownbend.org)
+- [**Economic Development for Central Oregon (EDCO)**](https://www.edcoinfo.com)
+- [**Boyd Acres Neighborhood District**](https://www.bendoregon.gov/government/departments/communications-engagement/neighborhood-districts)
+- [**Southwest Bend Neighborhood District**](https://www.bendoregon.gov/government/departments/communications-engagement/neighborhood-districts)
+- [**Deschutes Collaborative Forest Project Steering Committee**](https://deschutescollaborativeforest.org)
 
-##  [Current Weather »](https://www.yahoo.com/news/weather/united-states/oregon/bend-2362495/) 
+## [Current Weather »](https://www.yahoo.com/news/weather/united-states/oregon/bend-2362495)
 
 ## Get In Touch
 
- __ [Submit a Service Request](https://www.bendoregon.gov/services/bend-works)__ 
+[**Submit a Service Request**](https://www.bendoregon.gov/services/bend-works)  
+[**Permit Center**](https://www.bendoregon.gov/government/departments/community-development/online-permit-center) *(541) 388-5580*  
+[**Water/Sewer Account**](https://www.bendoregon.gov/services/utility-billing) *(541) 388-5515*  
+[**Administration**](https://www.bendoregon.gov/government/departments/city-manager-s-office) *(541) 388-5505*
 
- __ [Permit Center](https://www.bendoregon.gov/government/departments/community-development/online-permit-center)__  *(541) 388-5580* 
-
- __ [Water/Sewer Account](https://www.bendoregon.gov/services/utility-billing)__  *(541) 388-5515* 
-
- __ [Administration](https://www.bendoregon.gov/government/departments/city-manager-s-office)__  *(541) 388-5505* 
-
-  [![](images/b296866b18ef0ff27c33931ebd3f96e305982be9492b6d795c619e69fc672cfe.jpg)](mailto:communications@bendoregon.gov?subject=Hello%20City%20of%20Bend)  [![](images/f5014ffdee06681e9890383a32af27063b16854c609187f3fa741cfaf2ed49d7.jpg)](https://www.facebook.com/CityofBendOregon)  [![](images/6f5e1437204e7a4375feafd57a68f441ce06c2c3b72bb4d101a21d562184184d.jpg)](https://twitter.com/CityofBend)  [![](images/904d42d880eea3a325362ad031895b7aa88b456897022cad962e0bff0f99335a.jpg)](https://www.instagram.com/cityofbendoregon/)  [![](images/16ac783e34853b84255f6a7cf8af518cdbe71dbfe9083c7066f909e6d67aa294.jpg)](https://www.youtube.com/user/CityofBendOregon)  
+![](https://www.bendoregon.gov/home/showpublishedimage/5351/636536006746370000) ![](https://www.bendoregon.gov/home/showpublishedimage/5353/636536006768870000) ![](https://www.bendoregon.gov/home/showpublishedimage/14878/638344492394170000) ![](https://www.bendoregon.gov/home/showpublishedimage/6814/636663857634470000) ![](https://www.bendoregon.gov/home/showpublishedimage/5357/636536006796230000)
 
 ## Stay Informed
 
- [Calendar](https://www.bendoregon.gov/events) 
+[Calendar](https://www.bendoregon.gov/events)  
+[News](https://www.bendoregon.gov/news)  
+[City Council](https://www.bendoregon.gov/government/city-council)  
+[BendHub Employee Login](https://bendoregon.sharepoint.com)  
+[Privacy Policy](https://www.bendoregon.gov/services/privacy-policy)
 
- [News](https://www.bendoregon.gov/news) 
+[Website Design by Granicus](https://granicus.com/government-website-design?utm_source=customer&utm_medium=footer&utm_campaign=govAccesswebsite) - Connecting People and Government
 
- [City Council](https://www.bendoregon.gov/government/city-council) 
+[Accessibility Assistance](https://www.bendoregon.gov/accessibility)
 
- [BendHub Employee Login](https://bendoregon.sharepoint.com/) 
+[Back to Top](https://www.bendoregon.gov/government/city-council/megan-perkins)
 
- [Privacy Policy](https://www.bendoregon.gov/services/privacy-policy) 
+[View Full Site](https:void%280%29;)
 
- [Website Design by Granicus](https://granicus.com/government-website-design?utm_source=customer&utm_medium=footer&utm_campaign=govAccesswebsite) - Connecting People and Government
+Loading ...
 
- [Accessibility Assistance](https://www.bendoregon.gov/accessibility) 
+Original text
 
-  [Back to Top](https://www.bendoregon.gov/government/city-council/megan-perkins/)   [View Full Site]()  Loading...  ![](https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg)  Original text Rate this translation Your feedback will be used to help improve Google Translate 
+Rate this translation
+
+Your feedback will be used to help improve Google Translate

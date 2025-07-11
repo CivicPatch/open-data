@@ -1,28 +1,34 @@
- 
-
 Loading
 
-  [Skip to Main Content](https://www.forestgrove-or.gov/365/City-Council/)   ![Forest Grove, OR](images/c70e38065a04af16c42c7f5b7d383e48e65724a14c74571aac162d9ac51e1425.gif)  
+[Skip to Main Content](https://www.forestgrove-or.gov/365/City-Council/)
 
- [Create a Website Account](https://www.forestgrove-or.gov/MyAccount/ProfileCreate)  - Manage notification subscriptions, save form progress and more.    
+![Forest Grove, OR](https://www.forestgrove-or.gov/ImageRepository/Document?documentID=27)
 
- *  [Website Sign In](https://www.forestgrove-or.gov/MyAccount) 
-  ![OR Forest Grove Homepage](images/2935bc75c836bbf3003089c39117b5a10ddf2b1e805532c29fb7c95873c2996a.png)  Search 
+[Create a Website Account](https://www.forestgrove-or.gov/MyAccount/ProfileCreate) - Manage notification subscriptions, save form progress and more.   
 
- 1.  [Government](https://www.forestgrove-or.gov/27/Government) 
- 1.  [Departments](https://www.forestgrove-or.gov/101/Departments) 
- 1.  [Community](https://www.forestgrove-or.gov/31/Community) 
- 1.  [Business](https://www.forestgrove-or.gov/35/Business) 
- 1.  [How Do I...](https://www.forestgrove-or.gov/9/How-Do-I) 
-  ![](images/d600bd1fa414d6b3a3ff8eb4c3513c8ba1690acfad700b56d30b8b7bfc7db373.jpg)  
+- [Website Sign In](https://www.forestgrove-or.gov/MyAccount)
 
- 1.  [Home](https://www.forestgrove-or.gov/) 
- 1.  [Government](https://www.forestgrove-or.gov/27/Government) 
- 1. City Council
+![OR Forest Grove Homepage](https://www.forestgrove-or.gov/ImageRepository/Document?documentID=73)
+
+Search
+
+1. [Government](https://www.forestgrove-or.gov/27/Government)
+2. [Departments](https://www.forestgrove-or.gov/101/Departments)
+3. [Community](https://www.forestgrove-or.gov/31/Community)
+4. [Business](https://www.forestgrove-or.gov/35/Business)
+5. [How Do I...](https://www.forestgrove-or.gov/9/How-Do-I)
+
+<!--THE END-->
+
+![](https://www.forestgrove-or.gov/ImageRepository/Document?documentID=75)
+
+1. [Home](https://www.forestgrove-or.gov)
+2. [Government](https://www.forestgrove-or.gov/27/Government)
+3. City Council
 
 # City Council
 
-  ![](images/ab5314affea2908d9d1d48192927b2287dcc1864718987803c26fba0d5b54a47.gif)   [Select Language![](images/ab5314affea2908d9d1d48192927b2287dcc1864718987803c26fba0d5b54a47.gif)​![](images/ab5314affea2908d9d1d48192927b2287dcc1864718987803c26fba0d5b54a47.gif)▼](https://www.forestgrove-or.gov/365/City-Council/)  
+![](https://www.google.com/images/cleardot.gif)[Select Language![](https://www.google.com/images/cleardot.gif)​![](https://www.google.com/images/cleardot.gif)▼](https://www.forestgrove-or.gov/365/City-Council)
 
 ## Council Meetings
 
@@ -30,29 +36,32 @@ Take place at 7 pm on the 2nd and 4th Monday of each month, unless Monday is a h
 
 ## City Council Members
 
- * Mayor Malynda Wenzl  |  Current Term: 2022-2026
- * Councilor Angel Falconer  |  Current Term: 2025-2029
- * Councilor Donna Gustafson  |  Current Term: 2025-2029
- * Councilor Michael Marshall  |  Current Term: 2022-2026
- * Councilor Karen Martinez  |  Current Term: 2022-2026
- * Councilor Brian Schimmel  |  Current Term: 2025-2029
- * Councilor Mariana Valenzuela  |  Current Term: 2022-2026
+- Mayor Malynda Wenzl  |  Current Term: 2022-2026
+- Councilor Angel Falconer  |  Current Term: 2025-2029
+- Councilor Donna Gustafson  |  Current Term: 2025-2029
+- Councilor Michael Marshall  |  Current Term: 2022-2026
+- Councilor Karen Martinez  |  Current Term: 2022-2026
+- Councilor Brian Schimmel  |  Current Term: 2025-2029
+- Councilor Mariana Valenzuela  |  Current Term: 2022-2026
 
 ## Meeting Recordings
 
-Watch the full version of City Council meetings, thanks to our partners at [Tualatin Valley Community Television (TVCTV)](http://tvctv.org/).
+Watch the full version of City Council meetings, thanks to our partners at [Tualatin Valley Community Television (TVCTV)](https://tvctv.org).
 
-  [AGENDAS AND
+[AGENDAS AND  
+MINUTES](https://forestgroveor.portal.civicclerk.com/?category_id=26)
 
-MINUTES](https://forestgroveor.portal.civicclerk.com/?category_id=26)   [CITY COUNCIL
+[CITY COUNCIL  
+GOALS &amp; VALUES](https://www.forestgrove-or.gov/490/City-Council-Goals-and-Values)
 
-GOALS & VALUES](https://www.forestgrove-or.gov/490/City-Council-Goals-and-Values)   [CITY COUNCIL
+[CITY COUNCIL  
+RULES](https://www.forestgrove-or.gov/492/City-Council-Rules)
 
-RULES](https://www.forestgrove-or.gov/492/City-Council-Rules)   [CONTACT
+[CONTACT  
+CITY COUNCIL](https://or-forestgrove.civicplus.com/491/Contact-City-Council)
 
-CITY COUNCIL](https://or-forestgrove.civicplus.com/491/Contact-City-Council)   [MEET THE
-
-COUNCIL](https://www.forestgrove-or.gov/611/Meet-the-Council)  
+[MEET THE  
+COUNCIL](https://www.forestgrove-or.gov/611/Meet-the-Council)
 
 ## Accommodations
 
@@ -68,93 +77,107 @@ Forest Grove’s meeting bodies, including the City Council and all boards and c
 
 Stay connected to your city! What's Growing On is our monthly e-newsletter filled with news events and community stories.
 
-  [Subscribe Today!](https://mailchi.mp/forestgrove-or/whats-growing-on)  
+[Subscribe Today!](https://mailchi.mp/forestgrove-or/whats-growing-on)
 
-###  [Calendar](https://www.forestgrove-or.gov/calendar.aspx?CID=24) 
+### [Calendar](https://www.forestgrove-or.gov/calendar.aspx?CID=24)
 
- 1.    
+1. #### Mon, Jul. 14
+   
+   [**Community Enhancement Program Committee Meeting**](https://www.forestgrove-or.gov/Calendar.aspx?EID=2175)
+2. #### Mon, Jul. 14
+   
+   [**City Council Meeting**](https://www.forestgrove-or.gov/Calendar.aspx?EID=1769)
+3. #### Mon, Jul. 14
+   
+   [**Urban Renewal Agency Meeting**](https://www.forestgrove-or.gov/Calendar.aspx?EID=2176)
 
-#### Thu, May 8   
+[View All Events](https://www.forestgrove-or.gov/calendar.aspx?CID=24)
 
-  __ [Economic Development Commission](https://www.forestgrove-or.gov/Calendar.aspx?EID=1933)__  
- 1.    
+/Calendar.aspx
 
-#### Mon, May 12   
+### [Contact Us](https://www.forestgrove-or.gov/FormCenter/Contact-Us-Form-27/Contact-Us-92)
 
-  __ [City Council Meeting](https://www.forestgrove-or.gov/Calendar.aspx?EID=1767)__  
- 1.    
+1. #### Mariah S. Woods
+   
+   City Recorder
+   
+   [Email Mariah S. Woods](mailto:mwoods@forestgrove-or.gov)
+   
+   Phone: 503-992-3235
+2. #### Forest Grove City Hall
+   
+   **Physical Address** View Map  
+   1924 Council Street  
+   Forest Grove, OR 97116
+   
+   1924 Council Street Forest Grove OR 97116
+   
+   [Directions](https://www.google.com/maps/place/1924+Council+Street++Forest+Grove+OR+97116 "Open location on Google Maps")
+   
+   **Mailing Address**  
+   P.O. Box 326  
+   Forest Grove, OR 97116
+   
+   Phone: 503-992-3200
 
-#### Tue, May 13   
+<!--THE END-->
 
-  __ [Committee for Community Engagement- RESCHEDULED](https://www.forestgrove-or.gov/Calendar.aspx?EID=1819)__  
-  [View All Events](https://www.forestgrove-or.gov/calendar.aspx?CID=24)  /Calendar.aspx 
+1. [Agendas and Minutes](https://forestgroveor.portal.civicclerk.com/?category_id=26)
+2. [City Council Goals and Values](https://www.forestgrove-or.gov/490/City-Council-Goals-and-Values)
+3. [Contact City Council](https://www.forestgrove-or.gov/491/Contact-City-Council)
+4. [City Council Rules](https://www.forestgrove-or.gov/492/City-Council-Rules)
+5. [Meet the Council](https://www.forestgrove-or.gov/611/Meet-the-Council)
 
-###  [Contact Us](https://www.forestgrove-or.gov/FormCenter/Contact-Us-Form-27/Contact-Us-92) 
+[Online Payments](https://www.municipalonlinepayments.com/forestgroveor)
 
- 1.    
+[Employment](https://www.governmentjobs.com/careers/forestgrove)
 
-#### Mariah S. Woods   
+[Library](https://www.forestgrove-or.gov/176/Library)
 
- City Recorder  [Email Mariah S. Woods](mailto:mwoods@forestgrove-or.gov)  Phone:503-992-3235    
+[Parks &amp; Recreation](https://www.forestgrove-or.gov/243/Parks-Recreation)
 
- 1.    
+[Report a Concern](https://www.forestgrove-or.gov/618/Report-a-Concern)
 
-#### Forest Grove City Hall   
-
-  __Physical Address__ View Map   
-
- 1924 Council Street    
-
- Forest Grove , OR 97116    
-
- 1924 Council Street Forest Grove OR 97116  [Directions](https://www.google.com/maps/place/1924+Council+Street++Forest+Grove+OR+97116)     
-
-  __Mailing Address__    
-
- P.O. Box 326    
-
- Forest Grove , OR 97116    
-
- Phone:503-992-3200    
-
- 1.   [Agendas and Minutes](https://forestgroveor.portal.civicclerk.com/?category_id=26)  
- 1.   [City Council Goals and Values](https://www.forestgrove-or.gov/490/City-Council-Goals-and-Values)  
- 1.   [Contact City Council](https://www.forestgrove-or.gov/491/Contact-City-Council)  
- 1.   [City Council Rules](https://www.forestgrove-or.gov/492/City-Council-Rules)  
- 1.   [Meet the Council](https://www.forestgrove-or.gov/611/Meet-the-Council)  
-  [Online Payments](https://www.municipalonlinepayments.com/forestgroveor)   [Employment](https://www.governmentjobs.com/careers/forestgrove)   [Library](https://www.forestgrove-or.gov/176/Library)   [Parks & Recreation](https://www.forestgrove-or.gov/243/Parks-Recreation)   [Report a Concern](https://www.forestgrove-or.gov/618/Report-a-Concern)   [City Council](https://www.forestgrove-or.gov/365/City-Council)  
-
- 1.    
+[City Council](https://www.forestgrove-or.gov/365/City-Council)
 
 ### Contact Us
 
- 1.    
+1. 1924 Council Street  
+   P.O. Box 326  
+   Forest Grove, OR 97116  
+   Phone: 503-992-3200
 
-1924 Council Street   
+### [Quick Links](https://www.forestgrove-or.gov/QuickLinks.aspx?CID=15)
 
-P.O. Box 326   
+1. [Utility Billing](https://www.forestgrove-or.gov/459/Utility-Billing)
+2. [Light &amp; Power](https://www.forestgrove-or.gov/204/Light-Power)
+3. [Community Events](https://www.forestgrove-or.gov/Calendar.aspx)
+4. [Community News](https://www.forestgrove-or.gov/CivicAlerts.aspx)
+5. [FAQs](https://www.forestgrove-or.gov/FAQ.aspx)
 
-Forest Grove, OR 97116   
+/QuickLinks.aspx
 
-Phone:503-992-3200   
+### [Site Links](https://www.forestgrove-or.gov/QuickLinks.aspx?CID=16)
 
-###  [Quick Links](https://www.forestgrove-or.gov/QuickLinks.aspx?CID=15) 
+1. [Home](https://www.forestgrove-or.gov)
+2. [Site Map](https://www.forestgrove-or.gov/sitemap)
+3. [Contact Us](https://www.forestgrove-or.gov/directory.aspx)
+4. [Accessibility](https://www.forestgrove-or.gov/accessibility)
+5. [Copyright Notices](https://www.forestgrove-or.gov/copyright)
+6. [Privacy Policy](https://www.forestgrove-or.gov/privacy)
 
- 1.  [Utility Billing](https://www.forestgrove-or.gov/459/Utility-Billing)  
- 1.  [Light & Power](https://www.forestgrove-or.gov/204/Light-Power)  
- 1.  [Community Events](https://www.forestgrove-or.gov/Calendar.aspx)  
- 1.  [Community News](https://www.forestgrove-or.gov/CivicAlerts.aspx)  
- 1.  [FAQs](https://www.forestgrove-or.gov/FAQ.aspx)  
- /QuickLinks.aspx 
+/QuickLinks.aspx
 
-###  [Site Links](https://www.forestgrove-or.gov/QuickLinks.aspx?CID=16) 
+Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)
 
- 1.  [Home](https://www.forestgrove-or.gov/)  
- 1.  [Site Map](https://www.forestgrove-or.gov/sitemap)  
- 1.  [Contact Us](https://www.forestgrove-or.gov/directory.aspx)  
- 1.  [Accessibility](https://www.forestgrove-or.gov/accessibility)  
- 1.  [Copyright Notices](https://www.forestgrove-or.gov/copyright)  
- 1.  [Privacy Policy](https://www.forestgrove-or.gov/privacy)  
- /QuickLinks.aspx Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)  Loading Loading Do Not Show Again Close 
+Loading
 
- Original text Rate this translation Your feedback will be used to help improve Google Translate 
+Loading
+
+Do Not Show Again Close
+
+Original text
+
+Rate this translation
+
+Your feedback will be used to help improve Google Translate
