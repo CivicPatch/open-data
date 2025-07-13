@@ -1,0 +1,119 @@
+Loading
+
+[Skip to Main Content](https://www.postfalls.gov/directory.aspx?eid=88%2F)
+
+![Post Falls, ID](https://www.postfalls.gov/ImageRepository/Document?documentID=27)
+
+[Create a Website Account](https://www.postfalls.gov/MyAccount/ProfileCreate) - Manage notification subscriptions, save form progress and more.   
+
+- [Website Sign In](https://www.postfalls.gov/MyAccount)
+
+![Post Falls Idaho Homepage Logo](https://www.postfalls.gov/ImageRepository/Document?documentID=76)
+
+Search
+
+1. [Government](https://www.postfalls.gov/27/Government)
+2. [Departments](https://www.postfalls.gov/101/Departments)
+3. [Community](https://www.postfalls.gov/31/Community)
+4. [I Want To...](https://www.postfalls.gov/9/I-Want-To)
+
+<!--THE END-->
+
+![](https://www.postfalls.gov/ImageRepository/Document?documentID=78)
+
+1. [Home](https://www.postfalls.gov)
+2. Staff Directory
+
+# Aaron Plew
+
+ 
+
+[City Council](https://www.postfalls.gov/Directory.aspx?DID=10)  
+Title: City Council Seat 2  
+[Email Aaron Plew](mailto:aplew@postfalls.gov)
+
+Term of Office: 2022 through 2025
+
+## Overview
+
+"It is an honor and privilege to serve the people of Post Falls! Post Falls is such a fantastic community with a great future ahead. My commitment to this beautiful city is to guard and guide its future with an eye toward preserving and improving quality of life, ensuring Post Falls is a place where families, individuals, and commerce continue to thrive. My goals include ensuring any growth is managed in a responsible and sustainable manner, with transparency and community buy in. Post Falls is our home, and our children’s, it is our duty to ensure it is passed on to them well intact (Proverbs 13:22)"
+
+Aaron was appointed to City Council Seat 2 in January 2025 to fill a vacancy. He will serve the remainder of the term, which runs through 2025.
+
+Aaron serves in the community as the Director for Men’s Ministry at St. John the Baptist in Post Falls where he is also a member of the Parish Council. He has been a leader in Trail Life USA for 10 years, and is a leader in a troop at Trinity Church in CDA. 
+
+Aaron received his B.A. at Concordia University in Irvine, California. He has spent his career in the commercial/industrial battery sector. He has been with Fullriver Battery USA as the Director of Product for 8 years now. 
+
+Aaron and his wife Sara have been married for 24 years. They have 8 children, ages 21 down to 2 years old, and their first grandchild is due at the end of February. All of their children live in Kootenai County. They moved to Post Falls from Orange County 4 years ago and wake up everyday feeling blessed to be a part of this community.
+
+ 
+
+[Return to Staff Directory](https://www.postfalls.gov/Directory.aspx)
+
+[Payments](https://postfalls.billingdoc.net/login)
+
+[Permits](https://postfallsid.portal.opengov.com)
+
+[Bids &amp; Proposals](https://www.postfalls.gov/bids.aspx)
+
+[Recreation Programs](https://www.postfalls.gov/347/Sports-Leagues-Programs)
+
+[City Maps](https://www.postfalls.gov/GIS)
+
+[Citizen Feedback](https://www.postfalls.gov/FormCenter/General-Forms-4/Citizen-Feedback-55)
+
+[Notify Me](https://www.postfalls.gov/314/Alerts-Notifications)
+
+[Meetings &amp; Agendas](https://www.postfalls.gov/129/Meetings-Agendas)
+
+[Public Hearings](https://www.postfalls.gov/168/Public-Hearings)
+
+[Jobs](https://www.postfalls.gov/Jobs.aspx)
+
+### Contact Us
+
+1. **City of Post Falls**  
+   408 North Spokane Street  
+   Post Falls, ID 83854  
+   Phone: 208-773-3511
+
+### [Quick Links](https://www.postfalls.gov/QuickLinks.aspx?CID=15)
+
+1. [Community Events](https://www.postfalls.gov/Calendar.aspx)
+2. [Community News](https://www.postfalls.gov/CivicAlerts.aspx)
+3. [FAQs](https://www.postfalls.gov/FAQ.aspx)
+4. [Mayor](https://www.postfalls.gov/167/Mayor)
+5. [Public Records Requests](https://www.postfalls.gov/257/Public-Records-Requests)
+
+/QuickLinks.aspx
+
+### [Site Links](https://www.postfalls.gov/QuickLinks.aspx?CID=16)
+
+1. [Home](https://www.postfalls.gov)
+2. [Site Map](https://www.postfalls.gov/sitemap)
+3. [Contact Us](https://www.postfalls.gov/directory.aspx)
+4. [Accessibility](https://www.postfalls.gov/accessibility)
+5. [Copyright Notices](https://www.postfalls.gov/copyright)
+6. [Privacy Policy](https://www.postfalls.gov/site/privacy)
+
+/QuickLinks.aspx
+
+Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)
+
+Loading
+
+Loading
+
+Do Not Show Again Close
+
+Select LanguageAbkhazAcehneseAcholiAfarAfrikaansAlbanianAlurAmharicArabicArmenianAssameseAvarAwadhiAymaraAzerbaijaniBalineseBaluchiBambaraBaouléBashkirBasqueBatak KaroBatak SimalungunBatak TobaBelarusianBembaBengaliBetawiBhojpuriBikolBosnianBretonBulgarianBuryatCantoneseCatalanCebuanoChamorroChechenChichewaChinese (Simplified)Chinese (Traditional)ChuukeseChuvashCorsicanCrimean Tatar (Cyrillic)Crimean Tatar (Latin)CroatianCzechDanishDariDhivehiDinkaDogriDombeDutchDyulaDzongkhaEsperantoEstonianEweFaroeseFijianFilipinoFinnishFonFrenchFrench (Canada)FrisianFriulianFulaniGaGalicianGeorgianGermanGreekGuaraniGujaratiHaitian CreoleHakha ChinHausaHawaiianHebrewHiligaynonHindiHmongHungarianHunsrikIbanIcelandicIgboIlocanoIndonesianInuktut (Latin)Inuktut (Syllabics)IrishItalianJamaican PatoisJapaneseJavaneseJingpoKalaallisutKannadaKanuriKapampanganKazakhKhasiKhmerKigaKikongoKinyarwandaKitubaKokborokKomiKonkaniKoreanKrioKurdish (Kurmanji)Kurdish (Sorani)KyrgyzLaoLatgalianLatinLatvianLigurianLimburgishLingalaLithuanianLombardLugandaLuoLuxembourgishMacedonianMadureseMaithiliMakassarMalagasyMalayMalay (Jawi)MalayalamMalteseMamManxMaoriMarathiMarshalleseMarwadiMauritian CreoleMeadow MariMeiteilon (Manipuri)MinangMizoMongolianMyanmar (Burmese)Nahuatl (Eastern Huasteca)NdauNdebele (South)Nepalbhasa (Newari)NepaliNKoNorwegianNuerOccitanOdia (Oriya)OromoOssetianPangasinanPapiamentoPashtoPersianPolishPortuguese (Brazil)Portuguese (Portugal)Punjabi (Gurmukhi)Punjabi (Shahmukhi)QuechuaQʼeqchiʼRomaniRomanianRundiRussianSami (North)SamoanSangoSanskritSantali (Latin)Santali (Ol Chiki)Scots GaelicSepediSerbianSesothoSeychellois CreoleShanShonaSicilianSilesianSindhiSinhalaSlovakSlovenianSomaliSpanishSundaneseSusuSwahiliSwatiSwedishTahitianTajikTamazightTamazight (Tifinagh)TamilTatarTeluguTetumThaiTibetanTigrinyaTivTok PisinTonganTshilubaTsongaTswanaTuluTumbukaTurkishTurkmenTuvanTwiUdmurtUkrainianUrduUyghurUzbekVendaVenetianVietnameseWarayWelshWolofXhosaYakutYiddishYorubaYucatec MayaZapotecZulu
+
+Powered by [![Google Translate](https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png)Translate](https://translate.google.com)
+
+### Live Edit
+
+Original text
+
+Rate this translation
+
+Your feedback will be used to help improve Google Translate

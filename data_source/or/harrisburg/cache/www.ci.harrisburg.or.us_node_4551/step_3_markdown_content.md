@@ -1,0 +1,110 @@
+[Skip to main content](https://www.ci.harrisburg.or.us/node/4551/)
+
+[Public Hearing-Jim Woodall/ Isovolta Inc Located at 495 Territorial St-Conditional Use Permit &amp; Site Plan Review](https://www.ci.harrisburg.or.us/planning/page/public-hearing-jim-woodall-isovolta-inc-located-495-territorial-st-conditional-use)
+
+[Harrisburg  
+\
+Oregon](https://www.ci.harrisburg.or.us "Home")
+
+- Community
+  
+  - - About [Our City](https://www.ci.harrisburg.or.us/node/216) [Demographics](https://www.ci.harrisburg.or.us/node/217) Community Resources [Gazebo](https://www.ci.harrisburg.or.us/node/242) [Museum](https://www.ci.harrisburg.or.us/node/245) [Senior Center](https://www.ci.harrisburg.or.us/node/241) [Emergency Resources](https://www.ci.harrisburg.or.us/node/5961) [Narcotics/Opioid Information](https://www.ci.harrisburg.or.us/node/7877)
+    - [City Calendar](https://www.ci.harrisburg.or.us/calendar) [H.A.R.T. Center](https://www.ci.harrisburg.or.us/hart) [Library](https://www.ci.harrisburg.or.us/library) [School District](https://www.harrisburg.k12.or.us) [Parks](https://www.ci.harrisburg.or.us/parksrec) [Locations &amp; Amenities](https://www.ci.harrisburg.or.us/parksites) [Parks Master Plan](https://www.ci.harrisburg.or.us/node/7770) [Skate Park](https://www.ci.harrisburg.or.us/node/250) [Eagle Park](https://www.ci.harrisburg.or.us/node/7622)
+    - City Events/Tourism [Harrisburg Old Fashioned 4th of July](https://www.ci.harrisburg.or.us/node/285) [Summer Sounds Concerts](https://www.ci.harrisburg.or.us/node/497) [Annual Garage Sale](https://www.ci.harrisburg.or.us/node/3341) [Harvest Fest](https://www.ci.harrisburg.or.us/node/291) [Light Parade](https://www.ci.harrisburg.or.us/node/498) [National Night Out](https://www.ci.harrisburg.or.us/node/7991) [Tourism](https://www.ci.harrisburg.or.us/community/page/tourism) [Our Town Newsletter](https://www.ci.harrisburg.or.us/community/page/our-town-newsletters)
+- Business &amp; Development
+  
+  - - [Bids and RFPs](https://www.ci.harrisburg.or.us/rfps) [Municipal Code](https://www.codepublishing.com/or/harrisburg) [Forms and Permits](https://www.ci.harrisburg.or.us/forms) [City Services Fees](https://www.ci.harrisburg.or.us/administration/page/city-fees-services) [Perform a Lien Search](https://www.ci.harrisburg.or.us/node/253)
+    - Harrisburg Businesses [Harrisburg Businesses (and Restaurants!)](https://www.ci.harrisburg.or.us/node/6001) Business License Info [Business &amp; Rental Licenses](https://www.ci.harrisburg.or.us/economicdevelopment/page/business-and-rental-licenses) [Home Occupations](https://www.ci.harrisburg.or.us/economicdevelopment/page/home-occupation-business-licenses) [Secondhand Dealers Licenses](https://www.ci.harrisburg.or.us/economicdevelopment/page/secondhand-dealers) [Social Gaming Licenses](https://www.ci.harrisburg.or.us/economicdevelopment/page/social-games-licenses) [Solicitation Licenses](https://www.ci.harrisburg.or.us/economicdevelopment/page/solicitation-license) [Street and Sidewalk Vendors](https://www.ci.harrisburg.or.us/economicdevelopment/page/street-and-sidewalk-vendor-licenses)
+    - Economic Development [Economic Development](https://www.ci.harrisburg.or.us/node/3351) [Oregon Main Street Program](https://www.ci.harrisburg.or.us/node/443) [Redevelopment Agency](https://www.ci.harrisburg.or.us/economicdevelopment/page/Harrisburg-redevelopment-agency) [Enterprise Zone](https://www.ci.harrisburg.or.us/economicdevelopment/page/enterprise-zone) [Property Improvement Grants &amp; Loans](https://www.ci.harrisburg.or.us/node/470) [Tri-County Chamber of Commerce](https://www.tri-countychamber.com)
+- Government
+  
+  - - [Agendas and Minutes](https://www.ci.harrisburg.or.us/meetings) [Mayor &amp; City Council](https://www.ci.harrisburg.or.us/citycouncil) Public Records [Public Records Requests](https://www.ci.harrisburg.or.us/administration/page/public-records-requests) [Water System Upgrades Update!](https://www.ci.harrisburg.or.us/node/2551) [Sister City ~ Breal-sous-Montfort!](https://www.ci.harrisburg.or.us/node/8148)
+    - Boards and Committees [Budget Committee](https://www.ci.harrisburg.or.us/budgetcommittee) [Redevelopment Agency](https://www.ci.harrisburg.or.us/hra) [Library Board](https://www.ci.harrisburg.or.us/lb) [Personnel Committee](https://www.ci.harrisburg.or.us/personnelcommittee) [Planning Commission](https://www.ci.harrisburg.or.us/pc) [Tree Committee](https://www.ci.harrisburg.or.us/bc/page/tree-committee) [Law Enforcement Services](https://www.ci.harrisburg.or.us/node/7624) [Traffic Enforcement](https://www.ci.harrisburg.or.us/node/5501)
+    - Departments [Administration](https://www.ci.harrisburg.or.us/administration) [Finance](https://www.ci.harrisburg.or.us/finance) [Human Resources](https://www.ci.harrisburg.or.us/hr) [Library](https://www.ci.harrisburg.or.us/library) [Municipal Court](https://www.ci.harrisburg.or.us/node/4391) [Planning &amp; Building](https://www.ci.harrisburg.or.us/planning) [Public Works](https://www.ci.harrisburg.or.us/publicworks) [Utility Billing](https://www.ci.harrisburg.or.us/utilitybilling) [Code Enforcement](https://www.ci.harrisburg.or.us/node/7867)
+- I Want To...
+  
+  - - Contact the City [Submit a Request or Concern](https://www.ci.harrisburg.or.us/contact) [Staff Directory](https://www.ci.harrisburg.or.us/directory) [Job Opportunities](https://www.ci.harrisburg.or.us/jobs) Events and Meetings [Agendas and Minutes](https://www.ci.harrisburg.or.us/meetings) [Calendar](https://www.ci.harrisburg.or.us/calendar) [Utility Billing Payments and Resources](https://www.ci.harrisburg.or.us/node/227)
+    - Documents and Forms [Documents and Reports](https://www.ci.harrisburg.or.us/documents) [Forms and Applications](https://www.ci.harrisburg.or.us/forms) Social Media [Facebook](https://www.facebook.com/harrisburgoregon) [Find a Business](https://www.ci.harrisburg.or.us/node/298) [Volunteer](https://www.ci.harrisburg.or.us/node/239)
+    - Quick Links [Harrisburg Municipal Code](https://www.codepublishing.com/or/harrisburg) [Harrisburg Fire &amp; Rescue District](https://www.facebook.com/HRFPD) [Republic Services](https://www.republicservices.com) [NW Natural Gas](https://www.nwnatural.com) [Oregon Cascades West Council of Governments](https://www.ocwcog.org) [Linn County](https://www.co.linn.or.us) [Linn County Sheriff's Office](https://www.linnsheriff.org) [Report or Find a Lost Dog](https://www.linnsheriff.org/animal-control) [Pacific Power](https://www.pacificpower.net)
+
+# Mayor Bobby Duncan
+
+![Mayor Bobby Duncan](https://www.ci.harrisburg.or.us/sites/default/files/styles/full_node_primary/public/imageattachments/citycouncil/page/7719/bobby_duncan.jpg?itok=QWYqHrk8 "Mayor Bobby Duncan")
+
+### Title:  Mayor
+
+### Name:  Robert (Bobby) Duncan
+
+### Current Term:  Jan 1, 2023 to Dec 31, 2024
+
+**Council/Government Experience:**  Harrisburg Planning Commission - 2 Years (1997- 1999)  Appointed to City Council (1999) Council President (1999-2000), succeeded to Mayor in 2000 due to resignation of previous Mayor.  Mayor Duncan has successfully ran for Mayor of Harrisburg, and has held the position for 10 terms.  (20 years)
+
+**Current Committee Assignments:** Harrisburg Budget Committee
+
+Mayor Duncan has lived in one of the oldest homes in Harrisburg for 39 years.  He is a finish carpenter by trade.  He and his lovely wife Donna raised two children in Harrisburg, with both attending and graduating from Harrisburg schools.  While Bobby has served as Mayor, the City of Harrisburg has won the 'Award of Excellence' from the League of Oregon Cities, and was a Semi-Finalist for the 'All-America City' award.   The basis for being a semi-finalist was the City's ability to 'build bridges' between the city, citizens and private organizations to work together cooperatively to accomplish things that could not be done individually.
+
+One of Mayor Duncan's goals as Mayor was to establish a parks system.  When he started as Mayor, the City had only one park.  The City has since adopted a Parks Master Plan, expanded on Riverfront Park, and has added other four parks to the City since he first started holding the position of Mayor. 
+
+Even after 19 years of being the Mayor of Harrisburg, Bobby is humbled and honored to serve our citizens.  He is a kind and caring person who uses humor in appropriate ways to help persons - including councilors, staff and citizens- relax when discussing difficult issues.  He has a way of asking questions that puts people at ease.  No one has ever left a City Council meeting without having had an opportunity to discuss their concerns. 
+
+ 
+
+- ![Printer-friendly version](https://www.ci.harrisburg.or.us/sites/all/modules/print/icons/print_icon.png "Printer-friendly version")
+
+Search form
+
+Search Website
+
+[City Council](https://www.ci.harrisburg.or.us/citycouncil)
+
+- [Overview](https://www.ci.harrisburg.or.us/citycouncil)
+- [Agendas &amp; Minutes](https://www.ci.harrisburg.or.us/meetings?field_microsite_tid_1=27)
+- [Council Meeting Procedures](https://www.ci.harrisburg.or.us/citycouncil/page/meeting-procedures)
+- [Mayor's Page](https://www.ci.harrisburg.or.us/citycouncil/page/mayors-page)
+  
+  - [Proclamations](https://www.ci.harrisburg.or.us/citycouncil/page/proclamations)
+- [Water System Upgrades - Update!](https://www.ci.harrisburg.or.us/citycouncil/page/water-system-upgrades-construction-continues-both-north-and-south-water-plant)
+- [Register to Vote](https://www.ci.harrisburg.or.us/citycouncil/page/register-vote "Register to Vote")
+- [2024 General Election Certified Candidates](https://www.ci.harrisburg.or.us/citycouncil/page/certified-candidates-2024-general-election-city-harrisburg)
+
+## Contact Information
+
+120 Smith Street  
+PO Box 378  
+Harrisburg, OR 97446
+
+**City Hall Hours**  
+Monday through Friday  
+8:30 to 5:00, Closed 12-1 pm
+
+[View Full Contact Details](https://www.ci.harrisburg.or.us/citycouncil/custom-contact-page/city-council-contact-information)
+
+## Upcoming Events
+
+- [Harrisburg City Council](https://www.ci.harrisburg.or.us/citycouncil/page/harrisburg-city-council-29)
+  
+  07/22/2025 - 6:30pm
+- [Harrisburg City Council](https://www.ci.harrisburg.or.us/citycouncil/page/harrisburg-city-council-20)
+  
+  08/12/2025 - 6:30pm
+- [Harrisburg City Council](https://www.ci.harrisburg.or.us/citycouncil/page/harrisburg-city-council-30)
+  
+  08/26/2025 - 6:30pm
+
+[View the City Council Calendar](https://www.ci.harrisburg.or.us/calendar?field_microsite_tid_1=27)
+
+120 Smith Street P.O. Box 378  
+Harrisburg, OR 97446  
+541-995-6655
+
+- [Home](https://www.ci.harrisburg.or.us)
+- [Sitemap](https://www.ci.harrisburg.or.us/sitemap)
+- [Staff Login](https://www.ci.harrisburg.or.us/user/login?current=node%2F4551)
+
+![facebook](https://www.ci.harrisburg.or.us/sites/all/themes/aha_compass/images/social-icons/facebook.png)
+
+![rss](https://www.ci.harrisburg.or.us/sites/all/themes/aha_compass/images/social-icons/social-rss.png)
+
+[Site Design by Aha Consulting](https://www.ahaconsulting.com)
+
+![placeholder](https://www.ci.harrisburg.or.us/sites/all/themes/aha_compass/logo.png)
