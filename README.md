@@ -10,7 +10,7 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 
 | State | CivicPatch Count | Scrapeable | Scraped | Scraped % | Google Count | Missing Places in CivicPatch | Missing Places in Google |
 |-------|------------------|------------|---------|-----------|--------------|-----------------------|-------------------|
-| ca | 482 | 482 | 0 | 0.00% | 0 | 0 | 0 |
+| ca | 482 | 482 | 50 | 10.37% | 0 | 0 | 0 |
 | nd | 357 | 139 | 38 | 27.34% | 0 | 0 | 0 |
 | co | 272 | 216 | 117 | 54.17% | 269 | 1 | 4 |
 | wa | 281 | 219 | 176 | 80.37% | 281 | 2 | 2 |
@@ -38,7 +38,279 @@ None
 None
 
 **Divisions:**
-None
+- ocd-division/country:us/state:ca/place:anaheim/council_district:1
+- ocd-division/country:us/state:ca/place:anaheim/council_district:2
+- ocd-division/country:us/state:ca/place:anaheim/council_district:3
+- ocd-division/country:us/state:ca/place:anaheim/council_district:4
+- ocd-division/country:us/state:ca/place:anaheim/council_district:5
+- ocd-division/country:us/state:ca/place:anaheim/council_district:6
+- ocd-division/country:us/state:ca/place:bakersfield/ward:1
+- ocd-division/country:us/state:ca/place:bakersfield/ward:2
+- ocd-division/country:us/state:ca/place:bakersfield/ward:3
+- ocd-division/country:us/state:ca/place:bakersfield/ward:4
+- ocd-division/country:us/state:ca/place:bakersfield/ward:5
+- ocd-division/country:us/state:ca/place:bakersfield/ward:6
+- ocd-division/country:us/state:ca/place:bakersfield/ward:7
+- ocd-division/country:us/state:ca/place:berkeley/council_district:1
+- ocd-division/country:us/state:ca/place:berkeley/council_district:2
+- ocd-division/country:us/state:ca/place:berkeley/council_district:3
+- ocd-division/country:us/state:ca/place:berkeley/council_district:4
+- ocd-division/country:us/state:ca/place:berkeley/council_district:5
+- ocd-division/country:us/state:ca/place:berkeley/council_district:6
+- ocd-division/country:us/state:ca/place:berkeley/council_district:7
+- ocd-division/country:us/state:ca/place:berkeley/council_district:8
+- ocd-division/country:us/state:ca/place:chula_vista/council_district:1
+- ocd-division/country:us/state:ca/place:chula_vista/council_district:2
+- ocd-division/country:us/state:ca/place:chula_vista/council_district:3
+- ocd-division/country:us/state:ca/place:chula_vista/council_district:4
+- ocd-division/country:us/state:ca/place:concord/council_district:1
+- ocd-division/country:us/state:ca/place:concord/council_district:2
+- ocd-division/country:us/state:ca/place:concord/council_district:3
+- ocd-division/country:us/state:ca/place:concord/council_district:4
+- ocd-division/country:us/state:ca/place:concord/council_district:5
+- ocd-division/country:us/state:ca/place:corona/council_district:1
+- ocd-division/country:us/state:ca/place:corona/council_district:2
+- ocd-division/country:us/state:ca/place:corona/council_district:3
+- ocd-division/country:us/state:ca/place:corona/council_district:4
+- ocd-division/country:us/state:ca/place:corona/council_district:5
+- ocd-division/country:us/state:ca/place:elk_grove/council_district:1
+- ocd-division/country:us/state:ca/place:elk_grove/council_district:2
+- ocd-division/country:us/state:ca/place:elk_grove/council_district:3
+- ocd-division/country:us/state:ca/place:elk_grove/council_district:4
+- ocd-division/country:us/state:ca/place:escondido/council_district:1
+- ocd-division/country:us/state:ca/place:escondido/council_district:2
+- ocd-division/country:us/state:ca/place:escondido/council_district:3
+- ocd-division/country:us/state:ca/place:escondido/council_district:4
+- ocd-division/country:us/state:ca/place:fairfield/council_district:1
+- ocd-division/country:us/state:ca/place:fairfield/council_district:2
+- ocd-division/country:us/state:ca/place:fairfield/council_district:3
+- ocd-division/country:us/state:ca/place:fairfield/council_district:4
+- ocd-division/country:us/state:ca/place:fairfield/council_district:5
+- ocd-division/country:us/state:ca/place:fairfield/council_district:6
+- ocd-division/country:us/state:ca/place:fontana/council_district:1
+- ocd-division/country:us/state:ca/place:fontana/council_district:2
+- ocd-division/country:us/state:ca/place:fontana/council_district:3
+- ocd-division/country:us/state:ca/place:fontana/council_district:4
+- ocd-division/country:us/state:ca/place:fremont/council_district:1
+- ocd-division/country:us/state:ca/place:fremont/council_district:2
+- ocd-division/country:us/state:ca/place:fremont/council_district:3
+- ocd-division/country:us/state:ca/place:fremont/council_district:4
+- ocd-division/country:us/state:ca/place:fremont/council_district:5
+- ocd-division/country:us/state:ca/place:fremont/council_district:6
+- ocd-division/country:us/state:ca/place:fresno/council_district:1
+- ocd-division/country:us/state:ca/place:fresno/council_district:2
+- ocd-division/country:us/state:ca/place:fresno/council_district:3
+- ocd-division/country:us/state:ca/place:fresno/council_district:4
+- ocd-division/country:us/state:ca/place:fresno/council_district:5
+- ocd-division/country:us/state:ca/place:fresno/council_district:6
+- ocd-division/country:us/state:ca/place:fresno/council_district:7
+- ocd-division/country:us/state:ca/place:fullerton/council_district:1
+- ocd-division/country:us/state:ca/place:fullerton/council_district:2
+- ocd-division/country:us/state:ca/place:fullerton/council_district:3
+- ocd-division/country:us/state:ca/place:fullerton/council_district:4
+- ocd-division/country:us/state:ca/place:fullerton/council_district:5
+- ocd-division/country:us/state:ca/place:irvine/council_district:1
+- ocd-division/country:us/state:ca/place:irvine/council_district:2
+- ocd-division/country:us/state:ca/place:irvine/council_district:3
+- ocd-division/country:us/state:ca/place:irvine/council_district:4
+- ocd-division/country:us/state:ca/place:irvine/council_district:5
+- ocd-division/country:us/state:ca/place:long_beach/council_district:1
+- ocd-division/country:us/state:ca/place:long_beach/council_district:2
+- ocd-division/country:us/state:ca/place:long_beach/council_district:3
+- ocd-division/country:us/state:ca/place:long_beach/council_district:4
+- ocd-division/country:us/state:ca/place:long_beach/council_district:5
+- ocd-division/country:us/state:ca/place:long_beach/council_district:6
+- ocd-division/country:us/state:ca/place:long_beach/council_district:7
+- ocd-division/country:us/state:ca/place:long_beach/council_district:8
+- ocd-division/country:us/state:ca/place:long_beach/council_district:9
+- ocd-division/country:us/state:ca/place:los_angeles/council_district:1
+- ocd-division/country:us/state:ca/place:los_angeles/council_district:10
+- ocd-division/country:us/state:ca/place:los_angeles/council_district:11
+- ocd-division/country:us/state:ca/place:los_angeles/council_district:12
+- ocd-division/country:us/state:ca/place:los_angeles/council_district:13
+- ocd-division/country:us/state:ca/place:los_angeles/council_district:14
+- ocd-division/country:us/state:ca/place:los_angeles/council_district:15
+- ocd-division/country:us/state:ca/place:los_angeles/council_district:2
+- ocd-division/country:us/state:ca/place:los_angeles/council_district:3
+- ocd-division/country:us/state:ca/place:los_angeles/council_district:4
+- ocd-division/country:us/state:ca/place:los_angeles/council_district:5
+- ocd-division/country:us/state:ca/place:los_angeles/council_district:6
+- ocd-division/country:us/state:ca/place:los_angeles/council_district:7
+- ocd-division/country:us/state:ca/place:los_angeles/council_district:8
+- ocd-division/country:us/state:ca/place:los_angeles/council_district:9
+- ocd-division/country:us/state:ca/place:modesto/council_district:1
+- ocd-division/country:us/state:ca/place:modesto/council_district:2
+- ocd-division/country:us/state:ca/place:modesto/council_district:3
+- ocd-division/country:us/state:ca/place:modesto/council_district:4
+- ocd-division/country:us/state:ca/place:modesto/council_district:5
+- ocd-division/country:us/state:ca/place:modesto/council_district:6
+- ocd-division/country:us/state:ca/place:moreno_valley/council_district:1
+- ocd-division/country:us/state:ca/place:moreno_valley/council_district:2
+- ocd-division/country:us/state:ca/place:moreno_valley/council_district:3
+- ocd-division/country:us/state:ca/place:moreno_valley/council_district:4
+- ocd-division/country:us/state:ca/place:oakland/council_district:1
+- ocd-division/country:us/state:ca/place:oakland/council_district:2
+- ocd-division/country:us/state:ca/place:oakland/council_district:3
+- ocd-division/country:us/state:ca/place:oakland/council_district:4
+- ocd-division/country:us/state:ca/place:oakland/council_district:5
+- ocd-division/country:us/state:ca/place:oakland/council_district:6
+- ocd-division/country:us/state:ca/place:oakland/council_district:7
+- ocd-division/country:us/state:ca/place:oceanside/council_district:1
+- ocd-division/country:us/state:ca/place:oceanside/council_district:2
+- ocd-division/country:us/state:ca/place:oceanside/council_district:3
+- ocd-division/country:us/state:ca/place:oceanside/council_district:4
+- ocd-division/country:us/state:ca/place:ontario/council_district:4
+- ocd-division/country:us/state:ca/place:orange/council_district:1
+- ocd-division/country:us/state:ca/place:orange/council_district:2
+- ocd-division/country:us/state:ca/place:orange/council_district:3
+- ocd-division/country:us/state:ca/place:orange/council_district:4
+- ocd-division/country:us/state:ca/place:orange/council_district:5
+- ocd-division/country:us/state:ca/place:orange/council_district:6
+- ocd-division/country:us/state:ca/place:oxnard/council_district:1
+- ocd-division/country:us/state:ca/place:oxnard/council_district:2
+- ocd-division/country:us/state:ca/place:oxnard/council_district:3
+- ocd-division/country:us/state:ca/place:oxnard/council_district:4
+- ocd-division/country:us/state:ca/place:oxnard/council_district:5
+- ocd-division/country:us/state:ca/place:oxnard/council_district:6
+- ocd-division/country:us/state:ca/place:palmdale/council_district:1
+- ocd-division/country:us/state:ca/place:palmdale/council_district:2
+- ocd-division/country:us/state:ca/place:palmdale/council_district:3
+- ocd-division/country:us/state:ca/place:palmdale/council_district:4
+- ocd-division/country:us/state:ca/place:palmdale/council_district:5
+- ocd-division/country:us/state:ca/place:pasadena/council_district:1
+- ocd-division/country:us/state:ca/place:pasadena/council_district:2
+- ocd-division/country:us/state:ca/place:pasadena/council_district:3
+- ocd-division/country:us/state:ca/place:pasadena/council_district:4
+- ocd-division/country:us/state:ca/place:pasadena/council_district:5
+- ocd-division/country:us/state:ca/place:pasadena/council_district:6
+- ocd-division/country:us/state:ca/place:pasadena/council_district:7
+- ocd-division/country:us/state:ca/place:pomona/council_district:1
+- ocd-division/country:us/state:ca/place:pomona/council_district:2
+- ocd-division/country:us/state:ca/place:pomona/council_district:3
+- ocd-division/country:us/state:ca/place:pomona/council_district:4
+- ocd-division/country:us/state:ca/place:pomona/council_district:5
+- ocd-division/country:us/state:ca/place:pomona/council_district:6
+- ocd-division/country:us/state:ca/place:rancho_cucamonga/council_district:1
+- ocd-division/country:us/state:ca/place:rancho_cucamonga/council_district:2
+- ocd-division/country:us/state:ca/place:rancho_cucamonga/council_district:3
+- ocd-division/country:us/state:ca/place:rancho_cucamonga/council_district:4
+- ocd-division/country:us/state:ca/place:richmond/council_district:1
+- ocd-division/country:us/state:ca/place:richmond/council_district:2
+- ocd-division/country:us/state:ca/place:richmond/council_district:3
+- ocd-division/country:us/state:ca/place:richmond/council_district:4
+- ocd-division/country:us/state:ca/place:richmond/council_district:5
+- ocd-division/country:us/state:ca/place:richmond/council_district:6
+- ocd-division/country:us/state:ca/place:riverside/ward:1
+- ocd-division/country:us/state:ca/place:riverside/ward:2
+- ocd-division/country:us/state:ca/place:riverside/ward:3
+- ocd-division/country:us/state:ca/place:riverside/ward:4
+- ocd-division/country:us/state:ca/place:riverside/ward:5
+- ocd-division/country:us/state:ca/place:riverside/ward:6
+- ocd-division/country:us/state:ca/place:riverside/ward:7
+- ocd-division/country:us/state:ca/place:roseville/council_district:1
+- ocd-division/country:us/state:ca/place:roseville/council_district:2
+- ocd-division/country:us/state:ca/place:roseville/council_district:3
+- ocd-division/country:us/state:ca/place:roseville/council_district:4
+- ocd-division/country:us/state:ca/place:roseville/council_district:5
+- ocd-division/country:us/state:ca/place:sacramento/council_district:1
+- ocd-division/country:us/state:ca/place:sacramento/council_district:2
+- ocd-division/country:us/state:ca/place:sacramento/council_district:3
+- ocd-division/country:us/state:ca/place:sacramento/council_district:4
+- ocd-division/country:us/state:ca/place:sacramento/council_district:5
+- ocd-division/country:us/state:ca/place:sacramento/council_district:6
+- ocd-division/country:us/state:ca/place:sacramento/council_district:7
+- ocd-division/country:us/state:ca/place:sacramento/council_district:8
+- ocd-division/country:us/state:ca/place:salinas/council_district:1
+- ocd-division/country:us/state:ca/place:salinas/council_district:2
+- ocd-division/country:us/state:ca/place:salinas/council_district:3
+- ocd-division/country:us/state:ca/place:salinas/council_district:4
+- ocd-division/country:us/state:ca/place:salinas/council_district:5
+- ocd-division/country:us/state:ca/place:salinas/council_district:6
+- ocd-division/country:us/state:ca/place:san_bernardino/ward:1
+- ocd-division/country:us/state:ca/place:san_bernardino/ward:2
+- ocd-division/country:us/state:ca/place:san_bernardino/ward:3
+- ocd-division/country:us/state:ca/place:san_bernardino/ward:4
+- ocd-division/country:us/state:ca/place:san_bernardino/ward:5
+- ocd-division/country:us/state:ca/place:san_bernardino/ward:6
+- ocd-division/country:us/state:ca/place:san_bernardino/ward:7
+- ocd-division/country:us/state:ca/place:san_diego/council_district:1
+- ocd-division/country:us/state:ca/place:san_diego/council_district:2
+- ocd-division/country:us/state:ca/place:san_diego/council_district:3
+- ocd-division/country:us/state:ca/place:san_diego/council_district:4
+- ocd-division/country:us/state:ca/place:san_diego/council_district:5
+- ocd-division/country:us/state:ca/place:san_diego/council_district:6
+- ocd-division/country:us/state:ca/place:san_diego/council_district:7
+- ocd-division/country:us/state:ca/place:san_diego/council_district:8
+- ocd-division/country:us/state:ca/place:san_diego/council_district:9
+- ocd-division/country:us/state:ca/place:san_francisco/council_district:1
+- ocd-division/country:us/state:ca/place:san_francisco/council_district:10
+- ocd-division/country:us/state:ca/place:san_francisco/council_district:11
+- ocd-division/country:us/state:ca/place:san_francisco/council_district:2
+- ocd-division/country:us/state:ca/place:san_francisco/council_district:3
+- ocd-division/country:us/state:ca/place:san_francisco/council_district:4
+- ocd-division/country:us/state:ca/place:san_francisco/council_district:5
+- ocd-division/country:us/state:ca/place:san_francisco/council_district:6
+- ocd-division/country:us/state:ca/place:san_francisco/council_district:7
+- ocd-division/country:us/state:ca/place:san_francisco/council_district:8
+- ocd-division/country:us/state:ca/place:san_francisco/council_district:9
+- ocd-division/country:us/state:ca/place:san_jose/council_district:1
+- ocd-division/country:us/state:ca/place:san_jose/council_district:10
+- ocd-division/country:us/state:ca/place:san_jose/council_district:2
+- ocd-division/country:us/state:ca/place:san_jose/council_district:3
+- ocd-division/country:us/state:ca/place:san_jose/council_district:4
+- ocd-division/country:us/state:ca/place:san_jose/council_district:5
+- ocd-division/country:us/state:ca/place:san_jose/council_district:6
+- ocd-division/country:us/state:ca/place:san_jose/council_district:7
+- ocd-division/country:us/state:ca/place:san_jose/council_district:8
+- ocd-division/country:us/state:ca/place:san_jose/council_district:9
+- ocd-division/country:us/state:ca/place:santa_ana/ward:1
+- ocd-division/country:us/state:ca/place:santa_ana/ward:2
+- ocd-division/country:us/state:ca/place:santa_ana/ward:3
+- ocd-division/country:us/state:ca/place:santa_ana/ward:4
+- ocd-division/country:us/state:ca/place:santa_ana/ward:5
+- ocd-division/country:us/state:ca/place:santa_ana/ward:6
+- ocd-division/country:us/state:ca/place:santa_clara/council_district:1
+- ocd-division/country:us/state:ca/place:santa_clara/council_district:2
+- ocd-division/country:us/state:ca/place:santa_clara/council_district:3
+- ocd-division/country:us/state:ca/place:santa_clara/council_district:4
+- ocd-division/country:us/state:ca/place:santa_clara/council_district:5
+- ocd-division/country:us/state:ca/place:santa_clara/council_district:6
+- ocd-division/country:us/state:ca/place:santa_clarita/council_district:1
+- ocd-division/country:us/state:ca/place:santa_clarita/council_district:3
+- ocd-division/country:us/state:ca/place:santa_rosa/council_district:1
+- ocd-division/country:us/state:ca/place:santa_rosa/council_district:2
+- ocd-division/country:us/state:ca/place:santa_rosa/council_district:3
+- ocd-division/country:us/state:ca/place:santa_rosa/council_district:4
+- ocd-division/country:us/state:ca/place:santa_rosa/council_district:5
+- ocd-division/country:us/state:ca/place:santa_rosa/council_district:6
+- ocd-division/country:us/state:ca/place:santa_rosa/council_district:7
+- ocd-division/country:us/state:ca/place:simi_valley/council_district:1
+- ocd-division/country:us/state:ca/place:simi_valley/council_district:2
+- ocd-division/country:us/state:ca/place:simi_valley/council_district:3
+- ocd-division/country:us/state:ca/place:simi_valley/council_district:4
+- ocd-division/country:us/state:ca/place:stockton/council_district:1
+- ocd-division/country:us/state:ca/place:stockton/council_district:2
+- ocd-division/country:us/state:ca/place:stockton/council_district:3
+- ocd-division/country:us/state:ca/place:stockton/council_district:4
+- ocd-division/country:us/state:ca/place:stockton/council_district:5
+- ocd-division/country:us/state:ca/place:stockton/council_district:6
+- ocd-division/country:us/state:ca/place:sunnyvale/council_district:1
+- ocd-division/country:us/state:ca/place:sunnyvale/council_district:2
+- ocd-division/country:us/state:ca/place:sunnyvale/council_district:3
+- ocd-division/country:us/state:ca/place:sunnyvale/council_district:4
+- ocd-division/country:us/state:ca/place:sunnyvale/council_district:5
+- ocd-division/country:us/state:ca/place:sunnyvale/council_district:6
+- ocd-division/country:us/state:ca/place:vallejo/council_district:1
+- ocd-division/country:us/state:ca/place:vallejo/council_district:2
+- ocd-division/country:us/state:ca/place:vallejo/council_district:3
+- ocd-division/country:us/state:ca/place:vallejo/council_district:4
+- ocd-division/country:us/state:ca/place:vallejo/council_district:5
+- ocd-division/country:us/state:ca/place:vallejo/council_district:6
+- ocd-division/country:us/state:ca/place:visalia/council_district:1
+- ocd-division/country:us/state:ca/place:visalia/council_district:2
+- ocd-division/country:us/state:ca/place:visalia/council_district:3
+- ocd-division/country:us/state:ca/place:visalia/council_district:4
+- ocd-division/country:us/state:ca/place:visalia/council_district:5
 
 </details>
 
@@ -130,9 +402,9 @@ None
 
 **Places:**
 - ocd-division/country:us/state:co/place:raymer_(new_raymer)
+- ocd-division/country:us/state:co/place:carbonate
 - ocd-division/country:us/state:co/place:denver
 - ocd-division/country:us/state:co/place:broomfield
-- ocd-division/country:us/state:co/place:carbonate
 
 **Divisions:**
 - ocd-division/country:us/state:co/place:alamosa/ward:1
@@ -259,8 +531,8 @@ None
 #### Missing in CivicPatch:
 
 **Places:**
-- ocd-division/country:us/state:wa/place:st_john
 - ocd-division/country:us/state:wa/place:krupp
+- ocd-division/country:us/state:wa/place:st_john
 
 **Divisions:**
 - ocd-division/country:us/state:wa/place:pomeroy/ward:1
@@ -273,8 +545,8 @@ None
 #### Missing in Google:
 
 **Places:**
-- ocd-division/country:us/state:wa/place:krupp_(marlin)
 - ocd-division/country:us/state:wa/place:st._john
+- ocd-division/country:us/state:wa/place:krupp_(marlin)
 
 **Divisions:**
 - ocd-division/country:us/state:wa/place:anacortes/ward:1
@@ -416,11 +688,11 @@ None
 #### Missing in CivicPatch:
 
 **Places:**
+- ocd-division/country:us/state:nh/place:pinkhams_grant
 - ocd-division/country:us/state:nh/place:wentworth~s_location
 - ocd-division/country:us/state:nh/place:hale~s_location
-- ocd-division/country:us/state:nh/place:pinkhams_grant
-- ocd-division/country:us/state:nh/place:greens_grant
 - ocd-division/country:us/state:nh/place:millsfield
+- ocd-division/country:us/state:nh/place:greens_grant
 - ocd-division/country:us/state:nh/place:hart~s_location
 
 **Divisions:**
@@ -455,25 +727,25 @@ None
 #### Missing in Google:
 
 **Places:**
-- ocd-division/country:us/state:nh/place:success
-- ocd-division/country:us/state:nh/place:greens
 - ocd-division/country:us/state:nh/place:sargents
-- ocd-division/country:us/state:nh/place:martins
-- ocd-division/country:us/state:nh/place:dixs
-- ocd-division/country:us/state:nh/place:kilkenny
-- ocd-division/country:us/state:nh/place:chandlers
-- ocd-division/country:us/state:nh/place:low_and_burbanks
-- ocd-division/country:us/state:nh/place:atkinson_and_gilmanton_academy
-- ocd-division/country:us/state:nh/place:second_college
-- ocd-division/country:us/state:nh/place:hadleys
-- ocd-division/country:us/state:nh/place:ervings
-- ocd-division/country:us/state:nh/place:cutts
-- ocd-division/country:us/state:nh/place:pinkhams
-- ocd-division/country:us/state:nh/place:hart's_location
-- ocd-division/country:us/state:nh/place:crawfords
 - ocd-division/country:us/state:nh/place:thompson_and_meserves
+- ocd-division/country:us/state:nh/place:atkinson_and_gilmanton_academy
+- ocd-division/country:us/state:nh/place:chandlers
+- ocd-division/country:us/state:nh/place:dixs
+- ocd-division/country:us/state:nh/place:hart's_location
+- ocd-division/country:us/state:nh/place:success
+- ocd-division/country:us/state:nh/place:cutts
+- ocd-division/country:us/state:nh/place:martins
+- ocd-division/country:us/state:nh/place:kilkenny
+- ocd-division/country:us/state:nh/place:low_and_burbanks
+- ocd-division/country:us/state:nh/place:hadleys
+- ocd-division/country:us/state:nh/place:greens
+- ocd-division/country:us/state:nh/place:crawfords
 - ocd-division/country:us/state:nh/place:odell
 - ocd-division/country:us/state:nh/place:beans
+- ocd-division/country:us/state:nh/place:pinkhams
+- ocd-division/country:us/state:nh/place:ervings
+- ocd-division/country:us/state:nh/place:second_college
 
 **Divisions:**
 - ocd-division/country:us/state:nh/place:derry/council_district:1
