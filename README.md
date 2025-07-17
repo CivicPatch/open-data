@@ -10,14 +10,37 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 
 | State | CivicPatch Count | Scrapeable | Scraped | Scraped % | Google Count | Missing Places in CivicPatch | Missing Places in Google |
 |-------|------------------|------------|---------|-----------|--------------|-----------------------|-------------------|
+| ca | 482 | 482 | 0 | 0.00% | 0 | 0 | 0 |
 | nd | 357 | 139 | 38 | 27.34% | 0 | 0 | 0 |
 | co | 272 | 216 | 117 | 54.17% | 269 | 1 | 4 |
 | wa | 281 | 219 | 176 | 80.37% | 281 | 2 | 2 |
-| id | 201 | 132 | 94 | 71.21% | 0 | 0 | 0 |
+| id | 201 | 132 | 95 | 71.97% | 0 | 0 | 0 |
 | nh | 256 | 229 | 100 | 43.67% | 242 | 6 | 19 |
 | or | 241 | 222 | 103 | 46.40% | 0 | 0 | 0 |
 
 ## Missing OCD IDs by State
+
+### ca
+
+<details>
+<summary>missing entries</summary>
+
+#### Missing in CivicPatch:
+
+**Places:**
+None
+
+**Divisions:**
+None
+#### Missing in Google:
+
+**Places:**
+None
+
+**Divisions:**
+None
+
+</details>
 
 ### nd
 
@@ -106,10 +129,10 @@ None
 #### Missing in Google:
 
 **Places:**
-- ocd-division/country:us/state:co/place:carbonate
-- ocd-division/country:us/state:co/place:broomfield
-- ocd-division/country:us/state:co/place:denver
 - ocd-division/country:us/state:co/place:raymer_(new_raymer)
+- ocd-division/country:us/state:co/place:denver
+- ocd-division/country:us/state:co/place:broomfield
+- ocd-division/country:us/state:co/place:carbonate
 
 **Divisions:**
 - ocd-division/country:us/state:co/place:alamosa/ward:1
@@ -236,8 +259,8 @@ None
 #### Missing in CivicPatch:
 
 **Places:**
-- ocd-division/country:us/state:wa/place:krupp
 - ocd-division/country:us/state:wa/place:st_john
+- ocd-division/country:us/state:wa/place:krupp
 
 **Divisions:**
 - ocd-division/country:us/state:wa/place:pomeroy/ward:1
@@ -250,8 +273,8 @@ None
 #### Missing in Google:
 
 **Places:**
-- ocd-division/country:us/state:wa/place:st._john
 - ocd-division/country:us/state:wa/place:krupp_(marlin)
+- ocd-division/country:us/state:wa/place:st._john
 
 **Divisions:**
 - ocd-division/country:us/state:wa/place:anacortes/ward:1
@@ -393,12 +416,12 @@ None
 #### Missing in CivicPatch:
 
 **Places:**
-- ocd-division/country:us/state:nh/place:pinkhams_grant
+- ocd-division/country:us/state:nh/place:wentworth~s_location
 - ocd-division/country:us/state:nh/place:hale~s_location
+- ocd-division/country:us/state:nh/place:pinkhams_grant
+- ocd-division/country:us/state:nh/place:greens_grant
 - ocd-division/country:us/state:nh/place:millsfield
 - ocd-division/country:us/state:nh/place:hart~s_location
-- ocd-division/country:us/state:nh/place:greens_grant
-- ocd-division/country:us/state:nh/place:wentworth~s_location
 
 **Divisions:**
 - ocd-division/country:us/state:nh/place:berlin/ward:1
@@ -432,25 +455,25 @@ None
 #### Missing in Google:
 
 **Places:**
-- ocd-division/country:us/state:nh/place:beans
-- ocd-division/country:us/state:nh/place:greens
-- ocd-division/country:us/state:nh/place:odell
-- ocd-division/country:us/state:nh/place:cutts
-- ocd-division/country:us/state:nh/place:thompson_and_meserves
-- ocd-division/country:us/state:nh/place:hart's_location
 - ocd-division/country:us/state:nh/place:success
+- ocd-division/country:us/state:nh/place:greens
+- ocd-division/country:us/state:nh/place:sargents
 - ocd-division/country:us/state:nh/place:martins
 - ocd-division/country:us/state:nh/place:dixs
-- ocd-division/country:us/state:nh/place:low_and_burbanks
-- ocd-division/country:us/state:nh/place:hadleys
-- ocd-division/country:us/state:nh/place:sargents
-- ocd-division/country:us/state:nh/place:ervings
-- ocd-division/country:us/state:nh/place:pinkhams
-- ocd-division/country:us/state:nh/place:crawfords
-- ocd-division/country:us/state:nh/place:second_college
-- ocd-division/country:us/state:nh/place:atkinson_and_gilmanton_academy
-- ocd-division/country:us/state:nh/place:chandlers
 - ocd-division/country:us/state:nh/place:kilkenny
+- ocd-division/country:us/state:nh/place:chandlers
+- ocd-division/country:us/state:nh/place:low_and_burbanks
+- ocd-division/country:us/state:nh/place:atkinson_and_gilmanton_academy
+- ocd-division/country:us/state:nh/place:second_college
+- ocd-division/country:us/state:nh/place:hadleys
+- ocd-division/country:us/state:nh/place:ervings
+- ocd-division/country:us/state:nh/place:cutts
+- ocd-division/country:us/state:nh/place:pinkhams
+- ocd-division/country:us/state:nh/place:hart's_location
+- ocd-division/country:us/state:nh/place:crawfords
+- ocd-division/country:us/state:nh/place:thompson_and_meserves
+- ocd-division/country:us/state:nh/place:odell
+- ocd-division/country:us/state:nh/place:beans
 
 **Divisions:**
 - ocd-division/country:us/state:nh/place:derry/council_district:1
