@@ -80,12 +80,12 @@ None
 #### Missing in CivicPatch:
 
 **Places:**
-- ocd-division/country:us/state:nh/place:pinkhams_grant
-- ocd-division/country:us/state:nh/place:millsfield
+- ocd-division/country:us/state:nh/place:hart~s_location
 - ocd-division/country:us/state:nh/place:wentworth~s_location
+- ocd-division/country:us/state:nh/place:millsfield
 - ocd-division/country:us/state:nh/place:greens_grant
 - ocd-division/country:us/state:nh/place:hale~s_location
-- ocd-division/country:us/state:nh/place:hart~s_location
+- ocd-division/country:us/state:nh/place:pinkhams_grant
 
 **Divisions:**
 - ocd-division/country:us/state:nh/place:berlin/ward:1
@@ -119,25 +119,25 @@ None
 #### Missing in Google:
 
 **Places:**
-- ocd-division/country:us/state:nh/place:greens
-- ocd-division/country:us/state:nh/place:chandlers
-- ocd-division/country:us/state:nh/place:success
 - ocd-division/country:us/state:nh/place:dixs
+- ocd-division/country:us/state:nh/place:chandlers
+- ocd-division/country:us/state:nh/place:odell
+- ocd-division/country:us/state:nh/place:martins
+- ocd-division/country:us/state:nh/place:second_college
+- ocd-division/country:us/state:nh/place:beans
+- ocd-division/country:us/state:nh/place:low_and_burbanks
+- ocd-division/country:us/state:nh/place:greens
+- ocd-division/country:us/state:nh/place:thompson_and_meserves
 - ocd-division/country:us/state:nh/place:cutts
+- ocd-division/country:us/state:nh/place:pinkhams
+- ocd-division/country:us/state:nh/place:ervings
 - ocd-division/country:us/state:nh/place:kilkenny
 - ocd-division/country:us/state:nh/place:atkinson_and_gilmanton_academy
-- ocd-division/country:us/state:nh/place:hart's_location
-- ocd-division/country:us/state:nh/place:ervings
-- ocd-division/country:us/state:nh/place:pinkhams
-- ocd-division/country:us/state:nh/place:martins
-- ocd-division/country:us/state:nh/place:sargents
-- ocd-division/country:us/state:nh/place:hadleys
-- ocd-division/country:us/state:nh/place:beans
 - ocd-division/country:us/state:nh/place:crawfords
-- ocd-division/country:us/state:nh/place:second_college
-- ocd-division/country:us/state:nh/place:low_and_burbanks
-- ocd-division/country:us/state:nh/place:odell
-- ocd-division/country:us/state:nh/place:thompson_and_meserves
+- ocd-division/country:us/state:nh/place:hadleys
+- ocd-division/country:us/state:nh/place:success
+- ocd-division/country:us/state:nh/place:hart's_location
+- ocd-division/country:us/state:nh/place:sargents
 
 **Divisions:**
 - ocd-division/country:us/state:nh/place:derry/council_district:1
@@ -182,10 +182,10 @@ None
 #### Missing in Google:
 
 **Places:**
-- ocd-division/country:us/state:co/place:denver
+- ocd-division/country:us/state:co/place:broomfield
 - ocd-division/country:us/state:co/place:carbonate
 - ocd-division/country:us/state:co/place:raymer_(new_raymer)
-- ocd-division/country:us/state:co/place:broomfield
+- ocd-division/country:us/state:co/place:denver
 
 **Divisions:**
 - ocd-division/country:us/state:co/place:alamosa/ward:1
@@ -857,8 +857,8 @@ None
 #### Missing in CivicPatch:
 
 **Places:**
-- ocd-division/country:us/state:wa/place:krupp
 - ocd-division/country:us/state:wa/place:st_john
+- ocd-division/country:us/state:wa/place:krupp
 
 **Divisions:**
 - ocd-division/country:us/state:wa/place:pomeroy/ward:1
