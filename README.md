@@ -10,15 +10,54 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 
 | State | CivicPatch Count | Scrapeable | Scraped | Scraped % | Google Count | Missing Places in CivicPatch | Missing Places in Google |
 |-------|------------------|------------|---------|-----------|--------------|-----------------------|-------------------|
+| id | 201 | 132 | 95 | 71.97% | 0 | 0 | 0 |
 | nd | 357 | 139 | 38 | 27.34% | 0 | 0 | 0 |
 | nh | 256 | 229 | 100 | 43.67% | 242 | 6 | 19 |
 | co | 272 | 216 | 117 | 54.17% | 269 | 1 | 4 |
-| or | 241 | 222 | 103 | 46.40% | 0 | 0 | 0 |
-| ca | 482 | 482 | 73 | 15.15% | 0 | 0 | 0 |
-| id | 201 | 132 | 95 | 71.97% | 0 | 0 | 0 |
 | wa | 281 | 219 | 176 | 80.37% | 281 | 2 | 2 |
+| ca | 482 | 482 | 73 | 15.15% | 0 | 0 | 0 |
+| or | 241 | 222 | 103 | 46.40% | 0 | 0 | 0 |
 
 ## Missing OCD IDs by State
+
+### id
+
+<details>
+<summary>missing entries</summary>
+
+#### Missing in CivicPatch:
+
+**Places:**
+None
+
+**Divisions:**
+None
+#### Missing in Google:
+
+**Places:**
+None
+
+**Divisions:**
+- ocd-division/country:us/state:id/place:boise/council_district:1
+- ocd-division/country:us/state:id/place:boise/council_district:2
+- ocd-division/country:us/state:id/place:boise/council_district:3
+- ocd-division/country:us/state:id/place:boise/council_district:4
+- ocd-division/country:us/state:id/place:boise/council_district:5
+- ocd-division/country:us/state:id/place:boise/council_district:6
+- ocd-division/country:us/state:id/place:meridian/council_district:1
+- ocd-division/country:us/state:id/place:meridian/council_district:2
+- ocd-division/country:us/state:id/place:meridian/council_district:3
+- ocd-division/country:us/state:id/place:meridian/council_district:4
+- ocd-division/country:us/state:id/place:meridian/council_district:5
+- ocd-division/country:us/state:id/place:meridian/council_district:6
+- ocd-division/country:us/state:id/place:nampa/council_district:1
+- ocd-division/country:us/state:id/place:nampa/council_district:2
+- ocd-division/country:us/state:id/place:nampa/council_district:3
+- ocd-division/country:us/state:id/place:nampa/council_district:4
+- ocd-division/country:us/state:id/place:nampa/council_district:5
+- ocd-division/country:us/state:id/place:nampa/council_district:6
+
+</details>
 
 ### nd
 
@@ -82,10 +121,10 @@ None
 **Places:**
 - ocd-division/country:us/state:nh/place:greens_grant
 - ocd-division/country:us/state:nh/place:hart~s_location
-- ocd-division/country:us/state:nh/place:pinkhams_grant
 - ocd-division/country:us/state:nh/place:hale~s_location
-- ocd-division/country:us/state:nh/place:millsfield
 - ocd-division/country:us/state:nh/place:wentworth~s_location
+- ocd-division/country:us/state:nh/place:millsfield
+- ocd-division/country:us/state:nh/place:pinkhams_grant
 
 **Divisions:**
 - ocd-division/country:us/state:nh/place:berlin/ward:1
@@ -119,25 +158,25 @@ None
 #### Missing in Google:
 
 **Places:**
-- ocd-division/country:us/state:nh/place:kilkenny
-- ocd-division/country:us/state:nh/place:low_and_burbanks
-- ocd-division/country:us/state:nh/place:atkinson_and_gilmanton_academy
 - ocd-division/country:us/state:nh/place:hadleys
-- ocd-division/country:us/state:nh/place:success
-- ocd-division/country:us/state:nh/place:greens
-- ocd-division/country:us/state:nh/place:ervings
-- ocd-division/country:us/state:nh/place:odell
-- ocd-division/country:us/state:nh/place:sargents
-- ocd-division/country:us/state:nh/place:martins
-- ocd-division/country:us/state:nh/place:beans
-- ocd-division/country:us/state:nh/place:cutts
-- ocd-division/country:us/state:nh/place:dixs
+- ocd-division/country:us/state:nh/place:chandlers
+- ocd-division/country:us/state:nh/place:atkinson_and_gilmanton_academy
+- ocd-division/country:us/state:nh/place:hart's_location
 - ocd-division/country:us/state:nh/place:second_college
 - ocd-division/country:us/state:nh/place:thompson_and_meserves
-- ocd-division/country:us/state:nh/place:crawfords
-- ocd-division/country:us/state:nh/place:chandlers
-- ocd-division/country:us/state:nh/place:hart's_location
+- ocd-division/country:us/state:nh/place:success
 - ocd-division/country:us/state:nh/place:pinkhams
+- ocd-division/country:us/state:nh/place:sargents
+- ocd-division/country:us/state:nh/place:greens
+- ocd-division/country:us/state:nh/place:beans
+- ocd-division/country:us/state:nh/place:martins
+- ocd-division/country:us/state:nh/place:dixs
+- ocd-division/country:us/state:nh/place:odell
+- ocd-division/country:us/state:nh/place:ervings
+- ocd-division/country:us/state:nh/place:cutts
+- ocd-division/country:us/state:nh/place:kilkenny
+- ocd-division/country:us/state:nh/place:low_and_burbanks
+- ocd-division/country:us/state:nh/place:crawfords
 
 **Divisions:**
 - ocd-division/country:us/state:nh/place:derry/council_district:1
@@ -304,7 +343,7 @@ None
 
 </details>
 
-### or
+### wa
 
 <details>
 <summary>missing entries</summary>
@@ -312,108 +351,113 @@ None
 #### Missing in CivicPatch:
 
 **Places:**
-None
+- ocd-division/country:us/state:wa/place:krupp
+- ocd-division/country:us/state:wa/place:st_john
 
 **Divisions:**
-None
+- ocd-division/country:us/state:wa/place:pomeroy/ward:1
+- ocd-division/country:us/state:wa/place:pomeroy/ward:2
+- ocd-division/country:us/state:wa/place:pomeroy/ward:3
+- ocd-division/country:us/state:wa/place:pomeroy/ward:4
+- ocd-division/country:us/state:wa/place:raymond/ward:1
+- ocd-division/country:us/state:wa/place:raymond/ward:2
+- ocd-division/country:us/state:wa/place:raymond/ward:3
 #### Missing in Google:
 
 **Places:**
-None
+- ocd-division/country:us/state:wa/place:krupp_(marlin)
+- ocd-division/country:us/state:wa/place:st._john
 
 **Divisions:**
-- ocd-division/country:us/state:or/place:astoria/ward:1
-- ocd-division/country:us/state:or/place:astoria/ward:2
-- ocd-division/country:us/state:or/place:astoria/ward:3
-- ocd-division/country:us/state:or/place:astoria/ward:4
-- ocd-division/country:us/state:or/place:central_point/ward:1
-- ocd-division/country:us/state:or/place:central_point/ward:2
-- ocd-division/country:us/state:or/place:central_point/ward:3
-- ocd-division/country:us/state:or/place:central_point/ward:4
-- ocd-division/country:us/state:or/place:corvallis/ward:1
-- ocd-division/country:us/state:or/place:corvallis/ward:2
-- ocd-division/country:us/state:or/place:corvallis/ward:3
-- ocd-division/country:us/state:or/place:corvallis/ward:4
-- ocd-division/country:us/state:or/place:corvallis/ward:5
-- ocd-division/country:us/state:or/place:corvallis/ward:6
-- ocd-division/country:us/state:or/place:corvallis/ward:7
-- ocd-division/country:us/state:or/place:corvallis/ward:8
-- ocd-division/country:us/state:or/place:corvallis/ward:9
-- ocd-division/country:us/state:or/place:cottage_grove/ward:1
-- ocd-division/country:us/state:or/place:cottage_grove/ward:2
-- ocd-division/country:us/state:or/place:cottage_grove/ward:3
-- ocd-division/country:us/state:or/place:cottage_grove/ward:4
-- ocd-division/country:us/state:or/place:eugene/ward:1
-- ocd-division/country:us/state:or/place:eugene/ward:2
-- ocd-division/country:us/state:or/place:eugene/ward:3
-- ocd-division/country:us/state:or/place:eugene/ward:4
-- ocd-division/country:us/state:or/place:eugene/ward:5
-- ocd-division/country:us/state:or/place:eugene/ward:6
-- ocd-division/country:us/state:or/place:eugene/ward:7
-- ocd-division/country:us/state:or/place:eugene/ward:8
-- ocd-division/country:us/state:or/place:grants_pass/ward:1
-- ocd-division/country:us/state:or/place:grants_pass/ward:2
-- ocd-division/country:us/state:or/place:grants_pass/ward:3
-- ocd-division/country:us/state:or/place:grants_pass/ward:4
-- ocd-division/country:us/state:or/place:hermiston/ward:1
-- ocd-division/country:us/state:or/place:hermiston/ward:2
-- ocd-division/country:us/state:or/place:hermiston/ward:3
-- ocd-division/country:us/state:or/place:hermiston/ward:4
-- ocd-division/country:us/state:or/place:hillsboro/ward:1
-- ocd-division/country:us/state:or/place:hillsboro/ward:2
-- ocd-division/country:us/state:or/place:hillsboro/ward:3
-- ocd-division/country:us/state:or/place:klamath_falls/ward:1
-- ocd-division/country:us/state:or/place:klamath_falls/ward:2
-- ocd-division/country:us/state:or/place:klamath_falls/ward:3
-- ocd-division/country:us/state:or/place:klamath_falls/ward:4
-- ocd-division/country:us/state:or/place:klamath_falls/ward:5
-- ocd-division/country:us/state:or/place:lebanon/ward:1
-- ocd-division/country:us/state:or/place:lebanon/ward:2
-- ocd-division/country:us/state:or/place:lebanon/ward:3
-- ocd-division/country:us/state:or/place:lincoln_city/ward:1
-- ocd-division/country:us/state:or/place:lincoln_city/ward:2
-- ocd-division/country:us/state:or/place:lincoln_city/ward:3
-- ocd-division/country:us/state:or/place:mcminnville/ward:1
-- ocd-division/country:us/state:or/place:mcminnville/ward:2
-- ocd-division/country:us/state:or/place:mcminnville/ward:3
-- ocd-division/country:us/state:or/place:medford/ward:1
-- ocd-division/country:us/state:or/place:medford/ward:2
-- ocd-division/country:us/state:or/place:medford/ward:3
-- ocd-division/country:us/state:or/place:medford/ward:4
-- ocd-division/country:us/state:or/place:milton-freewater/ward:1
-- ocd-division/country:us/state:or/place:milton-freewater/ward:2
-- ocd-division/country:us/state:or/place:milton-freewater/ward:3
-- ocd-division/country:us/state:or/place:newberg/council_district:1
-- ocd-division/country:us/state:or/place:newberg/council_district:2
-- ocd-division/country:us/state:or/place:newberg/council_district:3
-- ocd-division/country:us/state:or/place:newberg/council_district:4
-- ocd-division/country:us/state:or/place:newberg/council_district:5
-- ocd-division/country:us/state:or/place:newberg/council_district:6
-- ocd-division/country:us/state:or/place:pendleton/ward:1
-- ocd-division/country:us/state:or/place:pendleton/ward:2
-- ocd-division/country:us/state:or/place:pendleton/ward:3
-- ocd-division/country:us/state:or/place:roseburg/ward:1
-- ocd-division/country:us/state:or/place:roseburg/ward:2
-- ocd-division/country:us/state:or/place:roseburg/ward:3
-- ocd-division/country:us/state:or/place:roseburg/ward:4
-- ocd-division/country:us/state:or/place:springfield/ward:1
-- ocd-division/country:us/state:or/place:springfield/ward:2
-- ocd-division/country:us/state:or/place:springfield/ward:3
-- ocd-division/country:us/state:or/place:springfield/ward:4
-- ocd-division/country:us/state:or/place:springfield/ward:5
-- ocd-division/country:us/state:or/place:springfield/ward:6
-- ocd-division/country:us/state:or/place:tillamook/ward:1
-- ocd-division/country:us/state:or/place:tillamook/ward:2
-- ocd-division/country:us/state:or/place:tillamook/ward:3
-- ocd-division/country:us/state:or/place:tillamook/ward:4
-- ocd-division/country:us/state:or/place:tillamook/ward:5
-- ocd-division/country:us/state:or/place:tillamook/ward:6
-- ocd-division/country:us/state:or/place:woodburn/ward:1
-- ocd-division/country:us/state:or/place:woodburn/ward:2
-- ocd-division/country:us/state:or/place:woodburn/ward:3
-- ocd-division/country:us/state:or/place:woodburn/ward:4
-- ocd-division/country:us/state:or/place:woodburn/ward:5
-- ocd-division/country:us/state:or/place:woodburn/ward:6
+- ocd-division/country:us/state:wa/place:anacortes/ward:1
+- ocd-division/country:us/state:wa/place:anacortes/ward:2
+- ocd-division/country:us/state:wa/place:anacortes/ward:3
+- ocd-division/country:us/state:wa/place:bainbridge_island/council_district:1
+- ocd-division/country:us/state:wa/place:bainbridge_island/council_district:2
+- ocd-division/country:us/state:wa/place:bainbridge_island/council_district:3
+- ocd-division/country:us/state:wa/place:bainbridge_island/council_district:4
+- ocd-division/country:us/state:wa/place:bainbridge_island/council_district:5
+- ocd-division/country:us/state:wa/place:bainbridge_island/council_district:6
+- ocd-division/country:us/state:wa/place:bainbridge_island/council_district:7
+- ocd-division/country:us/state:wa/place:bainbridge_island/ward:central
+- ocd-division/country:us/state:wa/place:bainbridge_island/ward:north
+- ocd-division/country:us/state:wa/place:bainbridge_island/ward:south
+- ocd-division/country:us/state:wa/place:bellingham/ward:1
+- ocd-division/country:us/state:wa/place:bellingham/ward:2
+- ocd-division/country:us/state:wa/place:bellingham/ward:3
+- ocd-division/country:us/state:wa/place:bellingham/ward:4
+- ocd-division/country:us/state:wa/place:bellingham/ward:5
+- ocd-division/country:us/state:wa/place:bellingham/ward:6
+- ocd-division/country:us/state:wa/place:blaine/ward:1
+- ocd-division/country:us/state:wa/place:blaine/ward:2
+- ocd-division/country:us/state:wa/place:blaine/ward:3
+- ocd-division/country:us/state:wa/place:bremerton/council_district:1
+- ocd-division/country:us/state:wa/place:bremerton/council_district:2
+- ocd-division/country:us/state:wa/place:bremerton/council_district:3
+- ocd-division/country:us/state:wa/place:bremerton/council_district:4
+- ocd-division/country:us/state:wa/place:bremerton/council_district:5
+- ocd-division/country:us/state:wa/place:bremerton/council_district:6
+- ocd-division/country:us/state:wa/place:bremerton/council_district:7
+- ocd-division/country:us/state:wa/place:camas/ward:1
+- ocd-division/country:us/state:wa/place:camas/ward:2
+- ocd-division/country:us/state:wa/place:camas/ward:3
+- ocd-division/country:us/state:wa/place:centralia/council_district:1
+- ocd-division/country:us/state:wa/place:centralia/council_district:2
+- ocd-division/country:us/state:wa/place:centralia/council_district:3
+- ocd-division/country:us/state:wa/place:centralia/council_district:4
+- ocd-division/country:us/state:wa/place:chehalis/council_district:1
+- ocd-division/country:us/state:wa/place:chehalis/council_district:2
+- ocd-division/country:us/state:wa/place:chehalis/council_district:3
+- ocd-division/country:us/state:wa/place:chehalis/council_district:4
+- ocd-division/country:us/state:wa/place:colville/ward:1
+- ocd-division/country:us/state:wa/place:colville/ward:2
+- ocd-division/country:us/state:wa/place:colville/ward:3
+- ocd-division/country:us/state:wa/place:hoquiam/ward:1
+- ocd-division/country:us/state:wa/place:hoquiam/ward:2
+- ocd-division/country:us/state:wa/place:hoquiam/ward:3
+- ocd-division/country:us/state:wa/place:hoquiam/ward:4
+- ocd-division/country:us/state:wa/place:hoquiam/ward:5
+- ocd-division/country:us/state:wa/place:hoquiam/ward:6
+- ocd-division/country:us/state:wa/place:mount_vernon/ward:1
+- ocd-division/country:us/state:wa/place:mount_vernon/ward:2
+- ocd-division/country:us/state:wa/place:mount_vernon/ward:3
+- ocd-division/country:us/state:wa/place:pasco/council_district:1
+- ocd-division/country:us/state:wa/place:pasco/council_district:2
+- ocd-division/country:us/state:wa/place:pasco/council_district:3
+- ocd-division/country:us/state:wa/place:pasco/council_district:4
+- ocd-division/country:us/state:wa/place:pasco/council_district:5
+- ocd-division/country:us/state:wa/place:pasco/council_district:6
+- ocd-division/country:us/state:wa/place:pullman/ward:1
+- ocd-division/country:us/state:wa/place:pullman/ward:2
+- ocd-division/country:us/state:wa/place:pullman/ward:3
+- ocd-division/country:us/state:wa/place:puyallup/council_district:1
+- ocd-division/country:us/state:wa/place:puyallup/council_district:2
+- ocd-division/country:us/state:wa/place:puyallup/council_district:3
+- ocd-division/country:us/state:wa/place:sedro-woolley/ward:1
+- ocd-division/country:us/state:wa/place:sedro-woolley/ward:2
+- ocd-division/country:us/state:wa/place:sedro-woolley/ward:3
+- ocd-division/country:us/state:wa/place:sedro-woolley/ward:4
+- ocd-division/country:us/state:wa/place:sedro-woolley/ward:5
+- ocd-division/country:us/state:wa/place:sedro-woolley/ward:6
+- ocd-division/country:us/state:wa/place:sunnyside/council_district:1
+- ocd-division/country:us/state:wa/place:sunnyside/council_district:2
+- ocd-division/country:us/state:wa/place:sunnyside/council_district:3
+- ocd-division/country:us/state:wa/place:sunnyside/council_district:4
+- ocd-division/country:us/state:wa/place:walla_walla/ward:central
+- ocd-division/country:us/state:wa/place:walla_walla/ward:east
+- ocd-division/country:us/state:wa/place:walla_walla/ward:south
+- ocd-division/country:us/state:wa/place:walla_walla/ward:west
+- ocd-division/country:us/state:wa/place:wenatchee/council_district:1
+- ocd-division/country:us/state:wa/place:wenatchee/council_district:2
+- ocd-division/country:us/state:wa/place:wenatchee/council_district:3
+- ocd-division/country:us/state:wa/place:wenatchee/council_district:4
+- ocd-division/country:us/state:wa/place:wenatchee/council_district:5
+- ocd-division/country:us/state:wa/place:yakima/council_district:1
+- ocd-division/country:us/state:wa/place:yakima/council_district:2
+- ocd-division/country:us/state:wa/place:yakima/council_district:3
+- ocd-division/country:us/state:wa/place:yakima/council_district:4
+- ocd-division/country:us/state:wa/place:yakima/council_district:5
+- ocd-division/country:us/state:wa/place:yakima/council_district:7
 
 </details>
 
@@ -810,7 +854,7 @@ None
 
 </details>
 
-### id
+### or
 
 <details>
 <summary>missing entries</summary>
@@ -828,142 +872,98 @@ None
 None
 
 **Divisions:**
-- ocd-division/country:us/state:id/place:boise/council_district:1
-- ocd-division/country:us/state:id/place:boise/council_district:2
-- ocd-division/country:us/state:id/place:boise/council_district:3
-- ocd-division/country:us/state:id/place:boise/council_district:4
-- ocd-division/country:us/state:id/place:boise/council_district:5
-- ocd-division/country:us/state:id/place:boise/council_district:6
-- ocd-division/country:us/state:id/place:meridian/council_district:1
-- ocd-division/country:us/state:id/place:meridian/council_district:2
-- ocd-division/country:us/state:id/place:meridian/council_district:3
-- ocd-division/country:us/state:id/place:meridian/council_district:4
-- ocd-division/country:us/state:id/place:meridian/council_district:5
-- ocd-division/country:us/state:id/place:meridian/council_district:6
-- ocd-division/country:us/state:id/place:nampa/council_district:1
-- ocd-division/country:us/state:id/place:nampa/council_district:2
-- ocd-division/country:us/state:id/place:nampa/council_district:3
-- ocd-division/country:us/state:id/place:nampa/council_district:4
-- ocd-division/country:us/state:id/place:nampa/council_district:5
-- ocd-division/country:us/state:id/place:nampa/council_district:6
-
-</details>
-
-### wa
-
-<details>
-<summary>missing entries</summary>
-
-#### Missing in CivicPatch:
-
-**Places:**
-- ocd-division/country:us/state:wa/place:krupp
-- ocd-division/country:us/state:wa/place:st_john
-
-**Divisions:**
-- ocd-division/country:us/state:wa/place:pomeroy/ward:1
-- ocd-division/country:us/state:wa/place:pomeroy/ward:2
-- ocd-division/country:us/state:wa/place:pomeroy/ward:3
-- ocd-division/country:us/state:wa/place:pomeroy/ward:4
-- ocd-division/country:us/state:wa/place:raymond/ward:1
-- ocd-division/country:us/state:wa/place:raymond/ward:2
-- ocd-division/country:us/state:wa/place:raymond/ward:3
-#### Missing in Google:
-
-**Places:**
-- ocd-division/country:us/state:wa/place:krupp_(marlin)
-- ocd-division/country:us/state:wa/place:st._john
-
-**Divisions:**
-- ocd-division/country:us/state:wa/place:anacortes/ward:1
-- ocd-division/country:us/state:wa/place:anacortes/ward:2
-- ocd-division/country:us/state:wa/place:anacortes/ward:3
-- ocd-division/country:us/state:wa/place:bainbridge_island/council_district:1
-- ocd-division/country:us/state:wa/place:bainbridge_island/council_district:2
-- ocd-division/country:us/state:wa/place:bainbridge_island/council_district:3
-- ocd-division/country:us/state:wa/place:bainbridge_island/council_district:4
-- ocd-division/country:us/state:wa/place:bainbridge_island/council_district:5
-- ocd-division/country:us/state:wa/place:bainbridge_island/council_district:6
-- ocd-division/country:us/state:wa/place:bainbridge_island/council_district:7
-- ocd-division/country:us/state:wa/place:bainbridge_island/ward:central
-- ocd-division/country:us/state:wa/place:bainbridge_island/ward:north
-- ocd-division/country:us/state:wa/place:bainbridge_island/ward:south
-- ocd-division/country:us/state:wa/place:bellingham/ward:1
-- ocd-division/country:us/state:wa/place:bellingham/ward:2
-- ocd-division/country:us/state:wa/place:bellingham/ward:3
-- ocd-division/country:us/state:wa/place:bellingham/ward:4
-- ocd-division/country:us/state:wa/place:bellingham/ward:5
-- ocd-division/country:us/state:wa/place:bellingham/ward:6
-- ocd-division/country:us/state:wa/place:blaine/ward:1
-- ocd-division/country:us/state:wa/place:blaine/ward:2
-- ocd-division/country:us/state:wa/place:blaine/ward:3
-- ocd-division/country:us/state:wa/place:bremerton/council_district:1
-- ocd-division/country:us/state:wa/place:bremerton/council_district:2
-- ocd-division/country:us/state:wa/place:bremerton/council_district:3
-- ocd-division/country:us/state:wa/place:bremerton/council_district:4
-- ocd-division/country:us/state:wa/place:bremerton/council_district:5
-- ocd-division/country:us/state:wa/place:bremerton/council_district:6
-- ocd-division/country:us/state:wa/place:bremerton/council_district:7
-- ocd-division/country:us/state:wa/place:camas/ward:1
-- ocd-division/country:us/state:wa/place:camas/ward:2
-- ocd-division/country:us/state:wa/place:camas/ward:3
-- ocd-division/country:us/state:wa/place:centralia/council_district:1
-- ocd-division/country:us/state:wa/place:centralia/council_district:2
-- ocd-division/country:us/state:wa/place:centralia/council_district:3
-- ocd-division/country:us/state:wa/place:centralia/council_district:4
-- ocd-division/country:us/state:wa/place:chehalis/council_district:1
-- ocd-division/country:us/state:wa/place:chehalis/council_district:2
-- ocd-division/country:us/state:wa/place:chehalis/council_district:3
-- ocd-division/country:us/state:wa/place:chehalis/council_district:4
-- ocd-division/country:us/state:wa/place:colville/ward:1
-- ocd-division/country:us/state:wa/place:colville/ward:2
-- ocd-division/country:us/state:wa/place:colville/ward:3
-- ocd-division/country:us/state:wa/place:hoquiam/ward:1
-- ocd-division/country:us/state:wa/place:hoquiam/ward:2
-- ocd-division/country:us/state:wa/place:hoquiam/ward:3
-- ocd-division/country:us/state:wa/place:hoquiam/ward:4
-- ocd-division/country:us/state:wa/place:hoquiam/ward:5
-- ocd-division/country:us/state:wa/place:hoquiam/ward:6
-- ocd-division/country:us/state:wa/place:mount_vernon/ward:1
-- ocd-division/country:us/state:wa/place:mount_vernon/ward:2
-- ocd-division/country:us/state:wa/place:mount_vernon/ward:3
-- ocd-division/country:us/state:wa/place:pasco/council_district:1
-- ocd-division/country:us/state:wa/place:pasco/council_district:2
-- ocd-division/country:us/state:wa/place:pasco/council_district:3
-- ocd-division/country:us/state:wa/place:pasco/council_district:4
-- ocd-division/country:us/state:wa/place:pasco/council_district:5
-- ocd-division/country:us/state:wa/place:pasco/council_district:6
-- ocd-division/country:us/state:wa/place:pullman/ward:1
-- ocd-division/country:us/state:wa/place:pullman/ward:2
-- ocd-division/country:us/state:wa/place:pullman/ward:3
-- ocd-division/country:us/state:wa/place:puyallup/council_district:1
-- ocd-division/country:us/state:wa/place:puyallup/council_district:2
-- ocd-division/country:us/state:wa/place:puyallup/council_district:3
-- ocd-division/country:us/state:wa/place:sedro-woolley/ward:1
-- ocd-division/country:us/state:wa/place:sedro-woolley/ward:2
-- ocd-division/country:us/state:wa/place:sedro-woolley/ward:3
-- ocd-division/country:us/state:wa/place:sedro-woolley/ward:4
-- ocd-division/country:us/state:wa/place:sedro-woolley/ward:5
-- ocd-division/country:us/state:wa/place:sedro-woolley/ward:6
-- ocd-division/country:us/state:wa/place:sunnyside/council_district:1
-- ocd-division/country:us/state:wa/place:sunnyside/council_district:2
-- ocd-division/country:us/state:wa/place:sunnyside/council_district:3
-- ocd-division/country:us/state:wa/place:sunnyside/council_district:4
-- ocd-division/country:us/state:wa/place:walla_walla/ward:central
-- ocd-division/country:us/state:wa/place:walla_walla/ward:east
-- ocd-division/country:us/state:wa/place:walla_walla/ward:south
-- ocd-division/country:us/state:wa/place:walla_walla/ward:west
-- ocd-division/country:us/state:wa/place:wenatchee/council_district:1
-- ocd-division/country:us/state:wa/place:wenatchee/council_district:2
-- ocd-division/country:us/state:wa/place:wenatchee/council_district:3
-- ocd-division/country:us/state:wa/place:wenatchee/council_district:4
-- ocd-division/country:us/state:wa/place:wenatchee/council_district:5
-- ocd-division/country:us/state:wa/place:yakima/council_district:1
-- ocd-division/country:us/state:wa/place:yakima/council_district:2
-- ocd-division/country:us/state:wa/place:yakima/council_district:3
-- ocd-division/country:us/state:wa/place:yakima/council_district:4
-- ocd-division/country:us/state:wa/place:yakima/council_district:5
-- ocd-division/country:us/state:wa/place:yakima/council_district:7
+- ocd-division/country:us/state:or/place:astoria/ward:1
+- ocd-division/country:us/state:or/place:astoria/ward:2
+- ocd-division/country:us/state:or/place:astoria/ward:3
+- ocd-division/country:us/state:or/place:astoria/ward:4
+- ocd-division/country:us/state:or/place:central_point/ward:1
+- ocd-division/country:us/state:or/place:central_point/ward:2
+- ocd-division/country:us/state:or/place:central_point/ward:3
+- ocd-division/country:us/state:or/place:central_point/ward:4
+- ocd-division/country:us/state:or/place:corvallis/ward:1
+- ocd-division/country:us/state:or/place:corvallis/ward:2
+- ocd-division/country:us/state:or/place:corvallis/ward:3
+- ocd-division/country:us/state:or/place:corvallis/ward:4
+- ocd-division/country:us/state:or/place:corvallis/ward:5
+- ocd-division/country:us/state:or/place:corvallis/ward:6
+- ocd-division/country:us/state:or/place:corvallis/ward:7
+- ocd-division/country:us/state:or/place:corvallis/ward:8
+- ocd-division/country:us/state:or/place:corvallis/ward:9
+- ocd-division/country:us/state:or/place:cottage_grove/ward:1
+- ocd-division/country:us/state:or/place:cottage_grove/ward:2
+- ocd-division/country:us/state:or/place:cottage_grove/ward:3
+- ocd-division/country:us/state:or/place:cottage_grove/ward:4
+- ocd-division/country:us/state:or/place:eugene/ward:1
+- ocd-division/country:us/state:or/place:eugene/ward:2
+- ocd-division/country:us/state:or/place:eugene/ward:3
+- ocd-division/country:us/state:or/place:eugene/ward:4
+- ocd-division/country:us/state:or/place:eugene/ward:5
+- ocd-division/country:us/state:or/place:eugene/ward:6
+- ocd-division/country:us/state:or/place:eugene/ward:7
+- ocd-division/country:us/state:or/place:eugene/ward:8
+- ocd-division/country:us/state:or/place:grants_pass/ward:1
+- ocd-division/country:us/state:or/place:grants_pass/ward:2
+- ocd-division/country:us/state:or/place:grants_pass/ward:3
+- ocd-division/country:us/state:or/place:grants_pass/ward:4
+- ocd-division/country:us/state:or/place:hermiston/ward:1
+- ocd-division/country:us/state:or/place:hermiston/ward:2
+- ocd-division/country:us/state:or/place:hermiston/ward:3
+- ocd-division/country:us/state:or/place:hermiston/ward:4
+- ocd-division/country:us/state:or/place:hillsboro/ward:1
+- ocd-division/country:us/state:or/place:hillsboro/ward:2
+- ocd-division/country:us/state:or/place:hillsboro/ward:3
+- ocd-division/country:us/state:or/place:klamath_falls/ward:1
+- ocd-division/country:us/state:or/place:klamath_falls/ward:2
+- ocd-division/country:us/state:or/place:klamath_falls/ward:3
+- ocd-division/country:us/state:or/place:klamath_falls/ward:4
+- ocd-division/country:us/state:or/place:klamath_falls/ward:5
+- ocd-division/country:us/state:or/place:lebanon/ward:1
+- ocd-division/country:us/state:or/place:lebanon/ward:2
+- ocd-division/country:us/state:or/place:lebanon/ward:3
+- ocd-division/country:us/state:or/place:lincoln_city/ward:1
+- ocd-division/country:us/state:or/place:lincoln_city/ward:2
+- ocd-division/country:us/state:or/place:lincoln_city/ward:3
+- ocd-division/country:us/state:or/place:mcminnville/ward:1
+- ocd-division/country:us/state:or/place:mcminnville/ward:2
+- ocd-division/country:us/state:or/place:mcminnville/ward:3
+- ocd-division/country:us/state:or/place:medford/ward:1
+- ocd-division/country:us/state:or/place:medford/ward:2
+- ocd-division/country:us/state:or/place:medford/ward:3
+- ocd-division/country:us/state:or/place:medford/ward:4
+- ocd-division/country:us/state:or/place:milton-freewater/ward:1
+- ocd-division/country:us/state:or/place:milton-freewater/ward:2
+- ocd-division/country:us/state:or/place:milton-freewater/ward:3
+- ocd-division/country:us/state:or/place:newberg/council_district:1
+- ocd-division/country:us/state:or/place:newberg/council_district:2
+- ocd-division/country:us/state:or/place:newberg/council_district:3
+- ocd-division/country:us/state:or/place:newberg/council_district:4
+- ocd-division/country:us/state:or/place:newberg/council_district:5
+- ocd-division/country:us/state:or/place:newberg/council_district:6
+- ocd-division/country:us/state:or/place:pendleton/ward:1
+- ocd-division/country:us/state:or/place:pendleton/ward:2
+- ocd-division/country:us/state:or/place:pendleton/ward:3
+- ocd-division/country:us/state:or/place:roseburg/ward:1
+- ocd-division/country:us/state:or/place:roseburg/ward:2
+- ocd-division/country:us/state:or/place:roseburg/ward:3
+- ocd-division/country:us/state:or/place:roseburg/ward:4
+- ocd-division/country:us/state:or/place:springfield/ward:1
+- ocd-division/country:us/state:or/place:springfield/ward:2
+- ocd-division/country:us/state:or/place:springfield/ward:3
+- ocd-division/country:us/state:or/place:springfield/ward:4
+- ocd-division/country:us/state:or/place:springfield/ward:5
+- ocd-division/country:us/state:or/place:springfield/ward:6
+- ocd-division/country:us/state:or/place:tillamook/ward:1
+- ocd-division/country:us/state:or/place:tillamook/ward:2
+- ocd-division/country:us/state:or/place:tillamook/ward:3
+- ocd-division/country:us/state:or/place:tillamook/ward:4
+- ocd-division/country:us/state:or/place:tillamook/ward:5
+- ocd-division/country:us/state:or/place:tillamook/ward:6
+- ocd-division/country:us/state:or/place:woodburn/ward:1
+- ocd-division/country:us/state:or/place:woodburn/ward:2
+- ocd-division/country:us/state:or/place:woodburn/ward:3
+- ocd-division/country:us/state:or/place:woodburn/ward:4
+- ocd-division/country:us/state:or/place:woodburn/ward:5
+- ocd-division/country:us/state:or/place:woodburn/ward:6
 
 </details>
 
