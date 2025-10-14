@@ -109,7 +109,6 @@ jobs:
           STORAGE_ACCESS_KEY_ID: ${{ secrets.STORAGE_ACCESS_KEY_ID }}
           STORAGE_SECRET_ACCESS_KEY: ${{ secrets.STORAGE_SECRET_ACCESS_KEY }}
         run: |
-          cd civicpatch
           mise upload-images-to-cdn --jurisdiction-id "${{ inputs.jurisdiction_id }}"
           # Remove local images after upload TODO
 
@@ -134,7 +133,6 @@ jobs:
           GOOGLE_SHEETS_CLIENT_EMAIL: ${{ secrets.GOOGLE_SHEETS_CLIENT_EMAIL }}
           GOOGLE_SHEETS_TOKEN_URI: ${{ secrets.GOOGLE_SHEETS_TOKEN_URI }}
         run: |
-          cd civicpatch
           mise send-costs-to-google-sheets --jurisdiction-id "${{ inputs.jurisdiction_id }}"
       
       - name: Create/Update Data Comment
@@ -143,7 +141,6 @@ jobs:
           GITHUB_TOKEN: ${{ steps.generate-pipeline-token.outputs.token }}
         run: |
           PR_NUMBER=${{ inputs.pr_number }}
-          cd civicpatch
 
           COMMENT=$(mise generate-data-comment --jurisdiction-id ${{ inputs.jurisdiction_id }} )
           gh pr comment $PR_NUMBER --edit-last --create-if-none --body "$COMMENT"
@@ -154,7 +151,6 @@ jobs:
           GITHUB_TOKEN: ${{ steps.generate-approve-token.outputs.token }}
         run: |
           PR_NUMBER=${{ inputs.pr_number }}
-          cd civicpatch
           COMMENT=$(mise generate-review-comment --jurisdiction-id ${{ inputs.jurisdiction_id }} )
 
           if [ -n "$REJECTED_REASONS" ]; then
