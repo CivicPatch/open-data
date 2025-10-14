@@ -1,0 +1,63 @@
+name: "[manual] - Data Scrape"
+
+on:
+  workflow_dispatch:
+    inputs:
+      jurisdiction_id:
+        description: 'ocdid for the municipality (e.g. ocd-division/country/state/city)'
+        required: true
+      name:
+        description: 'E.g. "Greensboro city"'
+        required: false
+      url:
+        description: 'URL of the city council page'
+        required: true
+          
+jobs:
+  data-scrape:
+    environment: env-${{ github.actor }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Setup mise
+        uses: jdx/mise-action@v3.2.0
+        with:
+          version: '2025.9.6'
+          cache: true
+          log_level: debug
+          working_directory: civicpatch # Doesn't seem to work?
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Pull docker image
+        run: |
+          cd civicpatch
+          docker compose -f docker-compose.github-actions.yml pull civicpatch-cicd
+
+      - name: Run data scrape
+        env:
+          BRAVE_SEARCH_TOKEN: ${{ secrets.BRAVE_SEARCH_TOKEN }}
+          GOOGLE_SEARCH_TOKEN: ${{ secrets.GOOGLE_SEARCH_TOKEN }}
+          GOOGLE_SEARCH_ENGINE_ID: ${{ secrets.GOOGLE_SEARCH_ENGINE_ID }}
+          SERP_API_TOKEN: ${{ secrets.SERP_API_TOKEN }}
+
+          GOOGLE_GEMINI_TOKEN: ${{ secrets.GOOGLE_GEMINI_TOKEN }}
+          OPENAI_TOKEN: ${{ secrets.OPENAI_TOKEN }}
+          TOGETHER_AI_TOKEN: ${{ secrets.TOGETHER_AI_TOKEN }}
+
+          CRUDDER_SHARED_TOKEN: ${{ secrets.CRUDDER_SHARED_TOKEN }}
+          CRUDDER_URL: ${{ vars.CRUDDER_URL }}
+        run: |
+          cd civicpatch
+          mise pipeline-run-cicd \
+            --jurisdiction-id "${{ github.event.inputs.jurisdiction_id }}" \
+            --name "${{ github.event.inputs.name }}" \
+            --url "${{ github.event.inputs.url }}"

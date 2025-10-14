@@ -1,0 +1,23 @@
+services:
+  civicpatch-slim:
+    init: true # https://stackoverflow.com/questions/50634819/xvfb-run-hangs-in-container
+    image: ghcr.io/civicpatch/civicpatch-slim:latest
+    restart: unless-stopped
+    environment:
+      - FRIENDLY_STORAGE_HOST=${FRIENDLY_STORAGE_HOST}
+      - STORAGE_ENDPOINT=${STORAGE_ENDPOINT}
+      - STORAGE_ACCESS_KEY_ID=${STORAGE_ACCESS_KEY_ID}
+      - STORAGE_SECRET_ACCESS_KEY=${STORAGE_SECRET_ACCESS_KEY}
+
+      - GOOGLE_SHEETS_SPREADSHEET_ID=${GOOGLE_SHEETS_SPREADSHEET_ID}
+      - GOOGLE_SHEETS_PRIVATE_KEY=${GOOGLE_SHEETS_PRIVATE_KEY}
+      - GOOGLE_SHEETS_CLIENT_EMAIL=${GOOGLE_SHEETS_CLIENT_EMAIL}
+      - GOOGLE_SHEETS_TOKEN_URI=${GOOGLE_SHEETS_TOKEN_URI}
+      
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../data:/app/data
+      - ../data_source:/app/data_source
+      - .:/app
