@@ -10,3 +10,47 @@ python3 ocdid_progress_tracker/main.py
 run = """
 python3 ocdid_progress_tracker/generate_readme.py
 """
+
+#############################################
+## GITHUB ACTIONS
+#############################################
+
+[tasks.pipeline-run-cicd]
+run = """
+docker compose -f docker-compose.github-actions.yml run --rm civicpatch-cicd poetry run \
+  python src/cli.py \
+    --jurisdiction-id "{{ option(name="jurisdiction-id") }}" \
+    --name "{{ option(name="name") }}" \
+    --url "{{ option(name="url") }}"
+"""
+
+[tasks.upload-images-to-cdn]
+run = """
+docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
+  python src/scripts/upload_images_to_cdn.py {{ option(name="jurisdiction-id") }}
+"""
+
+[tasks.send-costs-to-google-sheets]
+run = """
+docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
+  python src/scripts/send_costs_to_google_sheets.py {{ option(name="jurisdiction-id") }}
+"""
+
+[tasks.generate-data-comment]
+run = """
+docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
+  python src/scripts/generate_data_comment.py {{ option(name="jurisdiction-id") }} 
+"""
+
+[tasks.test-generate-review-comment]
+run = """
+docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
+  python src/scripts/generate_review_comment.py ocd-jurisdiction/country:us/state:wa/place:seattle
+"""
+
+[tasks.generate-review-comment]
+# Ex: /app/data/wa/place__spokane.yml
+run = """
+docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
+  python src/scripts/generate_review_comment.py {{ option(name="jurisdiction-id") }}
+"""

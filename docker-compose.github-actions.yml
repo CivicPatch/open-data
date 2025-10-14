@@ -1,0 +1,23 @@
+services:
+  civicpatch-cicd:
+    environment:
+      - BRAVE_SEARCH_TOKEN
+      - GOOGLE_SEARCH_TOKEN
+      - GOOGLE_SEARCH_ENGINE_ID
+      - SERP_API_SEARCH_TOKEN
+
+      - GOOGLE_GEMINI_TOKEN
+      - OPENAI_TOKEN
+      - TOGETHER_AI_TOKEN
+
+      - CRUDDER_SHARED_TOKEN
+      - CRUDDER_URL
+
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    init: true # https://stackoverflow.com/questions/50634819/xvfb-run-hangs-in-container
+    image: ghcr.io/civicpatch/civicpatch-github-actions:latest
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile.github-actions
+    volumes:
+      - .:/app
