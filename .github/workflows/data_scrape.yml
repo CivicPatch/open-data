@@ -34,12 +34,10 @@ jobs:
           version: '2025.9.6'
           cache: true
           log_level: debug
-          working_directory: civicpatch # Doesn't seem to work?
           github_token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Pull docker image
         run: |
-          cd civicpatch
           docker compose -f docker-compose.github-actions.yml pull civicpatch-cicd
 
       - name: Run data scrape
@@ -56,7 +54,6 @@ jobs:
           CRUDDER_SHARED_TOKEN: ${{ secrets.CRUDDER_SHARED_TOKEN }}
           CRUDDER_URL: ${{ vars.CRUDDER_URL }}
         run: |
-          cd civicpatch
           mise pipeline-run-cicd \
             --jurisdiction-id "${{ github.event.inputs.jurisdiction_id }}" \
             --name "${{ github.event.inputs.name }}" \
