@@ -85,20 +85,30 @@ def convert_to_people_schema(file_paths=None, delete_original=False):
                 yaml.dump(output_data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
             
             print(f"  ✓ Converted {len(validated_people)} people to {output_path}")
-            
-            # Delete original file if requested and conversion was successful
-            if delete_original:
-                try:
-                    os.remove(file_path)
-                    print(f"  ✓ Deleted original file: {file_path}")
-                except Exception as delete_error:
-                    print(f"  ⚠ Warning: Could not delete {file_path}: {delete_error}")
-            
             converted_count += 1
             
         except Exception as e:
             print(f"  ✗ Error processing {file_path}: {e}")
             error_count += 1
+            continue  # Skip to next file, don't delete this one
+        
+        # Only delete if we reach here (no exceptions occurred)
+        if delete_original:
+            try:
+                os.remove(file_path)
+                print(f"  ✓ Deleted original file: {file_path}")
+                
+                # Try to remove parent directory if it's empty
+                parent_dir = os.path.dirname(file_path)
+                try:
+                    os.rmdir(parent_dir)  # Only works if directory is empty
+                    print(f"  ✓ Deleted empty directory: {parent_dir}")
+                except OSError:
+                    # Directory not empty or other error - this is fine, just ignore
+                    pass
+                    
+            except Exception as delete_error:
+                print(f"  ⚠ Warning: Could not delete {file_path}: {delete_error}")
     
     print(f"\nConversion complete!")
     print(f"Successfully converted: {converted_count} files")
