@@ -1,0 +1,123 @@
+from schemas import Person
+import glob
+import yaml
+import os
+from pathlib import Path
+from datetime import datetime, timezone
+import sys
+
+def convert_to_people_schema(file_paths=None, delete_original=False):
+    """
+    Convert people.yml files to new schema format.
+    
+    Args:
+        file_paths: List of specific file paths to convert. If None, converts all people.yml files.
+        delete_original: If True, delete the original people.yml files after successful conversion.
+    """
+    # 1. Get files to convert
+    if file_paths is None:
+        # Convert all files
+        yaml_files = glob.glob("data/**/people.yml", recursive=True)
+        print(f"Found {len(yaml_files)} people.yml files to convert")
+    else:
+        # Convert only specified files
+        yaml_files = file_paths
+        print(f"Converting {len(yaml_files)} specified files")
+    
+    converted_count = 0
+    error_count = 0
+    
+    for file_path in yaml_files:
+        try:
+            # 2. For each file, load the YAML content and take note of the current file path
+            print(f"Processing: {file_path}")
+            
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = yaml.safe_load(f)
+            
+            # Extract state and place name from path: data/state/place/people.yml
+            path_parts = Path(file_path).parts
+            state = path_parts[1]  # e.g., 'ca', 'or', 'wa'
+            place = path_parts[2]  # e.g., 'gervais', 'kenmore'
+            
+            # 3. Validate and convert the content to the Person schema
+            validated_people = []
+            
+            for person_data in data:
+                # Add missing required fields
+                person_data['jurisdiction_id'] = f"ocd_jurisdiction/country:us/state:{state}/place:{place}/government"
+                
+                # Ensure required fields exist
+                if 'divisions' not in person_data or not person_data['divisions']:
+                    person_data['divisions'] = ['City']
+                
+                if 'cdn_image' not in person_data or not person_data['cdn_image']:
+                    person_data['cdn_image'] = ''
+                
+                if 'sources' not in person_data or not person_data['sources']:
+                    person_data['sources'] = []
+                
+                if 'updated_at' not in person_data or not person_data['updated_at']:
+                    person_data['updated_at'] = datetime.now(timezone.utc).isoformat(timespec='seconds')
+                
+                # Validate using Pydantic schema
+                person = Person(**person_data)
+                
+                # Convert to ordered dict maintaining Pydantic model field order
+                person_dict = {}
+                for field_name in Person.model_fields:
+                    person_dict[field_name] = getattr(person, field_name)
+                
+                validated_people.append(person_dict)
+            
+            # 4. Save the converted content to a new file under data/<state>/place_<place_name>.yml
+            output_path = f"data/{state}/place_{place}.yml"
+            
+            # The people list should be nested under the key: government
+            output_data = {
+                'government': validated_people
+            }
+            
+            # Create output directory if it doesn't exist
+            os.makedirs(os.path.dirname(output_path), exist_ok=True)
+            
+            with open(output_path, 'w', encoding='utf-8') as f:
+                yaml.dump(output_data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
+            
+            print(f"  ✓ Converted {len(validated_people)} people to {output_path}")
+            
+            # Delete original file if requested and conversion was successful
+            if delete_original:
+                try:
+                    os.remove(file_path)
+                    print(f"  ✓ Deleted original file: {file_path}")
+                except Exception as delete_error:
+                    print(f"  ⚠ Warning: Could not delete {file_path}: {delete_error}")
+            
+            converted_count += 1
+            
+        except Exception as e:
+            print(f"  ✗ Error processing {file_path}: {e}")
+            error_count += 1
+    
+    print(f"\nConversion complete!")
+    print(f"Successfully converted: {converted_count} files")
+    print(f"Errors: {error_count} files")
+
+if __name__ == "__main__":
+    # Parse command line arguments
+    delete_original = False
+    file_paths = []
+    
+    for arg in sys.argv[1:]:
+        if arg == "--delete-original":
+            delete_original = True
+        else:
+            file_paths.append(arg)
+    
+    # If file paths provided, use those; otherwise convert all files
+    if file_paths:
+        convert_to_people_schema(file_paths, delete_original=delete_original)
+    else:
+        # No file paths specified, convert all files
+        convert_to_people_schema(delete_original=delete_original)
