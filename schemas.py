@@ -4,6 +4,7 @@ import phonenumbers
 from phonenumbers import PhoneNumberFormat, NumberParseException
 import re
 from urllib.parse import urlparse
+from datetime import datetime, timezone
 
 class Person(BaseModel):
     jurisdiction_id: str
@@ -82,15 +83,15 @@ class Person(BaseModel):
         if v is None:
             return v
         
-        # Valid patterns: YYYY, YYYY/MM, YYYY/MM/DD
+        # Valid patterns: YYYY, YYYY-MM, YYYY-MM-DD
         patterns = [
             r'^\d{4}$',                    # YYYY
-            r'^\d{4}/\d{2}$',              # YYYY/MM  
-            r'^\d{4}/\d{2}/\d{2}$'         # YYYY/MM/DD
+            r'^\d{4}-\d{2}$',              # YYYY-MM  
+            r'^\d{4}-\d{2}-\d{2}$'         # YYYY-MM-DD
         ]
         
         if not any(re.match(pattern, v) for pattern in patterns):
-            raise ValueError(f"Start date must be in format YYYY, YYYY/MM, or YYYY/MM/DD")
+            raise ValueError(f"Start date must be in format YYYY, YYYY-MM, or YYYY-MM-DD")
         
         return v
 
@@ -100,14 +101,35 @@ class Person(BaseModel):
         if v is None:
             return v
         
-        # Valid patterns: YYYY, YYYY/MM, YYYY/MM/DD
+        # Valid patterns: YYYY, YYYY-MM, YYYY-MM-DD
         patterns = [
             r'^\d{4}$',                    # YYYY
-            r'^\d{4}/\d{2}$',              # YYYY/MM  
-            r'^\d{4}/\d{2}/\d{2}$'         # YYYY/MM/DD
+            r'^\d{4}-\d{2}$',              # YYYY-MM  
+            r'^\d{4}-\d{2}-\d{2}$'         # YYYY-MM-DD
         ]
         
         if not any(re.match(pattern, v) for pattern in patterns):
-            raise ValueError(f"End date must be in format YYYY, YYYY/MM, or YYYY/MM/DD")
+            raise ValueError(f"End date must be in format YYYY, YYYY-MM, or YYYY-MM-DD")
         
         return v
+
+    @field_validator('updated_at')
+    @classmethod
+    def validate_updated_at(cls, v):
+        try:
+            # Handle Z format
+            if v.endswith('Z'):
+                v = v[:-1] + '+00:00'
+            
+            # Parse datetime
+            dt = datetime.fromisoformat(v)
+            
+            # Add UTC if no timezone
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            
+            # Return in consistent format (seconds precision)
+            return dt.isoformat(timespec='seconds')
+            
+        except ValueError:
+            raise ValueError(f"Invalid datetime format. Expected: {datetime.now(timezone.utc).isoformat(timespec='seconds')}")

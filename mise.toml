@@ -4,6 +4,7 @@ python = "3.12.11" # must be after poetry so the poetry bin is first in PATH
 
 [env]
 POETRY_VENV_IN_PROJECT = "true"
+PYTHONPATH = "."
 
 [tasks.comp]
 run = """
@@ -13,6 +14,31 @@ python3 ocdid_progress_tracker/main.py
 [tasks.readme]
 run = """
 python3 ocdid_progress_tracker/generate_readme.py
+"""
+
+[tasks.convert-test]
+run = """
+poetry run python scripts/one_off/test_convert_small.py
+"""
+
+[tasks.convert-test-delete]
+run = """
+poetry run python scripts/one_off/test_convert_small.py --delete-original
+"""
+
+[tasks.convert-all]
+run = """
+poetry run python scripts/one_off/convert_to_people_schema.py
+"""
+
+[tasks.convert-all-delete]
+run = """
+poetry run python scripts/one_off/convert_to_people_schema.py --delete-original
+"""
+
+[tasks.test-env]
+run = """
+poetry run python scripts/one_off/test_env.py
 """
 
 #############################################
