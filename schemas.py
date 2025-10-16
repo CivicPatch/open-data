@@ -27,24 +27,13 @@ class Person(BaseModel):
         if v is None:
             return v
         
-        try:
-            # Parse the phone number (assuming US numbers)
-            parsed = phonenumbers.parse(v, "US")
-            
-            # Check if it's a valid number
-            if not phonenumbers.is_valid_number(parsed):
-                # Try to give more helpful error message
-                if phonenumbers.is_possible_number(parsed):
-                    raise ValueError(f"Phone number '{v}' is not a valid US number (check area code)")
-                else:
-                    raise ValueError(f"Phone number '{v}' is not in a valid format")
-            
-            # Format as (XXX) XXX-XXXX
-            formatted = phonenumbers.format_number(parsed, PhoneNumberFormat.NATIONAL)
-            return formatted
-            
-        except NumberParseException as e:
-            raise ValueError(f"Could not parse phone number '{v}': {str(e)}")
+        # Check if it's already in the correct format: (XXX) XXX-XXXX
+        phone_pattern = r'^\(\d{3}\) \d{3}-\d{4}$'
+        
+        if not re.match(phone_pattern, v):
+            raise ValueError(f"Phone number must be in format '(XXX) XXX-XXXX', got: '{v}'")
+        
+        return v
 
     @field_validator('email')
     @classmethod
@@ -52,13 +41,17 @@ class Person(BaseModel):
         if v is None:
             return v
         
-        # Simple regex for anything@anything format
+        # Check basic email format: anything@anything
         email_pattern = r'^[^@]+@[^@]+$'
         
         if not re.match(email_pattern, v):
-            raise ValueError(f"Email '{v}' must be in the format 'anything@anything'")
+            raise ValueError(f"Email must be in format 'anything@anything', got: '{v}'")
         
-        return v.lower()  # Normalize to lowercase
+        # Check if it's already lowercase
+        if v != v.lower():
+            raise ValueError(f"Email must be lowercase, got: '{v}' (should be '{v.lower()}')")
+        
+        return v
 
     @field_validator('website')
     @classmethod
@@ -66,14 +59,14 @@ class Person(BaseModel):
         if v is None:
             return v
         
-        # Add https:// if no scheme provided
+        # Must start with http:// or https://
         if not v.startswith(('http://', 'https://')):
-            v = f"https://{v}"
+            raise ValueError(f"Website must start with 'http://' or 'https://', got: '{v}'")
         
-        # Parse and validate
+        # Parse and validate domain
         parsed = urlparse(v)
         if not parsed.netloc or '.' not in parsed.netloc:
-            raise ValueError(f"Website must be a valid URL with a domain")
+            raise ValueError(f"Website must be a valid URL with a domain, got: '{v}'")
         
         return v
 
@@ -116,20 +109,17 @@ class Person(BaseModel):
     @field_validator('updated_at')
     @classmethod
     def validate_updated_at(cls, v):
+        # Must be in exact format: YYYY-MM-DDTHH:MM:SS+00:00 (or other timezone)
+        datetime_pattern = r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+-]\d{2}:\d{2}$'
+        
+        if not re.match(datetime_pattern, v):
+            expected_format = datetime.now(timezone.utc).isoformat(timespec='seconds')
+            raise ValueError(f"DateTime must be in format '{expected_format}', got: '{v}'")
+        
+        # Try to parse to ensure it's a valid datetime
         try:
-            # Handle Z format
-            if v.endswith('Z'):
-                v = v[:-1] + '+00:00'
-            
-            # Parse datetime
-            dt = datetime.fromisoformat(v)
-            
-            # Add UTC if no timezone
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=timezone.utc)
-            
-            # Return in consistent format (seconds precision)
-            return dt.isoformat(timespec='seconds')
-            
+            datetime.fromisoformat(v)
         except ValueError:
-            raise ValueError(f"Invalid datetime format. Expected: {datetime.now(timezone.utc).isoformat(timespec='seconds')}")
+            raise ValueError(f"Invalid datetime value: '{v}'")
+        
+        return v
