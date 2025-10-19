@@ -41,19 +41,14 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Pull Prebuilt Docker Image
-        run: docker pull ghcr.io/civicpatch/civicpatch-slim:latest
-
       - name: Setup mise
         uses: jdx/mise-action@v3.2.0
         with:
           version: '2025.9.6'
-          cache: true
+          install: true
+          cache: false
           log_level: debug
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
 
       - name: Download ZIP file
         run: |
@@ -80,6 +75,11 @@ jobs:
           ls -l data
           ls -l data_source
           git status
+
+      - name: Install poetry dependencies
+        run: |
+          mise ls
+          poetry install
 
       - name: Validate data
         run: |
