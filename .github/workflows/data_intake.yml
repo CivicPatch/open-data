@@ -44,7 +44,7 @@ jobs:
       - name: Pull Prebuilt Docker Image
         run: docker pull ghcr.io/civicpatch/civicpatch-slim:latest
 
-      - name: Set up mise
+      - name: Setup mise
         uses: jdx/mise-action@v3.2.0
         with:
           version: '2025.9.6'
@@ -52,9 +52,8 @@ jobs:
           log_level: debug
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set up Poetry
-        run: |
-          poetry install
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
 
       - name: Download ZIP file
         run: |
@@ -84,7 +83,7 @@ jobs:
 
       - name: Validate data
         run: |
-          mise validate-jurisdiction ${{ github.event.inputs.jurisdiction_id }}
+          poetry run python scripts/validate_jurisdiction.py ${{ github.event.inputs.jurisdiction_id }}
 
       - name: Get branch name from zip_file_url
         id: extract_branch
