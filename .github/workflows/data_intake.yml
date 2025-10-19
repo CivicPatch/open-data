@@ -34,11 +34,6 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
         with:
@@ -57,9 +52,8 @@ jobs:
           log_level: debug
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install dependencies
+      - name: Set up Poetry
         run: |
-          mise install
           poetry install
 
       - name: Download ZIP file
