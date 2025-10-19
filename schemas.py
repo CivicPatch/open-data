@@ -1,5 +1,5 @@
 from typing import List, Optional
-from pydantic import BaseModel, field_validator
+from pydantic import BaseModel, field_validator, model_validator
 import phonenumbers
 from phonenumbers import PhoneNumberFormat, NumberParseException
 import re
@@ -18,8 +18,13 @@ class Person(BaseModel):
     end_date: Optional[str] = None
     image: Optional[str] = None
     cdn_image: str
-    sources: List[str] # List of source URLs where information was found
+    sources: List[str]  # List of source URLs where information was found
     updated_at: str
+
+    @model_validator(mode="before")
+    def convert_empty_strings_to_null(cls, values):
+        # Iterate through all fields and convert '' to None
+        return {key: (None if value == '' else value) for key, value in values.items()}
 
     @field_validator('phone_number')
     @classmethod
