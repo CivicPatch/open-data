@@ -26,13 +26,15 @@ class Person(BaseModel):
     def validate_phone_number(cls, v):
         if v is None:
             return v
-        
-        # Check if it's already in the correct format: (XXX) XXX-XXXX
-        phone_pattern = r'^\(\d{3}\) \d{3}-\d{4}$'
-        
+
+        # Allow extensions in the format '(XXX) XXX-XXXX' or '(XXX) XXX-XXXX ext.XXX' with optional space after 'ext.'
+        phone_pattern = r'^\(\d{3}\) \d{3}-\d{4}( ext\. ?\d+)?$'
+
         if not re.match(phone_pattern, v):
-            raise ValueError(f"Phone number must be in format '(XXX) XXX-XXXX', got: '{v}'")
-        
+            raise ValueError(
+                f"Phone number must be in format '(XXX) XXX-XXXX' or '(XXX) XXX-XXXX ext.XXX', got: '{v}'"
+            )
+
         return v
 
     @field_validator('email')
@@ -46,10 +48,6 @@ class Person(BaseModel):
         
         if not re.match(email_pattern, v):
             raise ValueError(f"Email must be in format 'anything@anything', got: '{v}'")
-        
-        # Check if it's already lowercase
-        if v != v.lower():
-            raise ValueError(f"Email must be lowercase, got: '{v}' (should be '{v.lower()}')")
         
         return v
 

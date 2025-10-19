@@ -16,18 +16,22 @@ from schemas import Person
 def jurisdiction_to_file(jurisdiction_id):
     """Convert jurisdiction_id to file path."""
     # Parse: ocd_jurisdiction/country:us/state:ca/county:green/place:anaheim/government
-    parts = jurisdiction_id.replace("ocd_jurisdiction/country:us/state:", "").replace("/government", "").split("/")
-    
-    state = parts[0]
+    parts = jurisdiction_id.split("/") 
+
+    state = None
     county = None
     place = None
-    
+
     for part in parts:
-        if part.startswith("county:"):
+        if part.startswith("state:"):
+            state = part.replace("state:", "")
+        elif part.startswith("county:"):
             county = part.replace("county:", "")
         elif part.startswith("place:"):
             place = part.replace("place:", "")
-    
+
+    if not state:
+        raise ValueError(f"No state found in: {jurisdiction_id}") 
     if not place:
         raise ValueError(f"No place found in: {jurisdiction_id}")
     
@@ -58,6 +62,8 @@ def validate_file(file_path, jurisdiction_id):
             try:
                 # Check jurisdiction_id matches
                 if person_data.get('jurisdiction_id') != jurisdiction_id:
+                    # Debugging: Print mismatch if jurisdiction_id does not match
+                    print(f"Mismatch: Expected {jurisdiction_id}, Found {person_data.get('jurisdiction_id')}")
                     errors.append(f"Person {i+1}: Wrong jurisdiction_id")
                     continue
                 

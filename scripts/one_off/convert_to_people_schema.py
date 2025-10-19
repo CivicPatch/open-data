@@ -45,7 +45,7 @@ def convert_to_people_schema(file_paths=None, delete_original=False):
             
             for person_data in data:
                 # Add missing required fields
-                person_data['jurisdiction_id'] = f"ocd_jurisdiction/country:us/state:{state}/place:{place}/government"
+                person_data['jurisdiction_id'] = f"ocd-jurisdiction/country:us/state:{state}/place:{place}/government"
                 
                 # Ensure required fields exist
                 if 'divisions' not in person_data or not person_data['divisions']:
@@ -59,6 +59,27 @@ def convert_to_people_schema(file_paths=None, delete_original=False):
                 
                 if 'updated_at' not in person_data or not person_data['updated_at']:
                     person_data['updated_at'] = datetime.now(timezone.utc).isoformat(timespec='seconds')
+                else:
+                    # Ensure 'updated_at' is in the correct format or reset missing time to 12:00 AM
+                    if 'updated_at' in person_data:
+                        try:
+                            # Parse the existing date
+                            parsed_date = datetime.strptime(person_data['updated_at'], "%Y-%m-%dT%H:%M:%SZ")
+                            # Reformat to the required format
+                            person_data['updated_at'] = parsed_date.replace(tzinfo=timezone.utc).isoformat(timespec='seconds')
+                        except ValueError:
+                            # If time is missing, reset to 12:00 AM
+                            try:
+                                parsed_date = datetime.strptime(person_data['updated_at'], "%Y-%m-%d")
+                                parsed_date = parsed_date.replace(hour=0, minute=0, second=0, tzinfo=timezone.utc)
+                                person_data['updated_at'] = parsed_date.isoformat(timespec='seconds')
+                            except ValueError:
+                                raise ValueError(f"DateTime must be in format '2025-10-19T23:31:54+00:00', got: '{person_data['updated_at']}'")
+                
+                # Ensure 'start_date' and 'end_date' are not '.'; set to null if so
+                for date_field in ['start_date', 'end_date']:
+                    if date_field in person_data and person_data[date_field] == ".":
+                        person_data[date_field] = None
                 
                 # Validate using Pydantic schema
                 person = Person(**person_data)
