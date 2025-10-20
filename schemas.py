@@ -17,7 +17,7 @@ class Person(BaseModel):
     start_date: Optional[str] = None
     end_date: Optional[str] = None
     image: Optional[str] = None
-    cdn_image: str
+    cdn_image: Optional[str] = None
     sources: List[str]  # List of source URLs where information was found
     updated_at: str
 
