@@ -1,0 +1,1137 @@
+[2025-10-21T19:22:42.059412] [INFO] Step 0: INIT
+[2025-10-21T19:22:42.070276] [INFO] Step 1: RESEARCH_MUNICIPALITY
+[2025-10-21T19:22:42.091893] [INFO] Running Gemini prompt
+[2025-10-21T19:22:42.092334] [DEBUG] Prompt: 
+
+    Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
+
+    Municipality: Greensboro city, nc
+
+    Instructions:
+
+    1. Determine the government type of the city. Available government types:
+- mayor_commission
+- mayor_council
+- select_board
+- aldermen
+
+    2. Identify the elected officials in the local government, 
+       including the Mayor (if applicable).
+       2.1. For each official, extract the following details:
+            - name: Full name only (no titles)
+            - roles: List of active municipal roles (e.g., Mayor, Council Member)
+            - divisions: List of (ward, district), only if applicable
+
+    3. Create a JSON object with the following structure:
+       ```json
+       {
+         "government_type": examples - "mayor_council" or "mayor_commission", etc.,
+         "people": [
+           {
+             "name": "Full name of the official or null if uncertain",
+             "roles": ["Mayor", "Council Member", "Commissioner", etc.],
+             "divisions": ["Ward 1", "District 2", etc.] or [],
+           }
+         ],
+         "notes": "Brief notes about the search and results"
+       }
+       ```
+
+    IMPORTANT: If the response contains anything other than a valid JSON object,
+    it will be considered incorrect. Ensure the response is strictly JSON.
+    Verify that the response is valid JSON before returning it.
+    If it is not valid JSON, retry the generation.
+    
+[2025-10-21T19:22:51.934346] [DEBUG] Gemini raw response: {'government_type': 'mayor_council', 'people': [{'name': 'Nancy Vaughan', 'roles': ['Mayor'], 'divisions': []}, {'name': 'Marikay Abuzuaiter', 'roles': ['Mayor Pro Tem', 'Council Member'], 'divisions': ['At-Large']}, {'name': 'Hugh Holston', 'roles': ['Council Member'], 'divisions': ['At-Large']}, {'name': 'Jamilla Pinder', 'roles': ['Council Member'], 'divisions': ['At-Large']}, {'name': 'Sharon Hightower', 'roles': ['Council Member'], 'divisions': ['District 1']}, {'name': 'Goldie F. Wells', 'roles': ['Council Member'], 'divisions': ['District 2']}, {'name': 'Zack Matheny', 'roles': ['Council Member'], 'divisions': ['District 3']}, {'name': 'Nancy Hoffmann', 'roles': ['Council Member'], 'divisions': ['District 4']}, {'name': 'Tammi Thurm', 'roles': ['Council Member'], 'divisions': ['District 5']}], 'notes': 'Greensboro, NC operates under a Council-Manager form of government. The Mayor and three Council members are elected at-large, and five Council members are elected from districts. The Mayor Pro Tem is selected from the Council members. Current council members will serve abbreviated terms until the next election in 2025.'}
+[2025-10-21T19:22:51.936987] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 358, Output tokens: 1439, Total cost: $0.00
+[2025-10-21T19:22:51.937169] [INFO] gemini gemini-2.5-flash LLM call took 9.84 seconds
+[2025-10-21T19:22:51.939294] [INFO] Step 2: SEARCH_LINKS
+[2025-10-21T19:22:51.976630] [INFO] Searching for keyword term: mayor
+[2025-10-21T19:22:51.976916] [INFO] Searching with google for Greensboro city mayor
+[2025-10-21T19:22:52.250350] [INFO] -> https://www.greensboro-nc.gov/government/city-council
+[2025-10-21T19:22:52.250612] [INFO] -> https://www.greensboro-nc.gov/
+[2025-10-21T19:22:52.250755] [INFO] -> https://www.greensboro-nc.gov/government/city-council/council-meetings
+[2025-10-21T19:22:52.250968] [INFO] -> https://www.greensboro-nc.gov/i-want-to/contact/e-mail-city-council
+[2025-10-21T19:22:52.251107] [INFO] -> https://www.greensboro-nc.gov/government/city-council/interact-with-city-council
+[2025-10-21T19:22:52.251187] [INFO] -> https://www.greensboro-nc.gov/Home/Components/FacilityDirectory/FacilityDirectory/2/
+[2025-10-21T19:22:52.251291] [INFO] -> https://www.greensboro-nc.gov/government/city-manager-s-office
+[2025-10-21T19:22:52.251519] [INFO] -> https://www.greensboro-nc.gov/residents/community/maps
+[2025-10-21T19:22:52.251646] [INFO] -> https://www.greensboro-nc.gov/departments/planning
+[2025-10-21T19:22:52.251752] [INFO] -> https://www.greensboro-nc.gov/government/boards-and-commissions
+[2025-10-21T19:22:52.252572] [INFO] Search successful with google. Found 10 results.
+[2025-10-21T19:22:52.252691] [INFO] Searching for keyword term: council members
+[2025-10-21T19:22:52.252794] [INFO] Searching with google for Greensboro city council members
+[2025-10-21T19:22:52.618305] [INFO] -> https://www.greensboro-nc.gov/government/city-council
+[2025-10-21T19:22:52.618595] [INFO] -> https://www.greensboro-nc.gov/government/city-council/council-meetings
+[2025-10-21T19:22:52.618769] [INFO] -> https://www.greensboro-nc.gov/government/city-council/interact-with-city-council
+[2025-10-21T19:22:52.618923] [INFO] -> https://www.greensboro-nc.gov/i-want-to/contact/e-mail-city-council
+[2025-10-21T19:22:52.619009] [INFO] -> https://www.greensboro-nc.gov/
+[2025-10-21T19:22:52.619122] [INFO] -> https://www.greensboro-nc.gov/government/boards-and-commissions
+[2025-10-21T19:22:52.619223] [INFO] -> https://www.greensboro-nc.gov/departments/planning/boards-commissions-meetings/planning-and-zoning-commission
+[2025-10-21T19:22:52.619329] [INFO] -> https://www.greensboro-nc.gov/government/city-council/frequently-asked-questions
+[2025-10-21T19:22:52.619416] [INFO] -> https://www.greensboro-nc.gov/departments/planning
+[2025-10-21T19:22:52.619667] [INFO] -> https://www.greensboro-nc.gov/Home/Components/News/News/20257/36
+[2025-10-21T19:22:52.620003] [INFO] Search successful with google. Found 10 results.
+[2025-10-21T19:22:52.620101] [INFO] Searching for keyword term: elected officials
+[2025-10-21T19:22:52.620186] [INFO] Searching with google for Greensboro city elected officials
+[2025-10-21T19:22:52.899938] [INFO] -> https://www.greensboro-nc.gov/government/city-council
+[2025-10-21T19:22:52.900205] [INFO] -> https://www.greensboro-nc.gov/government/city-council/interact-with-city-council
+[2025-10-21T19:22:52.900426] [INFO] -> https://www.greensboro-nc.gov/
+[2025-10-21T19:22:52.900653] [INFO] -> https://www.greensboro-nc.gov/i-want-to/contact/e-mail-city-council
+[2025-10-21T19:22:52.900999] [INFO] -> https://www.greensboro-nc.gov/government/city-council/council-meetings
+[2025-10-21T19:22:52.901186] [INFO] -> https://www.greensboro-nc.gov/departments
+[2025-10-21T19:22:52.901343] [INFO] -> https://www.greensboro-nc.gov/government/city-manager-s-office
+[2025-10-21T19:22:52.901497] [INFO] -> https://www.greensboro-nc.gov/departments/planning
+[2025-10-21T19:22:52.901633] [INFO] -> https://www.greensboro-nc.gov/government
+[2025-10-21T19:22:52.901722] [INFO] -> https://www.greensboro-nc.gov/residents/community/maps
+[2025-10-21T19:22:52.901942] [INFO] Search successful with google. Found 10 results.
+[2025-10-21T19:22:52.903436] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.greensboro-nc.gov/government/city-council
+[2025-10-21T19:22:55.892785] [DEBUG] Attempting direct download for image: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2025-10-21T19:22:55.918769] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/3f3f3a8d0882.png
+[2025-10-21T19:22:55.925520] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T19:22:55.979539] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000: HTTP 403
+[2025-10-21T19:22:55.980901] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T19:22:56.240755] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/905f2571f89b.png
+[2025-10-21T19:22:56.267270] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T19:22:56.310366] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000: HTTP 403
+[2025-10-21T19:22:56.311087] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T19:22:56.577792] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/ac9d47e6ef7b.png
+[2025-10-21T19:22:56.605304] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T19:22:56.640354] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000: HTTP 403
+[2025-10-21T19:22:56.641004] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T19:22:56.890327] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/418597758fed.png
+[2025-10-21T19:22:56.923359] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T19:22:56.962491] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000: HTTP 403
+[2025-10-21T19:22:56.963165] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T19:22:57.207181] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/c497888ce312.png
+[2025-10-21T19:22:57.234618] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T19:22:57.284577] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000: HTTP 403
+[2025-10-21T19:22:57.285068] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T19:22:57.628578] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/d29ef06889ef.png
+[2025-10-21T19:22:57.667366] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T19:22:57.707641] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000: HTTP 403
+[2025-10-21T19:22:57.708160] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T19:22:58.003333] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/7298e0cc0f82.png
+[2025-10-21T19:22:58.042690] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/39396/638751413912470000
+[2025-10-21T19:22:58.099972] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/39396/638751413912470000: HTTP 403
+[2025-10-21T19:22:58.100572] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/39396/638751413912470000
+[2025-10-21T19:22:58.829547] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/64d5a566a1a6.png
+[2025-10-21T19:22:58.868544] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T19:22:58.917303] [WARNING] Failed direct download for https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png: HTTP 403
+[2025-10-21T19:22:58.918137] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T19:22:59.174564] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/1e2c25e8afe9.png
+[2025-10-21T19:22:59.211298] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T19:22:59.256766] [WARNING] Failed direct download for https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png: HTTP 403
+[2025-10-21T19:22:59.257536] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T19:22:59.523850] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/1e2c25e8afe9.png
+[2025-10-21T19:22:59.557347] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T19:22:59.606683] [WARNING] Failed direct download for https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png: HTTP 403
+[2025-10-21T19:22:59.607199] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T19:22:59.840278] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/1e2c25e8afe9.png
+[2025-10-21T19:22:59.870152] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T19:22:59.904761] [WARNING] Failed direct download for https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png: HTTP 403
+[2025-10-21T19:22:59.905364] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T19:23:00.174822] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/1e2c25e8afe9.png
+[2025-10-21T19:23:00.214465] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T19:23:00.256762] [WARNING] Failed direct download for https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png: HTTP 403
+[2025-10-21T19:23:00.257488] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T19:23:00.539998] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/1e2c25e8afe9.png
+[2025-10-21T19:23:00.580262] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T19:23:00.632525] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000: HTTP 403
+[2025-10-21T19:23:00.633133] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T19:23:00.942236] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/9a4812d60466.png
+[2025-10-21T19:23:00.987658] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T19:23:01.027283] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000: HTTP 403
+[2025-10-21T19:23:01.028056] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T19:23:01.324079] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/724891535320.png
+[2025-10-21T19:23:01.360574] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T19:23:01.402056] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000: HTTP 403
+[2025-10-21T19:23:01.402665] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T19:23:01.674538] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/97f6cff21062.png
+[2025-10-21T19:23:01.710836] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T19:23:01.751560] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000: HTTP 403
+[2025-10-21T19:23:01.752539] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T19:23:02.008787] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/d01c198668e2.png
+[2025-10-21T19:23:02.046433] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T19:23:02.102835] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000: HTTP 403
+[2025-10-21T19:23:02.103609] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T19:23:02.391838] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/71725d34df28.png
+[2025-10-21T19:23:02.442406] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2025-10-21T19:23:02.455011] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/54fb0f1c-a6d3-11ef-9354-819c52b83814%2Fmedia-manager%2F1732224644824-b642a4e5-e336-fdf0-ad1a-5d20fe199224.png
+[2025-10-21T19:23:02.506283] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/0c29396ea313.png
+[2025-10-21T19:23:02.514914] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/facebook.png
+[2025-10-21T19:23:02.555725] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/1856ee978803.png
+[2025-10-21T19:23:02.562246] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/instagram.png
+[2025-10-21T19:23:02.607826] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/5ad3ce5968f3.png
+[2025-10-21T19:23:02.613788] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/linkedin.png
+[2025-10-21T19:23:02.654884] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/1e418c6c7cf9.png
+[2025-10-21T19:23:02.661981] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/nextdoor.png
+[2025-10-21T19:23:02.704761] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/2e783218d036.png
+[2025-10-21T19:23:02.716296] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/x.png
+[2025-10-21T19:23:02.755389] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/68db9cc80233.png
+[2025-10-21T19:23:02.761984] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/youtube.png
+[2025-10-21T19:23:02.811364] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/b5ffd2d93e26.png
+[2025-10-21T19:23:02.974533] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.greensboro-nc.gov/government/city-council
+[2025-10-21T19:23:13.271591] [INFO] -> Progress: 75% (1062/1412)
+[2025-10-21T19:23:22.364032] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2025-10-21T19:23:22.364690] [INFO] -> Elapsed time: 19.39 seconds
+[2025-10-21T19:23:22.366226] [INFO] -> Average elapsed time: 19.39 seconds
+[2025-10-21T19:23:22.367504] [INFO] -> Total elapsed time: 19.39 seconds
+[2025-10-21T19:23:22.370000] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.greensboro-nc.gov/government/city-council
+[2025-10-21T19:23:22.370561] [INFO] Running Gemini prompt
+[2025-10-21T19:23:22.370666] [DEBUG] Prompt: 
+
+    First, determine if the content contains relevant information about the main governing body of the target municipality. If the content includes information about the following people, they are very likely to be on the council: Nancy Vaughan, Marikay Abuzuaiter, Hugh Holston, Jamilla Pinder, Sharon Hightower, Goldie F. Wells, Zack Matheny, Nancy Hoffmann, Tammi Thurm.
+    If not, return an empty JSON array `[]`.
+
+    Target Roles: mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+    Target Divisions: ward, district
+    Current Date: 2025-10-21
+
+    Return a JSON object with people, each having:
+    - name: (String) Full name only (no titles)
+    - image: (String or null) URL to profile image (https://...)
+    - roles: (Array of strings) Active municipal roles
+    - divisions: (Array of strings) Specific district/ward names
+    - phone_number: (String or null) Formatted phone number
+    - email: (String or null) Email address
+    - website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+    - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+    Guidelines:
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - Website extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided `current_date` to filter out roles or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+    
+[2025-10-21T19:23:48.814222] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 3183, Output tokens: 682, Total cost: $0.00
+[2025-10-21T19:23:48.817361] [INFO] gemini gemini-2.5-flash LLM call took 26.45 seconds
+[2025-10-21T19:23:48.818692] [INFO] Running OpenAI prompt
+[2025-10-21T19:23:48.818921] [DEBUG] Prompt: 
+
+You are an expert data extractor focused on accuracy.
+
+First, determine if the content contains relevant information about any of the main governing body of a municipality. Here is a list of known target people (may be missing or include extra): Nancy Vaughan, Marikay Abuzuaiter, Hugh Holston, Jamilla Pinder, Sharon Hightower, Goldie F. Wells, Zack Matheny, Nancy Hoffmann, Tammi Thurm.
+If not, return an empty JSON array `[]`.
+
+Target Person (if applicable): 
+Target roles: mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+Target divisions: ward, district
+Current Date: 2025-10-21
+
+Return a JSON object.
+
+Output Field Definitions & Structure:
+- name: (String) Full name only (no titles).
+- image: (String or null) URL to profile image (https://...)
+- roles: (Array of strings) Active municipal roles.
+         Identify their official job title or specific position.
+         This can be a wide variety of municipal roles (e.g., "Mayor", "City Manager", "Selectman",
+         "Alderman", "Council Member").
+- divisions: (Array of strings) Specific district/ward and name/number,
+          only if specified (e.g., "Ward 1", "District 2").
+- phone_number: (String or null) Formatted phone number
+- email: (String or null) Email address (email@example.com)
+- website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+- start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+- end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+Extraction Guidelines:
+- Roles extraction:
+  - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+  - If a role includes additional descriptors or variations, normalize it to the closest matching target role when possible.
+    - Example: "Vice President" under a governing body → Normalize to the closest matching target role, such as "Council Vice President" or "Commissioner Vice President."
+    - If a role cannot be normalized to a target role but is clearly valid (e.g., "Vice President"), extract it as-is.
+  - Use the governing body or surrounding context to determine the correct role for ambiguous titles.
+    - Example: If "Vice President" is listed under "Council Members," infer it as "Council Vice President."
+    - Example: If "Vice President" appears without clear context, extract it as "Vice President."
+  - Include only active roles (today is 2025-10-21).
+
+- Divisions:
+  - Extract divisions if explicitly mentioned and relevant to the person's role.
+  - Do not infer divisions if they are not explicitly stated.
+
+- General Guidelines:
+  - Merge details for the same person into a single record.
+  - Assign confidence (0-1 scale) and provide a brief reason for each field's data.
+  - Extract full names only (e.g., "John Smith," not "Mayor John Smith"). Titles belong in the roles field.
+  - Ensure extracted data is accurate and relevant to the governing body or target roles.
+- Image: Extract URL of portrait/headshot near name. Ignore logos, banners, icons. Check alt text but prioritize proximity/style.
+- Contact Details (Phone/Email/Website):
+  - Associate details logically if near the person's name/section.
+  - Pick the most relevant contact detail if multiple are present.
+  - Phone numbers:
+    - Extract number after labels like "Office:", "Cell:", "Mobile:", "Direct:", "Home:". Exclude "Fax:". Format numbers simply.
+  - Markdown Links: Extract email/phone from the VISIBLE TEXT of links like `[TEXT](...)`, ignore the target URL.
+  - `website` data MUST be a valid http/https URL. Prefer profile pages. EXCLUDE mailto:, tel:.
+  - `email` data should ONLY contain email addresses.
+- Term Dates (`start_date`, `end_date`):
+  - Extract start_date and end_date in YYYY, YYYY-MM, or YYYY-MM-DD format.
+  - Acceptable date phrases include:
+    - “Elected [date]”, “Appointed [date]”, “Term: [date1] to [date2]”, “Since [date]”.
+    - For vague phrases like "Spring 2025", extract the year only.
+  - If more than one term is mentioned, extract the most recent term dates.
+  - Examples:
+    - "Elected Nov 2024 for term ending Dec 2028" -> start_date: "2024-11", end_date: "2028-12"
+    - "Served January 2018 until December 2021 - Re-elected and serving January 2022 and until December 2025" -> start_date: "2022-01", end_date: "2025-12"
+    - "Elected in 2017 and re-elected in 2021 for the 2022-2025 term." -> start_date: "2022", end_date: "2025"
+
+**FINAL MANDATORY CHECK**: Review your entire response for accuracy before submitting,
+  paying close attention to the role inference, date extraction, and term identification rules.
+
+[2025-10-21T19:24:07.136036] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 3218, Output tokens: 860, Total cost: $0.00
+[2025-10-21T19:24:07.136539] [INFO] openai LLM call took 18.32 seconds
+[2025-10-21T19:24:07.143284] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:07.143539] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:07.143738] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:07.143985] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:07.144141] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:07.144348] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:07.144567] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:07.144812] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:07.144952] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:07.145161] [INFO] Current data: 0
+[2025-10-21T19:24:07.145318] [INFO] Required data: 9
+[2025-10-21T19:24:07.145471] [INFO] Minimum required data: 6
+[2025-10-21T19:24:07.145638] [INFO] Has target role: False
+[2025-10-21T19:24:07.145778] [INFO] Has target divisions (if available): False
+[2025-10-21T19:24:07.146198] [INFO] Current total cost for this run: $0.02
+[2025-10-21T19:24:07.146440] [INFO] Not enough data processed yet, collecting more data... 0/14
+[2025-10-21T19:24:07.152742] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.greensboro-nc.gov/
+[2025-10-21T19:24:09.372410] [DEBUG] Attempting direct download for image: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2025-10-21T19:24:09.394285] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/3f3f3a8d0882.png
+[2025-10-21T19:24:09.400259] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T19:24:09.434599] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000: HTTP 403
+[2025-10-21T19:24:09.435489] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T19:24:09.674904] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/905f2571f89b.png
+[2025-10-21T19:24:09.696844] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T19:24:09.742340] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000: HTTP 403
+[2025-10-21T19:24:09.742889] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T19:24:09.956764] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/ac9d47e6ef7b.png
+[2025-10-21T19:24:09.978677] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T19:24:10.018250] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000: HTTP 403
+[2025-10-21T19:24:10.018823] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T19:24:10.239225] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/418597758fed.png
+[2025-10-21T19:24:10.259865] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T19:24:10.295923] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000: HTTP 403
+[2025-10-21T19:24:10.296592] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T19:24:10.508740] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/c497888ce312.png
+[2025-10-21T19:24:10.529753] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T19:24:10.569084] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000: HTTP 403
+[2025-10-21T19:24:10.570890] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T19:24:10.896852] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/d29ef06889ef.png
+[2025-10-21T19:24:10.918325] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T19:24:10.955307] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000: HTTP 403
+[2025-10-21T19:24:10.955812] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T19:24:11.148808] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/7298e0cc0f82.png
+[2025-10-21T19:24:11.171471] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/36510/638499922823670000
+[2025-10-21T19:24:11.225086] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/36510/638499922823670000: HTTP 403
+[2025-10-21T19:24:11.225562] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/36510/638499922823670000
+[2025-10-21T19:24:11.896351] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/b65944aff0a1.png
+[2025-10-21T19:24:11.938178] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/33246/638253582811770000
+[2025-10-21T19:24:11.994163] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/33246/638253582811770000: HTTP 403
+[2025-10-21T19:24:11.994696] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/33246/638253582811770000
+[2025-10-21T19:24:12.738593] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/ab95f3485632.png
+[2025-10-21T19:24:12.769288] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/30205/638009932438230000
+[2025-10-21T19:24:12.807394] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/30205/638009932438230000: HTTP 403
+[2025-10-21T19:24:12.807915] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/30205/638009932438230000
+[2025-10-21T19:24:13.241791] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/94994e7441c6.png
+[2025-10-21T19:24:13.264992] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/30377/638004864719670000
+[2025-10-21T19:24:13.308291] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/30377/638004864719670000: HTTP 403
+[2025-10-21T19:24:13.308959] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/30377/638004864719670000
+[2025-10-21T19:24:13.687808] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/6f353425576a.png
+[2025-10-21T19:24:13.710601] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/27428/638004864480630000
+[2025-10-21T19:24:13.750579] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/27428/638004864480630000: HTTP 403
+[2025-10-21T19:24:13.751149] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/27428/638004864480630000
+[2025-10-21T19:24:14.215500] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/1d41f931556d.png
+[2025-10-21T19:24:14.240287] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/27416/638004863917970000
+[2025-10-21T19:24:14.290460] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/27416/638004863917970000: HTTP 403
+[2025-10-21T19:24:14.290913] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/27416/638004863917970000
+[2025-10-21T19:24:14.670239] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/c46c6bb67d1f.png
+[2025-10-21T19:24:14.693509] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/27422/638004866015570000
+[2025-10-21T19:24:14.726109] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/27422/638004866015570000: HTTP 403
+[2025-10-21T19:24:14.726738] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/27422/638004866015570000
+[2025-10-21T19:24:15.159920] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/25b7ccf1cccc.png
+[2025-10-21T19:24:15.181804] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/31905/638144825665570000
+[2025-10-21T19:24:15.216896] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/31905/638144825665570000: HTTP 403
+[2025-10-21T19:24:15.219693] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/31905/638144825665570000
+[2025-10-21T19:24:15.728847] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/2535e22519c2.png
+[2025-10-21T19:24:15.757279] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/27410/638004863170900000
+[2025-10-21T19:24:15.793541] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/27410/638004863170900000: HTTP 403
+[2025-10-21T19:24:15.794017] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/27410/638004863170900000
+[2025-10-21T19:24:16.282313] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/dfeb86b3108d.png
+[2025-10-21T19:24:16.306049] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/28560/637824373673770000
+[2025-10-21T19:24:16.347516] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/28560/637824373673770000: HTTP 403
+[2025-10-21T19:24:16.348297] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/28560/637824373673770000
+[2025-10-21T19:24:16.586285] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/ed2e93b073b0.png
+[2025-10-21T19:24:16.609146] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/40692/638848081870400000
+[2025-10-21T19:24:16.647453] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/40692/638848081870400000: HTTP 403
+[2025-10-21T19:24:16.648180] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/40692/638848081870400000
+[2025-10-21T19:24:16.888249] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/3c6eb65ad6d7.png
+[2025-10-21T19:24:16.912196] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/40602/638835886462130000
+[2025-10-21T19:24:16.956121] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/40602/638835886462130000: HTTP 403
+[2025-10-21T19:24:16.956629] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/40602/638835886462130000
+[2025-10-21T19:24:17.191708] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/947a78d385f0.png
+[2025-10-21T19:24:17.213685] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/32735/638193261595630000
+[2025-10-21T19:24:17.250251] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/32735/638193261595630000: HTTP 403
+[2025-10-21T19:24:17.250789] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/32735/638193261595630000
+[2025-10-21T19:24:17.491433] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/0a4747807687.png
+[2025-10-21T19:24:17.514394] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/29777/637959150063870000
+[2025-10-21T19:24:17.546694] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/29777/637959150063870000: HTTP 403
+[2025-10-21T19:24:17.547411] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/29777/637959150063870000
+[2025-10-21T19:24:17.745372] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/0297910232c5.png
+[2025-10-21T19:24:17.766907] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15448/636511962407230000
+[2025-10-21T19:24:17.798597] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15448/636511962407230000: HTTP 403
+[2025-10-21T19:24:17.799240] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15448/636511962407230000
+[2025-10-21T19:24:18.007378] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/2b80c654e9a0.png
+[2025-10-21T19:24:18.029709] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15450/636511963973530000
+[2025-10-21T19:24:18.061123] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15450/636511963973530000: HTTP 403
+[2025-10-21T19:24:18.061570] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15450/636511963973530000
+[2025-10-21T19:24:18.290286] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/be32b067da42.png
+[2025-10-21T19:24:18.313570] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15630/636513911352130000
+[2025-10-21T19:24:18.347020] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15630/636513911352130000: HTTP 403
+[2025-10-21T19:24:18.347545] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15630/636513911352130000
+[2025-10-21T19:24:18.565753] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/31ded26a3bf3.png
+[2025-10-21T19:24:18.591603] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15452/636511964129170000
+[2025-10-21T19:24:18.643912] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15452/636511964129170000: HTTP 403
+[2025-10-21T19:24:18.644524] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15452/636511964129170000
+[2025-10-21T19:24:18.862349] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/49729be4aaf7.png
+[2025-10-21T19:24:18.888704] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15454/636511964276500000
+[2025-10-21T19:24:18.927942] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15454/636511964276500000: HTTP 403
+[2025-10-21T19:24:18.928319] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15454/636511964276500000
+[2025-10-21T19:24:19.122738] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/ba64ed90adfd.png
+[2025-10-21T19:24:19.145275] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15588/636513909993570000
+[2025-10-21T19:24:19.182440] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15588/636513909993570000: HTTP 403
+[2025-10-21T19:24:19.183126] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15588/636513909993570000
+[2025-10-21T19:24:19.411545] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/99680dae9bd6.png
+[2025-10-21T19:24:19.432789] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15456/636511964450100000
+[2025-10-21T19:24:19.467309] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15456/636511964450100000: HTTP 403
+[2025-10-21T19:24:19.467735] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15456/636511964450100000
+[2025-10-21T19:24:19.673262] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/721c89a71282.png
+[2025-10-21T19:24:19.695248] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15526/636511949464370000
+[2025-10-21T19:24:19.728984] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15526/636511949464370000: HTTP 403
+[2025-10-21T19:24:19.729433] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15526/636511949464370000
+[2025-10-21T19:24:19.922741] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/0342fa710fb1.png
+[2025-10-21T19:24:19.945221] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15522/636511949459200000
+[2025-10-21T19:24:19.979165] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15522/636511949459200000: HTTP 403
+[2025-10-21T19:24:19.979995] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15522/636511949459200000
+[2025-10-21T19:24:20.190853] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/ea624485dda5.png
+[2025-10-21T19:24:20.212934] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15624/636513911068300000
+[2025-10-21T19:24:20.256335] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15624/636513911068300000: HTTP 403
+[2025-10-21T19:24:20.257033] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15624/636513911068300000
+[2025-10-21T19:24:20.479245] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/0808c488277b.png
+[2025-10-21T19:24:20.502150] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15524/636511949461700000
+[2025-10-21T19:24:20.537300] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15524/636511949461700000: HTTP 403
+[2025-10-21T19:24:20.537890] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15524/636511949461700000
+[2025-10-21T19:24:20.739945] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/93331faa58fa.png
+[2025-10-21T19:24:20.761911] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15520/638289164355700000
+[2025-10-21T19:24:20.799436] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15520/638289164355700000: HTTP 403
+[2025-10-21T19:24:20.799949] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15520/638289164355700000
+[2025-10-21T19:24:21.007163] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/ea6e818d9846.png
+[2025-10-21T19:24:21.029647] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T19:24:21.066714] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000: HTTP 403
+[2025-10-21T19:24:21.067127] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T19:24:21.273465] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/9a4812d60466.png
+[2025-10-21T19:24:21.299006] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T19:24:21.340288] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000: HTTP 403
+[2025-10-21T19:24:21.340806] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T19:24:21.543584] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/724891535320.png
+[2025-10-21T19:24:21.567099] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T19:24:21.603815] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000: HTTP 403
+[2025-10-21T19:24:21.604560] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T19:24:21.811236] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/97f6cff21062.png
+[2025-10-21T19:24:21.835179] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T19:24:21.876958] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000: HTTP 403
+[2025-10-21T19:24:21.877262] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T19:24:22.122630] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/d01c198668e2.png
+[2025-10-21T19:24:22.143754] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T19:24:22.185188] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000: HTTP 403
+[2025-10-21T19:24:22.185721] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T19:24:22.389865] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/71725d34df28.png
+[2025-10-21T19:24:22.412707] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2025-10-21T19:24:22.416626] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/54fb0f1c-a6d3-11ef-9354-819c52b83814%2Fmedia-manager%2F1732224644824-b642a4e5-e336-fdf0-ad1a-5d20fe199224.png
+[2025-10-21T19:24:22.442965] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/0c29396ea313.png
+[2025-10-21T19:24:22.447275] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/facebook.png
+[2025-10-21T19:24:22.467217] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/1856ee978803.png
+[2025-10-21T19:24:22.472038] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/instagram.png
+[2025-10-21T19:24:22.502755] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/5ad3ce5968f3.png
+[2025-10-21T19:24:22.507075] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/linkedin.png
+[2025-10-21T19:24:22.528962] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/1e418c6c7cf9.png
+[2025-10-21T19:24:22.533268] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/nextdoor.png
+[2025-10-21T19:24:22.555850] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/2e783218d036.png
+[2025-10-21T19:24:22.562319] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/x.png
+[2025-10-21T19:24:22.599861] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/68db9cc80233.png
+[2025-10-21T19:24:22.605286] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/youtube.png
+[2025-10-21T19:24:22.634981] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/b5ffd2d93e26.png
+[2025-10-21T19:24:22.779643] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.greensboro-nc.gov/
+[2025-10-21T19:24:33.035731] [INFO] -> Progress: 99% (1788/1795)
+[2025-10-21T19:24:33.400899] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2025-10-21T19:24:33.401005] [INFO] -> Elapsed time: 10.62 seconds
+[2025-10-21T19:24:33.401066] [INFO] -> Average elapsed time: 14.81 seconds
+[2025-10-21T19:24:33.401122] [INFO] -> Total elapsed time: 29.62 seconds
+[2025-10-21T19:24:33.403061] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.greensboro-nc.gov/
+[2025-10-21T19:24:33.403694] [INFO] Running Gemini prompt
+[2025-10-21T19:24:33.403769] [DEBUG] Prompt: 
+
+    First, determine if the content contains relevant information about the main governing body of the target municipality. If the content includes information about the following people, they are very likely to be on the council: Nancy Vaughan, Marikay Abuzuaiter, Hugh Holston, Jamilla Pinder, Sharon Hightower, Goldie F. Wells, Zack Matheny, Nancy Hoffmann, Tammi Thurm.
+    If not, return an empty JSON array `[]`.
+
+    Target Roles: mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+    Target Divisions: ward, district
+    Current Date: 2025-10-21
+
+    Return a JSON object with people, each having:
+    - name: (String) Full name only (no titles)
+    - image: (String or null) URL to profile image (https://...)
+    - roles: (Array of strings) Active municipal roles
+    - divisions: (Array of strings) Specific district/ward names
+    - phone_number: (String or null) Formatted phone number
+    - email: (String or null) Email address
+    - website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+    - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+    Guidelines:
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - Website extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided `current_date` to filter out roles or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+    
+[2025-10-21T19:24:37.063094] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 3870, Output tokens: 89, Total cost: $0.00
+[2025-10-21T19:24:37.066060] [INFO] gemini gemini-2.5-flash LLM call took 3.66 seconds
+[2025-10-21T19:24:37.066984] [INFO] Running OpenAI prompt
+[2025-10-21T19:24:37.067142] [DEBUG] Prompt: 
+
+You are an expert data extractor focused on accuracy.
+
+First, determine if the content contains relevant information about any of the main governing body of a municipality. Here is a list of known target people (may be missing or include extra): Nancy Vaughan, Marikay Abuzuaiter, Hugh Holston, Jamilla Pinder, Sharon Hightower, Goldie F. Wells, Zack Matheny, Nancy Hoffmann, Tammi Thurm.
+If not, return an empty JSON array `[]`.
+
+Target Person (if applicable): 
+Target roles: mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+Target divisions: ward, district
+Current Date: 2025-10-21
+
+Return a JSON object.
+
+Output Field Definitions & Structure:
+- name: (String) Full name only (no titles).
+- image: (String or null) URL to profile image (https://...)
+- roles: (Array of strings) Active municipal roles.
+         Identify their official job title or specific position.
+         This can be a wide variety of municipal roles (e.g., "Mayor", "City Manager", "Selectman",
+         "Alderman", "Council Member").
+- divisions: (Array of strings) Specific district/ward and name/number,
+          only if specified (e.g., "Ward 1", "District 2").
+- phone_number: (String or null) Formatted phone number
+- email: (String or null) Email address (email@example.com)
+- website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+- start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+- end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+Extraction Guidelines:
+- Roles extraction:
+  - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+  - If a role includes additional descriptors or variations, normalize it to the closest matching target role when possible.
+    - Example: "Vice President" under a governing body → Normalize to the closest matching target role, such as "Council Vice President" or "Commissioner Vice President."
+    - If a role cannot be normalized to a target role but is clearly valid (e.g., "Vice President"), extract it as-is.
+  - Use the governing body or surrounding context to determine the correct role for ambiguous titles.
+    - Example: If "Vice President" is listed under "Council Members," infer it as "Council Vice President."
+    - Example: If "Vice President" appears without clear context, extract it as "Vice President."
+  - Include only active roles (today is 2025-10-21).
+
+- Divisions:
+  - Extract divisions if explicitly mentioned and relevant to the person's role.
+  - Do not infer divisions if they are not explicitly stated.
+
+- General Guidelines:
+  - Merge details for the same person into a single record.
+  - Assign confidence (0-1 scale) and provide a brief reason for each field's data.
+  - Extract full names only (e.g., "John Smith," not "Mayor John Smith"). Titles belong in the roles field.
+  - Ensure extracted data is accurate and relevant to the governing body or target roles.
+- Image: Extract URL of portrait/headshot near name. Ignore logos, banners, icons. Check alt text but prioritize proximity/style.
+- Contact Details (Phone/Email/Website):
+  - Associate details logically if near the person's name/section.
+  - Pick the most relevant contact detail if multiple are present.
+  - Phone numbers:
+    - Extract number after labels like "Office:", "Cell:", "Mobile:", "Direct:", "Home:". Exclude "Fax:". Format numbers simply.
+  - Markdown Links: Extract email/phone from the VISIBLE TEXT of links like `[TEXT](...)`, ignore the target URL.
+  - `website` data MUST be a valid http/https URL. Prefer profile pages. EXCLUDE mailto:, tel:.
+  - `email` data should ONLY contain email addresses.
+- Term Dates (`start_date`, `end_date`):
+  - Extract start_date and end_date in YYYY, YYYY-MM, or YYYY-MM-DD format.
+  - Acceptable date phrases include:
+    - “Elected [date]”, “Appointed [date]”, “Term: [date1] to [date2]”, “Since [date]”.
+    - For vague phrases like "Spring 2025", extract the year only.
+  - If more than one term is mentioned, extract the most recent term dates.
+  - Examples:
+    - "Elected Nov 2024 for term ending Dec 2028" -> start_date: "2024-11", end_date: "2028-12"
+    - "Served January 2018 until December 2021 - Re-elected and serving January 2022 and until December 2025" -> start_date: "2022-01", end_date: "2025-12"
+    - "Elected in 2017 and re-elected in 2021 for the 2022-2025 term." -> start_date: "2022", end_date: "2025"
+
+**FINAL MANDATORY CHECK**: Review your entire response for accuracy before submitting,
+  paying close attention to the role inference, date extraction, and term identification rules.
+
+[2025-10-21T19:24:39.547212] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 3831, Output tokens: 94, Total cost: $0.00
+[2025-10-21T19:24:39.547586] [INFO] openai LLM call took 2.48 seconds
+[2025-10-21T19:24:39.552700] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:39.552883] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:39.553049] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:39.553297] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:39.553438] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:39.553702] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:39.553943] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:39.554095] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:39.554243] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:39.554604] [INFO] Current data: 0
+[2025-10-21T19:24:39.554774] [INFO] Required data: 9
+[2025-10-21T19:24:39.554900] [INFO] Minimum required data: 6
+[2025-10-21T19:24:39.555063] [INFO] Has target role: False
+[2025-10-21T19:24:39.555212] [INFO] Has target divisions (if available): False
+[2025-10-21T19:24:39.555475] [INFO] Current total cost for this run: $0.03
+[2025-10-21T19:24:39.555598] [INFO] Not enough data processed yet, collecting more data... 1/14
+[2025-10-21T19:24:39.557694] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.greensboro-nc.gov/government/city-council/council-meetings
+[2025-10-21T19:24:43.055351] [DEBUG] Attempting direct download for image: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2025-10-21T19:24:43.093708] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/3f3f3a8d0882.png
+[2025-10-21T19:24:43.098604] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T19:24:43.130145] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000: HTTP 403
+[2025-10-21T19:24:43.130706] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T19:24:43.324091] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/905f2571f89b.png
+[2025-10-21T19:24:43.347408] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T19:24:43.385772] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000: HTTP 403
+[2025-10-21T19:24:43.386429] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T19:24:43.589773] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/ac9d47e6ef7b.png
+[2025-10-21T19:24:43.613536] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T19:24:43.656212] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000: HTTP 403
+[2025-10-21T19:24:43.656678] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T19:24:43.873438] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/418597758fed.png
+[2025-10-21T19:24:43.893658] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T19:24:43.930434] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000: HTTP 403
+[2025-10-21T19:24:43.931053] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T19:24:44.140005] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/c497888ce312.png
+[2025-10-21T19:24:44.163104] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T19:24:44.193689] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000: HTTP 403
+[2025-10-21T19:24:44.194353] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T19:24:44.480654] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/d29ef06889ef.png
+[2025-10-21T19:24:44.502334] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T19:24:44.539312] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000: HTTP 403
+[2025-10-21T19:24:44.539974] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T19:24:44.764938] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/7298e0cc0f82.png
+[2025-10-21T19:24:44.788011] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/26464/637998780512130000
+[2025-10-21T19:24:44.819908] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/26464/637998780512130000: HTTP 403
+[2025-10-21T19:24:44.820314] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/26464/637998780512130000
+[2025-10-21T19:24:45.191981] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/f7423533b0b7.png
+[2025-10-21T19:24:45.214903] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/26462/637601315821830000
+[2025-10-21T19:24:45.255800] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/26462/637601315821830000: HTTP 403
+[2025-10-21T19:24:45.256442] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/26462/637601315821830000
+[2025-10-21T19:24:45.536876] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/642667467718.png
+[2025-10-21T19:24:45.559201] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/26472/637601431972230000
+[2025-10-21T19:24:45.592129] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/26472/637601431972230000: HTTP 403
+[2025-10-21T19:24:45.592671] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/26472/637601431972230000
+[2025-10-21T19:24:45.858740] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/17cb2f5bccfe.png
+[2025-10-21T19:24:45.880632] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T19:24:45.921623] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000: HTTP 403
+[2025-10-21T19:24:45.922165] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T19:24:46.123196] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/9a4812d60466.png
+[2025-10-21T19:24:46.145772] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T19:24:46.183041] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000: HTTP 403
+[2025-10-21T19:24:46.183493] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T19:24:46.389412] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/724891535320.png
+[2025-10-21T19:24:46.413619] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T19:24:46.460683] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000: HTTP 403
+[2025-10-21T19:24:46.461311] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T19:24:46.655825] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/97f6cff21062.png
+[2025-10-21T19:24:46.677100] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T19:24:46.712751] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000: HTTP 403
+[2025-10-21T19:24:46.713135] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T19:24:46.906114] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/d01c198668e2.png
+[2025-10-21T19:24:46.927451] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T19:24:46.962160] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000: HTTP 403
+[2025-10-21T19:24:46.962714] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T19:24:47.156512] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/71725d34df28.png
+[2025-10-21T19:24:47.177967] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/54fb0f1c-a6d3-11ef-9354-819c52b83814%2Fmedia-manager%2F1732224644824-b642a4e5-e336-fdf0-ad1a-5d20fe199224.png
+[2025-10-21T19:24:47.204853] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/0c29396ea313.png
+[2025-10-21T19:24:47.209318] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/facebook.png
+[2025-10-21T19:24:47.234256] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/1856ee978803.png
+[2025-10-21T19:24:47.239029] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/instagram.png
+[2025-10-21T19:24:47.261393] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/5ad3ce5968f3.png
+[2025-10-21T19:24:47.266654] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/linkedin.png
+[2025-10-21T19:24:47.300172] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/1e418c6c7cf9.png
+[2025-10-21T19:24:47.308065] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/nextdoor.png
+[2025-10-21T19:24:47.340667] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/2e783218d036.png
+[2025-10-21T19:24:47.345298] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/x.png
+[2025-10-21T19:24:47.375892] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/68db9cc80233.png
+[2025-10-21T19:24:47.380591] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/youtube.png
+[2025-10-21T19:24:47.404713] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/b5ffd2d93e26.png
+[2025-10-21T19:24:47.409265] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2025-10-21T19:24:47.512575] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.greensboro-nc.gov/government/city-council/council-meetings
+[2025-10-21T19:24:54.781750] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2025-10-21T19:24:54.781915] [INFO] -> Elapsed time: 7.27 seconds
+[2025-10-21T19:24:54.781968] [INFO] -> Average elapsed time: 12.09 seconds
+[2025-10-21T19:24:54.782034] [INFO] -> Total elapsed time: 36.27 seconds
+[2025-10-21T19:24:54.783534] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.greensboro-nc.gov/government/city-council/council-meetings
+[2025-10-21T19:24:54.784082] [INFO] Running Gemini prompt
+[2025-10-21T19:24:54.784175] [DEBUG] Prompt: 
+
+    First, determine if the content contains relevant information about the main governing body of the target municipality. If the content includes information about the following people, they are very likely to be on the council: Nancy Vaughan, Marikay Abuzuaiter, Hugh Holston, Jamilla Pinder, Sharon Hightower, Goldie F. Wells, Zack Matheny, Nancy Hoffmann, Tammi Thurm.
+    If not, return an empty JSON array `[]`.
+
+    Target Roles: mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+    Target Divisions: ward, district
+    Current Date: 2025-10-21
+
+    Return a JSON object with people, each having:
+    - name: (String) Full name only (no titles)
+    - image: (String or null) URL to profile image (https://...)
+    - roles: (Array of strings) Active municipal roles
+    - divisions: (Array of strings) Specific district/ward names
+    - phone_number: (String or null) Formatted phone number
+    - email: (String or null) Email address
+    - website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+    - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+    Guidelines:
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - Website extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided `current_date` to filter out roles or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+    
+[2025-10-21T19:24:57.178590] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 2186, Output tokens: 68, Total cost: $0.00
+[2025-10-21T19:24:57.181293] [INFO] gemini gemini-2.5-flash LLM call took 2.40 seconds
+[2025-10-21T19:24:57.182264] [INFO] Running OpenAI prompt
+[2025-10-21T19:24:57.182420] [DEBUG] Prompt: 
+
+You are an expert data extractor focused on accuracy.
+
+First, determine if the content contains relevant information about any of the main governing body of a municipality. Here is a list of known target people (may be missing or include extra): Nancy Vaughan, Marikay Abuzuaiter, Hugh Holston, Jamilla Pinder, Sharon Hightower, Goldie F. Wells, Zack Matheny, Nancy Hoffmann, Tammi Thurm.
+If not, return an empty JSON array `[]`.
+
+Target Person (if applicable): 
+Target roles: mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+Target divisions: ward, district
+Current Date: 2025-10-21
+
+Return a JSON object.
+
+Output Field Definitions & Structure:
+- name: (String) Full name only (no titles).
+- image: (String or null) URL to profile image (https://...)
+- roles: (Array of strings) Active municipal roles.
+         Identify their official job title or specific position.
+         This can be a wide variety of municipal roles (e.g., "Mayor", "City Manager", "Selectman",
+         "Alderman", "Council Member").
+- divisions: (Array of strings) Specific district/ward and name/number,
+          only if specified (e.g., "Ward 1", "District 2").
+- phone_number: (String or null) Formatted phone number
+- email: (String or null) Email address (email@example.com)
+- website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+- start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+- end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+Extraction Guidelines:
+- Roles extraction:
+  - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+  - If a role includes additional descriptors or variations, normalize it to the closest matching target role when possible.
+    - Example: "Vice President" under a governing body → Normalize to the closest matching target role, such as "Council Vice President" or "Commissioner Vice President."
+    - If a role cannot be normalized to a target role but is clearly valid (e.g., "Vice President"), extract it as-is.
+  - Use the governing body or surrounding context to determine the correct role for ambiguous titles.
+    - Example: If "Vice President" is listed under "Council Members," infer it as "Council Vice President."
+    - Example: If "Vice President" appears without clear context, extract it as "Vice President."
+  - Include only active roles (today is 2025-10-21).
+
+- Divisions:
+  - Extract divisions if explicitly mentioned and relevant to the person's role.
+  - Do not infer divisions if they are not explicitly stated.
+
+- General Guidelines:
+  - Merge details for the same person into a single record.
+  - Assign confidence (0-1 scale) and provide a brief reason for each field's data.
+  - Extract full names only (e.g., "John Smith," not "Mayor John Smith"). Titles belong in the roles field.
+  - Ensure extracted data is accurate and relevant to the governing body or target roles.
+- Image: Extract URL of portrait/headshot near name. Ignore logos, banners, icons. Check alt text but prioritize proximity/style.
+- Contact Details (Phone/Email/Website):
+  - Associate details logically if near the person's name/section.
+  - Pick the most relevant contact detail if multiple are present.
+  - Phone numbers:
+    - Extract number after labels like "Office:", "Cell:", "Mobile:", "Direct:", "Home:". Exclude "Fax:". Format numbers simply.
+  - Markdown Links: Extract email/phone from the VISIBLE TEXT of links like `[TEXT](...)`, ignore the target URL.
+  - `website` data MUST be a valid http/https URL. Prefer profile pages. EXCLUDE mailto:, tel:.
+  - `email` data should ONLY contain email addresses.
+- Term Dates (`start_date`, `end_date`):
+  - Extract start_date and end_date in YYYY, YYYY-MM, or YYYY-MM-DD format.
+  - Acceptable date phrases include:
+    - “Elected [date]”, “Appointed [date]”, “Term: [date1] to [date2]”, “Since [date]”.
+    - For vague phrases like "Spring 2025", extract the year only.
+  - If more than one term is mentioned, extract the most recent term dates.
+  - Examples:
+    - "Elected Nov 2024 for term ending Dec 2028" -> start_date: "2024-11", end_date: "2028-12"
+    - "Served January 2018 until December 2021 - Re-elected and serving January 2022 and until December 2025" -> start_date: "2022-01", end_date: "2025-12"
+    - "Elected in 2017 and re-elected in 2021 for the 2022-2025 term." -> start_date: "2022", end_date: "2025"
+
+**FINAL MANDATORY CHECK**: Review your entire response for accuracy before submitting,
+  paying close attention to the role inference, date extraction, and term identification rules.
+
+[2025-10-21T19:24:59.226890] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 2372, Output tokens: 64, Total cost: $0.00
+[2025-10-21T19:24:59.227405] [INFO] openai LLM call took 2.04 seconds
+[2025-10-21T19:24:59.233477] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:59.233780] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:59.233949] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:59.234097] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:59.234253] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:59.234477] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:59.234642] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:59.234837] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:59.234968] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:24:59.235166] [INFO] Current data: 0
+[2025-10-21T19:24:59.235320] [INFO] Required data: 9
+[2025-10-21T19:24:59.235452] [INFO] Minimum required data: 6
+[2025-10-21T19:24:59.235599] [INFO] Has target role: False
+[2025-10-21T19:24:59.235724] [INFO] Has target divisions (if available): False
+[2025-10-21T19:24:59.235981] [INFO] Current total cost for this run: $0.03
+[2025-10-21T19:24:59.236165] [INFO] Not enough data processed yet, collecting more data... 2/14
+[2025-10-21T19:24:59.240068] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.greensboro-nc.gov/government/city-council/interact-with-city-council
+[2025-10-21T19:25:04.698077] [DEBUG] Attempting direct download for image: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2025-10-21T19:25:04.718805] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/3f3f3a8d0882.png
+[2025-10-21T19:25:04.725608] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T19:25:04.772711] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000: HTTP 403
+[2025-10-21T19:25:04.773066] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T19:25:05.007036] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/905f2571f89b.png
+[2025-10-21T19:25:05.034632] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T19:25:05.076817] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000: HTTP 403
+[2025-10-21T19:25:05.077206] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T19:25:05.273010] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/ac9d47e6ef7b.png
+[2025-10-21T19:25:05.298831] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T19:25:05.333098] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000: HTTP 403
+[2025-10-21T19:25:05.333574] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T19:25:05.577248] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/418597758fed.png
+[2025-10-21T19:25:05.600179] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T19:25:05.640328] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000: HTTP 403
+[2025-10-21T19:25:05.640704] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T19:25:05.857917] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/c497888ce312.png
+[2025-10-21T19:25:05.881058] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T19:25:05.922602] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000: HTTP 403
+[2025-10-21T19:25:05.924215] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T19:25:06.228347] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/d29ef06889ef.png
+[2025-10-21T19:25:06.251191] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T19:25:06.295158] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000: HTTP 403
+[2025-10-21T19:25:06.295520] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T19:25:06.514293] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/7298e0cc0f82.png
+[2025-10-21T19:25:06.539710] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/26462/637601315821830000
+[2025-10-21T19:25:06.576125] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/26462/637601315821830000: HTTP 403
+[2025-10-21T19:25:06.576960] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/26462/637601315821830000
+[2025-10-21T19:25:06.845039] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/642667467718.png
+[2025-10-21T19:25:06.867544] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/30670/638028287037900000
+[2025-10-21T19:25:06.901032] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/30670/638028287037900000: HTTP 403
+[2025-10-21T19:25:06.901405] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/30670/638028287037900000
+[2025-10-21T19:25:07.109511] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/69da94da97e1.png
+[2025-10-21T19:25:07.133784] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/5845/638028278965130000
+[2025-10-21T19:25:07.178768] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/5845/638028278965130000: HTTP 403
+[2025-10-21T19:25:07.179398] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/5845/638028278965130000
+[2025-10-21T19:25:07.458972] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/d249694569d8.png
+[2025-10-21T19:25:07.481033] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/30265/638318536081830000
+[2025-10-21T19:25:07.517524] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/30265/638318536081830000: HTTP 403
+[2025-10-21T19:25:07.518052] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/30265/638318536081830000
+[2025-10-21T19:25:07.854653] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/7af1f80f058f.png
+[2025-10-21T19:25:07.878406] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/39276/638784151225130000
+[2025-10-21T19:25:07.911826] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/39276/638784151225130000: HTTP 403
+[2025-10-21T19:25:07.912447] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/39276/638784151225130000
+[2025-10-21T19:25:08.655020] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/6dae74c2a24c.png
+[2025-10-21T19:25:08.701266] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/10230/638028304351000000
+[2025-10-21T19:25:08.740206] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/10230/638028304351000000: HTTP 403
+[2025-10-21T19:25:08.740750] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/10230/638028304351000000
+[2025-10-21T19:25:08.942329] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/c5b26a9fe910.png
+[2025-10-21T19:25:08.964824] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/14845/638029244382970000
+[2025-10-21T19:25:09.002283] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/14845/638029244382970000: HTTP 403
+[2025-10-21T19:25:09.003527] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/14845/638029244382970000
+[2025-10-21T19:25:09.209326] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/8e9c780cc779.png
+[2025-10-21T19:25:09.233262] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/30257/638784152026670000
+[2025-10-21T19:25:09.270852] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/30257/638784152026670000: HTTP 403
+[2025-10-21T19:25:09.271360] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/30257/638784152026670000
+[2025-10-21T19:25:10.069961] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/44e0ebc8b7cc.png
+[2025-10-21T19:25:10.120427] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/5847/638784150671900000
+[2025-10-21T19:25:10.162200] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/5847/638784150671900000: HTTP 403
+[2025-10-21T19:25:10.162836] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/5847/638784150671900000
+[2025-10-21T19:25:11.134631] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/8a8d2680f5cb.png
+[2025-10-21T19:25:11.195500] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/26694/638784150054870000
+[2025-10-21T19:25:11.235873] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/26694/638784150054870000: HTTP 403
+[2025-10-21T19:25:11.236241] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/26694/638784150054870000
+[2025-10-21T19:25:11.988860] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/a92d28722aec.png
+[2025-10-21T19:25:12.037409] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T19:25:12.076967] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000: HTTP 403
+[2025-10-21T19:25:12.077388] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T19:25:12.307178] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/9a4812d60466.png
+[2025-10-21T19:25:12.329309] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T19:25:12.366047] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000: HTTP 403
+[2025-10-21T19:25:12.366499] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T19:25:12.605571] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/724891535320.png
+[2025-10-21T19:25:12.628318] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T19:25:12.665777] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000: HTTP 403
+[2025-10-21T19:25:12.666591] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T19:25:12.872002] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/97f6cff21062.png
+[2025-10-21T19:25:12.896674] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T19:25:12.933001] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000: HTTP 403
+[2025-10-21T19:25:12.933809] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T19:25:13.139628] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/d01c198668e2.png
+[2025-10-21T19:25:13.162944] [DEBUG] Attempting direct download for image: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T19:25:13.196996] [WARNING] Failed direct download for https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000: HTTP 403
+[2025-10-21T19:25:13.197644] [DEBUG] Attempting to visit and screenshot image by <img> tag in a separate context: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T19:25:13.406546] [INFO] Image captured via <img> tag screenshot in separate context: /app/data_source/nc/place_greensboro/images/71725d34df28.png
+[2025-10-21T19:25:13.429974] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2025-10-21T19:25:13.434801] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/54fb0f1c-a6d3-11ef-9354-819c52b83814%2Fmedia-manager%2F1732224644824-b642a4e5-e336-fdf0-ad1a-5d20fe199224.png
+[2025-10-21T19:25:13.463112] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/0c29396ea313.png
+[2025-10-21T19:25:13.467558] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/facebook.png
+[2025-10-21T19:25:13.494541] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/1856ee978803.png
+[2025-10-21T19:25:13.498653] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/instagram.png
+[2025-10-21T19:25:13.527448] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/5ad3ce5968f3.png
+[2025-10-21T19:25:13.532588] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/linkedin.png
+[2025-10-21T19:25:13.562592] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/1e418c6c7cf9.png
+[2025-10-21T19:25:13.568135] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/nextdoor.png
+[2025-10-21T19:25:13.602565] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/2e783218d036.png
+[2025-10-21T19:25:13.607493] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/x.png
+[2025-10-21T19:25:13.631503] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/68db9cc80233.png
+[2025-10-21T19:25:13.637095] [DEBUG] Attempting direct download for image: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/youtube.png
+[2025-10-21T19:25:13.660489] [DEBUG] Image downloaded directly: /app/data_source/nc/place_greensboro/images/b5ffd2d93e26.png
+[2025-10-21T19:25:13.794264] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.greensboro-nc.gov/government/city-council/interact-with-city-council
+[2025-10-21T19:25:22.608859] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2025-10-21T19:25:22.608994] [INFO] -> Elapsed time: 8.81 seconds
+[2025-10-21T19:25:22.609048] [INFO] -> Average elapsed time: 11.20 seconds
+[2025-10-21T19:25:22.609125] [INFO] -> Total elapsed time: 44.81 seconds
+[2025-10-21T19:25:22.610746] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.greensboro-nc.gov/government/city-council/interact-with-city-council
+[2025-10-21T19:25:22.611265] [INFO] Running Gemini prompt
+[2025-10-21T19:25:22.611361] [DEBUG] Prompt: 
+
+    First, determine if the content contains relevant information about the main governing body of the target municipality. If the content includes information about the following people, they are very likely to be on the council: Nancy Vaughan, Marikay Abuzuaiter, Hugh Holston, Jamilla Pinder, Sharon Hightower, Goldie F. Wells, Zack Matheny, Nancy Hoffmann, Tammi Thurm.
+    If not, return an empty JSON array `[]`.
+
+    Target Roles: mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+    Target Divisions: ward, district
+    Current Date: 2025-10-21
+
+    Return a JSON object with people, each having:
+    - name: (String) Full name only (no titles)
+    - image: (String or null) URL to profile image (https://...)
+    - roles: (Array of strings) Active municipal roles
+    - divisions: (Array of strings) Specific district/ward names
+    - phone_number: (String or null) Formatted phone number
+    - email: (String or null) Email address
+    - website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+    - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+    Guidelines:
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - Website extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided `current_date` to filter out roles or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+    
+[2025-10-21T19:25:45.179764] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 3924, Output tokens: 1115, Total cost: $0.00
+[2025-10-21T19:25:45.182491] [INFO] gemini gemini-2.5-flash LLM call took 22.57 seconds
+[2025-10-21T19:25:45.183474] [INFO] Running OpenAI prompt
+[2025-10-21T19:25:45.183634] [DEBUG] Prompt: 
+
+You are an expert data extractor focused on accuracy.
+
+First, determine if the content contains relevant information about any of the main governing body of a municipality. Here is a list of known target people (may be missing or include extra): Nancy Vaughan, Marikay Abuzuaiter, Hugh Holston, Jamilla Pinder, Sharon Hightower, Goldie F. Wells, Zack Matheny, Nancy Hoffmann, Tammi Thurm.
+If not, return an empty JSON array `[]`.
+
+Target Person (if applicable): 
+Target roles: mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+Target divisions: ward, district
+Current Date: 2025-10-21
+
+Return a JSON object.
+
+Output Field Definitions & Structure:
+- name: (String) Full name only (no titles).
+- image: (String or null) URL to profile image (https://...)
+- roles: (Array of strings) Active municipal roles.
+         Identify their official job title or specific position.
+         This can be a wide variety of municipal roles (e.g., "Mayor", "City Manager", "Selectman",
+         "Alderman", "Council Member").
+- divisions: (Array of strings) Specific district/ward and name/number,
+          only if specified (e.g., "Ward 1", "District 2").
+- phone_number: (String or null) Formatted phone number
+- email: (String or null) Email address (email@example.com)
+- website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+- start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+- end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+Extraction Guidelines:
+- Roles extraction:
+  - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+  - If a role includes additional descriptors or variations, normalize it to the closest matching target role when possible.
+    - Example: "Vice President" under a governing body → Normalize to the closest matching target role, such as "Council Vice President" or "Commissioner Vice President."
+    - If a role cannot be normalized to a target role but is clearly valid (e.g., "Vice President"), extract it as-is.
+  - Use the governing body or surrounding context to determine the correct role for ambiguous titles.
+    - Example: If "Vice President" is listed under "Council Members," infer it as "Council Vice President."
+    - Example: If "Vice President" appears without clear context, extract it as "Vice President."
+  - Include only active roles (today is 2025-10-21).
+
+- Divisions:
+  - Extract divisions if explicitly mentioned and relevant to the person's role.
+  - Do not infer divisions if they are not explicitly stated.
+
+- General Guidelines:
+  - Merge details for the same person into a single record.
+  - Assign confidence (0-1 scale) and provide a brief reason for each field's data.
+  - Extract full names only (e.g., "John Smith," not "Mayor John Smith"). Titles belong in the roles field.
+  - Ensure extracted data is accurate and relevant to the governing body or target roles.
+- Image: Extract URL of portrait/headshot near name. Ignore logos, banners, icons. Check alt text but prioritize proximity/style.
+- Contact Details (Phone/Email/Website):
+  - Associate details logically if near the person's name/section.
+  - Pick the most relevant contact detail if multiple are present.
+  - Phone numbers:
+    - Extract number after labels like "Office:", "Cell:", "Mobile:", "Direct:", "Home:". Exclude "Fax:". Format numbers simply.
+  - Markdown Links: Extract email/phone from the VISIBLE TEXT of links like `[TEXT](...)`, ignore the target URL.
+  - `website` data MUST be a valid http/https URL. Prefer profile pages. EXCLUDE mailto:, tel:.
+  - `email` data should ONLY contain email addresses.
+- Term Dates (`start_date`, `end_date`):
+  - Extract start_date and end_date in YYYY, YYYY-MM, or YYYY-MM-DD format.
+  - Acceptable date phrases include:
+    - “Elected [date]”, “Appointed [date]”, “Term: [date1] to [date2]”, “Since [date]”.
+    - For vague phrases like "Spring 2025", extract the year only.
+  - If more than one term is mentioned, extract the most recent term dates.
+  - Examples:
+    - "Elected Nov 2024 for term ending Dec 2028" -> start_date: "2024-11", end_date: "2028-12"
+    - "Served January 2018 until December 2021 - Re-elected and serving January 2022 and until December 2025" -> start_date: "2022-01", end_date: "2025-12"
+    - "Elected in 2017 and re-elected in 2021 for the 2022-2025 term." -> start_date: "2022", end_date: "2025"
+
+**FINAL MANDATORY CHECK**: Review your entire response for accuracy before submitting,
+  paying close attention to the role inference, date extraction, and term identification rules.
+
+[2025-10-21T19:26:07.721548] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 3834, Output tokens: 933, Total cost: $0.00
+[2025-10-21T19:26:07.722071] [INFO] openai LLM call took 22.54 seconds
+[2025-10-21T19:26:07.738097] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.738640] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.738800] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.739263] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.739413] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.739770] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.741523] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.743487] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.743782] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.744155] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.744509] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.744639] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.744817] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.744931] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.745095] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.745244] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.745408] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.745560] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T19:26:07.745728] [INFO] Current data: 9
+[2025-10-21T19:26:07.745837] [INFO] Required data: 9
+[2025-10-21T19:26:07.745952] [INFO] Minimum required data: 6
+[2025-10-21T19:26:07.746124] [INFO] Has target role: True
+[2025-10-21T19:26:07.746249] [INFO] Has target divisions (if available): True
+[2025-10-21T19:26:07.746573] [INFO] Current total cost for this run: $0.04
+[2025-10-21T19:26:07.746686] [INFO] Enough data processed, moving to report generation...
+[2025-10-21T19:26:07.783585] [INFO] Step 9: CLEANUP
+[2025-10-21T19:26:07.807493] [INFO] Step 5: MAYBE_SEND_TO_GITHUB
+[2025-10-21T19:26:07.807644] [INFO] CRUDDER_UPLOAD_URL: https://crudder.civicpatch.org/api/github_intake
