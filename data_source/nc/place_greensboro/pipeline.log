@@ -1,0 +1,1252 @@
+[2025-10-21T23:14:49.751222] [INFO] Step 0: INIT
+[2025-10-21T23:14:49.776353] [INFO] Step 1: RESEARCH_MUNICIPALITY
+[2025-10-21T23:14:49.801172] [INFO] Running Gemini prompt
+[2025-10-21T23:14:49.801834] [DEBUG] Prompt: 
+
+    Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
+
+    Municipality: Greensboro city, nc
+
+    Instructions:
+
+    1. Determine the government type of the city. Available government types:
+- mayor_commission
+- mayor_council
+- select_board
+- aldermen
+
+    2. Identify the elected officials in the local government, 
+       including the Mayor (if applicable).
+       2.1. For each official, extract the following details:
+            - name: Full name only (no titles)
+            - roles: List of active municipal roles (e.g., Mayor, Council Member)
+            - divisions: List of (ward, district), only if applicable
+
+    3. Create a JSON object with the following structure:
+       ```json
+       {
+         "government_type": examples - "mayor_council" or "mayor_commission", etc.,
+         "people": [
+           {
+             "name": "Full name of the official or null if uncertain",
+             "roles": ["Mayor", "Council Member", "Commissioner", etc.],
+             "divisions": ["Ward 1", "District 2", etc.] or [],
+           }
+         ],
+         "notes": "Brief notes about the search and results"
+       }
+       ```
+
+    IMPORTANT: If the response contains anything other than a valid JSON object,
+    it will be considered incorrect. Ensure the response is strictly JSON.
+    Verify that the response is valid JSON before returning it.
+    If it is not valid JSON, retry the generation.
+    
+[2025-10-21T23:14:58.268165] [DEBUG] Gemini raw response: {'government_type': 'mayor_council', 'people': [{'name': 'Nancy Vaughan', 'roles': ['Mayor'], 'divisions': []}, {'name': 'Marikay Abuzuaiter', 'roles': ['Mayor Pro Tem', 'Council Member'], 'divisions': []}, {'name': 'Hugh Holston', 'roles': ['Council Member'], 'divisions': []}, {'name': 'Jamilla Pinder', 'roles': ['Council Member'], 'divisions': []}, {'name': 'Sharon Hightower', 'roles': ['Council Member'], 'divisions': ['District 1']}, {'name': 'Goldie F. Wells', 'roles': ['Council Member'], 'divisions': ['District 2']}, {'name': 'Zack Matheny', 'roles': ['Council Member'], 'divisions': ['District 3']}, {'name': 'Nancy Hoffmann', 'roles': ['Council Member'], 'divisions': ['District 4']}, {'name': 'Tammi Thurm', 'roles': ['Council Member'], 'divisions': ['District 5']}], 'notes': "Greensboro, NC operates under a Council-Manager form of government. The City Council consists of a Mayor and eight Council members. The Mayor and three Council members are elected at-large, and five Council members are elected from districts. Mayor Nancy Vaughan's current term ends in 2025, and she announced in May 2024 that she would not seek re-election."}
+[2025-10-21T23:14:58.270570] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 358, Output tokens: 1369, Total cost: $0.00
+[2025-10-21T23:14:58.270743] [INFO] gemini gemini-2.5-flash LLM call took 8.47 seconds
+[2025-10-21T23:14:58.272697] [INFO] Step 2: SEARCH_LINKS
+[2025-10-21T23:14:58.302320] [INFO] Searching for keyword term: mayor
+[2025-10-21T23:14:58.302724] [INFO] Searching with google for Greensboro city mayor
+[2025-10-21T23:14:58.564030] [INFO] -> https://www.greensboro-nc.gov/government/city-council
+[2025-10-21T23:14:58.564581] [INFO] -> https://www.greensboro-nc.gov/
+[2025-10-21T23:14:58.564884] [INFO] -> https://www.greensboro-nc.gov/government/city-council/council-meetings
+[2025-10-21T23:14:58.565172] [INFO] -> https://www.greensboro-nc.gov/i-want-to/contact/e-mail-city-council
+[2025-10-21T23:14:58.565547] [INFO] -> https://www.greensboro-nc.gov/government/city-council/interact-with-city-council
+[2025-10-21T23:14:58.565835] [INFO] -> https://www.greensboro-nc.gov/Home/Components/FacilityDirectory/FacilityDirectory/2/
+[2025-10-21T23:14:58.566060] [INFO] -> https://www.greensboro-nc.gov/government/city-manager-s-office
+[2025-10-21T23:14:58.566476] [INFO] -> https://www.greensboro-nc.gov/residents/community/maps
+[2025-10-21T23:14:58.566676] [INFO] -> https://www.greensboro-nc.gov/departments/planning
+[2025-10-21T23:14:58.566978] [INFO] -> https://www.greensboro-nc.gov/government/boards-and-commissions
+[2025-10-21T23:14:58.567712] [INFO] Search successful with google. Found 10 results.
+[2025-10-21T23:14:58.567877] [INFO] Searching for keyword term: council members
+[2025-10-21T23:14:58.568008] [INFO] Searching with google for Greensboro city council members
+[2025-10-21T23:14:58.874287] [INFO] -> https://www.greensboro-nc.gov/government/city-council
+[2025-10-21T23:14:58.874683] [INFO] -> https://www.greensboro-nc.gov/government/city-council/council-meetings
+[2025-10-21T23:14:58.874887] [INFO] -> https://www.greensboro-nc.gov/government/city-council/interact-with-city-council
+[2025-10-21T23:14:58.875113] [INFO] -> https://www.greensboro-nc.gov/
+[2025-10-21T23:14:58.875359] [INFO] -> https://www.greensboro-nc.gov/i-want-to/contact/e-mail-city-council
+[2025-10-21T23:14:58.875691] [INFO] -> https://www.greensboro-nc.gov/government/boards-and-commissions
+[2025-10-21T23:14:58.875855] [INFO] -> https://www.greensboro-nc.gov/departments/planning/boards-commissions-meetings/planning-and-zoning-commission
+[2025-10-21T23:14:58.876034] [INFO] -> https://www.greensboro-nc.gov/government/city-council/frequently-asked-questions
+[2025-10-21T23:14:58.876174] [INFO] -> https://www.greensboro-nc.gov/departments/planning
+[2025-10-21T23:14:58.876314] [INFO] -> https://www.greensboro-nc.gov/Home/Components/News/News/20257/36
+[2025-10-21T23:14:58.876677] [INFO] Search successful with google. Found 10 results.
+[2025-10-21T23:14:58.876836] [INFO] Searching for keyword term: elected officials
+[2025-10-21T23:14:58.877173] [INFO] Searching with google for Greensboro city elected officials
+[2025-10-21T23:14:59.239992] [INFO] -> https://www.greensboro-nc.gov/government/city-council
+[2025-10-21T23:14:59.240398] [INFO] -> https://www.greensboro-nc.gov/government/city-council/interact-with-city-council
+[2025-10-21T23:14:59.240642] [INFO] -> https://www.greensboro-nc.gov/
+[2025-10-21T23:14:59.240828] [INFO] -> https://www.greensboro-nc.gov/i-want-to/contact/e-mail-city-council
+[2025-10-21T23:14:59.241042] [INFO] -> https://www.greensboro-nc.gov/government/city-council/council-meetings
+[2025-10-21T23:14:59.241190] [INFO] -> https://www.greensboro-nc.gov/departments
+[2025-10-21T23:14:59.241334] [INFO] -> https://www.greensboro-nc.gov/government/city-manager-s-office
+[2025-10-21T23:14:59.241452] [INFO] -> https://www.greensboro-nc.gov/departments/planning
+[2025-10-21T23:14:59.241570] [INFO] -> https://www.greensboro-nc.gov/government
+[2025-10-21T23:14:59.241716] [INFO] -> https://www.greensboro-nc.gov/residents/community/maps
+[2025-10-21T23:14:59.242006] [INFO] Search successful with google. Found 10 results.
+[2025-10-21T23:14:59.244037] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.greensboro-nc.gov/government/city-council
+[2025-10-21T23:15:01.422371] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2025-10-21T23:15:01.422899] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2025-10-21T23:15:01.454156] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/3f3f3a8d0882.png
+[2025-10-21T23:15:01.466071] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T23:15:01.466732] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T23:15:01.524217] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000: HTTP 403
+[2025-10-21T23:15:01.524705] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T23:15:01.533072] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/905f2571f89b.png
+[2025-10-21T23:15:01.539598] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T23:15:01.540047] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T23:15:01.585005] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000: HTTP 403
+[2025-10-21T23:15:01.588150] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T23:15:01.596087] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/ac9d47e6ef7b.png
+[2025-10-21T23:15:01.609515] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T23:15:01.611698] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T23:15:01.659759] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000: HTTP 403
+[2025-10-21T23:15:01.660303] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T23:15:01.667602] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/418597758fed.png
+[2025-10-21T23:15:01.676463] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T23:15:01.679450] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T23:15:01.733548] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000: HTTP 403
+[2025-10-21T23:15:01.734085] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T23:15:01.746510] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/c497888ce312.png
+[2025-10-21T23:15:01.791044] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T23:15:01.791789] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T23:15:01.834094] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000: HTTP 403
+[2025-10-21T23:15:01.837738] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T23:15:01.905191] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/d29ef06889ef.png
+[2025-10-21T23:15:01.910453] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T23:15:01.910858] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T23:15:01.976155] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000: HTTP 403
+[2025-10-21T23:15:01.976836] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T23:15:01.988471] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/7298e0cc0f82.png
+[2025-10-21T23:15:01.992982] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/39396/638751413912470000
+[2025-10-21T23:15:01.993415] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/39396/638751413912470000
+[2025-10-21T23:15:02.044389] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/39396/638751413912470000: HTTP 403
+[2025-10-21T23:15:02.044798] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/39396/638751413912470000
+[2025-10-21T23:15:02.457158] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/64d5a566a1a6.png
+[2025-10-21T23:15:02.461969] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T23:15:02.462322] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T23:15:02.506393] [WARNING] Failed to load image https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png: HTTP 403
+[2025-10-21T23:15:02.506896] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T23:15:02.512893] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/1e2c25e8afe9.png
+[2025-10-21T23:15:02.517946] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T23:15:02.518291] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T23:15:02.566043] [WARNING] Failed to load image https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png: HTTP 403
+[2025-10-21T23:15:02.566897] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T23:15:02.571852] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/1e2c25e8afe9.png
+[2025-10-21T23:15:02.578118] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T23:15:02.579036] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T23:15:02.622301] [WARNING] Failed to load image https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png: HTTP 403
+[2025-10-21T23:15:02.622717] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T23:15:02.626608] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/1e2c25e8afe9.png
+[2025-10-21T23:15:02.639857] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T23:15:02.640322] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T23:15:02.686337] [WARNING] Failed to load image https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png: HTTP 403
+[2025-10-21T23:15:02.687079] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T23:15:02.697712] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/1e2c25e8afe9.png
+[2025-10-21T23:15:02.708277] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T23:15:02.708685] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T23:15:02.747905] [WARNING] Failed to load image https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png: HTTP 403
+[2025-10-21T23:15:02.750837] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/DefaultContent/Default/_gfx/document_icons/pdf.png
+[2025-10-21T23:15:02.760130] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/1e2c25e8afe9.png
+[2025-10-21T23:15:02.774076] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T23:15:02.774558] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T23:15:02.826506] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000: HTTP 403
+[2025-10-21T23:15:02.826877] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T23:15:02.841218] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/9a4812d60466.png
+[2025-10-21T23:15:02.846338] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T23:15:02.846927] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T23:15:02.901724] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000: HTTP 403
+[2025-10-21T23:15:02.905112] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T23:15:02.916393] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/724891535320.png
+[2025-10-21T23:15:02.928860] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T23:15:02.929742] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T23:15:02.987275] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000: HTTP 403
+[2025-10-21T23:15:02.989094] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T23:15:02.997118] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/97f6cff21062.png
+[2025-10-21T23:15:03.008626] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T23:15:03.010221] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T23:15:03.062739] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000: HTTP 403
+[2025-10-21T23:15:03.063850] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T23:15:03.076521] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/d01c198668e2.png
+[2025-10-21T23:15:03.081675] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T23:15:03.082520] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T23:15:03.136634] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000: HTTP 403
+[2025-10-21T23:15:03.137894] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T23:15:03.150342] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/71725d34df28.png
+[2025-10-21T23:15:03.159160] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2025-10-21T23:15:03.166111] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/54fb0f1c-a6d3-11ef-9354-819c52b83814%2Fmedia-manager%2F1732224644824-b642a4e5-e336-fdf0-ad1a-5d20fe199224.png
+[2025-10-21T23:15:03.166904] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/54fb0f1c-a6d3-11ef-9354-819c52b83814%2Fmedia-manager%2F1732224644824-b642a4e5-e336-fdf0-ad1a-5d20fe199224.png
+[2025-10-21T23:15:03.209474] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/0c29396ea313.png
+[2025-10-21T23:15:03.221733] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/facebook.png
+[2025-10-21T23:15:03.225164] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/facebook.png
+[2025-10-21T23:15:03.262556] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/1856ee978803.png
+[2025-10-21T23:15:03.274014] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/instagram.png
+[2025-10-21T23:15:03.274445] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/instagram.png
+[2025-10-21T23:15:03.332710] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/5ad3ce5968f3.png
+[2025-10-21T23:15:03.342347] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/linkedin.png
+[2025-10-21T23:15:03.342811] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/linkedin.png
+[2025-10-21T23:15:03.395704] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/1e418c6c7cf9.png
+[2025-10-21T23:15:03.408629] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/nextdoor.png
+[2025-10-21T23:15:03.409149] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/nextdoor.png
+[2025-10-21T23:15:03.445219] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/2e783218d036.png
+[2025-10-21T23:15:03.459366] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/x.png
+[2025-10-21T23:15:03.459844] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/x.png
+[2025-10-21T23:15:03.505272] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/68db9cc80233.png
+[2025-10-21T23:15:03.510851] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/youtube.png
+[2025-10-21T23:15:03.511247] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/youtube.png
+[2025-10-21T23:15:03.578743] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/b5ffd2d93e26.png
+[2025-10-21T23:15:03.713055] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.greensboro-nc.gov/government/city-council
+[2025-10-21T23:15:13.334719] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2025-10-21T23:15:13.334832] [INFO] -> Elapsed time: 9.62 seconds
+[2025-10-21T23:15:13.334894] [INFO] -> Average elapsed time: 9.62 seconds
+[2025-10-21T23:15:13.334945] [INFO] -> Total elapsed time: 9.62 seconds
+[2025-10-21T23:15:13.336307] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.greensboro-nc.gov/government/city-council
+[2025-10-21T23:15:13.336891] [INFO] Running Gemini prompt
+[2025-10-21T23:15:13.336987] [DEBUG] Prompt: 
+
+    First, determine if the content contains relevant information about the main governing body of the target municipality. If the content includes information about the following people, they are very likely to be on the council: Nancy Vaughan, Marikay Abuzuaiter, Hugh Holston, Jamilla Pinder, Sharon Hightower, Goldie F. Wells, Zack Matheny, Nancy Hoffmann, Tammi Thurm.
+    If not, return an empty JSON array `[]`.
+
+    Target Roles: mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+    Target Divisions: ward, district
+    Current Date: 2025-10-21
+
+    Return a JSON object with people, each having:
+    - name: (String) Full name only (no titles)
+    - image: (String or null) URL to profile image (https://...)
+    - roles: (Array of strings) Active municipal roles
+    - divisions: (Array of strings) Specific district/ward names
+    - phone_number: (String or null) Formatted phone number
+    - email: (String or null) Email address
+    - website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+    - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+    Guidelines:
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - Website extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided `current_date` to filter out roles or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+    
+[2025-10-21T23:15:36.572246] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 3183, Output tokens: 724, Total cost: $0.00
+[2025-10-21T23:15:36.575303] [INFO] gemini gemini-2.5-flash LLM call took 23.24 seconds
+[2025-10-21T23:15:36.576305] [INFO] Running OpenAI prompt
+[2025-10-21T23:15:36.576474] [DEBUG] Prompt: 
+
+You are an expert data extractor focused on accuracy.
+
+First, determine if the content contains relevant information about any of the main governing body of a municipality. Here is a list of known target people (may be missing or include extra): Nancy Vaughan, Marikay Abuzuaiter, Hugh Holston, Jamilla Pinder, Sharon Hightower, Goldie F. Wells, Zack Matheny, Nancy Hoffmann, Tammi Thurm.
+If not, return an empty JSON array `[]`.
+
+Target Person (if applicable): 
+Target roles: mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+Target divisions: ward, district
+Current Date: 2025-10-21
+
+Return a JSON object.
+
+Output Field Definitions & Structure:
+- name: (String) Full name only (no titles).
+- image: (String or null) URL to profile image (https://...)
+- roles: (Array of strings) Active municipal roles.
+         Identify their official job title or specific position.
+         This can be a wide variety of municipal roles (e.g., "Mayor", "City Manager", "Selectman",
+         "Alderman", "Council Member").
+- divisions: (Array of strings) Specific district/ward and name/number,
+          only if specified (e.g., "Ward 1", "District 2").
+- phone_number: (String or null) Formatted phone number
+- email: (String or null) Email address (email@example.com)
+- website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+- start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+- end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+Extraction Guidelines:
+- Roles extraction:
+  - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+  - If a role includes additional descriptors or variations, normalize it to the closest matching target role when possible.
+    - Example: "Vice President" under a governing body → Normalize to the closest matching target role, such as "Council Vice President" or "Commissioner Vice President."
+    - If a role cannot be normalized to a target role but is clearly valid (e.g., "Vice President"), extract it as-is.
+  - Use the governing body or surrounding context to determine the correct role for ambiguous titles.
+    - Example: If "Vice President" is listed under "Council Members," infer it as "Council Vice President."
+    - Example: If "Vice President" appears without clear context, extract it as "Vice President."
+  - Include only active roles (today is 2025-10-21).
+
+- Divisions:
+  - Extract divisions if explicitly mentioned and relevant to the person's role.
+  - Do not infer divisions if they are not explicitly stated.
+
+- General Guidelines:
+  - Merge details for the same person into a single record.
+  - Assign confidence (0-1 scale) and provide a brief reason for each field's data.
+  - Extract full names only (e.g., "John Smith," not "Mayor John Smith"). Titles belong in the roles field.
+  - Ensure extracted data is accurate and relevant to the governing body or target roles.
+- Image: Extract URL of portrait/headshot near name. Ignore logos, banners, icons. Check alt text but prioritize proximity/style.
+- Contact Details (Phone/Email/Website):
+  - Associate details logically if near the person's name/section.
+  - Pick the most relevant contact detail if multiple are present.
+  - Phone numbers:
+    - Extract number after labels like "Office:", "Cell:", "Mobile:", "Direct:", "Home:". Exclude "Fax:". Format numbers simply.
+  - Markdown Links: Extract email/phone from the VISIBLE TEXT of links like `[TEXT](...)`, ignore the target URL.
+  - `website` data MUST be a valid http/https URL. Prefer profile pages. EXCLUDE mailto:, tel:.
+  - `email` data should ONLY contain email addresses.
+- Term Dates (`start_date`, `end_date`):
+  - Extract start_date and end_date in YYYY, YYYY-MM, or YYYY-MM-DD format.
+  - Acceptable date phrases include:
+    - “Elected [date]”, “Appointed [date]”, “Term: [date1] to [date2]”, “Since [date]”.
+    - For vague phrases like "Spring 2025", extract the year only.
+  - If more than one term is mentioned, extract the most recent term dates.
+  - Examples:
+    - "Elected Nov 2024 for term ending Dec 2028" -> start_date: "2024-11", end_date: "2028-12"
+    - "Served January 2018 until December 2021 - Re-elected and serving January 2022 and until December 2025" -> start_date: "2022-01", end_date: "2025-12"
+    - "Elected in 2017 and re-elected in 2021 for the 2022-2025 term." -> start_date: "2022", end_date: "2025"
+
+**FINAL MANDATORY CHECK**: Review your entire response for accuracy before submitting,
+  paying close attention to the role inference, date extraction, and term identification rules.
+
+[2025-10-21T23:15:44.982509] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 3218, Output tokens: 536, Total cost: $0.00
+[2025-10-21T23:15:44.982888] [INFO] openai LLM call took 8.41 seconds
+[2025-10-21T23:15:44.987482] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:15:44.987703] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:15:44.987962] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:15:44.988237] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:15:44.988413] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:15:44.988582] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:15:44.988894] [INFO] Current data: 0
+[2025-10-21T23:15:44.988997] [INFO] Required data: 9
+[2025-10-21T23:15:44.989140] [INFO] Minimum required data: 6
+[2025-10-21T23:15:44.989346] [INFO] Has target role: False
+[2025-10-21T23:15:44.989470] [INFO] Has target divisions (if available): False
+[2025-10-21T23:15:44.989666] [INFO] Current total cost for this run: $0.02
+[2025-10-21T23:15:44.989784] [INFO] Not enough data processed yet, collecting more data... 0/14
+[2025-10-21T23:15:44.992998] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.greensboro-nc.gov/
+[2025-10-21T23:15:47.110430] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2025-10-21T23:15:47.111957] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2025-10-21T23:15:47.132782] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/3f3f3a8d0882.png
+[2025-10-21T23:15:47.151378] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T23:15:47.151886] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T23:15:47.201457] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000: HTTP 403
+[2025-10-21T23:15:47.202356] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T23:15:47.217456] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/905f2571f89b.png
+[2025-10-21T23:15:47.237484] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T23:15:47.238513] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T23:15:47.286109] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000: HTTP 403
+[2025-10-21T23:15:47.286731] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T23:15:47.298440] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/ac9d47e6ef7b.png
+[2025-10-21T23:15:47.320205] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T23:15:47.321180] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T23:15:47.406355] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000: HTTP 403
+[2025-10-21T23:15:47.406928] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T23:15:47.419707] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/418597758fed.png
+[2025-10-21T23:15:47.430840] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T23:15:47.431605] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T23:15:47.477500] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000: HTTP 403
+[2025-10-21T23:15:47.478260] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T23:15:47.488308] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/c497888ce312.png
+[2025-10-21T23:15:47.499756] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T23:15:47.500263] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T23:15:47.554239] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000: HTTP 403
+[2025-10-21T23:15:47.554883] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T23:15:47.621915] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/d29ef06889ef.png
+[2025-10-21T23:15:47.627986] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T23:15:47.628412] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T23:15:47.667363] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000: HTTP 403
+[2025-10-21T23:15:47.669007] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T23:15:47.682589] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/7298e0cc0f82.png
+[2025-10-21T23:15:47.698917] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/36510/638499922823670000
+[2025-10-21T23:15:47.699663] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/36510/638499922823670000
+[2025-10-21T23:15:47.744952] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/36510/638499922823670000: HTTP 403
+[2025-10-21T23:15:47.746395] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/36510/638499922823670000
+[2025-10-21T23:15:49.793471] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/b65944aff0a1.png
+[2025-10-21T23:15:49.798204] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/33246/638253582811770000
+[2025-10-21T23:15:49.798640] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/33246/638253582811770000
+[2025-10-21T23:15:49.839348] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/33246/638253582811770000: HTTP 403
+[2025-10-21T23:15:49.842399] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/33246/638253582811770000
+[2025-10-21T23:15:56.832929] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/ab95f3485632.png
+[2025-10-21T23:15:56.839574] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/30205/638009932438230000
+[2025-10-21T23:15:56.839987] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/30205/638009932438230000
+[2025-10-21T23:15:56.887197] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/30205/638009932438230000: HTTP 403
+[2025-10-21T23:15:56.893357] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/30205/638009932438230000
+[2025-10-21T23:15:57.056786] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/94994e7441c6.png
+[2025-10-21T23:15:57.061455] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/30377/638004864719670000
+[2025-10-21T23:15:57.061755] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/30377/638004864719670000
+[2025-10-21T23:15:57.104228] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/30377/638004864719670000: HTTP 403
+[2025-10-21T23:15:57.108595] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/30377/638004864719670000
+[2025-10-21T23:15:57.239750] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/6f353425576a.png
+[2025-10-21T23:15:57.243924] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/27428/638004864480630000
+[2025-10-21T23:15:57.245311] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/27428/638004864480630000
+[2025-10-21T23:15:57.292165] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/27428/638004864480630000: HTTP 403
+[2025-10-21T23:15:57.292759] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/27428/638004864480630000
+[2025-10-21T23:15:57.561164] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/1d41f931556d.png
+[2025-10-21T23:15:57.566637] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/27416/638004863917970000
+[2025-10-21T23:15:57.567111] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/27416/638004863917970000
+[2025-10-21T23:15:57.609571] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/27416/638004863917970000: HTTP 403
+[2025-10-21T23:15:57.610407] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/27416/638004863917970000
+[2025-10-21T23:15:57.787685] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/c46c6bb67d1f.png
+[2025-10-21T23:15:57.792275] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/27422/638004866015570000
+[2025-10-21T23:15:57.792583] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/27422/638004866015570000
+[2025-10-21T23:15:57.835294] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/27422/638004866015570000: HTTP 403
+[2025-10-21T23:15:57.835896] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/27422/638004866015570000
+[2025-10-21T23:15:58.093956] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/25b7ccf1cccc.png
+[2025-10-21T23:15:58.106805] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/31905/638144825665570000
+[2025-10-21T23:15:58.107667] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/31905/638144825665570000
+[2025-10-21T23:15:58.154766] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/31905/638144825665570000: HTTP 403
+[2025-10-21T23:15:58.156137] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/31905/638144825665570000
+[2025-10-21T23:15:58.455566] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/2535e22519c2.png
+[2025-10-21T23:15:58.459703] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/27410/638004863170900000
+[2025-10-21T23:15:58.460111] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/27410/638004863170900000
+[2025-10-21T23:15:58.498264] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/27410/638004863170900000: HTTP 403
+[2025-10-21T23:15:58.502421] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/27410/638004863170900000
+[2025-10-21T23:15:58.823954] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/dfeb86b3108d.png
+[2025-10-21T23:15:58.828424] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/28560/637824373673770000
+[2025-10-21T23:15:58.828790] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/28560/637824373673770000
+[2025-10-21T23:15:58.878427] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/28560/637824373673770000: HTTP 403
+[2025-10-21T23:15:58.879169] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/28560/637824373673770000
+[2025-10-21T23:15:58.921159] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/ed2e93b073b0.png
+[2025-10-21T23:15:58.925374] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/42023
+[2025-10-21T23:15:58.925700] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/42023
+[2025-10-21T23:15:58.964671] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/42023: HTTP 403
+[2025-10-21T23:15:58.965225] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/42023
+[2025-10-21T23:15:59.025145] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/162d63f53c2b.png
+[2025-10-21T23:15:59.030274] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/40692/638848081870400000
+[2025-10-21T23:15:59.030808] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/40692/638848081870400000
+[2025-10-21T23:15:59.073342] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/40692/638848081870400000: HTTP 403
+[2025-10-21T23:15:59.073814] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/40692/638848081870400000
+[2025-10-21T23:15:59.106472] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/3c6eb65ad6d7.png
+[2025-10-21T23:15:59.117335] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/40602/638835886462130000
+[2025-10-21T23:15:59.118414] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/40602/638835886462130000
+[2025-10-21T23:15:59.166736] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/40602/638835886462130000: HTTP 403
+[2025-10-21T23:15:59.168122] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/40602/638835886462130000
+[2025-10-21T23:15:59.228229] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/947a78d385f0.png
+[2025-10-21T23:15:59.240086] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/32735/638193261595630000
+[2025-10-21T23:15:59.240674] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/32735/638193261595630000
+[2025-10-21T23:15:59.283859] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/32735/638193261595630000: HTTP 403
+[2025-10-21T23:15:59.286554] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/32735/638193261595630000
+[2025-10-21T23:15:59.322487] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/0a4747807687.png
+[2025-10-21T23:15:59.330802] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/29777/637959150063870000
+[2025-10-21T23:15:59.331446] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/29777/637959150063870000
+[2025-10-21T23:15:59.383203] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/29777/637959150063870000: HTTP 403
+[2025-10-21T23:15:59.384477] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/29777/637959150063870000
+[2025-10-21T23:15:59.402365] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/0297910232c5.png
+[2025-10-21T23:15:59.411666] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15448/636511962407230000
+[2025-10-21T23:15:59.412473] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15448/636511962407230000
+[2025-10-21T23:15:59.465287] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15448/636511962407230000: HTTP 403
+[2025-10-21T23:15:59.466120] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15448/636511962407230000
+[2025-10-21T23:15:59.479367] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/2b80c654e9a0.png
+[2025-10-21T23:15:59.496235] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15450/636511963973530000
+[2025-10-21T23:15:59.496989] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15450/636511963973530000
+[2025-10-21T23:15:59.564551] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15450/636511963973530000: HTTP 403
+[2025-10-21T23:15:59.565028] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15450/636511963973530000
+[2025-10-21T23:15:59.576086] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/be32b067da42.png
+[2025-10-21T23:15:59.588124] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15630/636513911352130000
+[2025-10-21T23:15:59.588912] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15630/636513911352130000
+[2025-10-21T23:15:59.647858] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15630/636513911352130000: HTTP 403
+[2025-10-21T23:15:59.648613] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15630/636513911352130000
+[2025-10-21T23:15:59.659967] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/31ded26a3bf3.png
+[2025-10-21T23:15:59.664277] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15452/636511964129170000
+[2025-10-21T23:15:59.664657] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15452/636511964129170000
+[2025-10-21T23:15:59.712518] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15452/636511964129170000: HTTP 403
+[2025-10-21T23:15:59.713779] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15452/636511964129170000
+[2025-10-21T23:15:59.725602] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/49729be4aaf7.png
+[2025-10-21T23:15:59.736242] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15454/636511964276500000
+[2025-10-21T23:15:59.737220] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15454/636511964276500000
+[2025-10-21T23:15:59.784517] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15454/636511964276500000: HTTP 403
+[2025-10-21T23:15:59.789861] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15454/636511964276500000
+[2025-10-21T23:15:59.798674] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/ba64ed90adfd.png
+[2025-10-21T23:15:59.812046] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15588/636513909993570000
+[2025-10-21T23:15:59.812694] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15588/636513909993570000
+[2025-10-21T23:15:59.855526] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15588/636513909993570000: HTTP 403
+[2025-10-21T23:15:59.856533] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15588/636513909993570000
+[2025-10-21T23:15:59.871758] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/99680dae9bd6.png
+[2025-10-21T23:15:59.876452] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15456/636511964450100000
+[2025-10-21T23:15:59.876961] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15456/636511964450100000
+[2025-10-21T23:15:59.929279] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15456/636511964450100000: HTTP 403
+[2025-10-21T23:15:59.929990] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15456/636511964450100000
+[2025-10-21T23:15:59.942342] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/721c89a71282.png
+[2025-10-21T23:15:59.950194] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15526/636511949464370000
+[2025-10-21T23:15:59.950938] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15526/636511949464370000
+[2025-10-21T23:15:59.995642] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15526/636511949464370000: HTTP 403
+[2025-10-21T23:15:59.996503] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15526/636511949464370000
+[2025-10-21T23:16:00.013332] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/0342fa710fb1.png
+[2025-10-21T23:16:00.025871] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15522/636511949459200000
+[2025-10-21T23:16:00.026669] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15522/636511949459200000
+[2025-10-21T23:16:00.072178] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15522/636511949459200000: HTTP 403
+[2025-10-21T23:16:00.073993] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15522/636511949459200000
+[2025-10-21T23:16:00.089741] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/ea624485dda5.png
+[2025-10-21T23:16:00.096648] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15624/636513911068300000
+[2025-10-21T23:16:00.097224] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15624/636513911068300000
+[2025-10-21T23:16:00.143986] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15624/636513911068300000: HTTP 403
+[2025-10-21T23:16:00.144415] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15624/636513911068300000
+[2025-10-21T23:16:00.161290] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/0808c488277b.png
+[2025-10-21T23:16:00.168299] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15524/636511949461700000
+[2025-10-21T23:16:00.169048] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15524/636511949461700000
+[2025-10-21T23:16:00.211381] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15524/636511949461700000: HTTP 403
+[2025-10-21T23:16:00.212009] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15524/636511949461700000
+[2025-10-21T23:16:00.221157] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/93331faa58fa.png
+[2025-10-21T23:16:00.227416] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15520/638289164355700000
+[2025-10-21T23:16:00.228191] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15520/638289164355700000
+[2025-10-21T23:16:00.273299] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15520/638289164355700000: HTTP 403
+[2025-10-21T23:16:00.274587] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15520/638289164355700000
+[2025-10-21T23:16:00.282889] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/ea6e818d9846.png
+[2025-10-21T23:16:00.293651] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T23:16:00.294126] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T23:16:00.343308] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000: HTTP 403
+[2025-10-21T23:16:00.343816] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T23:16:00.353700] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/9a4812d60466.png
+[2025-10-21T23:16:00.362204] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T23:16:00.362706] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T23:16:00.405762] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000: HTTP 403
+[2025-10-21T23:16:00.406653] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T23:16:00.415249] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/724891535320.png
+[2025-10-21T23:16:00.426028] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T23:16:00.426593] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T23:16:00.504523] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000: HTTP 403
+[2025-10-21T23:16:00.505431] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T23:16:00.513469] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/97f6cff21062.png
+[2025-10-21T23:16:00.522255] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T23:16:00.522835] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T23:16:00.562900] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000: HTTP 403
+[2025-10-21T23:16:00.563711] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T23:16:00.575634] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/d01c198668e2.png
+[2025-10-21T23:16:00.581997] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T23:16:00.583406] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T23:16:00.638461] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000: HTTP 403
+[2025-10-21T23:16:00.639420] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T23:16:00.649536] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/71725d34df28.png
+[2025-10-21T23:16:00.661283] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2025-10-21T23:16:00.673207] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/54fb0f1c-a6d3-11ef-9354-819c52b83814%2Fmedia-manager%2F1732224644824-b642a4e5-e336-fdf0-ad1a-5d20fe199224.png
+[2025-10-21T23:16:00.675123] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/54fb0f1c-a6d3-11ef-9354-819c52b83814%2Fmedia-manager%2F1732224644824-b642a4e5-e336-fdf0-ad1a-5d20fe199224.png
+[2025-10-21T23:16:00.711785] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/0c29396ea313.png
+[2025-10-21T23:16:00.723765] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/facebook.png
+[2025-10-21T23:16:00.724867] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/facebook.png
+[2025-10-21T23:16:00.756922] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/1856ee978803.png
+[2025-10-21T23:16:00.765513] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/instagram.png
+[2025-10-21T23:16:00.766378] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/instagram.png
+[2025-10-21T23:16:00.809922] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/5ad3ce5968f3.png
+[2025-10-21T23:16:00.820642] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/linkedin.png
+[2025-10-21T23:16:00.821987] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/linkedin.png
+[2025-10-21T23:16:00.859997] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/1e418c6c7cf9.png
+[2025-10-21T23:16:00.867528] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/nextdoor.png
+[2025-10-21T23:16:00.868352] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/nextdoor.png
+[2025-10-21T23:16:00.911002] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/2e783218d036.png
+[2025-10-21T23:16:00.916852] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/x.png
+[2025-10-21T23:16:00.917495] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/x.png
+[2025-10-21T23:16:00.955620] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/68db9cc80233.png
+[2025-10-21T23:16:00.962665] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/youtube.png
+[2025-10-21T23:16:00.963158] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/youtube.png
+[2025-10-21T23:16:01.006127] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/b5ffd2d93e26.png
+[2025-10-21T23:16:01.296418] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.greensboro-nc.gov/
+[2025-10-21T23:16:11.942249] [INFO] -> Progress: 99% (1795/1802)
+[2025-10-21T23:16:12.326001] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2025-10-21T23:16:12.326131] [INFO] -> Elapsed time: 11.03 seconds
+[2025-10-21T23:16:12.326187] [INFO] -> Average elapsed time: 10.01 seconds
+[2025-10-21T23:16:12.326396] [INFO] -> Total elapsed time: 20.03 seconds
+[2025-10-21T23:16:12.328140] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.greensboro-nc.gov/
+[2025-10-21T23:16:12.328694] [INFO] Running Gemini prompt
+[2025-10-21T23:16:12.328779] [DEBUG] Prompt: 
+
+    First, determine if the content contains relevant information about the main governing body of the target municipality. If the content includes information about the following people, they are very likely to be on the council: Nancy Vaughan, Marikay Abuzuaiter, Hugh Holston, Jamilla Pinder, Sharon Hightower, Goldie F. Wells, Zack Matheny, Nancy Hoffmann, Tammi Thurm.
+    If not, return an empty JSON array `[]`.
+
+    Target Roles: mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+    Target Divisions: ward, district
+    Current Date: 2025-10-21
+
+    Return a JSON object with people, each having:
+    - name: (String) Full name only (no titles)
+    - image: (String or null) URL to profile image (https://...)
+    - roles: (Array of strings) Active municipal roles
+    - divisions: (Array of strings) Specific district/ward names
+    - phone_number: (String or null) Formatted phone number
+    - email: (String or null) Email address
+    - website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+    - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+    Guidelines:
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - Website extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided `current_date` to filter out roles or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+    
+[2025-10-21T23:16:15.138604] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 3897, Output tokens: 75, Total cost: $0.00
+[2025-10-21T23:16:15.141989] [INFO] gemini gemini-2.5-flash LLM call took 2.81 seconds
+[2025-10-21T23:16:15.142825] [INFO] Running OpenAI prompt
+[2025-10-21T23:16:15.142960] [DEBUG] Prompt: 
+
+You are an expert data extractor focused on accuracy.
+
+First, determine if the content contains relevant information about any of the main governing body of a municipality. Here is a list of known target people (may be missing or include extra): Nancy Vaughan, Marikay Abuzuaiter, Hugh Holston, Jamilla Pinder, Sharon Hightower, Goldie F. Wells, Zack Matheny, Nancy Hoffmann, Tammi Thurm.
+If not, return an empty JSON array `[]`.
+
+Target Person (if applicable): 
+Target roles: mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+Target divisions: ward, district
+Current Date: 2025-10-21
+
+Return a JSON object.
+
+Output Field Definitions & Structure:
+- name: (String) Full name only (no titles).
+- image: (String or null) URL to profile image (https://...)
+- roles: (Array of strings) Active municipal roles.
+         Identify their official job title or specific position.
+         This can be a wide variety of municipal roles (e.g., "Mayor", "City Manager", "Selectman",
+         "Alderman", "Council Member").
+- divisions: (Array of strings) Specific district/ward and name/number,
+          only if specified (e.g., "Ward 1", "District 2").
+- phone_number: (String or null) Formatted phone number
+- email: (String or null) Email address (email@example.com)
+- website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+- start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+- end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+Extraction Guidelines:
+- Roles extraction:
+  - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+  - If a role includes additional descriptors or variations, normalize it to the closest matching target role when possible.
+    - Example: "Vice President" under a governing body → Normalize to the closest matching target role, such as "Council Vice President" or "Commissioner Vice President."
+    - If a role cannot be normalized to a target role but is clearly valid (e.g., "Vice President"), extract it as-is.
+  - Use the governing body or surrounding context to determine the correct role for ambiguous titles.
+    - Example: If "Vice President" is listed under "Council Members," infer it as "Council Vice President."
+    - Example: If "Vice President" appears without clear context, extract it as "Vice President."
+  - Include only active roles (today is 2025-10-21).
+
+- Divisions:
+  - Extract divisions if explicitly mentioned and relevant to the person's role.
+  - Do not infer divisions if they are not explicitly stated.
+
+- General Guidelines:
+  - Merge details for the same person into a single record.
+  - Assign confidence (0-1 scale) and provide a brief reason for each field's data.
+  - Extract full names only (e.g., "John Smith," not "Mayor John Smith"). Titles belong in the roles field.
+  - Ensure extracted data is accurate and relevant to the governing body or target roles.
+- Image: Extract URL of portrait/headshot near name. Ignore logos, banners, icons. Check alt text but prioritize proximity/style.
+- Contact Details (Phone/Email/Website):
+  - Associate details logically if near the person's name/section.
+  - Pick the most relevant contact detail if multiple are present.
+  - Phone numbers:
+    - Extract number after labels like "Office:", "Cell:", "Mobile:", "Direct:", "Home:". Exclude "Fax:". Format numbers simply.
+  - Markdown Links: Extract email/phone from the VISIBLE TEXT of links like `[TEXT](...)`, ignore the target URL.
+  - `website` data MUST be a valid http/https URL. Prefer profile pages. EXCLUDE mailto:, tel:.
+  - `email` data should ONLY contain email addresses.
+- Term Dates (`start_date`, `end_date`):
+  - Extract start_date and end_date in YYYY, YYYY-MM, or YYYY-MM-DD format.
+  - Acceptable date phrases include:
+    - “Elected [date]”, “Appointed [date]”, “Term: [date1] to [date2]”, “Since [date]”.
+    - For vague phrases like "Spring 2025", extract the year only.
+  - If more than one term is mentioned, extract the most recent term dates.
+  - Examples:
+    - "Elected Nov 2024 for term ending Dec 2028" -> start_date: "2024-11", end_date: "2028-12"
+    - "Served January 2018 until December 2021 - Re-elected and serving January 2022 and until December 2025" -> start_date: "2022-01", end_date: "2025-12"
+    - "Elected in 2017 and re-elected in 2021 for the 2022-2025 term." -> start_date: "2022", end_date: "2025"
+
+**FINAL MANDATORY CHECK**: Review your entire response for accuracy before submitting,
+  paying close attention to the role inference, date extraction, and term identification rules.
+
+[2025-10-21T23:16:17.792034] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 3850, Output tokens: 106, Total cost: $0.00
+[2025-10-21T23:16:17.792552] [INFO] openai LLM call took 2.65 seconds
+[2025-10-21T23:16:17.797404] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:16:17.797639] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:16:17.797870] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:16:17.798428] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:16:17.798728] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:16:17.798958] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:16:17.799274] [INFO] Current data: 0
+[2025-10-21T23:16:17.799451] [INFO] Required data: 9
+[2025-10-21T23:16:17.799633] [INFO] Minimum required data: 6
+[2025-10-21T23:16:17.799843] [INFO] Has target role: False
+[2025-10-21T23:16:17.800045] [INFO] Has target divisions (if available): False
+[2025-10-21T23:16:17.800368] [INFO] Current total cost for this run: $0.03
+[2025-10-21T23:16:17.800608] [INFO] Not enough data processed yet, collecting more data... 1/14
+[2025-10-21T23:16:17.803192] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.greensboro-nc.gov/government/city-council/council-meetings
+[2025-10-21T23:16:20.547564] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2025-10-21T23:16:20.547978] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2025-10-21T23:16:20.575234] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/3f3f3a8d0882.png
+[2025-10-21T23:16:20.584052] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T23:16:20.584557] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T23:16:20.634185] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000: HTTP 403
+[2025-10-21T23:16:20.635329] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T23:16:20.645539] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/905f2571f89b.png
+[2025-10-21T23:16:20.655152] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T23:16:20.659614] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T23:16:20.716124] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000: HTTP 403
+[2025-10-21T23:16:20.716754] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T23:16:20.724391] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/ac9d47e6ef7b.png
+[2025-10-21T23:16:20.733550] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T23:16:20.734154] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T23:16:20.786739] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000: HTTP 403
+[2025-10-21T23:16:20.788754] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T23:16:20.797935] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/418597758fed.png
+[2025-10-21T23:16:20.812453] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T23:16:20.813192] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T23:16:20.856253] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000: HTTP 403
+[2025-10-21T23:16:20.857080] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T23:16:20.865748] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/c497888ce312.png
+[2025-10-21T23:16:20.876577] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T23:16:20.877100] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T23:16:20.929211] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000: HTTP 403
+[2025-10-21T23:16:20.929670] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T23:16:21.012924] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/d29ef06889ef.png
+[2025-10-21T23:16:21.017931] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T23:16:21.018295] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T23:16:21.051998] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000: HTTP 403
+[2025-10-21T23:16:21.052543] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T23:16:21.076652] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/7298e0cc0f82.png
+[2025-10-21T23:16:21.089798] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/26464/637998780512130000
+[2025-10-21T23:16:21.090486] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/26464/637998780512130000
+[2025-10-21T23:16:21.136618] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/26464/637998780512130000: HTTP 403
+[2025-10-21T23:16:21.137819] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/26464/637998780512130000
+[2025-10-21T23:16:21.282656] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/f7423533b0b7.png
+[2025-10-21T23:16:21.287203] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/26462/637601315821830000
+[2025-10-21T23:16:21.287618] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/26462/637601315821830000
+[2025-10-21T23:16:21.329592] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/26462/637601315821830000: HTTP 403
+[2025-10-21T23:16:21.330430] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/26462/637601315821830000
+[2025-10-21T23:16:21.377362] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/642667467718.png
+[2025-10-21T23:16:21.398221] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/26472/637601431972230000
+[2025-10-21T23:16:21.398823] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/26472/637601431972230000
+[2025-10-21T23:16:21.443843] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/26472/637601431972230000: HTTP 403
+[2025-10-21T23:16:21.445396] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/26472/637601431972230000
+[2025-10-21T23:16:21.498628] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/17cb2f5bccfe.png
+[2025-10-21T23:16:21.504330] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T23:16:21.504945] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T23:16:21.544029] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000: HTTP 403
+[2025-10-21T23:16:21.546553] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T23:16:21.554957] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/9a4812d60466.png
+[2025-10-21T23:16:21.561331] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T23:16:21.562460] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T23:16:21.612703] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000: HTTP 403
+[2025-10-21T23:16:21.614635] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T23:16:21.627204] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/724891535320.png
+[2025-10-21T23:16:21.640441] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T23:16:21.641028] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T23:16:21.695853] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000: HTTP 403
+[2025-10-21T23:16:21.696464] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T23:16:21.704574] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/97f6cff21062.png
+[2025-10-21T23:16:21.709060] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T23:16:21.709560] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T23:16:21.747398] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000: HTTP 403
+[2025-10-21T23:16:21.748360] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T23:16:21.756539] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/d01c198668e2.png
+[2025-10-21T23:16:21.765533] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T23:16:21.767982] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T23:16:21.839132] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000: HTTP 403
+[2025-10-21T23:16:21.839640] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T23:16:21.847431] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/71725d34df28.png
+[2025-10-21T23:16:21.860716] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/54fb0f1c-a6d3-11ef-9354-819c52b83814%2Fmedia-manager%2F1732224644824-b642a4e5-e336-fdf0-ad1a-5d20fe199224.png
+[2025-10-21T23:16:21.861603] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/54fb0f1c-a6d3-11ef-9354-819c52b83814%2Fmedia-manager%2F1732224644824-b642a4e5-e336-fdf0-ad1a-5d20fe199224.png
+[2025-10-21T23:16:21.902043] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/0c29396ea313.png
+[2025-10-21T23:16:21.911455] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/facebook.png
+[2025-10-21T23:16:21.912135] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/facebook.png
+[2025-10-21T23:16:21.944767] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/1856ee978803.png
+[2025-10-21T23:16:21.951902] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/instagram.png
+[2025-10-21T23:16:21.953324] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/instagram.png
+[2025-10-21T23:16:21.996894] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/5ad3ce5968f3.png
+[2025-10-21T23:16:22.010921] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/linkedin.png
+[2025-10-21T23:16:22.011715] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/linkedin.png
+[2025-10-21T23:16:22.049196] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/1e418c6c7cf9.png
+[2025-10-21T23:16:22.061339] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/nextdoor.png
+[2025-10-21T23:16:22.063064] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/nextdoor.png
+[2025-10-21T23:16:22.110316] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/2e783218d036.png
+[2025-10-21T23:16:22.121041] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/x.png
+[2025-10-21T23:16:22.122861] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/x.png
+[2025-10-21T23:16:22.158688] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/68db9cc80233.png
+[2025-10-21T23:16:22.166768] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/youtube.png
+[2025-10-21T23:16:22.167769] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/youtube.png
+[2025-10-21T23:16:22.204817] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/b5ffd2d93e26.png
+[2025-10-21T23:16:22.215753] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2025-10-21T23:16:22.396088] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.greensboro-nc.gov/government/city-council/council-meetings
+[2025-10-21T23:16:30.177732] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2025-10-21T23:16:30.177839] [INFO] -> Elapsed time: 7.78 seconds
+[2025-10-21T23:16:30.177895] [INFO] -> Average elapsed time: 9.26 seconds
+[2025-10-21T23:16:30.177944] [INFO] -> Total elapsed time: 27.78 seconds
+[2025-10-21T23:16:30.179336] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.greensboro-nc.gov/government/city-council/council-meetings
+[2025-10-21T23:16:30.179974] [INFO] Running Gemini prompt
+[2025-10-21T23:16:30.180146] [DEBUG] Prompt: 
+
+    First, determine if the content contains relevant information about the main governing body of the target municipality. If the content includes information about the following people, they are very likely to be on the council: Nancy Vaughan, Marikay Abuzuaiter, Hugh Holston, Jamilla Pinder, Sharon Hightower, Goldie F. Wells, Zack Matheny, Nancy Hoffmann, Tammi Thurm.
+    If not, return an empty JSON array `[]`.
+
+    Target Roles: mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+    Target Divisions: ward, district
+    Current Date: 2025-10-21
+
+    Return a JSON object with people, each having:
+    - name: (String) Full name only (no titles)
+    - image: (String or null) URL to profile image (https://...)
+    - roles: (Array of strings) Active municipal roles
+    - divisions: (Array of strings) Specific district/ward names
+    - phone_number: (String or null) Formatted phone number
+    - email: (String or null) Email address
+    - website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+    - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+    Guidelines:
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - Website extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided `current_date` to filter out roles or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+    
+[2025-10-21T23:16:31.761552] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 2186, Output tokens: 70, Total cost: $0.00
+[2025-10-21T23:16:31.763611] [INFO] gemini gemini-2.5-flash LLM call took 1.58 seconds
+[2025-10-21T23:16:31.764226] [INFO] Running OpenAI prompt
+[2025-10-21T23:16:31.764342] [DEBUG] Prompt: 
+
+You are an expert data extractor focused on accuracy.
+
+First, determine if the content contains relevant information about any of the main governing body of a municipality. Here is a list of known target people (may be missing or include extra): Nancy Vaughan, Marikay Abuzuaiter, Hugh Holston, Jamilla Pinder, Sharon Hightower, Goldie F. Wells, Zack Matheny, Nancy Hoffmann, Tammi Thurm.
+If not, return an empty JSON array `[]`.
+
+Target Person (if applicable): 
+Target roles: mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+Target divisions: ward, district
+Current Date: 2025-10-21
+
+Return a JSON object.
+
+Output Field Definitions & Structure:
+- name: (String) Full name only (no titles).
+- image: (String or null) URL to profile image (https://...)
+- roles: (Array of strings) Active municipal roles.
+         Identify their official job title or specific position.
+         This can be a wide variety of municipal roles (e.g., "Mayor", "City Manager", "Selectman",
+         "Alderman", "Council Member").
+- divisions: (Array of strings) Specific district/ward and name/number,
+          only if specified (e.g., "Ward 1", "District 2").
+- phone_number: (String or null) Formatted phone number
+- email: (String or null) Email address (email@example.com)
+- website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+- start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+- end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+Extraction Guidelines:
+- Roles extraction:
+  - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+  - If a role includes additional descriptors or variations, normalize it to the closest matching target role when possible.
+    - Example: "Vice President" under a governing body → Normalize to the closest matching target role, such as "Council Vice President" or "Commissioner Vice President."
+    - If a role cannot be normalized to a target role but is clearly valid (e.g., "Vice President"), extract it as-is.
+  - Use the governing body or surrounding context to determine the correct role for ambiguous titles.
+    - Example: If "Vice President" is listed under "Council Members," infer it as "Council Vice President."
+    - Example: If "Vice President" appears without clear context, extract it as "Vice President."
+  - Include only active roles (today is 2025-10-21).
+
+- Divisions:
+  - Extract divisions if explicitly mentioned and relevant to the person's role.
+  - Do not infer divisions if they are not explicitly stated.
+
+- General Guidelines:
+  - Merge details for the same person into a single record.
+  - Assign confidence (0-1 scale) and provide a brief reason for each field's data.
+  - Extract full names only (e.g., "John Smith," not "Mayor John Smith"). Titles belong in the roles field.
+  - Ensure extracted data is accurate and relevant to the governing body or target roles.
+- Image: Extract URL of portrait/headshot near name. Ignore logos, banners, icons. Check alt text but prioritize proximity/style.
+- Contact Details (Phone/Email/Website):
+  - Associate details logically if near the person's name/section.
+  - Pick the most relevant contact detail if multiple are present.
+  - Phone numbers:
+    - Extract number after labels like "Office:", "Cell:", "Mobile:", "Direct:", "Home:". Exclude "Fax:". Format numbers simply.
+  - Markdown Links: Extract email/phone from the VISIBLE TEXT of links like `[TEXT](...)`, ignore the target URL.
+  - `website` data MUST be a valid http/https URL. Prefer profile pages. EXCLUDE mailto:, tel:.
+  - `email` data should ONLY contain email addresses.
+- Term Dates (`start_date`, `end_date`):
+  - Extract start_date and end_date in YYYY, YYYY-MM, or YYYY-MM-DD format.
+  - Acceptable date phrases include:
+    - “Elected [date]”, “Appointed [date]”, “Term: [date1] to [date2]”, “Since [date]”.
+    - For vague phrases like "Spring 2025", extract the year only.
+  - If more than one term is mentioned, extract the most recent term dates.
+  - Examples:
+    - "Elected Nov 2024 for term ending Dec 2028" -> start_date: "2024-11", end_date: "2028-12"
+    - "Served January 2018 until December 2021 - Re-elected and serving January 2022 and until December 2025" -> start_date: "2022-01", end_date: "2025-12"
+    - "Elected in 2017 and re-elected in 2021 for the 2022-2025 term." -> start_date: "2022", end_date: "2025"
+
+**FINAL MANDATORY CHECK**: Review your entire response for accuracy before submitting,
+  paying close attention to the role inference, date extraction, and term identification rules.
+
+[2025-10-21T23:16:33.921399] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 2371, Output tokens: 106, Total cost: $0.00
+[2025-10-21T23:16:33.922037] [INFO] openai LLM call took 2.16 seconds
+[2025-10-21T23:16:33.927112] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:16:33.927308] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:16:33.927485] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:16:33.927787] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:16:33.928067] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:16:33.928307] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:16:33.928631] [INFO] Current data: 0
+[2025-10-21T23:16:33.928753] [INFO] Required data: 9
+[2025-10-21T23:16:33.928873] [INFO] Minimum required data: 6
+[2025-10-21T23:16:33.928990] [INFO] Has target role: False
+[2025-10-21T23:16:33.929098] [INFO] Has target divisions (if available): False
+[2025-10-21T23:16:33.929353] [INFO] Current total cost for this run: $0.03
+[2025-10-21T23:16:33.929503] [INFO] Not enough data processed yet, collecting more data... 2/14
+[2025-10-21T23:16:33.933475] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.greensboro-nc.gov/government/city-council/interact-with-city-council
+[2025-10-21T23:16:40.000662] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2025-10-21T23:16:40.001376] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2025-10-21T23:16:40.027180] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/3f3f3a8d0882.png
+[2025-10-21T23:16:40.040950] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T23:16:40.041535] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T23:16:40.105584] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000: HTTP 403
+[2025-10-21T23:16:40.106105] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15462/636511194784970000
+[2025-10-21T23:16:40.112990] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/905f2571f89b.png
+[2025-10-21T23:16:40.117881] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T23:16:40.118330] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T23:16:40.164997] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000: HTTP 403
+[2025-10-21T23:16:40.165604] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15464/636511194786970000
+[2025-10-21T23:16:40.172895] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/ac9d47e6ef7b.png
+[2025-10-21T23:16:40.180510] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T23:16:40.181435] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T23:16:40.226485] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000: HTTP 403
+[2025-10-21T23:16:40.227196] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15466/636511194789330000
+[2025-10-21T23:16:40.235650] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/418597758fed.png
+[2025-10-21T23:16:40.244564] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T23:16:40.244979] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T23:16:40.290507] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000: HTTP 403
+[2025-10-21T23:16:40.291721] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15468/636511194791500000
+[2025-10-21T23:16:40.300599] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/c497888ce312.png
+[2025-10-21T23:16:40.313615] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T23:16:40.314140] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T23:16:40.353470] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000: HTTP 403
+[2025-10-21T23:16:40.356036] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15712/638009933298870000
+[2025-10-21T23:16:40.438727] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/d29ef06889ef.png
+[2025-10-21T23:16:40.443510] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T23:16:40.443862] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T23:16:40.479975] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000: HTTP 403
+[2025-10-21T23:16:40.480760] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/17788/636646747032300000
+[2025-10-21T23:16:40.499137] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/7298e0cc0f82.png
+[2025-10-21T23:16:40.511756] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/26462/637601315821830000
+[2025-10-21T23:16:40.512683] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/26462/637601315821830000
+[2025-10-21T23:16:40.560008] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/26462/637601315821830000: HTTP 403
+[2025-10-21T23:16:40.560992] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/26462/637601315821830000
+[2025-10-21T23:16:40.605866] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/642667467718.png
+[2025-10-21T23:16:40.617310] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/30670/638028287037900000
+[2025-10-21T23:16:40.617834] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/30670/638028287037900000
+[2025-10-21T23:16:40.659708] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/30670/638028287037900000: HTTP 403
+[2025-10-21T23:16:40.660574] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/30670/638028287037900000
+[2025-10-21T23:16:40.677132] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/69da94da97e1.png
+[2025-10-21T23:16:40.682580] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/5845/638028278965130000
+[2025-10-21T23:16:40.683342] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/5845/638028278965130000
+[2025-10-21T23:16:40.723626] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/5845/638028278965130000: HTTP 403
+[2025-10-21T23:16:40.724655] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/5845/638028278965130000
+[2025-10-21T23:16:40.739137] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/d249694569d8.png
+[2025-10-21T23:16:40.751312] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/30265/638318536081830000
+[2025-10-21T23:16:40.751797] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/30265/638318536081830000
+[2025-10-21T23:16:40.819335] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/30265/638318536081830000: HTTP 403
+[2025-10-21T23:16:40.819712] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/30265/638318536081830000
+[2025-10-21T23:16:40.947735] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/7af1f80f058f.png
+[2025-10-21T23:16:40.952320] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/39276/638784151225130000
+[2025-10-21T23:16:40.952680] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/39276/638784151225130000
+[2025-10-21T23:16:40.995421] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/39276/638784151225130000: HTTP 403
+[2025-10-21T23:16:40.996108] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/39276/638784151225130000
+[2025-10-21T23:16:43.467554] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/6dae74c2a24c.png
+[2025-10-21T23:16:43.472485] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/10230/638028304351000000
+[2025-10-21T23:16:43.472838] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/10230/638028304351000000
+[2025-10-21T23:16:43.512143] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/10230/638028304351000000: HTTP 403
+[2025-10-21T23:16:43.512900] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/10230/638028304351000000
+[2025-10-21T23:16:43.529044] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/c5b26a9fe910.png
+[2025-10-21T23:16:43.543570] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/14845/638029244382970000
+[2025-10-21T23:16:43.544111] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/14845/638029244382970000
+[2025-10-21T23:16:43.594609] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/14845/638029244382970000: HTTP 403
+[2025-10-21T23:16:43.595520] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/14845/638029244382970000
+[2025-10-21T23:16:43.611642] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/8e9c780cc779.png
+[2025-10-21T23:16:43.620962] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/30257/638784152026670000
+[2025-10-21T23:16:43.622707] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/30257/638784152026670000
+[2025-10-21T23:16:43.657875] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/30257/638784152026670000: HTTP 403
+[2025-10-21T23:16:43.658543] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/30257/638784152026670000
+[2025-10-21T23:16:45.973650] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/44e0ebc8b7cc.png
+[2025-10-21T23:16:45.978106] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/5847/638784150671900000
+[2025-10-21T23:16:45.978453] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/5847/638784150671900000
+[2025-10-21T23:16:46.029208] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/5847/638784150671900000: HTTP 403
+[2025-10-21T23:16:46.029847] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/5847/638784150671900000
+[2025-10-21T23:16:48.449617] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/8a8d2680f5cb.png
+[2025-10-21T23:16:48.454421] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/26694/638784150054870000
+[2025-10-21T23:16:48.454823] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/26694/638784150054870000
+[2025-10-21T23:16:48.500556] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/26694/638784150054870000: HTTP 403
+[2025-10-21T23:16:48.501088] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/26694/638784150054870000
+[2025-10-21T23:16:50.939386] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/a92d28722aec.png
+[2025-10-21T23:16:50.945207] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T23:16:50.945552] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T23:16:50.994283] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000: HTTP 403
+[2025-10-21T23:16:50.995012] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15470/637927891417770000
+[2025-10-21T23:16:51.008902] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/9a4812d60466.png
+[2025-10-21T23:16:51.017884] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T23:16:51.018776] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T23:16:51.062489] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000: HTTP 403
+[2025-10-21T23:16:51.063208] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15472/637927891725270000
+[2025-10-21T23:16:51.078263] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/724891535320.png
+[2025-10-21T23:16:51.087450] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T23:16:51.090161] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T23:16:51.141488] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000: HTTP 403
+[2025-10-21T23:16:51.142112] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15474/637927891975770000
+[2025-10-21T23:16:51.148106] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/97f6cff21062.png
+[2025-10-21T23:16:51.154690] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T23:16:51.156140] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T23:16:51.212708] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000: HTTP 403
+[2025-10-21T23:16:51.213186] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/15476/637927892301870000
+[2025-10-21T23:16:51.221055] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/d01c198668e2.png
+[2025-10-21T23:16:51.225904] [DEBUG] Attempting to intercept and save image for: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T23:16:51.226318] [DEBUG] Loading image from URL: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T23:16:51.257756] [WARNING] Failed to load image https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000: HTTP 403
+[2025-10-21T23:16:51.258566] [DEBUG] Attempting to create a canvas and load image: https://www.greensboro-nc.gov/home/showpublishedimage/19891/637927892677500000
+[2025-10-21T23:16:51.270674] [DEBUG] Image saved from canvas: /app/data_source/nc/place_greensboro/images/71725d34df28.png
+[2025-10-21T23:16:51.282760] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2025-10-21T23:16:51.294897] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/54fb0f1c-a6d3-11ef-9354-819c52b83814%2Fmedia-manager%2F1732224644824-b642a4e5-e336-fdf0-ad1a-5d20fe199224.png
+[2025-10-21T23:16:51.295562] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/54fb0f1c-a6d3-11ef-9354-819c52b83814%2Fmedia-manager%2F1732224644824-b642a4e5-e336-fdf0-ad1a-5d20fe199224.png
+[2025-10-21T23:16:51.333570] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/0c29396ea313.png
+[2025-10-21T23:16:51.346176] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/facebook.png
+[2025-10-21T23:16:51.347115] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/facebook.png
+[2025-10-21T23:16:51.384721] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/1856ee978803.png
+[2025-10-21T23:16:51.395707] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/instagram.png
+[2025-10-21T23:16:51.397344] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/instagram.png
+[2025-10-21T23:16:51.435059] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/5ad3ce5968f3.png
+[2025-10-21T23:16:51.443755] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/linkedin.png
+[2025-10-21T23:16:51.444748] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/linkedin.png
+[2025-10-21T23:16:51.483494] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/1e418c6c7cf9.png
+[2025-10-21T23:16:51.492812] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/nextdoor.png
+[2025-10-21T23:16:51.493619] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/nextdoor.png
+[2025-10-21T23:16:51.528469] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/2e783218d036.png
+[2025-10-21T23:16:51.533728] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/x.png
+[2025-10-21T23:16:51.534320] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/x.png
+[2025-10-21T23:16:51.569774] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/68db9cc80233.png
+[2025-10-21T23:16:51.581376] [DEBUG] Attempting to intercept and save image for: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/youtube.png
+[2025-10-21T23:16:51.581789] [DEBUG] Loading image from URL: https://gallery.eocampaign1.com/tentacles/icons/v1/social-block/square/color/youtube.png
+[2025-10-21T23:16:51.626530] [INFO] Image saved: /app/data_source/nc/place_greensboro/images/b5ffd2d93e26.png
+[2025-10-21T23:16:51.790816] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.greensboro-nc.gov/government/city-council/interact-with-city-council
+[2025-10-21T23:17:01.260265] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2025-10-21T23:17:01.260377] [INFO] -> Elapsed time: 9.47 seconds
+[2025-10-21T23:17:01.260473] [INFO] -> Average elapsed time: 9.12 seconds
+[2025-10-21T23:17:01.260551] [INFO] -> Total elapsed time: 36.47 seconds
+[2025-10-21T23:17:01.262041] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.greensboro-nc.gov/government/city-council/interact-with-city-council
+[2025-10-21T23:17:01.262586] [INFO] Running Gemini prompt
+[2025-10-21T23:17:01.262689] [DEBUG] Prompt: 
+
+    First, determine if the content contains relevant information about the main governing body of the target municipality. If the content includes information about the following people, they are very likely to be on the council: Nancy Vaughan, Marikay Abuzuaiter, Hugh Holston, Jamilla Pinder, Sharon Hightower, Goldie F. Wells, Zack Matheny, Nancy Hoffmann, Tammi Thurm.
+    If not, return an empty JSON array `[]`.
+
+    Target Roles: mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+    Target Divisions: ward, district
+    Current Date: 2025-10-21
+
+    Return a JSON object with people, each having:
+    - name: (String) Full name only (no titles)
+    - image: (String or null) URL to profile image (https://...)
+    - roles: (Array of strings) Active municipal roles
+    - divisions: (Array of strings) Specific district/ward names
+    - phone_number: (String or null) Formatted phone number
+    - email: (String or null) Email address
+    - website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+    - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+    Guidelines:
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - Website extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided `current_date` to filter out roles or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+    
+[2025-10-21T23:17:17.504990] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 3924, Output tokens: 1373, Total cost: $0.00
+[2025-10-21T23:17:17.507623] [INFO] gemini gemini-2.5-flash LLM call took 16.24 seconds
+[2025-10-21T23:17:17.508721] [INFO] Running OpenAI prompt
+[2025-10-21T23:17:17.508876] [DEBUG] Prompt: 
+
+You are an expert data extractor focused on accuracy.
+
+First, determine if the content contains relevant information about any of the main governing body of a municipality. Here is a list of known target people (may be missing or include extra): Nancy Vaughan, Marikay Abuzuaiter, Hugh Holston, Jamilla Pinder, Sharon Hightower, Goldie F. Wells, Zack Matheny, Nancy Hoffmann, Tammi Thurm.
+If not, return an empty JSON array `[]`.
+
+Target Person (if applicable): 
+Target roles: mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+Target divisions: ward, district
+Current Date: 2025-10-21
+
+Return a JSON object.
+
+Output Field Definitions & Structure:
+- name: (String) Full name only (no titles).
+- image: (String or null) URL to profile image (https://...)
+- roles: (Array of strings) Active municipal roles.
+         Identify their official job title or specific position.
+         This can be a wide variety of municipal roles (e.g., "Mayor", "City Manager", "Selectman",
+         "Alderman", "Council Member").
+- divisions: (Array of strings) Specific district/ward and name/number,
+          only if specified (e.g., "Ward 1", "District 2").
+- phone_number: (String or null) Formatted phone number
+- email: (String or null) Email address (email@example.com)
+- website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+- start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+- end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+Extraction Guidelines:
+- Roles extraction:
+  - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, chair, vice chair, chair pro tem, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+  - If a role includes additional descriptors or variations, normalize it to the closest matching target role when possible.
+    - Example: "Vice President" under a governing body → Normalize to the closest matching target role, such as "Council Vice President" or "Commissioner Vice President."
+    - If a role cannot be normalized to a target role but is clearly valid (e.g., "Vice President"), extract it as-is.
+  - Use the governing body or surrounding context to determine the correct role for ambiguous titles.
+    - Example: If "Vice President" is listed under "Council Members," infer it as "Council Vice President."
+    - Example: If "Vice President" appears without clear context, extract it as "Vice President."
+  - Include only active roles (today is 2025-10-21).
+
+- Divisions:
+  - Extract divisions if explicitly mentioned and relevant to the person's role.
+  - Do not infer divisions if they are not explicitly stated.
+
+- General Guidelines:
+  - Merge details for the same person into a single record.
+  - Assign confidence (0-1 scale) and provide a brief reason for each field's data.
+  - Extract full names only (e.g., "John Smith," not "Mayor John Smith"). Titles belong in the roles field.
+  - Ensure extracted data is accurate and relevant to the governing body or target roles.
+- Image: Extract URL of portrait/headshot near name. Ignore logos, banners, icons. Check alt text but prioritize proximity/style.
+- Contact Details (Phone/Email/Website):
+  - Associate details logically if near the person's name/section.
+  - Pick the most relevant contact detail if multiple are present.
+  - Phone numbers:
+    - Extract number after labels like "Office:", "Cell:", "Mobile:", "Direct:", "Home:". Exclude "Fax:". Format numbers simply.
+  - Markdown Links: Extract email/phone from the VISIBLE TEXT of links like `[TEXT](...)`, ignore the target URL.
+  - `website` data MUST be a valid http/https URL. Prefer profile pages. EXCLUDE mailto:, tel:.
+  - `email` data should ONLY contain email addresses.
+- Term Dates (`start_date`, `end_date`):
+  - Extract start_date and end_date in YYYY, YYYY-MM, or YYYY-MM-DD format.
+  - Acceptable date phrases include:
+    - “Elected [date]”, “Appointed [date]”, “Term: [date1] to [date2]”, “Since [date]”.
+    - For vague phrases like "Spring 2025", extract the year only.
+  - If more than one term is mentioned, extract the most recent term dates.
+  - Examples:
+    - "Elected Nov 2024 for term ending Dec 2028" -> start_date: "2024-11", end_date: "2028-12"
+    - "Served January 2018 until December 2021 - Re-elected and serving January 2022 and until December 2025" -> start_date: "2022-01", end_date: "2025-12"
+    - "Elected in 2017 and re-elected in 2021 for the 2022-2025 term." -> start_date: "2022", end_date: "2025"
+
+**FINAL MANDATORY CHECK**: Review your entire response for accuracy before submitting,
+  paying close attention to the role inference, date extraction, and term identification rules.
+
+[2025-10-21T23:17:32.642109] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 3834, Output tokens: 966, Total cost: $0.00
+[2025-10-21T23:17:32.642584] [INFO] openai LLM call took 15.13 seconds
+[2025-10-21T23:17:32.667933] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.668665] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.668897] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.669147] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.669379] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.669653] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.669835] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.670127] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.670380] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.670598] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.670810] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.670960] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.671101] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.671234] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.671456] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.671936] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.672155] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-10-21T23:17:32.672628] [INFO] Current data: 8
+[2025-10-21T23:17:32.672853] [INFO] Required data: 9
+[2025-10-21T23:17:32.673054] [INFO] Minimum required data: 6
+[2025-10-21T23:17:32.673301] [INFO] Has target role: True
+[2025-10-21T23:17:32.673504] [INFO] Has target divisions (if available): True
+[2025-10-21T23:17:32.674058] [INFO] Current total cost for this run: $0.04
+[2025-10-21T23:17:32.674354] [INFO] Enough data processed, moving to report generation...
+[2025-10-21T23:17:32.740618] [INFO] Step 9: CLEANUP
+[2025-10-21T23:17:32.819690] [INFO] Step 5: MAYBE_SEND_TO_GITHUB
+[2025-10-21T23:17:32.819850] [INFO] CRUDDER_UPLOAD_URL: https://crudder.civicpatch.org/api/github_intake
