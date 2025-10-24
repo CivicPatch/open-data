@@ -1,10 +1,15 @@
 from typing import List, Optional
 from pydantic import BaseModel, field_validator, model_validator
-import phonenumbers
-from phonenumbers import PhoneNumberFormat, NumberParseException
 import re
 from urllib.parse import urlparse
 from datetime import datetime, timezone
+
+class Jurisdiction(BaseModel):
+    id: str
+    name: str # Common name of the jurisdiction (including lsad)
+    url: Optional[str] = None
+    population: Optional[int] = None # This might be under divisions -> meta; consult repo
+    geoid: Optional[str] = None # This is definitely under divisions somewhere
 
 class Person(BaseModel):
     jurisdiction_id: str
