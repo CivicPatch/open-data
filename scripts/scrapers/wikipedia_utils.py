@@ -56,14 +56,11 @@ def get_entry_infobox(wiki_url) -> Tuple[Dict[str, Any], List[str]]:
                     header_text = header.get_text(strip=True).lower()
                     if "fips code" in header_text or "geoid" in header_text:
                         data_td = row.find("td")
+                        # First, remove super scripts
                         if data_td:
-                            # Look for external link first to avoid superscript
-                            fips_link = data_td.find("a", class_="external")
-                            if fips_link:
-                                geoid = fips_link.get_text(strip=True)
-                            else:
-                                # Fallback to full td text if no external link
-                                geoid = data_td.get_text(strip=True)
+                            for element in data_td.find_all('sup'):
+                                element.extract()
+                            geoid = data_td.get_text(strip=True)
                     elif "website" in header_text:
                         data_td = row.find("td")
                         if data_td:

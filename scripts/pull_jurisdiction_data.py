@@ -6,7 +6,8 @@ import yaml
 import io
 from pathlib import Path
 from scripts.scrapers import (
-    co as co_scraper
+    co as co_scraper,
+    wa as wa_scraper
 )
 
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -20,9 +21,10 @@ state_configs = {
     "wa": {
         "fips": "53",
         "pull_from_census": ["places"],
-        "scraper": None,  # Placeholder for WA scraper
+        "scraper": wa_scraper
     }
 }
+
 
 def pull_jurisdiction_data(state: str):
     # TODO: this will be replaced by jurisdictions repo work
@@ -30,24 +32,27 @@ def pull_jurisdiction_data(state: str):
     census_data, census_warnings = get_census_data_for_state(state)
     jurisdictions_with_supplemented_data, supplement_warnings = supplement_data(state, census_data)
     jurisdictions = jurisdictions_with_supplemented_data.values()
-    jurisdictions_by_population = sorted(jurisdictions, key=lambda j: j.population if j.population is not None else 0, reverse=True)
+    jurisdictions_by_population = sorted(
+        jurisdictions, key=lambda j: j.population if j.population is not None else 0, reverse=True
+    )
     data = {
         "jurisdictions": [jurisdiction.model_dump() for jurisdiction in jurisdictions_by_population],
         "warnings": census_warnings + supplement_warnings
     }
-    
+
     # Find project root (where pyproject.toml is located)
     output_path = PROJECT_ROOT / "data_source" / state / "jurisdictions.yml"
-    
+
     # Create directory if it doesn't exist
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    
+
     with open(output_path, "w") as f:
         yaml.dump(
             data,
             f,
             sort_keys=False,
         )
+
 
 # https://www.census.gov/library/reference/code-lists/class-codes.html
 def get_census_data_for_state(state: str) -> Tuple[Dict[str, Jurisdiction], List[str]]:
@@ -75,11 +80,12 @@ def get_census_data_for_state(state: str) -> Tuple[Dict[str, Jurisdiction], List
         for jurisdiction_object in place_jurisdictions:
             jurisdiction_id = jurisdiction_object.id
             if census_data.get(jurisdiction_id):
-                print(f"Warning: Duplicate jurisdiction found: {jurisdiction_id}")
+                print(f"Duplicate jurisdiction found: {jurisdiction_id}")
                 existing_jurisdiction = census_data[jurisdiction_id]
                 existing_jurisdiction_name = existing_jurisdiction.name
                 jurisdiction_object_name = jurisdiction_object.name
-                warnings.append(f"Duplicate jurisdiction found: {jurisdiction_id} between {existing_jurisdiction_name} and {jurisdiction_object_name}")
+                warnings.append(f"Duplicate jurisdiction found:"
+                                f{jurisdiction_id} between {existing_jurisdiction_name} and {jurisdiction_object_name}")
             else:
                 census_data[jurisdiction_id] = jurisdiction_object
 
@@ -89,11 +95,14 @@ def get_census_data_for_state(state: str) -> Tuple[Dict[str, Jurisdiction], List
         for jurisdiction_object in cousub_jurisdictions:
             jurisdiction_id = jurisdiction_object.id
             if census_data.get(jurisdiction_id):
-                print(f"Warning: Duplicate jurisdiction found: {jurisdiction_id}")
+                print(f"Duplicate jurisdiction found: {jurisdiction_id}")
                 existing_jurisdiction = census_data[jurisdiction_id]
                 existing_jurisdiction_name = existing_jurisdiction.name
                 jurisdiction_object_name = jurisdiction_object.name
-                warnings.append(f"Duplicate jurisdiction found: {jurisdiction_id} between {existing_jurisdiction_name} and {jurisdiction_object_name}")
+                warnings.append(f"Duplicate jurisdiction found: "
+                                f"{jurisdiction_id} between "
+                                f"{existing_jurisdiction_name}"
+                                f"and {jurisdiction_object_name}")
             else:
                 census_data[jurisdiction_id] = jurisdiction_object
 
