@@ -1,0 +1,63 @@
+name: "[auto] - Post Pull Request"
+
+on:
+  workflow_dispatch:
+    inputs:
+      state:
+        description: 'state intitials'
+        required: true
+        type: choice
+        options:
+          - co
+          - wa
+jobs:
+  data-scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate GitHub App Pipeline Token
+        id: generate-pipeline-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.GH_APP_BOT_PIPELINE_APP_ID }}
+          private-key: ${{ secrets.GH_APP_BOT_PIPELINE_PRIVATE_KEY }}
+
+      # Use this next step for git commits
+      - name: Get GitHub App User ID
+        id: get-user-id
+        run: echo "user-id=$(gh api "/users/${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ steps.generate-pipeline-token.outputs.token }}
+
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          token: ${{ steps.generate-pipeline-token.outputs.token }}
+
+      - name: Setup mise
+        uses: jdx/mise-action@v3.2.0
+        with:
+          version: '2025.9.6'
+          cache: true
+          log_level: debug
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update progress file
+        run: |
+          mise pipeline-run-cicd \
+            --state "${{ github.event.inputs.state }}"
+
+      - name: Commit changes to main
+        run: |
+          # Configure git
+          git config --global user.name '${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]'
+          git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]@users.noreply.github.com'
+
+          # Commit changes if any images were updated
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "Update government_progress.yml file for state: ${{ github.event.inputs.state }}"
+            git push -u origin main
+          fi
+           
