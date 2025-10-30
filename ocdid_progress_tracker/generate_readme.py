@@ -1,17 +1,14 @@
 import json
 import os
 
+
 def generate_readme(progress_file, output_file):
     with open(progress_file, "r") as file:
         data = json.load(file)
 
     # Static template with placeholders
-    template = """# CivicPatch Open Data
-# open-data
+    template = """# open-data
 
-Every day at 9AM PST, this repo syncs the data/ and data_source/ folders from the
-[civicpatch-tools repo](https://github.com/CivicPatch/civicpatch-tools)
-    
 ## Progress Overview
 
 All Google OCDIDs are gathered from these [set of files](https://drive.google.com/drive/folders/15DHdG3D4-IWeuAj5k-fTMUFVEkrYDGqn)
@@ -100,6 +97,7 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
         file.write(readme_content)
 
     print(f"README.md generated at {output_file}")
+
 
 if __name__ == "__main__":
     file_dir = os.path.dirname(os.path.abspath(__file__))
