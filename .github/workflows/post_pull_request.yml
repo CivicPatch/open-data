@@ -60,6 +60,11 @@ jobs:
           log_level: debug
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Install poetry dependencies
+        run: |
+          mise ls
+          poetry install
+
       - name: Update progress files for each state
         run: |
           for state in ${{ steps.extract-states.outputs.states }}; do
@@ -67,8 +72,8 @@ jobs:
             python scripts/create_update_progress_file.py "$state"
           done
 
-          python ocdid_progress_tracker/main.py
-          python ocdid_progress_tracker/generate_readme.py
+          poetry run python ocdid_progress_tracker/main.py
+          poetry run python ocdid_progress_tracker/generate_readme.py
 
       - name: Commit changes to main
         run: |
