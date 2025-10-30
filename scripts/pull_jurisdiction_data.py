@@ -85,7 +85,7 @@ def get_census_data_for_state(state: str) -> Tuple[Dict[str, Jurisdiction], List
                 existing_jurisdiction_name = existing_jurisdiction.name
                 jurisdiction_object_name = jurisdiction_object.name
                 warnings.append(f"Duplicate jurisdiction found:"
-                                f{jurisdiction_id} between {existing_jurisdiction_name} and {jurisdiction_object_name}")
+                                f"{jurisdiction_id} between {existing_jurisdiction_name} and {jurisdiction_object_name}")
             else:
                 census_data[jurisdiction_id] = jurisdiction_object
 

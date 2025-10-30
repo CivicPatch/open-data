@@ -11,6 +11,12 @@ class Jurisdiction(BaseModel):
     population: Optional[int] = None # This might be under divisions -> meta; consult repo
     geoid: Optional[str] = None # This is definitely under divisions somewhere
 
+class JurisdictionId(BaseModel):
+    id: str
+    jurisdiction_type: Optional[str] = None
+    normalized_id: Optional[str] = None
+
+    
 class Person(BaseModel):
     jurisdiction_id: str
     name: str
