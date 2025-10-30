@@ -38,12 +38,13 @@ jobs:
         with:
           ref: main
           token: ${{ steps.generate-pipeline-token.outputs.token }}
+          fetch-depth: 0  # Fetch all history for accurate diffing
 
       - name: Extract updated states
         id: extract-states
         run: |
           # Get the list of updated files
-          UPDATED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
+          UPDATED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
 
           # Extract unique state directories from the updated files
           STATES=$(echo "$UPDATED_FILES" | grep -oP '^data_source/\K[^/]+' | sort -u)
