@@ -1,15 +1,19 @@
 name: "[auto] - Post Pull Request"
 
 on:
-  workflow_dispatch:
-    inputs:
-      state:
-        description: 'state intitials'
-        required: true
-        type: choice
-        options:
-          - co
-          - wa
+  push:
+    branches:
+      - main
+  #workflow_dispatch:
+  #  inputs:
+  #    state:
+  #      description: 'state intitials'
+  #      required: true
+  #      type: choice
+  #      options:
+  #        - co
+  #        - wa
+  
 jobs:
   data-scrape:
     runs-on: ubuntu-latest
@@ -35,6 +39,18 @@ jobs:
           ref: main
           token: ${{ steps.generate-pipeline-token.outputs.token }}
 
+      - name: Extract updated states
+        id: extract-states
+        run: |
+          # Get the list of updated files
+          UPDATED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
+
+          # Extract unique state directories from the updated files
+          STATES=$(echo "$UPDATED_FILES" | grep -oP '^data_source/\K[^/]+' | sort -u)
+
+          # Output the states as a comma-separated list
+          echo "states=$STATES" >> $GITHUB_OUTPUT
+
       - name: Setup mise
         uses: jdx/mise-action@v3.2.0
         with:
@@ -43,10 +59,15 @@ jobs:
           log_level: debug
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Update progress file
+      - name: Update progress files for each state
         run: |
-          mise pipeline-run-cicd \
-            --state "${{ github.event.inputs.state }}"
+          for state in ${{ steps.extract-states.outputs.states }}; do
+            echo "Processing state: $state"
+            python scripts/create_update_progress_file.py "$state"
+          done
+
+          python ocdid_progress_tracker/main.py
+          python ocdid_progress_tracker/generate_readme.py
 
       - name: Commit changes to main
         run: |
@@ -57,7 +78,7 @@ jobs:
           # Commit changes if any images were updated
           if [ -n "$(git status --porcelain)" ]; then
             git add .
-            git commit -m "Update government_progress.yml file for state: ${{ github.event.inputs.state }}"
+            git commit -m "Update government_progress.yml file for states: ${{ steps.extract-states.outputs.states }}"
             git push -u origin main
           fi
            
