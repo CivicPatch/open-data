@@ -1,0 +1,93 @@
+name: "[manual] - Data Scrape by Population"
+
+on:
+  workflow_dispatch:
+    inputs:
+      state:
+        description: "State initials (e.g. co, wa)"
+        required: true
+        type: choice
+        options:
+          - co
+          - wa
+      num_jurisdictions:
+        description: "Number of jurisdictions to scrape by population (e.g. 10 for top 10)"
+        required: false
+        default: 10
+        type: number
+
+jobs:
+  fetch-jurisdictions:
+    environment: env-${{ github.actor }}
+
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Setup mise
+        uses: jdx/mise-action@v3.2.0
+        with:
+          version: "2025.9.6"
+          cache: true
+          log_level: debug
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install poetry dependencies
+        run: |
+          mise ls
+          poetry install
+
+      - name: Pull docker image
+        run: |
+          docker compose -f docker-compose.github-actions.yml pull civicpatch-cicd
+
+      - name: Fetch jurisdictions
+        id: find-jurisdictions
+        run: |
+          # Create a temporary file to store the jurisdictions
+          TMP_FILE="$RUNNER_TEMP/jurisdictions.json"
+
+          # Run the CLI command and save the output to the temporary file
+          python src/cli/cli.py get_juds --num-jurisdictions ${{ github.event.inptus.num_jurisdictions }} --state "${{ github.event.inputs.state }}" > "$TMP_FILE"
+
+          # Use jq to extract the jurisdictions and format them as a JSON array for the matrix
+          jq -c '.jurisdictions[] | {id, name, url}' "$TMP_FILE" > "$RUNNER_TEMP/matrix.json"
+
+      - name: Set matrix
+        id: set-matrix
+        run: |
+          # Convert the JSON array into a GitHub Actions matrix format
+          echo "matrix=$(jq -c -s '.' $RUNNER_TEMP/matrix.json)" >> $GITHUB_OUTPUT
+
+  run-pipelines:
+    needs: find-jurisdictions
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        jurisdiction: ${{ fromJson(needs.fetch-jurisdictions.outputs.matrix) }}
+    steps:
+      - name: Run pipeline for jurisdiction
+        env:
+          BRAVE_SEARCH_TOKEN: ${{ secrets.BRAVE_SEARCH_TOKEN }}
+          GOOGLE_SEARCH_TOKEN: ${{ secrets.GOOGLE_SEARCH_TOKEN }}
+          GOOGLE_SEARCH_ENGINE_ID: ${{ secrets.GOOGLE_SEARCH_ENGINE_ID }}
+          SERP_API_TOKEN: ${{ secrets.SERP_API_TOKEN }}
+
+          GOOGLE_GEMINI_TOKEN: ${{ secrets.GOOGLE_GEMINI_TOKEN }}
+          OPENAI_TOKEN: ${{ secrets.OPENAI_TOKEN }}
+          TOGETHER_AI_TOKEN: ${{ secrets.TOGETHER_AI_TOKEN }}
+
+          CRUDDER_SHARED_TOKEN: ${{ secrets.CRUDDER_SHARED_TOKEN }}
+          CRUDDER_URL: ${{ vars.CRUDDER_URL }}
+        run: |
+          echo "Running pipeline for jurisdiction: ${{ matrix.jurisdiction.name }}"
+          mise pipeline-run-cicd --jurisdiction-id "${{ matrix.jurisdiction.id }}" --name "${{ matrix.jurisdiction.name }}" --url "${{ matrix.jurisdiction.url }}"
