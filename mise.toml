@@ -55,10 +55,20 @@ poetry run python scripts/pull_jurisdiction_data.py $@
 ## GITHUB ACTIONS
 #############################################
 
+[tasks.get-juds]
+run = """
+docker compose -f docker-compose.github-actions.yml run --rm civicpatch-cicd poetry run \
+  python src/cli/cli.py \
+    get_juds \
+    --num-jurisdictions "{{ option(name="num-jurisdictions") }}" \
+    --state "{{ option(name="state") }}"
+"""
+
 [tasks.pipeline-run-cicd]
 run = """
 docker compose -f docker-compose.github-actions.yml run --rm civicpatch-cicd poetry run \
-  python src/cli.py \
+  python src/cli/cli.py \
+    run_pipeline
     --jurisdiction-id "{{ option(name="jurisdiction-id") }}" \
     --name "{{ option(name="name") }}" \
     --url "{{ option(name="url") }}"
@@ -79,7 +89,7 @@ docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
 [tasks.generate-data-comment]
 run = """
 docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
-  python src/scripts/generate_data_comment.py {{ option(name="jurisdiction-id") }} 
+  python src/scripts/generate_data_comment.py {{ option(name="jurisdiction-id") }}
 """
 
 [tasks.test-generate-review-comment]
