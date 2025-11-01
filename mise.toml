@@ -57,7 +57,7 @@ poetry run python scripts/pull_jurisdiction_data.py $@
 
 [tasks.get-juds]
 run = """
-docker compose -f docker-compose.github-actions.yml run --rm civicpatch-cicd poetry run \
+docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
   python src/cli/cli.py \
     get_juds \
     --num-jurisdictions "{{ option(name="num-jurisdictions") }}" \
@@ -82,7 +82,9 @@ docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
 
 [tasks.send-costs-to-google-sheets]
 run = """
-docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
+docker compose -f docker-compose.slim.yml \
+  --log-level ERROR \
+  run --rm civicpatch-slim poetry run \
   python src/scripts/send_costs_to_google_sheets.py {{ option(name="jurisdiction-id") }}
 """
 
