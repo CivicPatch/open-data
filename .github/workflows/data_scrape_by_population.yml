@@ -80,7 +80,22 @@ jobs:
       matrix:
         jurisdiction: ${{ fromJson(needs.fetch-jurisdictions.outputs.matrix) }}
     steps:
-      - name: Run pipeline for jurisdiction
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup mise
+        uses: jdx/mise-action@v3.2.0
+        with:
+          version: "2025.9.6"
+          cache: true
+          log_level: debug
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull docker image
+        run: |
+          docker compose -f docker-compose.github-actions.yml pull civicpatch-cicd
+
+      - name: Run data scrape
         env:
           BRAVE_SEARCH_TOKEN: ${{ secrets.BRAVE_SEARCH_TOKEN }}
           GOOGLE_SEARCH_TOKEN: ${{ secrets.GOOGLE_SEARCH_TOKEN }}
@@ -95,4 +110,7 @@ jobs:
           CRUDDER_URL: ${{ vars.CRUDDER_URL }}
         run: |
           echo "Running pipeline for jurisdiction: ${{ matrix.jurisdiction.name }}"
-          mise pipeline-run-cicd --jurisdiction-id "${{ matrix.jurisdiction.id }}" --name "${{ matrix.jurisdiction.name }}" --url "${{ matrix.jurisdiction.url }}"
+          mise pipeline-run-cicd \
+            --jurisdiction-id "${{ matrix.jurisdiction.id }}" \
+            --name "${{ matrix.jurisdiction.name }}" \
+            --url "${{ matrix.jurisdiction.url }}"
