@@ -1,4 +1,4 @@
-name: "[auto] - Post Pull Request"
+name: "[auto] Post Merge"
 
 on:
   push:
@@ -13,9 +13,9 @@ on:
   #      options:
   #        - co
   #        - wa
-  
+
 jobs:
-  data-scrape:
+  post-merge:
     runs-on: ubuntu-latest
 
     steps:
@@ -38,7 +38,7 @@ jobs:
         with:
           ref: main
           token: ${{ steps.generate-pipeline-token.outputs.token }}
-          fetch-depth: 0  # Fetch all history for accurate diffing
+          fetch-depth: 0 # Fetch all history for accurate diffing
 
       - name: Extract updated states
         id: extract-states
@@ -55,7 +55,7 @@ jobs:
       - name: Setup mise
         uses: jdx/mise-action@v3.2.0
         with:
-          version: '2025.9.6'
+          version: "2025.9.6"
           cache: true
           log_level: debug
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -87,4 +87,3 @@ jobs:
             git commit -m "Update government_progress.yml file for states: ${{ steps.extract-states.outputs.states }}"
             git push -u origin main
           fi
-           

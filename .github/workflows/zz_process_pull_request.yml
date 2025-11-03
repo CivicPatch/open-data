@@ -1,23 +1,23 @@
-name: "[auto] Process Pull Request"
+name: "[partial] Process Pull Request"
 
 on:
   workflow_call:
     inputs:
       pr_number:
-        description: 'The number of the PR to comment on'
+        description: "The number of the PR to comment on"
         required: true
         type: number
       head_ref:
-        description: 'The head ref (branch name) of the PR'
+        description: "The head ref (branch name) of the PR"
         required: true
         type: string
       jurisdiction_id:
-        description: 'The ocdid jurisdiction identifier for the municipality'
+        description: "The ocdid jurisdiction identifier for the municipality"
         required: true
         type: string
       upload_images:
-        description: 'Whether to upload images to CDN'
-        required: false 
+        description: "Whether to upload images to CDN"
+        required: false
         type: boolean
         default: false
 
@@ -78,7 +78,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
@@ -90,7 +90,7 @@ jobs:
       - name: Set up mise
         uses: jdx/mise-action@v3.2.0
         with:
-          version: '2025.9.6'
+          version: "2025.9.6"
           cache: true
           log_level: debug
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -102,7 +102,7 @@ jobs:
         run: echo "The branch name is ${{ inputs.head_ref }}"
 
       - name: Upload images to CDN
-        if: ${{ inputs.upload_images == true }} 
+        if: ${{ inputs.upload_images == true }}
         env:
           FRIENDLY_STORAGE_HOST: ${{ vars.FRIENDLY_STORAGE_HOST }}
           STORAGE_ENDPOINT: ${{ secrets.STORAGE_ENDPOINT }}
@@ -113,7 +113,7 @@ jobs:
           # Remove local images after upload TODO
 
       - name: Commit image updates
-        if: ${{ inputs.upload_images == true }} 
+        if: ${{ inputs.upload_images == true }}
         run: |
           # Configure git
           git config --global user.name '${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]'
@@ -125,16 +125,16 @@ jobs:
             git commit -m "Upload images to CDN for ${{ inputs.jurisdiction_id }}"
             git push -u origin ${{ inputs.head_ref }}
           fi
-    
+
       - name: Upload costs.json to Google Sheets
         env:
-          GOOGLE_SHEETS_SPREADSHEET_ID: ${{ vars.GOOGLE_SHEETS_SPREADSHEET_ID }} 
+          GOOGLE_SHEETS_SPREADSHEET_ID: ${{ vars.GOOGLE_SHEETS_SPREADSHEET_ID }}
           GOOGLE_SHEETS_PRIVATE_KEY: ${{ secrets.GOOGLE_SHEETS_PRIVATE_KEY }}
           GOOGLE_SHEETS_CLIENT_EMAIL: ${{ secrets.GOOGLE_SHEETS_CLIENT_EMAIL }}
           GOOGLE_SHEETS_TOKEN_URI: ${{ secrets.GOOGLE_SHEETS_TOKEN_URI }}
         run: |
           mise send-costs-to-google-sheets --jurisdiction-id "${{ inputs.jurisdiction_id }}"
-      
+
       - name: Create/Update Data Comment
         env:
           GITHUB_USERNAME: civic-patch-pipeline-bot
@@ -158,4 +158,3 @@ jobs:
           else
             gh pr review $PR_NUMBER --approve -b "$COMMENT"
           fi
-       
