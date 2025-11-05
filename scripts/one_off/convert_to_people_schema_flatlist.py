@@ -1,49 +1,61 @@
 import os
-import json
 import yaml
+from pathlib import Path
 
 
-def remove_government_key_and_flatten(directory: str):
+def flatten_government_key_and_convert_to_yaml(directory: str):
     """
     Traverse all YAML files under the given directory, remove the "government" key,
-    and promote its contents to the top level. Convert the files to flat JSON.
+    and promote its contents to the top level. Save the output back as YAML.
 
     Args:
         directory (str): The root directory to search for YAML files.
     """
     # Walk through the directory and find all .yml files
-    for root, _, files in os.walk(directory):
-        for file in files:
-            if file.endswith(".yml"):
-                file_path = os.path.join(root, file)
-                print(f"Processing file: {file_path}")
+    yaml_files = list(Path(directory).rglob("*.yml"))
+    print(f"Found {len(yaml_files)} YAML files to process.")
 
-                try:
-                    # Load the YAML file
-                    with open(file_path, "r") as f:
-                        data = yaml.safe_load(f)
+    converted_count = 0
+    error_count = 0
 
-                    # Check if the "government" key exists
-                    if "government" in data:
-                        # Promote the contents of "government" to the top level
-                        data = data["government"]
+    for file_path in yaml_files:
+        try:
+            file_path = str(file_path)  # Convert Path object to string
+            print(f"Processing file: {file_path}")
 
-                    # Convert the data to JSON
-                    json_output = json.dumps(data, indent=2)
+            # Load the YAML file
+            with open(file_path, "r", encoding="utf-8") as f:
+                data = yaml.safe_load(f)
 
-                    # Write the JSON output back to the file
-                    with open(file_path, "w") as f:
-                        f.write(json_output)
+            # Check if the "government" key exists and promote its contents
+            if "government" in data:
+                data = data["government"]
 
-                    print(f"Updated file: {file_path}")
+            # Write the flattened data back to the YAML file
+            with open(file_path, "w", encoding="utf-8") as f:
+                yaml.dump(
+                    data,
+                    f,
+                    default_flow_style=False,
+                    allow_unicode=True,
+                    sort_keys=False,
+                )
 
-                except Exception as e:
-                    print(f"Error processing file {file_path}: {e}")
+            print(f"  ✓ Converted to YAML: {file_path}")
+            converted_count += 1
+
+        except Exception as e:
+            print(f"  ✗ Error processing file {file_path}: {e}")
+            error_count += 1
+
+    print("\nConversion complete!")
+    print(f"Successfully converted: {converted_count} files")
+    print(f"Errors: {error_count} files")
 
 
 if __name__ == "__main__":
-    # Define the root directory containing the YAML files
+    # Default root directory
     root_directory = "data"
 
     # Run the script
-    remove_government_key_and_flatten(root_directory)
+    flatten_government_key_and_convert_to_yaml(root_directory)
