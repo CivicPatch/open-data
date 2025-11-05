@@ -6,7 +6,7 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 
 | State | CivicPatch Count | Scrapeable | Scraped | Scraped % | Google Count | Missing Places in CivicPatch | Missing Places in Google |
 |-------|------------------|------------|---------|-----------|--------------|-----------------------|-------------------|
-| wa | 281 | 244 | 174 | 71.31% | 281 | 1 | 1 |
+| wa | 281 | 244 | 176 | 72.13% | 281 | 1 | 1 |
 
 ## Missing OCD IDs by State
 
