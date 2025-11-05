@@ -1,0 +1,1017 @@
+[2025-11-05T23:09:24.882038] [INFO] Step 0: INIT
+[2025-11-05T23:09:24.896123] [INFO] Step 1: RESEARCH_MUNICIPALITY
+[2025-11-05T23:09:24.922605] [INFO] Running Gemini prompt
+[2025-11-05T23:09:24.922878] [DEBUG] Prompt: 
+
+    Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
+
+    Municipality: Chicago city, il
+
+    Instructions:
+
+    1. Determine the government type of the city. Available government types:
+- mayor_commission
+- mayor_council
+- select_board
+- aldermen
+
+    2. Identify the elected officials in the local government, 
+       including the Mayor (if applicable).
+       2.1. For each official, extract the following details:
+            - name: Full name only (no titles)
+            - roles: List of active municipal roles (e.g., Mayor, Council Member)
+            - divisions: List of (ward, district), only if applicable
+
+    3. Create a JSON object with the following structure:
+       ```json
+       {
+         "government_type": examples - "mayor_council" or "mayor_commission", etc.,
+         "people": [
+           {
+             "name": "Full name of the official or null if uncertain",
+             "roles": ["Mayor", "Council Member", "Commissioner", etc.],
+             "divisions": ["Ward 1", "District 2", etc.] or [],
+           }
+         ],
+         "notes": "Brief notes about the search and results"
+       }
+       ```
+
+    IMPORTANT: If the response contains anything other than a valid JSON object,
+    it will be considered incorrect. Ensure the response is strictly JSON.
+    Verify that the response is valid JSON before returning it.
+    If it is not valid JSON, retry the generation.
+    
+[2025-11-05T23:09:37.842923] [DEBUG] Gemini raw response: {'government_type': 'mayor_council', 'people': [{'name': 'Brandon Johnson', 'roles': ['Mayor'], 'divisions': []}, {'name': 'Anna M. Valencia', 'roles': ['City Clerk'], 'divisions': []}, {'name': 'Melissa Conyears-Ervin', 'roles': ['City Treasurer'], 'divisions': []}, {'name': 'Daniel La Spata', 'roles': ['Alderperson'], 'divisions': ['Ward 1']}, {'name': 'Brian Hopkins', 'roles': ['Alderperson'], 'divisions': ['Ward 2']}, {'name': 'Pat Dowell', 'roles': ['Alderperson'], 'divisions': ['Ward 3']}, {'name': 'Sophia King', 'roles': ['Alderperson'], 'divisions': ['Ward 4']}, {'name': 'Leslie Hairston', 'roles': ['Alderperson'], 'divisions': ['Ward 5']}, {'name': 'Roderick Sawyer', 'roles': ['Alderperson'], 'divisions': ['Ward 6']}, {'name': 'Gregory Mitchell', 'roles': ['Alderperson'], 'divisions': ['Ward 7']}, {'name': 'Michelle Harris', 'roles': ['Alderperson'], 'divisions': ['Ward 8']}, {'name': 'Anthony Beale', 'roles': ['Alderperson'], 'divisions': ['Ward 9']}, {'name': 'Peter Chico', 'roles': ['Alderperson'], 'divisions': ['Ward 10']}, {'name': 'Nicole Lee', 'roles': ['Alderperson'], 'divisions': ['Ward 11']}, {'name': 'George A. Cardenas', 'roles': ['Alderperson'], 'divisions': ['Ward 12']}, {'name': 'Marty Quinn', 'roles': ['Alderperson'], 'divisions': ['Ward 13']}, {'name': 'Ed Burke', 'roles': ['Alderperson'], 'divisions': ['Ward 14']}, {'name': 'Raymond Lopez', 'roles': ['Alderperson'], 'divisions': ['Ward 15']}, {'name': 'Stephanie D. Coleman', 'roles': ['Alderperson'], 'divisions': ['Ward 16']}, {'name': 'David Moore', 'roles': ['Alderperson'], 'divisions': ['Ward 17']}, {'name': 'Derrick Curtis', 'roles': ['Alderperson'], 'divisions': ['Ward 18']}, {'name': "Matthew O'Shea", 'roles': ['Alderperson'], 'divisions': ['Ward 19']}, {'name': 'Jeanette B. Taylor', 'roles': ['Alderperson'], 'divisions': ['Ward 20']}, {'name': 'Howard Brookins Jr.', 'roles': ['Alderperson'], 'divisions': ['Ward 21']}, {'name': 'Michael D. Rodriguez', 'roles': ['Alderperson'], 'divisions': ['Ward 22']}, {'name': 'Silvana Tabares', 'roles': ['Alderperson'], 'divisions': ['Ward 23']}, {'name': 'Monique Scott', 'roles': ['Alderperson'], 'divisions': ['Ward 24']}, {'name': 'Byron Sigcho Lopez', 'roles': ['Alderperson'], 'divisions': ['Ward 25']}, {'name': 'Roberto Maldonado', 'roles': ['Alderperson'], 'divisions': ['Ward 26']}, {'name': 'Walter Burnett, Jr.', 'roles': ['Alderperson'], 'divisions': ['Ward 27']}, {'name': 'Jason Ervin', 'roles': ['Alderperson'], 'divisions': ['Ward 28']}, {'name': 'Chris Taliaferro', 'roles': ['Alderperson'], 'divisions': ['Ward 29']}, {'name': 'Ariel E. Reboyras', 'roles': ['Alderperson'], 'divisions': ['Ward 30']}, {'name': 'Felix Cardona, Jr.', 'roles': ['Alderperson'], 'divisions': ['Ward 31']}, {'name': 'Scott Waguespack', 'roles': ['Alderperson'], 'divisions': ['Ward 32']}, {'name': 'Rossana Rodriguez Sanchez', 'roles': ['Alderperson'], 'divisions': ['Ward 33']}, {'name': 'Carrie Austin', 'roles': ['Alderperson'], 'divisions': ['Ward 34']}, {'name': 'Carlos Ramirez-Rosa', 'roles': ['Alderperson'], 'divisions': ['Ward 35']}, {'name': 'Gilbert Villegas', 'roles': ['Alderperson'], 'divisions': ['Ward 36']}, {'name': 'Emma Mitts', 'roles': ['Alderperson'], 'divisions': ['Ward 37']}, {'name': 'Nicholas Sposato', 'roles': ['Alderperson'], 'divisions': ['Ward 38']}, {'name': 'Samantha Nugent', 'roles': ['Alderperson'], 'divisions': ['Ward 39']}, {'name': 'Andre Vasquez, Jr.', 'roles': ['Alderperson'], 'divisions': ['Ward 40']}, {'name': 'Anthony Napolitano', 'roles': ['Alderperson'], 'divisions': ['Ward 41']}, {'name': 'Brendan Reilly', 'roles': ['Alderperson'], 'divisions': ['Ward 42']}, {'name': 'Timmy Knudsen', 'roles': ['Alderperson'], 'divisions': ['Ward 43']}, {'name': 'Thomas M. Tunney', 'roles': ['Alderperson'], 'divisions': ['Ward 44']}, {'name': 'James M. Gardiner', 'roles': ['Alderperson'], 'divisions': ['Ward 45']}, {'name': 'James Cappleman', 'roles': ['Alderperson'], 'divisions': ['Ward 46']}, {'name': 'Matthew J. Martin', 'roles': ['Alderperson'], 'divisions': ['Ward 47']}, {'name': 'Harry Osterman', 'roles': ['Alderperson'], 'divisions': ['Ward 48']}, {'name': 'Maria E. Hadden', 'roles': ['Alderperson'], 'divisions': ['Ward 49']}, {'name': 'Debra Silverstein', 'roles': ['Alderperson'], 'divisions': ['Ward 50']}], 'notes': 'The City of Chicago operates under a mayor-council government system. The Mayor, City Clerk, and City Treasurer are city-wide elected officials. The City Council consists of 50 alderpersons, each representing a specific ward. The list of alderpersons and their wards was compiled from recent search results.'}
+[2025-11-05T23:09:37.845908] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 358, Output tokens: 2913, Total cost: $0.01
+[2025-11-05T23:09:37.846085] [INFO] gemini gemini-2.5-flash LLM call took 12.92 seconds
+[2025-11-05T23:09:37.848384] [INFO] Step 2: SEARCH_LINKS
+[2025-11-05T23:09:37.864278] [INFO] Searching for keyword term: mayor
+[2025-11-05T23:09:37.864600] [INFO] Searching with google for Chicago city mayor
+[2025-11-05T23:09:38.267464] [INFO] -> https://www.chicago.gov/city/en/depts/mayor.html
+[2025-11-05T23:09:38.268205] [INFO] -> https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2025/october/city-property-executive-order.html
+[2025-11-05T23:09:38.268920] [INFO] -> https://www.chicago.gov/
+[2025-11-05T23:09:38.269570] [INFO] -> https://www.chicago.gov/city/en/about/council.html
+[2025-11-05T23:09:38.270488] [INFO] -> https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2025/october/budget-proposal-2025.html
+[2025-11-05T23:09:38.271676] [INFO] -> https://www.chicago.gov/city/en/depts/mayor/iframe/lookup_ward_and_alderman.html
+[2025-11-05T23:09:38.272554] [INFO] -> https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2025/january/mayor-brandon-johnson-announces-renewable-energy-milestone.html
+[2025-11-05T23:09:38.272784] [INFO] -> https://www.chicago.gov/city/en/general/contact.html
+[2025-11-05T23:09:38.272942] [INFO] -> https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases.html
+[2025-11-05T23:09:38.273081] [INFO] -> https://www.chicago.gov/city/en/depts/mopd.html
+[2025-11-05T23:09:38.273975] [INFO] Search successful with google. Found 10 results.
+[2025-11-05T23:09:38.274282] [INFO] Searching for keyword term: council members
+[2025-11-05T23:09:38.274632] [INFO] Searching with google for Chicago city council members
+[2025-11-05T23:09:38.625263] [INFO] -> https://www.chicago.gov/city/en/about/council.html
+[2025-11-05T23:09:38.625556] [INFO] -> https://www.chicago.gov/city/en/about/wards.html
+[2025-11-05T23:09:38.625686] [INFO] -> https://www.chicago.gov/city/en/chicagogovt.html
+[2025-11-05T23:09:38.625849] [INFO] -> https://www.chicago.gov/city/en/depts/mayor/provdrs/your_ward_and_alderman/svcs/find_my_alderman.html
+[2025-11-05T23:09:38.625982] [INFO] -> https://www.chicago.gov/city/en/depts/mayor/iframe/lookup_ward_and_alderman.html
+[2025-11-05T23:09:38.626123] [INFO] -> https://www.chicago.gov/city/en/depts/ccpsa/supp_info/district-councils.html
+[2025-11-05T23:09:38.626250] [INFO] -> https://www.chicago.gov/city/en/depts/dcd/supp_info/chicago_plan_commission.html
+[2025-11-05T23:09:38.626385] [INFO] -> https://www.chicago.gov/city/en/depts/dcd/supp_info/landmarks_commission.html
+[2025-11-05T23:09:38.626580] [INFO] -> https://www.chicago.gov/city/en/depts/mayor/provdrs/your_ward_and_alderman.html
+[2025-11-05T23:09:38.626744] [INFO] -> https://www.chicago.gov/city/en/depts/ccpsa/supp_info/serving-on-a-district-council.html
+[2025-11-05T23:09:38.627109] [INFO] Search successful with google. Found 10 results.
+[2025-11-05T23:09:38.627244] [INFO] Searching for keyword term: elected officials
+[2025-11-05T23:09:38.627366] [INFO] Searching with google for Chicago city elected officials
+[2025-11-05T23:09:38.879521] [INFO] -> https://www.chicago.gov/city/en/chicagogovt.html
+[2025-11-05T23:09:38.879869] [INFO] -> https://www.chicago.gov/city/en/about/council.html
+[2025-11-05T23:09:38.880123] [INFO] -> https://www.chicago.gov/
+[2025-11-05T23:09:38.880380] [INFO] -> https://www.chicago.gov/city/en/depts/mayor/provdrs/your_ward_and_alderman/svcs/find_my_alderman.html
+[2025-11-05T23:09:38.880763] [INFO] -> https://www.chicago.gov/city/en/depts/mayor.html
+[2025-11-05T23:09:38.881043] [INFO] -> https://www.chicago.gov/city/en/about/wards.html
+[2025-11-05T23:09:38.881326] [INFO] -> https://www.chicago.gov/city/en/general/contact.html
+[2025-11-05T23:09:38.881493] [INFO] -> https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2025/october/city-property-executive-order.html
+[2025-11-05T23:09:38.881692] [INFO] -> https://www.chicago.gov/city/en/depts/ccpsa/supp_info/district-councils.html
+[2025-11-05T23:09:38.881832] [INFO] -> https://www.chicago.gov/city/en/depts.html
+[2025-11-05T23:09:38.882541] [INFO] Search successful with google. Found 10 results.
+[2025-11-05T23:09:38.884860] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.chicago.gov/city/en/depts/mayor.html
+[2025-11-05T23:09:40.955425] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/safari-pinned-tab.svg
+[2025-11-05T23:09:40.962752] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/icon-dot-gov.svg
+[2025-11-05T23:09:40.969940] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/icon-https.svg
+[2025-11-05T23:09:40.975207] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/cds/chicago.gov-logo.png
+[2025-11-05T23:09:40.976275] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/cds/chicago.gov-logo.png
+[2025-11-05T23:09:41.037770] [INFO] Image saved: /app/data_source/il/place_chicago/images/941879e4567b.png
+[2025-11-05T23:09:41.044700] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/close.svg
+[2025-11-05T23:09:41.051272] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-05T23:09:41.062541] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-05T23:09:41.074149] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-05T23:09:41.080021] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/homepage/HomepageBanners/2018/2018May.jpg
+[2025-11-05T23:09:41.080469] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/homepage/HomepageBanners/2018/2018May.jpg
+[2025-11-05T23:09:41.193539] [INFO] Image saved: /app/data_source/il/place_chicago/images/390e5ef17848.png
+[2025-11-05T23:09:41.198741] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/homepage/HomepageBanners/2018/2018Spring.jpg
+[2025-11-05T23:09:41.199107] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/homepage/HomepageBanners/2018/2018Spring.jpg
+[2025-11-05T23:09:41.840184] [INFO] Image saved: /app/data_source/il/place_chicago/images/15b8ac629834.png
+[2025-11-05T23:09:41.846721] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/homepage/HomepageBanners/2018/FallBanner.2018.png
+[2025-11-05T23:09:41.847068] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/homepage/HomepageBanners/2018/FallBanner.2018.png
+[2025-11-05T23:09:41.992354] [INFO] Image saved: /app/data_source/il/place_chicago/images/82b1ac610776.png
+[2025-11-05T23:09:41.999253] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/homepage/HomepageBanners/2018/WinterBanner.2018.png
+[2025-11-05T23:09:41.999876] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/homepage/HomepageBanners/2018/WinterBanner.2018.png
+[2025-11-05T23:09:42.163255] [INFO] Image saved: /app/data_source/il/place_chicago/images/33669430de07.png
+[2025-11-05T23:09:42.168406] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/depts/mayor/ProtectingChicago/Protecting%20Chicago%20200x200.png
+[2025-11-05T23:09:42.168907] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/depts/mayor/ProtectingChicago/Protecting%20Chicago%20200x200.png
+[2025-11-05T23:09:42.271172] [INFO] Image saved: /app/data_source/il/place_chicago/images/14c3ac3e37eb.png
+[2025-11-05T23:09:42.276476] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/depts/mayor/MayorBrandonJohnson/MBJ_UIC_20230515_1.jpg
+[2025-11-05T23:09:42.276838] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/depts/mayor/MayorBrandonJohnson/MBJ_UIC_20230515_1.jpg
+[2025-11-05T23:09:42.382226] [INFO] Image saved: /app/data_source/il/place_chicago/images/7636b615d751.png
+[2025-11-05T23:09:42.387530] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/cds/city_seal_clr.png
+[2025-11-05T23:09:42.387874] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/cds/city_seal_clr.png
+[2025-11-05T23:09:42.441982] [INFO] Image saved: /app/data_source/il/place_chicago/images/83f20df4d15a.png
+[2025-11-05T23:09:42.458194] [DEBUG] Skipping blacklisted or invalid image: 
+[2025-11-05T23:09:42.466369] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2025-11-05T23:09:42.613027] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.chicago.gov/city/en/depts/mayor.html
+[2025-11-05T23:09:49.607412] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2025-11-05T23:09:49.607550] [INFO] -> Elapsed time: 6.99 seconds
+[2025-11-05T23:09:49.607622] [INFO] -> Average elapsed time: 6.99 seconds
+[2025-11-05T23:09:49.607703] [INFO] -> Total elapsed time: 6.99 seconds
+[2025-11-05T23:09:49.609595] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.chicago.gov/city/en/depts/mayor.html
+[2025-11-05T23:09:49.610309] [INFO] Running Gemini prompt
+[2025-11-05T23:09:49.610421] [DEBUG] Prompt: 
+
+    First, determine if the content contains relevant information about the main governing body of the target municipality. If the content includes information about the following people, they are very likely to be on the council: Brandon Johnson, Daniel La Spata, Brian Hopkins, Pat Dowell, Sophia King, Leslie Hairston, Roderick Sawyer, Gregory Mitchell, Michelle Harris, Anthony Beale, Peter Chico, Nicole Lee, George A. Cardenas, Marty Quinn, Ed Burke, Raymond Lopez, Stephanie D. Coleman, David Moore, Derrick Curtis, Matthew O'Shea, Jeanette B. Taylor, Howard Brookins Jr., Michael D. Rodriguez, Silvana Tabares, Monique Scott, Byron Sigcho Lopez, Roberto Maldonado, Walter Burnett, Jr., Jason Ervin, Chris Taliaferro, Ariel E. Reboyras, Felix Cardona, Jr., Scott Waguespack, Rossana Rodriguez Sanchez, Carrie Austin, Carlos Ramirez-Rosa, Gilbert Villegas, Emma Mitts, Nicholas Sposato, Samantha Nugent, Andre Vasquez, Jr., Anthony Napolitano, Brendan Reilly, Timmy Knudsen, Thomas M. Tunney, James M. Gardiner, James Cappleman, Matthew J. Martin, Harry Osterman, Maria E. Hadden, Debra Silverstein.
+    If not, return an empty JSON array `[]`.
+
+    Target Roles: mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson
+    Target Divisions: ward, district
+    Current Date: 2025-11-05
+
+    Return a JSON object with people, each having:
+    - name: (String) Full name only (no titles)
+    - image: (String or null) URL to profile image (https://...)
+    - roles: (Array of strings) Active municipal roles
+    - divisions: (Array of strings) Specific district/ward names
+    - phone_number: (String or null) Formatted phone number
+    - email: (String or null) Email address
+    - website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+    - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+    Guidelines:
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - Website extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided `current_date` to filter out roles or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+    
+[2025-11-05T23:09:53.954150] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 3147, Output tokens: 220, Total cost: $0.00
+[2025-11-05T23:09:53.956825] [INFO] gemini gemini-2.5-flash LLM call took 4.35 seconds
+[2025-11-05T23:09:53.957944] [INFO] Running OpenAI prompt
+[2025-11-05T23:09:53.958110] [DEBUG] Prompt: 
+
+You are an expert data extractor focused on accuracy.
+
+First, determine if the content contains relevant information about any of the main governing body of a municipality. Here is a list of known target people (may be missing or include extra): Brandon Johnson, Daniel La Spata, Brian Hopkins, Pat Dowell, Sophia King, Leslie Hairston, Roderick Sawyer, Gregory Mitchell, Michelle Harris, Anthony Beale, Peter Chico, Nicole Lee, George A. Cardenas, Marty Quinn, Ed Burke, Raymond Lopez, Stephanie D. Coleman, David Moore, Derrick Curtis, Matthew O'Shea, Jeanette B. Taylor, Howard Brookins Jr., Michael D. Rodriguez, Silvana Tabares, Monique Scott, Byron Sigcho Lopez, Roberto Maldonado, Walter Burnett, Jr., Jason Ervin, Chris Taliaferro, Ariel E. Reboyras, Felix Cardona, Jr., Scott Waguespack, Rossana Rodriguez Sanchez, Carrie Austin, Carlos Ramirez-Rosa, Gilbert Villegas, Emma Mitts, Nicholas Sposato, Samantha Nugent, Andre Vasquez, Jr., Anthony Napolitano, Brendan Reilly, Timmy Knudsen, Thomas M. Tunney, James M. Gardiner, James Cappleman, Matthew J. Martin, Harry Osterman, Maria E. Hadden, Debra Silverstein.
+If not, return an empty JSON array `[]`.
+
+Target Person (if applicable): 
+Target roles: mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson
+Target divisions: ward, district
+Current Date: 2025-11-05
+
+Return a JSON object.
+
+Output Field Definitions & Structure:
+- name: (String) Full name only (no titles).
+- image: (String or null) URL to profile image (https://...)
+- roles: (Array of strings) Active municipal roles.
+         Identify their official job title or specific position.
+         This can be a wide variety of municipal roles (e.g., "Mayor", "City Manager", "Selectman",
+         "Alderman", "Council Member").
+- divisions: (Array of strings) Specific district/ward and name/number,
+          only if specified (e.g., "Ward 1", "District 2").
+- phone_number: (String or null) Formatted phone number
+- email: (String or null) Email address (email@example.com)
+- website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+- start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+- end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+Extraction Guidelines:
+- Roles extraction:
+  - Extract roles that match the **target roles** provided (e.g., mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson).
+  - If a role includes additional descriptors or variations, normalize it to the closest matching target role when possible.
+    - Example: "Vice President" under a governing body → Normalize to the closest matching target role, such as "Council Vice President" or "Commissioner Vice President."
+    - If a role cannot be normalized to a target role but is clearly valid (e.g., "Vice President"), extract it as-is.
+  - Use the governing body or surrounding context to determine the correct role for ambiguous titles.
+    - Example: If "Vice President" is listed under "Council Members," infer it as "Council Vice President."
+    - Example: If "Vice President" appears without clear context, extract it as "Vice President."
+  - Include only active roles (today is 2025-11-05).
+
+- Divisions:
+  - Extract divisions if explicitly mentioned and relevant to the person's role.
+  - Do not infer divisions if they are not explicitly stated.
+
+- General Guidelines:
+  - Merge details for the same person into a single record.
+  - Assign confidence (0-1 scale) and provide a brief reason for each field's data.
+  - Extract full names only (e.g., "John Smith," not "Mayor John Smith"). Titles belong in the roles field.
+  - Ensure extracted data is accurate and relevant to the governing body or target roles.
+- Image: Extract URL of portrait/headshot near name. Ignore logos, banners, icons. Check alt text but prioritize proximity/style.
+- Contact Details (Phone/Email/Website):
+  - Associate details logically if near the person's name/section.
+  - Pick the most relevant contact detail if multiple are present.
+  - Phone numbers:
+    - Extract number after labels like "Office:", "Cell:", "Mobile:", "Direct:", "Home:". Exclude "Fax:". Format numbers simply.
+  - Markdown Links: Extract email/phone from the VISIBLE TEXT of links like `[TEXT](...)`, ignore the target URL.
+  - `website` data MUST be a valid http/https URL. Prefer profile pages. EXCLUDE mailto:, tel:.
+  - `email` data should ONLY contain email addresses.
+- Term Dates (`start_date`, `end_date`):
+  - Extract start_date and end_date in YYYY, YYYY-MM, or YYYY-MM-DD format.
+  - Acceptable date phrases include:
+    - “Elected [date]”, “Appointed [date]”, “Term: [date1] to [date2]”, “Since [date]”.
+    - For vague phrases like "Spring 2025", extract the year only.
+  - If more than one term is mentioned, extract the most recent term dates.
+  - Examples:
+    - "Elected Nov 2024 for term ending Dec 2028" -> start_date: "2024-11", end_date: "2028-12"
+    - "Served January 2018 until December 2021 - Re-elected and serving January 2022 and until December 2025" -> start_date: "2022-01", end_date: "2025-12"
+    - "Elected in 2017 and re-elected in 2021 for the 2022-2025 term." -> start_date: "2022", end_date: "2025"
+
+**FINAL MANDATORY CHECK**: Review your entire response for accuracy before submitting,
+  paying close attention to the role inference, date extraction, and term identification rules.
+
+[2025-11-05T23:09:58.279211] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 3227, Output tokens: 189, Total cost: $0.00
+[2025-11-05T23:09:58.279575] [INFO] openai LLM call took 4.32 seconds
+[2025-11-05T23:09:58.293961] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:09:58.294376] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:09:58.294730] [INFO] Current data: 1
+[2025-11-05T23:09:58.294926] [INFO] Required data: 51
+[2025-11-05T23:09:58.295193] [INFO] Minimum required data: 48
+[2025-11-05T23:09:58.295420] [INFO] Has target role: True
+[2025-11-05T23:09:58.295590] [INFO] Has target divisions (if available): False
+[2025-11-05T23:09:58.295944] [INFO] Current total cost for this run: $0.03
+[2025-11-05T23:09:58.296105] [INFO] Not enough data processed yet, collecting more data... 0/56
+[2025-11-05T23:09:58.300001] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.chicago.gov/city/en/about/council.html
+[2025-11-05T23:10:00.139018] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/safari-pinned-tab.svg
+[2025-11-05T23:10:00.143545] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/icon-dot-gov.svg
+[2025-11-05T23:10:00.148693] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/icon-https.svg
+[2025-11-05T23:10:00.153391] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/cds/chicago.gov-logo.png
+[2025-11-05T23:10:00.153811] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/cds/chicago.gov-logo.png
+[2025-11-05T23:10:00.211752] [INFO] Image saved: /app/data_source/il/place_chicago/images/941879e4567b.png
+[2025-11-05T23:10:00.216811] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/close.svg
+[2025-11-05T23:10:00.220293] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-05T23:10:00.223667] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-05T23:10:00.227452] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-05T23:10:00.232402] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/cds/city_seal_clr.png
+[2025-11-05T23:10:00.232811] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/cds/city_seal_clr.png
+[2025-11-05T23:10:00.287886] [INFO] Image saved: /app/data_source/il/place_chicago/images/83f20df4d15a.png
+[2025-11-05T23:10:00.293378] [DEBUG] Skipping blacklisted or invalid image: 
+[2025-11-05T23:10:00.297312] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2025-11-05T23:10:00.414913] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.chicago.gov/city/en/about/council.html
+[2025-11-05T23:10:04.832730] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2025-11-05T23:10:04.832853] [INFO] -> Elapsed time: 4.42 seconds
+[2025-11-05T23:10:04.832984] [INFO] -> Average elapsed time: 5.21 seconds
+[2025-11-05T23:10:04.833066] [INFO] -> Total elapsed time: 10.42 seconds
+[2025-11-05T23:10:04.834640] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.chicago.gov/city/en/about/council.html
+[2025-11-05T23:10:04.835155] [INFO] Running Gemini prompt
+[2025-11-05T23:10:04.835246] [DEBUG] Prompt: 
+
+    First, determine if the content contains relevant information about the main governing body of the target municipality. If the content includes information about the following people, they are very likely to be on the council: Brandon Johnson, Daniel La Spata, Brian Hopkins, Pat Dowell, Sophia King, Leslie Hairston, Roderick Sawyer, Gregory Mitchell, Michelle Harris, Anthony Beale, Peter Chico, Nicole Lee, George A. Cardenas, Marty Quinn, Ed Burke, Raymond Lopez, Stephanie D. Coleman, David Moore, Derrick Curtis, Matthew O'Shea, Jeanette B. Taylor, Howard Brookins Jr., Michael D. Rodriguez, Silvana Tabares, Monique Scott, Byron Sigcho Lopez, Roberto Maldonado, Walter Burnett, Jr., Jason Ervin, Chris Taliaferro, Ariel E. Reboyras, Felix Cardona, Jr., Scott Waguespack, Rossana Rodriguez Sanchez, Carrie Austin, Carlos Ramirez-Rosa, Gilbert Villegas, Emma Mitts, Nicholas Sposato, Samantha Nugent, Andre Vasquez, Jr., Anthony Napolitano, Brendan Reilly, Timmy Knudsen, Thomas M. Tunney, James M. Gardiner, James Cappleman, Matthew J. Martin, Harry Osterman, Maria E. Hadden, Debra Silverstein.
+    If not, return an empty JSON array `[]`.
+
+    Target Roles: mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson
+    Target Divisions: ward, district
+    Current Date: 2025-11-05
+
+    Return a JSON object with people, each having:
+    - name: (String) Full name only (no titles)
+    - image: (String or null) URL to profile image (https://...)
+    - roles: (Array of strings) Active municipal roles
+    - divisions: (Array of strings) Specific district/ward names
+    - phone_number: (String or null) Formatted phone number
+    - email: (String or null) Email address
+    - website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+    - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+    Guidelines:
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - Website extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided `current_date` to filter out roles or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+    
+[2025-11-05T23:10:07.677642] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 2044, Output tokens: 68, Total cost: $0.00
+[2025-11-05T23:10:07.680477] [INFO] gemini gemini-2.5-flash LLM call took 2.85 seconds
+[2025-11-05T23:10:07.681383] [INFO] Running OpenAI prompt
+[2025-11-05T23:10:07.681522] [DEBUG] Prompt: 
+
+You are an expert data extractor focused on accuracy.
+
+First, determine if the content contains relevant information about any of the main governing body of a municipality. Here is a list of known target people (may be missing or include extra): Brandon Johnson, Daniel La Spata, Brian Hopkins, Pat Dowell, Sophia King, Leslie Hairston, Roderick Sawyer, Gregory Mitchell, Michelle Harris, Anthony Beale, Peter Chico, Nicole Lee, George A. Cardenas, Marty Quinn, Ed Burke, Raymond Lopez, Stephanie D. Coleman, David Moore, Derrick Curtis, Matthew O'Shea, Jeanette B. Taylor, Howard Brookins Jr., Michael D. Rodriguez, Silvana Tabares, Monique Scott, Byron Sigcho Lopez, Roberto Maldonado, Walter Burnett, Jr., Jason Ervin, Chris Taliaferro, Ariel E. Reboyras, Felix Cardona, Jr., Scott Waguespack, Rossana Rodriguez Sanchez, Carrie Austin, Carlos Ramirez-Rosa, Gilbert Villegas, Emma Mitts, Nicholas Sposato, Samantha Nugent, Andre Vasquez, Jr., Anthony Napolitano, Brendan Reilly, Timmy Knudsen, Thomas M. Tunney, James M. Gardiner, James Cappleman, Matthew J. Martin, Harry Osterman, Maria E. Hadden, Debra Silverstein.
+If not, return an empty JSON array `[]`.
+
+Target Person (if applicable): 
+Target roles: mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson
+Target divisions: ward, district
+Current Date: 2025-11-05
+
+Return a JSON object.
+
+Output Field Definitions & Structure:
+- name: (String) Full name only (no titles).
+- image: (String or null) URL to profile image (https://...)
+- roles: (Array of strings) Active municipal roles.
+         Identify their official job title or specific position.
+         This can be a wide variety of municipal roles (e.g., "Mayor", "City Manager", "Selectman",
+         "Alderman", "Council Member").
+- divisions: (Array of strings) Specific district/ward and name/number,
+          only if specified (e.g., "Ward 1", "District 2").
+- phone_number: (String or null) Formatted phone number
+- email: (String or null) Email address (email@example.com)
+- website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+- start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+- end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+Extraction Guidelines:
+- Roles extraction:
+  - Extract roles that match the **target roles** provided (e.g., mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson).
+  - If a role includes additional descriptors or variations, normalize it to the closest matching target role when possible.
+    - Example: "Vice President" under a governing body → Normalize to the closest matching target role, such as "Council Vice President" or "Commissioner Vice President."
+    - If a role cannot be normalized to a target role but is clearly valid (e.g., "Vice President"), extract it as-is.
+  - Use the governing body or surrounding context to determine the correct role for ambiguous titles.
+    - Example: If "Vice President" is listed under "Council Members," infer it as "Council Vice President."
+    - Example: If "Vice President" appears without clear context, extract it as "Vice President."
+  - Include only active roles (today is 2025-11-05).
+
+- Divisions:
+  - Extract divisions if explicitly mentioned and relevant to the person's role.
+  - Do not infer divisions if they are not explicitly stated.
+
+- General Guidelines:
+  - Merge details for the same person into a single record.
+  - Assign confidence (0-1 scale) and provide a brief reason for each field's data.
+  - Extract full names only (e.g., "John Smith," not "Mayor John Smith"). Titles belong in the roles field.
+  - Ensure extracted data is accurate and relevant to the governing body or target roles.
+- Image: Extract URL of portrait/headshot near name. Ignore logos, banners, icons. Check alt text but prioritize proximity/style.
+- Contact Details (Phone/Email/Website):
+  - Associate details logically if near the person's name/section.
+  - Pick the most relevant contact detail if multiple are present.
+  - Phone numbers:
+    - Extract number after labels like "Office:", "Cell:", "Mobile:", "Direct:", "Home:". Exclude "Fax:". Format numbers simply.
+  - Markdown Links: Extract email/phone from the VISIBLE TEXT of links like `[TEXT](...)`, ignore the target URL.
+  - `website` data MUST be a valid http/https URL. Prefer profile pages. EXCLUDE mailto:, tel:.
+  - `email` data should ONLY contain email addresses.
+- Term Dates (`start_date`, `end_date`):
+  - Extract start_date and end_date in YYYY, YYYY-MM, or YYYY-MM-DD format.
+  - Acceptable date phrases include:
+    - “Elected [date]”, “Appointed [date]”, “Term: [date1] to [date2]”, “Since [date]”.
+    - For vague phrases like "Spring 2025", extract the year only.
+  - If more than one term is mentioned, extract the most recent term dates.
+  - Examples:
+    - "Elected Nov 2024 for term ending Dec 2028" -> start_date: "2024-11", end_date: "2028-12"
+    - "Served January 2018 until December 2021 - Re-elected and serving January 2022 and until December 2025" -> start_date: "2022-01", end_date: "2025-12"
+    - "Elected in 2017 and re-elected in 2021 for the 2022-2025 term." -> start_date: "2022", end_date: "2025"
+
+**FINAL MANDATORY CHECK**: Review your entire response for accuracy before submitting,
+  paying close attention to the role inference, date extraction, and term identification rules.
+
+[2025-11-05T23:10:14.950373] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 2322, Output tokens: 83, Total cost: $0.00
+[2025-11-05T23:10:14.950884] [INFO] openai LLM call took 7.27 seconds
+[2025-11-05T23:10:14.952295] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:10:14.952529] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:10:14.952793] [INFO] Current data: 1
+[2025-11-05T23:10:14.952933] [INFO] Required data: 51
+[2025-11-05T23:10:14.953049] [INFO] Minimum required data: 48
+[2025-11-05T23:10:14.953209] [INFO] Has target role: True
+[2025-11-05T23:10:14.953299] [INFO] Has target divisions (if available): False
+[2025-11-05T23:10:14.953512] [INFO] Current total cost for this run: $0.03
+[2025-11-05T23:10:14.953679] [INFO] Not enough data processed yet, collecting more data... 1/56
+[2025-11-05T23:10:14.955575] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.chicago.gov/city/en/chicagogovt.html
+[2025-11-05T23:10:16.753099] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/safari-pinned-tab.svg
+[2025-11-05T23:10:16.756979] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/icon-dot-gov.svg
+[2025-11-05T23:10:16.762662] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/icon-https.svg
+[2025-11-05T23:10:16.767356] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/cds/chicago.gov-logo.png
+[2025-11-05T23:10:16.767811] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/cds/chicago.gov-logo.png
+[2025-11-05T23:10:16.813886] [INFO] Image saved: /app/data_source/il/place_chicago/images/941879e4567b.png
+[2025-11-05T23:10:16.823143] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/close.svg
+[2025-11-05T23:10:16.828562] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-05T23:10:16.840703] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-05T23:10:16.846622] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-05T23:10:16.854514] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/cds/city_seal_clr.png
+[2025-11-05T23:10:16.858014] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/cds/city_seal_clr.png
+[2025-11-05T23:10:16.918499] [INFO] Image saved: /app/data_source/il/place_chicago/images/83f20df4d15a.png
+[2025-11-05T23:10:16.925173] [DEBUG] Skipping blacklisted or invalid image: 
+[2025-11-05T23:10:16.930478] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2025-11-05T23:10:17.048467] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.chicago.gov/city/en/chicagogovt.html
+[2025-11-05T23:10:21.115740] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2025-11-05T23:10:21.115851] [INFO] -> Elapsed time: 4.07 seconds
+[2025-11-05T23:10:21.115934] [INFO] -> Average elapsed time: 4.69 seconds
+[2025-11-05T23:10:21.115998] [INFO] -> Total elapsed time: 14.07 seconds
+[2025-11-05T23:10:21.117414] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.chicago.gov/city/en/chicagogovt.html
+[2025-11-05T23:10:21.117848] [INFO] Running Gemini prompt
+[2025-11-05T23:10:21.117939] [DEBUG] Prompt: 
+
+    First, determine if the content contains relevant information about the main governing body of the target municipality. If the content includes information about the following people, they are very likely to be on the council: Brandon Johnson, Daniel La Spata, Brian Hopkins, Pat Dowell, Sophia King, Leslie Hairston, Roderick Sawyer, Gregory Mitchell, Michelle Harris, Anthony Beale, Peter Chico, Nicole Lee, George A. Cardenas, Marty Quinn, Ed Burke, Raymond Lopez, Stephanie D. Coleman, David Moore, Derrick Curtis, Matthew O'Shea, Jeanette B. Taylor, Howard Brookins Jr., Michael D. Rodriguez, Silvana Tabares, Monique Scott, Byron Sigcho Lopez, Roberto Maldonado, Walter Burnett, Jr., Jason Ervin, Chris Taliaferro, Ariel E. Reboyras, Felix Cardona, Jr., Scott Waguespack, Rossana Rodriguez Sanchez, Carrie Austin, Carlos Ramirez-Rosa, Gilbert Villegas, Emma Mitts, Nicholas Sposato, Samantha Nugent, Andre Vasquez, Jr., Anthony Napolitano, Brendan Reilly, Timmy Knudsen, Thomas M. Tunney, James M. Gardiner, James Cappleman, Matthew J. Martin, Harry Osterman, Maria E. Hadden, Debra Silverstein.
+    If not, return an empty JSON array `[]`.
+
+    Target Roles: mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson
+    Target Divisions: ward, district
+    Current Date: 2025-11-05
+
+    Return a JSON object with people, each having:
+    - name: (String) Full name only (no titles)
+    - image: (String or null) URL to profile image (https://...)
+    - roles: (Array of strings) Active municipal roles
+    - divisions: (Array of strings) Specific district/ward names
+    - phone_number: (String or null) Formatted phone number
+    - email: (String or null) Email address
+    - website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+    - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+    Guidelines:
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - Website extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided `current_date` to filter out roles or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+    
+[2025-11-05T23:10:23.875060] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 1933, Output tokens: 81, Total cost: $0.00
+[2025-11-05T23:10:23.878141] [INFO] gemini gemini-2.5-flash LLM call took 2.76 seconds
+[2025-11-05T23:10:23.879023] [INFO] Running OpenAI prompt
+[2025-11-05T23:10:23.879185] [DEBUG] Prompt: 
+
+You are an expert data extractor focused on accuracy.
+
+First, determine if the content contains relevant information about any of the main governing body of a municipality. Here is a list of known target people (may be missing or include extra): Brandon Johnson, Daniel La Spata, Brian Hopkins, Pat Dowell, Sophia King, Leslie Hairston, Roderick Sawyer, Gregory Mitchell, Michelle Harris, Anthony Beale, Peter Chico, Nicole Lee, George A. Cardenas, Marty Quinn, Ed Burke, Raymond Lopez, Stephanie D. Coleman, David Moore, Derrick Curtis, Matthew O'Shea, Jeanette B. Taylor, Howard Brookins Jr., Michael D. Rodriguez, Silvana Tabares, Monique Scott, Byron Sigcho Lopez, Roberto Maldonado, Walter Burnett, Jr., Jason Ervin, Chris Taliaferro, Ariel E. Reboyras, Felix Cardona, Jr., Scott Waguespack, Rossana Rodriguez Sanchez, Carrie Austin, Carlos Ramirez-Rosa, Gilbert Villegas, Emma Mitts, Nicholas Sposato, Samantha Nugent, Andre Vasquez, Jr., Anthony Napolitano, Brendan Reilly, Timmy Knudsen, Thomas M. Tunney, James M. Gardiner, James Cappleman, Matthew J. Martin, Harry Osterman, Maria E. Hadden, Debra Silverstein.
+If not, return an empty JSON array `[]`.
+
+Target Person (if applicable): 
+Target roles: mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson
+Target divisions: ward, district
+Current Date: 2025-11-05
+
+Return a JSON object.
+
+Output Field Definitions & Structure:
+- name: (String) Full name only (no titles).
+- image: (String or null) URL to profile image (https://...)
+- roles: (Array of strings) Active municipal roles.
+         Identify their official job title or specific position.
+         This can be a wide variety of municipal roles (e.g., "Mayor", "City Manager", "Selectman",
+         "Alderman", "Council Member").
+- divisions: (Array of strings) Specific district/ward and name/number,
+          only if specified (e.g., "Ward 1", "District 2").
+- phone_number: (String or null) Formatted phone number
+- email: (String or null) Email address (email@example.com)
+- website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+- start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+- end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+Extraction Guidelines:
+- Roles extraction:
+  - Extract roles that match the **target roles** provided (e.g., mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson).
+  - If a role includes additional descriptors or variations, normalize it to the closest matching target role when possible.
+    - Example: "Vice President" under a governing body → Normalize to the closest matching target role, such as "Council Vice President" or "Commissioner Vice President."
+    - If a role cannot be normalized to a target role but is clearly valid (e.g., "Vice President"), extract it as-is.
+  - Use the governing body or surrounding context to determine the correct role for ambiguous titles.
+    - Example: If "Vice President" is listed under "Council Members," infer it as "Council Vice President."
+    - Example: If "Vice President" appears without clear context, extract it as "Vice President."
+  - Include only active roles (today is 2025-11-05).
+
+- Divisions:
+  - Extract divisions if explicitly mentioned and relevant to the person's role.
+  - Do not infer divisions if they are not explicitly stated.
+
+- General Guidelines:
+  - Merge details for the same person into a single record.
+  - Assign confidence (0-1 scale) and provide a brief reason for each field's data.
+  - Extract full names only (e.g., "John Smith," not "Mayor John Smith"). Titles belong in the roles field.
+  - Ensure extracted data is accurate and relevant to the governing body or target roles.
+- Image: Extract URL of portrait/headshot near name. Ignore logos, banners, icons. Check alt text but prioritize proximity/style.
+- Contact Details (Phone/Email/Website):
+  - Associate details logically if near the person's name/section.
+  - Pick the most relevant contact detail if multiple are present.
+  - Phone numbers:
+    - Extract number after labels like "Office:", "Cell:", "Mobile:", "Direct:", "Home:". Exclude "Fax:". Format numbers simply.
+  - Markdown Links: Extract email/phone from the VISIBLE TEXT of links like `[TEXT](...)`, ignore the target URL.
+  - `website` data MUST be a valid http/https URL. Prefer profile pages. EXCLUDE mailto:, tel:.
+  - `email` data should ONLY contain email addresses.
+- Term Dates (`start_date`, `end_date`):
+  - Extract start_date and end_date in YYYY, YYYY-MM, or YYYY-MM-DD format.
+  - Acceptable date phrases include:
+    - “Elected [date]”, “Appointed [date]”, “Term: [date1] to [date2]”, “Since [date]”.
+    - For vague phrases like "Spring 2025", extract the year only.
+  - If more than one term is mentioned, extract the most recent term dates.
+  - Examples:
+    - "Elected Nov 2024 for term ending Dec 2028" -> start_date: "2024-11", end_date: "2028-12"
+    - "Served January 2018 until December 2021 - Re-elected and serving January 2022 and until December 2025" -> start_date: "2022-01", end_date: "2025-12"
+    - "Elected in 2017 and re-elected in 2021 for the 2022-2025 term." -> start_date: "2022", end_date: "2025"
+
+**FINAL MANDATORY CHECK**: Review your entire response for accuracy before submitting,
+  paying close attention to the role inference, date extraction, and term identification rules.
+
+[2025-11-05T23:10:25.562703] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 2195, Output tokens: 70, Total cost: $0.00
+[2025-11-05T23:10:25.562978] [INFO] openai LLM call took 1.68 seconds
+[2025-11-05T23:10:25.564390] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:10:25.564599] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:10:25.564808] [INFO] Current data: 1
+[2025-11-05T23:10:25.564989] [INFO] Required data: 51
+[2025-11-05T23:10:25.565122] [INFO] Minimum required data: 48
+[2025-11-05T23:10:25.565281] [INFO] Has target role: True
+[2025-11-05T23:10:25.565402] [INFO] Has target divisions (if available): False
+[2025-11-05T23:10:25.565615] [INFO] Current total cost for this run: $0.03
+[2025-11-05T23:10:25.565900] [INFO] Not enough data processed yet, collecting more data... 2/56
+[2025-11-05T23:10:25.569263] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2025/october/city-property-executive-order.html
+[2025-11-05T23:10:28.807348] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/safari-pinned-tab.svg
+[2025-11-05T23:10:28.812713] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/icon-dot-gov.svg
+[2025-11-05T23:10:28.817671] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/icon-https.svg
+[2025-11-05T23:10:28.822362] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/cds/chicago.gov-logo.png
+[2025-11-05T23:10:28.822798] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/cds/chicago.gov-logo.png
+[2025-11-05T23:10:28.878358] [INFO] Image saved: /app/data_source/il/place_chicago/images/941879e4567b.png
+[2025-11-05T23:10:28.885615] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/close.svg
+[2025-11-05T23:10:28.891174] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-05T23:10:28.903963] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-05T23:10:28.908696] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-05T23:10:28.914152] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/depts/mayor/Photo%20Galleries%20Press%20Room/2025/2025-10-06-MPO-ICE-Free-Zone-Executive-Order-Signing_VJ30398.jpg
+[2025-11-05T23:10:28.914740] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/depts/mayor/Photo%20Galleries%20Press%20Room/2025/2025-10-06-MPO-ICE-Free-Zone-Executive-Order-Signing_VJ30398.jpg
+[2025-11-05T23:10:29.513201] [INFO] Image saved: /app/data_source/il/place_chicago/images/0f1d5b289b0a.png
+[2025-11-05T23:10:29.518795] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/cds/city_seal_clr.png
+[2025-11-05T23:10:29.519131] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/cds/city_seal_clr.png
+[2025-11-05T23:10:29.577013] [INFO] Image saved: /app/data_source/il/place_chicago/images/83f20df4d15a.png
+[2025-11-05T23:10:29.591420] [DEBUG] Skipping blacklisted or invalid image: 
+[2025-11-05T23:10:29.603046] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2025-11-05T23:10:29.978536] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2025/october/city-property-executive-order.html
+[2025-11-05T23:10:35.654328] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2025-11-05T23:10:35.654444] [INFO] -> Elapsed time: 5.68 seconds
+[2025-11-05T23:10:35.654497] [INFO] -> Average elapsed time: 4.92 seconds
+[2025-11-05T23:10:35.654551] [INFO] -> Total elapsed time: 19.68 seconds
+[2025-11-05T23:10:35.656016] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2025/october/city-property-executive-order.html
+[2025-11-05T23:10:35.656513] [INFO] Running Gemini prompt
+[2025-11-05T23:10:35.656597] [DEBUG] Prompt: 
+
+    First, determine if the content contains relevant information about the main governing body of the target municipality. If the content includes information about the following people, they are very likely to be on the council: Brandon Johnson, Daniel La Spata, Brian Hopkins, Pat Dowell, Sophia King, Leslie Hairston, Roderick Sawyer, Gregory Mitchell, Michelle Harris, Anthony Beale, Peter Chico, Nicole Lee, George A. Cardenas, Marty Quinn, Ed Burke, Raymond Lopez, Stephanie D. Coleman, David Moore, Derrick Curtis, Matthew O'Shea, Jeanette B. Taylor, Howard Brookins Jr., Michael D. Rodriguez, Silvana Tabares, Monique Scott, Byron Sigcho Lopez, Roberto Maldonado, Walter Burnett, Jr., Jason Ervin, Chris Taliaferro, Ariel E. Reboyras, Felix Cardona, Jr., Scott Waguespack, Rossana Rodriguez Sanchez, Carrie Austin, Carlos Ramirez-Rosa, Gilbert Villegas, Emma Mitts, Nicholas Sposato, Samantha Nugent, Andre Vasquez, Jr., Anthony Napolitano, Brendan Reilly, Timmy Knudsen, Thomas M. Tunney, James M. Gardiner, James Cappleman, Matthew J. Martin, Harry Osterman, Maria E. Hadden, Debra Silverstein.
+    If not, return an empty JSON array `[]`.
+
+    Target Roles: mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson
+    Target Divisions: ward, district
+    Current Date: 2025-11-05
+
+    Return a JSON object with people, each having:
+    - name: (String) Full name only (no titles)
+    - image: (String or null) URL to profile image (https://...)
+    - roles: (Array of strings) Active municipal roles
+    - divisions: (Array of strings) Specific district/ward names
+    - phone_number: (String or null) Formatted phone number
+    - email: (String or null) Email address
+    - website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+    - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+    Guidelines:
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - Website extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided `current_date` to filter out roles or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+    
+[2025-11-05T23:10:41.352797] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 2858, Output tokens: 237, Total cost: $0.00
+[2025-11-05T23:10:41.355500] [INFO] gemini gemini-2.5-flash LLM call took 5.70 seconds
+[2025-11-05T23:10:41.356821] [INFO] Running OpenAI prompt
+[2025-11-05T23:10:41.357052] [DEBUG] Prompt: 
+
+You are an expert data extractor focused on accuracy.
+
+First, determine if the content contains relevant information about any of the main governing body of a municipality. Here is a list of known target people (may be missing or include extra): Brandon Johnson, Daniel La Spata, Brian Hopkins, Pat Dowell, Sophia King, Leslie Hairston, Roderick Sawyer, Gregory Mitchell, Michelle Harris, Anthony Beale, Peter Chico, Nicole Lee, George A. Cardenas, Marty Quinn, Ed Burke, Raymond Lopez, Stephanie D. Coleman, David Moore, Derrick Curtis, Matthew O'Shea, Jeanette B. Taylor, Howard Brookins Jr., Michael D. Rodriguez, Silvana Tabares, Monique Scott, Byron Sigcho Lopez, Roberto Maldonado, Walter Burnett, Jr., Jason Ervin, Chris Taliaferro, Ariel E. Reboyras, Felix Cardona, Jr., Scott Waguespack, Rossana Rodriguez Sanchez, Carrie Austin, Carlos Ramirez-Rosa, Gilbert Villegas, Emma Mitts, Nicholas Sposato, Samantha Nugent, Andre Vasquez, Jr., Anthony Napolitano, Brendan Reilly, Timmy Knudsen, Thomas M. Tunney, James M. Gardiner, James Cappleman, Matthew J. Martin, Harry Osterman, Maria E. Hadden, Debra Silverstein.
+If not, return an empty JSON array `[]`.
+
+Target Person (if applicable): 
+Target roles: mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson
+Target divisions: ward, district
+Current Date: 2025-11-05
+
+Return a JSON object.
+
+Output Field Definitions & Structure:
+- name: (String) Full name only (no titles).
+- image: (String or null) URL to profile image (https://...)
+- roles: (Array of strings) Active municipal roles.
+         Identify their official job title or specific position.
+         This can be a wide variety of municipal roles (e.g., "Mayor", "City Manager", "Selectman",
+         "Alderman", "Council Member").
+- divisions: (Array of strings) Specific district/ward and name/number,
+          only if specified (e.g., "Ward 1", "District 2").
+- phone_number: (String or null) Formatted phone number
+- email: (String or null) Email address (email@example.com)
+- website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+- start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+- end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+Extraction Guidelines:
+- Roles extraction:
+  - Extract roles that match the **target roles** provided (e.g., mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson).
+  - If a role includes additional descriptors or variations, normalize it to the closest matching target role when possible.
+    - Example: "Vice President" under a governing body → Normalize to the closest matching target role, such as "Council Vice President" or "Commissioner Vice President."
+    - If a role cannot be normalized to a target role but is clearly valid (e.g., "Vice President"), extract it as-is.
+  - Use the governing body or surrounding context to determine the correct role for ambiguous titles.
+    - Example: If "Vice President" is listed under "Council Members," infer it as "Council Vice President."
+    - Example: If "Vice President" appears without clear context, extract it as "Vice President."
+  - Include only active roles (today is 2025-11-05).
+
+- Divisions:
+  - Extract divisions if explicitly mentioned and relevant to the person's role.
+  - Do not infer divisions if they are not explicitly stated.
+
+- General Guidelines:
+  - Merge details for the same person into a single record.
+  - Assign confidence (0-1 scale) and provide a brief reason for each field's data.
+  - Extract full names only (e.g., "John Smith," not "Mayor John Smith"). Titles belong in the roles field.
+  - Ensure extracted data is accurate and relevant to the governing body or target roles.
+- Image: Extract URL of portrait/headshot near name. Ignore logos, banners, icons. Check alt text but prioritize proximity/style.
+- Contact Details (Phone/Email/Website):
+  - Associate details logically if near the person's name/section.
+  - Pick the most relevant contact detail if multiple are present.
+  - Phone numbers:
+    - Extract number after labels like "Office:", "Cell:", "Mobile:", "Direct:", "Home:". Exclude "Fax:". Format numbers simply.
+  - Markdown Links: Extract email/phone from the VISIBLE TEXT of links like `[TEXT](...)`, ignore the target URL.
+  - `website` data MUST be a valid http/https URL. Prefer profile pages. EXCLUDE mailto:, tel:.
+  - `email` data should ONLY contain email addresses.
+- Term Dates (`start_date`, `end_date`):
+  - Extract start_date and end_date in YYYY, YYYY-MM, or YYYY-MM-DD format.
+  - Acceptable date phrases include:
+    - “Elected [date]”, “Appointed [date]”, “Term: [date1] to [date2]”, “Since [date]”.
+    - For vague phrases like "Spring 2025", extract the year only.
+  - If more than one term is mentioned, extract the most recent term dates.
+  - Examples:
+    - "Elected Nov 2024 for term ending Dec 2028" -> start_date: "2024-11", end_date: "2028-12"
+    - "Served January 2018 until December 2021 - Re-elected and serving January 2022 and until December 2025" -> start_date: "2022-01", end_date: "2025-12"
+    - "Elected in 2017 and re-elected in 2021 for the 2022-2025 term." -> start_date: "2022", end_date: "2025"
+
+**FINAL MANDATORY CHECK**: Review your entire response for accuracy before submitting,
+  paying close attention to the role inference, date extraction, and term identification rules.
+
+[2025-11-05T23:10:44.261836] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 3074, Output tokens: 205, Total cost: $0.00
+[2025-11-05T23:10:44.262337] [INFO] openai LLM call took 2.90 seconds
+[2025-11-05T23:10:44.268356] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:10:44.268791] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:10:44.269163] [INFO] Current data: 1
+[2025-11-05T23:10:44.269427] [INFO] Required data: 51
+[2025-11-05T23:10:44.269726] [INFO] Minimum required data: 48
+[2025-11-05T23:10:44.271220] [INFO] Has target role: True
+[2025-11-05T23:10:44.274006] [INFO] Has target divisions (if available): False
+[2025-11-05T23:10:44.275197] [INFO] Current total cost for this run: $0.03
+[2025-11-05T23:10:44.275499] [INFO] Not enough data processed yet, collecting more data... 3/56
+[2025-11-05T23:10:44.277885] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.chicago.gov/city/en/about/wards.html
+[2025-11-05T23:10:46.193970] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/safari-pinned-tab.svg
+[2025-11-05T23:10:46.199613] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/icon-dot-gov.svg
+[2025-11-05T23:10:46.204171] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/icon-https.svg
+[2025-11-05T23:10:46.208420] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/cds/chicago.gov-logo.png
+[2025-11-05T23:10:46.208831] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/cds/chicago.gov-logo.png
+[2025-11-05T23:10:46.249459] [INFO] Image saved: /app/data_source/il/place_chicago/images/941879e4567b.png
+[2025-11-05T23:10:46.260586] [DEBUG] Skipping blacklisted or invalid image: https://www.chicago.gov/content/dam/city/cds/close.svg
+[2025-11-05T23:10:46.265697] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-05T23:10:46.272948] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-05T23:10:46.298318] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-05T23:10:46.303450] [DEBUG] Attempting to intercept and save image for: https://www.chicago.gov/content/dam/city/cds/city_seal_clr.png
+[2025-11-05T23:10:46.303950] [DEBUG] Loading image from URL: https://www.chicago.gov/content/dam/city/cds/city_seal_clr.png
+[2025-11-05T23:10:46.362160] [INFO] Image saved: /app/data_source/il/place_chicago/images/83f20df4d15a.png
+[2025-11-05T23:10:46.367626] [DEBUG] Skipping blacklisted or invalid image: 
+[2025-11-05T23:10:46.376330] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2025-11-05T23:10:46.509220] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.chicago.gov/city/en/about/wards.html
+[2025-11-05T23:10:51.247095] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2025-11-05T23:10:51.247267] [INFO] -> Elapsed time: 4.74 seconds
+[2025-11-05T23:10:51.247336] [INFO] -> Average elapsed time: 4.75 seconds
+[2025-11-05T23:10:51.247402] [INFO] -> Total elapsed time: 23.74 seconds
+[2025-11-05T23:10:51.248944] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.chicago.gov/city/en/about/wards.html
+[2025-11-05T23:10:51.249434] [INFO] Running Gemini prompt
+[2025-11-05T23:10:51.249525] [DEBUG] Prompt: 
+
+    First, determine if the content contains relevant information about the main governing body of the target municipality. If the content includes information about the following people, they are very likely to be on the council: Brandon Johnson, Daniel La Spata, Brian Hopkins, Pat Dowell, Sophia King, Leslie Hairston, Roderick Sawyer, Gregory Mitchell, Michelle Harris, Anthony Beale, Peter Chico, Nicole Lee, George A. Cardenas, Marty Quinn, Ed Burke, Raymond Lopez, Stephanie D. Coleman, David Moore, Derrick Curtis, Matthew O'Shea, Jeanette B. Taylor, Howard Brookins Jr., Michael D. Rodriguez, Silvana Tabares, Monique Scott, Byron Sigcho Lopez, Roberto Maldonado, Walter Burnett, Jr., Jason Ervin, Chris Taliaferro, Ariel E. Reboyras, Felix Cardona, Jr., Scott Waguespack, Rossana Rodriguez Sanchez, Carrie Austin, Carlos Ramirez-Rosa, Gilbert Villegas, Emma Mitts, Nicholas Sposato, Samantha Nugent, Andre Vasquez, Jr., Anthony Napolitano, Brendan Reilly, Timmy Knudsen, Thomas M. Tunney, James M. Gardiner, James Cappleman, Matthew J. Martin, Harry Osterman, Maria E. Hadden, Debra Silverstein.
+    If not, return an empty JSON array `[]`.
+
+    Target Roles: mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson
+    Target Divisions: ward, district
+    Current Date: 2025-11-05
+
+    Return a JSON object with people, each having:
+    - name: (String) Full name only (no titles)
+    - image: (String or null) URL to profile image (https://...)
+    - roles: (Array of strings) Active municipal roles
+    - divisions: (Array of strings) Specific district/ward names
+    - phone_number: (String or null) Formatted phone number
+    - email: (String or null) Email address
+    - website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+    - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+    Guidelines:
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - Website extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided `current_date` to filter out roles or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+    
+[2025-11-05T23:11:03.656371] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 4091, Output tokens: 2618, Total cost: $0.01
+[2025-11-05T23:11:03.658850] [INFO] gemini gemini-2.5-flash LLM call took 12.41 seconds
+[2025-11-05T23:11:03.660249] [INFO] Running OpenAI prompt
+[2025-11-05T23:11:03.660406] [DEBUG] Prompt: 
+
+You are an expert data extractor focused on accuracy.
+
+First, determine if the content contains relevant information about any of the main governing body of a municipality. Here is a list of known target people (may be missing or include extra): Brandon Johnson, Daniel La Spata, Brian Hopkins, Pat Dowell, Sophia King, Leslie Hairston, Roderick Sawyer, Gregory Mitchell, Michelle Harris, Anthony Beale, Peter Chico, Nicole Lee, George A. Cardenas, Marty Quinn, Ed Burke, Raymond Lopez, Stephanie D. Coleman, David Moore, Derrick Curtis, Matthew O'Shea, Jeanette B. Taylor, Howard Brookins Jr., Michael D. Rodriguez, Silvana Tabares, Monique Scott, Byron Sigcho Lopez, Roberto Maldonado, Walter Burnett, Jr., Jason Ervin, Chris Taliaferro, Ariel E. Reboyras, Felix Cardona, Jr., Scott Waguespack, Rossana Rodriguez Sanchez, Carrie Austin, Carlos Ramirez-Rosa, Gilbert Villegas, Emma Mitts, Nicholas Sposato, Samantha Nugent, Andre Vasquez, Jr., Anthony Napolitano, Brendan Reilly, Timmy Knudsen, Thomas M. Tunney, James M. Gardiner, James Cappleman, Matthew J. Martin, Harry Osterman, Maria E. Hadden, Debra Silverstein.
+If not, return an empty JSON array `[]`.
+
+Target Person (if applicable): 
+Target roles: mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson
+Target divisions: ward, district
+Current Date: 2025-11-05
+
+Return a JSON object.
+
+Output Field Definitions & Structure:
+- name: (String) Full name only (no titles).
+- image: (String or null) URL to profile image (https://...)
+- roles: (Array of strings) Active municipal roles.
+         Identify their official job title or specific position.
+         This can be a wide variety of municipal roles (e.g., "Mayor", "City Manager", "Selectman",
+         "Alderman", "Council Member").
+- divisions: (Array of strings) Specific district/ward and name/number,
+          only if specified (e.g., "Ward 1", "District 2").
+- phone_number: (String or null) Formatted phone number
+- email: (String or null) Email address (email@example.com)
+- website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+- start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+- end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+Extraction Guidelines:
+- Roles extraction:
+  - Extract roles that match the **target roles** provided (e.g., mayor, president board of aldermen, vice president board of aldermen, mayor pro tempore, deputy mayor, alderperson).
+  - If a role includes additional descriptors or variations, normalize it to the closest matching target role when possible.
+    - Example: "Vice President" under a governing body → Normalize to the closest matching target role, such as "Council Vice President" or "Commissioner Vice President."
+    - If a role cannot be normalized to a target role but is clearly valid (e.g., "Vice President"), extract it as-is.
+  - Use the governing body or surrounding context to determine the correct role for ambiguous titles.
+    - Example: If "Vice President" is listed under "Council Members," infer it as "Council Vice President."
+    - Example: If "Vice President" appears without clear context, extract it as "Vice President."
+  - Include only active roles (today is 2025-11-05).
+
+- Divisions:
+  - Extract divisions if explicitly mentioned and relevant to the person's role.
+  - Do not infer divisions if they are not explicitly stated.
+
+- General Guidelines:
+  - Merge details for the same person into a single record.
+  - Assign confidence (0-1 scale) and provide a brief reason for each field's data.
+  - Extract full names only (e.g., "John Smith," not "Mayor John Smith"). Titles belong in the roles field.
+  - Ensure extracted data is accurate and relevant to the governing body or target roles.
+- Image: Extract URL of portrait/headshot near name. Ignore logos, banners, icons. Check alt text but prioritize proximity/style.
+- Contact Details (Phone/Email/Website):
+  - Associate details logically if near the person's name/section.
+  - Pick the most relevant contact detail if multiple are present.
+  - Phone numbers:
+    - Extract number after labels like "Office:", "Cell:", "Mobile:", "Direct:", "Home:". Exclude "Fax:". Format numbers simply.
+  - Markdown Links: Extract email/phone from the VISIBLE TEXT of links like `[TEXT](...)`, ignore the target URL.
+  - `website` data MUST be a valid http/https URL. Prefer profile pages. EXCLUDE mailto:, tel:.
+  - `email` data should ONLY contain email addresses.
+- Term Dates (`start_date`, `end_date`):
+  - Extract start_date and end_date in YYYY, YYYY-MM, or YYYY-MM-DD format.
+  - Acceptable date phrases include:
+    - “Elected [date]”, “Appointed [date]”, “Term: [date1] to [date2]”, “Since [date]”.
+    - For vague phrases like "Spring 2025", extract the year only.
+  - If more than one term is mentioned, extract the most recent term dates.
+  - Examples:
+    - "Elected Nov 2024 for term ending Dec 2028" -> start_date: "2024-11", end_date: "2028-12"
+    - "Served January 2018 until December 2021 - Re-elected and serving January 2022 and until December 2025" -> start_date: "2022-01", end_date: "2025-12"
+    - "Elected in 2017 and re-elected in 2021 for the 2022-2025 term." -> start_date: "2022", end_date: "2025"
+
+**FINAL MANDATORY CHECK**: Review your entire response for accuracy before submitting,
+  paying close attention to the role inference, date extraction, and term identification rules.
+
+[2025-11-05T23:11:53.724242] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 3965, Output tokens: 3214, Total cost: $0.01
+[2025-11-05T23:11:53.724845] [INFO] openai LLM call took 50.06 seconds
+[2025-11-05T23:11:53.856577] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.856961] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.857322] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.858046] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.858228] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.858423] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.858615] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.858772] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.859042] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.859163] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.859262] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.859381] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.859483] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.859571] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.859668] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.859801] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.859904] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.860074] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.860314] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.860421] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.860537] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.860670] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.860836] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.860962] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.861077] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.861190] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.861300] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.861425] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.861550] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.861960] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.862064] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.862154] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.862262] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.862372] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.862470] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.862556] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.862856] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.863005] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.863101] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.863232] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.863365] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.863469] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.863572] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.863705] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.863833] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.863946] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.864063] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.864161] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.864278] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.864388] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.864525] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.864688] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.864803] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.864916] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.865054] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.865155] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.865264] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.865405] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.865534] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.865749] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.865860] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.865976] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.866090] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.866207] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.866334] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.866460] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.866574] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.866699] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.866835] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.866955] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.867064] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.867153] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.867280] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.867379] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.867489] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.867603] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.867759] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.867889] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.868054] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.868206] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.868401] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.868533] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.868649] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.868768] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.868876] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.869032] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.869242] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.869365] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.869484] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.869603] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.869744] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.869862] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.870042] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.870217] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.870357] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.870488] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.870602] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.870740] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.870865] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.870994] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.871198] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.871335] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-05T23:11:53.871508] [INFO] Current data: 51
+[2025-11-05T23:11:53.871622] [INFO] Required data: 51
+[2025-11-05T23:11:53.871750] [INFO] Minimum required data: 48
+[2025-11-05T23:11:53.871863] [INFO] Has target role: True
+[2025-11-05T23:11:53.872054] [INFO] Has target divisions (if available): True
+[2025-11-05T23:11:53.872338] [INFO] Current total cost for this run: $0.05
+[2025-11-05T23:11:53.872457] [INFO] Enough data processed, moving to report generation...
+[2025-11-05T23:11:54.440983] [INFO] Step 9: CLEANUP
+[2025-11-05T23:11:54.450513] [INFO] Pipeline completed in 149 seconds.
+[2025-11-05T23:11:54.451809] [INFO] Step 8: MAYBE_SEND_TO_GITHUB
+[2025-11-05T23:11:54.451938] [INFO] CRUDDER_UPLOAD_URL: https://crudder.civicpatch.org/api/github_intake
