@@ -53,20 +53,14 @@ def validate_file(file_path, jurisdiction_id):
     try:
         with open(file_path) as f:
             data = yaml.safe_load(f)
-        
-        people = data.get('government', data if isinstance(data, list) else [])
+      
+         
+        people = [p for p in data if p["jurisdiction_id"] == jurisdiction_id]
         valid_count = 0
         errors = []
         
         for i, person_data in enumerate(people):
             try:
-                # Check jurisdiction_id matches
-                if person_data.get('jurisdiction_id') != jurisdiction_id:
-                    # Debugging: Print mismatch if jurisdiction_id does not match
-                    print(f"Mismatch: Expected {jurisdiction_id}, Found {person_data.get('jurisdiction_id')}")
-                    errors.append(f"Person {i+1}: Wrong jurisdiction_id")
-                    continue
-                
                 Person(**person_data)  # Validate with Pydantic
                 valid_count += 1
             except Exception as e:
