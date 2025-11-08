@@ -19,8 +19,8 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in CivicPatch:
 
 **Places:**
-- country:us/state:co/place:raymer_~new_raymer~
 - country:us/state:co/place:bonanza
+- country:us/state:co/place:raymer_~new_raymer~
 - country:us/state:co/place:central_city
 
 **Divisions:**
@@ -189,10 +189,10 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in Google:
 
 **Places:**
-- country:us/state:co/place:keystone
 - country:us/state:co/place:raymer_(new_raymer)
-- country:us/state:co/place:denver
+- country:us/state:co/place:keystone
 - country:us/state:co/place:broomfield
+- country:us/state:co/place:denver
 - country:us/state:co/place:central
 
 **Divisions:**
