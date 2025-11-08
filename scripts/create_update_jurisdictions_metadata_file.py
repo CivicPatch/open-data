@@ -1,10 +1,83 @@
-import yaml
-import sys
-from pathlib import Path
 import glob
 import re
+import sys
+from pathlib import Path
+from pydantic import BaseModel
+from typing import Optional
+
+import yaml
 
 PROJECT_ROOT = Path(__file__).parent.parent
+
+class JurisdictionId(BaseModel):
+    country: str
+    state: str
+    county: Optional[str] = None
+    place_label: str = "place"
+    place: str
+    jurisdiction_type: str
+
+
+def parse_jurisdiction_id(jurisdiction_id: str) -> JurisdictionId | None:
+    """
+    Parses a jurisdiction ID in the format
+        "ocd-jurisdiction/country:us/state:wa/place:seattle/government"
+    OR
+        "ocd-jurisdiction/country:us/state:il/county:dupage/place:naperville/government"
+    and returns a JurisdictionId object.
+
+    Returns None if the format is invalid.
+    """
+    try:
+        components = jurisdiction_id.split("/")
+        result = {}
+        country_part = components[1]
+        result["country"] = country_part.split(":")[1]
+
+        state_part = components[2]
+        result["state"] = state_part.split(":")[1]
+
+        substate_part = components[3]
+        substate_label, substate_name = substate_part.split(":")
+        if substate_label == "county":
+            result["county"] = substate_name
+            place_label, place_name = components[4].split(":")
+            result["place_label"] = place_label
+            result["place"] = place_name
+        else:
+            result["place_label"] = substate_label
+            result["place"] = substate_name
+
+        # Last component MUST contain the jurisdiction type
+        # Which has no ":"
+        jurisdiction_type = components[-1]
+        if ":" in jurisdiction_type:
+            return None
+
+        if "country" not in result or "state" not in result:
+            return None
+
+        return JurisdictionId(
+            country=result["country"],
+            state=result["state"],
+            county=result.get("county", None),
+            place_label=result["place_label"],
+            place=result["place"],
+            jurisdiction_type=jurisdiction_type,
+        )
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
+
+
+def jurisdiction_id_to_slug(jurisdiction_id: str) -> str:
+    jurisdiction_id_parts = parse_jurisdiction_id(jurisdiction_id)
+    branch = f"state_{jurisdiction_id_parts.state}__"
+    if jurisdiction_id_parts.county:
+        branch += f"county_{jurisdiction_id_parts.county}__"
+    branch += f"{jurisdiction_id_parts.place_label}_{jurisdiction_id_parts.place}__"
+    branch += f"{jurisdiction_id_parts.jurisdiction_type}"
+    return branch.lower()
 
 
 def extract_child_divisions(government_list, jurisdiction_id):
@@ -34,7 +107,7 @@ def create_update_progress_file(state: str):
     print("Create/updating progress file...")
     jurisdictions_file_path = PROJECT_ROOT / "data_source" / state / "jurisdictions.yml"
     progress_file_path = (
-        PROJECT_ROOT / "data_source" / state / "government_progress.yml"
+        PROJECT_ROOT / "data_source" / state / "jurisdictions_metadata.yml"
     )
     jurisdictions_data = yaml.safe_load(
         jurisdictions_file_path.read_text(encoding="utf-8")
@@ -46,8 +119,10 @@ def create_update_progress_file(state: str):
     progress_data = {"jurisdictions_by_id": {}, "warnings": []}
     for jurisdiction in jurisdictions:
         jurisdiction_id = jurisdiction["id"]
+        jurisdiction_ocdid_slug = jurisdiction_id_to_slug(jurisdiction_id)
         jurisdiction_object = {
             "jurisdiction_id": jurisdiction_id,
+            "jurisdiction_ocdid_slug": jurisdiction_ocdid_slug,
             "jurisdiction": {**jurisdiction},
             "child_divisions": [],  # Add empty child_divisions list
         }
@@ -57,7 +132,7 @@ def create_update_progress_file(state: str):
         files_found += 1
         with open(place_file_path, "r") as f:
             place_data = yaml.safe_load(f)
-        government_list = place_data.get("government", [])
+        government_list = place_data or []
 
         if not government_list:
             warnings.append(f"Empty file under {place_file_path}")
