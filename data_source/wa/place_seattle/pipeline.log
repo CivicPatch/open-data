@@ -1,0 +1,722 @@
+[2025-11-09T22:48:59.629912] [INFO] Step 0: INIT
+[2025-11-09T22:48:59.640016] [INFO] Step 1: RESEARCH_MUNICIPALITY
+[2025-11-09T22:48:59.659749] [INFO] Running Gemini prompt
+[2025-11-09T22:48:59.659970] [DEBUG] Prompt: 
+
+    Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
+
+    Municipality: Seattle city, wa
+
+    Instructions:
+
+    1. Determine the government type of the city. Available government types:
+- mayor_commission
+- mayor_council
+- select_board
+- aldermen
+
+    2. Identify the elected officials in the local government, 
+       including the Mayor (if applicable).
+       2.1. For each official, extract the following details:
+            - name: Full name only (no titles)
+            - roles: List of active municipal roles (e.g., Mayor, Council Member)
+            - divisions: List of (ward, district), only if applicable
+
+    3. Create a JSON object with the following structure:
+       ```json
+       {
+         "government_type": examples - "mayor_council" or "mayor_commission", etc.,
+         "people": [
+           {
+             "name": "Full name of the official or null if uncertain",
+             "roles": ["Mayor", "Council Member", "Commissioner", etc.],
+             "divisions": ["Ward 1", "District 2", etc.] or [],
+           }
+         ],
+         "notes": "Brief notes about the search and results"
+       }
+       ```
+
+    IMPORTANT: If the response contains anything other than a valid JSON object,
+    it will be considered incorrect. Ensure the response is strictly JSON.
+    Verify that the response is valid JSON before returning it.
+    If it is not valid JSON, retry the generation.
+    
+[2025-11-09T22:49:05.442681] [DEBUG] Gemini raw response: {'government_type': 'mayor_council', 'people': [{'name': 'Bruce Harrell', 'roles': ['Mayor'], 'divisions': []}, {'name': 'Rob Saka', 'roles': ['Council Member'], 'divisions': ['District 1']}, {'name': 'Mark Solomon', 'roles': ['Council Member'], 'divisions': ['District 2']}, {'name': 'Joy Hollingsworth', 'roles': ['Council Member'], 'divisions': ['District 3']}, {'name': 'Maritza Rivera', 'roles': ['Council Member'], 'divisions': ['District 4']}, {'name': 'Debora Juarez', 'roles': ['Council Member'], 'divisions': ['District 5']}, {'name': 'Dan Strauss', 'roles': ['Council Member'], 'divisions': ['District 6']}, {'name': 'Bob Kettle', 'roles': ['Council Member'], 'divisions': ['District 7']}, {'name': 'Alexis Mercedes Rinck', 'roles': ['Council Member'], 'divisions': ['Position 8']}, {'name': 'Sara Nelson', 'roles': ['Council President', 'Council Member'], 'divisions': ['Position 9']}], 'notes': "Seattle operates under a strong mayor-council form of government. The Mayor is elected at-large. The City Council has nine members; seven are elected by district, and two are elected at-large (referred to as 'Positions'). Sara Nelson also holds the role of Council President."}
+[2025-11-09T22:49:05.444721] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 358, Output tokens: 1137, Total cost: $0.00
+[2025-11-09T22:49:05.444927] [INFO] gemini gemini-2.5-flash LLM call took 5.78 seconds
+[2025-11-09T22:49:05.446918] [INFO] Step 2: SEARCH_LINKS
+[2025-11-09T22:49:05.467507] [INFO] Searching for keyword term: mayor
+[2025-11-09T22:49:05.467933] [INFO] Searching with google for Seattle city mayor
+[2025-11-09T22:49:05.851866] [INFO] -> https://www.seattle.gov/cityarchives/seattle-facts/city-officials/mayors/mayors-1948-present
+[2025-11-09T22:49:05.852167] [INFO] -> https://www.seattle.gov/mayor/about
+[2025-11-09T22:49:05.852327] [INFO] -> https://www.seattle.gov/mayor
+[2025-11-09T22:49:05.852480] [INFO] -> https://www.seattle.gov/council
+[2025-11-09T22:49:05.852603] [INFO] -> https://www.seattle.gov/
+[2025-11-09T22:49:05.852753] [INFO] -> https://www.seattle.gov/council/members
+[2025-11-09T22:49:05.852910] [INFO] -> https://www.seattle.gov/council/topics/city-council-budget-basics
+[2025-11-09T22:49:05.853125] [INFO] -> https://harrell.seattle.gov/2025/09/05/mayor-bruce-harrell-announces-budget-proposal-investing-nearly-12-million-to-significantly-increase-food-access/
+[2025-11-09T22:49:05.853639] [INFO] -> https://harrell.seattle.gov/2024/08/22/mayor-harrell-expands-efforts-to-support-student-safety-and-mental-health-in-partnership-with-seattle-public-schools/
+[2025-11-09T22:49:05.853805] [INFO] -> https://harrell.seattle.gov/2025/02/21/mayor-harrell-issues-executive-order-to-improve-the-accessibility-of-city-resources-and-information/
+[2025-11-09T22:49:05.854476] [INFO] Search successful with google. Found 10 results.
+[2025-11-09T22:49:05.854620] [INFO] Searching for keyword term: council members
+[2025-11-09T22:49:05.854751] [INFO] Searching with google for Seattle city council members
+[2025-11-09T22:49:06.325216] [INFO] -> https://www.seattle.gov/council/members
+[2025-11-09T22:49:06.325598] [INFO] -> https://www.seattle.gov/council
+[2025-11-09T22:49:06.325750] [INFO] -> https://council.seattle.gov/seattle-city-councilmembers/
+[2025-11-09T22:49:06.326059] [INFO] -> https://www.seattle.gov/council/members/find-your-district-and-councilmembers
+[2025-11-09T22:49:06.326278] [INFO] -> https://council.seattle.gov/councilmembers-2022/
+[2025-11-09T22:49:06.326426] [INFO] -> https://www.seattle.gov/cityclerk/agendas-and-legislative-resources/city-council-agendas/contact-the-city-council
+[2025-11-09T22:49:06.326541] [INFO] -> https://council.seattle.gov/
+[2025-11-09T22:49:06.326692] [INFO] -> https://seattle.gov/council/members/dan-strauss
+[2025-11-09T22:49:06.326789] [INFO] -> https://www.seattle.gov/council/meetings/committees-and-agendas
+[2025-11-09T22:49:06.326880] [INFO] -> https://www.seattle.gov/cityclerk/agendas-and-legislative-resources/find-your-council-district
+[2025-11-09T22:49:06.327312] [INFO] Search successful with google. Found 10 results.
+[2025-11-09T22:49:06.327413] [INFO] Searching for keyword term: elected officials
+[2025-11-09T22:49:06.327524] [INFO] Searching with google for Seattle city elected officials
+[2025-11-09T22:49:06.727442] [INFO] -> https://www.seattle.gov/elected-officials
+[2025-11-09T22:49:06.727671] [INFO] -> https://www.seattle.gov/council
+[2025-11-09T22:49:06.727817] [INFO] -> https://www.seattle.gov/
+[2025-11-09T22:49:06.727942] [INFO] -> https://www.seattle.gov/council/members
+[2025-11-09T22:49:06.728115] [INFO] -> https://www.seattle.gov/departments
+[2025-11-09T22:49:06.728259] [INFO] -> https://www.seattle.gov/mayor
+[2025-11-09T22:49:06.728450] [INFO] -> https://www.seattle.gov/ethics
+[2025-11-09T22:49:06.728614] [INFO] -> https://www.seattle.gov/mayor/about
+[2025-11-09T22:49:06.728700] [INFO] -> https://www.seattle.gov/cityclerk/agendas-and-legislative-resources/terms-of-office-for-elected-officials
+[2025-11-09T22:49:06.728793] [INFO] -> https://www.seattle.gov/city-light
+[2025-11-09T22:49:06.729362] [INFO] Search successful with google. Found 10 results.
+[2025-11-09T22:49:06.730807] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.seattle.gov/cityarchives/seattle-facts/city-officials/mayors/mayors-1948-present
+[2025-11-09T22:49:11.286695] [DEBUG] Skipping blacklisted or invalid image: None
+[2025-11-09T22:49:11.292105] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-09T22:49:11.305520] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-09T22:49:11.315116] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-09T22:49:11.320888] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1948-Devin.png
+[2025-11-09T22:49:11.321397] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1948-Devin.png
+[2025-11-09T22:49:11.471085] [INFO] Image saved: /app/data_source/wa/place_seattle/images/8860fa63867c.png
+[2025-11-09T22:49:11.477311] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1952-Pomeroy.png
+[2025-11-09T22:49:11.477896] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1952-Pomeroy.png
+[2025-11-09T22:49:11.567699] [INFO] Image saved: /app/data_source/wa/place_seattle/images/278a25712923.png
+[2025-11-09T22:49:11.581453] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1956-Clinton.png
+[2025-11-09T22:49:11.582834] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1956-Clinton.png
+[2025-11-09T22:49:11.855819] [INFO] Image saved: /app/data_source/wa/place_seattle/images/fc6af7aa6c73.png
+[2025-11-09T22:49:11.862456] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1964-Braman.png
+[2025-11-09T22:49:11.862990] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1964-Braman.png
+[2025-11-09T22:49:11.924198] [INFO] Image saved: /app/data_source/wa/place_seattle/images/01d9be6c396f.png
+[2025-11-09T22:49:11.932640] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1969-Miller.png
+[2025-11-09T22:49:11.933333] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1969-Miller.png
+[2025-11-09T22:49:12.172457] [INFO] Image saved: /app/data_source/wa/place_seattle/images/b869545af005.png
+[2025-11-09T22:49:12.182576] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1969-Uhlman.png
+[2025-11-09T22:49:12.183254] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1969-Uhlman.png
+[2025-11-09T22:49:12.282960] [INFO] Image saved: /app/data_source/wa/place_seattle/images/579f96cf137e.png
+[2025-11-09T22:49:12.289354] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1978-Royer.png
+[2025-11-09T22:49:12.289949] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1978-Royer.png
+[2025-11-09T22:49:12.393138] [INFO] Image saved: /app/data_source/wa/place_seattle/images/64dbe60938e6.png
+[2025-11-09T22:49:12.399357] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1990-Rice.png
+[2025-11-09T22:49:12.399850] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1990-Rice.png
+[2025-11-09T22:49:12.567926] [INFO] Image saved: /app/data_source/wa/place_seattle/images/65e1ce0d4221.png
+[2025-11-09T22:49:12.574196] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1998-Schell.png
+[2025-11-09T22:49:12.574746] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/1998-Schell.png
+[2025-11-09T22:49:12.654684] [INFO] Image saved: /app/data_source/wa/place_seattle/images/6823705711a6.png
+[2025-11-09T22:49:12.662558] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/2002-Nickels.png
+[2025-11-09T22:49:12.663140] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/2002-Nickels.png
+[2025-11-09T22:49:12.761044] [INFO] Image saved: /app/data_source/wa/place_seattle/images/f68365255691.png
+[2025-11-09T22:49:12.769091] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/2010-McGinn.png
+[2025-11-09T22:49:12.770002] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/2010-McGinn.png
+[2025-11-09T22:49:12.867352] [INFO] Image saved: /app/data_source/wa/place_seattle/images/01ddb82563bd.png
+[2025-11-09T22:49:12.876978] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/2014-Murray.png
+[2025-11-09T22:49:12.877872] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/2014-Murray.png
+[2025-11-09T22:49:12.973213] [INFO] Image saved: /app/data_source/wa/place_seattle/images/0966f243c3b2.png
+[2025-11-09T22:49:12.979434] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/2017-Harrell.png
+[2025-11-09T22:49:12.980007] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/2017-Harrell.png
+[2025-11-09T22:49:13.168317] [INFO] Image saved: /app/data_source/wa/place_seattle/images/56ec4c9cf674.png
+[2025-11-09T22:49:13.174057] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/2017-Burgess.png
+[2025-11-09T22:49:13.174518] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/2017-Burgess.png
+[2025-11-09T22:49:13.253962] [INFO] Image saved: /app/data_source/wa/place_seattle/images/0ce44b08bced.png
+[2025-11-09T22:49:13.260954] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/2017-Durkan.png
+[2025-11-09T22:49:13.261350] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/2017-Durkan.png
+[2025-11-09T22:49:13.422273] [INFO] Image saved: /app/data_source/wa/place_seattle/images/46e58a917d14.png
+[2025-11-09T22:49:13.427405] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/2022-Harrell.png
+[2025-11-09T22:49:13.427932] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/CityArchive/SeattleFacts/MayorPortraits/Pillarboxed/2022-Harrell.png
+[2025-11-09T22:49:13.500816] [INFO] Image saved: /app/data_source/wa/place_seattle/images/7c4f09a6f191.png
+[2025-11-09T22:49:13.509280] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2025-11-09T22:49:13.661167] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.seattle.gov/cityarchives/seattle-facts/city-officials/mayors/mayors-1948-present
+[2025-11-09T22:49:23.913987] [INFO] -> Progress: 100% (2219/2219)
+[2025-11-09T22:49:24.306860] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2025-11-09T22:49:24.307078] [INFO] -> Elapsed time: 10.65 seconds
+[2025-11-09T22:49:24.307159] [INFO] -> Average elapsed time: 10.65 seconds
+[2025-11-09T22:49:24.307305] [INFO] -> Total elapsed time: 10.65 seconds
+[2025-11-09T22:49:24.308666] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.seattle.gov/cityarchives/seattle-facts/city-officials/mayors/mayors-1948-present
+[2025-11-09T22:49:24.309298] [INFO] Running Gemini prompt
+[2025-11-09T22:49:24.309410] [DEBUG] Prompt: 
+
+    First, determine if the content contains relevant information about the main governing body of the target municipality. If the content includes information about the following people, they are very likely to be on the council: Bruce Harrell, Rob Saka, Mark Solomon, Joy Hollingsworth, Maritza Rivera, Debora Juarez, Dan Strauss, Bob Kettle, Alexis Mercedes Rinck, Sara Nelson.
+    If not, return an empty JSON array `[]`.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+    Target Divisions: ward, district
+    Current Date: 2025-11-09
+
+    Return a JSON object with people, each having:
+    - name: (String) Full name only (no titles)
+    - image: (String or null) URL to profile image (https://...)
+    - roles: (Array of strings) Active municipal roles
+    - divisions: (Array of strings) Specific district/ward names
+    - phone_number: (String or null) Formatted phone number
+    - email: (String or null) Email address
+    - website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+    - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+    Guidelines:
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - Website extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided `current_date` to filter out roles or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+    
+[2025-11-09T22:49:30.933853] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 8356, Output tokens: 244, Total cost: $0.00
+[2025-11-09T22:49:30.937461] [INFO] gemini gemini-2.5-flash LLM call took 6.63 seconds
+[2025-11-09T22:49:30.938363] [INFO] Running OpenAI prompt
+[2025-11-09T22:49:30.938625] [DEBUG] Prompt: 
+
+You are an expert data extractor focused on accuracy.
+
+First, determine if the content contains relevant information about any of the main governing body of a municipality. Here is a list of known target people (may be missing or include extra): Bruce Harrell, Rob Saka, Mark Solomon, Joy Hollingsworth, Maritza Rivera, Debora Juarez, Dan Strauss, Bob Kettle, Alexis Mercedes Rinck, Sara Nelson.
+If not, return an empty JSON array `[]`.
+
+Target Person (if applicable): 
+Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+Target divisions: ward, district
+Current Date: 2025-11-09
+
+Return a JSON object.
+
+Output Field Definitions & Structure:
+- name: (String) Full name only (no titles).
+- image: (String or null) URL to profile image (https://...)
+- roles: (Array of strings) Active municipal roles.
+         Identify their official job title or specific position.
+         This can be a wide variety of municipal roles (e.g., "Mayor", "City Manager", "Selectman",
+         "Alderman", "Council Member").
+- divisions: (Array of strings) Specific district/ward and name/number,
+          only if specified (e.g., "Ward 1", "District 2").
+- phone_number: (String or null) Formatted phone number
+- email: (String or null) Email address (email@example.com)
+- website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+- start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+- end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+Extraction Guidelines:
+- Roles extraction:
+  - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+  - If a role includes additional descriptors or variations, normalize it to the closest matching target role when possible.
+    - Example: "Vice President" under a governing body → Normalize to the closest matching target role, such as "Council Vice President" or "Commissioner Vice President."
+    - If a role cannot be normalized to a target role but is clearly valid (e.g., "Vice President"), extract it as-is.
+  - Use the governing body or surrounding context to determine the correct role for ambiguous titles.
+    - Example: If "Vice President" is listed under "Council Members," infer it as "Council Vice President."
+    - Example: If "Vice President" appears without clear context, extract it as "Vice President."
+  - Include only active roles (today is 2025-11-09).
+
+- Divisions:
+  - Extract divisions if explicitly mentioned and relevant to the person's role.
+  - Do not infer divisions if they are not explicitly stated.
+
+- General Guidelines:
+  - Merge details for the same person into a single record.
+  - Assign confidence (0-1 scale) and provide a brief reason for each field's data.
+  - Extract full names only (e.g., "John Smith," not "Mayor John Smith"). Titles belong in the roles field.
+  - Ensure extracted data is accurate and relevant to the governing body or target roles.
+- Image: Extract URL of portrait/headshot near name. Ignore logos, banners, icons. Check alt text but prioritize proximity/style.
+- Contact Details (Phone/Email/Website):
+  - Associate details logically if near the person's name/section.
+  - Pick the most relevant contact detail if multiple are present.
+  - Phone numbers:
+    - Extract number after labels like "Office:", "Cell:", "Mobile:", "Direct:", "Home:". Exclude "Fax:". Format numbers simply.
+  - Markdown Links: Extract email/phone from the VISIBLE TEXT of links like `[TEXT](...)`, ignore the target URL.
+  - `website` data MUST be a valid http/https URL. Prefer profile pages. EXCLUDE mailto:, tel:.
+  - `email` data should ONLY contain email addresses.
+- Term Dates (`start_date`, `end_date`):
+  - Extract start_date and end_date in YYYY, YYYY-MM, or YYYY-MM-DD format.
+  - Acceptable date phrases include:
+    - “Elected [date]”, “Appointed [date]”, “Term: [date1] to [date2]”, “Since [date]”.
+    - For vague phrases like "Spring 2025", extract the year only.
+  - If more than one term is mentioned, extract the most recent term dates.
+  - Examples:
+    - "Elected Nov 2024 for term ending Dec 2028" -> start_date: "2024-11", end_date: "2028-12"
+    - "Served January 2018 until December 2021 - Re-elected and serving January 2022 and until December 2025" -> start_date: "2022-01", end_date: "2025-12"
+    - "Elected in 2017 and re-elected in 2021 for the 2022-2025 term." -> start_date: "2022", end_date: "2025"
+
+**FINAL MANDATORY CHECK**: Review your entire response for accuracy before submitting,
+  paying close attention to the role inference, date extraction, and term identification rules.
+
+[2025-11-09T22:49:39.106788] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 8215, Output tokens: 588, Total cost: $0.00
+[2025-11-09T22:49:39.107279] [INFO] openai LLM call took 8.17 seconds
+[2025-11-09T22:49:39.116981] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:49:39.119719] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:49:39.120028] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:49:39.120498] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:49:39.120855] [INFO] Current data: 0
+[2025-11-09T22:49:39.121347] [INFO] Required data: 10
+[2025-11-09T22:49:39.121845] [INFO] Minimum required data: 7
+[2025-11-09T22:49:39.122292] [INFO] Has target role: False
+[2025-11-09T22:49:39.124072] [INFO] Has target divisions (if available): False
+[2025-11-09T22:49:39.124582] [INFO] Current total cost for this run: $0.03
+[2025-11-09T22:49:39.125042] [INFO] Not enough data processed yet, collecting more data... 0/15
+[2025-11-09T22:49:39.131477] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.seattle.gov/council/members
+[2025-11-09T22:49:40.669896] [DEBUG] Skipping blacklisted or invalid image: None
+[2025-11-09T22:49:40.675890] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-09T22:49:40.690370] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-09T22:49:40.699856] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-09T22:49:40.710311] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Members/SquareHeadshots/saka_300.jpg
+[2025-11-09T22:49:40.710780] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Members/SquareHeadshots/saka_300.jpg
+[2025-11-09T22:49:40.780648] [INFO] Image saved: /app/data_source/wa/place_seattle/images/cff4d84fc3da.png
+[2025-11-09T22:49:40.787212] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Members/Solomon/mark-solomon.jpg
+[2025-11-09T22:49:40.787728] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Members/Solomon/mark-solomon.jpg
+[2025-11-09T22:49:40.878086] [INFO] Image saved: /app/data_source/wa/place_seattle/images/2c29f05305fd.png
+[2025-11-09T22:49:40.883297] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Members/SquareHeadshots/hollingsworth_300.jpg
+[2025-11-09T22:49:40.883716] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Members/SquareHeadshots/hollingsworth_300.jpg
+[2025-11-09T22:49:40.939367] [INFO] Image saved: /app/data_source/wa/place_seattle/images/605125d4db35.png
+[2025-11-09T22:49:40.945883] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Members/SquareHeadshots/rivera_300.jpg
+[2025-11-09T22:49:40.946331] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Members/SquareHeadshots/rivera_300.jpg
+[2025-11-09T22:49:41.254610] [INFO] Image saved: /app/data_source/wa/place_seattle/images/51f9aec375fa.png
+[2025-11-09T22:49:41.261049] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Members/SquareHeadshots/juarez_300.jpg
+[2025-11-09T22:49:41.262182] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Members/SquareHeadshots/juarez_300.jpg
+[2025-11-09T22:49:41.338057] [INFO] Image saved: /app/data_source/wa/place_seattle/images/ba0a8bf2e48c.png
+[2025-11-09T22:49:41.346085] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Members/Strauss/Struass-2022-headshot_square.jpg
+[2025-11-09T22:49:41.346808] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Members/Strauss/Struass-2022-headshot_square.jpg
+[2025-11-09T22:49:41.520801] [INFO] Image saved: /app/data_source/wa/place_seattle/images/72cb2afc2923.png
+[2025-11-09T22:49:41.526867] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Members/SquareHeadshots/kettle_300.jpg
+[2025-11-09T22:49:41.527455] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Members/SquareHeadshots/kettle_300.jpg
+[2025-11-09T22:49:41.633862] [INFO] Image saved: /app/data_source/wa/place_seattle/images/224680c27986.png
+[2025-11-09T22:49:41.639163] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Members/SquareHeadshots/rinck_300.jpg
+[2025-11-09T22:49:41.639793] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Members/SquareHeadshots/rinck_300.jpg
+[2025-11-09T22:49:41.729010] [INFO] Image saved: /app/data_source/wa/place_seattle/images/99ad0841d929.png
+[2025-11-09T22:49:41.734144] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Members/Nelson/nelson_300x300.jpg
+[2025-11-09T22:49:41.734606] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Members/Nelson/nelson_300x300.jpg
+[2025-11-09T22:49:41.867257] [INFO] Image saved: /app/data_source/wa/place_seattle/images/0b69e4131116.png
+[2025-11-09T22:49:41.872291] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2025-11-09T22:49:42.014608] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.seattle.gov/council/members
+[2025-11-09T22:49:51.775398] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2025-11-09T22:49:51.775617] [INFO] -> Elapsed time: 9.76 seconds
+[2025-11-09T22:49:51.775708] [INFO] -> Average elapsed time: 9.88 seconds
+[2025-11-09T22:49:51.775823] [INFO] -> Total elapsed time: 19.76 seconds
+[2025-11-09T22:49:51.777183] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.seattle.gov/council/members
+[2025-11-09T22:49:51.777761] [INFO] Running Gemini prompt
+[2025-11-09T22:49:51.777851] [DEBUG] Prompt: 
+
+    First, determine if the content contains relevant information about the main governing body of the target municipality. If the content includes information about the following people, they are very likely to be on the council: Bruce Harrell, Rob Saka, Mark Solomon, Joy Hollingsworth, Maritza Rivera, Debora Juarez, Dan Strauss, Bob Kettle, Alexis Mercedes Rinck, Sara Nelson.
+    If not, return an empty JSON array `[]`.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+    Target Divisions: ward, district
+    Current Date: 2025-11-09
+
+    Return a JSON object with people, each having:
+    - name: (String) Full name only (no titles)
+    - image: (String or null) URL to profile image (https://...)
+    - roles: (Array of strings) Active municipal roles
+    - divisions: (Array of strings) Specific district/ward names
+    - phone_number: (String or null) Formatted phone number
+    - email: (String or null) Email address
+    - website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+    - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+    Guidelines:
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - Website extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided `current_date` to filter out roles or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+    
+[2025-11-09T22:50:03.314025] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 7459, Output tokens: 1339, Total cost: $0.01
+[2025-11-09T22:50:03.316913] [INFO] gemini gemini-2.5-flash LLM call took 11.54 seconds
+[2025-11-09T22:50:03.319542] [INFO] Running OpenAI prompt
+[2025-11-09T22:50:03.319800] [DEBUG] Prompt: 
+
+You are an expert data extractor focused on accuracy.
+
+First, determine if the content contains relevant information about any of the main governing body of a municipality. Here is a list of known target people (may be missing or include extra): Bruce Harrell, Rob Saka, Mark Solomon, Joy Hollingsworth, Maritza Rivera, Debora Juarez, Dan Strauss, Bob Kettle, Alexis Mercedes Rinck, Sara Nelson.
+If not, return an empty JSON array `[]`.
+
+Target Person (if applicable): 
+Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+Target divisions: ward, district
+Current Date: 2025-11-09
+
+Return a JSON object.
+
+Output Field Definitions & Structure:
+- name: (String) Full name only (no titles).
+- image: (String or null) URL to profile image (https://...)
+- roles: (Array of strings) Active municipal roles.
+         Identify their official job title or specific position.
+         This can be a wide variety of municipal roles (e.g., "Mayor", "City Manager", "Selectman",
+         "Alderman", "Council Member").
+- divisions: (Array of strings) Specific district/ward and name/number,
+          only if specified (e.g., "Ward 1", "District 2").
+- phone_number: (String or null) Formatted phone number
+- email: (String or null) Email address (email@example.com)
+- website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+- start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+- end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+Extraction Guidelines:
+- Roles extraction:
+  - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+  - If a role includes additional descriptors or variations, normalize it to the closest matching target role when possible.
+    - Example: "Vice President" under a governing body → Normalize to the closest matching target role, such as "Council Vice President" or "Commissioner Vice President."
+    - If a role cannot be normalized to a target role but is clearly valid (e.g., "Vice President"), extract it as-is.
+  - Use the governing body or surrounding context to determine the correct role for ambiguous titles.
+    - Example: If "Vice President" is listed under "Council Members," infer it as "Council Vice President."
+    - Example: If "Vice President" appears without clear context, extract it as "Vice President."
+  - Include only active roles (today is 2025-11-09).
+
+- Divisions:
+  - Extract divisions if explicitly mentioned and relevant to the person's role.
+  - Do not infer divisions if they are not explicitly stated.
+
+- General Guidelines:
+  - Merge details for the same person into a single record.
+  - Assign confidence (0-1 scale) and provide a brief reason for each field's data.
+  - Extract full names only (e.g., "John Smith," not "Mayor John Smith"). Titles belong in the roles field.
+  - Ensure extracted data is accurate and relevant to the governing body or target roles.
+- Image: Extract URL of portrait/headshot near name. Ignore logos, banners, icons. Check alt text but prioritize proximity/style.
+- Contact Details (Phone/Email/Website):
+  - Associate details logically if near the person's name/section.
+  - Pick the most relevant contact detail if multiple are present.
+  - Phone numbers:
+    - Extract number after labels like "Office:", "Cell:", "Mobile:", "Direct:", "Home:". Exclude "Fax:". Format numbers simply.
+  - Markdown Links: Extract email/phone from the VISIBLE TEXT of links like `[TEXT](...)`, ignore the target URL.
+  - `website` data MUST be a valid http/https URL. Prefer profile pages. EXCLUDE mailto:, tel:.
+  - `email` data should ONLY contain email addresses.
+- Term Dates (`start_date`, `end_date`):
+  - Extract start_date and end_date in YYYY, YYYY-MM, or YYYY-MM-DD format.
+  - Acceptable date phrases include:
+    - “Elected [date]”, “Appointed [date]”, “Term: [date1] to [date2]”, “Since [date]”.
+    - For vague phrases like "Spring 2025", extract the year only.
+  - If more than one term is mentioned, extract the most recent term dates.
+  - Examples:
+    - "Elected Nov 2024 for term ending Dec 2028" -> start_date: "2024-11", end_date: "2028-12"
+    - "Served January 2018 until December 2021 - Re-elected and serving January 2022 and until December 2025" -> start_date: "2022-01", end_date: "2025-12"
+    - "Elected in 2017 and re-elected in 2021 for the 2022-2025 term." -> start_date: "2022", end_date: "2025"
+
+**FINAL MANDATORY CHECK**: Review your entire response for accuracy before submitting,
+  paying close attention to the role inference, date extraction, and term identification rules.
+
+[2025-11-09T22:50:18.868064] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 7657, Output tokens: 969, Total cost: $0.00
+[2025-11-09T22:50:18.868599] [INFO] openai LLM call took 15.55 seconds
+[2025-11-09T22:50:18.890717] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.891119] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.891327] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.891535] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.891793] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.891991] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.892164] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.892354] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.892606] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.892921] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.893169] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.893284] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.893695] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.893909] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.894462] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.894693] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.895054] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.895266] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.895658] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.896074] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.896285] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.896508] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:18.896779] [INFO] Current data: 9
+[2025-11-09T22:50:18.896983] [INFO] Required data: 10
+[2025-11-09T22:50:18.897117] [INFO] Minimum required data: 7
+[2025-11-09T22:50:18.897346] [INFO] Has target role: False
+[2025-11-09T22:50:18.897518] [INFO] Has target divisions (if available): True
+[2025-11-09T22:50:18.897792] [INFO] Current total cost for this run: $0.04
+[2025-11-09T22:50:18.897943] [INFO] Not enough data processed yet, collecting more data... 1/15
+[2025-11-09T22:50:18.900577] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.seattle.gov/elected-officials
+[2025-11-09T22:50:22.704895] [DEBUG] Skipping blacklisted or invalid image: None
+[2025-11-09T22:50:22.711307] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-09T22:50:22.725173] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-09T22:50:22.732626] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2025-11-09T22:50:22.739396] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/MayorHarrell/Home/bruce_harrell_headshot.jpg
+[2025-11-09T22:50:22.739924] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/MayorHarrell/Home/bruce_harrell_headshot.jpg
+[2025-11-09T22:50:22.839271] [INFO] Image saved: /app/data_source/wa/place_seattle/images/195b414e2edf.png
+[2025-11-09T22:50:22.844075] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_saka_circle.jpg
+[2025-11-09T22:50:22.844525] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_saka_circle.jpg
+[2025-11-09T22:50:22.907015] [INFO] Image saved: /app/data_source/wa/place_seattle/images/44109d69c9ec.png
+[2025-11-09T22:50:22.919358] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_Solomon_circle2.png
+[2025-11-09T22:50:22.919817] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_Solomon_circle2.png
+[2025-11-09T22:50:22.972500] [INFO] Image saved: /app/data_source/wa/place_seattle/images/cc032e2da344.png
+[2025-11-09T22:50:22.978695] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_hollingsworth_circle.jpg
+[2025-11-09T22:50:22.979216] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_hollingsworth_circle.jpg
+[2025-11-09T22:50:23.022923] [INFO] Image saved: /app/data_source/wa/place_seattle/images/3fffe111ac1a.png
+[2025-11-09T22:50:23.028485] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_rivera_circle.jpg
+[2025-11-09T22:50:23.028903] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_rivera_circle.jpg
+[2025-11-09T22:50:23.229240] [INFO] Image saved: /app/data_source/wa/place_seattle/images/6f719fad59e2.png
+[2025-11-09T22:50:23.234438] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_juarez_154x154.jpg
+[2025-11-09T22:50:23.234774] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_juarez_154x154.jpg
+[2025-11-09T22:50:23.304033] [INFO] Image saved: /app/data_source/wa/place_seattle/images/1eb061401e8f.png
+[2025-11-09T22:50:23.315445] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_struass_circle.jpg
+[2025-11-09T22:50:23.316059] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_struass_circle.jpg
+[2025-11-09T22:50:23.388579] [INFO] Image saved: /app/data_source/wa/place_seattle/images/bcee73743e70.png
+[2025-11-09T22:50:23.395508] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_kettle_circle.jpg
+[2025-11-09T22:50:23.396157] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_kettle_circle.jpg
+[2025-11-09T22:50:23.480343] [INFO] Image saved: /app/data_source/wa/place_seattle/images/f580e51d678b.png
+[2025-11-09T22:50:23.490688] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_rinck_154x154.jpg
+[2025-11-09T22:50:23.491326] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_rinck_154x154.jpg
+[2025-11-09T22:50:23.618203] [INFO] Image saved: /app/data_source/wa/place_seattle/images/450881687033.png
+[2025-11-09T22:50:23.628797] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_nelson_circle2.jpg
+[2025-11-09T22:50:23.629399] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Council/Citywide%20Circle%20Headshots/council_nelson_circle2.jpg
+[2025-11-09T22:50:23.713594] [INFO] Image saved: /app/data_source/wa/place_seattle/images/86f9f0ee78ca.png
+[2025-11-09T22:50:23.720509] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Departments/CityAttorney/SeattleHome/AnnDavidson_CircleImage.jpg
+[2025-11-09T22:50:23.721000] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Departments/CityAttorney/SeattleHome/AnnDavidson_CircleImage.jpg
+[2025-11-09T22:50:23.804146] [INFO] Image saved: /app/data_source/wa/place_seattle/images/143fef98b8da.png
+[2025-11-09T22:50:23.812191] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Departments/Court/Homepage/JudgeAnitaCrawford-Willis_circle.jpg
+[2025-11-09T22:50:23.812795] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Departments/Court/Homepage/JudgeAnitaCrawford-Willis_circle.jpg
+[2025-11-09T22:50:23.889214] [INFO] Image saved: /app/data_source/wa/place_seattle/images/123126cde072.png
+[2025-11-09T22:50:23.896158] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Departments/Court/Homepage/JudgeDamonShadid_circle.jpg
+[2025-11-09T22:50:23.896610] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Departments/Court/Homepage/JudgeDamonShadid_circle.jpg
+[2025-11-09T22:50:24.059002] [INFO] Image saved: /app/data_source/wa/place_seattle/images/3f2c3d1758f9.png
+[2025-11-09T22:50:24.065367] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Departments/Court/Homepage/JudgeFayeRChess_circle.jpg
+[2025-11-09T22:50:24.065903] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Departments/Court/Homepage/JudgeFayeRChess_circle.jpg
+[2025-11-09T22:50:24.157158] [INFO] Image saved: /app/data_source/wa/place_seattle/images/5f07812dce67.png
+[2025-11-09T22:50:24.166931] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Departments/Court/Homepage/JudgeAndreaChin_circle.jpg
+[2025-11-09T22:50:24.167589] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Departments/Court/Homepage/JudgeAndreaChin_circle.jpg
+[2025-11-09T22:50:24.311127] [INFO] Image saved: /app/data_source/wa/place_seattle/images/b7f5ba98b3b1.png
+[2025-11-09T22:50:24.316242] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Departments/Court/Homepage/JudgeWillieGregory_circle.jpg
+[2025-11-09T22:50:24.316631] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Departments/Court/Homepage/JudgeWillieGregory_circle.jpg
+[2025-11-09T22:50:24.389420] [INFO] Image saved: /app/data_source/wa/place_seattle/images/8fba9ef8663f.png
+[2025-11-09T22:50:24.395646] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Departments/Court/Homepage/JudgeCatherineMcDowall_circle.jpg
+[2025-11-09T22:50:24.396331] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Departments/Court/Homepage/JudgeCatherineMcDowall_circle.jpg
+[2025-11-09T22:50:24.472573] [INFO] Image saved: /app/data_source/wa/place_seattle/images/39d22f6b6c90.png
+[2025-11-09T22:50:24.477519] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Departments/Court/Homepage/JudgePoojaVaddadi_circle.jpg
+[2025-11-09T22:50:24.478034] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Departments/Court/Homepage/JudgePoojaVaddadi_circle.jpg
+[2025-11-09T22:50:24.635254] [INFO] Image saved: /app/data_source/wa/place_seattle/images/75e9ce2e5283.png
+[2025-11-09T22:50:24.641440] [DEBUG] Attempting to intercept and save image for: https://www.seattle.gov/images//images/Departments/Court/Homepage/2021JudgesGroup_300x300.png
+[2025-11-09T22:50:24.642011] [DEBUG] Loading image from URL: https://www.seattle.gov/images//images/Departments/Court/Homepage/2021JudgesGroup_300x300.png
+[2025-11-09T22:50:24.731156] [INFO] Image saved: /app/data_source/wa/place_seattle/images/1d2c71cf9f58.png
+[2025-11-09T22:50:24.737558] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2025-11-09T22:50:24.898664] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.seattle.gov/elected-officials
+[2025-11-09T22:50:34.963599] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2025-11-09T22:50:34.963731] [INFO] -> Elapsed time: 10.06 seconds
+[2025-11-09T22:50:34.963830] [INFO] -> Average elapsed time: 9.69 seconds
+[2025-11-09T22:50:34.963910] [INFO] -> Total elapsed time: 29.06 seconds
+[2025-11-09T22:50:34.965500] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.seattle.gov/elected-officials
+[2025-11-09T22:50:34.966057] [INFO] Running Gemini prompt
+[2025-11-09T22:50:34.966152] [DEBUG] Prompt: 
+
+    First, determine if the content contains relevant information about the main governing body of the target municipality. If the content includes information about the following people, they are very likely to be on the council: Bruce Harrell, Rob Saka, Mark Solomon, Joy Hollingsworth, Maritza Rivera, Debora Juarez, Dan Strauss, Bob Kettle, Alexis Mercedes Rinck, Sara Nelson.
+    If not, return an empty JSON array `[]`.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+    Target Divisions: ward, district
+    Current Date: 2025-11-09
+
+    Return a JSON object with people, each having:
+    - name: (String) Full name only (no titles)
+    - image: (String or null) URL to profile image (https://...)
+    - roles: (Array of strings) Active municipal roles
+    - divisions: (Array of strings) Specific district/ward names
+    - phone_number: (String or null) Formatted phone number
+    - email: (String or null) Email address
+    - website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+    - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+    Guidelines:
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - Website extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided `current_date` to filter out roles or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+    
+[2025-11-09T22:50:47.039252] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 6424, Output tokens: 1140, Total cost: $0.00
+[2025-11-09T22:50:47.043206] [INFO] gemini gemini-2.5-flash LLM call took 12.08 seconds
+[2025-11-09T22:50:47.044930] [INFO] Running OpenAI prompt
+[2025-11-09T22:50:47.045083] [DEBUG] Prompt: 
+
+You are an expert data extractor focused on accuracy.
+
+First, determine if the content contains relevant information about any of the main governing body of a municipality. Here is a list of known target people (may be missing or include extra): Bruce Harrell, Rob Saka, Mark Solomon, Joy Hollingsworth, Maritza Rivera, Debora Juarez, Dan Strauss, Bob Kettle, Alexis Mercedes Rinck, Sara Nelson.
+If not, return an empty JSON array `[]`.
+
+Target Person (if applicable): 
+Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member
+Target divisions: ward, district
+Current Date: 2025-11-09
+
+Return a JSON object.
+
+Output Field Definitions & Structure:
+- name: (String) Full name only (no titles).
+- image: (String or null) URL to profile image (https://...)
+- roles: (Array of strings) Active municipal roles.
+         Identify their official job title or specific position.
+         This can be a wide variety of municipal roles (e.g., "Mayor", "City Manager", "Selectman",
+         "Alderman", "Council Member").
+- divisions: (Array of strings) Specific district/ward and name/number,
+          only if specified (e.g., "Ward 1", "District 2").
+- phone_number: (String or null) Formatted phone number
+- email: (String or null) Email address (email@example.com)
+- website: (String or null) Use the official's profile or biography URL if available; otherwise, use a contact form URL. If neither exists, set to null.
+- start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+- end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+
+Extraction Guidelines:
+- Roles extraction:
+  - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, trustee, council member).
+  - If a role includes additional descriptors or variations, normalize it to the closest matching target role when possible.
+    - Example: "Vice President" under a governing body → Normalize to the closest matching target role, such as "Council Vice President" or "Commissioner Vice President."
+    - If a role cannot be normalized to a target role but is clearly valid (e.g., "Vice President"), extract it as-is.
+  - Use the governing body or surrounding context to determine the correct role for ambiguous titles.
+    - Example: If "Vice President" is listed under "Council Members," infer it as "Council Vice President."
+    - Example: If "Vice President" appears without clear context, extract it as "Vice President."
+  - Include only active roles (today is 2025-11-09).
+
+- Divisions:
+  - Extract divisions if explicitly mentioned and relevant to the person's role.
+  - Do not infer divisions if they are not explicitly stated.
+
+- General Guidelines:
+  - Merge details for the same person into a single record.
+  - Assign confidence (0-1 scale) and provide a brief reason for each field's data.
+  - Extract full names only (e.g., "John Smith," not "Mayor John Smith"). Titles belong in the roles field.
+  - Ensure extracted data is accurate and relevant to the governing body or target roles.
+- Image: Extract URL of portrait/headshot near name. Ignore logos, banners, icons. Check alt text but prioritize proximity/style.
+- Contact Details (Phone/Email/Website):
+  - Associate details logically if near the person's name/section.
+  - Pick the most relevant contact detail if multiple are present.
+  - Phone numbers:
+    - Extract number after labels like "Office:", "Cell:", "Mobile:", "Direct:", "Home:". Exclude "Fax:". Format numbers simply.
+  - Markdown Links: Extract email/phone from the VISIBLE TEXT of links like `[TEXT](...)`, ignore the target URL.
+  - `website` data MUST be a valid http/https URL. Prefer profile pages. EXCLUDE mailto:, tel:.
+  - `email` data should ONLY contain email addresses.
+- Term Dates (`start_date`, `end_date`):
+  - Extract start_date and end_date in YYYY, YYYY-MM, or YYYY-MM-DD format.
+  - Acceptable date phrases include:
+    - “Elected [date]”, “Appointed [date]”, “Term: [date1] to [date2]”, “Since [date]”.
+    - For vague phrases like "Spring 2025", extract the year only.
+  - If more than one term is mentioned, extract the most recent term dates.
+  - Examples:
+    - "Elected Nov 2024 for term ending Dec 2028" -> start_date: "2024-11", end_date: "2028-12"
+    - "Served January 2018 until December 2021 - Re-elected and serving January 2022 and until December 2025" -> start_date: "2022-01", end_date: "2025-12"
+    - "Elected in 2017 and re-elected in 2021 for the 2022-2025 term." -> start_date: "2022", end_date: "2025"
+
+**FINAL MANDATORY CHECK**: Review your entire response for accuracy before submitting,
+  paying close attention to the role inference, date extraction, and term identification rules.
+
+[2025-11-09T22:50:59.231888] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 6569, Output tokens: 944, Total cost: $0.00
+[2025-11-09T22:50:59.232358] [INFO] openai LLM call took 12.19 seconds
+[2025-11-09T22:50:59.251678] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.252209] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.254479] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.254821] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.255613] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.255871] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.256112] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.256562] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.256953] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.257211] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.257603] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.257868] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.258119] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.258756] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.259300] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.260417] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.260882] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.261458] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.262051] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.262767] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.263666] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.264584] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.265190] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.265623] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.266189] [DEBUG] Skipping adding websites for person with role and contact info
+[2025-11-09T22:50:59.267731] [INFO] Current data: 11
+[2025-11-09T22:50:59.268434] [INFO] Required data: 10
+[2025-11-09T22:50:59.268827] [INFO] Minimum required data: 7
+[2025-11-09T22:50:59.270015] [INFO] Has target role: True
+[2025-11-09T22:50:59.270303] [INFO] Has target divisions (if available): True
+[2025-11-09T22:50:59.270647] [INFO] Current total cost for this run: $0.04
+[2025-11-09T22:50:59.270769] [INFO] Enough data processed, moving to report generation...
+[2025-11-09T22:50:59.305350] [INFO] Step 8: CLEANUP
+[2025-11-09T22:50:59.334179] [INFO] Pipeline completed in 119 seconds.
+[2025-11-09T22:50:59.335595] [INFO] Step 9: MAYBE_SEND_TO_GITHUB
+[2025-11-09T22:50:59.335751] [INFO] CRUDDER_UPLOAD_URL: http://crudder:8001/api/github_intake
