@@ -19,8 +19,8 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in CivicPatch:
 
 **Places:**
-- country:us/state:co/place:bonanza
 - country:us/state:co/place:central_city
+- country:us/state:co/place:bonanza
 - country:us/state:co/place:raymer_~new_raymer~
 
 **Divisions:**
