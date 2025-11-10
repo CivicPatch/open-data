@@ -1,144 +1,145 @@
-name: "[auto] Post Merge"
-on:
-  push:
-    branches:
-      - main
-  #workflow_dispatch:
-  #  inputs:
-  #    state:
-  #      description: 'state intitials'
-  #      required: true
-  #      type: choice
-  #      options:
-  #        - co
-  #        - wa
-jobs:
-  extract-files:
-    runs-on: ubuntu-latest
-    outputs:
-      yaml-files: ${{ steps.extract-files.outputs.yaml-files }}
-      states: ${{ steps.extract-states.outputs.states }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v5
-        with:
-          ref: main
-          fetch-depth: 0 # Fetch all history for accurate diffing
-
-      - name: Extract updated states
-        id: extract-states
-        run: |
-          # Get the list of updated files
-          UPDATED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
-          # Extract unique state directories from the updated files
-          STATES=$(echo "$UPDATED_FILES" | grep -oP '^data_source/\K[^/]+' | sort -u)
-          # Output the states as a comma-separated list
-          echo "states=$STATES" >> $GITHUB_OUTPUT
-
-      - name: Extract updated YAML files
-        id: extract-files
-        run: |
-          # Get the list of updated YAML files under data/**/**.yml
-          UPDATED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
-          YAML_FILES=$(echo "$UPDATED_FILES" | grep '^data/.*\.yml$' || true)
-
-          # Convert to JSON array for matrix
-          if [ -z "$YAML_FILES" ]; then
-            echo "yaml-files=[]" >> $GITHUB_OUTPUT
-          else
-            # Convert newline-separated list to JSON array
-            JSON_ARRAY=$(echo "$YAML_FILES" | jq -R -s -c 'split("\n") | map(select(length > 0))')
-            echo "yaml-files=$JSON_ARRAY" >> $GITHUB_OUTPUT
-          fi
-
-  update-people:
-    needs: extract-files
-    if: needs.extract-files.outputs.yaml-files != '[]'
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        yaml-file: ${{ fromJson(needs.extract-files.outputs.yaml-files) }}
-      fail-fast: false
-    steps:
-      - name: Convert file path to slug
-        id: convert-slug
-        run: |
-          # Convert path like "data/state/ca/county_marin__place_seattle.yml"
-          # to slug like "data__state_ca__county_marin__place_seattle"
-          FILE_PATH="${{ matrix.yaml-file }}"
-          # Remove .yml extension
-          FILE_PATH="${FILE_PATH%.yml}"
-          # Replace / with __
-          SLUG=$(echo "$FILE_PATH" | sed 's/\//__/g')
-          echo "slug=$SLUG" >> $GITHUB_OUTPUT
-
-      - name: Call jurisdictions/people endpoint
-        env:
-          CRUDDER_SHARED_TOKEN: ${{ secrets.CRUDDER_SHARED_TOKEN }}
-          CRUDDER_URL: ${{ vars.CRUDDER_URL }}
-
-        run: |
-          curl -X POST "$CRUDDER_URL/api/jurisdictions/people" \
-            -H "Content-Type: application/json" \
-            -H "Authorization: $CRUDDER_SHARED_TOKEN" \
-            -d "{\"people_filepath\": \"${{ steps.convert-slug.outputs.slug }}\"}" \
-            --fail-with-body
-
-  post-merge:
-    needs: [extract-files, update-people]
-    if: always()
-    runs-on: ubuntu-latest
-    steps:
-      - name: Generate GitHub App Pipeline Token
-        id: generate-pipeline-token
-        uses: actions/create-github-app-token@v2
-        with:
-          app-id: ${{ secrets.GH_APP_BOT_PIPELINE_APP_ID }}
-          private-key: ${{ secrets.GH_APP_BOT_PIPELINE_PRIVATE_KEY }}
-
-      - name: Get GitHub App User ID
-        id: get-user-id
-        run: echo "user-id=$(gh api "/users/${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
-        env:
-          GH_TOKEN: ${{ steps.generate-pipeline-token.outputs.token }}
-
-      - name: Checkout repository
-        uses: actions/checkout@v5
-        with:
-          ref: main
-          token: ${{ steps.generate-pipeline-token.outputs.token }}
-          fetch-depth: 0
-
-      - name: Setup mise
-        uses: jdx/mise-action@v3.2.0
-        with:
-          version: "2025.9.6"
-          cache: true
-          log_level: debug
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Install poetry dependencies
-        run: |
-          mise ls
-          poetry install
-
-      - name: Update progress files for each state
-        run: |
-          for state in ${{ needs.extract-files.outputs.states }}; do
-            echo "Processing state: $state"
-            poetry run python scripts/create_update_jurisdictions_metadata_file.py "$state"
-          done
-          poetry run python ocdid_progress_tracker/main.py
-          poetry run python ocdid_progress_tracker/generate_readme.py
-
-      - name: Commit changes to main
-        run: |
-          # Configure git
-          git config --global user.name '${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]'
-          git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]@users.noreply.github.com'
-          # Commit changes if any images were updated
-          if [ -n "$(git status --porcelain)" ]; then
-            git add .
-            git commit -m "Update government_progress.yml file for states: ${{ needs.extract-files.outputs.states }}"
-            git push -u origin main
-          fi
+#name: "[auto] Post Merge"
+#on:
+#  push:
+#    branches:
+#      - main
+#  #workflow_dispatch:
+#  #  inputs:
+#  #    state:
+#  #      description: 'state intitials'
+#  #      required: true
+#  #      type: choice
+#  #      options:
+#  #        - co
+#  #        - wa
+#jobs:
+#  extract-files:
+#    runs-on: ubuntu-latest
+#    outputs:
+#      yaml-files: ${{ steps.extract-files.outputs.yaml-files }}
+#      states: ${{ steps.extract-states.outputs.states }}
+#    steps:
+#      - name: Checkout repository
+#        uses: actions/checkout@v5
+#        with:
+#          ref: main
+#          fetch-depth: 0 # Fetch all history for accurate diffing
+#
+#      - name: Extract updated states
+#        id: extract-states
+#        run: |
+#          # Get the list of updated files
+#          UPDATED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
+#          # Extract unique state directories from the updated files
+#          STATES=$(echo "$UPDATED_FILES" | grep -oP '^data_source/\K[^/]+' | sort -u)
+#          # Output the states as a comma-separated list
+#          echo "states=$STATES" >> $GITHUB_OUTPUT
+#
+#      - name: Extract updated YAML files
+#        id: extract-files
+#        run: |
+#          # Get the list of updated YAML files under data/**/**.yml
+#          UPDATED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
+#          YAML_FILES=$(echo "$UPDATED_FILES" | grep '^data/.*\.yml$' || true)
+#
+#          # Convert to JSON array for matrix
+#          if [ -z "$YAML_FILES" ]; then
+#            echo "yaml-files=[]" >> $GITHUB_OUTPUT
+#          else
+#            # Convert newline-separated list to JSON array
+#            JSON_ARRAY=$(echo "$YAML_FILES" | jq -R -s -c 'split("\n") | map(select(length > 0))')
+#            echo "yaml-files=$JSON_ARRAY" >> $GITHUB_OUTPUT
+#          fi
+#
+#  update-people:
+#    needs: extract-files
+#    if: needs.extract-files.outputs.yaml-files != '[]'
+#    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        yaml-file: ${{ fromJson(needs.extract-files.outputs.yaml-files) }}
+#      fail-fast: false
+#    steps:
+#      - name: Convert file path to slug
+#        id: convert-slug
+#        run: |
+#          # Convert path like "data/state/ca/county_marin__place_seattle.yml"
+#          # to slug like "data__state_ca__county_marin__place_seattle"
+#          FILE_PATH="${{ matrix.yaml-file }}"
+#          # Remove .yml extension
+#          FILE_PATH="${FILE_PATH%.yml}"
+#          # Replace / with __
+#          SLUG=$(echo "$FILE_PATH" | sed 's/\//__/g')
+#          echo "slug=$SLUG" >> $GITHUB_OUTPUT
+#
+#      - name: Call jurisdictions/people endpoint
+#        env:
+#          CRUDDER_SHARED_TOKEN: ${{ secrets.CRUDDER_SHARED_TOKEN }}
+#          CRUDDER_URL: ${{ vars.CRUDDER_URL }}
+#
+#        run: |
+#          curl -X POST "$CRUDDER_URL/api/jurisdictions/people" \
+#            -H "Content-Type: application/json" \
+#            -H "Authorization: $CRUDDER_SHARED_TOKEN" \
+#            -d "{\"people_filepath\": \"${{ steps.convert-slug.outputs.slug }}\"}" \
+#            --fail-with-body
+#
+#  post-merge:
+#    needs: [extract-files, update-people]
+#    if: always()
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Generate GitHub App Pipeline Token
+#        id: generate-pipeline-token
+#        uses: actions/create-github-app-token@v2
+#        with:
+#          app-id: ${{ secrets.GH_APP_BOT_PIPELINE_APP_ID }}
+#          private-key: ${{ secrets.GH_APP_BOT_PIPELINE_PRIVATE_KEY }}
+#
+#      - name: Get GitHub App User ID
+#        id: get-user-id
+#        run: echo "user-id=$(gh api "/users/${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
+#        env:
+#          GH_TOKEN: ${{ steps.generate-pipeline-token.outputs.token }}
+#
+#      - name: Checkout repository
+#        uses: actions/checkout@v5
+#        with:
+#          ref: main
+#          token: ${{ steps.generate-pipeline-token.outputs.token }}
+#          fetch-depth: 0
+#
+#      - name: Setup mise
+#        uses: jdx/mise-action@v3.2.0
+#        with:
+#          version: "2025.9.6"
+#          cache: true
+#          log_level: debug
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#
+#      - name: Install poetry dependencies
+#        run: |
+#          mise ls
+#          poetry install
+#
+#      - name: Update progress files for each state
+#        run: |
+#          for state in ${{ needs.extract-files.outputs.states }}; do
+#            echo "Processing state: $state"
+#            poetry run python scripts/create_update_jurisdictions_metadata_file.py "$state"
+#          done
+#          poetry run python ocdid_progress_tracker/main.py
+#          poetry run python ocdid_progress_tracker/generate_readme.py
+#
+#      - name: Commit changes to main
+#        run: |
+#          # Configure git
+#          git config --global user.name '${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]'
+#          git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]@users.noreply.github.com'
+#          # Commit changes if any images were updated
+#          if [ -n "$(git status --porcelain)" ]; then
+#            git add .
+#            git commit -m "Update government_progress.yml file for states: ${{ needs.extract-files.outputs.states }}"
+#            git push -u origin main
+#          fi
+#
