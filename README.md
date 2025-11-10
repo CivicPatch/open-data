@@ -190,9 +190,9 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 
 **Places:**
 - country:us/state:co/place:central
+- country:us/state:co/place:raymer_(new_raymer)
 - country:us/state:co/place:denver
 - country:us/state:co/place:keystone
-- country:us/state:co/place:raymer_(new_raymer)
 - country:us/state:co/place:broomfield
 
 **Divisions:**
