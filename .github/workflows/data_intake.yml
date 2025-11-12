@@ -6,19 +6,19 @@ on:
   workflow_dispatch:
     inputs:
       server_url:
-        description: 'CivicPatch Server URL (e.g. https://civicpatch.example.com)'
+        description: "CivicPatch Server URL (e.g. https://civicpatch.example.com)"
         required: true
       user_email:
-        description: 'Email associated with your CivicPatch account'
+        description: "Email associated with your CivicPatch account"
         required: true
       request_id:
-        description: 'Unique request ID for this data intake'
+        description: "Unique request ID for this data intake"
         required: true
       jurisdiction_id:
-        description: 'ocdid for the municipality'
+        description: "ocdid for the municipality"
         required: true
       zip_file_url:
-        description: 'Presigned URL of the ZIP file containing YAML data'
+        description: "Presigned URL of the ZIP file containing YAML data"
         required: true
 
 jobs:
@@ -44,7 +44,7 @@ jobs:
       - name: Setup mise
         uses: jdx/mise-action@v3.2.0
         with:
-          version: '2025.9.6'
+          version: "2025.9.6"
           cache: false
           install: true
           log_level: debug
@@ -71,7 +71,7 @@ jobs:
       - name: Unzip data into root project directory
         run: |
           unzip -o /tmp/payload.zip -d .
-          ls -l 
+          ls -l
           ls -l data
           ls -l data_source
           git status
@@ -83,7 +83,7 @@ jobs:
 
       - name: Validate data
         run: |
-          poetry run python scripts/validate_jurisdiction.py ${{ github.event.inputs.jurisdiction_id }}
+          poetry run python scripts/github_actions/validate_jurisdiction.py ${{ github.event.inputs.jurisdiction_id }}
 
       - name: Get branch name from zip_file_url
         id: extract_branch
@@ -105,7 +105,7 @@ jobs:
           git checkout -B ${{ steps.extract_branch.outputs.branch_name }}
           git add .
           git commit -m "Add municipal officials for ${{ github.event.inputs.jurisdiction_id }} by ${{ github.event.inputs.user_email }}"
-          git push -u origin ${{ steps.extract_branch.outputs.branch_name }} 
+          git push -u origin ${{ steps.extract_branch.outputs.branch_name }}
 
           echo ${{ github.actor }}
 
@@ -116,7 +116,7 @@ jobs:
           )
           github_pr_number=$(basename "$github_pull_request_url")
           echo "pr_number=$github_pr_number" >> $GITHUB_OUTPUT
-  
+
   process-pull-request:
     needs: data-intake
     uses: ./.github/workflows/zz_process_pull_request.yml
@@ -136,5 +136,3 @@ jobs:
       GOOGLE_SHEETS_PRIVATE_KEY: ${{ secrets.GOOGLE_SHEETS_PRIVATE_KEY }}
       GOOGLE_SHEETS_CLIENT_EMAIL: ${{ secrets.GOOGLE_SHEETS_CLIENT_EMAIL }}
       GOOGLE_SHEETS_TOKEN_URI: ${{ secrets.GOOGLE_SHEETS_TOKEN_URI }}
-
-

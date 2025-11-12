@@ -39,7 +39,7 @@ poetry run python scripts/one_off/convert_to_people_schema.py --delete-original
 
 [tasks.validate-jurisdiction]
 run = """
-poetry run python scripts/validate_jurisdiction.py $@
+poetry run python scripts/github_actions/validate_jurisdiction.py $@
 """
 
 [tasks.test-env]
@@ -47,9 +47,9 @@ run = """
 poetry run python scripts/one_off/test_env.py
 """
 
-[tasks.add-state]
+[tasks.setup-state]
 run = """
-poetry run python scripts/pull_jurisdiction_data.py $@
+poetry run python scripts/setup_state.py $@
 """
 
 #############################################
@@ -110,5 +110,3 @@ run = """
 docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
   python src/scripts/generate_review_comment.py {{ option(name="jurisdiction-id") }}
 """
-
-
