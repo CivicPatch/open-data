@@ -1,14 +1,18 @@
 import json
 import os
+from pathlib import Path
 
 import yaml
+
+PROJECT_ROOT = Path(__file__).parent.parent.parent
 
 
 def count_municipalities():
     # Resolve the absolute path to the data_source and google_data directories
-    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    data_source_path = os.path.join(project_root, "data_source")
-    google_data_path = os.path.join(project_root, "ocdid_progress_tracker/google_data")
+    data_source_path = os.path.join(PROJECT_ROOT, "data_source")
+    google_data_path = os.path.join(
+        PROJECT_ROOT, "scripts", "track_progress", "google_data"
+    )
 
     print(f"Resolved data source path: {data_source_path}")
     print(f"Resolved Google data path: {google_data_path}")
@@ -161,7 +165,7 @@ def count_municipalities():
                 )
 
     # Write results to a JSON file
-    output_file = os.path.join(project_root, "progress.json")
+    output_file = os.path.join(PROJECT_ROOT, "progress.json")
     with open(output_file, "w") as outfile:
         json.dump(results, outfile, indent=4)
 

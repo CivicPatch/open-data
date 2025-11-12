@@ -1,5 +1,8 @@
 import json
 import os
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).parent.parent.parent
 
 
 def generate_readme(progress_file, output_file):
@@ -100,11 +103,6 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 
 
 if __name__ == "__main__":
-    file_dir = os.path.dirname(os.path.abspath(__file__))
-
-    # Move up one level to access the parent directory
-    project_root = os.path.dirname(file_dir)
-
-    progress_file = f"{project_root}/progress.json"
-    output_file = f"{project_root}/README.md"
+    progress_file = f"{PROJECT_ROOT}/progress.json"
+    output_file = f"{PROJECT_ROOT}/README.md"
     generate_readme(progress_file, output_file)
