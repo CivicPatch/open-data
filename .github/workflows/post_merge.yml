@@ -2,10 +2,10 @@ name: "[auto] Post Merge"
 on:
   push:
     paths:
-      - 'data/**/**.yml'
+      - "data/**/**.yml"
     branches:
       - main
-    
+
   #workflow_dispatch:
   #  inputs:
   #    state:
@@ -118,7 +118,8 @@ jobs:
           CRUDDER_SHARED_TOKEN: ${{ secrets.CRUDDER_SHARED_TOKEN }}
           CRUDDER_URL: ${{ vars.CRUDDER_URL }}
         run: |
-          curl -X POST "$CRUDDER_URL/api/od_sync" \
+          curl -X POST "$CRUDDER_URL/api/admin/od_sync" \
+
             -H "Content-Type: application/json" \
             -H "Authorization: $CRUDDER_SHARED_TOKEN"
             --fail-with-body
