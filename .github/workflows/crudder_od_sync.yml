@@ -1,0 +1,18 @@
+name: "[manual] Sync data back to crudder"
+on:
+  workflow_dispatch:
+
+jobs:
+  sync-with-crudder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call od_sync
+        env:
+          CRUDDER_SHARED_TOKEN: ${{ secrets.CRUDDER_SHARED_TOKEN }}
+          CRUDDER_URL: ${{ vars.CRUDDER_URL }}
+        run: |
+          curl -X POST "$CRUDDER_URL/api/admin/od_sync" \
+
+            -H "Content-Type: application/json" \
+            -H "Authorization: $CRUDDER_SHARED_TOKEN"
+            --fail-with-body
