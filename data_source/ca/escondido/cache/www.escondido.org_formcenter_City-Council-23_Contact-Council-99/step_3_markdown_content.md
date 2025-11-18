@@ -1,6 +1,6 @@
 Loading
 
-[Skip to Main Content](https://www.escondido.org/formcenter/City-Council-23/Contact-Council-99/)
+[Skip to Main Content](https://www.escondido.org/FormCenter/City-Council-23/Contact-Council-99/)
 
 ![Escondido, CA](https://www.escondido.org/ImageRepository/Document?documentID=27)
 
@@ -20,7 +20,7 @@ Search
 
 <!--THE END-->
 
-![](https://www.escondido.org/ImageRepository/Document?documentID=73)
+![](https://www.escondido.org/ImageRepository/Document?documentID=74)
 
 1. [Home](https://www.escondido.org)
 2. Form Center
@@ -29,7 +29,7 @@ Search
 
 ### Search Forms by:
 
-Enter Search Terms [Select a Category](https://www.escondido.org/formcenter/City-Council-23/Contact-Council-99/)
+Enter Search Terms [Select a Category](https://www.escondido.org/FormCenter/City-Council-23/Contact-Council-99/)
 
 Select category/categories to filter
 
@@ -65,7 +65,7 @@ Select category/categories to filter
 
 Search
 
-By [signing in or creating an account](https://www.escondido.gov/formcenter/City-Council-23/Contact-Council-99), some fields will auto-populate with your information.
+By [signing in or creating an account](https://www.escondido.gov/FormCenter/City-Council-23/Contact-Council-99), some fields will auto-populate with your information.
 
 ## Contact Council
 
@@ -86,7 +86,7 @@ This form has been modified since it was saved. Please review all fields before 
 7. Email address
    
    This field is not part of the form submission.
-8. [Submit](https://www.escondido.org/formcenter/City-Council-23/Contact-Council-99)
+8. [Submit](https://www.escondido.org/FormCenter/City-Council-23/Contact-Council-99)
 
 \* indicates a required field
 

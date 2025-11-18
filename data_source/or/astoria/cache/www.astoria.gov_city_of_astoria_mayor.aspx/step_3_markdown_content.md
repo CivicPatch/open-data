@@ -1,4 +1,4 @@
-- [LOGIN](https://www.astoria.gov/city_of_astoria_mayor.aspx)
+- [LOGIN](https://www.astoria.gov/City_of_Astoria_Mayor.aspx)
   
   Remember me Sign in
 
@@ -10,7 +10,7 @@
 - [Site Map](https://www.astoria.gov/dept/Main/SiteMap.aspx)
 - [Print Page](https://www.printfriendly.com "Print this Page")
 - [Rss Feed](https://www.astoria.gov/Rss "View RSS Feeds")
-- [Select a Department »](https://www.astoria.gov/city_of_astoria_mayor.aspx "Select a Department")
+- [Select a Department »](https://www.astoria.gov/City_of_Astoria_Mayor.aspx "Select a Department")
   
   - [City of Astoria Home](https://www.astoria.gov "City of Astoria Home")
   - [911 Dispatch](https://www.astoria.gov/dept/911_Dispatch "911 Dispatch")
@@ -41,7 +41,7 @@
 
 <!--THE END-->
 
-- [GOVERNMENT »](https://www.astoria.gov/city_of_astoria_mayor.aspx "GOVERNMENT")
+- [GOVERNMENT »](https://www.astoria.gov/City_of_Astoria_Mayor.aspx "GOVERNMENT")
   
   - [City Council »](https://www.astoria.gov/City_Council.aspx "City Council")
     
@@ -66,10 +66,10 @@
     - [Planning Commission](https://www.astoria.gov/default.asp?pageid=117&deptid=3 "Planning Commission")
     - [Traffic Safety Advisory Committee](https://www.astoria.gov/Traffic_Safety_Advisory_Committee.aspx "Traffic Safety Advisory Committee")
     - [Citizen Advisory Committee Application](https://www.astoria.gov/Citizen_Advisory_Committee_Form.aspx "Citizen Advisory Committee Application")
-  - [Agendas &amp; Minutes »](https://www.astoria.gov/city_of_astoria_mayor.aspx "Agendas & Minutes")
+  - [Agendas &amp; Minutes »](https://www.astoria.gov/City_of_Astoria_Mayor.aspx "Agendas & Minutes")
     
     - [Agendas &amp; Minutes](https://www.astoria.gov/Agenda_Minutes.aspx "Agendas & Minutes")
-  - [City Codes »](https://www.astoria.gov/city_of_astoria_mayor.aspx "City Codes")
+  - [City Codes »](https://www.astoria.gov/City_of_Astoria_Mayor.aspx "City Codes")
     
     - [City Code](https://www.astoria.gov/City_Code.aspx "City Code")
     - [Development Code](https://www.astoria.gov/Development_Zoning.aspx "Development Code")
@@ -82,7 +82,7 @@
   - [Local /Government Resources](https://www.astoria.gov/Local_Government_Resources.aspx "Local /Government Resources")
   - [Public Notices](https://www.astoria.gov/Public_Notices.aspx "Public Notices")
   - [Public Records](https://www.astoria.gov/View_Public_Records.aspx "Public Records")
-- [DEPARTMENTS »](https://www.astoria.gov/city_of_astoria_mayor.aspx "DEPARTMENTS")
+- [DEPARTMENTS »](https://www.astoria.gov/City_of_Astoria_Mayor.aspx "DEPARTMENTS")
   
   - [911 Dispatch](https://www.astoria.gov/dept/911_Dispatch "911 Dispatch")
   - [City Manager](https://www.astoria.gov/dept/City_Managers_Office "City Manager")
@@ -137,7 +137,7 @@
     - [Permit Information](https://www.astoria.gov/City_of_Astoria_Forms.aspx "Permit Information")
     - [System Development Charges (SDCs)](https://www.astoria.gov/SDCs.aspx "System Development Charges (SDCs)")
     - [GIS Mapping](https://www.astoria.gov/Public_GIS_Maps.aspx "GIS Mapping")
-- [SERVICES »](https://www.astoria.gov/city_of_astoria_mayor.aspx "SERVICES")
+- [SERVICES »](https://www.astoria.gov/City_of_Astoria_Mayor.aspx "SERVICES")
   
   - [Who to contact](https://www.astoria.gov/Who_to_Call.aspx "Who to contact")
   - [Utility Billing](https://www.astoria.gov/City_of_Astoria_Utility_Billing.aspx "Utility Billing")
@@ -146,15 +146,15 @@
   - [Fees for City Services](https://www.astoria.gov/Fees_for_City_Services.aspx "Fees for City Services")
   - [Building Inspections](https://www.astoria.gov/Building_Inspection_Program.aspx "Building Inspections")
   - [Resources](https://www.astoria.gov/Resources.aspx "Resources")
-  - [Projects »](https://www.astoria.gov/city_of_astoria_mayor.aspx "Projects")
+  - [Projects »](https://www.astoria.gov/City_of_Astoria_Mayor.aspx "Projects")
     
     - [Citywide Projects](https://www.astoria.gov/ALL_PROJECTS_.aspx "Citywide Projects")
     - [Port of Astoria Waterfront Master Plan](https://www.astoria.gov/Astoria_Waterfront_Master_Plan.aspx "Port of Astoria Waterfront Master Plan")
     - [Sign up for Alerts](https://www.astoria.gov/Sign_up_for_Alerts.aspx "Sign up for Alerts")
-- [VISITORS »](https://www.astoria.gov/city_of_astoria_mayor.aspx "VISITORS")
+- [VISITORS »](https://www.astoria.gov/City_of_Astoria_Mayor.aspx "VISITORS")
   
   - [History](https://www.astoria.gov/History.aspx "History")
-  - [ATTRACTIONS »](https://www.astoria.gov/city_of_astoria_mayor.aspx "ATTRACTIONS")
+  - [ATTRACTIONS »](https://www.astoria.gov/City_of_Astoria_Mayor.aspx "ATTRACTIONS")
     
     - [Visitor Center/Chamber of Commerce](https://www.oldoregon.com "Visitor Center/Chamber of Commerce")
     - [Astoria Column](https://www.astoriacolumn.org "Astoria Column")
@@ -173,8 +173,8 @@ Search
 # City of Astoria Mayor
 
 1. [Home](https://www.astoria.gov)
-2. [Government](https://www.astoria.gov/city_of_astoria_mayor.aspx/)
-3. [City Council](https://www.astoria.gov/city_of_astoria_mayor.aspx/City_Council.aspx)
+2. [Government](https://www.astoria.gov/City_of_Astoria_Mayor.aspx/)
+3. [City Council](https://www.astoria.gov/City_of_Astoria_Mayor.aspx/City_Council.aspx)
 4. City Of Astoria Mayor
 
 <!--THE END-->
@@ -229,11 +229,11 @@ Sign up for City of Astoria email lists to receive news and information througho
 
 Copyright © 2025 City of Astoria, Oregon
 
-![](https://www.astoria.gov/track.aspx?referrer=&rnd=110337895862282050&page=%2Fcity_of_astoria_mayor.aspx)
+![](https://www.astoria.gov/track.aspx?referrer=&rnd=462104114882996740&page=%2FCity_of_Astoria_Mayor.aspx)
 
  
 
-[Maximize](https://www.astoria.gov/city_of_astoria_mayor.aspx)[Close](https://www.astoria.gov/city_of_astoria_mayor.aspx)
+[Maximize](https://www.astoria.gov/City_of_Astoria_Mayor.aspx)[Close](https://www.astoria.gov/City_of_Astoria_Mayor.aspx)
 
 Original text
 
