@@ -1,6 +1,6 @@
 Loading
 
-[Skip to Main Content](https://www.centralpointoregon.gov/directory.aspx?eid=38%2F)
+[Skip to Main Content](https://www.centralpointoregon.gov/directory.aspx?EID=38%2F)
 
 [Create a Website Account](https://www.centralpointoregon.gov/MyAccount/ProfileCreate) - Manage notification subscriptions, save form progress and more.   
 

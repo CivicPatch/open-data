@@ -1,6 +1,6 @@
 Loading
 
-[Skip to Main Content](https://www.lebanonoregon.gov/directory.aspx?eid=47%2F)
+[Skip to Main Content](https://www.lebanonoregon.gov/directory.aspx?EID=47%2F)
 
 [Airport Road Updates](https://www.lebanonoregon.gov/AlertCenter.aspx) [Airport Road/Stoltz Hill Road Intersection Improvements Project Read On...](https://www.lebanonoregon.gov/625/Airport-RoadStoltz-Hill-Road-Intersectio)
 
@@ -17,7 +17,7 @@ Loading
 
 Search
 
-![](https://www.lebanonoregon.gov/ImageRepository/Document?documentID=656)
+![](https://www.lebanonoregon.gov/ImageRepository/Document?documentID=658)
 
 1. [Home](https://www.lebanonoregon.gov)
 2. Staff Directory
