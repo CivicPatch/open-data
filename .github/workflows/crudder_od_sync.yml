@@ -3,16 +3,16 @@ on:
   workflow_dispatch:
 
 jobs:
-  sync-with-crudder:
+  sync-with-api:
     environment: env-${{ github.actor }}
     runs-on: ubuntu-latest
     steps:
       - name: Call od_sync
         env:
-          CRUDDER_SHARED_TOKEN: ${{ secrets.CRUDDER_SHARED_TOKEN }}
-          CRUDDER_URL: ${{ vars.CRUDDER_URL }}
+          API_CIVICPATCH_ORG_TOKEN: ${{ secrets.API_CIVICPATCH_ORG_TOKEN }}
+          API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
         run: |
-          curl -X POST "$CRUDDER_URL/api/admin/od_sync" \
+          curl -X POST "$API_CIVICPATCH_ORG_URL/api/admin/od_sync" \
             -H "Content-Type: application/json" \
-            -H "Authorization: $CRUDDER_SHARED_TOKEN" \
+            -H "Authorization: $API_CIVICPATCH_ORG_TOKEN" \
             --fail-with-body
