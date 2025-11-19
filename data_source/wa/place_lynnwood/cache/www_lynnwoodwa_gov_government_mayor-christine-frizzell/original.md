@@ -1,0 +1,375 @@
+Mayor Christine Frizzell – City of Lynnwood
+
+
+
+💬 Are we doing ok with managing the city?
+
+Close modal
+
+[Skip to main content](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell#main-content)
+
+opens in new tab or window
+
+![City of Lynnwood - Logo](https://www.lynnwoodwa.gov/files/assets/public/templateimages/print-header.png)
+
+![QR code to access this page](data:image/png;base64,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)
+
+[English (United States) Select this as your preferred language](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell?oc_lang=en-US)[Spanish Select this as your preferred language](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell?oc_lang=es)[Korean Select this as your preferred language](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell?oc_lang=ko)[Vietnamese Select this as your preferred language](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell?oc_lang=vi)[Russian Select this as your preferred language](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell?oc_lang=ru)[Arabic Select this as your preferred language](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell?oc_lang=ar)
+
+English (United States)
+
+ is your current preferred language.
+
+* [Spanish Select this as your preferred language](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell?oc_lang=es)
+* [Korean Select this as your preferred language](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell?oc_lang=ko)
+* [Vietnamese Select this as your preferred language](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell?oc_lang=vi)
+* [Russian Select this as your preferred language](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell?oc_lang=ru)
+* [Arabic Select this as your preferred language](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell?oc_lang=ar)
+
+[City of Lynnwood - Home - Logo](https://www.lynnwoodwa.gov/Home)
+
+Open Search
+
+Menu
+
+* [Community](https://www.lynnwoodwa.gov/Community)
+  Sub-menu
+  + [Communications](https://www.lynnwoodwa.gov/Community/Communications)Sub-menu
+    - [News & Media](https://www.lynnwoodwa.gov/Community/Communications/News-Media)
+    - [Inside Lynnwood](https://www.lynnwoodwa.gov/Community/Communications/Inside-Lynnwood)
+    - [Lynnwood eNews](https://www.lynnwoodwa.gov/Community/Communications/Lynnwood-eNews)
+    - [Social Media Center](https://www.lynnwoodwa.gov/Community/Communications/Social-Media-Center)
+    - [Recreation Guide](https://www.lynnwoodwa.gov/Community/Communications/Recreation-Guide)
+    - [Messenger](https://www.lynnwoodwa.gov/Community/Communications/Messenger)
+  + [Community Engagement](https://www.lynnwoodwa.gov/Community/Community-Engagement)Sub-menu
+    - [Community Events](https://www.lynnwoodwa.gov/Community/Community-Engagement/Community-Events)
+    - [Healthy Lynnwood](https://www.lynnwoodwa.gov/Community/Community-Engagement/Healthy-Lynnwood)
+    - [Police Outreach & Community Engagement](https://www.lynnwoodwa.gov/Community/Community-Engagement/Police-Outreach-Community-Engagement)
+    - [Safe and Welcoming Lynnwood](https://www.lynnwoodwa.gov/Community/Community-Engagement/Safe-and-Welcoming-Lynnwood)
+    - [Community Equity Survey](https://www.lynnwoodwa.gov/Community/Community-Engagement/Community-Equity-Survey)
+    - [Veterans Services & Programs](https://www.lynnwoodwa.gov/Community/Community-Engagement/Veterans-Services-Programs)
+    - [Lynnwood University](https://www.lynnwoodwa.gov/Community/Community-Engagement/Lynnwood-University)
+    - [Legislative Priorities](https://www.lynnwoodwa.gov/Community/Community-Engagement/Legislative-Priorities)
+    - [Sister City & Friendship City Program](https://www.lynnwoodwa.gov/Community/Community-Engagement/Sister-City-Friendship-City-Program)
+    - [Visioning Lynnwood](https://www.lynnwoodwa.gov/Community/Community-Engagement/Visioning-Lynnwood)
+    - [State of the City Address](https://www.lynnwoodwa.gov/Community/Community-Engagement/State-of-the-City-Address)
+    - [National Community Survey Results](https://www.lynnwoodwa.gov/Community/Community-Engagement/National-Community-Survey-Results)
+  + [Events Calendar](https://www.lynnwoodwa.gov/Community/Events-Calendar)Sub-menu
+    - [Bike to School Day](https://www.lynnwoodwa.gov/Community/Events-Calendar/Bike-to-School-Day)
+    - [Cops for Inclusion](https://www.lynnwoodwa.gov/Community/Events-Calendar/Cops-for-Inclusion-A-Day-with-Kids-of-Diverse-Abilities)
+    - [South Lynnwood Park Stewardship Event](https://www.lynnwoodwa.gov/Community/Events-Calendar/South-Lynnwood-Park-Stewardship-Event)
+  + [Have Your Say Lynnwood!](https://www.lynnwoodwa.gov/Community/Have-Your-Say)
+  + [Human Services](https://www.lynnwoodwa.gov/Community/Human-Services)
+  + [Play Lynnwood](https://www.lynnwoodwa.gov/Community/Play-Lynnwood)Sub-menu
+    - [Swimming Pool Schedule](https://www.lynnwoodwa.gov/Community/Play-Lynnwood/Swimming-Pool-Schedule)
+    - [Lynnwood Recreation Classes & Activities](https://www.lynnwoodwa.gov/Community/Play-Lynnwood/Lynnwood-Recreation-Classes-Activities)
+    - [Lynnwood Senior Center Classes & Activities](https://www.lynnwoodwa.gov/Community/Play-Lynnwood/Lynnwood-Senior-Center-Classes-Activities)
+    - [Rentals: Athletic, Park, Pool and Party](https://www.lynnwoodwa.gov/Community/Play-Lynnwood/Rentals-Athletic-Park-Pool-and-Party)
+    - [Parks, Trails and Open Space](https://www.lynnwoodwa.gov/Community/Play-Lynnwood/Parks-Trails-and-Open-Space)
+    - [Community Events Calendar](https://www.lynnwoodwa.gov/Community/Play-Lynnwood/Community-Events-Calendar)
+    - [Healthy Lynnwood](https://www.lynnwoodwa.gov/Community/Play-Lynnwood/Healthy-Lynnwood)
+    - [Parks, Recreation & Cultural Arts Department](https://www.lynnwoodwa.gov/Community/Play-Lynnwood/Parks-Recreation-Cultural-Arts-Department)
+    - [Lynnwood Golf Course](https://www.lynnwoodwa.gov/Community/Play-Lynnwood/Lynnwood-Golf-Course)
+  + [Volunteer](https://www.lynnwoodwa.gov/Community/Volunteer)Sub-menu
+    - [Boards and Commissions](https://www.lynnwoodwa.gov/Community/Volunteer/Boards-and-Commissions)
+    - [Lynnwood Police Volunteer Programs](https://www.lynnwoodwa.gov/Community/Volunteer/Lynnwood-Police-Volunteer-Programs)
+    - [Parks, Recreation & Cultural Arts Volunteers](https://www.lynnwoodwa.gov/Community/Volunteer/Parks-Recreation-Cultural-Arts-Volunteers)
+    - [Environmental Volunteer Opportunities](https://www.lynnwoodwa.gov/Community/Volunteer/Environmental-Volunteer-Opportunities)
+    - [Adopt a Street](https://www.lynnwoodwa.gov/Community/Volunteer/Adopt-a-Street)
+* [Business](https://www.lynnwoodwa.gov/Business)
+  Sub-menu
+  + [Doing Business in Lynnwood](https://www.lynnwoodwa.gov/Business/Doing-Business-in-Lynnwood)
+  + [Steps to Start a Business](https://www.lynnwoodwa.gov/Business/Steps-to-Start-a-Business)
+  + [Business Licensing](https://www.lynnwoodwa.gov/Business/Business-Licensing)
+  + [Apply for a Permit](https://www.lynnwoodwa.gov/Business/Apply-for-a-Permit)
+  + [Business Opportunities](https://www.lynnwoodwa.gov/Business/Business-Opportunities)Sub-menu
+    - [Locate Commercial Space](https://www.lynnwoodwa.gov/Business/Business-Opportunities/Locate-Commercial-Space)
+  + [Resources for Businesses](https://www.lynnwoodwa.gov/Business/Resources-for-Businesses)Sub-menu
+    - [Lynnwood Chamber](https://www.lynnwoodwa.gov/Business/Resources-for-Businesses/Lynnwood-Chamber)
+    - [Economic Alliance Snohomish County](https://www.lynnwoodwa.gov/Business/Resources-for-Businesses/Economic-Alliance-Snohomish-County)
+    - [WorkSource Snohomish County](https://www.lynnwoodwa.gov/Business/Resources-for-Businesses/WorkSource-Snohomish-County)
+    - [Sno-Isle Libraries](https://www.lynnwoodwa.gov/Business/Resources-for-Businesses/Sno-Isle-Libraries)
+    - [NW Innovation Resource Center](https://www.lynnwoodwa.gov/Business/Resources-for-Businesses/NW-Innovation-Resource-Center)
+    - [Small Business Development Center](https://www.lynnwoodwa.gov/Business/Resources-for-Businesses/Small-Business-Development-Center)
+    - [Washington APEX Accelerator](https://www.lynnwoodwa.gov/Business/Resources-for-Businesses/Washington-APEX-Accelerator)
+    - [Business Impact NW](https://www.lynnwoodwa.gov/Business/Resources-for-Businesses/Business-Impact-NW)
+    - [Edmonds College](https://www.lynnwoodwa.gov/Business/Resources-for-Businesses/Edmonds-College)
+    - [Small Business Administration](https://www.lynnwoodwa.gov/Business/Resources-for-Businesses/Small-Business-Administration)
+    - [Washington State Department of Commerce](https://www.lynnwoodwa.gov/Business/Resources-for-Businesses/Washington-State-Department-of-Commerce)
+  + [World Cup Resources](https://www.lynnwoodwa.gov/Business/World-Cup-Ready)
+* [Government](https://www.lynnwoodwa.gov/Government)
+  Sub-menu
+  + [Mayor Christine Frizzell](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell)Sub-menu
+    - [City Strategic Plan](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell/City-Strategic-Plan)
+    - [Proclamations, Letters of Recognition, and Welcome Greetings](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell/Proclamations-Letters-of-Recognition-and-Welcome-Greetings)
+  + [City Council](https://www.lynnwoodwa.gov/Government/City-Council)Sub-menu
+    - [City Council Meetings](https://www.lynnwoodwa.gov/Government/City-Council/City-Council-Meetings)
+    - [George Hurst](https://www.lynnwoodwa.gov/Government/City-Council/Hurst-new-format)
+    - [Robert Leutwyler](https://www.lynnwoodwa.gov/Government/City-Council/Robert-Leutwyler)
+    - [Derica Escamilla](https://www.lynnwoodwa.gov/Government/City-Council/Council-Member-Escamilla)
+    - [Patrick Decker](https://www.lynnwoodwa.gov/Government/City-Council/Decker-new-format)
+    - [Josh Binda](https://www.lynnwoodwa.gov/Government/City-Council/Binda-new-format)
+    - [Nick Coelho](https://www.lynnwoodwa.gov/Government/City-Council/Coelho-new-format)
+    - [David Parshall](https://www.lynnwoodwa.gov/Government/City-Council/Parshall-new-format)
+    - [Transportation Benefit District](https://www.lynnwoodwa.gov/Government/City-Council/Transportation-Benefit-District)
+    - [City Council Proclamations](https://www.lynnwoodwa.gov/Government/City-Council/City-Council-Proclamations)
+  + [Departments](https://www.lynnwoodwa.gov/Government/Departments)Sub-menu
+    - [Development & Business Services](https://www.lynnwoodwa.gov/Government/Departments/Development-Business-Services)
+    - [Finance](https://www.lynnwoodwa.gov/Government/Departments/Finance)
+    - [Human Resources](https://www.lynnwoodwa.gov/Government/Departments/Human-Resources)
+    - [Information Technology](https://www.lynnwoodwa.gov/Government/Departments/Information-Technology)
+    - [Parks, Recreation & Cultural Arts](https://www.lynnwoodwa.gov/Government/Departments/Parks-Recreation-Cultural-Arts)
+    - [Police Department](https://www.lynnwoodwa.gov/Government/Departments/Police-Department)
+    - [Public Works](https://www.lynnwoodwa.gov/Government/Departments/Public-Works)
+    - [Mayor Christine Frizzell](https://www.lynnwoodwa.gov/Government/Departments/Mayor-Christine-Frizzell)
+    - [City Council](https://www.lynnwoodwa.gov/Government/Departments/City-Council)
+    - [City Clerk](https://www.lynnwoodwa.gov/Government/Departments/City-Clerk)
+  + [Municipal Court](https://www.lynnwoodwa.gov/Government/Municipal-Court)Sub-menu
+    - [Infractions, Parking Tickets & Photo Enforcement](https://www.lynnwoodwa.gov/Government/Municipal-Court/Infractions-Parking-Tickets-Photo-Enforcement)
+    - [Virtual Hearings](https://www.lynnwoodwa.gov/Government/Municipal-Court/Virtual-Hearings)
+    - [Court Recordings](https://www.lynnwoodwa.gov/Government/Municipal-Court/Court-Recordings)
+    - [Court Forms](https://www.lynnwoodwa.gov/Government/Municipal-Court/Court-Forms)
+    - [Local Court Rules, Administrative Orders, & Court Security](https://www.lynnwoodwa.gov/Government/Municipal-Court/Local-Court-Rules-Administrative-Orders-Court-Security)
+    - [Marriage Information](https://www.lynnwoodwa.gov/Government/Municipal-Court/Marriage-Information)
+    - [Court Support Services](https://www.lynnwoodwa.gov/Government/Municipal-Court/Court-Support-Services)
+    - [Collections](https://www.lynnwoodwa.gov/Government/Municipal-Court/Collections)
+    - [Jury](https://www.lynnwoodwa.gov/Government/Municipal-Court/Jury)
+    - [Policies and Procedures at Lynnwood Municpal Court During COVID-19](https://www.lynnwoodwa.gov/Government/Municipal-Court/COVID-19)
+  + [City Clerk](https://www.lynnwoodwa.gov/Government/City-Clerk)Sub-menu
+    - [Claim for Damages](https://www.lynnwoodwa.gov/Government/City-Clerk/Claim-for-Damages)
+    - [Lynnwood Municipal Code](https://www.lynnwoodwa.gov/Government/City-Clerk/Lynnwood-Municipal-Code)
+    - [Public Notices](https://www.lynnwoodwa.gov/Government/City-Clerk/Public-Notices)
+    - [Public Records Requests](https://www.lynnwoodwa.gov/Government/City-Clerk/Public-Records-Requests)
+    - [Accommodation, Translation or Interpreter Request](https://www.lynnwoodwa.gov/Government/City-Clerk/Accommodation-Translation-or-Interpreter-Request)
+    - [Administrative Policies](https://www.lynnwoodwa.gov/Government/City-Clerk/Administrative-Policies)
+  + [Boards and Commissions](https://www.lynnwoodwa.gov/Government/Boards-and-Commissions)Sub-menu
+    - [Arts Commission](https://www.lynnwoodwa.gov/Government/Boards-and-Commissions/Arts-Commission)
+    - [Board of Ethics](https://www.lynnwoodwa.gov/Government/Boards-and-Commissions/Board-of-Ethics)
+    - [Civil Service Commission](https://www.lynnwoodwa.gov/Government/Boards-and-Commissions/Civil-Service-Commission)
+    - [Diversity, Equity & Inclusion Commission](https://www.lynnwoodwa.gov/Government/Boards-and-Commissions/Diversity-Equity-Inclusion-Commission)
+    - [History & Heritage Board](https://www.lynnwoodwa.gov/Government/Boards-and-Commissions/History-Heritage-Board)
+    - [Human Services Commission](https://www.lynnwoodwa.gov/Government/Boards-and-Commissions/Human-Services-Commission)
+    - [LEOFF-1 Disability Board](https://www.lynnwoodwa.gov/Government/Boards-and-Commissions/LEOFF-1-Disability-Board)
+    - [Parks & Recreation Board](https://www.lynnwoodwa.gov/Government/Boards-and-Commissions/Parks-Recreation-Board)
+    - [Planning Commission](https://www.lynnwoodwa.gov/Government/Boards-and-Commissions/Planning-Commission)
+    - [Tourism Advisory Committee](https://www.lynnwoodwa.gov/Government/Boards-and-Commissions/Tourism-Advisory-Committee)
+  + [Lynnwood Municipal Code](https://www.lynnwoodwa.gov/Government/Lynnwood-Municipal-Code)
+  + [Lynnwood Library](https://www.lynnwoodwa.gov/Government/Lynnwood-Library)
+  + [South County Fire](https://www.lynnwoodwa.gov/Government/South-County-Fire)
+  + [Contact Us](https://www.lynnwoodwa.gov/Government/Contact-Us)Sub-menu
+    - [Compliment a City Employee](https://www.lynnwoodwa.gov/Government/Contact-Us/Compliment-a-City-Employee)
+* [Services](https://www.lynnwoodwa.gov/Services)
+  Sub-menu
+  + [Apply for a Permit](https://www.lynnwoodwa.gov/Services/Apply-for-a-Permit)Sub-menu
+    - [Guide to Getting a Permit](https://www.lynnwoodwa.gov/Services/Apply-for-a-Permit/Guide-to-Getting-a-Permit)
+    - [Contact Us: Questions or Need Assistance](https://www.lynnwoodwa.gov/Services/Apply-for-a-Permit/Contact-Us)
+    - [Online Permit Portal: Apply, Review, Pay, Issue Permits & Inspections](https://www.lynnwoodwa.gov/Services/Apply-for-a-Permit/Online-Permit-Portal-Apply-Review-Pay-Issue-Permits-Inspections)
+    - [Applications & Checklists](https://www.lynnwoodwa.gov/Services/Apply-for-a-Permit/Applications-Checklists)
+    - [Permit & Impact Fees](https://www.lynnwoodwa.gov/Services/Apply-for-a-Permit/Permit-Impact-Fees)
+    - [Adopted Codes, City Design Guidelines & Plans](https://www.lynnwoodwa.gov/Services/Apply-for-a-Permit/Adopted-Codes-City-Design-Guidelines-Plans)
+    - [Business Licensing](https://www.lynnwoodwa.gov/Services/Apply-for-a-Permit/Business-Licensing)
+    - [Planning & Zoning](https://www.lynnwoodwa.gov/Services/Apply-for-a-Permit/Planning-Zoning)
+    - [Online Permit Portal Help Guide](https://www.lynnwoodwa.gov/Services/Apply-for-a-Permit/Online-Permit-Portal-Help-Guide)
+    - [Public Records Requests](https://www.lynnwoodwa.gov/Services/Apply-for-a-Permit/Public-Records-Requests)
+  + [Document Library](https://www.lynnwoodwa.gov/Services/Document-Library)Sub-menu
+    - [Standard Plans Index](https://www.lynnwoodwa.gov/Services/Document-Library/Standard-Plans-Index)
+  + [Report a Problem](https://www.lynnwoodwa.gov/Services/Report-a-Problem)Sub-menu
+    - [Street, Traffic Light or Street Sign](https://www.lynnwoodwa.gov/Services/Report-a-Problem/Street-Traffic-Light-or-Street-Sign)
+    - [Code Violation](https://www.lynnwoodwa.gov/Services/Report-a-Problem/Code-Violation)
+    - [Animal Control](https://www.lynnwoodwa.gov/Services/Report-a-Problem/Animal-Control)
+    - [Flooding, a Water Leak, or a Sewer Issue](https://www.lynnwoodwa.gov/Services/Report-a-Problem/Flooding-a-water-leak-or-a-sewer-issue)
+    - [Reporting a Crime](https://www.lynnwoodwa.gov/Services/Report-a-Problem/Reporting-a-Crime)
+    - [Crime Tips](https://www.lynnwoodwa.gov/Services/Report-a-Problem/Crime-Tips)
+    - [Streetlight Outages](https://www.lynnwoodwa.gov/Services/Report-a-Problem/Streetlight-Outages)
+    - [Reporting a Spill](https://www.lynnwoodwa.gov/Services/Report-a-Problem/Reporting-a-Spill)
+    - [Utility Billing Problem or Water Shut Off](https://www.lynnwoodwa.gov/Services/Report-a-Problem/Utility-Billing-Problem-or-Water-Shut-Off)
+    - [File a Complaint](https://www.lynnwoodwa.gov/Services/Report-a-Problem/File-a-Complaint)
+    - [Park or Trail Problem](https://www.lynnwoodwa.gov/Services/Report-a-Problem/Park-or-Trail-Problem)
+  + [Do I Live in Lynnwood Map](https://www.lynnwoodwa.gov/Services/Do-I-Live-In-Lynnwood-Map)
+  + [Pay My Utility Bill](https://www.lynnwoodwa.gov/Services/Pay-My-Utility-Bill)
+  + [Utility Billing Reduced Rates and Rebates](https://www.lynnwoodwa.gov/Services/Utility-Billing-Reduced-Rates-and-Rebates)
+  + [Contact Us](https://www.lynnwoodwa.gov/Services/Contact-Us)
+
+Select the Escape key to close the menu. Focus will then be set to the first menu item.
+
+Search
+
+You Are Here : 
+
+
+[Home](https://www.lynnwoodwa.gov/Home)
+/
+[Government](https://www.lynnwoodwa.gov/Government)/Mayor Christine Frizzell
+
+Mayor Christine Frizzell
+========================
+
+![City Hall Flowers](https://www.lynnwoodwa.gov/files/assets/public/v/2/lynnwood-stock-photography/city-hall-flowers.jpg?dimension=pageimagefullwidth&w=1140 "City Hall Flowers")
+
+Welcome to our vibrant and welcoming City of Lynnwood! You will find arts and culture, parks and trails, education and recreation and a great entrepreneurial spirit. Our community members help shape and guide the city’s progress as a leading marketplace of business and commerce; and it is a perfect place to call home. Lynnwood truly is a community with – a great deal more!
+
+Your thoughts, ideas, and concerns are important to me, our City Council and City Staff. I’m inviting you to let your voice be heard to make sure that the great City of Lynnwood is the best that it can be. I’m inviting you to be engaged!
+
+Strategic Plan 2022-2026
+------------------------
+
+(show below)
+
+![Strategic Plan Web Banner.jpg](https://www.lynnwoodwa.gov/files/sharedassets/public/v/1/executive/strategic-plan-web-banner.jpg?w=700&h=124)
+
+Our Strategic Plan 2022-2026 is a compilation of priorities, objectives, and strategies determined by City leadership to be of the highest importance for the years 2022-2026.
+
+**Lynnwood's [Strategic Plan(PDF, 1MB)](https://www.lynnwoodwa.gov/files/sharedassets/public/v/1/finance/sp-2022-2026-adopted-07.11.22_1.pdf "SP-2022-2026-Adopted-07.11.22_1.pdf") identifies our six highest priorities for 2022-2026:**
+
+1. Fulfill the community vision for the City Center and Lynnwood Link light rail.
+2. Ensure financial stability and economic success.
+3. Nurture operational and organizational excellence.
+4. Be a safe community.
+5. Be a diverse, welcoming, equitable, and livable city.
+6. Pursue and maintain collaborative relationships and partnerships.
+
+[Learn more about Lynnwood's Citywide Strategic Plan.](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell/City-Strategic-Plan)
+
+Safe, Welcoming & Equitable Lynnwood
+------------------------------------
+
+(show below)
+
+The City of Lynnwood is committed to being a safe, welcoming and equitable community for all. We work towards accomplishing this through the following programs, services and initiatives:
+
+|  |  |
+| --- | --- |
+| * Our Community Vision * Safe, Welcoming and Equitable Resolution * Diversity, Equity and Inclusion Commission * Human Services Commission * All Are Welcome Initiative * Government Alliance for Racial Equity (GARE) | All Are Welcome Decal |
+
+Learn more about [Safe and Welcoming Lynnwood](https://www.lynnwoodwa.gov/Community/Community-Engagement/Safe-and-Welcoming-Lynnwood).
+
+Mayor's Community Engagement
+----------------------------
+
+(show below)
+
+### Meet With Mayor Frizzell
+
+Each Wednesday afternoon from 4:00-5:00 PM, I’m opening my office to you. If you want a chance to chat with me about your thoughts, ideas or concerns, please fill out the form to schedule an appointment.
+
+[Schedule an Appointment With the Mayor](https://us.openforms.com/Form/aa0789b1-2394-4d9d-98f8-eafd92e39273)
+
+I also encourage you to be informed and be engaged. Attend a City Council, a City Board or Commission meeting. Join us for one of our many community outreach or open house meetings. Sign up for [Lynnwood eNews](https://www.lynnwoodwa.gov/Community/Communications/Lynnwood-eNews) and read *[Inside Lynnwood](https://www.lynnwoodwa.gov/Community/Communications/Inside-Lynnwood)* when it arrives in your mailbox.
+
+State of the City Address
+-------------------------
+
+(show below)
+
+Watch Mayor Christine Frizzell's State of the City Address and view previous State of the City Addresses.
+
+[State of the City](https://www.lynnwoodwa.gov/Community/Community-Engagement/State-of-the-City-Address)
+
+Request a Letter or Proclamation
+--------------------------------
+
+(show below)
+
+The City of Lynnwood wishes to show support of our community members, affinity groups, and highlight people and causes important to the Lynnwood community. This can be accomplished through various ways such as issuing proclamations, letters of recognition from the mayor, and welcome letters from the mayor.
+
+[Find out more information and submit a request form.](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell/Proclamations-Letters-of-Recognition-and-Welcome-Greetings)
+
+Submit a Compliment or Complaint
+--------------------------------
+
+(show below)
+
+We are focused on providing a high level of customer service to our community members. If you've had a positive or a negative experience, we want to hear about it.
+
+[Submit a Compliment](https://www.lynnwoodwa.gov/Government/Contact-Us/Compliment-a-City-Employee)
+
+[Submit a Complaint](https://www.lynnwoodwa.gov/Services/Report-a-Problem/File-a-Complaint)
+
+Contact Us
+----------
+
+### Phone
+
+[425-670-5001](tel:4256705001)
+
+### Location
+
+City Hall
+
+19100 44th Ave W
+
+98036
+
+[View Map](https://maps.google.com?q=City Hall%2019100 44th Ave W %20%2098036)
+
+Mayor Christine Frizzell
+------------------------
+
+![Christine Frizzell Headshot 2022.jpg](https://www.lynnwoodwa.gov/files/sharedassets/public/v/3/executive/24-mayor-christine-frizzell-hr-crop.jpg?w=150&h=218)
+
+[Email Mayor Frizzell](mailto:mayor@LynnwoodWA.gov)  
+[About Mayor Frizzell](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell/About-Mayor-Christine-Frizzell)
+
+Executive Office Staff
+----------------------
+
+* **Julie Moore**  
+  Assistant City Administrator   
+  425-670-5023  
+  [Email](mailto:administration@lynnwoodwa.gov) [Julie](mailto:administration@lynnwoodwa.gov)
+
+* **Lila Robinson**  
+  Executive Assistant  
+  425-670-5001  
+   [Email Lila](mailto:executiveoffice@lynnwoodwa.gov)
+
+* **Luke Lonie**  
+  City Clerk  
+  425-670-5161  
+  [Email](mailto:cityclerk@lynnwoodwa.gov)[Luke](mailto:cityclerk@lynnwoodwa.gov)
+* **Nathan MacDonald**  
+  Manager of Communications & Public Affairs  
+  425-670-5003  
+  [Email Nathan](mailto:communications@lynnwoodwa.gov)
+
+Share
+
+* [Facebook](https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.lynnwoodwa.gov%2fGovernment%2fMayor-Christine-Frizzell)
+* [X](https://twitter.com/share?url=https%3a%2f%2fwww.lynnwoodwa.gov%2fGovernment%2fMayor-Christine-Frizzell)
+* [Email](mailto:?Body=https%3a%2f%2fwww.lynnwoodwa.gov%2fGovernment%2fMayor-Christine-Frizzell)
+* [Print](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell#)
+
+[Back to top](https://www.lynnwoodwa.gov/Government/Mayor-Christine-Frizzell#body-top)
+
+
+
+City of Lynnwood  
+19100 44th Ave W  
+Lynnwood WA 98036  
+[www.LynnwoodWA.gov](http://www.lynnwoodwa.gov)
+
+[Contact Us](https://www.lynnwoodwa.gov/Government/Contact-Us)
+
+### Follow & Connect
+
+* [Lynnwood eNews](https://www.lynnwoodwa.gov/Community/Communications/Lynnwood-eNews)
+* [Facebook](http://www.facebook.com/lynnwoodwa)
+* [Twitter](http://www.twitter.com/lynnwood)
+* [Instagram](https://www.instagram.com/cityoflynnwood/?hl=en)
+* [YouTube](https://www.youtube.com/user/CityofLynnwood?)
+
+### Quick Links
+
+* [Jobs](https://www.governmentjobs.com/careers/lynnwood)
+* [News Room](https://www.lynnwoodwa.gov/Community/Communications/News-Media)
+* [Events Calendar](https://www.lynnwoodwa.gov/Community/Events-Calendar)
+* [Document Library](https://www.lynnwoodwa.gov/Services/Document-Library)
+* [Report a Problem](https://www.lynnwoodwa.gov/Services/Report-a-Problem)
+* [ESS Employee Self Service](https://lss.lynnwoodwa.gov/ess/login.aspx)
+* [Accommodation, Translation or Interpreter Request](https://www.lynnwoodwa.gov/Government/City-Clerk/Accommodation-Translation-or-Interpreter-Request)
+
+[Website Disclaimer](https://www.lynnwoodwa.gov/Community/Communications/Website-Disclaimer) | [Social Media Policy](https://www.lynnwoodwa.gov/Community/Communications/Social-Media-Center/Social-Media-Policy) | [Privacy & Security](https://www.lynnwoodwa.gov/Community/Communications/Privacy-Security-Noticec) | [Non-Discrimination and Title VI Program](https://www.lynnwoodwa.gov/Government/Departments/Public-Works/Title-VI-Non-Discrimination)
+
+© 2025 City of Lynnwood | Powered by [Granicus](https://granicus.com/solution/govaccess/opencities/)
+
+Ready
