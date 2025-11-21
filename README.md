@@ -7,7 +7,7 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 | State | CivicPatch Count | Scrapeable | Scraped | Scraped % | Google Count | Missing Places in CivicPatch | Missing Places in Google |
 |-------|------------------|------------|---------|-----------|--------------|-----------------------|-------------------|
 | co | 271 | 250 | 117 | 46.80% | 269 | 3 | 5 |
-| wa | 281 | 244 | 189 | 77.46% | 281 | 1 | 1 |
+| wa | 281 | 244 | 190 | 77.87% | 281 | 1 | 1 |
 
 ## Missing OCD IDs by State
 
@@ -19,8 +19,8 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in CivicPatch:
 
 **Places:**
-- country:us/state:co/place:raymer_~new_raymer~
 - country:us/state:co/place:bonanza
+- country:us/state:co/place:raymer_~new_raymer~
 - country:us/state:co/place:central_city
 
 **Divisions:**
@@ -189,11 +189,11 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in Google:
 
 **Places:**
-- country:us/state:co/place:broomfield
 - country:us/state:co/place:denver
 - country:us/state:co/place:keystone
-- country:us/state:co/place:central
+- country:us/state:co/place:broomfield
 - country:us/state:co/place:raymer_(new_raymer)
+- country:us/state:co/place:central
 
 **Divisions:**
 - country:us/state:co/place:alamosa/ward:1
@@ -599,6 +599,12 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 - country:us/state:wa/place:bremerton/council_district:5
 - country:us/state:wa/place:bremerton/council_district:6
 - country:us/state:wa/place:bremerton/council_district:7
+- country:us/state:wa/place:burlington/ward:1
+- country:us/state:wa/place:burlington/ward:2
+- country:us/state:wa/place:burlington/ward:3
+- country:us/state:wa/place:burlington/ward:4
+- country:us/state:wa/place:burlington/ward:5
+- country:us/state:wa/place:burlington/ward:6
 - country:us/state:wa/place:camas/ward:1
 - country:us/state:wa/place:camas/ward:2
 - country:us/state:wa/place:camas/ward:3
