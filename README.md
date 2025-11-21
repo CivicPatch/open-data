@@ -7,7 +7,7 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 | State | CivicPatch Count | Scrapeable | Scraped | Scraped % | Google Count | Missing Places in CivicPatch | Missing Places in Google |
 |-------|------------------|------------|---------|-----------|--------------|-----------------------|-------------------|
 | co | 271 | 250 | 117 | 46.80% | 269 | 3 | 5 |
-| wa | 281 | 244 | 185 | 75.82% | 281 | 1 | 1 |
+| wa | 281 | 244 | 186 | 76.23% | 281 | 1 | 1 |
 
 ## Missing OCD IDs by State
 
@@ -19,9 +19,9 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in CivicPatch:
 
 **Places:**
+- country:us/state:co/place:central_city
 - country:us/state:co/place:bonanza
 - country:us/state:co/place:raymer_~new_raymer~
-- country:us/state:co/place:central_city
 
 **Divisions:**
 - country:us/state:co/county:adams/council_district:1
@@ -189,11 +189,11 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in Google:
 
 **Places:**
+- country:us/state:co/place:raymer_(new_raymer)
 - country:us/state:co/place:denver
-- country:us/state:co/place:broomfield
 - country:us/state:co/place:keystone
 - country:us/state:co/place:central
-- country:us/state:co/place:raymer_(new_raymer)
+- country:us/state:co/place:broomfield
 
 **Divisions:**
 - country:us/state:co/place:alamosa/ward:1
