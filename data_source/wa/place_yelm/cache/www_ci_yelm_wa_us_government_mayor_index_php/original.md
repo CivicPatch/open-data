@@ -1,0 +1,421 @@
+Mayor Joe DePinto
+
+
+
+![Spinner: Black decorative](https://cdn.userway.org/widgetapp/images/spin_bl.svg)
+
+![](https://cdn.userway.org/widgetapp/images/body_bl.svg)
+
+![Spinner: Black decorative](https://cdn.userway.org/widgetapp/images/spin_bl.svg)
+
+
+[Skip to main content](https://www.ci.yelm.wa.us/#main)
+
+[![logo](https://www.ci.yelm.wa.us/_assets_/images/logo.png)](https://www.ci.yelm.wa.us/)
+
+
+
+* [Home](https://www.ci.yelm.wa.us/index.php)
+* [Government](https://www.ci.yelm.wa.us/government/index.php)
+
+
+  + [Mayor](https://www.ci.yelm.wa.us/government/mayor/index.php)
+    - [Comments to the Mayor](https://www.ci.yelm.wa.us/citizen_request_center/index.php)
+  + [City Council](https://www.ci.yelm.wa.us/government/city_council/index.php)
+    - [Comments to Council](https://www.yelmwa.gov/services/contact/index.php)
+    - [Agendas & Minutes](https://www.ci.yelm.wa.us/government/city_council/agendas_minutes.php)
+    - [Documents](https://www.ci.yelm.wa.us/government/city_council/documents.php)
+    - [Public Disclosure Commission](https://www.pdc.wa.gov/)
+    - [Yelm City Council Application](https://lf.yelmwa.gov/Forms/CityCouncilApp)
+    - [Yelm Municipal Code](https://ecode360.com/YE4701)
+    - [Watch Council Meeting Videos](https://www.youtube.com/channel/UCrBZJLqnfHeEIQkNBrffUdw)
+  + [Boards & Commissions](https://www.ci.yelm.wa.us/government/boards_commissions/index.php)
+    - [Arts Commission](https://www.ci.yelm.wa.us/government/boards_commissions/arts_commission.php)
+    - [Civil Services Commission](https://www.ci.yelm.wa.us/government/boards_commissions/civil_services_commission.php)
+    - [Emergency Management Board](https://www.ci.yelm.wa.us/government/boards_commissions/emergency_management_board.php)
+    - [Historic Preservation Commission](https://www.ci.yelm.wa.us/government/boards_commissions/historic_preservation_commission.php)
+    - [Lodging Tax Advisory Committee](https://www.ci.yelm.wa.us/government/boards_commissions/lodging_tax_advisory_committee.php)
+    - [Parks Advisory Committee](https://www.ci.yelm.wa.us/government/boards_commissions/parks_advisory_committee.php)
+    - [Planning Commission](https://www.ci.yelm.wa.us/government/boards_commissions/planning_commission.php)
+    - [Police Advisory Committee](https://www.ci.yelm.wa.us/government/boards_commissions/police_advisory_committee.php)
+    - [Salary Commission](https://www.ci.yelm.wa.us/government/boards_commissions/salary_commission_committee.php)
+    - [Site Plan Review Committee](https://www.ci.yelm.wa.us/government/boards_commissions/site_plan_review_committee.php)
+    - [Tree Advisory Board](https://www.ci.yelm.wa.us/government/boards_commissions/tree_advisory_board.php)
+  + [City Administrator](https://www.ci.yelm.wa.us/government/city_administrator.php)
+  + [Elections](https://www.thurstoncountywa.gov/departments/auditor/elections)
+  + [Projects](https://www.ci.yelm.wa.us/government/projects/index.php)
+    - [Construction Projects](https://www.ci.yelm.wa.us/government/projects/construction_projects.php)
+  + [Sister Cities](https://www.ci.yelm.wa.us/government/sister_cities.php)
+  + [Transparency](https://www.ci.yelm.wa.us/government/transparency/index.php)
+    - [Budgets](https://www.ci.yelm.wa.us/departments/finance/budgets.php)
+    - [Interlocal Agreements](https://www.ci.yelm.wa.us/government/transparency/interlocal_agreements.php)
+    - [Municipal Code](https://ecode360.com/YE4701)
+    - [Ordinances](https://lf.yelmwa.gov/weblink/Browse.aspx?id=20&dbid=0&cr=1)
+    - [Public Notices](https://www.ci.yelm.wa.us/government/transparency/public_notices.php)
+    - [Public Records Request](https://yelmwapd.govqa.us/WEBAPP/_rs/(S(4ywk0glgl0rckc4fddgccctl))/SupportHome.aspx?lp=2&sSessionID=)
+    - [Reports & Plans](https://www.ci.yelm.wa.us/government/transparency/reports_plans.php)
+    - [Resolutions](https://lf.yelmwa.gov/weblink/Browse.aspx?id=17&dbid=0)
+    - [Comprehensive Plan](https://www.ci.yelm.wa.us/government/transparency/comprehensive_plan.php)
+    - [2017 Comprehensive Plan](https://www.ci.yelm.wa.us/Documents/Government/Transparency/2017%20Comprehensive%20Plan%20-%202021%20Rezone.pdf)
+    - [City of Yelm Title VI](https://www.ci.yelm.wa.us/government/transparency/title_vi_non-discrimination_statement.php)
+  + [Contact the City](https://www.ci.yelm.wa.us/services/contact/index.php)
+* [Departments](https://www.ci.yelm.wa.us/departments/index.php)
+
+
+  + [Executive](https://www.ci.yelm.wa.us/departments/executive.php)
+  + [Finance](https://www.ci.yelm.wa.us/departments/finance/index.php)
+    - [B & O Taxes Filing Form](https://lf.yelmwa.gov/Forms/BO)
+    - [Budgets](https://www.ci.yelm.wa.us/departments/finance/budgets.php)
+  + [Human Resources](https://www.ci.yelm.wa.us/departments/human_resources/index.php)
+    - [Employment Opportunities](https://www.ci.yelm.wa.us/departments/human_resources/employment_opportunities.php)
+    - [Volunteer Opportunities](https://www.ci.yelm.wa.us/departments/human_resources/volunteer_opportunities.php)
+    - [Contracts](https://www.ci.yelm.wa.us/departments/human_resources/contracts.php)
+    - [Holidays Schedule](https://www.ci.yelm.wa.us/departments/human_resources/holidays_schedule.php)
+    - [Job Descriptions](https://www.ci.yelm.wa.us/departments/human_resources/job_descriptions.php)
+  + [Municipal Court](https://www.ci.yelm.wa.us/departments/municipal_court/index.php)
+    - [Court Dates](https://www.ci.yelm.wa.us/departments/municipal_court/court_dates.php)
+    - [In House Counsel](https://www.ci.yelm.wa.us/departments/municipal_court/staff.php)
+    - [Criminal Procedures](https://www.ci.yelm.wa.us/departments/municipal_court/criminal_procedures.php)
+    - [Levels of Court](https://youtu.be/6F3OHlJLPJ8)
+    - [Passport Services](https://www.ci.yelm.wa.us/departments/municipal_court/passport_services.php)
+    - [Payments and Collections](https://www.ci.yelm.wa.us/departments/municipal_court/payments_and_collections.php)
+    - [Request Public Records](https://yelmwapd.govqa.us/WEBAPP/_rs/)
+    - [Resources](https://www.ci.yelm.wa.us/departments/municipal_court/resources.php)
+    - [Traffic Infractions](https://www.ci.yelm.wa.us/departments/municipal_court/traffic_infractions.php)
+  + [Planning & Building](https://www.ci.yelm.wa.us/departments/planning_building/index.php)
+    - [Permits](https://www.ci.yelm.wa.us/services/permits_forms/index.php)
+    - [Permit Information](https://www.ci.yelm.wa.us/departments/planning_building/permit_information.php)
+    - [Climate Planning](https://www.ci.yelm.wa.us/departments/planning_building/climate_planning.php)
+    - [Code Enforcement](https://www.ci.yelm.wa.us/departments/planning_building/code_enforcement/index.php)
+    - [Construction Review and Inspection](https://www.ci.yelm.wa.us/departments/planning_building/construction_review_and_inspection/index.php)
+    - [Current Development Projects](https://www.ci.yelm.wa.us/Documents/Departments/Planning%20and%20Building/Master%20Project%20List/Master%20Project%20List.pdf)
+    - [Fee Schedule](https://www.ci.yelm.wa.us/departments/planning_building/fees.php)
+    - [Habitat Conservation Plan](https://www.ci.yelm.wa.us/departments/planning_building/habitat_conservation_plan.php)
+    - [Hearing Examiner](https://www.ci.yelm.wa.us/departments/planning_building/hearing_examiner.php)
+    - [Infrastructure Plans](https://www.ci.yelm.wa.us/government/projects/index.php)
+    - [Mazama Pocket Gopher](https://www.ci.yelm.wa.us/departments/planning_building/mazama_pocket_gopher.php)
+    - [Planning Commission](https://www.ci.yelm.wa.us/government/boards_commissions/planning_commission.php)
+    - [Tree Regulations](https://www.ci.yelm.wa.us/departments/planning_building/tree_regulations.php)
+    - [Yelm Municipal Code](https://www.codepublishing.com/WA/Yelm/)
+    - [Zoning Map](https://yelmwa.maps.arcgis.com/apps/webappviewer/index.html?id=628c04c53750424f899bb307492f4fb0)
+  + [Police](https://www.ci.yelm.wa.us/departments/police/index.php)
+    - [Send a Message to the Chief](https://www.ci.yelm.wa.us/citizen_request_center/index.php)
+    - [Staff](https://www.ci.yelm.wa.us/departments/police/staff.php)
+    - [Services](https://www.ci.yelm.wa.us/departments/police/services/index.php)
+    - [Join YPD](https://www.ci.yelm.wa.us/departments/human_resources/employment_opportunities.php)
+    - [Crime Prevention](https://www.ci.yelm.wa.us/departments/police/crime_prevention.php)
+    - [Community Survey on Public Safety and Law Enforcement](https://lf.yelmwa.gov/Forms/Survey)
+    - [Emergency Preparedness](https://www.ci.yelm.wa.us/services/emergency_management/index.php)
+    - [Flock Safety](https://www.ci.yelm.wa.us/departments/police/flock_safety.php)
+    - [Volunteer Program](https://www.ci.yelm.wa.us/departments/police/volunteer_program.php)
+    - [Public Records Request](https://yelmwapd.govqa.us/WEBAPP/_rs/(S(kdmd4vmhtahkrewr45gfh35j))/SupportHome.aspx?lp=2&sSessionID=)
+  + [Public Services](https://www.ci.yelm.wa.us/departments/public_services/index.php)
+    - [Report A Concern](https://citizenportal.dudesolutions.com/CityOfYelm/home)
+    - [Biodryer & Biosolids](https://www.ci.yelm.wa.us/departments/public_services/biodryer_biosolids.php)
+    - [De-Icing, Sanding, & Snow Plow Route](https://www.ci.yelm.wa.us/Documents/Departments/Public%20Services/De-Icing-Sanding-Snow%20Plow%20Route/Deicing,%20Sanding,%20and%20Snow%20Route%20Map%20(1).pdf)
+    - [Development Guidelines](https://www.ci.yelm.wa.us/departments/public_services/development_guidelines.php)
+    - [Fats Oils & Grease](https://www.ci.yelm.wa.us/departments/public_services/fats_oils_grease.php)
+    - [Infrastructure Plans](https://www.ci.yelm.wa.us/government/transparency/reports_plans.php)
+    - [Parks](https://www.ci.yelm.wa.us/explore/parks/index.php)
+    - [Road Closures](https://www.ci.yelm.wa.us/departments/public_services/road_closures.php)
+    - [Sewer](https://www.ci.yelm.wa.us/departments/public_services/sewer.php)
+    - [Stormwater](https://www.ci.yelm.wa.us/departments/public_services/stormwater.php)
+    - [Transportation](https://www.ci.yelm.wa.us/departments/public_services/transportation.php)
+    - [Utilities](https://www.ci.yelm.wa.us/departments/utilities/index.php)
+    - [Water](https://www.ci.yelm.wa.us/departments/public_services/water.php)
+  + [Utilities](https://www.ci.yelm.wa.us/departments/utilities/index.php)
+    - [Pay Utility Bill Online](https://www.xpressbillpay.com/#/)
+    - [Open or Close Accounts](https://www.ci.yelm.wa.us/departments/utilities/accounts.php)
+    - [Reduced Utility Rate Application](https://www.ci.yelm.wa.us/Documents/Departments/Utilities/Reduced%20Utility%20Rate%20Application/REDUCED%20RATE%20APPfillable.pdf)
+    - [Emergencies](https://www.ci.yelm.wa.us/departments/utilities/emergencies.php)
+    - [FAQs](https://www.ci.yelm.wa.us/services/faqs.php)
+    - [Permits & Forms](https://www.ci.yelm.wa.us/services/permits_forms/index.php)
+    - [Policies](https://www.ci.yelm.wa.us/departments/utilities/policies.php)
+    - [Rates](https://www.ci.yelm.wa.us/departments/utilities/rates.php)
+    - [STEP Sewer System](https://www.ci.yelm.wa.us/departments/utilities/step_sewer_system.php)
+    - [Water Quality Reports](https://www.ci.yelm.wa.us/government/transparency/reports_plans.php)
+    - [Public Services](https://www.ci.yelm.wa.us/departments/public_services/index.php)
+* [Community](https://www.ci.yelm.wa.us/community/index.php)
+
+
+  + [Military Connection](https://www.ci.yelm.wa.us/community/our_military_community.php)
+    - [Veterans Service Organizations](https://www.ci.yelm.wa.us/community/veterans_service_organizations.php)
+    - [Military Banner Program](https://www.ci.yelm.wa.us/community/military_banner_program.php)
+    - [Military & Veterans Events](https://www.ci.yelm.wa.us/community/veterans_events.php)
+  + [Resident Guide](https://www.ci.yelm.wa.us/community/resident_guide/index.php)
+    - [Community Center](https://www.ci.yelm.wa.us/explore/community_center/index.php)
+    - [Community Conversations](https://www.ci.yelm.wa.us/community/resident_guide/community_conversations.php)
+    - [Permits & Forms](https://www.ci.yelm.wa.us/services/permits_forms/index.php)
+    - [Intercity Transit](https://www.intercitytransit.com/)
+    - [Organizations](https://www.ci.yelm.wa.us/community/resident_guide/organizations.php)
+    - [Resources](https://www.ci.yelm.wa.us/community/resident_guide/resources.php)
+    - [Road Closures](https://www.ci.yelm.wa.us/departments/public_services/road_closures.php)
+    - [Schools](https://www.ci.yelm.wa.us/community/resident_guide/schools.php)
+    - [Volunteer Opportunities](https://www.ci.yelm.wa.us/departments/human_resources/volunteer_opportunities.php)
+    - [Yelm 101](https://www.ci.yelm.wa.us/community/resident_guide/index.php#outer-59)
+    - [Youth Clubs](https://www.ci.yelm.wa.us/community/resident_guide/youth_clubs.php)
+  + [Recreational Activities](https://www.ci.yelm.wa.us/explore/recreation_programs.php)
+    - [Community Events](https://www.ci.yelm.wa.us/explore/community_events/index.php)
+    - [Parks](https://www.ci.yelm.wa.us/explore/parks/index.php)
+    - [Recreation Programs](https://www.ci.yelm.wa.us/explore/recreation_programs.php)
+  + [Stay Informed](https://www.ci.yelm.wa.us/community/stay_informed/index.php)
+    - [Agendas & Minutes](https://www.ci.yelm.wa.us/government/city_council/agendas_minutes.php)
+    - [Election Information](https://www.thurstoncountywa.gov/auditor)
+    - [News & Announcements](https://www.ci.yelm.wa.us/newslist.php)
+    - [Newsletters](https://www.ci.yelm.wa.us/community/stay_informed/newsletters.php)
+    - [Reports & Plans](https://www.ci.yelm.wa.us/government/transparency/reports_plans.php)
+    - [Subscribe For eNotifications](https://www.ci.yelm.wa.us/enotify/index.php)
+* [Services](https://www.ci.yelm.wa.us/services/index.php)
+
+
+  + [Contact](https://www.ci.yelm.wa.us/services/contact/index.php)
+    - [Water & Sewer Emergencies](https://www.ci.yelm.wa.us/departments/utilities/emergencies.php)
+  + [Report A Concern](https://citizenportal.dudesolutions.com/CityOfYelm/home)
+  + [Business](https://www.ci.yelm.wa.us/services/business/index.php)
+    - [Doing Business with Yelm](https://www.ci.yelm.wa.us/services/business/doing_business_with_yelm.php)
+    - [Annual Fire Inspection](https://www.ci.yelm.wa.us/services/business/annual_fire_inspection.php)
+    - [Beautification Grant](https://www.ci.yelm.wa.us/community/resident_guide/beautification_grant_program.php)
+    - [Building & Planning Permits](https://www.ci.yelm.wa.us/services/permits_forms/index.php)
+    - [Business Roundtable](https://www.ci.yelm.wa.us/services/business/business_roundtable.php)
+    - [Employment Opportunities](https://www.ci.yelm.wa.us/departments/human_resources/employment_opportunities.php)
+    - [Outside Agency Funding](https://www.ci.yelm.wa.us/services/business/outside_agency_funding.php)
+    - [Permits & Forms](https://www.ci.yelm.wa.us/services/permits_forms/index.php)
+    - [Planning & Building](https://www.ci.yelm.wa.us/departments/planning_building/index.php)
+    - [Resources](https://www.ci.yelm.wa.us/services/business/resources.php)
+    - [Yelm Chamber of Commerce](http://www.yelmchamber.com/)
+    - [Department of Revenue](https://dor.wa.gov/)
+    - [South Thurston Economic Development Initiative](http://www.thurstonedc.com/stedi/)
+    - [Municipal Research Services Center of Washington](https://mrscrosters.org/)
+  + [Emergency Management](https://www.ci.yelm.wa.us/services/emergency_management/index.php)
+    - [Sign Up For Emergency Alerts](https://www.smart911.com/smart911/registration/registrationLanding.action)
+    - [Business Preparedness - State E.M.](https://mil.wa.gov/emergency-management-division/preparedness/businesses)
+    - [Emergency Management Board](https://www.ci.yelm.wa.us/government/boards_commissions/emergency_management_board.php)
+    - [Hazards Mitigation Plan](https://www.ci.yelm.wa.us/services/emergency_management/hazards_mitigation_plan.php)
+    - [Personal Preparedness](http://www.co.thurston.wa.us/em/PEO/PEP.htm)
+    - [Prepare in espanol - State E.M.](http://www.mil.wa.gov/preparese)
+    - [River Flooding Information](http://www.co.thurston.wa.us/em/PressRelease/Rivers/Rivers.htm)
+    - [School Preparedness](http://www.co.thurston.wa.us/em/schools/)
+    - [Threats and Hazards - State E.M.](https://www.mil.wa.gov/hazards)
+    - [Volunteer Opportunities](http://www.co.thurston.wa.us/em/vol.htm)
+  + [FAQs](https://www.ci.yelm.wa.us/services/faqs.php)
+  + [Passport Services](https://www.ci.yelm.wa.us/departments/municipal_court/passport_services.php)
+  + [Permits & Forms](https://www.ci.yelm.wa.us/services/permits_forms/index.php)
+    - [Advisory Position](https://lf.yelmwa.gov/Forms/B-C-App)
+    - [Beautification Grant](https://www.ci.yelm.wa.us/community/resident_guide/beautification_grant_program.php)
+    - [Building & Planning Permits](https://lf.yelmwa.gov/Forms/form/Landing?friendlyname=YelmPub)
+    - [Business Licenses](https://www.ci.yelm.wa.us/services/business/doing_business_with_yelm.php)
+    - [Dog Registration](https://lf.yelmwa.gov/Forms/DogLicense)
+    - [Fee Schedule](https://www.ci.yelm.wa.us/departments/planning_building/fees.php)
+    - [Utility Account](https://www.ci.yelm.wa.us/departments/utilities/accounts.php)
+    - [Zoning Permit](https://www.ci.yelm.wa.us/Documents/Service/Permits%20and%20Forms/RezoneApplication.pdf)
+  + [Request Public Records](https://yelmwapd.govqa.us/WEBAPP/_rs/(S(4ywk0glgl0rckc4fddgccctl))/SupportHome.aspx?lp=2&sSessionID=)
+  + [Reserve the Community Center](https://lf.yelmwa.gov/Forms/CCR)
+* [Explore](https://www.ci.yelm.wa.us/explore/index.php)
+
+
+  + [Arts & Culture](https://www.ci.yelm.wa.us/explore/arts_culture.php)
+  + [Attractions](https://www.ci.yelm.wa.us/explore/attractions.php)
+  + [Community Center](https://www.ci.yelm.wa.us/explore/community_center/index.php)
+    - [Rates](https://www.ci.yelm.wa.us/explore/community_center/rates.php)
+    - [Reserve Room](https://lf.yelmwa.gov/Forms/CCR)
+  + [Community Events](https://www.ci.yelm.wa.us/explore/community_events/index.php)
+    - [Arbor Day](https://www.ci.yelm.wa.us/explore/community_events/arbor_day.php)
+    - [Christmas in the Park](https://www.ci.yelm.wa.us/explore/community_events/christmas_in_the_park.php)
+    - [Jazz in the Park](https://www.ci.yelm.wa.us/explore/community_events/jazz_in_the_park.php)
+    - [National Night Out](https://www.ci.yelm.wa.us/explore/community_events/national_night_out.php)
+    - [Nisqually Valley BBQ Rally](https://www.ci.yelm.wa.us/explore/community_events/nisqually_valley_bbq_rally.php)
+    - [Prairie Days](https://www.ci.yelm.wa.us/explore/community_events/prairie_days.php)
+    - [Spring Cleanup](https://www.ci.yelm.wa.us/explore/community_events/spring_cleanup.php)
+    - [Yelm Farmers Market](https://www.ci.yelm.wa.us/explore/community_events/yelm_farmers_market.php)
+  + [Farmers Market](http://yelmfarmersmarket.com/yfm/)
+  + [History](https://www.ci.yelm.wa.us/explore/history/index.php)
+    - [Museum](https://www.ci.yelm.wa.us/explore/history/museum.php)
+    - [Yelm: 100 Years, One Community](https://www.ci.yelm.wa.us/explore/history/yelm__100_years,_one_community.php)
+  + [Intercity Transit](https://www.intercitytransit.com/)
+  + [Parks](https://www.ci.yelm.wa.us/explore/parks/index.php)
+    - [Yelm Fitness Court](https://www.ci.yelm.wa.us/explore/parks/yelm_fitness_court.php)
+    - [Yelm City Park](https://www.ci.yelm.wa.us/explore/parks/yelm_city_park.php)
+    - [Cochrane Memorial Park](https://www.ci.yelm.wa.us/explore/parks/cochrane_memorial_park.php)
+    - [Longmire Community Park](https://www.ci.yelm.wa.us/explore/parks/longmire_community_park.php)
+    - [Yelm-Tenino/Prairie Line Trail](https://www.ci.yelm.wa.us/explore/parks/yelm_tenino_prairie_line_trail.php)
+    - [Yelm Community Garden](https://www.ci.yelm.wa.us/explore/parks/yelm_community_garden.php)
+    - [Yelm Splash Pad](https://www.ci.yelm.wa.us/explore/parks/yelm_splash_pad.php)
+    - [Yelm Dog Park](https://www.ci.yelm.wa.us/explore/parks/yelm_dog_park.php)
+    - [Yelm Skate Park](https://www.ci.yelm.wa.us/explore/parks/yelm_skate_park.php)
+  + [Recreation Programs](https://www.ci.yelm.wa.us/explore/recreation_programs.php)
+    - [2025 Recreation Catalog](https://www.ci.yelm.wa.us/explore/2025_recreation_catalog.php)
+    - [Agents of Discovery](https://www.ci.yelm.wa.us/explore/agents_of_discovery.php)
+  + [Trails](https://www.ci.yelm.wa.us/explore/trails.php)
+  + [Experience Yelm](https://www.experienceolympia.com/our-communities/yelm/)
+
+![](https://www.google.com/images/cleardot.gif)[Select Language![](https://www.google.com/images/cleardot.gif)​![](https://www.google.com/images/cleardot.gif)▼](https://www.ci.yelm.wa.us/#)
+
+* EN Reset
+  + [**English**](https://www.ci.yelm.wa.us/#)
+  + [Afrikaans](https://www.ci.yelm.wa.us/#)
+  + [Albanian](https://www.ci.yelm.wa.us/#)
+  + [Arabic](https://www.ci.yelm.wa.us/#)
+  + [Armenian](https://www.ci.yelm.wa.us/#)
+  + [Azerbaijani](https://www.ci.yelm.wa.us/#)
+  + [Basque](https://www.ci.yelm.wa.us/#)
+  + [Belarusian](https://www.ci.yelm.wa.us/#)
+  + [Bengali](https://www.ci.yelm.wa.us/#)
+  + [Bosnian](https://www.ci.yelm.wa.us/#)
+  + [Bulgarian](https://www.ci.yelm.wa.us/#)
+  + [Catalan](https://www.ci.yelm.wa.us/#)
+  + [Cebuano](https://www.ci.yelm.wa.us/#)
+  + [Chinese (Simplified)](https://www.ci.yelm.wa.us/#)
+  + [Chinese (Traditional)](https://www.ci.yelm.wa.us/#)
+  + [Croatian](https://www.ci.yelm.wa.us/#)
+  + [Czech](https://www.ci.yelm.wa.us/#)
+  + [Danish](https://www.ci.yelm.wa.us/#)
+  + [Dutch](https://www.ci.yelm.wa.us/#)
+  + [Esperanto](https://www.ci.yelm.wa.us/#)
+  + [Estonian](https://www.ci.yelm.wa.us/#)
+  + [Filipino](https://www.ci.yelm.wa.us/#)
+  + [Finnish](https://www.ci.yelm.wa.us/#)
+  + [French](https://www.ci.yelm.wa.us/#)
+  + [Galician](https://www.ci.yelm.wa.us/#)
+  + [Georgian](https://www.ci.yelm.wa.us/#)
+  + [German](https://www.ci.yelm.wa.us/#)
+  + [Greek](https://www.ci.yelm.wa.us/#)
+  + [Gujarati](https://www.ci.yelm.wa.us/#)
+  + [Haitian Creole](https://www.ci.yelm.wa.us/#)
+  + [Hausa](https://www.ci.yelm.wa.us/#)
+  + [Hebrew](https://www.ci.yelm.wa.us/#)
+  + [Hindi](https://www.ci.yelm.wa.us/#)
+  + [Hmong](https://www.ci.yelm.wa.us/#)
+  + [Hungarian](https://www.ci.yelm.wa.us/#)
+  + [Icelandic](https://www.ci.yelm.wa.us/#)
+  + [Igbo](https://www.ci.yelm.wa.us/#)
+  + [Indonesian](https://www.ci.yelm.wa.us/#)
+  + [Irish](https://www.ci.yelm.wa.us/#)
+  + [Italian](https://www.ci.yelm.wa.us/#)
+  + [Japanese](https://www.ci.yelm.wa.us/#)
+  + [Javanese](https://www.ci.yelm.wa.us/#)
+  + [Kannada](https://www.ci.yelm.wa.us/#)
+  + [Khmer](https://www.ci.yelm.wa.us/#)
+  + [Korean](https://www.ci.yelm.wa.us/#)
+  + [Lao](https://www.ci.yelm.wa.us/#)
+  + [Latin](https://www.ci.yelm.wa.us/#)
+  + [Latvian](https://www.ci.yelm.wa.us/#)
+  + [Lithuanian](https://www.ci.yelm.wa.us/#)
+  + [Macedonian](https://www.ci.yelm.wa.us/#)
+  + [Malay](https://www.ci.yelm.wa.us/#)
+  + [Maltese](https://www.ci.yelm.wa.us/#)
+  + [Maori](https://www.ci.yelm.wa.us/#)
+  + [Marathi](https://www.ci.yelm.wa.us/#)
+  + [Mongolian](https://www.ci.yelm.wa.us/#)
+  + [Nepali](https://www.ci.yelm.wa.us/#)
+  + [Norwegian](https://www.ci.yelm.wa.us/#)
+  + [Persian](https://www.ci.yelm.wa.us/#)
+  + [Polish](https://www.ci.yelm.wa.us/#)
+  + [Portuguese](https://www.ci.yelm.wa.us/#)
+  + [Punjabi](https://www.ci.yelm.wa.us/#)
+  + [Romanian](https://www.ci.yelm.wa.us/#)
+  + [Russian](https://www.ci.yelm.wa.us/#)
+  + [Serbian](https://www.ci.yelm.wa.us/#)
+  + [Slovak](https://www.ci.yelm.wa.us/#)
+  + [Slovenian](https://www.ci.yelm.wa.us/#)
+  + [Somali](https://www.ci.yelm.wa.us/#)
+  + [Spanish](https://www.ci.yelm.wa.us/#)
+  + [Swahili](https://www.ci.yelm.wa.us/#)
+  + [Swedish](https://www.ci.yelm.wa.us/#)
+  + [Tamil](https://www.ci.yelm.wa.us/#)
+  + [Telugu](https://www.ci.yelm.wa.us/#)
+  + [Thai](https://www.ci.yelm.wa.us/#)
+  + [Turkish](https://www.ci.yelm.wa.us/#)
+  + [Ukrainian](https://www.ci.yelm.wa.us/#)
+  + [Urdu](https://www.ci.yelm.wa.us/#)
+  + [Vietnamese](https://www.ci.yelm.wa.us/#)
+  + [Welsh](https://www.ci.yelm.wa.us/#)
+  + [Yiddish](https://www.ci.yelm.wa.us/#)
+  + [Yoruba](https://www.ci.yelm.wa.us/#)
+  + [Zulu](https://www.ci.yelm.wa.us/#)
+
+Search
+
+![search icon](https://www.ci.yelm.wa.us/_assets_/images/search.png)
+
+![search icon](https://www.ci.yelm.wa.us/_assets_/images/search.png)
+
+[![facebook](https://www.ci.yelm.wa.us/_assets_/images/fb.png)](https://www.facebook.com/CityofYelmWA)
+[![youtube](https://www.ci.yelm.wa.us/_assets_/images/yt.png)](http://www.youtube.com)
+
+
+
+
+![arrow](https://www.ci.yelm.wa.us/_assets_/images/arrow-left.png)![arrow](https://www.ci.yelm.wa.us/_assets_/images/arrow-right.png)
+
+slide 1 of 1
+
+Mayor Joe DePinto
+=================
+
+* [Home](https://www.ci.yelm.wa.us/)
+* [Government](https://www.ci.yelm.wa.us/government/index.php)
+* Mayor
+
+Mayor Joe DePinto
+-----------------
+
+![address](https://www.ci.yelm.wa.us/_assets_/images/location.png)
+106 2nd St SE  
+Yelm, WA 98597
+[![Email](https://www.ci.yelm.wa.us/_assets_/images/mail.png)
+joed@yelmwa.gov](mailto:joed@yelmwa.gov)
+
+
+
+Sub Menu
+
+Send Mayor Joe a Message
+------------------------
+
+* [Comments to the Mayor](https://www.ci.yelm.wa.us/citizen_request_center/index.php)
+
+Joe DePinto was first elected to the Yelm City Council in 2015, reelected to a second term in 2019, and then elected as Mayor of Yelm in 2021. Yelm is his hometown and growing up here Joe attended Prairie Elementary, Mill Pond Intermediate School, Yelm Middle School, and Yelm High School. Joe’s first job was at Pizza Hut when he was 16 years old and later was hired at Yelm Dairy Queen when they first opened. He has coached youth baseball in Yelm, is a member of the Yelm Eagles, and can be found shopping, eating, and frequenting local establishments.  
+  
+Joe has worked as a staffer for Congresswoman Cathy McMorris Rodgers, a senior legislative aide for State Representative Paul Harris, and currently works as a contract lobbyist representing clients before the Washington State Legislature. His biggest priorities as Mayor are focused around increasing public safety, supporting our local law enforcement officers, and reducing traffic in Yelm. In his personal life, Joe has a love for everything Star Trek, enjoys playing poker, actively plays tennis, and can sometimes be found singing some 90’s hip hop karaoke.  
+  
+  
+“I am honored to serve as Mayor of my hometown. I will do everything in my power to give back to the community that has given me so much and made me the person I am today. I am a believer in servant leadership and know that I work for the people, not the other way around. If you see me around town, please say hi to me and let me know what you want to see accomplished in Yelm. Remember, this is OUR town!” - **Mayor Joe**
+
+![Mayor of Yelm](https://www.ci.yelm.wa.us/Images/Government/Mayor/Mayor%20Joe.jpg)
+
+![icon](https://www.ci.yelm.wa.us/_assets_/images/share.png)
+Share this page
+
+Share this page
+
+Close
+
+![ADA Accessibility](https://www.ci.yelm.wa.us/_assets_/images/ada.png)
+
+Please ensure Javascript is enabled for purposes of
+[website accessibility](https://userway.org)
+
+
+
+[106 2nd St SE, Yelm WA 98597](https://maps.app.goo.gl/797rPm9kiZUffxap6)
+
+Powered by [revize.](https://www.revize.com) the Government Website Experts  |  [Login](https://cms7.revize.com/revize/security/index.jsp?webspace=thecityofyelmwa&filename=/government/mayor/index.php)
+
+
+
+
+
+
+ 
+
+![](https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg)
+
+Original text
+
+Rate this translation
+
+Your feedback will be used to help improve Google Translate
+
+###
+
+Close [Read More](#)
