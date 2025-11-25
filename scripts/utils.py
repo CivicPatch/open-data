@@ -30,4 +30,4 @@ def jurisdiction_to_file(jurisdiction_id):
     else:
         filename = f"place_{place}"
 
-    return Path(f"data/{state}/local/{filename}__{jurisdiction_type}.yml")
+    return Path(f"data/{state}/local/{filename}.yml")
