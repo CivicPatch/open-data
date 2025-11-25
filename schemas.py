@@ -1,9 +1,8 @@
 from typing import List, Optional
-from pydantic import BaseModel, field_validator, model_validator
+from pydantic import BaseModel, field_validator, model_validator, computed_field
 import re
 from urllib.parse import urlparse
 from datetime import datetime, timezone
-
 
 class Jurisdiction(BaseModel):
     id: str
