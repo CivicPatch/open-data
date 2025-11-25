@@ -7,6 +7,7 @@ def jurisdiction_to_file(jurisdiction_id):
     state = None
     county = None
     place = None
+    jurisdiction_type = None
 
     for part in parts:
         if part.startswith("state:"):
@@ -15,6 +16,8 @@ def jurisdiction_to_file(jurisdiction_id):
             county = part.replace("county:", "")
         elif part.startswith("place:"):
             place = part.replace("place:", "")
+    
+    jurisdiction_type = parts[-1]  # Get the last part for jurisdiction type
 
     if not state:
         raise ValueError(f"No state found in: {jurisdiction_id}")
@@ -23,8 +26,8 @@ def jurisdiction_to_file(jurisdiction_id):
 
     # Build file path
     if county:
-        filename = f"county_{county}__place_{place}.yml"
+        filename = f"county_{county}__place_{place}"
     else:
-        filename = f"place_{place}.yml"
+        filename = f"place_{place}"
 
-    return Path(f"data/{state}/local/{filename}")
+    return Path(f"data/{state}/local/{filename}__{jurisdiction_type}.yml")
