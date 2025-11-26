@@ -7,7 +7,7 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 | State | CivicPatch Count | Scrapeable | Scraped | Scraped % | Google Count | Missing Places in CivicPatch | Missing Places in Google |
 |-------|------------------|------------|---------|-----------|--------------|-----------------------|-------------------|
 | co | 271 | 250 | 117 | 46.80% | 269 | 3 | 5 |
-| wa | 281 | 244 | 192 | 78.69% | 281 | 1 | 1 |
+| wa | 281 | 244 | 0 | 0.00% | 281 | 1 | 1 |
 
 ## Missing OCD IDs by State
 
@@ -19,9 +19,9 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in CivicPatch:
 
 **Places:**
-- country:us/state:co/place:central_city
 - country:us/state:co/place:raymer_~new_raymer~
 - country:us/state:co/place:bonanza
+- country:us/state:co/place:central_city
 
 **Divisions:**
 - country:us/state:co/county:adams/council_district:1
@@ -189,11 +189,11 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in Google:
 
 **Places:**
-- country:us/state:co/place:central
-- country:us/state:co/place:broomfield
-- country:us/state:co/place:keystone
 - country:us/state:co/place:denver
+- country:us/state:co/place:central
 - country:us/state:co/place:raymer_(new_raymer)
+- country:us/state:co/place:keystone
+- country:us/state:co/place:broomfield
 
 **Divisions:**
 - country:us/state:co/place:alamosa/ward:1
@@ -476,6 +476,7 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 - country:us/state:wa/county:yakima/council_district:1
 - country:us/state:wa/county:yakima/council_district:2
 - country:us/state:wa/county:yakima/council_district:3
+- country:us/state:wa/place:kennewick/ward:1
 - country:us/state:wa/place:kennewick/ward:1/precinct:645
 - country:us/state:wa/place:kennewick/ward:1/precinct:646
 - country:us/state:wa/place:kennewick/ward:1/precinct:650
@@ -502,6 +503,7 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 - country:us/state:wa/place:kennewick/ward:1/precinct:686
 - country:us/state:wa/place:kennewick/ward:1/precinct:690
 - country:us/state:wa/place:kennewick/ward:1/precinct:691
+- country:us/state:wa/place:kennewick/ward:2
 - country:us/state:wa/place:kennewick/ward:2/precinct:560
 - country:us/state:wa/place:kennewick/ward:2/precinct:565
 - country:us/state:wa/place:kennewick/ward:2/precinct:570
@@ -529,6 +531,7 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 - country:us/state:wa/place:kennewick/ward:2/precinct:639
 - country:us/state:wa/place:kennewick/ward:2/precinct:640
 - country:us/state:wa/place:kennewick/ward:2/precinct:641
+- country:us/state:wa/place:kennewick/ward:3
 - country:us/state:wa/place:kennewick/ward:3/precinct:500
 - country:us/state:wa/place:kennewick/ward:3/precinct:505
 - country:us/state:wa/place:kennewick/ward:3/precinct:510
@@ -558,118 +561,33 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 - country:us/state:wa/place:raymond/ward:1
 - country:us/state:wa/place:raymond/ward:2
 - country:us/state:wa/place:raymond/ward:3
+- country:us/state:wa/place:ritzville/ward:1
+- country:us/state:wa/place:ritzville/ward:2
+- country:us/state:wa/place:ritzville/ward:3
+- country:us/state:wa/place:ritzville/ward:4
+- country:us/state:wa/place:ritzville/ward:5
+- country:us/state:wa/place:seattle/council_district:1
+- country:us/state:wa/place:seattle/council_district:2
+- country:us/state:wa/place:seattle/council_district:3
+- country:us/state:wa/place:seattle/council_district:4
+- country:us/state:wa/place:seattle/council_district:5
+- country:us/state:wa/place:seattle/council_district:6
+- country:us/state:wa/place:seattle/council_district:7
+- country:us/state:wa/place:spokane/council_district:1
+- country:us/state:wa/place:spokane/council_district:2
+- country:us/state:wa/place:spokane/council_district:3
+- country:us/state:wa/place:tacoma/council_district:1
+- country:us/state:wa/place:tacoma/council_district:2
+- country:us/state:wa/place:tacoma/council_district:3
+- country:us/state:wa/place:tacoma/council_district:4
+- country:us/state:wa/place:tacoma/council_district:5
 #### Missing in Google:
 
 **Places:**
 - country:us/state:wa/place:st._john
 
 **Divisions:**
-- country:us/state:wa/place:aberdeen/ward:1
-- country:us/state:wa/place:aberdeen/ward:2
-- country:us/state:wa/place:aberdeen/ward:3
-- country:us/state:wa/place:aberdeen/ward:4
-- country:us/state:wa/place:aberdeen/ward:5
-- country:us/state:wa/place:aberdeen/ward:6
-- country:us/state:wa/place:anacortes/ward:1
-- country:us/state:wa/place:anacortes/ward:2
-- country:us/state:wa/place:anacortes/ward:3
-- country:us/state:wa/place:bainbridge_island/council_district:1
-- country:us/state:wa/place:bainbridge_island/council_district:2
-- country:us/state:wa/place:bainbridge_island/council_district:3
-- country:us/state:wa/place:bainbridge_island/council_district:4
-- country:us/state:wa/place:bainbridge_island/council_district:5
-- country:us/state:wa/place:bainbridge_island/council_district:6
-- country:us/state:wa/place:bainbridge_island/council_district:7
-- country:us/state:wa/place:bainbridge_island/ward:Central
-- country:us/state:wa/place:bainbridge_island/ward:North
-- country:us/state:wa/place:bainbridge_island/ward:South
-- country:us/state:wa/place:bellingham/ward:1
-- country:us/state:wa/place:bellingham/ward:2
-- country:us/state:wa/place:bellingham/ward:3
-- country:us/state:wa/place:bellingham/ward:4
-- country:us/state:wa/place:bellingham/ward:5
-- country:us/state:wa/place:bellingham/ward:6
-- country:us/state:wa/place:blaine/ward:1
-- country:us/state:wa/place:blaine/ward:2
-- country:us/state:wa/place:blaine/ward:3
-- country:us/state:wa/place:bremerton/council_district:1
-- country:us/state:wa/place:bremerton/council_district:2
-- country:us/state:wa/place:bremerton/council_district:3
-- country:us/state:wa/place:bremerton/council_district:4
-- country:us/state:wa/place:bremerton/council_district:5
-- country:us/state:wa/place:bremerton/council_district:6
-- country:us/state:wa/place:bremerton/council_district:7
-- country:us/state:wa/place:burlington/ward:1
-- country:us/state:wa/place:burlington/ward:2
-- country:us/state:wa/place:burlington/ward:3
-- country:us/state:wa/place:burlington/ward:4
-- country:us/state:wa/place:burlington/ward:5
-- country:us/state:wa/place:burlington/ward:6
-- country:us/state:wa/place:camas/ward:1
-- country:us/state:wa/place:camas/ward:2
-- country:us/state:wa/place:camas/ward:3
-- country:us/state:wa/place:centralia/council_district:1
-- country:us/state:wa/place:centralia/council_district:2
-- country:us/state:wa/place:centralia/council_district:3
-- country:us/state:wa/place:centralia/council_district:4
-- country:us/state:wa/place:chehalis/council_district:1
-- country:us/state:wa/place:chehalis/council_district:2
-- country:us/state:wa/place:chehalis/council_district:3
-- country:us/state:wa/place:chehalis/council_district:4
-- country:us/state:wa/place:colville/ward:1
-- country:us/state:wa/place:colville/ward:2
-- country:us/state:wa/place:colville/ward:3
-- country:us/state:wa/place:everett/council_district:1
-- country:us/state:wa/place:everett/council_district:2
-- country:us/state:wa/place:everett/council_district:3
-- country:us/state:wa/place:everett/council_district:4
-- country:us/state:wa/place:everett/council_district:5
-- country:us/state:wa/place:hoquiam/ward:1
-- country:us/state:wa/place:hoquiam/ward:2
-- country:us/state:wa/place:hoquiam/ward:3
-- country:us/state:wa/place:hoquiam/ward:4
-- country:us/state:wa/place:hoquiam/ward:5
-- country:us/state:wa/place:hoquiam/ward:6
-- country:us/state:wa/place:mount_vernon/ward:1
-- country:us/state:wa/place:mount_vernon/ward:2
-- country:us/state:wa/place:mount_vernon/ward:3
-- country:us/state:wa/place:pasco/council_district:1
-- country:us/state:wa/place:pasco/council_district:2
-- country:us/state:wa/place:pasco/council_district:3
-- country:us/state:wa/place:pasco/council_district:4
-- country:us/state:wa/place:pasco/council_district:5
-- country:us/state:wa/place:pasco/council_district:6
-- country:us/state:wa/place:pullman/ward:1
-- country:us/state:wa/place:pullman/ward:2
-- country:us/state:wa/place:pullman/ward:3
-- country:us/state:wa/place:puyallup/council_district:1
-- country:us/state:wa/place:puyallup/council_district:2
-- country:us/state:wa/place:puyallup/council_district:3
-- country:us/state:wa/place:sedro-woolley/ward:1
-- country:us/state:wa/place:sedro-woolley/ward:2
-- country:us/state:wa/place:sedro-woolley/ward:3
-- country:us/state:wa/place:sedro-woolley/ward:4
-- country:us/state:wa/place:sedro-woolley/ward:5
-- country:us/state:wa/place:sedro-woolley/ward:6
-- country:us/state:wa/place:sunnyside/council_district:1
-- country:us/state:wa/place:sunnyside/council_district:2
-- country:us/state:wa/place:sunnyside/council_district:3
-- country:us/state:wa/place:sunnyside/council_district:4
-- country:us/state:wa/place:walla_walla/ward:Central
-- country:us/state:wa/place:walla_walla/ward:East
-- country:us/state:wa/place:walla_walla/ward:South
-- country:us/state:wa/place:walla_walla/ward:West
-- country:us/state:wa/place:wenatchee/council_district:1
-- country:us/state:wa/place:wenatchee/council_district:2
-- country:us/state:wa/place:wenatchee/council_district:3
-- country:us/state:wa/place:wenatchee/council_district:4
-- country:us/state:wa/place:wenatchee/council_district:5
-- country:us/state:wa/place:yakima/council_district:1
-- country:us/state:wa/place:yakima/council_district:2
-- country:us/state:wa/place:yakima/council_district:3
-- country:us/state:wa/place:yakima/council_district:4
-- country:us/state:wa/place:yakima/council_district:5
-- country:us/state:wa/place:yakima/council_district:7
+None
 
 </details>
 
