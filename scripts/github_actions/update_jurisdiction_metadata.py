@@ -6,7 +6,6 @@ from typing import Optional
 
 import yaml
 from pydantic import BaseModel
-from scripts.utils import parse_jurisdiction_id
 
 PROJECT_ROOT = Path(__file__).parent.parent.parent
 

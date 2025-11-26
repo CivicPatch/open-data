@@ -17,8 +17,6 @@ def jurisdiction_to_file(jurisdiction_id):
         elif part.startswith("place:"):
             place = part.replace("place:", "")
     
-    jurisdiction_type = parts[-1]  # Get the last part for jurisdiction type
-
     if not state:
         raise ValueError(f"No state found in: {jurisdiction_id}")
     if not place:
