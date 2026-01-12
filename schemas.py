@@ -54,7 +54,7 @@ class Official(BaseModel):
     urls: List[str] = []
     office: Office = None
     image: Optional[str] = None
-    jurisdiction_id: str
+    jurisdiction_ocdid: str
     cdn_image: Optional[str] = None
     source_urls: List[str]
     updated_at: str
@@ -120,7 +120,7 @@ class Official(BaseModel):
 
 # Old schema for reference
 #class Person(BaseModel):
-#    jurisdiction_id: str
+#    jurisdiction_ocdid: str
 #    name: str
 #    roles: List[str]
 #    divisions: List[str]

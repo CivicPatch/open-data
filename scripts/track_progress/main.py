@@ -60,9 +60,9 @@ def count_municipalities():
                 else 0
             )
 
-            for jurisdiction_id, jurisdiction_obj in jurisdictions_by_id.items():
+            for jurisdiction_ocdid, jurisdiction_obj in jurisdictions_by_id.items():
                 # Chop off /government for comparison
-                base_ocdid = jurisdiction_id.replace("/government", "")
+                base_ocdid = jurisdiction_ocdid.replace("/government", "")
                 civicpatch_ocdids.add(base_ocdid)
                 # Add child divisions
                 for division in jurisdiction_obj.get("child_divisions", []):

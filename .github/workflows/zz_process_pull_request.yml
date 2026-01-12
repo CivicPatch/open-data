@@ -11,7 +11,7 @@ on:
         description: "The head ref (branch name) of the PR"
         required: true
         type: string
-      jurisdiction_id:
+      jurisdiction_ocdid:
         description: "The ocdid jurisdiction identifier for the municipality"
         required: true
         type: string
@@ -109,7 +109,7 @@ jobs:
           STORAGE_ACCESS_KEY_ID: ${{ secrets.STORAGE_ACCESS_KEY_ID }}
           STORAGE_SECRET_ACCESS_KEY: ${{ secrets.STORAGE_SECRET_ACCESS_KEY }}
         run: |
-          mise upload-images-to-cdn --jurisdiction-id "${{ inputs.jurisdiction_id }}"
+          mise upload-images-to-cdn --jurisdiction-id "${{ inputs.jurisdiction_ocdid }}"
           # Remove local images after upload TODO
 
       - name: Commit image updates
@@ -122,7 +122,7 @@ jobs:
           # Commit changes if any images were updated
           if [ -n "$(git status --porcelain)" ]; then
             git add .
-            git commit -m "Upload images to CDN for ${{ inputs.jurisdiction_id }}"
+            git commit -m "Upload images to CDN for ${{ inputs.jurisdiction_ocdid }}"
             git push -u origin ${{ inputs.head_ref }}
           fi
 
@@ -133,7 +133,7 @@ jobs:
           GOOGLE_SHEETS_CLIENT_EMAIL: ${{ secrets.GOOGLE_SHEETS_CLIENT_EMAIL }}
           GOOGLE_SHEETS_TOKEN_URI: ${{ secrets.GOOGLE_SHEETS_TOKEN_URI }}
         run: |
-          mise send-costs-to-google-sheets --jurisdiction-id "${{ inputs.jurisdiction_id }}"
+          mise send-costs-to-google-sheets --jurisdiction-id "${{ inputs.jurisdiction_ocdid }}"
 
       - name: Create/Update Data Comment
         env:
@@ -142,7 +142,7 @@ jobs:
         run: |
           PR_NUMBER=${{ inputs.pr_number }}
 
-          COMMENT=$(mise generate-data-comment --jurisdiction-id ${{ inputs.jurisdiction_id }} )
+          COMMENT=$(mise generate-data-comment --jurisdiction-id ${{ inputs.jurisdiction_ocdid }} )
           gh pr comment $PR_NUMBER --edit-last --create-if-none --body "$COMMENT"
 
       - name: Create Approval/Disapproval Comment
@@ -151,7 +151,7 @@ jobs:
           GITHUB_TOKEN: ${{ steps.generate-approve-token.outputs.token }}
         run: |
           PR_NUMBER=${{ inputs.pr_number }}
-          COMMENT=$(mise generate-review-comment --jurisdiction-id ${{ inputs.jurisdiction_id }} )
+          COMMENT=$(mise generate-review-comment --jurisdiction-id ${{ inputs.jurisdiction_ocdid }} )
 
           if [ -n "$REJECTED_REASONS" ]; then
             gh pr review $PR_NUMBER --request-changes -b "$COMMENT"

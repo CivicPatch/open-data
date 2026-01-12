@@ -14,7 +14,7 @@ from schemas import Official
 from scripts.utils import jurisdiction_to_file
 
 
-def validate_file(file_path, jurisdiction_id):
+def validate_file(file_path, jurisdiction_ocdid):
     """Validate all people in a file."""
     if not file_path.exists():
         print(f"❌ File not found: {file_path}")
@@ -24,7 +24,7 @@ def validate_file(file_path, jurisdiction_id):
         with open(file_path) as f:
             data = yaml.safe_load(f)
 
-        people = [p for p in data if p["jurisdiction_id"] == jurisdiction_id]
+        people = [p for p in data if p["jurisdiction_ocdid"] == jurisdiction_ocdid]
         valid_count = 0
         errors = []
 
@@ -57,17 +57,17 @@ def validate_file(file_path, jurisdiction_id):
 def main():
     if len(sys.argv) != 2:
         print(
-            "Usage: python scripts/github_actions/validate_jurisdiction.py <jurisdiction_id>"
+            "Usage: python scripts/github_actions/validate_jurisdiction.py <jurisdiction_ocdid>"
         )
         return 1
 
-    jurisdiction_id = sys.argv[1]
+    jurisdiction_ocdid = sys.argv[1]
 
     try:
-        file_path = jurisdiction_to_file(jurisdiction_id)
+        file_path = jurisdiction_to_file(jurisdiction_ocdid)
         print(f"📁 Checking: {file_path}")
 
-        success = validate_file(file_path, jurisdiction_id)
+        success = validate_file(file_path, jurisdiction_ocdid)
         return 0 if success else 1
 
     except Exception as e:
