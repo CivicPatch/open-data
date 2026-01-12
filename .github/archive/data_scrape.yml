@@ -3,7 +3,7 @@ name: "[manual] - Data Scrape"
 on:
   workflow_dispatch:
     inputs:
-      jurisdiction_id:
+      jurisdiction_ocdid:
         description: 'ocdid for the municipality (e.g. ocd-division/country/state/city)'
         required: true
       name:
@@ -55,6 +55,6 @@ jobs:
           API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
         run: |
           mise pipeline-run-cicd \
-            --jurisdiction-id "${{ github.event.inputs.jurisdiction_id }}" \
+            --jurisdiction-id "${{ github.event.inputs.jurisdiction_ocdid }}" \
             --name "${{ github.event.inputs.name }}" \
             --url "${{ github.event.inputs.url }}"

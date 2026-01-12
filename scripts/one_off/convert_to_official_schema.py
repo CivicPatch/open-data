@@ -20,7 +20,7 @@ def person_to_official(person: Person) -> Official:
         
         image=person.image,
 
-        jurisdiction_id=person.jurisdiction_id,
+        jurisdiction_ocdid=person.jurisdiction_ocdid,
         cdn_image=person.cdn_image,
         source_urls=person.sources,
         updated_at=person.updated_at,

@@ -1,8 +1,8 @@
 from pathlib import Path
-def jurisdiction_to_file(jurisdiction_id):
-    """Convert jurisdiction_id to file path."""
+def jurisdiction_to_file(jurisdiction_ocdid):
+    """Convert jurisdiction_ocdid to file path."""
     # Parse: ocd_jurisdiction/country:us/state:ca/county:green/place:anaheim/government
-    parts = jurisdiction_id.split("/")
+    parts = jurisdiction_ocdid.split("/")
 
     state = None
     county = None
@@ -18,9 +18,9 @@ def jurisdiction_to_file(jurisdiction_id):
             place = part.replace("place:", "")
     
     if not state:
-        raise ValueError(f"No state found in: {jurisdiction_id}")
+        raise ValueError(f"No state found in: {jurisdiction_ocdid}")
     if not place:
-        raise ValueError(f"No place found in: {jurisdiction_id}")
+        raise ValueError(f"No place found in: {jurisdiction_ocdid}")
 
     # Build file path
     if county:

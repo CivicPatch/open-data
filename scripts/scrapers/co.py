@@ -30,12 +30,12 @@ def scrape(census_data) -> Tuple[Dict[str, Any], List[str]]:
         #**cdp_entries
     }
 
-    for jurisdiction_id, jurisdiction in census_data.items():
+    for jurisdiction_ocdid, jurisdiction in census_data.items():
         geoid = jurisdiction.geoid
         if geoid in entries:
             municipality = entries[geoid]
             jurisdiction.url = municipality.get("url", None)
-            census_data[jurisdiction_id] = jurisdiction
+            census_data[jurisdiction_ocdid] = jurisdiction
         else:
             warnings.append(f"No municipality data found for GEOID: {geoid}, ({jurisdiction.name})")
     return census_data, warnings

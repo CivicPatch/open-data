@@ -14,7 +14,7 @@ on:
       request_id:
         description: "Unique request ID for this data intake"
         required: true
-      jurisdiction_id:
+      jurisdiction_ocdid:
         description: "ocdid for the municipality"
         required: true
       zip_file_url:
@@ -83,7 +83,7 @@ jobs:
 
       - name: Validate data
         run: |
-          poetry run python scripts/github_actions/validate_jurisdiction.py ${{ github.event.inputs.jurisdiction_id }}
+          poetry run python scripts/github_actions/validate_jurisdiction.py ${{ github.event.inputs.jurisdiction_ocdid }}
 
       - name: Get branch name from zip_file_url
         id: extract_branch
@@ -104,13 +104,13 @@ jobs:
 
           git checkout -B ${{ steps.extract_branch.outputs.branch_name }}
           git add .
-          git commit -m "Add municipal officials for ${{ github.event.inputs.jurisdiction_id }} by ${{ github.event.inputs.user_email }}"
+          git commit -m "Add municipal officials for ${{ github.event.inputs.jurisdiction_ocdid }} by ${{ github.event.inputs.user_email }}"
           git push -u origin ${{ steps.extract_branch.outputs.branch_name }}
 
           echo ${{ github.actor }}
 
           github_pull_request_url=$(gh pr create \
-            --title "Data intake for ${{ github.event.inputs.jurisdiction_id }} by ${{ github.event.inputs.user_email }}" \
+            --title "Data intake for ${{ github.event.inputs.jurisdiction_ocdid }} by ${{ github.event.inputs.user_email }}" \
             --body "Automated data intake for request ID: ${{ github.event.inputs.request_id }}. Please review the data before merging." \
             --base main
           )
@@ -123,7 +123,7 @@ jobs:
     with:
       pr_number: ${{ fromJson(needs.data-intake.outputs.pr_number) }}
       head_ref: ${{ needs.data-intake.outputs.head_ref }}
-      jurisdiction_id: ${{ github.event.inputs.jurisdiction_id }}
+      jurisdiction_ocdid: ${{ github.event.inputs.jurisdiction_ocdid }}
       upload_images: true
     secrets:
       GH_APP_BOT_PIPELINE_APP_ID: ${{ secrets.GH_APP_BOT_PIPELINE_APP_ID }}

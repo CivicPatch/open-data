@@ -9,9 +9,9 @@ from pydantic import BaseModel
 
 PROJECT_ROOT = Path(__file__).parent.parent.parent
 
-def extract_child_divisions(government_list, jurisdiction_id):
+def extract_child_divisions(government_list, jurisdiction_ocdid):
     child_divisions = []
-    base_id = "/".join(jurisdiction_id.split("/")[:-1])
+    base_id = "/".join(jurisdiction_ocdid.split("/")[:-1])
     for member in government_list:
         divisions = member.get("divisions", [])
         for division in divisions:
@@ -47,13 +47,13 @@ def create_update_progress_file(state: str):
 
     progress_data = {"jurisdictions_by_id": {}, "warnings": []}
     for jurisdiction in jurisdictions:
-        jurisdiction_id = jurisdiction["id"]
+        jurisdiction_ocdid = jurisdiction["id"]
         jurisdiction_object = {
-            "jurisdiction_id": jurisdiction_id,
+            "jurisdiction_ocdid": jurisdiction_ocdid,
             "jurisdiction": {**jurisdiction},
             "child_divisions": [],  # Add empty child_divisions list
         }
-        progress_data["jurisdictions_by_id"][jurisdiction_id] = jurisdiction_object
+        progress_data["jurisdictions_by_id"][jurisdiction_ocdid] = jurisdiction_object
 
     for place_file_path in list(glob.glob(f"data/{state}/*.yml")):
         files_found += 1
@@ -66,25 +66,25 @@ def create_update_progress_file(state: str):
             continue
 
         place_data_updated_at = government_list[0].get("updated_at")
-        place_jurisdiction_id = government_list[0].get("jurisdiction_id")
+        place_jurisdiction_ocdid = government_list[0].get("jurisdiction_ocdid")
 
-        if progress_data["jurisdictions_by_id"].get(place_jurisdiction_id) is None:
+        if progress_data["jurisdictions_by_id"].get(place_jurisdiction_ocdid) is None:
             warnings.append(
-                f"Could not find matching jurisdiction id for {place_jurisdiction_id}"
+                f"Could not find matching jurisdiction id for {place_jurisdiction_ocdid}"
             )
             continue
 
         # Extract child divisions from government members
         child_divisions = extract_child_divisions(
-            government_list, place_jurisdiction_id
+            government_list, place_jurisdiction_ocdid
         )
 
         jurisdiction_object = progress_data["jurisdictions_by_id"][
-            place_jurisdiction_id
+            place_jurisdiction_ocdid
         ]
         jurisdiction_object["updated_at"] = place_data_updated_at
         jurisdiction_object["child_divisions"] = child_divisions
-        progress_data["jurisdictions_by_id"][place_jurisdiction_id] = (
+        progress_data["jurisdictions_by_id"][place_jurisdiction_ocdid] = (
             jurisdiction_object
         )
 

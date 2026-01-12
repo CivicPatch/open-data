@@ -46,7 +46,7 @@ def convert_to_people_schema(file_paths=None, delete_original=False):
 
             for person_data in data:
                 # Add missing required fields
-                person_data["jurisdiction_id"] = (
+                person_data["jurisdiction_ocdid"] = (
                     f"ocd-jurisdiction/country:us/state:{state}/place:{place}/government"
                 )
 

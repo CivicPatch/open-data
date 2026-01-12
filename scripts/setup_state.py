@@ -138,18 +138,18 @@ def get_census_data_for_state(state: str) -> Tuple[Dict[str, Jurisdiction], List
         zip_to_geojson(place_map_url, geojson_file_path, geojson_data_source_dir)
 
         for jurisdiction_object in place_jurisdictions:
-            jurisdiction_id = jurisdiction_object.id
-            if census_data.get(jurisdiction_id):
-                print(f"Duplicate jurisdiction found: {jurisdiction_id}")
-                existing_jurisdiction = census_data[jurisdiction_id]
+            jurisdiction_ocdid = jurisdiction_object.id
+            if census_data.get(jurisdiction_ocdid):
+                print(f"Duplicate jurisdiction found: {jurisdiction_ocdid}")
+                existing_jurisdiction = census_data[jurisdiction_ocdid]
                 existing_jurisdiction_name = existing_jurisdiction.name
                 jurisdiction_object_name = jurisdiction_object.name
                 warnings.append(
                     f"Duplicate jurisdiction found:"
-                    f"{jurisdiction_id} between {existing_jurisdiction_name} and {jurisdiction_object_name}"
+                    f"{jurisdiction_ocdid} between {existing_jurisdiction_name} and {jurisdiction_object_name}"
                 )
             else:
-                census_data[jurisdiction_id] = jurisdiction_object
+                census_data[jurisdiction_ocdid] = jurisdiction_object
 
     if "county_subdivisions" in pull_from_census:
         cousub_jurisdictions, c_warnings = pull_cousub_data(state, state_fips)
@@ -160,20 +160,20 @@ def get_census_data_for_state(state: str) -> Tuple[Dict[str, Jurisdiction], List
         zip_to_geojson(cousub_map_url, geojson_file_path, geojson_data_source_dir)
 
         for jurisdiction_object in cousub_jurisdictions:
-            jurisdiction_id = jurisdiction_object.id
-            if census_data.get(jurisdiction_id):
-                print(f"Duplicate jurisdiction found: {jurisdiction_id}")
-                existing_jurisdiction = census_data[jurisdiction_id]
+            jurisdiction_ocdid = jurisdiction_object.id
+            if census_data.get(jurisdiction_ocdid):
+                print(f"Duplicate jurisdiction found: {jurisdiction_ocdid}")
+                existing_jurisdiction = census_data[jurisdiction_ocdid]
                 existing_jurisdiction_name = existing_jurisdiction.name
                 jurisdiction_object_name = jurisdiction_object.name
                 warnings.append(
                     f"Duplicate jurisdiction found: "
-                    f"{jurisdiction_id} between "
+                    f"{jurisdiction_ocdid} between "
                     f"{existing_jurisdiction_name}"
                     f"and {jurisdiction_object_name}"
                 )
             else:
-                census_data[jurisdiction_id] = jurisdiction_object
+                census_data[jurisdiction_ocdid] = jurisdiction_object
 
     print(f"Combining localities into final local.geojson file: {geojson_data_local_file_path}")
     combine_geojsons_with_type(geojson_data_source_dir, geojson_data_local_file_path)
@@ -226,7 +226,7 @@ def pull_place_data(
             if population == 0:
                 continue
             jurisdiction_object = Jurisdiction(
-                id=api_data["jurisdiction_id"],
+                id=api_data["jurisdiction_ocdid"],
                 name=api_data["friendly_name"],
                 url=None,
                 population=population,
@@ -283,7 +283,7 @@ def pull_cousub_data(
                 continue
 
             jurisdiction_object = Jurisdiction(
-                id=api_data["jurisdiction_id"],
+                id=api_data["jurisdiction_ocdid"],
                 name=api_data["friendly_name"],
                 url=None,
                 population=population,
@@ -293,7 +293,7 @@ def pull_cousub_data(
     return jurisdictions, warnings
 
 
-def create_jurisdiction_id(state, api_name, type):
+def create_jurisdiction_ocdid(state, api_name, type):
     if type == "county_subdivision":
         jurisdiction_name, _friendly_name = get_names(api_name)
         county_name = get_county_name(api_name)
@@ -324,10 +324,10 @@ def get_api_data_by_geoid(
         population = int(item[population_index])
         jurisdiction_name, friendly_name = get_names(name)
         # county_name = get_county_name(name)
-        jurisdiction_id = create_jurisdiction_id(state, name, type)
-        # jurisdiction_id = f"ocd-jurisdiction/country:us/state:{state}/county:{county_name}/place:{jurisdiction_name}/government"
+        jurisdiction_ocdid = create_jurisdiction_ocdid(state, name, type)
+        # jurisdiction_ocdid = f"ocd-jurisdiction/country:us/state:{state}/county:{county_name}/place:{jurisdiction_name}/government"
         data[geoid] = {
-            "jurisdiction_id": jurisdiction_id,
+            "jurisdiction_ocdid": jurisdiction_ocdid,
             "jurisdiction_name": jurisdiction_name,
             "friendly_name": friendly_name,
             # "county_name": county_name,
