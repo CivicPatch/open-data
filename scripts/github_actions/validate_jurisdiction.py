@@ -10,7 +10,7 @@ Usage:
 import sys
 import yaml
 
-from schemas import Person
+from schemas import Official
 from scripts.utils import jurisdiction_to_file
 
 
@@ -30,11 +30,11 @@ def validate_file(file_path, jurisdiction_id):
 
         for i, person_data in enumerate(people):
             try:
-                Person(**person_data)  # Validate with Pydantic
+                Official(**person_data)  # Validate with Pydantic
                 valid_count += 1
             except Exception as e:
                 name = person_data.get("name", "Unknown")
-                errors.append(f"Person {i + 1} ({name}): {e}")
+                errors.append(f"Official {i + 1} ({name}): {e}")
 
         # Print results
         print(f"✅ Valid: {valid_count}")
