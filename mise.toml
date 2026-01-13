@@ -75,7 +75,7 @@ run = """
 docker compose -f docker-compose.github-actions.yml run --rm civicpatch-cicd poetry run \
   python src/interfaces/cli/main.py \
     run_pipeline \
-    --jurisdiction-id "{{ option(name="jurisdiction-id") }}" \
+    --jurisdiction-ocdid "{{ option(name="jurisdiction-ocdid") }}" \
     --name "{{ option(name="name") }}" \
     --url "{{ option(name="url") }}"
 """
@@ -83,20 +83,20 @@ docker compose -f docker-compose.github-actions.yml run --rm civicpatch-cicd poe
 [tasks.upload-images-to-cdn]
 run = """
 docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
-  python src/scripts/upload_images_to_cdn.py {{ option(name="jurisdiction-id") }}
+  python src/scripts/upload_images_to_cdn.py {{ option(name="jurisdiction-ocdid") }}
 """
 
 [tasks.send-costs-to-google-sheets]
 run = """
 docker compose -f docker-compose.slim.yml \
   run --rm civicpatch-slim poetry run \
-  python src/scripts/send_costs_to_google_sheets.py {{ option(name="jurisdiction-id") }}
+  python src/scripts/send_costs_to_google_sheets.py {{ option(name="jurisdiction-ocdid") }}
 """
 
 [tasks.generate-data-comment]
 run = """
 docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
-  python src/scripts/generate_data_comment.py {{ option(name="jurisdiction-id") }}
+  python src/scripts/generate_data_comment.py {{ option(name="jurisdiction-ocdid") }}
 """
 
 [tasks.test-generate-review-comment]
@@ -109,5 +109,5 @@ docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
 # Ex: /app/data/wa/place__spokane.yml
 run = """
 docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
-  python src/scripts/generate_review_comment.py {{ option(name="jurisdiction-id") }}
+  python src/scripts/generate_review_comment.py {{ option(name="jurisdiction-ocdid") }}
 """
