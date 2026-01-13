@@ -53,14 +53,29 @@ def get_entry_infobox(wiki_url) -> Tuple[Dict[str, Any], List[str]]:
             for row in infobox.find_all("tr"):
                 header = row.find("th")
                 if header:
+                    # Remove superscripts for cleaner matching
+                    for sup in header.find_all('sup'):
+                        sup.extract()
                     header_text = header.get_text(strip=True).lower()
-                    if "fips code" in header_text or "geoid" in header_text:
+                    link = header.find("a")
+                    link_text = link.get_text(strip=True).lower() if link else ""
+                    # Match "FIPS code" or "FIPS" + "code" (with possible superscripts)
+                    if (
+                        "fips code" in header_text
+                        or ("fips" in link_text and "code" in header_text)
+                        or "geoid" in header_text
+                    ):
                         data_td = row.find("td")
-                        # First, remove super scripts
                         if data_td:
+                            # Remove superscripts from td
                             for element in data_td.find_all('sup'):
                                 element.extract()
-                            geoid = data_td.get_text(strip=True)
+                            # If td contains a link, get its text
+                            td_link = data_td.find("a")
+                            if td_link:
+                                geoid = td_link.get_text(strip=True)
+                            else:
+                                geoid = data_td.get_text(strip=True)
                     elif "website" in header_text:
                         data_td = row.find("td")
                         if data_td:
