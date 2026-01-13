@@ -12,6 +12,7 @@ import yaml
 
 from schemas import Jurisdiction
 from scripts.scrapers import co as co_scraper
+from scripts.scrapers import nj as nj_scraper
 from scripts.scrapers import wa as wa_scraper
 
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -22,6 +23,7 @@ state_configs = {
         "pull_from_census": ["places"],
         "scraper": co_scraper,
     },
+    "nj": {"fips": "34", "pull_from_census": ["places", "county_subdivisions"], "scraper": nj_scraper},
     "wa": {"fips": "53", "pull_from_census": ["places"], "scraper": wa_scraper},
 }
 
@@ -214,7 +216,7 @@ def pull_place_data(
             funcstat = item[6]
             if funcstat not in ["A", "B", "C", "G"]:
                 warnings.append(
-                    f"Skipping place with unsupported functional status ({funcstat}): {name})"
+                    f"Place: Skipping place with unsupported functional status ({funcstat}): {name})"
                 )
                 continue
             geoid = item[1]
@@ -270,7 +272,7 @@ def pull_cousub_data(
             funcstat = item[5]
             if funcstat not in ["A", "B", "C", "G"]:
                 warnings.append(
-                    f"Skipping place with unsupported functional status ({funcstat}): {name})"
+                    f"Cousub: Skipping cousub with unsupported functional status ({funcstat}): {name})"
                 )
                 continue
             geoid = item[1]

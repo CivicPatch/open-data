@@ -5,7 +5,6 @@ import time
 from scripts.scrapers import wikipedia_utils
 
 MUNICIPALITIES_URL = "https://en.wikipedia.org/w/api.php?action=parse&page=List_of_municipalities_in_Colorado&format=json"
-CCDS_URL = "https://en.wikipedia.org/wiki/List_of_census-designated_places_in_Colorado"
 
 def scrape(census_data) -> Tuple[Dict[str, Any], List[str]]:
     mun_entries, mun_warnings = wikipedia_utils.get_entries(
