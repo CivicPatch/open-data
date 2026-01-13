@@ -15,6 +15,8 @@ from scripts.scrapers import co as co_scraper
 from scripts.scrapers import nj as nj_scraper
 from scripts.scrapers import wa as wa_scraper
 
+from scripts.github_actions.update_jurisdiction_metadata import create_update_progress_file
+
 PROJECT_ROOT = Path(__file__).parent.parent
 
 state_configs = {
@@ -385,3 +387,4 @@ if __name__ == "__main__":
 
     state_arg = sys.argv[1]
     pull_jurisdiction_data(state_arg)
+    create_update_progress_file(state=state_arg)
