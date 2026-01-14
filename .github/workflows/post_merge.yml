@@ -2,7 +2,8 @@ name: "[auto] Post Merge"
 on:
   push:
     paths:
-      - "data/**/**.yml"
+      - "data/**/**.yml" # newly scraped jurisdiction
+      - "data_source/**/jurisdictions.yml" # manual update to jurisdictions
     branches:
       - main
 
@@ -34,9 +35,9 @@ jobs:
           # Get the list of updated files
           UPDATED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
           # Extract unique state directories from the updated files
-          STATES=$(echo "$UPDATED_FILES" | grep -oP '^data_source/\K[^/]+' | sort -u)
-          # Output the states as a comma-separated list
-          echo "states=$STATES" >> $GITHUB_OUTPUT
+          STATES=$(echo "$UPDATED_FILES" | grep '^data_source/' | cut -d/ -f2 | sort -u)
+          STATES_CSV=$(echo "$STATES" | paste -sd "," -)
+          echo "states=$STATES_CSV" >> $GITHUB_OUTPUT
 
       - name: Extract updated YAML files
         id: extract-files
@@ -95,7 +96,7 @@ jobs:
 
       - name: Update progress files for each state
         run: |
-          for state in ${{ needs.extract-files.outputs.states }}; do
+          for state in $(echo "${{ needs.extract-files.outputs.states }}" | tr ',' ' '); do
             echo "Processing state: $state"
             poetry run python scripts/github_actions/update_jurisdiction_metadata.py "$state"
           done

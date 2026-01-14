@@ -387,4 +387,3 @@ if __name__ == "__main__":
 
     state_arg = sys.argv[1]
     pull_jurisdiction_data(state_arg)
-    create_update_progress_file(state=state_arg)
