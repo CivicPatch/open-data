@@ -1,0 +1,128 @@
+Boards and Commissions
+
+
+![Spinner: Black decorative](https://cdn.userway.org/widgetapp/images/spin_bl.svg)
+![](https://cdn.userway.org/widgetapp/images/body_bl.svg)
+![Spinner: Black decorative](https://cdn.userway.org/widgetapp/images/spin_bl.svg)
+
+
+Skip to main content
+
+* Government
+  + Elected Officials
+    - [Mayor Brian C. Wahler](https://www.piscatawaynj.org/government/elected_officials/mayor_brian_wahler.php)
+    - [Council President Michele Lombardi (Ward 4)](https://www.piscatawaynj.org/government/elected_officials/ward_4_councilmember.php)
+    - [Council Vice President Sharon Carmichael (Ward 3)](https://www.piscatawaynj.org/government/elected_officials/ward_3_councilmember.php)
+    - [At-Large Councilmember Gabrielle Cahill](https://www.piscatawaynj.org/government/elected_officials/at-large_councilmember1.php)
+    - [At-Large Councilmember Laura Leibowitz](https://www.piscatawaynj.org/government/elected_officials/at-large_councilmember2.php)
+    - [At-Large Councilmember Sarah Rashid](https://www.piscatawaynj.org/government/elected_officials/at-large_councilmember3.php)
+    - [Ward 1 Councilmember Frank Uhrin](https://www.piscatawaynj.org/government/elected_officials/ward_1_councilmember.php)
+    - [Ward 2 Councilmember Dennis Espinosa](https://www.piscatawaynj.org/government/elected_officials/ward_2_councilmember.php)
+* [Contact Us](https://www.piscatawaynj.org/contact_us1/index.php)
+
+Facebook
+Twitter
+Instagram
+Youtube
+Translate
+![](https://www.piscatawaynj.org/_assets_/images/translate-icon.png)
+![](https://www.google.com/images/cleardot.gif)
+Select Language​▼
+Select your language.
+English
+Spanish
+
+
+
+
+
+slide
+1
+of 1
+
+
+
+Sub Menu
+
+* Civil Rights Advisory Commission
+  + [Dr. MLK Jr. Breakfast](https://www.piscatawaynj.org/government/dr_mlk_jr_breakfast.php)
+  + [Jackie Robinson Day](https://www.piscatawaynj.org/government/jackie_robinson_day.php)
+
+
+
+
+
+If you wish to volunteer your services as a Piscataway resident for one or more of the boards and commissions, please complete the Piscataway Township
+Resident Leadership Form
+and submit the application to the Township Clerk.
+To view full membership of all the boards and commissions in Piscataway Township, please
+click here
+.
+
+
+
+
+
+
+
+You can unsubscribe at any time using the Unsubscribe link at the bottom of every email.
+
+Get news from Piscataway Township in your e-mail inbox.
+
+Email
+
+Sorry, we could not complete your sign-up. Please contact us to resolve this.
+
+Operation timed out, please try again.
+
+By submitting this form, you are consenting to receive e-mails from: Piscataway Township, 455 Hoes Lane, Piscataway, NJ, 08854, US, http://www.piscatawaynj.org. You can revoke your consent to receive emails at any time by using the SafeUnsubscribe® link, found at the bottom of every email.
+[Emails are serviced by Constant Contact.](https://www.constantcontact.com/legal/service-provider)
+
+
+
+![location icon](https://www.piscatawaynj.org/_assets_/images/location-icon.png)
+455 Hoes Lane, Piscataway, NJ 08854
+
+![phone icon](https://www.piscatawaynj.org/_assets_/images/phone-icon.png)
+
+Phone:
+(732) 562-2300
+
+![fax icon](https://www.piscatawaynj.org/_assets_/images/fax-icon.png)
+Fax:
+(732) 529-2500
+
+Facebook
+Twitter
+Instagram
+Youtube
+
+* [Mayor Brian C. Wahler](https://www.piscatawaynj.org/government/elected_officials/mayor_brian_wahler.php)
+* [Council President Dennis Espinosa (Ward 2)](https://www.piscatawaynj.org/government/elected_officials/council_president.php)
+* [Council Vice President Michele Lombardi (Ward 4)](https://www.piscatawaynj.org/government/elected_officials/council_vice_president.php)
+* [At-Large Councilmember Gabrielle Cahill](https://www.piscatawaynj.org/government/elected_officials/at-large_councilmember1.php)
+* [At-Large Councilmember Laura Leibowitz](https://www.piscatawaynj.org/government/elected_officials/at-large_councilmember2.php)
+* [At-Large Councilmember Sarah Rashid](https://www.piscatawaynj.org/government/elected_officials/at-large_councilmember3.php)
+* [Ward 1 Councilmember Frank Uhrin](https://www.piscatawaynj.org/government/elected_officials/ward_1_councilmember.php)
+* [Ward 3 Councilmember Sharon Carmichael](https://www.piscatawaynj.org/government/elected_officials/ward_3_councilmember.php)
+
+Powered by
+revize.,
+the Government Website Experts
+Login
+
+
+Share this page
+
+
+
+
+
+
+
+
+![](https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg)
+Original text
+Rate this translation
+Your feedback will be used to help improve Google Translate
+Read More
