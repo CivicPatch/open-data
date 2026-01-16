@@ -35,7 +35,7 @@ jobs:
           # Get the list of updated files
           UPDATED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
           # Extract unique state directories from the updated files
-          STATES=$(echo "$UPDATED_FILES" | grep '^data_source/' | cut -d/ -f2 | sort -u)
+          STATES=$(echo "$UPDATED_FILES" | grep -E '^(data|data_source)/' | cut -d/ -f2 | sort -u)
           STATES_CSV=$(echo "$STATES" | paste -sd "," -)
           echo "states=$STATES_CSV" >> $GITHUB_OUTPUT
 
@@ -44,7 +44,7 @@ jobs:
         run: |
           # Get the list of updated YAML files under data/**/**.yml
           UPDATED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
-          YAML_FILES=$(echo "$UPDATED_FILES" | grep '^data/.*\.yml$' || true)
+          YAML_FILES=$(echo "$UPDATED_FILES" | grep -E '^(data|data_source)/.*\.yml$' || true)
 
           # Convert to JSON array for matrix
           if [ -z "$YAML_FILES" ]; then
