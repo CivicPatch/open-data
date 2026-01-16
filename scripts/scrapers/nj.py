@@ -16,6 +16,12 @@ def scrape(census_data) -> Tuple[Dict[str, Any], List[str]]:
 
     warnings = mun_warnings
 
+    # Temporary: output the mun_entries to a file to debug
+    #with open("nj_mun_entries_debug.json", "w") as f:
+    #    import json
+    #    json.dump(mun_entries, f, indent=4)
+
+
     entries = {
         **mun_entries,
     }
@@ -24,7 +30,7 @@ def scrape(census_data) -> Tuple[Dict[str, Any], List[str]]:
         geoid = jurisdiction.geoid
         if geoid not in entries:
             state_prefix = geoid[:2]
-            place_suffix = geoid[5:]
+            place_suffix = geoid[-5:]
             potential_entry_keys = [k for k in entries.keys() if k.startswith(state_prefix) and k.endswith(place_suffix)]
 
             if potential_entry_keys:
