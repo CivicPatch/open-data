@@ -121,6 +121,7 @@ jobs:
     needs: data-intake
     uses: ./.github/workflows/zz_process_pull_request.yml
     with:
+      request_id: ${{ github.event.inputs.request_id }}
       pr_number: ${{ fromJson(needs.data-intake.outputs.pr_number) }}
       head_ref: ${{ needs.data-intake.outputs.head_ref }}
       jurisdiction_ocdid: ${{ github.event.inputs.jurisdiction_ocdid }}
@@ -130,6 +131,7 @@ jobs:
       GH_APP_BOT_PIPELINE_PRIVATE_KEY: ${{ secrets.GH_APP_BOT_PIPELINE_PRIVATE_KEY }}
       GH_APP_BOT_APPROVE_APP_ID: ${{ secrets.GH_APP_BOT_APPROVE_APP_ID }}
       GH_APP_BOT_APPROVE_PRIVATE_KEY: ${{ secrets.GH_APP_BOT_APPROVE_PRIVATE_KEY }}
+      API_CIVICPATCH_ORG_TOKEN: ${{ secrets.API_CIVICPATCH_ORG_TOKEN }}
       STORAGE_ENDPOINT: ${{ secrets.STORAGE_ENDPOINT }}
       STORAGE_ACCESS_KEY_ID: ${{ secrets.STORAGE_ACCESS_KEY_ID }}
       STORAGE_SECRET_ACCESS_KEY: ${{ secrets.STORAGE_SECRET_ACCESS_KEY }}
