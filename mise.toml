@@ -70,16 +70,6 @@ curl -s -X GET "${API_CIVICPATCH_ORG_URL}/api/v1/jurisdictions/available?num_jur
 #    --state "wa"
 #"""
 
-[tasks.pipeline-run-cicd]
-run = """
-docker compose -f docker-compose.github-actions.yml run --rm civicpatch-cicd poetry run \
-  python src/interfaces/cli/main.py \
-    run_pipeline \
-    --jurisdiction-ocdid "{{ option(name="jurisdiction-ocdid") }}" \
-    --name "{{ option(name="name") }}" \
-    --url "{{ option(name="url") }}"
-"""
-
 [tasks.upload-images-to-cdn]
 run = """
 docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
