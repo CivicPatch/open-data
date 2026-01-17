@@ -15,7 +15,7 @@ class Jurisdiction(BaseModel):
 
 class Office(BaseModel):
     name: str
-    division_id: Optional[str] = None
+    division_ocdid: Optional[str] = None
     start_date: Optional[str] = None
     end_date: Optional[str] = None
 

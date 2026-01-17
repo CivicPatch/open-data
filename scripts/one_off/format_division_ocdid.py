@@ -53,8 +53,5 @@ def convert_to_division_ocdids(file_paths=None, delete_original=False):
         with open(new_file_path, "w") as f:
             yaml.dump(data, f, sort_keys=False, allow_unicode=True)
 
-        if delete_original and new_file_path != file_path:
-            os.remove(file_path)
-
 if __name__ == "__main__":
     convert_to_division_ocdids(delete_original=False)
