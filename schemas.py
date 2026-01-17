@@ -16,8 +16,6 @@ class Jurisdiction(BaseModel):
 class Office(BaseModel):
     name: str
     division_ocdid: Optional[str] = None
-    start_date: Optional[str] = None
-    end_date: Optional[str] = None
 
     @field_validator("start_date")
     @classmethod
@@ -52,6 +50,8 @@ class Official(BaseModel):
     phones: List[str] = []
     emails: List[str] = []
     urls: List[str] = []
+    start_date: Optional[str] = None
+    end_date: Optional[str] = None
     office: Office = None
     image: Optional[str] = None
     jurisdiction_ocdid: str
