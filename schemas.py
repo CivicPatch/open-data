@@ -15,7 +15,21 @@ class Jurisdiction(BaseModel):
 
 class Office(BaseModel):
     name: str
-    division_ocdid: Optional[str] = None
+    division_ocdid: Optional[str] = None 
+
+class Official(BaseModel):
+    name: str
+    phones: List[str] = []
+    emails: List[str] = []
+    urls: List[str] = []
+    start_date: Optional[str] = None
+    end_date: Optional[str] = None
+    office: Office = None
+    image: Optional[str] = None
+    jurisdiction_ocdid: str
+    cdn_image: Optional[str] = None
+    source_urls: List[str]
+    updated_at: str
 
     @field_validator("start_date")
     @classmethod
@@ -44,20 +58,6 @@ class Office(BaseModel):
         if not any(re.match(pattern, v) for pattern in patterns):
             raise ValueError("End date must be in format YYYY, YYYY-MM, or YYYY-MM-DD")
         return v
-
-class Official(BaseModel):
-    name: str
-    phones: List[str] = []
-    emails: List[str] = []
-    urls: List[str] = []
-    start_date: Optional[str] = None
-    end_date: Optional[str] = None
-    office: Office = None
-    image: Optional[str] = None
-    jurisdiction_ocdid: str
-    cdn_image: Optional[str] = None
-    source_urls: List[str]
-    updated_at: str
 
     @field_validator("phones")
     @classmethod
