@@ -6,11 +6,90 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 
 | State | CivicPatch Count | Scrapeable | Scraped | Scraped % | Google Count | Missing Places in CivicPatch | Missing Places in Google |
 |-------|------------------|------------|---------|-----------|--------------|-----------------------|-------------------|
-| co | 271 | 250 | 117 | 46.80% | 269 | 3 | 5 |
 | nj | 563 | 559 | 0 | 0.00% | 565 | 3 | 1 |
+| co | 271 | 250 | 117 | 46.80% | 269 | 3 | 5 |
 | wa | 281 | 244 | 0 | 0.00% | 281 | 1 | 1 |
 
 ## Missing OCD IDs by State
+
+### nj
+
+<details>
+<summary>missing entries</summary>
+
+#### Missing in CivicPatch:
+
+**Places:**
+- country:us/state:nj/place:princeton
+- country:us/state:nj/place:pine_valley
+- country:us/state:nj/county:sussex/place:walpack
+
+**Divisions:**
+- country:us/state:nj/county:atlantic/council_district:1
+- country:us/state:nj/county:atlantic/council_district:2
+- country:us/state:nj/county:atlantic/council_district:3
+- country:us/state:nj/county:atlantic/council_district:4
+- country:us/state:nj/county:atlantic/council_district:5
+- country:us/state:nj/county:essex/council_district:1
+- country:us/state:nj/county:essex/council_district:2
+- country:us/state:nj/county:essex/council_district:3
+- country:us/state:nj/county:essex/council_district:4
+- country:us/state:nj/county:essex/council_district:5
+- country:us/state:nj/county:hudson/council_district:1
+- country:us/state:nj/county:hudson/council_district:2
+- country:us/state:nj/county:hudson/council_district:3
+- country:us/state:nj/county:hudson/council_district:4
+- country:us/state:nj/county:hudson/council_district:5
+- country:us/state:nj/county:hudson/council_district:6
+- country:us/state:nj/county:hudson/council_district:7
+- country:us/state:nj/county:hudson/council_district:8
+- country:us/state:nj/county:hudson/council_district:9
+- country:us/state:nj/county:ocean/place:toms_river/ward:1
+- country:us/state:nj/county:ocean/place:toms_river/ward:2
+- country:us/state:nj/county:ocean/place:toms_river/ward:3
+- country:us/state:nj/county:ocean/place:toms_river/ward:4
+- country:us/state:nj/place:atlantic_city/ward:1
+- country:us/state:nj/place:atlantic_city/ward:2
+- country:us/state:nj/place:atlantic_city/ward:3
+- country:us/state:nj/place:atlantic_city/ward:4
+- country:us/state:nj/place:atlantic_city/ward:5
+- country:us/state:nj/place:atlantic_city/ward:6
+- country:us/state:nj/place:camden/ward:1
+- country:us/state:nj/place:camden/ward:2
+- country:us/state:nj/place:camden/ward:3
+- country:us/state:nj/place:camden/ward:4
+- country:us/state:nj/place:elizabeth/ward:1
+- country:us/state:nj/place:elizabeth/ward:2
+- country:us/state:nj/place:elizabeth/ward:3
+- country:us/state:nj/place:elizabeth/ward:4
+- country:us/state:nj/place:elizabeth/ward:5
+- country:us/state:nj/place:elizabeth/ward:6
+- country:us/state:nj/place:jersey_city/ward:a
+- country:us/state:nj/place:jersey_city/ward:b
+- country:us/state:nj/place:jersey_city/ward:c
+- country:us/state:nj/place:jersey_city/ward:d
+- country:us/state:nj/place:jersey_city/ward:e
+- country:us/state:nj/place:jersey_city/ward:f
+- country:us/state:nj/place:newark/ward:central
+- country:us/state:nj/place:newark/ward:east
+- country:us/state:nj/place:newark/ward:north
+- country:us/state:nj/place:newark/ward:south
+- country:us/state:nj/place:newark/ward:west
+- country:us/state:nj/place:paterson/ward:1
+- country:us/state:nj/place:paterson/ward:2
+- country:us/state:nj/place:paterson/ward:3
+- country:us/state:nj/place:paterson/ward:4
+- country:us/state:nj/place:paterson/ward:5
+- country:us/state:nj/place:paterson/ward:6
+#### Missing in Google:
+
+**Places:**
+- country:us/state:nj/place:
+
+**Divisions:**
+None
+
+</details>
 
 ### co
 
@@ -20,9 +99,9 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in CivicPatch:
 
 **Places:**
-- country:us/state:co/place:raymer_~new_raymer~
 - country:us/state:co/place:central_city
 - country:us/state:co/place:bonanza
+- country:us/state:co/place:raymer_~new_raymer~
 
 **Divisions:**
 - country:us/state:co/county:adams/council_district:1
@@ -190,11 +269,11 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in Google:
 
 **Places:**
-- country:us/state:co/place:broomfield
 - country:us/state:co/place:raymer_(new_raymer)
-- country:us/state:co/place:denver
 - country:us/state:co/place:keystone
 - country:us/state:co/place:central
+- country:us/state:co/place:denver
+- country:us/state:co/place:broomfield
 
 **Divisions:**
 - country:us/state:co/place:alamosa/ward:1
@@ -331,85 +410,6 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 - country:us/state:co/place:windsor/council_district:4
 - country:us/state:co/place:windsor/council_district:5
 - country:us/state:co/place:windsor/council_district:6
-
-</details>
-
-### nj
-
-<details>
-<summary>missing entries</summary>
-
-#### Missing in CivicPatch:
-
-**Places:**
-- country:us/state:nj/place:pine_valley
-- country:us/state:nj/county:sussex/place:walpack
-- country:us/state:nj/place:princeton
-
-**Divisions:**
-- country:us/state:nj/county:atlantic/council_district:1
-- country:us/state:nj/county:atlantic/council_district:2
-- country:us/state:nj/county:atlantic/council_district:3
-- country:us/state:nj/county:atlantic/council_district:4
-- country:us/state:nj/county:atlantic/council_district:5
-- country:us/state:nj/county:essex/council_district:1
-- country:us/state:nj/county:essex/council_district:2
-- country:us/state:nj/county:essex/council_district:3
-- country:us/state:nj/county:essex/council_district:4
-- country:us/state:nj/county:essex/council_district:5
-- country:us/state:nj/county:hudson/council_district:1
-- country:us/state:nj/county:hudson/council_district:2
-- country:us/state:nj/county:hudson/council_district:3
-- country:us/state:nj/county:hudson/council_district:4
-- country:us/state:nj/county:hudson/council_district:5
-- country:us/state:nj/county:hudson/council_district:6
-- country:us/state:nj/county:hudson/council_district:7
-- country:us/state:nj/county:hudson/council_district:8
-- country:us/state:nj/county:hudson/council_district:9
-- country:us/state:nj/county:ocean/place:toms_river/ward:1
-- country:us/state:nj/county:ocean/place:toms_river/ward:2
-- country:us/state:nj/county:ocean/place:toms_river/ward:3
-- country:us/state:nj/county:ocean/place:toms_river/ward:4
-- country:us/state:nj/place:atlantic_city/ward:1
-- country:us/state:nj/place:atlantic_city/ward:2
-- country:us/state:nj/place:atlantic_city/ward:3
-- country:us/state:nj/place:atlantic_city/ward:4
-- country:us/state:nj/place:atlantic_city/ward:5
-- country:us/state:nj/place:atlantic_city/ward:6
-- country:us/state:nj/place:camden/ward:1
-- country:us/state:nj/place:camden/ward:2
-- country:us/state:nj/place:camden/ward:3
-- country:us/state:nj/place:camden/ward:4
-- country:us/state:nj/place:elizabeth/ward:1
-- country:us/state:nj/place:elizabeth/ward:2
-- country:us/state:nj/place:elizabeth/ward:3
-- country:us/state:nj/place:elizabeth/ward:4
-- country:us/state:nj/place:elizabeth/ward:5
-- country:us/state:nj/place:elizabeth/ward:6
-- country:us/state:nj/place:jersey_city/ward:a
-- country:us/state:nj/place:jersey_city/ward:b
-- country:us/state:nj/place:jersey_city/ward:c
-- country:us/state:nj/place:jersey_city/ward:d
-- country:us/state:nj/place:jersey_city/ward:e
-- country:us/state:nj/place:jersey_city/ward:f
-- country:us/state:nj/place:newark/ward:central
-- country:us/state:nj/place:newark/ward:east
-- country:us/state:nj/place:newark/ward:north
-- country:us/state:nj/place:newark/ward:south
-- country:us/state:nj/place:newark/ward:west
-- country:us/state:nj/place:paterson/ward:1
-- country:us/state:nj/place:paterson/ward:2
-- country:us/state:nj/place:paterson/ward:3
-- country:us/state:nj/place:paterson/ward:4
-- country:us/state:nj/place:paterson/ward:5
-- country:us/state:nj/place:paterson/ward:6
-#### Missing in Google:
-
-**Places:**
-- country:us/state:nj/place:
-
-**Divisions:**
-None
 
 </details>
 
