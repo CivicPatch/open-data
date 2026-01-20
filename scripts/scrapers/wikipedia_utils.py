@@ -31,10 +31,14 @@ def get_entries(title, table_index: int, rows_to_skip: int, entry_column: int) -
             continue
 
         if entry:
-            entries_by_geoid[entry["geoid"]] = entry
+            if entry["geoid"]:
+                entries_by_geoid[entry["geoid"]] = entry
+            else:
+                warnings.append(f"No GEOID found in infobox for {entry}")
         else:
             warnings.append(f"Failed to retrieve entry for {wiki_url}")
 
+    print("Warnings found: ", warnings)
     return entries_by_geoid, warnings
 
 def get_entry_infobox(wiki_url) -> Tuple[Dict[str, Any], List[str]]:
@@ -83,6 +87,7 @@ def get_entry_infobox(wiki_url) -> Tuple[Dict[str, Any], List[str]]:
                             if link and link.has_attr("href"):
                                 official_website = link["href"]
             return {
+                "wiki_url": get_wiki_url(wiki_url),
                 "geoid": normalize_geoid(geoid),
                 "url": official_website
             }, []
@@ -96,6 +101,13 @@ def get_parse_url(wiki_url: str):
         title = title[:-1]
     parse_url = f"https://en.wikipedia.org/w/api.php?action=parse&page={title}&format=json"
     return parse_url
+
+def get_wiki_url(wiki_url: str):
+    title = wiki_url.split("/")[-1]
+    if title.endswith("/"):
+        title = title[:-1]
+    full_url = f"https://en.wikipedia.org/wiki/{title}"
+    return full_url
 
 
 def normalize_td(td_element):
