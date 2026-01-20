@@ -14,6 +14,7 @@ from schemas import Jurisdiction
 from scripts.scrapers import co as co_scraper
 from scripts.scrapers import nj as nj_scraper
 from scripts.scrapers import wa as wa_scraper
+from scripts.scrapers import tx as tx_scraper
 
 from scripts.github_actions.update_jurisdiction_metadata import create_update_progress_file
 
@@ -26,6 +27,7 @@ state_configs = {
         "scraper": co_scraper,
     },
     "nj": {"fips": "34", "pull_from_census": ["places", "county_subdivisions"], "scraper": nj_scraper},
+    "tx": {"fips": "48", "pull_from_census": ["places"], "scraper": tx_scraper},
     "wa": {"fips": "53", "pull_from_census": ["places"], "scraper": wa_scraper},
 }
 
@@ -387,3 +389,4 @@ if __name__ == "__main__":
 
     state_arg = sys.argv[1]
     pull_jurisdiction_data(state_arg)
+    create_update_progress_file(state_arg)
