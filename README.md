@@ -20,9 +20,9 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in CivicPatch:
 
 **Places:**
-- country:us/state:nj/place:pine_valley
-- country:us/state:nj/county:sussex/place:walpack
 - country:us/state:nj/place:princeton
+- country:us/state:nj/county:sussex/place:walpack
+- country:us/state:nj/place:pine_valley
 
 **Divisions:**
 - country:us/state:nj/county:atlantic/council_district:1
@@ -99,9 +99,9 @@ None
 #### Missing in CivicPatch:
 
 **Places:**
-- country:us/state:co/place:central_city
 - country:us/state:co/place:raymer_~new_raymer~
 - country:us/state:co/place:bonanza
+- country:us/state:co/place:central_city
 
 **Divisions:**
 - country:us/state:co/county:adams/council_district:1
@@ -269,11 +269,11 @@ None
 #### Missing in Google:
 
 **Places:**
+- country:us/state:co/place:central
 - country:us/state:co/place:denver
+- country:us/state:co/place:broomfield
 - country:us/state:co/place:keystone
 - country:us/state:co/place:raymer_(new_raymer)
-- country:us/state:co/place:broomfield
-- country:us/state:co/place:central
 
 **Divisions:**
 - country:us/state:co/place:alamosa/ward:1
