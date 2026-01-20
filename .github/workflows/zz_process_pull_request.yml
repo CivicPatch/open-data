@@ -165,10 +165,10 @@ jobs:
             gh pr review $PR_NUMBER --approve -b "$COMMENT"
           fi
 
-      - name: Associate pull request url with job request id (if environment variables are set)
+      - name: Associate pull request url with job request id
         env: 
-          API_CIVICPATCH_ORG_TOKEN: $${{ secrets.API_CIVICPATCH_ORG_TOKEN }}
-          API_CIVICPATCH_ORG_URL: $${{ vars.API_CIVICPATCH_ORG_URL }}
+          API_CIVICPATCH_ORG_TOKEN: ${{ secrets.API_CIVICPATCH_ORG_TOKEN }}
+          API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
           REQUEST_ID: ${{ github.event.inputs.request_id }}
         run: |
           if [ -n "$API_CIVICPATCH_ORG_TOKEN" ] && [ -n "$API_CIVICPATCH_ORG_URL" ]; then
