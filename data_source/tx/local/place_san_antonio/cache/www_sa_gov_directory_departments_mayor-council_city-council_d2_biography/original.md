@@ -1,0 +1,240 @@
+Jalen McKee-Rodriguez - City of San Antonio
+
+
+
+[Skip to main content](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography#main-content)
+
+opens in new tab or window
+
+![Image fade background image](https://www.sa.gov/files/oc-templates/00000000-0000-0000-0000-000000000000/4324767c-d12a-44cb-8189-d2e4aba0c416/v/1336/sanantonio-skyline-2022-11-8.jpg?t=638978989122273442)
+
+![City of San Antonio - Logo](https://www.sa.gov/files/templates/00000000-0000-0000-0000-000000000000/4324767c-d12a-44cb-8189-d2e4aba0c416/v/1335/print-header.png)
+
+![QR code to access this page](data:image/png;base64,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)
+
+Quick Links:
+
+Quick Links
+
+* [Official website of the City of San Antonio](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography#)
+
+[English Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=en-US)[español (Spanish) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=es)[عربى (Arabic) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=ar) [中文 (Chinese-Simplified) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=zh-CN)[繁體中文 (Chinese-Traditional) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=zh-TW)[Tagalog (Filipino) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=tl)[français (French) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=fr)[Deutsch (German) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=de)[ગુજરાતી (Gujarati) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=gu)[日本語 (Japanese) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=ja)[한국어 (Korean) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=ko)[پښتو (Pashto) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=ps)[فارسی (Farsi / Persian) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=fa)[kiSwahili (Swahili) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=sw)[தமிழ் (Tamil) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=ta)[తెలుగు (Telugu)  Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=te)[اُردُو (Urdu)  Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=ur)[Tiếng Việt (Vietnamese) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=vi)
+
+English
+
+ is your current preferred language.
+
+* [español (Spanish) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=es)
+* [عربى (Arabic) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=ar)
+* [中文 (Chinese-Simplified) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=zh-CN)
+* [繁體中文 (Chinese-Traditional) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=zh-TW)
+* [Tagalog (Filipino) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=tl)
+* [français (French) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=fr)
+* [Deutsch (German) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=de)
+* [ગુજરાતી (Gujarati) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=gu)
+* [日本語 (Japanese) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=ja)
+* [한국어 (Korean) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=ko)
+* [پښتو (Pashto) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=ps)
+* [فارسی (Farsi / Persian) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=fa)
+* [kiSwahili (Swahili) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=sw)
+* [தமிழ் (Tamil) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=ta)
+* [తెలుగు (Telugu)  Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=te)
+* [اُردُو (Urdu)  Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=ur)
+* [Tiếng Việt (Vietnamese) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography?oc_lang=vi)
+
+[City of San Antonio - Home - Logo](https://www.sa.gov/Home)
+
+Open Search
+
+Menu
+
+* [Community](https://www.sa.gov/Community)
+  Sub-menu
+  + [Animals, Pets & Wildlife](https://www.sa.gov/Community/Animals-Pets-Wildlife)
+  + [Arts, Culture, & Entertainment](https://www.sa.gov/Community/Arts-Culture-Entertainment)
+  + [Employment & Training](https://www.sa.gov/Community/Employment-Training)
+  + [Garbage, Recycling & Graffiti](https://www.sa.gov/Community/Garbage-Recycling-Graffiti)
+  + [Health & Social Services](https://www.sa.gov/Community/Health-Social-Services)
+  + [Housing & Neighborhoods](https://www.sa.gov/Community/Housing-Neighborhoods)
+  + [Outdoor, Recreation & Activities](https://www.sa.gov/Community/Outdoor-Recreation-Activities)
+  + [Public Safety & Justice](https://www.sa.gov/Community/Public-Safety-Justice)
+  + [Residential Permits & Property](https://www.sa.gov/Community/Residential-Permits-Property)
+  + [Streets & Parking](https://www.sa.gov/Community/Streets-Parking)
+  + [Volunteer](https://www.sa.gov/Community/Volunteer)
+* [Business](https://www.sa.gov/Business)
+  Sub-menu
+  + [Business with the City](https://www.sa.gov/Business/Business-with-the-City)
+  + [Construction & Development](https://www.sa.gov/Business/Construction-Development)
+  + [Permits & Licensing](https://www.sa.gov/Business/Permits-Licensing)
+  + [Public Streets & Infrastructure](https://www.sa.gov/Business/Public-Streets-Infrastructure)
+* [Government](https://www.sa.gov/Government)
+  Sub-menu
+  + [Departments](https://www.sa.gov/Government/Departments)
+  + [City Holidays & Closures](https://www.sa.gov/Government/Closures)
+  + [Council & Committee Meeting Agendas](https://www.sa.gov/Government/Agendas)
+  + [Emergency/Crisis Response](https://www.sa.gov/Government/Emergency-Crisis-Response)
+  + [Get Involved - Speak Up](https://www.sa.gov/Government/Speak-Up)
+  + [Officials: Elected & Appointed](https://www.sa.gov/Government/Officials)
+  + [Records & Data](https://www.sa.gov/Government/Records-Data)
+* [Directory](https://www.sa.gov/Directory)
+  Sub-menu
+  + [Department Newsletters](https://www.sa.gov/Directory/Newsletters)
+  + [Departments](https://www.sa.gov/Directory/Departments)
+  + [Events](https://www.sa.gov/Directory/Events-Directory)
+  + [Initiatives](https://www.sa.gov/Directory/Initiatives)
+  + [Mobile Apps](https://www.sa.gov/Directory/Mobile-Apps)
+  + [News Releases](https://www.sa.gov/Directory/News-Releases)
+  + [Online Payments](https://www.sa.gov/Directory/Online-Payments)
+  + [Services](https://www.sa.gov/Directory/Services)
+  + [Venues & Facilities Reservations](https://www.sa.gov/Directory/Venues-Facilities-Reservations)
+
+Select the Escape key to close the menu. Focus will then be set to the first menu item.
+
+Search
+
+You Are Here : 
+
+
+[Home](https://www.sa.gov/Home)
+/
+[Directory](https://www.sa.gov/Directory)/
+[Departments](https://www.sa.gov/Directory/Departments)
+/
+
+[Mayor & City Council](https://www.sa.gov/Directory/Departments/Mayor-Council)
+/
+
+[City Council](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council)
+/
+
+[District 2](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2)
+/
+Jalen McKee-Rodriguez
+
+[District 2](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2)
+
+Open side Menu
+
+* [Jalen McKee-Rodriguez](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography)
+* [Staff Directory](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Staff)
+* [News & Events](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/News)
+  Sub-menu
+  + [Newsletters](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/News/Newsletters)
+  + [News Releases](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/News/News-Releases)
+  + [Events](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/News/Events)
+* [Resources](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Resources)
+* [Contact & Connect](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Contact)
+
+Jalen McKee-Rodriguez
+=====================
+
+![City Council District 2 Councilmember Jalen McKee-Rodriguez](https://www.sa.gov/files/assets/main/v/5/council/images/d2headshot.jpg) Jalen McKee-Rodriguez was elected to serve District 2 of San Antonio on June 5, 2021 and sworn in on June 15, 2021. He serves as a fierce advocate for equitable investment in our City’s infrastructure, increased focus on the social determinants of health, accountability and transparency in City operations, and the re-imagination of public safety to prevent crime. When elected, McKee-Rodriguez became the first openly-gay man elected to City Council in San Antonio, and the first openly-gay Black man elected to any seat in Texas.
+
+McKee-Rodriguez’s team takes an organizer’s approach to governance. You will commonly see him with his team block walking, hosting open office hours at local businesses, texting and calling constituents, conducting ride-alongs with city departments in addition to community clean-ups. and providing direct assistance like meals and supplies to families in need.
+
+Born on February 26, 1995 in Knoxville, TN, Jalen is the eldest son of two Veterans of the United States Army. After graduating from Fort Knox High School in Fort Knox, KY, Jalen moved to San Antonio to attend the University of Texas at San Antonio, where he earned a B.A. in Communication, followed by an M.Ed. in Educational Leadership and Policy Studies. During his time at UTSA, he served as president of Omega Delta Phi, Executive Director of the Council of Student Organizations, President of the Multicultural Greek Council, and performed as Rowdy the Roadrunner.
+
+Following his collegiate career, he volunteered full-time as an AmeriCorps member with City Year at Davis Middle School before becoming a Math Teacher at Sam Houston High School and, later, Madison High School. Jalen McKee-Rodriguez has brought a fiery (and colorful) brand of advocacy to Council, where he has successfully advocated for a street lighting index paired with record funding, a change to the City’s Equity Lens for infrastructure funding, a Civil Rights Coordinator in the department of Diversity, Equity, and Inclusion, additional resources for Animal Care Services, and funding for Home Repair and Housing Assistance programs. His work on these issues has garnered the attention of public figures like Taraji P. Henson and Nicki Minaj.
+
+Jalen and his husband Nathan married in April of 2018 and they have two cats and a dog: Cairo, Rome, and London. Jalen is a certified math teacher (grades 4-8 and 7-12), licensed bartender, and Zumba®️ instructor.
+
+Council Committee Assignments
+-----------------------------
+
+* [Municipal Court Advisory](https://www.sanantonio.gov/Council/Council-Committees#213331576-municipal-court-advisory) (Chair)
+* [Public Safety](https://www.sanantonio.gov/Council/Council-Committees#213331036-public-safety)
+* [Transportation and Infrastructure](https://www.sanantonio.gov/Council/Council-Committees#213331042-transportation-and-infrastructure)
+
+Requests
+--------
+
+* [Request a Meeting](https://webapp1.sanantonio.gov/IQMeetingRequest/?view=meeting&type=district2)
+* [Invite to an Event](https://webapp1.sanantonio.gov/IQMeetingRequest/?view=event&type=district2)
+
+Contact
+-------
+
+### Staff Directory
+
+[Contact Information](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Staff)
+
+### Email
+
+[Contact Form](https://us.openforms.com/Form/786b72cb-3a6a-4a2f-8ec9-f2d38a9a72a6)
+
+### Mailing Address
+
+P.O. Box 839966  
+San Antonio, TX 78283
+
+### Downtown Office
+
+City Hall  
+100 Military Plaza  
+San Antonio, TX 78205  
+[Directions](https://goo.gl/maps/tkTZMAqxjHMpxwix5)
+
+### Claude Black Community Center Field Office
+
+2805 E. Commerce  
+San Antonio, TX 78203  
+[Directions](https://goo.gl/maps/x8pC2cKjMxwcTuyj9)
+
+**Phone:** [210-207-0950](tel:2102070950)
+
+### Rittiman Field Office
+
+4351 Rittiman Road  
+San Antonio, TX 78218  
+[Directions](https://goo.gl/maps/Mas5wGQBh3oghRBc9)
+
+**Phone:** [210-207-0970](tel:2102070970)
+
+Get Social
+----------
+
+* [Facebook](https://www.facebook.com/COSACD2)
+* [X](https://twitter.com/COSA_CD2)
+* [Instagram](https://www.instagram.com/cosa_cd2/)
+* [Nextdoor](https://nextdoor.com/agency-detail/tx/san-antonio/san-antonio-city-council/?i=bdzbbsgjkhzrqjrcthdc)
+
+Share
+
+* [Facebook](https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.sa.gov%2fDirectory%2fDepartments%2fMayor-Council%2fCity-Council%2fD2%2fBiography)
+* [X](https://twitter.com/share?url=https%3a%2f%2fwww.sa.gov%2fDirectory%2fDepartments%2fMayor-Council%2fCity-Council%2fD2%2fBiography)
+* [Email](mailto:?Body=https%3a%2f%2fwww.sa.gov%2fDirectory%2fDepartments%2fMayor-Council%2fCity-Council%2fD2%2fBiography)
+* [Print](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography#)
+
+[Back to top](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography#body-top)
+
+
+
+### Contact Us
+
+* Customer Service [3-1-1](tel:311) or [210-207-6000](tel:2102076000)
+* [Email Us](https://www.sa.gov/Site-Footer/Contact-Us)
+* [Visit Us](https://www.sa.gov/Site-Footer/Contact-Us#visit)
+
+### Get Social
+
+* [Visit us on Facebook](https://www.facebook.com/cosagov/)
+* [Follow us on X](https://twitter.com/COSAGOV)
+* [Follow us on Instagram](https://www.instagram.com/cosagov/)
+* [Visit us on YouTube](https://www.youtube.com/user/COSAGOV)
+
+### Visit Other San Antonio Sites
+
+* [San Antonio Public Library](https://www.mysapl.org/)
+* [San Antonio International Airport](https://flysanantonio.com/)
+* [Henry B. González Convention Center](https://www.sahbgcc.com/)
+
+### Share Your Feedback
+
+[Learn more about this website.  
+![](https://www.sa.gov/files/sharedassets/main/v/4/about-website-20221222.png?w=380&h=226)](https://www.sa.gov/About-this-Website)
+
+[Careers](https://www.sa.gov/Directory/Initiatives/Join-Our-Team) | [Non-Discrimination Ordinance](https://www.sa.gov/Directory/Departments/COA/Civil-Rights/Submit-a-Discrimination-Complaint) | [ADA Compliance](https://www.sa.gov/Directory/Departments/COA/Disability-Access) | [Open Records](https://www.sa.gov/Directory/Departments/CE/Open-Government-Request) | [Contact Us](https://www.sa.gov/Site-Footer/Contact-Us) | [Privacy Policy & Disclaimer](https://www.sa.gov/Disclaimer) | [Employee Access](https://www.sanantonio.gov/EASI)
+
+© 2026 City of San Antonio
+
+Ready

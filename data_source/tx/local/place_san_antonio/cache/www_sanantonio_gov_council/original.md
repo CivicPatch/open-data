@@ -1,0 +1,301 @@
+Mayor & City Council - City of San Antonio
+
+
+
+[Skip to main content](https://www.sa.gov/Directory/Departments/Mayor-Council#main-content)
+
+opens in new tab or window
+
+![Image fade background image](https://www.sa.gov/files/oc-templates/00000000-0000-0000-0000-000000000000/4324767c-d12a-44cb-8189-d2e4aba0c416/v/1336/sanantonio-skyline-2022-11-8.jpg?t=638978989122273442)
+
+![City of San Antonio - Logo](https://www.sa.gov/files/templates/00000000-0000-0000-0000-000000000000/4324767c-d12a-44cb-8189-d2e4aba0c416/v/1335/print-header.png)
+
+![QR code to access this page](data:image/png;base64,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)
+
+Quick Links:
+
+Quick Links
+
+* [Official website of the City of San Antonio](https://www.sa.gov/Directory/Departments/Mayor-Council#)
+
+[English Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=en-US)[español (Spanish) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=es)[عربى (Arabic) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=ar) [中文 (Chinese-Simplified) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=zh-CN)[繁體中文 (Chinese-Traditional) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=zh-TW)[Tagalog (Filipino) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=tl)[français (French) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=fr)[Deutsch (German) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=de)[ગુજરાતી (Gujarati) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=gu)[日本語 (Japanese) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=ja)[한국어 (Korean) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=ko)[پښتو (Pashto) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=ps)[فارسی (Farsi / Persian) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=fa)[kiSwahili (Swahili) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=sw)[தமிழ் (Tamil) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=ta)[తెలుగు (Telugu)  Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=te)[اُردُو (Urdu)  Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=ur)[Tiếng Việt (Vietnamese) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=vi)
+
+English
+
+ is your current preferred language.
+
+* [español (Spanish) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=es)
+* [عربى (Arabic) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=ar)
+* [中文 (Chinese-Simplified) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=zh-CN)
+* [繁體中文 (Chinese-Traditional) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=zh-TW)
+* [Tagalog (Filipino) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=tl)
+* [français (French) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=fr)
+* [Deutsch (German) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=de)
+* [ગુજરાતી (Gujarati) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=gu)
+* [日本語 (Japanese) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=ja)
+* [한국어 (Korean) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=ko)
+* [پښتو (Pashto) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=ps)
+* [فارسی (Farsi / Persian) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=fa)
+* [kiSwahili (Swahili) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=sw)
+* [தமிழ் (Tamil) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=ta)
+* [తెలుగు (Telugu)  Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=te)
+* [اُردُو (Urdu)  Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=ur)
+* [Tiếng Việt (Vietnamese) Select this as your preferred language](https://www.sa.gov/Directory/Departments/Mayor-Council?oc_lang=vi)
+
+[City of San Antonio - Home - Logo](https://www.sa.gov/Home)
+
+Open Search
+
+Menu
+
+* [Community](https://www.sa.gov/Community)
+  Sub-menu
+  + [Animals, Pets & Wildlife](https://www.sa.gov/Community/Animals-Pets-Wildlife)
+  + [Arts, Culture, & Entertainment](https://www.sa.gov/Community/Arts-Culture-Entertainment)
+  + [Employment & Training](https://www.sa.gov/Community/Employment-Training)
+  + [Garbage, Recycling & Graffiti](https://www.sa.gov/Community/Garbage-Recycling-Graffiti)
+  + [Health & Social Services](https://www.sa.gov/Community/Health-Social-Services)
+  + [Housing & Neighborhoods](https://www.sa.gov/Community/Housing-Neighborhoods)
+  + [Outdoor, Recreation & Activities](https://www.sa.gov/Community/Outdoor-Recreation-Activities)
+  + [Public Safety & Justice](https://www.sa.gov/Community/Public-Safety-Justice)
+  + [Residential Permits & Property](https://www.sa.gov/Community/Residential-Permits-Property)
+  + [Streets & Parking](https://www.sa.gov/Community/Streets-Parking)
+  + [Volunteer](https://www.sa.gov/Community/Volunteer)
+* [Business](https://www.sa.gov/Business)
+  Sub-menu
+  + [Business with the City](https://www.sa.gov/Business/Business-with-the-City)
+  + [Construction & Development](https://www.sa.gov/Business/Construction-Development)
+  + [Permits & Licensing](https://www.sa.gov/Business/Permits-Licensing)
+  + [Public Streets & Infrastructure](https://www.sa.gov/Business/Public-Streets-Infrastructure)
+* [Government](https://www.sa.gov/Government)
+  Sub-menu
+  + [Departments](https://www.sa.gov/Government/Departments)
+  + [City Holidays & Closures](https://www.sa.gov/Government/Closures)
+  + [Council & Committee Meeting Agendas](https://www.sa.gov/Government/Agendas)
+  + [Emergency/Crisis Response](https://www.sa.gov/Government/Emergency-Crisis-Response)
+  + [Get Involved - Speak Up](https://www.sa.gov/Government/Speak-Up)
+  + [Officials: Elected & Appointed](https://www.sa.gov/Government/Officials)
+  + [Records & Data](https://www.sa.gov/Government/Records-Data)
+* [Directory](https://www.sa.gov/Directory)
+  Sub-menu
+  + [Department Newsletters](https://www.sa.gov/Directory/Newsletters)
+  + [Departments](https://www.sa.gov/Directory/Departments)
+  + [Events](https://www.sa.gov/Directory/Events-Directory)
+  + [Initiatives](https://www.sa.gov/Directory/Initiatives)
+  + [Mobile Apps](https://www.sa.gov/Directory/Mobile-Apps)
+  + [News Releases](https://www.sa.gov/Directory/News-Releases)
+  + [Online Payments](https://www.sa.gov/Directory/Online-Payments)
+  + [Services](https://www.sa.gov/Directory/Services)
+  + [Venues & Facilities Reservations](https://www.sa.gov/Directory/Venues-Facilities-Reservations)
+
+Select the Escape key to close the menu. Focus will then be set to the first menu item.
+
+Search
+
+You Are Here : 
+
+
+[Home](https://www.sa.gov/Home)
+/
+[Directory](https://www.sa.gov/Directory)/
+[Departments](https://www.sa.gov/Directory/Departments)
+/
+Mayor & City Council
+
+[Mayor & City Council](https://www.sa.gov/Directory/Departments/Mayor-Council)
+
+Open side Menu
+
+* [About](https://www.sa.gov/Directory/Departments/Mayor-Council/About)
+  Sub-menu
+  + [Staff Directory](https://www.sa.gov/Directory/Departments/Mayor-Council/About/Staff)
+  + [Assistant to Council, Emily McGinn](https://www.sa.gov/Directory/Departments/Mayor-Council/About/Assistant)
+* [Mayor](https://www.sa.gov/Directory/Departments/Mayor-Council/Mayor)
+  Sub-menu
+  + [Gina Ortiz Jones](https://www.sa.gov/Directory/Departments/Mayor-Council/Mayor/Biography)
+  + [Staff Directory](https://www.sa.gov/Directory/Departments/Mayor-Council/Mayor/Staff)
+  + [News Releases](https://www.sa.gov/Directory/Departments/Mayor-Council/Mayor/News-Releases)
+  + [Programs & Initiatives](https://www.sa.gov/Directory/Departments/Mayor-Council/Mayor/Initiatives)
+  + [Resources](https://www.sa.gov/Directory/Departments/Mayor-Council/Mayor/Resources)
+  + [Contact & Connect](https://www.sa.gov/Directory/Departments/Mayor-Council/Mayor/Contact)
+* [Council Districts Map](https://www.sa.gov/Directory/Departments/Mayor-Council/Council-Districts-Map)
+* [City Council](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council)
+  Sub-menu
+  + [District 1](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D1)Sub-menu
+    - [Sukh Kaur](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D1/Biography)
+    - [Staff Directory](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D1/Staff)
+    - [News & Events](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D1/News)
+    - [Resources](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D1/Resources)
+    - [Contact & Connect](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D1/Contact)
+  + [District 2](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2)Sub-menu
+    - [Jalen McKee-Rodriguez](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Biography)
+    - [Staff Directory](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Staff)
+    - [News & Events](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/News)
+    - [Resources](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Resources)
+    - [Contact & Connect](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D2/Contact)
+  + [District 3](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D3)Sub-menu
+    - [Phyllis Viagran](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D3/Biography)
+    - [Staff Directory](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D3/Staff)
+    - [News & Events](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D3/News)
+    - [Programs & Initiatives](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D3/Initiatives)
+    - [Resources](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D3/Resources)
+    - [Contact & Connect](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D3/Contact)
+  + [District 4](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D4)Sub-menu
+    - [Edward Mungia](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D4/Biography)
+    - [Staff Directory](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D4/Staff)
+    - [News & Events](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D4/News)
+    - [Resources](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D4/Resources)
+    - [Contact & Connect](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D4/Contact)
+  + [District 5](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D5)Sub-menu
+    - [Teri Castillo](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D5/Biography)
+    - [Staff Directory](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D5/Staff)
+    - [News & Events](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D5/News)
+    - [Resources](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D5/Resources)
+    - [Contact & Connect](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D5/Contact)
+  + [District 6](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D6)Sub-menu
+    - [Ric Galvan](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D6/Biography)
+    - [Staff Directory](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D6/Staff)
+    - [News & Events](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D6/News-Events)
+    - [Resources](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D6/Resources)
+    - [Contact & Connect](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D6/Contact)
+  + [District 7](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D7)Sub-menu
+    - [Marina Alderete Gavito](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D7/Biography)
+    - [Staff Directory](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D7/Staff)
+    - [News & Events](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D7/News)
+    - [Resources](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D7/Resources)
+    - [Contact & Connect](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D7/Contact)
+  + [District 8](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D8)Sub-menu
+    - [Ivalis Meza Gonzalez](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D8/Biography)
+    - [Staff Directory](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D8/Staff)
+    - [News Releases](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D8/News-Releases)
+    - [Resources](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D8/Resources)
+    - [Contact & Connect](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D8/Contact)
+    - [Events](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D8/Events)
+  + [District 9](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D9)Sub-menu
+    - [Misty Spears](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D9/Biography)
+    - [Staff Directory](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D9/Staff)
+    - [News & Events](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D9/News-Events)
+    - [Resources](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D9/Resources)
+    - [Contact & Connect](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D9/Contact)
+  + [District 10](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D10)Sub-menu
+    - [Marc Whyte](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D10/Biography)
+    - [Staff Directory](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D10/Staff)
+    - [News & Events](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D10/News)
+    - [Resources](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D10/Resources)
+    - [Contact & Connect](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council/D10/Contact)
+* [Meetings & Agendas](https://www.sa.gov/Directory/Departments/Mayor-Council/Meetings)
+  Sub-menu
+  + [Council Meeting Process](https://www.sa.gov/Directory/Departments/Mayor-Council/Meetings/Process)
+  + [Meeting Participation](https://www.sa.gov/Directory/Departments/Mayor-Council/Meetings/Participation)Sub-menu
+    - [Parking & Transportation Assistance](https://www.sa.gov/Directory/Departments/Mayor-Council/Meetings/Participation/Parking)
+* [Committees](https://www.sa.gov/Directory/Departments/Mayor-Council/Committees)
+* [City Council Project Fund (CCPF)](https://www.sa.gov/Directory/Departments/Mayor-Council/CCPF)
+  Sub-menu
+  + [CCPF Application](https://www.sa.gov/Directory/Departments/Mayor-Council/CCPF/Application)
+
+Mayor & City Council
+====================
+
+Trending
+--------
+
+* [Find My Councilmember](https://www.sanantonio.gov/council/find-my-council-member)
+* [City Council](https://www.sa.gov/Directory/Departments/Mayor-Council/City-Council)
+* [Meetings & Agendas](https://www.sa.gov/Directory/Departments/Mayor-Council/Meetings)
+* [Mayor](https://www.sa.gov/Directory/Departments/Mayor-Council/Mayor)
+
+Featured
+--------
+
+[![100 dollar bills](https://www.sa.gov/files/assets/main/v/2/council/images/ccpf.jpg?dimension=featuredimage&w=1140)
+
+### City Council Project Funds (CCPF)
+
+Qualifying district/community events, education or youth or senior activities can apply for funding.](https://www.sa.gov/Directory/Departments/Mayor-Council/CCPF)
+
+[![](https://www.sa.gov/files/assets/main/v/1/council/images/agendas.jpg?w=768&h=506)
+
+### City Council Agendas
+
+View meetings and agendas on the SASpeakUp portal.](https://www.saspeakup.com/DN30446)
+
+[![](https://www.sa.gov/files/assets/main/v/3/mayor/other-elected-officials.jpg?w=768&h=506)
+
+### Other Elected Officials
+
+Find your City, County, School Board, State and Other Representatives.](https://www.bexar.org/2231/Who-represents-me-Search)
+
+Contact
+-------
+
+### Downtown Office
+
+City Hall  
+100 Military Plaza  
+San Antonio, TX 78205  
+[Directions](https://goo.gl/maps/RwtN5fqGXiZ6t4BN9)
+
+### Mailing Address
+
+P.O. Box 839966  
+San Antonio, TX 78283
+
+### Phone
+
+Mayor's Office
+:   [210-207-7107](tel:2102077107)
+
+City Council Office
+:   [210-207-7040](tel:2102077040)
+
+### Hours
+
+**Monday - Friday**: 7:45 a.m. - 4:30 p.m.
+
+Get Social
+----------
+
+* [Facebook](https://www.facebook.com/pages/san-antonio-tx/city-of-san-antonio/161177032727)
+* [X](https://X.com/COSAGOV)
+* [YouTube](https://www.youtube.com/user/COSAGOV)
+
+Share
+
+* [Facebook](https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.sa.gov%2fDirectory%2fDepartments%2fMayor-Council)
+* [X](https://twitter.com/share?url=https%3a%2f%2fwww.sa.gov%2fDirectory%2fDepartments%2fMayor-Council)
+* [Email](mailto:?Body=https%3a%2f%2fwww.sa.gov%2fDirectory%2fDepartments%2fMayor-Council)
+* [Print](https://www.sa.gov/Directory/Departments/Mayor-Council#)
+
+[Back to top](https://www.sa.gov/Directory/Departments/Mayor-Council#body-top)
+
+
+
+### Contact Us
+
+* Customer Service [3-1-1](tel:311) or [210-207-6000](tel:2102076000)
+* [Email Us](https://www.sa.gov/Site-Footer/Contact-Us)
+* [Visit Us](https://www.sa.gov/Site-Footer/Contact-Us#visit)
+
+### Get Social
+
+* [Visit us on Facebook](https://www.facebook.com/cosagov/)
+* [Follow us on X](https://twitter.com/COSAGOV)
+* [Follow us on Instagram](https://www.instagram.com/cosagov/)
+* [Visit us on YouTube](https://www.youtube.com/user/COSAGOV)
+
+### Visit Other San Antonio Sites
+
+* [San Antonio Public Library](https://www.mysapl.org/)
+* [San Antonio International Airport](https://flysanantonio.com/)
+* [Henry B. González Convention Center](https://www.sahbgcc.com/)
+
+### Share Your Feedback
+
+[Learn more about this website.  
+![](https://www.sa.gov/files/sharedassets/main/v/4/about-website-20221222.png?w=380&h=226)](https://www.sa.gov/About-this-Website)
+
+[Careers](https://www.sa.gov/Directory/Initiatives/Join-Our-Team) | [Non-Discrimination Ordinance](https://www.sa.gov/Directory/Departments/COA/Civil-Rights/Submit-a-Discrimination-Complaint) | [ADA Compliance](https://www.sa.gov/Directory/Departments/COA/Disability-Access) | [Open Records](https://www.sa.gov/Directory/Departments/CE/Open-Government-Request) | [Contact Us](https://www.sa.gov/Site-Footer/Contact-Us) | [Privacy Policy & Disclaimer](https://www.sa.gov/Disclaimer) | [Employee Access](https://www.sanantonio.gov/EASI)
+
+© 2026 City of San Antonio
+
+Ready
