@@ -42,7 +42,7 @@ def count_municipalities():
         civicpatch_scrapeable_count = 0
         civicpatch_scraped_count = 0
 
-        # Load government_progress.yml
+        # Load jurisdictions_metadata.yml
         with open(progress_file, "r") as file:
             progress_data = yaml.safe_load(file)
             jurisdictions_by_id = progress_data.get("jurisdictions_by_id", {})

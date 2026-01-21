@@ -12,23 +12,24 @@ PROJECT_ROOT = Path(__file__).parent.parent.parent
 def extract_child_divisions(government_list, jurisdiction_ocdid):
     child_divisions = []
     base_id = "/".join(jurisdiction_ocdid.split("/")[:-1])
+    print("extracting child divisions for:", jurisdiction_ocdid)
     for member in government_list:
-        divisions = member.get("divisions", [])
-        for division in divisions:
-            # Check for 'district' and extract number/name
-            district_match = re.search(
-                r"district\s*:?[\s\-]*(\w+)", str(division), re.IGNORECASE
-            )
-            if district_match:
-                district_num = district_match.group(1)
-                child_divisions.append(f"{base_id}/council_district:{district_num}")
-            # Check for 'ward' and extract number/name
-            ward_match = re.search(
-                r"ward\s*:?[\s\-]*(\w+)", str(division), re.IGNORECASE
-            )
-            if ward_match:
-                ward_num = ward_match.group(1)
-                child_divisions.append(f"{base_id}/ward:{ward_num}")
+        office = member.get("office", {})
+        division = office.get("division_ocdid", "")
+        # Check for 'district' and extract number/name
+        district_match = re.search(
+            r"district\s*:?[\s\-]*(\w+)", str(division), re.IGNORECASE
+        )
+        if district_match:
+            district_num = district_match.group(1)
+            child_divisions.append(f"{base_id}/council_district:{district_num}")
+        # Check for 'ward' and extract number/name
+        ward_match = re.search(
+            r"ward\s*:?[\s\-]*(\w+)", str(division), re.IGNORECASE
+        )
+        if ward_match:
+            ward_num = ward_match.group(1)
+            child_divisions.append(f"{base_id}/ward:{ward_num}")
     return child_divisions
 
 
@@ -55,7 +56,7 @@ def create_update_progress_file(state: str):
         }
         progress_data["jurisdictions_by_id"][jurisdiction_ocdid] = jurisdiction_object
 
-    for place_file_path in list(glob.glob(f"data/{state}/*.yml")):
+    for place_file_path in list(glob.glob(f"data/{state}/**/*.yml")):
         files_found += 1
         with open(place_file_path, "r") as f:
             place_data = yaml.safe_load(f)

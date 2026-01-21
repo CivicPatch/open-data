@@ -3,10 +3,12 @@ import os
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).parent.parent.parent
+PROGRESS_FILE = f"{PROJECT_ROOT}/progress.json"
+OUTPUT_FILE = f"{PROJECT_ROOT}/README.md"
 
 
-def generate_readme(progress_file, output_file):
-    with open(progress_file, "r") as file:
+def generate_readme():
+    with open(PROGRESS_FILE, "r") as file:
         data = json.load(file)
 
     # Static template with placeholders
@@ -23,13 +25,6 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 ## Missing OCD IDs by State
 
 {missing_ocdids}
-
-## Additional Information
-
-- **Future Goals**:
-    - [ ] Top 100 cities in Colorado
-    - [ ] Top 100 cities in Oregon
-    - [ ] Top 100 most populous cities in the US
 """
 
     # Generate the progress table dynamically
@@ -96,13 +91,11 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
     readme_content = readme_content.replace("{missing_ocdids}", missing_ocdids.strip())
 
     # Write the content to README.md
-    with open(output_file, "w") as file:
+    with open(OUTPUT_FILE, "w") as file:
         file.write(readme_content)
 
-    print(f"README.md generated at {output_file}")
+    print(f"README.md generated at {OUTPUT_FILE}")
 
 
 if __name__ == "__main__":
-    progress_file = f"{PROJECT_ROOT}/progress.json"
-    output_file = f"{PROJECT_ROOT}/README.md"
-    generate_readme(progress_file, output_file)
+    generate_readme()
