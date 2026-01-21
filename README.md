@@ -6,12 +6,91 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 
 | State | CivicPatch Count | Scrapeable | Scraped | Scraped % | Google Count | Missing Places in CivicPatch | Missing Places in Google |
 |-------|------------------|------------|---------|-----------|--------------|-----------------------|-------------------|
-| co | 271 | 250 | 117 | 46.80% | 269 | 3 | 5 |
-| tx | 1222 | 919 | 2 | 0.22% | 1218 | 29 | 33 |
 | nj | 563 | 559 | 0 | 0.00% | 565 | 3 | 1 |
+| co | 271 | 250 | 117 | 46.80% | 269 | 3 | 5 |
 | wa | 281 | 244 | 194 | 79.51% | 281 | 1 | 1 |
+| tx | 1222 | 919 | 3 | 0.33% | 1218 | 29 | 33 |
 
 ## Missing OCD IDs by State
+
+### nj
+
+<details>
+<summary>missing entries</summary>
+
+#### Missing in CivicPatch:
+
+**Places:**
+- country:us/state:nj/place:pine_valley
+- country:us/state:nj/county:sussex/place:walpack
+- country:us/state:nj/place:princeton
+
+**Divisions:**
+- country:us/state:nj/county:atlantic/council_district:1
+- country:us/state:nj/county:atlantic/council_district:2
+- country:us/state:nj/county:atlantic/council_district:3
+- country:us/state:nj/county:atlantic/council_district:4
+- country:us/state:nj/county:atlantic/council_district:5
+- country:us/state:nj/county:essex/council_district:1
+- country:us/state:nj/county:essex/council_district:2
+- country:us/state:nj/county:essex/council_district:3
+- country:us/state:nj/county:essex/council_district:4
+- country:us/state:nj/county:essex/council_district:5
+- country:us/state:nj/county:hudson/council_district:1
+- country:us/state:nj/county:hudson/council_district:2
+- country:us/state:nj/county:hudson/council_district:3
+- country:us/state:nj/county:hudson/council_district:4
+- country:us/state:nj/county:hudson/council_district:5
+- country:us/state:nj/county:hudson/council_district:6
+- country:us/state:nj/county:hudson/council_district:7
+- country:us/state:nj/county:hudson/council_district:8
+- country:us/state:nj/county:hudson/council_district:9
+- country:us/state:nj/county:ocean/place:toms_river/ward:1
+- country:us/state:nj/county:ocean/place:toms_river/ward:2
+- country:us/state:nj/county:ocean/place:toms_river/ward:3
+- country:us/state:nj/county:ocean/place:toms_river/ward:4
+- country:us/state:nj/place:atlantic_city/ward:1
+- country:us/state:nj/place:atlantic_city/ward:2
+- country:us/state:nj/place:atlantic_city/ward:3
+- country:us/state:nj/place:atlantic_city/ward:4
+- country:us/state:nj/place:atlantic_city/ward:5
+- country:us/state:nj/place:atlantic_city/ward:6
+- country:us/state:nj/place:camden/ward:1
+- country:us/state:nj/place:camden/ward:2
+- country:us/state:nj/place:camden/ward:3
+- country:us/state:nj/place:camden/ward:4
+- country:us/state:nj/place:elizabeth/ward:1
+- country:us/state:nj/place:elizabeth/ward:2
+- country:us/state:nj/place:elizabeth/ward:3
+- country:us/state:nj/place:elizabeth/ward:4
+- country:us/state:nj/place:elizabeth/ward:5
+- country:us/state:nj/place:elizabeth/ward:6
+- country:us/state:nj/place:jersey_city/ward:a
+- country:us/state:nj/place:jersey_city/ward:b
+- country:us/state:nj/place:jersey_city/ward:c
+- country:us/state:nj/place:jersey_city/ward:d
+- country:us/state:nj/place:jersey_city/ward:e
+- country:us/state:nj/place:jersey_city/ward:f
+- country:us/state:nj/place:newark/ward:central
+- country:us/state:nj/place:newark/ward:east
+- country:us/state:nj/place:newark/ward:north
+- country:us/state:nj/place:newark/ward:south
+- country:us/state:nj/place:newark/ward:west
+- country:us/state:nj/place:paterson/ward:1
+- country:us/state:nj/place:paterson/ward:2
+- country:us/state:nj/place:paterson/ward:3
+- country:us/state:nj/place:paterson/ward:4
+- country:us/state:nj/place:paterson/ward:5
+- country:us/state:nj/place:paterson/ward:6
+#### Missing in Google:
+
+**Places:**
+- country:us/state:nj/place:
+
+**Divisions:**
+None
+
+</details>
 
 ### co
 
@@ -191,11 +270,11 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in Google:
 
 **Places:**
+- country:us/state:co/place:central
+- country:us/state:co/place:keystone
 - country:us/state:co/place:denver
 - country:us/state:co/place:raymer_(new_raymer)
 - country:us/state:co/place:broomfield
-- country:us/state:co/place:keystone
-- country:us/state:co/place:central
 
 **Divisions:**
 - country:us/state:co/place:alamosa/ward:1
@@ -335,6 +414,342 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 
 </details>
 
+### wa
+
+<details>
+<summary>missing entries</summary>
+
+#### Missing in CivicPatch:
+
+**Places:**
+- country:us/state:wa/place:st_john
+
+**Divisions:**
+- country:us/state:wa/county:adams/council_district:1
+- country:us/state:wa/county:adams/council_district:2
+- country:us/state:wa/county:adams/council_district:3
+- country:us/state:wa/county:asotin/council_district:1
+- country:us/state:wa/county:asotin/council_district:2
+- country:us/state:wa/county:asotin/council_district:3
+- country:us/state:wa/county:benton/council_district:1
+- country:us/state:wa/county:benton/council_district:2
+- country:us/state:wa/county:benton/council_district:3
+- country:us/state:wa/county:chelan/council_district:1
+- country:us/state:wa/county:chelan/council_district:2
+- country:us/state:wa/county:chelan/council_district:3
+- country:us/state:wa/county:clallam/council_district:1
+- country:us/state:wa/county:clallam/council_district:2
+- country:us/state:wa/county:clallam/council_district:3
+- country:us/state:wa/county:clark/council_district:1
+- country:us/state:wa/county:clark/council_district:2
+- country:us/state:wa/county:clark/council_district:3
+- country:us/state:wa/county:clark/council_district:4
+- country:us/state:wa/county:clark/council_district:5
+- country:us/state:wa/county:columbia/council_district:1
+- country:us/state:wa/county:columbia/council_district:2
+- country:us/state:wa/county:columbia/council_district:3
+- country:us/state:wa/county:cowlitz/council_district:1
+- country:us/state:wa/county:cowlitz/council_district:2
+- country:us/state:wa/county:cowlitz/council_district:3
+- country:us/state:wa/county:douglas/council_district:1
+- country:us/state:wa/county:douglas/council_district:2
+- country:us/state:wa/county:douglas/council_district:3
+- country:us/state:wa/county:ferry/council_district:1
+- country:us/state:wa/county:ferry/council_district:2
+- country:us/state:wa/county:ferry/council_district:3
+- country:us/state:wa/county:franklin/council_district:1
+- country:us/state:wa/county:franklin/council_district:2
+- country:us/state:wa/county:franklin/council_district:3
+- country:us/state:wa/county:garfield/council_district:1
+- country:us/state:wa/county:garfield/council_district:2
+- country:us/state:wa/county:garfield/council_district:3
+- country:us/state:wa/county:grant/council_district:1
+- country:us/state:wa/county:grant/council_district:2
+- country:us/state:wa/county:grant/council_district:3
+- country:us/state:wa/county:grays_harbor/council_district:1
+- country:us/state:wa/county:grays_harbor/council_district:2
+- country:us/state:wa/county:grays_harbor/council_district:3
+- country:us/state:wa/county:island/council_district:1
+- country:us/state:wa/county:island/council_district:2
+- country:us/state:wa/county:island/council_district:3
+- country:us/state:wa/county:jefferson/council_district:1
+- country:us/state:wa/county:jefferson/council_district:2
+- country:us/state:wa/county:jefferson/council_district:3
+- country:us/state:wa/county:king/council_district:1
+- country:us/state:wa/county:king/council_district:2
+- country:us/state:wa/county:king/council_district:3
+- country:us/state:wa/county:king/council_district:4
+- country:us/state:wa/county:king/council_district:5
+- country:us/state:wa/county:king/council_district:6
+- country:us/state:wa/county:king/council_district:7
+- country:us/state:wa/county:king/council_district:8
+- country:us/state:wa/county:king/council_district:9
+- country:us/state:wa/county:kitsap/council_district:1
+- country:us/state:wa/county:kitsap/council_district:2
+- country:us/state:wa/county:kitsap/council_district:3
+- country:us/state:wa/county:kittitas/council_district:1
+- country:us/state:wa/county:kittitas/council_district:2
+- country:us/state:wa/county:kittitas/council_district:3
+- country:us/state:wa/county:klickitat/council_district:1
+- country:us/state:wa/county:klickitat/council_district:2
+- country:us/state:wa/county:klickitat/council_district:3
+- country:us/state:wa/county:lewis/council_district:1
+- country:us/state:wa/county:lewis/council_district:2
+- country:us/state:wa/county:lewis/council_district:3
+- country:us/state:wa/county:lincoln/council_district:1
+- country:us/state:wa/county:lincoln/council_district:2
+- country:us/state:wa/county:lincoln/council_district:3
+- country:us/state:wa/county:mason/council_district:1
+- country:us/state:wa/county:mason/council_district:2
+- country:us/state:wa/county:mason/council_district:3
+- country:us/state:wa/county:okanogan/council_district:1
+- country:us/state:wa/county:okanogan/council_district:2
+- country:us/state:wa/county:okanogan/council_district:3
+- country:us/state:wa/county:pacific/council_district:1
+- country:us/state:wa/county:pacific/council_district:2
+- country:us/state:wa/county:pacific/council_district:3
+- country:us/state:wa/county:pend_oreille/council_district:1
+- country:us/state:wa/county:pend_oreille/council_district:2
+- country:us/state:wa/county:pend_oreille/council_district:3
+- country:us/state:wa/county:pierce/council_district:1
+- country:us/state:wa/county:pierce/council_district:2
+- country:us/state:wa/county:pierce/council_district:3
+- country:us/state:wa/county:pierce/council_district:4
+- country:us/state:wa/county:pierce/council_district:5
+- country:us/state:wa/county:pierce/council_district:6
+- country:us/state:wa/county:pierce/council_district:7
+- country:us/state:wa/county:skagit/council_district:1
+- country:us/state:wa/county:skagit/council_district:2
+- country:us/state:wa/county:skagit/council_district:3
+- country:us/state:wa/county:skamania/council_district:1
+- country:us/state:wa/county:skamania/council_district:2
+- country:us/state:wa/county:skamania/council_district:3
+- country:us/state:wa/county:snohomish/council_district:1
+- country:us/state:wa/county:snohomish/council_district:2
+- country:us/state:wa/county:snohomish/council_district:3
+- country:us/state:wa/county:snohomish/council_district:4
+- country:us/state:wa/county:snohomish/council_district:5
+- country:us/state:wa/county:spokane/council_district:1
+- country:us/state:wa/county:spokane/council_district:2
+- country:us/state:wa/county:spokane/council_district:3
+- country:us/state:wa/county:spokane/council_district:4
+- country:us/state:wa/county:spokane/council_district:5
+- country:us/state:wa/county:stevens/council_district:1
+- country:us/state:wa/county:stevens/council_district:2
+- country:us/state:wa/county:stevens/council_district:3
+- country:us/state:wa/county:thurston/council_district:1
+- country:us/state:wa/county:thurston/council_district:2
+- country:us/state:wa/county:thurston/council_district:3
+- country:us/state:wa/county:wahkiakum/council_district:1
+- country:us/state:wa/county:wahkiakum/council_district:2
+- country:us/state:wa/county:wahkiakum/council_district:3
+- country:us/state:wa/county:walla_walla/council_district:1
+- country:us/state:wa/county:walla_walla/council_district:2
+- country:us/state:wa/county:walla_walla/council_district:3
+- country:us/state:wa/county:whatcom/council_district:1
+- country:us/state:wa/county:whatcom/council_district:2
+- country:us/state:wa/county:whatcom/council_district:3
+- country:us/state:wa/county:whatcom/council_district:4
+- country:us/state:wa/county:whatcom/council_district:5
+- country:us/state:wa/county:whitman/council_district:1
+- country:us/state:wa/county:whitman/council_district:2
+- country:us/state:wa/county:whitman/council_district:3
+- country:us/state:wa/county:yakima/council_district:1
+- country:us/state:wa/county:yakima/council_district:2
+- country:us/state:wa/county:yakima/council_district:3
+- country:us/state:wa/place:kennewick/ward:1
+- country:us/state:wa/place:kennewick/ward:1/precinct:645
+- country:us/state:wa/place:kennewick/ward:1/precinct:646
+- country:us/state:wa/place:kennewick/ward:1/precinct:650
+- country:us/state:wa/place:kennewick/ward:1/precinct:651
+- country:us/state:wa/place:kennewick/ward:1/precinct:655
+- country:us/state:wa/place:kennewick/ward:1/precinct:656
+- country:us/state:wa/place:kennewick/ward:1/precinct:657
+- country:us/state:wa/place:kennewick/ward:1/precinct:660
+- country:us/state:wa/place:kennewick/ward:1/precinct:663
+- country:us/state:wa/place:kennewick/ward:1/precinct:664
+- country:us/state:wa/place:kennewick/ward:1/precinct:665
+- country:us/state:wa/place:kennewick/ward:1/precinct:667
+- country:us/state:wa/place:kennewick/ward:1/precinct:668
+- country:us/state:wa/place:kennewick/ward:1/precinct:669
+- country:us/state:wa/place:kennewick/ward:1/precinct:670
+- country:us/state:wa/place:kennewick/ward:1/precinct:674
+- country:us/state:wa/place:kennewick/ward:1/precinct:675
+- country:us/state:wa/place:kennewick/ward:1/precinct:676
+- country:us/state:wa/place:kennewick/ward:1/precinct:680
+- country:us/state:wa/place:kennewick/ward:1/precinct:681
+- country:us/state:wa/place:kennewick/ward:1/precinct:682
+- country:us/state:wa/place:kennewick/ward:1/precinct:683
+- country:us/state:wa/place:kennewick/ward:1/precinct:685
+- country:us/state:wa/place:kennewick/ward:1/precinct:686
+- country:us/state:wa/place:kennewick/ward:1/precinct:690
+- country:us/state:wa/place:kennewick/ward:1/precinct:691
+- country:us/state:wa/place:kennewick/ward:2
+- country:us/state:wa/place:kennewick/ward:2/precinct:560
+- country:us/state:wa/place:kennewick/ward:2/precinct:565
+- country:us/state:wa/place:kennewick/ward:2/precinct:570
+- country:us/state:wa/place:kennewick/ward:2/precinct:574
+- country:us/state:wa/place:kennewick/ward:2/precinct:575
+- country:us/state:wa/place:kennewick/ward:2/precinct:580
+- country:us/state:wa/place:kennewick/ward:2/precinct:585
+- country:us/state:wa/place:kennewick/ward:2/precinct:590
+- country:us/state:wa/place:kennewick/ward:2/precinct:595
+- country:us/state:wa/place:kennewick/ward:2/precinct:600
+- country:us/state:wa/place:kennewick/ward:2/precinct:601
+- country:us/state:wa/place:kennewick/ward:2/precinct:605
+- country:us/state:wa/place:kennewick/ward:2/precinct:610
+- country:us/state:wa/place:kennewick/ward:2/precinct:615
+- country:us/state:wa/place:kennewick/ward:2/precinct:620
+- country:us/state:wa/place:kennewick/ward:2/precinct:625
+- country:us/state:wa/place:kennewick/ward:2/precinct:626
+- country:us/state:wa/place:kennewick/ward:2/precinct:630
+- country:us/state:wa/place:kennewick/ward:2/precinct:633
+- country:us/state:wa/place:kennewick/ward:2/precinct:634
+- country:us/state:wa/place:kennewick/ward:2/precinct:635
+- country:us/state:wa/place:kennewick/ward:2/precinct:636
+- country:us/state:wa/place:kennewick/ward:2/precinct:637
+- country:us/state:wa/place:kennewick/ward:2/precinct:638
+- country:us/state:wa/place:kennewick/ward:2/precinct:639
+- country:us/state:wa/place:kennewick/ward:2/precinct:640
+- country:us/state:wa/place:kennewick/ward:2/precinct:641
+- country:us/state:wa/place:kennewick/ward:3
+- country:us/state:wa/place:kennewick/ward:3/precinct:500
+- country:us/state:wa/place:kennewick/ward:3/precinct:505
+- country:us/state:wa/place:kennewick/ward:3/precinct:510
+- country:us/state:wa/place:kennewick/ward:3/precinct:511
+- country:us/state:wa/place:kennewick/ward:3/precinct:515
+- country:us/state:wa/place:kennewick/ward:3/precinct:516
+- country:us/state:wa/place:kennewick/ward:3/precinct:520
+- country:us/state:wa/place:kennewick/ward:3/precinct:525
+- country:us/state:wa/place:kennewick/ward:3/precinct:530
+- country:us/state:wa/place:kennewick/ward:3/precinct:535
+- country:us/state:wa/place:kennewick/ward:3/precinct:540
+- country:us/state:wa/place:kennewick/ward:3/precinct:545
+- country:us/state:wa/place:kennewick/ward:3/precinct:550
+- country:us/state:wa/place:kennewick/ward:3/precinct:551
+- country:us/state:wa/place:kennewick/ward:3/precinct:552
+- country:us/state:wa/place:kennewick/ward:3/precinct:553
+- country:us/state:wa/place:kennewick/ward:3/precinct:555
+- country:us/state:wa/place:kennewick/ward:3/precinct:556
+- country:us/state:wa/place:kennewick/ward:3/precinct:557
+- country:us/state:wa/place:kennewick/ward:3/precinct:558
+- country:us/state:wa/place:kennewick/ward:3/precinct:559
+- country:us/state:wa/place:kennewick/ward:3/precinct:560
+- country:us/state:wa/place:pomeroy/ward:1
+- country:us/state:wa/place:pomeroy/ward:2
+- country:us/state:wa/place:pomeroy/ward:3
+- country:us/state:wa/place:pomeroy/ward:4
+- country:us/state:wa/place:raymond/ward:1
+- country:us/state:wa/place:raymond/ward:2
+- country:us/state:wa/place:raymond/ward:3
+- country:us/state:wa/place:tacoma/council_district:1
+- country:us/state:wa/place:tacoma/council_district:2
+- country:us/state:wa/place:tacoma/council_district:3
+- country:us/state:wa/place:tacoma/council_district:4
+- country:us/state:wa/place:tacoma/council_district:5
+#### Missing in Google:
+
+**Places:**
+- country:us/state:wa/place:st._john
+
+**Divisions:**
+- country:us/state:wa/place:aberdeen/ward:1
+- country:us/state:wa/place:aberdeen/ward:2
+- country:us/state:wa/place:aberdeen/ward:3
+- country:us/state:wa/place:aberdeen/ward:4
+- country:us/state:wa/place:aberdeen/ward:5
+- country:us/state:wa/place:aberdeen/ward:6
+- country:us/state:wa/place:anacortes/ward:1
+- country:us/state:wa/place:anacortes/ward:2
+- country:us/state:wa/place:anacortes/ward:3
+- country:us/state:wa/place:bainbridge_island/council_district:2_
+- country:us/state:wa/place:bainbridge_island/council_district:3_
+- country:us/state:wa/place:bainbridge_island/council_district:4_
+- country:us/state:wa/place:bainbridge_island/council_district:5_
+- country:us/state:wa/place:bainbridge_island/council_district:6_
+- country:us/state:wa/place:bainbridge_island/council_district:7_
+- country:us/state:wa/place:bainbridge_island/ward:_central
+- country:us/state:wa/place:bainbridge_island/ward:_north
+- country:us/state:wa/place:bainbridge_island/ward:_south
+- country:us/state:wa/place:bellingham/ward:1
+- country:us/state:wa/place:bellingham/ward:2
+- country:us/state:wa/place:bellingham/ward:3
+- country:us/state:wa/place:bellingham/ward:4
+- country:us/state:wa/place:bellingham/ward:5
+- country:us/state:wa/place:bellingham/ward:6
+- country:us/state:wa/place:bremerton/council_district:1
+- country:us/state:wa/place:bremerton/council_district:2
+- country:us/state:wa/place:bremerton/council_district:3
+- country:us/state:wa/place:bremerton/council_district:4
+- country:us/state:wa/place:bremerton/council_district:5
+- country:us/state:wa/place:bremerton/council_district:6
+- country:us/state:wa/place:bremerton/council_district:7
+- country:us/state:wa/place:burlington/ward:1
+- country:us/state:wa/place:burlington/ward:2
+- country:us/state:wa/place:burlington/ward:3
+- country:us/state:wa/place:burlington/ward:4
+- country:us/state:wa/place:burlington/ward:5
+- country:us/state:wa/place:burlington/ward:6
+- country:us/state:wa/place:camas/ward:1
+- country:us/state:wa/place:camas/ward:3
+- country:us/state:wa/place:centralia/council_district:1
+- country:us/state:wa/place:centralia/council_district:2
+- country:us/state:wa/place:centralia/council_district:3
+- country:us/state:wa/place:centralia/council_district:4
+- country:us/state:wa/place:chehalis/council_district:1
+- country:us/state:wa/place:chehalis/council_district:2
+- country:us/state:wa/place:chehalis/council_district:3
+- country:us/state:wa/place:chehalis/council_district:4
+- country:us/state:wa/place:everett/council_district:1
+- country:us/state:wa/place:everett/council_district:2
+- country:us/state:wa/place:everett/council_district:3
+- country:us/state:wa/place:everett/council_district:4
+- country:us/state:wa/place:everett/council_district:5
+- country:us/state:wa/place:hoquiam/ward:1
+- country:us/state:wa/place:hoquiam/ward:2
+- country:us/state:wa/place:hoquiam/ward:3
+- country:us/state:wa/place:hoquiam/ward:4
+- country:us/state:wa/place:hoquiam/ward:5
+- country:us/state:wa/place:hoquiam/ward:6
+- country:us/state:wa/place:mount_vernon/ward:1
+- country:us/state:wa/place:mount_vernon/ward:2
+- country:us/state:wa/place:mount_vernon/ward:3
+- country:us/state:wa/place:pasco/council_district:1
+- country:us/state:wa/place:pasco/council_district:2
+- country:us/state:wa/place:pasco/council_district:3
+- country:us/state:wa/place:pasco/council_district:4
+- country:us/state:wa/place:pasco/council_district:5
+- country:us/state:wa/place:pasco/council_district:6
+- country:us/state:wa/place:pullman/ward:1
+- country:us/state:wa/place:pullman/ward:2
+- country:us/state:wa/place:pullman/ward:3
+- country:us/state:wa/place:puyallup/council_district:1
+- country:us/state:wa/place:puyallup/council_district:2
+- country:us/state:wa/place:puyallup/council_district:3
+- country:us/state:wa/place:sedro-woolley/ward:1
+- country:us/state:wa/place:sedro-woolley/ward:2
+- country:us/state:wa/place:sedro-woolley/ward:3
+- country:us/state:wa/place:sedro-woolley/ward:4
+- country:us/state:wa/place:sedro-woolley/ward:5
+- country:us/state:wa/place:sedro-woolley/ward:6
+- country:us/state:wa/place:sunnyside/council_district:1
+- country:us/state:wa/place:sunnyside/council_district:2
+- country:us/state:wa/place:sunnyside/council_district:3
+- country:us/state:wa/place:sunnyside/council_district:4
+- country:us/state:wa/place:wenatchee/council_district:1
+- country:us/state:wa/place:wenatchee/council_district:2
+- country:us/state:wa/place:wenatchee/council_district:3
+- country:us/state:wa/place:wenatchee/council_district:4
+- country:us/state:wa/place:wenatchee/council_district:5
+- country:us/state:wa/place:yakima/council_district:1
+- country:us/state:wa/place:yakima/council_district:2
+- country:us/state:wa/place:yakima/council_district:3
+- country:us/state:wa/place:yakima/council_district:4
+- country:us/state:wa/place:yakima/council_district:5
+- country:us/state:wa/place:yakima/council_district:7
+
+</details>
+
 ### tx
 
 <details>
@@ -343,35 +758,35 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in CivicPatch:
 
 **Places:**
-- country:us/state:tx/place:post_oak_bend_city
-- country:us/state:tx/place:lakeside_~tarrant_county~
-- country:us/state:tx/place:nesbitt
-- country:us/state:tx/place:brazos_bend
-- country:us/state:tx/place:pecos
-- country:us/state:tx/place:morgan~s_point_resort
-- country:us/state:tx/place:lincoln_park
-- country:us/state:tx/place:reno_~lamar_county~
-- country:us/state:tx/place:lakeside
-- country:us/state:tx/place:bailey~s_prairie
-- country:us/state:tx/place:millican
-- country:us/state:tx/place:reno_~parker_county~
-- country:us/state:tx/place:corral_city
-- country:us/state:tx/place:oak_ridge_~cooke_county~
 - country:us/state:tx/place:hillcrest
-- country:us/state:tx/place:st_jo
-- country:us/state:tx/place:st_paul
-- country:us/state:tx/place:o~brien
-- country:us/state:tx/place:mustang
-- country:us/state:tx/place:lakeside_~san_patricio_county~
-- country:us/state:tx/place:oak_ridge_~kaufman_county~
-- country:us/state:tx/place:miller~s_cove
-- country:us/state:tx/place:oak_ridge
-- country:us/state:tx/place:st_hedwig
 - country:us/state:tx/place:los_ybanez
 - country:us/state:tx/place:morgan~s_point
-- country:us/state:tx/place:carl~s_corner
+- country:us/state:tx/place:morgan~s_point_resort
 - country:us/state:tx/place:rangerville
+- country:us/state:tx/place:reno_~parker_county~
+- country:us/state:tx/place:brazos_bend
+- country:us/state:tx/place:carl~s_corner
+- country:us/state:tx/place:miller~s_cove
+- country:us/state:tx/place:bailey~s_prairie
 - country:us/state:tx/place:o~donnell
+- country:us/state:tx/place:o~brien
+- country:us/state:tx/place:reno_~lamar_county~
+- country:us/state:tx/place:lincoln_park
+- country:us/state:tx/place:oak_ridge_~kaufman_county~
+- country:us/state:tx/place:post_oak_bend_city
+- country:us/state:tx/place:oak_ridge_~cooke_county~
+- country:us/state:tx/place:lakeside_~tarrant_county~
+- country:us/state:tx/place:oak_ridge
+- country:us/state:tx/place:nesbitt
+- country:us/state:tx/place:millican
+- country:us/state:tx/place:mustang
+- country:us/state:tx/place:st_hedwig
+- country:us/state:tx/place:pecos
+- country:us/state:tx/place:st_jo
+- country:us/state:tx/place:corral_city
+- country:us/state:tx/place:st_paul
+- country:us/state:tx/place:lakeside_~san_patricio_county~
+- country:us/state:tx/place:lakeside
 
 **Divisions:**
 - country:us/state:tx/county:anderson/council_district:1
@@ -1473,12 +1888,6 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 - country:us/state:tx/place:houston/council_district:i
 - country:us/state:tx/place:houston/council_district:j
 - country:us/state:tx/place:houston/council_district:k
-- country:us/state:tx/place:irving/council_district:1
-- country:us/state:tx/place:irving/council_district:3
-- country:us/state:tx/place:irving/council_district:4
-- country:us/state:tx/place:irving/council_district:5
-- country:us/state:tx/place:irving/council_district:6
-- country:us/state:tx/place:irving/council_district:7
 - country:us/state:tx/place:killeen/council_district:1
 - country:us/state:tx/place:killeen/council_district:2
 - country:us/state:tx/place:killeen/council_district:3
@@ -1555,456 +1964,42 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in Google:
 
 **Places:**
-- country:us/state:tx/place:south_frydek
-- country:us/state:tx/place:town_of_pecos
-- country:us/state:tx/place:bailey's_prairie
-- country:us/state:tx/place:road_runner
-- country:us/state:tx/place:hillcrest_village
-- country:us/state:tx/place:st._hedwig
-- country:us/state:tx/place:miller's_cove
 - country:us/state:tx/place:reno_city_(parker_and_tarrant
-- country:us/state:tx/place:dennis
-- country:us/state:tx/place:o'brien
-- country:us/state:tx/place:morgan's_point
-- country:us/state:tx/place:ellinger
-- country:us/state:tx/place:post_oak_bend
+- country:us/state:tx/place:san_elizario
+- country:us/state:tx/place:poetry
+- country:us/state:tx/place:reno_city_(lamar
+- country:us/state:tx/place:sandy_oaks
+- country:us/state:tx/place:o'donnell
+- country:us/state:tx/place:peaster
 - country:us/state:tx/place:coupland
 - country:us/state:tx/place:st._jo
-- country:us/state:tx/place:plantersville
-- country:us/state:tx/place:double_horn
-- country:us/state:tx/place:peaster
-- country:us/state:tx/place:lakeside_town_(san_patricio
-- country:us/state:tx/place:poetry
-- country:us/state:tx/place:kingsbury
-- country:us/state:tx/place:reno_city_(lamar
-- country:us/state:tx/place:spring_branch
-- country:us/state:tx/place:oak_ridge_town_(cooke
-- country:us/state:tx/place:lakeside_town_(tarrant
-- country:us/state:tx/place:st._paul
-- country:us/state:tx/place:carl's_corner
 - country:us/state:tx/place:oak_ridge_town_(kaufman
-- country:us/state:tx/place:morgan's_point_resort
-- country:us/state:tx/place:sandy_oaks
-- country:us/state:tx/place:san_elizario
+- country:us/state:tx/place:road_runner
 - country:us/state:tx/place:stockton_bend
-- country:us/state:tx/place:o'donnell
+- country:us/state:tx/place:south_frydek
+- country:us/state:tx/place:kingsbury
+- country:us/state:tx/place:post_oak_bend
+- country:us/state:tx/place:hillcrest_village
+- country:us/state:tx/place:morgan's_point_resort
+- country:us/state:tx/place:bailey's_prairie
+- country:us/state:tx/place:spring_branch
+- country:us/state:tx/place:town_of_pecos
+- country:us/state:tx/place:miller's_cove
+- country:us/state:tx/place:morgan's_point
+- country:us/state:tx/place:st._hedwig
+- country:us/state:tx/place:lakeside_town_(san_patricio
+- country:us/state:tx/place:dennis
+- country:us/state:tx/place:ellinger
+- country:us/state:tx/place:plantersville
+- country:us/state:tx/place:carl's_corner
+- country:us/state:tx/place:double_horn
+- country:us/state:tx/place:lakeside_town_(tarrant
+- country:us/state:tx/place:oak_ridge_town_(cooke
+- country:us/state:tx/place:st._paul
+- country:us/state:tx/place:o'brien
 
 **Divisions:**
-None
-
-</details>
-
-### nj
-
-<details>
-<summary>missing entries</summary>
-
-#### Missing in CivicPatch:
-
-**Places:**
-- country:us/state:nj/county:sussex/place:walpack
-- country:us/state:nj/place:pine_valley
-- country:us/state:nj/place:princeton
-
-**Divisions:**
-- country:us/state:nj/county:atlantic/council_district:1
-- country:us/state:nj/county:atlantic/council_district:2
-- country:us/state:nj/county:atlantic/council_district:3
-- country:us/state:nj/county:atlantic/council_district:4
-- country:us/state:nj/county:atlantic/council_district:5
-- country:us/state:nj/county:essex/council_district:1
-- country:us/state:nj/county:essex/council_district:2
-- country:us/state:nj/county:essex/council_district:3
-- country:us/state:nj/county:essex/council_district:4
-- country:us/state:nj/county:essex/council_district:5
-- country:us/state:nj/county:hudson/council_district:1
-- country:us/state:nj/county:hudson/council_district:2
-- country:us/state:nj/county:hudson/council_district:3
-- country:us/state:nj/county:hudson/council_district:4
-- country:us/state:nj/county:hudson/council_district:5
-- country:us/state:nj/county:hudson/council_district:6
-- country:us/state:nj/county:hudson/council_district:7
-- country:us/state:nj/county:hudson/council_district:8
-- country:us/state:nj/county:hudson/council_district:9
-- country:us/state:nj/county:ocean/place:toms_river/ward:1
-- country:us/state:nj/county:ocean/place:toms_river/ward:2
-- country:us/state:nj/county:ocean/place:toms_river/ward:3
-- country:us/state:nj/county:ocean/place:toms_river/ward:4
-- country:us/state:nj/place:atlantic_city/ward:1
-- country:us/state:nj/place:atlantic_city/ward:2
-- country:us/state:nj/place:atlantic_city/ward:3
-- country:us/state:nj/place:atlantic_city/ward:4
-- country:us/state:nj/place:atlantic_city/ward:5
-- country:us/state:nj/place:atlantic_city/ward:6
-- country:us/state:nj/place:camden/ward:1
-- country:us/state:nj/place:camden/ward:2
-- country:us/state:nj/place:camden/ward:3
-- country:us/state:nj/place:camden/ward:4
-- country:us/state:nj/place:elizabeth/ward:1
-- country:us/state:nj/place:elizabeth/ward:2
-- country:us/state:nj/place:elizabeth/ward:3
-- country:us/state:nj/place:elizabeth/ward:4
-- country:us/state:nj/place:elizabeth/ward:5
-- country:us/state:nj/place:elizabeth/ward:6
-- country:us/state:nj/place:jersey_city/ward:a
-- country:us/state:nj/place:jersey_city/ward:b
-- country:us/state:nj/place:jersey_city/ward:c
-- country:us/state:nj/place:jersey_city/ward:d
-- country:us/state:nj/place:jersey_city/ward:e
-- country:us/state:nj/place:jersey_city/ward:f
-- country:us/state:nj/place:newark/ward:central
-- country:us/state:nj/place:newark/ward:east
-- country:us/state:nj/place:newark/ward:north
-- country:us/state:nj/place:newark/ward:south
-- country:us/state:nj/place:newark/ward:west
-- country:us/state:nj/place:paterson/ward:1
-- country:us/state:nj/place:paterson/ward:2
-- country:us/state:nj/place:paterson/ward:3
-- country:us/state:nj/place:paterson/ward:4
-- country:us/state:nj/place:paterson/ward:5
-- country:us/state:nj/place:paterson/ward:6
-#### Missing in Google:
-
-**Places:**
-- country:us/state:nj/place:
-
-**Divisions:**
-None
-
-</details>
-
-### wa
-
-<details>
-<summary>missing entries</summary>
-
-#### Missing in CivicPatch:
-
-**Places:**
-- country:us/state:wa/place:st_john
-
-**Divisions:**
-- country:us/state:wa/county:adams/council_district:1
-- country:us/state:wa/county:adams/council_district:2
-- country:us/state:wa/county:adams/council_district:3
-- country:us/state:wa/county:asotin/council_district:1
-- country:us/state:wa/county:asotin/council_district:2
-- country:us/state:wa/county:asotin/council_district:3
-- country:us/state:wa/county:benton/council_district:1
-- country:us/state:wa/county:benton/council_district:2
-- country:us/state:wa/county:benton/council_district:3
-- country:us/state:wa/county:chelan/council_district:1
-- country:us/state:wa/county:chelan/council_district:2
-- country:us/state:wa/county:chelan/council_district:3
-- country:us/state:wa/county:clallam/council_district:1
-- country:us/state:wa/county:clallam/council_district:2
-- country:us/state:wa/county:clallam/council_district:3
-- country:us/state:wa/county:clark/council_district:1
-- country:us/state:wa/county:clark/council_district:2
-- country:us/state:wa/county:clark/council_district:3
-- country:us/state:wa/county:clark/council_district:4
-- country:us/state:wa/county:clark/council_district:5
-- country:us/state:wa/county:columbia/council_district:1
-- country:us/state:wa/county:columbia/council_district:2
-- country:us/state:wa/county:columbia/council_district:3
-- country:us/state:wa/county:cowlitz/council_district:1
-- country:us/state:wa/county:cowlitz/council_district:2
-- country:us/state:wa/county:cowlitz/council_district:3
-- country:us/state:wa/county:douglas/council_district:1
-- country:us/state:wa/county:douglas/council_district:2
-- country:us/state:wa/county:douglas/council_district:3
-- country:us/state:wa/county:ferry/council_district:1
-- country:us/state:wa/county:ferry/council_district:2
-- country:us/state:wa/county:ferry/council_district:3
-- country:us/state:wa/county:franklin/council_district:1
-- country:us/state:wa/county:franklin/council_district:2
-- country:us/state:wa/county:franklin/council_district:3
-- country:us/state:wa/county:garfield/council_district:1
-- country:us/state:wa/county:garfield/council_district:2
-- country:us/state:wa/county:garfield/council_district:3
-- country:us/state:wa/county:grant/council_district:1
-- country:us/state:wa/county:grant/council_district:2
-- country:us/state:wa/county:grant/council_district:3
-- country:us/state:wa/county:grays_harbor/council_district:1
-- country:us/state:wa/county:grays_harbor/council_district:2
-- country:us/state:wa/county:grays_harbor/council_district:3
-- country:us/state:wa/county:island/council_district:1
-- country:us/state:wa/county:island/council_district:2
-- country:us/state:wa/county:island/council_district:3
-- country:us/state:wa/county:jefferson/council_district:1
-- country:us/state:wa/county:jefferson/council_district:2
-- country:us/state:wa/county:jefferson/council_district:3
-- country:us/state:wa/county:king/council_district:1
-- country:us/state:wa/county:king/council_district:2
-- country:us/state:wa/county:king/council_district:3
-- country:us/state:wa/county:king/council_district:4
-- country:us/state:wa/county:king/council_district:5
-- country:us/state:wa/county:king/council_district:6
-- country:us/state:wa/county:king/council_district:7
-- country:us/state:wa/county:king/council_district:8
-- country:us/state:wa/county:king/council_district:9
-- country:us/state:wa/county:kitsap/council_district:1
-- country:us/state:wa/county:kitsap/council_district:2
-- country:us/state:wa/county:kitsap/council_district:3
-- country:us/state:wa/county:kittitas/council_district:1
-- country:us/state:wa/county:kittitas/council_district:2
-- country:us/state:wa/county:kittitas/council_district:3
-- country:us/state:wa/county:klickitat/council_district:1
-- country:us/state:wa/county:klickitat/council_district:2
-- country:us/state:wa/county:klickitat/council_district:3
-- country:us/state:wa/county:lewis/council_district:1
-- country:us/state:wa/county:lewis/council_district:2
-- country:us/state:wa/county:lewis/council_district:3
-- country:us/state:wa/county:lincoln/council_district:1
-- country:us/state:wa/county:lincoln/council_district:2
-- country:us/state:wa/county:lincoln/council_district:3
-- country:us/state:wa/county:mason/council_district:1
-- country:us/state:wa/county:mason/council_district:2
-- country:us/state:wa/county:mason/council_district:3
-- country:us/state:wa/county:okanogan/council_district:1
-- country:us/state:wa/county:okanogan/council_district:2
-- country:us/state:wa/county:okanogan/council_district:3
-- country:us/state:wa/county:pacific/council_district:1
-- country:us/state:wa/county:pacific/council_district:2
-- country:us/state:wa/county:pacific/council_district:3
-- country:us/state:wa/county:pend_oreille/council_district:1
-- country:us/state:wa/county:pend_oreille/council_district:2
-- country:us/state:wa/county:pend_oreille/council_district:3
-- country:us/state:wa/county:pierce/council_district:1
-- country:us/state:wa/county:pierce/council_district:2
-- country:us/state:wa/county:pierce/council_district:3
-- country:us/state:wa/county:pierce/council_district:4
-- country:us/state:wa/county:pierce/council_district:5
-- country:us/state:wa/county:pierce/council_district:6
-- country:us/state:wa/county:pierce/council_district:7
-- country:us/state:wa/county:skagit/council_district:1
-- country:us/state:wa/county:skagit/council_district:2
-- country:us/state:wa/county:skagit/council_district:3
-- country:us/state:wa/county:skamania/council_district:1
-- country:us/state:wa/county:skamania/council_district:2
-- country:us/state:wa/county:skamania/council_district:3
-- country:us/state:wa/county:snohomish/council_district:1
-- country:us/state:wa/county:snohomish/council_district:2
-- country:us/state:wa/county:snohomish/council_district:3
-- country:us/state:wa/county:snohomish/council_district:4
-- country:us/state:wa/county:snohomish/council_district:5
-- country:us/state:wa/county:spokane/council_district:1
-- country:us/state:wa/county:spokane/council_district:2
-- country:us/state:wa/county:spokane/council_district:3
-- country:us/state:wa/county:spokane/council_district:4
-- country:us/state:wa/county:spokane/council_district:5
-- country:us/state:wa/county:stevens/council_district:1
-- country:us/state:wa/county:stevens/council_district:2
-- country:us/state:wa/county:stevens/council_district:3
-- country:us/state:wa/county:thurston/council_district:1
-- country:us/state:wa/county:thurston/council_district:2
-- country:us/state:wa/county:thurston/council_district:3
-- country:us/state:wa/county:wahkiakum/council_district:1
-- country:us/state:wa/county:wahkiakum/council_district:2
-- country:us/state:wa/county:wahkiakum/council_district:3
-- country:us/state:wa/county:walla_walla/council_district:1
-- country:us/state:wa/county:walla_walla/council_district:2
-- country:us/state:wa/county:walla_walla/council_district:3
-- country:us/state:wa/county:whatcom/council_district:1
-- country:us/state:wa/county:whatcom/council_district:2
-- country:us/state:wa/county:whatcom/council_district:3
-- country:us/state:wa/county:whatcom/council_district:4
-- country:us/state:wa/county:whatcom/council_district:5
-- country:us/state:wa/county:whitman/council_district:1
-- country:us/state:wa/county:whitman/council_district:2
-- country:us/state:wa/county:whitman/council_district:3
-- country:us/state:wa/county:yakima/council_district:1
-- country:us/state:wa/county:yakima/council_district:2
-- country:us/state:wa/county:yakima/council_district:3
-- country:us/state:wa/place:kennewick/ward:1
-- country:us/state:wa/place:kennewick/ward:1/precinct:645
-- country:us/state:wa/place:kennewick/ward:1/precinct:646
-- country:us/state:wa/place:kennewick/ward:1/precinct:650
-- country:us/state:wa/place:kennewick/ward:1/precinct:651
-- country:us/state:wa/place:kennewick/ward:1/precinct:655
-- country:us/state:wa/place:kennewick/ward:1/precinct:656
-- country:us/state:wa/place:kennewick/ward:1/precinct:657
-- country:us/state:wa/place:kennewick/ward:1/precinct:660
-- country:us/state:wa/place:kennewick/ward:1/precinct:663
-- country:us/state:wa/place:kennewick/ward:1/precinct:664
-- country:us/state:wa/place:kennewick/ward:1/precinct:665
-- country:us/state:wa/place:kennewick/ward:1/precinct:667
-- country:us/state:wa/place:kennewick/ward:1/precinct:668
-- country:us/state:wa/place:kennewick/ward:1/precinct:669
-- country:us/state:wa/place:kennewick/ward:1/precinct:670
-- country:us/state:wa/place:kennewick/ward:1/precinct:674
-- country:us/state:wa/place:kennewick/ward:1/precinct:675
-- country:us/state:wa/place:kennewick/ward:1/precinct:676
-- country:us/state:wa/place:kennewick/ward:1/precinct:680
-- country:us/state:wa/place:kennewick/ward:1/precinct:681
-- country:us/state:wa/place:kennewick/ward:1/precinct:682
-- country:us/state:wa/place:kennewick/ward:1/precinct:683
-- country:us/state:wa/place:kennewick/ward:1/precinct:685
-- country:us/state:wa/place:kennewick/ward:1/precinct:686
-- country:us/state:wa/place:kennewick/ward:1/precinct:690
-- country:us/state:wa/place:kennewick/ward:1/precinct:691
-- country:us/state:wa/place:kennewick/ward:2
-- country:us/state:wa/place:kennewick/ward:2/precinct:560
-- country:us/state:wa/place:kennewick/ward:2/precinct:565
-- country:us/state:wa/place:kennewick/ward:2/precinct:570
-- country:us/state:wa/place:kennewick/ward:2/precinct:574
-- country:us/state:wa/place:kennewick/ward:2/precinct:575
-- country:us/state:wa/place:kennewick/ward:2/precinct:580
-- country:us/state:wa/place:kennewick/ward:2/precinct:585
-- country:us/state:wa/place:kennewick/ward:2/precinct:590
-- country:us/state:wa/place:kennewick/ward:2/precinct:595
-- country:us/state:wa/place:kennewick/ward:2/precinct:600
-- country:us/state:wa/place:kennewick/ward:2/precinct:601
-- country:us/state:wa/place:kennewick/ward:2/precinct:605
-- country:us/state:wa/place:kennewick/ward:2/precinct:610
-- country:us/state:wa/place:kennewick/ward:2/precinct:615
-- country:us/state:wa/place:kennewick/ward:2/precinct:620
-- country:us/state:wa/place:kennewick/ward:2/precinct:625
-- country:us/state:wa/place:kennewick/ward:2/precinct:626
-- country:us/state:wa/place:kennewick/ward:2/precinct:630
-- country:us/state:wa/place:kennewick/ward:2/precinct:633
-- country:us/state:wa/place:kennewick/ward:2/precinct:634
-- country:us/state:wa/place:kennewick/ward:2/precinct:635
-- country:us/state:wa/place:kennewick/ward:2/precinct:636
-- country:us/state:wa/place:kennewick/ward:2/precinct:637
-- country:us/state:wa/place:kennewick/ward:2/precinct:638
-- country:us/state:wa/place:kennewick/ward:2/precinct:639
-- country:us/state:wa/place:kennewick/ward:2/precinct:640
-- country:us/state:wa/place:kennewick/ward:2/precinct:641
-- country:us/state:wa/place:kennewick/ward:3
-- country:us/state:wa/place:kennewick/ward:3/precinct:500
-- country:us/state:wa/place:kennewick/ward:3/precinct:505
-- country:us/state:wa/place:kennewick/ward:3/precinct:510
-- country:us/state:wa/place:kennewick/ward:3/precinct:511
-- country:us/state:wa/place:kennewick/ward:3/precinct:515
-- country:us/state:wa/place:kennewick/ward:3/precinct:516
-- country:us/state:wa/place:kennewick/ward:3/precinct:520
-- country:us/state:wa/place:kennewick/ward:3/precinct:525
-- country:us/state:wa/place:kennewick/ward:3/precinct:530
-- country:us/state:wa/place:kennewick/ward:3/precinct:535
-- country:us/state:wa/place:kennewick/ward:3/precinct:540
-- country:us/state:wa/place:kennewick/ward:3/precinct:545
-- country:us/state:wa/place:kennewick/ward:3/precinct:550
-- country:us/state:wa/place:kennewick/ward:3/precinct:551
-- country:us/state:wa/place:kennewick/ward:3/precinct:552
-- country:us/state:wa/place:kennewick/ward:3/precinct:553
-- country:us/state:wa/place:kennewick/ward:3/precinct:555
-- country:us/state:wa/place:kennewick/ward:3/precinct:556
-- country:us/state:wa/place:kennewick/ward:3/precinct:557
-- country:us/state:wa/place:kennewick/ward:3/precinct:558
-- country:us/state:wa/place:kennewick/ward:3/precinct:559
-- country:us/state:wa/place:kennewick/ward:3/precinct:560
-- country:us/state:wa/place:pomeroy/ward:1
-- country:us/state:wa/place:pomeroy/ward:2
-- country:us/state:wa/place:pomeroy/ward:3
-- country:us/state:wa/place:pomeroy/ward:4
-- country:us/state:wa/place:raymond/ward:1
-- country:us/state:wa/place:raymond/ward:2
-- country:us/state:wa/place:raymond/ward:3
-- country:us/state:wa/place:tacoma/council_district:1
-- country:us/state:wa/place:tacoma/council_district:2
-- country:us/state:wa/place:tacoma/council_district:3
-- country:us/state:wa/place:tacoma/council_district:4
-- country:us/state:wa/place:tacoma/council_district:5
-#### Missing in Google:
-
-**Places:**
-- country:us/state:wa/place:st._john
-
-**Divisions:**
-- country:us/state:wa/place:aberdeen/ward:1
-- country:us/state:wa/place:aberdeen/ward:2
-- country:us/state:wa/place:aberdeen/ward:3
-- country:us/state:wa/place:aberdeen/ward:4
-- country:us/state:wa/place:aberdeen/ward:5
-- country:us/state:wa/place:aberdeen/ward:6
-- country:us/state:wa/place:anacortes/ward:1
-- country:us/state:wa/place:anacortes/ward:2
-- country:us/state:wa/place:anacortes/ward:3
-- country:us/state:wa/place:bainbridge_island/council_district:2_
-- country:us/state:wa/place:bainbridge_island/council_district:3_
-- country:us/state:wa/place:bainbridge_island/council_district:4_
-- country:us/state:wa/place:bainbridge_island/council_district:5_
-- country:us/state:wa/place:bainbridge_island/council_district:6_
-- country:us/state:wa/place:bainbridge_island/council_district:7_
-- country:us/state:wa/place:bainbridge_island/ward:_central
-- country:us/state:wa/place:bainbridge_island/ward:_north
-- country:us/state:wa/place:bainbridge_island/ward:_south
-- country:us/state:wa/place:bellingham/ward:1
-- country:us/state:wa/place:bellingham/ward:2
-- country:us/state:wa/place:bellingham/ward:3
-- country:us/state:wa/place:bellingham/ward:4
-- country:us/state:wa/place:bellingham/ward:5
-- country:us/state:wa/place:bellingham/ward:6
-- country:us/state:wa/place:bremerton/council_district:1
-- country:us/state:wa/place:bremerton/council_district:2
-- country:us/state:wa/place:bremerton/council_district:3
-- country:us/state:wa/place:bremerton/council_district:4
-- country:us/state:wa/place:bremerton/council_district:5
-- country:us/state:wa/place:bremerton/council_district:6
-- country:us/state:wa/place:bremerton/council_district:7
-- country:us/state:wa/place:burlington/ward:1
-- country:us/state:wa/place:burlington/ward:2
-- country:us/state:wa/place:burlington/ward:3
-- country:us/state:wa/place:burlington/ward:4
-- country:us/state:wa/place:burlington/ward:5
-- country:us/state:wa/place:burlington/ward:6
-- country:us/state:wa/place:camas/ward:1
-- country:us/state:wa/place:camas/ward:3
-- country:us/state:wa/place:centralia/council_district:1
-- country:us/state:wa/place:centralia/council_district:2
-- country:us/state:wa/place:centralia/council_district:3
-- country:us/state:wa/place:centralia/council_district:4
-- country:us/state:wa/place:chehalis/council_district:1
-- country:us/state:wa/place:chehalis/council_district:2
-- country:us/state:wa/place:chehalis/council_district:3
-- country:us/state:wa/place:chehalis/council_district:4
-- country:us/state:wa/place:everett/council_district:1
-- country:us/state:wa/place:everett/council_district:2
-- country:us/state:wa/place:everett/council_district:3
-- country:us/state:wa/place:everett/council_district:4
-- country:us/state:wa/place:everett/council_district:5
-- country:us/state:wa/place:hoquiam/ward:1
-- country:us/state:wa/place:hoquiam/ward:2
-- country:us/state:wa/place:hoquiam/ward:3
-- country:us/state:wa/place:hoquiam/ward:4
-- country:us/state:wa/place:hoquiam/ward:5
-- country:us/state:wa/place:hoquiam/ward:6
-- country:us/state:wa/place:mount_vernon/ward:1
-- country:us/state:wa/place:mount_vernon/ward:2
-- country:us/state:wa/place:mount_vernon/ward:3
-- country:us/state:wa/place:pasco/council_district:1
-- country:us/state:wa/place:pasco/council_district:2
-- country:us/state:wa/place:pasco/council_district:3
-- country:us/state:wa/place:pasco/council_district:4
-- country:us/state:wa/place:pasco/council_district:5
-- country:us/state:wa/place:pasco/council_district:6
-- country:us/state:wa/place:pullman/ward:1
-- country:us/state:wa/place:pullman/ward:2
-- country:us/state:wa/place:pullman/ward:3
-- country:us/state:wa/place:puyallup/council_district:1
-- country:us/state:wa/place:puyallup/council_district:2
-- country:us/state:wa/place:puyallup/council_district:3
-- country:us/state:wa/place:sedro-woolley/ward:1
-- country:us/state:wa/place:sedro-woolley/ward:2
-- country:us/state:wa/place:sedro-woolley/ward:3
-- country:us/state:wa/place:sedro-woolley/ward:4
-- country:us/state:wa/place:sedro-woolley/ward:5
-- country:us/state:wa/place:sedro-woolley/ward:6
-- country:us/state:wa/place:sunnyside/council_district:1
-- country:us/state:wa/place:sunnyside/council_district:2
-- country:us/state:wa/place:sunnyside/council_district:3
-- country:us/state:wa/place:sunnyside/council_district:4
-- country:us/state:wa/place:wenatchee/council_district:1
-- country:us/state:wa/place:wenatchee/council_district:2
-- country:us/state:wa/place:wenatchee/council_district:3
-- country:us/state:wa/place:wenatchee/council_district:4
-- country:us/state:wa/place:wenatchee/council_district:5
-- country:us/state:wa/place:yakima/council_district:1
-- country:us/state:wa/place:yakima/council_district:2
-- country:us/state:wa/place:yakima/council_district:3
-- country:us/state:wa/place:yakima/council_district:4
-- country:us/state:wa/place:yakima/council_district:5
-- country:us/state:wa/place:yakima/council_district:7
+- country:us/state:tx/place:irving/council_district:2
+- country:us/state:tx/place:irving/council_district:8
 
 </details>
