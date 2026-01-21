@@ -15,6 +15,8 @@ from scripts.scrapers import co as co_scraper
 from scripts.scrapers import nj as nj_scraper
 from scripts.scrapers import wa as wa_scraper
 from scripts.scrapers import tx as tx_scraper
+from scripts.track_progress.main import count_municipalities
+from scripts.track_progress.generate_readme import generate_readme
 
 from scripts.github_actions.update_jurisdiction_metadata import create_update_progress_file
 
@@ -389,4 +391,9 @@ if __name__ == "__main__":
 
     state_arg = sys.argv[1]
     pull_jurisdiction_data(state_arg)
+
+    # Call other scripts
     create_update_progress_file(state_arg)
+    count_municipalities()
+    generate_readme()
+
