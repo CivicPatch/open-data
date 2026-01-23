@@ -1,0 +1,860 @@
+[2026-01-23T01:43:17.361890] [INFO] Step 1: RESEARCH_MUNICIPALITY
+[2026-01-23T01:43:17.382656] [INFO] Running Gemini prompt
+[2026-01-23T01:43:17.383051] [DEBUG] Prompt: 
+
+    Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
+
+    Municipality: Corpus Christi city, tx
+
+    Instructions:
+
+    1. Determine the government type of the city. Available government types:
+- mayor_commission
+- mayor_council
+- township_committee
+- select_board
+- aldermen
+
+    2. Identify the elected officials in the local government, 
+       including the Mayor (if applicable).
+       2.1. For each official, extract the following details:
+            - name: Full name only (no titles)
+            - roles: List of active municipal roles (e.g., Mayor, Council Member)
+            - divisions: List of (ward, district), only if applicable
+
+    3. Create a JSON object with the following structure:
+       ```json
+       {
+         "government_type": examples - "mayor_council" or "mayor_commission", etc.,
+         "people": [
+           {
+             "name": "Full name of the official or null if uncertain",
+             "roles": ["Mayor", "Council Member", "Commissioner", etc.],
+             "divisions": ["Ward 1", "District 2", etc.] or [],
+           }
+         ],
+         "notes": "Brief notes about the search and results"
+       }
+       ```
+
+    IMPORTANT: If the response contains anything other than a valid JSON object,
+    it will be considered incorrect. Ensure the response is strictly JSON.
+    Verify that the response is valid JSON before returning it.
+    If it is not valid JSON, retry the generation.
+    
+[2026-01-23T01:43:24.348126] [DEBUG] Gemini raw response: {'government_type': 'mayor_council', 'people': [{'name': 'Paulette Guajardo', 'roles': ['Mayor'], 'divisions': []}, {'name': 'Roland Barrera', 'roles': ['Council Member'], 'divisions': ['At-Large']}, {'name': 'Mark Scott', 'roles': ['Council Member'], 'divisions': ['At-Large']}, {'name': 'Carolyn Vaughn', 'roles': ['Council Member'], 'divisions': ['At-Large']}, {'name': 'Everett Roy', 'roles': ['Council Member'], 'divisions': ['District 1']}, {'name': 'Sylvia Campos', 'roles': ['Council Member'], 'divisions': ['District 2']}, {'name': 'Eric J. Cantu', 'roles': ['Council Member'], 'divisions': ['District 3']}, {'name': 'Kaylynn Paxson', 'roles': ['Council Member'], 'divisions': ['District 4']}, {'name': 'Gil Hernandez', 'roles': ['Council Member'], 'divisions': ['District 5']}], 'notes': "Corpus Christi operates under a Council-Manager form of government. The City Council consists of the Mayor, three At-Large Council Members, and five District Council Members, all elected to two-year terms. Mayor Paulette Guajardo was re-elected in December 2024. The listed council members' terms are expected to end in 2026."}
+[2026-01-23T01:43:24.351345] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 364, Output tokens: 1284, Total cost: $0.003319
+[2026-01-23T01:43:24.351673] [INFO] gemini gemini-2.5-flash LLM call took 6.97 seconds
+[2026-01-23T01:43:24.352152] [INFO] Source URLs not found, using search engine for links.
+[2026-01-23T01:43:24.439161] [INFO] Step 2: SEARCH_LINKS from website: https://www.corpuschristitx.gov/
+[2026-01-23T01:43:24.460138] [INFO] Using government type: mayor_council for keyword selection with keywords: {'mayor': ['mayor and city council', 'about mayor', 'meet the mayor', 'about the mayor', 'mayor', 'council president', 'council manager'], 'council members': ['meet the council', 'city council members', 'council bios', 'council members', 'councilmembers', 'counsel member', 'city council', 'board of trustees', 'council districts', 'city hall', 'council', 'municipal directory'], 'elected officials': ['elected officials', 'city administration', 'index', 'government', 'bios', 'meet', 'about']}
+[2026-01-23T01:43:24.460546] [INFO] Searching for keyword term: mayor, keywords: ['mayor and city council', 'about mayor', 'meet the mayor', 'about the mayor', 'mayor', 'council president', 'council manager']
+[2026-01-23T01:43:24.461172] [INFO] Searching with google for Corpus Christi city mayor
+[2026-01-23T01:43:24.711536] [INFO] -> https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/
+[2026-01-23T01:43:24.712096] [INFO] -> https://www.corpuschristitx.gov/our-government/mayor-and-council/
+[2026-01-23T01:43:24.712510] [INFO] -> https://www.corpuschristitx.gov/
+[2026-01-23T01:43:24.712946] [INFO] -> https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/
+[2026-01-23T01:43:24.713459] [INFO] -> https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/mayoral-requests/
+[2026-01-23T01:43:24.713929] [INFO] -> https://www.corpuschristitx.gov/our-government/agendas-and-minutes/public-comment-procedures/
+[2026-01-23T01:43:24.714633] [INFO] -> https://www.corpuschristitx.gov/our-government/agendas-and-minutes/
+[2026-01-23T01:43:24.715246] [INFO] -> https://www.corpuschristitx.gov/department-directory/city-manager-leadership/
+[2026-01-23T01:43:24.716096] [INFO] -> https://www.corpuschristitx.gov/news/posts/city-of-corpus-christi-approves-professional-services-contract-for-reclaimed-water-infrastructure/
+[2026-01-23T01:43:24.716572] [INFO] -> https://www.corpuschristitx.gov/department-directory/city-secretary/agendas-and-minutes/council-meeting-calendars/
+[2026-01-23T01:43:24.719565] [INFO] Search successful with google. Found 10 results.
+[2026-01-23T01:43:24.720167] [INFO] Searching for keyword term: council members, keywords: ['meet the council', 'city council members', 'council bios', 'council members', 'councilmembers', 'counsel member', 'city council', 'board of trustees', 'council districts', 'city hall', 'council', 'municipal directory']
+[2026-01-23T01:43:24.720587] [INFO] Searching with google for Corpus Christi city council members
+[2026-01-23T01:43:24.986696] [INFO] -> https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/
+[2026-01-23T01:43:24.987227] [INFO] -> https://www.corpuschristitx.gov/our-government/mayor-and-council/
+[2026-01-23T01:43:24.987561] [INFO] -> https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-mark-scott/
+[2026-01-23T01:43:24.987923] [INFO] -> https://www.corpuschristitx.gov/department-directory/city-secretary/about-us/corpus-christi-history/
+[2026-01-23T01:43:24.988396] [INFO] -> https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-roland-barrera/
+[2026-01-23T01:43:24.989261] [INFO] -> https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-carolyn-vaughn/
+[2026-01-23T01:43:24.989688] [INFO] -> https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-5-gil-hernandez/
+[2026-01-23T01:43:24.990515] [INFO] -> https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-3-eric-cantu/
+[2026-01-23T01:43:24.991054] [INFO] -> https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-4-kaylynn-paxson/
+[2026-01-23T01:43:24.993232] [INFO] Search successful with google. Found 9 results.
+[2026-01-23T01:43:24.994239] [INFO] Searching for keyword term: elected officials, keywords: ['elected officials', 'city administration', 'index', 'government', 'bios', 'meet', 'about']
+[2026-01-23T01:43:24.994593] [INFO] Searching with google for Corpus Christi city elected officials
+[2026-01-23T01:43:25.279016] [INFO] -> https://www.corpuschristitx.gov/our-government/mayor-and-council/
+[2026-01-23T01:43:25.279717] [INFO] -> https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/
+[2026-01-23T01:43:25.280192] [INFO] -> https://www.corpuschristitx.gov/
+[2026-01-23T01:43:25.280799] [INFO] -> https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/
+[2026-01-23T01:43:25.281486] [INFO] -> https://www.corpuschristitx.gov/department-directory/city-secretary/
+[2026-01-23T01:43:25.282186] [INFO] -> https://www.corpuschristitx.gov/department-directory/intergovernmental-relations/
+[2026-01-23T01:43:25.284984] [INFO] -> https://www.corpuschristitx.gov/department-directory/city-manager-leadership/
+[2026-01-23T01:43:25.286131] [INFO] -> https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/mayoral-requests/
+[2026-01-23T01:43:25.287868] [INFO] -> https://www.corpuschristitx.gov/news/city-secretary-s-office/
+[2026-01-23T01:43:25.288735] [INFO] -> https://www.corpuschristitx.gov/department-directory/city-secretary/elections/election-and-campaign-reports/
+[2026-01-23T01:43:25.290419] [INFO] Search successful with google. Found 10 results.
+[2026-01-23T01:43:25.480439] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/
+[2026-01-23T01:43:28.537366] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/o4vfoqsr/corpus-christi-logo.svg
+[2026-01-23T01:43:28.555400] [DEBUG] Skipping blacklisted or invalid image: None
+[2026-01-23T01:43:28.570296] [DEBUG] Attempting to intercept and save image for: https://www.corpuschristitx.gov/media/simnanb4/mayor-paulette-m-guajardo-2025.png
+[2026-01-23T01:43:28.571122] [DEBUG] Loading image from URL: https://www.corpuschristitx.gov/media/simnanb4/mayor-paulette-m-guajardo-2025.png
+[2026-01-23T01:43:29.573273] [INFO] Image saved: /app/data_source/tx/local/place_corpus_christi/images/ed608d483e33.png
+[2026-01-23T01:43:29.592432] [DEBUG] Attempting to intercept and save image for: https://www.corpuschristitx.gov/media/simnanb4/mayor-paulette-m-guajardo-2025.png
+[2026-01-23T01:43:29.593355] [DEBUG] Loading image from URL: https://www.corpuschristitx.gov/media/simnanb4/mayor-paulette-m-guajardo-2025.png
+[2026-01-23T01:43:30.614279] [INFO] Image saved: /app/data_source/tx/local/place_corpus_christi/images/ed608d483e33.png
+[2026-01-23T01:43:30.648532] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/4iuhcmkx/permit-certificate-document.svg
+[2026-01-23T01:43:30.677728] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/5h0dlj2d/megaphone.svg
+[2026-01-23T01:43:30.698180] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/wjlma2sh/corpus-christi-favicon.svg
+[2026-01-23T01:43:30.724296] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/1otpokoh/facebook_circle.svg
+[2026-01-23T01:43:30.748466] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/vmfj11sn/facebook_circle_es.svg
+[2026-01-23T01:43:30.768945] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/solbg45u/instagram_circle.svg
+[2026-01-23T01:43:30.788971] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/s1rlrvtk/x-circle-black.svg
+[2026-01-23T01:43:30.817077] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/endlbgup/linked_in_circle.svg
+[2026-01-23T01:43:30.840718] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/4sahvgac/youtube_circle.svg
+[2026-01-23T01:43:31.207063] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/
+[2026-01-23T01:43:40.312140] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-23T01:43:40.312467] [INFO] -> Elapsed time: 9.10 seconds
+[2026-01-23T01:43:40.313185] [INFO] -> Average elapsed time: 9.10 seconds
+[2026-01-23T01:43:40.313509] [INFO] -> Total elapsed time: 9.10 seconds
+[2026-01-23T01:43:40.406611] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/
+[2026-01-23T01:43:40.408249] [INFO] Running OpenAI prompt
+[2026-01-23T01:43:40.408485] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Paulette Guajardo, Roland Barrera, Mark Scott, Carolyn Vaughn, Everett Roy, Sylvia Campos, Eric J. Cantu, Kaylynn Paxson, Gil Hernandez
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-23T01:43:40.408858] [INFO] openai LLM call took 0.00 seconds
+[2026-01-23T01:44:06.224201] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 2482, Output tokens: 1770, Total cost: $0.004160
+[2026-01-23T01:44:06.225090] [INFO] Page relevance check found related urls: ['https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-roland-barrera/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-mark-scott/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-carolyn-vaughn/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-1-everett-roy/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-2-sylvia-campos/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-3-eric-cantu/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-4-kaylynn-paxson/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-5-gil-hernandez/']
+[2026-01-23T01:44:06.226840] [INFO] Running Gemini prompt
+[2026-01-23T01:44:06.227361] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Paulette Guajardo, Roland Barrera, Mark Scott, Carolyn Vaughn, Everett Roy, Sylvia Campos, Eric J. Cantu, Kaylynn Paxson, Gil Hernandez
+
+    Only extract people who are currently serving as officials as of 2026-01-23. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-23
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-23) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-23T01:44:35.404754] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 3691, Output tokens: 1186, Total cost: $0.004072
+[2026-01-23T01:44:35.408108] [INFO] gemini gemini-2.5-flash LLM call took 29.18 seconds
+[2026-01-23T01:44:35.409932] [INFO] Running OpenAI prompt
+[2026-01-23T01:44:35.410782] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Paulette Guajardo, Roland Barrera, Mark Scott, Carolyn Vaughn, Everett Roy, Sylvia Campos, Eric J. Cantu, Kaylynn Paxson, Gil Hernandez
+
+    Only extract people who are currently serving as officials as of 2026-01-23. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-23
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-23T01:44:35.411757] [INFO] openai LLM call took 0.00 seconds
+[2026-01-23T01:45:24.786189] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 3241, Output tokens: 3380, Total cost: $0.007570
+[2026-01-23T01:45:24.922680] [DEBUG] Skipping adding websites for person with role and contact info: Paulette M. Guajardo
+[2026-01-23T01:45:24.923249] [DEBUG] Skipping adding websites for person with role and contact info: Paulette M. Guajardo
+[2026-01-23T01:45:24.924335] [INFO] links updated: [Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-mark-scott/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-secretary/about-us/corpus-christi-history/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/mayoral-requests/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-roland-barrera/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-secretary/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/agendas-and-minutes/public-comment-procedures/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-carolyn-vaughn/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/intergovernmental-relations/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/agendas-and-minutes/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-5-gil-hernandez/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-manager-leadership/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-3-eric-cantu/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/news/posts/city-of-corpus-christi-approves-professional-services-contract-for-reclaimed-water-infrastructure/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-4-kaylynn-paxson/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/news/city-secretary-s-office/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-secretary/agendas-and-minutes/council-meeting-calendars/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-secretary/elections/election-and-campaign-reports/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-5-gil-hernandez', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-carolyn-vaughn', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-3-eric-cantu', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-mark-scott', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-1-everett-roy', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-4-kaylynn-paxson', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-2-sylvia-campos', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-roland-barrera', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/', status='done', folder_name='www_corpuschristitx_gov_our-government_mayor-and-council_mayor-s-office_', is_profile_page=False)]
+[2026-01-23T01:45:25.055977] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office
+[2026-01-23T01:45:27.692893] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/o4vfoqsr/corpus-christi-logo.svg
+[2026-01-23T01:45:27.710014] [DEBUG] Skipping blacklisted or invalid image: None
+[2026-01-23T01:45:27.728113] [DEBUG] Attempting to intercept and save image for: https://www.corpuschristitx.gov/media/simnanb4/mayor-paulette-m-guajardo-2025.png
+[2026-01-23T01:45:27.729566] [DEBUG] Loading image from URL: https://www.corpuschristitx.gov/media/simnanb4/mayor-paulette-m-guajardo-2025.png
+[2026-01-23T01:45:28.709695] [INFO] Image saved: /app/data_source/tx/local/place_corpus_christi/images/ed608d483e33.png
+[2026-01-23T01:45:28.722161] [DEBUG] Attempting to intercept and save image for: https://www.corpuschristitx.gov/media/simnanb4/mayor-paulette-m-guajardo-2025.png
+[2026-01-23T01:45:28.722949] [DEBUG] Loading image from URL: https://www.corpuschristitx.gov/media/simnanb4/mayor-paulette-m-guajardo-2025.png
+[2026-01-23T01:45:29.683105] [INFO] Image saved: /app/data_source/tx/local/place_corpus_christi/images/ed608d483e33.png
+[2026-01-23T01:45:29.700968] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/4iuhcmkx/permit-certificate-document.svg
+[2026-01-23T01:45:29.719061] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/5h0dlj2d/megaphone.svg
+[2026-01-23T01:45:29.736444] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/wjlma2sh/corpus-christi-favicon.svg
+[2026-01-23T01:45:29.754624] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/1otpokoh/facebook_circle.svg
+[2026-01-23T01:45:29.771911] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/vmfj11sn/facebook_circle_es.svg
+[2026-01-23T01:45:29.787413] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/solbg45u/instagram_circle.svg
+[2026-01-23T01:45:29.800051] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/s1rlrvtk/x-circle-black.svg
+[2026-01-23T01:45:29.814672] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/endlbgup/linked_in_circle.svg
+[2026-01-23T01:45:29.829126] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/4sahvgac/youtube_circle.svg
+[2026-01-23T01:45:30.182762] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office
+[2026-01-23T01:45:35.625439] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-23T01:45:35.625863] [INFO] -> Elapsed time: 5.44 seconds
+[2026-01-23T01:45:35.626275] [INFO] -> Average elapsed time: 7.22 seconds
+[2026-01-23T01:45:35.626614] [INFO] -> Total elapsed time: 14.44 seconds
+[2026-01-23T01:45:35.722496] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office
+[2026-01-23T01:45:35.725157] [INFO] Running OpenAI prompt
+[2026-01-23T01:45:35.725633] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Paulette Guajardo, Roland Barrera, Mark Scott, Carolyn Vaughn, Everett Roy, Sylvia Campos, Eric J. Cantu, Kaylynn Paxson, Gil Hernandez
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-23T01:45:35.726115] [INFO] openai LLM call took 0.00 seconds
+[2026-01-23T01:45:58.622594] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 2482, Output tokens: 1734, Total cost: $0.004088
+[2026-01-23T01:45:58.623616] [INFO] Page relevance check found related urls: ['https://www.corpuschristitx.gov/our-government/mayor-and-council/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-roland-barrera/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-mark-scott/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-carolyn-vaughn/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-1-everett-roy/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-2-sylvia-campos/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-3-eric-cantu/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-4-kaylynn-paxson/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-5-gil-hernandez/']
+[2026-01-23T01:45:58.627643] [INFO] Running Gemini prompt
+[2026-01-23T01:45:58.628713] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Paulette Guajardo, Roland Barrera, Mark Scott, Carolyn Vaughn, Everett Roy, Sylvia Campos, Eric J. Cantu, Kaylynn Paxson, Gil Hernandez
+
+    Only extract people who are currently serving as officials as of 2026-01-23. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-23
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-23) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-23T01:46:18.509824] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 3691, Output tokens: 1136, Total cost: $0.003947
+[2026-01-23T01:46:18.512991] [INFO] gemini gemini-2.5-flash LLM call took 19.88 seconds
+[2026-01-23T01:46:18.514811] [INFO] Running OpenAI prompt
+[2026-01-23T01:46:18.515327] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Paulette Guajardo, Roland Barrera, Mark Scott, Carolyn Vaughn, Everett Roy, Sylvia Campos, Eric J. Cantu, Kaylynn Paxson, Gil Hernandez
+
+    Only extract people who are currently serving as officials as of 2026-01-23. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-23
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-23T01:46:18.516020] [INFO] openai LLM call took 0.00 seconds
+[2026-01-23T01:47:04.421644] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 3241, Output tokens: 3276, Total cost: $0.007362
+[2026-01-23T01:47:04.443763] [DEBUG] Skipping adding websites for person with role and contact info: Paulette M. Guajardo
+[2026-01-23T01:47:04.444710] [DEBUG] Skipping adding websites for person with role and contact info: Paulette M. Guajardo
+[2026-01-23T01:47:04.446806] [INFO] links updated: [Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-mark-scott/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-secretary/about-us/corpus-christi-history/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/mayoral-requests/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-roland-barrera/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-secretary/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/agendas-and-minutes/public-comment-procedures/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-carolyn-vaughn/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/intergovernmental-relations/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/agendas-and-minutes/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-5-gil-hernandez/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-manager-leadership/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-3-eric-cantu/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/news/posts/city-of-corpus-christi-approves-professional-services-contract-for-reclaimed-water-infrastructure/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-4-kaylynn-paxson/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/news/city-secretary-s-office/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-secretary/agendas-and-minutes/council-meeting-calendars/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-secretary/elections/election-and-campaign-reports/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-5-gil-hernandez', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-carolyn-vaughn', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-3-eric-cantu', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-mark-scott', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-1-everett-roy', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-4-kaylynn-paxson', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-2-sylvia-campos', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-roland-barrera', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/', status='done', folder_name='www_corpuschristitx_gov_our-government_mayor-and-council_mayor-s-office_', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office', status='done', folder_name='www_corpuschristitx_gov_our-government_mayor-and-council_mayor-s-office', is_profile_page=True)]
+[2026-01-23T01:47:04.553841] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.corpuschristitx.gov/our-government/mayor-and-council
+[2026-01-23T01:47:07.381866] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/o4vfoqsr/corpus-christi-logo.svg
+[2026-01-23T01:47:07.400760] [DEBUG] Attempting to intercept and save image for: https://cctexas-002-us.govstack.com/media/p3mftttl/new-council-chambers-small.webp
+[2026-01-23T01:47:07.401770] [DEBUG] Loading image from URL: https://cctexas-002-us.govstack.com/media/p3mftttl/new-council-chambers-small.webp
+[2026-01-23T01:47:08.197569] [INFO] Image saved: /app/data_source/tx/local/place_corpus_christi/images/b0c86722b1d5.png
+[2026-01-23T01:47:08.217189] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/sjfkadm1/school-building.svg
+[2026-01-23T01:47:08.230318] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/entl0ig4/meeting.svg
+[2026-01-23T01:47:08.246610] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/zhxigic2/agenda.svg
+[2026-01-23T01:47:08.257765] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/5h0dlj2d/megaphone.svg
+[2026-01-23T01:47:08.268617] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/4iuhcmkx/permit-certificate-document.svg
+[2026-01-23T01:47:08.281321] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/wjlma2sh/corpus-christi-favicon.svg
+[2026-01-23T01:47:08.291386] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/1otpokoh/facebook_circle.svg
+[2026-01-23T01:47:08.302775] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/vmfj11sn/facebook_circle_es.svg
+[2026-01-23T01:47:08.314797] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/solbg45u/instagram_circle.svg
+[2026-01-23T01:47:08.324591] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/s1rlrvtk/x-circle-black.svg
+[2026-01-23T01:47:08.334904] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/endlbgup/linked_in_circle.svg
+[2026-01-23T01:47:08.348135] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/4sahvgac/youtube_circle.svg
+[2026-01-23T01:47:08.563244] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.corpuschristitx.gov/our-government/mayor-and-council
+[2026-01-23T01:47:14.023041] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-23T01:47:14.023314] [INFO] -> Elapsed time: 5.46 seconds
+[2026-01-23T01:47:14.023713] [INFO] -> Average elapsed time: 6.49 seconds
+[2026-01-23T01:47:14.024229] [INFO] -> Total elapsed time: 19.46 seconds
+[2026-01-23T01:47:14.219987] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.corpuschristitx.gov/our-government/mayor-and-council
+[2026-01-23T01:47:14.223376] [INFO] Running OpenAI prompt
+[2026-01-23T01:47:14.224201] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Paulette Guajardo, Roland Barrera, Mark Scott, Carolyn Vaughn, Everett Roy, Sylvia Campos, Eric J. Cantu, Kaylynn Paxson, Gil Hernandez
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-23T01:47:14.224670] [INFO] openai LLM call took 0.00 seconds
+[2026-01-23T01:47:34.567311] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 2182, Output tokens: 1453, Total cost: $0.003452
+[2026-01-23T01:47:34.568440] [INFO] Page relevance check found related urls: ['https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-roland-barrera/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-mark-scott/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-carolyn-vaughn/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-1-everett-roy/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-2-sylvia-campos/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-3-eric-cantu/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-4-kaylynn-paxson/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-5-gil-hernandez/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/']
+[2026-01-23T01:47:34.571398] [INFO] Running Gemini prompt
+[2026-01-23T01:47:34.571865] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Paulette Guajardo, Roland Barrera, Mark Scott, Carolyn Vaughn, Everett Roy, Sylvia Campos, Eric J. Cantu, Kaylynn Paxson, Gil Hernandez
+
+    Only extract people who are currently serving as officials as of 2026-01-23. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-23
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-23) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-23T01:47:42.227448] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 3318, Output tokens: 907, Total cost: $0.003263
+[2026-01-23T01:47:42.231919] [INFO] gemini gemini-2.5-flash LLM call took 7.66 seconds
+[2026-01-23T01:47:42.234441] [INFO] Running OpenAI prompt
+[2026-01-23T01:47:42.235049] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Paulette Guajardo, Roland Barrera, Mark Scott, Carolyn Vaughn, Everett Roy, Sylvia Campos, Eric J. Cantu, Kaylynn Paxson, Gil Hernandez
+
+    Only extract people who are currently serving as officials as of 2026-01-23. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-23
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-23T01:47:42.235813] [INFO] openai LLM call took 0.00 seconds
+[2026-01-23T01:48:10.852409] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 2941, Output tokens: 2130, Total cost: $0.004995
+[2026-01-23T01:48:10.932114] [DEBUG] Skipping adding websites for person with role and contact info: Paulette M. Guajardo
+[2026-01-23T01:48:10.933333] [DEBUG] Skipping adding websites for person with role and contact info: Paulette M. Guajardo
+[2026-01-23T01:48:10.937622] [INFO] links updated: [Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-5-gil-hernandez', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-carolyn-vaughn', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-3-eric-cantu', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-mark-scott', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-1-everett-roy', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-4-kaylynn-paxson', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-2-sylvia-campos', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-roland-barrera', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office', status='done', folder_name='www_corpuschristitx_gov_our-government_mayor-and-council_mayor-s-office', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-mark-scott/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-secretary/about-us/corpus-christi-history/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/mayoral-requests/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-roland-barrera/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-secretary/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/agendas-and-minutes/public-comment-procedures/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-carolyn-vaughn/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/intergovernmental-relations/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/agendas-and-minutes/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-5-gil-hernandez/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-manager-leadership/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-3-eric-cantu/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/news/posts/city-of-corpus-christi-approves-professional-services-contract-for-reclaimed-water-infrastructure/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-4-kaylynn-paxson/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/news/city-secretary-s-office/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-secretary/agendas-and-minutes/council-meeting-calendars/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-secretary/elections/election-and-campaign-reports/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/', status='done', folder_name='www_corpuschristitx_gov_our-government_mayor-and-council_mayor-s-office_', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council', status='done', folder_name='www_corpuschristitx_gov_our-government_mayor-and-council', is_profile_page=True)]
+[2026-01-23T01:48:11.045602] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members
+[2026-01-23T01:48:13.851980] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/o4vfoqsr/corpus-christi-logo.svg
+[2026-01-23T01:48:13.868826] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/1uhpjmsr/map-marker.svg
+[2026-01-23T01:48:13.885550] [DEBUG] Attempting to intercept and save image for: https://www.corpuschristitx.gov/media/r3ph5orx/roland-barrera1.jpg?rxy=0.510431117975028,0.37394011349082446&width=300&height=400&v=1db660ce4d708a0&format=webp
+[2026-01-23T01:48:13.887025] [DEBUG] Loading image from URL: https://www.corpuschristitx.gov/media/r3ph5orx/roland-barrera1.jpg?rxy=0.510431117975028,0.37394011349082446&width=300&height=400&v=1db660ce4d708a0&format=webp
+[2026-01-23T01:48:14.448527] [INFO] Image saved: /app/data_source/tx/local/place_corpus_christi/images/d6ed3481f9b3.png
+[2026-01-23T01:48:14.464500] [DEBUG] Attempting to intercept and save image for: https://www.corpuschristitx.gov/media/brwjonxr/scott-mark-24-7x8-c.jpg?width=300&height=400&v=1db6609aafbd050&format=webp
+[2026-01-23T01:48:14.465255] [DEBUG] Loading image from URL: https://www.corpuschristitx.gov/media/brwjonxr/scott-mark-24-7x8-c.jpg?width=300&height=400&v=1db6609aafbd050&format=webp
+[2026-01-23T01:48:14.898123] [INFO] Image saved: /app/data_source/tx/local/place_corpus_christi/images/05cccf1be639.png
+[2026-01-23T01:48:14.917468] [DEBUG] Attempting to intercept and save image for: https://www.corpuschristitx.gov/media/zsnbm43g/vaughan-c-43-7x8-c.jpg?width=300&height=400&v=1db660c6e27bba0&format=webp
+[2026-01-23T01:48:14.918366] [DEBUG] Loading image from URL: https://www.corpuschristitx.gov/media/zsnbm43g/vaughan-c-43-7x8-c.jpg?width=300&height=400&v=1db660c6e27bba0&format=webp
+[2026-01-23T01:48:15.343688] [INFO] Image saved: /app/data_source/tx/local/place_corpus_christi/images/249f5fd73461.png
+[2026-01-23T01:48:15.366926] [DEBUG] Attempting to intercept and save image for: https://www.corpuschristitx.gov/media/o5ip1hsx/roy-everett-40-7x8-c.jpg?width=300&height=400&v=1db65f5d82cd010&format=webp
+[2026-01-23T01:48:15.367765] [DEBUG] Loading image from URL: https://www.corpuschristitx.gov/media/o5ip1hsx/roy-everett-40-7x8-c.jpg?width=300&height=400&v=1db65f5d82cd010&format=webp
+[2026-01-23T01:48:15.773635] [INFO] Image saved: /app/data_source/tx/local/place_corpus_christi/images/4d196a15416c.png
+[2026-01-23T01:48:15.792146] [DEBUG] Attempting to intercept and save image for: https://www.corpuschristitx.gov/media/tyvhioso/campos-sylvia-21-7x8-c.jpg?width=300&height=400&v=1db65f966e9ebf0&format=webp
+[2026-01-23T01:48:15.793123] [DEBUG] Loading image from URL: https://www.corpuschristitx.gov/media/tyvhioso/campos-sylvia-21-7x8-c.jpg?width=300&height=400&v=1db65f966e9ebf0&format=webp
+[2026-01-23T01:48:16.205230] [INFO] Image saved: /app/data_source/tx/local/place_corpus_christi/images/481f48250a7d.png
+[2026-01-23T01:48:16.221544] [DEBUG] Attempting to intercept and save image for: https://www.corpuschristitx.gov/media/tqzi0go0/cantu-eric-04-7x8-c.jpg?width=300&height=400&v=1db65f5181fed20&format=webp
+[2026-01-23T01:48:16.222598] [DEBUG] Loading image from URL: https://www.corpuschristitx.gov/media/tqzi0go0/cantu-eric-04-7x8-c.jpg?width=300&height=400&v=1db65f5181fed20&format=webp
+[2026-01-23T01:48:16.635881] [INFO] Image saved: /app/data_source/tx/local/place_corpus_christi/images/fd32eefb0689.png
+[2026-01-23T01:48:16.649333] [DEBUG] Attempting to intercept and save image for: https://www.corpuschristitx.gov/media/jk3hkdmp/paxson-kaylynn-15-7x8-c.jpg?width=300&height=400&v=1db660cb3e71c30&format=webp
+[2026-01-23T01:48:16.650286] [DEBUG] Loading image from URL: https://www.corpuschristitx.gov/media/jk3hkdmp/paxson-kaylynn-15-7x8-c.jpg?width=300&height=400&v=1db660cb3e71c30&format=webp
+[2026-01-23T01:48:17.080459] [INFO] Image saved: /app/data_source/tx/local/place_corpus_christi/images/9e73981a248c.png
+[2026-01-23T01:48:17.105731] [DEBUG] Attempting to intercept and save image for: https://www.corpuschristitx.gov/media/shcha2a1/hernandez-gill-21-7x8-c.jpg?width=300&height=400&v=1db65f997fb9130&format=webp
+[2026-01-23T01:48:17.107876] [DEBUG] Loading image from URL: https://www.corpuschristitx.gov/media/shcha2a1/hernandez-gill-21-7x8-c.jpg?width=300&height=400&v=1db65f997fb9130&format=webp
+[2026-01-23T01:48:17.545318] [INFO] Image saved: /app/data_source/tx/local/place_corpus_christi/images/10c2e7594403.png
+[2026-01-23T01:48:17.560840] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/sjfkadm1/school-building.svg
+[2026-01-23T01:48:17.576372] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/zhxigic2/agenda.svg
+[2026-01-23T01:48:17.591252] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/5h0dlj2d/megaphone.svg
+[2026-01-23T01:48:17.605495] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/4iuhcmkx/permit-certificate-document.svg
+[2026-01-23T01:48:17.619350] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/wjlma2sh/corpus-christi-favicon.svg
+[2026-01-23T01:48:17.632149] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/1otpokoh/facebook_circle.svg
+[2026-01-23T01:48:17.648013] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/vmfj11sn/facebook_circle_es.svg
+[2026-01-23T01:48:17.660617] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/solbg45u/instagram_circle.svg
+[2026-01-23T01:48:17.674193] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/s1rlrvtk/x-circle-black.svg
+[2026-01-23T01:48:17.687293] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/endlbgup/linked_in_circle.svg
+[2026-01-23T01:48:17.697230] [DEBUG] Skipping blacklisted or invalid image: https://www.corpuschristitx.gov/media/4sahvgac/youtube_circle.svg
+[2026-01-23T01:48:17.924274] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members
+[2026-01-23T01:48:23.954455] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-23T01:48:23.954805] [INFO] -> Elapsed time: 6.03 seconds
+[2026-01-23T01:48:23.955314] [INFO] -> Average elapsed time: 6.26 seconds
+[2026-01-23T01:48:23.955854] [INFO] -> Total elapsed time: 25.03 seconds
+[2026-01-23T01:48:24.068971] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members
+[2026-01-23T01:48:24.070847] [INFO] Running OpenAI prompt
+[2026-01-23T01:48:24.071301] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Paulette Guajardo, Roland Barrera, Mark Scott, Carolyn Vaughn, Everett Roy, Sylvia Campos, Eric J. Cantu, Kaylynn Paxson, Gil Hernandez
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-23T01:48:24.071879] [INFO] openai LLM call took 0.00 seconds
+[2026-01-23T01:48:43.557363] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 2695, Output tokens: 1374, Total cost: $0.003422
+[2026-01-23T01:48:43.559412] [INFO] Page relevance check found related urls: ['https://www.corpuschristitx.gov/our-government/mayor-and-council/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-roland-barrera/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-mark-scott/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-carolyn-vaughn/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-1-everett-roy/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-2-sylvia-campos/', 'https://www.corpuschristititx.gov/our-government/mayor-and-council/council-members/district-3-eric-cantu/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-4-kaylynn-paxson/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-5-gil-hernandez/', 'https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/']
+[2026-01-23T01:48:43.567126] [INFO] Running Gemini prompt
+[2026-01-23T01:48:43.567760] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Paulette Guajardo, Roland Barrera, Mark Scott, Carolyn Vaughn, Everett Roy, Sylvia Campos, Eric J. Cantu, Kaylynn Paxson, Gil Hernandez
+
+    Only extract people who are currently serving as officials as of 2026-01-23. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-23
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-23) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-23T01:48:50.217857] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 3946, Output tokens: 1397, Total cost: $0.004676
+[2026-01-23T01:48:50.221953] [INFO] gemini gemini-2.5-flash LLM call took 6.65 seconds
+[2026-01-23T01:48:50.224219] [INFO] Running OpenAI prompt
+[2026-01-23T01:48:50.224903] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Paulette Guajardo, Roland Barrera, Mark Scott, Carolyn Vaughn, Everett Roy, Sylvia Campos, Eric J. Cantu, Kaylynn Paxson, Gil Hernandez
+
+    Only extract people who are currently serving as officials as of 2026-01-23. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-23
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-23T01:48:50.226599] [INFO] openai LLM call took 0.00 seconds
+[2026-01-23T01:49:39.708273] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 3454, Output tokens: 3108, Total cost: $0.007080
+[2026-01-23T01:49:39.738978] [DEBUG] Skipping adding websites for person with role and contact info: Paulette M. Guajardo
+[2026-01-23T01:49:39.739939] [DEBUG] Skipping adding websites for person with role and contact info: Roland Barrera
+[2026-01-23T01:49:39.740333] [DEBUG] Skipping adding websites for person with role and contact info: Mark Scott
+[2026-01-23T01:49:39.740672] [DEBUG] Skipping adding websites for person with role and contact info: Carolyn Vaughn
+[2026-01-23T01:49:39.741210] [DEBUG] Skipping adding websites for person with role and contact info: Everett Roy
+[2026-01-23T01:49:39.741632] [DEBUG] Skipping adding websites for person with role and contact info: Sylvia Campos
+[2026-01-23T01:49:39.742183] [DEBUG] Skipping adding websites for person with role and contact info: Eric Cantu
+[2026-01-23T01:49:39.742706] [DEBUG] Skipping adding websites for person with role and contact info: Kaylynn Paxson
+[2026-01-23T01:49:39.743201] [DEBUG] Skipping adding websites for person with role and contact info: Gil Hernandez
+[2026-01-23T01:49:39.743699] [DEBUG] Skipping adding websites for person with role and contact info: Paulette M. Guajardo
+[2026-01-23T01:49:39.744297] [DEBUG] Skipping adding websites for person with role and contact info: Roland Barrera
+[2026-01-23T01:49:39.745140] [DEBUG] Skipping adding websites for person with role and contact info: Mark Scott
+[2026-01-23T01:49:39.748813] [DEBUG] Skipping adding websites for person with role and contact info: Carolyn Vaughn
+[2026-01-23T01:49:39.749269] [DEBUG] Skipping adding websites for person with role and contact info: Everett Roy
+[2026-01-23T01:49:39.749869] [DEBUG] Skipping adding websites for person with role and contact info: Sylvia Campos
+[2026-01-23T01:49:39.750935] [DEBUG] Skipping adding websites for person with role and contact info: Eric Cantu
+[2026-01-23T01:49:39.751390] [DEBUG] Skipping adding websites for person with role and contact info: Kaylynn Paxson
+[2026-01-23T01:49:39.753349] [DEBUG] Skipping adding websites for person with role and contact info: Gil Hernandez
+[2026-01-23T01:49:39.755964] [INFO] links updated: [Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-roland-barrera', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-mark-scott', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-carolyn-vaughn', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-1-everett-roy', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-2-sylvia-campos', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-4-kaylynn-paxson', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-5-gil-hernandez', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office', status='done', folder_name='www_corpuschristitx_gov_our-government_mayor-and-council_mayor-s-office', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council', status='done', folder_name='www_corpuschristitx_gov_our-government_mayor-and-council', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-3-eric-cantu', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-mark-scott/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-secretary/about-us/corpus-christi-history/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/mayoral-requests/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-roland-barrera/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-secretary/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/agendas-and-minutes/public-comment-procedures/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/at-large-carolyn-vaughn/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/intergovernmental-relations/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/agendas-and-minutes/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-5-gil-hernandez/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-manager-leadership/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-3-eric-cantu/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/news/posts/city-of-corpus-christi-approves-professional-services-contract-for-reclaimed-water-infrastructure/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members/district-4-kaylynn-paxson/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/news/city-secretary-s-office/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-secretary/agendas-and-minutes/council-meeting-calendars/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/department-directory/city-secretary/elections/election-and-campaign-reports/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/mayor-s-office/', status='done', folder_name='www_corpuschristitx_gov_our-government_mayor-and-council_mayor-s-office_', is_profile_page=False), Link(url='https://www.corpuschristitx.gov/our-government/mayor-and-council/council-members', status='done', folder_name='www_corpuschristitx_gov_our-government_mayor-and-council_council-members', is_profile_page=True)]
+[2026-01-23T01:49:40.325156] [INFO] Step 8: WorkflowStatus.FORMAT_OUTPUT Formatting output data.
+[2026-01-23T01:49:40.420120] [INFO] Step 9: CLEANUP
+[2026-01-23T01:49:40.511593] [INFO] Step 10: WorkflowStatus.SAVE_OUTPUT Saving output data and config files.
+[2026-01-23T01:49:40.727897] [INFO] Step 11: MAYBE_SEND_TO_GITHUB
+[2026-01-23T01:49:40.728598] [INFO] CRUDDER_UPLOAD_URL: https://api.civicpatch.org/api/internal/pipelines/github_intake
