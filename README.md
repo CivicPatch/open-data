@@ -9,7 +9,7 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 | nj | 563 | 559 | 6 | 1.07% | 565 | 3 | 1 |
 | co | 271 | 250 | 117 | 46.80% | 269 | 3 | 5 |
 | wa | 281 | 244 | 194 | 79.51% | 281 | 1 | 1 |
-| tx | 1222 | 919 | 42 | 4.57% | 1218 | 29 | 33 |
+| tx | 1222 | 919 | 46 | 5.01% | 1218 | 29 | 33 |
 
 ## Missing OCD IDs by State
 
@@ -21,9 +21,9 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in CivicPatch:
 
 **Places:**
-- country:us/state:nj/place:princeton
-- country:us/state:nj/county:sussex/place:walpack
 - country:us/state:nj/place:pine_valley
+- country:us/state:nj/county:sussex/place:walpack
+- country:us/state:nj/place:princeton
 
 **Divisions:**
 - country:us/state:nj/county:atlantic/council_district:1
@@ -89,9 +89,9 @@ None
 #### Missing in CivicPatch:
 
 **Places:**
-- country:us/state:co/place:raymer_~new_raymer~
-- country:us/state:co/place:bonanza
 - country:us/state:co/place:central_city
+- country:us/state:co/place:bonanza
+- country:us/state:co/place:raymer_~new_raymer~
 
 **Divisions:**
 - country:us/state:co/county:adams/council_district:1
@@ -259,11 +259,11 @@ None
 #### Missing in Google:
 
 **Places:**
-- country:us/state:co/place:keystone
 - country:us/state:co/place:broomfield
-- country:us/state:co/place:raymer_(new_raymer)
 - country:us/state:co/place:denver
 - country:us/state:co/place:central
+- country:us/state:co/place:raymer_(new_raymer)
+- country:us/state:co/place:keystone
 
 **Divisions:**
 - country:us/state:co/place:alamosa/ward:1
@@ -747,35 +747,35 @@ None
 #### Missing in CivicPatch:
 
 **Places:**
-- country:us/state:tx/place:st_paul
-- country:us/state:tx/place:oak_ridge
-- country:us/state:tx/place:mustang
-- country:us/state:tx/place:post_oak_bend_city
 - country:us/state:tx/place:bailey~s_prairie
-- country:us/state:tx/place:oak_ridge_~cooke_county~
-- country:us/state:tx/place:morgan~s_point_resort
 - country:us/state:tx/place:los_ybanez
-- country:us/state:tx/place:carl~s_corner
-- country:us/state:tx/place:millican
-- country:us/state:tx/place:o~donnell
 - country:us/state:tx/place:oak_ridge_~kaufman_county~
+- country:us/state:tx/place:carl~s_corner
 - country:us/state:tx/place:rangerville
 - country:us/state:tx/place:miller~s_cove
-- country:us/state:tx/place:morgan~s_point
-- country:us/state:tx/place:reno_~lamar_county~
-- country:us/state:tx/place:lincoln_park
-- country:us/state:tx/place:nesbitt
-- country:us/state:tx/place:st_hedwig
-- country:us/state:tx/place:brazos_bend
-- country:us/state:tx/place:st_jo
-- country:us/state:tx/place:lakeside_~tarrant_county~
-- country:us/state:tx/place:lakeside_~san_patricio_county~
 - country:us/state:tx/place:lakeside
-- country:us/state:tx/place:reno_~parker_county~
-- country:us/state:tx/place:pecos
+- country:us/state:tx/place:oak_ridge_~cooke_county~
+- country:us/state:tx/place:nesbitt
 - country:us/state:tx/place:corral_city
+- country:us/state:tx/place:reno_~lamar_county~
+- country:us/state:tx/place:lakeside_~tarrant_county~
+- country:us/state:tx/place:reno_~parker_county~
+- country:us/state:tx/place:mustang
+- country:us/state:tx/place:pecos
+- country:us/state:tx/place:post_oak_bend_city
+- country:us/state:tx/place:millican
+- country:us/state:tx/place:morgan~s_point_resort
+- country:us/state:tx/place:o~donnell
+- country:us/state:tx/place:oak_ridge
 - country:us/state:tx/place:hillcrest
+- country:us/state:tx/place:st_hedwig
+- country:us/state:tx/place:morgan~s_point
+- country:us/state:tx/place:st_jo
 - country:us/state:tx/place:o~brien
+- country:us/state:tx/place:lincoln_park
+- country:us/state:tx/place:brazos_bend
+- country:us/state:tx/place:lakeside_~san_patricio_county~
+- country:us/state:tx/place:st_paul
 
 **Divisions:**
 - country:us/state:tx/county:anderson/council_district:1
@@ -1847,39 +1847,39 @@ None
 #### Missing in Google:
 
 **Places:**
-- country:us/state:tx/place:kingsbury
-- country:us/state:tx/place:oak_ridge_town_(cooke
-- country:us/state:tx/place:dennis
-- country:us/state:tx/place:sandy_oaks
-- country:us/state:tx/place:reno_city_(parker_and_tarrant
+- country:us/state:tx/place:san_elizario
 - country:us/state:tx/place:reno_city_(lamar
+- country:us/state:tx/place:post_oak_bend
+- country:us/state:tx/place:dennis
+- country:us/state:tx/place:coupland
+- country:us/state:tx/place:morgan's_point_resort
+- country:us/state:tx/place:poetry
 - country:us/state:tx/place:o'donnell
-- country:us/state:tx/place:peaster
-- country:us/state:tx/place:st._jo
-- country:us/state:tx/place:plantersville
 - country:us/state:tx/place:lakeside_town_(san_patricio
+- country:us/state:tx/place:morgan's_point
+- country:us/state:tx/place:lakeside_town_(tarrant
+- country:us/state:tx/place:o'brien
+- country:us/state:tx/place:ellinger
+- country:us/state:tx/place:road_runner
+- country:us/state:tx/place:plantersville
+- country:us/state:tx/place:st._paul
 - country:us/state:tx/place:st._hedwig
 - country:us/state:tx/place:oak_ridge_town_(kaufman
-- country:us/state:tx/place:south_frydek
-- country:us/state:tx/place:poetry
-- country:us/state:tx/place:morgan's_point_resort
-- country:us/state:tx/place:st._paul
-- country:us/state:tx/place:carl's_corner
-- country:us/state:tx/place:o'brien
-- country:us/state:tx/place:post_oak_bend
-- country:us/state:tx/place:morgan's_point
-- country:us/state:tx/place:double_horn
-- country:us/state:tx/place:town_of_pecos
-- country:us/state:tx/place:san_elizario
-- country:us/state:tx/place:stockton_bend
-- country:us/state:tx/place:bailey's_prairie
-- country:us/state:tx/place:lakeside_town_(tarrant
-- country:us/state:tx/place:spring_branch
-- country:us/state:tx/place:ellinger
-- country:us/state:tx/place:coupland
-- country:us/state:tx/place:road_runner
 - country:us/state:tx/place:miller's_cove
+- country:us/state:tx/place:oak_ridge_town_(cooke
+- country:us/state:tx/place:sandy_oaks
+- country:us/state:tx/place:reno_city_(parker_and_tarrant
+- country:us/state:tx/place:spring_branch
+- country:us/state:tx/place:peaster
+- country:us/state:tx/place:st._jo
+- country:us/state:tx/place:stockton_bend
+- country:us/state:tx/place:kingsbury
+- country:us/state:tx/place:town_of_pecos
+- country:us/state:tx/place:bailey's_prairie
 - country:us/state:tx/place:hillcrest_village
+- country:us/state:tx/place:south_frydek
+- country:us/state:tx/place:carl's_corner
+- country:us/state:tx/place:double_horn
 
 **Divisions:**
 - country:us/state:tx/place:arlington/council_district:6
@@ -1894,6 +1894,13 @@ None
 - country:us/state:tx/place:bryan/council_district:3
 - country:us/state:tx/place:bryan/council_district:4
 - country:us/state:tx/place:bryan/council_district:5
+- country:us/state:tx/place:georgetown/council_district:1
+- country:us/state:tx/place:georgetown/council_district:2
+- country:us/state:tx/place:georgetown/council_district:3
+- country:us/state:tx/place:georgetown/council_district:4
+- country:us/state:tx/place:georgetown/council_district:5
+- country:us/state:tx/place:georgetown/council_district:6
+- country:us/state:tx/place:georgetown/council_district:7
 - country:us/state:tx/place:harlingen/council_district:1
 - country:us/state:tx/place:harlingen/council_district:2
 - country:us/state:tx/place:harlingen/council_district:3
@@ -1901,6 +1908,12 @@ None
 - country:us/state:tx/place:harlingen/council_district:5
 - country:us/state:tx/place:irving/council_district:2
 - country:us/state:tx/place:irving/council_district:8
+- country:us/state:tx/place:longview/council_district:1
+- country:us/state:tx/place:longview/council_district:2
+- country:us/state:tx/place:longview/council_district:3
+- country:us/state:tx/place:longview/council_district:4
+- country:us/state:tx/place:longview/council_district:5
+- country:us/state:tx/place:longview/council_district:6
 - country:us/state:tx/place:mesquite/council_district:5
 - country:us/state:tx/place:mesquite/council_district:6
 - country:us/state:tx/place:new_braunfels/council_district:1
