@@ -1,0 +1,2751 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n3-active wf-muli-n4-active wf-muli-i4-active wf-muli-n7-active wf-active has-webFonts"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:700,regular|Merriweather:700|Open+Sans:300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,italic,regular|Ovo:regular|Source+Sans+Pro:200,600,600italic,700,700italic,900,900italic,italic,regular|Ubuntu:500,700,regular|" media="all"><script type="text/javascript" src="//heatmaps.monsido.com/v1/heatmaps.js"></script><script type="text/javascript" src="//cdn.monsido.com/page-assist/v2/mon-page-assist-loader.js"></script><script type="text/javascript" src="//pagecorrect.monsido.com/v1/page-correct.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-RZP08EJJT9&amp;cx=c&amp;gtm=4e61m0"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-XBV0QJK3KQ&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61m0"></script><script type="text/javascript" async="" src="//siteimproveanalytics.com/js/siteanalyze_6099404.js"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-XBV0QJK3KQ';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	<meta name="category0" content="Home">
+<meta name="category1" content="Government">
+<meta name="category2" content="Mayor's Welcome and Town Council">
+<meta name="category3" content="District 4 Council Member Idalia Maria Amaya">
+
+	
+	<meta name="theme-color" content="#002a5c">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>District 4 Council Member Idalia Maria Amaya | Town of Little Elm, TX - Official Website</title>
+
+		<meta name="description" content="">
+		<meta name="keywords" content="Council Member Chip Norman">
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '350px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/-1010756130.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<style>.frase-answers-bot{position:absolute;bottom:0;right:0}
+</style><style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style></head>
+<body class="wide withFeatureColumn cpTextResizeOn doneLoading monsido-toolbar-body-container"><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="https://www.littleelm.gov/Common/images/ajax-loader.gif" alt="Loading" title="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks">
+<a href="https://www.littleelm.gov/874/District-4-Council-Member-Idalia-Maria-A#cce2509a16-406a-4dc8-9777-396959490f22" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="6">
+    <input type="hidden" id="hdnContentCollectionID" value="646096d4-6ee7-4d77-ae34-1bb5a30af987">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="15">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID">
+    <input type="hidden" id="pagePageID" value="874">
+
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700); 
+.alertText .customAlert {
+    color: #EAEAEA;
+    display: inline-block;
+    font-family: 'Open Sans Condensed', sans-serif; 
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 27px;
+    left: 57px;
+    line-height: 27px;
+    overflow: hidden;
+    position: absolute;
+    top: 15px;
+    white-space: nowrap;
+    width: 268px;
+}
+</style>
+  <div id="1_divAlertBar" class="alertToolbar cpToolbar" style="background: rgb(34, 34, 34); z-index: 2;">
+    <div id="1_divAlertToolbarInner" class="alertToolbarInner" style="font-size: 16px;">
+        <a href="https://www.littleelm.gov/1836/37230/Winter-Weather-Updates-2026" id="1_lnkAlertText" class="alertText" style="border-right: 1px solid #000000;">
+            <img src="https://www.littleelm.gov/Common/Images/AlertCenter/alertBarBlink.svg" id="1_imgDot" alt="Emergency Alert" class="redDot">
+            <span id="1_customAlert" class="customAlert">Emergency Alert</span>
+        </a>
+        <span id="1_spnAlertContainer" class="alertContainer"><a href="https://www.littleelm.gov/1836/37230/Winter-Weather-Updates-2026" target="_self" class="alert" style="border-left: 1px solid #635e65; border-right: 1px solid #000000;background: #030303 url(/Common/images/AlertCenter/alertBarBlackTextBckg.png) repeat-x; color: #FFFFFF;">
+	WINTER STORM UPDATE
+	<span style="color: #FC4C2F;">Read On...</span>
+</a>
+</span>
+    </div>
+  </div>
+  <div id="1_divAlertBarEmpty" class="alertBarEmpty"></div>
+  
+
+
+
+<!-- Begin Signed Out Bar -->
+<div class="cpToolbar user public" style="z-index: 1;">
+    <div class="inner selfClear">
+        <p class="dropdown"><a href="https://www.littleelm.gov/MyAccount/ProfileCreate" role="link" class="myConnections" id="signedOutToolbarCreateProfileButton">Create a Website Account</a> <span class="welcomeMessage">- Manage notification subscriptions, save form progress and more. &nbsp;&nbsp;</span></p>
+        <ul class="nav secondary">
+	        <li><a href="https://www.littleelm.gov/MyAccount" role="link" class="button" id="loggedOutToolbarSignInButton"><span>Website Sign In</span></a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#signedOutToolbarCreateProfileButton').keypress(function (e) { if (e.which === 0) return; $(this).click(); });
+        $('#signedOutToolbarCreateProfileButton').click(function (event) {
+        	event.preventDefault();
+        	window.location.href = '/MyAccount/ProfileCreate?from=url&url=/&dn=' + window.location.origin;
+        });
+
+			
+				$('#loggedOutToolbarSignInButton').click(function (event) {
+					event.preventDefault();
+					window.location.href = '/MyAccount/?from=url&url=' + encodeURIComponent(window.location.href.replace(window.location.origin, '')) + '&dn=' + window.location.host;
+				});
+			
+
+		if ('False' == 'True') {
+            $('#loggedOutToolbarSignInButton').hide();
+		}
+    })
+</script>
+<!-- End Signed Out Bar -->
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 92px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="bodyContainerTS">
+<!-- Header Container --><header data-cprole="structuralContainer" id="headerContainerTS" class="fixedTopTS" style="top: 0px;">
+<div class="siteWrap9"><div data-cprole="banner" id="bannerLogoTS" class="bannerLogoTS empty">
+
+
+
+
+				<a id="bannerLogoTS-55" style="			display: block; text-align: center;
+" class="bannerObject" href="https://www.littleelm.gov/" target="_self"><img alt="Home Page" class="bannerObject" height="94" src="https://www.littleelm.gov/ImageRepository/Document?documentID=16827" width="328"></a>
+</div><div data-cprole="contentContainer" id="searchTS">	<div id="cc94a44be1-66e7-4e43-ba20-56aab22de894" data-containerid="94a44be1-66e7-4e43-ba20-56aab22de894" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="890ae024-9256-47df-9d6a-49ce7c0f4f33">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last idc71be0bb-17d8-4067-9e5f-d33afb0b1920" style="height: 65px;" data-widgetcontainerid="c71be0bb-17d8-4067-9e5f-d33afb0b1920">
+	
+<div data-widget-id="80578f04-7737-4eb9-89c9-0747534dd34b" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButton80578f04-7737-4eb9-89c9-0747534dd34b").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDept80578f04-7737-4eb9-89c9-0747534dd34b").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchField80578f04-7737-4eb9-89c9-0747534dd34b").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDept80578f04-7737-4eb9-89c9-0747534dd34b").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDept80578f04-7737-4eb9-89c9-0747534dd34b").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchField80578f04-7737-4eb9-89c9-0747534dd34b").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDept80578f04-7737-4eb9-89c9-0747534dd34b").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchField80578f04-7737-4eb9-89c9-0747534dd34b").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchField80578f04-7737-4eb9-89c9-0747534dd34b"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin17 widgetOptionSet34" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBox80578f04-7737-4eb9-89c9-0747534dd34b ui-autocomplete-input" cp5ph="true" id="searchField80578f04-7737-4eb9-89c9-0747534dd34b" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search..." title="Search..." type="text" value="" autocomplete="off">
+						<a href="https://www.littleelm.gov/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButton80578f04-7737-4eb9-89c9-0747534dd34b" role="button"><img alt="Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=16829" data-image="/ImageRepository/Document?documentID=16828" src="https://www.littleelm.gov/ImageRepository/Document?documentID=16828"></a>
+
+			<label class="searchLabel" for="searchField80578f04-7737-4eb9-89c9-0747534dd34b">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #454545;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #454545;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #454545;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #454545;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBox80578f04-7737-4eb9-89c9-0747534dd34b
+	{
+		color: #454545;
+		background: #ffffff;
+border: 0 none;
+height: 65px;
+box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.38);
+border-radius: 10px;
+font-size: 15px;
+padding-left: 1.5em;
+font-family: Source Sans Pro;
+font-weight: 600;
+	}
+	.widgetSearch .widgetBody .widgetSearchButton80578f04-7737-4eb9-89c9-0747534dd34b
+	{
+		margin: 13px;
+	}
+	.widgetSearch .widgetSearch-onlyDept80578f04-7737-4eb9-89c9-0747534dd34b
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDept80578f04-7737-4eb9-89c9-0747534dd34b
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchField80578f04-7737-4eb9-89c9-0747534dd34b").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation" style="">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem8" class="topMenuItem" role="none" data-pageid="8" data-displaymegamenu="True" style="width: 26.9028%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavDepartments" class="navMainItem mainNavItem mainNavItem1" href="https://www.littleelm.gov/8/Departments" target="_self" style="font-size: 20px;"><span style="display: inline;">   Departments </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem9" class="topMenuItem mouseover" role="none" data-pageid="9" data-displaymegamenu="True" style="width: 23.1781%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="true" id="mainNavHowDoI" class="navMainItem mainNavItem mainNavItem2" href="https://www.littleelm.gov/9/How-Do-I" target="_self" style="font-size: 20px;"><span style="display: inline;">   How Do I </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem35" class="topMenuItem" role="none" data-pageid="35" data-displaymegamenu="True" style="width: 23.502%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavBusiness" class="navMainItem mainNavItem mainNavItem3" href="https://www.littleelm.gov/35/Business" target="_self" style="font-size: 20px;"><span style="display: inline;">   Business </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem27" class="topMenuItem" role="none" data-pageid="27" data-displaymegamenu="True" style="width: 26.417%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem4" href="https://www.littleelm.gov/27/Government" target="_self" style="font-size: 20px;"><span style="display: inline;">   Government </span></a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=15&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = true;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="1"></aside></nav></div>
+</header><!-- Banner --><div data-cprole="structuralContainer" id="bannerContainerTS" class="noOverflowTS">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="bannerSizingTS">
+<div data-cprole="structuralContainer" id="bannerContentTS">
+<div class="siteWrap9"><div data-cprole="contentContainer" id="contentTS">	<div id="cc18903d8a-a61b-46a2-a36d-9bc243284903" data-containerid="18903d8a-a61b-46a2-a36d-9bc243284903" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+
+
+
+		<div id="bannerImagesJSON54" class="hidden"></div><div class="bannerObject external fixedBanner" id="bannerDivbanner1" style="min-height: 368px; top: 0px; left: -177.1px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img class="bannerObject" width="1265px" style="position: absolute; left: 0px; margin: 0px; width: 1619.2px;" src="https://www.littleelm.gov/ImageRepository/Document?documentID=16824" data-is-delayed="false" alt=""></div>
+		
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner1',
+								{"BannerOptionID":54,"ThemeID":15,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":2,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":66,"BannerOptionID":54,"FileName":"/ImageRepository/Document?documentID=16824","Height":500,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""}],"BannerVideos":[{"BannerVideoID":13,"BannerOptionID":54,"VideoFileName":"","ImageFileName":"EmptyBannerBkg202205071719480872.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								'/App_Themes/Interior/Images/',
+								'Rotating');
+						});
+				});
+			</script>
+
+</div>
+</div><!-- Content container --><div data-cprole="structuralContainer" id="mainContainerTS">
+<div class="siteWrap3"><div data-cprole="structuralContainer" id="mainWrapTS" class="mainWrap" role="main">
+<div data-cprole="structuralContainer" id="outerContentWrapTS" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="contentWrapTS" class="contentWrap">
+<div data-cprole="breadCrumbs" id="breadCrumbs" class="breadCrumbContainer">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="https://www.littleelm.gov/">Home</a></li><li><a class="breadCrumb" href="https://www.littleelm.gov/27/Government">Government</a></li><li><a class="breadCrumb" href="https://www.littleelm.gov/525/Mayors-Welcome-and-Town-Council">Mayor's Welcome and Town Council</a></li><li id="currentBCPage" data-pageid="874">District 4 Council Member Idalia Maria Amaya</li>
+		</ol>
+
+	   
+    
+</div><div data-cprole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="874">
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="525">
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="21587">
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="District 4 Council Member Idalia Maria Amaya">
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="True">
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False">
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published">
+
+				<h1 id="versionHeadLine" class="headline">
+
+District 4 Council Member Idalia Maria Amaya		</h1>
+	
+		<div id="cce2509a16-406a-4dc8-9777-396959490f22" data-containerid="e2509a16-406a-4dc8-9777-396959490f22" class="pageContent cpGrid cpGrid24">
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="08777f79-c788-4e3a-b005-bbe9e09c2dbd">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last idb395e6ab-364f-4b99-9bd9-837c783a58fe" style="height: 480px;" data-widgetcontainerid="b395e6ab-364f-4b99-9bd9-837c783a58fe">
+	
+<div class="widget editor pageStyles wide" id="divEditor999477f0-1fc7-46f9-90fb-5930be38cdf8" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <p id="isPasted">Councilmember Idalia Maria Amaya was elected to the Little Elm Town Council in 2025. She is a dedicated public servant and proud native of Little Elm, with over 15 years of experience in social work, education, nonprofit leadership, and community development.</p><p>In addition to her role on the Town Council, Idalia serves on the Little Elm Community Development Corporation Board. She is also a graduate of Citizen’s Government Academy, a member of the Little Elm High School Alumni Association, and a volunteer with the Little Elm Area Food Bank.</p><p>When she’s not working, you can find her spending time with loved ones, enjoying live music, or exploring our Town’s beautiful parks. For Idalia, Little Elm isn’t just a place where she grew up—it’s home, and she’s proud to serve the community that shaped her.</p><p>A graduate of Little Elm High School and a longtime supporter of community development, Idalia is committed to helping Little Elm grow in a way that benefits all residents. She holds a Bachelor of Science in Human Development and Family Science from the University of Texas at Austin, and dual master’s degrees from Columbia University—in Social Work and International Affairs. In 2024, she graduated from the LBJ Women’s Campaign School at UT Austin.</p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '999477f0-1fc7-46f9-90fb-5930be38cdf8'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: block;">	<div id="cc015498b3-496c-4e7e-9cec-3108e2db684c" data-containerid="015498b3-496c-4e7e-9cec-3108e2db684c" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="a82dc1a5-b5e4-4438-b5e0-80925bc7cd0d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id79b90433-3cdb-494b-bfb8-cb8576badcb6" style="height: 542px;" data-widgetcontainerid="79b90433-3cdb-494b-bfb8-cb8576badcb6">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="abc3e2ad-942a-4105-a88e-562cdedd977f" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidgetabc3e2ad-942a-4105-a88e-562cdedd977f" class="widget widgetStaffDirectory skin18 wide">
+			<div class="widgetHeader">
+					<h3><a style="" href="https://www.littleelm.gov/Directory.aspx">Contact Us</a></h3>
+							</div>
+						<ol class="semanticList">
+			<li class="widgetItem h-card">
+
+					<img src="https://www.littleelm.gov/ImageRepository/Document?documentID=21208" alt="Idalia" title="Idalia" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name">
+					Idalia Maria Amaya
+					
+				</h4>
+				<div class="field p-job-title">Council Member, District 4</div>
+						<div class="field u-email"><a href="mailto:idalia.amaya@littleelm.gov">idalia.amaya@littleelm.gov </a></div>
+
+
+					<div class="field p-tel">Phone: <a href="tel:2149750471">214-975-0471</a></div>
+
+
+
+				<br>
+			</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="7795884f-6feb-4687-bdf0-44797c135ade">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last idd5362747-b1b7-488f-a6f0-b87de6e5510c" style="height: 300px;" data-widgetcontainerid="d5362747-b1b7-488f-a6f0-b87de6e5510c">
+	
+<div class="widget editor pageStyles narrow" id="divEditor6960586c-6cac-4870-afd6-570c18991fe1" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h3 class="subhead2">Town Hall</h3><p>100 W. Eldorado Parkway<br>Little Elm, Texas 75068</p><h3 class="subhead2">Hours</h3><p><span>Monday-Thursday</span></p><p><span>7:30 a.m.-5:30 p.m.</span><span><br></span></p><p>&nbsp;</p><p><br></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '6960586c-6cac-4870-afd6-570c18991fe1'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="siteSidebarTS" class="siteSidebar">
+<aside data-cprole="contentContainer" id="sidebarContainer1TS">	<div id="cc94d6cdbf-c711-46d4-9731-56851a89335a" data-containerid="94d6cdbf-c711-46d4-9731-56851a89335a" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav">
+
+
+
+
+
+	<ol role="menu" id="secondaryMenusecondaryNav" data-parent="525" class="rootNavMenu accordionNav">
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem466" data-pageid="466">
+		<div class="accordionNavItem">
+			<a href="https://www.littleelm.gov/DocumentCenter/Index/74" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Council Meeting Procedures</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem869" data-pageid="869">
+		<div class="accordionNavItem">
+			<a href="https://www.littleelm.gov/869/Mayor-Curtis-J-Cornelious" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Mayor Curtis J. Cornelious</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1504" data-pageid="1504">
+		<div class="accordionNavItem">
+			<a href="https://www.littleelm.gov/1504/At-Large-Place-1-Council-Member-Jamell-T" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">At Large Place 1 Council Member Jamell T. Johnson</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem870" data-pageid="870">
+		<div class="accordionNavItem">
+			<a href="https://www.littleelm.gov/870/Mayor-Pro-Tem-District-2-Council-Member-" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Mayor Pro Tem &amp; District 2 Council Member Tony Singh</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem871" data-pageid="871">
+		<div class="accordionNavItem">
+			<a href="https://www.littleelm.gov/871/District-3-Council-Member-Ken-Eaken" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">District 3 Council Member Ken Eaken</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem874" data-pageid="874">
+		<div class="accordionNavItem">
+			<a href="https://www.littleelm.gov/874/District-4-Council-Member-Idalia-Maria-A" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">District 4 Council Member Idalia Maria Amaya</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1587" data-pageid="1587">
+		<div class="accordionNavItem">
+			<a href="https://www.littleelm.gov/1587/Deputy-Mayor-Pro-Tem-District-5-Council-" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Deputy Mayor Pro Tem &amp; District 5 Council Member Andrew Evans</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1586" data-pageid="1586">
+		<div class="accordionNavItem">
+			<a href="https://www.littleelm.gov/1586/At-Large-Place-6-Council-Member-Michel-H" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">At Large Place 6 Council Member Michel Hambrick</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem363" data-pageid="363">
+		<div class="accordionNavItem">
+			<a href="https://www.littleelm.gov/597/Town-Council-District-Map" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Council Districts</a>
+		</div>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = false;
+		});
+	</script>
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			$('*[id^="SideItem"]').each(function () {
+				var ids = $('[id="' + this.id + '"]');
+				if (ids.length > 1)
+					$.each(ids, function (index, value) {
+						value.id = value.id + '_' + index;
+					});
+			});
+
+			$('.hasAccordionChildren .openAccordionNav').click(function (e) {
+				e.preventDefault();
+				showHideAccordionMenuForSecondaryNav($(this));
+			});
+
+			$("#secondaryNav .grippy").each(function () {
+				menuManager.setupDraggableElement($(this), SIDE_MENU, '#secondaryNav');
+			});
+
+			$("#secondaryNav li").each(function () {
+				menuManager.setupDroppableAccordionElement($(this), SIDE_MENU);
+			});
+		});
+	</script>
+
+
+
+</nav><aside data-cprole="contentContainer" id="sidebarContainer2TS">	<div id="ccc6ff8002-6636-422d-8a86-83e766e5413b" data-containerid="c6ff8002-6636-422d-8a86-83e766e5413b" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div><!-- GBs --><div data-cprole="structuralContainer" id="gbsContainerTS">
+<div class="siteWrap9"><div data-cprole="contentContainer" id="gbsTS">	<div id="cc7dd2d557-d86c-4786-9ec1-3cc907be7a3d" data-containerid="7dd2d557-d86c-4786-9ec1-3cc907be7a3d" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="55">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="height: auto;" data-widgetcontainerid="07cb1d97-1717-4b41-89c3-be0aa38c4b50">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last idd19b6220-310d-4dda-b157-fbeb4ba1126c" style="height: 595px;" data-widgetcontainerid="d19b6220-310d-4dda-b157-fbeb4ba1126c">
+	
+<div data-widget-id="0c98fdd3-4269-45c1-869d-867f7c41c159" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget0c98fdd3-4269-45c1-869d-867f7c41c159" class="widget widgetGraphicLinks skin20 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 "> 	
+				<ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.littleelm.gov/105/Human-Resources" target="_self" class="fancyButton fancyButton236 ">
+		<span>
+			<span><span class="text"><span class="textStyle1">work with us</span>Join our team of dedicated professionals serving our residents and stakeholders.</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton236.fancyButton:link,.fancyButton236.fancyButton:visited, .fancyButton236div.fancyButton{
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	-khtml-border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	-khtml-border-top-right-radius: 10px;
+	border-top-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-bottom-left-radius: 10px;
+	-khtml-border-bottom-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-bottom-right-radius: 10px;
+	-khtml-border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-image: url('/ImageRepository/Document?documentID=16830');
+	background-repeat: no-repeat;
+	background-position: center center;
+min-height: 576px;
+box-shadow: 0px 10px 25px rgba(0, 46, 89, 0.28);
+overflow: hidden;
+background-size: cover;
+}
+
+.fancyButton236 > span > span {
+min-height: 576px;
+background-color: rgba(0, 42, 92, .8);}
+.fancyButton236.fancyButton:hover,.fancyButton236.fancyButton:focus,.fancyButton236.fancyButton:active,.fancyButton236.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.fancyButton236.fancyButton:link > span,.fancyButton236.fancyButton:visited > span, .fancyButton236div.fancyButton > span{
+}
+.fancyButton236.fancyButton:hover > span,.fancyButton236.fancyButton:focus > span,.fancyButton236.fancyButton:active > span,.fancyButton236.fancyButton.hover > span{
+}
+.fancyButton236.fancyButton .text{
+	color: #ffffff;
+	font-size: 1em;
+	font-family: "Arial";
+	text-align: left;
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
+	padding-right: 2.5em;
+	padding-left: 2.5em;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
+	padding-right: 2.5em;
+	padding-left: 2.5em;
+	background-image: url('/ImageRepository/Document?documentID=16832');
+	background-repeat: no-repeat;
+	background-position: right top;
+padding: clamp(1em, 3vw, 2.5em) !important;
+vertical-align: bottom;
+position: relative;
+transition: all .3s ease-in-out;
+background-size: 185px;
+background-size: clamp(85px, 10vw, 185px);
+}
+.fancyButton236.fancyButton:hover .text,.fancyButton236.fancyButton:focus .text,.fancyButton236.fancyButton:active .text,.fancyButton236.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: right top;
+background-size: 311px;
+background-size: clamp(140px, 20vw, 311px);
+}
+.fancyButton236.fancyButton .textStyle1{
+	color: #ffffff;
+	font-size: 1.5em;
+	font-family: Source Sans Pro;
+	font-weight: 700;
+	text-decoration: none;
+text-transform: uppercase;
+line-height: 1.15;
+display: block;
+}
+
+.fancyButton236 .textStyle1::after {
+content: '';
+display: block;
+margin: 8px 0 12px;
+width: 100%;
+height: 3px;
+max-width: 79px;
+border-radius: 30px;
+background: #00A75A;
+transition: all .3s ease-in-out;
+}
+
+.fancyButton236:hover .textStyle1::after,
+.fancyButton236:focus .textStyle1::after,
+.fancyButton236:active .textStyle1::after {
+max-width: 234px;}
+.fancyButton236.fancyButton:hover .textStyle1, .fancyButton236.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+				--></ul>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8" style="height: auto;" data-widgetcontainerid="fd7a19c9-1d38-4b56-8f39-f8f9651e6f3f">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id7e7b53fe-03c2-42bd-9aa8-f6b2e3ed6f59" style="height: 595px;" data-widgetcontainerid="7e7b53fe-03c2-42bd-9aa8-f6b2e3ed6f59">
+	
+<div data-widget-id="9822d0b2-9ada-472f-bb41-84c7beb80c74" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget9822d0b2-9ada-472f-bb41-84c7beb80c74" class="widget widgetGraphicLinks skin20 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.littleelm.gov/1258/Agendas-Minutes-Videos" target="_self" class="fancyButton fancyButton238 ">
+		<span>
+			<span><span class="text"><span class="textStyle1">Agendas &amp; Minutes</span>Watch Town Council live during meetings. All recordings are Town property.</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton238.fancyButton:link,.fancyButton238.fancyButton:visited, .fancyButton238div.fancyButton{
+	background-color: #00713d;
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	-khtml-border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	-khtml-border-top-right-radius: 10px;
+	border-top-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-bottom-left-radius: 10px;
+	-khtml-border-bottom-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-bottom-right-radius: 10px;
+	-khtml-border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-repeat: no-repeat;
+	background-position: center center;
+min-height: 273px;
+box-shadow: 0px 10px 25px rgba(0, 46, 89, 0.28);
+overflow: hidden;
+background-size: cover;
+}
+
+.fancyButton238 > span > span {
+min-height: 274px;
+
+}
+.fancyButton238.fancyButton:hover,.fancyButton238.fancyButton:focus,.fancyButton238.fancyButton:active,.fancyButton238.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.fancyButton238.fancyButton:link > span,.fancyButton238.fancyButton:visited > span, .fancyButton238div.fancyButton > span{
+}
+.fancyButton238.fancyButton:hover > span,.fancyButton238.fancyButton:focus > span,.fancyButton238.fancyButton:active > span,.fancyButton238.fancyButton.hover > span{
+}
+.fancyButton238.fancyButton .text{
+	color: #ffffff;
+	font-size: 1em;
+	font-family: "Arial";
+	text-align: left;
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
+	padding-right: 2.5em;
+	padding-left: 2.5em;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
+	padding-right: 2.5em;
+	padding-left: 2.5em;
+	background-image: url('/ImageRepository/Document?documentID=16835');
+	background-repeat: no-repeat;
+	background-position: right center;
+padding: clamp(1em, 3vw, 2.5em) !important;
+vertical-align: bottom;
+position: relative;
+transition: all .3s ease-in-out;
+
+}
+.fancyButton238.fancyButton:hover .text,.fancyButton238.fancyButton:focus .text,.fancyButton238.fancyButton:active .text,.fancyButton238.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=16836');
+	background-repeat: no-repeat;
+	background-position: right center;
+
+
+}
+.fancyButton238.fancyButton .textStyle1{
+	color: #ffffff;
+	font-size: 1.5em;
+	font-family: Source Sans Pro;
+	font-weight: 700;
+	text-decoration: none;
+text-transform: uppercase;
+line-height: 1.15;
+display: block;
+}
+
+.fancyButton238 .textStyle1::after {
+content: '';
+display: block;
+margin: 8px 0 12px;
+width: 100%;
+height: 3px;
+max-width: 79px;
+border-radius: 30px;
+background: #00A75A;
+transition: all .3s ease-in-out;
+}
+
+.fancyButton238:hover .textStyle1::after,
+.fancyButton238:focus .textStyle1::after,
+.fancyButton238:active .textStyle1::after {
+max-width: 234px;}
+.fancyButton238.fancyButton:hover .textStyle1, .fancyButton238.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.littleelm.gov/1379/Online-Bill-Pay-Options" target="_self" class="fancyButton fancyButton239 ">
+		<span>
+			<span><span class="text"><span class="textStyle1">Pay Bills</span>Access the new online payment system 24-hours a day, seven days a week! In addition to basic contact information, anyone paying a water bill will need their account number and customer number found on your water bill.</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton239.fancyButton:link,.fancyButton239.fancyButton:visited, .fancyButton239div.fancyButton{
+	background-color: #002a5c;
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	-khtml-border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	-khtml-border-top-right-radius: 10px;
+	border-top-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-bottom-left-radius: 10px;
+	-khtml-border-bottom-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-bottom-right-radius: 10px;
+	-khtml-border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-repeat: no-repeat;
+	background-position: center center;
+min-height: 274px;
+box-shadow: 0px 10px 25px rgba(0, 46, 89, 0.28);
+overflow: hidden;
+background-size: cover;
+transition: all .3s ease-in-out;
+}
+
+.fancyButton239 > span > span {
+min-height: 274px;
+
+}
+.fancyButton239.fancyButton:hover,.fancyButton239.fancyButton:focus,.fancyButton239.fancyButton:active,.fancyButton239.fancyButton.hover{
+	background-color: #001f43;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.fancyButton239.fancyButton:link > span,.fancyButton239.fancyButton:visited > span, .fancyButton239div.fancyButton > span{
+}
+.fancyButton239.fancyButton:hover > span,.fancyButton239.fancyButton:focus > span,.fancyButton239.fancyButton:active > span,.fancyButton239.fancyButton.hover > span{
+}
+.fancyButton239.fancyButton .text{
+	color: #ffffff;
+	font-size: 1em;
+	font-family: "Arial";
+	text-align: left;
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
+	padding-right: 2.5em;
+	padding-left: 2.5em;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
+	padding-right: 2.5em;
+	padding-left: 2.5em;
+	background-image: url('/ImageRepository/Document?documentID=16834');
+	background-repeat: repeat;
+	background-position: left top;
+padding: clamp(1em, 3vw, 2.5em) !important;
+vertical-align: bottom;
+position: relative;
+transition: all .3s ease-in-out;
+
+}
+.fancyButton239.fancyButton:hover .text,.fancyButton239.fancyButton:focus .text,.fancyButton239.fancyButton:active .text,.fancyButton239.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: repeat;
+	background-position: left top;
+
+
+}
+.fancyButton239.fancyButton .textStyle1{
+	color: #ffffff;
+	font-size: 1.5em;
+	font-family: Source Sans Pro;
+	font-weight: 700;
+	text-decoration: none;
+text-transform: uppercase;
+line-height: 1.15;
+display: block;
+}
+
+.fancyButton239 .textStyle1::after {
+content: '';
+display: block;
+margin: 8px 0 12px;
+width: 100%;
+height: 3px;
+max-width: 79px;
+border-radius: 30px;
+background: #00A75A;
+transition: all .3s ease-in-out;
+}
+
+.fancyButton239:hover .textStyle1::after,
+.fancyButton239:focus .textStyle1::after,
+.fancyButton239:active .textStyle1::after {
+max-width: 234px;}
+.fancyButton239.fancyButton:hover .textStyle1, .fancyButton239.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+						--></ul>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8 last" style="height: auto;" data-widgetcontainerid="d0f42e98-7aa6-4845-a73c-45c5bfb46e97">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id2a6616a7-d111-4122-9758-0efbce3755dd" style="height: 595px;" data-widgetcontainerid="2a6616a7-d111-4122-9758-0efbce3755dd">
+	
+<div data-widget-id="57e8d2ff-9b63-4abd-9c28-ea850b0ea753" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget57e8d2ff-9b63-4abd-9c28-ea850b0ea753" class="widget widgetGraphicLinks skin20 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 "> 	
+				<ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://lakefrontlittleelm.com/" target="_self" class="fancyButton fancyButton237 ">
+		<span>
+			<span><span class="text"><span class="textStyle1">Lakefront Little Elm</span>We’re home to the sun on your face, drink in your hand, sitting outside laughing with your best friends kind of feeling that doesn’t end when the summer fades.</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton237.fancyButton:link,.fancyButton237.fancyButton:visited, .fancyButton237div.fancyButton{
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	-khtml-border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	-khtml-border-top-right-radius: 10px;
+	border-top-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-bottom-left-radius: 10px;
+	-khtml-border-bottom-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-bottom-right-radius: 10px;
+	-khtml-border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-image: url('/ImageRepository/Document?documentID=16833');
+	background-repeat: no-repeat;
+	background-position: center center;
+min-height: 576px;
+box-shadow: 0px 10px 25px rgba(0, 46, 89, 0.28);
+overflow: hidden;
+background-size: cover;
+}
+
+.fancyButton237 > span > span {
+min-height: 576px;
+background: transparent linear-gradient(180deg, rgba(0, 113, 61, 0) 0%, rgba(0, 113, 61, 0) 35%, rgba(0, 113, 61, 0.83) 65%, rgba(0, 113, 61, 1) 100%) 0% 0% no-repeat padding-box;
+}
+
+/* THIS IS A MOBILE STYLE FOR THE GREEN GRADIENT BACKGROUND. REMOVE THIS IF REMOVING THE LINEAR GRADIENT. */
+body.narrow .fancyButton237 > span > span {
+background: rgba(0, 113, 61, 0.83);}
+.fancyButton237.fancyButton:hover,.fancyButton237.fancyButton:focus,.fancyButton237.fancyButton:active,.fancyButton237.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.fancyButton237.fancyButton:link > span,.fancyButton237.fancyButton:visited > span, .fancyButton237div.fancyButton > span{
+}
+.fancyButton237.fancyButton:hover > span,.fancyButton237.fancyButton:focus > span,.fancyButton237.fancyButton:active > span,.fancyButton237.fancyButton.hover > span{
+}
+.fancyButton237.fancyButton .text{
+	color: #ffffff;
+	font-size: 1em;
+	font-family: "Arial";
+	text-align: left;
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
+	padding-right: 2.5em;
+	padding-left: 2.5em;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
+	padding-right: 2.5em;
+	padding-left: 2.5em;
+	background-image: url('/ImageRepository/Document?documentID=16831');
+	background-repeat: no-repeat;
+	background-position: left top;
+padding: clamp(1em, 3vw, 2.5em) !important;
+vertical-align: bottom;
+position: relative;
+transition: all .3s ease-in-out;
+background-size: 185px;
+background-size: clamp(85px, 10vw, 185px);
+}
+.fancyButton237.fancyButton:hover .text,.fancyButton237.fancyButton:focus .text,.fancyButton237.fancyButton:active .text,.fancyButton237.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+background-size: 311px;
+background-size: clamp(140px, 20vw, 311px);
+}
+.fancyButton237.fancyButton .textStyle1{
+	color: #ffffff;
+	font-size: 1.5em;
+	font-family: Source Sans Pro;
+	font-weight: 700;
+	text-decoration: none;
+text-transform: uppercase;
+line-height: 1.15;
+display: block;
+}
+
+.fancyButton237 .textStyle1::after {
+content: '';
+display: block;
+margin: 8px 0 12px;
+width: 100%;
+height: 3px;
+max-width: 79px;
+border-radius: 30px;
+background: #00A75A;
+transition: all .3s ease-in-out;
+}
+
+.fancyButton237:hover .textStyle1::after,
+.fancyButton237:focus .textStyle1::after,
+.fancyButton237:active .textStyle1::after {
+max-width: 234px;}
+.fancyButton237.fancyButton:hover .textStyle1, .fancyButton237.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+				--></ul>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Calendar/Carousel --><!-- <div data-cpRole="structuralContainer" id="homeContainer1">
+    <div class="siteWrap2">
+      <div data-cpRole="contentContainer" id="homeContent1a"></div>
+    </div>
+  </div> --><!-- Footer --><footer data-cprole="structuralContainer" id="footerContainerTS">
+<div class="siteWrap3"><div data-cprole="contentContainer" id="footerTS">	<div id="cc59eb9955-4989-4be4-a0b7-3ede8e58d5b4" data-containerid="59eb9955-4989-4be4-a0b7-3ede8e58d5b4" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="60">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col3 first" style="height: auto;" data-widgetcontainerid="fa8deecd-05ac-483b-bd23-061b17e88c1e">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col3 first last id03080ab9-71d0-4bd5-bd0a-a6a0f50599f9" style="height: 216px;" data-widgetcontainerid="03080ab9-71d0-4bd5-bd0a-a6a0f50599f9">
+	
+    <div data-widget-id="be456629-94c7-47ad-9f24-4dd2d8eeace6" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdvbe456629-94c7-47ad-9f24-4dd2d8eeace6" class="widget widgetInfoAdvanced skin23 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="headerbe456629-94c7-47ad-9f24-4dd2d8eeace6">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="https://www.littleelm.gov/"><img src="https://www.littleelm.gov/ImageRepository/Document?documentId=16837" class="fr-dib" alt="Little Elm"></a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdvbe456629-94c7-47ad-9f24-4dd2d8eeace6 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="d0ec7ba6-5685-4132-81a6-1b2064219712">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id9437f2ca-bc37-469c-b430-c98123f7d9f1" style="height: 216px;" data-widgetcontainerid="9437f2ca-bc37-469c-b430-c98123f7d9f1">
+	
+
+<div class="widget widgetSpacer" id="39db32cc-e3d0-4864-aded-ef49531ca158" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col7" style="height: auto;" data-widgetcontainerid="cc62bc1e-76ce-492d-8744-13ca03d4ba57">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col7 first last ida514f4e6-66ab-4bd1-a035-8849829cbae4" style="height: 216px;" data-widgetcontainerid="a514f4e6-66ab-4bd1-a035-8849829cbae4">
+	
+    <div data-widget-id="e028bce1-da2a-4585-91f5-a4681b434930" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdve028bce1-da2a-4585-91f5-a4681b434930" class="widget widgetInfoAdvanced skin21 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="headere028bce1-da2a-4585-91f5-a4681b434930">
+			<header class="widgetHeader" id="headere028bce1-da2a-4585-91f5-a4681b434930">
+		<div class="">
+					<h3>Contact Us</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p id="isPasted">Town of Little Elm<br>100 W. Eldorado Parkway<br>Little Elm, TX 75068</p><p><br></p><p><a class="Hyperlink" href="https://www.littleelm.gov/Directory.aspx" target="_self">Staff Directory</a><br><a class="Hyperlink" href="mailto:takisia.daniel@littleelm.org">Email Us</a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdve028bce1-da2a-4585-91f5-a4681b434930 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8" style="height: auto;" data-widgetcontainerid="05b12b8f-b769-4c6a-858e-e8d3525c9c16">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id4ad79ccc-f123-452a-a9f2-a8e46eac5af8" style="height: 216px;" data-widgetcontainerid="4ad79ccc-f123-452a-a9f2-a8e46eac5af8">
+	
+	<div data-widget-id="da766121-a435-4b8b-9c75-f640b93ebc89" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklinkda766121-a435-4b8b-9c75-f640b93ebc89" class="widget widgetQuickLinks skin21 widgetOptionSet17 wide" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeaderda766121-a435-4b8b-9c75-f640b93ebc89">
+			<header class="widgetHeader" id="quickLinksHeaderda766121-a435-4b8b-9c75-f640b93ebc89">
+		<div class="">
+					<h3><a style="" href="https://www.littleelm.gov/QuickLinks.aspx?CID=105">Social Media</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  wide">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.facebook.com/TownofLittleElm" target="_self">Facebook</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.instagram.com/littleelmtx/?hl=en" target="_self">Instagram</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.youtube.com/user/TownOfLittleElmTexas" target="_self">YouTube</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col5 last" style="height: auto;" data-widgetcontainerid="1cdb617a-dc13-47d8-a98f-acbf3f01b91f">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last id11044877-155b-4905-8652-e1bdd84cc4c7" style="height: 216px;" data-widgetcontainerid="11044877-155b-4905-8652-e1bdd84cc4c7">
+	
+	<div data-widget-id="cc418cf5-a0e7-4c2c-9ce3-bbe27af8e65d" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklinkcc418cf5-a0e7-4c2c-9ce3-bbe27af8e65d" class="widget widgetQuickLinks skin21 widgetOptionSet17 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeadercc418cf5-a0e7-4c2c-9ce3-bbe27af8e65d">
+			<header class="widgetHeader" id="quickLinksHeadercc418cf5-a0e7-4c2c-9ce3-bbe27af8e65d">
+		<div class="">
+					<h3><a style="" href="https://www.littleelm.gov/QuickLinks.aspx?CID=89">Helpful Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.littleelm.gov/" target="_self">Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.littleelm.gov/directory.aspx" target="_self">Contact Us</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.littleelm.gov/Accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.littleelm.gov/site/copyright" target="_self">Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div><div data-cprole="contentContainer" id="poweredByTS">	<div id="cc575c2fce-20a0-4f37-84d7-1d4e8a77a5d7" data-containerid="575c2fce-20a0-4f37-84d7-1d4e8a77a5d7" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="ed014cc7-6b67-4739-9445-112af2411b4d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last idd9011fd6-042c-4884-8197-fbd14c6b0668" style="height: 37px;" data-widgetcontainerid="d9011fd6-042c-4884-8197-fbd14c6b0668">
+	
+ 
+	<div data-widget-id="3a02474c-85f7-4827-8b8c-ea36b8d3fd46" data-modulename="customHtml" id="widgetCustomHtml3a02474c-85f7-4827-8b8c-ea36b8d3fd46" class="widget widgetCustomHtml skin22 narrow">
+	<div class="widgetBody pageStyles" id="widgetBody3a02474c-85f7-4827-8b8c-ea36b8d3fd46">
+		<div id="customHtml3a02474c-85f7-4827-8b8c-ea36b8d3fd46"><div><style>
+  /* CP icon */
+  .cpBylineIconTS {
+    color: #454545;
+  }
+  /* CP Text */
+  .cpBylineTextTS,
+  .cpBylineTextTS a:link {
+    color: #454545;
+  }
+
+  .cpBylineTS {
+    text-align: center;
+  }
+  
+  .cpBylineIconTS {
+    fill: currentColor;
+    width: 39px;
+    height: 26px;
+    display: inline;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="widgetItem cpBylineTS">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="cpBylineIconTS">
+    <path class="c" d="M73.4,23.2h-19v16.7h19c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5h-19v28.4h5.5l11.3-11.7h2.2c11.9,0,21.6-9.7,21.6-21.6C95,33,85.3,23.2,73.4,23.2"></path>
+    <path class="p" d="M45.8,66.5H26.6C14.7,66.5,5,56.8,5,44.9C5,33,14.7,23.2,26.6,23.2h19.1v16.7H26.6c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h19.1V66.5z"></path>
+  </svg>
+  <span class="cpBylineTextTS">Government Websites by <a href="https://connect.civicplus.com/referral">CivicPlus®</a></span>
+</div>
+</div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</footer>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '874',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!-- SiteImprove Code -->
+<script type="text/javascript">
+/*<![CDATA[*/
+(function() {
+var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+sz.src = '//siteimproveanalytics.com/js/siteanalyze_6099404.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+})();
+/*]]>*/
+</script> 
+<!-- End SiteImprove Code -->
+	
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-119381159-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-119381159-1');
+</script>
+
+<script type="module" data-hash="d7339c88f2b347fd93b2b4955100cf12" id="frase-script" src="https://answers-script.frase.io/bot.js"></script>
+
+<!-- Fixed Nav Adjustment -->
+<script>
+  function getValueTS(elem, attr) {
+    const val = elem.css(attr);
+    if (val === undefined) return undefined;
+    const num = parseInt(val, 10);
+    if (num === NaN) return undefined;
+    return num;
+  }
+
+  function clampTS(number, min, max) {
+    return Math.min(Math.max(number, min), max);
+  }
+
+  function isPageEditingTS() {
+    return (
+      $("#doneEditing").length > 0 || // In live edit
+      typeof DesignCenter !== "undefined" // In theme manager
+    );
+  }
+
+  const bgColorRegexTS = /rgba\((\d+), (\d+), (\d+), (\d*\.?\d*)\)/;
+  function isTransparentTS(elem) {
+    const bg = elem.css('background-color');
+    if (typeof bg !== "string" || !bg.startsWith('rgba(')) return false;
+    const matchState = bg.match(bgColorRegexTS);
+    if (!matchState || matchState.length !== 5) return false;
+    const alpha = parseFloat(matchState[4], 10);
+    if (!(alpha >= 0 && alpha < 1)) return false;
+    return true;
+  }
+
+  function iterateLeftpads(cb) {
+    const containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (let i = 0; i < containersTS.length; i++) {
+      const containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-leftpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-leftpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  const anchor = $("#divToolbars");
+
+  // Outer banner padding (push banner down)
+  const outerSizingTS = $("#bannerContainerTS");
+  // Inner banner padding (push banner content down) - Transparent header OR on attaching headers
+  const innerSizingTS = $("#bannerSizingTS");
+  const bodyContainerTS = $("#bodyContainerTS");
+
+  const forceUnfixClassTS = "forceUnfixTS";
+
+  const fixedTopTS = $(".fixedTopTS");
+  const fixedBottomTS = $(".fixedBottomTS");
+  const fixedLeftTS = $(".fixedLeftTS");
+
+  var initialTopTS;
+  var topAttachTS;
+  if (fixedTopTS && fixedTopTS.length === 1) {
+    initialTopTS = getValueTS(fixedTopTS, 'top');
+    const attachment = fixedTopTS.attr('data-attach');
+    if (attachment) topAttachTS = $("#" + attachment);
+    if (!topAttachTS || topAttachTS.length !== 1) topAttachTS = undefined;
+  }
+
+  function resizeAdjustmentTS() {
+    const editing = isPageEditingTS();
+
+    // Fixed top script
+    (function () {
+      if (!fixedTopTS || fixedTopTS.length !== 1 || initialTopTS === undefined) return;
+
+      if (editing) {
+        fixedTopTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedTopTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      const topPosition = fixedTopTS.css('position');
+      if (topPosition === 'fixed') {
+        if (topAttachTS) {
+          scrollAdjustmentTS();
+        } else {
+          const anchorHeight = anchor.outerHeight() - 1;
+          fixedTopTS.css('top', anchorHeight + initialTopTS);
+        }
+      } else {
+        fixedTopTS.css('top', initialTopTS);
+      }
+
+      if (topPosition === 'fixed' || topPosition === 'absolute') {
+        // Bump the banner content down
+        if (isTransparentTS(fixedTopTS)) {
+          innerSizingTS.css('padding-top', initialTopTS + fixedTopTS.outerHeight() - 1);
+          outerSizingTS.css('padding-top', '');
+
+          try {
+            window.Pages.onResizeHandlersExecute();
+          } catch (e) { }
+        } else {
+          outerSizingTS.css('padding-top', fixedTopTS.outerHeight() - 1);
+          innerSizingTS.css('padding-top', '');
+        }
+      } else {
+        innerSizingTS.css('padding-top', '');
+        outerSizingTS.css('padding-top', '');
+      }
+    })();
+
+    // Fixed bottom script
+    (function () {
+      if (!fixedBottomTS || fixedBottomTS.length === 0) return;
+
+      // If the widget has gone narrow, force unfix
+      if (editing || fixedBottomTS.outerHeight() > 200) {
+        fixedBottomTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedBottomTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedBottomTS.css('position') === 'fixed') {
+        bodyContainerTS.css('padding-bottom', fixedBottomTS.outerHeight());
+      } else {
+        bodyContainerTS.css('padding-bottom', '');
+      }
+    })();
+
+    // Fixed left script
+    (function () {
+      if (!fixedLeftTS || fixedLeftTS.length === 0) return;
+
+      if (editing) {
+        fixedLeftTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedLeftTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedLeftTS.css('position') === 'fixed') {
+        const anchorHeight = anchor.outerHeight() - 1;
+        fixedLeftTS.css('top', anchorHeight);
+        const leftBoundingTS = fixedLeftTS[0].getBoundingClientRect();
+        iterateLeftpads(function (containerTS) {
+          const containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.left <= leftBoundingTS.right) {
+            $(containerTS).css('padding-left', leftBoundingTS.width + 16);
+          }
+        });
+      } else {
+        fixedLeftTS.css('top', '');
+        iterateLeftpads(function (containerTS) {
+          $(containerTS).css('padding-left', '');
+        });
+      }
+    })();
+  }
+
+  function scrollAdjustmentTS() {
+    if (!fixedTopTS || fixedTopTS.length !== 1 || !topAttachTS || topAttachTS.length !== 1) return;
+    const topPosition = fixedTopTS.css('position');
+    if (topPosition === 'fixed' || topPosition === 'absolute') {
+      const anchorBounding = anchor[0].getBoundingClientRect();
+      const attachBounding = topAttachTS[0].getBoundingClientRect();
+      const scrollTop = $(window).scrollTop();
+
+      fixedTopTS.css('top', Math.max(anchorBounding.bottom - 1, attachBounding.bottom));
+    } else {
+      fixedTopTS.css('top', initialTopTS);
+    }
+  }
+
+  $(window).load(function () {
+    setTimeout(function () {
+      resizeAdjustmentTS();
+    }, 350);
+
+    $(window).scroll(function () {
+      scrollAdjustmentTS();
+    });
+
+    var adjustTimeoutTS;
+    $(window).resize(function () {
+      clearTimeout(adjustTimeoutTS);
+      adjustTimeoutTS = setTimeout(function () {
+        resizeAdjustmentTS();
+      }, 350);
+    });
+
+    $.when(window.Pages.angularToolbarComplete).done(function () {
+      resizeAdjustmentTS();
+    });
+  });
+</script>
+<!-- End Fixed Nav Adjustment -->
+
+<!----- Start Monsido Script ----->
+<script type="text/javascript">
+    window._monsido = window._monsido || {
+        token: "7VrG6oT82xo1xcP2VpjEHQ",
+        statistics: {
+            enabled: true,
+            cookieLessTracking: false,
+            documentTracking: {
+                enabled: true,
+                documentCls: "monsido_download",
+                documentIgnoreCls: "monsido_ignore_download",
+                documentExt: ["pdf","xls","ppt","docx","doc","xlsx","pptx"],
+            },
+        },
+        heatmap: {
+            enabled: true,
+        },
+        pageCorrect: {
+            enabled: true,
+        },
+        pageAssistV2: {
+            enabled: true,
+            theme: "light",
+            mainColor: "#783CE2",
+            textColor: "#ffffff",
+            linkColor: "#783CE2",
+            buttonHoverColor: "#783CE2",
+            mainDarkColor: "#052942",
+            textDarkColor: "#ffffff",
+            linkColorDark: "#FFCF4B",
+            buttonHoverDarkColor: "#FFCF4B",
+            greeting: "Discover your personalization options",
+            direction: "leftbottom",
+            coordinates: "undefined undefined undefined undefined",
+            iconShape: "circle",
+            title: "Personalization Options",
+            titleText: "Welcome to PageAssist&#8482; toolbar! Adjust the options below to cater the website to your accessibility needs.",
+            iconPictureUrl: "logo",
+            logoPictureUrl: "",
+            logoPictureBase64: "",
+            languages: [""],
+            defaultLanguage: "",
+            skipTo: false,
+            alwaysOnTop: false,
+        },
+    };
+</script>
+<script type="text/javascript" async="" src="https://app-script.monsido.com/v2/monsido-script.js"></script>
+<!----- End Monsido Script ----->
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Lato:700,regular|Merriweather:700|Open+Sans:300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,italic,regular|Ovo:regular|Source+Sans+Pro:200,600,600italic,700,700italic,900,900italic,italic,regular|Ubuntu:500,700,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<div id="frase-answers-bot" class="frase-answers-bot" style="left: auto; right: 0px;"><div id="frase-wrapper" style="overflow: hidden; right: 0px; height: 70px; margin-right: 0px; margin-bottom: 0px; background: transparent; bottom: 0px;"><iframe title="Chat Bot" id="frase-iframe" src="https://answers-bot.frase.io/d7339c88f2b347fd93b2b4955100cf12" style="bottom: 0px; right: 0px; position: fixed; z-index: 2147483647; border: none; height: 70px; width: 70px; margin-right: 0px; margin-bottom: 0px; background: transparent;"></iframe><div id="frase-greeting" style="position: fixed; bottom: calc(86px); right: 18px; background-color: rgb(255, 255, 255); padding: 15px; border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px; z-index: 10001; max-width: 300px; border: 1px solid rgb(221, 221, 221); cursor: pointer;"><p style="margin: 0px 10px 0px 0px; font-weight: 500; font-size: 0.8rem; line-height: 0.8rem;">Hi 👋, how can I help?</p><button title="close greeting" style="position: absolute; top: -8px; right: -5px; border: none; background: rgb(229, 229, 229); border-radius: 50%; cursor: pointer; padding: 0px; height: 18px; width: 18px; font-size: 0.7rem; display: flex;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" style="height: 12px; width: 12px; color: rgb(0, 0, 0); font-size: 0.7rem; margin: auto;"><path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path></svg></button></div></div></div><ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu8" class="contentTop mainNavMegaMenu megaMenuContainer pageID_8 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 293.188px;">	<div id="cc0b3a6bb3-e5fe-4202-a8af-390907dbd705" data-containerid="0b3a6bb3-e5fe-4202-a8af-390907dbd705" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu9" class="contentTop mainNavMegaMenu megaMenuContainer pageID_9 moved megaMenu animation-triggered" data-orientation="horizontal" style="position: absolute; z-index: 100; top: 298.188px;">	<div id="cc4e18c740-fd88-46b7-a8f5-368bf53b2c78" data-containerid="4e18c740-fd88-46b7-a8f5-368bf53b2c78" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu35" class="contentTop mainNavMegaMenu megaMenuContainer pageID_35 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 293.188px;">	<div id="ccb4c1f4be-85e1-4a5b-abfa-991825b92896" data-containerid="b4c1f4be-85e1-4a5b-abfa-991825b92896" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu27" class="contentTop mainNavMegaMenu megaMenuContainer pageID_27 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 293.188px;">	<div id="cc1a701fdf-f066-4912-8641-772fc2ab7836" data-containerid="1a701fdf-f066-4912-8641-772fc2ab7836" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><div id="bannerSlideshowControls_banner1" class="bannerSlideshowControlsNew none " style="display:none">
+			<a id="arrowPrev_banner1" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner1" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div><button class="mon-logo-container mon-light-theme" mon-position="leftbottom" aria-labelledby="mon-pa-pageassist-label mon-pa-logo-label" id="monsido-pageassist" aria-expanded="false"><span id="mon-pa-pageassist-label" class="mon-pa-efsc">PageAssist</span>
+        <span id="mon-pa-logo-label" class="mon-logo-text-content">Discover your personalization options</span>
+        <span class="mon-logo-image-wrapper-content">
+            <span class="mon-logo-image-wrapper ">
+                <span class="mon-pageassist-close-img mon-pa-efsc">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><path class="a mon-pa-efsc" d="M10.343,87.5l4.264-4.264a1.341,1.341,0,0,0,0-1.9l-.948-.948a1.341,1.341,0,0,0-1.9,0L7.5,84.657,3.236,80.392a1.341,1.341,0,0,0-1.9,0l-.948.948a1.341,1.341,0,0,0,0,1.9L4.657,87.5.392,91.764a1.341,1.341,0,0,0,0,1.9l.948.948a1.341,1.341,0,0,0,1.9,0L7.5,90.343l4.264,4.264a1.341,1.341,0,0,0,1.9,0l.948-.948a1.341,1.341,0,0,0,0-1.9Z" transform="translate(0 -80)"></path></svg>
+                </span>
+                <span class="mon-pageassist-check-img mon-pa-efsc">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7.457" viewBox="0 0 10 7.457"><path class="a mon-pa-efsc" d="M3.4,72.409l-3.25-3.25a.5.5,0,0,1,0-.707l.707-.707a.5.5,0,0,1,.707,0L3.75,69.934,8.44,65.245a.5.5,0,0,1,.707,0l.707.707a.5.5,0,0,1,0,.707L4.1,72.409a.5.5,0,0,1-.707,0Z" transform="translate(0 -65.098)"></path></svg>
+                </span>
+                <span class="mon-logo-image-bg">
+                    <img class="mon-logo-image" src="//cdn.monsido.com/page-assist/v2/assets/img/uaccess.svg" alt="PageAssist Personalization Options">
+                </span>
+                <img class="mon-spinner mon-pa-efsc" src="//cdn.monsido.com/page-assist/v2/assets/img/default-spinner.png" alt="PageAssist Loading">
+            </span>
+        </span>
+        <style type="text/css">
+    
+    @keyframes monLogoRight {
+        from {
+            right: -60px !important;
+        }
+        to {
+            right: 20px !important;
+        }
+    }
+    @keyframes monLogoLeft {
+        from {
+            left: -60px !important;
+        }
+        to {
+            left: 20px !important;
+        }
+    }
+    @keyframes monLogoBottom {
+        from {
+            bottom: -60px !important;
+        }
+        to {
+            bottom: 5px !important;
+        }
+    }
+    @keyframes monLogoTop {
+        from {
+            top: -60px !important;
+        }
+        to {
+            top: 5px !important;
+        }
+    }
+    @keyframes monSpinner {
+        from {
+            transform: rotate(0);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container {
+        background: transparent !important;
+        border: none !important;
+        box-sizing: content-box !important;
+        font-family: 'Roboto', Arial, sans-serif !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        cursor: pointer !important;
+        position: fixed !important;
+        bottom: 3px !important;
+        z-index: 2147483640 !important;
+        text-transform: none !important;
+        transition: right 0.2s ease;
+        animation: monLogoLeft 0.3s normal forwards;
+        align-items: center !important;
+        display: flex !important;
+        outline: none !important;
+        padding: 10px !important;
+        margin: 0 !important;
+        max-width: 200px !important;
+        white-space: normal !important;
+        height: auto !important;
+        width: auto !important;
+    }
+
+    .mon-logo-container {
+        --mon-pa-distance-from-popup: 3;
+    }
+
+    .mon-pa-button-border {
+        border: 3px solid var(--mon-pa-button-border-color);
+    }
+
+    #mon-pa-pageassist-label {
+        border: 0 !important;
+        clip: rect(1px, 1px, 1px, 1px) !important;
+        clip-path: inset(50%) !important;
+        height: 1px !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: absolute !important;
+        width: 1px !important;
+        white-space: nowrap !important;
+    }
+
+    body.monsido-toolbar-body-container > mon-pa-dashboard + .mon-logo-container {
+        animation:unset;
+        transition:unset;
+    }
+
+    .mon-logo-container[mon-loading] img.mon-spinner {
+        display: block !important;
+        margin: auto !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]):hover {
+        background-color:#783CE2 !important;
+        border-radius: 3px !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]).mon-dark-theme:hover {
+        background-color: #052942 !important;
+        border-radius: 3px !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    .mon-logo-image-wrapper img.mon-spinner {
+        display: none !important;
+        animation-name:monSpinner;
+        animation-duration:3s;
+        animation-iteration-count:infinite;
+        animation-timing-function:linear;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content {
+        order:0 !important;
+    }
+
+    body.monsido-toolbar-body-container>.mon-logo-container[mon-position="right"] .mon-logo-image-wrapper-content,
+    body.monsido-toolbar-body-container>.mon-logo-container[mon-position="righttop"] .mon-logo-image-wrapper-content,
+    body.monsido-toolbar-body-container>.mon-logo-container[mon-position="rightbottom"] .mon-logo-image-wrapper-content {
+        order:1 !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper .mon-logo-image-bg {
+        background: #783CE2 !important;
+        display: none !important;
+        width: 36px !important;
+        height: 36px !important;
+        margin: auto !important;
+        border-radius: 50% !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-image-wrapper .mon-logo-image-bg {
+        background-color: #052942 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper .mon-logo-image-bg {
+        display: block !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper .mon-logo-image-bg img.mon-logo-image {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"])[mon-loading].mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img,
+    body.monsido-toolbar-body-container .mon-logo-container[mon-loading] .mon-logo-image-wrapper .mon-logo-image-bg,
+    body.monsido-toolbar-body-container .mon-logo-container[mon-loading].mon-dark-theme .mon-logo-image-wrapper .mon-pageassist-check-img,
+    body.monsido-toolbar-body-container .mon-logo-container[mon-loading].mon-dark-theme .mon-logo-image-wrapper .mon-logo-image-bg {
+        display: none !important;
+    }
+
+    
+    body.monsido-toolbar-body-container>.mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        display:block !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color: #783CE2 !important;
+        border-radius: 50% !important;
+        box-sizing: border-box !important;
+        padding: 0 !important;
+        width: 60px !important;
+        height: 60px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-rounded-box .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        border-radius: 3px !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:focus .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        box-shadow: 0px 0px 1px 5px #1c86db !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:hover:not([aria-expanded="true"]) .mon-logo-image-wrapper-content .mon-logo-image-wrapper{
+        box-shadow: 0px 0px 1px 2px #ffffff !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img,
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img {
+        display: none !important;
+        margin: 4px 0 0 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img svg,
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img svg {
+        width: 15px !important;
+        height: 15px !important;
+        vertical-align: unset !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img svg .a,
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img svg .a {
+        fill: #ffffff !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#052942 !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#052942 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img svg .a,
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img svg .a {
+        fill: #ffffff !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img  {
+        display: block !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#783CE2 !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"].mon-dark-theme .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#052942 !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper .mon-pageassist-check-img,
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper .mon-logo-image-bg {
+        display: none !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]).mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img  {
+        display: block !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#783CE2 !important;
+    }
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme.mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#052942 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-styles-applied .mon-logo-image-wrapper .mon-pageassist-close-img,
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-styles-applied .mon-logo-image-wrapper .mon-logo-image-bg {
+        display: none !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-text-content {
+        display:none !important;
+        letter-spacing: normal !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]):hover .mon-logo-text-content {
+        display: block !important;
+        text-align: left !important;
+        line-height: 1.3 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-text-content {
+        order:1 !important;
+        padding-right:20px !important;
+        padding-left:10px !important;
+        display:none !important;
+        color:#ffffff !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-text-content {
+        color:#ffffff !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='centertop'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='centerbottom'] {
+        animation: monLogoBottom 0.3s normal forwards;
+        left: 50% !important;
+        margin-left: -40px !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='centerbottom'] {
+        animation: monLogoBottom 0.3s normal forwards;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='centertop'] {
+        top: 5px !important;
+        animation: monLogoTop 0.3s normal forwards;
+        bottom: auto !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='lefttop'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='righttop'] {
+        top: 5px !important;
+        bottom: auto !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='right'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='left'] {
+        bottom: 50% !important;
+        margin-top: 40px !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='left'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='leftbottom'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='lefttop'] {
+        left: 20px !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='right'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='rightbottom'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='righttop'] {
+        animation: monLogoRight 0.3s normal forwards;
+        right: 20px !important;
+    }
+
+    
+    @media (max-height: 920px) {
+        body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] {
+            display: none !important;
+        }
+    }
+
+    @media print {
+        body.monsido-toolbar-body-container .mon-logo-container {
+            display: none !important;
+        }
+    }
+
+    
+    button.skip-to-pageassist {
+        left: -999px !important;
+        position: fixed !important;
+        top: auto !important;
+        width: 1px !important;
+        height: 1px !important;
+        overflow: hidden !important;
+        z-index: -999 !important;
+    }
+
+    button.skip-to-pageassist:focus, button.skip-to-pageassist:active {
+        color: #fff !important;
+        background-color: #000 !important;
+        top: 4px !important;
+        left: 4px !important;
+        right: auto !important;
+        height: auto !important;
+        width: auto !important;
+        overflow: auto !important;
+        padding: 5px !important;
+        text-align: center !important;
+        font-size: 1.2em !important;
+        z-index: 9999999999999999999999999999 !important;
+    }
+
+    
+        body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            color: #ffffff !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            color: #ffffff !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]):hover {
+            background-color: #783CE2 !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container:hover .mon-logo-image-wrapper .mon-logo-image-bg {
+            background-color: #783CE2 !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper .mon-logo-image-bg {
+            background-color: #783CE2 !important;
+        }
+    
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"].mon-dark-theme .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme.mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            color: #ffffff !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:not([aria-expanded="true"]):hover {
+            background-color: #783CE2 !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-image-wrapper .mon-logo-image-bg {
+            background-color: #783CE2 !important;
+        }
+    
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-coordinates-bottom {
+        animation: monLogoBottom 0.3s normal forwards;
+        bottom: var(--mon-pa-button-bottom) !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-coordinates-top {
+        top: var(--mon-pa-button-top) !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-coordinates-left {
+        left: var(--mon-pa-button-left) !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-coordinates-right {
+        right: var(--mon-pa-button-right) !important;
+    }
+    
+
+</style></button></body></html>
