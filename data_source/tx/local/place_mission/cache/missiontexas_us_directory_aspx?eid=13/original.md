@@ -1,4 +1,4 @@
-Staff Directory • City of Mission Mayor
+Staff Directory • Jessica Ortega
 
 
 
@@ -14,7 +14,7 @@ Staff Directory • City of Mission Mayor
 
 Loading
 
-[Skip to Main Content](https://missiontexas.us/directory.aspx?did=14#contentarea)
+[Skip to Main Content](https://missiontexas.us/directory.aspx?eid=13#contentarea)
 
 
 
@@ -46,19 +46,30 @@ Search
 1. [Home](https://missiontexas.us/)
 2. Staff Directory
 
-City of Mission Mayor
-=====================
+![Jessica Ortega](https://missiontexas.us/ImageRepository/Document?documentID=1085 "Jessica Ortega")
 
-Link: [City Mayor Page](https://missiontexas.us/159/City-Mayor)  
-   
+Jessica Ortega
+==============
 
-| Staff | | | | |
-| --- | --- | --- | --- | --- |
-| Name | Title | Email | Phone | Additional Phone |
-| [Gonzalez Garza, Norie](https://missiontexas.us/directory.aspx?EID=21) | City Mayor | [Email Norie Gonzalez Garza](mailto:mayorgarza@missiontexas.us) | [956-580-8662](tel:9565808662) |  |
+[City Council](https://missiontexas.us/Directory.aspx?DID=13)  
+Title: Place 1
 
   
+  
 
+Councilwoman Jessica Ortega is a passionate public servant, lifelong advocate, and proud Mission native currently serving her third term on the Mission City Council. First elected in 2014 and re-elected in 2018 and 2022, she brings over a decade of leadership, heart, and hands-on community engagement to her role.
+
+A 1992 graduate of Mission High School, Councilwoman Ortega holds a Bachelor of Arts in Communication–Journalism from the University of Texas-Pan American (1997) and a Master of Science in Social Work (2005), reflecting her dual commitment to impactful communication and compassionate service.
+
+She currently serves as a Life Skills Coach for the Pregnancy, Education, and Parenting Program at La Joya I.S.D., where she mentors and empowers young parents as they build positive futures for their families. In addition, Councilwoman Ortega is proud to serve as an Adjunct Professor at South Texas College, where she teaches *Introduction to Social Work* and *Social Welfare: Legislation, Programs, and Services*, helping shape the next generation of community leaders.
+
+Her dedication to Mission and its people has earned her numerous accolades, including being named Mission’s Woman of the Year in 2007. She is a past president of Silver Ribbon Community Partners Against Elder Abuse and an active supporter of the Rio Grande Valley Diabetes Association. As a proud graduate of Mission Leadership Class XXVII, she continues to give back in countless ways.
+
+A strong voice for mental health awareness, animal welfare, and community well-being, Councilwoman Ortega is also a passionate advocate for the Mission Animal Shelter, lending her voice and energy to protecting our four-legged friends.
+
+With a joyful spirit and a tireless work ethic, Councilwoman Ortega is deeply committed to fostering a healthier, kinder, and more equitable Mission—where every resident (and pet!) feels valued and supported.
+
+  
 [Return to Staff Directory](https://missiontexas.us/Directory.aspx)
 
 * [Agendas & MinutesLearn more](https://mission-tx.municodemeetings.com/)

@@ -41,7 +41,7 @@ Loading
 [![Search](https://missiontexas.us/ImageRepository/Document?documentID=93)](https://missiontexas.us/Search/Results)
 Search
 
-![](https://missiontexas.us/ImageRepository/Document?documentID=90)
+![](https://missiontexas.us/ImageRepository/Document?documentID=88)
 
 1. [Agendas & Minutes](https://mission-tx.municodemeetings.com/)
 

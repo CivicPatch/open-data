@@ -1,4 +1,4 @@
-Staff Directory • City of Mission Mayor
+Staff Directory • Marissa Ortega Gerlach
 
 
 
@@ -14,7 +14,7 @@ Staff Directory • City of Mission Mayor
 
 Loading
 
-[Skip to Main Content](https://missiontexas.us/directory.aspx?did=14#contentarea)
+[Skip to Main Content](https://missiontexas.us/directory.aspx?eid=16#contentarea)
 
 
 
@@ -46,19 +46,26 @@ Search
 1. [Home](https://missiontexas.us/)
 2. Staff Directory
 
-City of Mission Mayor
-=====================
+![MEDC Board Member Marissa Gerlach Headshot 2024](https://missiontexas.us/ImageRepository/Document?documentID=1562 "MEDC Board Member Marissa Gerlach Headshot 2024")
 
-Link: [City Mayor Page](https://missiontexas.us/159/City-Mayor)  
-   
+Marissa Ortega Gerlach
+======================
 
-| Staff | | | | |
-| --- | --- | --- | --- | --- |
-| Name | Title | Email | Phone | Additional Phone |
-| [Gonzalez Garza, Norie](https://missiontexas.us/directory.aspx?EID=21) | City Mayor | [Email Norie Gonzalez Garza](mailto:mayorgarza@missiontexas.us) | [956-580-8662](tel:9565808662) |  |
+[City Council](https://missiontexas.us/Directory.aspx?DID=13)  
+Title: Place 3
 
   
+  
 
+Councilwoman Marissa Ortega Gerlach was elected to the Mission City Council in December 2023 through a special election to fill a vacated seat. She brings extensive financial expertise to the City, with a strong focus on fiscal responsibility, infrastructure investment, business development, and long-term strategic planning for the city’s continued growth.
+
+A Mission native, Councilwoman Gerlach graduated from Sharyland High School in 1994 and earned a Bachelor of Business Administration in Accounting from the University of Texas-Pan American in 1999. Upon graduation, she began her career in accounting, including internal and external auditing, financial statement and income tax preparation, Securities and Exchange Commission (SEC) reporting, and compliance assurance for various private companies and financial institutions. In 2011, she joined her husband in managing their multi-state oil and gas service company, where she served as Chief Financial Officer, business manager, and head of human resources. In that role, she expanded her expertise in budgeting, financial planning, and fiscal oversight. She currently manages a diverse portfolio of private investment ventures.
+
+Councilwoman Gerlach serves as treasurer and founding member of the Veterans Memorial High School Golf Booster Club, is a founding member of the Greater Gold Foundation, is a member of the American Petroleum Institute—Rio Grande Valley Chapter and has been a longstanding volunteer with the Texas Citrus Fiesta.
+
+She and her husband, Scott Gerlach, also a Mission native, were married in 2000 and have two sons.
+
+  
 [Return to Staff Directory](https://missiontexas.us/Directory.aspx)
 
 * [Agendas & MinutesLearn more](https://mission-tx.municodemeetings.com/)
