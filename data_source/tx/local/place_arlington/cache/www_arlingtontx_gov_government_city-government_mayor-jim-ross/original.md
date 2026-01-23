@@ -1,0 +1,344 @@
+Mayor Jim Ross | City of Arlington, TX
+
+
+
+[Skip to main content](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Mayor-Jim-Ross#main-content)
+
+opens in new tab or window
+
+### Sign up for MyArlingtonTX News
+
+Stay informed with this twice-weekly e-newsletter sent right to your inbox.
+
+[Sign Up Here](https://public.govdelivery.com/accounts/TXARLINGTON/subscriber/topics?qsp=TXARLINGTON_1)
+
+[Close this announcement](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Mayor-Jim-Ross?OC_EA_EmergencyAnnouncementList_Dismiss=d6384cea-be50-47fe-925b-431c024cdd64)
+
+![City of Arlington, TX - Logo](https://www.arlingtontx.gov/files/templates/00000000-0000-0000-0000-000000000000/1e57e76d-1919-4c46-a066-ed414e8610c1/v/211/print-logo.svg)
+
+![QR code to access this page](data:image/png;base64,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)
+
+Quick Links:
+
+Quick Links
+
+* [Accessibility](https://www.arlingtontx.gov/Government/Data-Information/Data-Information-Directory/Accessibility)
+* [News](https://www.arlingtontx.gov/News-Events)
+* [Contact Us](https://www.arlingtontx.gov/Government/Contact-Us)
+* [Facebook](https://www.facebook.com/CityofArlington)
+* [X](https://x.com/cityofarlington)
+* [Instagram](http://www.instagram.com/cityofarlington)
+* [YouTube](http://www.youtube.com/cityofarlington)
+* [LinkedIn](https://www.linkedin.com/company/city-of-arlington/)
+
+[English Select this as your preferred language](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Mayor-Jim-Ross?oc_lang=en-US)[Spanish Select this as your preferred language](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Mayor-Jim-Ross?oc_lang=es)[Vietnamese Select this as your preferred language](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Mayor-Jim-Ross?oc_lang=vi)
+
+English
+
+ is your current preferred language.
+
+* [Spanish Select this as your preferred language](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Mayor-Jim-Ross?oc_lang=es)
+* [Vietnamese Select this as your preferred language](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Mayor-Jim-Ross?oc_lang=vi)
+
+[City of Arlington, TX - Home - Logo](https://www.arlingtontx.gov/Home)
+
+Open Search
+
+Menu
+
+* [Government](https://www.arlingtontx.gov/Government)
+  Sub-menu
+  + [City Government](https://www.arlingtontx.gov/Government/City-Government)Sub-menu
+    - [Mayor Jim Ross](https://www.arlingtontx.gov/Government/City-Government/Mayor-Jim-Ross)
+    - [City Council](https://www.arlingtontx.gov/Government/City-Government/City-Council)
+    - [City Attorney](https://www.arlingtontx.gov/Government/City-Government/City-Attorney)
+    - [City Auditor](https://www.arlingtontx.gov/Government/City-Government/City-Auditor)
+    - [City Manager](https://www.arlingtontx.gov/Government/City-Government/City-Manager)
+    - [City Secretary](https://www.arlingtontx.gov/Government/City-Government/City-Secretary)
+    - [Boards & Commissions](https://www.arlingtontx.gov/Government/City-Government/Boards-Commissions)
+  + [Meetings & Agendas](https://www.arlingtontx.gov/Government/Meetings-Agendas)Sub-menu
+    - [City Council Meeting Agendas](https://www.arlingtontx.gov/Government/Meetings-Agendas/City-Council-Meeting-Agendas)
+    - [City Council Meeting Minutes](https://www.arlingtontx.gov/Government/Meetings-Agendas/City-Council-Meeting-Minutes)
+    - [City Council Meeting Schedule](https://www.arlingtontx.gov/Government/Meetings-Agendas/City-Council-Meeting-Schedule)
+    - [City Council Meeting Process](https://www.arlingtontx.gov/Government/Meetings-Agendas/City-Council-Meeting-Process)
+    - [Watch Meetings](https://www.arlingtontx.gov/Government/Meetings-Agendas/Watch-Meetings)
+  + [Departments](https://www.arlingtontx.gov/Government/Departments)
+  + [Elections & Voting](https://www.arlingtontx.gov/Government/Elections-Voting)Sub-menu
+    - [Election Information](https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information)
+    - [Council District Maps](https://www.arlingtontx.gov/Government/Elections-Voting/Council-District-Maps)
+    - [Campaign Finance Reports](https://www.arlingtontx.gov/Government/Elections-Voting/Campaign-Finance-Reports)
+  + [Public Safety](https://www.arlingtontx.gov/Government/Public-Safety)
+  + [Municipal Court](https://www.arlingtontx.gov/Government/Municipal-Court)Sub-menu
+    - [Municipal Court Payment Options](https://www.arlingtontx.gov/Government/Municipal-Court/Municipal-Court-Payment-Options)
+    - [Citation Search](https://www.arlingtontx.gov/Government/Municipal-Court/Citation-Search)
+    - [Warrants or Posting Bond](https://www.arlingtontx.gov/Government/Municipal-Court/Warrants-or-Posting-Bond)
+    - [Court Information](https://www.arlingtontx.gov/Government/Municipal-Court/Court-Information)
+  + [Budget & Finance](https://www.arlingtontx.gov/Government/Budget-Finance)Sub-menu
+    - [Budget & Business Plan](https://www.arlingtontx.gov/Government/Budget-Finance/Budget-Business-Plan)
+    - [Treasury](https://www.arlingtontx.gov/Government/Budget-Finance/Treasury)
+    - [Purchasing](https://www.arlingtontx.gov/Government/Budget-Finance/Purchasing)
+    - [Financial Transparency](https://www.arlingtontx.gov/Government/Budget-Finance/Financial-Transparency)
+    - [Accounts Payable & Payroll](https://www.arlingtontx.gov/Government/Budget-Finance/Accounts-Payable-Payroll)
+    - [Annual Financial Reports](https://www.arlingtontx.gov/Government/Budget-Finance/Annual-Financial-Reports)
+  + [Records](https://www.arlingtontx.gov/Government/Records)Sub-menu
+    - [Vital Records](https://www.arlingtontx.gov/Government/Records/Vital-Records)
+    - [Open Records Requests](https://www.arlingtontx.gov/Government/Records/Open-Records-Requests)
+    - [Police Records](https://www.arlingtontx.gov/Government/Records/Police-Records)
+  + [Jobs & Volunteering](https://www.arlingtontx.gov/Government/Jobs-Volunteering)
+  + [Contact Us](https://www.arlingtontx.gov/Government/Contact-Us)Sub-menu
+    - [Action Center](https://www.arlingtontx.gov/Government/Contact-Us/Action-Center)
+    - [City Phones & Emails Directory](https://www.arlingtontx.gov/Government/Contact-Us/City-Phones-Emails-Directory)
+    - [Mobile Apps](https://www.arlingtontx.gov/Government/Contact-Us/Mobile-Apps)
+  + [Data & Information](https://www.arlingtontx.gov/Government/Data-Information)Sub-menu
+    - [City Facts](https://www.arlingtontx.gov/Government/Data-Information/City-Facts)
+    - [Open Data](https://www.arlingtontx.gov/Government/Data-Information/Open-Data)
+    - [Interactive Maps](https://www.arlingtontx.gov/Government/Data-Information/Interactive-Maps)
+* [Business](https://www.arlingtontx.gov/Business)
+  Sub-menu
+  + [Economic Development Corporation](https://www.arlingtontx.gov/Business/Economic-Development-Corporation)
+  + [Office Of Economic Development](https://www.arlingtontx.gov/Business/Office-Of-Economic-Development)Sub-menu
+    - [Site Selection Resources](https://www.arlingtontx.gov/Business/Office-Of-Economic-Development/Site-Selection-Resources)
+  + [Small Business Assistance](https://www.arlingtontx.gov/Business/Small-Business-Assistance)
+  + [Development Resources](https://www.arlingtontx.gov/Business/Development-Resources)Sub-menu
+    - [Water Utilities Resources for Engineers, Builders and Contractors](https://www.arlingtontx.gov/Business/Development-Resources/Water-Utilities-Resources-for-Engineers-Builders-and-Contractors)
+    - [Zoning](https://www.arlingtontx.gov/Business/Development-Resources/Zoning)
+    - [Commercial Site Plan/Public Improvements](https://www.arlingtontx.gov/Business/Development-Resources/Commercial-Site-Plan-Public-Improvements)
+    - [Land Development](https://www.arlingtontx.gov/Business/Development-Resources/Land-Development)
+  + [Planning & Development](https://www.arlingtontx.gov/Business/Planning-Development)Sub-menu
+    - [Building Codes](https://www.arlingtontx.gov/Business/Planning-Development/Building-Codes)
+    - [Permit Applications & Forms](https://www.arlingtontx.gov/Business/Planning-Development/Permit-Applications-Forms)
+    - [Long Range Planning](https://www.arlingtontx.gov/Business/Planning-Development/Long-Range-Planning)
+    - [Permitting & Inspections](https://www.arlingtontx.gov/Business/Planning-Development/Permitting-Inspections)
+    - [Boards & Commissions](https://www.arlingtontx.gov/Business/Planning-Development/Boards-Commissions)
+  + [Health Services](https://www.arlingtontx.gov/Business/Health-Services)
+  + [Work With the City](https://www.arlingtontx.gov/Business/Work-With-the-City)Sub-menu
+    - [Bid Opportunities](https://www.arlingtontx.gov/Business/Work-With-the-City/Bid-Opportunities)
+    - [Office of Business Outreach](https://www.arlingtontx.gov/Business/Work-With-the-City/Office-of-Business-Outreach)
+  + [Real Estate Services](https://www.arlingtontx.gov/Business/Real-Estate-Services)
+  + [Film Friendly City](https://www.arlingtontx.gov/Business/Film-Friendly-City)
+* [City Services](https://www.arlingtontx.gov/City-Services)
+  Sub-menu
+  + [Action Center](https://www.arlingtontx.gov/City-Services/Action-Center)Sub-menu
+    - [Contact the Action Center](https://www.arlingtontx.gov/City-Services/Action-Center/Contact-the-Action-Center)
+    - [Ask Arlington App](https://www.arlingtontx.gov/City-Services/Action-Center/Ask-Arlington-App)
+    - [Report an Issue](https://www.arlingtontx.gov/City-Services/Action-Center/Report-an-Issue)
+  + [Water Utilities](https://www.arlingtontx.gov/City-Services/Water-Utilities)Sub-menu
+    - [Pay Your Water Bill](https://www.arlingtontx.gov/City-Services/Water-Utilities/Pay-Your-Water-Bill)
+    - [My Water Account](https://www.arlingtontx.gov/City-Services/Water-Utilities/My-Water-Account)
+    - [Common Water Issues](https://www.arlingtontx.gov/City-Services/Water-Utilities/Common-Water-Issues)
+    - [Water Conservation](https://www.arlingtontx.gov/City-Services/Water-Utilities/Water-Conservation)
+  + [Garbage & Recycling](https://www.arlingtontx.gov/City-Services/Garbage-Recycling)
+  + [Public Safety](https://www.arlingtontx.gov/City-Services/Public-Safety)Sub-menu
+    - [Police Department](https://www.arlingtontx.gov/City-Services/Public-Safety/Police-Department)
+    - [Fire Department](https://www.arlingtontx.gov/City-Services/Public-Safety/Fire-Department)
+    - [Emergency Preparedness](https://www.arlingtontx.gov/City-Services/Public-Safety/Emergency-Preparedness)
+  + [Code Compliance](https://www.arlingtontx.gov/City-Services/Code-Compliance)Sub-menu
+    - [Tool Sharing Program](https://www.arlingtontx.gov/City-Services/Code-Compliance/Tool-Sharing-Program)
+    - [Garage Sales Permit](https://www.arlingtontx.gov/City-Services/Code-Compliance/Garage-Sales-Permit)
+    - [Graffiti Removal](https://www.arlingtontx.gov/City-Services/Code-Compliance/Graffiti-Removal)
+  + [Your Home & Neighborhood](https://www.arlingtontx.gov/City-Services/Your-Home-Neighborhood)Sub-menu
+    - [Neighborhood Programs](https://www.arlingtontx.gov/City-Services/Your-Home-Neighborhood/Neighborhood-Programs)
+    - [Home Improvement](https://www.arlingtontx.gov/City-Services/Your-Home-Neighborhood/Home-Improvement)
+  + [Animals & Pets](https://www.arlingtontx.gov/City-Services/Animals-Pets)Sub-menu
+    - [Animal Services](https://www.arlingtontx.gov/City-Services/Animals-Pets/Animal-Services)
+    - [Adoptable Animals](https://www.arlingtontx.gov/City-Services/Animals-Pets/Adoptable-Animals)
+    - [Lost and Found Pets](https://www.arlingtontx.gov/City-Services/Animals-Pets/Lost-and-Found-Pets)
+    - [Pet Information](https://www.arlingtontx.gov/City-Services/Animals-Pets/Pet-Information)
+    - [Urban Wildlife](https://www.arlingtontx.gov/City-Services/Animals-Pets/Urban-Wildlife)
+    - [Animal Control](https://www.arlingtontx.gov/City-Services/Animals-Pets/Animal-Control)
+    - [Breeder Information](https://www.arlingtontx.gov/City-Services/Animals-Pets/Breeder-Information)
+  + [Housing](https://www.arlingtontx.gov/City-Services/Housing)Sub-menu
+    - [Housing Choice Voucher Program](https://www.arlingtontx.gov/City-Services/Housing/Housing-Choice-Voucher-Program)
+    - [Rental Assistance](https://www.arlingtontx.gov/City-Services/Housing/Rental-Assistance)
+    - [Housing Rehabilitation](https://www.arlingtontx.gov/City-Services/Housing/Housing-Rehabilitation)
+    - [Homeless Services](https://www.arlingtontx.gov/City-Services/Housing/Homeless-Services)
+  + [Library](https://www.arlingtontx.gov/City-Services/Library)Sub-menu
+    - [Library Account](https://www.arlingtontx.gov/City-Services/Library/Library-Account)
+    - [Library Card](https://www.arlingtontx.gov/City-Services/Library/Library-Card)
+    - [Library Programs & Events](https://www.arlingtontx.gov/City-Services/Library/Library-Programs-Events)
+    - [Library Locations](https://www.arlingtontx.gov/City-Services/Library/Library-Locations)
+    - [Library Catalog](https://www.arlingtontx.gov/City-Services/Library/Library-Catalog)
+  + [Permits](https://www.arlingtontx.gov/City-Services/Permits)
+  + [Public Projects & Construction](https://www.arlingtontx.gov/City-Services/Public-Projects-Construction)Sub-menu
+    - [Southeast Connector Project](https://www.arlingtontx.gov/City-Services/Public-Projects-Construction/Southeast-Connector-Project)
+    - [A-Z List of Public Projects](https://www.arlingtontx.gov/City-Services/Public-Projects-Construction/A-Z-List-of-Public-Projects)
+    - [Project Tracker](https://www.arlingtontx.gov/City-Services/Public-Projects-Construction/Project-Tracker)
+    - [Bond Tracker](https://www.arlingtontx.gov/City-Services/Public-Projects-Construction/Bond-Tracker)
+  + [Transportation, Streets & Traffic](https://www.arlingtontx.gov/City-Services/Transportation-Streets-Traffic)Sub-menu
+    - [Arlington Municipal Airport](https://www.arlingtontx.gov/City-Services/Transportation-Streets-Traffic/Airport)
+    - [Arlington On-Demand](https://www.arlingtontx.gov/City-Services/Transportation-Streets-Traffic/Arlington-On-Demand)
+    - [Handitran](https://www.arlingtontx.gov/City-Services/Transportation-Streets-Traffic/Handitran)
+    - [Streets and Traffic](https://www.arlingtontx.gov/City-Services/Transportation-Streets-Traffic/Streets-and-Traffic)
+  + [Arlington Tomorrow Foundation](https://www.arlingtontx.gov/City-Services/Arlington-Tomorrow-Foundation)
+* [Parks & Places](https://www.arlingtontx.gov/Parks-Places)
+  Sub-menu
+  + [Parks & Trails](https://www.arlingtontx.gov/Parks-Places/Parks-Trails)Sub-menu
+    - [Park Finder](https://www.arlingtontx.gov/Parks-Places/Parks-Trails/Park-Finder)
+    - [Urban Forestry](https://www.arlingtontx.gov/Parks-Places/Parks-Trails/Urban-Forestry)
+    - [Lake Arlington](https://www.arlingtontx.gov/Parks-Places/Parks-Trails/Lake-Arlington)
+  + [Facilities](https://www.arlingtontx.gov/Parks-Places/Facilities)Sub-menu
+    - [Arlington Tennis Center](https://www.arlingtontx.gov/Parks-Places/Facilities/Arlington-Tennis-Center)
+    - [Event Centers](https://www.arlingtontx.gov/Parks-Places/Facilities/Event-Centers)
+    - [Arlington Expo Center](https://www.arlingtontx.gov/Parks-Places/Facilities/Arlington-Expo-Center)
+    - [Golf](https://www.arlingtontx.gov/Parks-Places/Facilities/Golf)
+    - [Park Pavilions](https://www.arlingtontx.gov/Parks-Places/Facilities/Park-Pavilions)
+    - [Aquatics](https://www.arlingtontx.gov/Parks-Places/Facilities/Aquatics)
+    - [Recreation Centers](https://www.arlingtontx.gov/Parks-Places/Facilities/Recreation-Centers)
+    - [Athletic Fields](https://www.arlingtontx.gov/Parks-Places/Facilities/Athletic-Fields)
+    - [Arlington Cemetery](https://www.arlingtontx.gov/Parks-Places/Facilities/Arlington-Cemetery)
+  + [Activities](https://www.arlingtontx.gov/Parks-Places/Activities)Sub-menu
+    - [Register for Parks, Recreation & Culture Programs](https://www.arlingtontx.gov/Parks-Places/Activities/Register-for-Parks-Recreation-Culture-Programs)
+    - [Special Events](https://www.arlingtontx.gov/Parks-Places/Activities/Special-Events)
+    - [50+ Programs](https://www.arlingtontx.gov/Parks-Places/Activities/50-Programs)
+  + [Tourism](https://www.arlingtontx.gov/Parks-Places/Tourism)
+  + [History of Arlington](https://www.arlingtontx.gov/Parks-Places/History-of-Arlington)
+  + [Sister Cities](https://www.arlingtontx.gov/Parks-Places/Sister-Cities)Sub-menu
+    - [Visit the Sister Cities of Arlington website](https://www.arlingtontx.gov/Parks-Places/Sister-Cities/Sister-Cities-of-Arlington)
+* [News & Events](https://www.arlingtontx.gov/News-Events)
+  Sub-menu
+  + [All News](https://www.arlingtontx.gov/News-Events/All-News)
+  + [MyArlingtonTV](https://www.arlingtontx.gov/News-Events/MyArlingtonTV)
+  + [Español](https://www.arlingtontx.gov/News-Events/Espanol)Sub-menu
+    - [Calendario de Eventos en Español](https://www.arlingtontx.gov/News-Events/Espanol/Calendario-de-Eventos-en-Español)
+  + [Events](https://www.arlingtontx.gov/News-Events/Events)
+
+Select the Escape key to close the menu. Focus will then be set to the first menu item.
+
+Search
+
+You Are Here : 
+
+
+[Home](https://www.arlingtontx.gov/Home)
+/
+[Government](https://www.arlingtontx.gov/Government)/
+[City Government](https://www.arlingtontx.gov/Government/City-Government)
+/
+
+[City Council](https://www.arlingtontx.gov/Government/City-Government/City-Council)
+/
+
+[City Council Members](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members)
+/
+Mayor Jim Ross
+
+City Council Navigation
+
+Open side Menu
+
+* [City Council Members](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members)
+  Sub-menu
+  + [Mayor Jim Ross](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Mayor-Jim-Ross)Sub-menu
+    - [Proclamations](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Mayor-Jim-Ross/Proclamations)
+    - [International Protocol](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Mayor-Jim-Ross/International-Protocol)
+    - [Mayor’s Advisory Groups](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Mayor-Jim-Ross/Mayor’s-Advisory-Groups)
+  + [Mauricio Galante](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Council-Member-Mauricio-Galante-District-1)
+  + [Raul H. Gonzalez](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Council-Member-Raul-H.-Gonzalez-District-2)
+  + [Nikkie Hunter](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Council-Member-Nikkie-Hunter-District-3)
+  + [Andrew Piel](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Council-Member-Andrew-Piel-District-4)
+  + [Rebecca Boxall](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Council-Member-Rebecca-Boxall-District-5)
+  + [Long Pham](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Council-Member-Long-Pham-District-6)
+  + [Bowie Hogg](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Council-Member-Bowie-Hogg-District-7)
+  + [Dr. Barbara Odom-Wesley](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Council-Member-Dr.-Barbara-Odom-Wesley-District-8)
+* [City Council District Map](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-District-Map)
+* [City Council Priorities](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Priorities)
+  Sub-menu
+  + [FY 2025 City Council Priorities](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Priorities/FY-2025-City-Council-Priorities)
+* [City Vision, Mission Statement & Values](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Vision-Mission-Statement-Values)
+
+Mayor Jim Ross
+==============
+
+Mayor
+
+Jim Ross was elected to the office of Mayor at the City of Arlington in June 2021. Jim has spent decades serving his community and his country.
+
+* Telephone[817-459-6122](tel:8174596122)
+
+![Mayor Jim Ross](https://www.arlingtontx.gov/files/assets/city/v/1/city-council/images/mayor-jim-ross-horizontal.jpg?dimension=pageimage&w=480)
+
+Jim Ross was elected to the office of Mayor at the City of Arlington in June 2021. Jim has spent decades serving his community and his country. As a proud resident of Arlington for forty years, he has witnessed the growth and growing pains this community has endured.
+
+From 1979 to 1983, Jim served this country as a United States Marine. With assignments at home and abroad, he served the Marines in numerous capacities. Having received his Honorable Discharge in 1983, Jim moved to Texas where he was soon hired by the Arlington Police Department.
+
+During his thirteen-year career as a Police Officer, Jim was a member of Arlington's first full time Special Operations Unit (SWAT), taught self-defense and physical fitness at the police academy and spent over six years investigating illegal narcotics trafficking, both locally and with the Drug Enforcement Administration Task Force. His commendations and accomplishments as a Marine and police officer are numerous.
+
+In 1996, Jim decided to make a career change and go to law school, which he completed in twenty-eight months. He studied and passed the State of Texas Bar exam on his first attempt and was licensed as an attorney in May 1999. During his first ten years of practice, Jim represented thousands of clients while working environmental exposure cases for some of the country's most prestigious law firms. In 2009, Jim left the larger firms to pursue private practice and established The Jim Ross Law Group, P.C.
+
+In November 2017, Jim opened the Mercury Chophouse - Arlington, a fine dining steakhouse. In 2023, he opened the Hearsay Arlington lounge and restaurant in Choctaw Stadium.
+
+Jim is an active and proud resident of Arlington, having served on the board of directors for the Arlington Police Foundation, the Greater Arlington Chamber of Commerce, the Margarita Society, Special Olympics, and the American Heart Association and he is a member of the American Legion.
+
+As Mayor, he serves on the boards of the Arlington Tomorrow Foundation, Gene and Jerry Jones Family Arlington Youth Foundation, National Medal of Honor Museum Foundation, Texas Municipal League, North Texas Commission, Tarrant County Workforce Governing Board, Downtown Arlington Management Corporation and as a member of the North Central Texas Council of Governments' Regional Transportation Council and the Tarrant Regional Transportation Council. Jim is a US Conference of Mayors' Trustee and also serves the Conference as chair of the Veterans Affairs Task Force and co-chair of the Infrastructure Law Implementation Task Force.
+
+More than a passionate lawyer, businessman, and advocate for all, Jim is a family man with four children and five grandchildren.
+
+* [Write to the Mayor](https://us.openforms.com/Form/84b41fe2-d2ad-4de3-aa31-3932a979f2e6)
+
+[Proclamations
+-------------
+
+Learn more on how on how individuals and organizations can request official proclamations, certificates, or greetings from the City.](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Mayor-Jim-Ross/Proclamations)
+
+[City Council
+------------
+
+Learn about the City’s governing body, its council members, their roles and responsibilities, and how residents can get involved.](https://www.arlingtontx.gov/Government/City-Government/City-Council)
+
+[Mayor’s Advisory Groups
+-----------------------
+
+The Mayor's Advisory Groups advise the Mayor on important topics facing the City. This includes the Mayor's Youth Commission, People With Disabilities and more.](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Mayor-Jim-Ross/Mayor’s-Advisory-Groups)
+
+Mailing Address
+---------------
+
+P.O. Box 90231  
+Arlington, TX 76004-3231
+
+Hours
+-----
+
+Monday to Friday  
+8:00am - 5:00pm
+
+[Back to top](https://www.arlingtontx.gov/Government/City-Government/City-Council/City-Council-Members/Mayor-Jim-Ross#body-top)
+
+
+
+![COA-Vertical.png](https://www.arlingtontx.gov/files/sharedassets/city/v/1/coa-vertical.png)
+
+### Contact Us
+
+101 W. Abram St.  
+Arlington TX 76010
+
+[View on Map](https://maps.app.goo.gl/u56WxVvxiwhDwWGv9)
+
+[Contact Us](https://www.arlingtontx.gov/Government/Contact-Us)
+
+[817-459-6777](tel:8174596777)
+
+### Share & Connect
+
+* [Like us on Facebook](https://www.facebook.com/CityofArlington)
+* [Follow us on X](https://x.com/cityofarlington)
+* [Follow us on Instagram](https://www.instagram.com/cityofarlington/?hl=en)
+* [Follow us on YouTube](http://www.youtube.com/cityofarlington)
+* [Follow us on LinkedIn](https://www.linkedin.com/company/city-of-arlington/)
+
+### Quick Links
+
+* [Open Data](https://www.arlingtontx.gov/Government/Data-Information/Data-Information-Directory/Open-Data)
+* [Open Records Request](https://arlingtontx.govqa.us/WEBAPP/_rs/(S(412yz3mcenbudxwrp003wqb3))/SupportHome.aspx)
+* [Financial Transparency](https://www.arlingtontx.gov/Government/Budget-Finance/Financial-Transparency)
+* [Police Records Request](https://policerecords-arlingtontx.govqa.us/WEBAPP/_rs/(S(wfp2j0e3rxq55zxnj2fv0pys))/SupportHome.aspx?lp=3)
+* [Bidding Opportunities](https://www.arlingtontx.gov/Government/Budget-Finance/Purchasing/Bidding-Procurement)
+* [Report Fraud, Waste & Abuse](https://www.arlingtontx.gov/Government/City-Government/City-Auditor/Report-Fraud-Waste-Abuse)
+* [Property Tax Rate](https://www.arlingtontx.gov/Government/Budget-Finance/Treasury/Property-Tax-Rate)
+
+[Terms of Use](https://www.arlingtontx.gov/Government/Data-Information/Data-Information-Directory/Terms-of-Use) | [Privacy Policy](https://www.arlingtontx.gov/Government/Data-Information/Data-Information-Directory/Privacy-Policy) | [Accessibility](https://www.arlingtontx.gov/Government/Data-Information/Data-Information-Directory/Accessibility) | [Employee Center](https://www.arlingtontx.gov/Government/Departments/Department-Directory/Human-Resources/Employee-Center)
+
+© 2026 City of Arlington, TX | Powered by [Granicus](https://granicus.com/solution/govaccess/opencities/)
+
+Ready
