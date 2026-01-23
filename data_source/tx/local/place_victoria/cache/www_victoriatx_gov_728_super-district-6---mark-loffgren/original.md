@@ -10,9 +10,9 @@ Super District 6 - Mark Loffgren | Victoria, TX
 
   
 
+[Skip To Main Content](#mainSectionTS)
 
-
-![Loading](https://www.victoriatx.gov/Common/images/ajax-loader.gif "Loading")
+![Loading](https://www.victoriatx.gov/Common/images/ajax-loader.gif)
 
 Loading
 
@@ -49,17 +49,17 @@ Read On...](https://www.victoriatx.gov/820/WeatherEmergencies)
 [![Search](https://www.victoriatx.gov/ImageRepository/Document?documentID=15438)](https://www.victoriatx.gov/Search/Results)
 Search
 
-* [![Facebook for the City of Victoria, Texas](https://www.victoriatx.gov/ImageRepository/Document?documentID=15416)](https://www.facebook.com/CityofVictoriaTexas)
+* [![Facebook](https://www.victoriatx.gov/ImageRepository/Document?documentID=15416)](https://www.facebook.com/CityofVictoriaTexas)
 
-* [![Instagram for the City of Victoria, Texas](https://www.victoriatx.gov/ImageRepository/Document?documentID=15415)](https://www.instagram.com/cityofvictoria_pio?igsh=MWdyaTB5cXY2OWl1NQ== )
+* [![Instagram](https://www.victoriatx.gov/ImageRepository/Document?documentID=15415)](https://www.instagram.com/cityofvictoria_pio?igsh=MWdyaTB5cXY2OWl1NQ== )
 
 * [![Spotify for the City of Victoria, Texas](https://www.victoriatx.gov/ImageRepository/Document?documentID=15634)](https://open.spotify.com/show/1Xhblqi7nkdGzmwxctI9TS?si=178521a112f64f0e.)
 
 * [![X Account for the City of Victoria, Texas](https://www.victoriatx.gov/ImageRepository/Document?documentID=15425)](https://x.com/VictoriaPIO)
 
-* [![YouTube for the City of Victoria, Texas](https://www.victoriatx.gov/ImageRepository/Document?documentID=15424)](https://www.youtube.com/user/VictoriaTexasVideos)
+* [![YouTube](https://www.victoriatx.gov/ImageRepository/Document?documentID=15424)](https://www.youtube.com/user/VictoriaTexasVideos)
 
-![](https://www.victoriatx.gov/ImageRepository/Document?documentID=15410)
+![](https://www.victoriatx.gov/ImageRepository/Document?documentID=15412)
 
 1. [City Council Documents](https://www.victoriatx.gov/591/City-Council-Documents)
 2. [Elections](https://www.victoriatx.gov/1422/November-4-2025-Special-Election)
@@ -86,7 +86,7 @@ Mark Loffgren is the City Council representative for Super District 6, which enc
 
 ### [Contact Us](https://www.victoriatx.gov/Directory.aspx)
 
-1. ![Mark Loffgren](https://www.victoriatx.gov/ImageRepository/Document?documentID=3409 "Mark Loffgren")
+1. ![](https://www.victoriatx.gov/ImageRepository/Document?documentID=3409 "Mark Loffgren")
 
    #### Mark Loffgren
 

@@ -1,4 +1,4 @@
-Super District 5/Mayor Pro-Tem - Dr. Andrew Young | Victoria, TX
+District 2 - Steven Kidder | Victoria, TX
 
 
 
@@ -12,11 +12,11 @@ Super District 5/Mayor Pro-Tem - Dr. Andrew Young | Victoria, TX
 
 [Skip To Main Content](#mainSectionTS)
 
-![Loading](https://www.victoriatx.gov/Common/images/ajax-loader.gif)
+![Loading](https://www.victoriatx.gov/Common/images/ajax-loader.gif "Loading")
 
 Loading
 
-[Skip to Main Content](https://www.victoriatx.gov/727/Super-District-5Mayor-Pro-Tem---Dr-Andre#ccf001ac24-5dec-456f-8f63-9cbb87fe9ca6)
+[Skip to Main Content](https://www.victoriatx.gov/724/District-2---Steven-Kidder#ccf001ac24-5dec-456f-8f63-9cbb87fe9ca6)
 
 
 
@@ -77,22 +77,22 @@ Search
 1. [Homepage](https://www.victoriatx.gov/)
 2. [Government](https://www.victoriatx.gov/27/Government)
 3. [City Council](https://www.victoriatx.gov/501/City-Council)
-4. Super District 5/Mayor Pro-Tem - Dr. Andrew Young
+4. District 2 - Steven Kidder
 
-Super District 5/Mayor Pro-Tem - Dr. Andrew Young
-=================================================
+District 2 - Steven Kidder
+==========================
 
-Dr. Andrew Young is the City Council representative for Super District 5, which encompasses Districts 1 and 2, and he also serves as Mayor Pro Tem. He is a fellow of the American College of Foot and Ankle Surgeons and a board-certified foot surgeon. He is a podiatrist with Podiatry Associates of Victoria. Originally from Kansas City, he has been a proud Victoria resident since 2001. He earned his bachelor’s degree in biology from Monmouth College and his doctorate in podiatric medicine from Rosalind Franklin University. He is a member of the Texas Podiatric Medical Association, the American Podiatric Medical Association, the American Academy of Podiatric Sports Medicine, the Victoria Health Facilities Development Corporation, the Victoria Public Facility Corporation, and the Victoria Housing Finance Corporation Board of Directors. He was first elected to the City Council in 2013.
+Steven Kidder is the City Council representative for District 2. He is a private practice attorney; prior to his current role, he served as the City of Victoria Municipal Court judge. He earned his bachelor’s degree in government/political science from the University of Texas at Austin in 1983 and his doctorate in law from the University of Houston Law Center in 1987, and he was licensed by the State Bar of Texas in 1987.
 
 ### [Contact Us](https://www.victoriatx.gov/Directory.aspx)
 
-1. ![](https://www.victoriatx.gov/ImageRepository/Document?documentID=2256 "Dr. Andrew Young")
+1. ![](https://www.victoriatx.gov/ImageRepository/Document?documentID=14317 "Councilman Steven Kidder")
 
-   #### Andrew Young
+   #### Steven Kidder
 
-   Super District 5/Mayor Pro-Tem
+   District 2
 
-   [Email Andrew Young](mailto:ayoung@victoriatx.gov)
+   [Email Steven Kidder](mailto:skidder@victoriatx.gov)
 
 * [Newsroom](https://www.victoriatx.gov/1081/Newsroom)
 

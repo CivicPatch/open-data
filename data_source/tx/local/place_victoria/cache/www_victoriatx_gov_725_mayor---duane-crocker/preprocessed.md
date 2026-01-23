@@ -1,8 +1,7 @@
 Mayor - Duane Crocker | Victoria, TX
 
 
-Skip To Main Content
-![Loading](https://www.victoriatx.gov/Common/images/ajax-loader.gif)
+![Loading](https://www.victoriatx.gov/Common/images/ajax-loader.gif "Loading")
 
 
 [![Emergency Alert](https://www.victoriatx.gov/Common/Images/AlertCenter/alertBarBlink.svg)
@@ -11,13 +10,13 @@ WINTER WEATHER](https://www.victoriatx.gov/AlertCenter.aspx)
 
 ![Victoria Texas Homepage](https://www.victoriatx.gov/ImageRepository/Document?documentID=15413)
 ![Search](https://www.victoriatx.gov/ImageRepository/Document?documentID=15438)
-![Facebook](https://www.victoriatx.gov/ImageRepository/Document?documentID=15416)
-![Instagram](https://www.victoriatx.gov/ImageRepository/Document?documentID=15415)
+![Facebook for the City of Victoria, Texas](https://www.victoriatx.gov/ImageRepository/Document?documentID=15416)
+![Instagram for the City of Victoria, Texas](https://www.victoriatx.gov/ImageRepository/Document?documentID=15415)
 ![Spotify for the City of Victoria, Texas](https://www.victoriatx.gov/ImageRepository/Document?documentID=15634)
 ![X Account for the City of Victoria, Texas](https://www.victoriatx.gov/ImageRepository/Document?documentID=15425)
-![YouTube](https://www.victoriatx.gov/ImageRepository/Document?documentID=15424)
+![YouTube for the City of Victoria, Texas](https://www.victoriatx.gov/ImageRepository/Document?documentID=15424)
 
-![](https://www.victoriatx.gov/ImageRepository/Document?documentID=15410)
+![](https://www.victoriatx.gov/ImageRepository/Document?documentID=15412)
 
 
 
@@ -47,7 +46,7 @@ Duane Crocker is the mayor of Victoria. A Victoria native, he is the principal s
 
 ### [Contact Us](https://www.victoriatx.gov/Directory.aspx)
 
-1. ![](https://www.victoriatx.gov/ImageRepository/Document?documentID=13640 "Duane Crocker")
+1. ![Duane Crocker](https://www.victoriatx.gov/ImageRepository/Document?documentID=13640 "Duane Crocker")
 
    #### Duane Crocker
 

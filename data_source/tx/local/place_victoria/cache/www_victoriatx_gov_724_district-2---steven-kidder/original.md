@@ -10,7 +10,7 @@ District 2 - Steven Kidder | Victoria, TX
 
   
 
-
+[Skip To Main Content](#mainSectionTS)
 
 ![Loading](https://www.victoriatx.gov/Common/images/ajax-loader.gif)
 
@@ -59,7 +59,7 @@ Search
 
 * [![YouTube](https://www.victoriatx.gov/ImageRepository/Document?documentID=15424)](https://www.youtube.com/user/VictoriaTexasVideos)
 
-![](https://www.victoriatx.gov/ImageRepository/Document?documentID=15412)
+![](https://www.victoriatx.gov/ImageRepository/Document?documentID=15410)
 
 1. [City Council Documents](https://www.victoriatx.gov/591/City-Council-Documents)
 2. [Elections](https://www.victoriatx.gov/1422/November-4-2025-Special-Election)
