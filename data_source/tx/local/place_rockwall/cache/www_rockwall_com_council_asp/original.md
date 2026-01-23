@@ -1,0 +1,90 @@
+City of Rockwall - Mayor & Council
+
+
+
+
+
+
+
+
+
+
+[General Election Information...](https://www.rockwall.com/citysec.asp)
+  
+
+News ▾
+
+[News](https://www.rockwall.com/news_archives.asp)
+
+[Monthly Newsletter](https://www.rockwall.com/newsletter_archives.asp)
+
+ [Open Records](https://rockwalltx.justfoia.com/publicportal/home/newrequest) |
+
+Water Bill ▾
+
+[Pay Water Bill](https://www.municipalonlinepayments.com/rockwalltx)
+
+[New Water Service](https://www.rockwall.com/utilityWaterServiceApp.asp)
+
+[Disconnect Water Service](https://www.rockwall.com/utilityWaterServiceDisconnect.asp)
+
+[Transfer Water Service](https://www.rockwall.com/utilityWaterServiceTransfer.asp)
+
+[Trash Pickup](https://www.rockwall.com/utility.asp)
+
+|
+[Garbage Updates](https://www.rockwall.com/garbageupdates.asp)
+
+|
+ |
+ |
+
+[![City of Rockwall](https://www.rockwall.com/images/LogoKate.png)](https://www.rockwall.com/index.asp)
+
+Mayor & Council
+
+* [Community](https://www.rockwall.com/NewsServices.asp)
+* [City Admin ☰](https://www.rockwall.com/council.asp#)
+  + [City Council](https://www.rockwall.com/council.asp)
+  + [City Management](https://www.rockwall.com/citymgr.asp)
+  + [City Secretary](https://www.rockwall.com/citysec.asp)
+  + [Consortium Reports](https://www.rockwall.com/consortium.asp)
+  + [Important Numbers](https://www.rockwall.com/Emergencies.asp)
+  + [City Ordinances](https://www.rockwall.com/council.asp#)
+* [Departments](https://www.rockwall.com/departments.asp)
+* [Events ☰](https://www.rockwall.com/council.asp#)
+  + [Calendar](https://www.rockwall.com/event_Calendar.asp)
+  + [Spring Eggstravaganza](https://www.rockwall.com/event_Eggstravaganza.asp)
+  + [Rockwall Farmers Market](https://www.rockwallfarmersmarket.org/)
+  + [Concert By The Lake Series](https://www.rockwall.com/event_cbl.asp)
+  + [San Jacinto Music Series](https://www.rockwall.com/mainstreet_music.asp)
+* [Meetings](https://www.rockwall.com/meetings.asp)
+* [more ☰](https://www.rockwall.com/council.asp#)
+  + [Media](https://www.rockwall.com/media.asp)
+  + [Additional Links](https://www.rockwall.com/links.asp)
+  + [Site Map](https://www.rockwall.com/Sitemap.asp)
+
+Rockwall Mayor and City Council
+-------------------------------
+
+|  |  |  |
+| --- | --- | --- |
+| Mayor - Tim McCallum MAYOR  [Tim McCallum](mailto:TimMcCallum@rockwall.com)   [Biography](https://www.rockwall.com/council.asp#Mayor)  Welcome to Rockwall! Our City is one of the fastest growing in North Texas. Rockwall was founded in 1854 and is the County Seat of Rockwall County. Rockwall is approximately 22 miles east of downtown Dallas on Interstate 30 with a population of more than 50,000.    Elected Mayor: 2025  Elected Place 1: 2023  Re-Elected Place 1: 2005  Elected Place 1: 2003    [×](https://www.rockwall.com/council.asp#) Mayor Tim McCallum  |  | | --- | | Tim McCallumTim McCallum was elected Mayor of the City of Rockwall in 2025 and has been a resident in Rockwall since 1999. Mayor McCallum was elected to City Council in 2023 and previously served from 2003-2007. McCallum is well known for his service to his community, having been twice awarded the Presidential Volunteer Service Award, for his many hours of service to various local and national organizations. Since moving to Rockwall, he has served in a variety of offices and volunteer positions, including, Rockwall City Council, Rockwall Mayor Pro-Tem, Rockwall Economic Development Corporation Board of Directors, Rockwall Housing Authority Board Chairman, Cain Middle School PTA President, Rockwall Heath HS HBO President, The Oaks of Buffalo Way HOA President along with various corporate, charitable, and philanthropic boards.   McCallum is a successful entrepreneur and businessman, currently leading a dynamic team of high-tech professionals as president and chief executive officer of Raze Media, an award winning, Dallas-based, digital marketing agency. Prior to working in digital marketing, McCallum was the Chief Marketing Officer for Incomm International and had an award-winning career in the retail sector as an executive for 7-Eleven, Inc., where he gained appreciation for the everyday challenges facing business owners.   He and his wife of 30 years, Jennifer, also own and operate He Wines She Dines, a private winery and wine club in Rockwall. They are members of the First United Methodist Church in Rockwall and have two adult children, Caroline and Andrew, and have welcomed a grandbaby to the family. |    [Council Terms and Upcoming Election Info (Internet Posting Requirement for Political Subdivisions)](https://www.rockwall.com/documents/CitySec/Internet%20Posting%20Requirement%20for%20Political%20Subdivisions.pdf)     OUR MISSION  The purpose of the government of the City of Rockwall is to provide responsible leadership and the services and infrastructure necessary for a safe environment and a high quality of life for our citizens.    MEETINGS & AGENDAS  Council Meetings are held at 6:00 p.m. on the 1st and 3rd Mondays of each month at, 385 S. Goliad, Council Chambers.   [Meeting & Agendas Page](https://www.rockwall.com/meetings.asp)    CONTACT INFORMATION  The Mayor and all members of the City Council are elected 'at large.' The City of Rockwall is not split up into specific precincts or districts for municipal elections. Correspondence to the Mayor and/or the City Council may be sent to:    **Rockwall City Hall**  385 South Goliad  Rockwall, Texas 75087 |  | |  |  | | --- | --- | | Richard W. Henson - Place 1 **PLACE 1  [Richard W. Henson](mailto:RichardHenson@rockwall.com)**  [Biography](https://www.rockwall.com/council.asp#Place1)  Elected: 2025  [×](https://www.rockwall.com/council.asp#) Richard W. Henson  |  | | --- | | Richard W. HensonRichard W. Henson was elected to the Rockwall City Council in May 2025. He is a local businessman who first moved to Rockwall in 1997.  Led by his priorities of faith, family and community service, Mr. Henson has been married to his wife, Sharon for over 30 years raising 2 sons in Rockwall and is also currently elected and serving in his 2nd term as a Precinct Chair for the Rockwall County Republican Party. Mr. Henson has owned & operated several businesses in the Rockwall area, including an oil & gas Landman services company which he founded in 2007; and a Lake Ray Hubbard marina and award-winning boat dealership, from 1997 through 2005. He also serves as the Vice President of Oil & Gas for a private equity firm in Dallas, focused on energy sector investing and lending.  Henson has a record of serving on the following local boards and volunteer organizations:     * Precinct Chair 3B - Rockwall County Republican Party * Get Out The Vote Chair, Lunch Bunch Director, Long Range Planning Committee – Rockwall County Republican Party * Sparks Award - Rockwall County Republican Party * AAPL- American Association of Professional Landmen * DAPL- Dallas Association of Petroleum Landmen * Board of Trustees- Heritage Christian Academy, Secretary * Small Group Leader, Dream Team - Lakeshore Church | | | Mark Moeller - Place 2 **PLACE 2  [Mark Moeller](mailto:MarkMoeller@rockwall.com)**  **Mayor Pro Tem**  [Biography](https://www.rockwall.com/council.asp#Place2)  Re-Elected: 2024  Elected: 2022  [×](https://www.rockwall.com/council.asp#) Mark Moeller  |  | | --- | | Mark MoellerCouncilmember Mark Moeller retired in July 2015, after a 38 year career in law enforcement. Upon graduating with a Bachelor of Science in criminal justice, from Central Missouri State University, Mark joined the Dallas Police Department in July 1977. He also received a Master of Science in business and human relations from Amber University in 1997. For nearly 25 years, Mark worked in several different divisions, including patrol, narcotics, internal affairs, youth, and crimes against persons. He retired from Dallas as a Lieutenant, leaving to become the Police Chief for the City of Rockwall in April 2002.  He served as Chief for more than 13 years during a time of unprecedented growth and change in our city. The population doubled from 20,000 to more than 40,000, and the department grew from 42 to 79 sworn officers. Chief Moeller implemented many new programs and enhanced and refined several others throughout his tenure.  One of the most notable, was overseeing the designation as a “Recognized Agency” through the Texas Police Chiefs Recognition Program. This requires assessment and certification by outside assessors to ensure compliance with 168 standards and best practices for Texas police agencies, meaning a department is operating under the most professional standards in law enforcement.  Since his retirement, and in keeping with his commitment to public service, Mark has served on the Board of Directors for the Rockwall Central Appraisal District for six years. He also served six years as a member of Rockwall’s Planning and Zoning Commission. Mark has been married to his wife, Debbie, for more than 42 years. They have two adult children and four grandchildren, all living in the Rockwall area. | | | Melba L Jeffus - Place 3 **PLACE 3  [Melba L. Jeffus](mailto:MelbaJeffus@rockwall.com)**  [Biography](https://www.rockwall.com/council.asp#Place3)  Elected: 2025    [×](https://www.rockwall.com/council.asp#) Melba L. Jeffus  |  | | --- | | Melba L. JeffusMelba Jeffus was elected to City Council in 2025 and has been a resident of Rockwall since 2004. Jeffus and her husband Stan, moved to Rockwall in 2004. She graduated from the Rockwall Citizens Academy in 2005 and served on the Architectural Review Board from 2006-2012 and on the Rockwall Appraisal Review Board from 2014-2018. An active member of the Rockwall Republican Party since 2008, she held several offices in the Rockwall Republican Women’s Club including Vice President from 2011-2014 and President from 2014-2018.  Jeffus retired from the Dallas County Community College District in 2011 having worked in Financial Aid, Marketing and Communications, and Information Technology. Jeffus has been a local activist and volunteer for over 2 decades attending countless P&Z meetings and Council meetings.  Jeffus has received the TFRW “Tribute to Women” award; the “Rockwall County GOP Chairman” award in 2017; and the “RCRW Woman of Influence” award in 2019.  In 2024, Congressman Patrick Fallon, awarded Jeffus the “United States Congressional Patriot” award.  Jeffus and her husband of 60 years, Stan, are members of the First Baptist Church of Rockwall and have one adult daughter, Jennifer. Stan and Jennifer are dedicated members of the Rockwall Fire Department volunteer CERT organization. | | | Sedric Thomas - Place 4 **PLACE 4  [Sedric Thomas](mailto:SedricThomas@rockwall.com)**  [Biography](https://www.rockwall.com/council.asp#Place4)  Elected: 2024  Appointed: 2023  [×](https://www.rockwall.com/council.asp#) Sedric Thomas  |  | | --- | | Sedric ThomasThe Rockwall City Council selected Sedric Thomas to fill the Place 4 vacancy left when Trace Johannesen was elected as Mayor in May 2023. Thomas brings a wealth of experience to the position, having served in many leadership roles, most recently as the Chairman of the Rockwall Planning & Zoning Commission.    Thomas moved to Rockwall with his family in 2017 from nearby Lavon, where he was a past City Councilmember and Planning & Zoning Commissioner. He works for the Army & Air Force Exchange Service (AAFES) as a Financial Operations Manager. AAFES is part of the Department of Defense.    A U.S. Army Veteran, he continues to serve on the executive board for Rockwall County Helping Hands. He and his wife, Brooke, have three adult children currently serving in the U.S. Army, and one in elementary school. | | | Dennis Lewis - Place 5 **PLACE 5  [Dennis Lewis](mailto:DennisLewis@rockwall.com)**  [Biography](https://www.rockwall.com/council.asp#Place5)  Re-Elected: 2025  Elected: 2023  Appointed: 2022  Re-Elected: 2014, 2016  Elected: 2012    [×](https://www.rockwall.com/council.asp#)Dennis Lewis  |  | | --- | | Dennis LewisDennis was appointed to the City Council in December 2022. He was elected to the Council in  May 2023 and was re-elected in May 2025. Prior to being elected Dennis served the citizens of  Rockwall in several different capacities - as a Planning & Zoning Commissioner and as a City Council Member from 2012 until being term limited in 2018. Dennis has also served as a Mayor Pro Tern for the City of Rockwall. He currently serves as one of the City of Rockwall's representatives to the Rockwall County Planning Consortium as well as serving on the Rockwall Emergency Services Corporation Board. In addition he is one of the city council liaisons to the Rockwall Economic Development Corporation, serves on the city's hotel/motel tax committee and is the city council liaison to the City of Rockwall's Art Commission.  Dennis proudly serves as Chairman of the Board of Meals on Wheels Senior Services of Rockwall County.  Dennis is a graduate of Texas A&M University. In his professional life Dennis is Vice President of Potter Concrete, Ltd. He enjoys serving the construction industry in which he works. He is a former board member and former President of the North Texas Chapter of the American Subcontractors Association (ASA) and is active in and a former board member of the Texas Construction Association. He currently serves as a member ofthe ASA- National Organization's Task Force on Ethics in Construction. Dennis also serves on the Board of Directors of the Construction Education Foundation (CEF).  Dennis and his wife Clarissa along with their three children moved to Rockwall in 1993. All three children are Rockwall High School graduates. | | | Anna Campbell - Place 6 **PLACE 6** **[Anna Campbell](mailto:AnnaCampbell@rockwall.com)**  [Biography](https://www.rockwall.com/council.asp#Place6)  Re-Elected: 2022, 2024  Elected: 2021 (Unexpired 1 year term)  Appointed: 2020  [×](https://www.rockwall.com/council.asp#)   Anna Campbell  |  | | --- | | Anna CampbellAnna G. Campbell was appointed to the Rockwall City Council in June of 2020. Anna was born and raised in the Republic of Panama (Canal Zone). She is a 30-year resident of the City of Rockwall where she has raised her two sons. She has been active in the Rockwall community, serving as President of the Rockwall County Hispanic Republican Club and on the Executive Board of the Rockwall Women’s League. Anna is the President Elect for the Rockwall County Republican Women, and holds additional leadership roles with the Boys and Girls Club, and the Rockwall Rotary Club.  Anna is a 20 year educator for Rockwall ISD. She has taught bilingual kindergarten and 1st grade; ESL and Spanish in middle school; and AVID, ESL and Spanish at Rockwall High School. She has served on the RHS Leadership Team for 10 years, and currently sponsors the RHS Interact Club, which connects high school students with Rockwall Rotary projects. Anna has received several honors, including Williams Middle School Teacher of the Year, Region 10 Secondary Teacher of the Year, the Hawk Award-Most Influential Teacher of the Year (twice), Multi-Cultural Secondary Teacher of the Year and nominated by students, peers and parents for the Sterling Shining Star Award. Anna earned a B.A. in English and Spanish.  Anna has also served the Rockwall County Hispanic community working with churches and other organizations in providing legal assistance, as well as family involvement in education and the community. Anna enjoys spending time with her family and is a member of the First Baptist Church of Rockwall. | | |
+
+
+
+**City of Rockwall**  
+Phone (972) 771-7700  
+Monday - Friday | 8:00am - 5:00pm  
+385 South Goliad | © 2026, City of Rockwall |
+[Sign up for eNews.](https://visitor.r20.constantcontact.com/manage/optin?v=001rlsB_VLrUOllom1HReQefE084M-1vJpuGjBAsVr1tkrKKNo7RPlgj3hmV7UCdEkb2zsLMC3EkIBSuIOmaUR-F7nq_x9O6yUwm4n2rGWn00-ggxDw6Dicavx0OA-SBDAQmQ4NXb2WwB-7RsM8p-wuc2GLRi1hpiWs5DlbHMXWF7VrGrxXVWQ3Aw%3D%3D)
+
+
+
+
+
+![]()
+
+[![](https://www.rockwall.com/images/loading.gif)](https://www.rockwall.com/council.asp#)
+
+[![](https://www.rockwall.com/images/closelabel.gif)](https://www.rockwall.com/council.asp#)
