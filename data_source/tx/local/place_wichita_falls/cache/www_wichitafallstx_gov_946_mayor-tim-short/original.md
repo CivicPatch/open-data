@@ -12,11 +12,15 @@ Mayor Tim Short | Wichita Falls, TX - Official Website
 
 
 
-![Loading](http://www.wichitafallstx.gov/Common/images/ajax-loader.gif "Loading")
+This website is AudioEye enabled and is being optimized for accessibility. To open the AudioEye Toolbar, press "shift + =". Some assistive technologies may require the use of a passthrough function before this keystroke. For more information, activate the button labeled “Explore your accessibility options”.
+
+[Skip To Main Content](#structuralContainer4b)
+
+![Loading](https://www.wichitafallstx.gov/Common/images/ajax-loader.gif)
 
 Loading
 
-[Skip to Main Content](http://www.wichitafallstx.gov/946/Mayor-Tim-Short#ccdcb9cf96-1f19-47c0-a050-3f175042f4df)
+[Skip to Main Content](https://www.wichitafallstx.gov/946/Mayor-Tim-Short#ccdcb9cf96-1f19-47c0-a050-3f175042f4df)
 
 
 
@@ -28,30 +32,30 @@ Loading
 
 
 
-[![Emergency Alert](http://www.wichitafallstx.gov/Common/Images/AlertCenter/alertBarBlink.svg)
-EMERGENCY ALERT](http://www.wichitafallstx.gov/AlertCenter.aspx)
+[![](https://www.wichitafallstx.gov/Common/Images/AlertCenter/alertBarBlink.svg)
+EMERGENCY ALERT](https://www.wichitafallstx.gov/AlertCenter.aspx)
 [Winter Storm Warning
-Read On...](http://www.wichitafallstx.gov/AlertCenter.aspx?AID=Winter-Storm-Warning-88)
+Read On...](https://www.wichitafallstx.gov/AlertCenter.aspx?AID=Winter-Storm-Warning-88)
 [Extreme Cold Watch In Effect
-Read On...](http://www.wichitafallstx.gov/AlertCenter.aspx?AID=Extreme-Cold-Watch-In-Effect-87)
+Read On...](https://www.wichitafallstx.gov/AlertCenter.aspx?AID=Extreme-Cold-Watch-In-Effect-87)
 
-[![home page](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=35606)](http://www.wichitafallstx.gov/)
+[![home page](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=35606)](https://www.wichitafallstx.gov/)
 
-1. [Home](http://www.wichitafallstx.gov/)
-2. [Government](http://www.wichitafallstx.gov/27/Government)
-3. [Residents](http://www.wichitafallstx.gov/444/Residents)
-4. [Visitors](http://www.wichitafallstx.gov/54/Visitors)
-5. [Business](http://www.wichitafallstx.gov/35/Business)
-6. [How Do I...](http://www.wichitafallstx.gov/7/How-Do-I)
+1. [Home](https://www.wichitafallstx.gov/)
+2. [Government](https://www.wichitafallstx.gov/27/Government)
+3. [Residents](https://www.wichitafallstx.gov/444/Residents)
+4. [Visitors](https://www.wichitafallstx.gov/54/Visitors)
+5. [Business](https://www.wichitafallstx.gov/35/Business)
+6. [How Do I...](https://www.wichitafallstx.gov/7/How-Do-I)
 
-[![Go to Site Search](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=31317)](http://www.wichitafallstx.gov/Search/Results)
+[![Go to Site Search](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=31317)](https://www.wichitafallstx.gov/Search/Results)
 Search
 
-![](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=31307)![](/ImageRepository/Document?documentID=31308)![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
+![](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=31307)![](/ImageRepository/Document?documentID=31308)![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
 
-1. [Home](http://www.wichitafallstx.gov/)
-2. [Government](http://www.wichitafallstx.gov/27/Government)
-3. [Wichita Falls City Council](http://www.wichitafallstx.gov/29/Wichita-Falls-City-Council)
+1. [Home](https://www.wichitafallstx.gov/)
+2. [Government](https://www.wichitafallstx.gov/27/Government)
+3. [Wichita Falls City Council](https://www.wichitafallstx.gov/29/Wichita-Falls-City-Council)
 4. Mayor Tim Short
 
 Mayor Tim Short
@@ -116,15 +120,15 @@ PERSONAL
    | --- |
    | **Mayor Tim ShortContact Information** Mayor Tim Short  1300 7th Street, Room 105  Wichita Falls, TX 76301     Mailing Address:  P.O. Box 1431   Wichita Falls, TX 76307     Office: 940.761.7404 or   940.761.7409    Fax: 940.761.8833  [tim.short](mailto:tim.short@wichitafallstx.gov)[@  wichitafallstx.gov](mailto:tim.short@wichitafallstx.gov) |
 
-1. [Proclamations](http://www.wichitafallstx.gov/980/Proclamations)
+1. [Proclamations](https://www.wichitafallstx.gov/980/Proclamations)
 
 * [Water Concerns](https://www.wichitafallstx.gov/687/Water-Distribution)
 
-* [Municipal Court](http://www.wichitafallstx.gov/426/Municipal-Court)
+* [Municipal Court](https://www.wichitafallstx.gov/426/Municipal-Court)
 
 * [Report a Concern](https://clients.comcate.com/newrequest.php?id=34)
 
-* [Utility Payments](http://www.wichitafallstx.gov/235/Utility-Billing-and-Collections)
+* [Utility Payments](https://www.wichitafallstx.gov/235/Utility-Billing-and-Collections)
 
 * [Notify Me](http://www.wichitafallstx.gov/list.aspx)
 
@@ -141,7 +145,7 @@ PERSONAL
 
 * [Wichita Falls Trails](https://wichitafallstrails.com/)
 
-* [Facebook](http://www.wichitafallstx.gov/facebook)
+* [Facebook](https://www.wichitafallstx.gov/facebook)
 
 * [Instagram](https://www.instagram.com/cityofwichitafalls/?hl=en)
 
@@ -149,38 +153,38 @@ PERSONAL
 
 * [Twitter](https://twitter.com/CityofWF)
 
-1. ![Wichita Falls Blue Skies Golden Opportunities](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=35616 "Wichita Falls Blue Skies Golden Opportunities")  
+1. ![Wichita Falls Blue Skies Golden Opportunities](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=35616)  
      
    1300 7th Street, Wichita Falls, TX 76307-7531
 
-### [Quick Links](http://www.wichitafallstx.gov/QuickLinks.aspx?CID=116)
+### [Quick Links](https://www.wichitafallstx.gov/QuickLinks.aspx?CID=116)
 
-1. [City Internships](http://www.wichitafallstx.gov/1948/City-Internships)
+1. [City Internships](https://www.wichitafallstx.gov/1948/City-Internships)
 2. [Code of Ordinances](https://ecode360.com/WI6513)
-3. [Election Information](http://www.wichitafallstx.gov/1702/Election-Information)
-4. [WIC Program](http://www.wichitafallstx.gov/359/Women-Infants-Children-WIC)
+3. [Election Information](https://www.wichitafallstx.gov/1702/Election-Information)
+4. [WIC Program](https://www.wichitafallstx.gov/359/Women-Infants-Children-WIC)
 
 /QuickLinks.aspx
 
-### [Helpful Links](http://www.wichitafallstx.gov/QuickLinks.aspx?CID=117)
+### [Helpful Links](https://www.wichitafallstx.gov/QuickLinks.aspx?CID=117)
 
-1. [Apply for a Job](http://www.wichitafallstx.gov/18/Human-Resources)
-2. [Request Facility Rentals](http://www.wichitafallstx.gov/266/Facility-Rentals)
+1. [Apply for a Job](https://www.wichitafallstx.gov/18/Human-Resources)
+2. [Request Facility Rentals](https://www.wichitafallstx.gov/266/Facility-Rentals)
 3. [Sign up for Recreation Activities](https://activenet010.active.com/cityofwichitafalls/)
 4. [Obtain Public Records](https://wichitafallstx.govqa.us/WEBAPP/_rs/(S(aua3x3awojprokmgrinxoxzn))/supporthome.aspx)
-5. [Utility Billing & Services](http://www.wichitafallstx.gov/1635/Utility-Billing-Collections-and-Services)
-6. [Claim For Damage](http://www.wichitafallstx.gov/FormCenter/Forms-3/Risk-Management-Claim-for-Damage-Form-73)
+5. [Utility Billing & Services](https://www.wichitafallstx.gov/1635/Utility-Billing-Collections-and-Services)
+6. [Claim For Damage](https://www.wichitafallstx.gov/FormCenter/Forms-3/Risk-Management-Claim-for-Damage-Form-73)
 
 /QuickLinks.aspx
 
-### [Site Links](http://www.wichitafallstx.gov/QuickLinks.aspx?CID=104)
+### [Site Links](https://www.wichitafallstx.gov/QuickLinks.aspx?CID=104)
 
-1. [Home](http://www.wichitafallstx.gov/)
-2. [Site Map](http://www.wichitafallstx.gov/sitemap)
-3. [Contact Us](http://www.wichitafallstx.gov/directory.aspx)
-4. [Calendar](http://www.wichitafallstx.gov/calendar.aspx)
-5. [Accessibility](http://www.wichitafallstx.gov/Accessibility)
-6. [Copyright Notices](http://www.wichitafallstx.gov/site/copyright)
+1. [Home](https://www.wichitafallstx.gov/)
+2. [Site Map](https://www.wichitafallstx.gov/sitemap)
+3. [Contact Us](https://www.wichitafallstx.gov/directory.aspx)
+4. [Calendar](https://www.wichitafallstx.gov/calendar.aspx)
+5. [Accessibility](https://www.wichitafallstx.gov/Accessibility)
+6. [Copyright Notices](https://www.wichitafallstx.gov/site/copyright)
 7. [Powered by CivicPlus®](http://civicplus.com/referral)
 
 /QuickLinks.aspx
@@ -238,6 +242,10 @@ PowerPoint Download
 Document Download
 
 
+
+
+
+Explore your accessibility options
 
 
 

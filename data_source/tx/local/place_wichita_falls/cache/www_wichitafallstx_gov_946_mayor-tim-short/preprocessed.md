@@ -1,20 +1,21 @@
 Mayor Tim Short | Wichita Falls, TX - Official Website
 
 
-![Loading](http://www.wichitafallstx.gov/Common/images/ajax-loader.gif "Loading")
+Skip To Main Content
+![Loading](https://www.wichitafallstx.gov/Common/images/ajax-loader.gif)
 
 
-![Emergency Alert](http://www.wichitafallstx.gov/Common/Images/AlertCenter/alertBarBlink.svg)
+![](https://www.wichitafallstx.gov/Common/Images/AlertCenter/alertBarBlink.svg)
 
-![home page](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=35606)
-![Go to Site Search](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=31317)
-![](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=31307)
+![home page](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=35606)
+![Go to Site Search](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=31317)
+![](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=31307)
 ![](/ImageRepository/Document?documentID=31308)
 ![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
 ![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
 
 
-1. [Wichita Falls City Council](http://www.wichitafallstx.gov/29/Wichita-Falls-City-Council)
+1. [Wichita Falls City Council](https://www.wichitafallstx.gov/29/Wichita-Falls-City-Council)
 2. Mayor Tim Short
 
 Mayor Tim Short
@@ -48,7 +49,7 @@ CITY COUNCIL GOALS
 
 1. |  |
    | --- |
-   | ![Mayor Tim Short](http://www.wichitafallstx.gov/ImageRepository/Document?documentId=41940) **Contact Information** Mayor Tim Short    1300 7th Street, Room 105   Wichita Falls, TX 76301     Mailing Address:   P.O. Box 1431   Wichita Falls, TX 76307     Office: 940.761.7404 or   940.761.7409     Fax: 940.761.8833     [tim.short](mailto:tim.short@wichitafallstx.gov) [@   wichitafallstx.gov](mailto:tim.short@wichitafallstx.gov) |
+   | ![Mayor Tim Short](https://www.wichitafallstx.gov/ImageRepository/Document?documentId=41940) **Contact Information** Mayor Tim Short    1300 7th Street, Room 105   Wichita Falls, TX 76301     Mailing Address:   P.O. Box 1431   Wichita Falls, TX 76307     Office: 940.761.7404 or   940.761.7409     Fax: 940.761.8833     [tim.short](mailto:tim.short@wichitafallstx.gov) [@   wichitafallstx.gov](mailto:tim.short@wichitafallstx.gov) |
 
 * [Wichita Falls Trails](https://wichitafallstrails.com/)
 
@@ -56,13 +57,13 @@ CITY COUNCIL GOALS
 
 
 
-![Wichita Falls Blue Skies Golden Opportunities](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=35616 "Wichita Falls Blue Skies Golden Opportunities")
+![Wichita Falls Blue Skies Golden Opportunities](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=35616)
 
 
 
 
 
-1. [City Internships](http://www.wichitafallstx.gov/1948/City-Internships)
+1. [City Internships](https://www.wichitafallstx.gov/1948/City-Internships)
 
 
 
@@ -72,4 +73,4 @@ CITY COUNCIL GOALS
 
 
 
-1. [Contact Us](http://www.wichitafallstx.gov/directory.aspx)
+1. [Contact Us](https://www.wichitafallstx.gov/directory.aspx)

@@ -2,16 +2,16 @@ Wichita Falls City Council | Wichita Falls, TX - Official Website
 
 
 Skip To Main Content
-![Loading](http://www.wichitafallstx.gov/Common/images/ajax-loader.gif)
+![Loading](https://www.wichitafallstx.gov/Common/images/ajax-loader.gif)
 
 
-![](http://www.wichitafallstx.gov/Common/Images/AlertCenter/alertBarBlink.svg)
+![](https://www.wichitafallstx.gov/Common/Images/AlertCenter/alertBarBlink.svg)
 
-![home page](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=35606)
-![Go to Site Search](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=31317)
-![](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=31307)
+![home page](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=35606)
+![Go to Site Search](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=31317)
+![](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=31307)
 ![](/ImageRepository/Document?documentID=31308)
-![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
+![](/ImageRepository/Document?documentID=31309)
 ![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
 
 
@@ -24,11 +24,11 @@ The Wichita Falls City Council consists of a Mayor, five district representative
 
 [**TIM SHORT | MAYOR**](https://tx-wichitafalls3.civicplus.com/946/Mayor-Tim-Short)
 
-![Tim Short](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=41903)
+![Tim Short](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=41903)
 
-![Austin Cobb Headshot](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=44426)
-![Whitney Flack Headshot](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=44030)
-![Robert Brooks](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=44071)
+![Austin Cobb Headshot](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=44426)
+![Whitney Flack Headshot](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=44030)
+![Robert Brooks](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=44071)
 
 
 [AUSTIN COBB | At Large](http://www.wichitafallstx.gov/519/Councilor-At-Large-Michael-Smith)
@@ -37,9 +37,9 @@ The Wichita Falls City Council consists of a Mayor, five district representative
 
 [ROBERT BROOKS | District 2](http://www.wichitafallstx.gov/1370/District-2-Councilor-DeAndra-Chenault)
 
-![BrowningJ_6058 1 (2)](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=36056)
-![Image_20231127_091309_773](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=41904)
-![Image_20231127_091305_325](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=41905)
+![BrowningJ_6058 1 (2)](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=36056)
+![Image_20231127_091309_773](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=41904)
+![Image_20231127_091305_325](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=41905)
 
 
 [Jeff Browning | District 3](http://www.wichitafallstx.gov/1500/District-3-Councilor-Brian-Hooker)
@@ -50,20 +50,20 @@ The Wichita Falls City Council consists of a Mayor, five district representative
 
 Council representatives can be contacted privately or the entire Council can be addressed during their monthly meetings. To address the Council during a meeting, you must provide your name, address and item of discussion on the sign-in sheet located outside the Seminar Room prior to the opening of the meeting.
 
-![City Council 2025 ](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=47266)
+![City Council 2025 ](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=47266)
 
 
 
 The mission of the City of Wichita Falls is to enhance our quality of life through responsive service delivery, sound financial management, and partnerships spanning the public, private and business sectors.
 
-1. [Mayor Tim Short](http://www.wichitafallstx.gov/946/Mayor-Tim-Short)
+1. [Mayor Tim Short](https://www.wichitafallstx.gov/946/Mayor-Tim-Short)
 2. [District 1 Councilor Whitney Flack](https://www.wichitafallstx.gov/518/District-1-Councilor-Whitney-Flack)
-3. [District 2 Councilor Robert Brooks](http://www.wichitafallstx.gov/1370/District-2-Councilor-Robert-Brooks)
+3. [District 2 Councilor Robert Brooks](https://www.wichitafallstx.gov/1370/District-2-Councilor-Robert-Brooks)
 4. [District 3 Councilor Jeff Browning](https://www.wichitafallstx.gov/1500/District-3-Councilor-Jeff-Browning)
 5. [District 4 Councilor Mike Battaglino](https://www.wichitafallstx.gov/1368/District-4-Councilor-Mike-Battaglino)
 6. [District 5 Councilor Tom Taylor](https://www.wichitafallstx.gov/1369/District-5-Councilor-Tom-Taylor)
-7. [Councilor At Large Austin Cobb](http://www.wichitafallstx.gov/519/Councilor-At-Large-Austin-Cobb)
-8. [City Council Meetings and Agendas](http://www.wichitafallstx.gov/994/Council-Meetings-and-Agendas)
+7. [Councilor At Large Austin Cobb](https://www.wichitafallstx.gov/519/Councilor-At-Large-Austin-Cobb)
+8. [City Council Meetings and Agendas](https://www.wichitafallstx.gov/994/Council-Meetings-and-Agendas)
 9. [City Council District Map](https://www.wichitafallstx.gov/DocumentCenter/View/24378/City-Council-District-Map-2022?bidId=)
 
 * [Wichita Falls Trails](https://wichitafallstrails.com/)
@@ -72,13 +72,13 @@ The mission of the City of Wichita Falls is to enhance our quality of life throu
 
 
 
-![Wichita Falls Blue Skies Golden Opportunities](http://www.wichitafallstx.gov/ImageRepository/Document?documentID=35616)
+![Wichita Falls Blue Skies Golden Opportunities](https://www.wichitafallstx.gov/ImageRepository/Document?documentID=35616)
 
 
 
 
 
-1. [City Internships](http://www.wichitafallstx.gov/1948/City-Internships)
+1. [City Internships](https://www.wichitafallstx.gov/1948/City-Internships)
 
 
 
@@ -88,4 +88,4 @@ The mission of the City of Wichita Falls is to enhance our quality of life throu
 
 
 
-1. [Contact Us](http://www.wichitafallstx.gov/directory.aspx)
+1. [Contact Us](https://www.wichitafallstx.gov/directory.aspx)
