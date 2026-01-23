@@ -1,0 +1,352 @@
+[2026-01-23T01:38:17.795644] [INFO] Step 1: RESEARCH_MUNICIPALITY
+[2026-01-23T01:38:17.823040] [INFO] Running Gemini prompt
+[2026-01-23T01:38:17.823515] [DEBUG] Prompt: 
+
+    Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
+
+    Municipality: Midland city, tx
+
+    Instructions:
+
+    1. Determine the government type of the city. Available government types:
+- mayor_commission
+- mayor_council
+- township_committee
+- select_board
+- aldermen
+
+    2. Identify the elected officials in the local government, 
+       including the Mayor (if applicable).
+       2.1. For each official, extract the following details:
+            - name: Full name only (no titles)
+            - roles: List of active municipal roles (e.g., Mayor, Council Member)
+            - divisions: List of (ward, district), only if applicable
+
+    3. Create a JSON object with the following structure:
+       ```json
+       {
+         "government_type": examples - "mayor_council" or "mayor_commission", etc.,
+         "people": [
+           {
+             "name": "Full name of the official or null if uncertain",
+             "roles": ["Mayor", "Council Member", "Commissioner", etc.],
+             "divisions": ["Ward 1", "District 2", etc.] or [],
+           }
+         ],
+         "notes": "Brief notes about the search and results"
+       }
+       ```
+
+    IMPORTANT: If the response contains anything other than a valid JSON object,
+    it will be considered incorrect. Ensure the response is strictly JSON.
+    Verify that the response is valid JSON before returning it.
+    If it is not valid JSON, retry the generation.
+    
+[2026-01-23T01:38:24.538782] [DEBUG] Gemini raw response: {'government_type': 'mayor_council', 'people': [{'name': 'Lori Blong', 'roles': ['Mayor'], 'divisions': []}, {'name': 'Amy Stretcher Burkes', 'roles': ['Mayor Pro Tem', 'Council Member'], 'divisions': ['District 4']}, {'name': 'Brian Stubbs', 'roles': ['Council Member'], 'divisions': ['District 1']}, {'name': 'John Burkholder', 'roles': ['Council Member'], 'divisions': ['At-Large']}, {'name': 'Robin Poole', 'roles': ['Council Member'], 'divisions': ['At-Large']}, {'name': 'Jack Ladd', 'roles': ['Council Member'], 'divisions': ['District 3']}, {'name': 'John Norman', 'roles': ['Council Member'], 'divisions': ['District 2']}], 'notes': 'Midland, Texas operates under a Council-Manager form of government. The City Council consists of a Mayor and six Council Members, with two elected at-large and four by district.'}
+[2026-01-23T01:38:24.541964] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 363, Output tokens: 844, Total cost: $0.002219
+[2026-01-23T01:38:24.542466] [INFO] gemini gemini-2.5-flash LLM call took 6.72 seconds
+[2026-01-23T01:38:24.543174] [INFO] Source URLs not found, using search engine for links.
+[2026-01-23T01:38:24.764582] [INFO] Step 2: SEARCH_LINKS from website: https://www.midlandtexas.gov
+[2026-01-23T01:38:24.784967] [INFO] Using government type: mayor_council for keyword selection with keywords: {'mayor': ['mayor and city council', 'about mayor', 'meet the mayor', 'about the mayor', 'mayor', 'council president', 'council manager'], 'council members': ['meet the council', 'city council members', 'council bios', 'council members', 'councilmembers', 'counsel member', 'city council', 'board of trustees', 'council districts', 'city hall', 'council', 'municipal directory'], 'elected officials': ['elected officials', 'city administration', 'index', 'government', 'bios', 'meet', 'about']}
+[2026-01-23T01:38:24.785541] [INFO] Searching for keyword term: mayor, keywords: ['mayor and city council', 'about mayor', 'meet the mayor', 'about the mayor', 'mayor', 'council president', 'council manager']
+[2026-01-23T01:38:24.785922] [INFO] Searching with google for Midland city mayor
+[2026-01-23T01:38:25.030973] [INFO] -> https://www.midlandtexas.gov/238/Mayor-City-Council
+[2026-01-23T01:38:25.031602] [INFO] -> https://www.midlandtexas.gov/
+[2026-01-23T01:38:25.097598] [INFO] -> https://www.midlandtexas.gov/directory.aspx?EID=11
+[2026-01-23T01:38:25.100135] [INFO] -> https://www.midlandtexas.gov/directory.aspx?did=7
+[2026-01-23T01:38:25.102594] [INFO] -> https://www.midlandtexas.gov/1231/Meetings-Agendas-and-Minutes
+[2026-01-23T01:38:25.105173] [INFO] -> https://www.midlandtexas.gov/directory.aspx?eid=9
+[2026-01-23T01:38:25.107284] [INFO] -> https://www.midlandtexas.gov/m/newsflash/home/detail/1352
+[2026-01-23T01:38:25.108196] [INFO] -> https://www.midlandtexas.gov/967/PrimeGov-Meetings
+[2026-01-23T01:38:25.109180] [INFO] -> https://www.midlandtexas.gov/m/newsflash/Home/Detail/1669
+[2026-01-23T01:38:25.109850] [INFO] -> https://www.midlandtexas.gov/DocumentCenter/View/201/City-of-Midland-Charter?bidId
+[2026-01-23T01:38:25.112069] [INFO] Search successful with google. Found 10 results.
+[2026-01-23T01:38:25.113150] [INFO] Searching for keyword term: council members, keywords: ['meet the council', 'city council members', 'council bios', 'council members', 'councilmembers', 'counsel member', 'city council', 'board of trustees', 'council districts', 'city hall', 'council', 'municipal directory']
+[2026-01-23T01:38:25.113661] [INFO] Searching with google for Midland city council members
+[2026-01-23T01:38:25.359915] [INFO] -> https://www.midlandtexas.gov/238/Mayor-City-Council
+[2026-01-23T01:38:25.360588] [INFO] -> https://www.midlandtexas.gov/directory.aspx?did=7
+[2026-01-23T01:38:25.361017] [INFO] -> https://www.midlandtexas.gov/243/Boards-Commissions
+[2026-01-23T01:38:25.361328] [INFO] -> https://www.midlandtexas.gov/m/newsflash/Home/Detail/1684
+[2026-01-23T01:38:25.361795] [INFO] -> https://www.midlandtexas.gov/DocumentCenter/View/201/City-of-Midland-Charter?bidId
+[2026-01-23T01:38:25.362365] [INFO] -> https://www.midlandtexas.gov/m/newsflash/Home/Detail/1843
+[2026-01-23T01:38:25.362733] [INFO] -> https://www.midlandtexas.gov/CivicAlerts.asp?AID=1630
+[2026-01-23T01:38:25.363318] [INFO] -> https://www.midlandtexas.gov/m/newsflash/home/detail/1549
+[2026-01-23T01:38:25.363759] [INFO] -> https://www.midlandtexas.gov/148/City-Secretary
+[2026-01-23T01:38:25.364323] [INFO] -> https://www.midlandtexas.gov/1031/2022-Redistricting
+[2026-01-23T01:38:25.365798] [INFO] Search successful with google. Found 10 results.
+[2026-01-23T01:38:25.366225] [INFO] Searching for keyword term: elected officials, keywords: ['elected officials', 'city administration', 'index', 'government', 'bios', 'meet', 'about']
+[2026-01-23T01:38:25.366825] [INFO] Searching with google for Midland city elected officials
+[2026-01-23T01:38:25.695665] [INFO] -> https://www.midlandtexas.gov/238/Mayor-City-Council
+[2026-01-23T01:38:25.697196] [INFO] -> https://www.midlandtexas.gov/
+[2026-01-23T01:38:25.698104] [INFO] -> https://www.midlandtexas.gov/directory.aspx?did=7
+[2026-01-23T01:38:25.698859] [INFO] -> https://www.midlandtexas.gov/243/Boards-Commissions
+[2026-01-23T01:38:25.699725] [INFO] -> https://www.midlandtexas.gov/m/newsflash/Home/Detail/1684
+[2026-01-23T01:38:25.701576] [INFO] -> https://www.midlandtexas.gov/471/Employment-Opportunities
+[2026-01-23T01:38:25.702711] [INFO] -> https://www.midlandtexas.gov/DocumentCenter/View/201/City-of-Midland-Charter?bidId
+[2026-01-23T01:38:25.704922] [INFO] -> https://www.midlandtexas.gov/m/newsflash/Home/Detail/1669
+[2026-01-23T01:38:25.706025] [INFO] -> https://www.midlandtexas.gov/101/Departments
+[2026-01-23T01:38:25.707315] [INFO] -> https://www.midlandtexas.gov/148/City-Secretary
+[2026-01-23T01:38:25.710786] [INFO] Search successful with google. Found 10 results.
+[2026-01-23T01:38:25.866485] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.midlandtexas.gov/238/Mayor-City-Council
+[2026-01-23T01:38:32.215567] [DEBUG] Skipping blacklisted or invalid image: https://www.midlandtexas.gov/Common/images/ajax-loader.gif
+[2026-01-23T01:38:32.238658] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10068
+[2026-01-23T01:38:32.240690] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10068
+[2026-01-23T01:38:32.518551] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/2cd69010887f.png
+[2026-01-23T01:38:32.542095] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10072
+[2026-01-23T01:38:32.543035] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10072
+[2026-01-23T01:38:32.765961] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/47e604b28c1f.png
+[2026-01-23T01:38:32.792081] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10074
+[2026-01-23T01:38:32.792756] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10074
+[2026-01-23T01:38:33.013267] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/86f0b1048309.png
+[2026-01-23T01:38:33.037730] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10640
+[2026-01-23T01:38:33.039437] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10640
+[2026-01-23T01:38:33.563828] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/e7ef5059929b.png
+[2026-01-23T01:38:33.601288] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=9741
+[2026-01-23T01:38:33.602168] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=9741
+[2026-01-23T01:38:34.116573] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/bdf1bbfb5f84.png
+[2026-01-23T01:38:34.151624] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=7219
+[2026-01-23T01:38:34.152628] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=7219
+[2026-01-23T01:38:34.731507] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/d4090e14f88a.png
+[2026-01-23T01:38:34.755329] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=9656
+[2026-01-23T01:38:34.757575] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=9656
+[2026-01-23T01:38:35.175500] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/21ad480737b8.png
+[2026-01-23T01:38:35.202418] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=9665
+[2026-01-23T01:38:35.203326] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=9665
+[2026-01-23T01:38:35.726727] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/7ef6f05c2a20.png
+[2026-01-23T01:38:35.770124] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=9655
+[2026-01-23T01:38:35.776525] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=9655
+[2026-01-23T01:38:36.349250] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/76b7c6b6ed2b.png
+[2026-01-23T01:38:36.369935] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=9661
+[2026-01-23T01:38:36.370833] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=9661
+[2026-01-23T01:38:36.928333] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/d3f85bd97a24.png
+[2026-01-23T01:38:36.945436] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=7230
+[2026-01-23T01:38:36.946276] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=7230
+[2026-01-23T01:38:37.572248] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/95b074e78212.png
+[2026-01-23T01:38:37.588365] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=7235
+[2026-01-23T01:38:37.592197] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=7235
+[2026-01-23T01:38:38.162797] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/2baf80d9e225.png
+[2026-01-23T01:38:38.182456] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=2169
+[2026-01-23T01:38:38.183296] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=2169
+[2026-01-23T01:38:38.800019] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/e74786db4cd0.png
+[2026-01-23T01:38:38.814447] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10082
+[2026-01-23T01:38:38.815524] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10082
+[2026-01-23T01:38:39.047866] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/df6c16477e83.png
+[2026-01-23T01:38:39.066885] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10095
+[2026-01-23T01:38:39.067717] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10095
+[2026-01-23T01:38:39.292430] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/be034e1fde48.png
+[2026-01-23T01:38:39.309068] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10083
+[2026-01-23T01:38:39.310263] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10083
+[2026-01-23T01:38:39.531973] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/1bbc1534c76c.png
+[2026-01-23T01:38:39.554021] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10096
+[2026-01-23T01:38:39.557837] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10096
+[2026-01-23T01:38:39.784359] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/6fc9340e1239.png
+[2026-01-23T01:38:39.800095] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10084
+[2026-01-23T01:38:39.801319] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10084
+[2026-01-23T01:38:40.028508] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/388dfad3fe40.png
+[2026-01-23T01:38:40.043440] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentId=10076
+[2026-01-23T01:38:40.044604] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentId=10076
+[2026-01-23T01:38:40.308520] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/39955d6839e2.png
+[2026-01-23T01:38:40.324021] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10098
+[2026-01-23T01:38:40.324750] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10098
+[2026-01-23T01:38:40.544640] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/91cb9e7c3642.png
+[2026-01-23T01:38:40.562221] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10111
+[2026-01-23T01:38:40.563066] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10111
+[2026-01-23T01:38:40.789770] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/4244b7a5eb41.png
+[2026-01-23T01:38:40.808776] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10099
+[2026-01-23T01:38:40.809814] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10099
+[2026-01-23T01:38:41.033247] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/34075668fed2.png
+[2026-01-23T01:38:41.048095] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10112
+[2026-01-23T01:38:41.048876] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10112
+[2026-01-23T01:38:41.269489] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/e858dd01c6fa.png
+[2026-01-23T01:38:41.286586] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10100
+[2026-01-23T01:38:41.287404] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentID=10100
+[2026-01-23T01:38:41.508051] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/0c5c960e98f9.png
+[2026-01-23T01:38:41.524305] [DEBUG] Attempting to intercept and save image for: https://www.midlandtexas.gov/ImageRepository/Document?documentId=10077
+[2026-01-23T01:38:41.525060] [DEBUG] Loading image from URL: https://www.midlandtexas.gov/ImageRepository/Document?documentId=10077
+[2026-01-23T01:38:41.746479] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/78648b6bb3be.png
+[2026-01-23T01:38:41.764725] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-23T01:38:41.765642] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-23T01:38:41.794318] [INFO] Image saved: /app/data_source/tx/local/place_midland/images/3f3f3a8d0882.png
+[2026-01-23T01:38:41.813203] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-23T01:38:42.195295] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.midlandtexas.gov/238/Mayor-City-Council
+[2026-01-23T01:38:50.825292] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-23T01:38:50.825689] [INFO] -> Elapsed time: 8.63 seconds
+[2026-01-23T01:38:50.825951] [INFO] -> Average elapsed time: 8.63 seconds
+[2026-01-23T01:38:50.826271] [INFO] -> Total elapsed time: 8.63 seconds
+[2026-01-23T01:38:50.914198] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.midlandtexas.gov/238/Mayor-City-Council
+[2026-01-23T01:38:50.916374] [INFO] Running OpenAI prompt
+[2026-01-23T01:38:50.917067] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Lori Blong, Amy Stretcher Burkes, Brian Stubbs, John Burkholder, Robin Poole, Jack Ladd, John Norman
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-23T01:38:50.917716] [INFO] openai LLM call took 0.00 seconds
+[2026-01-23T01:39:20.840048] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1985, Output tokens: 1580, Total cost: $0.003656
+[2026-01-23T01:39:20.841185] [INFO] Page relevance check found related urls: ['https://www.midlandtexas.gov/858/City-Leadership', 'https://www.midlandtexas.gov/directory.aspx?EID=204', 'https://www.midlandtexas.gov/directory.aspx?EID=107', 'https://www.midlandtexas.gov/directory.aspx?EID=203', 'https://www.midlandtexas.gov/Directory.aspx?EID=11', 'http://www.midlandtexas.gov/directory.aspx?eid=7', 'https://www.midlandtexas.gov/directory.aspx?eid=14', 'https://www.midlandtexas.gov/directory']
+[2026-01-23T01:39:20.842916] [INFO] Running Gemini prompt
+[2026-01-23T01:39:20.843675] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Lori Blong, Amy Stretcher Burkes, Brian Stubbs, John Burkholder, Robin Poole, Jack Ladd, John Norman
+
+    Only extract people who are currently serving as officials as of 2026-01-23. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-23
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-23) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-23T01:39:24.976408] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 3214, Output tokens: 669, Total cost: $0.002637
+[2026-01-23T01:39:24.983372] [INFO] gemini gemini-2.5-flash LLM call took 4.14 seconds
+[2026-01-23T01:39:24.986527] [INFO] Running OpenAI prompt
+[2026-01-23T01:39:24.987040] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Lori Blong, Amy Stretcher Burkes, Brian Stubbs, John Burkholder, Robin Poole, Jack Ladd, John Norman
+
+    Only extract people who are currently serving as officials as of 2026-01-23. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-23
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-23T01:39:24.988267] [INFO] openai LLM call took 0.00 seconds
+[2026-01-23T01:40:20.997724] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 2744, Output tokens: 2867, Total cost: $0.006420
+[2026-01-23T01:40:21.015893] [DEBUG] Skipping adding websites for person with role and contact info: Lori Blong
+[2026-01-23T01:40:21.016425] [DEBUG] Skipping adding websites for person with role and contact info: John Burkholder
+[2026-01-23T01:40:21.017087] [DEBUG] Skipping adding websites for person with role and contact info: Robin Poole
+[2026-01-23T01:40:21.017920] [DEBUG] Skipping adding websites for person with role and contact info: Brian Stubbs
+[2026-01-23T01:40:21.019064] [DEBUG] Skipping adding websites for person with role and contact info: John Norman
+[2026-01-23T01:40:21.020667] [DEBUG] Skipping adding websites for person with role and contact info: Jack Ladd
+[2026-01-23T01:40:21.021478] [DEBUG] Skipping adding websites for person with role and contact info: Amy Stretcher Burkes
+[2026-01-23T01:40:21.022216] [DEBUG] Skipping adding websites for person with role and contact info: Lori Blong
+[2026-01-23T01:40:21.022887] [DEBUG] Skipping adding websites for person with role and contact info: John Burkholder
+[2026-01-23T01:40:21.023443] [DEBUG] Skipping adding websites for person with role and contact info: Robin Poole
+[2026-01-23T01:40:21.024353] [DEBUG] Skipping adding websites for person with role and contact info: Brian Stubbs
+[2026-01-23T01:40:21.024981] [DEBUG] Skipping adding websites for person with role and contact info: John Norman
+[2026-01-23T01:40:21.025505] [DEBUG] Skipping adding websites for person with role and contact info: Jack Ladd
+[2026-01-23T01:40:21.026386] [DEBUG] Skipping adding websites for person with role and contact info: Amy Stretcher Burkes
+[2026-01-23T01:40:21.027671] [INFO] links updated: [Link(url='https://www.midlandtexas.gov/858/city-leadership', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.midlandtexas.gov/directory.aspx?eid=204', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.midlandtexas.gov/directory.aspx?eid=107', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.midlandtexas.gov/directory.aspx?eid=203', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.midlandtexas.gov/directory.aspx?eid=11', status='pending', folder_name='', is_profile_page=True), Link(url='http://www.midlandtexas.gov/directory.aspx?eid=7', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.midlandtexas.gov/directory.aspx?eid=14', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.midlandtexas.gov/directory', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.midlandtexas.gov/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/directory.aspx?did=7', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/directory.aspx?EID=11', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/243/Boards-Commissions', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/m/newsflash/Home/Detail/1684', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/1231/Meetings-Agendas-and-Minutes', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/DocumentCenter/View/201/City-of-Midland-Charter?bidId', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/directory.aspx?eid=9', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/m/newsflash/Home/Detail/1843', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/471/Employment-Opportunities', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/m/newsflash/home/detail/1352', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/CivicAlerts.asp?AID=1630', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/967/PrimeGov-Meetings', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/m/newsflash/home/detail/1549', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/m/newsflash/Home/Detail/1669', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/148/City-Secretary', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/101/Departments', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/1031/2022-Redistricting', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.midlandtexas.gov/238/Mayor-City-Council', status='done', folder_name='www_midlandtexas_gov_238_mayor-city-council', is_profile_page=False)]
+[2026-01-23T01:40:21.477186] [INFO] Step 8: WorkflowStatus.FORMAT_OUTPUT Formatting output data.
+[2026-01-23T01:40:21.590620] [INFO] Step 9: CLEANUP
+[2026-01-23T01:40:21.680498] [INFO] Step 10: WorkflowStatus.SAVE_OUTPUT Saving output data and config files.
+[2026-01-23T01:40:21.852775] [INFO] Step 11: MAYBE_SEND_TO_GITHUB
+[2026-01-23T01:40:21.853010] [INFO] CRUDDER_UPLOAD_URL: https://api.civicpatch.org/api/internal/pipelines/github_intake
