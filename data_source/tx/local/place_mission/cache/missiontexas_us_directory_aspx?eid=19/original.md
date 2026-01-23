@@ -1,4 +1,4 @@
-Staff Directory • City of Mission Mayor
+Staff Directory • Jose Alberto Vela
 
 
 
@@ -14,7 +14,7 @@ Staff Directory • City of Mission Mayor
 
 Loading
 
-[Skip to Main Content](https://missiontexas.us/directory.aspx?did=14#contentarea)
+[Skip to Main Content](https://missiontexas.us/directory.aspx?eid=19#contentarea)
 
 
 
@@ -46,19 +46,26 @@ Search
 1. [Home](https://missiontexas.us/)
 2. Staff Directory
 
-City of Mission Mayor
-=====================
+![DSC04980-6](https://missiontexas.us/ImageRepository/Document?documentID=1568 "DSC04980-6")
 
-Link: [City Mayor Page](https://missiontexas.us/159/City-Mayor)  
-   
+Jose Alberto Vela
+=================
 
-| Staff | | | | |
-| --- | --- | --- | --- | --- |
-| Name | Title | Email | Phone | Additional Phone |
-| [Gonzalez Garza, Norie](https://missiontexas.us/directory.aspx?EID=21) | City Mayor | [Email Norie Gonzalez Garza](mailto:mayorgarza@missiontexas.us) | [956-580-8662](tel:9565808662) |  |
+[City Council](https://missiontexas.us/Directory.aspx?DID=13)  
+Title: Place 4
 
   
+  
 
+Jose Alberto Vela is a lifelong resident of Mission, Texas, and a proud graduate of Our Lady of Guadalupe School and Mission High School. He earned his Doctorate in Pharmacy from Texas Southern University and has been serving the healthcare needs of South Texas since 2002.
+
+In 2005, Mr. Vela opened his first pharmacy in Mission. Today, he oversees a network of pharmacy and medical equipment locations spanning seven counties under the TLC Pharmacy and Medical Equipment and Apple Pharmacies brands. His businesses have provided jobs, expanded healthcare access, and contributed to the economic vitality of the region.
+
+In addition to his work in healthcare, Mr. Vela is a founding shareholder and board member of Freedom Bank, where he has played a key role in supporting local businesses and families through community-based financial services.
+
+Mr. Vela is also a strong advocate for individuals with special needs, particularly those living with autism. His commitment to inclusivity, health equity, and compassionate service shapes both his professional career and civic leadership.
+
+  
 [Return to Staff Directory](https://missiontexas.us/Directory.aspx)
 
 * [Agendas & MinutesLearn more](https://mission-tx.municodemeetings.com/)

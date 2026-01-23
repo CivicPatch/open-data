@@ -7,7 +7,7 @@ City Council | Mission, TX
 ![Mission Texas Home Page](https://missiontexas.us/ImageRepository/Document?documentID=92)
 ![Search](https://missiontexas.us/ImageRepository/Document?documentID=93)
 
-![](https://missiontexas.us/ImageRepository/Document?documentID=90)
+![](https://missiontexas.us/ImageRepository/Document?documentID=88)
 
 
 1. [City Council](https://missiontexas.us/160/City-Council)

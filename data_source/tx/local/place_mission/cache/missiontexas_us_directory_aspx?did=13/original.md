@@ -1,4 +1,4 @@
-Staff Directory • City of Mission Mayor
+Staff Directory • City Council
 
 
 
@@ -14,7 +14,7 @@ Staff Directory • City of Mission Mayor
 
 Loading
 
-[Skip to Main Content](https://missiontexas.us/directory.aspx?did=14#contentarea)
+[Skip to Main Content](https://missiontexas.us/directory.aspx?did=13#contentarea)
 
 
 
@@ -41,21 +41,24 @@ Loading
 [![Search](https://missiontexas.us/ImageRepository/Document?documentID=93)](https://missiontexas.us/Search/Results)
 Search
 
-![](https://missiontexas.us/ImageRepository/Document?documentID=89)
+![](https://missiontexas.us/ImageRepository/Document?documentID=88)
 
 1. [Home](https://missiontexas.us/)
 2. Staff Directory
 
-City of Mission Mayor
-=====================
+City Council
+============
 
-Link: [City Mayor Page](https://missiontexas.us/159/City-Mayor)  
+Link: [City Council Page](https://missiontexas.us/160/City-Council)  
    
 
 | Staff | | | | |
 | --- | --- | --- | --- | --- |
 | Name | Title | Email | Phone | Additional Phone |
-| [Gonzalez Garza, Norie](https://missiontexas.us/directory.aspx?EID=21) | City Mayor | [Email Norie Gonzalez Garza](mailto:mayorgarza@missiontexas.us) | [956-580-8662](tel:9565808662) |  |
+| [Alberto Vela, Jose](https://missiontexas.us/directory.aspx?EID=19) | Place 4 |  |  |  |
+| [Ortega Gerlach, Marissa](https://missiontexas.us/directory.aspx?EID=16) | Place 3 |  |  |  |
+| [Ortega, Jessica](https://missiontexas.us/directory.aspx?EID=13) | Place 1 |  |  |  |
+| [Plata, Ruben](https://missiontexas.us/directory.aspx?EID=14) | Place 2 Mayor Pro Tem |  |  |  |
 
   
 
