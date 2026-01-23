@@ -1,0 +1,456 @@
+Deputy Mayor Pro Tem Daisy Palomo | City of Carrollton, TX
+
+
+
+
+
+
+
+
+
+
+
+
+
+Please enable JavaScript in your browser for a better user experience.
+
+
+
+[Skip to Main Content](https://www.cityofcarrollton.com/government/city-council/place-6#pagebody)
+
+
+
+
+City of Carrollton, TX
+======================
+
+[Home](https://www.cityofcarrollton.com/home)
+[Menu](javascript:void(0);)
+
+
+[Contact Us](https://www.cityofcarrollton.com/about-us/connect-with-us/contact-us)
+[Calendar](https://www.cityofcarrollton.com/about-us/calendar)
+[Pay & Apply](https://www.cityofcarrollton.com/about-us/how-do-i/pay)
+[Translate](//translate.google.com/translate?js=y&prev=_t&hl=en&ie=UTF-8&layout=1&eotf=1&sl=en&tl=es&u=https%3a%2f%2fwww.cityofcarrollton.com%2fgovernment%2fcity-council%2fplace-6)
+
+[Search](javascript:void(0);)
+
+[Go](javascript:void(0);)
+
+* [Adopt A Pet](https://www.cityofcarrollton.com/business)
+* [Get a Library Card](https://www.cityofcarrollton.com/?navid=837)
+* [Pay Your Water Bill](https://www.cityofcarrollton.com/?navid=2472)
+* [Pay a Ticket](https://www.cityofcarrollton.com/?navid=562)
+
+
+
+
+
+
+
+
+
+
+
+[My Carrollton](javascript:void(0);)
+
+> Enter your address to get information such as trash and recycling pick up days, county of residence, and elected officials.
+
+enter an address
+
+Address not found...
+
+Close Window
+
+< Enter an address to get started
+
+### [Trash & Recycling Pickup](https://www.cityofcarrollton.com/residents/resources/trash-recycling)
+
+* **Trash Pickup Day**
+
+* **Recycling Pickup Week**
+
+### [Emergency Contacts](https://www.cityofcarrollton.com/residents/public-safety)
+
+* **Emergencies: 911**
+* Emergencies: 911 24\7 Non-Emergency Hotline 972-466-3333 or \*247
+
+* **Police Headquarters**
+* Police Headquarters 2025 E. Jackson Road 972-466-3290
+
+* **Closest Fire Station**
+* Fire Station #
+
+### [Parks & Trails](https://www.cityofcarrollton.com/departments/departments-g-p/parks-recreation/parks-trails)
+
+### County
+
+### [Neighborhood Empowerment Zone](https://www.cityofcarrollton.com/departments/departments-a-f/community-development/neighborhood-empowerment-zones)
+
+* **Yes**
+
+### [Elected Officials](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/city-council-191)
+
+* **Mayor**
+* Mayor Steve Babick 972-466-3167 | Steve.Babick@cityofcarrollton.com
+
+* **Councilmember**
+* Councilmember |
+
+* [Home](https://www.cityofcarrollton.com/home "Click to open Home")
+* [Departments](https://www.cityofcarrollton.com/departments "Click to open Departments")
+
+  + [Departments A - F](https://www.cityofcarrollton.com/departments/departments-a-f "Click to open Departments A - F")
+    - [Animal Services](https://www.cityofcarrollton.com/departments/departments-a-f/animal-services "Click to open Animal Services")
+    - [Building Inspection](https://www.cityofcarrollton.com/departments/departments-a-f/building-inspection "Click to open Building Inspection")
+    - [City Attorney](https://www.cityofcarrollton.com/departments/departments-a-f/city-attorney "Click to open City Attorney")
+    - [City Manager's Office](https://www.cityofcarrollton.com/departments/departments-a-f/city-manager-s-office "Click to open City Manager's Office")
+    - [City Secretary](https://www.cityofcarrollton.com/departments/departments-a-f/city-secretary "Click to open City Secretary")
+    - [Code Enforcement](https://www.cityofcarrollton.com/departments/departments-a-f/code-enforcement "Code Enforcement: Neighborhood Integrity")
+    - [Community Development](https://www.cityofcarrollton.com/departments/departments-a-f/community-development "Click to open Community Development")
+    - [Economic Development](https://www.cityofcarrollton.com/departments/departments-a-f/economic-development "Click to open Economic Development")
+    - [Emergency Management](https://www.cityofcarrollton.com/departments/departments-a-f/emergency-management "Click to open Emergency Management")
+    - [Engineering](https://www.cityofcarrollton.com/departments/departments-a-f/engineering "Click to open Engineering")
+    - [Environmental Quality](https://www.cityofcarrollton.com/departments/departments-a-f/environmental-quality "Click to open Environmental Quality")
+    - [Finance](https://www.cityofcarrollton.com/departments/departments-a-f/finance "Click to open Finance")
+    - [Fire](https://www.cityofcarrollton.com/departments/departments-a-f/fire "Click to open Fire")
+  + [Departments G - P](https://www.cityofcarrollton.com/departments/departments-g-p "Click to open Departments G - P")
+    - [Information Technology](https://www.cityofcarrollton.com/departments/departments-g-p/information-technology "Click to open Information Technology")
+    - [Inspections & Permits](https://www.cityofcarrollton.com/departments/departments-g-p/inspections-permits "Click to open Inspections & Permits")
+    - [Library](https://www.cityofcarrollton.com/departments/departments-g-p/library "Click to open Library")
+    - [Marketing Services](https://www.cityofcarrollton.com/departments/departments-g-p/marketing-services "Click to open Marketing Services")
+    - [Municipal Court](https://www.cityofcarrollton.com/departments/departments-g-p/municipal-court "Click to open Municipal Court")
+    - [Parks & Recreation](https://www.cityofcarrollton.com/departments/departments-g-p/parks-recreation "Click to open Parks & Recreation")
+    - [Planning & Zoning](https://www.cityofcarrollton.com/departments/departments-g-p/planning-zoning-43 "Click to open Planning & Zoning")
+    - [Police](https://www.cityofcarrollton.com/departments/departments-g-p/police "Click to open Police")
+    - [Prosecutor Office](https://www.cityofcarrollton.com/departments/departments-g-p/prosecutor-office "Click to open Prosecutor Office")
+    - [Public Works](https://www.cityofcarrollton.com/departments/departments-g-p/public-works "Click to open Public Works")
+  + [Departments Q - Z](https://www.cityofcarrollton.com/departments/departments-q-z "Click to open Departments Q - Z")
+    - [Risk Management](https://www.cityofcarrollton.com/departments/departments-q-z/risk-management "Click to open Risk Management")
+    - [Strategic Services](https://www.cityofcarrollton.com/departments/departments-q-z/strategic-services "Click to open Strategic Services")
+    - [Transit-Oriented Development](https://www.cityofcarrollton.com/departments/departments-q-z/transit-oriented-development "Click to open Transit-Oriented Development")
+    - [Trash & Recycling](https://www.cityofcarrollton.com/departments/departments-q-z/trash-recycling "Click to open Trash & Recycling")
+    - [Utility Customer Service](https://www.cityofcarrollton.com/departments/departments-q-z/utility-customer-service "Click to open Utility Customer Service")
+    - [Workforce Services](https://www.cityofcarrollton.com/departments/departments-q-z/workforce-services "Workforce Services (Human Resources)")
+* [Government](https://www.cityofcarrollton.com/government "Click to open Government")
+
+  + [City Council](https://www.cityofcarrollton.com/government/city-council "Mayor & City Council")
+    - [Council Meetings](https://www.cityofcarrollton.com/government/city-council/council-meetings "Click to open Council Meetings")
+    - [Destination 2040](https://www.cityofcarrollton.com/government/city-council/destination-2040 "Click to open Destination 2040")
+    - [Request a Proclamation or Appearance](https://www.cityofcarrollton.com/government/city-council/request-a-proclamation-or-appearance "Click to open Request a Proclamation or Appearance")
+  + [Elections](https://www.cityofcarrollton.com/government/elections "Click to open Elections")
+  + [City Manager's Office](https://www.cityofcarrollton.com/government/city-manager-s-office "Click to open City Manager's Office")
+    - [City Administrators](https://www.cityofcarrollton.com/government/city-manager-s-office/city-administrators "Click to open City Administrators")
+    - [City Secretary](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary "Click to open City Secretary")
+    - [Strategic Services](https://www.cityofcarrollton.com/government/city-manager-s-office/managed-competition "Click to open Strategic Services")
+    - [Organizational Chart](https://www.cityofcarrollton.com/government/city-manager-s-office/organizational-chart "Click to open Organizational Chart")
+  + [City Charter & Ordinances](https://www.cityofcarrollton.com/government/city-charter-ordinances "Click to open City Charter & Ordinances")
+    - [City Charter](https://www.cityofcarrollton.com/government/city-charter-ordinances/city-charter-2490 "Click to open City Charter")
+    - [Codes & Ordinances](https://www.cityofcarrollton.com/government/city-charter-ordinances/codes-ordinances "Click to open Codes & Ordinances")
+  + [Get Involved](https://www.cityofcarrollton.com/government/get-involved "Click to open Get Involved")
+    - [Boards & Commissions](https://www.cityofcarrollton.com/government/boards-commissions "Click to open Boards & Commissions")
+  + [Municipal Court](https://www.cityofcarrollton.com/government/municipal-court "Click to open Municipal Court")
+    - [Request a 10 Day Extension](https://www.cityofcarrollton.com/government/municipal-court/request-a-10-day-extension "Click to open Request a 10 Day Extension")
+    - [Jury Duty](https://www.cityofcarrollton.com/government/municipal-court/jury-duty "Click to open Jury Duty")
+    - [Local Rules](https://www.cityofcarrollton.com/government/municipal-court/local-rules "Click to open Local Rules")
+    - [Pay Fines Online](https://www.cityofcarrollton.com/government/municipal-court/pay-fines-online "Click to open Pay Fines Online")
+  + [![Open File Folder and Magnifying Glass](https://www.cityofcarrollton.com/home/showpublishedimage/26627/637965016842270000)](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/make-an-open-records-request)  
+    [Open Records Request](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/make-an-open-records-request)
+* [Residents](https://www.cityofcarrollton.com/residents "Click to open Residents")
+
+  + [Amenities](https://www.cityofcarrollton.com/residents/amenities "Click to open Amenities")
+    - [Golf](https://www.cityofcarrollton.com/residents/amenities/golf "Click to open Golf")
+    - [Hike & Bike Trails](https://www.cityofcarrollton.com/residents/amenities/hike-bike-trails "Click to open Hike & Bike Trails")
+    - [Historic Downtown Carrollton](https://www.cityofcarrollton.com/residents/amenities/historic-downtown-carrollton "Click to open Historic Downtown Carrollton")
+    - [Homestead Museum](https://www.cityofcarrollton.com/residents/leisure-opportunities/homestead-museum "Click to open Homestead Museum")
+    - [Library](https://www.cityofcarrollton.com/residents/leisure-opportunities/library "Click to open Library")
+    - [Nature Preserve](https://www.cityofcarrollton.com/residents/leisure-opportunities/nature-preserve "Click to open Nature Preserve")
+    - [Senior Center](https://www.cityofcarrollton.com/residents/amenities/senior-center "Click to open Senior Center")
+    - [Tennis](https://www.cityofcarrollton.com/residents/leisure-opportunities/tennis "Click to open Tennis")
+  + [Get Involved](https://www.cityofcarrollton.com/residents/get-involved-2500 "Click to open Get Involved")
+    - [Adaptive Programs](https://www.cityofcarrollton.com/residents/get-involved/adaptive-programs "Adaptive Programs & Accessibility")
+    - [Citizen Academies](https://www.cityofcarrollton.com/residents/get-involved/citizen-academies "Click to open Citizen Academies")
+    - [Class & Activities Registration](https://www.cityofcarrollton.com/residents/get-involved/class-activities-registration "Click to open Class & Activities Registration")
+    - [Destination 2040](https://www.cityofcarrollton.com/residents/get-involved/destination-2040 "Click to open Destination 2040")
+    - [Leisure Connections Magazine](https://www.cityofcarrollton.com/residents/leisure-opportunities/leisure-connections-magazine "Click to open Leisure Connections Magazine")
+    - [Plan the Future](https://www.cityofcarrollton.com/residents/get-involved/plan-the-future "Click to open Plan the Future")
+    - [Senior Activities](https://www.cityofcarrollton.com/residents/leisure-opportunities/senior-activities "Click to open Senior Activities")
+    - [Special Events](https://www.cityofcarrollton.com/residents/special-events "Click to open Special Events")
+    - [Thinksafe](https://www.cityofcarrollton.com/residents/get-involved/adaptive-programs/thinksafe "Click to open Thinksafe")
+    - [Volunteering Opportunities](https://www.cityofcarrollton.com/residents/volunteering-opportunities "Click to open Volunteering Opportunities")
+    - [Volunteer Awards](https://www.cityofcarrollton.com/residents/get-involved/volunteer-awards "Click to open Volunteer Awards")
+  + [Newcomers](https://www.cityofcarrollton.com/residents/newcomers "Click to open Newcomers")
+    - [City Services Guidebook](https://www.cityofcarrollton.com/residents/newcomers/city-services-guidebook "Click to open City Services Guidebook")
+    - [Trash & Recycling](https://www.cityofcarrollton.com/residents/newcomers/trash-recycling "Click to open Trash & Recycling")
+    - [Utility Resources](https://www.cityofcarrollton.com/residents/newcomers/local-utilities "Click to open Utility Resources")
+  + [Resources](https://www.cityofcarrollton.com/residents/resources-2499 "Click to open Resources")
+    - [Code Enforcement](https://www.cityofcarrollton.com/residents/neighborhoods/neighborhood-code-information "Code Enforcement: Neighborhood Integrity")
+    - [Construction Projects](https://www.cityofcarrollton.com/residents/construction-projects "Click to open Construction Projects")
+    - [Incentives & Grants: Neighborhood Improvement in Action (IMPACT)](https://www.cityofcarrollton.com/residents/resources/incentives-grants-neighborhood-improvement-in-action-impact "IMPACT")
+    - [Inspections & Permits](https://www.cityofcarrollton.com/residents/inspections-permits "Click to open Inspections & Permits")
+    - [Veterans](https://www.cityofcarrollton.com/residents/veterans-military-service "Click to open Veterans")
+    - [Neighborhood Parks](https://www.cityofcarrollton.com/residents/leisure-opportunities/neighborhood-parks "Click to open Neighborhood Parks")
+    - [Restaurants](https://www.cityofcarrollton.com/residents/resources/restaurants "Support Restaurants in Carrollton")
+    - [Trash & Recycling](https://www.cityofcarrollton.com/residents/resources/trash-recycling "Click to open Trash & Recycling")
+    - [Where Do Tax Dollars Go?](https://www.cityofcarrollton.com/residents/resources/where-do-tax-dollars-go "Click to open Where Do Tax Dollars Go?")
+    - [Online Services](https://www.cityofcarrollton.com/residents/resources/online-services "Online City Services")
+    - [On the Horizon Newsletter](https://www.cityofcarrollton.com/on-the-horizon-newsletter "Click to open On the Horizon Newsletter")
+  + [Public Safety](https://www.cityofcarrollton.com/residents/public-safety "Click to open Public Safety")
+    - [Health and Safety Fair](https://www.cityofcarrollton.com/residents/public-safety/health-and-safety-fair "Carrollton Health & Safety Fair")
+* [Business](https://www.cityofcarrollton.com/business "Click to open Business")
+
+  + ### Learn more about doing business in the City of Carrollton.
+  + [Business Resources](https://www.cityofcarrollton.com/business/business-resources "Click to open Business Resources")
+  + [Economic Development Community](https://www.cityofcarrollton.com/business/economic-development-community "Click to open Economic Development Community")
+  + [Business Incentives](https://www.cityofcarrollton.com/business/business-incentives "Click to open Business Incentives")
+  + [Development Projects](https://www.cityofcarrollton.com/business/development-projects "Click to open Development Projects")
+  + [**Current Bids**](https://www.cityofcarrollton.com/departments/departments-a-f/finance/purchasing/current-bids)
+* [About Us](https://www.cityofcarrollton.com/about-us "Click to open About Us")
+
+  + [Amenities](https://www.cityofcarrollton.com/about-us/amenities "Click to open Amenities")
+    - [Golf](https://www.cityofcarrollton.com/about-us/amenities/golf "Click to open Golf")
+    - [Hike & Bike Trails](https://www.cityofcarrollton.com/about-us/amenities/hike-bike-trails "Click to open Hike & Bike Trails")
+    - [Historic Downtown Carrollton](https://www.cityofcarrollton.com/about-us/amenities/historic-downtown-carrollton "Click to open Historic Downtown Carrollton")
+    - [Special Events](https://www.cityofcarrollton.com/about-us/amenities/special-events "Click to open Special Events")
+    - [Homestead Museum](https://www.cityofcarrollton.com/about-us/amenities/homestead-museum "Click to open Homestead Museum")
+    - [Library](https://www.cityofcarrollton.com/about-us/amenities/library "Click to open Library")
+    - [Nature Preserve](https://www.cityofcarrollton.com/about-us/amenities/nature-preserve "Click to open Nature Preserve")
+    - [Senior Center](https://www.cityofcarrollton.com/about-us/amenities/senior-center "Click to open Senior Center")
+    - [Tennis](https://www.cityofcarrollton.com/about-us/amenities/tennis "Click to open Tennis")
+  + [Calendar](https://www.cityofcarrollton.com/about-us/calendar "Click to open Calendar")
+    - [Special Events](https://www.cityofcarrollton.com/about-us/calendar/special-events "Click to open Special Events")
+    - [Festival at the Switchyard](https://www.cityofcarrollton.com/about-us/calendar/festival-at-the-switchyard "Click to open Festival at the Switchyard")
+  + [Community Profile](https://www.cityofcarrollton.com/about-us/community-profile "Click to open Community Profile")
+    - [City Logo](https://www.cityofcarrollton.com/about-us/community-profile/city-logo "City of Carrollton Logo")
+    - [Arts & Culture](https://www.cityofcarrollton.com/about-us/community-profile/arts-culture "Arts & Culture in Carrollton")
+    - [Awards & Accolades](https://www.cityofcarrollton.com/about-us/community-profile/awards-accolades "Click to open Awards & Accolades")
+    - [Demographics](https://www.cityofcarrollton.com/about-us/community-profile/demographics "2010 Census Information")
+    - [Financial Transparency](https://www.cityofcarrollton.com/about-us/community-profile/financial-transparency "Click to open Financial Transparency")
+    - [City of Carrollton History](https://www.cityofcarrollton.com/about-us/community-profile/history "Click to open City of Carrollton History")
+    - [State of the City](https://www.cityofcarrollton.com/about-us/community-profile/state-of-the-city "State of the City ")
+  + [Connect With Us](https://www.cityofcarrollton.com/about-us/connect-with-us "Click to open Connect With Us")
+    - [Contact Us](https://www.cityofcarrollton.com/about-us/connect-with-us/contact-us "Click to open Contact Us")
+    - [Job Opportunities](https://www.cityofcarrollton.com/about-us/connect-with-us/job-opportunities "Click to open Job Opportunities")
+    - [Latest City News](https://www.cityofcarrollton.com/about-us/connect-with-us/latest-city-news "News & Updates")
+    - [Maps](https://www.cityofcarrollton.com/about-us/connect-with-us/maps "City of Carrollton Maps (GIS)")
+    - [Privacy Policy & Disclaimer](https://www.cityofcarrollton.com/about-us/connect-with-us/privacy-policy-disclaimer "Click to open Privacy Policy & Disclaimer")
+    - [Sign up for eNewsletter](https://www.cityofcarrollton.com/about-us/connect-with-us/sign-up-for-enewsletter "eNewsletter")
+    - [Social Media](https://www.cityofcarrollton.com/about-us/connect-with-us/social-media "Click to open Social Media")
+    - [Rumor Has It](https://www.cityofcarrollton.com/about-us/connect-with-us/rumor-has-it "Click to open Rumor Has It")
+    - [Apps](https://www.cityofcarrollton.com/about-us/connect-with-us/apps "Click to open Apps")
+    - [CityServe](https://www.cityofcarrollton.com/about-us/connect-with-us/cityserve "Click to open CityServe")
+    - [Sponsorship Opportunities](https://www.cityofcarrollton.com/about-us/connect-with-us/sponsorship-opportunities "Click to open Sponsorship Opportunities")
+  + [Inclement Weather](https://www.cityofcarrollton.com/about-us/inclement-weather "Click to open Inclement Weather")
+
+
+
+
+
+
+* ![A group of nine professionally dressed individuals stands in a row, posing for a formal group photo in front of a colorful abstract mural. The setting features a modern indoor space with a white railing and staircase.](https://www.cityofcarrollton.com/home/showpublishedimage/33114/638750666322470000)
+
+Click to Expand...
+------------------
+
+* [City Council](https://www.cityofcarrollton.com/government/city-council)[-](javascript:void(0) "Expand/Collapse subpages under Sidenav Item with Children")
+  + [Council Meetings](https://www.cityofcarrollton.com/government/city-council/council-meetings)[+](javascript:void(0) "Expand/Collapse subpages under Sidenav Item with Children")
+    - [Participate in a Council Meeting](https://www.cityofcarrollton.com/government/city-council/council-meetings/participate-in-a-council-meeting)
+  + [Mayor](https://www.cityofcarrollton.com/government/city-council/mayor)
+  + [Place 1](https://www.cityofcarrollton.com/government/city-council/place-1)
+  + [Place 2](https://www.cityofcarrollton.com/government/city-council/place-2)
+  + [Place 3](https://www.cityofcarrollton.com/government/city-council/place-3)
+  + [Place 4](https://www.cityofcarrollton.com/government/city-council/place-4)
+  + [Place 5](https://www.cityofcarrollton.com/government/city-council/place-5)
+  + [Place 6](https://www.cityofcarrollton.com/government/city-council/place-6)
+  + [Place 7](https://www.cityofcarrollton.com/government/city-council/place-7)
+  + [Campaign Finance Reports](https://www.cityofcarrollton.com/government/city-council/campaign-finance-reports)
+  + [Destination 2040](https://www.cityofcarrollton.com/government/city-council/destination-2040)
+  + [Request a Proclamation or Appearance](https://www.cityofcarrollton.com/government/city-council/request-a-proclamation-or-appearance)[+](javascript:void(0) "Expand/Collapse subpages under Sidenav Item with Children")
+    - [Request Recognition](https://www.cityofcarrollton.com/government/city-council/request-a-proclamation-or-appearance/request-recognition)
+    - [Request Mayor or Council Appearance](https://www.cityofcarrollton.com/government/city-council/request-a-proclamation-or-appearance/request-mayor-or-council-appearance)
+* [Elections](https://www.cityofcarrollton.com/government/elections)
+* [City Manager's Office](https://www.cityofcarrollton.com/government/city-manager-s-office)[+](javascript:void(0) "Expand/Collapse subpages under Sidenav Item with Children")
+  + [City Administrators](https://www.cityofcarrollton.com/government/city-manager-s-office/city-administrators)
+  + [City Secretary](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary)[+](javascript:void(0) "Expand/Collapse subpages under Sidenav Item with Children")
+    - [Alcoholic Beverages Permit](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/tabc-information/alcoholic-beverages-permit)
+    - [Boards & Commissions](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/boards-commissions)
+    - [Citizens Government Academy](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/citizens-government-academy)
+    - [City Charter](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/city-charter)
+    - [City Ordinances](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/city-ordinances)
+    - [Council Agendas, Videos & Minutes](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/council-agendas-videos-minutes)
+    - [Elections](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/elections)
+    - [Ethics Commission Forms](https://www.cityofcarrollton.com/government/city-manager-s-office/ethics-commission-forms)
+    - [Accessibility and Non-Discrimination Compliance](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/accessibility-and-non-discrimination-compliance)
+    - [Meeting Postings](https://www.cityofcarrollton.com/government/city-manager-s-office/meeting-postings)
+    - [Make an Open Records Request](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/make-an-open-records-request)
+    - [Public Comment, Forum, & Hearing](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/public-forums-hearings)
+    - [Public Notices](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/public-notices)
+  + [Strategic Services](https://www.cityofcarrollton.com/government/city-manager-s-office/managed-competition)[+](javascript:void(0) "Expand/Collapse subpages under Sidenav Item with Children")
+    - [Internships](https://www.cityofcarrollton.com/government/city-manager-s-office/managed-competition/organizational-development/internships)
+  + [Marketing Services](https://www.cityofcarrollton.com/government/city-manager-s-office/marketing-services) [+](javascript:void(0) "Expand/Collapse subpages under Sidenav Item with Children")
+    - [Awards & Accolades](https://www.cityofcarrollton.com/awards-accolades)
+  + [Organizational Chart](https://www.cityofcarrollton.com/government/city-manager-s-office/organizational-chart)
+* [City Charter & Ordinances](https://www.cityofcarrollton.com/government/city-charter-ordinances)[+](javascript:void(0) "Expand/Collapse subpages under Sidenav Item with Children")
+  + [City Charter](https://www.cityofcarrollton.com/government/city-charter-ordinances/city-charter-2490)
+  + [Codes & Ordinances](https://www.cityofcarrollton.com/government/city-charter-ordinances/codes-ordinances)
+* [Get Involved](https://www.cityofcarrollton.com/government/get-involved)[+](javascript:void(0) "Expand/Collapse subpages under Sidenav Item with Children")
+  + [Boards & Commissions](https://www.cityofcarrollton.com/government/boards-commissions)
+* [Municipal Court](https://www.cityofcarrollton.com/government/municipal-court)[+](javascript:void(0) "Expand/Collapse subpages under Sidenav Item with Children")
+  + [Request a 10 Day Extension](https://www.cityofcarrollton.com/government/municipal-court/request-a-10-day-extension)
+  + [Jury Duty](https://www.cityofcarrollton.com/government/municipal-court/jury-duty)
+  + [Local Rules](https://www.cityofcarrollton.com/government/municipal-court/local-rules)
+  + [Pay Fines Online](https://www.cityofcarrollton.com/government/municipal-court/pay-fines-online)
+
+[Government](https://www.cityofcarrollton.com/government) » [City Council](https://www.cityofcarrollton.com/government/city-council)
+
+Deputy Mayor Pro Tem Daisy Palomo
+=================================
+
+[Font Size:](javascript:void(0); "default font size")
+[+](javascript:void(0); "larger font size")
+[-](javascript:void(0); "smaller font size")
+
+[Share & Bookmark](javascript:void(0); "Click to expand Share & Bookmark options")
+Share & Bookmark, Press Enter to show all options, press Tab go to next option
+
+* [Email](javascript:void(0); "Click to submit an email online")
+* [Facebook](javascript:shareLink('facebook') "Click to share with Facebook")
+* [LinkedIn](javascript:shareLink('linkedin') "Click to share with LinkedIn")
+* [Twitter](javascript:shareLink('twitter') "Click to share with Twitter")
+* [Reddit](javascript:shareLink('reddit') "Click to share with Reddit")
+
+[Feedback](javascript:void(0); "Click to submit an email to feedback")
+[Print](javascript:window.print(); "Click to print this page")
+
+Deputy Mayor Pro Tem Daisy Palomo was elected to represent Place 6 on the Carrollton City Council in 2023.
+----------------------------------------------------------------------------------------------------------
+
+As a member of the Council, she works to establish policies, set priorities, and make decisions that guide the City's growth and development. Councilmembers collaborate with the Mayor and fellow members to ensure Carrollton remains a thriving and well-managed community.
+
+
+
+![education-school@2x](https://www.cityofcarrollton.com/home/showpublishedimage/24983/637798505345670000)Education
+
+Councilmember Daisy Palomo is the youngest of seven and the first in her family to graduate from college. She received her Associates of Arts from Northlake College in 1997, Bachelor of Science in Information Systems and Master of Business Administration in Finance from The University of Texas at Arlington in 2000 and 2006 respectively.
+
+![jobs-employment@2x](https://www.cityofcarrollton.com/home/showpublishedimage/24993/637798505368470000)Professional Background
+
+Daisy began her professional career at Sprint Corporation as a Software Engineer. Since she received her MBA, she has held a variety of corporate accounting and finance positions for companies like Robert Half Management Resources, Toyota Motor North America, GameStop and CSC, Computer Sciences Corporation. Daisy is currently working for American Airlines Corp. in the Revenue Management organization. She is also a small business owner focusing on tax preparation and bookkeeping.
+
+![cityhall-government@2x](https://www.cityofcarrollton.com/home/showpublishedimage/24971/637798505059130000)Public Service
+
+Daisy Palomo was elected to the City Council of Carrollton in May 2023.
+
+She is an alumnus of the Carrollton Citizens’ Police Academy in both Spanish and English classes of 2022. Daisy volunteers with special events with the CCPAAA as well as community policing events like UNIDOS meetings with residents. She is also an alumnus of the Carrollton Citizens’ Fire Academy of 2023.
+
+She volunteers with Make It Count (formerly known as Bea’s Kids) as a RESH180 class facilitator for CFBISD high schools.
+
+She completed the School Partners USA program as part of the Dallas cohort to bridge partnerships with CFBISD, with an emphasis on R.L. Turner High School. She was part of team that introduced Community Mural projects at our local schools.
+
+Daisy is a board member of Grace Christian Preschool where they offer childcare for teen moms and area families. She is an active volunteer in the community with the Thanksgiving Day Soup Kitchen, the Free Community Clothes Closet and always willing to help those in need.
+
+Daisy is part of the leadership team in her church focusing on youth and young adult ministries, and also helps with various church administration functions.
+
+She serves as the Chaplain for the American Legion Auxiliary, Post 597.
+
+She is a co-host on the Alexandra & Friends Podcast which has listeners all around the world.
+
+![house-home@2x](https://www.cityofcarrollton.com/home/showpublishedimage/24991/637798505363630000)Personal
+
+Councilmember Daisy Palomo is a 5th generation Texan, born and raised in Dallas, Oak Cliff, and a resident of Carrollton for the past 15 years.
+
+Daisy has been married to her husband, Luis for 10 years and together they have a blended family of seven children. She is proud to have raised her family in Carrollton with two graduates from R.L. Turner METSA academy and two graduates from Early College High School at Brookhaven. In June of 2023, Daisy is very proud U.S. Marine mom. When time allows, she loves to travel and make lasting memories with her husband and grown children.
+
+
+
+
+---
+
+#### 2025-2026 Council Appointments
+
+* Carrollton-Farmers Branch / Dallas ISD Liaison
+* Music Ministry Conservatory Liaison
+* TOD Committee
+* Woven Health Clinic Liaison
+* Mayor’s Retail & Real Estate Advisory
+* Library Board Observer
+
+---
+
+
+
+* [![cityhall-government@2x](https://www.cityofcarrollton.com/home/showpublishedimage/24971/637798505059130000)
+  Mayor & Council](https://www.cityofcarrollton.com/government/city-council)
+* [![bids-citycouncil-court@2x](https://www.cityofcarrollton.com/home/showpublishedimage/24963/637798505040700000)
+  Council Meetings](https://www.cityofcarrollton.com/government/city-council/council-meetings)
+* [![Calculator-Coins](https://www.cityofcarrollton.com/home/showpublishedimage/32441/638682223231830000)
+  Campaign Finance Reports](https://www.cityofcarrollton.com/government/city-council/campaign-finance-reports)
+
+![Daisy-Palomo-325x325](https://www.cityofcarrollton.com/home/showpublishedimage/32667/638699629011570000)  
+ **Daisy Palomo****Deputy Mayor Pro Tem**
+
+Place 6, At-Large
+
+Elected May 2023  
+Term Expires 2026
+
+---
+
+Contact 
+
+972-466-4232(VM)
+
+P.O. Box 110535  
+Carrollton, Texas 75011-0535
+
+[Email](mailto:Daisy.Palomo@cityofcarrollton.com&amp;amp;nbsp;)
+
+
+
+
+[![footer-logo@2x](https://www.cityofcarrollton.com/home/showpublishedimage/23438/637709289904700000)](https://www.cityofcarrollton.com/home)
+
+[![footer-fb@2x](https://www.cityofcarrollton.com/home/showpublishedimage/23418/637709227122800000)](https://www.cityofcarrollton.com/?splash=https%3a%2f%2fwww.facebook.com%2fcarrolltontexas&____isexternal=true)
+[![footer-ig@2x](https://www.cityofcarrollton.com/home/showpublishedimage/23422/637709227131230000)](https://www.cityofcarrollton.com/?splash=https%3a%2f%2fwww.instagram.com%2fcarrolltontx%2f&____isexternal=true)
+[![footer-nd@2x](https://www.cityofcarrollton.com/home/showpublishedimage/23426/637709227138900000)](https://www.cityofcarrollton.com/?splash=https%3a%2f%2fnextdoor.com&____isexternal=true)
+[![footer-tw@2x](https://www.cityofcarrollton.com/home/showpublishedimage/23434/637709227155470000)](https://www.cityofcarrollton.com/?splash=https%3a%2f%2ftwitter.com%2fcarrolltonTX&____isexternal=true)
+
+
+
+
+* [City Jobs](https://www.cityofcarrollton.com/departments/departments-q-z/workforce-services)
+* [Trash & Recycling](https://www.cityofcarrollton.com/departments/departments-q-z/trash-recycling)
+* [Open Records Request](https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/make-an-open-records-request)
+
+* [News](https://www.cityofcarrollton.com/about-us/connect-with-us/latest-city-news)
+* [Calendar](https://www.cityofcarrollton.com/about-us/calendar)
+* [eNewsletter](https://www.cityofcarrollton.com/about-us/how-do-i/sign-up-for/enewsletter)
+
+* [Pay Your Water Bill](https://www.cityofcarrollton.com/departments/departments-q-z/utility-customer-service/pay-your-water-bill-online)
+* [Financial Transparency](https://www.cityofcarrollton.com/departments/departments-a-f/finance/transparency-resources/traditional-financial-information)
+* [Privacy Policy](https://www.cityofcarrollton.com/about-us/connect-with-us/privacy-policy-disclaimer)
+
+
+
+* [Site Map](https://www.cityofcarrollton.com/about-us/site-selection/advanced-components/site-map)
+* [Contact Us](https://www.cityofcarrollton.com/about-us/connect-with-us/contact-us)
+
+WEBSITE DESIGN BY [GRANICUS](//granicus.com) - Connecting People and Government
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Loading ...
