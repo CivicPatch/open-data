@@ -1,0 +1,2529 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n3-active wf-muli-n4-active wf-muli-i4-active wf-muli-n7-active wf-active has-webFonts" style="height: 100%;"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700,700italic,800,800italic,italic,regular|Oswald:500,600,700,regular|Source+Sans+Pro:600,600italic,700,700italic,900,900italic,italic,regular|" media="all"><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-QLM34WF250&amp;cx=c&amp;gtm=4e61m0"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-METH026RQ3&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61m1h2"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-METH026RQ3';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Favicon MetaTags -->
+<link rel="icon" type="image/png" sizes="192x192" href="/DocumentCenter/View/15348">
+
+<link rel="icon" type="image/png" sizes="256x256" href="/DocumentCenter/View/15349">
+<link rel="apple-touch-icon" sizes="120x120" href="/DocumentCenter/View/15350">
+<link rel="icon" type="image/png" sizes="16x16" href="/DocumentCenter/View/15351">
+<link rel="icon" type="image/png" sizes="32x32" href="/DocumentCenter/View/15352">
+<meta rel="msapplication-config" content="/DocumentCenter/View/15353">
+<link rel="icon" type="image/png" sizes="150x150" href="/DocumentCenter/View/15353">
+<link rel="shortcut icon" href="/DocumentCenter/View/15355">
+<link rel="manifest" href="/DocumentCenter/View/15356">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!-- End Favicon MetaTags -->
+<script async="" src="https://docaccess.com/docbox.js"></script>
+	<meta name="category0" content="Home">
+<meta name="category1" content="City Hall">
+<meta name="category2" content="City Council">
+
+	
+	<meta name="theme-color" content="#28536a">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>City Council | New Braunfels, TX - Official Website</title>
+
+		<meta name="description" content="Learn more about New Braunfels City Council including district information, term length, and contact information.">
+		<meta name="keywords" content="City Council">
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '350px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/-1396870161.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<style>.frase-answers-bot{position:absolute;bottom:0;right:0}
+</style><style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.2f3WBw8L4SI.L.W.O/am=AAQD/d=0/rs=AN8SPfrXXtxuFpMMBoYgp93jo68L3iC3ZQ/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/_/translate_http/_/js/k=translate_http.tr.en_US.gm28aokwBeQ.O/am=AAAQ/d=1/exm=el_conf/ed=1/rs=AN8SPfo-cjsGcRTUC_jpauJJ5fve_ZlsdQ/m=el_main"></script><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style></head>
+<body class="wide cpTextResizeOn doneLoading" style="position: relative; min-height: 100%; top: 0px;"><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="https://www.newbraunfels.gov/Common/images/ajax-loader.gif" alt="Loading" title="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks">
+<a href="https://www.newbraunfels.gov/298/City-Council#cc80d7a2b1-a529-451f-b707-f9173a55389b" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="7">
+    <input type="hidden" id="hdnContentCollectionID" value="45d5ab2a-f064-42f0-91a3-64263d4ae281">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="50">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID">
+    <input type="hidden" id="pagePageID" value="298">
+
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700); 
+.alertText .customAlert {
+    color: #EAEAEA;
+    display: inline-block;
+    font-family: 'Open Sans Condensed', sans-serif; 
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 27px;
+    left: 57px;
+    line-height: 27px;
+    overflow: hidden;
+    position: absolute;
+    top: 15px;
+    white-space: nowrap;
+    width: 268px;
+}
+</style>
+  <div id="1_divAlertBar" class="alertToolbar cpToolbar" style="background: rgb(34, 34, 34); z-index: 1;">
+    <div id="1_divAlertToolbarInner" class="alertToolbarInner" style="font-size: 16px;">
+        <a href="https://www.newbraunfels.gov/AlertCenter.aspx" id="1_lnkAlertText" class="alertText" style="border-right: 1px solid #000000;">
+            <img src="https://www.newbraunfels.gov/Common/Images/AlertCenter/alertBarBlink.svg" id="1_imgDot" alt="Emergency Alert" class="redDot">
+            <span id="1_customAlert" class="customAlert">Freezing Weather</span>
+        </a>
+        <span id="1_spnAlertContainer" class="alertContainer"><a href="https://www.newbraunfels.gov/m/NewsFlash/home/detail/3882" target="_blank" class="alert" style="border-left: 1px solid #635e65; border-right: 1px solid #000000;background: #030303 url(/Common/images/AlertCenter/alertBarBlackTextBckg.png) repeat-x; color: #FFFFFF;" aria-label="
+	City of New Braunfels Prepares for Freezing Temperatures
+	Read On...
+ Opens in new window" rel="noopener">
+	City of New Braunfels Prepares for Freezing Temperatures
+	<span style="color: #FC4C2F;">Read On...</span>
+</a>
+<a href="https://www.weather.gov/ewx/" target="_blank" class="alert" style="border-left: 1px solid #635e65; border-right: 1px solid #000000;background: #030303 url(/Common/images/AlertCenter/alertBarBlackTextBckg.png) repeat-x; color: #FFFFFF;" aria-label="
+	Arctic Cold Front Expected in New Braunfels
+	Read On...
+ Opens in new window" rel="noopener">
+	Arctic Cold Front Expected in New Braunfels
+	<span style="color: #FC4C2F;">Read On...</span>
+</a>
+</span>
+    </div>
+  </div>
+  <div id="1_divAlertBarEmpty" class="alertBarEmpty"></div>
+  
+
+
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 57px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="bodyContainerTS">
+<!-- Header Container --><header data-cprole="structuralContainer" id="headerContainerTS" class="fixedTopTS" style="top: 56px;">
+<div data-cprole="structuralContainer" id="headerWrapTS">
+<div class="siteWrap"><div data-cprole="banner" id="bannerLogoTS" class="bannerLogoTS empty">
+
+
+
+
+				<a id="bannerLogoTS-138" style="			display: block; text-align: center;
+" class="bannerObject" href="https://www.newbraunfels.gov/" target="_blank" aria-label="Home page Opens in new window" rel="noopener"><img alt="Home page Opens in new window" class="bannerObject" height="117" src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=24407" width="330"></a>
+</div><div data-cprole="contentContainer" id="searchTS">	<div id="ccbcf3a668-13cf-4650-bbd3-f0fbb62853bd" data-containerid="bcf3a668-13cf-4650-bbd3-f0fbb62853bd" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="50">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col15 first" style="height: auto;" data-widgetcontainerid="a39c350d-e8b1-4052-9856-f69a6de4cf1f">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col15 first last id01d9863e-3d4e-40db-a5ca-06ce1c20cd56" style="height: 95px;" data-widgetcontainerid="01d9863e-3d4e-40db-a5ca-06ce1c20cd56">
+	
+	<div data-widget-id="3ca2be73-154d-4c22-ae60-ec891f58c9fb" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink3ca2be73-154d-4c22-ae60-ec891f58c9fb" class="widget widgetQuickLinks skin22 widgetOptionSet18 wide" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:30em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Quick Links">
+			<header class="widgetHeader" id="quickLinksHeader3ca2be73-154d-4c22-ae60-ec891f58c9fb">
+		<div class="">
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid3 ">
+        <div class="row  wide">
+				<div class="col col1 first ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.newbraunfels.gov/3075/All-Departments" target="_blank" aria-label="All Departments Opens in new window" rel="noopener">All Departments</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.newbraunfels.gov/3317/Make-a-Request" target="_blank" aria-label="Submit a Request Opens in new window" rel="noopener">Submit a Request</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.newbraunfels.gov/3554/Join-Our-Team" target="_blank" aria-label="Join Our Team Opens in new window" rel="noopener">Join Our Team</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col9 last" style="height: auto;" data-widgetcontainerid="32cec271-f089-4e98-926c-576c3e4fe5df">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col9 first last id1298256d-79fb-4ed8-8626-ebbb66162982" style="height: 95px;" data-widgetcontainerid="1298256d-79fb-4ed8-8626-ebbb66162982">
+	
+<div data-widget-id="aa0c5006-9afd-4545-98ea-9623dd5ca4fa" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButtonaa0c5006-9afd-4545-98ea-9623dd5ca4fa").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDeptaa0c5006-9afd-4545-98ea-9623dd5ca4fa").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchFieldaa0c5006-9afd-4545-98ea-9623dd5ca4fa").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDeptaa0c5006-9afd-4545-98ea-9623dd5ca4fa").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDeptaa0c5006-9afd-4545-98ea-9623dd5ca4fa").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (false) {
+					var currentRequest = null;
+					var $searchField = $("#searchFieldaa0c5006-9afd-4545-98ea-9623dd5ca4fa").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDeptaa0c5006-9afd-4545-98ea-9623dd5ca4fa").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchFieldaa0c5006-9afd-4545-98ea-9623dd5ca4fa").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchFieldaa0c5006-9afd-4545-98ea-9623dd5ca4fa"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin17 widgetOptionSet59" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBoxaa0c5006-9afd-4545-98ea-9623dd5ca4fa" cp5ph="true" id="searchFieldaa0c5006-9afd-4545-98ea-9623dd5ca4fa" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search..." title="Search..." type="text" value="">
+						<a href="https://www.newbraunfels.gov/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButtonaa0c5006-9afd-4545-98ea-9623dd5ca4fa" role="button"><img alt="Go to Site Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=24388" data-image="/ImageRepository/Document?documentID=24387" src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=24387"></a>
+
+			<label class="searchLabel" for="searchFieldaa0c5006-9afd-4545-98ea-9623dd5ca4fa">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #FFFFFF;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #FFFFFF;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #FFFFFF;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #FFFFFF;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBoxaa0c5006-9afd-4545-98ea-9623dd5ca4fa
+	{
+		color: #FFFFFF;
+		background: #2F5268; border: 0; box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16); border-radius: 5px; padding: 0 80px 0 20px; height: 75px; font-family: Source Sans Pro; font-size: 1.2em;
+	}
+	.widgetSearch .widgetBody .widgetSearchButtonaa0c5006-9afd-4545-98ea-9623dd5ca4fa
+	{
+		margin: 18px 18px 0 0;
+	}
+	.widgetSearch .widgetSearch-onlyDeptaa0c5006-9afd-4545-98ea-9623dd5ca4fa
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDeptaa0c5006-9afd-4545-98ea-9623dd5ca4fa
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchFieldaa0c5006-9afd-4545-98ea-9623dd5ca4fa").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><div data-cprole="structuralContainer" id="headerNavTS">
+<div class="siteWrap"><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem2993" class="topMenuItem" role="none" data-pageid="2993" data-displaymegamenu="True" style="width: 32.6681%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavLivingVisiting" class="navMainItem mainNavItem mainNavItem1" href="https://www.newbraunfels.gov/2993/Living-Visiting" target="_self" style="font-size: 22px;"><span style="display: inline;">   Living &amp; Visiting </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem2935" class="topMenuItem" role="none" data-pageid="2935" data-displaymegamenu="True" style="width: 43.2003%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavBusinessDevelopment" class="navMainItem mainNavItem mainNavItem2" href="https://www.newbraunfels.gov/2935/Business-Development" target="_self" style="font-size: 22px;"><span style="display: inline;">   Business &amp; Development </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem2964" class="topMenuItem" role="none" data-pageid="2964" data-displaymegamenu="True" style="width: 24.1316%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavCityHall" class="navMainItem mainNavItem mainNavItem3" href="https://www.newbraunfels.gov/2964/City-Hall" target="_self" style="font-size: 22px;"><span style="display: inline;">   City Hall </span></a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=50&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = true;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="0"></aside></nav></div>
+</div>
+</header><!-- Banner --><div data-cprole="structuralContainer" id="bannerContainerTS" class="noOverflowTS" style="padding-top: 179px;">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="bannerSizingTS">
+<div data-cprole="structuralContainer" id="bannerSearchTS">
+<div class="siteWrap2"><div data-cprole="contentContainer" id="welcomeTS">	<div id="cca618c32c-5d5f-48ee-9f15-d49f9830c243" data-containerid="a618c32c-5d5f-48ee-9f15-d49f9830c243" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+
+
+
+		<div id="bannerImagesJSON139" class="hidden"></div><div class="bannerObject external fixedBanner" id="bannerDivbanner1" style="min-height: 574px; top: 0px; left: -378.199px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img class="bannerObject" width="1265px" style="position: absolute; left: 0px; margin: 0px; width: 2021.4px;" src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=24384" data-is-delayed="false" alt=""></div>
+		
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner1',
+								{"BannerOptionID":139,"ThemeID":50,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":2,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":424,"BannerOptionID":139,"FileName":"/ImageRepository/Document?documentID=24384","Height":625,"Width":2201,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":2,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":425,"BannerOptionID":139,"FileName":"/ImageRepository/Document?documentID=24383","Height":625,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":3,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":438,"BannerOptionID":139,"FileName":"/ImageRepository/Document?documentID=21154","Height":500,"Width":1500,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":3,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""}],"BannerVideos":[],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								'/App_Themes/Simple/Images/',
+								'Rotating');
+						});
+				});
+			</script>
+
+</div>
+</div><!-- Content container --><div data-cprole="structuralContainer" id="mainContainerTS">
+<div class="siteWrap2"><div data-cprole="structuralContainer" id="mainWrapTS" class="mainWrap" role="main">
+<div data-cprole="structuralContainer" id="outerContentWrapTS" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="contentWrapTS" class="contentWrap">
+<div data-cprole="breadCrumbs" id="breadCrumbs" class="breadCrumbContainer">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="https://www.newbraunfels.gov/">Home</a></li><li><a class="breadCrumb" href="https://www.newbraunfels.gov/2964/City-Hall">City Hall</a></li><li id="currentBCPage" data-pageid="298">City Council</li>
+		</ol>
+
+	   
+    
+</div><div data-cprole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="298">
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="2964">
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="43189">
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="City Council">
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="False">
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False">
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published">
+
+				<h1 id="versionHeadLine" class="headline">
+
+City Council		</h1>
+	
+		<div id="cc80d7a2b1-a529-451f-b707-f9173a55389b" data-containerid="80d7a2b1-a529-451f-b707-f9173a55389b" class="pageContent cpGrid cpGrid24">
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="cbeab522-2d7f-4209-81f4-68046f8f9aac">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col24 first last id87471199-0283-4301-8c85-af4e72aadf11" style="height: 368px;" data-widgetcontainerid="87471199-0283-4301-8c85-af4e72aadf11">
+	
+
+<div class="widget image pageStyles" id="divImageOuter13d3d38b-15c3-4197-bfd6-9f3d3fadf022" data-widget-id="13d3d38b-15c3-4197-bfd6-9f3d3fadf022">
+    
+	<div class="widgetBody " id="divImage13d3d38b-15c3-4197-bfd6-9f3d3fadf022">
+<img src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=24941" alt="Close Up of City logo sign on top of New Braunfels City Hall" title="Close Up of City logo sign on top of New Braunfels City Hall">	</div>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest wide">
+
+	
+	<div class="inner col col2 first id0c96ecff-9ca5-4953-b529-63c92bfd21df" style="height: 152px;" data-widgetcontainerid="0c96ecff-9ca5-4953-b529-63c92bfd21df">
+	
+
+<div class="widget widgetSpacer" id="00ef5ffe-5d45-42fd-87ec-b1b24a1486b7" style="height: auto;"></div>	</div> <!-- inner column -->
+	<div class="inner col col20 id47fb410d-73ff-48f3-9dcd-95438283ccb6" style="height: 152px;" data-widgetcontainerid="47fb410d-73ff-48f3-9dcd-95438283ccb6">
+	
+
+<div class="widget image pageStyles" id="divImageOutere64df5ed-3427-4ce2-a29d-d37a42c9e0dc" data-widget-id="e64df5ed-3427-4ce2-a29d-d37a42c9e0dc">
+    
+	<div class="widgetBody " id="divImagee64df5ed-3427-4ce2-a29d-d37a42c9e0dc">
+				<a href="https://www.newbraunfels.gov/3923/Ride-the-Rio" target="_blank" aria-label="Ride the Rio ribbon Opens in new window" rel="noopener"><img src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=41516" alt="Ride the Rio ribbon Opens in new window" title="Ride the Rio ribbon"></a>
+	</div>
+</div>
+	</div> <!-- inner column -->
+	<div class="inner col col2 last id84783891-5589-4a45-bba8-7a3b5ad9e4b0" style="height: 152px;" data-widgetcontainerid="84783891-5589-4a45-bba8-7a3b5ad9e4b0">
+	
+
+<div class="widget widgetSpacer" id="97e063ea-96fc-4003-9f93-5696e73365d9" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest wide">
+
+	
+	<div class="inner col col24 first last id426e1098-11b1-4bf8-a341-fadb3133f512" style="height: 254px;" data-widgetcontainerid="426e1098-11b1-4bf8-a341-fadb3133f512">
+	
+<div class="widget editor pageStyles wide" id="divEditor9c10dd66-ba62-4044-b7c9-49fdd80b02d4" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h1 class="headline">City Council Meetings and How to Watch</h1><p>Regular City Council meetings are held at 6:00pm on the 2nd and 4th Monday of each month. <a href="https://newbraunfels.legistar.com/Calendar.aspx" rel="noopener" target="_blank" aria-label="You can&nbsp; Opens in new window">You can&nbsp;</a><a href="https://newbraunfels.legistar.com/Calendar.aspx" rel="noopener" target="_blank" aria-label="watch those meetings&nbsp; Opens in new window">watch those meetings&nbsp;</a><a href="https://newbraunfels.legistar.com/Calendar.aspx" rel="noopener" target="_blank" aria-label="live online Opens in new window">live online</a>, or you can also view the live City Council meetings as well as replays of the latest meeting daily at 9:00am and 5:00pm on</p><ul><li>Spectrum Cable - Channel 21&nbsp;</li><li>AT&amp;T UVerse - Channel 99</li></ul>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '9c10dd66-ba62-4044-b7c9-49fdd80b02d4'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest wide">
+
+	
+	<div class="inner col col24 first last id53c9c7a8-c8bc-4062-bf1a-07275d217d40" style="height: 115px;" data-widgetcontainerid="53c9c7a8-c8bc-4062-bf1a-07275d217d40">
+	
+<div class="widget editor pageStyles wide" id="divEditor029a9bb1-a37b-43a7-878e-6930ce802149" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h1 class="headline">City Council Resources</h1>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '029a9bb1-a37b-43a7-878e-6930ce802149'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest wide">
+
+	
+	<div class="inner col col24 first last id3f498d24-492f-432f-9891-f5b28c7b3dfe" style="height: 422px;" data-widgetcontainerid="3f498d24-492f-432f-9891-f5b28c7b3dfe">
+	
+    <section class="widget clear dynamicSubpage widgetPages skin17 wide" id="widgetPagebfb7143c-9906-4a60-a8b7-de435e7ba607" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Pages">
+		<div class="hidden widgetTypeID">9</div>
+		<div class="hidden depth">1</div>
+		<div class="hidden cols">2</div>
+		<div class="hidden format">4</div>		
+		<div class="widgetBody">
+			
+		<style>
+			.widgetPages .widgetBody .layout4 .mediaLeft .media
+			{
+				margin-bottom: 10px; /* matches space between image and text */
+				width: 75px; /* Thumbnail size */
+			}
+			.widgetPages .widgetBody .layout4 .mediaLeft .text
+			{
+				margin-left: 85px; /* Thumbnail size + 10px */
+			}
+		</style>
+	<div class="widgetBody cpGrid cpGrid2 ">
+		<div class="row wide">
+					<div class="col col1">
+						<ol class="semanticList layout4" role="menu">
+			<li class="megaMenuItem widgetItem mediaLeft" data-pageid="2056" role="none">
+				<img class="media" alt="City Council Agendas, Minutes, &amp; Videos" src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=24626&amp;thumbnailSize=2" width="75" height="75">
+				<h4 class="widgetTitle text">
+					<a role="menuitem" href="https://newbraunfels.legistar.com/DepartmentDetail.aspx?ID=32742&amp;GUID=5C149C96-58E1-4E06-A0CD-47EF922B147F" target="_blank" rel="noopener" aria-label="City Council Agendas, Minutes, &amp; Videos Opens in new window">City Council Agendas, Minutes, &amp; Videos</a>
+				</h4>
+				<p class="widgetDesc text">Find agendas, packets, and minutes for City of New Braunfels meetings including: City Council, Zoning, Building, 
+Economic Development, Downtown, and more. </p>
+				
+			</li>			<li class="megaMenuItem widgetItem mediaLeft" data-pageid="2969" role="none">
+				<img class="media" alt="City Charter" src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=24618&amp;thumbnailSize=2" width="75" height="75">
+				<h4 class="widgetTitle text">
+					<a role="menuitem" href="https://www.newbraunfels.gov/DocumentCenter/View/22508/Certified-City-Charter-2021" target="_blank" rel="noopener" aria-label="City Charter Opens in new window" class="docaccess-activated" data-docaccess-source-url="https://www.newbraunfels.gov/DocumentCenter/View/22508/Certified-City-Charter-2021" data-url-hash="0eaf78df2f276f147c9a0f8f56dee94cef7787a049199de80c54fbdf95095b73" data-url-status="disabled">City Charter</a>
+				</h4>
+				<p class="widgetDesc text">Last amended in 2021, the New Braunfels City Charter is the governing document for the City, similar to the Constitution for the United States.</p>
+				
+			</li>			<li class="megaMenuItem widgetItem mediaLeft" data-pageid="2282" role="none">
+				<img class="media" alt="Find My Council District" src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=24835&amp;thumbnailSize=2" width="75" height="75">
+				<h4 class="widgetTitle text">
+					<a role="menuitem" href="https://newbraunfels.maps.arcgis.com/apps/webappviewer/index.html?id=27281ec8ad7e4ade8e1bc80c10b60714" target="_blank" rel="noopener" aria-label="Find My Council District Opens in new window">Find My Council District</a>
+				</h4>
+				<p class="widgetDesc text">Use this interactive map to find your City Council district, which City Council members represents you, and much more.</p>
+				
+			</li>			<li class="megaMenuItem widgetItem mediaLeft" data-pageid="3239" role="none">
+				<img class="media" alt="Redistricting" src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=24831&amp;thumbnailSize=2" width="75" height="75">
+				<h4 class="widgetTitle text">
+					<a role="menuitem" href="https://www.newbraunfels.gov/3239/Redistricting" target="_self">Redistricting</a>
+				</h4>
+				<p class="widgetDesc text">Learn more about the City Council redistricting process. Based on 2020 Census information, the City of New Braunfels has redrawn City Council districts to better represent the community. </p>
+				
+			</li>						</ol>
+					</div>
+					<div class="col col1">
+						<ol class="semanticList layout4" role="menu">
+			<li class="megaMenuItem widgetItem mediaLeft" data-pageid="3384" role="none">
+				<img class="media" alt="Open Records Requests" src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=24638&amp;thumbnailSize=2" width="75" height="75">
+				<h4 class="widgetTitle text">
+					<a role="menuitem" href="https://newbraunfelstx.govqa.us/WEBAPP/_rs/SupportHome.aspx" target="_blank" rel="noopener" aria-label="Open Records Requests Opens in new window">Open Records Requests</a>
+				</h4>
+				<p class="widgetDesc text">Request records from the City of New Braunfels, the New Braunfels Police Department, or New Braunfels Municipal Court.</p>
+				
+			</li>			<li class="megaMenuItem widgetItem mediaLeft" data-pageid="3385" role="none">
+				<img class="media" alt="Proclamation Application" src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=24634&amp;thumbnailSize=2" width="75" height="75">
+				<h4 class="widgetTitle text">
+					<a role="menuitem" href="https://newbraunfels.gov/3127/Proclamation-Application" target="_blank" rel="noopener" aria-label="Proclamation Application Opens in new window">Proclamation Application</a>
+				</h4>
+				<p class="widgetDesc text">Information on how to request a proclamation from New Braunfels City Council.</p>
+				
+			</li>			<li class="megaMenuItem widgetItem mediaLeft" data-pageid="3866" role="none">
+				<img class="media" alt="Strategic Plan" src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=25096&amp;thumbnailSize=2" width="75" height="75">
+				<h4 class="widgetTitle text">
+					<a role="menuitem" href="https://www.newbraunfels.gov/3866/Strategic-Plan" target="_self">Strategic Plan</a>
+				</h4>
+				<p class="widgetDesc text">Learn more about the 2025 City of New Braunfels Strategic Plan and the goals that have been approved by City Council.</p>
+				
+			</li>			<li class="megaMenuItem widgetItem mediaLeft" data-pageid="3915" role="none">
+				<img class="media" alt="Community Survey" src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=25474&amp;thumbnailSize=2" width="75" height="75">
+				<h4 class="widgetTitle text">
+					<a role="menuitem" href="https://www.newbraunfels.gov/3796/Community-Survey" target="_blank" rel="noopener" aria-label="Community Survey Opens in new window">Community Survey</a>
+				</h4>
+				<p class="widgetDesc text">Information and results for the most recent National Community Survey conducted in New Braunfels. </p>
+				
+			</li>						</ol>
+					</div>
+		</div>
+	</div>
+
+
+
+
+		</div>
+	</section>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest wide">
+
+	
+	<div class="inner col col24 first last idcb0ed068-224f-46e0-9505-c390a474ae02" style="height: 30px;" data-widgetcontainerid="cb0ed068-224f-46e0-9505-c390a474ae02">
+	
+
+<div class="widget widgetSpacer" id="0b0a5ad6-1de6-4d6f-a971-323158eb0f73" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col24 first last id928f69c9-5b69-415d-91cd-41c70ed936df" style="height: 115px;" data-widgetcontainerid="928f69c9-5b69-415d-91cd-41c70ed936df">
+	
+<div class="widget editor pageStyles wide" id="divEditor14fb80ac-be2e-4c41-b0b1-c3f425838d19" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h1 class="headline">Meet the City Council</h1>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '14fb80ac-be2e-4c41-b0b1-c3f425838d19'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="74770bf8-9249-4c8f-aadc-8c89b16d4371">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last idc6cd930b-4744-4421-a8f3-9c7b3c22679e" style="height: 357px;" data-widgetcontainerid="c6cd930b-4744-4421-a8f3-9c7b3c22679e">
+	
+<div class="widget editor pageStyles wide" id="divEditor1513a56e-0c74-4aec-a627-6a80328d14c6" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <p style="box-sizing: content-box; margin-bottom: 1.4em; border: 0px none; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14.4px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><strong style="box-sizing: content-box; font-weight: 700;"><img src="https://www.newbraunfels.gov/ImageRepository/Document?documentId=31646" class="fr-fil fr-bordered fr-rounded fr-dii" alt="Headshot of Mayor of New Braunfels Neal Linnartz" style="width: 201px;"></strong></p><h3 class="subhead2"><strong style="box-sizing: content-box; font-weight: 700;"><span style="font-size: 18px;">New Braunfels Mayor</span></strong></h3><h3 class="subhead2">Neal Linnartz</h3><h3 class="subhead2">Term Expires: May 2026</h3><h3 class="subhead2"><strong style="box-sizing: content-box; font-weight: 700;">Contact:</strong></h3><h2 id="isPasted">Phone - (210) 660-8421<br style="box-sizing: border-box;">Email - <a href="mailto:nlinnartz@newbraunfels.gov">nlinnartz@newbraunfels.gov</a><br style="box-sizing: border-box;">Mail - 550 Landa St. New Braunfels, TX 78130</h2><p><br></p><p><br></p><p><br></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '1513a56e-0c74-4aec-a627-6a80328d14c6'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="d64f7f0e-4d7d-4dd5-a4f8-c1398c10ec5b">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last idef0491bd-cace-4ad6-a3f4-0a872ab42fb4" style="height: 762px;" data-widgetcontainerid="ef0491bd-cace-4ad6-a3f4-0a872ab42fb4">
+	
+<div data-widget-id="66628c30-2181-49ab-ab3d-567715d34714" data-widget-controller-path="/NewsFlash/Widget">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<section class="widget widgetNewsFlash skin18 widgetOptionSet58 wide" data-modulewidgettype="newsFlash" id="widgetNewsFlash66628c30-2181-49ab-ab3d-567715d34714" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="newsFlashHeader66628c30-2181-49ab-ab3d-567715d34714">
+				<header class="widgetHeader" id="newsFlashHeader66628c30-2181-49ab-ab3d-567715d34714">
+			<div class="">
+						<h3><a style="" href="https://www.newbraunfels.gov/CivicAlerts.aspx?CID=50">Messages from the Mayor</a></h3>
+											</div>
+		</header>
+	<div class="widgetBody cpGrid cpGrid2 ">
+	<div class="row wide" style="">
+				<div class="col col1 first ">
+					<ol class="semanticList">
+			<li class="widgetItem inlineTitle" data-news-i-d="3873">
+
+					<h4 id="newsFlashItemHeader3873" class="widgetTitle">
+	<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3873" target="_self">January 2026 - Community Survey 		<span class="htmlChar"></span>
+</a></h4>
+<div class="widgetDesc">
+I want to personally encourage residents to take part in the upcoming National Community Survey..				<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3873" target="_self" id="newsFlashReadOn3873" aria-labelledby="newsFlashItemHeader3873 newsFlashReadOn3873" class="readOn">Read on...</a>
+</div>
+
+			</li>
+			<li class="widgetItem inlineTitle" data-news-i-d="3866">
+
+					<h4 id="newsFlashItemHeader3866" class="widgetTitle">
+	<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3866" target="_self">December 2025 - The Holidays in New Braunfels 		<span class="htmlChar"></span>
+</a></h4>
+<div class="widgetDesc">
+As the chill of December settles over our city, I’m reminded of why New Braunfels is such a special place...				<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3866" target="_self" id="newsFlashReadOn3866" aria-labelledby="newsFlashItemHeader3866 newsFlashReadOn3866" class="readOn">Read on...</a>
+</div>
+
+			</li>
+			<li class="widgetItem inlineTitle" data-news-i-d="3851">
+
+					<h4 id="newsFlashItemHeader3851" class="widgetTitle">
+	<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3851" target="_self">November 2025 - A Continued Commitment to a Cleaner New Braunfels 		<span class="htmlChar"></span>
+</a></h4>
+<div class="widgetDesc">
+I’m proud to share an update on one of our city’s most visible and impactful initiatives, the Right-of-Way (ROW) &amp; Beautification Program...				<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3851" target="_self" id="newsFlashReadOn3851" aria-labelledby="newsFlashItemHeader3851 newsFlashReadOn3851" class="readOn">Read on...</a>
+</div>
+
+			</li>
+			<li class="widgetItem inlineTitle" data-news-i-d="3810">
+
+					<h4 id="newsFlashItemHeader3810" class="widgetTitle">
+	<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3810" target="_self">October 2025 - Pedestrian Improvements 		<span class="htmlChar"></span>
+</a></h4>
+<div class="widgetDesc">
+?October is National Pedestrian Safety Month, and I’d like to take a moment to share some of the steps we’ve been taking here in New Braunfels to make it easier and safer to get around on foot or by bike.?..				<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3810" target="_self" id="newsFlashReadOn3810" aria-labelledby="newsFlashItemHeader3810 newsFlashReadOn3810" class="readOn">Read on...</a>
+</div>
+
+			</li>
+			<li class="widgetItem inlineTitle" data-news-i-d="3809">
+
+					<h4 id="newsFlashItemHeader3809" class="widgetTitle">
+	<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3809" target="_blank" aria-label="September 2025 - Willard Canyon Is Officially Open 		
+ Opens in new window" rel="noopener">September 2025 - Willard Canyon Is Officially Open 		<span class="htmlChar"></span>
+</a></h4>
+<div class="widgetDesc">
+It is my pleasure to announce the Willard Canyon is now open to the public...				<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3809" target="_blank" id="newsFlashReadOn3809" aria-labelledby="newsFlashItemHeader3809 newsFlashReadOn3809" class="readOn" aria-label="Read on... Opens in new window" rel="noopener">Read on...</a>
+</div>
+
+			</li>
+			<li class="widgetItem inlineTitle" data-news-i-d="3757">
+
+					<h4 id="newsFlashItemHeader3757" class="widgetTitle">
+	<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3757" target="_self">August 2025 - Outdoor Warning Sirens and Emergency Notifications 		<span class="htmlChar"></span>
+</a></h4>
+<div class="widgetDesc">
+Last month’s flooding across the Texas Hill Country has once again reminded us of both the awe-inspiring beauty and, at times, the devastating power of Mother Nature...				<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3757" target="_self" id="newsFlashReadOn3757" aria-labelledby="newsFlashItemHeader3757 newsFlashReadOn3757" class="readOn">Read on...</a>
+</div>
+
+			</li>
+					</ol>
+				</div>
+				<div class="col col1  last">
+					<ol class="semanticList">
+			<li class="widgetItem inlineTitle" data-news-i-d="3753">
+
+					<h4 id="newsFlashItemHeader3753" class="widgetTitle">
+	<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3753" target="_self">July 2025 - National Park and Recreation Month 		<span class="htmlChar"></span>
+</a></h4>
+<div class="widgetDesc">
+I’m encouraging all residents of New Braunfels to participate in National Park and Recreation Month. This annual celebration recognizes the vital role parks and recreation play in building stronger, healthier, and more connected communities...				<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3753" target="_self" id="newsFlashReadOn3753" aria-labelledby="newsFlashItemHeader3753 newsFlashReadOn3753" class="readOn">Read on...</a>
+</div>
+
+			</li>
+			<li class="widgetItem inlineTitle" data-news-i-d="3752">
+
+					<h4 id="newsFlashItemHeader3752" class="widgetTitle">
+	<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3752" target="_self">June 2025 - Downtown Parking Changes 		<span class="htmlChar"></span>
+</a></h4>
+<div class="widgetDesc">
+New Braunfels is a city that continues to grow and with that growth comes new challenges, particularly in how we manage the high demand for parking in our vibrant downtown area...				<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3752" target="_self" id="newsFlashReadOn3752" aria-labelledby="newsFlashItemHeader3752 newsFlashReadOn3752" class="readOn">Read on...</a>
+</div>
+
+			</li>
+			<li class="widgetItem inlineTitle" data-news-i-d="3688">
+
+					<h4 id="newsFlashItemHeader3688" class="widgetTitle">
+	<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3688" target="_self">May 2025 - Right-of-Way (ROW) &amp; Beautification Program 		<span class="htmlChar"></span>
+</a></h4>
+<div class="widgetDesc">
+I’m excited to share an important new initiative that is already making a visible difference across our city...				<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3688" target="_self" id="newsFlashReadOn3688" aria-labelledby="newsFlashItemHeader3688 newsFlashReadOn3688" class="readOn">Read on...</a>
+</div>
+
+			</li>
+			<li class="widgetItem inlineTitle" data-news-i-d="3671">
+
+					<h4 id="newsFlashItemHeader3671" class="widgetTitle">
+	<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3671" target="_self">April 2025 - Strategic Plan Update 		<span class="htmlChar"></span>
+</a></h4>
+<div class="widgetDesc">
+One year ago, in April of 2024, City Council adopted the City’s Strategic Plan using feedback and input from the residents of New Braunfels...				<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3671" target="_self" id="newsFlashReadOn3671" aria-labelledby="newsFlashItemHeader3671 newsFlashReadOn3671" class="readOn">Read on...</a>
+</div>
+
+			</li>
+			<li class="widgetItem inlineTitle" data-news-i-d="3672">
+
+					<h4 id="newsFlashItemHeader3672" class="widgetTitle">
+	<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3672" target="_self">March 2025 - Traffic Signal Art Box Program 		<span class="htmlChar"></span>
+</a></h4>
+<div class="widgetDesc">
+I am thrilled to invite our talented local artists to leave their mark on our city in an exciting new way...				<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3672" target="_self" id="newsFlashReadOn3672" aria-labelledby="newsFlashItemHeader3672 newsFlashReadOn3672" class="readOn">Read on...</a>
+</div>
+
+			</li>
+			<li class="widgetItem inlineTitle" data-news-i-d="3673">
+
+					<h4 id="newsFlashItemHeader3673" class="widgetTitle">
+	<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3673" target="_self">February 2025 - Year in Review for 2024 		<span class="htmlChar"></span>
+</a></h4>
+<div class="widgetDesc">
+Throughout 2024, our City has worked diligently to enhance services, invest in community infrastructure, and strengthen the quality of life for residents...				<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3673" target="_self" id="newsFlashReadOn3673" aria-labelledby="newsFlashItemHeader3673 newsFlashReadOn3673" class="readOn">Read on...</a>
+</div>
+
+			</li>
+					</ol>
+				</div>
+	</div>
+
+				<a id="newsFlashViewAll66628c30-2181-49ab-ab3d-567715d34714" class="widgetViewAll" style="" href="https://www.newbraunfels.gov/CivicAlerts.aspx?CID=50" aria-labelledby="newsFlashHeader66628c30-2181-49ab-ab3d-567715d34714 newsFlashViewAll66628c30-2181-49ab-ab3d-567715d34714">View All</a>
+			</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/CivicAlerts.aspx</div>
+	</div>
+
+	</section>
+
+
+
+
+
+
+
+
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col4 first" style="height: auto;" data-widgetcontainerid="4cd0d07f-219a-4d68-b1df-1bd28eb0dafd">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last idd69cc420-fc24-4618-ad99-f089aa66ca1e" style="height: 320px;" data-widgetcontainerid="d69cc420-fc24-4618-ad99-f089aa66ca1e">
+	
+
+<div class="widget widgetSpacer" id="6470a82b-2dd8-4185-ac85-276755effa1e" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col16" style="height: auto;" data-widgetcontainerid="5f312a27-6b09-4637-96c0-ffaff13b6a18">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col16 first last id83951327-ab27-43f4-92af-e4572a6ce733" style="height: 320px;" data-widgetcontainerid="83951327-ab27-43f4-92af-e4572a6ce733">
+	
+
+<div class="widget image pageStyles" id="divImageOuter51bba7ec-9dd0-4e6e-9fc1-1ad1b07ec557" data-widget-id="51bba7ec-9dd0-4e6e-9fc1-1ad1b07ec557">
+    
+	<div class="widgetBody " id="divImage51bba7ec-9dd0-4e6e-9fc1-1ad1b07ec557">
+				<a href="https://newbraunfels.maps.arcgis.com/apps/webappviewer/index.html?id=27281ec8ad7e4ade8e1bc80c10b60714" target="_blank" aria-label="FindMyCouncilmember2022 Opens in new window" rel="noopener"><img src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=24009" alt="FindMyCouncilmember2022 Opens in new window" title="FindMyCouncilmember2022"></a>
+	</div>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4 last" style="height: auto;" data-widgetcontainerid="b139898b-72bc-4583-8694-2b2aaab814ee">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last id5bcc8f8c-ec6a-4706-bf8a-4bc49d327a83" style="height: 320px;" data-widgetcontainerid="5bcc8f8c-ec6a-4706-bf8a-4bc49d327a83">
+	
+
+<div class="widget widgetSpacer" id="03ba2d7e-392d-4160-aac0-6d391c43e606" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="4850f178-0673-44e5-bb10-0db97d4ea037">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col24 first last iddb4ac61c-c1e3-4ebb-a862-a70bd1138cda" style="height: 434px;" data-widgetcontainerid="db4ac61c-c1e3-4ebb-a862-a70bd1138cda">
+	
+
+	<div id="divTabbedcf20f62e-1b3b-461c-8752-a48a676a677c" class="widget widgetTabbed skin17 wide" data-widgetid="cf20f62e-1b3b-461c-8752-a48a676a677c" role="tablist">
+		<ol class="tabbedWidget cpTabs  " style="display: table;">
+			<!--
+					--><li style="width: 16%;" class="active">	<a href="https://www.newbraunfels.gov/298/City-Council#tabcf20f62e-1b3b-461c-8752-a48a676a677c_0" class="tabButton" role="tab" aria-controls="#tabcf20f62e-1b3b-461c-8752-a48a676a677c_0" aria-selected="true" style="height: 97px;"><span class="tabName editable" data-sequence="0" data-tabname="District 1:&nbsp; &nbsp; &nbsp; Toni Carter" contenteditable="false">District 1:&nbsp; &nbsp; &nbsp; Toni Carter</span></a>
+</li><!--
+					--><li style="width: 16%;" class="">	<a href="https://www.newbraunfels.gov/298/City-Council#tabcf20f62e-1b3b-461c-8752-a48a676a677c_1" class="tabButton" role="tab" aria-controls="#tabcf20f62e-1b3b-461c-8752-a48a676a677c_1" aria-selected="false" style="height: 97px;"><span class="tabName editable" data-sequence="1" data-tabname="District 2: Michael Capizzi" contenteditable="false">District 2: Michael Capizzi</span></a>
+</li><!--
+					--><li style="width: 16%;" class="">	<a href="https://www.newbraunfels.gov/298/City-Council#tabcf20f62e-1b3b-461c-8752-a48a676a677c_2" class="tabButton" role="tab" aria-controls="#tabcf20f62e-1b3b-461c-8752-a48a676a677c_2" aria-selected="false" style="height: 97px;"><span class="tabName editable" data-sequence="2" data-tabname="District 3:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;D. Lee Edwards" contenteditable="false">District 3:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;D. Lee Edwards</span></a>
+</li><!--
+					--><li style="width: 16%;" class="">	<a href="https://www.newbraunfels.gov/298/City-Council#tabcf20f62e-1b3b-461c-8752-a48a676a677c_3" class="tabButton" role="tab" aria-controls="#tabcf20f62e-1b3b-461c-8752-a48a676a677c_3" aria-selected="false" style="height: 97px;"><span class="tabName editable" data-sequence="3" data-tabname="District 4: Lawrence Spradley" contenteditable="false">District 4: Lawrence Spradley</span></a>
+</li><!--
+					--><li style="width: 16%;" class="">	<a href="https://www.newbraunfels.gov/298/City-Council#tabcf20f62e-1b3b-461c-8752-a48a676a677c_4" class="tabButton" role="tab" aria-controls="#tabcf20f62e-1b3b-461c-8752-a48a676a677c_4" aria-selected="false" style="height: 97px;"><span class="tabName editable" data-sequence="4" data-tabname="District 5:&nbsp; Mary Ann Labowski" contenteditable="false">District 5:&nbsp; Mary Ann Labowski</span></a>
+</li><!--
+					--><li style="width: 16%;" class="">	<a href="https://www.newbraunfels.gov/298/City-Council#tabcf20f62e-1b3b-461c-8752-a48a676a677c_5" class="tabButton" role="tab" aria-controls="#tabcf20f62e-1b3b-461c-8752-a48a676a677c_5" aria-selected="false" style="height: 97px;"><span class="tabName editable" data-sequence="5" data-tabname="District 6: April Ryan" contenteditable="false">District 6: April Ryan</span></a>
+</li><!--
+					-->
+		</ol>
+
+		<div class="cpTabPanels">
+					<ol class="tabbedWidgetNarrow cpTabs " style="display: none;">
+						<li class="active">	<a href="https://www.newbraunfels.gov/298/City-Council#tabcf20f62e-1b3b-461c-8752-a48a676a677c_0" class="tabButton" role="tab" aria-controls="#tabcf20f62e-1b3b-461c-8752-a48a676a677c_0" aria-selected="true"><span class="tabName editable" data-sequence="0" data-tabname="District 1:&nbsp; &nbsp; &nbsp; Toni Carter" contenteditable="false">District 1:&nbsp; &nbsp; &nbsp; Toni Carter</span></a>
+</li>
+					</ol>
+				<div class="tabbedWidget cpTabPanel showing" style="display: block;" id="tabcf20f62e-1b3b-461c-8752-a48a676a677c_0" role="tabpanel">
+
+<div class="widget editor pageStyles wide" id="divEditorab53edf5-be47-44df-b2b4-2211e15759b5" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h2 id="isPasted" style="font-family: &quot;Open Sans&quot;; font-weight: 600; color: rgb(24, 50, 91); font-size: 1.2em; font-variant-ligatures: normal; orphans: 2; widows: 2;"><img src="https://www.newbraunfels.gov/ImageRepository/Document?documentId=37487" alt="Council Member Toni Carter" style="box-sizing: content-box; border: 1px solid rgb(204, 204, 204); max-width: 100%; cursor: pointer; padding: 0.25em; border-radius: 10px; width: 201px;" class="fr-fic fr-dii fr-fil"></h2><h3 class="subhead2"><strong><span style="font-size: 18px;">City Council - District 1</span> <a aria-label="(View Map) Opens in new window" href="https://gismaps.newbraunfels.gov/PDFMaps/CityCouncilDistrict1_letter.pdf" rel="noopener" target="_blank" class="docaccess-activated" data-docaccess-source-url="https://gismaps.newbraunfels.gov/PDFMaps/CityCouncilDistrict1_letter.pdf" data-url-hash="06d3c8e220580984ab0b09244c9e8834ffd5d5ee2ee90e74ba131a3a98a8b953" data-url-status="disabled">(View Map)</a></strong></h3><h3 class="subhead2"><br></h3><h2 class="subhead1">Toni Carter</h2><h3 class="subhead2">Term Expires: May 2028</h3><h3 class="subhead2" id="isPasted"><strong>Contact:</strong></h3><h2 class="subhead1" id="isPasted">Phone - (618) 531-1935<br style="box-sizing: border-box;">Email - <a href="mailto:tcarter@newbraunfels.gov">tcarter@newbraunfels.gov</a><br style="box-sizing: border-box;">Mail - 550 Landa St. New Braunfels, TX 78130</h2>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + 'ab53edf5-be47-44df-b2b4-2211e15759b5'));
+	});
+</script>
+</div>
+				</div>
+					<ol class="tabbedWidgetNarrow cpTabs " style="display: none;">
+						<li class="">	<a href="https://www.newbraunfels.gov/298/City-Council#tabcf20f62e-1b3b-461c-8752-a48a676a677c_1" class="tabButton" role="tab" aria-controls="#tabcf20f62e-1b3b-461c-8752-a48a676a677c_1" aria-selected="false"><span class="tabName editable" data-sequence="1" data-tabname="District 2: Michael Capizzi" contenteditable="false">District 2: Michael Capizzi</span></a>
+</li>
+					</ol>
+				<div class="tabbedWidget cpTabPanel " style="display: none;" id="tabcf20f62e-1b3b-461c-8752-a48a676a677c_1" role="tabpanel">
+
+<div class="widget editor pageStyles narrow" id="divEditor7764c499-9730-4583-b33b-9154aeeb7a70" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h2 id="isPasted" style="box-sizing: border-box; margin-top: 0.167em; border: 0px none; font-family: &quot;Open Sans&quot;; font-style: normal; font-weight: 600; color: rgb(24, 50, 91); font-size: 1.2em; text-decoration: none; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: block; background-color: rgb(255, 255, 255);"><img src="https://www.newbraunfels.gov/ImageRepository/Document?documentId=37482" alt="District 2 - Councilmember Michael Capizzi" style="box-sizing: content-box; border: 1px solid rgb(204, 204, 204); max-width: 100%; cursor: pointer; padding: 0.25em; border-radius: 10px; background-color: rgb(255, 255, 255); text-align: left; width: 201px;" class="fr-fil fr-dii"></h2><h3 class="subhead2"><strong><span style="font-size: 18px;">City Council - District 2</span></strong> <a aria-label="(View Map) Opens in new window" href="https://gismaps.newbraunfels.gov/PDFMaps/CityCouncilDistrict2_letter.pdf" rel="noopener" style="box-sizing: border-box; user-select: auto; text-decoration: underline; font-size: 1em; font-style: normal; font-weight: 600; color: rgb(24, 50, 91); outline: 0px; margin-top: 0.167em; border: 0px none; font-family: &quot;Open Sans&quot;; display: inline-block;" target="_blank" class="docaccess-activated" data-docaccess-source-url="https://gismaps.newbraunfels.gov/PDFMaps/CityCouncilDistrict2_letter.pdf" data-url-hash="ee9f4dae9bd3253263ec8fe11c469fc16796b1897c7bcfa1f3bcb50968f0ead0" data-url-status="disabled"><strong>(View Map)</strong></a></h3><h2 class="subhead1">Michael Capizzi</h2><h3 class="subhead2">Term Expires: May 2028</h3><h3 class="subhead2"><strong>Contact:</strong></h3><h2 class="subhead1">Phone - (830) 302-6065<br style="box-sizing: border-box;">Email - <a href="mailto:mcapizzi@newbraunfels.gov">mcapizzi@newbraunfels.gov</a><br style="box-sizing: border-box;">Mail - 550 Landa St. New Braunfels, TX 78130</h2><p><br></p><p><br></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '7764c499-9730-4583-b33b-9154aeeb7a70'));
+	});
+</script>
+</div>
+				</div>
+					<ol class="tabbedWidgetNarrow cpTabs " style="display: none;">
+						<li class="">	<a href="https://www.newbraunfels.gov/298/City-Council#tabcf20f62e-1b3b-461c-8752-a48a676a677c_2" class="tabButton" role="tab" aria-controls="#tabcf20f62e-1b3b-461c-8752-a48a676a677c_2" aria-selected="false"><span class="tabName editable" data-sequence="2" data-tabname="District 3:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;D. Lee Edwards" contenteditable="false">District 3:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;D. Lee Edwards</span></a>
+</li>
+					</ol>
+				<div class="tabbedWidget cpTabPanel " style="display: none;" id="tabcf20f62e-1b3b-461c-8752-a48a676a677c_2" role="tabpanel">
+
+<div class="widget editor pageStyles narrow" id="divEditor8aedb46d-1a85-4e90-a3ca-8d883e12cfc9" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h3 class="subhead2"><span style="font-size: 18px;"><strong><img src="https://www.newbraunfels.gov/ImageRepository/Document?documentId=33921" class="fr-fil fr-dii fr-bordered fr-rounded" alt="Headshot of D. Lee Edwards" style="width: 201px;">City Council - District 3 (</strong></span><span style="font-size: 18px;"><a href="https://gismaps.newbraunfels.gov/PDFMaps/CityCouncilDistrict3_letter.pdf" target="_blank" rel="noopener" aria-label="View Map Opens in new window" class="docaccess-activated" data-docaccess-source-url="https://gismaps.newbraunfels.gov/PDFMaps/CityCouncilDistrict3_letter.pdf" data-url-hash="b791834a8e3d00f329f8fd6991ab3a7f94d267c3557a0ce9a127225cb8777d07" data-url-status="disabled"><strong>View Map</strong></a></span><span style="font-size: 18px;"><strong>)</strong></span></h3><h2 class="subhead1"><strong>D. Lee Edwards</strong></h2><h3 class="subhead2">Term Expires: May 2027</h3><h3 class="subhead2" id="isPasted"><strong>Contact:</strong></h3><h2 class="subhead1">Phone - (830) 515-6454<br style="box-sizing: border-box;">Email - <a href="mailto:dledwards@newbraunfels.gov">dledwards@newbraunfels.gov</a><br style="box-sizing: border-box;">Mail - 550 Landa St. New Braunfels, TX 78130</h2>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '8aedb46d-1a85-4e90-a3ca-8d883e12cfc9'));
+	});
+</script>
+</div>
+				</div>
+					<ol class="tabbedWidgetNarrow cpTabs " style="display: none;">
+						<li class="">	<a href="https://www.newbraunfels.gov/298/City-Council#tabcf20f62e-1b3b-461c-8752-a48a676a677c_3" class="tabButton" role="tab" aria-controls="#tabcf20f62e-1b3b-461c-8752-a48a676a677c_3" aria-selected="false"><span class="tabName editable" data-sequence="3" data-tabname="District 4: Lawrence Spradley" contenteditable="false">District 4: Lawrence Spradley</span></a>
+</li>
+					</ol>
+				<div class="tabbedWidget cpTabPanel " style="display: none;" id="tabcf20f62e-1b3b-461c-8752-a48a676a677c_3" role="tabpanel">
+
+<div class="widget editor pageStyles narrow" id="divEditor7bf68230-58b9-43c4-a77b-d8d71572ac07" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h3 id="isPasted"><img src="https://www.newbraunfels.gov/ImageRepository/Document?documentId=22766" alt="" style="box-sizing: content-box; border: 1px solid rgb(204, 204, 204); max-width: calc(100% - 5px); cursor: pointer; padding: 0.25em; user-select: none; border-radius: 10px; background: rgb(255, 255, 255); width: 218px;" class="fr-fil fr-dii"></h3><h3 class="subhead2"><span style="font-size: 18px;"><strong>City Council - District 4</strong></span> <a aria-label="(View Map) Opens in new window" href="https://gismaps.newbraunfels.gov/PDFMaps/CityCouncilDistrict4_letter.pdf" rel="noopener" target="_blank" class="docaccess-activated" data-docaccess-source-url="https://gismaps.newbraunfels.gov/PDFMaps/CityCouncilDistrict4_letter.pdf" data-url-hash="7c1520f793f7ad9cb8f30ed6ea1a56bd28560d72b21c3603c3b6e9a920276490" data-url-status="disabled">(View Map)</a></h3><h2 class="subhead1"><strong>Lawrence Spradley</strong> <a aria-label="(View Biography) Opens in new window" href="https://www.newbraunfels.gov/DocumentCenter/View/22628/Bio---Lawrence-Spradley" rel="noopener" target="_blank" class="docaccess-activated" data-docaccess-source-url="https://www.newbraunfels.gov/DocumentCenter/View/22628/Bio---Lawrence-Spradley" data-url-hash="d445d88b39428632a61d0a63c3876ac8dde858d26cefaec5d06e0c2c5f7f63cd" data-url-status="disabled">(View Biography)</a></h2><h3 class="subhead2">Mayor Pro Tem</h3><h3 class="subhead2">Term Expires: May 2027</h3><h3 class="subhead2" id="isPasted"><strong style="box-sizing: border-box; font-weight: 700;">Contact:</strong></h3><h2 class="subhead1">Phone - (830) 822-8704<br style="box-sizing: border-box;">Email -&nbsp;<a href="mailto:lspradley@newbraunfels.gov" style="box-sizing: border-box; user-select: auto; text-decoration: underline; color: rgb(24, 50, 91); font-size: 1em;">lspradley@newbraunfels.gov</a><br style="box-sizing: border-box;">Mail - 550 Landa St. New Braunfels, TX 78130</h2><h2 class="subhead1"><br></h2><h2 class="subhead1"><br></h2><h2 class="subhead1">Message To Residents</h2><h3 class="subhead2"><br></h3><p>New Braunfels is one of the most unique places in all of Texas where we live, work, and play. From the Gruene Historic District to the downtown Farmers Market, the Guadalupe and Comal rivers, and all points in-between our city offers a uniqueness not seen anywhere else. From the time I visited New Braunfels in 1979, I fell in love. Our family was finally able to call New Braunfels home in 2015, after retiring from the US Army after 27 years.</p><p>District 4 is diverse, spanning from the new Texas Department of Public Safety Driver's License Office on Conrads Lane to the Gruene Historic District, to the Headwaters of the Comal River. The Guadalupe River flows within the district from the Gruene Road Bridge to the Common Street Bridge. With the Gruene nightlife, fabulous food, shopping, and river fun, there is something for all of us to be proud of, and help us enjoy living, working, and playing here. I am very grateful for the opportunity to serve New Braunfels as a City Councilman and represent the people in District 4.</p><h2 class="subhead1">Key Priorities</h2><h3 class="subhead2"><br></h3><h3 class="subhead2"><strong style="box-sizing: border-box; font-weight: 700;">Police &amp; Fire</strong></h3><p>Fully support the Police and Fire departments to address staffing and equipment issues in relation to growth and tourism by determining the proper size of protection for city residents and tourists</p><h3 class="subhead2"><strong style="box-sizing: border-box; font-weight: 700;">Improve the relationship between the citizens and the City</strong></h3><ul><li style="box-sizing: border-box; margin-bottom: 0.35em; border: 0px none;">Improve listening skills within the City; specifically, toward citizen wants, needs, or concerns.</li><li style="box-sizing: border-box; margin-bottom: 0.35em; border: 0px none;">Properly explain procedures, rules, and protocols to citizens when appropriately warranted.</li><li style="box-sizing: border-box; margin-bottom: 0.35em; border: 0px none;">Encourage and support City University</li><li style="box-sizing: border-box; margin-bottom: 0.35em; border: 0px none;">Review City website for ease of access, user-friendliness, and transparency</li></ul><h3 class="subhead2"><strong style="box-sizing: border-box; font-weight: 700;">Infrastructure</strong></h3><ul><li style="box-sizing: border-box; margin-bottom: 0.35em; border: 0px none;">Maintain our current roads</li><li style="box-sizing: border-box; margin-bottom: 0.35em; border: 0px none;">Schedule investments on various road-widening projects</li><li style="box-sizing: border-box; margin-bottom: 0.35em; border: 0px none;">Support and secure funding for neighborhood parks, bike trails, and green space</li><li style="box-sizing: border-box; margin-bottom: 0.35em; border: 0px none;">Support and maintain our current parks and trails throughout the city</li></ul><h3 class="subhead2"><strong style="box-sizing: border-box; font-weight: 700;">Planning</strong></h3><ul><li style="box-sizing: border-box; margin-bottom: 0.35em; border: 0px none;">Advocate for responsible growth; growing at a sustainable and balanced pace</li><li style="box-sizing: border-box; margin-bottom: 0.35em; border: 0px none;">Update current City zoning ordinances to allow a mixture of housing types and economic opportunities</li><li style="box-sizing: border-box; margin-bottom: 0.35em; border: 0px none;">Support the City's 2018 Comprehensive Plan</li><li style="box-sizing: border-box; margin-bottom: 0.35em; border: 0px none;">Review and validate the 2013 Stormwater Management Strategy</li></ul><h3 class="subhead2"><strong style="box-sizing: border-box; font-weight: 700;">Cultural &amp; Tourism</strong></h3><ul><li style="box-sizing: border-box; margin-bottom: 0.35em; border: 0px none;">Support preservation of New Braunfels cultural heritage and historical landmarks</li><li style="box-sizing: border-box; margin-bottom: 0.35em; border: 0px none;">Encourage tourism with our local natural river attractions, waterpark, Wurstfest, other festivals, events, and tours that celebrate New Braunfels’ rich heritage and unique identity. &nbsp;</li><li style="box-sizing: border-box; margin-bottom: 0.35em; border: 0px none;">Support the Downtown Implementation Plan</li></ul><h3 style="box-sizing: border-box; margin-top: 1.4em; border: 0px none; font-family: &quot;Open Sans&quot;; font-style: normal; font-weight: 600; color: rgb(29, 111, 119); text-decoration: none; font-size: 1em; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: block; background-color: rgb(255, 255, 255);"><br></h3>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '7bf68230-58b9-43c4-a77b-d8d71572ac07'));
+	});
+</script>
+</div>
+				</div>
+					<ol class="tabbedWidgetNarrow cpTabs " style="display: none;">
+						<li class="">	<a href="https://www.newbraunfels.gov/298/City-Council#tabcf20f62e-1b3b-461c-8752-a48a676a677c_4" class="tabButton" role="tab" aria-controls="#tabcf20f62e-1b3b-461c-8752-a48a676a677c_4" aria-selected="false"><span class="tabName editable" data-sequence="4" data-tabname="District 5:&nbsp; Mary Ann Labowski" contenteditable="false">District 5:&nbsp; Mary Ann Labowski</span></a>
+</li>
+					</ol>
+				<div class="tabbedWidget cpTabPanel " style="display: none;" id="tabcf20f62e-1b3b-461c-8752-a48a676a677c_4" role="tabpanel">
+
+<div class="widget editor pageStyles narrow" id="divEditorc4b9fc85-58df-4613-8645-2d89244ea668" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h3 class="subhead2"><span style="font-size: 18px;"><strong><img src="https://www.newbraunfels.gov/ImageRepository/Document?documentId=31683" class="fr-fil fr-dii fr-rounded fr-bordered" alt="Headshot of Coucilmember Mary Ann Labowski" style="width: 201px;">City Council - District 5</strong></span> <a aria-label="(View Map) Opens in new window" href="https://gismaps.newbraunfels.gov/PDFMaps/CityCouncilDistrict5_letter.pdf" rel="noopener" target="_blank" class="docaccess-activated" data-docaccess-source-url="https://gismaps.newbraunfels.gov/PDFMaps/CityCouncilDistrict5_letter.pdf" data-url-hash="d8c6b822837c1dbd28e2ebfcb3bc961a4d4032a057458b352d74973c7d959134" data-url-status="disabled">(View Map)</a></h3><h2 class="subhead1">Mary Ann Labowski</h2><h3 class="subhead2">Term Expires: May 2026</h3><h3 class="subhead2"><strong style="box-sizing: border-box; font-weight: 700;">Contact:</strong></h3><h2 class="subhead1">Phone - (830) 359-0019</h2><h2 class="subhead1">Email -&nbsp;<a href="mailto:mlabowski@newbraunfels.gov">mlabowski@newbraunfels.gov</a><a href="mailto:jhurta@nbtexas.org" style="box-sizing: border-box; user-select: auto; text-decoration: underline;"></a><br style="box-sizing: border-box;">Mail - 550 Landa St. New Braunfels, TX 78130</h2>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + 'c4b9fc85-58df-4613-8645-2d89244ea668'));
+	});
+</script>
+</div>
+				</div>
+					<ol class="tabbedWidgetNarrow cpTabs " style="display: none;">
+						<li class="">	<a href="https://www.newbraunfels.gov/298/City-Council#tabcf20f62e-1b3b-461c-8752-a48a676a677c_5" class="tabButton" role="tab" aria-controls="#tabcf20f62e-1b3b-461c-8752-a48a676a677c_5" aria-selected="false"><span class="tabName editable" data-sequence="5" data-tabname="District 6: April Ryan" contenteditable="false">District 6: April Ryan</span></a>
+</li>
+					</ol>
+				<div class="tabbedWidget cpTabPanel " style="display: none;" id="tabcf20f62e-1b3b-461c-8752-a48a676a677c_5" role="tabpanel">
+
+<div class="widget editor pageStyles narrow" id="divEditor680c4f1c-d58f-4b09-a164-f67115b7e208" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h2 id="isPasted" style="box-sizing: border-box; margin-top: 0.167em; border: 0px none; font-family: &quot;Open Sans&quot;; font-style: normal; font-weight: 600; color: rgb(24, 50, 91); font-size: 1.2em; text-decoration: none; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: block; background-color: rgb(255, 255, 255);"><img src="https://www.newbraunfels.gov/ImageRepository/Document?documentId=31837" alt="Headshot of Councilmember April Ryan" style="box-sizing: content-box; border: 1px solid rgb(204, 204, 204); max-width: 100%; cursor: pointer; padding: 0.25em; user-select: none; border-radius: 10px; background: rgb(255, 255, 255); text-align: left; width: 201px;" class="fr-fil fr-dii"></h2><h3 class="subhead2"><strong><span style="font-size: 18px;">City Council - District 6</span></strong> <a aria-label="(View Map) Opens in new window" href="https://gismaps.newbraunfels.gov/PDFMaps/CityCouncilDistrict6_letter.pdf" rel="noopener" target="_blank" class="docaccess-activated" data-docaccess-source-url="https://gismaps.newbraunfels.gov/PDFMaps/CityCouncilDistrict6_letter.pdf" data-url-hash="cc8a6c527f8c890c13eb98a155a307f9cde51598c17a4c93e55e635f6b3d9673" data-url-status="disabled">(View Map)</a>&nbsp;</h3><h2 class="subhead1">April Ryan</h2><h3 class="subhead2">Term Expires: May 2026</h3><h3 class="subhead2"><strong>Contact:</strong></h3><h2 class="subhead1">Phone - (830) 221-4659 then press option 4</h2><h2 class="subhead1">Email - <a href="mailto:april.ryan@newbraunfels.gov" style="box-sizing: border-box; user-select: auto; text-decoration: underline;">april.ryan@newbraunfels.gov</a><br style="box-sizing: border-box;">Mail - 550 Landa St. New Braunfels, TX 78130</h2>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '680c4f1c-d58f-4b09-a164-f67115b7e208'));
+	});
+</script>
+</div>
+				</div>
+					</div>
+	</div>
+	<script type="text/javascript">
+		
+		$.when(window.Pages.rwdReady).done(function () {
+			var tabbedWidgetID = 'divTabbedcf20f62e-1b3b-461c-8752-a48a676a677c';
+			var mediaQuerySize = 25;
+			if (mediaQuerySize > 0) {
+				var mediaElementQuery = '#' + tabbedWidgetID + ':media(this-min-width:' + mediaQuerySize + 'em)';
+				var $tabbedWidget = $('#' + tabbedWidgetID);
+				window.cpMedia.unregister(mediaElementQuery).register(mediaElementQuery, {
+					deferSetup: false,
+					setup: function () {
+						var liveEditEnabled = $.cookie("enableLiveEdit") === "true";
+						if (!liveEditEnabled) {
+							$tabbedWidget.addClass('narrow').removeClass('wide');
+							cpMedia.diag('$(element).addClass("narrow"), mediaQuery: ' + mediaElementQuery);
+							$tabbedWidget.find('.tabbedWidget.cpTabs').hide();
+							$tabbedWidget.find('.tabbedWidgetNarrow.cpTabs').show();
+							$tabbedWidget.data("tabHeightSet", false);
+						}
+					},
+					match: function () {
+						$tabbedWidget.addClass('wide').removeClass('narrow');
+						cpMedia.diag('$(element).removeClass("narrow"), mediaQuery: ' + mediaElementQuery);
+						$tabbedWidget.find('.tabbedWidget.cpTabs').show();
+						$tabbedWidget.find('.tabbedWidgetNarrow.cpTabs').hide();
+
+						if($tabbedWidget.data("tabHeightSet") == false)
+						{
+							$tabbedWidget.data("tabHeightSet", true);
+
+							var tabbedWidgetID = 'divTabbedcf20f62e-1b3b-461c-8752-a48a676a677c';
+							setTabbedWidgetsTabHeight(tabbedWidgetID);
+						}
+						$('.cpTabPanels').unbind('click');
+					},
+					unmatch: function () {
+						var liveEditEnabled = $.cookie("enableLiveEdit") === "true";
+						if (!liveEditEnabled) {
+							$tabbedWidget.addClass('narrow').removeClass('wide');
+							cpMedia.diag('$(element).addClass("narrow"), mediaQuery: ' + mediaElementQuery);
+							$tabbedWidget.find('.tabbedWidget.cpTabs').hide();
+							$tabbedWidget.find('.tabbedWidgetNarrow.cpTabs').show();
+						}
+						$('.cpTabPanels').click(function() {
+							this.scrollIntoView();
+						});
+					}
+				});
+			}
+		});	
+		
+		//Used for when page is initially loaded
+		if($('#divTabbedcf20f62e-1b3b-461c-8752-a48a676a677c').hasClass('narrow'))
+		{
+			$('.cpTabPanels').click(function() {
+				this.scrollIntoView();
+			});
+		}
+		
+
+		//If responsive not enabled, execute this after a timeout
+		if(!isResponsiveEnabled)
+		{
+			window.setTimeout(function(){
+				var tabbedWidgetID = 'divTabbedcf20f62e-1b3b-461c-8752-a48a676a677c';
+				typeof setTabbedWidgetsTabHeight === "function" && setTabbedWidgetsTabHeight(tabbedWidgetID);
+			}, 1500);
+		}
+
+		function reinitCarousels() {
+			if (window.carouselsToInit) {
+				for (var i = 0; i < window.carouselsToInit.length; i++) {
+					carouselsToInit[i]();
+				}
+			}
+		}
+		function sizeTabbedContent(element){
+			if(window.Pages){
+				if(window.Pages.onResizeHandlers){
+					var setTabbedInterval = setInterval(function () {
+						window.Pages.onResizeHandlers.forEach(function(car){car();});
+					}, 25)
+
+
+					setTimeout(function () {
+						clearInterval(setTabbedInterval);
+						if ($.cookie("enableLiveEdit") === "true") {
+							setInterval(function () {
+								window.Pages.onResizeHandlers.forEach(function(car){car();});
+							}, 2000);
+						}
+					}, 2500);
+					element.onclick="window.setTimeout(function(){reinitCarousels();},2);"
+				}
+			}
+		}
+
+		function adjustTab(e) {
+			e.preventDefault();
+			window.setTimeout(function(){
+				reinitCarousels();
+			}, 2);
+			sizeTabbedContent(this);
+		}
+
+		var tabButtons = document.querySelectorAll("#divTabbedcf20f62e-1b3b-461c-8752-a48a676a677c .tabButton");
+
+		tabButtons.forEach(function (tabButton) {
+			tabButton.addEventListener("click", adjustTab);
+		});
+
+	</script>
+
+
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest wide">
+
+	
+	<div class="inner col col24 first last id890a3050-90cc-42a0-8426-3a54e8596753" style="height: 115px;" data-widgetcontainerid="890a3050-90cc-42a0-8426-3a54e8596753">
+	
+<div class="widget editor pageStyles wide" id="divEditor8a48f74d-7233-4947-a92f-b4c992603ce5" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h1 class="headline">City Council Messages</h1>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '8a48f74d-7233-4947-a92f-b4c992603ce5'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col24 first last id777f6e95-cbf4-4eaf-b3ed-665eb664b51c" style="height: 458px;" data-widgetcontainerid="777f6e95-cbf4-4eaf-b3ed-665eb664b51c">
+	
+<div data-widget-id="c6f2b91d-3830-4ddc-a313-fa1f76ce42ab" data-widget-controller-path="/NewsFlash/Widget">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<section class="widget widgetNewsFlash skin18 widgetOptionSet58 wide" data-modulewidgettype="newsFlash" id="widgetNewsFlashc6f2b91d-3830-4ddc-a313-fa1f76ce42ab" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="newsFlashHeaderc6f2b91d-3830-4ddc-a313-fa1f76ce42ab">
+				<header class="widgetHeader" id="newsFlashHeaderc6f2b91d-3830-4ddc-a313-fa1f76ce42ab">
+			<div class="">
+						<h3><a style="" href="https://www.newbraunfels.gov/CivicAlerts.aspx?CID=51">Messages from City Council</a></h3>
+											</div>
+		</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+	<div class="row wide" style="">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+			<li class="widgetItem inlineTitle" data-news-i-d="3874">
+
+					<h4 id="newsFlashItemHeader3874" class="widgetTitle">
+	<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3874" target="_self">Dec. 29, 2025 - Community and City Connectivity 		<span class="htmlChar"></span>
+</a></h4>
+<div class="widgetDesc">
+Read the latest message from District 3 City Councilmember D. Lee Edwards				<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3874" target="_self" id="newsFlashReadOn3874" aria-labelledby="newsFlashItemHeader3874 newsFlashReadOn3874" class="readOn">Read on...</a>
+</div>
+
+			</li>
+			<li class="widgetItem inlineTitle" data-news-i-d="3862">
+
+					<h4 id="newsFlashItemHeader3862" class="widgetTitle">
+	<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3862" target="_self">Nov. 24, 2025 - Honoring Our Traditions and Looking Ahead in the Greatest Big Small Town in Texas 		<span class="htmlChar"></span>
+</a></h4>
+<div class="widgetDesc">
+Read the latest message from District 2 City Councilmember Michael Capizzi				<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3862" target="_self" id="newsFlashReadOn3862" aria-labelledby="newsFlashItemHeader3862 newsFlashReadOn3862" class="readOn">Read on...</a>
+</div>
+
+			</li>
+			<li class="widgetItem inlineTitle" data-news-i-d="3843">
+
+					<h4 id="newsFlashItemHeader3843" class="widgetTitle">
+	<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3843" target="_self">Oct. 30, 2025 - Celebrating Holidays and Life in New Braunfels: Community, Safety, and Giving Thanks 		<span class="htmlChar"></span>
+</a></h4>
+<div class="widgetDesc">
+Read the latest message from District 1 City Councilmember Toni L. Carter				<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3843" target="_self" id="newsFlashReadOn3843" aria-labelledby="newsFlashItemHeader3843 newsFlashReadOn3843" class="readOn">Read on...</a>
+</div>
+
+			</li>
+			<li class="widgetItem inlineTitle" data-news-i-d="3811">
+
+					<h4 id="newsFlashItemHeader3811" class="widgetTitle">
+	<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3811" target="_self">Oct. 3, 2025 - Celebrating Fall in New Braunfels: Community, Safety, and Stewardship 		<span class="htmlChar"></span>
+</a></h4>
+<div class="widgetDesc">
+Read the latest message from Mayor Pro Tem Lawrence W. Spradley...				<a href="https://www.newbraunfels.gov/CivicAlerts.aspx?AID=3811" target="_self" id="newsFlashReadOn3811" aria-labelledby="newsFlashItemHeader3811 newsFlashReadOn3811" class="readOn">Read on...</a>
+</div>
+
+			</li>
+					</ol>
+				</div>
+	</div>
+
+				<a id="newsFlashViewAllc6f2b91d-3830-4ddc-a313-fa1f76ce42ab" class="widgetViewAll" style="" href="https://www.newbraunfels.gov/CivicAlerts.aspx?CID=51" aria-labelledby="newsFlashHeaderc6f2b91d-3830-4ddc-a313-fa1f76ce42ab newsFlashViewAllc6f2b91d-3830-4ddc-a313-fa1f76ce42ab">View All</a>
+			</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/CivicAlerts.aspx</div>
+	</div>
+
+	</section>
+
+
+
+
+
+
+
+
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div>
+</div>
+</div></div>
+</div><!-- GBs --><div data-cprole="structuralContainer" id="gbsContainerTS">
+<div class="siteWrap2"><div data-cprole="contentContainer" id="gbsTS">	<div id="cc17ce8d1e-fa18-468a-9898-020aeb433609" data-containerid="17ce8d1e-fa18-468a-9898-020aeb433609" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</div></div>
+</div><!-- Footer --><footer data-cprole="structuralContainer" id="footerContainerTS"><div class="inner">
+<div class="siteWrap2"><div data-cprole="contentContainer" id="footerTS">	<div id="cc796e0ff9-fc55-4bcd-b7c4-2e811dc86e4b" data-containerid="796e0ff9-fc55-4bcd-b7c4-2e811dc86e4b" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="50">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col6 first" style="height: auto;" data-widgetcontainerid="d0e16679-ef41-43c2-b968-76f501f686ff">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col6 first last id6666a593-677e-4e4a-99e9-fc7e1637789d" style="height: 185px;" data-widgetcontainerid="6666a593-677e-4e4a-99e9-fc7e1637789d">
+	
+    <div data-widget-id="a97ceb9d-57b2-4064-9dae-1ab15192a6e5" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdva97ceb9d-57b2-4064-9dae-1ab15192a6e5" class="widget widgetInfoAdvanced skin20 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="headera97ceb9d-57b2-4064-9dae-1ab15192a6e5">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><img src="https://www.newbraunfels.gov/ImageRepository/Document?documentId=24394" class="fr-dib" alt="City of New Braunfels"></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdva97ceb9d-57b2-4064-9dae-1ab15192a6e5 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col6 first last idd1777e57-9008-421a-839a-2c719d0f6c74" style="height: 51px;" data-widgetcontainerid="d1777e57-9008-421a-839a-2c719d0f6c74">
+	
+<div data-widget-id="d20dfe57-cbe3-4260-9783-6d94d40cf6db" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetd20dfe57-cbe3-4260-9783-6d94d40cf6db" class="widget widgetGraphicLinks skin23 widgetOptionSet57 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid4 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row autoWidths center wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.newbraunfels.gov/facebook" target="_self" aria-label="Facebook graphic"><img src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=24395" class="graphicButtonLink" alt="Facebook" onmouseover="this.src='/ImageRepository/Document?documentID=24395'" onmouseout="this.src='/ImageRepository/Document?documentID=24395'" onfocus="this.src='/ImageRepository/Document?documentID=24395'" onblur="this.src='/ImageRepository/Document?documentID=24395'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.newbraunfels.gov/instagram" target="_self" aria-label="Instagram graphic"><img src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=24396" class="graphicButtonLink" alt="Instagram" onmouseover="this.src='/ImageRepository/Document?documentID=24396'" onmouseout="this.src='/ImageRepository/Document?documentID=24396'" onfocus="this.src='/ImageRepository/Document?documentID=24396'" onblur="this.src='/ImageRepository/Document?documentID=24396'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.newbraunfels.gov/youtube" target="_self" aria-label="YouTube graphic"><img src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=28275" class="graphicButtonLink" alt="YouTube" onmouseover="this.src='/ImageRepository/Document?documentID=28275'" onmouseout="this.src='/ImageRepository/Document?documentID=28275'" onfocus="this.src='/ImageRepository/Document?documentID=28275'" onblur="this.src='/ImageRepository/Document?documentID=28275'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://nextdoor.com/agency-detail/tx/new-braunfels/city-of-new-braunfels/" target="_blank" aria-label="Nextdoor Opens in new window" rel="noopener"><img src="https://www.newbraunfels.gov/ImageRepository/Document?documentID=24398" class="graphicButtonLink" alt="Nextdoor Opens in new window" onmouseover="this.src='/ImageRepository/Document?documentID=24398'" onmouseout="this.src='/ImageRepository/Document?documentID=24398'" onfocus="this.src='/ImageRepository/Document?documentID=24398'" onblur="this.src='/ImageRepository/Document?documentID=24398'"> </a></li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="c846b65f-258d-414b-8a94-747c8d72327b">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id15c3c0d3-200c-46e6-bae7-28fda075bb3c" style="height: 354px;" data-widgetcontainerid="15c3c0d3-200c-46e6-bae7-28fda075bb3c">
+	
+
+<div class="widget widgetSpacer" id="8fe7d2fc-1bde-45c4-b641-b62fcb1829d1" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col5" style="height: auto;" data-widgetcontainerid="05b5ea7a-023e-446e-8c89-4d9ae9b0cf4a">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last id519ceb04-070c-433c-aa5a-f6bdc8bb9691" style="height: 354px;" data-widgetcontainerid="519ceb04-070c-433c-aa5a-f6bdc8bb9691">
+	
+    <div data-widget-id="75188d1c-cfb7-4b1a-99d4-09e1a6cc8e58" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv75188d1c-cfb7-4b1a-99d4-09e1a6cc8e58" class="widget widgetInfoAdvanced skin20 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="header75188d1c-cfb7-4b1a-99d4-09e1a6cc8e58">
+			<header class="widgetHeader" id="header75188d1c-cfb7-4b1a-99d4-09e1a6cc8e58">
+		<div class="">
+					<h3>Contact Us</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>City of New Braunfels<br>550 Landa St.<br>New Braunfels, TX 78130</p><p>Phone: <a href="tel:830-221-4000">830-221-4000</a><br><a href="https://www.newbraunfels.gov/list.aspx">Subscribe To City Updates</a></p><p><a href="https://newbraunfels.quickbase.com/db/btvz6tztb/form?a=API_GenAddRecordForm&amp;dfid=10&amp;ifv=1&amp;aftersaveurl=https%3A%2F%2Fnewbraunfels.gov%2F3932%2FThank-You&amp;page=1" rel="noopener" target="_blank" aria-label="CustomerSatisfactionSurveyButton-01 Opens in new window"><img src="https://www.newbraunfels.gov/ImageRepository/Document?documentId=25761" class="fr-fil fr-dib" alt="CustomerSatisfactionSurveyButton-01 Opens in new window" style="width: 152px;"></a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv75188d1c-cfb7-4b1a-99d4-09e1a6cc8e58 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="6068aac6-097b-4ae8-a6be-6a40f6823c06">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last idba63b74c-c3f1-489e-8492-bcc0b99b20b6" style="height: 354px;" data-widgetcontainerid="ba63b74c-c3f1-489e-8492-bcc0b99b20b6">
+	
+
+<div class="widget widgetSpacer" id="a52e5a67-650f-4d46-8201-646dfcda2074" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col5" style="height: auto;" data-widgetcontainerid="b72b17bc-771b-4a94-92a0-81a22a4144a8">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last id5e2e18b8-0477-4aad-9bd9-7c3ed69c6d0f" style="height: 354px;" data-widgetcontainerid="5e2e18b8-0477-4aad-9bd9-7c3ed69c6d0f">
+	
+	<div data-widget-id="631341ac-d26a-4de1-acd4-44bdb5d73710" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink631341ac-d26a-4de1-acd4-44bdb5d73710" class="widget widgetQuickLinks skin20 widgetOptionSet18 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeader631341ac-d26a-4de1-acd4-44bdb5d73710">
+			<header class="widgetHeader" id="quickLinksHeader631341ac-d26a-4de1-acd4-44bdb5d73710">
+		<div class="">
+					<h3><a style="" href="https://www.newbraunfels.gov/QuickLinks.aspx?CID=107,49">Quick Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.newbraunfels.gov/3075/All-Departments" target="_blank" aria-label="All Departments Opens in new window" rel="noopener">All Departments</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.newbraunfels.gov/3317/Make-a-Request" target="_blank" aria-label="Submit a Request Opens in new window" rel="noopener">Submit a Request</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.newbraunfels.gov/3554/Join-Our-Team" target="_blank" aria-label="Join Our Team Opens in new window" rel="noopener">Join Our Team</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.newbraunfels.gov/Directory.aspx" target="_blank" aria-label="Staff Directory Opens in new window" rel="noopener">Staff Directory</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.newbraunfels.gov/2993/Living-Visiting" target="_blank" aria-label="Living &amp; Visiting in New Braunfels Opens in new window" rel="noopener">Living &amp; Visiting in New Braunfels</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.newbraunfels.gov/2935/Business-Development" target="_blank" aria-label="Business &amp; Development Opens in new window" rel="noopener">Business &amp; Development</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="8617b132-5122-4d10-98d7-fa95757eab25">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last idde1d6066-cde3-4057-8207-59b9c5639b4b" style="height: 354px;" data-widgetcontainerid="de1d6066-cde3-4057-8207-59b9c5639b4b">
+	
+
+<div class="widget widgetSpacer" id="59aa56cd-2bba-461a-8f25-1de84f8dbb72" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col5 last" style="height: auto;" data-widgetcontainerid="ab903257-ccd8-49f1-b1cc-c707517016dc">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last idb16ff5e5-e4ac-4602-a37b-6f948d36a82f" style="height: 354px;" data-widgetcontainerid="b16ff5e5-e4ac-4602-a37b-6f948d36a82f">
+	
+	<div data-widget-id="b78192d8-4472-4435-8950-3f3d246f128c" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklinkb78192d8-4472-4435-8950-3f3d246f128c" class="widget widgetQuickLinks skin20 widgetOptionSet18 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeaderb78192d8-4472-4435-8950-3f3d246f128c">
+			<header class="widgetHeader" id="quickLinksHeaderb78192d8-4472-4435-8950-3f3d246f128c">
+		<div class="">
+					<h3><a style="" href="https://www.newbraunfels.gov/QuickLinks.aspx?CID=50">Helpful Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.newbraunfels.gov/" target="_self">Home Page</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.newbraunfels.gov/3539/39879/Americans-with-Disabilities-Act-Informat?activeLiveTab=widgets" target="_blank" aria-label="Americans with Disabilities Act Information Opens in new window" rel="noopener">Americans with Disabilities Act Information</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.newbraunfels.gov/4144/Title-VI-Information" target="_blank" aria-label="Title VI Information Opens in new window" rel="noopener">Title VI Information</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.newbraunfels.gov/accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.newbraunfels.gov/3597/OneSite---Login-Portal" target="_blank" aria-label="OneSite Portal Opens in new window" rel="noopener">OneSite Portal</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.newbraunfels.gov/sitemap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="e8f35a3a-4c9c-4940-afe8-ec292a87c6de">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id20c926f8-3c00-4a2c-986c-b4e754299cd5" style="height: 64px;" data-widgetcontainerid="20c926f8-3c00-4a2c-986c-b4e754299cd5">
+	
+ 
+	<div data-widget-id="e276ca4c-13c8-43f4-84e6-feb14638ba59" data-modulename="customHtml" id="widgetCustomHtmle276ca4c-13c8-43f4-84e6-feb14638ba59" class="widget widgetCustomHtml skin21 narrow">
+	<div class="widgetBody pageStyles" id="widgetBodye276ca4c-13c8-43f4-84e6-feb14638ba59">
+		<div id="customHtmle276ca4c-13c8-43f4-84e6-feb14638ba59"><div><style>
+  /* CP icon */
+  .cpBylineIconTS {
+    color: #fff;
+  }
+  /* CP Text */
+  .cpBylineTextTS,
+  .cpBylineTextTS a:link {
+    color: #fff;
+  }
+
+  .cpBylineTS {
+    text-align: center;
+  }
+  
+  .cpBylineIconTS {
+    fill: currentColor;
+    width: 39px;
+    height: 26px;
+    display: inline;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="widgetItem cpBylineTS">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="cpBylineIconTS">
+    <path class="c" d="M73.4,23.2h-19v16.7h19c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5h-19v28.4h5.5l11.3-11.7h2.2c11.9,0,21.6-9.7,21.6-21.6C95,33,85.3,23.2,73.4,23.2"></path>
+    <path class="p" d="M45.8,66.5H26.6C14.7,66.5,5,56.8,5,44.9C5,33,14.7,23.2,26.6,23.2h19.1v16.7H26.6c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h19.1V66.5z"></path>
+  </svg>
+  <span class="cpBylineTextTS">Government Websites by <a href="https://connect.civicplus.com/referral">CivicPlus®</a></span>
+</div>
+</div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div></div>
+</footer>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '298',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-139336507-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-139336507-1');
+
+</script>
+
+<!-- End Google Analytics code -->
+
+
+<!-- Fixed Nav Adjustment -->
+<script>
+  function getValueTS(elem, attr) {
+    const val = elem.css(attr);
+    if (val === undefined) return undefined;
+    const num = parseInt(val, 10);
+    if (num === NaN) return undefined;
+    return num;
+  }
+
+  function clampTS(number, min, max) {
+    return Math.min(Math.max(number, min), max);
+  }
+
+  function isPageEditingTS() {
+    return (
+      $("#doneEditing").length > 0 || // In live edit
+      typeof DesignCenter !== "undefined" // In theme manager
+    );
+  }
+
+  const bgColorRegexTS = /rgba\((\d+), (\d+), (\d+), (\d*\.?\d*)\)/;
+  function isTransparentTS(elem) {
+    const bg = elem.css('background-color');
+    if (typeof bg !== "string" || !bg.startsWith('rgba(')) return false;
+    const matchState = bg.match(bgColorRegexTS);
+    if (!matchState || matchState.length !== 5) return false;
+    const alpha = parseFloat(matchState[4], 10);
+    if (!(alpha >= 0 && alpha < 1)) return false;
+    return true;
+  }
+
+  function iterateLeftpads(cb) {
+    const containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (let i = 0; i < containersTS.length; i++) {
+      const containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-leftpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-leftpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  const anchor = $("#divToolbars");
+
+  // Outer banner padding (push banner down)
+  const outerSizingTS = $("#bannerContainerTS");
+  // Inner banner padding (push banner content down) - Transparent header OR on attaching headers
+  const innerSizingTS = $("#bannerSizingTS");
+  const bodyContainerTS = $("#bodyContainerTS");
+
+  const forceUnfixClassTS = "forceUnfixTS";
+
+  const fixedTopTS = $(".fixedTopTS");
+  const fixedBottomTS = $(".fixedBottomTS");
+  const fixedLeftTS = $(".fixedLeftTS");
+
+  var initialTopTS;
+  var topAttachTS;
+  if (fixedTopTS && fixedTopTS.length === 1) {
+    initialTopTS = getValueTS(fixedTopTS, 'top');
+    const attachment = fixedTopTS.attr('data-attach');
+    if (attachment) topAttachTS = $("#" + attachment);
+    if (!topAttachTS || topAttachTS.length !== 1) topAttachTS = undefined;
+  }
+
+  function resizeAdjustmentTS() {
+    const editing = isPageEditingTS();
+
+    // Fixed top script
+    (function () {
+      if (!fixedTopTS || fixedTopTS.length !== 1 || initialTopTS === undefined) return;
+
+      if (editing) {
+        fixedTopTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedTopTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      const topPosition = fixedTopTS.css('position');
+      if (topPosition === 'fixed') {
+        if (topAttachTS) {
+          scrollAdjustmentTS();
+        } else {
+          const anchorHeight = anchor.outerHeight() - 1;
+          fixedTopTS.css('top', anchorHeight + initialTopTS);
+        }
+      } else {
+        fixedTopTS.css('top', initialTopTS);
+      }
+
+      if (topPosition === 'fixed' || topPosition === 'absolute') {
+        // Bump the banner content down
+        if (isTransparentTS(fixedTopTS)) {
+          innerSizingTS.css('padding-top', initialTopTS + fixedTopTS.outerHeight() - 1);
+          outerSizingTS.css('padding-top', '');
+
+          try {
+            window.Pages.onResizeHandlersExecute();
+          } catch (e) { }
+        } else {
+          outerSizingTS.css('padding-top', fixedTopTS.outerHeight() - 1);
+          innerSizingTS.css('padding-top', '');
+        }
+      } else {
+        innerSizingTS.css('padding-top', '');
+        outerSizingTS.css('padding-top', '');
+      }
+    })();
+
+    // Fixed bottom script
+    (function () {
+      if (!fixedBottomTS || fixedBottomTS.length === 0) return;
+
+      // If the widget has gone narrow, force unfix
+      if (editing || fixedBottomTS.outerHeight() > 200) {
+        fixedBottomTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedBottomTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedBottomTS.css('position') === 'fixed') {
+        bodyContainerTS.css('padding-bottom', fixedBottomTS.outerHeight());
+      } else {
+        bodyContainerTS.css('padding-bottom', '');
+      }
+    })();
+
+    // Fixed left script
+    (function () {
+      if (!fixedLeftTS || fixedLeftTS.length === 0) return;
+
+      if (editing) {
+        fixedLeftTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedLeftTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedLeftTS.css('position') === 'fixed') {
+        const anchorHeight = anchor.outerHeight() - 1;
+        fixedLeftTS.css('top', anchorHeight);
+        const leftBoundingTS = fixedLeftTS[0].getBoundingClientRect();
+        iterateLeftpads(function (containerTS) {
+          const containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.left <= leftBoundingTS.right) {
+            $(containerTS).css('padding-left', leftBoundingTS.width + 16);
+          }
+        });
+      } else {
+        fixedLeftTS.css('top', '');
+        iterateLeftpads(function (containerTS) {
+          $(containerTS).css('padding-left', '');
+        });
+      }
+    })();
+  }
+
+  function scrollAdjustmentTS() {
+    if (!fixedTopTS || fixedTopTS.length !== 1 || !topAttachTS || topAttachTS.length !== 1) return;
+    const topPosition = fixedTopTS.css('position');
+    if (topPosition === 'fixed' || topPosition === 'absolute') {
+      const anchorBounding = anchor[0].getBoundingClientRect();
+      const attachBounding = topAttachTS[0].getBoundingClientRect();
+      const scrollTop = $(window).scrollTop();
+
+      fixedTopTS.css('top', Math.max(anchorBounding.bottom - 1, attachBounding.bottom));
+    } else {
+      fixedTopTS.css('top', initialTopTS);
+    }
+  }
+
+  $(window).load(function () {
+    setTimeout(function () {
+      resizeAdjustmentTS();
+    }, 350);
+
+    $(window).scroll(function () {
+      scrollAdjustmentTS();
+    });
+
+    var adjustTimeoutTS;
+    $(window).resize(function () {
+      clearTimeout(adjustTimeoutTS);
+      adjustTimeoutTS = setTimeout(function () {
+        resizeAdjustmentTS();
+      }, 350);
+    });
+
+    $.when(window.Pages.angularToolbarComplete).done(function () {
+      resizeAdjustmentTS();
+    });
+  });
+</script>
+<!-- End Fixed Nav Adjustment -->
+
+
+<!----------Google Translate (Mobile Friendly)--------->
+
+
+
+<style>#google-translate-container {float: right;padding: 3px 5px 0px 0px;}.goog-te-combo,.goog-te-banner *,.goog-te-ftab *,.goog-te-menu *,.goog-te-menu2 *,.goog-te-balloon * {font-family: arial;font-size: 10pt;background-image: url("https://theme.zdassets.com/theme_assets/958586/bae8aa24db8d43595871692a9d259186f2db3fb4.png");background-position: 3px 4px;background-size: 22px;background-repeat: no-repeat;text-indent: 20px;background-color: #fff;color: #000 !important;}.goog-logo-link {display: none !important;}.goog-te-gadget {color: transparent !important;}.goog-te-gadget .goog-te-combo {margin: 2px 0 !important;border-radius: 15px !important;}.goog-te-combo{border: 1px solid !important;border-color: #bcc9d7 #96a3b1 #96a3b1 #bcc9d7 !important;border-radius: 0 !important;height:32px; !important;padding: 0 1px 0 .25rem !important;}
+
+#launcher-wrapper {bottom: 50px !important;}
+
+</style>
+
+<div id="google-translate-container">
+
+<div id="google_translate_element" style="position: fixed; bottom: 0px; right: 20px; z-index: 5;"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo" aria-label="google translate languages"><option value="">Select Language</option><option value="ab">Abkhaz</option><option value="ace">Acehnese</option><option value="ach">Acholi</option><option value="aa">Afar</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="alz">Alur</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="as">Assamese</option><option value="av">Avar</option><option value="awa">Awadhi</option><option value="ay">Aymara</option><option value="az">Azerbaijani</option><option value="ban">Balinese</option><option value="bal">Baluchi</option><option value="bm">Bambara</option><option value="bci">Baoulé</option><option value="ba">Bashkir</option><option value="eu">Basque</option><option value="btx">Batak Karo</option><option value="bts">Batak Simalungun</option><option value="bbc">Batak Toba</option><option value="be">Belarusian</option><option value="bem">Bemba</option><option value="bn">Bengali</option><option value="bew">Betawi</option><option value="bho">Bhojpuri</option><option value="bik">Bikol</option><option value="bs">Bosnian</option><option value="br">Breton</option><option value="bg">Bulgarian</option><option value="bua">Buryat</option><option value="yue">Cantonese</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ch">Chamorro</option><option value="ce">Chechen</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="chk">Chuukese</option><option value="cv">Chuvash</option><option value="co">Corsican</option><option value="crh">Crimean Tatar (Cyrillic)</option><option value="crh-Latn">Crimean Tatar (Latin)</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="fa-AF">Dari</option><option value="dv">Dhivehi</option><option value="din">Dinka</option><option value="doi">Dogri</option><option value="dov">Dombe</option><option value="nl">Dutch</option><option value="dyu">Dyula</option><option value="dz">Dzongkha</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="ee">Ewe</option><option value="fo">Faroese</option><option value="fj">Fijian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fon">Fon</option><option value="fr">French</option><option value="fr-CA">French (Canada)</option><option value="fy">Frisian</option><option value="fur">Friulian</option><option value="ff">Fulani</option><option value="gaa">Ga</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gn">Guarani</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="cnh">Hakha Chin</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hil">Hiligaynon</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="hrx">Hunsrik</option><option value="iba">Iban</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="ilo">Ilocano</option><option value="id">Indonesian</option><option value="iu-Latn">Inuktut (Latin)</option><option value="iu">Inuktut (Syllabics)</option><option value="ga">Irish</option><option value="it">Italian</option><option value="jam">Jamaican Patois</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kac">Jingpo</option><option value="kl">Kalaallisut</option><option value="kn">Kannada</option><option value="kr">Kanuri</option><option value="pam">Kapampangan</option><option value="kk">Kazakh</option><option value="kha">Khasi</option><option value="km">Khmer</option><option value="cgg">Kiga</option><option value="kg">Kikongo</option><option value="rw">Kinyarwanda</option><option value="ktu">Kituba</option><option value="trp">Kokborok</option><option value="kv">Komi</option><option value="gom">Konkani</option><option value="ko">Korean</option><option value="kri">Krio</option><option value="ku">Kurdish (Kurmanji)</option><option value="ckb">Kurdish (Sorani)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="ltg">Latgalian</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lij">Ligurian</option><option value="li">Limburgish</option><option value="ln">Lingala</option><option value="lt">Lithuanian</option><option value="lmo">Lombard</option><option value="lg">Luganda</option><option value="luo">Luo</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mad">Madurese</option><option value="mai">Maithili</option><option value="mak">Makassar</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ms-Arab">Malay (Jawi)</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mam">Mam</option><option value="gv">Manx</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mh">Marshallese</option><option value="mwr">Marwadi</option><option value="mfe">Mauritian Creole</option><option value="chm">Meadow Mari</option><option value="mni-Mtei">Meiteilon (Manipuri)</option><option value="min">Minang</option><option value="lus">Mizo</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="nhe">Nahuatl (Eastern Huasteca)</option><option value="ndc-ZW">Ndau</option><option value="nr">Ndebele (South)</option><option value="new">Nepalbhasa (Newari)</option><option value="ne">Nepali</option><option value="bm-Nkoo">NKo</option><option value="no">Norwegian</option><option value="nus">Nuer</option><option value="oc">Occitan</option><option value="or">Odia (Oriya)</option><option value="om">Oromo</option><option value="os">Ossetian</option><option value="pag">Pangasinan</option><option value="pap">Papiamento</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese (Brazil)</option><option value="pt-PT">Portuguese (Portugal)</option><option value="pa">Punjabi (Gurmukhi)</option><option value="pa-Arab">Punjabi (Shahmukhi)</option><option value="qu">Quechua</option><option value="kek">Qʼeqchiʼ</option><option value="rom">Romani</option><option value="ro">Romanian</option><option value="rn">Rundi</option><option value="ru">Russian</option><option value="se">Sami (North)</option><option value="sm">Samoan</option><option value="sg">Sango</option><option value="sa">Sanskrit</option><option value="sat-Latn">Santali (Latin)</option><option value="sat">Santali (Ol Chiki)</option><option value="gd">Scots Gaelic</option><option value="nso">Sepedi</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="crs">Seychellois Creole</option><option value="shn">Shan</option><option value="sn">Shona</option><option value="scn">Sicilian</option><option value="szl">Silesian</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sus">Susu</option><option value="sw">Swahili</option><option value="ss">Swati</option><option value="sv">Swedish</option><option value="ty">Tahitian</option><option value="tg">Tajik</option><option value="ber-Latn">Tamazight</option><option value="ber">Tamazight (Tifinagh)</option><option value="ta">Tamil</option><option value="tt">Tatar</option><option value="te">Telugu</option><option value="tet">Tetum</option><option value="th">Thai</option><option value="bo">Tibetan</option><option value="ti">Tigrinya</option><option value="tiv">Tiv</option><option value="tpi">Tok Pisin</option><option value="to">Tongan</option><option value="lua">Tshiluba</option><option value="ts">Tsonga</option><option value="tn">Tswana</option><option value="tcy">Tulu</option><option value="tum">Tumbuka</option><option value="tr">Turkish</option><option value="tk">Turkmen</option><option value="tyv">Tuvan</option><option value="ak">Twi</option><option value="udm">Udmurt</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="ug">Uyghur</option><option value="uz">Uzbek</option><option value="ve">Venda</option><option value="vec">Venetian</option><option value="vi">Vietnamese</option><option value="war">Waray</option><option value="cy">Welsh</option><option value="wo">Wolof</option><option value="xh">Xhosa</option><option value="sah">Yakut</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="yua">Yucatec Maya</option><option value="zap">Zapotec</option><option value="zu">Zulu</option></select></div>Powered by <span style="white-space:nowrap"><a class="VIpgJd-ZVi9od-l4eHX-hSRGPd" href="https://translate.google.com" target="_blank" rel="noopener"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate">Translate</a></span></div></div>
+
+</div>
+
+<script>
+
+function googleTranslateElementInit() {
+var el = document.getElementById("google_translate_element");
+if (el && el.innerHTML.trim() !== "") {
+    return;
+}
+
+
+new google.translate.TranslateElement({ pageLanguage: "en" }, "google_translate_element");
+
+// begin accessibility compliance
+
+$('img.goog-te-gadget-icon').attr('alt','Google Translate');
+
+$('div#goog-gt-tt div.logo img').attr('alt','translate');
+
+$('div#goog-gt-tt .original-text').css('text-align','left');
+
+$('.goog-te-gadget-simple .goog-te-menu-value span').css('color','#000000');
+
+$('.goog-te-combo').attr('aria-label','google translate languages');
+
+$('svg.goog-te-spinner').attr('title','Google Translate Spinner');
+
+$('.goog-te-gadget-simple .goog-te-menu-value span').css('color','#000000');
+
+}
+
+$(function() {
+
+$.getScript("//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit");
+
+});
+
+</script>
+
+
+
+<!--------------End Google Translate----------------->
+
+
+
+<script type="module" data-hash="05839e92f0d54797987f51635d06b473" id="frase-script" src="
+https://answers-script.frase.io/bot.js"></script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700,700italic,800,800italic,italic,regular|Oswald:500,600,700,regular|Source+Sans+Pro:600,600italic,700,700italic,900,900italic,italic,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<div id="frase-answers-bot" class="frase-answers-bot" style="left: auto; right: 0px;"><div id="frase-wrapper" style="overflow: hidden; right: 0px; height: 0px; margin-right: 0px; margin-bottom: 0px; background: transparent; bottom: 0px; min-height: 0px;"><iframe title="Chat Bot" id="frase-iframe" src="https://answers-bot.frase.io/05839e92f0d54797987f51635d06b473" style="bottom: 0px; right: 0px; position: fixed; z-index: 2147483647; border: none; height: 0px; width: 0px; margin-right: 0px; margin-bottom: 0px; background: transparent; min-height: 0px;"></iframe></div></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu2993" class="contentTop mainNavMegaMenu megaMenuContainer pageID_2993 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 362.656px; width: 902px; top: 281.781px;">	<div id="ccc992a482-952e-4a89-a098-dce7c3b5ffa9" data-containerid="c992a482-952e-4a89-a098-dce7c3b5ffa9" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu2935" class="contentTop mainNavMegaMenu megaMenuContainer pageID_2935 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 362.656px; width: 902px; top: 281.781px;">	<div id="cc6a9699c8-a9f0-4832-b390-571bee3216a9" data-containerid="6a9699c8-a9f0-4832-b390-571bee3216a9" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu2964" class="contentTop mainNavMegaMenu megaMenuContainer pageID_2964 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 362.656px; width: 902px; top: 281.781px;">	<div id="cc6a595947-d1b9-4e12-9d9d-94034845cbca" data-containerid="6a595947-d1b9-4e12-9d9d-94034845cbca" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr"><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""><div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr">Original text</div></div><div class="VIpgJd-yAWNEb-hvhgNd-k77Iif"><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Rate this translation</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Your feedback will be used to help improve Google Translate</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Good translation" aria-label="Good translation" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Poor translation" aria-label="Poor translation" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b>&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div><div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><div id="bannerSlideshowControls_banner1" class="bannerSlideshowControlsNew none " style="display:none">
+			<a id="arrowPrev_banner1" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner1" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div></body></html>
