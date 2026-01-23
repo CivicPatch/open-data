@@ -1,0 +1,261 @@
+City Council | Leander, TX
+
+
+
+
+
+
+
+
+  
+
+
+
+![Loading](https://www.leandertx.gov/Common/images/ajax-loader.gif "Loading")
+
+Loading
+
+[Skip to Main Content](https://www.leandertx.gov/527/City-Council#cc5f8c90dc-b4cb-431b-90ee-10648f8df655)
+
+
+
+
+
+
+
+
+
+
+
+[![Emergency Alert](https://www.leandertx.gov/Common/Images/AlertCenter/alertBarBlink.svg)
+Weather Alert](https://www.leandertx.gov/AlertCenter.aspx)
+[Winter Storm Warning
+read more](https://www.leandertx.gov/m/NewsFlash/home/detail/1280)
+
+[Create a Website Account](https://www.leandertx.gov/MyAccount/ProfileCreate) - Manage notification subscriptions, save form progress and more.   
+
+* [Website Sign In](https://www.leandertx.gov/MyAccount)
+
+[![Leander Texas home page](https://www.leandertx.gov/ImageRepository/Document?documentID=71)](https://www.leandertx.gov/)
+
+[![Search](https://www.leandertx.gov/ImageRepository/Document?documentID=82)](https://www.leandertx.gov/Search/Results)
+Search
+
+1. [Government](https://www.leandertx.gov/27/Government)
+2. [Departments](https://www.leandertx.gov/101/Departments)
+3. [Community](https://www.leandertx.gov/31/Community)
+4. [Business](https://www.leandertx.gov/35/Business)
+5. [How Do I...](https://www.leandertx.gov/9/How-Do-I)
+
+![](https://www.leandertx.gov/ImageRepository/Document?documentID=65)![](/ImageRepository/Document?documentID=68)![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
+
+1. [Home](https://www.leandertx.gov/)
+2. [Government](https://www.leandertx.gov/27/Government)
+3. City Council
+
+City Council
+============
+
+Mission
+-------
+
+To deliver fundamental services and programs that recognize and cultivate the unique characteristics of the City, generate an inviting atmosphere, and drive purpose of place and a sense of belonging.
+
+Vision
+------
+
+An economically sustainable and balanced community that invites endless possibilities, celebrates its vibrant culture, and cultivates a welcoming environment.
+
+About
+-----
+
+The City of Leander is a [home-rule](https://library.municode.com/tx/leander/codes/code_of_ordinances?nodeId=HOME_RULE_CHARTER_ARTIINFOGOPOCI_S1.04GEPO) municipality with a council-manager form of government. The City Council is made up of a mayor and six council members, and each are elected at-large (by all voters) for three-year staggered terms as unpaid elected officials.
+
+Under a council-manager form of government, voters elect the Council which, in turn, hires a City Manager to administer the city’s day-to-day affairs. The Council serves as the legislative body which sets policy, approves the budget, sets the tax rate, and determines the extent and cost of municipal services. The City Manager is responsible for directing the workforce and programs of the city in accordance with ordinances, rules, and regulations adopted by the Council.
+
+* [Email the Council](mailto:citycouncil@leandertx.gov)
+* [Council rules of procedure](https://www.leandertx.gov/DocumentCenter/View/2036)
+
+Meetings
+--------
+
+Regular meetings are held on the first and third Thursday of each month starting at 6 p.m. in the Council Chamber of Pat Bryson Municipal Hall located at 201 N. Brushy Street, Leander, Texas 78646. For more information about public meetings of the Leander City Council, please contact the City Secretary at 512-528-2743 or [email us](mailto:dcrabtree@leandertx.gov).
+
+Agendas & Minutes
+-----------------
+
+Meeting agendas are posted three (3) business days before the scheduled meeting day. Official minutes of each meeting must be approved by City Council at the next regularly scheduled meeting.
+
+* [Agendas & Minutes](https://www.leandertx.gov/129/Agendas-Minutes)
+
+[![CC-SS Core Values](https://www.leandertx.gov/ImageRepository/Document?documentId=3770)](https://www.leandertx.gov/ImageRepository/Document?documentID=3770)
+
+### [Council Members](https://www.leandertx.gov/Directory.aspx)
+
+1. #### Vacant
+
+   Mayor
+
+   [More Information](https://www.leandertx.gov/directory.aspx?eid=153)
+
+1. ![Stephen Chang Photo](https://www.leandertx.gov/ImageRepository/Document?documentID=4507 "Stephen Chang Photo")
+
+   #### Stephen Chang
+
+   Council Member, Place 1
+
+   [More Information](https://www.leandertx.gov/directory.aspx?eid=154)
+
+1. ![Michael Herrera](https://www.leandertx.gov/ImageRepository/Document?documentID=4355 "Michael Herrera")
+
+   #### Michael Herrera
+
+   Council Member, Place 2
+
+   [More Information](https://www.leandertx.gov/directory.aspx?eid=155)
+
+1. ![Natomi Blair](https://www.leandertx.gov/ImageRepository/Document?documentID=1533 "Natomi Blair")
+
+   #### Natomi Blair
+
+   Council Member, Place 3
+
+   [More Information](https://www.leandertx.gov/directory.aspx?eid=156)
+
+1. ![NaCole Thompson 3](https://www.leandertx.gov/ImageRepository/Document?documentID=3867 "NaCole Thompson 3")
+
+   #### Na'Cole Thompson
+
+   Mayor Pro Tem/Council Member, Place 4
+
+   [More Information](https://www.leandertx.gov/directory.aspx?eid=157)
+
+1. ![Andrew Naudin Photo](https://www.leandertx.gov/ImageRepository/Document?documentID=4506 "Andrew Naudin Photo")
+
+   #### Andrew Naudin
+
+   Council Member, Place 5
+
+   [More Information](https://www.leandertx.gov/directory.aspx?eid=158)
+
+1. ![Becki Ross](https://www.leandertx.gov/ImageRepository/Document?documentID=1537 "Becki Ross")
+
+   #### Becki Ross
+
+   Council Member, Place 6
+
+   [More Information](https://www.leandertx.gov/directory.aspx?eid=159)
+
+1. [Video Stream](https://www.leandertx.gov/528/Video-Stream)
+2. [State of the City](https://www.leandertx.gov/529/State-of-the-City)
+3. [Audio Meetings](https://www.leandertx.gov/885/Audio-Meetings)
+
+* [Agendas & Minutes](https://www.leandertx.gov/129/Agendas-Minutes)
+
+* [Pay My Bills](https://www.municipalonlinepayments.com/leandertx)
+
+* [Forms & Applications](https://www.leandertx.gov/653/Forms-Permits-Applications)
+
+* [Job Opportunities](https://www.governmentjobs.com/careers/leandertx)
+
+* [Elections](https://www.leandertx.gov/168/Elections)
+
+* [Government Transparency](https://www.leandertx.gov/612/Government-Transparency)
+
+1. [![Leander Texas home page](https://www.leandertx.gov/ImageRepository/Document?documentId=83)](https://www.leandertx.gov/)
+
+* [![ Facebook](https://www.leandertx.gov/ImageRepository/Document?documentID=48)](https://www.leandertx.gov/facebook)
+
+* [![X logo-white Opens in new window](https://www.leandertx.gov/ImageRepository/Document?documentID=4708)](https://www.leandertx.gov/x)
+
+* [![ Instagram](https://www.leandertx.gov/ImageRepository/Document?documentID=49)](https://www.leandertx.gov/instagram)
+
+* [![ YouTube](https://www.leandertx.gov/ImageRepository/Document?documentID=51)](https://www.leandertx.gov/youtube)
+
+* [![Nextdoor](https://www.leandertx.gov/ImageRepository/Document?documentID=62)](https://www.leandertx.gov/nextdoor)
+
+* [![Linkedin](https://www.leandertx.gov/ImageRepository/Document?documentID=52)](https://www.leandertx.gov/linkedin)
+
+### Contact Us
+
+1. **City Hall**  
+   105 N Brushy Street  
+   Leander, Texas 78641
+
+   **Mailing Address**  
+   PO Box 319  
+   Leander, TX 78646
+
+   Phone: [512-528-2700](tel:512-528-2700)  
+   [**Get answers and assistance**](https://www.leandertx.gov/9/How-Do-I)
+
+### [Quick Links](https://www.leandertx.gov/QuickLinks.aspx?CID=15)
+
+1. [City Council](https://www.leandertx.gov/527/City-Council)
+2. [Contact Us](https://www.leandertx.gov/FormCenter/General-Forms-4/Contact-the-City-79)
+3. [Open Records Request](https://www.leandertx.gov/FormCenter/City-Secretary-6/Open-Records-Request-49)
+4. [Public Comments Request](https://www.leandertx.gov/FormCenter/City-Secretary-6/Public-Comments-Request-92)
+5. [Staff Directory](https://www.leandertx.gov/directory.aspx)
+
+/QuickLinks.aspx
+
+### [Site Links](https://www.leandertx.gov/QuickLinks.aspx?CID=16)
+
+1. [Home](https://www.leandertx.gov/)
+2. [Accessibility](https://www.leandertx.gov/accessibility)
+3. [Copyright Notices](https://www.leandertx.gov/copyright)
+4. [Privacy Policy](https://www.leandertx.gov/privacy)
+5. [Site Map](https://www.leandertx.gov/sitemap)
+
+/QuickLinks.aspx
+
+Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)
+
+Loading
+
+Loading
+
+Do Not Show Again
+Close
+
+
+
+
+
+
+
+
+
+
+
+Select LanguageAbkhazAcehneseAcholiAfarAfrikaansAlbanianAlurAmharicArabicArmenianAssameseAvarAwadhiAymaraAzerbaijaniBalineseBaluchiBambaraBaouléBashkirBasqueBatak KaroBatak SimalungunBatak TobaBelarusianBembaBengaliBetawiBhojpuriBikolBosnianBretonBulgarianBuryatCantoneseCatalanCebuanoChamorroChechenChichewaChinese (Simplified)Chinese (Traditional)ChuukeseChuvashCorsicanCrimean Tatar (Cyrillic)Crimean Tatar (Latin)CroatianCzechDanishDariDhivehiDinkaDogriDombeDutchDyulaDzongkhaEsperantoEstonianEweFaroeseFijianFilipinoFinnishFonFrenchFrench (Canada)FrisianFriulianFulaniGaGalicianGeorgianGermanGreekGuaraniGujaratiHaitian CreoleHakha ChinHausaHawaiianHebrewHiligaynonHindiHmongHungarianHunsrikIbanIcelandicIgboIlocanoIndonesianInuktut (Latin)Inuktut (Syllabics)IrishItalianJamaican PatoisJapaneseJavaneseJingpoKalaallisutKannadaKanuriKapampanganKazakhKhasiKhmerKigaKikongoKinyarwandaKitubaKokborokKomiKonkaniKoreanKrioKurdish (Kurmanji)Kurdish (Sorani)KyrgyzLaoLatgalianLatinLatvianLigurianLimburgishLingalaLithuanianLombardLugandaLuoLuxembourgishMacedonianMadureseMaithiliMakassarMalagasyMalayMalay (Jawi)MalayalamMalteseMamManxMaoriMarathiMarshalleseMarwadiMauritian CreoleMeadow MariMeiteilon (Manipuri)MinangMizoMongolianMyanmar (Burmese)Nahuatl (Eastern Huasteca)NdauNdebele (South)Nepalbhasa (Newari)NepaliNKoNorwegianNuerOccitanOdia (Oriya)OromoOssetianPangasinanPapiamentoPashtoPersianPolishPortuguese (Brazil)Portuguese (Portugal)Punjabi (Gurmukhi)Punjabi (Shahmukhi)QuechuaQʼeqchiʼRomaniRomanianRundiRussianSami (North)SamoanSangoSanskritSantali (Latin)Santali (Ol Chiki)Scots GaelicSepediSerbianSesothoSeychellois CreoleShanShonaSicilianSilesianSindhiSinhalaSlovakSlovenianSomaliSpanishSundaneseSusuSwahiliSwatiSwedishTahitianTajikTamazightTamazight (Tifinagh)TamilTatarTeluguTetumThaiTibetanTigrinyaTivTok PisinTonganTshilubaTsongaTswanaTuluTumbukaTurkishTurkmenTuvanTwiUdmurtUkrainianUrduUyghurUzbekVendaVenetianVietnameseWarayWelshWolofXhosaYakutYiddishYorubaYucatec MayaZapotecZulu
+
+Powered by [![Google Translate](https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png)Translate](https://translate.google.com)
+
+
+
+
+
+
+
+Arrow Left
+
+
+Arrow Right
+
+Slideshow Left Arrow
+
+
+Slideshow Right Arrow
+
+
+
+![](https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg)
+
+Original text
+
+Rate this translation
+
+Your feedback will be used to help improve Google Translate
+
+Close **×**
