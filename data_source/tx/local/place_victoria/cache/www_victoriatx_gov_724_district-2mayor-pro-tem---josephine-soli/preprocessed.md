@@ -1,8 +1,8 @@
-Super District 6 - Mark Loffgren | Victoria, TX
+District 2 - Steven Kidder | Victoria, TX
 
 
 Skip To Main Content
-![Loading](https://www.victoriatx.gov/Common/images/ajax-loader.gif)
+![Loading](https://www.victoriatx.gov/Common/images/ajax-loader.gif "Loading")
 
 
 [![Emergency Alert](https://www.victoriatx.gov/Common/Images/AlertCenter/alertBarBlink.svg)
@@ -17,7 +17,7 @@ WINTER WEATHER](https://www.victoriatx.gov/AlertCenter.aspx)
 ![X Account for the City of Victoria, Texas](https://www.victoriatx.gov/ImageRepository/Document?documentID=15425)
 ![YouTube](https://www.victoriatx.gov/ImageRepository/Document?documentID=15424)
 
-![](https://www.victoriatx.gov/ImageRepository/Document?documentID=15412)
+![](https://www.victoriatx.gov/ImageRepository/Document?documentID=15411)
 
 
 
@@ -34,24 +34,22 @@ WINTER WEATHER](https://www.victoriatx.gov/AlertCenter.aspx)
 11. [Watch City Council Meetings](https://www.victoriatx.gov/209/Watch-TV15)
 
 1. [City Council](https://www.victoriatx.gov/501/City-Council)
-2. Super District 6 - Mark Loffgren
+2. District 2 - Steven Kidder
 
-Super District 6 - Mark Loffgren
-================================
+District 2 - Steven Kidder
+==========================
 
-Mark Loffgren is the City Council representative for Super District 6, which encompasses Districts 3 and 4. He was born in Oakland, CA; graduated high school in England; earned his bachelor's degree from UCSC; and earned graduate coursework from UCB. He was recruited by H-E-B to come to Victoria in 1986 and retired as an H-E-B store director. He is a member of the Victoria Sales Tax Development Corporation, the Victoria Metropolitan Planning Organization Advisory Committee, the Victoria Broadband Commission, the Golden Crescent Regional Planning Commission, and the Downtown Tax Increment Reinvestment Zone Board. He was appointed by the Golden Crescent Regional Planning Commission as their representative to the Texas Association of Regional Councils. He served on the United Way Board for 12 years. He was elected in 2019 and reelected in 2022. He received a Distinguished Citizen Award from the City on April 19, 2016.
+Steven Kidder is the City Council representative for District 2. He is a private practice attorney; prior to his current role, he served as the City of Victoria Municipal Court judge. He earned his bachelor’s degree in government/political science from the University of Texas at Austin in 1983 and his doctorate in law from the University of Houston Law Center in 1987, and he was licensed by the State Bar of Texas in 1987.
 
 
 
 ### [Contact Us](https://www.victoriatx.gov/Directory.aspx)
 
-1. ![](https://www.victoriatx.gov/ImageRepository/Document?documentID=3409 "Mark Loffgren")
+1. ![](https://www.victoriatx.gov/ImageRepository/Document?documentID=14317 "Councilman Steven Kidder")
 
-   #### Mark Loffgren
+   District 2
 
-   Super District 6
-
-   [Email Mark Loffgren](mailto:mloffgren@victoriatx.gov)
+   [Email Steven Kidder](mailto:skidder@victoriatx.gov)
 
 
 

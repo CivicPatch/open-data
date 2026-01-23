@@ -12,11 +12,7 @@ Mayor - Duane Crocker | Victoria, TX
 
 
 
-This website is AudioEye enabled and is being optimized for accessibility. To open the AudioEye Toolbar, press "shift + =". Some assistive technologies may require the use of a passthrough function before this keystroke. For more information, activate the button labeled “Explore your accessibility options”.
-
-[Skip To Main Content](#mainSectionTS)
-
-![Loading](https://www.victoriatx.gov/Common/images/ajax-loader.gif)
+![Loading](https://www.victoriatx.gov/Common/images/ajax-loader.gif "Loading")
 
 Loading
 
@@ -53,17 +49,17 @@ Read On...](https://www.victoriatx.gov/820/WeatherEmergencies)
 [![Search](https://www.victoriatx.gov/ImageRepository/Document?documentID=15438)](https://www.victoriatx.gov/Search/Results)
 Search
 
-* [![Facebook](https://www.victoriatx.gov/ImageRepository/Document?documentID=15416)](https://www.facebook.com/CityofVictoriaTexas)
+* [![Facebook for the City of Victoria, Texas](https://www.victoriatx.gov/ImageRepository/Document?documentID=15416)](https://www.facebook.com/CityofVictoriaTexas)
 
-* [![Instagram](https://www.victoriatx.gov/ImageRepository/Document?documentID=15415)](https://www.instagram.com/cityofvictoria_pio?igsh=MWdyaTB5cXY2OWl1NQ== )
+* [![Instagram for the City of Victoria, Texas](https://www.victoriatx.gov/ImageRepository/Document?documentID=15415)](https://www.instagram.com/cityofvictoria_pio?igsh=MWdyaTB5cXY2OWl1NQ== )
 
 * [![Spotify for the City of Victoria, Texas](https://www.victoriatx.gov/ImageRepository/Document?documentID=15634)](https://open.spotify.com/show/1Xhblqi7nkdGzmwxctI9TS?si=178521a112f64f0e.)
 
 * [![X Account for the City of Victoria, Texas](https://www.victoriatx.gov/ImageRepository/Document?documentID=15425)](https://x.com/VictoriaPIO)
 
-* [![YouTube](https://www.victoriatx.gov/ImageRepository/Document?documentID=15424)](https://www.youtube.com/user/VictoriaTexasVideos)
+* [![YouTube for the City of Victoria, Texas](https://www.victoriatx.gov/ImageRepository/Document?documentID=15424)](https://www.youtube.com/user/VictoriaTexasVideos)
 
-![](https://www.victoriatx.gov/ImageRepository/Document?documentID=15410)
+![](https://www.victoriatx.gov/ImageRepository/Document?documentID=15412)
 
 1. [City Council Documents](https://www.victoriatx.gov/591/City-Council-Documents)
 2. [Elections](https://www.victoriatx.gov/1422/November-4-2025-Special-Election)
@@ -92,7 +88,7 @@ Duane Crocker is the mayor of Victoria. A Victoria native, he is the principal s
 
 ### [Contact Us](https://www.victoriatx.gov/Directory.aspx)
 
-1. ![](https://www.victoriatx.gov/ImageRepository/Document?documentID=13640 "Duane Crocker")
+1. ![Duane Crocker](https://www.victoriatx.gov/ImageRepository/Document?documentID=13640 "Duane Crocker")
 
    #### Duane Crocker
 
@@ -212,10 +208,6 @@ PowerPoint Download
 Document Download
 
 
-
-
-
-Explore your accessibility options
 
 
 

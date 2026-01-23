@@ -12,7 +12,11 @@ Super District 5/Mayor Pro-Tem - Dr. Andrew Young | Victoria, TX
 
 
 
-![Loading](https://www.victoriatx.gov/Common/images/ajax-loader.gif "Loading")
+This website is AudioEye enabled and is being optimized for accessibility. To open the AudioEye Toolbar, press "shift + =". Some assistive technologies may require the use of a passthrough function before this keystroke. For more information, activate the button labeled “Explore your accessibility options”.
+
+[Skip To Main Content](#mainSectionTS)
+
+![Loading](https://www.victoriatx.gov/Common/images/ajax-loader.gif)
 
 Loading
 
@@ -59,7 +63,7 @@ Search
 
 * [![YouTube](https://www.victoriatx.gov/ImageRepository/Document?documentID=15424)](https://www.youtube.com/user/VictoriaTexasVideos)
 
-![](https://www.victoriatx.gov/ImageRepository/Document?documentID=15411)
+![](https://www.victoriatx.gov/ImageRepository/Document?documentID=15410)
 
 1. [City Council Documents](https://www.victoriatx.gov/591/City-Council-Documents)
 2. [Elections](https://www.victoriatx.gov/1422/November-4-2025-Special-Election)
@@ -204,6 +208,10 @@ PowerPoint Download
 Document Download
 
 
+
+
+
+Explore your accessibility options
 
 
 
