@@ -1,0 +1,2527 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n3-active wf-muli-n4-active wf-muli-i4-active wf-muli-n7-active wf-active has-webFonts" style="height: 100%;"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira+Sans:100,100italic,200,200italic,300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,italic,regular|Lato:100,100italic,300,300italic,700,700italic,900,900italic,italic,regular|" media="all"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-1Z5HS7Z1SD&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61m0"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-1Z5HS7Z1SD';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	
+	
+	
+	<meta name="theme-color" content="#012f60">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>Staff Directory • Shatara Moore</title>
+
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '350px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/-2002564885.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+	
+	<link rel="stylesheet" href="/App_Themes/CP/nmenu.css" type="text/css">
+
+    
+	<!-- Dynamic Header Scripts -->
+	
+	<!--Reference Stylesheet-->
+	
+    
+		<!--Dynamic Header Styles-->
+	<style type="text/css">
+	
+	</style>
+	
+	
+	
+
+
+
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.2f3WBw8L4SI.L.W.O/am=AAQD/d=0/rs=AN8SPfrXXtxuFpMMBoYgp93jo68L3iC3ZQ/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/_/translate_http/_/js/k=translate_http.tr.en_US.gm28aokwBeQ.O/am=AAAQ/d=1/exm=el_conf/ed=1/rs=AN8SPfo-cjsGcRTUC_jpauJJ5fve_ZlsdQ/m=el_main"></script><style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style><link rel="stylesheet" type="text/css" href="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-14/compliance.css"><link rel="stylesheet" type="text/css" href="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-14/fullCSS.bundle.css"><style>
+      .audioeye-skip-link {
+        display: inline-block !important;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        z-index: 50000 !important;
+      }
+      .audioeye-skip-link:focus, .audioeye-skip-link:active {
+        left: 0;
+        width: auto;
+        height: auto;
+        background: #fff;
+        color: #000;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.5;
+        margin-bottom: 8px;
+        padding: 5px;
+        border: 3px solid #000;
+        transition: none;
+      }
+    </style></head>
+<body class="wide cpTextResizeOn doneLoading" style="position: relative; min-height: 100%; top: 0px; cursor: default;" data-audioeye-lang="en" data-audioeye-device-desktop="" data-audioeye-launcher=""><div id="ae_enabled_site" class="ae-blurb-noaudio" role="status" aria-live="polite" data-nosnippet="" style="display: none;"><div><p data-modulename="launcher">This website is AudioEye enabled and is being optimized for accessibility. To open the AudioEye Toolbar, press "shift + =". Some assistive technologies may require the use of a passthrough function before this keystroke. For more information, activate the button labeled “Explore your accessibility options”.</p></div></div><a href="#structuralContainer6" class="audioeye-skip-link">Skip To Main Content</a><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="https://www.paristexas.gov/Common/images/ajax-loader.gif" alt="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks" class="ae-exclude" role="presentation" aria-hidden="true" tabindex="-1">
+<a href="https://www.paristexas.gov/directory.aspx?eid=181#contentarea" target="_self" class="skipToContentLink ae-exclude" role="presentation" aria-hidden="true" tabindex="-1">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs" role="presentation"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="1">
+    <input type="hidden" id="hdnContentCollectionID" value="008a392e-c696-4110-be1a-97ffcfd279ad">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="1">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID" value="4">
+    <input type="hidden" id="pagePageID">
+
+        <input type="hidden" id="hdnModuleID" value="4">
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700); 
+.alertText .customAlert {
+    color: #EAEAEA;
+    display: inline-block;
+    font-family: 'Open Sans Condensed', sans-serif; 
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 27px;
+    left: 57px;
+    line-height: 27px;
+    overflow: hidden;
+    position: absolute;
+    top: 15px;
+    white-space: nowrap;
+    width: 268px;
+}
+</style>
+  <div id="1_divAlertBar" class="alertToolbar cpToolbar" style="background: rgb(34, 34, 34); z-index: 2;">
+    <div id="1_divAlertToolbarInner" class="alertToolbarInner" style="font-size: 16px;">
+        <a href="https://www.paristexas.gov/AlertCenter.aspx" id="1_lnkAlertText" class="alertText" style="border-right: 1px solid #000000;">
+            <img src="https://www.paristexas.gov/Common/Images/AlertCenter/alertBarBlink.svg" id="1_imgDot" alt="Emergency Alert" class="redDot">
+            <span id="1_customAlert" class="customAlert">Weather Alert</span>
+        </a>
+        <span id="1_spnAlertContainer" class="alertContainer"><a href="https://www.paristexas.gov/AlertCenter.aspx?AID=Winter-Weather-Updates-57" target="_self" class="alert" style="border-left: 1px solid #635e65; border-right: 1px solid #000000;background: #030303 url(/Common/images/AlertCenter/alertBarBlackTextBckg.png) repeat-x; color: #FFFFFF;">
+	Winter Weather Updates
+	<span style="color: #FC4C2F;">Read On...</span>
+</a>
+</span>
+    </div>
+  </div>
+  <div id="1_divAlertBarEmpty" class="alertBarEmpty"></div>
+  
+
+
+
+<!-- Begin Signed Out Bar -->
+<div class="cpToolbar user public" style="z-index: 1;">
+    <div class="inner selfClear">
+        <p class="dropdown"><a href="https://www.paristexas.gov/MyAccount/ProfileCreate" role="link" class="myConnections" id="signedOutToolbarCreateProfileButton">Create a Website Account</a> <span class="welcomeMessage">- Manage notification subscriptions, save form progress and more. &nbsp;&nbsp;</span></p>
+        <ul class="nav secondary" role="presentation">
+	        <li><a href="https://www.paristexas.gov/MyAccount" role="link" class="button" id="loggedOutToolbarSignInButton"><span>Website Sign In</span></a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#signedOutToolbarCreateProfileButton').keypress(function (e) { if (e.which === 0) return; $(this).click(); });
+        $('#signedOutToolbarCreateProfileButton').click(function (event) {
+        	event.preventDefault();
+        	window.location.href = '/MyAccount/ProfileCreate?from=url&url=/&dn=' + window.location.origin;
+        });
+
+			
+				$('#loggedOutToolbarSignInButton').click(function (event) {
+					event.preventDefault();
+					window.location.href = '/MyAccount/?from=url&url=' + encodeURIComponent(window.location.href.replace(window.location.origin, '')) + '&dn=' + window.location.host;
+				});
+			
+
+		if ('False' == 'True') {
+            $('#loggedOutToolbarSignInButton').hide();
+		}
+    })
+</script>
+<!-- End Signed Out Bar -->
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 92px;" class="noTransition">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="structuralContainer1">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="structuralContainer2">
+<div data-cprole="stickyStructuralContainer" id="stickyStructuralContainer" class="stickyStructuralContainer stickySticky" style="top: 91.7812px;"><div id="stickyStructuralContainer_54fef0a0-ba58-4816-b7a0-5b5a87e962c1" class="stickyInnerDiv sticky ">
+<header class="siteHeader"><div data-cprole="structuralContainer" id="structuralContainer3">
+<div class="siteWrap"><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation" aria-label="Main">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem443" class="topMenuItem" role="none" data-pageid="443" data-displaymegamenu="False" style="width: 12.7082%;"><!--
+			--><!--
+			--> <a role="menuitem" id="mainNavHome" class="navMainItem mainNavItem mainNavItem1" href="https://www.paristexas.gov/" target="_self" style="font-size: 21px;"><span style="display: inline;">   Home </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem416" class="topMenuItem" role="none" data-pageid="416" data-displaymegamenu="True" style="width: 17.9498%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem2 " href="https://www.paristexas.gov/416/Government" target="_self" style="font-size: 21px;"><span style="display: inline;">   Government </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem8" class="topMenuItem" role="none" data-pageid="8" data-displaymegamenu="True" style="width: 18.605%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavDepartments" class="navMainItem mainNavItem mainNavItem3 " href="https://www.paristexas.gov/8/Departments" target="_self" style="font-size: 21px;"><span style="display: inline;">   Departments </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem70" class="topMenuItem" role="none" data-pageid="70" data-displaymegamenu="True" style="width: 20.4887%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavOurCommunity" class="navMainItem mainNavItem mainNavItem4 " href="https://www.paristexas.gov/70/Our-Community" target="_self" style="font-size: 21px;"><span style="display: inline;">   Our Community </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem417" class="topMenuItem" role="none" data-pageid="417" data-displaymegamenu="True" style="width: 15.1652%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavBusiness" class="navMainItem mainNavItem mainNavItem5 " href="https://www.paristexas.gov/417/Business" target="_self" style="font-size: 21px;"><span style="display: inline;">   Business </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem9" class="topMenuItem" role="none" data-pageid="9" data-displaymegamenu="True" style="width: 15.0833%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavHowDoI" class="navMainItem mainNavItem mainNavItem6 " href="https://www.paristexas.gov/9/How-Do-I" target="_self" style="font-size: 21px;"><span style="display: inline;">   How Do I </span></a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=4&themeID=1&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = true;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;" role="presentation"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="0"></aside></nav></div><aside data-cprole="contentContainer" id="contentContainer1" class="topLinksTS">	<div id="cc932bb5da-692e-464b-84d6-f6d6b022dd91" data-containerid="932bb5da-692e-464b-84d6-f6d6b022dd91" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="1">
+				                
+
+
+
+	</div>
+</aside>
+</div></header></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer4" style="padding-top: 88px;">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer2" class="logo" role="presentation"><div data-cprole="banner" id="banner2" class="imageBig empty">
+
+
+
+
+				<span id="banner2-2" style="			display: block; text-align: center;
+"><img alt="" class="bannerObject" height="141" src="https://www.paristexas.gov/ImageRepository/Document?documentID=2687" width="280"></span>
+</div></aside><aside data-cprole="contentContainer" id="contentContainer3" class="searchTS" role="presentation">	<div id="cc5d86eed9-f748-406a-8dd9-ca9354e77bf3" data-containerid="5d86eed9-f748-406a-8dd9-ca9354e77bf3" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="eb148f19-4f0c-4fe7-9b37-3b59e702505f">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last idff53169e-f0eb-4f97-9b4c-e886c38cf8d6" style="height: 65px;" data-widgetcontainerid="ff53169e-f0eb-4f97-9b4c-e886c38cf8d6">
+	
+<div data-widget-id="c952ed48-400e-4fd6-874f-de3b55c0302d" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButtonc952ed48-400e-4fd6-874f-de3b55c0302d").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDeptc952ed48-400e-4fd6-874f-de3b55c0302d").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchFieldc952ed48-400e-4fd6-874f-de3b55c0302d").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDeptc952ed48-400e-4fd6-874f-de3b55c0302d").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDeptc952ed48-400e-4fd6-874f-de3b55c0302d").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchFieldc952ed48-400e-4fd6-874f-de3b55c0302d").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDeptc952ed48-400e-4fd6-874f-de3b55c0302d").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchFieldc952ed48-400e-4fd6-874f-de3b55c0302d").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchFieldc952ed48-400e-4fd6-874f-de3b55c0302d"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin1 widgetOptionSet12" style="display: block;">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBoxc952ed48-400e-4fd6-874f-de3b55c0302d ui-autocomplete-input" cp5ph="true" id="searchFieldc952ed48-400e-4fd6-874f-de3b55c0302d" name="searchField" onchange="searchBtnApplyQuery();" placeholder="How can we help you?" title="How can we help you?" type="text" value="" autocomplete="off" aria-label="Search Site">
+						<a href="https://www.paristexas.gov/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButtonc952ed48-400e-4fd6-874f-de3b55c0302d"><img alt="Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=2747" data-image="/ImageRepository/Document?documentID=2746" src="https://www.paristexas.gov/ImageRepository/Document?documentID=2746"></a>
+
+			<label class="searchLabel" for="searchFieldc952ed48-400e-4fd6-874f-de3b55c0302d">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #353637;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #353637;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #353637;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #353637;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBoxc952ed48-400e-4fd6-874f-de3b55c0302d
+	{
+		color: #353637;
+		border: 1px solid #e5e0d8; background: rgba(255,255,255,0.8); height: 65px; padding: 0 40px 0 20px; font-family: Fira Sans; font-weight: 700; font-size: 1.2em;
+	}
+	.widgetSearch .widgetBody .widgetSearchButtonc952ed48-400e-4fd6-874f-de3b55c0302d
+	{
+		margin: 4px 4px 0 0;
+	}
+	.widgetSearch .widgetSearch-onlyDeptc952ed48-400e-4fd6-874f-de3b55c0302d
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDeptc952ed48-400e-4fd6-874f-de3b55c0302d
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchFieldc952ed48-400e-4fd6-874f-de3b55c0302d").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside></div><aside data-cprole="contentContainer" id="contentContainer20" class="photoTS">	<div id="ccbfaab3af-cfd1-4fb0-8575-93f6648bdcd0" data-containerid="bfaab3af-cfd1-4fb0-8575-93f6648bdcd0" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="0d5263fd-e054-4176-ae5e-c40f01a6dbb5">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id92653593-7680-4142-bf4f-ed0fb3d9aa62" style="height: 86px;" data-widgetcontainerid="92653593-7680-4142-bf4f-ed0fb3d9aa62">
+	
+<div data-widget-id="6c221b55-2932-42bd-b4d2-e59084367ef6" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget6c221b55-2932-42bd-b4d2-e59084367ef6" class="widget widgetGraphicLinks skin1 widgetOptionSet4 narrow" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 "> 	
+				<ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="http://tonycorsoimages.com/" target="_blank" rel="noopener" aria-describedby="audioeye_new_window_message"><img src="https://www.paristexas.gov/ImageRepository/Document?documentID=3216" class="graphicButtonLink" alt="Webp.net-resizeimage Opens in new window" onmouseover="this.src='/ImageRepository/Document?documentID=3216'" onmouseout="this.src='/ImageRepository/Document?documentID=3216'" onfocus="this.src='/ImageRepository/Document?documentID=3216'" onblur="this.src='/ImageRepository/Document?documentID=3216'"> </a></li><!--
+				--></ul>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="structuralContainer5">
+<div class="siteWrap"><div data-cprole="structuralContainer" id="structuralContainer6" class="mainWrap" role="main" tabindex="-1">
+<div data-cprole="structuralContainer" id="structuralContainer7" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="structuralContainer8" class="contentWrap">
+<div data-cprole="breadCrumbs" class="breadCrumbContainer" id="breadCrumbs" role="navigation" aria-label="Breadcrumb">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="https://www.paristexas.gov/">Home</a></li><li>Staff Directory</li>
+		</ol>
+
+	   
+    
+</div>
+<div data-cprole="mainContentContainer" id="moduleContent">
+
+<div id="ctl00_ctl00_MainContent_BodyWrapper">
+	
+	<script type="text/javascript"><!--
+	var isie6 = false, isie7 = false, isie6or7 = false;
+	var intCountryCode = 840;
+
+	function setUrlLength(editor) {
+		//Toggle Image Context Menu Items
+		setMenuItems(editor);
+		//setContentBackgroundColor(editor);
+		removeIEParagraphs(editor);
+	}
+	function setUrlLengthAndToolToggle(editor) {
+		var minToolsGroups = 2; // Number of MinimumSetOfTools tools groups.
+		
+		// Hide the MinimumSetOfTools on load.
+		var toolbar = editor.get_toolContainer(); // Get toolbar container.
+		var toolgroups = toolbar.getElementsByTagName("UL"); // Get all toolgroups containers.
+		
+		for (var i = toolgroups.length - 1; i >= minToolsGroups; i--)			toolgroups[i].style.display = "none";
+		
+		if (editor.isIE) {
+			var elem = editor.get_element();
+			elem.style.height = "430px";
+ 			elem.style.minHeight = "430px";
+		}
+		
+		// Toggle Image Context Menu Items.
+		setMenuItems(editor);
+		//setContentBackgroundColor(editor);
+		removeIEParagraphs(editor);
+	}
+//--></script><!--[if IE 6]><script type="text/javascript">isie6 = true; isie6or7 = true;</script><![endif]-->
+<!--[if IE 7]><script type="text/javascript">isie7 = true; isie6or7 = true;</script><![endif]-->
+
+	
+
+	<form name="aspnetForm" method="post" action="./directory.aspx?eid=181" id="aspnetForm" style="display:inline;" onsubmit="return headerValidationCallback();" enctype="multipart/form-data" autocomplete="off" aria-label="Search the Directory">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" role="presentation">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" role="presentation">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Me6Qgx0gNehPyAT0jliEyUqzdiq/Yzv4Wca1LqZvh6pXoiGgMDRRtwaQhofErl7F17sUqr2RI4rXIn7L82eVjPuHjvws9PADuK7kOhT9t7yt5PooobcNBpLfe9PJZb0d" role="presentation">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZDLabodcikOjfaxGftwY9HZ4kdGjeaKe0dWaPQB1vgEd44eKAO0Ba1XMxE47-4twmw2&amp;t=638901361900000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=inLNP31wjqiaI82QcH4u7I71VHLIImzSRVoQAsV6_PNnrOu35oSrP-fktZb38yN1iHsxOuYTpPgebuvS3itkNDLQybUfBynodkPwcNYuu-5d7dEEJZPI3T2Vm57A0oUefZV704Z-0E62UXTckXj_X_urLROZ7xCT0LlKVHEeZf55MwRhNUf-qoYv7TXZNOcfRkghmszkBchwDCBZrMbNwwBUFz9bMFENu7H3ZkagHhGUNhiZSJJ_6rKgB8JZT9HTTpwkKUZBVrWA-S1010VS5Ob6lDwN9zNSwRQIL4BFNHXoQKw87hXTih7r4GO7vfq9srwqbRxzNCwrmjbkqxS8PKvq3JrNg9F8Yzi5r8_QnUw8wnSAXB3cGwR-Oug_rBjSvh1H2m1dhLMfnrFII3aXyZHVFuHavV3Jq2X9dFwARhK6bD6UgXxog8zmfpLJ6WuLe1SOWsSp6nBTLbtzTkaRqQV5ezsjtJAY_BjxLBRMSuqCK3ndsYNX2uDXn8OU1aFYN7YRkehqMOG2DZDJN3je3le0UoSpMEP119RvNyCBDd3fFfEROn22W2Zy-nkYf66ujs8p5jJJk9qUQcNjKmE-72VQP6-3ZlE78IqOcbGpJjJWLsqLv5a8Qrfz-bHTJfA7HQK17c_eRCCcdbgekRrNJ7DUshbeGeZZxU6mDOMM0fgY7UNyFSNn1dRISJr64r5_4nSCb2qU5aLOXTahkfUoU8LYfD9sfSesIHRwVM0dEZYw_fNzolVFS1omlCXY1C6wm_ZyHwvxNChMm56m_LNnwTXM-14U_Aj7mxxcUeel5LCis9bNX9XAMZfTXFcWd5Z_AfhU8RWVsb9-PorEp_06SpgGOenb5xBqGLxeKltoBnI1" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="42A65EF5" role="presentation">
+</div>
+		<!--for archiving purpose-->
+		<input name="ysnNotifyMe" type="hidden" role="presentation">
+		<input name="strPage" type="hidden" role="presentation">
+		<input name="intArchMainCatID" type="hidden" role="presentation">
+		<input name="intArchMainItemID" type="hidden" role="presentation">
+		 <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$MainContent$scriptManager', 'aspnetForm', [], [], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+		<script type="text/javascript">
+			Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(beginRequest);
+			Sys.WebForms.PageRequestManager.getInstance().add_pageLoaded(pageLoaded);
+		</script>
+		
+		<div id="modulecontent" name="modulecontent.aspx" style="padding-top: 0px;">
+<div id="contentarea"></div>
+
+<!-- BEGIN CityDirectoryContent.aspx ***** -->
+<style>
+	#moduleContent,
+	#moduleContent * {
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+		box-sizing: content-box;
+	}
+
+	table[summary="Search Directory"], table[summary="Employee Info"], table[summary="Table for layout purposes"] {
+		width: 100%
+	}
+</style>
+
+<link href="/Common/Modules/CityDirectory/RWDCityDirectory.css" rel="stylesheet" type="text/css">
+<script src="/Common/Modules/CityDirectory/RWDCityDirectory.js" type="text/javascript"></script>
+
+<script type="text/javascript" language="javascript" src="/common/nMenu.js"></script>
+<style type="text/css">
+	td.r { text-align: right; margin: 0px; margin-left: auto;}
+	td.l { text-align: left; margin: 0px; margin-right: auto; }
+	td.c { text-align: center; margin: 0px auto; }
+	tr.qcol { background: #dde6ed; }
+	a.archLinkColor { color: #353637; }tr.alt { background-color: #f1f4f9; }	.DirectoryCategoryText, .BioName {
+		font-family: arial;
+		font-size: 12pt;
+		color: Black;
+		font-weight: bold;
+	}
+	.DirectoryNormalText, .BioText { 
+		font-family: arial;
+		font-size: 8pt;
+		color: Black;
+		font-weight: normal;
+	}
+	.DirectoryLinksText, .BioLink { 
+		font-family: arial;
+		font-size: 8pt;
+		color: Black;
+		font-weight: normal;
+	}
+	.BioLink { 
+		color: #1e6cb5;
+	}
+	.BioName { 
+		border: 0px;
+		padding: 0px;
+		color: #4f7330;
+	}
+	.DirectoryNormalText label { font-weight: bold; }
+	.DirectoryCategoryText { margin-bottom: 1em; }
+	.DirectoryNormalText p { margin: 0px 0px 10px 0px; }
+</style>
+
+<div id="CityDirectoryLeftMargin" style="margin-left: 20px;">
+		<div class="BioText" style="float: left;">
+<h1 class="BioName">Shatara Moore</h1> &nbsp;		<div class="BioBottomBorder"></div>
+		<div>		<a class="BioLink" href="https://www.paristexas.gov/Directory.aspx?DID=67">City Council</a><br>Title: Council Member District 1
+<br><script type="text/javascript" language="javascript"><!--
+	var wsd="smoore";
+	var xsd="paristexas.gov";
+	var ysd="email Council Member Moore";
+	var zsd = document.write("<a class='BioLink' href=\"mailto:" + wsd + '@' + xsd + '\">'+ ysd + '</a>');
+//--></script><a class="BioLink" href="mailto:smoore@paristexas.gov">email Council Member Moore</a>		</div>	</div>	<br style="clear: left;"><br style="font-size: 8px;">
+	<div class="BioText fr-view responsiveEditor">
+<table style="width: 100%; border-collapse: collapse; border-spacing: 0px; border: none rgb(176, 192, 208); empty-cells: show; max-width: 100%; box-sizing: inherit; background-color: rgb(221, 229, 237); text-decoration: none; font-size: 0.9rem;" fr-original-style="width: 100%;"><tbody fr-original-style="" style="box-sizing: inherit;"><tr fr-original-style="" style="box-sizing: inherit; background-color: rgb(255, 255, 255); border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: rgb(176, 192, 208); border-bottom-color: rgb(176, 192, 208); border-left-color: rgb(176, 192, 208); border-image: initial; border-top-style: initial; border-top-color: initial;"><td style="width: 50%; min-width: 5px; padding: 0.35em; vertical-align: top; box-sizing: inherit; user-select: text; border: 1px solid rgb(221, 221, 221); text-align: left; text-decoration: none;" fr-original-style="width: 50.0000%;"><img src="https://www.paristexas.gov/ImageRepository/Document?documentId=5705" style="display: block; vertical-align: top; margin: 5px auto 5px 0px; text-align: left; border: 0px; height: auto; max-width: 100%; cursor: pointer; padding: 0px 1px; user-select: none; position: relative; box-sizing: inherit;" alt="" fr-original-style="display: block; vertical-align: top; margin: 5px auto 5px 0px; text-align: left;" fr-original-class="fr-draggable"></td><td fr-original-style="" style="padding: 0.35em; min-width: 5px; vertical-align: top; box-sizing: inherit; user-select: text; border: 1px solid rgb(221, 221, 221); text-align: left; text-decoration: none;"><h1 fr-original-style="" fr-original-class="headline" style="font-size: 1.5em; margin: 0px; color: rgb(79, 115, 48); font-weight: 900; font-family: Lato; font-style: normal; text-decoration: none; box-sizing: inherit;">Council Member District 1</h1>Mrs. Shatara Moore<h3 fr-original-style="" fr-original-class="subhead2" style="font-size: 1.2em; font-weight: 700; margin: 1.4em 0px 0px; font-family: Lato; font-style: normal; color: rgb(79, 115, 48); text-decoration: none; box-sizing: inherit;" aria-level="2" role="heading">Term Expires</h3>May 2026<br fr-original-style="" style="box-sizing: inherit;"><br fr-original-style="" style="box-sizing: inherit;"><a href="mailto:smoore@paristexas.gov" fr-original-style="" style="background-color: transparent; transition: color 333ms cubic-bezier(0.45, 0.45, 0.45, 1) 0s, background-color 333ms cubic-bezier(0.45, 0.45, 0.45, 1) 0s; color: rgb(30, 108, 181); user-select: auto; text-decoration: none; box-sizing: inherit; font-weight: 700;">email Council Member Moore</a></td></tr></tbody></table>&nbsp;
+    </div><br><a href="https://www.paristexas.gov/Directory.aspx" class="DirectoryLinksText" style="font-weight: bold;">Return to Staff Directory</a><br>
+	<br>
+	<span style="font-family: arial; font-size: 12pt; color: Black;">
+		
+	</span>
+</div>
+<!-- END CityDirectoryContent.aspx ***** -->
+</div>
+<script type="text/javascript">order+='ModuleContent\n'</script>
+
+		<input type="submit" name="ctl00$ctl00$MainContent$ctl00_liveEditSpawnWindow" value="" id="ctl00_ctl00_MainContent_ctl00_liveEditSpawnWindow" disabled="disabled" aria-hidden="true" style="display: none;">
+	
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","CancelControlID":"ctl00_LiveEditCloseButton","PopupControlID":"ctl00_ctl00_MainContent_ctl00_liveEditPopupWindow","PopupDragHandleControlID":"ctl00_liveEditTitleBar","dynamicServicePath":"/directory.aspx","id":"editItemBehavior"}, null, null, $get("ctl00_ctl00_MainContent_ctl00_liveEditSpawnWindow"));
+});
+//]]>
+</script>
+<input name="__RequestVerificationToken" type="hidden" value="BW3L9Y2l6Jo0wKGtsWcoP_AefnUCFIBY_xWOdjvG7TqWzJkuVbqmSB7PWOCKtCCUSsDczHowkVaXLWw7LBH2YGfv2QlgQXEIaTu_Ktc8yDY1" role="presentation"></form>
+	<form id="aspnetSearchForm" name="aspnetSearchForm" style="display:none;" action="/Search.aspx" method="get" role="presentation">
+		<input name="SearchString" type="hidden" value="" role="presentation">
+	</form>
+	
+	
+	
+	</div>
+	 
+</div>	
+
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: none;" role="presentation">	<div id="cc176fce5e-378f-4e69-aaa2-9d44f34b3327" data-containerid="176fce5e-378f-4e69-aaa2-9d44f34b3327" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="structuralContainer9" class="siteSidebar" style="min-height: 957px;">
+<nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav" aria-label="Secondary">
+
+
+
+
+
+	<ol id="secondaryMenusecondaryNav" data-parent="4" class="rootNavMenu flyoutNav">
+	<li aria-haspopup="false" id="SideItem314" class="topMenuItem" data-display-main-item-sub-menu-indicators="False" data-pageid="314" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="https://www.paristexas.gov/313/ADA-Forms-and-Procedure" target="_self" aria-haspopup="false">ADA Forms and Procedures</a>
+			</li>
+	<li aria-haspopup="false" id="SideItem312" class="topMenuItem" data-display-main-item-sub-menu-indicators="False" data-pageid="312" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="https://www.smart911.com/smart911/ref/reg.action?pa=paristexas" target="_blank" aria-haspopup="false" aria-label="RAVE Mobile Alerts Opens in new window" rel="noopener">RAVE Mobile Alerts</a>
+			</li>
+	<li aria-haspopup="false" id="SideItem332" class="topMenuItem" data-display-main-item-sub-menu-indicators="False" data-pageid="332" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="https://www.paristexas.gov/332/Online-Payments" target="_self" aria-haspopup="false">Online Payments</a>
+			</li>
+	<li aria-haspopup="false" id="SideItem82" class="topMenuItem" data-display-main-item-sub-menu-indicators="False" data-pageid="82" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="https://www.paristexas.gov/Directory.aspx" target="_self" aria-haspopup="false">Staff Directory</a>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = true;
+		});
+	</script>
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//Init secondary menu
+			var setupDraggable = menuManager.isSideMenuEditable;
+			var urlToGetHiddenMenus = '/Pages/MenuSecondary/HiddenSecondarySubMenus?pageID=1&moduleID=4&themeID=1&menuContainerID=secondaryNav';
+			var menuID = 'secondaryMenusecondaryNav';
+			menuManager.setMOMMode(2, SIDE_MENU);
+			menuManager.setupMenu(menuID, 'secondaryNav', SIDE_MENU, setupDraggable, urlToGetHiddenMenus);
+		});
+	</script>
+
+
+
+
+</nav>
+</div>
+</div></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer10">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer4" role="presentation">	<div id="cc130166bc-70c0-4354-83cd-f13bf13ac1bf" data-containerid="130166bc-70c0-4354-83cd-f13bf13ac1bf" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-smoothscrolling="True">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="5b163419-e24e-40dc-9c1e-6c234ed38f54">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id3cf24e3a-aa0a-4585-85e5-b9caac99f1d3" style="height: 188px;" data-widgetcontainerid="3cf24e3a-aa0a-4585-85e5-b9caac99f1d3">
+	
+<div data-widget-id="894ccc22-d7c1-42d1-9895-d0efdbddc25e" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget894ccc22-d7c1-42d1-9895-d0efdbddc25e" class="widget widgetGraphicLinks skin1 widgetOptionSet15 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:64em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid6 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.paristexas.gov/641/RAVE-Alert" target="_self" class="fancyButton fancyButton143 ">
+		<span>
+			<span><span class="text">Sign up for Alerts</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton143.fancyButton:link,.fancyButton143.fancyButton:visited, .fancyButton143div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton143.fancyButton:hover,.fancyButton143.fancyButton:focus,.fancyButton143.fancyButton:active,.fancyButton143.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton143.fancyButton:link > span,.fancyButton143.fancyButton:visited > span, .fancyButton143div.fancyButton > span{
+}
+.fancyButton143.fancyButton:hover > span,.fancyButton143.fancyButton:focus > span,.fancyButton143.fancyButton:active > span,.fancyButton143.fancyButton.hover > span{
+}
+.fancyButton143.fancyButton .text{
+	color: #353637;
+	font-size: 1.4em;
+	font-family: "Fira Sans";
+	text-align: center;
+	padding-top: 120px;
+	font-weight: 800;
+	text-decoration: none;
+	padding-top: 120px;
+	background-image: url('/ImageRepository/Document?documentID=2760');
+	background-repeat: no-repeat;
+	background-position: center top;
+	opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.fancyButton143.fancyButton:hover .text,.fancyButton143.fancyButton:focus .text,.fancyButton143.fancyButton:active .text,.fancyButton143.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=2761');
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.paristexas.gov/435" target="_self" class="fancyButton fancyButton144 ">
+		<span>
+			<span><span class="text">Pay a Bill or Ticket</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton144.fancyButton:link,.fancyButton144.fancyButton:visited, .fancyButton144div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton144.fancyButton:hover,.fancyButton144.fancyButton:focus,.fancyButton144.fancyButton:active,.fancyButton144.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton144.fancyButton:link > span,.fancyButton144.fancyButton:visited > span, .fancyButton144div.fancyButton > span{
+}
+.fancyButton144.fancyButton:hover > span,.fancyButton144.fancyButton:focus > span,.fancyButton144.fancyButton:active > span,.fancyButton144.fancyButton.hover > span{
+}
+.fancyButton144.fancyButton .text{
+	color: #353637;
+	font-size: 1.4em;
+	font-family: "Fira Sans";
+	text-align: center;
+	padding-top: 120px;
+	font-weight: 800;
+	text-decoration: none;
+	padding-top: 120px;
+	background-image: url('/ImageRepository/Document?documentID=2766');
+	background-repeat: no-repeat;
+	background-position: center top;
+	opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.fancyButton144.fancyButton:hover .text,.fancyButton144.fancyButton:focus .text,.fancyButton144.fancyButton:active .text,.fancyButton144.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=2767');
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://public.mygov.us/paris_texas" target="_blank" class="fancyButton fancyButton145 " aria-label="Permits &amp; Inspections Opens in new window" rel="noopener">
+		<span>
+			<span><span class="text">Permits &amp; Inspections</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton145.fancyButton:link,.fancyButton145.fancyButton:visited, .fancyButton145div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton145.fancyButton:hover,.fancyButton145.fancyButton:focus,.fancyButton145.fancyButton:active,.fancyButton145.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton145.fancyButton:link > span,.fancyButton145.fancyButton:visited > span, .fancyButton145div.fancyButton > span{
+}
+.fancyButton145.fancyButton:hover > span,.fancyButton145.fancyButton:focus > span,.fancyButton145.fancyButton:active > span,.fancyButton145.fancyButton.hover > span{
+}
+.fancyButton145.fancyButton .text{
+	color: #353637;
+	font-size: 1.4em;
+	font-family: "Fira Sans";
+	text-align: center;
+	padding-top: 120px;
+	font-weight: 800;
+	text-decoration: none;
+	padding-top: 120px;
+	background-image: url('/ImageRepository/Document?documentID=2768');
+	background-repeat: no-repeat;
+	background-position: center top;
+	opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.fancyButton145.fancyButton:hover .text,.fancyButton145.fancyButton:focus .text,.fancyButton145.fancyButton:active .text,.fancyButton145.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=2769');
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.paristexas.gov/285/Laserfiche" target="_self" class="fancyButton fancyButton146 ">
+		<span>
+			<span><span class="text">Documents &amp; Public Notices</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton146.fancyButton:link,.fancyButton146.fancyButton:visited, .fancyButton146div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton146.fancyButton:hover,.fancyButton146.fancyButton:focus,.fancyButton146.fancyButton:active,.fancyButton146.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton146.fancyButton:link > span,.fancyButton146.fancyButton:visited > span, .fancyButton146div.fancyButton > span{
+}
+.fancyButton146.fancyButton:hover > span,.fancyButton146.fancyButton:focus > span,.fancyButton146.fancyButton:active > span,.fancyButton146.fancyButton.hover > span{
+}
+.fancyButton146.fancyButton .text{
+	color: #353637;
+	font-size: 1.4em;
+	font-family: "Fira Sans";
+	text-align: center;
+	padding-top: 120px;
+	font-weight: 800;
+	text-decoration: none;
+	padding-top: 120px;
+	background-image: url('/ImageRepository/Document?documentID=2762');
+	background-repeat: no-repeat;
+	background-position: center top;
+	opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.fancyButton146.fancyButton:hover .text,.fancyButton146.fancyButton:focus .text,.fancyButton146.fancyButton:active .text,.fancyButton146.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=2763');
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.paristexas.gov/calendar.aspx" target="_self" class="fancyButton fancyButton202 ">
+		<span>
+			<span><span class="text">Calendar</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton202.fancyButton:link,.fancyButton202.fancyButton:visited, .fancyButton202div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton202.fancyButton:hover,.fancyButton202.fancyButton:focus,.fancyButton202.fancyButton:active,.fancyButton202.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton202.fancyButton:link > span,.fancyButton202.fancyButton:visited > span, .fancyButton202div.fancyButton > span{
+}
+.fancyButton202.fancyButton:hover > span,.fancyButton202.fancyButton:focus > span,.fancyButton202.fancyButton:active > span,.fancyButton202.fancyButton.hover > span{
+}
+.fancyButton202.fancyButton .text{
+	color: #353637;
+	font-size: 1.4em;
+	font-family: "Fira Sans";
+	text-align: center;
+	padding-top: 120px;
+	font-weight: 800;
+	text-decoration: none;
+	padding-top: 120px;
+	background-image: url(/ImageRepository/Document?documentID=3231);
+	background-repeat: no-repeat;
+	background-position: center top;
+	opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.fancyButton202.fancyButton:hover .text,.fancyButton202.fancyButton:focus .text,.fancyButton202.fancyButton:active .text,.fancyButton202.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url(/ImageRepository/Document?documentID=3232);
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://experience.arcgis.com/experience/83fe755bd3b144a4a69d42048aacd89a" target="_self" class="fancyButton fancyButton178 ">
+		<span>
+			<span><span class="text">City Maps</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton178.fancyButton:link,.fancyButton178.fancyButton:visited, .fancyButton178div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton178.fancyButton:hover,.fancyButton178.fancyButton:focus,.fancyButton178.fancyButton:active,.fancyButton178.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton178.fancyButton:link > span,.fancyButton178.fancyButton:visited > span, .fancyButton178div.fancyButton > span{
+}
+.fancyButton178.fancyButton:hover > span,.fancyButton178.fancyButton:focus > span,.fancyButton178.fancyButton:active > span,.fancyButton178.fancyButton.hover > span{
+}
+.fancyButton178.fancyButton .text{
+	color: #353637;
+	font-size: 1.4em;
+	font-family: "Fira Sans";
+	text-align: center;
+	padding-top: 120px;
+	font-weight: 800;
+	text-decoration: none;
+	padding-top: 120px;
+	background-image: url('/ImageRepository/Document?documentID=3012');
+	background-repeat: no-repeat;
+	background-position: center top;
+	opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.fancyButton178.fancyButton:hover .text,.fancyButton178.fancyButton:focus .text,.fancyButton178.fancyButton:active .text,.fancyButton178.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=3013');
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer11">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer5" role="presentation">	<div id="cce566a1e2-86f0-462b-a854-cf57cdb32048" data-containerid="e566a1e2-86f0-462b-a854-cf57cdb32048" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="40">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="height: auto;" data-widgetcontainerid="6ceb38e7-fca3-4a60-84d8-21c1c4fbb0de">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id837a2bf3-4532-41af-8b3e-384deabbfa22" style="height: 197px;" data-widgetcontainerid="837a2bf3-4532-41af-8b3e-384deabbfa22">
+	
+	<div data-widget-id="46edcaeb-133f-48fe-a13c-096ca5981da9" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink46edcaeb-133f-48fe-a13c-096ca5981da9" class="widget widgetQuickLinks skin5 widgetOptionSet16 wide" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeader46edcaeb-133f-48fe-a13c-096ca5981da9">
+			<header class="widgetHeader" id="quickLinksHeader46edcaeb-133f-48fe-a13c-096ca5981da9" role="presentation">
+		<div class="">
+					<h3><a style="" href="https://www.paristexas.gov/QuickLinks.aspx?CID=33">Quick Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  wide">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.paristexas.gov/jobs.aspx" target="_blank" aria-label="Employment Opportunities Opens in new window" rel="noopener">Employment Opportunities</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.visitparistexas.com" target="_self">Visit Paris Texas</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://ecode360.com/PA6438" target="_blank" aria-label="Paris Municipal Code Opens in new window" rel="noopener">Paris Municipal Code</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col10" style="height: auto;" data-widgetcontainerid="f68bed94-fcf1-445c-8124-a4a473196422">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col10 first last id94111006-95d8-48b3-b617-9950d3ed3844" style="height: 197px;" data-widgetcontainerid="94111006-95d8-48b3-b617-9950d3ed3844">
+	
+	<div data-widget-id="fe4b6499-39f9-47a8-abed-584df5f418ea" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklinkfe4b6499-39f9-47a8-abed-584df5f418ea" class="widget widgetQuickLinks skin5 widgetOptionSet17 wide" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeaderfe4b6499-39f9-47a8-abed-584df5f418ea">
+			<header class="widgetHeader" id="quickLinksHeaderfe4b6499-39f9-47a8-abed-584df5f418ea" role="presentation">
+		<div class="">
+					<h3><a style="" href="https://www.paristexas.gov/QuickLinks.aspx?CID=34">Helpful Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  wide">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.paristexas.gov/trash" target="_blank" aria-label="Sanitation and Solid Waste Collection Opens in new window" rel="noopener">Sanitation and Solid Waste Collection</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.paristexas.gov/localutilities" target="_blank" aria-label="Local Utility Services Opens in new window" rel="noopener">Local Utility Services</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.paristexas.gov/airport" target="_blank" aria-label="Cox Field Airport Opens in new window" rel="noopener">Cox Field Airport</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6 last" style="height: auto;" data-widgetcontainerid="56419bd7-6ba6-4e15-b18d-26126f3f10fd">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id30bbed8f-1e1c-49b5-aaca-6ffd660de0e3" style="height: 197px;" data-widgetcontainerid="30bbed8f-1e1c-49b5-aaca-6ffd660de0e3">
+	
+<div data-widget-id="e8692bf1-ccf6-4754-8c2b-0323a615bfb9" data-widget-controller-path="/Faq/Widget">
+  
+
+
+
+
+
+
+
+	<section id="widgetFaqe8692bf1-ccf6-4754-8c2b-0323a615bfb9" class="widget widgetFAQ skin5 widgetOptionSet18 narrow" data-modulewidgettype="FAQ" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="faqHeadere8692bf1-ccf6-4754-8c2b-0323a615bfb9">
+			<header class="widgetHeader" id="faqHeadere8692bf1-ccf6-4754-8c2b-0323a615bfb9" role="presentation">
+		<div class="">
+			<h3><a href="https://www.paristexas.gov/Faq.aspx?TID=33">Frequently Asked Questions</a></h3>
+				</div>
+	</header>
+	<div class="widgetBody pageStyles cpGrid cpGrid1 ">
+		<div class="row  narrow">
+					<link href="/Areas/FAQ/Assets/Styles/Widget.css" rel="stylesheet">
+					<div class="col col1">
+						<ol class="semanticList" style="columns: 1">
+
+
+        <li style="position: relative" class="widgetItem">
+            <a class="widgetDesc widgetFAQQuestion" href="https://www.paristexas.gov/Faq.aspx?QID=144">How do I take care of a traffic citation?</a>
+        </li>
+
+
+        <li style="position: relative" class="widgetItem">
+            <a class="widgetDesc widgetFAQQuestion" href="https://www.paristexas.gov/Faq.aspx?QID=142">How do we announce weather warnings to the public?</a>
+        </li>
+
+
+        <li style="position: relative" class="widgetItem">
+            <a class="widgetDesc widgetFAQQuestion" href="https://www.paristexas.gov/Faq.aspx?QID=145">What are the codes regarding outside storage?</a>
+        </li>
+						</ol>
+					</div>
+		</div>
+        	</div>
+	<div class="widgetFooter">	
+	</div>
+    <div class="addItemModal hidden">
+        <div class="url hidden">/FAQ.aspx</div>
+    </div>
+
+	</section>
+
+
+<script>
+	function handleExpandCollapse(e) {
+		const element = e.currentTarget;
+		const answer = document.getElementById(element.getAttribute("aria-controls")).parentElement;
+		const expandArrow = element.getElementsByClassName("widgetFAQ--arrow")[0];
+		if (answer.classList.contains("hidden")) {
+			expandArrow.classList.add('widgetFAQ--arrow-expanded');
+			expandArrow.classList.remove('widgetFAQ--arrow-collapsed');
+			answer.classList.remove("hidden");
+			element.setAttribute("aria-expanded", "true");
+		} else {
+			expandArrow.classList.add('widgetFAQ--arrow-collapsed');
+			expandArrow.classList.remove('widgetFAQ--arrow-expanded');
+			answer.classList.add("hidden");
+			element.setAttribute("aria-expanded", "false");
+		}
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		e.stopPropagation();
+	}
+    document.querySelectorAll(".widgetFAQ--question a").forEach(element => {
+        // When the link is clicked, expand or collapse the answer
+		element.addEventListener("click", handleExpandCollapse);
+    });
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer12">
+<div class="siteWrap"><footer data-cprole="contentContainer" id="contentContainer6" class="siteFooter">	<div id="cc7fa065b8-9521-4357-b45f-7fa7245d28d5" data-containerid="7fa065b8-9521-4357-b45f-7fa7245d28d5" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="40">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="791de3a4-5e50-4b5f-bac7-3b48b840842d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id4abb8979-f7e6-461c-a3b9-b3769544c1f4" style="height: 15px;" data-widgetcontainerid="4abb8979-f7e6-461c-a3b9-b3769544c1f4">
+	
+
+<div class="widget widgetSpacer" id="a955518a-7853-41b9-967a-81c6df1a5cdd" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col6 first" style="height: auto;" data-widgetcontainerid="e4f5cacf-5d2f-42e9-a32e-743b1b1ea300">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last ida6abc7f4-684d-4c97-a035-5c673df3dadd" style="height: 62px;" data-widgetcontainerid="a6abc7f4-684d-4c97-a035-5c673df3dadd">
+	
+<div data-widget-id="6a00fed5-7539-4b0d-95ba-d7a9752525a8" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget6a00fed5-7539-4b0d-95ba-d7a9752525a8" class="widget widgetGraphicLinks skin1 widgetOptionSet19 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row autoWidths center wide"><!--
+--><div class="col col1 first "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.paristexas.gov/facebook" target="_self"><img src="https://www.paristexas.gov/ImageRepository/Document?documentID=2772" class="graphicButtonLink" alt="Facebook" onmouseover="this.src='/ImageRepository/Document?documentID=2773'" onmouseout="this.src='/ImageRepository/Document?documentID=2772'" onfocus="this.src='/ImageRepository/Document?documentID=2773'" onblur="this.src='/ImageRepository/Document?documentID=2772'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.paristexas.gov/twitter" target="_self"><img src="https://www.paristexas.gov/ImageRepository/Document?documentID=2776" class="graphicButtonLink" alt="Twitter" onmouseover="this.src='/ImageRepository/Document?documentID=2777'" onmouseout="this.src='/ImageRepository/Document?documentID=2776'" onfocus="this.src='/ImageRepository/Document?documentID=2777'" onblur="this.src='/ImageRepository/Document?documentID=2776'"> </a></li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col14" style="height: auto;" data-widgetcontainerid="c372da19-9122-41ba-b642-452c20b34ea8">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col14 first last idf4ba3ae8-946b-490b-b0af-136dd8b372d6" style="height: 62px;" data-widgetcontainerid="f4ba3ae8-946b-490b-b0af-136dd8b372d6">
+	
+	<div data-widget-id="e139bdbc-2b86-4474-a9a4-8ff84c6f6b61" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklinke139bdbc-2b86-4474-a9a4-8ff84c6f6b61" class="widget widgetQuickLinks skin6 widgetOptionSet20 wide" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn">
+			<header class="widgetHeader" id="quickLinksHeadere139bdbc-2b86-4474-a9a4-8ff84c6f6b61" role="presentation">
+		<div class="">
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid7 ">
+        <div class="row autoWidths center wide">
+				<div class="col col1 first ">
+					<ol class="semanticList" role="presentation">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.paristexas.gov/" target="_self">Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList" role="presentation">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.paristexas.gov/directory.aspx" target="_self">Contact Us</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList" role="presentation">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.paristexas.gov/accessibility.aspx" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  last">
+					<ol class="semanticList" role="presentation">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.paristexas.gov/sitemap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList" role="presentation">
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList" role="presentation">
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList" role="presentation">
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col2" style="height: auto;" data-widgetcontainerid="a42ae706-9ead-41a7-a49c-f03ca07a49ad">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col2 first last idfd4f9567-79d6-40fe-902f-941046477595" style="height: 62px;" data-widgetcontainerid="fd4f9567-79d6-40fe-902f-941046477595">
+	
+<div data-widget-id="cb48abf2-a917-4f0f-85d3-eb9bc9ace84b" data-widget-controller-path="/Layout/WidgetShare">
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				setWidgetServiceClicking($("#widgetShareHeadercb48abf2-a917-4f0f-85d3-eb9bc9ace84b"), true, function () {
+					var $widgetBody = $('#widgetShareBodycb48abf2-a917-4f0f-85d3-eb9bc9ace84b');
+
+					if ($widgetBody.is(':visible')) {
+						var menuItems = $('.widgetItem a', $widgetBody);
+
+						$(menuItems[0]).focus();
+
+						$('.widgetItem', $widgetBody).unbind("keydown").bind("keydown", function (e) {
+
+							if (e.which === 9) {
+								var index = menuItems.index(e.target);
+
+								if ((index === 0 && e.shiftKey) || (index === (menuItems.length - 1) && !e.shiftKey)) {
+									$("#widgetShareHeadercb48abf2-a917-4f0f-85d3-eb9bc9ace84b").trigger('click').focus();
+								}
+							}
+			});
+					} else {
+						$('.widgetItem', $widgetBody).unbind("keydown");
+					}
+				});
+			});
+		</script>
+
+	<section id="widgetSharecb48abf2-a917-4f0f-85d3-eb9bc9ace84b" class="widget widgetShare skin4 widgetOptionSet6 flyOutParent wide" role="presentation">
+			<header id="widgetShareHeadercb48abf2-a917-4f0f-85d3-eb9bc9ace84b" class="widgetHeader" role="presentation">
+				<h3 role="presentation"><img alt="Share" class="imageHover" data-hover="/ImageRepository/Document?documentID=2751" data-image="/ImageRepository/Document?documentID=2750" src="https://www.paristexas.gov/ImageRepository/Document?documentID=2750" role="button" tabindex="0" data-ae-blurbtype="button" aria-expanded="false"></h3>
+	</header>
+    
+
+	</section>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col2 last" style="height: auto;" data-widgetcontainerid="63188246-1189-467c-8c47-86ed011dc216">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col2 first last id24bdfbd8-99da-4b93-9b48-264549c9ee64" style="height: 62px;" data-widgetcontainerid="24bdfbd8-99da-4b93-9b48-264549c9ee64">
+	
+<div data-widget-id="aad69249-1193-47c3-9b52-7574f9f8c5d3" data-widget-controller-path="/Layout/WidgetSiteTools">
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				setWidgetServiceClicking($("#widgetSiteToolsHeaderaad69249-1193-47c3-9b52-7574f9f8c5d3"), true, function () {
+					var $widgetBody = $('#widgetSiteToolsBodyaad69249-1193-47c3-9b52-7574f9f8c5d3');
+
+					if ($widgetBody.is(':visible')) {
+						var menuItems = $('.widgetItem a', $widgetBody);
+
+						$(menuItems[0]).focus();
+
+						$('.widgetItem', $widgetBody).unbind("keydown").bind("keydown", function (e) {
+
+							if (e.which === 9) {
+								var index = menuItems.index(e.target);
+
+								if ((index === 0 && e.shiftKey) || (index === (menuItems.length - 1) && !e.shiftKey)) {
+									$("#widgetSiteToolsHeaderaad69249-1193-47c3-9b52-7574f9f8c5d3").trigger('click').focus();
+								}
+							}
+						});
+					} else {
+						$('.widgetItem', $widgetBody).unbind("keydown");
+					}
+				});
+			});
+		</script>
+
+	<section id="widgetSiteToolsaad69249-1193-47c3-9b52-7574f9f8c5d3" class="widget widgetSiteTools skin4 widgetOptionSet8 flyOutParent wide" role="presentation">
+				<header id="widgetSiteToolsHeaderaad69249-1193-47c3-9b52-7574f9f8c5d3" class="widgetHeader" role="presentation">
+			<h3 role="presentation"><img alt="Site Tools" class="imageHover" data-hover="/ImageRepository/Document?documentID=2749" data-image="/ImageRepository/Document?documentID=2748" src="https://www.paristexas.gov/ImageRepository/Document?documentID=2748" role="button" tabindex="0" data-ae-blurbtype="button" aria-expanded="false"></h3>
+		</header>
+	
+
+	</section>
+
+
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="1ec27cea-9f93-44ee-bbef-7d58003bd054">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id9e9f0a28-a0f2-4d4c-859c-438af94c2fc1" style="height: 35px;" data-widgetcontainerid="9e9f0a28-a0f2-4d4c-859c-438af94c2fc1">
+	
+    <div data-widget-id="14143007-e1c5-4e61-928b-17196e1bf82c" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv14143007-e1c5-4e61-928b-17196e1bf82c" class="widget widgetInfoAdvanced skin6 widgetOptionSet5 wide" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn">
+			<header class="widgetHeader" id="header14143007-e1c5-4e61-928b-17196e1bf82c" role="presentation">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row wide">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList" role="presentation">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<div style="text-align: center; font-weight: 800;">The City of Paris&nbsp; &nbsp; &nbsp; &nbsp;135 SE 1st Street&nbsp; &nbsp; &nbsp; &nbsp;Paris, TX 75460&nbsp; &nbsp; &nbsp; &nbsp;<a href="tel: 903-785-7511" target="_self" class="Hyperlink">903-785-7511</a><br>
+</div>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv14143007-e1c5-4e61-928b-17196e1bf82c .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</footer></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer13">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer7" role="presentation">	<div id="cc14c0ca99-157e-4834-87a6-9cbd2dfa1498" data-containerid="14c0ca99-157e-4834-87a6-9cbd2dfa1498" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col20 first" style="height: auto;" data-widgetcontainerid="5bc5eaae-d5fd-4f90-8384-9bf9b15fe058">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col20 first last ide0ed71e9-997d-47b0-80ff-e751a5c147c8" style="height: 112px;" data-widgetcontainerid="e0ed71e9-997d-47b0-80ff-e751a5c147c8">
+	
+
+<div class="widget widgetSpacer" id="b9a87945-90f1-4adf-94b7-628f06c0aa03" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4 last" style="height: auto;" data-widgetcontainerid="d7d0bbd3-741b-4a75-8077-cd2833e3ddb6">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last id0cbf01ea-e9aa-487d-84fd-4b35634cc470" style="height: 112px;" data-widgetcontainerid="0cbf01ea-e9aa-487d-84fd-4b35634cc470">
+	
+
+<div class="widget image pageStyles" id="divImageOuter9e99b452-0fe9-4c07-b1c0-3177d13969d0" data-widget-id="9e99b452-0fe9-4c07-b1c0-3177d13969d0">
+    
+	<div class="widgetBody " id="divImage9e99b452-0fe9-4c07-b1c0-3177d13969d0">
+<img src="https://www.paristexas.gov/ImageRepository/Document?documentID=6568" alt="City of Paris logo">	</div>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="838e51c0-bfa8-4452-b744-8186388c598f">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last idc147d51e-0a92-4a86-97f4-a41bc93c15cd" style="height: 15px;" data-widgetcontainerid="c147d51e-0a92-4a86-97f4-a41bc93c15cd">
+	
+ 
+	<div data-widget-id="75b9d344-edc2-4823-88b3-542b95f55aef" data-modulename="customHtml" id="widgetCustomHtml75b9d344-edc2-4823-88b3-542b95f55aef" class="widget widgetCustomHtml skin1 narrow">
+	<div class="widgetBody pageStyles" id="widgetBody75b9d344-edc2-4823-88b3-542b95f55aef">
+		<div id="customHtml75b9d344-edc2-4823-88b3-542b95f55aef"><div><div id="google_translate_element" style="position: fixed; bottom: 0px; right: 20px; z-index: 5;"><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage" class="goog-te-gadget-simple" style="white-space: nowrap;"><img src="https://www.google.com/images/cleardot.gif" class="goog-te-gadget-icon" alt="Google Translate" style="background-image: url(&quot;https://translate.googleapis.com/translate_static/img/te_ctrl3.gif&quot;); background-position: -65px 0px;"><span style="vertical-align: middle;"><a aria-haspopup="true" class="VIpgJd-ZVi9od-xl07Ob-lTBxed" href="https://www.paristexas.gov/directory.aspx?eid=181#"><span>Select Language</span><img src="https://www.google.com/images/cleardot.gif" alt="Google Translate" width="1" height="1"><span style="border-left: 1px solid rgb(187, 187, 187);">​</span><img src="https://www.google.com/images/cleardot.gif" alt="Google Translate" width="1" height="1"><span aria-hidden="true" style="color: rgb(118, 118, 118);">▼</span></a></span></div></div></div></div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside></div>
+</div>
+</div>
+
+
+
+
+		<div id="bannerImagesJSON1" class="hidden"></div><div class="bannerObject external fixedBanner" id="bannerDivbanner1" style="min-height: 2393px; top: 0px; left: 0px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="false"><img class="bannerObject" width="2016px" style="position: absolute; left: 50%; margin: 0px 0px 0px -1008px; z-index: 2;" src="https://www.paristexas.gov/ImageRepository/Document?documentID=3181" data-is-delayed="false" alt=""><img class="bannerObject" width="2016px" style="position: absolute; display: none; left: 50%; margin: 0 0 0 -1008px;" src="/ImageRepository/Document?documentID=3182" data-is-delayed="true" data-delayed-image="/ImageRepository/Document?documentID=3182" alt=""><img class="bannerObject" width="2016px" style="position: absolute; display: none; left: 50%; margin: 0 0 0 -1008px;" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-is-delayed="true" data-delayed-image="/ImageRepository/Document?documentID=3183" alt=""><img class="bannerObject" width="2016px" style="position: absolute; display: none; left: 50%; margin: 0 0 0 -1008px;" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-is-delayed="true" data-delayed-image="/ImageRepository/Document?documentID=3184" alt=""><img class="bannerObject" width="2016px" style="position: absolute; display: none; left: 50%; margin: 0 0 0 -1008px;" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-is-delayed="true" data-delayed-image="/ImageRepository/Document?documentID=3185" alt=""><img class="bannerObject" width="2016px" style="position: absolute; left: 50%; margin: 0px 0px 0px -1008px; z-index: 3; opacity: 0.000355264;" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-is-delayed="true" data-delayed-image="/ImageRepository/Document?documentID=3186" alt=""></div>
+		
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner1',
+								{"BannerOptionID":1,"ThemeID":1,"SlotName":"banner1","Name":"Interior Banner Pics","IsDefault":true,"BannerMode":3,"SlideShowSlideTiming":"8","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":false,"ImageAlignment":2,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":1,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"alignCenter viewport","BannerImages":[{"BannerImageID":51,"BannerOptionID":1,"FileName":"/ImageRepository/Document?documentID=3181","Height":408,"Width":2016,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":52,"BannerOptionID":1,"FileName":"/ImageRepository/Document?documentID=3182","Height":408,"Width":2016,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":2,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":53,"BannerOptionID":1,"FileName":"/ImageRepository/Document?documentID=3183","Height":408,"Width":2016,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":3,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":54,"BannerOptionID":1,"FileName":"/ImageRepository/Document?documentID=3184","Height":408,"Width":2016,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":4,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":55,"BannerOptionID":1,"FileName":"/ImageRepository/Document?documentID=3185","Height":408,"Width":2016,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":5,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":56,"BannerOptionID":1,"FileName":"/ImageRepository/Document?documentID=3186","Height":408,"Width":2016,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":6,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""}],"BannerVideos":[{"BannerVideoID":1,"BannerOptionID":1,"VideoFileName":"","ImageFileName":"EmptyBannerBkg201804191209361906.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								'/App_Themes/Interior/Images/',
+								'Slideshow');
+						});
+				});
+			</script>
+
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '',
+				targetType: 0
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+	
+	<script type="text/javascript">function dynamicStretchContainers () {Core.Layout.stretchContainers('#structuralContainer9');}</script>
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <script type="text/javascript">!function(){var b=function(){window.__AudioEyeSiteHash = "05437ea358b855319e1f02ff1989b674"; var a=document.createElement("script");a.src="https://wsmcdn.audioeye.com/aem.js";a.type="text/javascript";a.setAttribute("async","");document.getElementsByTagName("body")[0].appendChild(a)};"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",b):window.attachEvent&&window.attachEvent("onload",b):b()}();</script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;" role="presentation" aria-hidden="true" tabindex="-1">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Fira+Sans:100,100italic,200,200italic,300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,italic,regular|Lato:100,100italic,300,300italic,700,700italic,900,900italic,italic,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" role="presentation" aria-hidden="true" tabindex="-1">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;" role="presentation"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div id="ctl00_ctl00_MainContent_ctl00_liveEditPopupWindow" class="modalContainer modalContainerCP" style="display: none; position: fixed; z-index: 100001;">
+	<div id="ctl00_liveEditTitleBar" class="modalTitleLeft"><h3 id="ctl00_LiveEditModalTitle" class="modalTitle">Live Edit</h3><a id="ctl00_LiveEditCloseButton" class="modalClose" aria-label="Close this modal" href="https://www.paristexas.gov/" title="Close this window"><svg viewBox="0 0 25 25" id="modalIconClose" role="presentation" aria-hidden="true" tabindex="-1"><polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon></svg></a></div><div id="ctl00_liveEditContentLeft" class="modalContentLeft"><div id="ctl00_liveEditContentRight" class="modalContentRight"><div id="ctl00_liveEditContent" class="modalContent"><iframe style="display: none; border: none;" src="about:blank" id="liveEditDialog" title="Live Edit Dialog" name="liveEditDialog"></iframe></div></div></div><div id="ctl00_liveEditFooter" class="modalBottomLeft"><div id="ctl00_liveEditfooterbar" class="modalBottomRight"><div id="ctl00_liveEditfooterbar1" class="modalBottom"></div></div></div>
+</div><div id="editItemBehavior_backgroundElement" class="modalBackground" style="display: none; position: fixed; left: 0px; top: 0px; z-index: 10000;"></div><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu416" class="contentTop mainNavMegaMenu megaMenuContainer pageID_416 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 21.8906px; width: 1221px; top: 167.781px;">	<div id="cc4fea26e0-5792-4572-8b96-63cf341d8183" data-containerid="4fea26e0-5792-4572-8b96-63cf341d8183" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu8" class="contentTop mainNavMegaMenu megaMenuContainer pageID_8 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 21.8906px; width: 1221px; top: 167.781px;">	<div id="cc1269528f-830e-4102-95ab-c205ecff3e77" data-containerid="1269528f-830e-4102-95ab-c205ecff3e77" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu70" class="contentTop mainNavMegaMenu megaMenuContainer pageID_70 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 21.8906px; width: 1221px; top: 167.781px;">	<div id="cc9546260e-76de-4866-a6c3-6458b6b7780a" data-containerid="9546260e-76de-4866-a6c3-6458b6b7780a" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu417" class="contentTop mainNavMegaMenu megaMenuContainer pageID_417 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 21.8906px; width: 1221px; top: 167.781px;">	<div id="cc8a251f78-8077-48aa-a784-86aac6aba990" data-containerid="8a251f78-8077-48aa-a784-86aac6aba990" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu9" class="contentTop mainNavMegaMenu megaMenuContainer pageID_9 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 21.8906px; width: 1221px; top: 167.781px;">	<div id="cc198a874a-a7a3-452b-812d-f63befeea162" data-containerid="198a874a-a7a3-452b-812d-f63befeea162" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><div id="widgetShareBodycb48abf2-a917-4f0f-85d3-eb9bc9ace84b" class="widgetBody flyOut bottom rightEdge widget widgetShare skin4 cpGrid cpGrid1 moved" style="display: none; position: absolute; z-index: 100; top: 2223.48px; left: 1021.56px;" data-parentid="widgetSharecb48abf2-a917-4f0f-85d3-eb9bc9ace84b">
+        <div class="row                   
+ wide">
+	<div class="col col1 first last">
+		<ol class="semanticList">
+                <li class="widgetItem"><a tabindex="0" role="link" class="widgetShareFacebook shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.paristexas.gov/Layout/WidgetShare/ShareLink/Facebook" target="_blank" aria-label="Facebook Opens in new window" rel="noopener" data-ae-ignore-keys="tab shift+tab">Facebook</a></li>
+                <li class="widgetItem"><a tabindex="0" role="link" class="widgetShareTwitter shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.paristexas.gov/Layout/WidgetShare/ShareLink/Twitter" target="_blank" aria-label="Twitter Opens in new window" rel="noopener" data-ae-ignore-keys="tab shift+tab">Twitter</a></li>
+                <li class="widgetItem"><a tabindex="0" role="link" class="widgetSharePinterest shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.paristexas.gov/Layout/WidgetShare/ShareLink/Pinterest" target="_blank" aria-label="Pinterest Opens in new window" rel="noopener" data-ae-ignore-keys="tab shift+tab">Pinterest</a></li>
+                <li class="widgetItem"><a tabindex="0" role="link" class="widgetShareDelicious shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.paristexas.gov/Layout/WidgetShare/ShareLink/Delicious" target="_blank" aria-label="Delicious Opens in new window" rel="noopener" data-ae-ignore-keys="tab shift+tab">Delicious</a></li>
+                <li class="widgetItem"><a tabindex="0" role="link" class="widgetShareBlogger shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.paristexas.gov/Layout/WidgetShare/ShareLink/Blogger" target="_blank" aria-label="Blogger Opens in new window" rel="noopener" data-ae-ignore-keys="tab shift+tab">Blogger</a></li>
+                <li class="widgetItem"><a tabindex="0" role="link" class="widgetShareLinkedIn shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.paristexas.gov/Layout/WidgetShare/ShareLink/LinkedIn" target="_blank" aria-label="LinkedIn Opens in new window" rel="noopener" data-ae-ignore-keys="tab shift+tab">LinkedIn</a></li>
+		</ol>
+	</div>
+
+        </div>
+    </div><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr"><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""><div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr">Original text</div></div><div class="VIpgJd-yAWNEb-hvhgNd-k77Iif"><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Rate this translation</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Your feedback will be used to help improve Google Translate</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Good translation" aria-label="Good translation" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Poor translation" aria-label="Poor translation" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0" title="voting"></iframe></div></div></div><div id="widgetSiteToolsBodyaad69249-1193-47c3-9b52-7574f9f8c5d3" class="widgetBody whiteIcons flyOut bottom rightEdge widget widgetSiteTools skin4 cpGrid cpGrid1 moved" style="display: none; position: absolute; z-index: 100; top: 2223.48px; left: 1085.33px;" data-parentid="widgetSiteToolsaad69249-1193-47c3-9b52-7574f9f8c5d3">
+         <div class="row                   
+ wide">
+	<div class="col col1 first last">
+		<ol class="semanticList">
+					<li class="widgetItem"><a tabindex="0" role="link" aria-label="Site Tools Home" class="widgetSiteToolsHome siteToolsService" href="https://www.paristexas.gov/" data-ae-ignore-keys="tab shift+tab">Home</a></li>
+					<li class="widgetItem"><a tabindex="0" role="link" aria-label="Site Tools My Account" class="widgetSiteToolsMyAccount siteToolsService" href="https://www.paristexas.gov/MyAccount" data-ae-ignore-keys="tab shift+tab">My Account</a></li>
+					<li id="PrinterFriendlyaad69249-1193-47c3-9b52-7574f9f8c5d3" class="widgetItem"><a tabindex="0" aria-label="Site Tools Printer Friendly View opens in a new window" role="link" class="widgetSiteToolsPrinterFriendly siteToolsService" onkeypress="if (event.which == 13) { this.onclick(); }" onclick="Core.Layout.dynamicJavascript('printPreview();'); return false;" href="https://www.paristexas.gov/directory.aspx?eid=181#PrinterFriendlyaad69249-1193-47c3-9b52-7574f9f8c5d3" data-ae-ignore-keys="tab shift+tab">Printer Friendly</a></li>
+					<li class="widgetItem"><a tabindex="0" role="link" aria-label="Site Tools Email Page" class="widgetSiteToolsEmailPage siteToolsService" href="https://www.paristexas.gov/EmailPage" data-ae-ignore-keys="tab shift+tab">Email Page</a></li>
+					<li class="widgetItem"><a tabindex="0" role="link" aria-label="Site Tools Contact Us" class="widgetSiteToolsContactUs siteToolsService" href="https://www.paristexas.gov/directory.aspx" data-ae-ignore-keys="tab shift+tab">Contact Us</a></li>
+					<li class="widgetItem"><a tabindex="0" role="link" aria-label="Site Tools RSS" class="widgetSiteToolsRSS siteToolsService" href="https://www.paristexas.gov/rss.aspx" data-ae-ignore-keys="tab shift+tab">RSS</a></li>
+					<li class="widgetItem"><a tabindex="0" role="link" aria-label="Site Tools Site Map" class="widgetSiteToolsSiteMap siteToolsService" href="https://www.paristexas.gov/SiteMap" data-ae-ignore-keys="tab shift+tab">Site Map</a></li>
+					<li id="TranslatePageaad69249-1193-47c3-9b52-7574f9f8c5d3" class="widgetItem"><a tabindex="0" aria-label="Site Tools Translate Page opens in a new window" role="link" class="widgetSiteToolsTranslatePage siteToolsService" onkeypress="if (event.which == 13) { this.onclick(); }" onclick="Core.Layout.dynamicJavascript('window.open(\'https://translate.google.com/translate?js=n&amp;sl=auto&amp;tl=es&amp;u=\' + document.location.href, \&quot;TranslateWindow\&quot;);'); return false;" href="https://www.paristexas.gov/directory.aspx?eid=181#TranslatePageaad69249-1193-47c3-9b52-7574f9f8c5d3" data-ae-ignore-keys="tab shift+tab">Translate Page</a></li>
+					<li class="widgetItem"><a tabindex="0" role="link" aria-label="Site Tools Notifications" class="widgetSiteToolsNotifications siteToolsService" href="https://www.paristexas.gov/list.aspx" data-ae-ignore-keys="tab shift+tab">Notifications</a></li>
+					<li class="widgetItem"><a tabindex="0" role="link" aria-label="Site Tools Documents" class="widgetSiteToolsDocuments siteToolsService" href="https://www.paristexas.gov/DocumentCenter" data-ae-ignore-keys="tab shift+tab">Documents</a></li>
+		</ol>
+	</div>
+
+		 </div>
+	</div><div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><iframe frameborder="0" class="VIpgJd-ZVi9od-xl07Ob-OEVmcd skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 2622px; height: 263px; display: none;"></iframe><div id="bannerSlideshowControls_banner1" class="bannerSlideshowControlsNew centered viewport ">
+			<a id="arrowPrev_banner1" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner1" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div><script src="https://wsmcdn.audioeye.com/aem.js" type="text/javascript" async=""></script><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b role="emphasis">&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div><script src="https://wsv3cdn.audioeye.com/bootstrap.js?h=05437ea358b855319e1f02ff1989b674" type="text/javascript" async=""></script><script async="" crossorigin="anonymous" src="https://wsv3cdn.audioeye.com/v2/scripts/loader.js?h=05437ea358b855319e1f02ff1989b674&amp;lang=en&amp;cb=2026-01-14"></script><script type="text/javascript" src="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-14/startup.bundle.js"></script><div id="ae_app" data-nosnippet="">
+    
+        <!--
+        Layout, Style or Voice Helpers
+    -->
+    <div id="ae_helpers" class="ae-module" style="display: none;">
+
+    
+<script type="text/javascript">
+AudioEye.layoutHelpers.push(function(ele){
+
+// Tabset function setup - Active Class is the class the li gets when the element is active
+// Function includes tabsetup, tab labels and keylooping
+function tabSet(listParent, listItem, listAnchor, activeClass, tabPanels){
+  // Setting roles and initial values
+  $ae(listParent).each(function(){
+    if ($ae(this).find(listItem).length > 1) {
+      if($ae(this).css('display') !== 'none'){
+        $ae(this).attr({'role':'tablist'});
+      }
+
+      $ae(this).find(listItem).attr({'role':'presentation'});
+      $ae(this).find(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+      $ae(this).find(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+      $ae(this).find(tabPanels).each(function(){
+        if($ae(this).parent().find(listParent).css('display') !== 'none'){
+          $ae(this).attr({'role':'tabpanel'});
+        }
+      });
+    }
+  });
+
+
+  // Encapsulate events - Key Navigation for tabsets without tabindex
+  ele.outerFind(listParent).each(function(){
+    if ($ae(this).find(listItem).length > 1) {
+      // Change active tab onclick event
+      $ae(this).find('a').click(function(){
+        $ae(listParent).find('a').attr({'aria-selected':'false', 'tabindex':'-1'});	
+        $ae(listParent).find('li.active a').attr({'aria-selected':'true', 'tabindex':'0'});	
+      });
+
+
+      // tabset keylooping
+      $ae(this).find('a').on('keydown', function(e){
+        if(e.keyCode === 13 || e.keyCode === 32){
+          e.preventDefault();
+          this.click();
+        }
+        else if(e.keyCode === 37 && ($ae(this)[0] === $ae(this).closest('ol').find('a').first()[0])){
+          AudioEye.focusElement($ae(this).closest('ol').find('a').eq(-1));
+        }
+        else if( e.keyCode === 39 && ($ae(this)[0] === $ae(this).closest('ol').find('a').last()[0])){
+          AudioEye.focusElement($ae(this).closest('ol').find('a').first());
+        }
+        else if(e.keyCode === 37 ){
+          AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+        }
+        else if(e.keyCode === 39 ){
+          AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+        }
+      });
+    }
+
+  });	// Close encapsulated actions
+}
+// tabset function call
+tabSet('ol.tabbedWidget.cpTabs','ol.tabbedWidget.cpTabs li','ol.tabbedWidget.cpTabs li > a','active','.cpTabPanels');
+/* end */
+
+
+/* Start new tabset */
+// Facilites Map & Listing Tabset
+function  facilitiesTabSet(listParent, listItem, listAnchor, activeClass, tabPanels){
+
+  // Setting roles and initial values
+  $ae(listParent).attr({'role':'tablist'});
+  $ae(listItem).attr({'role':'presentation'});
+  $ae(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+  $ae(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+  $ae(tabPanels).attr({'role':'tabpanel'});
+
+  $ae(listAnchor).click(function(){
+    $ae(listAnchor).attr({'aria-selected':'false', 'tabindex':'-1'});
+    $ae(this).attr({'aria-selected':'true', 'tabindex':'0'});
+  });
+
+  ele.outerFind('.searchResults > ol.tabs').each(function(){
+
+    $ae(this).find('a').on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+      else if((e.keyCode === 37 || e.keyCode === 38) && ($ae(this)[0] === $ae(this).closest('ol').find('a').first()[0])){
+        AudioEye.focusElement($ae(this).closest('ol').find('a').eq(-1));
+      }
+      else if((e.keyCode === 39 || e.keyCode === 40) && ($ae(this)[0] === $ae(this).closest('ol').find('a').last()[0])){
+        AudioEye.focusElement($ae(this).closest('ol').find('a').first());
+      }
+      else if(e.keyCode === 37 || e.keyCode === 38){
+        AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+      }
+      else if(e.keyCode === 39 || e.keyCode === 40){
+        AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+      }
+    });
+
+  }); 
+
+}
+
+facilitiesTabSet('.searchResults > ol.tabs','.searchResults > ol.tabs > li','.searchResults > ol.tabs > li > a','active','.searchResults > div');
+/* -END- */
+
+/* Start new tabset */
+// Facilitites Sidebar Tabset
+function sideBarTabset(listParent, listItem, listAnchor, activeClass, tabPanels){
+
+  // Setting roles and initial values
+  $ae(listParent).attr({'role':'tablist'});
+  $ae(listItem).attr({'role':'presentation'});
+  $ae(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+  $ae(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+  //$ae(tabPanels).attr({'role':'tabpanel'});
+
+  $ae(listAnchor).click(function(){
+    $ae(listAnchor).attr({'aria-selected':'false', 'tabindex':'-1'});
+    $ae(this).attr({'aria-selected':'true', 'tabindex':'0'});
+  });
+
+  ele.outerFind('ul.tabs.searchCriteria').each(function(){
+
+    $ae(this).find('a').on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+      else if((e.keyCode === 37 || e.keyCode === 38) && ($ae(this)[0] === $ae(this).closest('ul').find('a').first()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').eq(-1));
+      }
+      else if((e.keyCode === 39 || e.keyCode === 40) && ($ae(this)[0] === $ae(this).closest('ul').find('a').last()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').first());
+      }
+      else if(e.keyCode === 37 || e.keyCode === 38){
+        AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+      }
+      else if(e.keyCode === 39 || e.keyCode === 40){
+        AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+      }
+    });
+
+  }); 
+
+}
+
+sideBarTabset('ul.tabs.searchCriteria','ul.tabs.searchCriteria > li','ul.tabs.searchCriteria > li > a','active','ul.tabs.searchCriteria + div.sidebar > div');
+/* End */
+
+/* Start new tabset */
+function calendarTabset(listParent, listItem, listAnchor, activeClass, tabPanels){
+
+  // Setting roles and initial values
+  $ae(listParent).attr({'role':'tablist'});
+  $ae(listItem).attr({'role':'presentation'});
+  $ae(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+  $ae(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+  $ae(tabPanels).attr({'role':'tabpanel'});
+
+  $ae(listAnchor).click(function(){
+    $ae(listAnchor).attr({'aria-selected':'false', 'tabindex':'-1'});
+    $ae(this).attr({'aria-selected':'true', 'tabindex':'0'});
+  });
+
+  $ae('.header > #subheader ul.tabs').each(function(){
+
+    $ae(this).find('a').on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+      else if((e.keyCode === 37 || e.keyCode === 38)  && ($ae(this)[0] === $ae(this).closest('ul').find('a').first()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').eq(-1));
+      }
+      else if((e.keyCode === 39 || e.keyCode === 40) && ($ae(this)[0] === $ae(this).closest('ul').find('a').last()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').first());
+      }
+      else if(e.keyCode === 37 || e.keyCode === 38){
+        AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+      }
+      else if(e.keyCode === 39 || e.keyCode === 40) {
+        AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+      }
+    });
+
+  }); 
+
+}
+
+calendarTabset('.header > #subheader ul.tabs','.header > #subheader ul.tabs > li','.header > #subheader ul.tabs > li > a','active','.header > .list');
+/* end */
+
+// Tabset for Agenda Center Years
+// AE -  Agenda Center Tabset [AEI-40486]
+ele.outerFind('ul.years').each(function(){
+
+  tabset($ae(this), $ae(this).find('li'), $ae(this).find('a[id^="a"]'),'current', $ae(this).parent().find('table'));
+
+  function tabset(tablist, li, tabs, activeClass, tabPanel){
+    tablist.attr('role','tablist');
+    li.attr('role', 'presentation');
+    tabs.attr({'role': 'tab', 'tabindex':'-1', 'aria-selected':'false'});
+    $ae(li.selector +'.' + activeClass +' > '+ tabs.selector).attr({'aria-selected':'true', 'tabindex':'0'});
+    tabPanel.attr('role', 'tabpanel');
+
+    // individual tabs TODO - Update so it is dynamic
+    var tab = tablist.find('>'+li.selector+'>a');
+
+    tab.on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+    }).click(function(){
+      $ae('body').data({'ae-year-tab': '#' + $ae(this).attr('id')});
+      setTimeout(function(){
+        AudioEye.focusElement($ae('body').data('ae-year-tab'));
+        $ae($ae('body').data('ae-year-tab')).attr('tabindex','0');
+      }, 1000);
+    });
+  }
+
+});
+
+}); // layout helpers push close brackets
+</script>
+
+    </div>
+    
+
+        <!--
+        Compliance
+    -->
+    <div id="ae_compliance" class="ae-module" style="display: none;">
+
+        <!-- For autoSmartRem addNewWindowWarnings div is referenced in an aria-describedby -->
+        <div id="audioeye_new_window_message" style="display:none">Opens in new window</div>
+        <div id="audioeye_pdf_message" style="display:none">PDF Download</div>
+        <div id="audioeye_word_message" style="display:none">Word Download</div>
+        <div id="audioeye_excel_message" style="display:none">Excel Download</div>
+        <div id="audioeye_powerpoint_message" style="display:none">PowerPoint Download</div>
+        <div id="audioeye_document_message" style="display:none">Document Download</div>
+
+                    </div>
+    
+    <!--
+        Versioning Control Panel if versioning = true !
+    -->
+        
+    <!--
+        Launcher
+    -->
+    <aside id="ae_launcher" style="display: none" class="ae-module aetipsytip ae-active ae-cta-position-preset-right-lower" aria-label="Accessibility Help Desk">
+  <button aria-label="Explore your accessibility options">
+    <div style="display: none" class="ae-left">
+      <span>Explore your accessibility options</span>
+    </div>
+
+    <div class="ae-right">
+      <span class="icomoon-wrapper">
+        <div>
+          <span class="icomoon-cta ae-icon-launcher-universalaccess ae-initial-cta">
+            <span class="icomoon-cta path1 a11y-icon-figure-and-border"></span>
+            <span class="icomoon-cta path2 a11y-icon-background" style="color: rgb(18, 117, 179);"></span>
+          </span>
+        </div>
+      </span>
+    </div>
+  </button>
+</aside>
+
+    <!-- Toolbar -->
+
+    <span id="ae_placeholder_toolbar" style="display: none;" aria-hidden="true"></span>
+
+    <!--
+        Site Menu
+    -->
+    <span id="ae_placeholder_site-menu" style="display: none;" aria-hidden="true"></span>
+
+    
+    <!--
+        Generic Aria Live message container
+    -->
+    <div class="ae-blurb-noaudio" id="ae_enabled_messages" aria-relevant="additions" aria-live="assertive"></div>
+
+    
+    <!-- Symbol definitions -->
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="icon-close-carousel" viewBox="0 0 32 32">
+                <title>close carousel</title>
+                <path fill="#ffffff" style="fill: var(--color1, #ffffff)" d="M28.992 0l-12.992 12.992-12.992-12.992-3.008 3.008 12.992 12.992-12.992 12.992 3.008 3.008 12.992-12.992 12.992 12.992 3.008-3.008-12.992-12.992 12.992-12.992-3.008-3.008z"></path>
+            </symbol>
+        </defs>
+    </svg>
+
+</div><!-- end #ae_app --><style> body[data-audioeye-carousel-modal-active] .pageContent .col, body[data-audioeye-carousel-modal-active] .pageContent .row, body[data-audioeye-carousel-modal-active] .widget, body[data-audioeye-carousel-modal-active] [data-cprole$=Container], body[data-audioeye-carousel-modal-active] [data-cprole=banner], body[data-audioeye-carousel-modal-active] [data-cprole=nav] { z-index: unset !important; }</style></body></html>
