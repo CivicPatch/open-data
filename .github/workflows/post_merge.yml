@@ -88,7 +88,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        jurisdiction-ocdid: ${{ fromJson(needs.extract-files.outputs.jurisdiction-ocdids) }}
+        jurisdiction_ocdid: ${{ fromJson(needs.extract-files.outputs.jurisdiction-ocdids) }}
     steps:
       - name: Generate GitHub App Pipeline Token
         id: generate-pipeline-token
@@ -129,7 +129,7 @@ jobs:
           STORAGE_ACCESS_KEY_ID: ${{ secrets.STORAGE_ACCESS_KEY_ID }}
           STORAGE_SECRET_ACCESS_KEY: ${{ secrets.STORAGE_SECRET_ACCESS_KEY }}
         run: |
-          mise upload-images-to-cdn --jurisdiction-ocdid "${{ inputs.jurisdiction_ocdid }}"
+          mise upload-images-to-cdn --jurisdiction-ocdid "${{ matrix.jurisdiction_ocdid }}"
           # Remove local images after upload TODO
 
       - name: Commit image updates
@@ -141,7 +141,7 @@ jobs:
           # Commit changes if any images were updated
           if [ -n "$(git status --porcelain)" ]; then
             git add .
-            git commit -m "Upload images to CDN for ${{ inputs.jurisdiction_ocdid }}"
+            git commit -m "Upload images to CDN for ${{ matrix.jurisdiction_ocdid }}"
             git push -u origin ${{ inputs.head_ref }}
           fi
 
