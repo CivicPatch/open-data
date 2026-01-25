@@ -19,6 +19,7 @@ class Office(BaseModel):
 
 class Official(BaseModel):
     name: str
+    other_names: List[str] = []
     phones: List[str] = []
     emails: List[str] = []
     urls: List[str] = []
