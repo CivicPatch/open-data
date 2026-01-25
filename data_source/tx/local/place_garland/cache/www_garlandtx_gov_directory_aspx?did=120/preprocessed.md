@@ -14,7 +14,7 @@ Skip To Main Content
 
 ![Cowboy Hat Mural](https://www.garlandtx.gov/ImageRepository/Document?documentID=17319)
 ![Concert on the Square](https://www.garlandtx.gov/ImageRepository/Document?documentID=17320)
-![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 "Firewheel Golf Park")
+![](/ImageRepository/Document?documentID=17317 "Firewheel Golf Park")
 ![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 "Kids playing in the Splash Pad at Watson Park")
 ![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 "Downtown Square")
 ![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 "Garland Power and Light 100 Years display")
