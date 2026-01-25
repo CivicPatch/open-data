@@ -1,0 +1,2740 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n3-active wf-muli-n4-active wf-muli-i4-active wf-muli-n7-active wf-active has-webFonts"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,700,700italic,900,900italic,italic,regular|Merriweather:700|Montserrat:500,600,700,regular|Open+Sans:600,700,regular|Poppins:100,100italic,200,200italic,300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,italic,regular|Roboto:100,100italic,200,200italic,300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,italic,regular|" media="all"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-1GSMNB4ZW4&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61m0"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-1GSMNB4ZW4';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	
+	<meta name="category0" content="Home">
+<meta name="category1" content="Your Government">
+<meta name="category2" content="City Council">
+
+	
+	<meta name="theme-color" content="rgb(23, 44, 80)">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>City Council | Nacogdoches, TX - Official Website</title>
+
+		<meta name="description" content="Learn about the meetings of the city council, view agendas, and find out how to contact council members.">
+		<meta name="keywords" content="City Council">
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '390px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/-1101294625.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<style>.frase-answers-bot{position:absolute;bottom:0;right:0}
+</style><style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style><link rel="stylesheet" type="text/css" href="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-14/compliance.css"><link rel="stylesheet" type="text/css" href="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-14/fullCSS.bundle.css"><style>
+      .audioeye-skip-link {
+        display: inline-block !important;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        z-index: 50000 !important;
+      }
+      .audioeye-skip-link:focus, .audioeye-skip-link:active {
+        left: 0;
+        width: auto;
+        height: auto;
+        background: #fff;
+        color: #000;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.5;
+        margin-bottom: 8px;
+        padding: 5px;
+        border: 3px solid #000;
+        transition: none;
+      }
+    </style><link rel="stylesheet" type="text/css" href="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-14/site-menu.css"><script charset="utf-8" data-webpack="audioeye_services:chunk-354" src="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-14/site-menu.bundle.js"></script></head>
+<body class="wide cpTextResizeOn doneLoading ae-city-council-h1" data-audioeye-lang="en" data-audioeye-device-desktop="" data-audioeye-launcher=""><div id="ae_enabled_site" class="ae-blurb-noaudio" role="status" aria-live="polite" data-nosnippet="" style="display: none;"><div><p data-modulename="launcher">This website is AudioEye enabled and is being optimized for accessibility. To open the AudioEye Toolbar, press "shift + =". Some assistive technologies may require the use of a passthrough function before this keystroke. For more information, activate the button labeled “Explore your accessibility options”.</p></div></div><a href="#mainWrapTS" class="audioeye-skip-link">Skip To Main Content</a><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="https://www.nactx.us/Common/images/ajax-loader.gif" alt="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks" class="ae-exclude" role="presentation" aria-hidden="true" tabindex="-1">
+<a href="https://www.nactx.us/838/City-Council#cc3f1dfb10-4d56-4504-9e02-221557b00c9a" target="_self" class="skipToContentLink ae-exclude" role="presentation" aria-hidden="true" tabindex="-1">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs" role="presentation"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="10">
+    <input type="hidden" id="hdnContentCollectionID" value="e11eb05c-fa1e-4c4c-af80-67c61ad01fec">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="15">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID">
+    <input type="hidden" id="pagePageID" value="838">
+
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+
+
+
+<!-- Begin Signed Out Bar -->
+<div class="cpToolbar user public" style="z-index: 1;">
+    <div class="inner selfClear">
+        <p class="dropdown"><a href="https://www.nactx.us/MyAccount/ProfileCreate" role="link" class="myConnections" id="signedOutToolbarCreateProfileButton">Create a Website Account</a> <span class="welcomeMessage">- Manage notification subscriptions, save form progress and more. &nbsp;&nbsp;</span></p>
+        <ul class="nav secondary" role="presentation">
+	        <li><a href="https://www.nactx.us/MyAccount" role="link" class="button" id="loggedOutToolbarSignInButton"><span>Website Sign In</span></a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#signedOutToolbarCreateProfileButton').keypress(function (e) { if (e.which === 0) return; $(this).click(); });
+        $('#signedOutToolbarCreateProfileButton').click(function (event) {
+        	event.preventDefault();
+        	window.location.href = '/MyAccount/ProfileCreate?from=url&url=/&dn=' + window.location.origin;
+        });
+
+			
+				$('#loggedOutToolbarSignInButton').click(function (event) {
+					event.preventDefault();
+					window.location.href = '/MyAccount/?from=url&url=' + encodeURIComponent(window.location.href.replace(window.location.origin, '')) + '&dn=' + window.location.host;
+				});
+			
+
+		if ('False' == 'True') {
+            $('#loggedOutToolbarSignInButton').hide();
+		}
+    })
+</script>
+<!-- End Signed Out Bar -->
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 35px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="bodyContainerTS">
+<!-- <div data-cpRole="banner" id="banner2" class="fixedBannerTS"></div> --><!-- Header Container --><header data-cprole="structuralContainer" id="headerContainerTS" class="fixedTopTS" style="top: 34px;">
+<div class="siteWrap8"><div data-cprole="structuralContainer" id="flexHeaderTS">
+<div data-cprole="banner" id="bannerLogoTS" class="bannerLogoTS empty">
+
+
+
+
+				<a id="bannerLogoTS-29" style="			display: block; text-align: center;
+" class="bannerObject" href="https://www.nactx.us/" target="_self"><img alt="Homepage Nacogdoches Texas" class="bannerObject" height="83" src="https://www.nactx.us/ImageRepository/Document?documentID=8777" width="285"></a>
+</div><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation" aria-label="Main" data-ae-site-menu-link="true"><button type="button" id="ae-sitemenu-button-0" class="ae-offscreen ae-accessible-menu-button" tabindex="0" style="display: none" data-custom-label="">Accessible Menu</button>
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem817" class="topMenuItem" role="none" data-pageid="817" data-displaymegamenu="True" style="width: 29.9263%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavYourGovernment" class="navMainItem mainNavItem mainNavItem1 " href="https://www.nactx.us/817/Your-Government" target="_self" style="font-size: 17px;"><span style="display: inline;">   Your Government </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem628" class="topMenuItem" role="none" data-pageid="628" data-displaymegamenu="True" style="width: 23.4807%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavDepartments" class="navMainItem mainNavItem mainNavItem2 " href="https://www.nactx.us/628/Departments" target="_self" style="font-size: 17px;"><span style="display: inline;">   Departments </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem799" class="topMenuItem" role="none" data-pageid="799" data-displaymegamenu="True" style="width: 27.3481%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavOurCommunity" class="navMainItem mainNavItem mainNavItem3 " href="https://www.nactx.us/799/Our-Community" target="_self" style="font-size: 17px;"><span style="display: inline;">   Our Community </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem609" class="topMenuItem" role="none" data-pageid="609" data-displaymegamenu="True" style="width: 19.2449%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavHowDoI" class="navMainItem mainNavItem mainNavItem4 " href="https://www.nactx.us/609/How-Do-I" target="_self" style="font-size: 17px;"><span style="display: inline;">   How Do I? </span></a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=15&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = true;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="1"></aside></nav><div data-cprole="contentContainer" id="searchTS">	<div id="ccf2c1db64-ce4b-42eb-8696-826fc27c2f33" data-containerid="f2c1db64-ce4b-42eb-8696-826fc27c2f33" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="height: auto;" data-widgetcontainerid="d50b6ad9-d5f7-4c0a-a646-621dd71b8f2d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last idd560eb15-5c18-4fc8-831c-b804d95e4cde" style="height: 60px;" data-widgetcontainerid="d560eb15-5c18-4fc8-831c-b804d95e4cde">
+	
+<div data-widget-id="e271c7c3-5855-4acc-afe2-6d8644373d0b" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgete271c7c3-5855-4acc-afe2-6d8644373d0b" class="widget widgetGraphicLinks skin30 widgetOptionSet29 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row autoWidths center wide"><!--
+--><div class="col col1 first "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.nactx.us/facebook" target="_self"><img src="https://www.nactx.us/ImageRepository/Document?documentID=8786" class="graphicButtonLink" alt="Facebook" onmouseover="this.src='/ImageRepository/Document?documentID=8786'" onmouseout="this.src='/ImageRepository/Document?documentID=8786'" onfocus="this.src='/ImageRepository/Document?documentID=8786'" onblur="this.src='/ImageRepository/Document?documentID=8786'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.nactx.us/instagram" target="_self"><img src="https://www.nactx.us/ImageRepository/Document?documentID=8787" class="graphicButtonLink" alt="Instagram" onmouseover="this.src='/ImageRepository/Document?documentID=8787'" onmouseout="this.src='/ImageRepository/Document?documentID=8787'" onfocus="this.src='/ImageRepository/Document?documentID=8787'" onblur="this.src='/ImageRepository/Document?documentID=8787'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://nextdoor.com/agency-detail/tx/nacogdoches/city-of-nacogdoches/ " target="_self"><img src="https://www.nactx.us/ImageRepository/Document?documentID=8788" class="graphicButtonLink" alt="Nextdoor" onmouseover="this.src='/ImageRepository/Document?documentID=8788'" onmouseout="this.src='/ImageRepository/Document?documentID=8788'" onfocus="this.src='/ImageRepository/Document?documentID=8788'" onblur="this.src='/ImageRepository/Document?documentID=8788'"> </a></li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col16 last" style="height: auto;" data-widgetcontainerid="7ed52d75-67c3-4f3e-8922-aa6302a73231">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col16 first last id0c29575d-9468-4a4e-9938-067595834f6c" style="height: 60px;" data-widgetcontainerid="0c29575d-9468-4a4e-9938-067595834f6c">
+	
+<div data-widget-id="575e2ded-cfac-48be-beaa-ed3d83309da8" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButton575e2ded-cfac-48be-beaa-ed3d83309da8").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDept575e2ded-cfac-48be-beaa-ed3d83309da8").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchField575e2ded-cfac-48be-beaa-ed3d83309da8").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDept575e2ded-cfac-48be-beaa-ed3d83309da8").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDept575e2ded-cfac-48be-beaa-ed3d83309da8").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchField575e2ded-cfac-48be-beaa-ed3d83309da8").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDept575e2ded-cfac-48be-beaa-ed3d83309da8").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchField575e2ded-cfac-48be-beaa-ed3d83309da8").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchField575e2ded-cfac-48be-beaa-ed3d83309da8"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin23 widgetOptionSet28" style="display: block;">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBox575e2ded-cfac-48be-beaa-ed3d83309da8 ui-autocomplete-input" cp5ph="true" id="searchField575e2ded-cfac-48be-beaa-ed3d83309da8" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search..." title="Search..." type="text" value="" autocomplete="off" aria-label="Search Site">
+						<a href="https://www.nactx.us/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButton575e2ded-cfac-48be-beaa-ed3d83309da8" tabindex="0" data-ae-blurbtype="button"><img alt="Submit Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=8793" data-image="/ImageRepository/Document?documentID=8792" src="https://www.nactx.us/ImageRepository/Document?documentID=8792"></a>
+
+			<label class="searchLabel" for="searchField575e2ded-cfac-48be-beaa-ed3d83309da8">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #555555;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #555555;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #555555;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #555555;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBox575e2ded-cfac-48be-beaa-ed3d83309da8
+	{
+		color: #555555;
+		height:60px;
+background:#ECEAE5;
+padding:0 65px 0 27px;
+font-family:Roboto;
+font-weight:600;
+border:none;
+border-radius: 10px;
+	}
+	.widgetSearch .widgetBody .widgetSearchButton575e2ded-cfac-48be-beaa-ed3d83309da8
+	{
+		margin:11px 11px 11px 0;
+	}
+	.widgetSearch .widgetSearch-onlyDept575e2ded-cfac-48be-beaa-ed3d83309da8
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDept575e2ded-cfac-48be-beaa-ed3d83309da8
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchField575e2ded-cfac-48be-beaa-ed3d83309da8").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div>
+</div></div>
+</header><!-- Banner --><div data-cprole="structuralContainer" id="bannerContainerTS" class="noOverflowTS" style="padding-top: 98px;">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="bannerSizingTS">
+<div data-cprole="structuralContainer" id="bannerSearchTS">
+<div class="siteWrap8"></div>
+</div>
+</div>
+
+
+
+
+		<div class="bannerObject external" id="bannerDivbanner1" style="min-height: 400px; top: 0px; left: -467.5px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img alt="" class="bannerObject" src="https://www.nactx.us/ImageRepository/Document?documentID=8776" width="2200px" style="position: absolute; left: 0px; margin: 0px; width: 2200px;"></div>
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderBanner('banner1-28',
+								'banner1',
+								{"BannerOptionID":28,"ThemeID":15,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":1,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":false,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":64,"BannerOptionID":28,"FileName":"/ImageRepository/Document?documentID=8776","Height":400,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null}],"BannerVideos":[{"BannerVideoID":17,"BannerOptionID":28,"VideoFileName":"","ImageFileName":"EmptyBannerBkg202502170629478720.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								{"BannerImageID":64,"BannerOptionID":28,"FileName":"/ImageRepository/Document?documentID=8776","Height":400,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null},
+								'/App_Themes/2025 - Interior/Images/',
+								'<img alt="" class="bannerObject" src="/ImageRepository/Document?documentID=8776" />');
+						});
+				});
+			</script>
+
+</div>
+</div><!-- Content container --><div data-cprole="structuralContainer" id="mainContainerTS">
+<div class="siteWrap4"><div data-cprole="structuralContainer" id="mainWrapTS" class="mainWrap" role="main" tabindex="-1">
+<div data-cprole="structuralContainer" id="siteSidebarTS" class="siteSidebar">
+<aside data-cprole="contentContainer" id="sidebarContainer1TS">	<div id="cce4c9a68b-4c47-488c-b10c-d14b8f233155" data-containerid="e4c9a68b-4c47-488c-b10c-d14b8f233155" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav" aria-label="Secondary">
+
+
+
+
+
+	<ol id="secondaryMenusecondaryNav" data-parent="838" class="rootNavMenu accordionNav" data-ae-site-menu-link="true"><button type="button" id="ae-sitemenu-button-1" class="ae-offscreen ae-accessible-menu-button" tabindex="0" style="display: none" data-custom-label="Secondary">Accessible Menu - Secondary</button>
+	<li aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1173" data-pageid="1173">
+		<div class="accordionNavItem">
+			<a href="https://www.nactx.us/1173/Open-Forum" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Open Forum</a>
+		</div>
+			</li>
+	<li aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem863" data-pageid="863">
+		<div class="accordionNavItem">
+			<a href="https://www.nactx.us/DocumentCenter/View/16" target="_self" class="navMainItem secondaryNavItem cpComponent docaccess-activated" data-type="SecondaryMainItem" data-docaccess-source-url="https://www.nactx.us/DocumentCenter/View/16" data-url-hash="archived" data-url-status="archived">Ward Map</a>
+		</div>
+			</li>
+	<li aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem943" data-pageid="943">
+		<div class="accordionNavItem">
+			<a href="https://www.nactx.us/1200/NacTV" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Watch Council Meetings</a>
+		</div>
+			</li>
+	<li aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1543" data-pageid="1543">
+		<div class="accordionNavItem">
+			<a href="https://www.nactx.us/1543/2025-City-Council-Meeting-Dates" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">2025 City Council Meeting Dates</a>
+		</div>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = false;
+		});
+	</script>
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			$('*[id^="SideItem"]').each(function () {
+				var ids = $('[id="' + this.id + '"]');
+				if (ids.length > 1)
+					$.each(ids, function (index, value) {
+						value.id = value.id + '_' + index;
+					});
+			});
+
+			$('.hasAccordionChildren .openAccordionNav').click(function (e) {
+				e.preventDefault();
+				showHideAccordionMenuForSecondaryNav($(this));
+			});
+
+			$("#secondaryNav .grippy").each(function () {
+				menuManager.setupDraggableElement($(this), SIDE_MENU, '#secondaryNav');
+			});
+
+			$("#secondaryNav li").each(function () {
+				menuManager.setupDroppableAccordionElement($(this), SIDE_MENU);
+			});
+		});
+	</script>
+
+
+
+</nav><aside data-cprole="contentContainer" id="sidebarContainer2TS">	<div id="cc39259955-c7fb-4d97-92a9-70f7f3b01572" data-containerid="39259955-c7fb-4d97-92a9-70f7f3b01572" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="outerContentWrapTS" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="contentWrapTS" class="contentWrap">
+<div data-cprole="breadCrumbs" id="breadCrumbs" class="breadCrumbContainer" role="navigation" aria-label="Breadcrumb">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="https://www.nactx.us/">Home</a></li><li><a class="breadCrumb" href="https://www.nactx.us/817/Your-Government">Your Government</a></li><li id="currentBCPage" data-pageid="838">City Council</li>
+		</ol>
+
+	   
+    
+</div><div data-cprole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="838">
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="817">
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="11336">
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="City Council">
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="False">
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False">
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published">
+
+				<h1 id="versionHeadLine" class="headline">
+
+City Council		</h1>
+	
+		<div id="cc3f1dfb10-4d56-4504-9e02-221557b00c9a" data-containerid="3f1dfb10-4d56-4504-9e02-221557b00c9a" class="pageContent cpGrid cpGrid24">
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="5003068c-35b0-427c-a5a4-30c11521504e">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last idcd52b259-d91d-4a0e-9294-813ef0af7219" style="height: 637px;" data-widgetcontainerid="cd52b259-d91d-4a0e-9294-813ef0af7219">
+	
+
+<div class="widget image pageStyles" id="divImageOuterc0baa146-00ff-43e0-aa06-8fdf3751aa56" data-widget-id="c0baa146-00ff-43e0-aa06-8fdf3751aa56">
+    
+	<div class="widgetBody imageBorder" id="divImagec0baa146-00ff-43e0-aa06-8fdf3751aa56">
+<img src="https://www.nactx.us/ImageRepository/Document?documentID=8181" alt="NCC2403GROUP (1)">	</div>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="99ae9950-fc65-40b0-a297-b39008563fce">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id31f0c0a7-f7f6-432b-a95a-47bd1bf1112d" style="height: 905px;" data-widgetcontainerid="31f0c0a7-f7f6-432b-a95a-47bd1bf1112d">
+	
+<div class="widget editor pageStyles wide" id="divEditord79feede-5efa-49a8-a882-cd13aa391fb8" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <p style="text-align: center;"><em>Pictured (left to right): &nbsp;Blane Williams, Brad Maule, Randy Johnson, Kathleen Belanger, Chad Huckaby</em></p><p>City Council meetings are typically held on the first and third Tuesday of each month in the Council Chamber of Nacogdoches City Hall, located at 202 East Pilar Street, unless otherwise noted. Agendas showing meeting dates, locations, and start times are posted a week prior to each regularly scheduled Council meeting. Please note – Council may occasionally call special meetings or workshops on dates other than the first and third Tuesday of each month.</p><h3 class="subhead2" aria-level="2" role="heading">Agendas &amp; Minutes</h3><ul><li><a href="https://www.nactx.us/agendas">Meeting Agendas - current</a></li><li><a href="https://lf.ci.nacogdoches.tx.us/weblink/browse.aspx?dbid=1&amp;startid=149564">Meeting Agendas - archived</a></li><li><a href="https://lf.ci.nacogdoches.tx.us/weblink/browse.aspx?dbid=1&amp;startid=124511">Meeting Minutes</a></li></ul><h3 class="subhead2" aria-level="2" role="heading">Council Members</h3><ul><li><a href="mailto:johnsonre@nactx.us" title="johnsonre@nactx.us">Randy Johnson</a> – Mayor (term expires 2027)</li><li><a href="mailto:belangerk@nactx.us" title="belangerk@nactx.us">Kathleen Belanger</a> – Council Member, Northeast Ward (term expires 2027)</li><li><a href="mailto:mauleb@nactx.us" title="mauleb@nactx.us">Brad Maule</a> – Council Member, Northwest Ward (term expires 2027)</li><li><a href="mailto:huckabyc@nactx.us" title="huckabyc@nactx.us">Chad Huckaby</a> – Council Member, Southwest Ward (term expires 2026)</li><li><a href="mailto:williamsbl@nactx.us" title="boldonr@nactx.us">Blane Williams</a> – Council Member, Southeast Ward (term expires 2026)</li></ul><h3 class="subhead2" aria-level="2" role="heading">Form of Government</h3><p>The City of Nacogdoches has a council-manager form of government, which combines strong political leadership, representative democracy through elected officials, and professional management. Under this form, members of Council set the municipal government policies while the City Manager, who is appointed by Council, assumes administrative responsibility of municipal government operations. As determined by the <a href="https://library.municode.com/tx/nacogdoches/codes/code_of_ordinances?nodeId=PTITHCHNATE_ARTIVTHCO" target="_blank" rel="noopener" aria-describedby="audioeye_new_window_message" aria-label="city charter Opens in new window">city charter</a>, Nacogdoches City Council consists of five members – one member elected by each of the <a href="https://nacogdoches.maps.arcgis.com/apps/mapviewer/index.html?webmap=7920859c63d94ef1bd1d507552e904bb" target="_blank" rel="noopener" aria-describedby="audioeye_new_window_message" aria-label="four wards Opens in new window">four wards</a> and one member elected at-large as Mayor – for terms of two years each.</p><h3 class="subhead2" aria-level="2" role="heading">Open Forum</h3><p>The Nacogdoches City Council welcomes public comments at regularly scheduled meetings. In addition to public comments on meeting agenda items, Council offers an open forum whereby citizens may comment on governance issues over which the City of Nacogdoches has domain.</p><ul><li><a href="https://www.nactx.us/1173/Open-Forum">About Open Forum</a></li><li><a href="https://www.nactx.us/comments">Public Comments Request</a></li></ul>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + 'd79feede-5efa-49a8-a882-cd13aa391fb8'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: none;" role="presentation">	<div id="ccf17cfabb-5eec-4934-b021-cb26b8ad7680" data-containerid="f17cfabb-5eec-4934-b021-cb26b8ad7680" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div><!-- GBs --><div data-cprole="structuralContainer" id="gbsContainerTS">
+<div class="siteWrap4"><div data-cprole="contentContainer" id="gbsTS">	<div id="cc14d94f6b-2c35-4b75-9794-4601d08f57f8" data-containerid="14d94f6b-2c35-4b75-9794-4601d08f57f8" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="35">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="height: auto;" data-widgetcontainerid="83940269-68de-4d7f-a9bd-88cf73ca3dd5">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id657b246d-789b-4515-b990-eae2d1aba49d" style="height: 186px;" data-widgetcontainerid="657b246d-789b-4515-b990-eae2d1aba49d">
+	
+<div data-widget-id="7eeb5888-630a-4dcb-a7a9-eb68761f16f2" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget7eeb5888-630a-4dcb-a7a9-eb68761f16f2" class="widget widgetGraphicLinks skin25 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:20em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.applicantpro.com/openings/nactx/jobs" target="_self" class="fancyButton fancyButton254 ">
+		<span>
+			<span><span class="text">Employment</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton254.fancyButton:link,.fancyButton254.fancyButton:visited, .fancyButton254div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton254.fancyButton:hover,.fancyButton254.fancyButton:focus,.fancyButton254.fancyButton:active,.fancyButton254.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton254.fancyButton:link > span,.fancyButton254.fancyButton:visited > span, .fancyButton254div.fancyButton > span{
+}
+.fancyButton254.fancyButton:hover > span,.fancyButton254.fancyButton:focus > span,.fancyButton254.fancyButton:active > span,.fancyButton254.fancyButton.hover > span{
+}
+.fancyButton254.fancyButton .text{
+	color: rgb(85, 85, 85);
+	font-size: 1.1em;
+	font-family: "Roboto";
+	padding-top: 133px;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 133px;
+	background-image: url('/ImageRepository/Document?documentID=8781');
+	background-repeat: no-repeat;
+	background-position: center 2px ;
+line-height:1.2;
+transition:all .3s ease-in-out; 
+position:relative;
+}
+.fancyButton254 .text::after{ 
+position:absolute;
+transition:all .3s ease-in-out;
+content:"";
+width:0px;
+height:3px;
+border-radius:3px;
+bottom:-6px;
+left:50%;
+transform:translate(-50%);
+background:#AE4144;
+}
+.fancyButton254:hover .text::after,
+.fancyButton254:focus .text::after,
+.fancyButton254:active .text::after{
+width:100px;
+}
+.fancyButton254.fancyButton:hover .text,.fancyButton254.fancyButton:focus .text,.fancyButton254.fancyButton:active .text,.fancyButton254.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://nacogdochestx.citysourced.com/servicerequests/create" target="_self" class="fancyButton fancyButton255 ">
+		<span>
+			<span><span class="text">Report an Issue</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton255.fancyButton:link,.fancyButton255.fancyButton:visited, .fancyButton255div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton255.fancyButton:hover,.fancyButton255.fancyButton:focus,.fancyButton255.fancyButton:active,.fancyButton255.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton255.fancyButton:link > span,.fancyButton255.fancyButton:visited > span, .fancyButton255div.fancyButton > span{
+}
+.fancyButton255.fancyButton:hover > span,.fancyButton255.fancyButton:focus > span,.fancyButton255.fancyButton:active > span,.fancyButton255.fancyButton.hover > span{
+}
+.fancyButton255.fancyButton .text{
+	color: rgb(85, 85, 85);
+	font-size: 1.1em;
+	font-family: "Roboto";
+	padding-top: 133px;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 133px;
+	background-image: url('/ImageRepository/Document?documentID=8784');
+	background-repeat: no-repeat;
+	background-position: center 2px ;
+line-height:1.2;
+transition:all .3s ease-in-out; 
+position:relative;
+}
+.fancyButton255 .text::after{ 
+position:absolute;
+transition:all .3s ease-in-out;
+content:"";
+width:0px;
+height:3px;
+border-radius:3px;
+bottom:-6px;
+left:50%;
+transform:translate(-50%);
+background:#AE4144;
+}
+.fancyButton255:hover .text::after,
+.fancyButton255:focus .text::after,
+.fancyButton255:active .text::after{
+width:100px;
+}
+.fancyButton255.fancyButton:hover .text,.fancyButton255.fancyButton:focus .text,.fancyButton255.fancyButton:active .text,.fancyButton255.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8" style="height: auto;" data-widgetcontainerid="19999422-9dd4-4e0d-8b79-60e59f60a4f9">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id5956402b-c816-42cd-9e49-c4fde5b88501" style="height: 186px;" data-widgetcontainerid="5956402b-c816-42cd-9e49-c4fde5b88501">
+	
+<div data-widget-id="ad3beac3-6bf1-4b44-81cf-d86a6e5acc14" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetad3beac3-6bf1-4b44-81cf-d86a6e5acc14" class="widget widgetGraphicLinks skin25 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:20em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.nactx.us/870/Pay-Online" target="_self" class="fancyButton fancyButton256 ">
+		<span>
+			<span><span class="text">Online Bill Pay</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton256.fancyButton:link,.fancyButton256.fancyButton:visited, .fancyButton256div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton256.fancyButton:hover,.fancyButton256.fancyButton:focus,.fancyButton256.fancyButton:active,.fancyButton256.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton256.fancyButton:link > span,.fancyButton256.fancyButton:visited > span, .fancyButton256div.fancyButton > span{
+}
+.fancyButton256.fancyButton:hover > span,.fancyButton256.fancyButton:focus > span,.fancyButton256.fancyButton:active > span,.fancyButton256.fancyButton.hover > span{
+}
+.fancyButton256.fancyButton .text{
+	color: rgb(85, 85, 85);
+	font-size: 1.1em;
+	font-family: "Roboto";
+	padding-top: 133px;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 133px;
+	background-image: url('/ImageRepository/Document?documentID=8783');
+	background-repeat: no-repeat;
+	background-position: center 2px ;
+line-height:1.2;
+transition:all .3s ease-in-out; 
+position:relative;
+}
+.fancyButton256 .text::after{ 
+position:absolute;
+transition:all .3s ease-in-out;
+content:"";
+width:0px;
+height:3px;
+border-radius:3px;
+bottom:-6px;
+left:50%;
+transform:translate(-50%);
+background:#AE4144;
+}
+.fancyButton256:hover .text::after,
+.fancyButton256:focus .text::after,
+.fancyButton256:active .text::after{
+width:100px;
+}
+.fancyButton256.fancyButton:hover .text,.fancyButton256.fancyButton:focus .text,.fancyButton256.fancyButton:active .text,.fancyButton256.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.nactx.us/agendas" target="_self" class="fancyButton fancyButton257 ">
+		<span>
+			<span><span class="text">Agendas &amp; Minutes</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton257.fancyButton:link,.fancyButton257.fancyButton:visited, .fancyButton257div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton257.fancyButton:hover,.fancyButton257.fancyButton:focus,.fancyButton257.fancyButton:active,.fancyButton257.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton257.fancyButton:link > span,.fancyButton257.fancyButton:visited > span, .fancyButton257div.fancyButton > span{
+}
+.fancyButton257.fancyButton:hover > span,.fancyButton257.fancyButton:focus > span,.fancyButton257.fancyButton:active > span,.fancyButton257.fancyButton.hover > span{
+}
+.fancyButton257.fancyButton .text{
+	color: rgb(85, 85, 85);
+	font-size: 1.1em;
+	font-family: "Roboto";
+	padding-top: 133px;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 133px;
+	background-image: url('/ImageRepository/Document?documentID=8780');
+	background-repeat: no-repeat;
+	background-position: center 2px ;
+line-height:1.2;
+transition:all .3s ease-in-out; 
+position:relative;
+}
+.fancyButton257 .text::after{ 
+position:absolute;
+transition:all .3s ease-in-out;
+content:"";
+width:0px;
+height:3px;
+border-radius:3px;
+bottom:-6px;
+left:50%;
+transform:translate(-50%);
+background:#AE4144;
+}
+.fancyButton257:hover .text::after,
+.fancyButton257:focus .text::after,
+.fancyButton257:active .text::after{
+width:100px;
+}
+.fancyButton257.fancyButton:hover .text,.fancyButton257.fancyButton:focus .text,.fancyButton257.fancyButton:active .text,.fancyButton257.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8 last" style="height: auto;" data-widgetcontainerid="ea2a7e88-d57b-4ae0-8bcd-aaf1d4f93841">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id6d49a5b2-acac-4b97-81cd-c58988eab9a4" style="height: 186px;" data-widgetcontainerid="6d49a5b2-acac-4b97-81cd-c58988eab9a4">
+	
+<div data-widget-id="da10cf79-bd70-4a6b-a8ad-b102e7040091" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetda10cf79-bd70-4a6b-a8ad-b102e7040091" class="widget widgetGraphicLinks skin25 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:20em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://signup.hyper-reach.com/hyper_reach/sign_up_page_2/?id=106044" target="_self" class="fancyButton fancyButton258 ">
+		<span>
+			<span><span class="text">Nacwise Sign Up</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton258.fancyButton:link,.fancyButton258.fancyButton:visited, .fancyButton258div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton258.fancyButton:hover,.fancyButton258.fancyButton:focus,.fancyButton258.fancyButton:active,.fancyButton258.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton258.fancyButton:link > span,.fancyButton258.fancyButton:visited > span, .fancyButton258div.fancyButton > span{
+}
+.fancyButton258.fancyButton:hover > span,.fancyButton258.fancyButton:focus > span,.fancyButton258.fancyButton:active > span,.fancyButton258.fancyButton.hover > span{
+}
+.fancyButton258.fancyButton .text{
+	color: rgb(85, 85, 85);
+	font-size: 1.1em;
+	font-family: "Roboto";
+	padding-top: 133px;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 133px;
+	background-image: url('/ImageRepository/Document?documentID=8785');
+	background-repeat: no-repeat;
+	background-position: center 2px ;
+line-height:1.2;
+transition:all .3s ease-in-out; 
+position:relative;
+}
+.fancyButton258 .text::after{ 
+position:absolute;
+transition:all .3s ease-in-out;
+content:"";
+width:0px;
+height:3px;
+border-radius:3px;
+bottom:-6px;
+left:50%;
+transform:translate(-50%);
+background:#AE4144;
+}
+.fancyButton258:hover .text::after,
+.fancyButton258:focus .text::after,
+.fancyButton258:active .text::after{
+width:100px;
+}
+.fancyButton258.fancyButton:hover .text,.fancyButton258.fancyButton:focus .text,.fancyButton258.fancyButton:active .text,.fancyButton258.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.nactx.us/1536/Bond-Election-Day---November-7-2023" target="_self" class="fancyButton fancyButton259 ">
+		<span>
+			<span><span class="text">Nacogodoches Bond Projects</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton259.fancyButton:link,.fancyButton259.fancyButton:visited, .fancyButton259div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton259.fancyButton:hover,.fancyButton259.fancyButton:focus,.fancyButton259.fancyButton:active,.fancyButton259.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton259.fancyButton:link > span,.fancyButton259.fancyButton:visited > span, .fancyButton259div.fancyButton > span{
+}
+.fancyButton259.fancyButton:hover > span,.fancyButton259.fancyButton:focus > span,.fancyButton259.fancyButton:active > span,.fancyButton259.fancyButton.hover > span{
+}
+.fancyButton259.fancyButton .text{
+	color: rgb(85, 85, 85);
+	font-size: 1.1em;
+	font-family: "Roboto";
+	padding-top: 133px;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 133px;
+	background-image: url('/ImageRepository/Document?documentID=8782');
+	background-repeat: no-repeat;
+	background-position: center 2px ;
+line-height:1.2;
+transition:all .3s ease-in-out; 
+position:relative;
+}
+.fancyButton259 .text::after{ 
+position:absolute;
+transition:all .3s ease-in-out;
+content:"";
+width:0px;
+height:3px;
+border-radius:3px;
+bottom:-6px;
+left:50%;
+transform:translate(-50%);
+background:#AE4144;
+}
+.fancyButton259:hover .text::after,
+.fancyButton259:focus .text::after,
+.fancyButton259:active .text::after{
+width:100px;
+}
+.fancyButton259.fancyButton:hover .text,.fancyButton259.fancyButton:focus .text,.fancyButton259.fancyButton:active .text,.fancyButton259.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Calendar/Carousel --><!-- <div data-cpRole="structuralContainer" id="homeContainer1">
+    <div class="siteWrap4">
+      <div data-cpRole="contentContainer" id="homeContent1a"></div>
+    </div>
+  </div> --><!-- Footer --><footer data-cprole="structuralContainer" id="footerContainerTS" class="noOverflowTS">
+<div data-cprole="banner" id="banner2"><div data-cprole="structuralContainer" id="bannerSizing2TS">
+<div class="siteWrap4"><div data-cprole="contentContainer" id="footerTS">	<div id="cc4a5fa377-9184-4954-b50d-5a291afca1ba" data-containerid="4a5fa377-9184-4954-b50d-5a291afca1ba" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="65">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col7 first" style="height: auto;" data-widgetcontainerid="8c684646-8337-43aa-9d1b-ae659051156f">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col7 first last id19d503c9-73f1-4f13-9e1a-73303468c29d" style="height: 143px;" data-widgetcontainerid="19d503c9-73f1-4f13-9e1a-73303468c29d">
+	
+    <div data-widget-id="03dd5235-caf0-4bbc-8d20-87fb3dc6be9f" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv03dd5235-caf0-4bbc-8d20-87fb3dc6be9f" class="widget widgetInfoAdvanced skin23 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn">
+			<header class="widgetHeader" id="header03dd5235-caf0-4bbc-8d20-87fb3dc6be9f" role="presentation">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList" role="presentation">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="https://www.nactx.us/"><img src="https://www.nactx.us/ImageRepository/Document?documentId=8790" class="fr-dib" alt="Homepage Nacogdoches Texas"></a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv03dd5235-caf0-4bbc-8d20-87fb3dc6be9f .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col7 first last idc5aad208-2e36-4337-b43e-cf716752106d" style="height: 61px;" data-widgetcontainerid="c5aad208-2e36-4337-b43e-cf716752106d">
+	
+<div data-widget-id="c67a08e2-ad80-4148-b532-8e86d0678885" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetc67a08e2-ad80-4148-b532-8e86d0678885" class="widget widgetGraphicLinks skin23 widgetOptionSet4 narrow" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 "> 	
+				<ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.nactx.us/" target="_self" class="fancyButton fancyButton263 ">
+		<span>
+			<span><span class="text">Website Sign-in</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton263.fancyButton:link,.fancyButton263.fancyButton:visited, .fancyButton263div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton263.fancyButton:hover,.fancyButton263.fancyButton:focus,.fancyButton263.fancyButton:active,.fancyButton263.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton263.fancyButton:link > span,.fancyButton263.fancyButton:visited > span, .fancyButton263div.fancyButton > span{
+}
+.fancyButton263.fancyButton:hover > span,.fancyButton263.fancyButton:focus > span,.fancyButton263.fancyButton:active > span,.fancyButton263.fancyButton.hover > span{
+}
+.fancyButton263.fancyButton .text{
+	color: rgb(85, 85, 85);
+	font-family: "Roboto";
+	text-align: left;
+	padding-top: .25em;
+	padding-bottom: .25em;
+	padding-right: 3em;
+	padding-left: 70px;
+	font-weight: 500;
+	text-decoration: none;
+	background-color: rgb(255, 253, 248);
+	padding-top: .25em;
+	padding-bottom: .25em;
+	padding-right: 3em;
+	padding-left: 70px;
+	background-image: url('/ImageRepository/Document?documentID=8789');
+	background-repeat: no-repeat;
+	background-position: 16px  center;
+border-radius: 10px;
+min-height:50px;
+display:flex;
+line-height:1.2;
+flex-direction:column;
+justify-content:center;
+width:fit-content;
+margin:0 auto;
+}
+.fancyButton263.fancyButton:hover .text,.fancyButton263.fancyButton:focus .text,.fancyButton263.fancyButton:active .text,.fancyButton263.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+
+
+}
+</style>
+
+ </li><!--
+				--></ul>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="c4622437-db26-4414-8d9d-2904a3830198">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id8c6cd378-ee21-49c7-a631-5749924b197c" style="height: 334px;" data-widgetcontainerid="8c6cd378-ee21-49c7-a631-5749924b197c">
+	
+
+<div class="widget widgetSpacer" id="74cfee21-e26e-4d9b-8a92-881d5bb40add" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col5" style="height: auto;" data-widgetcontainerid="237cd09c-ab14-481a-a8e7-35ef71d84da5">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last id93a95188-fb83-454f-975d-de6f380e46ef" style="height: 334px;" data-widgetcontainerid="93a95188-fb83-454f-975d-de6f380e46ef">
+	
+    <div data-widget-id="19f66105-544a-4b12-8920-7ff955238095" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv19f66105-544a-4b12-8920-7ff955238095" class="widget widgetInfoAdvanced skin27 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="header19f66105-544a-4b12-8920-7ff955238095">
+			<header class="widgetHeader" id="header19f66105-544a-4b12-8920-7ff955238095" role="presentation">
+		<div class="">
+					<h3 role="heading" aria-level="2">Contact Us</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Phone: <a href="tel:9365592500">936-559-2500</a></p><p><br></p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Physical Address:</p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>202 East Pilar Street</p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Nacogdoches, TX 75961</p><p><br></p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Mailing Address:</p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>P.O. Box 635030</p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Nacogdoches, TX 75963</p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv19f66105-544a-4b12-8920-7ff955238095 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="01079e6e-de60-4e73-9a84-c8c98054dc8a">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last ide867660e-83c2-46a5-a2aa-d4e6029f7928" style="height: 334px;" data-widgetcontainerid="e867660e-83c2-46a5-a2aa-d4e6029f7928">
+	
+
+<div class="widget widgetSpacer" id="d863185e-8887-4d6d-9e11-d3f98c65599e" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col5" style="height: auto;" data-widgetcontainerid="a14a7459-dfe0-48e8-bed6-729b81b0021c">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last id66179ec7-3c24-4dfe-9b3d-4facfcdc9729" style="height: 334px;" data-widgetcontainerid="66179ec7-3c24-4dfe-9b3d-4facfcdc9729">
+	
+    <div data-widget-id="445ddad9-cf57-45e4-bd46-9da3ac3abaff" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv445ddad9-cf57-45e4-bd46-9da3ac3abaff" class="widget widgetInfoAdvanced skin27 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="header445ddad9-cf57-45e4-bd46-9da3ac3abaff">
+			<header class="widgetHeader" id="header445ddad9-cf57-45e4-bd46-9da3ac3abaff" role="presentation">
+		<div class="">
+					<h3 role="heading" aria-level="2">Water Line Broken</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Monday - Friday</p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>8:00am - 5:00pm</p><p><br></p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Phone: <a href="tel:9365592593">936-559-2593</a></p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>After Hours Emergencies:</p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>936-559-2900</p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv445ddad9-cf57-45e4-bd46-9da3ac3abaff .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="e62766b7-f0eb-4bff-bdc7-1d1c9b315a94">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last idf592f921-c38f-4bc9-af58-8c4e9ec9b96e" style="height: 334px;" data-widgetcontainerid="f592f921-c38f-4bc9-af58-8c4e9ec9b96e">
+	
+
+<div class="widget widgetSpacer" id="4ab1c998-25b4-40e0-9e50-8387cc34acca" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4 last" style="height: auto;" data-widgetcontainerid="75569df5-0379-4dfd-9e15-594ba26a90dd">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last idc7cd5fb4-19dc-400f-95e2-6f7ba4ec3a11" style="height: 334px;" data-widgetcontainerid="c7cd5fb4-19dc-400f-95e2-6f7ba4ec3a11">
+	
+	<div data-widget-id="7df80c8f-94cb-4c9f-a4b3-a99306261f2f" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink7df80c8f-94cb-4c9f-a4b3-a99306261f2f" class="widget widgetQuickLinks skin27 widgetOptionSet17 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeader7df80c8f-94cb-4c9f-a4b3-a99306261f2f">
+			<header class="widgetHeader" id="quickLinksHeader7df80c8f-94cb-4c9f-a4b3-a99306261f2f" role="presentation">
+		<div class="">
+					<h3 role="heading" aria-level="2"><a style="" href="https://www.nactx.us/QuickLinks.aspx?CID=86">Quick Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.nactx.us/640/animal-services" target="_self">Animal Services</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.nactx.us/962/library" target="_self">Library</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.nactx.us/760/police" target="_self">Police</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.nactx.us/601/history-of-nacogdoches" target="_self">History of Nacogdoches</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.nactx.us/1583/Water-Service-Line-Inventory" target="_self">Water Service Line Inventory</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.nactx.us/bids.aspx" target="_self">Bid Postings</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://nactx.us/1642/Property-Tax-Rate" target="_self">Tax Rate Public Notice</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div><div data-cprole="structuralContainer" id="linksContainerTS">
+<div class="siteWrap4"><div data-cprole="contentContainer" id="linksTS">	<div id="cccbbd6131-e90c-4fa7-85db-c83e8fdb131e" data-containerid="cbbd6131-e90c-4fa7-85db-c83e8fdb131e" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="64">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col2 first" style="height: auto;" data-widgetcontainerid="b3f6d688-5fa2-41c5-b53c-e6e5fa73e17b">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col2 first last id7269026e-62d5-4f28-a4c1-81feac3d792a" style="height: 86px;" data-widgetcontainerid="7269026e-62d5-4f28-a4c1-81feac3d792a">
+	
+
+<div class="widget widgetSpacer" id="8342cd5e-40e1-4237-a504-81a79330be19" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col20" style="height: auto;" data-widgetcontainerid="81b5b3fd-5cdf-42dc-b407-e2af0e0ac86a">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col20 first last id3dbc11a7-85a5-49d6-9cb9-32a115858ded" style="height: 86px;" data-widgetcontainerid="3dbc11a7-85a5-49d6-9cb9-32a115858ded">
+	
+	<div data-widget-id="53d4d0cc-b39d-41d0-9b10-7cbc1237c74f" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink53d4d0cc-b39d-41d0-9b10-7cbc1237c74f" class="widget widgetQuickLinks skin29 widgetOptionSet17 wide" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:64em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn">
+			<header class="widgetHeader" id="quickLinksHeader53d4d0cc-b39d-41d0-9b10-7cbc1237c74f" role="presentation">
+		<div class="">
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid5 ">
+        <div class="row  wide">
+				<div class="col col1 first ">
+					<ol class="semanticList" role="presentation">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.nactx.us/1/" target="_self">Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList" role="presentation">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.nactx.us/sitemap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList" role="presentation">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.nactx.us/privacy" target="_self">Privacy</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList" role="presentation">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.nactx.us/accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  last">
+					<ol class="semanticList" role="presentation">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.nactx.us/site/copyright" target="_self">Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col2 last" style="height: auto;" data-widgetcontainerid="3b37dc74-6e97-45fd-9230-12c0f3d10393">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col2 first last id7ab38cfb-50aa-4399-90c9-6e35281a8c51" style="height: 86px;" data-widgetcontainerid="7ab38cfb-50aa-4399-90c9-6e35281a8c51">
+	
+
+<div class="widget widgetSpacer" id="71f9fbc9-7292-4047-8d54-c1296523928b" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+
+
+
+		<div class="bannerObject external" id="bannerDivbanner2" style="min-height: 500px; top: 0px; left: -501.521px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img alt="" class="bannerObject" src="https://www.nactx.us/ImageRepository/Document?documentID=8791" width="2268.041237113402px" style="position: absolute; left: 0px; margin: 0px; width: 2268.04px;"></div>
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderBanner('banner2-30',
+								'banner2',
+								{"BannerOptionID":30,"ThemeID":15,"SlotName":"banner2","Name":"Default","IsDefault":true,"BannerMode":1,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":false,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":66,"BannerOptionID":30,"FileName":"/ImageRepository/Document?documentID=8791","Height":485,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null}],"BannerVideos":[{"BannerVideoID":19,"BannerOptionID":30,"VideoFileName":"","ImageFileName":"EmptyBannerBkg202502170629478720.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								{"BannerImageID":66,"BannerOptionID":30,"FileName":"/ImageRepository/Document?documentID=8791","Height":485,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null},
+								'/App_Themes/2025 - Interior/Images/',
+								'<img alt="" class="bannerObject" src="/ImageRepository/Document?documentID=8791" />');
+						});
+				});
+			</script>
+
+</div>
+</footer><!-- Powered By --><div data-cprole="structuralContainer" id="poweredByContainerTS">
+<div class="siteWrap4"><div data-cprole="contentContainer" id="poweredByTS">	<div id="cc2394e556-c119-4c97-8e8f-9df5f8725569" data-containerid="2394e556-c119-4c97-8e8f-9df5f8725569" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="4df63bfb-96af-40ea-8788-f78af7e5aa7d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id2359e628-babc-4458-b534-54fcba90aa47" style="height: 34px;" data-widgetcontainerid="2359e628-babc-4458-b534-54fcba90aa47">
+	
+ 
+	<div data-widget-id="4065f4a5-1ea0-42e1-af49-fd95ec2cc630" data-modulename="customHtml" id="widgetCustomHtml4065f4a5-1ea0-42e1-af49-fd95ec2cc630" class="widget widgetCustomHtml skin28 narrow">
+	<div class="widgetBody pageStyles" id="widgetBody4065f4a5-1ea0-42e1-af49-fd95ec2cc630">
+		<div id="customHtml4065f4a5-1ea0-42e1-af49-fd95ec2cc630"><div><style>
+  /* CP icon */
+  .cpBylineIconTS {
+    
+  }
+  /* CP Text */
+  .cpBylineTextTS,
+  .cpBylineTextTS a:link {
+   
+  }
+
+  .cpBylineTS {
+    text-align: center;
+  }
+  
+  .cpBylineIconTS {
+    fill: currentColor;
+    width: 39px;
+    height: 26px;
+    display: inline;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="widgetItem cpBylineTS">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="cpBylineIconTS" role="presentation" aria-hidden="true" tabindex="-1">
+    <path class="c" d="M73.4,23.2h-19v16.7h19c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5h-19v28.4h5.5l11.3-11.7h2.2c11.9,0,21.6-9.7,21.6-21.6C95,33,85.3,23.2,73.4,23.2"></path>
+    <path class="p" d="M45.8,66.5H26.6C14.7,66.5,5,56.8,5,44.9C5,33,14.7,23.2,26.6,23.2h19.1v16.7H26.6c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h19.1V66.5z"></path>
+  </svg>
+  <span class="cpBylineTextTS">Government Websites by <a href="https://connect.civicplus.com/referral">CivicPlus®</a></span>
+</div>
+</div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25" role="presentation" aria-hidden="true" tabindex="-1">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '838',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!-- Move banner to outer wrap --> 
+<script> 
+function moveBannerToOuterWrap() { 
+    if ($(".fixedBannerTS").length) { 
+		if ($("#bannerDivbanner2").length) { 
+			$("#bannerDivbanner2").appendTo("#outer-wrap"); 
+		} else { 
+			setTimeout(function() { 
+				moveBannerToOuterWrap(); 
+			}, 500); 
+		} 
+	}
+} 
+moveBannerToOuterWrap(); 
+</script> 
+<style> 
+#structuralContainer1 { 
+    background-color: transparent !important; 
+} 
+</style> 
+<!-- end move banner to outer wrap -->
+
+<script type="text/javascript">!function(){var b=function(){window.__AudioEyeSiteHash = "8d0f50c0291660efeb33efb07a2a34fa"; var a=document.createElement("script");a.src="https://wsmcdn.audioeye.com/aem.js";a.type="text/javascript";a.setAttribute("async","");document.getElementsByTagName("body")[0].appendChild(a)};"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",b):window.attachEvent&&window.attachEvent("onload",b):b()}();</script>
+
+
+<!-- Fixed Nav Adjustment -->
+<script>
+  function getValueTS(elem, attr) {
+    const val = elem.css(attr);
+    if (val === undefined) return undefined;
+    const num = parseInt(val, 10);
+    if (num === NaN) return undefined;
+    return num;
+  }
+
+  function clampTS(number, min, max) {
+    return Math.min(Math.max(number, min), max);
+  }
+
+  function isPageEditingTS() {
+    return (
+      $("#doneEditing").length > 0 || // In live edit
+      typeof DesignCenter !== "undefined" // In theme manager
+    );
+  }
+
+  const bgColorRegexTS = /rgba((d+), (d+), (d+), (d*.?d*))/;
+  function isTransparentTS(elem) {
+    const bg = elem.css('background-color');
+    if (typeof bg !== "string" || !bg.startsWith('rgba(')) return false;
+    const matchState = bg.match(bgColorRegexTS);
+    if (!matchState || matchState.length !== 5) return false;
+    const alpha = parseFloat(matchState[4], 10);
+    if (!(alpha >= 0 && alpha < 1)) return false;
+    return true;
+  }
+
+  function iterateLeftpads(cb) {
+    const containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (let i = 0; i < containersTS.length; i++) {
+      const containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-leftpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-leftpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  const anchor = $("#divToolbars");
+  const anchor2 = $("#headerContainerTS")
+
+  // Outer banner padding (push banner down)
+  const outerSizingTS = $("#bannerContainerTS");
+  // Inner banner padding (push banner content down) - Transparent header OR on attaching headers
+  const innerSizingTS = $("#bannerSizingTS");
+  const bodyContainerTS = $("#bodyContainerTS");
+
+  const forceUnfixClassTS = "forceUnfixTS";
+
+  const fixedTopTS = $(".fixedTopTS");
+  const fixedBottomTS = $(".fixedBottomTS");
+  const fixedLeftTS = $(".fixedLeftTS");
+
+  var initialTopTS;
+  var topAttachTS;
+  if (fixedTopTS && fixedTopTS.length === 1) {
+    initialTopTS = getValueTS(fixedTopTS, 'top');
+    const attachment = fixedTopTS.attr('data-attach');
+    if (attachment) topAttachTS = $("#" + attachment);
+    if (!topAttachTS || topAttachTS.length !== 1) topAttachTS = undefined;
+  }
+
+  function resizeAdjustmentTS() {
+    const editing = isPageEditingTS();
+
+    // Fixed top script
+    (function () {
+      if (!fixedTopTS || fixedTopTS.length !== 1 || initialTopTS === undefined) return;
+
+      if (editing) {
+        fixedTopTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedTopTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      const topPosition = fixedTopTS.css('position');
+      if (topPosition === 'fixed') {
+        if (topAttachTS) {
+          scrollAdjustmentTS();
+        } else {
+          const anchorHeight = anchor.outerHeight() - 1;
+          fixedTopTS.css('top', anchorHeight + initialTopTS);
+        }
+      } else {
+        fixedTopTS.css('top', initialTopTS);
+      }
+
+      if (topPosition === 'fixed' || topPosition === 'absolute') {
+        // Bump the banner content down
+        if (isTransparentTS(fixedTopTS)) {
+          innerSizingTS.css('padding-top', initialTopTS + fixedTopTS.outerHeight() - 1);
+          outerSizingTS.css('padding-top', '');
+
+          try {
+            window.Pages.onResizeHandlersExecute();
+          } catch (e) { }
+        } else {
+          outerSizingTS.css('padding-top', fixedTopTS.outerHeight() - 1);
+          innerSizingTS.css('padding-top', '');
+        }
+      } else {
+        innerSizingTS.css('padding-top', '');
+        outerSizingTS.css('padding-top', '');
+      }
+    })();
+
+    // Fixed bottom script
+    (function () {
+      if (!fixedBottomTS || fixedBottomTS.length === 0) return;
+
+      // If the widget has gone narrow, force unfix
+      if (editing || fixedBottomTS.outerHeight() > 200) {
+        fixedBottomTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedBottomTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedBottomTS.css('position') === 'fixed') {
+        bodyContainerTS.css('padding-bottom', fixedBottomTS.outerHeight());
+      } else {
+        bodyContainerTS.css('padding-bottom', '');
+      }
+    })();
+
+    // Fixed left script
+    (function () {
+      if (!fixedLeftTS || fixedLeftTS.length === 0) return;
+
+      if (editing) {
+        fixedLeftTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedLeftTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedLeftTS.css('position') === 'fixed') {
+        const anchorHeight = anchor.outerHeight() - 1;
+        fixedLeftTS.css('top', anchorHeight);
+        const leftBoundingTS = fixedLeftTS[0].getBoundingClientRect();
+        iterateLeftpads(function (containerTS) {
+          const containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.left <= leftBoundingTS.right) {
+            $(containerTS).css('padding-left', leftBoundingTS.width + 16);
+          }
+        });
+      } else {
+        fixedLeftTS.css('top', '');
+        iterateLeftpads(function (containerTS) {
+          $(containerTS).css('padding-left', '');
+        });
+      }
+    })();
+  }
+
+  function scrollAdjustmentTS() {
+    if (!fixedTopTS || fixedTopTS.length !== 1 || !topAttachTS || topAttachTS.length !== 1) return;
+    const topPosition = fixedTopTS.css('position');
+    if (topPosition === 'fixed' || topPosition === 'absolute') {
+      const anchorBounding = anchor[0].getBoundingClientRect();
+      const attachBounding = topAttachTS[0].getBoundingClientRect();
+      const scrollTop = $(window).scrollTop();
+
+      fixedTopTS.css('top', Math.max(anchorBounding.bottom - 1, attachBounding.bottom));
+    } else {
+      fixedTopTS.css('top', initialTopTS);
+    }
+  }
+
+  $(window).load(function () {
+    setTimeout(function () {
+      resizeAdjustmentTS();
+    }, 350);
+
+    $(window).scroll(function () {
+      scrollAdjustmentTS();
+    });
+
+    var adjustTimeoutTS;
+    $(window).resize(function () {
+      clearTimeout(adjustTimeoutTS);
+      adjustTimeoutTS = setTimeout(function () {
+        resizeAdjustmentTS();
+      }, 350);
+    });
+
+    $.when(window.Pages.angularToolbarComplete).done(function () {
+      resizeAdjustmentTS();
+    });
+  });
+</script>
+<!-- End Fixed Nav Adjustment -->
+
+<script type="module" data-hash="cba1f8f8f68742d29ac7af954cb002cf" id="frase-script" src="https://answers-script.frase.io/bot.js"></script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;" role="presentation" aria-hidden="true" tabindex="-1">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,700,700italic,900,900italic,italic,regular|Merriweather:700|Montserrat:500,600,700,regular|Open+Sans:600,700,regular|Poppins:100,100italic,200,200italic,300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,italic,regular|Roboto:100,100italic,200,200italic,300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,italic,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" role="presentation" aria-hidden="true" tabindex="-1">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<div id="frase-answers-bot" class="frase-answers-bot" style="left: auto; right: 0px;"><div id="frase-wrapper" style="overflow: hidden; right: 0px; height: 95px; margin-right: 0px; margin-bottom: 0px; background: transparent; bottom: 0px;"><iframe title="Chat Bot" id="frase-iframe" src="https://answers-bot.frase.io/cba1f8f8f68742d29ac7af954cb002cf" style="bottom: 0px; right: 0px; position: fixed; z-index: 2147483647; border: none; height: 95px; width: 95px; margin-right: 0px; margin-bottom: 0px; background: transparent;"></iframe><div id="frase-greeting" style="position: fixed; bottom: calc(111px); right: 18px; background-color: rgb(255, 255, 255); padding: 15px; border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px; z-index: 10001; max-width: 300px; border: 1px solid rgb(221, 221, 221); cursor: pointer;"><p style="margin: 0px 10px 0px 0px; font-weight: 500; font-size: 0.8rem; line-height: 0.8rem;">Hi, how can I help?</p><button title="close greeting" style="position: absolute; top: -8px; right: -5px; border: none; background: rgb(229, 229, 229); border-radius: 50%; cursor: pointer; padding: 0px; height: 18px; width: 18px; font-size: 0.7rem; display: flex;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" style="height: 12px; width: 12px; color: rgb(0, 0, 0); font-size: 0.7rem; margin: auto;"><path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path></svg></button></div></div></div><ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;" role="presentation"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu817" class="contentTop mainNavMegaMenu megaMenuContainer pageID_817 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 77.2188px;">	<div id="ccfc7621bc-50dc-49f0-94d0-a11289614db1" data-containerid="fc7621bc-50dc-49f0-94d0-a11289614db1" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu628" class="contentTop mainNavMegaMenu megaMenuContainer pageID_628 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 77.2188px;">	<div id="cc4726a15f-a712-4aa7-bd3c-b366e57f4887" data-containerid="4726a15f-a712-4aa7-bd3c-b366e57f4887" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu799" class="contentTop mainNavMegaMenu megaMenuContainer pageID_799 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 77.2188px;">	<div id="cc9b0ad56a-95ef-4c1f-9b66-6b8a425be84b" data-containerid="9b0ad56a-95ef-4c1f-9b66-6b8a425be84b" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu609" class="contentTop mainNavMegaMenu megaMenuContainer pageID_609 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 77.2188px;">	<div id="ccabe7b081-ff6f-48d8-aabe-c540235681d7" data-containerid="abe7b081-ff6f-48d8-aabe-c540235681d7" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b role="emphasis">&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div><script src="https://wsmcdn.audioeye.com/aem.js" type="text/javascript" async=""></script><script src="https://wsv3cdn.audioeye.com/bootstrap.js?h=8d0f50c0291660efeb33efb07a2a34fa" type="text/javascript" async=""></script><script async="" crossorigin="anonymous" src="https://wsv3cdn.audioeye.com/v2/scripts/loader.js?h=8d0f50c0291660efeb33efb07a2a34fa&amp;lang=en&amp;cb=2026-01-14"></script><script type="text/javascript" src="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-14/startup.bundle.js"></script><div id="ae_app" data-nosnippet="">
+    
+        <!--
+        Layout, Style or Voice Helpers
+    -->
+    <div id="ae_helpers" class="ae-module" style="display: none;">
+
+    
+<script type="text/javascript">
+AudioEye.layoutHelpers.push(function(ele){
+
+// Tabset function setup - Active Class is the class the li gets when the element is active
+// Function includes tabsetup, tab labels and keylooping
+function tabSet(listParent, listItem, listAnchor, activeClass, tabPanels){
+  // Setting roles and initial values
+  $ae(listParent).each(function(){
+    if ($ae(this).find(listItem).length > 1) {
+      if($ae(this).css('display') !== 'none'){
+        $ae(this).attr({'role':'tablist'});
+      }
+
+      $ae(this).find(listItem).attr({'role':'presentation'});
+      $ae(this).find(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+      $ae(this).find(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+      $ae(this).find(tabPanels).each(function(){
+        if($ae(this).parent().find(listParent).css('display') !== 'none'){
+          $ae(this).attr({'role':'tabpanel'});
+        }
+      });
+    }
+  });
+
+
+  // Encapsulate events - Key Navigation for tabsets without tabindex
+  ele.outerFind(listParent).each(function(){
+    if ($ae(this).find(listItem).length > 1) {
+      // Change active tab onclick event
+      $ae(this).find('a').click(function(){
+        $ae(listParent).find('a').attr({'aria-selected':'false', 'tabindex':'-1'});	
+        $ae(listParent).find('li.active a').attr({'aria-selected':'true', 'tabindex':'0'});	
+      });
+
+
+      // tabset keylooping
+      $ae(this).find('a').on('keydown', function(e){
+        if(e.keyCode === 13 || e.keyCode === 32){
+          e.preventDefault();
+          this.click();
+        }
+        else if(e.keyCode === 37 && ($ae(this)[0] === $ae(this).closest('ol').find('a').first()[0])){
+          AudioEye.focusElement($ae(this).closest('ol').find('a').eq(-1));
+        }
+        else if( e.keyCode === 39 && ($ae(this)[0] === $ae(this).closest('ol').find('a').last()[0])){
+          AudioEye.focusElement($ae(this).closest('ol').find('a').first());
+        }
+        else if(e.keyCode === 37 ){
+          AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+        }
+        else if(e.keyCode === 39 ){
+          AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+        }
+      });
+    }
+
+  });	// Close encapsulated actions
+}
+// tabset function call
+tabSet('ol.tabbedWidget.cpTabs','ol.tabbedWidget.cpTabs li','ol.tabbedWidget.cpTabs li > a','active','.cpTabPanels');
+/* end */
+
+
+/* Start new tabset */
+// Facilites Map & Listing Tabset
+function  facilitiesTabSet(listParent, listItem, listAnchor, activeClass, tabPanels){
+
+  // Setting roles and initial values
+  $ae(listParent).attr({'role':'tablist'});
+  $ae(listItem).attr({'role':'presentation'});
+  $ae(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+  $ae(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+  $ae(tabPanels).attr({'role':'tabpanel'});
+
+  $ae(listAnchor).click(function(){
+    $ae(listAnchor).attr({'aria-selected':'false', 'tabindex':'-1'});
+    $ae(this).attr({'aria-selected':'true', 'tabindex':'0'});
+  });
+
+  ele.outerFind('.searchResults > ol.tabs').each(function(){
+
+    $ae(this).find('a').on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+      else if((e.keyCode === 37 || e.keyCode === 38) && ($ae(this)[0] === $ae(this).closest('ol').find('a').first()[0])){
+        AudioEye.focusElement($ae(this).closest('ol').find('a').eq(-1));
+      }
+      else if((e.keyCode === 39 || e.keyCode === 40) && ($ae(this)[0] === $ae(this).closest('ol').find('a').last()[0])){
+        AudioEye.focusElement($ae(this).closest('ol').find('a').first());
+      }
+      else if(e.keyCode === 37 || e.keyCode === 38){
+        AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+      }
+      else if(e.keyCode === 39 || e.keyCode === 40){
+        AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+      }
+    });
+
+  }); 
+
+}
+
+facilitiesTabSet('.searchResults > ol.tabs','.searchResults > ol.tabs > li','.searchResults > ol.tabs > li > a','active','.searchResults > div');
+/* -END- */
+
+/* Start new tabset */
+// Facilitites Sidebar Tabset
+function sideBarTabset(listParent, listItem, listAnchor, activeClass, tabPanels){
+
+  // Setting roles and initial values
+  $ae(listParent).attr({'role':'tablist'});
+  $ae(listItem).attr({'role':'presentation'});
+  $ae(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+  $ae(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+  //$ae(tabPanels).attr({'role':'tabpanel'});
+
+  $ae(listAnchor).click(function(){
+    $ae(listAnchor).attr({'aria-selected':'false', 'tabindex':'-1'});
+    $ae(this).attr({'aria-selected':'true', 'tabindex':'0'});
+  });
+
+  ele.outerFind('ul.tabs.searchCriteria').each(function(){
+
+    $ae(this).find('a').on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+      else if((e.keyCode === 37 || e.keyCode === 38) && ($ae(this)[0] === $ae(this).closest('ul').find('a').first()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').eq(-1));
+      }
+      else if((e.keyCode === 39 || e.keyCode === 40) && ($ae(this)[0] === $ae(this).closest('ul').find('a').last()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').first());
+      }
+      else if(e.keyCode === 37 || e.keyCode === 38){
+        AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+      }
+      else if(e.keyCode === 39 || e.keyCode === 40){
+        AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+      }
+    });
+
+  }); 
+
+}
+
+sideBarTabset('ul.tabs.searchCriteria','ul.tabs.searchCriteria > li','ul.tabs.searchCriteria > li > a','active','ul.tabs.searchCriteria + div.sidebar > div');
+/* End */
+
+/* Start new tabset */
+function calendarTabset(listParent, listItem, listAnchor, activeClass, tabPanels){
+
+  // Setting roles and initial values
+  $ae(listParent).attr({'role':'tablist'});
+  $ae(listItem).attr({'role':'presentation'});
+  $ae(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+  $ae(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+  $ae(tabPanels).attr({'role':'tabpanel'});
+
+  $ae(listAnchor).click(function(){
+    $ae(listAnchor).attr({'aria-selected':'false', 'tabindex':'-1'});
+    $ae(this).attr({'aria-selected':'true', 'tabindex':'0'});
+  });
+
+  $ae('.header > #subheader ul.tabs').each(function(){
+
+    $ae(this).find('a').on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+      else if((e.keyCode === 37 || e.keyCode === 38)  && ($ae(this)[0] === $ae(this).closest('ul').find('a').first()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').eq(-1));
+      }
+      else if((e.keyCode === 39 || e.keyCode === 40) && ($ae(this)[0] === $ae(this).closest('ul').find('a').last()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').first());
+      }
+      else if(e.keyCode === 37 || e.keyCode === 38){
+        AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+      }
+      else if(e.keyCode === 39 || e.keyCode === 40) {
+        AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+      }
+    });
+
+  }); 
+
+}
+
+calendarTabset('.header > #subheader ul.tabs','.header > #subheader ul.tabs > li','.header > #subheader ul.tabs > li > a','active','.header > .list');
+/* end */
+
+// Tabset for Agenda Center Years
+// AE -  Agenda Center Tabset [AEI-40486]
+ele.outerFind('ul.years').each(function(){
+
+  tabset($ae(this), $ae(this).find('li'), $ae(this).find('a[id^="a"]'),'current', $ae(this).parent().find('table'));
+
+  function tabset(tablist, li, tabs, activeClass, tabPanel){
+    tablist.attr('role','tablist');
+    li.attr('role', 'presentation');
+    tabs.attr({'role': 'tab', 'tabindex':'-1', 'aria-selected':'false'});
+    $ae(li.selector +'.' + activeClass +' > '+ tabs.selector).attr({'aria-selected':'true', 'tabindex':'0'});
+    tabPanel.attr('role', 'tabpanel');
+
+    // individual tabs TODO - Update so it is dynamic
+    var tab = tablist.find('>'+li.selector+'>a');
+
+    tab.on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+    }).click(function(){
+      $ae('body').data({'ae-year-tab': '#' + $ae(this).attr('id')});
+      setTimeout(function(){
+        AudioEye.focusElement($ae('body').data('ae-year-tab'));
+        $ae($ae('body').data('ae-year-tab')).attr('tabindex','0');
+      }, 1000);
+    });
+  }
+
+});
+
+}); // layout helpers push close brackets
+</script>
+
+    </div>
+    
+
+        <!--
+        Compliance
+    -->
+    <div id="ae_compliance" class="ae-module" style="display: none;">
+
+        <!-- For autoSmartRem addNewWindowWarnings div is referenced in an aria-describedby -->
+        <div id="audioeye_new_window_message" style="display:none">Opens in new window</div>
+        <div id="audioeye_pdf_message" style="display:none">PDF Download</div>
+        <div id="audioeye_word_message" style="display:none">Word Download</div>
+        <div id="audioeye_excel_message" style="display:none">Excel Download</div>
+        <div id="audioeye_powerpoint_message" style="display:none">PowerPoint Download</div>
+        <div id="audioeye_document_message" style="display:none">Document Download</div>
+
+                    </div>
+    
+    <!--
+        Versioning Control Panel if versioning = true !
+    -->
+        
+    <!--
+        Launcher
+    -->
+    <aside id="ae_launcher" style="display: none" class="ae-module aetipsytip ae-active ae-cta-position-preset-right-lower" aria-label="Accessibility Help Desk">
+  <button aria-label="Explore your accessibility options">
+    <div style="display: none" class="ae-left">
+      <span>Explore your accessibility options</span>
+    </div>
+
+    <div class="ae-right">
+      <span class="icomoon-wrapper">
+        <div>
+          <span class="icomoon-cta ae-icon-launcher-universalaccess ae-initial-cta">
+            <span class="icomoon-cta path1 a11y-icon-figure-and-border"></span>
+            <span class="icomoon-cta path2 a11y-icon-background" style="color: rgb(18, 117, 179);"></span>
+          </span>
+        </div>
+      </span>
+    </div>
+  </button>
+</aside>
+
+    <!-- Toolbar -->
+
+    <span id="ae_placeholder_toolbar" style="display: none;" aria-hidden="true"></span>
+
+    <!--
+        Site Menu
+    -->
+    <span id="ae_placeholder_site-menu" style="display: none;" aria-hidden="true"></span>
+
+    
+    <!--
+        Generic Aria Live message container
+    -->
+    <div class="ae-blurb-noaudio" id="ae_enabled_messages" aria-relevant="additions" aria-live="assertive"></div>
+
+    
+    <!-- Symbol definitions -->
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="icon-close-carousel" viewBox="0 0 32 32">
+                <title>close carousel</title>
+                <path fill="#ffffff" style="fill: var(--color1, #ffffff)" d="M28.992 0l-12.992 12.992-12.992-12.992-3.008 3.008 12.992 12.992-12.992 12.992 3.008 3.008 12.992-12.992 12.992 12.992 3.008-3.008-12.992-12.992 12.992-12.992-3.008-3.008z"></path>
+            </symbol>
+        </defs>
+    </svg>
+
+</div><!-- end #ae_app --><style> body[data-audioeye-carousel-modal-active] .pageContent .col, body[data-audioeye-carousel-modal-active] .pageContent .row, body[data-audioeye-carousel-modal-active] .widget, body[data-audioeye-carousel-modal-active] [data-cprole$=Container], body[data-audioeye-carousel-modal-active] [data-cprole=banner], body[data-audioeye-carousel-modal-active] [data-cprole=nav] { z-index: unset !important; }</style></body></html>
