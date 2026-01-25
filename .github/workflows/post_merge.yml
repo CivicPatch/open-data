@@ -102,6 +102,13 @@ jobs:
         run: echo "user-id=$(gh api "/users/${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
         env:
           GH_TOKEN: ${{ steps.generate-pipeline-token.outputs.token }}  
+      
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          token: ${{ steps.generate-pipeline-token.outputs.token }}
+          fetch-depth: 0
 
       - name: Setup mise
         uses: jdx/mise-action@v3.2.0
@@ -114,13 +121,6 @@ jobs:
       - name: Install poetry dependencies
         run: |
           poetry install
-      
-      - name: Checkout repository
-        uses: actions/checkout@v5
-        with:
-          ref: main
-          token: ${{ steps.generate-pipeline-token.outputs.token }}
-          fetch-depth: 0
 
       - name: Upload images to CDN
         env:
