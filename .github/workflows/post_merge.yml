@@ -77,7 +77,7 @@ jobs:
           JURISDICTION_OCDIDS=$(poetry run python scripts/github_actions/extract_jurisdiction_ocdids.py $LOCAL_DATA_FILES_CSV)
           echo "jurisdiction ocdids: $JURISDICTION_OCDIDS"
           # Convert to JSON array for matrix
-          JURISDICTION_OCDIDS_JSON=$(echo $JURISDICTION_OCDIDS | jq -R 'split(",")')
+          JURISDICTION_OCDIDS_JSON=$(echo $JURISDICTION_OCDIDS | jq -R -c 'split(",")')
           echo "jurisdiction JSON array: $JURISDICTION_OCDIDS_JSON"
           echo "jurisdiction-ocdids=$JURISDICTION_OCDIDS_JSON" >> $GITHUB_OUTPUT
 
