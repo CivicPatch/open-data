@@ -92,6 +92,12 @@ jobs:
           BRANCH_NAME="${ZIP_FILE%%.zip*}"  # Remove everything starting from .zip
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
+      - name: Get jurisdiction_folder
+        id: get-jurisdiction-folder
+        run: |
+          JURISDICTION_FOLDER=$(poetry run python scripts/github_actions/get_jurisdiction_folder.py "${{ github.event.inputs.jurisdiction_ocdid }}")
+          echo "jurisdiction-folder=$JURISDICTION_FOLDER" >> "$GITHUB_OUTPUT"
+
       - name: Create a PR
         id: create-pr
         env:
@@ -103,7 +109,8 @@ jobs:
           git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]@users.noreply.github.com'
 
           git checkout -B ${{ steps.extract_branch.outputs.branch_name }}
-          git add .
+          git add "data/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}"
+          git add "data_source/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}"
           git commit -m "Add municipal officials for ${{ github.event.inputs.jurisdiction_ocdid }} by ${{ github.event.inputs.user_email }}"
           git push -u origin ${{ steps.extract_branch.outputs.branch_name }}
 

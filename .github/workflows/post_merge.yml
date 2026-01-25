@@ -131,6 +131,12 @@ jobs:
         run: |
           mise upload-images-to-cdn --jurisdiction-ocdid "${{ matrix.jurisdiction_ocdid }}"
           # Remove local images after upload TODO
+        
+      - name: Get jurisdiction_folder
+        id: get-jurisdiction-folder
+        run: |
+          JURISDICTION_FOLDER=$(poetry run python scripts/github_actions/get_jurisdiction_folder.py "${{ matrix.jurisdiction_ocdid }}")
+          echo "jurisdiction-folder=$JURISDICTION_FOLDER" >> "$GITHUB_OUTPUT"
 
       - name: Commit image updates
         run: |
@@ -138,13 +144,11 @@ jobs:
           git config --global user.name '${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]'
           git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]@users.noreply.github.com'
 
-          # Pull the latest changes from the remote repository
-          git fetch origin main
-          git reset --soft origin/main
-
           # Commit changes if any images were updated
           if [ -n "$(git status --porcelain)" ]; then
-            git add .
+            git add "data/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}"
+            git add "data_source/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}"
+            git status
             git commit -m "Upload images to CDN for ${{ matrix.jurisdiction_ocdid }}"
             git push -u origin main
           fi
@@ -202,9 +206,10 @@ jobs:
           # Configure git
           git config --global user.name '${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]'
           git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]@users.noreply.github.com'
-          # Commit changes if any images were updated
+
+          # Commit only specific files
           if [ -n "$(git status --porcelain)" ]; then
-            git add .
+            git add README.md progress.json
             git commit -m "Update jurisdiction_metadata.yml file for states: ${{ needs.extract-files.outputs.states }}"
             git push -u origin main
           fi
