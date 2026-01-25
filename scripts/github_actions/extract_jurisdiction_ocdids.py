@@ -1,7 +1,7 @@
 import yaml
 import sys
 
-def get_jurisdiction_ocdid_from_file(file_path: str) -> str | None:
+def extract_jurisdiction_ocdids(file_path: str) -> str | None:
     """Extract the jurisdiction_ocdid from a given YAML file.
 
     Args:
@@ -19,7 +19,7 @@ def get_jurisdiction_ocdid_from_file(file_path: str) -> str | None:
 if __name__ == "__main__":
     import sys
     if len(sys.argv) <= 1:
-        print("Usage: python get_jurisdiction_ocdid_from_file.py <file_path>, <file_path>")
+        print("Usage: python extract_jurisdiction_ocdids.py <file_path>,<file_path>")
         sys.exit(1)
     file_paths_arg = sys.argv[1:]
     #print(f"Received argument: {file_paths_arg}")
@@ -27,7 +27,7 @@ if __name__ == "__main__":
     #print(f"Processing files: {file_paths}")
     ocdids = []
     for file_path in file_paths:
-        ocdid = get_jurisdiction_ocdid_from_file(file_path)
+        ocdid = extract_jurisdiction_ocdids(file_path)
         if ocdid:
             ocdids.append(ocdid)
     print(",".join(ocdids))

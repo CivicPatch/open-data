@@ -74,7 +74,7 @@ jobs:
           LOCAL_DATA_FILES_CSV=$(echo "$LOCAL_DATA_FILES" | paste -sd "," -)
           echo $LOCAL_DATA_FILES_CSV
           # Extract jurisdiction ocdids from the updated files
-          JURISDICTION_OCDIDS=$(poetry run python scripts/github_actions/extract_jurisdiction_ocdids.py --file-paths $LOCAL_DATA_FILES_CSV)
+          JURISDICTION_OCDIDS=$(poetry run python scripts/github_actions/extract_jurisdiction_ocdids.py $LOCAL_DATA_FILES_CSV)
           echo "jurisdiction ocdids: $JURISDICTION_OCDIDS"
           # Convert to JSON array for matrix
           JURISDICTION_OCDIDS_JSON=$(echo $JURISDICTION_OCDIDS | jq -R 'split(",")')
