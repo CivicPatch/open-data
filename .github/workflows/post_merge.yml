@@ -185,6 +185,10 @@ jobs:
           if [ -n "$(git status --porcelain)" ]; then
             git add data/
             git status
+            
+            # Pull any changes that happened since checkout
+            git pull --rebase origin main
+            
             git commit -m "Upload images to CDN [skip ci]"
             git push
           else
@@ -250,12 +254,15 @@ jobs:
 
           # Commit only specific files
           if [ -n "$(git status --porcelain)" ]; then
+            # Pull latest changes before committing
+            git pull --rebase origin main
+            
             git add README.md progress.json
             git commit -m "Update jurisdiction_metadata.yml [skip ci]"
             git push
           else
             echo "No changes to commit"
-          fi
+          fi 
 
       - name: Call od_sync
         env:
