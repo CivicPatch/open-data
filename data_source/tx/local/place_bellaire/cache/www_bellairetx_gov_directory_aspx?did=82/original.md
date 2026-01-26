@@ -1,0 +1,159 @@
+Staff Directory • Mayor and City Council
+
+
+
+
+
+
+
+ 
+
+
+
+![Loading](https://www.bellairetx.gov/Common/images/ajax-loader.gif "Loading")
+
+Loading
+
+[Skip to Main Content](https://www.bellairetx.gov/directory.aspx?did=82#contentarea)
+
+
+
+
+
+
+
+
+
+
+
+
+[Create a Website Account](https://www.bellairetx.gov/MyAccount/ProfileCreate) - Manage notification subscriptions, save form progress and more.   
+
+* [Website Sign In](https://www.bellairetx.gov/MyAccount)
+
+[![Homepage](https://www.bellairetx.gov/ImageRepository/Document?documentID=29880)](https://www.bellairetx.gov/)
+
+* [![Facebook](https://www.bellairetx.gov/ImageRepository/Document?documentID=29884)](https://www.facebook.com/bellairetx.gov)
+
+* [![Instagram](https://www.bellairetx.gov/ImageRepository/Document?documentID=29885)](https://www.instagram.com/cityofbellairetexas/?hl=en)
+
+* [![X](https://www.bellairetx.gov/ImageRepository/Document?documentID=32208)](https://twitter.com/cityofbellaire)
+
+* [![Nextdoor](https://www.bellairetx.gov/ImageRepository/Document?documentID=29887)](https://nextdoor.com/city/feed/)
+
+* [![YouTube](https://www.bellairetx.gov/ImageRepository/Document?documentID=29893)](https://www.youtube.com/channel/UCY0d_thg055PhETqQRRYPjA)
+
+* [![Linkedin](https://www.bellairetx.gov/ImageRepository/Document?documentID=29886)](https://www.linkedin.com/company/city-of-bellairetx/)
+
+[![Search](https://www.bellairetx.gov/ImageRepository/Document?documentID=30393)](https://www.bellairetx.gov/Search/Results)
+Search
+
+1. [Our Government](https://www.bellairetx.gov/587/Our-Government)
+2. [Departments](https://www.bellairetx.gov/588/Departments)
+3. [Community](https://www.bellairetx.gov/589/Community)
+4. [Services](https://www.bellairetx.gov/1124/Services)
+5. [How Do I…](https://www.bellairetx.gov/1125/How-Do-I)
+
+![](https://www.bellairetx.gov/ImageRepository/Document?documentID=29881)
+
+1. [City of Bellaire](https://www.bellairetx.gov/)
+2. Staff Directory
+
+Mayor and City Council
+======================
+
+Physical Address:
+
+Bellaire, TX 77401
+
+Phone:
+
+[713-662-8276](tel:7136628276)
+
+  
+
+| Staff | | | | |
+| --- | --- | --- | --- | --- |
+| Name | Title | Email | Phone | Additional Phone |
+| [Pappas, Gus](https://www.bellairetx.gov/directory.aspx?EID=76) | Mayor | [Email Gus Pappas](mailto:gpappas@bellairetx.gov) |  |  |
+| [Frazier, Winfred](https://www.bellairetx.gov/directory.aspx?EID=71) | Council Member - Position 1 and Mayor Pro Tem | [Email Win Frazier](mailto:wfrazier@bellairetx.gov) |  |  |
+| [Lewis, Catherine](https://www.bellairetx.gov/directory.aspx?EID=72) | Council Member - Position 2 | [Email Catherine Lewis](mailto:clewis@bellairetx.gov) |  |  |
+| [Gordon, Ross](https://www.bellairetx.gov/directory.aspx?EID=106) | Council Member - Position 3 | [Email Ross Gordon](mailto:rgordon@bellairetx.gov) |  |  |
+| [Taylor, Cindy](https://www.bellairetx.gov/directory.aspx?EID=108) | Council Member - Position 4 | [Email Cindy Taylor](mailto:ctaylor@bellairetx.gov) |  |  |
+| [Witt, Brian](https://www.bellairetx.gov/directory.aspx?EID=74) | Council Member - Position 5 | [Email Brian Witt](mailto:bwitt@bellairetx.gov) |  |  |
+| [Georgiou, Jackie](https://www.bellairetx.gov/directory.aspx?EID=110) | Council Member - Position 6 | [Email Jackie Georgiou](mailto:jgeorgiou@bellairetx.gov) |  |  |
+
+  
+
+[Return to Staff Directory](https://www.bellairetx.gov/Directory.aspx)
+
+1. ![Footer Site ID](https://www.bellairetx.gov/ImageRepository/Document?documentId=30391)
+
+### Contact Us
+
+1. City Hall
+2. 7008 S. Rice Avenue
+3. Bellaire, TX 77401
+4. Phone: [713-662-8222](tel:7136628222)
+5. After Hours: [713-668-0487](tel:7136680487)
+
+### [Quick Links](https://www.bellairetx.gov/QuickLinks.aspx?CID=1)
+
+1. [Mayor's Blog](https://www.bellairetx.gov/blog.aspx)
+2. [City Council](https://www.bellairetx.gov/614/Mayor-and-Council)
+3. [City Departments](https://www.bellairetx.gov/588/Departments)
+4. [SeeClickFix Report a Concern](https://bellairetx.gov/1770/SeeClickFix-Bellaire)
+5. [Watch City Meetings Live!](https://bellairetx.new.swagit.com/views/21)
+6. [Media Inquiries](https://bellairetx.gov/1777/Media-Inquiries)
+
+/QuickLinks.aspx
+
+### [Site Links](https://www.bellairetx.gov/QuickLinks.aspx?CID=8)
+
+1. [Home](https://www.bellairetx.gov/)
+2. [Copyright Notices](https://www.bellairetx.gov/site/copyright)
+3. [Staff Directory](https://www.bellairetx.gov/directory.aspx)
+4. [Site Map](https://www.bellairetx.gov/sitemap.aspx)
+5. [Accessibility](https://www.bellairetx.gov/accessibility)
+6. [Privacy and Disclaimer](https://www.bellairetx.gov/1965/Privacy-and-Disclaimer)
+7. [Translate](https://www.bellairetx.gov/translate)
+
+/QuickLinks.aspx
+
+Loading
+
+Loading
+
+Do Not Show Again
+Close
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Arrow Left
+
+
+Arrow Right
+
+Slideshow Left Arrow
+
+
+Slideshow Right Arrow
+
+
+
+### Live Edit
+
+Close **×**
