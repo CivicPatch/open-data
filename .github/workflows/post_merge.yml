@@ -161,9 +161,17 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           pattern: images-*
+          path: downloaded-artifacts
           merge-multiple: true
-      
-      # TBD: Need to remove old images from data_source folders
+
+      - name: Move files to correct location
+        run: |
+          # Artifacts are downloaded with their upload path preserved when merge-multiple is used
+          # Move everything from the download directory to the repo root
+          if [ -d "downloaded-artifacts" ]; then
+            cp -r downloaded-artifacts/* .
+            rm -rf downloaded-artifacts
+          fi
 
       - name: Commit image updates
         run: |
