@@ -38,7 +38,7 @@ City of Saginaw](https://www.saginawtx.org/index.php)
 
 
 
-Sunday Jan. 25,
+Monday Jan. 26,
 
 ![](department/Slides/Admin.jpg)
 ![preview](https://www.saginawtx.org/_assets_/images/slider-prev.png)

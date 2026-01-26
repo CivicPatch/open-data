@@ -353,7 +353,7 @@ Search
 
 GO
 
-Sunday Jan. 25, Clouds  19 °F
+Monday Jan. 26, Haze  19 °F
 
 
 
