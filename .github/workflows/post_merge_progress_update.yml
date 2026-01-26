@@ -1,0 +1,160 @@
+name: "[auto] Post Merge - Progress Update"
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**/*.yml" # newly scraped jurisdiction
+      - "data_source/**/jurisdictions.yml" # manual update to jurisdictions
+
+concurrency:
+  group: post-merge-main-progress-update
+  cancel-in-progress: false
+
+  #workflow_dispatch:
+  #  inputs:
+  #    state:
+  #      description: 'state intitials'
+  #      required: true
+  #      type: choice
+  #      options:
+  #        - co
+  #        - wa
+
+permissions:
+  contents: write
+
+jobs:
+  extract-files:
+    runs-on: ubuntu-latest
+    outputs:
+      jurisdiction-ocdids: ${{ steps.extract-from-files.outputs.jurisdiction-ocdids }}
+      states: ${{ steps.extract-states.outputs.states }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0 # Fetch all history for accurate diffing
+
+      - name: Setup mise
+        uses: jdx/mise-action@v3.2.0
+        with:
+          version: "2025.9.6"
+          cache: true
+          log_level: debug
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install poetry dependencies
+        run: |
+          poetry install
+
+      - name: Extract updated states
+        id: extract-states
+        run: |
+          # Get the list of updated files
+          UPDATED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
+          # Extract unique state directories from the updated files
+          STATES=$(echo "$UPDATED_FILES" | grep -E '^(data|data_source)/' | cut -d/ -f2 | sort -u)
+          STATES_CSV=$(echo "$STATES" | paste -sd "," -)
+          echo "states=$STATES_CSV" >> $GITHUB_OUTPUT
+
+      - name: Extract updated jurisdiction ocdids
+        id: extract-from-files
+        run: |
+          # Get the list of updated YAML files under data/**/**.yml
+          UPDATED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
+          echo "Updated files:"
+          echo "$UPDATED_FILES"
+
+          LOCAL_DATA_FILES=$(echo "$UPDATED_FILES" | grep -E '^data/.*\.yml$' || true)
+          echo "Local data files:"
+          echo "$LOCAL_DATA_FILES"
+          # Join the file paths with commas
+          LOCAL_DATA_FILES_CSV=$(echo "$LOCAL_DATA_FILES" | paste -sd "," -)
+          echo $LOCAL_DATA_FILES_CSV
+          # Extract jurisdiction ocdids from the updated files
+          JURISDICTION_OCDIDS=$(poetry run python scripts/github_actions/extract_jurisdiction_ocdids.py $LOCAL_DATA_FILES_CSV)
+          echo "jurisdiction ocdids: $JURISDICTION_OCDIDS"
+          # Convert to JSON array for matrix
+          JURISDICTION_OCDIDS_JSON=$(echo $JURISDICTION_OCDIDS | jq -R -c 'split(",")')
+          echo "jurisdiction JSON array: $JURISDICTION_OCDIDS_JSON"
+          echo "jurisdiction-ocdids=$JURISDICTION_OCDIDS_JSON" >> $GITHUB_OUTPUT
+
+  post-merge:
+    environment: env-${{ github.actor }}
+    needs: [extract-files]
+    if: needs.extract-files.outputs.states != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate GitHub App Pipeline Token
+        id: generate-pipeline-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.GH_APP_BOT_PIPELINE_APP_ID }}
+          private-key: ${{ secrets.GH_APP_BOT_PIPELINE_PRIVATE_KEY }}
+
+      - name: Get GitHub App User ID
+        id: get-user-id
+        run: echo "user-id=$(gh api "/users/${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ steps.generate-pipeline-token.outputs.token }}
+
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          # Use default token for auth (prevents workflow loops)
+          fetch-depth: 0
+
+      - name: Setup mise
+        uses: jdx/mise-action@v3.2.0
+        with:
+          version: "2025.9.6"
+          cache: true
+          log_level: debug
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install poetry dependencies
+        run: |
+          mise ls
+          poetry install
+
+      - name: Update progress files for each state
+        run: |
+          for state in $(echo "${{ needs.extract-files.outputs.states }}" | tr ',' ' '); do
+            echo "Processing state: $state"
+            poetry run python scripts/github_actions/update_jurisdiction_metadata.py "$state"
+          done
+          poetry run python scripts/track_progress/main.py
+          poetry run python scripts/track_progress/generate_readme.py
+
+      - name: Commit changes to main
+        run: |
+          # Configure git with custom bot identity
+          git config --global user.name '${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]'
+          git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]@users.noreply.github.com'
+
+          # Commit only specific files
+          if [ -n "$(git status --porcelain)" ]; then
+            # Fetch latest without touching working directory
+            git fetch origin main
+            
+            # Reset to remote (keeps working directory changes)
+            git reset --soft origin/main
+            
+            git add .
+            git commit -m "Update jurisdiction_metadata.yml [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Call od_sync
+        env:
+          API_CIVICPATCH_ORG_TOKEN: ${{ secrets.API_CIVICPATCH_ORG_TOKEN }}
+          API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
+        run: |
+          curl -X POST "$API_CIVICPATCH_ORG_URL/api/admin/od_sync" \
+            -H "Content-Type: application/json" \
+            -H "Authorization: $API_CIVICPATCH_ORG_TOKEN" \
+            --fail-with-body
