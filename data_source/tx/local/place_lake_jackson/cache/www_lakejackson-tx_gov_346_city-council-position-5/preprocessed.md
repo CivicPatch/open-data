@@ -15,7 +15,7 @@ Jon "J.B." Baker, City Council Position 5 | Lake Jackson, TX - Official Website
 ![Twitter](https://www.lakejackson-tx.gov/ImageRepository/Document?documentID=7324)
 ![YouTube](https://www.lakejackson-tx.gov/ImageRepository/Document?documentID=7325)
 ![Search](https://www.lakejackson-tx.gov/ImageRepository/Document?documentID=7321)
-![](https://www.lakejackson-tx.gov/ImageRepository/Document?documentID=7316)
+![](https://www.lakejackson-tx.gov/ImageRepository/Document?documentID=7407)
 
 
 1. [City Government](https://www.lakejackson-tx.gov/27/City-Government)
