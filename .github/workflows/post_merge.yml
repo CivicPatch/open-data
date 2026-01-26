@@ -183,12 +183,12 @@ jobs:
 
           # Check if there are changes to commit
           if [ -n "$(git status --porcelain)" ]; then
-            git add data/
-            git status
-            
-            # Pull any changes that happened since checkout
+            # Pull latest changes
             git pull --rebase origin main
             
+            # Now stage and commit
+            git add data/
+            git status
             git commit -m "Upload images to CDN [skip ci]"
             git push
           else
@@ -254,7 +254,7 @@ jobs:
 
           # Commit only specific files
           if [ -n "$(git status --porcelain)" ]; then
-            # Pull latest changes before committing
+            # Pull latest changes BEFORE staging
             git pull --rebase origin main
             
             git add README.md progress.json
@@ -262,7 +262,7 @@ jobs:
             git push
           else
             echo "No changes to commit"
-          fi 
+          fi
 
       - name: Call od_sync
         env:
