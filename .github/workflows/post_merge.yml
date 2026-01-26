@@ -1,11 +1,14 @@
 name: "[auto] Post Merge"
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches: [main]
     paths:
-      - "data/**/**.yml" # newly scraped jurisdiction
+      - "data/**/*.yml" # newly scraped jurisdiction
       - "data_source/**/jurisdictions.yml" # manual update to jurisdictions
+
+concurrency:
+  group: post-merge-main
+  cancel-in-progress: false
 
   #workflow_dispatch:
   #  inputs:
@@ -22,7 +25,6 @@ permissions:
 
 jobs:
   extract-files:
-    if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     outputs:
       jurisdiction-ocdids: ${{ steps.extract-from-files.outputs.jurisdiction-ocdids }}
@@ -87,24 +89,10 @@ jobs:
       matrix:
         jurisdiction_ocdid: ${{ fromJson(needs.extract-files.outputs.jurisdiction-ocdids) }}
     steps:
-      - name: Generate GitHub App Pipeline Token
-        id: generate-pipeline-token
-        uses: actions/create-github-app-token@v2
-        with:
-          app-id: ${{ secrets.GH_APP_BOT_PIPELINE_APP_ID }}
-          private-key: ${{ secrets.GH_APP_BOT_PIPELINE_PRIVATE_KEY }} 
-
-      - name: Get GitHub App User ID
-        id: get-user-id
-        run: echo "user-id=$(gh api "/users/${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
-        env:
-          GH_TOKEN: ${{ steps.generate-pipeline-token.outputs.token }}  
-      
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
           ref: main
-          token: ${{ steps.generate-pipeline-token.outputs.token }}
           fetch-depth: 0
 
       - name: Setup mise
@@ -134,26 +122,71 @@ jobs:
         run: |
           JURISDICTION_FOLDER=$(poetry run python scripts/github_actions/get_jurisdiction_folder.py "${{ matrix.jurisdiction_ocdid }}")
           echo "jurisdiction-folder=$JURISDICTION_FOLDER" >> "$GITHUB_OUTPUT"
+      
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: images-${{ matrix.jurisdiction_ocdid }}
+          path: |
+            data/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}.yml
+            data_source/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}/
+
+  commit-image-updates:
+    runs-on: ubuntu-latest
+    needs: [extract-files, upload-images]
+    if: ${{ needs.extract-files.outputs.jurisdiction-ocdids != '[]' }}
+    steps:
+      - name: Generate GitHub App Pipeline Token
+        id: generate-pipeline-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.GH_APP_BOT_PIPELINE_APP_ID }}
+          private-key: ${{ secrets.GH_APP_BOT_PIPELINE_PRIVATE_KEY }}
+
+      - name: Get GitHub App User ID
+        id: get-user-id
+        run: echo "user-id=$(gh api "/users/${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ steps.generate-pipeline-token.outputs.token }}
+
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          # Use default token for auth (prevents workflow loops)
+          fetch-depth: 0
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: images-*
+          merge-multiple: true
+          path: .
 
       - name: Commit image updates
         run: |
-          # Configure git
+          # Configure git with custom bot identity
           git config --global user.name '${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]'
           git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]@users.noreply.github.com'
 
-          # Commit changes if any images were updated
+          # Check if there are changes to commit
           if [ -n "$(git status --porcelain)" ]; then
-            git add "data/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}.yml"
-            git add "data_source/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}"
+            git add data/
+            git add data_source/
             git status
-            git commit -m "Upload images to CDN for ${{ matrix.jurisdiction_ocdid }}"
-            git push -u origin main
+            git commit -m "Upload images to CDN [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
           fi
 
   post-merge:
     environment: env-${{ github.actor }}
-    needs: [extract-files]
-    if: ${{ needs.extract-files.outputs.states != '' }}
+    needs: [extract-files, commit-image-updates]
+    if: |
+      always() &&
+      needs.extract-files.outputs.states != '' &&
+      (needs.commit-image-updates.result == 'success' || needs.commit-image-updates.result == 'skipped')
     runs-on: ubuntu-latest
     steps:
       - name: Generate GitHub App Pipeline Token
@@ -173,7 +206,7 @@ jobs:
         uses: actions/checkout@v5
         with:
           ref: main
-          token: ${{ steps.generate-pipeline-token.outputs.token }}
+          # Use default token for auth (prevents workflow loops)
           fetch-depth: 0
 
       - name: Setup mise
@@ -200,15 +233,17 @@ jobs:
 
       - name: Commit changes to main
         run: |
-          # Configure git
+          # Configure git with custom bot identity
           git config --global user.name '${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]'
           git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]@users.noreply.github.com'
 
           # Commit only specific files
           if [ -n "$(git status --porcelain)" ]; then
             git add README.md progress.json
-            git commit -m "Update jurisdiction_metadata.yml file for states: ${{ needs.extract-files.outputs.states }}"
-            git push -u origin main
+            git commit -m "Update jurisdiction_metadata.yml [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
           fi
 
       - name: Call od_sync
