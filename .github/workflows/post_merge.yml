@@ -183,8 +183,11 @@ jobs:
 
           # Check if there are changes to commit
           if [ -n "$(git status --porcelain)" ]; then
-            # Pull latest changes
-            git pull --rebase origin main
+            # Fetch latest without touching working directory
+            git fetch origin main
+            
+            # Reset to remote (keeps working directory changes)
+            git reset --soft origin/main
             
             # Now stage and commit
             git add data/
@@ -254,8 +257,11 @@ jobs:
 
           # Commit only specific files
           if [ -n "$(git status --porcelain)" ]; then
-            # Pull latest changes BEFORE staging
-            git pull --rebase origin main
+            # Fetch latest without touching working directory
+            git fetch origin main
+            
+            # Reset to remote (keeps working directory changes)
+            git reset --soft origin/main
             
             git add README.md progress.json
             git commit -m "Update jurisdiction_metadata.yml [skip ci]"
