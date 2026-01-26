@@ -1,0 +1,3003 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-i4-active wf-muli-n7-active wf-muli-n3-active wf-muli-n4-active wf-active has-webFonts" style="height: 100%;"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Cormorant+Garamond:300,300italic,500,500italic,600,600italic,700,700italic,italic,regular|Lato:700,700italic,900,900italic,italic,regular|Montserrat:100,100italic,200,200italic,300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,italic,regular|Oxygen:300,700,regular|" media="all"><script type="text/javascript" src="//heatmaps.monsido.com/v1/heatmaps.js"></script><script type="text/javascript" src="//cdn.monsido.com/page-assist/v2/mon-page-assist-loader.js"></script><script type="text/javascript" src="//pagecorrect.monsido.com/v1/page-correct.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K1P80JTEGS&amp;cx=c&amp;_slc=1"></script><script type="text/javascript" async="" src="//siteimproveanalytics.com/js/siteanalyze_6076005.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-4ZK5N0Y9SB&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61m1h1"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-4ZK5N0Y9SB';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	<meta name="p:domain_verify" content="4de37c5bece04da51353b6c9db4ff3e7">
+<meta name="google-site-verification" content="sVay0CWp70yR2IoaFPKvyrMgcB9N2dwncB2n_d99c9Q">
+<meta name="facebook-domain-verification" content="1n2mi75q2kvc7417xjwy5iseogjxcl">
+
+<!-- OpenGraph image for all site pages requested in 811922 -->
+<meta property="og:image" content="https://lakeway-tx.gov/ImageRepository/Document?documentID=43155">
+
+	<meta name="category0" content="Home">
+<meta name="category1" content="Government">
+<meta name="category2" content="Mayor &amp; City Council">
+
+	
+	<meta name="theme-color" content="rgb(0, 95, 132)">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>Mayor &amp; City Council | City of Lakeway, TX - Official Website</title>
+
+		<meta name="description" content="">
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '350px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/1942074011.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<style>.frase-answers-bot{position:absolute;bottom:0;right:0}
+</style><style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.2f3WBw8L4SI.L.W.O/am=AAQD/d=0/rs=AN8SPfrXXtxuFpMMBoYgp93jo68L3iC3ZQ/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/_/translate_http/_/js/k=translate_http.tr.en_US.gm28aokwBeQ.O/am=AAAQ/d=1/exm=el_conf/ed=1/rs=AN8SPfo-cjsGcRTUC_jpauJJ5fve_ZlsdQ/m=el_main"></script><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style></head>
+<body class="wide cpTextResizeOn doneLoading monsido-toolbar-body-container" style="position: relative; min-height: 100%; top: 0px;"><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="https://www.lakeway-tx.gov/Common/images/ajax-loader.gif" alt="Loading" title="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks">
+<a href="https://www.lakeway-tx.gov/100/Mayor-City-Council#cc9fbaae7f-1d70-43bd-9ff6-16bd8fe5b55d" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="10">
+    <input type="hidden" id="hdnContentCollectionID" value="982aff86-77ac-4099-9d09-3c47e4aaf2a2">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="33">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID">
+    <input type="hidden" id="pagePageID" value="100">
+
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700); 
+.alertText .customAlert {
+    color: #EAEAEA;
+    display: inline-block;
+    font-family: 'Open Sans Condensed', sans-serif; 
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 27px;
+    left: 57px;
+    line-height: 27px;
+    overflow: hidden;
+    position: absolute;
+    top: 15px;
+    white-space: nowrap;
+    width: 268px;
+}
+</style>
+  <div id="1_divAlertBar" class="alertToolbar cpToolbar" style="background: rgb(34, 34, 34); z-index: 1;">
+    <div id="1_divAlertToolbarInner" class="alertToolbarInner" style="font-size: 16px;">
+        <a href="https://www.lakeway-tx.gov/AlertCenter.aspx" id="1_lnkAlertText" class="alertText" style="border-right: 1px solid #000000;">
+            
+            <span id="1_customAlert" class="customAlert">Important Updates</span>
+        </a>
+        <span id="1_spnAlertContainer" class="alertContainer"><a href="https://www.lakeway-tx.gov/2060/TrashRecycling-Service-Updates" target="_blank" class="alert" style="border-left: 1px solid #635e65; border-right: 1px solid #000000;background: #030303 url(/Common/images/AlertCenter/alertBarBlackTextBckg.png) repeat-x; color: #FFFFFF;" aria-label="
+	City offices and facilities CLOSED Monday; Trash Service CANCELED Monday with ALL services this week sliding to the next day
+	Read On...
+ Opens in new window" rel="noopener">
+	City offices and facilities CLOSED Monday; Trash Service CANCELED Monday with ALL services this week sliding to the next day
+	<span style="color: #FC4C2F;">Read On...</span>
+</a>
+<a href="https://www.lakeway-tx.gov/1960/A-Night-with-the-Austin-Symphony-Orchest" target="_blank" class="alert" style="border-left: 1px solid #635e65; border-right: 1px solid #000000;background: #030303 url(/Common/images/AlertCenter/alertBarBlackTextBckg.png) repeat-x; color: #FFFFFF;" aria-label="
+	&quot;A Night With The Austin Symphony Orchestra&quot; Ticket Information
+	Read On...
+ Opens in new window" rel="noopener">
+	"A Night With The Austin Symphony Orchestra" Ticket Information
+	<span style="color: #FC4C2F;">Read On...</span>
+</a>
+</span>
+    </div>
+  </div>
+  <div id="1_divAlertBarEmpty" class="alertBarEmpty"></div>
+  
+
+
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 79px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="bodyContainerTS">
+<!-- Banner --><div data-cprole="structuralContainer" id="bannerContainerTS" class="noOverflowTS">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="bannerSizingTS">
+<!-- Header Container --><header data-cprole="structuralContainer" id="headerContainerTS">
+<div class="siteWrap3" data-skip-leftpad=""><div data-cprole="banner" id="bannerLogoTS" class="bannerLogoTS empty">
+
+
+
+
+				<a id="bannerLogoTS-84" style="			display: block; text-align: center;
+" class="bannerObject" href="https://www.lakeway-tx.gov/" target="_self"><img alt="Lakeway Texas homepage" class="bannerObject" height="118" src="https://www.lakeway-tx.gov/ImageRepository/Document?documentID=42002" width="360"></a>
+</div><div data-cprole="contentContainer" id="homeTS">	<div id="cc913934cb-2bd1-4a78-8fb5-de6cbbf7b840" data-containerid="913934cb-2bd1-4a78-8fb5-de6cbbf7b840" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="e313d4ee-4ecd-4afb-bc83-de4d331a66ca">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last idddb1766f-f9ed-4dcc-9739-ba581a56eb1d" style="height: 49px;" data-widgetcontainerid="ddb1766f-f9ed-4dcc-9739-ba581a56eb1d">
+	
+<div data-widget-id="b78e1db8-8a3d-4679-9c2f-18a30849742c" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetb78e1db8-8a3d-4679-9c2f-18a30849742c" class="widget widgetGraphicLinks skin71 widgetOptionSet4 narrow" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 "> 	
+				<ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.lakeway-tx.gov/" target="_self" class="fancyButton fancyButton700 ">
+		<span>
+			<span><span class="text">Home</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton700.fancyButton:link,.fancyButton700.fancyButton:visited, .fancyButton700div.fancyButton{
+	background-color: rgb(0, 72, 100);
+	padding-left: 50px;
+	-webkit-border-top-left-radius: 6px;
+	-moz-border-top-left-radius: 6px;
+	-khtml-border-top-left-radius: 6px;
+	border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	-moz-border-top-right-radius: 6px;
+	-khtml-border-top-right-radius: 6px;
+	border-top-right-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-bottom-left-radius: 6px;
+	-khtml-border-bottom-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	-moz-border-bottom-right-radius: 6px;
+	-khtml-border-bottom-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	background-image: url('/ImageRepository/Document?documentID=42027');
+	background-repeat: no-repeat;
+	background-position: 15px  center;
+	border-top: 1px solid rgb(0, 186, 210);
+	border-left: 1px solid rgb(0, 186, 210);
+	border-right: 1px solid rgb(0, 186, 210);
+	border-bottom: 1px solid rgb(0, 186, 210);
+transition: all .3s ease-in-out;
+box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+width: 117px;
+margin: 0 auto;
+}
+.fancyButton700.fancyButton:hover,.fancyButton700.fancyButton:focus,.fancyButton700.fancyButton:active,.fancyButton700.fancyButton.hover{
+	background-color: rgb(0, 186, 210);
+	background-image: url('/ImageRepository/Document?documentID=42028');
+	background-repeat: no-repeat;
+	background-position: 15px  center;
+}
+.fancyButton700.fancyButton:link > span,.fancyButton700.fancyButton:visited > span, .fancyButton700div.fancyButton > span{
+}
+.fancyButton700.fancyButton:hover > span,.fancyButton700.fancyButton:focus > span,.fancyButton700.fancyButton:active > span,.fancyButton700.fancyButton.hover > span{
+}
+.fancyButton700.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-size: 1.15em;
+	font-family: "Lato";
+	text-align: left;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton700.fancyButton:hover .text,.fancyButton700.fancyButton:focus .text,.fancyButton700.fancyButton:active .text,.fancyButton700.fancyButton.hover .text{
+	color: rgb(0, 64, 89);
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+				--></ul>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem31" class="topMenuItem" role="none" data-pageid="31" data-displaymegamenu="True" style="width: 20.3393%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavCommunity" class="navMainItem mainNavItem mainNavItem1 " href="https://www.lakeway-tx.gov/31/Community" target="_self" style="font-size: 18px;"><span style="display: inline;">   Community </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem27" class="topMenuItem" role="none" data-pageid="27" data-displaymegamenu="True" style="width: 21.3086%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem2 " href="https://www.lakeway-tx.gov/27/Government" target="_self" style="font-size: 18px;"><span style="display: inline;">   Government </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem575" class="topMenuItem" role="none" data-pageid="575" data-displaymegamenu="True" style="width: 17.6737%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavServices" class="navMainItem mainNavItem mainNavItem3 " href="https://www.lakeway-tx.gov/575/Services" target="_self" style="font-size: 18px;"><span style="display: inline;">   Services </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem175" class="topMenuItem" role="none" data-pageid="175" data-displaymegamenu="True" style="width: 21.5509%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavDepartments" class="navMainItem mainNavItem mainNavItem4 " href="https://www.lakeway-tx.gov/175/Departments" target="_self" style="font-size: 18px;"><span style="display: inline;">   Departments </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem577" class="topMenuItem" role="none" data-pageid="577" data-displaymegamenu="True" style="width: 19.1276%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavHowDoI" class="navMainItem mainNavItem mainNavItem5 " href="https://www.lakeway-tx.gov/577/How-Do-I" target="_self" style="font-size: 18px;"><span style="display: inline;">   How Do I... </span></a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=33&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = true;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="1"></aside></nav></div>
+</header><div data-cprole="structuralContainer" id="bannerSearchTS">
+<div class="siteWrap3"><div data-cprole="contentContainer" id="searchTS">	<div id="ccd10aa53f-df1f-4651-b4fd-a167273ed96c" data-containerid="d10aa53f-df1f-4651-b4fd-a167273ed96c" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="799e06bf-6807-4f23-93ba-aa0ba7af4133">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id311855d2-6e80-4f54-9510-337df2c58614" style="height: 70px;" data-widgetcontainerid="311855d2-6e80-4f54-9510-337df2c58614">
+	
+<div data-widget-id="cd553dc4-6745-4685-b4a3-8e98d3432578" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButtoncd553dc4-6745-4685-b4a3-8e98d3432578").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDeptcd553dc4-6745-4685-b4a3-8e98d3432578").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchFieldcd553dc4-6745-4685-b4a3-8e98d3432578").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDeptcd553dc4-6745-4685-b4a3-8e98d3432578").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDeptcd553dc4-6745-4685-b4a3-8e98d3432578").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchFieldcd553dc4-6745-4685-b4a3-8e98d3432578").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDeptcd553dc4-6745-4685-b4a3-8e98d3432578").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchFieldcd553dc4-6745-4685-b4a3-8e98d3432578").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchFieldcd553dc4-6745-4685-b4a3-8e98d3432578"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin63 widgetOptionSet49" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBoxcd553dc4-6745-4685-b4a3-8e98d3432578 ui-autocomplete-input" cp5ph="true" id="searchFieldcd553dc4-6745-4685-b4a3-8e98d3432578" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Find what you’re looking for…" title="Find what you’re looking for…" type="text" value="" autocomplete="off">
+						<a href="https://www.lakeway-tx.gov/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButtoncd553dc4-6745-4685-b4a3-8e98d3432578" role="button"><img alt="Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=42031" data-image="/ImageRepository/Document?documentID=42030" src="https://www.lakeway-tx.gov/ImageRepository/Document?documentID=42030"></a>
+
+			<label class="searchLabel" for="searchFieldcd553dc4-6745-4685-b4a3-8e98d3432578">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #383838;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #383838;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #383838;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #383838;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBoxcd553dc4-6745-4685-b4a3-8e98d3432578
+	{
+		color: #383838;
+		background-color: #FFF;
+border: none;
+height: 70px;
+border-radius: 4px;
+box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+font-family: Lato;
+font-size: 18px;
+padding: 0 66px 0 16px;
+	}
+	.widgetSearch .widgetBody .widgetSearchButtoncd553dc4-6745-4685-b4a3-8e98d3432578
+	{
+		margin: 10px 10px 0 0;
+	}
+	.widgetSearch .widgetSearch-onlyDeptcd553dc4-6745-4685-b4a3-8e98d3432578
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDeptcd553dc4-6745-4685-b4a3-8e98d3432578
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchFieldcd553dc4-6745-4685-b4a3-8e98d3432578").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+
+
+
+		<div id="bannerImagesJSON85" class="hidden"></div><div class="bannerObject external fixedBanner" id="bannerDivbanner1" style="min-height: 641px; top: 0px; left: -649.5px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img class="bannerObject" width="1265px" style="position: absolute; left: 0px; margin: 0px; width: 2564px;" src="https://www.lakeway-tx.gov/ImageRepository/Document?documentID=42003" data-is-delayed="false" alt=""></div>
+		
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner1',
+								{"BannerOptionID":85,"ThemeID":33,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":2,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":246,"BannerOptionID":85,"FileName":"/ImageRepository/Document?documentID=42004","Height":550,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":247,"BannerOptionID":85,"FileName":"/ImageRepository/Document?documentID=42005","Height":550,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":2,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":248,"BannerOptionID":85,"FileName":"/ImageRepository/Document?documentID=42003","Height":550,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":3,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""}],"BannerVideos":[{"BannerVideoID":15,"BannerOptionID":85,"VideoFileName":"","ImageFileName":"EmptyBannerBkg202402011122288790.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								'/App_Themes/2024 - Interior/Images/',
+								'Rotating');
+						});
+				});
+			</script>
+
+</div>
+</div><!-- Content container --><div data-cprole="structuralContainer" id="mainContainerTS">
+<div class="siteWrap"><div data-cprole="structuralContainer" id="mainWrapTS" class="mainWrap" role="main">
+<div data-cprole="structuralContainer" id="outerContentWrapTS" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="contentWrapTS" class="contentWrap">
+<div data-cprole="breadCrumbs" id="breadCrumbs" class="breadCrumbContainer">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="https://www.lakeway-tx.gov/">Home</a></li><li><a class="breadCrumb" href="https://www.lakeway-tx.gov/27/Government">Government</a></li><li id="currentBCPage" data-pageid="100">Mayor &amp; City Council</li>
+		</ol>
+
+	   
+    
+</div><div data-cprole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="100">
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="27">
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="36052">
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="Mayor &amp; City Council">
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="False">
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False">
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published">
+
+				<h1 id="versionHeadLine" class="headline">
+
+Mayor &amp; City Council		</h1>
+	
+		<div id="cc9fbaae7f-1d70-43bd-9ff6-16bd8fe5b55d" data-containerid="9fbaae7f-1d70-43bd-9ff6-16bd8fe5b55d" class="pageContent cpGrid cpGrid24" data-smoothscrolling="True">
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="1a3a10a6-3933-4770-9c47-50307c8656e0">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last idfdc1c614-2ba9-43b4-9ac3-0b93d868db2b" style="height: 450px;" data-widgetcontainerid="fdc1c614-2ba9-43b4-9ac3-0b93d868db2b">
+	
+<div class="widget editor pageStyles wide" id="divEditor6f7d86c1-c16c-4423-a44b-950842356de1" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <style type="text/css">
+    .Caption, p.Caption, li.Caption, div.Caption, span.Caption { font-family: Arial; font-size: 10pt; color: #3D3C3A; font-style: italic; } hr, .hr { color: #123E83; background: #123E83; } a:link.frontendeditlink, a:hover.frontendeditlink, a:active.frontendeditlink, a:visited.frontendeditlink { color: #FF0000; text-decoration: none; } div.frontendeditarea { padding: 3px 0px; text-align: center; border-top: solid #000000 1px; border-bottom: solid #000000 1px; background: #FFFEA5; } .frontendedittext, p.frontendedittext, li.frontendedittext, div.frontendedittext, span.frontendedittext { color: #000000; } a:link.CPCopy, a:hover.CPCopy, a:active.CPCopy, a:visited.CPCopy { font-family: Arial; font-size: 8pt; color: #ffffff; } #Section1 ul, #Section1 ol, .bullet1 { padding: 4px 0px 0px 19px; margin: 0px 0px 0px 19px; } #Section1 ul li, #Section1 ol li, .bullet2 { margin: 0px 0px 4px 0px; } .Headline, p.Headline, li.Headline, div.Headline, span.Headline, .h1 { font-family: Arial ; font-size: 14pt; color: #0A9845; font-weight: bold; font-style: normal; text-decoration: none; } .Subhead1, p.Subhead1, li.Subhead1, div.Subhead1, span.Subhead1, .h2 { font-family: Arial; font-size: 11pt; color: #174A90; font-weight: bold; font-style: normal; text-decoration: none; } .Subhead2, p.Subhead2, li.Subhead2, div.Subhead2, span.Subhead2, .h3 { font-family: Arial; font-size: 10pt; color: #0A9845; font-weight: bold; font-style: normal; text-decoration: none; } body, td, .normal, .Normal, .MsoNormal, p.MsoNormal, li.MsoNormal, div.MsoNormal, span.MsoNormal { font-family: Arial; font-size: 10pt; color: #3D3C3A; font-weight: normal; font-style: normal; text-decoration: none; } .Section1 a, #Section1 a, span.MsoHyperlink, span.MsoHyperlinkFollowed, .Hyperlink, .Section1 a.Hyperlink, #Section1 a.Hyperlink, span.Hyperlink { font-family: Arial; font-size: 10pt; color: #2862A4; font-weight: normal; font-style: normal; text-decoration: underline; } .Section1 a:visited, #Section1 a:visited, span.MsoHyperlinkFollowed, .FollowedHyperlink, .Section1 a:visited.FollowedHyperlink, #Section1 a:visited.FollowedHyperlink { font-family: Arial; font-size: 10pt; color: #2862A4; font-weight: normal; font-style: normal; text-decoration: underline; } .TableHeader, p.TableHeader, li.TableHeader, div.TableHeader, span.TableHeader { color: #2862A4; background: #2862A4; } .TableFirstRow, p.TableFirstRow, li.TableFirstRow, div.TableFirstRow, span.TableFirstRow { color: #ECEDED; background: #ECEDED; } .TableAltRow, p.TableAltRow, li.TableAltRow, div.TableAltRow, span.TableAltRow { color: #FDFDFD; background: #FDFDFD; } .photoshadowborder, p.photoshadowborder, li.photoshadowborder, div.photoshadowborder, span.photoshadowborder { padding: 4px;border:1px solid #cccccc;-moz-box-shadow: 2px 2px 5px #cccccc;-webkit-box-shadow: 2px 2px 5px #cccccc;box-shadow: 2px 2px 5px #cccccc;} .simpleblackborder, p.simpleblackborder, li.simpleblackborder, div.simpleblackborder, span.simpleblackborder { padding: 4px;border: 1px solid #000;}
+</style><!--Mayor and City Council--><p>The City Council is the “governing body of the city.” It is made up of seven members (mayor and six councilmembers). The City Charter requires that all councilmembers be volunteers. All councilmembers are elected “at large.” The mayor represents the city at ceremonies and events. <span data-olk-copy-source="MessageBody" style="color: rgb(40, 50, 78);" data-pasted="true">The mayor’s vote carries the same weight as that of each councilmember and cannot override or veto council decisions.</span><span style="color: rgb(40, 50, 78);">&nbsp;</span>The mayor does set the agenda for council meetings and also acts as the city’s spokesperson when needed.</p><ul><li style="text-align: justify;">All office holders for city elective office shall meet the requirements for public office prescribed by state and federal law, as well as the City Charter of the City of Lakeway. They must be registered voters, residing in the city for at least one year prior to the election and be at least 21 years of age by the date of the election. Members of the council shall serve without pay or compensation.</li></ul><h2 class="subhead1">Meetings</h2><ul><li>First Monday of each month at 6:30 p.m. (as needed)</li><li>Third Monday of each month at 6:30 p.m.</li><li>Lakeway City Hall council chambers<br>1102 Lohmans Crossing Road<br>Lakeway, Texas 78734<em><br><br></em></li></ul><h2 class="subhead1">Agendas &amp; Minutes</h2><p>Currently posted agendas as well as past agendas, minutes, and council meeting audio recordings may be found in the <a class="Hyperlink" href="https://www.lakeway-tx.gov/archive.aspx" target="_self">Archive Center</a>.</p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '6f7d86c1-c16c-4423-a44b-950842356de1'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="016368c2-a21c-4bde-afb8-cacfbfcaa260">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id5a940a77-c239-4402-96ca-58d0bed9ee62" style="height: 60px;" data-widgetcontainerid="5a940a77-c239-4402-96ca-58d0bed9ee62">
+	
+<div class="widget editor pageStyles wide" id="divEditor7eb8d6d8-0e51-4aa9-8ad0-2c1df3abf5b5" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h2 class="subhead1 ">Lakeway City Council</h2>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '7eb8d6d8-0e51-4aa9-8ad0-2c1df3abf5b5'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="cab3b2be-2758-4fec-ad05-a988ae7bd94f">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id77439f14-9221-44ca-abcb-07b6c9b43062" style="height: 317px;" data-widgetcontainerid="77439f14-9221-44ca-abcb-07b6c9b43062">
+	
+<div class="widget editor pageStyles wide" id="divEditor5a3a3464-6f9f-4159-9dd7-78919c6db9ee" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view responsiveEditor">
+
+
+        <table style="width: 94%; margin-left: calc(6%);"><tbody><tr><td style="width: 25%; background-color: rgb(239, 239, 239);">Thomas Kilgore</td><td style="width: 25%; background-color: rgb(239, 239, 239);">Mayor</td><td style="width: 22.6614%; background-color: rgb(239, 239, 239);">May 2021 - May 2027</td><td style="width: 27.4045%; background-color: rgb(239, 239, 239);"><a href="mailto:mayorkilgore@lakeway-tx.gov">mayorkilgore@lakeway-tx.gov</a><br></td></tr><tr><td style="width: 25%; background-color: rgb(239, 239, 239);">Louis Mastrangelo</td><td style="width: 25%; background-color: rgb(239, 239, 239);">Mayor Pro Tem</td><td style="width: 22.6614%; background-color: rgb(239, 239, 239);">May 2025 - May 2027</td><td style="width: 27.4045%; background-color: rgb(239, 239, 239);"><a href="mailto:louismastrangelo@lakeway-tx.gov">louismastrangelo@lakeway-tx.gov</a><br></td></tr><tr><td style="width: 25%; background-color: rgb(239, 239, 239);">Kelly Brynteson<br></td><td style="width: 25%; background-color: rgb(239, 239, 239);">Councilmember<br></td><td style="width: 22.6614%; background-color: rgb(239, 239, 239);">May 2022 - May 2026<br></td><td style="width: 27.4045%; background-color: rgb(239, 239, 239);"><a href="mailto:kellybrynteson@lakeway-tx.gov" id="isPasted">kellybrynteson@lakeway-tx.gov</a><br></td></tr><tr><td style="width: 25%; background-color: rgb(239, 239, 239);">Jennifer Szimanski<br></td><td style="width: 25%; background-color: rgb(239, 239, 239);">Councilmember<br></td><td style="width: 22.6614%; background-color: rgb(239, 239, 239);">May 2022 - May 2026<br></td><td style="width: 27.4045%; background-color: rgb(239, 239, 239);"><a href="mailto:jenniferszimanski@lakeway-tx.gov" id="isPasted">jenniferszimanski@lakeway-tx.gov</a><br></td></tr><tr><td style="width: 25%; background-color: rgb(239, 239, 239);">Christopher Forton</td><td style="width: 25%; background-color: rgb(239, 239, 239);">Councilmember</td><td style="width: 22.6614%; background-color: rgb(239, 239, 239);">May 2023 - May 2027</td><td style="width: 27.4045%; background-color: rgb(239, 239, 239);"><a href="mailto:christopherforton@lakeway-tx.gov">christopherforton@lakeway-tx.gov</a></td></tr><tr><td style="width: 25%; background-color: rgb(239, 239, 239);">Kent O'Brien</td><td style="width: 25%; background-color: rgb(239, 239, 239);">Councilmember</td><td style="width: 22.6614%; background-color: rgb(239, 239, 239);">May 2023 - May 2027</td><td style="width: 27.4045%; background-color: rgb(239, 239, 239);"><a href="mailto:kentobrien@lakeway-tx.gov">kentobrien@lakeway-tx.gov</a></td></tr><tr><td style="width: 25%; background-color: rgb(239, 239, 239);">Matt Sherman</td><td style="width: 25%; background-color: rgb(239, 239, 239);">Councilmember</td><td style="width: 22.6614%; background-color: rgb(239, 239, 239);">May 2024 - May 2026</td><td style="width: 27.4045%; background-color: rgb(239, 239, 239);"><a href="mailto:mattsherman@lakeway-tx.gov">mattsherman@lakeway</a><a href="//-tx.gov">-tx.gov</a>&nbsp;</td></tr></tbody></table><p><a href="mailto:keithtrecker@lakeway-tx.gov"><br></a></p><p><br></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '5a3a3464-6f9f-4159-9dd7-78919c6db9ee'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: none;">	<div id="cc64f97c17-4438-45dc-802f-1725e0f9592c" data-containerid="64f97c17-4438-45dc-802f-1725e0f9592c" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="siteSidebarTS" class="siteSidebar">
+<aside data-cprole="contentContainer" id="sidebarContainer1TS">	<div id="cc8b648aea-aa85-4e33-b2c4-5b28e0b8cda0" data-containerid="8b648aea-aa85-4e33-b2c4-5b28e0b8cda0" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav">
+
+
+
+
+
+	<ol role="menu" id="secondaryMenusecondaryNav" data-parent="100" class="rootNavMenu accordionNav">
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem653" data-pageid="653">
+		<div class="accordionNavItem">
+			<a href="https://www.lakeway-tx.gov/107/City-Council-Agendas-Minutes" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Agendas &amp; Minutes</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1853" data-pageid="1853">
+		<div class="accordionNavItem">
+			<a href="https://www.lakeway-tx.gov/1853/Mayor-Thomas-Kilgore" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Mayor Thomas Kilgore</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1651" data-pageid="1651">
+		<div class="accordionNavItem">
+			<a href="https://www.lakeway-tx.gov/1651/Mayor-Pro-Tem-Louis-Mastrangelo" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Mayor Pro Tem Louis Mastrangelo</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem2007" data-pageid="2007">
+		<div class="accordionNavItem">
+			<a href="https://www.lakeway-tx.gov/2007/Councilmember-Kelly-Brynteson" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Councilmember Kelly Brynteson </a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem2006" data-pageid="2006">
+		<div class="accordionNavItem">
+			<a href="https://www.lakeway-tx.gov/2006/Councilmember-Jennifer-Szimanski" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Councilmember Jennifer Szimanski</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem2080" data-pageid="2080">
+		<div class="accordionNavItem">
+			<a href="https://www.lakeway-tx.gov/2080/Councilmember-Christopher-Forton" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Councilmember Christopher Forton</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem2074" data-pageid="2074">
+		<div class="accordionNavItem">
+			<a href="https://www.lakeway-tx.gov/2074/Councilmember-Kent-OBrien" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Councilmember Kent O'Brien</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem2189" data-pageid="2189">
+		<div class="accordionNavItem">
+			<a href="https://www.lakeway-tx.gov/2189/Councilmember-Matt-Sherman" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Councilmember Matt Sherman</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1062" data-pageid="1062">
+		<div class="accordionNavItem">
+			<a href="https://www.lakeway-tx.gov/1062/Videos---Meetings-Events" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Videos - Meetings &amp; Events</a>
+				<a href="https://www.lakeway-tx.gov/100/Mayor-City-Council#" class="openAccordionNav accordionSecondaryNavItem" title="Expand Videos - Meetings &amp; Events Submenu"></a>
+		</div>
+					<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" style="display: none;" data-parent="1062">
+						<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem1067" data-pageid="1067">
+			<div class="accordionNavItem">
+				<a href="https://www.lakeway-tx.gov/1067/Council-Live-On-Demand-Streaming-Video" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Council Live / On-Demand Streaming Video</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = false;
+		});
+	</script>
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			$('*[id^="SideItem"]').each(function () {
+				var ids = $('[id="' + this.id + '"]');
+				if (ids.length > 1)
+					$.each(ids, function (index, value) {
+						value.id = value.id + '_' + index;
+					});
+			});
+
+			$('.hasAccordionChildren .openAccordionNav').click(function (e) {
+				e.preventDefault();
+				showHideAccordionMenuForSecondaryNav($(this));
+			});
+
+			$("#secondaryNav .grippy").each(function () {
+				menuManager.setupDraggableElement($(this), SIDE_MENU, '#secondaryNav');
+			});
+
+			$("#secondaryNav li").each(function () {
+				menuManager.setupDroppableAccordionElement($(this), SIDE_MENU);
+			});
+		});
+	</script>
+
+
+
+</nav><aside data-cprole="contentContainer" id="sidebarContainer2TS">	<div id="cc983a910f-598e-4c6d-b132-4acc32ce7791" data-containerid="983a910f-598e-4c6d-b132-4acc32ce7791" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div><!-- GBs --><div data-cprole="structuralContainer" id="gbsContainerTS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="gbsTS">	<div id="cc3f288722-ebf1-44cf-a5e5-e7461688ed72" data-containerid="3f288722-ebf1-44cf-a5e5-e7461688ed72" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="35">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="height: auto;" data-widgetcontainerid="43f19e9e-0b48-4b78-b532-ac809a66ce8a">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last ide2ec102b-4680-4d83-b4ec-0414f2caab7d" style="height: 149px;" data-widgetcontainerid="e2ec102b-4680-4d83-b4ec-0414f2caab7d">
+	
+<div data-widget-id="24aef9cf-689d-4289-b262-d033f4de5891" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget24aef9cf-689d-4289-b262-d033f4de5891" class="widget widgetGraphicLinks skin66 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:23em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.lakeway-tx.gov/archive.aspx" target="_self" class="fancyButton fancyButton686 ">
+		<span>
+			<span><span class="text">City Meetings</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton686.fancyButton:link,.fancyButton686.fancyButton:visited, .fancyButton686div.fancyButton{
+	padding-top: 102px;
+	background-image: url('/ImageRepository/Document?documentID=42009');
+	background-repeat: no-repeat;
+	background-position: center 17px ;
+transition: all .3s ease-in-out;}
+.fancyButton686.fancyButton:hover,.fancyButton686.fancyButton:focus,.fancyButton686.fancyButton:active,.fancyButton686.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton686.fancyButton:link > span,.fancyButton686.fancyButton:visited > span, .fancyButton686div.fancyButton > span{
+}
+.fancyButton686.fancyButton:hover > span,.fancyButton686.fancyButton:focus > span,.fancyButton686.fancyButton:active > span,.fancyButton686.fancyButton.hover > span{
+}
+.fancyButton686.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-size: 1.25em;
+	font-family: "Lato";
+	padding-top: 13px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 13px;
+	background-repeat: no-repeat;
+	background-position: left top;
+position: relative;
+}
+
+.fancyButton686 .text:after {
+content: "";
+position: absolute;
+background-color: #7CB82F;
+height: 3px;
+width: 0;
+max-width: 100%;
+left: 50%;
+top: 0;
+transform: translateX(-50%);
+transition: all .3s ease-in-out;
+}
+.fancyButton686.fancyButton:hover .text,.fancyButton686.fancyButton:focus .text,.fancyButton686.fancyButton:active .text,.fancyButton686.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.fancyButton686:is(:hover,:focus,:active) .text:after {
+width: 100px;
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.lakeway-tx.gov/FormCenter/Contact-Us-3/Citizen-Feedback-70" target="_self" class="fancyButton fancyButton687 ">
+		<span>
+			<span><span class="text">Provide Feedback</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton687.fancyButton:link,.fancyButton687.fancyButton:visited, .fancyButton687div.fancyButton{
+	padding-top: 102px;
+	background-image: url('/ImageRepository/Document?documentID=42013');
+	background-repeat: no-repeat;
+	background-position: center 17px ;
+transition: all .3s ease-in-out;}
+.fancyButton687.fancyButton:hover,.fancyButton687.fancyButton:focus,.fancyButton687.fancyButton:active,.fancyButton687.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton687.fancyButton:link > span,.fancyButton687.fancyButton:visited > span, .fancyButton687div.fancyButton > span{
+}
+.fancyButton687.fancyButton:hover > span,.fancyButton687.fancyButton:focus > span,.fancyButton687.fancyButton:active > span,.fancyButton687.fancyButton.hover > span{
+}
+.fancyButton687.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-size: 1.25em;
+	font-family: "Lato";
+	padding-top: 13px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 13px;
+	background-repeat: no-repeat;
+	background-position: left top;
+position: relative;
+}
+
+.fancyButton687 .text:after {
+content: "";
+position: absolute;
+background-color: #7CB82F;
+height: 3px;
+width: 0;
+max-width: 100%;
+left: 50%;
+top: 0;
+transform: translateX(-50%);
+transition: all .3s ease-in-out;
+}
+.fancyButton687.fancyButton:hover .text,.fancyButton687.fancyButton:focus .text,.fancyButton687.fancyButton:active .text,.fancyButton687.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.fancyButton687:is(:hover,:focus,:active) .text:after {
+width: 100px;
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8" style="height: auto;" data-widgetcontainerid="ec34738e-2718-4415-a447-cfc55fe8c648">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id7139bfbb-a9ac-4db4-a32c-3e9d99d9d988" style="height: 149px;" data-widgetcontainerid="7139bfbb-a9ac-4db4-a32c-3e9d99d9d988">
+	
+<div data-widget-id="64ac9458-7a03-4f48-9f11-a3f934afa639" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget64ac9458-7a03-4f48-9f11-a3f934afa639" class="widget widgetGraphicLinks skin66 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:23em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.lakeway-tx.gov/2165/Parks-Recreation" target="_self" class="fancyButton fancyButton688 ">
+		<span>
+			<span><span class="text">Parks</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton688.fancyButton:link,.fancyButton688.fancyButton:visited, .fancyButton688div.fancyButton{
+	padding-top: 102px;
+	background-image: url('/ImageRepository/Document?documentID=42601');
+	background-repeat: no-repeat;
+	background-position: center 17px ;
+transition: all .3s ease-in-out;}
+.fancyButton688.fancyButton:hover,.fancyButton688.fancyButton:focus,.fancyButton688.fancyButton:active,.fancyButton688.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton688.fancyButton:link > span,.fancyButton688.fancyButton:visited > span, .fancyButton688div.fancyButton > span{
+}
+.fancyButton688.fancyButton:hover > span,.fancyButton688.fancyButton:focus > span,.fancyButton688.fancyButton:active > span,.fancyButton688.fancyButton.hover > span{
+}
+.fancyButton688.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-size: 1.25em;
+	font-family: "Lato";
+	padding-top: 13px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 13px;
+	background-repeat: no-repeat;
+	background-position: left top;
+position: relative;
+}
+
+.fancyButton688 .text:after {
+content: "";
+position: absolute;
+background-color: #7CB82F;
+height: 3px;
+width: 0;
+max-width: 100%;
+left: 50%;
+top: 0;
+transform: translateX(-50%);
+transition: all .3s ease-in-out;
+}
+.fancyButton688.fancyButton:hover .text,.fancyButton688.fancyButton:focus .text,.fancyButton688.fancyButton:active .text,.fancyButton688.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.fancyButton688:is(:hover,:focus,:active) .text:after {
+width: 100px;
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.lakeway-tx.gov/934" target="_self" class="fancyButton fancyButton689 ">
+		<span>
+			<span><span class="text">Events</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton689.fancyButton:link,.fancyButton689.fancyButton:visited, .fancyButton689div.fancyButton{
+	padding-top: 102px;
+	background-image: url('/ImageRepository/Document?documentID=42014');
+	background-repeat: no-repeat;
+	background-position: center 17px ;
+transition: all .3s ease-in-out;}
+.fancyButton689.fancyButton:hover,.fancyButton689.fancyButton:focus,.fancyButton689.fancyButton:active,.fancyButton689.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton689.fancyButton:link > span,.fancyButton689.fancyButton:visited > span, .fancyButton689div.fancyButton > span{
+}
+.fancyButton689.fancyButton:hover > span,.fancyButton689.fancyButton:focus > span,.fancyButton689.fancyButton:active > span,.fancyButton689.fancyButton.hover > span{
+}
+.fancyButton689.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-size: 1.25em;
+	font-family: "Lato";
+	padding-top: 13px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 13px;
+	background-repeat: no-repeat;
+	background-position: left top;
+position: relative;
+}
+
+.fancyButton689 .text:after {
+content: "";
+position: absolute;
+background-color: #7CB82F;
+height: 3px;
+width: 0;
+max-width: 100%;
+left: 50%;
+top: 0;
+transform: translateX(-50%);
+transition: all .3s ease-in-out;
+}
+.fancyButton689.fancyButton:hover .text,.fancyButton689.fancyButton:focus .text,.fancyButton689.fancyButton:active .text,.fancyButton689.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.fancyButton689:is(:hover,:focus,:active) .text:after {
+width: 100px;
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8 last" style="height: auto;" data-widgetcontainerid="ff42ed45-0156-435b-bb60-8c9544d1a593">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id120e61c1-350e-4e98-a522-b77d20e23532" style="height: 149px;" data-widgetcontainerid="120e61c1-350e-4e98-a522-b77d20e23532">
+	
+<div data-widget-id="2f43306b-df52-449d-85c6-faf4b66af68a" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget2f43306b-df52-449d-85c6-faf4b66af68a" class="widget widgetGraphicLinks skin66 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:23em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.lakeway-tx.gov/1741/Police-Department" target="_self" class="fancyButton fancyButton690 ">
+		<span>
+			<span><span class="text">Police Services</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton690.fancyButton:link,.fancyButton690.fancyButton:visited, .fancyButton690div.fancyButton{
+	padding-top: 102px;
+	background-image: url('/ImageRepository/Document?documentID=42012');
+	background-repeat: no-repeat;
+	background-position: center 17px ;
+transition: all .3s ease-in-out;}
+.fancyButton690.fancyButton:hover,.fancyButton690.fancyButton:focus,.fancyButton690.fancyButton:active,.fancyButton690.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton690.fancyButton:link > span,.fancyButton690.fancyButton:visited > span, .fancyButton690div.fancyButton > span{
+}
+.fancyButton690.fancyButton:hover > span,.fancyButton690.fancyButton:focus > span,.fancyButton690.fancyButton:active > span,.fancyButton690.fancyButton.hover > span{
+}
+.fancyButton690.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-size: 1.25em;
+	font-family: "Lato";
+	padding-top: 13px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 13px;
+	background-repeat: no-repeat;
+	background-position: left top;
+position: relative;
+}
+
+.fancyButton690 .text:after {
+content: "";
+position: absolute;
+background-color: #7CB82F;
+height: 3px;
+width: 0;
+max-width: 100%;
+left: 50%;
+top: 0;
+transform: translateX(-50%);
+transition: all .3s ease-in-out;
+}
+.fancyButton690.fancyButton:hover .text,.fancyButton690.fancyButton:focus .text,.fancyButton690.fancyButton:active .text,.fancyButton690.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.fancyButton690:is(:hover,:focus,:active) .text:after {
+width: 100px;
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.lakeway-tx.gov/Faq.aspx" target="_self" class="fancyButton fancyButton691 ">
+		<span>
+			<span><span class="text">FAQs</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton691.fancyButton:link,.fancyButton691.fancyButton:visited, .fancyButton691div.fancyButton{
+	padding-top: 102px;
+	background-image: url('/ImageRepository/Document?documentID=42010');
+	background-repeat: no-repeat;
+	background-position: center 17px ;
+transition: all .3s ease-in-out;}
+.fancyButton691.fancyButton:hover,.fancyButton691.fancyButton:focus,.fancyButton691.fancyButton:active,.fancyButton691.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton691.fancyButton:link > span,.fancyButton691.fancyButton:visited > span, .fancyButton691div.fancyButton > span{
+}
+.fancyButton691.fancyButton:hover > span,.fancyButton691.fancyButton:focus > span,.fancyButton691.fancyButton:active > span,.fancyButton691.fancyButton.hover > span{
+}
+.fancyButton691.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-size: 1.25em;
+	font-family: "Lato";
+	padding-top: 13px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 13px;
+	background-repeat: no-repeat;
+	background-position: left top;
+position: relative;
+}
+
+.fancyButton691 .text:after {
+content: "";
+position: absolute;
+background-color: #7CB82F;
+height: 3px;
+width: 0;
+max-width: 100%;
+left: 50%;
+top: 0;
+transform: translateX(-50%);
+transition: all .3s ease-in-out;
+}
+.fancyButton691.fancyButton:hover .text,.fancyButton691.fancyButton:focus .text,.fancyButton691.fancyButton:active .text,.fancyButton691.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.fancyButton691:is(:hover,:focus,:active) .text:after {
+width: 100px;
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Calendar/Carousel --><!-- <div data-cpRole="structuralContainer" id="homeContainer1">
+    <div class="siteWrap2">
+      <div data-cpRole="contentContainer" id="homeContent1a"></div>
+    </div>
+  </div> --><!-- Footer --><footer data-cprole="structuralContainer" id="footerContainerTS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="footerTS">	<div id="ccbf4884ed-3df8-4710-9db2-27305faaffc3" data-containerid="bf4884ed-3df8-4710-9db2-27305faaffc3" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="67">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col9 first" style="height: auto;" data-widgetcontainerid="03bacd00-1964-4833-a2ba-a147d2f91647">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col9 first last idef7c5905-866f-45c2-b925-43b0e8ce5d03" style="height: 276px;" data-widgetcontainerid="ef7c5905-866f-45c2-b925-43b0e8ce5d03">
+	
+<div data-widget-id="4b76f5df-e552-488a-85db-8675924a0835" data-widget-controller-path="/Faq/Widget">
+  
+
+
+
+
+
+
+
+	<section id="widgetFaq4b76f5df-e552-488a-85db-8675924a0835" class="widget widgetFAQ skin68 widgetOptionSet36 wide" data-modulewidgettype="FAQ" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="faqHeader4b76f5df-e552-488a-85db-8675924a0835">
+			<header class="widgetHeader" id="faqHeader4b76f5df-e552-488a-85db-8675924a0835">
+		<div class="">
+			<h3><a href="https://www.lakeway-tx.gov/Faq.aspx?TID=29">FAQs</a></h3>
+				</div>
+	</header>
+	<div class="widgetBody pageStyles cpGrid cpGrid1 ">
+		<div class="row  wide">
+					<link href="/Areas/FAQ/Assets/Styles/Widget.css" rel="stylesheet">
+					<div class="col col1">
+						<ol class="semanticList" style="columns: 1">
+
+
+        <li style="position: relative" class="widgetItem">
+            <a class="widgetDesc widgetFAQQuestion" href="https://www.lakeway-tx.gov/Faq.aspx?QID=101">Can I fill out a Job Application Online?</a>
+        </li>
+
+
+        <li style="position: relative" class="widgetItem">
+            <a class="widgetDesc widgetFAQQuestion" href="https://www.lakeway-tx.gov/Faq.aspx?QID=103">Can I just send in my resume?</a>
+        </li>
+
+
+        <li style="position: relative" class="widgetItem">
+            <a class="widgetDesc widgetFAQQuestion" href="https://www.lakeway-tx.gov/Faq.aspx?QID=104">Do I need to fill out separate applications for each position?</a>
+        </li>
+
+
+        <li style="position: relative" class="widgetItem">
+            <a class="widgetDesc widgetFAQQuestion" href="https://www.lakeway-tx.gov/Faq.aspx?QID=105">Does my application stay on file for future positions?</a>
+        </li>
+
+
+        <li style="position: relative" class="widgetItem">
+            <a class="widgetDesc widgetFAQQuestion" href="https://www.lakeway-tx.gov/Faq.aspx?QID=176">Who can I contact if I have questions about a current job opening or the application process?</a>
+        </li>
+						</ol>
+					</div>
+		</div>
+        	</div>
+	<div class="widgetFooter">	
+	</div>
+    <div class="addItemModal hidden">
+        <div class="url hidden">/FAQ.aspx</div>
+    </div>
+
+	</section>
+
+
+<script>
+	function handleExpandCollapse(e) {
+		const element = e.currentTarget;
+		const answer = document.getElementById(element.getAttribute("aria-controls")).parentElement;
+		const expandArrow = element.getElementsByClassName("widgetFAQ--arrow")[0];
+		if (answer.classList.contains("hidden")) {
+			expandArrow.classList.add('widgetFAQ--arrow-expanded');
+			expandArrow.classList.remove('widgetFAQ--arrow-collapsed');
+			answer.classList.remove("hidden");
+			element.setAttribute("aria-expanded", "true");
+		} else {
+			expandArrow.classList.add('widgetFAQ--arrow-collapsed');
+			expandArrow.classList.remove('widgetFAQ--arrow-expanded');
+			answer.classList.add("hidden");
+			element.setAttribute("aria-expanded", "false");
+		}
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		e.stopPropagation();
+	}
+    document.querySelectorAll(".widgetFAQ--question a").forEach(element => {
+        // When the link is clicked, expand or collapse the answer
+		element.addEventListener("click", handleExpandCollapse);
+    });
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="9e684521-1463-42a2-8a35-4d49fbf493b0">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id757d2bba-c1e2-4c25-b969-53d6ed23f197" style="height: 276px;" data-widgetcontainerid="757d2bba-c1e2-4c25-b969-53d6ed23f197">
+	
+
+<div class="widget widgetSpacer" id="e8a4f9fd-4333-445c-baec-1bb3310be7d9" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col14 last" style="height: auto;" data-widgetcontainerid="8cfd369f-1538-49d7-aae3-6db335205813">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col6 first id79e38473-44b4-4ce9-af32-5429bebc0d4c" style="height: 119px;" data-widgetcontainerid="79e38473-44b4-4ce9-af32-5429bebc0d4c">
+	
+    <div data-widget-id="8e35ecd5-73e3-4690-b51e-51ede7b09ee5" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv8e35ecd5-73e3-4690-b51e-51ede7b09ee5" class="widget widgetInfoAdvanced skin65 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="header8e35ecd5-73e3-4690-b51e-51ede7b09ee5">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="https://www.lakeway-tx.gov/"><img src="https://www.lakeway-tx.gov/ImageRepository/Document?documentId=42029" class="fr-dib" alt="Lakeway Texas Homepage"></a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv8e35ecd5-73e3-4690-b51e-51ede7b09ee5 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+	<div class="inner col col1 id707727d9-9020-44bc-b993-97d24673f411" style="height: 119px;" data-widgetcontainerid="707727d9-9020-44bc-b993-97d24673f411">
+	
+
+<div class="widget widgetSpacer" id="46329dd9-09e3-4e68-8f4d-d6f54b2a2e79" style="height: auto;"></div>	</div> <!-- inner column -->
+	<div class="inner col col7 last id0ff8fea6-97f3-40ee-8b0f-888d36f65365" style="height: 119px;" data-widgetcontainerid="0ff8fea6-97f3-40ee-8b0f-888d36f65365">
+	
+    <div data-widget-id="870a32b2-8b68-4138-b07b-2e0f8b69ae80" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv870a32b2-8b68-4138-b07b-2e0f8b69ae80" class="widget widgetInfoAdvanced skin65 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="header870a32b2-8b68-4138-b07b-2e0f8b69ae80">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>1102 Lohmans Crossing Road</p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Lakeway, TX 78734-4470</p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Phone: <a href="tel:5123147500">512-314-7500</a> | <a href="mailto:info@lakeway-tx.gov">Email Us</a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv870a32b2-8b68-4138-b07b-2e0f8b69ae80 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col14 first last id5d8a44fd-96df-4a2a-98b8-3ad3a1aaa7cf" style="height: 107px;" data-widgetcontainerid="5d8a44fd-96df-4a2a-98b8-3ad3a1aaa7cf">
+	
+	<div data-widget-id="86b96cdb-0cfa-49f3-a4c3-56558dbb3aaa" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink86b96cdb-0cfa-49f3-a4c3-56558dbb3aaa" class="widget widgetQuickLinks skin65 widgetOptionSet35 wide" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:37em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Quick Links">
+			<header class="widgetHeader" id="quickLinksHeader86b96cdb-0cfa-49f3-a4c3-56558dbb3aaa">
+		<div class="">
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid4 ">
+        <div class="row  wide">
+				<div class="col col1 first ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.lakeway-tx.gov/108/City-Charter-Code-of-Ordinances" target="_self">City Charter &amp; Code</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.lakeway-tx.gov/124/Current-Job-Openings" target="_self">Career Opportunities</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.lakeway-tx.gov/949/Help-Center" target="_self">Help Center</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.lakeway-tx.gov/143/GIS" target="_self">Interactive Maps</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.lakeway-tx.gov/70/Solid-Waste-Management" target="_self">Trash &amp; Recycling</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.lakeway-tx.gov/1291/Purchasing" target="_self">Bid Opportunities</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.lakeway-tx.gov/" target="_self">Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.lakeway-tx.gov/sitemap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.lakeway-tx.gov/directory.aspx" target="_self">Contact Us</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.lakeway-tx.gov/accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.lakeway-tx.gov/copyright" target="_self">Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.lakeway-tx.gov/privacy" target="_self">Privacy Policy</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</footer><!-- Fixed GBs --><div data-cprole="structuralContainer" id="fixedGbsContainerTS" class="fixedLeftTS">
+<div class="siteWrap" data-skip-leftpad=""><div data-cprole="contentContainer" id="fixedGbsTS">	<div id="cc8150cf05-6ee9-4639-b270-9f5b3989add8" data-containerid="8150cf05-6ee9-4639-b270-9f5b3989add8" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="9cb53f90-a9b9-46e7-b1c0-212b132ed87d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id93f46088-c306-4fa7-a91f-b220d46d1858" style="height: 33px;" data-widgetcontainerid="93f46088-c306-4fa7-a91f-b220d46d1858">
+	
+<div data-widget-id="40682639-fa97-42fb-a116-559dafcdce1b" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget40682639-fa97-42fb-a116-559dafcdce1b" class="widget widgetGraphicLinks skin69 widgetOptionSet48 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:15em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid7 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row autoWidths center wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.lakeway-tx.gov/facebook" target="_self" aria-label=" graphic"><img src="https://www.lakeway-tx.gov/ImageRepository/Document?documentID=42421" class="graphicButtonLink" alt="" onmouseover="this.src='/ImageRepository/Document?documentID=42421'" onmouseout="this.src='/ImageRepository/Document?documentID=42421'" onfocus="this.src='/ImageRepository/Document?documentID=42421'" onblur="this.src='/ImageRepository/Document?documentID=42421'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.lakeway-tx.gov/x" target="_self" aria-label=" graphic"><img src="https://www.lakeway-tx.gov/ImageRepository/Document?documentID=42423" class="graphicButtonLink" alt="" onmouseover="this.src='/ImageRepository/Document?documentID=42423'" onmouseout="this.src='/ImageRepository/Document?documentID=42423'" onfocus="this.src='/ImageRepository/Document?documentID=42423'" onblur="this.src='/ImageRepository/Document?documentID=42423'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.lakeway-tx.gov/instagram" target="_self" aria-label=" graphic"><img src="https://www.lakeway-tx.gov/ImageRepository/Document?documentID=42422" class="graphicButtonLink" alt="" onmouseover="this.src='/ImageRepository/Document?documentID=42422'" onmouseout="this.src='/ImageRepository/Document?documentID=42422'" onfocus="this.src='/ImageRepository/Document?documentID=42422'" onblur="this.src='/ImageRepository/Document?documentID=42422'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.lakeway-tx.gov/youtube" target="_self" aria-label="Youtube graphic"><img src="https://www.lakeway-tx.gov/ImageRepository/Document?documentID=33514" class="graphicButtonLink" alt="Youtube" onmouseover="this.src='/ImageRepository/Document?documentID=33514'" onmouseout="this.src='/ImageRepository/Document?documentID=33514'" onfocus="this.src='/ImageRepository/Document?documentID=33514'" onblur="this.src='/ImageRepository/Document?documentID=33514'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.lakeway-tx.gov/nextdoor" target="_self" aria-label="NextDoor White graphic"><img src="https://www.lakeway-tx.gov/ImageRepository/Document?documentID=42461" class="graphicButtonLink" alt="NextDoor White" onmouseover="this.src='/ImageRepository/Document?documentID=42461'" onmouseout="this.src='/ImageRepository/Document?documentID=42461'" onfocus="this.src='/ImageRepository/Document?documentID=42461'" onblur="this.src='/ImageRepository/Document?documentID=42461'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.lakeway-tx.gov/linkedin" target="_self" aria-label="LinkedIn White graphic"><img src="https://www.lakeway-tx.gov/ImageRepository/Document?documentID=42462" class="graphicButtonLink" alt="LinkedIn White" onmouseover="this.src='/ImageRepository/Document?documentID=42462'" onmouseout="this.src='/ImageRepository/Document?documentID=42462'" onfocus="this.src='/ImageRepository/Document?documentID=42462'" onblur="this.src='/ImageRepository/Document?documentID=42462'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.threads.net/@cityoflakeway" target="_self" aria-label="Threads graphic"><img src="https://www.lakeway-tx.gov/ImageRepository/Document?documentID=42463" class="graphicButtonLink" alt="Threads" onmouseover="this.src='/ImageRepository/Document?documentID=42463'" onmouseout="this.src='/ImageRepository/Document?documentID=42463'" onfocus="this.src='/ImageRepository/Document?documentID=42463'" onblur="this.src='/ImageRepository/Document?documentID=42463'"> </a></li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Powered By --><div data-cprole="structuralContainer" id="poweredByContainerTS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="poweredByTS">	<div id="cca5384f37-80c9-4fab-afc4-880c0777eeaa" data-containerid="a5384f37-80c9-4fab-afc4-880c0777eeaa" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="781687f8-fbc5-4124-b2e9-af2c6b9ecf67">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id9ee91f37-2789-41a7-9764-7c2d3411c526" style="height: 33px;" data-widgetcontainerid="9ee91f37-2789-41a7-9764-7c2d3411c526">
+	
+ 
+	<div data-widget-id="30d31dd7-faf9-4b6c-9178-0c4c3cd6e99c" data-modulename="customHtml" id="widgetCustomHtml30d31dd7-faf9-4b6c-9178-0c4c3cd6e99c" class="widget widgetCustomHtml skin70 narrow">
+	<div class="widgetBody pageStyles" id="widgetBody30d31dd7-faf9-4b6c-9178-0c4c3cd6e99c">
+		<div id="customHtml30d31dd7-faf9-4b6c-9178-0c4c3cd6e99c"><div><style>
+  /* CP icon */
+  .cpBylineIconTS {
+    color: #333;
+  }
+  /* CP Text */
+  .cpBylineTextTS,
+  .cpBylineTextTS a:link {
+    color: #333;
+  }
+
+  .cpBylineTS {
+    text-align: center;
+  }
+  
+  .cpBylineIconTS {
+    fill: currentColor;
+    width: 39px;
+    height: 26px;
+    display: inline;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="widgetItem cpBylineTS">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="cpBylineIconTS">
+    <path class="c" d="M73.4,23.2h-19v16.7h19c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5h-19v28.4h5.5l11.3-11.7h2.2c11.9,0,21.6-9.7,21.6-21.6C95,33,85.3,23.2,73.4,23.2"></path>
+    <path class="p" d="M45.8,66.5H26.6C14.7,66.5,5,56.8,5,44.9C5,33,14.7,23.2,26.6,23.2h19.1v16.7H26.6c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h19.1V66.5z"></path>
+  </svg>
+  <span class="cpBylineTextTS">Government Websites by <a href="https://connect.civicplus.com/referral">CivicPlus®</a></span>
+</div>
+</div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '100',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!----------Google Translate (Mobile Friendly)--------->
+
+
+
+<style>#google-translate-container {float: right;padding: 3px 5px 0px 0px;}.goog-te-combo,.goog-te-banner *,.goog-te-ftab *,.goog-te-menu *,.goog-te-menu2 *,.goog-te-balloon * {font-family: arial;font-size: 10pt;background-image: url("https://theme.zdassets.com/theme_assets/958586/bae8aa24db8d43595871692a9d259186f2db3fb4.png");background-position: 3px 4px;background-size: 22px;background-repeat: no-repeat;text-indent: 20px;background-color: #fff;color: #000 !important;}.goog-logo-link {display: none !important;}.goog-te-gadget {color: transparent !important;}.goog-te-gadget .goog-te-combo {margin: 2px 0 !important;border-radius: 15px !important;}.goog-te-combo{border: 1px solid !important;border-color: #bcc9d7 #96a3b1 #96a3b1 #bcc9d7 !important;border-radius: 0 !important;height:32px; !important;padding: 0 1px 0 .25rem !important;}
+
+#launcher-wrapper {bottom: 50px !important;}
+
+</style>
+
+<div id="google-translate-container">
+
+<div id="google_translate_element" style="position: fixed; bottom: 0px; right: 20px; z-index: 5;"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo" aria-label="google translate languages"><option value="">Select Language</option><option value="ab">Abkhaz</option><option value="ace">Acehnese</option><option value="ach">Acholi</option><option value="aa">Afar</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="alz">Alur</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="as">Assamese</option><option value="av">Avar</option><option value="awa">Awadhi</option><option value="ay">Aymara</option><option value="az">Azerbaijani</option><option value="ban">Balinese</option><option value="bal">Baluchi</option><option value="bm">Bambara</option><option value="bci">Baoulé</option><option value="ba">Bashkir</option><option value="eu">Basque</option><option value="btx">Batak Karo</option><option value="bts">Batak Simalungun</option><option value="bbc">Batak Toba</option><option value="be">Belarusian</option><option value="bem">Bemba</option><option value="bn">Bengali</option><option value="bew">Betawi</option><option value="bho">Bhojpuri</option><option value="bik">Bikol</option><option value="bs">Bosnian</option><option value="br">Breton</option><option value="bg">Bulgarian</option><option value="bua">Buryat</option><option value="yue">Cantonese</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ch">Chamorro</option><option value="ce">Chechen</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="chk">Chuukese</option><option value="cv">Chuvash</option><option value="co">Corsican</option><option value="crh">Crimean Tatar (Cyrillic)</option><option value="crh-Latn">Crimean Tatar (Latin)</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="fa-AF">Dari</option><option value="dv">Dhivehi</option><option value="din">Dinka</option><option value="doi">Dogri</option><option value="dov">Dombe</option><option value="nl">Dutch</option><option value="dyu">Dyula</option><option value="dz">Dzongkha</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="ee">Ewe</option><option value="fo">Faroese</option><option value="fj">Fijian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fon">Fon</option><option value="fr">French</option><option value="fr-CA">French (Canada)</option><option value="fy">Frisian</option><option value="fur">Friulian</option><option value="ff">Fulani</option><option value="gaa">Ga</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gn">Guarani</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="cnh">Hakha Chin</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hil">Hiligaynon</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="hrx">Hunsrik</option><option value="iba">Iban</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="ilo">Ilocano</option><option value="id">Indonesian</option><option value="iu-Latn">Inuktut (Latin)</option><option value="iu">Inuktut (Syllabics)</option><option value="ga">Irish</option><option value="it">Italian</option><option value="jam">Jamaican Patois</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kac">Jingpo</option><option value="kl">Kalaallisut</option><option value="kn">Kannada</option><option value="kr">Kanuri</option><option value="pam">Kapampangan</option><option value="kk">Kazakh</option><option value="kha">Khasi</option><option value="km">Khmer</option><option value="cgg">Kiga</option><option value="kg">Kikongo</option><option value="rw">Kinyarwanda</option><option value="ktu">Kituba</option><option value="trp">Kokborok</option><option value="kv">Komi</option><option value="gom">Konkani</option><option value="ko">Korean</option><option value="kri">Krio</option><option value="ku">Kurdish (Kurmanji)</option><option value="ckb">Kurdish (Sorani)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="ltg">Latgalian</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lij">Ligurian</option><option value="li">Limburgish</option><option value="ln">Lingala</option><option value="lt">Lithuanian</option><option value="lmo">Lombard</option><option value="lg">Luganda</option><option value="luo">Luo</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mad">Madurese</option><option value="mai">Maithili</option><option value="mak">Makassar</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ms-Arab">Malay (Jawi)</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mam">Mam</option><option value="gv">Manx</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mh">Marshallese</option><option value="mwr">Marwadi</option><option value="mfe">Mauritian Creole</option><option value="chm">Meadow Mari</option><option value="mni-Mtei">Meiteilon (Manipuri)</option><option value="min">Minang</option><option value="lus">Mizo</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="nhe">Nahuatl (Eastern Huasteca)</option><option value="ndc-ZW">Ndau</option><option value="nr">Ndebele (South)</option><option value="new">Nepalbhasa (Newari)</option><option value="ne">Nepali</option><option value="bm-Nkoo">NKo</option><option value="no">Norwegian</option><option value="nus">Nuer</option><option value="oc">Occitan</option><option value="or">Odia (Oriya)</option><option value="om">Oromo</option><option value="os">Ossetian</option><option value="pag">Pangasinan</option><option value="pap">Papiamento</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese (Brazil)</option><option value="pt-PT">Portuguese (Portugal)</option><option value="pa">Punjabi (Gurmukhi)</option><option value="pa-Arab">Punjabi (Shahmukhi)</option><option value="qu">Quechua</option><option value="kek">Qʼeqchiʼ</option><option value="rom">Romani</option><option value="ro">Romanian</option><option value="rn">Rundi</option><option value="ru">Russian</option><option value="se">Sami (North)</option><option value="sm">Samoan</option><option value="sg">Sango</option><option value="sa">Sanskrit</option><option value="sat-Latn">Santali (Latin)</option><option value="sat">Santali (Ol Chiki)</option><option value="gd">Scots Gaelic</option><option value="nso">Sepedi</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="crs">Seychellois Creole</option><option value="shn">Shan</option><option value="sn">Shona</option><option value="scn">Sicilian</option><option value="szl">Silesian</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sus">Susu</option><option value="sw">Swahili</option><option value="ss">Swati</option><option value="sv">Swedish</option><option value="ty">Tahitian</option><option value="tg">Tajik</option><option value="ber-Latn">Tamazight</option><option value="ber">Tamazight (Tifinagh)</option><option value="ta">Tamil</option><option value="tt">Tatar</option><option value="te">Telugu</option><option value="tet">Tetum</option><option value="th">Thai</option><option value="bo">Tibetan</option><option value="ti">Tigrinya</option><option value="tiv">Tiv</option><option value="tpi">Tok Pisin</option><option value="to">Tongan</option><option value="lua">Tshiluba</option><option value="ts">Tsonga</option><option value="tn">Tswana</option><option value="tcy">Tulu</option><option value="tum">Tumbuka</option><option value="tr">Turkish</option><option value="tk">Turkmen</option><option value="tyv">Tuvan</option><option value="ak">Twi</option><option value="udm">Udmurt</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="ug">Uyghur</option><option value="uz">Uzbek</option><option value="ve">Venda</option><option value="vec">Venetian</option><option value="vi">Vietnamese</option><option value="war">Waray</option><option value="cy">Welsh</option><option value="wo">Wolof</option><option value="xh">Xhosa</option><option value="sah">Yakut</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="yua">Yucatec Maya</option><option value="zap">Zapotec</option><option value="zu">Zulu</option></select></div>Powered by <span style="white-space:nowrap"><a class="VIpgJd-ZVi9od-l4eHX-hSRGPd" href="https://translate.google.com" target="_blank" rel="noopener"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate">Translate</a></span></div></div>
+
+</div>
+
+<script>
+
+function googleTranslateElementInit() {
+var el = document.getElementById("google_translate_element");
+if (el && el.innerHTML.trim() !== "") {
+    return;
+}
+
+
+new google.translate.TranslateElement({ pageLanguage: "en" }, "google_translate_element");
+
+// begin accessibility compliance
+
+$('img.goog-te-gadget-icon').attr('alt','Google Translate');
+
+$('div#goog-gt-tt div.logo img').attr('alt','translate');
+
+$('div#goog-gt-tt .original-text').css('text-align','left');
+
+$('.goog-te-gadget-simple .goog-te-menu-value span').css('color','#000000');
+
+$('.goog-te-combo').attr('aria-label','google translate languages');
+
+$('svg.goog-te-spinner').attr('title','Google Translate Spinner');
+
+$('.goog-te-gadget-simple .goog-te-menu-value span').css('color','#000000');
+
+}
+
+$(function() {
+
+$.getScript("//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit");
+
+});
+
+</script>
+
+
+
+<!--------------End Google Translate----------------->
+
+
+<div style="display:none;">
+This is the official City of Lakeway website in Lakeway, Texas. City of Lakeway, TX - Official Website. Here is the site's home page:
+<a href="http://www.lakeway-tx.gov"> 
+Information about the City of Lakeway and community including city departments, City Council, parks, and police. Also includes city history.
+</a></div><script type="text/javascript">
+if(self != top) { top.location = self.location; }
+</script><a href="http://www.lakeway-tx.gov">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-83177714-1', 'auto');
+  ga('send', 'pageview');
+ 
+</script>
+
+	
+
+<!--SiteImprove Script-->
+<script type="text/javascript">
+/*<![CDATA[*/
+(function() {
+var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+sz.src = '//siteimproveanalytics.com/js/siteanalyze_6076005.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+})();
+/*]]>*/
+</script>
+<!--End Site ImproveScript-->
+
+<!-- Fixed Nav Adjustment -->
+<script>
+  function getValueTS(elem, attr) {
+    const val = elem.css(attr);
+    if (val === undefined) return undefined;
+    const num = parseInt(val, 10);
+    if (num === NaN) return undefined;
+    return num;
+  }
+
+  function clampTS(number, min, max) {
+    return Math.min(Math.max(number, min), max);
+  }
+
+  function isPageEditingTS() {
+    return (
+      $("#doneEditing").length > 0 || // In live edit
+      typeof DesignCenter !== "undefined" // In theme manager
+    );
+  }
+
+  const bgColorRegexTS = /rgba\((\d+), (\d+), (\d+), (\d*\.?\d*)\)/;
+  function isTransparentTS(elem) {
+    const bg = elem.css('background-color');
+    if (typeof bg !== "string" || !bg.startsWith('rgba(')) return false;
+    const matchState = bg.match(bgColorRegexTS);
+    if (!matchState || matchState.length !== 5) return false;
+    const alpha = parseFloat(matchState[4], 10);
+    if (!(alpha >= 0 && alpha < 1)) return false;
+    return true;
+  }
+
+  function iterateLeftpads(cb) {
+    const containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (let i = 0; i < containersTS.length; i++) {
+      const containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-leftpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-leftpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  const anchor = $("#divToolbars");
+
+  // Outer banner padding (push banner down)
+  const outerSizingTS = $("#bannerContainerTS");
+  // Inner banner padding (push banner content down) - Transparent header OR on attaching headers
+  const innerSizingTS = $("#bannerSizingTS");
+
+  const forceUnfixClassTS = "forceUnfixTS";
+
+  const fixedTopTS = $(".fixedTopTS");
+  const fixedBottomTS = $(".fixedBottomTS");
+  const fixedLeftTS = $(".fixedLeftTS");
+
+  var initialTopTS;
+  var topAttachTS;
+  if (fixedTopTS && fixedTopTS.length === 1) {
+    initialTopTS = getValueTS(fixedTopTS, 'top');
+    const attachment = fixedTopTS.attr('data-attach');
+    if (attachment) topAttachTS = $("#" + attachment);
+    if (!topAttachTS || topAttachTS.length !== 1) topAttachTS = undefined;
+  }
+
+  function resizeAdjustmentTS() {
+    const editing = isPageEditingTS();
+
+    // Fixed top script
+    (function () {
+      if (!fixedTopTS || fixedTopTS.length !== 1 || initialTopTS === undefined) return;
+
+      if (editing) {
+        fixedTopTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedTopTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      const topPosition = fixedTopTS.css('position');
+      if (topPosition === 'fixed') {
+        if (topAttachTS) {
+          scrollAdjustmentTS();
+        } else {
+          const anchorHeight = anchor.outerHeight() - 1;
+          fixedTopTS.css('top', anchorHeight + initialTopTS);
+        }
+      } else {
+        fixedTopTS.css('top', initialTopTS);
+      }
+
+      if (topPosition === 'fixed' || topPosition === 'absolute') {
+        // Bump the banner content down
+        if (isTransparentTS(fixedTopTS)) {
+          innerSizingTS.css('padding-top', initialTopTS + fixedTopTS.outerHeight());
+          outerSizingTS.css('padding-top', '');
+
+          try {
+            window.Pages.onResizeHandlersExecute();
+          } catch (e) { }
+        } else {
+          outerSizingTS.css('padding-top', fixedTopTS.outerHeight());
+          innerSizingTS.css('padding-top', '');
+        }
+      } else {
+        innerSizingTS.css('padding-top', '');
+        outerSizingTS.css('padding-top', '');
+      }
+    })();
+
+    // Fixed bottom script
+    (function () {
+      if (!fixedBottomTS || fixedBottomTS.length === 0) return;
+
+      // If the widget has gone narrow, force unfix
+      if (editing || fixedBottomTS.outerHeight() > 200) {
+        fixedBottomTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedBottomTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedBottomTS.css('position') === 'fixed') {
+        bodyContainerTS.css('padding-bottom', fixedBottomTS.outerHeight());
+      } else {
+        bodyContainerTS.css('padding-bottom', '');
+      }
+    })();
+
+    // Fixed left script
+    (function () {
+      if (!fixedLeftTS || fixedLeftTS.length === 0) return;
+
+      if (editing) {
+        fixedLeftTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedLeftTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedLeftTS.css('position') === 'fixed') {
+        const anchorHeight = anchor.outerHeight() - 1;
+        fixedLeftTS.css('top', anchorHeight);
+        const leftBoundingTS = fixedLeftTS[0].getBoundingClientRect();
+        iterateLeftpads(function (containerTS) {
+          const containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.left <= leftBoundingTS.right) {
+            $(containerTS).css('padding-left', leftBoundingTS.width + 16);
+          }
+        });
+      } else {
+        fixedLeftTS.css('top', '');
+        iterateLeftpads(function (containerTS) {
+          $(containerTS).css('padding-left', '');
+        });
+      }
+    })();
+  }
+
+  function scrollAdjustmentTS() {
+    if (!fixedTopTS || fixedTopTS.length !== 1 || !topAttachTS || topAttachTS.length !== 1) return;
+    const topPosition = fixedTopTS.css('position');
+    if (topPosition === 'fixed' || topPosition === 'absolute') {
+      const anchorBounding = anchor[0].getBoundingClientRect();
+      const attachBounding = topAttachTS[0].getBoundingClientRect();
+      const scrollTop = $(window).scrollTop();
+
+      fixedTopTS.css('top', Math.max(anchorBounding.bottom - 1, attachBounding.bottom));
+    } else {
+      fixedTopTS.css('top', initialTopTS);
+    }
+  }
+
+  $(window).load(function () {
+    setTimeout(function () {
+      resizeAdjustmentTS();
+    }, 350);
+
+    $(window).scroll(function () {
+      scrollAdjustmentTS();
+    });
+
+    var adjustTimeoutTS;
+    $(window).resize(function () {
+      clearTimeout(adjustTimeoutTS);
+      adjustTimeoutTS = setTimeout(function () {
+        resizeAdjustmentTS();
+      }, 350);
+    });
+
+    $.when(window.Pages.angularToolbarComplete).done(function () {
+      resizeAdjustmentTS();
+    });
+  });
+</script>
+<!-- End Fixed Nav Adjustment -->
+
+<script type="module" data-hash="f8b87fd393024f5784b1c4ac1bd12e3b" id="frase-script" src="https://answers-script.frase.io/bot.js"></script>
+
+
+<script type="text/javascript">
+    window._monsido = window._monsido || {
+        token: "OjSvl_-E1T-OPnQ-E4LiuA",
+        statistics: {
+            enabled: true,
+            cookieLessTracking: true,
+            documentTracking: {
+                enabled: true,
+                documentCls: "monsido_download",
+                documentIgnoreCls: "monsido_ignore_download",
+                documentExt: [],
+            },
+        },
+        heatmap: {
+            enabled: true,
+        },
+        pageCorrect: {
+            enabled: true,
+        },
+        pageAssistV2: {
+            enabled: true,
+            theme: "light",
+            mainColor: "#783CE2",
+            textColor: "#ffffff",
+            linkColor: "#783CE2",
+            buttonHoverColor: "#783CE2",
+            mainDarkColor: "#052942",
+            textDarkColor: "#ffffff",
+            linkColorDark: "#FFCF4B",
+            buttonHoverDarkColor: "#FFCF4B",
+            greeting: "Discover your personalization options",
+            direction: "leftbottom",
+            coordinates: "undefined undefined undefined undefined",
+            iconShape: "circle",
+            title: "Personalization Options",
+            titleText: "Welcome to PageAssist toolbar! Adjust the options below to cater the website to your accessibility needs.",
+            iconPictureUrl: "logo",
+            logoPictureUrl: "",
+            logoPictureBase64: "",
+            languages: [""],
+            defaultLanguage: "",
+            skipTo: false,
+            alwaysOnTop: false,
+            hotkeyEnabled:false,
+        },
+    };
+</script>
+<script type="text/javascript" async="" src="https://app-script.monsido.com/v2/monsido-script.js"></script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Cormorant+Garamond:300,300italic,500,500italic,600,600italic,700,700italic,italic,regular|Lato:700,700italic,900,900italic,italic,regular|Montserrat:100,100italic,200,200italic,300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,italic,regular|Oxygen:300,700,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+</a><div id="frase-answers-bot" class="frase-answers-bot" style="left: auto; right: 0px;"><div id="frase-wrapper" style="overflow: hidden; right: 0px; height: 70px; margin-right: 0px; margin-bottom: 50px; background: transparent; bottom: 0px;"><iframe title="Chat Bot" id="frase-iframe" src="https://answers-bot.frase.io/f8b87fd393024f5784b1c4ac1bd12e3b" style="bottom: 0px; right: 0px; position: fixed; z-index: 2147483647; border: none; height: 70px; width: 70px; margin-right: 0px; margin-bottom: 50px; background: transparent;"></iframe><div id="frase-greeting" style="position: fixed; bottom: calc(136px); right: 18px; background-color: rgb(255, 255, 255); padding: 15px; border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px; z-index: 10001; max-width: 300px; border: 1px solid rgb(221, 221, 221); cursor: pointer;"><p style="margin: 0px 10px 0px 0px; font-weight: 500; font-size: 0.8rem; line-height: 0.8rem;">Hi 👋, how can I help?</p><button title="close greeting" style="position: absolute; top: -8px; right: -5px; border: none; background: rgb(229, 229, 229); border-radius: 50%; cursor: pointer; padding: 0px; height: 18px; width: 18px; font-size: 0.7rem; display: flex;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" style="height: 12px; width: 12px; color: rgb(0, 0, 0); font-size: 0.7rem; margin: auto;"><path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path></svg></button></div></div></div><ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu31" class="contentTop mainNavMegaMenu megaMenuContainer pageID_31 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 276px;">	<div id="ccfedddf6d-4754-4170-b0d9-ee062f088eb1" data-containerid="fedddf6d-4754-4170-b0d9-ee062f088eb1" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu27" class="contentTop mainNavMegaMenu megaMenuContainer pageID_27 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 276px;">	<div id="cc66565c8a-d270-45b4-ac7e-6a04c0da28cc" data-containerid="66565c8a-d270-45b4-ac7e-6a04c0da28cc" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu575" class="contentTop mainNavMegaMenu megaMenuContainer pageID_575 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 276px;">	<div id="cc3d0875e5-b31a-4a5c-9760-b9039e7bffb2" data-containerid="3d0875e5-b31a-4a5c-9760-b9039e7bffb2" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu175" class="contentTop mainNavMegaMenu megaMenuContainer pageID_175 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 276px;">	<div id="cc8313c089-afe4-48e7-ae8e-81adbd79ee74" data-containerid="8313c089-afe4-48e7-ae8e-81adbd79ee74" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu577" class="contentTop mainNavMegaMenu megaMenuContainer pageID_577 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 276px;">	<div id="cc850be6f4-7312-480d-8bb1-9d099ddb4c48" data-containerid="850be6f4-7312-480d-8bb1-9d099ddb4c48" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr"><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""><div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr">Original text</div></div><div class="VIpgJd-yAWNEb-hvhgNd-k77Iif"><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Rate this translation</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Your feedback will be used to help improve Google Translate</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Good translation" aria-label="Good translation" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Poor translation" aria-label="Poor translation" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b>&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div><div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><div id="bannerSlideshowControls_banner1" class="bannerSlideshowControlsNew none " style="display:none">
+			<a id="arrowPrev_banner1" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner1" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div><button class="mon-logo-container mon-light-theme" mon-position="leftbottom" aria-labelledby="mon-pa-pageassist-label mon-pa-logo-label" id="monsido-pageassist" aria-expanded="false"><span id="mon-pa-pageassist-label" class="mon-pa-efsc">PageAssist</span>
+        <span id="mon-pa-logo-label" class="mon-logo-text-content">Discover your personalization options</span>
+        <span class="mon-logo-image-wrapper-content">
+            <span class="mon-logo-image-wrapper ">
+                <span class="mon-pageassist-close-img mon-pa-efsc">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><path class="a mon-pa-efsc" d="M10.343,87.5l4.264-4.264a1.341,1.341,0,0,0,0-1.9l-.948-.948a1.341,1.341,0,0,0-1.9,0L7.5,84.657,3.236,80.392a1.341,1.341,0,0,0-1.9,0l-.948.948a1.341,1.341,0,0,0,0,1.9L4.657,87.5.392,91.764a1.341,1.341,0,0,0,0,1.9l.948.948a1.341,1.341,0,0,0,1.9,0L7.5,90.343l4.264,4.264a1.341,1.341,0,0,0,1.9,0l.948-.948a1.341,1.341,0,0,0,0-1.9Z" transform="translate(0 -80)"></path></svg>
+                </span>
+                <span class="mon-pageassist-check-img mon-pa-efsc">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7.457" viewBox="0 0 10 7.457"><path class="a mon-pa-efsc" d="M3.4,72.409l-3.25-3.25a.5.5,0,0,1,0-.707l.707-.707a.5.5,0,0,1,.707,0L3.75,69.934,8.44,65.245a.5.5,0,0,1,.707,0l.707.707a.5.5,0,0,1,0,.707L4.1,72.409a.5.5,0,0,1-.707,0Z" transform="translate(0 -65.098)"></path></svg>
+                </span>
+                <span class="mon-logo-image-bg">
+                    <img class="mon-logo-image" src="//cdn.monsido.com/page-assist/v2/assets/img/uaccess.svg" alt="PageAssist Personalization Options">
+                </span>
+                <img class="mon-spinner mon-pa-efsc" src="//cdn.monsido.com/page-assist/v2/assets/img/default-spinner.png" alt="PageAssist Loading">
+            </span>
+        </span>
+        <style type="text/css">
+    
+    @keyframes monLogoRight {
+        from {
+            right: -60px !important;
+        }
+        to {
+            right: 20px !important;
+        }
+    }
+    @keyframes monLogoLeft {
+        from {
+            left: -60px !important;
+        }
+        to {
+            left: 20px !important;
+        }
+    }
+    @keyframes monLogoBottom {
+        from {
+            bottom: -60px !important;
+        }
+        to {
+            bottom: 5px !important;
+        }
+    }
+    @keyframes monLogoTop {
+        from {
+            top: -60px !important;
+        }
+        to {
+            top: 5px !important;
+        }
+    }
+    @keyframes monSpinner {
+        from {
+            transform: rotate(0);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container {
+        background: transparent !important;
+        border: none !important;
+        box-sizing: content-box !important;
+        font-family: 'Roboto', Arial, sans-serif !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        cursor: pointer !important;
+        position: fixed !important;
+        bottom: 3px !important;
+        z-index: 2147483640 !important;
+        text-transform: none !important;
+        transition: right 0.2s ease;
+        animation: monLogoLeft 0.3s normal forwards;
+        align-items: center !important;
+        display: flex !important;
+        outline: none !important;
+        padding: 10px !important;
+        margin: 0 !important;
+        max-width: 200px !important;
+        white-space: normal !important;
+        height: auto !important;
+        width: auto !important;
+    }
+
+    .mon-logo-container {
+        --mon-pa-distance-from-popup: 3;
+    }
+
+    .mon-pa-button-border {
+        border: 3px solid var(--mon-pa-button-border-color);
+    }
+
+    #mon-pa-pageassist-label {
+        border: 0 !important;
+        clip: rect(1px, 1px, 1px, 1px) !important;
+        clip-path: inset(50%) !important;
+        height: 1px !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: absolute !important;
+        width: 1px !important;
+        white-space: nowrap !important;
+    }
+
+    body.monsido-toolbar-body-container > mon-pa-dashboard + .mon-logo-container {
+        animation:unset;
+        transition:unset;
+    }
+
+    .mon-logo-container[mon-loading] img.mon-spinner {
+        display: block !important;
+        margin: auto !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]):hover {
+        background-color:#783CE2 !important;
+        border-radius: 3px !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]).mon-dark-theme:hover {
+        background-color: #052942 !important;
+        border-radius: 3px !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    .mon-logo-image-wrapper img.mon-spinner {
+        display: none !important;
+        animation-name:monSpinner;
+        animation-duration:3s;
+        animation-iteration-count:infinite;
+        animation-timing-function:linear;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content {
+        order:0 !important;
+    }
+
+    body.monsido-toolbar-body-container>.mon-logo-container[mon-position="right"] .mon-logo-image-wrapper-content,
+    body.monsido-toolbar-body-container>.mon-logo-container[mon-position="righttop"] .mon-logo-image-wrapper-content,
+    body.monsido-toolbar-body-container>.mon-logo-container[mon-position="rightbottom"] .mon-logo-image-wrapper-content {
+        order:1 !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper .mon-logo-image-bg {
+        background: #783CE2 !important;
+        display: none !important;
+        width: 36px !important;
+        height: 36px !important;
+        margin: auto !important;
+        border-radius: 50% !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-image-wrapper .mon-logo-image-bg {
+        background-color: #052942 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper .mon-logo-image-bg {
+        display: block !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper .mon-logo-image-bg img.mon-logo-image {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"])[mon-loading].mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img,
+    body.monsido-toolbar-body-container .mon-logo-container[mon-loading] .mon-logo-image-wrapper .mon-logo-image-bg,
+    body.monsido-toolbar-body-container .mon-logo-container[mon-loading].mon-dark-theme .mon-logo-image-wrapper .mon-pageassist-check-img,
+    body.monsido-toolbar-body-container .mon-logo-container[mon-loading].mon-dark-theme .mon-logo-image-wrapper .mon-logo-image-bg {
+        display: none !important;
+    }
+
+    
+    body.monsido-toolbar-body-container>.mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        display:block !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color: #783CE2 !important;
+        border-radius: 50% !important;
+        box-sizing: border-box !important;
+        padding: 0 !important;
+        width: 60px !important;
+        height: 60px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-rounded-box .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        border-radius: 3px !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:focus .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        box-shadow: 0px 0px 1px 5px #1c86db !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:hover:not([aria-expanded="true"]) .mon-logo-image-wrapper-content .mon-logo-image-wrapper{
+        box-shadow: 0px 0px 1px 2px #ffffff !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img,
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img {
+        display: none !important;
+        margin: 4px 0 0 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img svg,
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img svg {
+        width: 15px !important;
+        height: 15px !important;
+        vertical-align: unset !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img svg .a,
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img svg .a {
+        fill: #ffffff !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#052942 !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#052942 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img svg .a,
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img svg .a {
+        fill: #ffffff !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img  {
+        display: block !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#783CE2 !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"].mon-dark-theme .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#052942 !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper .mon-pageassist-check-img,
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper .mon-logo-image-bg {
+        display: none !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]).mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img  {
+        display: block !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#783CE2 !important;
+    }
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme.mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#052942 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-styles-applied .mon-logo-image-wrapper .mon-pageassist-close-img,
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-styles-applied .mon-logo-image-wrapper .mon-logo-image-bg {
+        display: none !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-text-content {
+        display:none !important;
+        letter-spacing: normal !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]):hover .mon-logo-text-content {
+        display: block !important;
+        text-align: left !important;
+        line-height: 1.3 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-text-content {
+        order:1 !important;
+        padding-right:20px !important;
+        padding-left:10px !important;
+        display:none !important;
+        color:#ffffff !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-text-content {
+        color:#ffffff !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='centertop'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='centerbottom'] {
+        animation: monLogoBottom 0.3s normal forwards;
+        left: 50% !important;
+        margin-left: -40px !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='centerbottom'] {
+        animation: monLogoBottom 0.3s normal forwards;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='centertop'] {
+        top: 5px !important;
+        animation: monLogoTop 0.3s normal forwards;
+        bottom: auto !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='lefttop'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='righttop'] {
+        top: 5px !important;
+        bottom: auto !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='right'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='left'] {
+        bottom: 50% !important;
+        margin-top: 40px !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='left'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='leftbottom'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='lefttop'] {
+        left: 20px !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='right'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='rightbottom'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='righttop'] {
+        animation: monLogoRight 0.3s normal forwards;
+        right: 20px !important;
+    }
+
+    
+    @media (max-height: 920px) {
+        body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] {
+            display: none !important;
+        }
+    }
+
+    @media print {
+        body.monsido-toolbar-body-container .mon-logo-container {
+            display: none !important;
+        }
+    }
+
+    
+    button.skip-to-pageassist {
+        left: -999px !important;
+        position: fixed !important;
+        top: auto !important;
+        width: 1px !important;
+        height: 1px !important;
+        overflow: hidden !important;
+        z-index: -999 !important;
+    }
+
+    button.skip-to-pageassist:focus, button.skip-to-pageassist:active {
+        color: #fff !important;
+        background-color: #000 !important;
+        top: 4px !important;
+        left: 4px !important;
+        right: auto !important;
+        height: auto !important;
+        width: auto !important;
+        overflow: auto !important;
+        padding: 5px !important;
+        text-align: center !important;
+        font-size: 1.2em !important;
+        z-index: 9999999999999999999999999999 !important;
+    }
+
+    
+        body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            color: #ffffff !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            color: #ffffff !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]):hover {
+            background-color: #783CE2 !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container:hover .mon-logo-image-wrapper .mon-logo-image-bg {
+            background-color: #783CE2 !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper .mon-logo-image-bg {
+            background-color: #783CE2 !important;
+        }
+    
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"].mon-dark-theme .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme.mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            color: #ffffff !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:not([aria-expanded="true"]):hover {
+            background-color: #783CE2 !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-image-wrapper .mon-logo-image-bg {
+            background-color: #783CE2 !important;
+        }
+    
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-coordinates-bottom {
+        animation: monLogoBottom 0.3s normal forwards;
+        bottom: var(--mon-pa-button-bottom) !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-coordinates-top {
+        top: var(--mon-pa-button-top) !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-coordinates-left {
+        left: var(--mon-pa-button-left) !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-coordinates-right {
+        right: var(--mon-pa-button-right) !important;
+    }
+    
+
+</style></button></body></html>
