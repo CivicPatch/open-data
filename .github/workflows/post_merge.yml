@@ -122,11 +122,14 @@ jobs:
         run: |
           JURISDICTION_FOLDER=$(poetry run python scripts/github_actions/get_jurisdiction_folder.py "${{ matrix.jurisdiction_ocdid }}")
           echo "jurisdiction-folder=$JURISDICTION_FOLDER" >> "$GITHUB_OUTPUT"
+          # Hash the ocdid for artifact name
+          HASHED_OCDID=$(echo -n "${{ matrix.jurisdiction_ocdid }}" | sha256sum | cut -d' ' -f1)
+          echo "hashed-ocdid=$HASHED_OCDID" >> "$GITHUB_OUTPUT"
       
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: images-${{ matrix.jurisdiction_ocdid }}
+          name: images-${{ steps.get-jurisdiction-folder.outputs.hashed-ocdid }}
           path: |
             data/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}.yml
             data_source/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}/
