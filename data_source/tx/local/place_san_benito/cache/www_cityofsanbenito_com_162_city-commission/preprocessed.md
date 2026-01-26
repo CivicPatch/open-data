@@ -13,7 +13,7 @@ City Commission | San Benito, TX - Official Website
 
 ![Search Icon](https://www.cityofsanbenito.com/ImageRepository/Document?documentID=4869)
 
-![](https://www.cityofsanbenito.com/ImageRepository/Document?documentID=4877)
+![](https://www.cityofsanbenito.com/ImageRepository/Document?documentID=4873)
 
 
 1. City Commission

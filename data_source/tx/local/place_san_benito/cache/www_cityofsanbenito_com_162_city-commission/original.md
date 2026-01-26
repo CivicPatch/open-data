@@ -51,7 +51,7 @@ Loading
 [![Search Icon](https://www.cityofsanbenito.com/ImageRepository/Document?documentID=4869)](https://www.cityofsanbenito.com/Search/Results)
 Search
 
-![](https://www.cityofsanbenito.com/ImageRepository/Document?documentID=4877)
+![](https://www.cityofsanbenito.com/ImageRepository/Document?documentID=4873)
 
 1. [Home](https://www.cityofsanbenito.com/)
 2. [Government](https://www.cityofsanbenito.com/27/Government)
