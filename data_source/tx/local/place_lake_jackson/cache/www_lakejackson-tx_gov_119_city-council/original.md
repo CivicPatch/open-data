@@ -49,7 +49,7 @@ Loading
 [![Search](https://www.lakejackson-tx.gov/ImageRepository/Document?documentID=7321)](https://www.lakejackson-tx.gov/Search/Results)
 Search
 
-![](https://www.lakejackson-tx.gov/ImageRepository/Document?documentID=7316)
+![](https://www.lakejackson-tx.gov/ImageRepository/Document?documentID=7407)
 
 1. [Home](https://www.lakejackson-tx.gov/)
 2. [City Government](https://www.lakejackson-tx.gov/27/City-Government)
