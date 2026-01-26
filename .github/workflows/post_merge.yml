@@ -130,8 +130,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: images-${{ steps.get-jurisdiction-folder.outputs.hashed-ocdid }}
-          path: |
-            data/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}.yml
+          path: data/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}.yml
 
   commit-image-updates:
     runs-on: ubuntu-latest
@@ -163,7 +162,8 @@ jobs:
         with:
           pattern: images-*
           merge-multiple: true
-          path: .
+      
+      # TBD: Need to remove old images from data_source folders
 
       - name: Commit image updates
         run: |
@@ -174,7 +174,6 @@ jobs:
           # Check if there are changes to commit
           if [ -n "$(git status --porcelain)" ]; then
             git add data/
-            git add data_source/
             git status
             git commit -m "Upload images to CDN [skip ci]"
             git push
