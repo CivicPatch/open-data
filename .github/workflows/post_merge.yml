@@ -130,7 +130,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: images-${{ steps.get-jurisdiction-folder.outputs.hashed-ocdid }}
-          path: data/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}.yml
+          path: | # https://github.com/actions/upload-artifact/issues/174#issuecomment-2878874192
+            dummy-preserve-hierarchy.txt 
+            data/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}*
 
   commit-image-updates:
     runs-on: ubuntu-latest
