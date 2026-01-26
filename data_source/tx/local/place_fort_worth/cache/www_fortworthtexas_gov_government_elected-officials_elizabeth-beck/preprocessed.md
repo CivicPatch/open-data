@@ -1,0 +1,233 @@
+Elizabeth M. Beck – Welcome to the City of Fort Worth
+
+
+Skip to main content
+opens in new tab or window
+
+Quick Links:
+
+* [Contact](https://www.fortworthtexas.gov/departments/communications/customercare)
+
+English
+is your current preferred language.
+EspañolSelect this as your preferred language
+Tiếng ViệtSelect this as your preferred language
+
+[City of Fort Worth - Home - Logo](https://www.fortworthtexas.gov/Home)
+
+* Residents
+  + My Neighborhood
+    - [My council district](https://www.fortworthtexas.gov/residents/my-neighborhood/my-council-districts)
+  + My Data
+    - [One Address](https://www.fortworthtexas.gov/residents/my-data/one-address)
+* Departments
+  + [City Directory](https://www.fortworthtexas.gov/departments/city-directory)
+  + [City Attorney's Office](https://www.fortworthtexas.gov/departments/cityattorney)
+  + [City Manager's Office](https://www.fortworthtexas.gov/departments/city-manager)
+    - [City Manager's Office Leadership](https://www.fortworthtexas.gov/departments/city-manager/city-manager-contacts)
+  + [City Secretary's Office](https://www.fortworthtexas.gov/departments/citysecretary)
+    - [How to appear or speak before City Council](https://www.fortworthtexas.gov/departments/citysecretary/appear-at-council)
+    - [City Elections](https://www.fortworthtexas.gov/departments/citysecretary/elections)
+* Government
+  + Elected Officials
+    - [Mattie Parker](https://www.fortworthtexas.gov/government/elected-officials/mattie-parker)
+    - [Carlos Flores](https://www.fortworthtexas.gov/government/elected-officials/carlos-flores)
+    - [Michael D. Crain](https://www.fortworthtexas.gov/government/elected-officials/michael-crain)
+    - [Charles Lauersdorf](https://www.fortworthtexas.gov/government/elected-officials/charles-lauersdorf)
+    - [Deborah Peoples](https://www.fortworthtexas.gov/government/elected-officials/deborah-peoples)
+    - [Dr. Mia Hall](https://www.fortworthtexas.gov/government/elected-officials/mia-hall)
+    - [Chris Nettles](https://www.fortworthtexas.gov/government/elected-officials/chris-nettles)
+    - [Elizabeth M. Beck](https://www.fortworthtexas.gov/government/elected-officials/elizabeth-beck)
+    - [Alan Blaylock](https://www.fortworthtexas.gov/government/elected-officials/alan-blaylock)
+    - [Jeanette Martinez](https://www.fortworthtexas.gov/government/elected-officials/jeanette-martinez)
+    - [Contact your councilmember](https://www.fortworthtexas.gov/government/elected-officials/contact)
+  + [Mayor's Office](https://www.fortworthtexas.gov/government/mayor)
+    - [Contact the Mayor](https://www.fortworthtexas.gov/government/mayor/contact)
+    - [Good Natured](https://www.fortworthtexas.gov/government/mayor/good-natured)
+  + [City Management](https://www.fortworthtexas.gov/government/city-management)
+    - [City Manager](https://www.fortworthtexas.gov/government/city-management/city-manager)
+    - [City Attorney](https://www.fortworthtexas.gov/government/city-management/city-attorney)
+    - [City Secretary](https://www.fortworthtexas.gov/government/city-management/city-secretary)
+    - [Assistant City Managers](https://www.fortworthtexas.gov/government/city-management/assistant-city-managers)
+    - [City Auditor](https://www.fortworthtexas.gov/government/city-management/city-auditor)
+  + [City Council Meeting](https://www.fortworthtexas.gov/government/city-council-meetings)
+    - [How to appear/speak before City Council](https://www.fortworthtexas.gov/government/city-council-meetings/appear)
+    - [City Council Meetings & Agendas](https://www.fortworthtexas.gov/government/city-council-meetings/meetings-agendas)
+    - [Watch recorded city meetings](https://www.fortworthtexas.gov/government/city-council-meetings/watch-recorded-city-meetings)
+  + [District Map with Councilmembers](https://www.fortworthtexas.gov/government/district-map)
+* Calendar & Services
+  + News
+    - [Latest City News](https://www.fortworthtexas.gov/calendar-services/news/latest-news)
+    - [Sign up for City News emails](https://www.fortworthtexas.gov/calendar-services/news/sign-up-news)
+  + [Watch city meetings on FWTV](https://www.fortworthtexas.gov/calendar-services/fwtv)
+* A-Z Index
+  + [City Council](https://www.fortworthtexas.gov/a-z-index/city-council)
+  + [City Management Contacts](https://www.fortworthtexas.gov/a-z-index/city-management-contacts)
+  + [Human Resources Contact](https://www.fortworthtexas.gov/a-z-index/human-resources-contacts)
+  + [City Council Contacts](https://www.fortworthtexas.gov/a-z-index/city-council-contacts)
+  + [Initiatives with the City of Fort Worth](https://www.fortworthtexas.gov/a-z-index/initiatives)
+  + [Permits with the City of Fort Worth](https://www.fortworthtexas.gov/a-z-index/permits)
+  + [Recycling with the City of Fort Worth](https://www.fortworthtexas.gov/a-z-index/recycling)
+  + [Water Contact](https://www.fortworthtexas.gov/a-z-index/water-contact)
+  + [Property management for the city](https://www.fortworthtexas.gov/a-z-index/property)
+* [Full month view of Calendar & Meetings](https://www.fortworthtexas.gov/calendar)
+  + [Monthly Events](https://www.fortworthtexas.gov/calendar/monthly-events)
+* Capital Projects
+  + [Keller Hicks Road Improvements](https://www.fortworthtexas.gov/projects/cfw-keller-hicks-improvements)
+  + [Cooks Lane/Morrison Drive Sewer Main Improvements](https://www.fortworthtexas.gov/projects/Cooks-LaneMorrison-Drive-Sewer-Main-Improvements)
+  + [Riverside Alliance & Diamond Hill-Jarvis Infrastructure Improvements](https://www.fortworthtexas.gov/projects/Riverside-Alliance-Diamond-Hill-Jarvis-Infrastructure-Improvements)
+  + [Bryant Irvin Road 30-inch Water Main/Pressure Plane Transfer Project](https://www.fortworthtexas.gov/projects/cfw-bryant-irvin-road-30inch-water-main-pressure-plane-transfer-project)
+  + [Northside III 54-inch Water Transmission Main Alignment and Land Study](https://www.fortworthtexas.gov/projects/cfw-northside-III-54-inch-water-transmission-main-alignment-and-land-study)
+  + [Miller Avenue to Trueland Drive Area Water & Sewer Improvements](https://www.fortworthtexas.gov/projects/cfw-miller-avenue-to-trueland-drive-area-water-sewer-improvements)
+* [City News](https://www.fortworthtexas.gov/news)
+  + [Gallery for Summer 2022](https://www.fortworthtexas.gov/news/gallery-2022)
+  + [city hall selfie day 2025](https://www.fortworthtexas.gov/news/City-Hall-Selfie-Day-2025)
+  + [The Bricks of Camp Bowie Boulevard](https://www.fortworthtexas.gov/news/camp-bowie-boulevard-bricks)
+* About Fort Worth
+  + [Official City of Fort Worth Logo](https://www.fortworthtexas.gov/about/logo)
+  + [City Fact Sheet](https://www.fortworthtexas.gov/about/fact-sheet)
+
+Select the Escape key to close the menu. Focus will then be set to the first menu item.
+
+You Are Here :
+Home
+/
+Government
+/
+Elected Officials
+/
+Elizabeth M. Beck
+
+Elizabeth M. Beck
+=================
+
+District 9 City Councilmember
+
+Elizabeth M. Beck was sworn in as a member of the City Council on June 15, 2021. Elizabeth is a mother, veteran, lawyer, and life-long resident of Fort Worth.
+
+* Email
+
+  [District9@fortworthtexas.gov](mailto:District9@fortworthtexas.gov "Compose an email to District9@fortworthtexas.gov")
+
+Elizabeth is a mother, veteran, lawyer, and life-long resident of Fort Worth. After graduating from Southwest High School she joined the U.S. Army Reserves, where she spent eight and a half years in the 223rd Maintenance Company based out of Grand Prairie.  In 2005, she deployed as a Sergeant to Taji, Iraq in support of Operation Iraqi Freedom.
+
+Weeks after returning from Iraq, Elizabeth was attending classes to complete her Bachelor’s degree at the University of Texas at Arlington. While completing her Masters in City and Regional Planning and the University of Texas at Arlington, she began working full-time as a transportation planner at the North Central Texas Council of Governments.
+
+While at the Council of Governments, Elizabeth again served her community on a wide range of projects, including protecting NAS JRB, Fort Worth through compatible development, environmental justice and civil rights compliance.
+Elizabeth’s need to fight to make her community a better place led her to Texas A&M School of Law, where she earned her law degree. As a lawyer, Elizabeth represents employees across the country in wage and hour claims.
+
+Elizabeth currently raises her two children, three-legged dog, and three-legged cat in District 9’s South Hills Neighborhood.
+
+District 9 Map(show below)
+
+**Enter the street address and click the select button or Use my location on your cell phone to locate your address in District 9.**
+
+This element requires javascript to be enabled.
+Please wait while we load your map...
+
+District History(show below)
+
+* Elizabeth M. Beck: 6.15.2021 to present
+* Ann Zadeh: 7.15.2014 to 6.15.2021
+* Joel Burns: 1.8.2008 to 7.15.2014
+* Wendy Davis: 5.1.1999 to 1.8.2008
+* Cathy Hirt: 5.4.1996 to 5.1.1999
+* Kenneth Barr: 5.1.1993 to 5.4.1996
+* David Chappell: 5.6.1989 to 5.1.1993
+* Estil Vance Jr.: 4.20.1985 to 5.6.1989
+* Herman Stute: 5.1.1979 to 4.6.1985
+* Shirley Johnson: 4.19.1977 to 5.1.1979
+
+(First single member district election occurred on April 19, 1977)
+
+* Margret Rimmer: 4.7.1971 to 4.19.1977
+* William R. Sarsgard: 4.24.1967 to 4.7.1971
+* Marvin B. Shannon: 4.2.1963 to 4.24.1967
+* Gene S. Moore: 4.4.1961 to 4.2.1963
+* C. B. Williams: 4.2.1957 to 4.4.1961
+* Barney B. Holland: 4.20.1955 to 4.2.1957
+* T. L. Carleton: 4.22.1953 to 4.20.1955
+* George B. Bennett: 4.5.1949 to 4.2.1953
+* H. Malvern Marks Jr.: 4.8.1941 to 4.5.1949
+* A. B. Smith: 3.30.1938 to 4.8.1941
+* George B. Eagle: 4.7.1937 to 2.9.1938
+* Van Zandt Jarvis: 2.25.1927 to 4.7.1937
+* L. P. Card: 4.7.1925 to 2.1.1927
+
+* [City unveils ‘Hands of Unity' mural on Lowden Street](https://www.fortworthtexas.gov/news/2025/12/lowden-mural)
+* [Fort Worth prepares for annual Christmas tree lighting](https://www.fortworthtexas.gov/news/2025/11/christmas-tree)
+* [Sign toppers to honor musician Leon Bridges in his hometown](https://www.fortworthtexas.gov/news/2025/9/leon-bridges)
+* [Learn about Central City Project progress, upcoming work](https://www.fortworthtexas.gov/news/2025/9/central-city-open-house)
+
+District Directors
+------------------
+
+[Anthony Rojas](mailto:Anthony.Rojas@fortworthtexas.gov)
+, District Director II
+
+[Mia Boatner](mailto:Mia.Boatner@fortworthtexas.gov)
+, District Director I
+
+Share
+
+* [Email](mailto:?Body=https%3a%2f%2fwww.fortworthtexas.gov%2fgovernment%2felected-officials%2felizabeth-beck)
+
+Back to top
+
+
+
+[Title VI and Accessibility & Accommodations](https://www.fortworthtexas.gov/departments/hr/civil-right-office/title-VI-accessibility-accommodations)
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Accommodations are available for residents who have accessibility requirements. To learn more about accessibility accommodations available from the City of Fort Worth, visit the
+Accessibility page
+.
+due to disability.
+
+![](https://www.google.com/images/cleardot.gif)
+Select Language​▼
+
+* [Contact & Addresses](https://www.fortworthtexas.gov/contact)
+* [City Directory](https://www.fortworthtexas.gov/departments/city-directory)
+* [Employee Email](https://outlook.office365.com/owa?realm=fortworthtexas.gov)
+
+[City Council](https://www.fortworthtexas.gov/government)
+---------------------------------------------------------
+
+* [City Council Meeting and Work Session Agendas](https://fortworthgov.legistar.com/Calendar.aspx)
+* [City Code & Charter](https://codelibrary.amlegal.com/codes/ftworth/latest/overview)
+
+* [Title VI](https://www.fortworthtexas.gov/departments/tpw/title-vi)
+
+Get email updates from the City of Fort Worth on the topics you want.
+
+[Contact](https://www.fortworthtexas.gov/departments/communications/customercare)
+,
+[Mailing/Physical Address](https://www.fortworthtexas.gov/departments/communications/customercare#address-numbers)
+&
+Main Number
+:
+
+### **City Hall, 100 Fort Worth Trail, Fort Worth, TX 76102/817-392-1234**
+
+About
+|
+Copyright & Disclaimer
+|
+Sitemap
+|
+A-Z Index
+|
+Web suggestions
+|
+Google Translation of website
+
+© 2026 City of Fort Worth |
+Powered by
+Granicus
+
+![](https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg)
+Original text
+Rate this translation
+Your feedback will be used to help improve Google Translate
+Ready
