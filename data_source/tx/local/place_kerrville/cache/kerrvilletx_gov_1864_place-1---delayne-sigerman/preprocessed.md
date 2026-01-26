@@ -7,7 +7,7 @@ Place 1 - Delayne Sigerman | Kerrville TX - Official Website
 ![Kerrville Texas Home Page](https://kerrvilletx.gov/ImageRepository/Document?documentID=44664)
 
 ![Search](https://kerrvilletx.gov/ImageRepository/Document?documentID=44672)
-![](https://kerrvilletx.gov/ImageRepository/Document?documentID=44662)
+![](https://kerrvilletx.gov/ImageRepository/Document?documentID=44663)
 
 
 1. [City Council](https://kerrvilletx.gov/956/City-Council)
