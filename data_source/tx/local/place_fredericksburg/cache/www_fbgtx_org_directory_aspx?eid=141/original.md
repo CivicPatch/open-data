@@ -48,7 +48,7 @@ Read on...](https://www.fbgtx.org/AlertCenter.aspx?AID=WINTER-WEATHER-UPDATES-21
 [![Search](https://www.fbgtx.org/ImageRepository/Document?documentID=7499)](https://www.fbgtx.org/Search/Results)
 Search
 
-![](https://www.fbgtx.org/ImageRepository/Document?documentID=7337)
+![](https://www.fbgtx.org/ImageRepository/Document?documentID=7827)
 
 1. [Mission Statement](https://www.fbgtx.org/680/Mission-Statement)
 2. [Agendas, Minutes, & Presentations](https://www.fbgtx.org/223/Agendas-Minutes-Presentations)

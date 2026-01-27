@@ -48,7 +48,7 @@ Read on...](https://www.fbgtx.org/AlertCenter.aspx?AID=WINTER-WEATHER-UPDATES-21
 [![Search](https://www.fbgtx.org/ImageRepository/Document?documentID=7499)](https://www.fbgtx.org/Search/Results)
 Search
 
-![](https://www.fbgtx.org/ImageRepository/Document?documentID=7339)
+![](https://www.fbgtx.org/ImageRepository/Document?documentID=7337)
 
 1. [Mayor Jeryl Hoover](https://www.fbgtx.org/1119/Mayor-Jeryl-Hoover)
 2. [Councilmember Emily Kirchner](https://www.fbgtx.org/1120/Councilmember-Emily-Kirchner)
