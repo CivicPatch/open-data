@@ -1,0 +1,2524 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n3-active wf-muli-n4-active wf-muli-i4-active wf-muli-n7-active wf-active has-webFonts"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,700,700italic,900,900italic,italic,regular|Montserrat:100,100italic,200,200italic,300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,italic,regular|Open+Sans:500,500italic,600,600italic,700,700italic,italic,regular|Poppins:100,100italic,200,200italic,300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,italic,regular|Roboto+Slab:500,600,700,regular|" media="all"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-P2PF4W1CVZ&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61q1"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-P2PF4W1CVZ';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	
+	<meta name="category0" content="Home">
+<meta name="category1" content="Government">
+<meta name="category2" content="Boards &amp; Commissions">
+<meta name="category3" content="Municipal Development District Board of Directors">
+
+	
+	<meta name="theme-color" content="rgb(12, 66, 32)">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>Municipal Development District Board of Directors | Oak Point, TX</title>
+
+		<meta name="description" content="The Board of the Oak Point Municipal Development District Board of Directors consists of seven members that recommend funding of authorized projects to the City Council.">
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '390px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/-1389439808.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style></head>
+<body class="wide cpTextResizeOn doneLoading"><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="http://www.oakpointtexas.com/Common/images/ajax-loader.gif" alt="Loading" title="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks">
+<a href="http://www.oakpointtexas.com/212/Municipal-Development-District-Board-of-#cca22b7f9e-a40a-451b-8af0-1b32d687eefa" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="7">
+    <input type="hidden" id="hdnContentCollectionID" value="c166838b-85df-4b7d-87ce-b14c6f1eb04e">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="18">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID">
+    <input type="hidden" id="pagePageID" value="212">
+
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+
+
+
+<!-- Begin Signed Out Bar -->
+<div class="cpToolbar user public" style="z-index: 1;">
+    <div class="inner selfClear">
+        <p class="dropdown"><a href="http://www.oakpointtexas.com/MyAccount/ProfileCreate" role="link" class="myConnections" id="signedOutToolbarCreateProfileButton">Create a Website Account</a> <span class="welcomeMessage">- Manage notification subscriptions, save form progress and more. &nbsp;&nbsp;</span></p>
+        <ul class="nav secondary">
+	        <li><a href="http://www.oakpointtexas.com/MyAccount" role="link" class="button" id="loggedOutToolbarSignInButton"><span>Website Sign In</span></a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#signedOutToolbarCreateProfileButton').keypress(function (e) { if (e.which === 0) return; $(this).click(); });
+        $('#signedOutToolbarCreateProfileButton').click(function (event) {
+        	event.preventDefault();
+        	window.location.href = '/MyAccount/ProfileCreate?from=url&url=/&dn=' + window.location.origin;
+        });
+
+			
+				$('#loggedOutToolbarSignInButton').click(function (event) {
+					event.preventDefault();
+					window.location.href = '/MyAccount/?from=url&url=' + encodeURIComponent(window.location.href.replace(window.location.origin, '')) + '&dn=' + window.location.host;
+				});
+			
+
+		if ('False' == 'True') {
+            $('#loggedOutToolbarSignInButton').hide();
+		}
+    })
+</script>
+<!-- End Signed Out Bar -->
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 35px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="bodyContainerTS">
+<div data-cprole="banner" id="banner1" class="fixedBannerTS"><!-- Header Container --><header data-cprole="structuralContainer" id="headerContainerTS" class="fixedTopTS" style="top: 34px;">
+<div class="siteWrap5" data-skip-leftpad=""><div data-cprole="structuralContainer" id="headerInnerTS">
+<div data-cprole="banner" id="bannerLogoTS" class="bannerLogoTS empty">
+
+
+
+
+				<a id="bannerLogoTS-54" style="			display: block; text-align: center;
+" class="bannerObject" href="http://www.oakpointtexas.com/" target="_self"><img alt="Oak Point Texas Homepage" class="bannerObject" height="178" src="http://www.oakpointtexas.com/ImageRepository/Document?documentID=1170" width="859"></a>
+</div><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem27" class="topMenuItem" role="none" data-pageid="27" data-displaymegamenu="True" style="width: 26.8943%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem1 " href="http://www.oakpointtexas.com/27/Government" target="_self">   Government </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem101" class="topMenuItem" role="none" data-pageid="101" data-displaymegamenu="True" style="width: 22.9456%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavServices" class="navMainItem mainNavItem mainNavItem2 " href="http://www.oakpointtexas.com/101/Services" target="_self">   Services </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem31" class="topMenuItem" role="none" data-pageid="31" data-displaymegamenu="True" style="width: 25.7204%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavCommunity" class="navMainItem mainNavItem mainNavItem3 " href="http://www.oakpointtexas.com/31/Community" target="_self">   Community </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem9" class="topMenuItem" role="none" data-pageid="9" data-displaymegamenu="True" style="width: 24.4397%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavHowDoI" class="navMainItem mainNavItem mainNavItem4 " href="http://www.oakpointtexas.com/9/How-Do-I" target="_self">   How Do I... </a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=18&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = false;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="0"></aside></nav>
+</div></div>
+</header><!-- Banner --><div data-cprole="structuralContainer" id="bannerContainerTS" class="noOverflowTS">
+<div data-cprole="structuralContainer" id="bannerSizingTS" style="padding-top: 90px;">
+<div data-cprole="structuralContainer" id="bannerSearchTS">
+<div class="siteWrap5" data-skip-leftpad=""><div data-cprole="contentContainer" id="searchTS">	<div id="ccebf3fcc1-cca1-4dc7-bef1-c4524fc9e737" data-containerid="ebf3fcc1-cca1-4dc7-bef1-c4524fc9e737" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="f9460aa6-dff1-4516-8482-126933ed60cc">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id20aeb495-5692-4234-83aa-d21c98fba488" style="height: 65px;" data-widgetcontainerid="20aeb495-5692-4234-83aa-d21c98fba488">
+	
+<div data-widget-id="dd8d89cc-2971-402e-8d7a-edceb9d6c4c9" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButtondd8d89cc-2971-402e-8d7a-edceb9d6c4c9").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDeptdd8d89cc-2971-402e-8d7a-edceb9d6c4c9").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchFielddd8d89cc-2971-402e-8d7a-edceb9d6c4c9").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDeptdd8d89cc-2971-402e-8d7a-edceb9d6c4c9").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDeptdd8d89cc-2971-402e-8d7a-edceb9d6c4c9").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchFielddd8d89cc-2971-402e-8d7a-edceb9d6c4c9").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDeptdd8d89cc-2971-402e-8d7a-edceb9d6c4c9").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchFielddd8d89cc-2971-402e-8d7a-edceb9d6c4c9").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchFielddd8d89cc-2971-402e-8d7a-edceb9d6c4c9"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin65 widgetOptionSet55" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBoxdd8d89cc-2971-402e-8d7a-edceb9d6c4c9 ui-autocomplete-input" cp5ph="true" id="searchFielddd8d89cc-2971-402e-8d7a-edceb9d6c4c9" name="searchField" onchange="searchBtnApplyQuery();" placeholder="What can we help you find?" title="What can we help you find?" type="text" value="" autocomplete="off">
+						<a href="http://www.oakpointtexas.com/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButtondd8d89cc-2971-402e-8d7a-edceb9d6c4c9" role="button"><img alt="Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=1187" data-image="/ImageRepository/Document?documentID=1188" src="http://www.oakpointtexas.com/ImageRepository/Document?documentID=1188"></a>
+
+			<label class="searchLabel" for="searchFielddd8d89cc-2971-402e-8d7a-edceb9d6c4c9">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #383838;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #383838;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #383838;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #383838;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBoxdd8d89cc-2971-402e-8d7a-edceb9d6c4c9
+	{
+		color: #373330;
+		font-family: Poppins;
+height: 65px;
+border-radius: 33px;
+border: 1px solid rgba(255,255,255,1);
+background: #fff;
+padding: 0 80px 0 20px;
+box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.21);
+	}
+	.widgetSearch .widgetBody .widgetSearchButtondd8d89cc-2971-402e-8d7a-edceb9d6c4c9
+	{
+		margin: 5px; padding-top: .50em; 
+padding-right: .75em;
+	}
+	.widgetSearch .widgetSearch-onlyDeptdd8d89cc-2971-402e-8d7a-edceb9d6c4c9
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDeptdd8d89cc-2971-402e-8d7a-edceb9d6c4c9
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchFielddd8d89cc-2971-402e-8d7a-edceb9d6c4c9").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+</div><!-- Content container --><div data-cprole="structuralContainer" id="mainContainerTS">
+<div class="siteWrap5" style="padding-left: 116px;"><div data-cprole="structuralContainer" id="mainWrapTS" class="mainWrap" role="main">
+<div data-cprole="structuralContainer" id="outerContentWrapTS" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="contentWrapTS" class="contentWrap">
+<div data-cprole="breadCrumbs" id="breadCrumbs" class="breadCrumbContainer">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="http://www.oakpointtexas.com/">Home</a></li><li><a class="breadCrumb" href="http://www.oakpointtexas.com/27/Government">Government</a></li><li><a class="breadCrumb" href="http://www.oakpointtexas.com/207/Boards-Commissions">Boards &amp; Commissions</a></li><li id="currentBCPage" data-pageid="212">Municipal Development District Board of Directors</li>
+		</ol>
+
+	   
+    
+</div><div data-cprole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="212">
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="207">
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="1759">
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="Municipal Development District Board of Directors">
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="False">
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False">
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published">
+
+				<h1 id="versionHeadLine" class="headline">
+
+Municipal Development District Board of Directors		</h1>
+	
+		<div id="cca22b7f9e-a40a-451b-8af0-1b32d687eefa" data-containerid="a22b7f9e-a40a-451b-8af0-1b32d687eefa" class="pageContent cpGrid cpGrid24">
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="fcc7b11c-94a1-4272-a706-77b8536edbe6">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last idb0e2cd12-c599-4396-ad9c-57dc64d870d8" style="height: 214px;" data-widgetcontainerid="b0e2cd12-c599-4396-ad9c-57dc64d870d8">
+	
+<div class="widget editor pageStyles wide" id="divEditorb60dcfb1-7bb1-44bd-8c7c-3dc02c5bc8df" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h2 class="subhead1 ">Meetings</h2><ul><li>Held as needed</li><li>Tuesday evenings</li><li>Oak Point City Hall<br>100 Naylor Road<br>Oak Point, TX 75068</li></ul>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + 'b60dcfb1-7bb1-44bd-8c7c-3dc02c5bc8df'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="31790d6e-a069-4f0a-8842-455b09119672">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col24 first last id01b59c1e-d5c2-4c33-8390-4e45ecf658dd" style="height: 156px;" data-widgetcontainerid="01b59c1e-d5c2-4c33-8390-4e45ecf658dd">
+	
+<div class="widget editor pageStyles wide" id="divEditor12e94976-04a3-497b-889e-27d240ae58e3" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h2 class="subhead1 ">Agendas &amp; Minutes</h2><p>Agendas are available prior to the meetings. Minutes are available following approval.</p><p><a class="Hyperlink" href="http://www.oakpointtexas.com/AgendaCenter/Municipal-Development-District-Board-of--6">View Most Recent Agendas and Minutes</a></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '12e94976-04a3-497b-889e-27d240ae58e3'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest wide">
+
+	
+	<div class="inner col col24 first last id287d5d0e-68de-493e-91fc-cb4d244cf1b4" style="height: 306px;" data-widgetcontainerid="287d5d0e-68de-493e-91fc-cb4d244cf1b4">
+	
+
+
+
+	<section data-widget-id="43595adf-8caf-495b-9785-f98ab73b994e" data-modulename="list" id="widgetList43595adf-8caf-495b-9785-f98ab73b994e" class="widget widgetList pageStyles wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="header43595adf-8caf-495b-9785-f98ab73b994e">
+				<header class="widgetHeader" id="header43595adf-8caf-495b-9785-f98ab73b994e">
+				<h2 class="subhead1" data-headertext="Members">Members</h2>
+		</header>
+		<div class="headerContent">The Municipal Development District Board of Directors members are appointed by the City Council and serve two-year staggered terms.  Terms expire in July of each year.  Currently, <a href="http://www.oakpointtexas.com/209/EDC-Board-of-Directors">Economic Development Corporation</a> members serve dual roles as Municipal Development District members.</div>
+	<div class="widgetBody" id="div43595adf-8caf-495b-9785-f98ab73b994e">
+		<div class="row wide">
+					<div class="col col12">
+							<ul class="list" start="1">
+									<li>Betsy Sellinger, Member<br>Term expires: July 2027</li>
+									<li>James Hankins, Member<br>Term expires: July 2027</li>
+									<li>Greg Weiler, Member<br>Term expires: July 2026</li>
+							</ul>
+					</div>
+					<div class="col col12">
+							<ul class="list" start="4">
+									<li>Chris Risher, Vice President<br>Term expires: July 2027</li>
+									<li>David Wootton, President<br>Term expires: July 2026</li>
+									<li>Debbie Peterman, Member<br>Term expires: July 2026</li>
+							</ul>
+					</div>
+
+		</div>
+	</div>
+
+	</section>
+
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col24 first last id7247f1a1-73eb-4508-b4b5-8ef19cab24c1" style="height: 406px;" data-widgetcontainerid="7247f1a1-73eb-4508-b4b5-8ef19cab24c1">
+	
+<div class="widget editor pageStyles wide" id="divEditor4e3e5445-cfd8-4a16-9e94-5fed32e4f07c" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h2 class="subhead1 ">About the District</h2><p>On May 14, 2011, voters in Oak Point and the Oak Point extraterritorial jurisdiction (<abbr>ETJ</abbr>) voted to create the Oak Point Municipal Development District (<abbr>MDD</abbr>) and impose a 0.25% sales and use tax within the Oak Point City limits and <abbr>ETJ</abbr> for the purpose of financing development projects beneficial to the <abbr>MDD</abbr>. Authorized projects include land, buildings, equipment, facilities, and improvements associated with:</p><ul><li>Affordable housing</li><li>Business development in certain small municipalities</li><li>Business enterprises that create or retain primary jobs</li><li>Variety of recreational or community facilities</li><li>Water supply facilities and water conservation programs</li></ul><p>The Board of the Oak Point <abbr>MDD</abbr> consists of seven members that recommend funding of authorized projects to the City Council.</p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '4e3e5445-cfd8-4a16-9e94-5fed32e4f07c'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: none;">	<div id="ccccf7559d-7297-49b0-9f5e-d0b6b34803a9" data-containerid="ccf7559d-7297-49b0-9f5e-d0b6b34803a9" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="siteSidebarTS" class="siteSidebar">
+<aside data-cprole="contentContainer" id="sidebarContainer1TS">	<div id="cc09aac098-0627-4d3e-8da7-0f0a6e5efc1a" data-containerid="09aac098-0627-4d3e-8da7-0f0a6e5efc1a" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav">
+
+
+
+
+
+	<ol role="menu" id="secondaryMenusecondaryNav" data-parent="207" class="rootNavMenu accordionNav">
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem211" data-pageid="211">
+		<div class="accordionNavItem">
+			<a href="http://www.oakpointtexas.com/211/Board-of-Adjustment" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Board of Adjustment</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem209" data-pageid="209">
+		<div class="accordionNavItem">
+			<a href="http://www.oakpointtexas.com/209/EDC-Board-of-Directors" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">EDC Board of Directors</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem212" data-pageid="212">
+		<div class="accordionNavItem">
+			<a href="http://www.oakpointtexas.com/212/Municipal-Development-District-Board-of-" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Municipal Development District Board of Directors</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem210" data-pageid="210">
+		<div class="accordionNavItem">
+			<a href="http://www.oakpointtexas.com/210/Parks-Recreation-Commission" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Parks &amp; Recreation Commission</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem208" data-pageid="208">
+		<div class="accordionNavItem">
+			<a href="http://www.oakpointtexas.com/208/Planning-Zoning-Commission" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Planning &amp; Zoning Commission</a>
+		</div>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = false;
+		});
+	</script>
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			$('*[id^="SideItem"]').each(function () {
+				var ids = $('[id="' + this.id + '"]');
+				if (ids.length > 1)
+					$.each(ids, function (index, value) {
+						value.id = value.id + '_' + index;
+					});
+			});
+
+			$('.hasAccordionChildren .openAccordionNav').click(function (e) {
+				e.preventDefault();
+				showHideAccordionMenuForSecondaryNav($(this));
+			});
+
+			$("#secondaryNav .grippy").each(function () {
+				menuManager.setupDraggableElement($(this), SIDE_MENU, '#secondaryNav');
+			});
+
+			$("#secondaryNav li").each(function () {
+				menuManager.setupDroppableAccordionElement($(this), SIDE_MENU);
+			});
+		});
+	</script>
+
+
+
+</nav><aside data-cprole="contentContainer" id="sidebarContainer2TS">	<div id="cce70a376d-b825-42c8-ae55-e3e0b1ba038e" data-containerid="e70a376d-b825-42c8-ae55-e3e0b1ba038e" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div><!-- GBs --><div data-cprole="structuralContainer" id="gbsContainerTS">
+<div class="siteWrap5" style="padding-left: 116px;"><div data-cprole="contentContainer" id="gbsTS">	<div id="cce83db5ae-d924-4287-869b-3802f8245f23" data-containerid="e83db5ae-d924-4287-869b-3802f8245f23" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="33">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="height: auto;" data-widgetcontainerid="1531463a-1e24-48e0-8184-7b7fc204426a">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id5716e46f-1903-4dfc-b83c-b25e6fd2a60c" style="height: 180px;" data-widgetcontainerid="5716e46f-1903-4dfc-b83c-b25e6fd2a60c">
+	
+<div data-widget-id="7a49c999-3b05-4edc-bcc0-f7b2de44f1a5" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget7a49c999-3b05-4edc-bcc0-f7b2de44f1a5" class="widget widgetGraphicLinks skin64 widgetOptionSet42 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:2em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="http://www.oakpointtexas.com/158/Building-Inspections" target="_self" class="fancyButton fancyButton223 ">
+		<span>
+			<span><span class="text">Permits</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton223.fancyButton:link,.fancyButton223.fancyButton:visited, .fancyButton223div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=1183');
+	background-repeat: no-repeat;
+	background-position: center 10px ;
+transition: all .3s ease-in-out;
+position: relative;
+}
+
+.fancyButton223:after {
+content: '';
+height: 0;
+width: 5px;
+border-radius: 30px;
+background: #8B715E;
+position: absolute;
+top: 135px;
+left: 50%; transform: translate(0, 0);
+transition: all .3s ease-in-out;
+}
+.fancyButton223.fancyButton:hover,.fancyButton223.fancyButton:focus,.fancyButton223.fancyButton:active,.fancyButton223.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=1228');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all .3s ease-in-out;
+}
+.fancyButton223:hover:after, .fancyButton223:focus:after, .fancyButton223:active:after, .fancyButton223.mouseover:after {
+width: 90px;
+height: 2px;
+background: #DAAA5E;
+left: calc(50% - 43px);
+transition: all .3s ease-in-out;}
+.fancyButton223.fancyButton:link > span,.fancyButton223.fancyButton:visited > span, .fancyButton223div.fancyButton > span{
+}
+.fancyButton223.fancyButton:hover > span,.fancyButton223.fancyButton:focus > span,.fancyButton223.fancyButton:active > span,.fancyButton223.fancyButton.hover > span{
+}
+.fancyButton223.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Poppins";
+	padding-top: 9.5em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9.5em;
+	background-repeat: no-repeat;
+	background-position: center 9em ;
+transition: all .3s ease-in-out;
+
+}
+.fancyButton223.fancyButton:hover .text,.fancyButton223.fancyButton:focus .text,.fancyButton223.fancyButton:active .text,.fancyButton223.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 6.4em ;
+transition: all .3s ease-in-out;
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="http://www.oakpointtexas.com/154/Municipal-Court" target="_self" class="fancyButton fancyButton122 ">
+		<span>
+			<span><span class="text">Municipal Court</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton122.fancyButton:link,.fancyButton122.fancyButton:visited, .fancyButton122div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=1181');
+	background-repeat: no-repeat;
+	background-position: center 10px ;
+transition: all .3s ease-in-out;
+position: relative;
+}
+
+.fancyButton122:after {
+content: '';
+height: 0;
+width: 5px;
+border-radius: 30px;
+background: #8B715E;
+position: absolute;
+top: 135px;
+left: 50%; transform: translate(0, 0);
+transition: all .3s ease-in-out;}
+.fancyButton122.fancyButton:hover,.fancyButton122.fancyButton:focus,.fancyButton122.fancyButton:active,.fancyButton122.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=1224');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all .3s ease-in-out;
+}
+.fancyButton122:hover:after, .fancyButton122:focus:after, .fancyButton122:active:after, .fancyButton122.mouseover:after {
+width: 90px;
+height: 2px;
+background: #DAAA5E;
+left: calc(50% - 43px);
+transition: all .3s ease-in-out;}
+.fancyButton122.fancyButton:link > span,.fancyButton122.fancyButton:visited > span, .fancyButton122div.fancyButton > span{
+}
+.fancyButton122.fancyButton:hover > span,.fancyButton122.fancyButton:focus > span,.fancyButton122.fancyButton:active > span,.fancyButton122.fancyButton.hover > span{
+}
+.fancyButton122.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Poppins";
+	padding-top: 9.5em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9.5em;
+	background-repeat: no-repeat;
+	background-position: center 9em ;
+transition: all .3s ease-in-out;
+
+}
+.fancyButton122.fancyButton:hover .text,.fancyButton122.fancyButton:focus .text,.fancyButton122.fancyButton:active .text,.fancyButton122.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 6.4em ;
+transition: all .3s ease-in-out;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8" style="height: auto;" data-widgetcontainerid="19eb1267-5a5b-47c4-84aa-250278b19eea">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last ide6845e50-5cce-4c7a-9654-8ea99dd5fee7" style="height: 180px;" data-widgetcontainerid="e6845e50-5cce-4c7a-9654-8ea99dd5fee7">
+	
+<div data-widget-id="5d5a4c18-0695-41da-b012-ac0db23204dc" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget5d5a4c18-0695-41da-b012-ac0db23204dc" class="widget widgetGraphicLinks skin64 widgetOptionSet42 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:2em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="http://www.oakpointtexas.com/316/Public-Safety" target="_self" class="fancyButton fancyButton123 ">
+		<span>
+			<span><span class="text">Public Safety</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton123.fancyButton:link,.fancyButton123.fancyButton:visited, .fancyButton123div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=1219');
+	background-repeat: no-repeat;
+	background-position: center 10px ;
+transition: all .3s ease-in-out;
+position: relative;
+}
+
+.fancyButton123:after {
+content: '';
+height: 0;
+width: 5px;
+border-radius: 30px;
+background: #8B715E;
+position: absolute;
+top: 135px;
+left: 50%; transform: translate(0, 0);
+transition: all .3s ease-in-out;}
+.fancyButton123.fancyButton:hover,.fancyButton123.fancyButton:focus,.fancyButton123.fancyButton:active,.fancyButton123.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=1321');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all .3s ease-in-out;
+}
+.fancyButton123:hover:after, .fancyButton123:focus:after, .fancyButton123:active:after, .fancyButton123.mouseover:after {
+width: 90px;
+height: 2px;
+background: #DAAA5E;
+left: calc(50% - 43px);
+transition: all .3s ease-in-out;}
+.fancyButton123.fancyButton:link > span,.fancyButton123.fancyButton:visited > span, .fancyButton123div.fancyButton > span{
+}
+.fancyButton123.fancyButton:hover > span,.fancyButton123.fancyButton:focus > span,.fancyButton123.fancyButton:active > span,.fancyButton123.fancyButton.hover > span{
+}
+.fancyButton123.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Poppins";
+	padding-top: 9.5em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9.5em;
+	background-repeat: no-repeat;
+	background-position: center 9em ;
+transition: all .3s ease-in-out;
+
+}
+.fancyButton123.fancyButton:hover .text,.fancyButton123.fancyButton:focus .text,.fancyButton123.fancyButton:active .text,.fancyButton123.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 6.4em ;
+transition: all .3s ease-in-out;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.oakpointtexas.com/213/Code-of-Ordinances" target="_self" class="fancyButton fancyButton250 ">
+		<span>
+			<span><span class="text">Code of Ordinances</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton250.fancyButton:link,.fancyButton250.fancyButton:visited, .fancyButton250div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=1698');
+	background-repeat: no-repeat;
+	background-position: center 10px ;
+transition: all .3s ease-in-out;
+position: relative;
+}
+
+.fancyButton250:after {
+content: '';
+height: 0;
+width: 5px;
+border-radius: 30px;
+background: #8B715E;
+position: absolute;
+top: 135px;
+left: 50%; transform: translate(0, 0);
+transition: all .3s ease-in-out;
+}
+.fancyButton250.fancyButton:hover,.fancyButton250.fancyButton:focus,.fancyButton250.fancyButton:active,.fancyButton250.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=1699');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all .3s ease-in-out;
+}
+.fancyButton250:hover:after, .fancyButton250:focus:after, .fancyButton250:active:after, .fancyButton250.mouseover:after {
+width: 90px;
+height: 2px;
+background: #DAAA5E;
+left: calc(50% - 43px);
+transition: all .3s ease-in-out;}
+.fancyButton250.fancyButton:link > span,.fancyButton250.fancyButton:visited > span, .fancyButton250div.fancyButton > span{
+}
+.fancyButton250.fancyButton:hover > span,.fancyButton250.fancyButton:focus > span,.fancyButton250.fancyButton:active > span,.fancyButton250.fancyButton.hover > span{
+}
+.fancyButton250.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Poppins";
+	padding-top: 9.5em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9.5em;
+	background-repeat: no-repeat;
+	background-position: center 9em ;
+transition: all .3s ease-in-out;
+
+}
+.fancyButton250.fancyButton:hover .text,.fancyButton250.fancyButton:focus .text,.fancyButton250.fancyButton:active .text,.fancyButton250.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 6.4em ;
+transition: all .3s ease-in-out;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8 last" style="height: auto;" data-widgetcontainerid="ba4cbccd-e61d-4f43-a345-78df8b9a882d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id3e7dc1ca-6b69-4e50-b510-7c958953ece7" style="height: 180px;" data-widgetcontainerid="3e7dc1ca-6b69-4e50-b510-7c958953ece7">
+	
+<div data-widget-id="463bcacd-9438-4770-8ccd-18da6ffd94d8" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget463bcacd-9438-4770-8ccd-18da6ffd94d8" class="widget widgetGraphicLinks skin64 widgetOptionSet42 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:2em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="http://www.oakpointtexas.com/192/Human-Resources" target="_self" class="fancyButton fancyButton222 ">
+		<span>
+			<span><span class="text">Job Opportunities</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton222.fancyButton:link,.fancyButton222.fancyButton:visited, .fancyButton222div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=1180');
+	background-repeat: no-repeat;
+	background-position: center 10px ;
+transition: all .3s ease-in-out;
+position: relative;
+}
+
+.fancyButton222:after {
+content: '';
+height: 0;
+width: 5px;
+border-radius: 30px;
+background: #8B715E;
+position: absolute;
+top: 135px;
+left: 50%; transform: translate(0, 0);
+transition: all .3s ease-in-out;
+}
+.fancyButton222.fancyButton:hover,.fancyButton222.fancyButton:focus,.fancyButton222.fancyButton:active,.fancyButton222.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=1226');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all .3s ease-in-out;
+}
+.fancyButton222:hover:after, .fancyButton222:focus:after, .fancyButton222:active:after, .fancyButton222.mouseover:after {
+width: 90px;
+height: 2px;
+background: #DAAA5E;
+left: calc(50% - 43px);
+transition: all .3s ease-in-out;}
+.fancyButton222.fancyButton:link > span,.fancyButton222.fancyButton:visited > span, .fancyButton222div.fancyButton > span{
+}
+.fancyButton222.fancyButton:hover > span,.fancyButton222.fancyButton:focus > span,.fancyButton222.fancyButton:active > span,.fancyButton222.fancyButton.hover > span{
+}
+.fancyButton222.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Poppins";
+	padding-top: 9.5em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9.5em;
+	background-repeat: no-repeat;
+	background-position: center 9em ;
+transition: all .3s ease-in-out;
+
+}
+.fancyButton222.fancyButton:hover .text,.fancyButton222.fancyButton:focus .text,.fancyButton222.fancyButton:active .text,.fancyButton222.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 6.4em ;
+transition: all .3s ease-in-out;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="http://www.oakpointtexas.com/list.aspx" target="_self" class="fancyButton fancyButton224 ">
+		<span>
+			<span><span class="text">Notify Me®</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton224.fancyButton:link,.fancyButton224.fancyButton:visited, .fancyButton224div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=1182');
+	background-repeat: no-repeat;
+	background-position: center 10px ;
+transition: all .3s ease-in-out;
+position: relative;
+}
+
+.fancyButton224:after {
+content: '';
+height: 0;
+width: 5px;
+border-radius: 30px;
+background: #8B715E;
+position: absolute;
+top: 135px;
+left: 50%; transform: translate(0, 0);
+transition: all .3s ease-in-out;
+}
+.fancyButton224.fancyButton:hover,.fancyButton224.fancyButton:focus,.fancyButton224.fancyButton:active,.fancyButton224.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=1227');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all .3s ease-in-out;
+}
+.fancyButton224:hover:after, .fancyButton224:focus:after, .fancyButton224:active:after, .fancyButton224.mouseover:after {
+width: 90px;
+height: 2px;
+background: #DAAA5E;
+left: calc(50% - 43px);
+transition: all .3s ease-in-out;}
+.fancyButton224.fancyButton:link > span,.fancyButton224.fancyButton:visited > span, .fancyButton224div.fancyButton > span{
+}
+.fancyButton224.fancyButton:hover > span,.fancyButton224.fancyButton:focus > span,.fancyButton224.fancyButton:active > span,.fancyButton224.fancyButton.hover > span{
+}
+.fancyButton224.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Poppins";
+	padding-top: 9.5em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9.5em;
+	background-repeat: no-repeat;
+	background-position: center 9em ;
+transition: all .3s ease-in-out;
+
+}
+.fancyButton224.fancyButton:hover .text,.fancyButton224.fancyButton:focus .text,.fancyButton224.fancyButton:active .text,.fancyButton224.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 6.4em ;
+transition: all .3s ease-in-out;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Calendar/Carousel --><!-- <div data-cpRole="structuralContainer" id="homeContainer1">
+    <div class="siteWrap2">
+      <div data-cpRole="contentContainer" id="homeContent1a"></div>
+    </div>
+  </div> --><!-- Footer --><div data-cprole="structuralContainer" id="footerWrapTS">
+<footer data-cprole="structuralContainer" id="footerContainerTS">
+<div class="siteWrap3" style="padding-left: 116px;"><div data-cprole="contentContainer" id="footerTS">	<div id="ccc04e7b4b-fd6f-4955-924b-46fb8693e374" data-containerid="c04e7b4b-fd6f-4955-924b-46fb8693e374" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col5 first" style="height: auto;" data-widgetcontainerid="3c3ab2cb-bba3-49fb-b798-165d424f9c85">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last idfe1622f6-5108-444b-9761-1368a27d65b1" style="height: 388px;" data-widgetcontainerid="fe1622f6-5108-444b-9761-1368a27d65b1">
+	
+    <div data-widget-id="0de8e1a6-d63c-4c6d-97c2-1404731ca5f4" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv0de8e1a6-d63c-4c6d-97c2-1404731ca5f4" class="widget widgetInfoAdvanced skin65 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="header0de8e1a6-d63c-4c6d-97c2-1404731ca5f4">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="http://www.oakpointtexas.com/"><img src="http://www.oakpointtexas.com/ImageRepository/Document?documentId=1175" class="fr-dib" alt="Oak Point Texas homepage"></a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv0de8e1a6-d63c-4c6d-97c2-1404731ca5f4 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col2" style="height: auto;" data-widgetcontainerid="0dd30c50-30be-490c-b3cf-52702ba0bbf5">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col2 first last iddd604a4f-954e-4b1a-863d-abdf27541e31" style="height: 388px;" data-widgetcontainerid="dd604a4f-954e-4b1a-863d-abdf27541e31">
+	
+
+<div class="widget widgetSpacer" id="54dbd3a5-15c2-41b5-b5a8-b6203ae54368" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col5" style="height: auto;" data-widgetcontainerid="2aa09a3c-acdd-4ded-864e-f5e23c75d623">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last idd8df11a6-dd80-43be-ae90-6e7546657a81" style="height: 388px;" data-widgetcontainerid="d8df11a6-dd80-43be-ae90-6e7546657a81">
+	
+    <div data-widget-id="77ebc809-b8d3-46bc-9f42-267383e4a666" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv77ebc809-b8d3-46bc-9f42-267383e4a666" class="widget widgetInfoAdvanced skin63 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="header77ebc809-b8d3-46bc-9f42-267383e4a666">
+			<header class="widgetHeader" id="header77ebc809-b8d3-46bc-9f42-267383e4a666">
+		<div class="">
+					<h3>Contact Us</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><strong>City of Oak</strong><br>Point 100 Naylor Road<br>Oak Point, TX 75068</p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><strong>Hours of Operation:</strong><br>Mon - Thurs 7:30 am - 5:30 pm<br>Fri 8:00 am - Noon&nbsp;</p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><strong>City Hall Phone:&nbsp;</strong><br><a href="tel:972-294-2312">972-294-2312</a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv77ebc809-b8d3-46bc-9f42-267383e4a666 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4" style="height: auto;" data-widgetcontainerid="74b8a278-07c3-45de-afdf-133352c5dcc7">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last idea0d05e5-ecec-4055-af6e-84acdeb59665" style="height: 388px;" data-widgetcontainerid="ea0d05e5-ecec-4055-af6e-84acdeb59665">
+	
+<div data-widget-id="146bf49c-338c-4a97-bea0-fcf9bab74417" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget146bf49c-338c-4a97-bea0-fcf9bab74417" class="widget widgetGraphicLinks skin67 widgetOptionSet52 narrow" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+			<h3>Share</h3>
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 "> 	
+				<ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="http://www.oakpointtexas.com/facebook" target="_self" class="fancyButton fancyButton127 ">
+		<span>
+			<span><span class="text">Facebook</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton127.fancyButton:link,.fancyButton127.fancyButton:visited, .fancyButton127div.fancyButton{
+	padding-left: 28px;
+	background-image: url('/ImageRepository/Document?documentID=1189');
+	background-repeat: no-repeat;
+	background-position: left center;
+background-size: 19px; 
+width: fit-content;
+}
+
+.row.outer:not(.wide) .fancyButton127:link {
+margin: 0 auto;}
+.fancyButton127.fancyButton:hover,.fancyButton127.fancyButton:focus,.fancyButton127.fancyButton:active,.fancyButton127.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.fancyButton127.fancyButton:link > span,.fancyButton127.fancyButton:visited > span, .fancyButton127div.fancyButton > span{
+}
+.fancyButton127.fancyButton:hover > span,.fancyButton127.fancyButton:focus > span,.fancyButton127.fancyButton:active > span,.fancyButton127.fancyButton.hover > span{
+}
+.fancyButton127.fancyButton .text{
+	color: rgb(34, 34, 34);
+	font-family: "Open Sans";
+	font-style: normal;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton127.fancyButton:hover .text,.fancyButton127.fancyButton:focus .text,.fancyButton127.fancyButton:active .text,.fancyButton127.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+				--></ul>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4" style="height: auto;" data-widgetcontainerid="f368e451-f5a6-4a36-a019-948cfd4c8124">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last id49765f5c-5a0a-475b-a243-b5711b9edd29" style="height: 388px;" data-widgetcontainerid="49765f5c-5a0a-475b-a243-b5711b9edd29">
+	
+	<div data-widget-id="36f7e9d9-0bbb-4051-bcdd-e45556895e12" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink36f7e9d9-0bbb-4051-bcdd-e45556895e12" class="widget widgetQuickLinks skin63 widgetOptionSet25 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeader36f7e9d9-0bbb-4051-bcdd-e45556895e12">
+			<header class="widgetHeader" id="quickLinksHeader36f7e9d9-0bbb-4051-bcdd-e45556895e12">
+		<div class="">
+					<h3><a style="" href="http://www.oakpointtexas.com/QuickLinks.aspx?CID=13">Quick Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://www.oakpointtexas.com/213/Code-of-Ordinances" target="_self">Code of Ordinances</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://www.oakpointtexas.com/157/Pay-a-Citation" target="_self">Pay a Citation</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://oakpointtexas.com/158/Building-Inspections" target="_self">Permitting &amp; Inspections</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://www.oakpointtexas.com/177/Trash-Recycling" target="_blank" aria-label="Trash &amp; Recycling Opens in new window" rel="noopener">Trash &amp; Recycling</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://www.oakpointtexas.com/153/Animal-Control" target="_self">Animal Control</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4 last" style="height: auto;" data-widgetcontainerid="bde7eb25-2b7b-4f41-807a-06f0f3146dbb">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last ideed0f4ac-2f45-4928-bbf1-9056a4915322" style="height: 388px;" data-widgetcontainerid="eed0f4ac-2f45-4928-bbf1-9056a4915322">
+	
+	<div data-widget-id="535a8576-b963-48e9-a75a-65a3fe61872d" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink535a8576-b963-48e9-a75a-65a3fe61872d" class="widget widgetQuickLinks skin63 widgetOptionSet26 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeader535a8576-b963-48e9-a75a-65a3fe61872d">
+			<header class="widgetHeader" id="quickLinksHeader535a8576-b963-48e9-a75a-65a3fe61872d">
+		<div class="">
+					<h3><a style="" href="http://www.oakpointtexas.com/QuickLinks.aspx?CID=14">Site Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://www.oakpointtexas.com/" target="_self">Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://www.oakpointtexas.com/sitemap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://www.oakpointtexas.com/accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://www.oakpointtexas.com/site/copyright" target="_self">Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</footer><!-- Fixed GBs --><div data-cprole="structuralContainer" id="gbsContainer2TS" class="fixedLeftTS" style="top: 34px;">
+<div class="siteWrap" data-skip-leftpad=""><div data-cprole="contentContainer" id="gbs2TS">	<div id="cca8de75cf-8f2a-4df4-9435-ca9a208fa01f" data-containerid="a8de75cf-8f2a-4df4-9435-ca9a208fa01f" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="10">
+				                
+
+		<div class="row outer"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="1b186a5e-f394-4913-9b56-34e8ca77fa33">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last ida681c05c-a7b7-4385-8d18-13fa52732c4c" style="height: 500px;" data-widgetcontainerid="a681c05c-a7b7-4385-8d18-13fa52732c4c">
+	
+<div data-widget-id="b8a90f3e-254e-4006-bc3b-e3d25ecc0908" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetb8a90f3e-254e-4006-bc3b-e3d25ecc0908" class="widget widgetGraphicLinks skin68 widgetOptionSet38 narrow" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:10em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row narrow"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="http://www.oakpointtexas.com/" target="_self" class="fancyButton fancyButton118 ">
+		<span>
+			<span><span class="text">Home</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton118.fancyButton:link,.fancyButton118.fancyButton:visited, .fancyButton118div.fancyButton{
+	height: 100px;
+	padding-top: 15px;
+	background-repeat: no-repeat;
+	background-position: left top;
+transition: all .3s ease-in-out;
+background-color: rgba(238, 242, 245, .9);
+}
+.fancyButton118.fancyButton:hover,.fancyButton118.fancyButton:focus,.fancyButton118.fancyButton:active,.fancyButton118.fancyButton.hover{
+	background-color: rgb(255, 255, 255);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton118.fancyButton:link > span,.fancyButton118.fancyButton:visited > span, .fancyButton118div.fancyButton > span{
+}
+.fancyButton118.fancyButton:hover > span,.fancyButton118.fancyButton:focus > span,.fancyButton118.fancyButton:active > span,.fancyButton118.fancyButton.hover > span{
+}
+.fancyButton118.fancyButton .text{
+	color: rgb(56, 56, 56);
+	font-size: .9em;
+	font-family: "Roboto Slab";
+	padding-top: 48px;
+	padding-bottom: 5px;
+	padding-right: 8px;
+	padding-left: 8px;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 48px;
+	padding-bottom: 5px;
+	padding-right: 8px;
+	padding-left: 8px;
+	background-image: url('/ImageRepository/Document?documentID=1185');
+	background-repeat: no-repeat;
+	background-position: center 5px ;
+background-size: 35px;
+transition: all .3s ease-in-out;line-height: 1.1;}
+.fancyButton118.fancyButton:hover .text,.fancyButton118.fancyButton:focus .text,.fancyButton118.fancyButton:active .text,.fancyButton118.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center top;
+background-size: 45px;
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="http://www.oakpointtexas.com/AgendaCenter" target="_self" class="fancyButton fancyButton119 ">
+		<span>
+			<span><span class="text">Agendas &amp; Minutes</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton119.fancyButton:link,.fancyButton119.fancyButton:visited, .fancyButton119div.fancyButton{
+	height: 100px;
+	padding-top: 15px;
+	background-repeat: no-repeat;
+	background-position: left top;
+transition: all .3s ease-in-out;
+background-color: rgba(238, 242, 245, .9);
+}
+.fancyButton119.fancyButton:hover,.fancyButton119.fancyButton:focus,.fancyButton119.fancyButton:active,.fancyButton119.fancyButton.hover{
+	background-color: rgb(255, 255, 255);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton119.fancyButton:link > span,.fancyButton119.fancyButton:visited > span, .fancyButton119div.fancyButton > span{
+}
+.fancyButton119.fancyButton:hover > span,.fancyButton119.fancyButton:focus > span,.fancyButton119.fancyButton:active > span,.fancyButton119.fancyButton.hover > span{
+}
+.fancyButton119.fancyButton .text{
+	color: rgb(56, 56, 56);
+	font-size: .9em;
+	font-family: "Roboto Slab";
+	padding-top: 48px;
+	padding-bottom: 5px;
+	padding-right: 8px;
+	padding-left: 8px;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 48px;
+	padding-bottom: 5px;
+	padding-right: 8px;
+	padding-left: 8px;
+	background-image: url('/ImageRepository/Document?documentID=1184');
+	background-repeat: no-repeat;
+	background-position: center 5px ;
+background-size: 35px;
+transition: all .3s ease-in-out;line-height: 1.1;}
+.fancyButton119.fancyButton:hover .text,.fancyButton119.fancyButton:focus .text,.fancyButton119.fancyButton:active .text,.fancyButton119.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center top;
+background-size: 45px;
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://oakpointrequests.portal.iworq.net/portalhome/oakpointrequests" target="_self" class="fancyButton fancyButton120 ">
+		<span>
+			<span><span class="text">Request Service</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton120.fancyButton:link,.fancyButton120.fancyButton:visited, .fancyButton120div.fancyButton{
+	height: 100px;
+	padding-top: 15px;
+	background-repeat: no-repeat;
+	background-position: left top;
+transition: all .3s ease-in-out;
+background-color: rgba(238, 242, 245, .9);
+}
+.fancyButton120.fancyButton:hover,.fancyButton120.fancyButton:focus,.fancyButton120.fancyButton:active,.fancyButton120.fancyButton.hover{
+	background-color: rgb(255, 255, 255);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton120.fancyButton:link > span,.fancyButton120.fancyButton:visited > span, .fancyButton120div.fancyButton > span{
+}
+.fancyButton120.fancyButton:hover > span,.fancyButton120.fancyButton:focus > span,.fancyButton120.fancyButton:active > span,.fancyButton120.fancyButton.hover > span{
+}
+.fancyButton120.fancyButton .text{
+	color: rgb(56, 56, 56);
+	font-size: .9em;
+	font-family: "Roboto Slab";
+	padding-top: 48px;
+	padding-bottom: 5px;
+	padding-right: 8px;
+	padding-left: 8px;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 48px;
+	padding-bottom: 5px;
+	padding-right: 8px;
+	padding-left: 8px;
+	background-image: url('/ImageRepository/Document?documentID=1186');
+	background-repeat: no-repeat;
+	background-position: center 5px ;
+background-size: 35px;
+transition: all .3s ease-in-out;line-height: 1.1;}
+.fancyButton120.fancyButton:hover .text,.fancyButton120.fancyButton:focus .text,.fancyButton120.fancyButton:active .text,.fancyButton120.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center top;
+background-size: 45px;
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div><!-- Powered By --><div data-cprole="structuralContainer" id="poweredByContainerTS">
+<div class="siteWrap2" style="padding-left: 116px;"><div data-cprole="contentContainer" id="poweredByTS">	<div id="ccf5025ab7-7583-466f-83e0-f0c0f2232161" data-containerid="f5025ab7-7583-466f-83e0-f0c0f2232161" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="08e7320d-bb7f-4504-8319-f995cc28cccf">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id00b38318-0dab-4f9c-ab04-4bc9de6925bd" style="height: 34px;" data-widgetcontainerid="00b38318-0dab-4f9c-ab04-4bc9de6925bd">
+	
+ 
+	<div data-widget-id="b818e953-f3d4-41ac-b875-12a8f6bc1318" data-modulename="customHtml" id="widgetCustomHtmlb818e953-f3d4-41ac-b875-12a8f6bc1318" class="widget widgetCustomHtml skin65 narrow">
+	<div class="widgetBody pageStyles" id="widgetBodyb818e953-f3d4-41ac-b875-12a8f6bc1318">
+		<div id="customHtmlb818e953-f3d4-41ac-b875-12a8f6bc1318"><div><style>
+  /* CP icon */
+  .cpBylineIconTS {
+    color: #000;
+  }
+  /* CP Text */
+  .cpBylineTextTS,
+  .cpBylineTextTS a:link {
+    color: 000;
+  }
+
+  .cpBylineTS {
+    text-align: center;
+  }
+  
+  .cpBylineIconTS {
+    fill: currentColor;
+    width: 39px;
+    height: 26px;
+    display: inline;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="widgetItem cpBylineTS">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="cpBylineIconTS">
+    <path fill="#383938" class="c" d="M73.4,23.2h-19v16.7h19c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5h-19v28.4h5.5l11.3-11.7h2.2c11.9,0,21.6-9.7,21.6-21.6C95,33,85.3,23.2,73.4,23.2"></path>
+    <path fill="#CC0020" class="p" d="M45.8,66.5H26.6C14.7,66.5,5,56.8,5,44.9C5,33,14.7,23.2,26.6,23.2h19.1v16.7H26.6c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h19.1V66.5z"></path>
+  </svg>
+  <span class="cpBylineTextTS">Government Websites by <a href="https://connect.civicplus.com/referral">CivicPlus®</a></span>
+</div></div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><a class="translateWidget" title="Enable Google Translate" style="background-color: #FFF;border-color: #9b9b9b #d5d5d5 transparent #d5d5d5;border-style: solid;border-width: 1px 1px 0 1px;bottom: 0px;color: #000;cursor: pointer;font-size: .9em;padding: 2px 6px 3px 4px;position: fixed;right: 20px;z-index: 5;"><img alt="Google Translate Icon" src="http://www.oakpointtexas.com/Assets/Images/GoogleTranslate.gif" style="box-sizing: content-box !important;height:19px;margin: -2px 0 0 -2px;padding-right: 5px;width:19px;">Enable Google Translate</a>
+
+
+
+
+		<div id="bannerImagesJSON55" class="hidden"></div>
+		
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner1',
+								{"BannerOptionID":55,"ThemeID":18,"SlotName":"banner1","Name":"Default - Health","IsDefault":true,"BannerMode":2,"SlideShowSlideTiming":null,"SlideshowTransition":0,"SlideShowTransitionTiming":null,"ImageScale":true,"ImageAlignment":1,"ImageScroll":false,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":81,"BannerOptionID":55,"FileName":"/ImageRepository/Document?documentID=1171","Height":869,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""}],"BannerVideos":[{"BannerVideoID":2,"BannerOptionID":55,"VideoFileName":"","ImageFileName":"EmptyBannerBkg202401081636502643.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								'/App_Themes/2024 - Interior/Images/',
+								'Rotating');
+						});
+				});
+			</script>
+
+</div>
+</div>
+
+            </div>
+        </div>
+    <div class="bannerObject external fixedBanner" id="bannerDivbanner1" style="min-height: 829px; top: 0px; left: -278.892px; right: 0px; position: fixed; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img class="bannerObject" width="1265px" style="position: absolute; left: 0px; margin: 0px; width: 1822.78px;" src="http://www.oakpointtexas.com/ImageRepository/Document?documentID=1171" data-is-delayed="false" alt=""></div></div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '212',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!-- Google Translate -->
+
+	<script type="text/javascript">
+	var translateActiveCookie = getCookieValue('translateActive');
+
+	if (translateActiveCookie == 'true') {
+		enableGoogleTranslate();
+	} else {
+		var button = '<a class="translateWidget" title="Enable Google Translate" style="background-color: #FFF;border-color: #9b9b9b #d5d5d5 transparent #d5d5d5;border-style: solid;border-width: 1px 1px 0 1px;bottom: 0px;color: #000;cursor: pointer;font-size: .9em;padding: 2px 6px 3px 4px;position: fixed;right: 20px;z-index: 5;">';
+		button += '<img alt="Google Translate Icon" src="/Assets/Images/GoogleTranslate.gif" style="box-sizing: content-box !important;height:19px;margin: -2px 0 0 -2px;padding-right: 5px;width:19px;">Enable Google Translate</a>';
+		$('div[data-cprole="structuralContainer"]').last().after(button);
+	}
+
+	function googleTranslateElementInit() {
+  		var el = document.getElementById("google_translate_element");
+  		if (el && el.innerHTML.trim() !== "") {
+  		    return;
+  		}
+
+  		new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+	}
+
+	function enableGoogleTranslate() {
+		$('#google_translate_element').show();
+		var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+		sz.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+		$('div[data-cprole="structuralContainer"]').last().after('<div id="google_translate_element" style="position: fixed; bottom: 0px; right: 20px; z-index: 5;"></div>');
+	        document.cookie = "translateActive=true; expires=12/31/2999; path=/";
+	}
+
+	$('a.translateWidget').unbind('click').click(function (e) {
+		$(this).hide();
+		enableGoogleTranslate();
+	});
+	</script>
+
+	<!-- End Google Translate -->
+
+<!-- Fixed Nav Adjustment -->
+<script>
+  function getValueTS(elem, attr) {
+    const val = elem.css(attr);
+    if (val === undefined) return undefined;
+    const num = parseInt(val, 10);
+    if (num === NaN) return undefined;
+    return num;
+  }
+
+  function clampTS(number, min, max) {
+    return Math.min(Math.max(number, min), max);
+  }
+
+  function isPageEditingTS() {
+    return (
+      $("#doneEditing").length > 0 || // In live edit
+      typeof DesignCenter !== "undefined" // In theme manager
+    );
+  }
+
+  const bgColorRegexTS = /rgba\((\d+), (\d+), (\d+), (\d*\.?\d*)\)/;
+  function isTransparentTS(elem) {
+    const bg = elem.css('background-color');
+    if (typeof bg !== "string" || !bg.startsWith('rgba(')) return false;
+    const matchState = bg.match(bgColorRegexTS);
+    if (!matchState || matchState.length !== 5) return false;
+    const alpha = parseFloat(matchState[4], 10);
+    if (!(alpha >= 0 && alpha < 1)) return false;
+    return true;
+  }
+
+  function iterateLeftpads(cb) {
+    const containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (let i = 0; i < containersTS.length; i++) {
+      const containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-leftpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-leftpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  const anchor = $("#divToolbars");
+  const bodyContainerTS = $("#bodyContainerTS");
+
+  // Outer banner padding (push banner down)
+  const outerSizingTS = $("#bannerContainerTS");
+  // Inner banner padding (push banner content down) - Transparent header OR on attaching headers
+  const innerSizingTS = $("#bannerSizingTS");
+
+  const forceUnfixClassTS = "forceUnfixTS";
+
+  const fixedTopTS = $(".fixedTopTS");
+  const fixedBottomTS = $(".fixedBottomTS");
+  const fixedLeftTS = $(".fixedLeftTS");
+
+  var initialTopTS;
+  var topAttachTS;
+  if (fixedTopTS && fixedTopTS.length === 1) {
+    initialTopTS = getValueTS(fixedTopTS, 'top');
+    const attachment = fixedTopTS.attr('data-attach');
+    if (attachment) topAttachTS = $("#" + attachment);
+    if (!topAttachTS || topAttachTS.length !== 1) topAttachTS = undefined;
+  }
+
+  function resizeAdjustmentTS() {
+    const editing = isPageEditingTS();
+
+    // Fixed top script
+    (function () {
+      if (!fixedTopTS || fixedTopTS.length !== 1 || initialTopTS === undefined) return;
+
+      if (editing) {
+        fixedTopTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedTopTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      const topPosition = fixedTopTS.css('position');
+      if (topPosition === 'fixed') {
+        if (topAttachTS) {
+          scrollAdjustmentTS();
+        } else {
+          const anchorHeight = anchor.outerHeight() - 1;
+          fixedTopTS.css('top', anchorHeight + initialTopTS);
+        }
+      } else {
+        fixedTopTS.css('top', initialTopTS);
+      }
+
+      if (topPosition === 'fixed' || topPosition === 'absolute') {
+        // Bump the banner content down
+        if (isTransparentTS(fixedTopTS)) {
+          innerSizingTS.css('padding-top', initialTopTS + fixedTopTS.outerHeight());
+          outerSizingTS.css('padding-top', '');
+
+          try {
+            window.Pages.onResizeHandlersExecute();
+          } catch (e) { }
+        } else {
+          outerSizingTS.css('padding-top', fixedTopTS.outerHeight());
+          innerSizingTS.css('padding-top', '');
+        }
+      } else {
+        innerSizingTS.css('padding-top', '');
+        outerSizingTS.css('padding-top', '');
+      }
+    })();
+
+    // Fixed bottom script
+    (function () {
+      if (!fixedBottomTS || fixedBottomTS.length === 0) return;
+
+      // If the widget has gone narrow, force unfix
+      if (editing || fixedBottomTS.outerHeight() > 200) {
+        fixedBottomTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedBottomTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedBottomTS.css('position') === 'fixed') {
+        bodyContainerTS.css('padding-bottom', fixedBottomTS.outerHeight());
+      } else {
+        bodyContainerTS.css('padding-bottom', '');
+      }
+    })();
+
+    // Fixed left script
+    (function () {
+      if (!fixedLeftTS || fixedLeftTS.length === 0) return;
+
+      if (editing) {
+        fixedLeftTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedLeftTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedLeftTS.css('position') === 'fixed') {
+        const anchorHeight = anchor.outerHeight() - 1;
+        fixedLeftTS.css('top', anchorHeight);
+        const leftBoundingTS = fixedLeftTS[0].getBoundingClientRect();
+        iterateLeftpads(function (containerTS) {
+          const containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.left <= leftBoundingTS.right) {
+            $(containerTS).css('padding-left', leftBoundingTS.width + 16);
+          }
+        });
+      } else {
+        fixedLeftTS.css('top', '');
+        iterateLeftpads(function (containerTS) {
+          $(containerTS).css('padding-left', '');
+        });
+      }
+    })();
+  }
+
+  function scrollAdjustmentTS() {
+    if (!fixedTopTS || fixedTopTS.length !== 1 || !topAttachTS || topAttachTS.length !== 1) return;
+    const topPosition = fixedTopTS.css('position');
+    if (topPosition === 'fixed' || topPosition === 'absolute') {
+      const anchorBounding = anchor[0].getBoundingClientRect();
+      const attachBounding = topAttachTS[0].getBoundingClientRect();
+      const scrollTop = $(window).scrollTop();
+
+      fixedTopTS.css('top', Math.max(anchorBounding.bottom - 1, attachBounding.bottom));
+    } else {
+      fixedTopTS.css('top', initialTopTS);
+    }
+  }
+
+  $(window).load(function () {
+    setTimeout(function () {
+      try {
+        resizeAdjustmentTS();
+      } catch (e) {
+        console.error(e);
+      }
+    }, 350);
+
+    $(window).scroll(function () {
+      try {
+        scrollAdjustmentTS();
+      } catch (e) {
+        console.error(e);
+      }
+    });
+
+    var adjustTimeoutTS;
+    $(window).resize(function () {
+      clearTimeout(adjustTimeoutTS);
+      adjustTimeoutTS = setTimeout(function () {
+        try {
+          resizeAdjustmentTS();
+        } catch (e) {
+          console.error(e);
+        }
+      }, 350);
+    });
+
+    $.when(window.Pages.angularToolbarComplete).done(function () {
+      try {
+        resizeAdjustmentTS();
+      } catch (e) {
+        console.error(e);
+      }
+    });
+  });
+</script>
+<!-- End Fixed Nav Adjustment -->
+
+<!-- Move banner to outer wrap --> 
+<script> 
+function moveBannerToOuterWrap() { 
+		if ($("#bannerDivbanner1").length) { 
+			$("#bannerDivbanner1").appendTo("#outer-wrap"); 
+		} else { 
+			setTimeout(function() { 
+				moveBannerToOuterWrap(); 
+			}, 500); 
+		} 
+} 
+moveBannerToOuterWrap(); 
+</script> 
+<style> 
+#structuralContainer1 { 
+    background-color: transparent !important; 
+} 
+</style> 
+<!-- end move banner to outer wrap -->
+
+
+<!-- Google tag (gtag.js) --> <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DE506SXM75"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-DE506SXM75'); </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,700,700italic,900,900italic,italic,regular|Montserrat:100,100italic,200,200italic,300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,italic,regular|Open+Sans:500,500italic,600,600italic,700,700italic,italic,regular|Poppins:100,100italic,200,200italic,300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,italic,regular|Roboto+Slab:500,600,700,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu27" class="contentTop mainNavMegaMenu megaMenuContainer pageID_27 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 313.062px; width: 937px; top: 88px;">	<div id="cc87b0841e-12ae-4106-9ef9-f615dd826f7c" data-containerid="87b0841e-12ae-4106-9ef9-f615dd826f7c" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu101" class="contentTop mainNavMegaMenu megaMenuContainer pageID_101 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 313.062px; width: 937px; top: 88px;">	<div id="cc5f0e8318-30c5-4a26-90c3-30847189824c" data-containerid="5f0e8318-30c5-4a26-90c3-30847189824c" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu31" class="contentTop mainNavMegaMenu megaMenuContainer pageID_31 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 313.062px; width: 937px; top: 88px;">	<div id="cc9d19ebd5-6463-4498-94e1-01317967a1eb" data-containerid="9d19ebd5-6463-4498-94e1-01317967a1eb" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu9" class="contentTop mainNavMegaMenu megaMenuContainer pageID_9 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 313.062px; width: 937px; top: 88px;">	<div id="ccdcf332a2-fc4e-426b-988f-d219e59131aa" data-containerid="dcf332a2-fc4e-426b-988f-d219e59131aa" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b>&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div><div id="bannerSlideshowControls_banner1" class="bannerSlideshowControlsNew none " style="display:none">
+			<a id="arrowPrev_banner1" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner1" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div></body></html>
