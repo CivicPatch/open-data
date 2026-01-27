@@ -275,8 +275,6 @@ Rate this translation
 
 Your feedback will be used to help improve Google Translate
 
-Close **×**
-
 PageAssist
 Discover your personalization options
 
@@ -290,3 +288,5 @@ Discover your personalization options
 
 ![PageAssist Personalization Options](//cdn.monsido.com/page-assist/v2/assets/img/uaccess.svg)
 ![PageAssist Loading](//cdn.monsido.com/page-assist/v2/assets/img/default-spinner.png)
+
+Close **×**

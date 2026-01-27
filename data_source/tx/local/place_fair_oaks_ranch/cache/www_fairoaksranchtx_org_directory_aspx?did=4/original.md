@@ -2,13 +2,7 @@
 
 
 
-
-
-
-
-City Council | Fair Oaks Ranch, TX - Official Website
-
-
+Directory • City Council
 
 
 
@@ -24,7 +18,8 @@ City Council | Fair Oaks Ranch, TX - Official Website
 
 Loading
 
-[Skip to Main Content](https://www.fairoaksranchtx.org/63/City-Council#cc9ef8e1cb-dedf-45ed-8cba-450ee6f758c6)
+[Skip to Main Content](https://www.fairoaksranchtx.org/directory.aspx?did=4#contentarea)
+
 
 
 
@@ -64,60 +59,44 @@ Search
 3. [Doing Business](https://www.fairoaksranchtx.org/332/Doing-Business)
 4. [How Do I...](https://www.fairoaksranchtx.org/362/How-Do-I)
 
-![](https://www.fairoaksranchtx.org/ImageRepository/Document?documentID=5286)
-
-1. [Mayor](https://www.fairoaksranchtx.org/285/Mayor)
-
-   1. [Our Government](https://www.fairoaksranchtx.org/27/Our-Government)
-   2. [Mayor's Monthly Messages](https://www.fairoaksranchtx.org/530/Mayors-Monthly-Messages)
-   3. [State of the City](https://www.fairoaksranchtx.org/536/State-of-the-City)
-   4. [City Council](https://www.fairoaksranchtx.org/63/City-Council)
-2. [City Council](https://www.fairoaksranchtx.org/63/City-Council)
-3. [Mission & Priorities](https://www.fairoaksranchtx.org/102/Mission-Priorities)
-4. [Committees](https://www.fairoaksranchtx.org/286/Committees)
-
-   1. [Board of Appeals](https://www.fairoaksranchtx.org/493/Board-of-Appeals)
-   2. [Capital Improvements Advisory Committee](https://www.fairoaksranchtx.org/494/Capital-Improvements-Advisory-Committee)
-   3. [Municipal Development District Board of Directors](https://www.fairoaksranchtx.org/495/Municipal-Development-District-Board-of-)
-   4. [Planning & Zoning Commission](https://www.fairoaksranchtx.org/496/Planning-Zoning-Commission)
-   5. [Zoning Board of Adjustment](https://www.fairoaksranchtx.org/497/Zoning-Board-of-Adjustment)
-   6. [Wildlife Education](https://www.fairoaksranchtx.org/160/Wildlife-Education)
-
-      1. [History](https://www.fairoaksranchtx.org/271/History)
-      2. [Brochure](https://www.fairoaksranchtx.org/DocumentCenter/View/1522)
-      3. [Resources & Links](https://www.fairoaksranchtx.org/DocumentCenter/View/2008/Wildlife-Education-Committee-Library)
-      4. [Minutes and Documents](https://www.fairoaksranchtx.org/archive.aspx)
-      5. [Wildlife Photos](https://www.fairoaksranchtx.org/276/Wildlife-Photos)
-   7. [Transportation Safety Advisory Committee](https://www.fairoaksranchtx.org/635/Transportation-Safety-Advisory-Committee)
-5. [Municipal Development District](https://www.fairoaksranchtx.org/287/Municipal-Development-District)
-6. [Other Elected Officials](https://www.fairoaksranchtx.org/93/Other-Elected-Officials)
+![](https://www.fairoaksranchtx.org/ImageRepository/Document?documentID=5287)
 
 1. [Home](https://www.fairoaksranchtx.org/)
-2. [Government](https://www.fairoaksranchtx.org/27/Government)
-3. [Government Leadership](https://www.fairoaksranchtx.org/284/Government-Leadership)
-4. City Council
+2. Directory
 
 City Council
 ============
 
-**Overview**
-------------
+Physical Address:
 
-Fair Oaks Ranch is a Home Rule city. City Council is elected at-large representing all residents within the City limits. Council members including the Mayor serve staggered three-year terms with [City Elections](http://tx-fairoaksranch2.civicplus.com/134/City-Elections "City Elections") held each year. The Mayor Pro Tem is selected by the council members each year after the election.
+7286 Dietz Elkhorn  
+Fair Oaks Ranch, TX 78015
 
-The City Council meets the first and third Thursday at 6:30 p.m. every month in the City Hall Council Chambers.  When needed, City Council will hold Special Meetings, Workshops and Public Hearings in addition to the regular city council meetings.
+Phone:
 
-As required by law, all [meeting agendas](https://fairoaksranch-tx.municodemeetings.com/) are posted 72 hours in advance of the meeting on the City Hall's bulletin board which is the city's official posting place.  The bulletin board is located just outside of the City Hall's front door for easy access.  As required by law, Public Hearing notices are also published in the [Boerne Star](http://www.boernestar.com/ "Boerne str") which is the city's official newspaper noted by City Resolution.  
+[(210) 698-0900](tel:2106980900)
 
-Council Members - Elected at Large
-----------------------------------
+Fax:
 
-|  |  |  |
-| --- | --- | --- |
-| ![Emily Stroup](https://www.fairoaksranchtx.org/ImageRepository/Document?documentId=4365)**Emily Stroup** Place 1 2024-2027 [estroup@fairoaksranchtx.org](mailto:estroup@fairoaksranchtx.org) | ![Keith Rhoden](https://www.fairoaksranchtx.org/ImageRepository/Document?documentId=4856)**Keith Rhoden,**Mayor Pro Tem Place 2 2023-2026 [krhoden@fairoaksranchtx.org](mailto:krhoden@fairoaksranchtx.org) | ![Olvera, Ruben J. (2)](https://www.fairoaksranchtx.org/ImageRepository/Document?documentId=5157)**Ruben J. Olvera** Place 3 2025-2028 [rolvera@fairoaksranchtx.org](mailto:rolvera@fairoaksranchtx.org) |
-| ![Dale Pearson](https://www.fairoaksranchtx.org/ImageRepository/Document?documentId=6452)**Dale Pearson** Place 4 2025-2028 [dpearson@fairoaksranchtx.org](mailto:dpearson@fairoaksranchtx.org) | ![Scott Parker 2](https://www.fairoaksranchtx.org/ImageRepository/Document?documentId=3806)**Scott Parker** Place 5 2025-2028 [sparker@fairoaksranchtx.org](mailto:sparker@fairoaksranchtx.org) | ![Jonathan Swarek](https://www.fairoaksranchtx.org/ImageRepository/Document?documentId=6218)**Jonathan Swarek** Place 6 2025-2026 [jswarek@fairoaksranchtx.org](mailto:jswarek@fairoaksranchtx.org) |
+(210) 698-3565
 
-A phone message may be left for any Council member at City Hall, (210) 698-0900.
+[Email](mailto:cityhall@fairoaksranchtx.org)  
+   
+
+| Staff | | | | |
+| --- | --- | --- | --- | --- |
+| Name | Title | Email | Phone | Additional Phone |
+| [Maxton, Greg](https://www.fairoaksranchtx.org/directory.aspx?EID=40) | Mayor | [mayor@fairoaksranchtx.org](mailto:mayor@fairoaksranchtx.org) | [210-698-0900](tel:2106980900) |  |
+| [Stroup, Emily](https://www.fairoaksranchtx.org/directory.aspx?EID=53) | Council Member, Place 1 | [Email](mailto:estroup@fairoaksranchtx.org) | [210-698-0900](tel:2106980900) |  |
+| [Parker, Scott](https://www.fairoaksranchtx.org/directory.aspx?EID=55) | Council Member, Place 5 | [Email](mailto:sparker@fairoaksranchtx.org) | [2106980900](tel:2106980900) |  |
+| [Rhoden, Keith](https://www.fairoaksranchtx.org/directory.aspx?EID=66) | Mayor Pro Tem; Council Member, Place 2 |  |  |  |
+| [Olvera, Ruben J.](https://www.fairoaksranchtx.org/directory.aspx?EID=74) | Council Member, Place 3 |  |  |  |
+| [Pearson, Dale](https://www.fairoaksranchtx.org/directory.aspx?EID=75) | Council Member, Place 4 |  |  |  |
+| [Swarek, Jonathan](https://www.fairoaksranchtx.org/directory.aspx?EID=76) | Council Member, Place 6 |  |  |  |
+
+  
+
+[Return to Directory](https://www.fairoaksranchtx.org/Directory.aspx)
 
 * [Notify Me](https://fairoaksranchtx.org/list.aspx)
 
@@ -210,6 +189,8 @@ Slideshow Left Arrow
 Slideshow Right Arrow
 
 
+
+### Live Edit
 
 ![](https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg)
 
