@@ -1,0 +1,2679 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n3-active wf-muli-n4-active wf-muli-i4-active wf-muli-n7-active wf-active has-webFonts"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,italic,regular|" media="all"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-DW3Y5437XH&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61n1"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-DW3Y5437XH';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = true;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	
+	<meta name="category0" content="Home">
+<meta name="category1" content="Government">
+<meta name="category2" content="City Council">
+
+	
+	<meta name="theme-color" content="#1e7ac3">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>City Council | Bonham, TX</title>
+
+		<meta name="description" content="Learn about the Bonham City Council.">
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '390px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/-235755578.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style></head>
+<body class="wide withFeatureColumn cpTextResizeOn doneLoading"><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="https://www.cityofbonham.org/Common/images/ajax-loader.gif" alt="Loading" title="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks">
+<a href="https://www.cityofbonham.org/251/City-Council#cc5f8c90dc-b4cb-431b-90ee-10648f8df655" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="1">
+    <input type="hidden" id="hdnContentCollectionID" value="0029f277-53a0-4f22-b70a-c8efbc12d4a0">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="16">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID">
+    <input type="hidden" id="pagePageID" value="251">
+
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+
+
+
+<!-- Begin Signed Out Bar -->
+<div class="cpToolbar user public" style="z-index: 1;">
+    <div class="inner selfClear">
+        <p class="dropdown"><a href="https://www.cityofbonham.org/MyAccount/ProfileCreate" role="link" class="myConnections" id="signedOutToolbarCreateProfileButton">Create a Website Account</a> <span class="welcomeMessage">- Manage notification subscriptions, save form progress and more. &nbsp;&nbsp;</span></p>
+        <ul class="nav secondary">
+	        <li><a href="https://www.cityofbonham.org/MyAccount" role="link" class="button" id="loggedOutToolbarSignInButton"><span>Website Sign In</span></a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#signedOutToolbarCreateProfileButton').keypress(function (e) { if (e.which === 0) return; $(this).click(); });
+        $('#signedOutToolbarCreateProfileButton').click(function (event) {
+        	event.preventDefault();
+        	window.location.href = '/MyAccount/ProfileCreate?from=url&url=/&dn=' + window.location.origin;
+        });
+
+			
+				$('#loggedOutToolbarSignInButton').click(function (event) {
+					event.preventDefault();
+					window.location.href = '/MyAccount/?from=url&url=' + encodeURIComponent(window.location.href.replace(window.location.origin, '')) + '&dn=' + window.location.host;
+				});
+			
+
+		if ('False' == 'True') {
+            $('#loggedOutToolbarSignInButton').hide();
+		}
+    })
+</script>
+<!-- End Signed Out Bar -->
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 35px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="bodyContainerTS">
+<!-- Header Container --><header data-cprole="structuralContainer" id="headerContainerTS" class="fixedTopTS" style="top: 34px;">
+<div class="siteWrap3"><div data-cprole="banner" id="bannerLogoTS" class="bannerLogoTS empty">
+
+
+
+
+				<a id="bannerLogoTS-54" style="			display: block; text-align: center;
+" class="bannerObject" href="https://www.cityofbonham.org/" target="_self"><img alt="Bonham Texas Homepage" class="bannerObject" height="104" src="https://www.cityofbonham.org/ImageRepository/Document?documentID=1867" width="130"></a>
+</div><div data-cprole="contentContainer" id="searchTS">	<div id="cc3d1551d4-01e9-44c7-b58d-ae09f1d0f445" data-containerid="3d1551d4-01e9-44c7-b58d-ae09f1d0f445" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="f9c009be-1c3a-4b25-a67e-a5686ea6c660">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last ida058f7e3-05a8-400f-be5b-65e8b2843d7a" style="height: 65px;" data-widgetcontainerid="a058f7e3-05a8-400f-be5b-65e8b2843d7a">
+	
+<div data-widget-id="436586a6-2d76-4caa-94ed-8a0c7e45ddfd" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButton436586a6-2d76-4caa-94ed-8a0c7e45ddfd").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDept436586a6-2d76-4caa-94ed-8a0c7e45ddfd").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchField436586a6-2d76-4caa-94ed-8a0c7e45ddfd").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDept436586a6-2d76-4caa-94ed-8a0c7e45ddfd").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDept436586a6-2d76-4caa-94ed-8a0c7e45ddfd").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchField436586a6-2d76-4caa-94ed-8a0c7e45ddfd").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDept436586a6-2d76-4caa-94ed-8a0c7e45ddfd").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchField436586a6-2d76-4caa-94ed-8a0c7e45ddfd").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchField436586a6-2d76-4caa-94ed-8a0c7e45ddfd"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin43 widgetOptionSet15" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBox436586a6-2d76-4caa-94ed-8a0c7e45ddfd ui-autocomplete-input" cp5ph="true" id="searchField436586a6-2d76-4caa-94ed-8a0c7e45ddfd" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search..." title="Search..." type="text" value="" autocomplete="off">
+						<a href="https://www.cityofbonham.org/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButton436586a6-2d76-4caa-94ed-8a0c7e45ddfd" role="button"><img alt="Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=68" data-image="/ImageRepository/Document?documentID=69" src="https://www.cityofbonham.org/ImageRepository/Document?documentID=69"></a>
+
+			<label class="searchLabel" for="searchField436586a6-2d76-4caa-94ed-8a0c7e45ddfd">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #373330;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #373330;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #373330;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #373330;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBox436586a6-2d76-4caa-94ed-8a0c7e45ddfd
+	{
+		color: #373330;
+		font-family: Montserrat;
+font-size: 1.1em;
+box-shadow: 0px 3px 10px #00000033;
+height: 65px;
+border: none;
+border-radius: 5px;
+padding: 0 80px 0 25px;
+	}
+	.widgetSearch .widgetBody .widgetSearchButton436586a6-2d76-4caa-94ed-8a0c7e45ddfd
+	{
+		margin: 7px;
+max-width: 50px;
+	}
+	.widgetSearch .widgetSearch-onlyDept436586a6-2d76-4caa-94ed-8a0c7e45ddfd
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDept436586a6-2d76-4caa-94ed-8a0c7e45ddfd
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchField436586a6-2d76-4caa-94ed-8a0c7e45ddfd").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem27" class="topMenuItem" role="none" data-pageid="27" data-displaymegamenu="True" style="width: 24.1205%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem1 " href="https://www.cityofbonham.org/27/Government" target="_self">   Government </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem31" class="topMenuItem" role="none" data-pageid="31" data-displaymegamenu="True" style="width: 20.747%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavResidents" class="navMainItem mainNavItem mainNavItem2 " href="https://www.cityofbonham.org/31/Residents" target="_self">   Residents </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem35" class="topMenuItem" role="none" data-pageid="35" data-displaymegamenu="True" style="width: 19.4217%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavBusiness" class="navMainItem mainNavItem mainNavItem3 " href="https://www.cityofbonham.org/35/Business" target="_self">   Business </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem101" class="topMenuItem" role="none" data-pageid="101" data-displaymegamenu="True" style="width: 14.1205%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavVisit" class="navMainItem mainNavItem mainNavItem4 " href="https://www.cityofbonham.org/101/Visit" target="_self">   Visit </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem9" class="topMenuItem" role="none" data-pageid="9" data-displaymegamenu="True" style="width: 21.5904%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavIWantTo" class="navMainItem mainNavItem mainNavItem5 " href="https://www.cityofbonham.org/9/I-Want-To" target="_self">   I Want To... </a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=16&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = false;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="0"></aside></nav></div>
+</header><!-- Banner --><div data-cprole="structuralContainer" id="bannerContainerTS" class="noOverflowTS" style="padding-top: 91px;">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="bannerSizingTS">
+<div class="siteWrap"><div data-cprole="structuralContainer" id="bannerContentTS">
+<div data-cprole="contentContainer" id="bannerContentTSa">	<div id="cca4a5d191-6051-425f-a9a7-7d5f62a23d13" data-containerid="a4a5d191-6051-425f-a9a7-7d5f62a23d13" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</div>
+</div></div>
+</div>
+
+
+
+
+		<div id="bannerImagesJSON52" class="hidden"></div><div class="bannerObject external fixedBanner" id="bannerDivbanner1" style="min-height: 460px; top: 0px; left: 0px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img class="bannerObject" width="1265px" style="position: absolute; left: 0px; margin: 0px; width: 1265px;" src="https://www.cityofbonham.org/ImageRepository/Document?documentID=64" data-is-delayed="false" alt=""></div>
+		
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner1',
+								{"BannerOptionID":52,"ThemeID":16,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":2,"SlideShowSlideTiming":null,"SlideshowTransition":0,"SlideShowTransitionTiming":null,"ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":63,"BannerOptionID":52,"FileName":"/ImageRepository/Document?documentID=65","Height":800,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":64,"BannerOptionID":52,"FileName":"/ImageRepository/Document?documentID=64","Height":800,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":2,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":65,"BannerOptionID":52,"FileName":"/ImageRepository/Document?documentID=63","Height":800,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":3,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""}],"BannerVideos":[],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								'/App_Themes/Interior/Images/',
+								'Rotating');
+						});
+				});
+			</script>
+
+</div>
+</div><!-- Content container --><div data-cprole="structuralContainer" id="mainContainerTS">
+<div class="siteWrap"><div data-cprole="structuralContainer" id="mainWrapTS" class="mainWrap" role="main">
+<div data-cprole="structuralContainer" id="outerContentWrapTS" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="contentWrapTS" class="contentWrap">
+<div data-cprole="breadCrumbs" id="breadCrumbs" class="breadCrumbContainer">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="https://www.cityofbonham.org/">Home</a></li><li><a class="breadCrumb" href="https://www.cityofbonham.org/27/Government">Government</a></li><li id="currentBCPage" data-pageid="251">City Council</li>
+		</ol>
+
+	   
+    
+</div><div data-cprole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="251">
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="27">
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="2003">
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="City Council">
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="True">
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False">
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published">
+
+				<h1 id="versionHeadLine" class="headline">
+
+City Council		</h1>
+	
+		<div id="cc5f8c90dc-b4cb-431b-90ee-10648f8df655" data-containerid="5f8c90dc-b4cb-431b-90ee-10648f8df655" class="pageContent cpGrid cpGrid24" data-contentcontainerbreakpoint="20">
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="593a409c-8a00-4357-8d90-94ee1f45b249">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col24 first last id189bbd7d-42ba-428c-9b88-6f8f762fde8a" style="height: 468px;" data-widgetcontainerid="189bbd7d-42ba-428c-9b88-6f8f762fde8a">
+	
+<div class="widget editor pageStyles wide" id="divEditor3de00bba-bf36-49eb-88a5-d1f9df586193" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h2 class="subhead1">Meetings</h2><ul><li>5:30 pm</li><li>2nd Monday of every month</li><li>Council Chambers<br>Bonham City Hall<br>514 Chestnut Street<br>Bonham, TX 75418</li></ul><h2 class="subhead1" id="isPasted"><a aria-label="Agendas &amp; Minutes Opens in new window" href="https://www.cityofbonham.org/AgendaCenter/City-Council-2" rel="noopener" target="_blank">Agendas &amp; Minutes</a></h2><p>Agendas are available prior to the meetings. Minutes are available following approval.</p><h2 class="subhead1">Boundaries of the City Council Wards</h2><p><a href="https://www.cityofbonham.org/DocumentCenter/View/2328" target="_blank" rel="noopener" aria-label="City Council Ward Map Opens in new window" class="docaccess-activated" data-docaccess-source-url="https://cityofbonham.org/DocumentCenter/View/2328" data-url-hash="5a87d04e5aba676d360bcfcebe7e684ab4c5c789e7afd2b54beb16d812dcf51e" data-url-status="disabled">City Council Ward Map</a></p><h2 class="subhead1">Contact Us</h2><p>903-583-7555 ext. 114</p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '3de00bba-bf36-49eb-88a5-d1f9df586193'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col24 first last ida487886e-695e-4c1a-8e16-d4c4d752973e" style="height: 614px;" data-widgetcontainerid="a487886e-695e-4c1a-8e16-d4c4d752973e">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="9678041d-5426-41de-8f10-43e2d9b11e9f" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidget9678041d-5426-41de-8f10-43e2d9b11e9f" class="widget widgetStaffDirectory skin43 wide">
+			<div class="widgetHeader">
+					<h3><a style="" href="https://www.cityofbonham.org/Directory.aspx">Members</a></h3>
+							</div>
+						<div class="widgetBody cpGrid cpGrid3">
+						<div class="row  wide">
+								<div class="col col1" style="padding: 5px;">
+									<ol class="semanticList">
+													<li class="widgetItem h-card">
+
+					<img src="https://www.cityofbonham.org/ImageRepository/Document?documentID=1062" alt="062522JohnBurnett2165" title="062522JohnBurnett2165" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name">
+					John Burnett
+					
+				</h4>
+				<div class="field p-job-title">Mayor</div>
+
+
+
+
+
+					<div class="field p-link"><a href="https://www.cityofbonham.org/directory.aspx?eid=6">More Information</a></div>
+				<br>
+			</li>
+
+									</ol>
+								</div>
+								<div class="col col1" style="padding: 5px;">
+									<ol class="semanticList">
+													<li class="widgetItem h-card">
+
+					<img src="https://www.cityofbonham.org/ImageRepository/Document?documentID=1063" alt="062522KevinHayes2136" title="062522KevinHayes2136" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name">
+					Kevin  Hayes
+					
+				</h4>
+				<div class="field p-job-title">Mayor Pro Tem</div>
+
+
+
+
+
+					<div class="field p-link"><a href="https://www.cityofbonham.org/directory.aspx?eid=158">More Information</a></div>
+				<br>
+			</li>
+
+									</ol>
+								</div>
+								<div class="col col1" style="padding: 5px;">
+									<ol class="semanticList">
+													<li class="widgetItem h-card">
+
+					<img src="https://www.cityofbonham.org/ImageRepository/Document?documentID=2484" alt="Sam Fox" title="Sam Fox" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name">
+					Sam Fox
+					
+				</h4>
+				<div class="field p-job-title">Council Member, Ward 2</div>
+
+
+
+
+
+					<div class="field p-link"><a href="https://www.cityofbonham.org/directory.aspx?eid=99">More Information</a></div>
+				<br>
+			</li>
+
+									</ol>
+								</div>
+						</div>
+						<div class="row  wide">
+								<div class="col col1" style="padding: 5px;">
+									<ol class="semanticList">
+													<li class="widgetItem h-card">
+
+					<img src="https://www.cityofbonham.org/ImageRepository/Document?documentID=2485" alt="Clark Smith" title="Clark Smith" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name">
+					Clark Smith
+					
+				</h4>
+				<div class="field p-job-title">Council Member, Ward 3</div>
+
+
+
+
+
+					<div class="field p-link"><a href="https://www.cityofbonham.org/directory.aspx?eid=102">More Information</a></div>
+				<br>
+			</li>
+
+									</ol>
+								</div>
+								<div class="col col1" style="padding: 5px;">
+									<ol class="semanticList">
+													<li class="widgetItem h-card">
+
+					<img src="https://www.cityofbonham.org/ImageRepository/Document?documentID=1925" alt="Allen Sanderson Council Member Ward 4" title="Allen Sanderson Council Member Ward 4" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name">
+					Allen Sanderson
+					
+				</h4>
+				<div class="field p-job-title">Council Member, Ward 4</div>
+
+
+
+
+
+					<div class="field p-link"><a href="https://www.cityofbonham.org/directory.aspx?eid=157">More Information</a></div>
+				<br>
+			</li>
+
+									</ol>
+								</div>
+								<div class="col col1" style="padding: 5px;">
+									<ol class="semanticList">
+													<li class="widgetItem h-card">
+
+					<img src="https://www.cityofbonham.org/ImageRepository/Document?documentID=1399" alt="100722ErnieQuintana2148 (003)" title="100722ErnieQuintana2148 (003)" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name">
+					Ernie Quintana
+					
+				</h4>
+				<div class="field p-job-title">Council Member, Ward 5</div>
+
+
+
+
+
+					<div class="field p-link"><a href="https://www.cityofbonham.org/directory.aspx?eid=143">More Information</a></div>
+				<br>
+			</li>
+
+									</ol>
+								</div>
+						</div>
+									</div>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="7dfdf634-cd5a-4953-9236-8ebe216b8a83">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id0b34e234-49d0-49b7-8d81-a36774b6ae8e" style="height: 311px;" data-widgetcontainerid="0b34e234-49d0-49b7-8d81-a36774b6ae8e">
+	
+<div class="widget editor pageStyles wide" id="divEditor67fc6f45-fdcd-45ee-812b-6567ffc0c18e" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h2 class="subhead1">Overview</h2><p id="isPasted">The City of Bonham operates with a Council/Manager form of government. The City Council is comprised of a Mayor, who is elected at large, and 6 Council Members, 1 elected from each district and 1 elected at large. The Council appoints the City Manager, City Attorney, Municipal Judge and City Secretary, who work with direction both from the City Council and City Manager. All other staff members work under the direction of the City Manager.</p><p>The Mayor and Council are the policymakers for the City of Bonham. Among their many duties, the Mayor and Council take feedback from the community, approve the budget and tax rate, adopt resolutions and ordinances, establish goals and provide direction for the city government, and supervise, monitor, and evaluate the City Manager's performance.</p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '67fc6f45-fdcd-45ee-812b-6567ffc0c18e'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: block;">	<div id="ccd6923f64-2522-4bce-8783-61ad1b416b69" data-containerid="d6923f64-2522-4bce-8783-61ad1b416b69" class="pageContent cpGrid cpGrid24 showInMobile" data-contentcontainerbreakpoint="40">
+				                
+
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="siteSidebarTS" class="siteSidebar">
+<aside data-cprole="contentContainer" id="sidebarContainer1TS">	<div id="cce4b3c5b4-2573-4ff1-a30a-f57da467b84e" data-containerid="e4b3c5b4-2573-4ff1-a30a-f57da467b84e" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav">
+
+
+
+
+
+	<ol role="menu" id="secondaryMenusecondaryNav" data-parent="27" class="rootNavMenu accordionNav">
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem129" data-pageid="129">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofbonham.org/AgendaCenter" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Agendas &amp; Minutes</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem333" data-pageid="333">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofbonham.org/333/Boards-Commissions" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Boards &amp; Commissions</a>
+				<a href="https://www.cityofbonham.org/251/City-Council#" class="openAccordionNav accordionSecondaryNavItem" title="Expand Boards &amp; Commissions Submenu"></a>
+		</div>
+					<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" style="display: none;" data-parent="333">
+						<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem334" data-pageid="334">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/165/About-BEDCO" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Bonham Economic Development Corporation (BEDCO)</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem335" data-pageid="335">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/335/Planning-Zoning-Commission" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Planning &amp; Zoning Commission</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem461" data-pageid="461">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/461/Airport-Advisory-Board" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Airport Advisory Board</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem251" data-pageid="251">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofbonham.org/251/City-Council" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">City Council</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem408" data-pageid="408">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofbonham.org/408/City-Secretary" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">City Secretary</a>
+				<a href="https://www.cityofbonham.org/251/City-Council#" class="openAccordionNav accordionSecondaryNavItem" title="Expand City Secretary Submenu"></a>
+		</div>
+					<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" style="display: none;" data-parent="408">
+						<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem253" data-pageid="253">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/253/Election-Information" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Election Information</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem441" data-pageid="441">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/441/Open-Records-Requests" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Open Records Requests</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem478" data-pageid="478">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/478/City-Council-Ward-Map" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">City Council Ward Map</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem252" data-pageid="252">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofbonham.org/252/City-Manager" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">City Manager</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem336" data-pageid="336">
+		<div class="accordionNavItem">
+			<a href="https://ecode360.com/BO6251" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">City Ordinances</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem149" data-pageid="149">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofbonham.org/149/Departments" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Departments</a>
+				<a href="https://www.cityofbonham.org/251/City-Council#" class="openAccordionNav accordionSecondaryNavItem" title="Expand Departments Submenu"></a>
+		</div>
+					<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" style="display: none;" data-parent="149">
+						<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem175" data-pageid="175">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/175/Emergency-Management" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Emergency Management</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem502" data-pageid="502">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/502/Engineering" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Engineering</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem176" data-pageid="176">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/176/Finance-Department" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Finance Department</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem177" data-pageid="177">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/177/Fire-Department" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Fire Department</span></a>
+					<a href="https://www.cityofbonham.org/251/City-Council#" class="openAccordionNav accordionNavMenuItem" title="Expand Fire Department Submenu"></a>
+			</div>
+							<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl2" style="display: none;" data-parent="177">
+							<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem436" data-pageid="436">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/436/Ambulance-Service" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Ambulance Service </span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem440" data-pageid="440">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/440/Community-Education" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Community Education </span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem184" data-pageid="184">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/184/Hiring-Testing-Process" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Hiring &amp; Testing Process</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem452" data-pageid="452">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/452/Insurance-rating" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Insurance rating </span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem460" data-pageid="460">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/460/LAFS-Program" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">LAFS Program </span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem178" data-pageid="178">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/178/Line-of-Duty-Death" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Line-of-Duty Death</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem179" data-pageid="179">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/gallery.aspx?AID=2" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Photo Album</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem183" data-pageid="183">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/183/Public-Safety-Announcement" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Public Safety Announcement</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem453" data-pageid="453">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/453/Stations-and-Apparatus" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Stations and Apparatus</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem180" data-pageid="180">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/180/Volunteer-Firefighters" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Volunteer Firefighters</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem454" data-pageid="454">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/454/FAQ" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">FAQ</span></a>
+			</div>
+					</li>
+
+				</ol>
+		</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem185" data-pageid="185">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/185/Human-Resources" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Human Resources</span></a>
+					<a href="https://www.cityofbonham.org/251/City-Council#" class="openAccordionNav accordionNavMenuItem" title="Expand Human Resources Submenu"></a>
+			</div>
+							<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl2" style="display: none;" data-parent="185">
+							<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem186" data-pageid="186">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/186/Employment" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Employment</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem447" data-pageid="447">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/254/Employee-of-the-Quarter" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Employee Recognition</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem448" data-pageid="448">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/448/Benefits" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Benefits</span></a>
+			</div>
+					</li>
+
+				</ol>
+		</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem157" data-pageid="157">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/157/Library" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Library</span></a>
+					<a href="https://www.cityofbonham.org/251/City-Council#" class="openAccordionNav accordionNavMenuItem" title="Expand Library Submenu"></a>
+			</div>
+							<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl2" style="display: none;" data-parent="157">
+							<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem158" data-pageid="158">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/158/About-Us" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">About Us</span></a>
+					<a href="https://www.cityofbonham.org/251/City-Council#" class="openAccordionNav accordionNavMenuItem" title="Expand About Us Submenu"></a>
+			</div>
+							<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl3" style="display: none;" data-parent="158">
+							<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem192" data-pageid="192">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/192/Location-and-Hours" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Location and Hours</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem195" data-pageid="195">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/195/Library-Card" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Library Card</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem402" data-pageid="402">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/402/Donations-and-Fundraisers" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Donations and Fundraisers</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem197" data-pageid="197">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/197/Volunteering" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Volunteering</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem196" data-pageid="196">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/FormCenter/Library-6/How-Can-We-Improve-49" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Survey</span></a>
+			</div>
+					</li>
+
+				</ol>
+		</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem160" data-pageid="160">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/160/Books-and-More" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Books and More</span></a>
+					<a href="https://www.cityofbonham.org/251/City-Council#" class="openAccordionNav accordionNavMenuItem" title="Expand Books and More Submenu"></a>
+			</div>
+							<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl3" style="display: none;" data-parent="160">
+							<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem159" data-pageid="159">
+			<div class="accordionNavItem">
+				<a href="https://bonham.biblionix.com/catalog/" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Catalog</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem189" data-pageid="189">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/189/Digital-Content" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">&nbsp;Digital Content&nbsp;</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem207" data-pageid="207">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/207/Databases" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Databases</span></a>
+			</div>
+					</li>
+
+				</ol>
+		</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem406" data-pageid="406">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/406/Research-Center" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Research Center</span></a>
+					<a href="https://www.cityofbonham.org/251/City-Council#" class="openAccordionNav accordionNavMenuItem" title="Expand Research Center Submenu"></a>
+			</div>
+							<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl3" style="display: none;" data-parent="406">
+							<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem161" data-pageid="161">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/161/Genealogy-History" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Genealogy &amp; History</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem412" data-pageid="412">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/412/Health-and-Medical" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Health and Medical</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem413" data-pageid="413">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/413/Resources-by-Subject" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Resources by Subject</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem414" data-pageid="414">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/414/Education-Resources" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Education Resources</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem415" data-pageid="415">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/415/Computer-Knowledge" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Computer Knowledge</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem433" data-pageid="433">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/433/Job-Search" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Job Search</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem435" data-pageid="435">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/435/LawGovernment" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Law/Government</span></a>
+			</div>
+					</li>
+
+				</ol>
+		</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem162" data-pageid="162">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/162/Programs" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Programs</span></a>
+					<a href="https://www.cityofbonham.org/251/City-Council#" class="openAccordionNav accordionNavMenuItem" title="Expand Programs Submenu"></a>
+			</div>
+							<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl3" style="display: none;" data-parent="162">
+							<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem198" data-pageid="198">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/198/Adults" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Adults</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem220" data-pageid="220">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/220/Tweens-7-13-and-Teens-14-18" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Tweens (7-13) and Teens (14-18)</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem202" data-pageid="202">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/202/Children" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Children</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem215" data-pageid="215">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/215/Summer-2025" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Summer 2025</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem210" data-pageid="210">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/210/Services" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Services</span></a>
+			</div>
+					</li>
+
+				</ol>
+		</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem407" data-pageid="407">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/407/Stay-Connected" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Stay Connected</span></a>
+					<a href="https://www.cityofbonham.org/251/City-Council#" class="openAccordionNav accordionNavMenuItem" title="Expand Stay Connected Submenu"></a>
+			</div>
+							<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl3" style="display: none;" data-parent="407">
+							<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem449" data-pageid="449">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/449/Community-Newsletter" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Community Newsletter</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem504" data-pageid="504">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/504/Library-2025-By-The-Numbers" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Library 2025 By The Numbers </span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem450" data-pageid="450">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/450/Social-Media" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Social Media</span></a>
+			</div>
+					</li>
+
+				</ol>
+		</li>
+
+				</ol>
+		</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem187" data-pageid="187">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/187/Municipal-Court" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Municipal Court</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem188" data-pageid="188">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/188/Parks-Recreation" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Parks &amp; Recreation</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem489" data-pageid="489">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/489/Planning-Development" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Planning &amp; Development</span></a>
+					<a href="https://www.cityofbonham.org/251/City-Council#" class="openAccordionNav accordionNavMenuItem" title="Expand Planning &amp; Development Submenu"></a>
+			</div>
+							<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl2" style="display: none;" data-parent="489">
+							<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem497" data-pageid="497">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/489/Planning-Development" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Planning &amp; Development</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem488" data-pageid="488">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/488/Building-Permits-Applications" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Building Permits &amp; Applications</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem492" data-pageid="492">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/492/Planning-Applications-Checklists" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Planning Applications &amp; Checklists</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem499" data-pageid="499">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/335/Planning-Zoning-Commission" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Planning &amp; Zoning Commission</span></a>
+			</div>
+					</li>
+
+				</ol>
+		</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem225" data-pageid="225">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/225/Police-Department" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Police Department</span></a>
+					<a href="https://www.cityofbonham.org/251/City-Council#" class="openAccordionNav accordionNavMenuItem" title="Expand Police Department Submenu"></a>
+			</div>
+							<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl2" style="display: none;" data-parent="225">
+							<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem226" data-pageid="226">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/226/Animal-Control" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Animal Control</span></a>
+					<a href="https://www.cityofbonham.org/251/City-Council#" class="openAccordionNav accordionNavMenuItem" title="Expand Animal Control Submenu"></a>
+			</div>
+							<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl3" style="display: none;" data-parent="226">
+							<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem227" data-pageid="227">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/227/Adopt-a-Pet" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Adopt a Pet</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem229" data-pageid="229">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/229/Animal-Cruelty-Neglect" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Animal Cruelty &amp; Neglect</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem231" data-pageid="231">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/231/Dangerous-Animals" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Dangerous Animals</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem228" data-pageid="228">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/228/Humane-Animal-Trap" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Humane Animal Trap</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem230" data-pageid="230">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/230/Rabies" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Rabies</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem500" data-pageid="500">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/500/Animal-Shelter-Volunteer" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Animal Shelter Volunteer      </span></a>
+			</div>
+					</li>
+
+				</ol>
+		</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem234" data-pageid="234">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/234/Crime-Prevention" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Crime Prevention</span></a>
+					<a href="https://www.cityofbonham.org/251/City-Council#" class="openAccordionNav accordionNavMenuItem" title="Expand Crime Prevention Submenu"></a>
+			</div>
+							<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl3" style="display: none;" data-parent="234">
+							<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem235" data-pageid="235">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/235/House-Watch-Program" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">House Watch Program</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem236" data-pageid="236">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/236/Operation-Identification" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Operation Identification</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem237" data-pageid="237">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/237/Secure-Your-Home" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Secure Your Home</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem238" data-pageid="238">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/238/Security-Survey" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Security Survey</span></a>
+			</div>
+					</li>
+
+				</ol>
+		</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem239" data-pageid="239">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/239/Information-Desk" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Information Desk</span></a>
+					<a href="https://www.cityofbonham.org/251/City-Council#" class="openAccordionNav accordionNavMenuItem" title="Expand Information Desk Submenu"></a>
+			</div>
+							<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl3" style="display: none;" data-parent="239">
+							<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem241" data-pageid="241">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/241/Employment-Opportunities" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Employment Opportunities</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem242" data-pageid="242">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/242/Project-HELP" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Project HELP</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem243" data-pageid="243">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/243/Public-Criminal-History-Requests" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Public Criminal History Requests</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem245" data-pageid="245">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/245/Sex-Offender-Compliance" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Sex Offender Compliance</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem247" data-pageid="247">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Staffing</span></a>
+			</div>
+					</li>
+
+				</ol>
+		</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem455" data-pageid="455">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/455/Business-Contact-Information" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Business Contact Information</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem479" data-pageid="479">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/479/Biased-Based-Profiling-Policy" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Biased Based Profiling Policy</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem480" data-pageid="480">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/480/Officer-Compliment-Form" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Officer Compliment Form</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem481" data-pageid="481">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/481/Officer-Complaint-Form" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Officer Complaint Form</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem486" data-pageid="486">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/486/Senior-Lock-Box-Program" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Senior Lock Box Program</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem503" data-pageid="503">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/503/Records" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Records</span></a>
+			</div>
+					</li>
+
+				</ol>
+		</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem248" data-pageid="248">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/248/Public-Works" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Public Works</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem249" data-pageid="249">
+			<div class="accordionNavItem">
+				<a href="https://www.cityofbonham.org/249/Street-Department" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Street Department</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem338" data-pageid="338">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofbonham.org/Directory.aspx" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Employee Directory</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem254" data-pageid="254">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofbonham.org/254/Employee-of-the-Quarter" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Employee of the Quarter</a>
+		</div>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = false;
+		});
+	</script>
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			$('*[id^="SideItem"]').each(function () {
+				var ids = $('[id="' + this.id + '"]');
+				if (ids.length > 1)
+					$.each(ids, function (index, value) {
+						value.id = value.id + '_' + index;
+					});
+			});
+
+			$('.hasAccordionChildren .openAccordionNav').click(function (e) {
+				e.preventDefault();
+				showHideAccordionMenuForSecondaryNav($(this));
+			});
+
+			$("#secondaryNav .grippy").each(function () {
+				menuManager.setupDraggableElement($(this), SIDE_MENU, '#secondaryNav');
+			});
+
+			$("#secondaryNav li").each(function () {
+				menuManager.setupDroppableAccordionElement($(this), SIDE_MENU);
+			});
+		});
+	</script>
+
+
+
+</nav><aside data-cprole="contentContainer" id="sidebarContainer2TS">	<div id="cc423aa350-6526-42e0-89ce-16a628e54b60" data-containerid="423aa350-6526-42e0-89ce-16a628e54b60" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div><!-- GBs --><div data-cprole="structuralContainer" id="gbsContainerTS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="gbsTS">	<div id="cc7883925a-2d7b-4fe1-b74a-3359532ddb00" data-containerid="7883925a-2d7b-4fe1-b74a-3359532ddb00" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="8dc386e3-55f7-478b-bc75-836a05c3f647">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last ide9d53e70-d544-4ed0-903f-f3cec5374214" style="height: 175px;" data-widgetcontainerid="e9d53e70-d544-4ed0-903f-f3cec5374214">
+	
+<div data-widget-id="bf0e4bb5-b6b2-4925-a647-406536dc1d06" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetbf0e4bb5-b6b2-4925-a647-406536dc1d06" class="widget widgetGraphicLinks skin45 widgetOptionSet33 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid5 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofbonham.org/137/2524/Online-Payments" target="_self" class="fancyButton fancyButton46 ">
+		<span>
+			<span><span class="text">Online Bill Pay</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton46.fancyButton:link,.fancyButton46.fancyButton:visited, .fancyButton46div.fancyButton{
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+	background-position: left top;
+transition:.2s ease-in-out;}
+.fancyButton46.fancyButton:hover,.fancyButton46.fancyButton:focus,.fancyButton46.fancyButton:active,.fancyButton46.fancyButton.hover{
+	background-color: #ef6950;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton46.fancyButton:link > span,.fancyButton46.fancyButton:visited > span, .fancyButton46div.fancyButton > span{
+}
+.fancyButton46.fancyButton:hover > span,.fancyButton46.fancyButton:focus > span,.fancyButton46.fancyButton:active > span,.fancyButton46.fancyButton.hover > span{
+}
+.fancyButton46.fancyButton .text{
+	color: #484848;
+	font-family: "Montserrat";
+	padding-top: 8.5em;
+	padding-bottom: 1.5em;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 8.5em;
+	padding-bottom: 1.5em;
+	background-image: url('/ImageRepository/Document?documentID=77');
+	background-repeat: no-repeat;
+	background-position: center 30px ;
+transition:.2s ease-in-out;
+background-size:80px;
+}
+.fancyButton46.fancyButton:hover .text,.fancyButton46.fancyButton:focus .text,.fancyButton46.fancyButton:active .text,.fancyButton46.fancyButton.hover .text{
+	color: #ffffff;
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=76');
+	background-repeat: no-repeat;
+	background-position: center 20px ;
+background-size:100px;
+background-color:transparent;text-shadow:0px 2px 5px rgba(0,0,0,.4);}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofbonham.org/489/Planning-Development" target="_self" class="fancyButton fancyButton47 ">
+		<span>
+			<span><span class="text">Building Permits</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton47.fancyButton:link,.fancyButton47.fancyButton:visited, .fancyButton47div.fancyButton{
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+	background-position: left top;
+transition:.2s ease-in-out;}
+.fancyButton47.fancyButton:hover,.fancyButton47.fancyButton:focus,.fancyButton47.fancyButton:active,.fancyButton47.fancyButton.hover{
+	background-color: #409ae1;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton47.fancyButton:link > span,.fancyButton47.fancyButton:visited > span, .fancyButton47div.fancyButton > span{
+}
+.fancyButton47.fancyButton:hover > span,.fancyButton47.fancyButton:focus > span,.fancyButton47.fancyButton:active > span,.fancyButton47.fancyButton.hover > span{
+}
+.fancyButton47.fancyButton .text{
+	color: #484848;
+	font-family: "Montserrat";
+	padding-top: 8.5em;
+	padding-bottom: 1.5em;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 8.5em;
+	padding-bottom: 1.5em;
+	background-image: url('/ImageRepository/Document?documentID=71');
+	background-repeat: no-repeat;
+	background-position: center 30px ;
+transition:.2s ease-in-out;
+background-size:80px;
+}
+.fancyButton47.fancyButton:hover .text,.fancyButton47.fancyButton:focus .text,.fancyButton47.fancyButton:active .text,.fancyButton47.fancyButton.hover .text{
+	color: #ffffff;
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=70');
+	background-repeat: no-repeat;
+	background-position: center 20px ;
+background-size:100px;
+background-color:transparent;text-shadow:0px 2px 5px rgba(0,0,0,.4);}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofbonham.org/186/Employment" target="_blank" class="fancyButton fancyButton48 " aria-label="Job Postings Opens in new window" rel="noopener">
+		<span>
+			<span><span class="text">Job Postings</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton48.fancyButton:link,.fancyButton48.fancyButton:visited, .fancyButton48div.fancyButton{
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+	background-position: left top;
+transition:.2s ease-in-out;}
+.fancyButton48.fancyButton:hover,.fancyButton48.fancyButton:focus,.fancyButton48.fancyButton:active,.fancyButton48.fancyButton.hover{
+	background-color: #997eff;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton48.fancyButton:link > span,.fancyButton48.fancyButton:visited > span, .fancyButton48div.fancyButton > span{
+}
+.fancyButton48.fancyButton:hover > span,.fancyButton48.fancyButton:focus > span,.fancyButton48.fancyButton:active > span,.fancyButton48.fancyButton.hover > span{
+}
+.fancyButton48.fancyButton .text{
+	color: #484848;
+	font-family: "Montserrat";
+	padding-top: 8.5em;
+	padding-bottom: 1.5em;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 8.5em;
+	padding-bottom: 1.5em;
+	background-image: url('/ImageRepository/Document?documentID=73');
+	background-repeat: no-repeat;
+	background-position: center 30px ;
+transition:.2s ease-in-out;
+background-size:80px;
+}
+.fancyButton48.fancyButton:hover .text,.fancyButton48.fancyButton:focus .text,.fancyButton48.fancyButton:active .text,.fancyButton48.fancyButton.hover .text{
+	color: #ffffff;
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=72');
+	background-repeat: no-repeat;
+	background-position: center 20px ;
+background-size:100px;
+background-color:transparent;text-shadow:0px 2px 5px rgba(0,0,0,.4);}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofbonham.org/Facilities/Facility/Details/Lake-Bonham-Recreation-Park-4" target="_self" class="fancyButton fancyButton49 ">
+		<span>
+			<span><span class="text">Lake Bonham Reservations</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton49.fancyButton:link,.fancyButton49.fancyButton:visited, .fancyButton49div.fancyButton{
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+	background-position: left top;
+transition:.2s ease-in-out;}
+.fancyButton49.fancyButton:hover,.fancyButton49.fancyButton:focus,.fancyButton49.fancyButton:active,.fancyButton49.fancyButton.hover{
+	background-color: #32a592;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton49.fancyButton:link > span,.fancyButton49.fancyButton:visited > span, .fancyButton49div.fancyButton > span{
+}
+.fancyButton49.fancyButton:hover > span,.fancyButton49.fancyButton:focus > span,.fancyButton49.fancyButton:active > span,.fancyButton49.fancyButton.hover > span{
+}
+.fancyButton49.fancyButton .text{
+	color: #484848;
+	font-family: "Montserrat";
+	padding-top: 8.5em;
+	padding-bottom: 1.5em;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 8.5em;
+	padding-bottom: 1.5em;
+	background-image: url('/ImageRepository/Document?documentID=75');
+	background-repeat: no-repeat;
+	background-position: center 30px ;
+transition:.2s ease-in-out;
+background-size:80px;
+}
+.fancyButton49.fancyButton:hover .text,.fancyButton49.fancyButton:focus .text,.fancyButton49.fancyButton:active .text,.fancyButton49.fancyButton.hover .text{
+	color: #ffffff;
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=74');
+	background-repeat: no-repeat;
+	background-position: center 20px ;
+background-size:100px;
+background-color:transparent;text-shadow:0px 2px 5px rgba(0,0,0,.4);}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofbonham.org/Directory.aspx" target="_self" class="fancyButton fancyButton50 ">
+		<span>
+			<span><span class="text">Staff Directory</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton50.fancyButton:link,.fancyButton50.fancyButton:visited, .fancyButton50div.fancyButton{
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+	background-position: left top;
+transition:.2s ease-in-out;}
+.fancyButton50.fancyButton:hover,.fancyButton50.fancyButton:focus,.fancyButton50.fancyButton:active,.fancyButton50.fancyButton.hover{
+	background-color: #ef6950;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton50.fancyButton:link > span,.fancyButton50.fancyButton:visited > span, .fancyButton50div.fancyButton > span{
+}
+.fancyButton50.fancyButton:hover > span,.fancyButton50.fancyButton:focus > span,.fancyButton50.fancyButton:active > span,.fancyButton50.fancyButton.hover > span{
+}
+.fancyButton50.fancyButton .text{
+	color: #484848;
+	font-family: "Montserrat";
+	padding-top: 8.5em;
+	padding-bottom: 1.5em;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 8.5em;
+	padding-bottom: 1.5em;
+	background-image: url('/ImageRepository/Document?documentID=79');
+	background-repeat: no-repeat;
+	background-position: center 30px ;
+transition:.2s ease-in-out;
+background-size:80px;
+}
+.fancyButton50.fancyButton:hover .text,.fancyButton50.fancyButton:focus .text,.fancyButton50.fancyButton:active .text,.fancyButton50.fancyButton.hover .text{
+	color: #ffffff;
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=78');
+	background-repeat: no-repeat;
+	background-position: center 20px ;
+background-size:100px;
+background-color:transparent;text-shadow:0px 2px 5px rgba(0,0,0,.4);}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Calendar/Carousel --><!-- <div data-cpRole="structuralContainer" id="homeContainer1">
+    <div class="siteWrap">
+      <div data-cpRole="contentContainer" id="homeContent1a"></div>
+    </div>
+  </div> --><!-- Footer --><footer data-cprole="structuralContainer" id="footerContainerTS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="footerTS">	<div id="cc60230d6b-5902-4526-afc5-a8b44909cd1e" data-containerid="60230d6b-5902-4526-afc5-a8b44909cd1e" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="55">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col4 first" style="height: auto;" data-widgetcontainerid="b05e6fd0-ecea-46b5-9798-41ee460efc1c">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last id62fe0df0-201e-4aa3-ace1-d76ba6413229" style="height: 279px;" data-widgetcontainerid="62fe0df0-201e-4aa3-ace1-d76ba6413229">
+	
+    <div data-widget-id="0ba3d60a-adaf-4d49-9bad-d3d67b1f27f0" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv0ba3d60a-adaf-4d49-9bad-d3d67b1f27f0" class="widget widgetInfoAdvanced skin56 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="header0ba3d60a-adaf-4d49-9bad-d3d67b1f27f0">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="https://www.cityofbonham.org/"><img src="https://www.cityofbonham.org/ImageRepository/Document?documentId=1865" class="fr-dib" alt="Bonham Texas Homepage"></a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv0ba3d60a-adaf-4d49-9bad-d3d67b1f27f0 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col3" style="height: auto;" data-widgetcontainerid="89bab1a8-a4b3-4b5f-bb88-a9484fa1ab3c">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col3 first last id58136962-1992-4ad1-a048-c92d5b10e531" style="height: 279px;" data-widgetcontainerid="58136962-1992-4ad1-a048-c92d5b10e531">
+	
+
+<div class="widget widgetSpacer" id="6c6d95e3-dfc8-420a-a31b-aa127044ce88" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col3" style="height: auto;" data-widgetcontainerid="6a0545ff-8e8a-452f-a63a-0b4505d36254">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col3 first last idee2068b8-86b6-4c9a-a31e-27d7ab0eb410" style="height: 279px;" data-widgetcontainerid="ee2068b8-86b6-4c9a-a31e-27d7ab0eb410">
+	
+    <div data-widget-id="6999ae5f-77a6-4474-bc8e-4fe047b00634" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv6999ae5f-77a6-4474-bc8e-4fe047b00634" class="widget widgetInfoAdvanced skin37 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="header6999ae5f-77a6-4474-bc8e-4fe047b00634">
+			<header class="widgetHeader" id="header6999ae5f-77a6-4474-bc8e-4fe047b00634">
+		<div class="">
+					<h3>Contact Us</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p id="isPasted"><strong>Bonham City Hall</strong><br>514 Chestnut Street<br>Bonham, TX 75418<br><br><strong>Phone:</strong> <a href="tel: 903-583-7555">903-583-7555</a><br><strong>Fax: </strong>903-583-5761</p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv6999ae5f-77a6-4474-bc8e-4fe047b00634 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col3" style="height: auto;" data-widgetcontainerid="a6f10e26-8bb8-4ec2-9d7d-f82fcf53e33f">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col3 first last idc5b119ad-bde7-4328-88a6-f292ca392e8b" style="height: 279px;" data-widgetcontainerid="c5b119ad-bde7-4328-88a6-f292ca392e8b">
+	
+
+<div class="widget widgetSpacer" id="2633af19-5481-4349-9279-0728d7c758e5" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4" style="height: auto;" data-widgetcontainerid="27a3258d-2184-4ff2-85df-3745fac1a44a">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last id66e1f920-e202-41a1-8e42-5e2c6c658405" style="height: 279px;" data-widgetcontainerid="66e1f920-e202-41a1-8e42-5e2c6c658405">
+	
+	<div data-widget-id="955dec5c-e1dd-464c-9996-ec7835ae9426" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink955dec5c-e1dd-464c-9996-ec7835ae9426" class="widget widgetQuickLinks skin37 widgetOptionSet37 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeader955dec5c-e1dd-464c-9996-ec7835ae9426">
+			<header class="widgetHeader" id="quickLinksHeader955dec5c-e1dd-464c-9996-ec7835ae9426">
+		<div class="">
+					<h3><a style="" href="https://www.cityofbonham.org/QuickLinks.aspx?CID=15">Quick Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofbonham.org/250/Utilities-Billing" target="_self">Utilities</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofbonham.org/251/City-Council" target="_self">City Council</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink docaccess-activated" href="https://cityofbonham.org/ArchiveCenter/ViewFile/Item/62" target="_self" data-docaccess-source-url="https://www.cityofbonham.org/ArchiveCenter/ViewFile/Item/62" data-url-hash="1e023d5fc585dca98b076a2e9b10eac541a93762a0050a7079b2239b46ce2068" data-url-status="disabled">Proposed Budget FY 2026</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink docaccess-activated" href="https://www.cityofbonham.org/ArchiveCenter/ViewFile/Item/63" target="_self" data-docaccess-source-url="https://www.cityofbonham.org/ArchiveCenter/ViewFile/Item/63" data-url-hash="f15f57f1de4f163c77c2f30408f10d63e65615701c84d29457381c79a031ce68" data-url-status="disabled">2025 Tax Rate Calculation</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofbonham.org/163/BEDCO" target="_self">Economic Development</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofbonham.org/169/Visitor-Center" target="_self">Visitor Center</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col3" style="height: auto;" data-widgetcontainerid="7c72fd4c-2b3b-4cc5-a7c0-823c79e8e58a">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col3 first last id29a2d36c-276b-4cc8-a6cb-1c60c029e8c2" style="height: 279px;" data-widgetcontainerid="29a2d36c-276b-4cc8-a6cb-1c60c029e8c2">
+	
+
+<div class="widget widgetSpacer" id="8d163658-b4cd-427b-bd76-ff8483367fc6" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4 last" style="height: auto;" data-widgetcontainerid="2242d69a-42b2-426e-a205-f1459c589524">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last id1cc77098-5406-4576-a014-cd2874614c49" style="height: 279px;" data-widgetcontainerid="1cc77098-5406-4576-a014-cd2874614c49">
+	
+	<div data-widget-id="f6c5fb73-bfbc-4e5e-a0cb-fddfa26e5790" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklinkf6c5fb73-bfbc-4e5e-a0cb-fddfa26e5790" class="widget widgetQuickLinks skin37 widgetOptionSet37 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeaderf6c5fb73-bfbc-4e5e-a0cb-fddfa26e5790">
+			<header class="widgetHeader" id="quickLinksHeaderf6c5fb73-bfbc-4e5e-a0cb-fddfa26e5790">
+		<div class="">
+					<h3><a style="" href="https://www.cityofbonham.org/QuickLinks.aspx?CID=16">Helpful Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofbonham.org/" target="_self">Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofbonham.org/sitemap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofbonham.org/directory.aspx" target="_self">Contact Us</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofbonham.org/accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofbonham.org/copyright" target="_self">Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofbonham.org/privacy" target="_self">Privacy Policy</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</footer><!-- Powered By --><div data-cprole="structuralContainer" id="poweredByContainerTS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="poweredByTS">	<div id="ccc9732a38-d6e7-4968-a126-ffd86428b062" data-containerid="c9732a38-d6e7-4968-a126-ffd86428b062" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="201eca5d-2933-4492-a494-d1724c96a62a">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last ida452460f-012f-4d9e-9d73-b1e137b210ec" style="height: 34px;" data-widgetcontainerid="a452460f-012f-4d9e-9d73-b1e137b210ec">
+	
+ 
+	<div data-widget-id="721667b9-3d60-4b8f-a524-50a5792ab70d" data-modulename="customHtml" id="widgetCustomHtml721667b9-3d60-4b8f-a524-50a5792ab70d" class="widget widgetCustomHtml skin43 narrow">
+	<div class="widgetBody pageStyles" id="widgetBody721667b9-3d60-4b8f-a524-50a5792ab70d">
+		<div id="customHtml721667b9-3d60-4b8f-a524-50a5792ab70d"><div><style>
+  /* CP icon */
+  .cpBylineIconTS {
+    color: #fff;
+  }
+  /* CP Text */
+  .cpBylineTextTS,
+  .cpBylineTextTS a:link {
+    color: #fff;
+  }
+
+  .cpBylineTS {
+    text-align: center;
+  }
+  
+  .cpBylineIconTS {
+    fill: currentColor;
+    width: 39px;
+    height: 26px;
+    display: inline;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="widgetItem cpBylineTS">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="cpBylineIconTS">
+    <path class="c" d="M73.4,23.2h-19v16.7h19c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5h-19v28.4h5.5l11.3-11.7h2.2c11.9,0,21.6-9.7,21.6-21.6C95,33,85.3,23.2,73.4,23.2"></path>
+    <path class="p" d="M45.8,66.5H26.6C14.7,66.5,5,56.8,5,44.9C5,33,14.7,23.2,26.6,23.2h19.1v16.7H26.6c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h19.1V66.5z"></path>
+  </svg>
+  <span class="cpBylineTextTS">Government Websites by <a href="https://connect.civicplus.com/referral" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);">CivicPlus®</a></span>
+</div></div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '251',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!-- Fixed Nav Adjustment -->
+<script>
+  function getValueTS(elem, attr) {
+    var val = elem.css(attr);
+    if (val === undefined) return undefined;
+    var num = parseInt(val, 10);
+    if (num === NaN) return undefined;
+    return num;
+  }
+
+  function clampTS(number, min, max) {
+    return Math.min(Math.max(number, min), max);
+  }
+
+  function isPageEditingTS() {
+    return (
+      $("#doneEditing").length > 0 || // In live edit
+      typeof DesignCenter !== "undefined" // In theme manager
+    );
+  }
+
+  var bgColorRegexTS = new RegExp("rgba\((\d+), (\d+), (\d+), (\d*\.?\d*)\)");
+  function isTransparentTS(elem) {
+    var bg = elem.css('background-color');
+    if (typeof bg !== "string") return false;
+    if (bg === "transparent") return true;
+    if (!bg.startsWith('rgba(')) return false;
+    var matchState = bg.match(bgColorRegexTS);
+    if (!matchState || matchState.length !== 5) return false;
+    var alpha = parseFloat(matchState[4], 10);
+    if (!(alpha >= 0 && alpha < 1)) return false;
+    return true;
+  }
+
+  function iterateLeftpads(cb) {
+    var containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (var i = 0; i < containersTS.length; i++) {
+      var containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-leftpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-leftpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  function iterateRightpads(cb) {
+    var containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (var i = 0; i < containersTS.length; i++) {
+      var containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-rightpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-rightpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  var anchor = $("#divToolbars");
+  var bodyContainerTS = $("#bodyContainerTS");
+
+  // Outer banner padding (push banner down)
+  var outerSizingTS = $("#bannerContainerTS");
+  // Inner banner padding (push banner content down) - Transparent header OR on attaching headers
+  var innerSizingTS = $("#bannerSizingTS");
+
+  var forceUnfixClassTS = "forceUnfixTS";
+
+  var fixedTopTS = $(".fixedTopTS");
+  var fixedBottomTS = $(".fixedBottomTS");
+  var fixedLeftTS = $(".fixedLeftTS");
+  var fixedRightTS = $(".fixedRightTS");
+
+  var initialTopTS;
+  var topAttachTS;
+  if (fixedTopTS && fixedTopTS.length === 1) {
+    initialTopTS = getValueTS(fixedTopTS, 'top');
+    var attachment = fixedTopTS.attr('data-attach');
+    if (attachment) topAttachTS = $("#" + attachment);
+    if (!topAttachTS || topAttachTS.length !== 1) topAttachTS = undefined;
+  }
+
+  function resizeAdjustmentTS() {
+    var editing = isPageEditingTS();
+
+    // Fixed top script
+    (function () {
+      if (!fixedTopTS || fixedTopTS.length !== 1 || initialTopTS === undefined) return;
+
+      if (editing) {
+        fixedTopTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedTopTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      var topPosition = fixedTopTS.css('position');
+      if (topPosition === 'fixed') {
+        if (topAttachTS) {
+          scrollAdjustmentTS();
+        } else {
+          var anchorHeight = anchor.outerHeight() - 1;
+          fixedTopTS.css('top', anchorHeight + initialTopTS);
+        }
+      } else {
+        fixedTopTS.css('top', initialTopTS);
+      }
+
+      if (topPosition === 'fixed' || topPosition === 'absolute') {
+        // Bump the banner content down
+        if (isTransparentTS(fixedTopTS)) {
+          innerSizingTS.css('padding-top', initialTopTS + fixedTopTS.outerHeight());
+          outerSizingTS.css('padding-top', '');
+
+          try {
+            window.Pages.onResizeHandlersExecute();
+          } catch (e) { }
+        } else {
+          outerSizingTS.css('padding-top', fixedTopTS.outerHeight() - 1);
+          innerSizingTS.css('padding-top', '');
+        }
+      } else {
+        innerSizingTS.css('padding-top', '');
+        outerSizingTS.css('padding-top', '');
+      }
+    })();
+
+    // Fixed bottom script
+    (function () {
+      if (!fixedBottomTS || fixedBottomTS.length === 0) return;
+
+      // If the widget has gone narrow, force unfix
+      if (editing || fixedBottomTS.outerHeight() > 200) {
+        fixedBottomTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedBottomTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedBottomTS.css('position') === 'fixed') {
+        bodyContainerTS.css('padding-bottom', fixedBottomTS.outerHeight());
+      } else {
+        bodyContainerTS.css('padding-bottom', '');
+      }
+    })();
+
+    // Fixed left script
+    (function () {
+      if (!fixedLeftTS || fixedLeftTS.length === 0) return;
+
+      if (editing) {
+        fixedLeftTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedLeftTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedLeftTS.css('position') === 'fixed') {
+        var anchorHeight = anchor.outerHeight() - 1;
+        fixedLeftTS.css('top', anchorHeight);
+        var leftBoundingTS = fixedLeftTS[0].getBoundingClientRect();
+        iterateLeftpads(function (containerTS) {
+          var containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.left <= leftBoundingTS.right) {
+            $(containerTS).css('padding-left', leftBoundingTS.width + 16);
+          } else {
+            $(containerTS).css('padding-left', '');
+          }
+        });
+      } else {
+        fixedLeftTS.css('top', '');
+        iterateLeftpads(function (containerTS) {
+          $(containerTS).css('padding-left', '');
+        });
+      }
+    })();
+
+    // Fixed right script
+    (function () {
+      if (!fixedRightTS || fixedRightTS.length === 0) return;
+
+      if (editing) {
+        fixedRightTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedRightTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedRightTS.css('position') === 'fixed') {
+        var anchorHeight = anchor.outerHeight() - 1;
+        fixedRightTS.css('top', anchorHeight);
+        var rightBoundingTS = fixedRightTS[0].getBoundingClientRect();
+        iterateRightpads(function (containerTS) {
+          var containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.right >= rightBoundingTS.left) {
+            $(containerTS).css('padding-right', rightBoundingTS.width + 16);
+          }
+        });
+      } else {
+        fixedRightTS.css('top', '');
+        iterateRightpads(function (containerTS) {
+          $(containerTS).css('padding-right', '');
+        });
+      }
+    })();
+  }
+
+  function scrollAdjustmentTS() {
+    if (!fixedTopTS || fixedTopTS.length !== 1 || !topAttachTS || topAttachTS.length !== 1) return;
+    var topPosition = fixedTopTS.css('position');
+    if (topPosition === 'fixed' || topPosition === 'absolute') {
+      var anchorBounding = anchor[0].getBoundingClientRect();
+      var attachBounding = topAttachTS[0].getBoundingClientRect();
+      var scrollTop = $(window).scrollTop();
+
+      fixedTopTS.css('top', Math.max(anchorBounding.bottom - 1, attachBounding.bottom));
+    } else {
+      fixedTopTS.css('top', initialTopTS);
+    }
+  }
+
+  $(window).load(function () {
+    setTimeout(function () {
+      try {
+        resizeAdjustmentTS();
+      } catch (e) {
+        console.error(e);
+      }
+    }, 350);
+
+    $(window).scroll(function () {
+      try {
+        scrollAdjustmentTS();
+      } catch (e) {
+        console.error(e);
+      }
+    });
+
+    var adjustTimeoutTS;
+    $(window).resize(function () {
+      clearTimeout(adjustTimeoutTS);
+      adjustTimeoutTS = setTimeout(function () {
+        try {
+          resizeAdjustmentTS();
+        } catch (e) {
+          console.error(e);
+        }
+      }, 350);
+    });
+
+    $.when(window.Pages.angularToolbarComplete).done(function () {
+      try {
+        resizeAdjustmentTS();
+      } catch (e) {
+        console.error(e);
+      }
+    });
+  });
+</script>
+<!-- End Fixed Nav Adjustment -->
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,italic,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu27" class="contentTop mainNavMegaMenu megaMenuContainer pageID_27 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 113.719px; width: 830px; top: 92px;">	<div id="cc9431fbf9-2d8b-4a59-855e-a26805f6e2d7" data-containerid="9431fbf9-2d8b-4a59-855e-a26805f6e2d7" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu31" class="contentTop mainNavMegaMenu megaMenuContainer pageID_31 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 113.719px; width: 830px; top: 92px;">	<div id="ccc770b745-1be0-4afb-a013-e58f809238f0" data-containerid="c770b745-1be0-4afb-a013-e58f809238f0" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu35" class="contentTop mainNavMegaMenu megaMenuContainer pageID_35 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 113.719px; width: 830px; top: 92px;">	<div id="cc06f0ff7e-331f-403f-b472-8b167dc19a26" data-containerid="06f0ff7e-331f-403f-b472-8b167dc19a26" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu101" class="contentTop mainNavMegaMenu megaMenuContainer pageID_101 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 113.719px; width: 830px; top: 92px;">	<div id="cc373f281d-13c4-4cc4-8f9d-afa4fc5ded58" data-containerid="373f281d-13c4-4cc4-8f9d-afa4fc5ded58" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu9" class="contentTop mainNavMegaMenu megaMenuContainer pageID_9 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 113.719px; width: 830px; top: 92px;">	<div id="ccef7c7c25-d616-4e26-a509-7cf5c7dd81c5" data-containerid="ef7c7c25-d616-4e26-a509-7cf5c7dd81c5" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><div id="bannerSlideshowControls_banner1" class="bannerSlideshowControlsNew none " style="display:none">
+			<a id="arrowPrev_banner1" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner1" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b>&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div></body></html>
