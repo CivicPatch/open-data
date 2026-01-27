@@ -1,0 +1,1516 @@
+[2026-01-27T03:04:18.276330] [INFO] Step 1: RESEARCH_MUNICIPALITY
+[2026-01-27T03:04:18.304815] [INFO] Running Gemini prompt
+[2026-01-27T03:04:18.305285] [DEBUG] Prompt: 
+
+    Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
+
+    Municipality: Borger city, tx
+
+    Instructions:
+
+    1. Determine the government type of the city. Available government types:
+- mayor_commission
+- mayor_council
+- township_committee
+- select_board
+- aldermen
+
+    2. Identify the elected officials in the local government, 
+       including the Mayor (if applicable).
+       2.1. For each official, extract the following details:
+            - name: Full name only (no titles)
+            - roles: List of active municipal roles (e.g., Mayor, Council Member)
+            - divisions: List of (ward, district), only if applicable
+
+    3. Create a JSON object with the following structure:
+       ```json
+       {
+         "government_type": examples - "mayor_council" or "mayor_commission", etc.,
+         "people": [
+           {
+             "name": "Full name of the official or null if uncertain",
+             "roles": ["Mayor", "Council Member", "Commissioner", etc.],
+             "divisions": ["Ward 1", "District 2", etc.] or [],
+           }
+         ],
+         "notes": "Brief notes about the search and results"
+       }
+       ```
+
+    IMPORTANT: If the response contains anything other than a valid JSON object,
+    it will be considered incorrect. Ensure the response is strictly JSON.
+    Verify that the response is valid JSON before returning it.
+    If it is not valid JSON, retry the generation.
+    
+[2026-01-27T03:04:24.766009] [DEBUG] Gemini raw response: {'government_type': 'mayor_council', 'people': [{'name': 'Karen Felker', 'roles': ['Mayor', 'Council Member'], 'divisions': ['Place 3']}, {'name': 'Kim Perez', 'roles': ['Mayor Pro Tem', 'Council Member'], 'divisions': ['Place 2']}, {'name': 'Charles "Pete" Loftis', 'roles': ['Council Member'], 'divisions': ['Place 1']}, {'name': 'Robert L. Lawrence', 'roles': ['Council Member'], 'divisions': ['Place 4']}, {'name': 'Thomas Phelan', 'roles': ['Council Member'], 'divisions': ['Place 5']}], 'notes': 'Borger, TX operates under a Home Rule City Council/Manager form of government. The citizens elect five council members at large, who then elect one of their own to serve as Mayor and another as Mayor Pro Tem. The listed officials were confirmed for the 2025-2026 year.'}
+[2026-01-27T03:04:24.768633] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 364, Output tokens: 1171, Total cost: $0.003037
+[2026-01-27T03:04:24.769008] [INFO] gemini gemini-2.5-flash LLM call took 6.46 seconds
+[2026-01-27T03:04:24.769813] [INFO] Source URLs provided, skipping link search.
+[2026-01-27T03:04:24.846123] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.borgertx.gov/204/Your-City-Council
+[2026-01-27T03:04:27.268854] [DEBUG] Skipping blacklisted or invalid image: https://www.borgertx.gov/Common/images/ajax-loader.gif
+[2026-01-27T03:04:27.282356] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:04:27.283551] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:04:27.505979] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:04:27.517593] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:04:27.518424] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:04:27.735718] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:04:27.750099] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:04:27.751225] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:04:27.967951] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:04:27.979635] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:04:27.980819] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:04:28.199980] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:04:28.209722] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:04:28.210586] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:04:28.579558] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:04:28.589072] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=339
+[2026-01-27T03:04:28.590563] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=339
+[2026-01-27T03:04:29.002507] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/6d15b7d0dffd.png
+[2026-01-27T03:04:29.012138] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1247
+[2026-01-27T03:04:29.013463] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1247
+[2026-01-27T03:04:29.436001] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/c821d95c627c.png
+[2026-01-27T03:04:29.444601] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=337
+[2026-01-27T03:04:29.445362] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=337
+[2026-01-27T03:04:30.009794] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/efedc4b1c1a3.png
+[2026-01-27T03:04:30.025196] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=2136
+[2026-01-27T03:04:30.026316] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=2136
+[2026-01-27T03:04:30.251382] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/2f01132ba3af.png
+[2026-01-27T03:04:30.264127] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=2234
+[2026-01-27T03:04:30.265047] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=2234
+[2026-01-27T03:04:30.907051] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/df43eccfeb92.png
+[2026-01-27T03:04:30.916213] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:04:30.917212] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:04:31.182418] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:04:31.446915] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.borgertx.gov/204/Your-City-Council
+[2026-01-27T03:04:31.490993] [DEBUG] -> Preprocessing with identities: {'Karen Felker': ['Karen Felker'], 'Kim Perez': ['Kim Perez'], 'Charles "Pete" Loftis': ['Charles "Pete" Loftis'], 'Robert L. Lawrence': ['Robert L. Lawrence'], 'Thomas Phelan': ['Thomas Phelan']}
+[2026-01-27T03:04:37.633241] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-27T03:04:37.633729] [INFO] -> Elapsed time: 6.19 seconds
+[2026-01-27T03:04:37.634165] [INFO] -> Average elapsed time: 6.19 seconds
+[2026-01-27T03:04:37.634629] [INFO] -> Total elapsed time: 6.19 seconds
+[2026-01-27T03:04:37.727450] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.borgertx.gov/204/Your-City-Council
+[2026-01-27T03:04:37.729205] [INFO] Running OpenAI prompt
+[2026-01-27T03:04:37.729679] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-27T03:04:37.729986] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:04:55.440227] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1186, Output tokens: 1180, Total cost: $0.002656
+[2026-01-27T03:04:55.440784] [INFO] Page relevance check found related urls: ['https://www.borgertx.gov/Directory.aspx', 'https://www.borgertx.gov/your-city-council']
+[2026-01-27T03:04:55.441618] [INFO] Running Gemini prompt
+[2026-01-27T03:04:55.442149] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only extract people who are currently serving as officials as of 2026-01-27. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-27
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-27) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-27T03:05:06.893913] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 2254, Output tokens: 552, Total cost: $0.002056
+[2026-01-27T03:05:06.899175] [INFO] gemini gemini-2.5-flash LLM call took 11.46 seconds
+[2026-01-27T03:05:06.904134] [INFO] Running OpenAI prompt
+[2026-01-27T03:05:06.905559] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only extract people who are currently serving as officials as of 2026-01-27. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-27
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-27T03:05:06.906506] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:05:49.188846] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1945, Output tokens: 3327, Total cost: $0.007140
+[2026-01-27T03:05:49.201082] [DEBUG] Skipping adding websites for person with role and contact info: Charles "Pete" Loftis
+[2026-01-27T03:05:49.201485] [DEBUG] Skipping adding websites for person with role and contact info: Kim Perez
+[2026-01-27T03:05:49.201871] [DEBUG] Skipping adding websites for person with role and contact info: Karen Felker
+[2026-01-27T03:05:49.202805] [DEBUG] Skipping adding websites for person with role and contact info: Bob Lawrence
+[2026-01-27T03:05:49.203445] [DEBUG] Skipping adding websites for person with role and contact info: Tom Phelan
+[2026-01-27T03:05:49.204064] [INFO] links updated: [Link(url='https://www.borgertx.gov/directory.aspx', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/your-city-council', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/204/Your-City-Council', status='done', folder_name='www_borgertx_gov_204_your-city-council', is_profile_page=False)]
+[2026-01-27T03:05:49.286764] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.borgertx.gov/directory.aspx
+[2026-01-27T03:05:52.729593] [DEBUG] Skipping blacklisted or invalid image: https://www.borgertx.gov/Common/images/ajax-loader.gif
+[2026-01-27T03:05:52.754584] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:05:52.755619] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:05:53.050896] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:05:53.064880] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:05:53.066161] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:05:53.357720] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:05:53.370472] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:05:53.371472] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:05:53.763552] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:05:53.779033] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:05:53.780182] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:05:54.002504] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:05:54.019844] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:05:54.020540] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:05:54.385327] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:05:54.400219] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:05:54.401599] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:05:54.717099] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:05:55.026866] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.borgertx.gov/directory.aspx
+[2026-01-27T03:05:55.270193] [DEBUG] -> Preprocessing with identities: {'Karen Felker': ['Karen Felker'], 'Kim Perez': ['Kim Perez'], 'Charles "Pete" Loftis': ['Charles "Pete" Loftis'], 'Robert L. Lawrence': ['Robert L. Lawrence'], 'Thomas Phelan': ['Thomas Phelan']}
+[2026-01-27T03:05:58.849389] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-27T03:05:58.849841] [INFO] -> Elapsed time: 3.82 seconds
+[2026-01-27T03:05:58.850259] [INFO] -> Average elapsed time: 4.91 seconds
+[2026-01-27T03:05:58.850908] [INFO] -> Total elapsed time: 9.82 seconds
+[2026-01-27T03:05:58.933839] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.borgertx.gov/directory.aspx
+[2026-01-27T03:05:58.936007] [INFO] Running OpenAI prompt
+[2026-01-27T03:05:58.936747] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-27T03:05:58.937668] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:06:16.614101] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1347, Output tokens: 1246, Total cost: $0.002829
+[2026-01-27T03:06:16.614647] [INFO] Page relevance check found related urls: ['https://www.borgertx.gov/Directory.aspx?did=17', 'https://www.borgertx.gov/Directory.aspx?DID=', 'https://www.borgertx.gov/Directory.aspx?did=5']
+[2026-01-27T03:06:16.615658] [INFO] Running Gemini prompt
+[2026-01-27T03:06:16.616222] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only extract people who are currently serving as officials as of 2026-01-27. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-27
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-27) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-27T03:06:18.027988] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 2604, Output tokens: 65, Total cost: $0.000944
+[2026-01-27T03:06:18.032563] [INFO] gemini gemini-2.5-flash LLM call took 1.41 seconds
+[2026-01-27T03:06:18.034800] [INFO] Running OpenAI prompt
+[2026-01-27T03:06:18.035389] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only extract people who are currently serving as officials as of 2026-01-27. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-27
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-27T03:06:18.037245] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:06:28.005079] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 2106, Output tokens: 715, Total cost: $0.001956
+[2026-01-27T03:06:28.009825] [DEBUG] Skipping adding websites for person with role and contact info: Charles "Pete" Loftis
+[2026-01-27T03:06:28.010657] [DEBUG] Skipping adding websites for person with role and contact info: Kim Perez
+[2026-01-27T03:06:28.011189] [DEBUG] Skipping adding websites for person with role and contact info: Karen Felker
+[2026-01-27T03:06:28.012309] [DEBUG] Skipping adding websites for person with role and contact info: Bob Lawrence
+[2026-01-27T03:06:28.014217] [DEBUG] Skipping adding websites for person with role and contact info: Tom Phelan
+[2026-01-27T03:06:28.016294] [INFO] links updated: [Link(url='https://www.borgertx.gov/directory.aspx?did=17', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?did=', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?did=5', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/your-city-council', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/204/Your-City-Council', status='done', folder_name='www_borgertx_gov_204_your-city-council', is_profile_page=False), Link(url='https://www.borgertx.gov/directory.aspx', status='done', folder_name='www_borgertx_gov_directory_aspx', is_profile_page=True)]
+[2026-01-27T03:06:29.674044] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.borgertx.gov/directory.aspx?did=17
+[2026-01-27T03:06:32.548894] [DEBUG] Skipping blacklisted or invalid image: https://www.borgertx.gov/Common/images/ajax-loader.gif
+[2026-01-27T03:06:32.562785] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:06:32.565001] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:06:32.783218] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:06:32.793301] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:06:32.795328] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:06:33.024019] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:06:33.042339] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:06:33.043546] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:06:33.279099] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:06:33.297942] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:06:33.299143] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:06:33.526840] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:06:33.542722] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:06:33.543597] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:06:33.906111] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:06:33.917355] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:06:33.918984] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:06:34.190300] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:06:34.405048] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.borgertx.gov/directory.aspx?did=17
+[2026-01-27T03:06:34.464301] [DEBUG] -> Preprocessing with identities: {'Karen Felker': ['Karen Felker'], 'Kim Perez': ['Kim Perez'], 'Charles "Pete" Loftis': ['Charles "Pete" Loftis'], 'Robert L. Lawrence': ['Robert L. Lawrence'], 'Thomas Phelan': ['Thomas Phelan']}
+[2026-01-27T03:06:37.234340] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-27T03:06:37.234812] [INFO] -> Elapsed time: 2.83 seconds
+[2026-01-27T03:06:37.235085] [INFO] -> Average elapsed time: 3.94 seconds
+[2026-01-27T03:06:37.235349] [INFO] -> Total elapsed time: 11.83 seconds
+[2026-01-27T03:06:37.312159] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.borgertx.gov/directory.aspx?did=17
+[2026-01-27T03:06:37.314088] [INFO] Running OpenAI prompt
+[2026-01-27T03:06:37.314351] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-27T03:06:37.314668] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:06:54.002487] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1048, Output tokens: 995, Total cost: $0.002252
+[2026-01-27T03:06:54.003075] [INFO] Page relevance check found related urls: ['https://www.borgertx.gov/204/City-Council', 'https://www.borgertx.gov/directory.aspx?EID=33', 'https://www.borgertx.gov/directory.aspx?EID=35', 'https://www.borgertx.gov/directory.aspx?EID=36', 'https://www.borgertx.gov/directory.aspx?EID=34', 'https://www.borgertx.gov/directory.aspx?EID=146']
+[2026-01-27T03:06:54.003648] [INFO] Running Gemini prompt
+[2026-01-27T03:06:54.004007] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only extract people who are currently serving as officials as of 2026-01-27. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-27
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-27) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-27T03:06:58.637726] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 2151, Output tokens: 422, Total cost: $0.001700
+[2026-01-27T03:06:58.640151] [INFO] gemini gemini-2.5-flash LLM call took 4.64 seconds
+[2026-01-27T03:06:58.641936] [INFO] Running OpenAI prompt
+[2026-01-27T03:06:58.642372] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only extract people who are currently serving as officials as of 2026-01-27. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-27
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-27T03:06:58.642898] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:07:31.904983] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1807, Output tokens: 2222, Total cost: $0.004896
+[2026-01-27T03:07:31.911274] [DEBUG] Skipping adding websites for person with role and contact info: Charles Loftis
+[2026-01-27T03:07:31.911800] [DEBUG] Skipping adding websites for person with role and contact info: Kim Perez
+[2026-01-27T03:07:31.912212] [DEBUG] Skipping adding websites for person with role and contact info: Karen Felker
+[2026-01-27T03:07:31.912599] [DEBUG] Skipping adding websites for person with role and contact info: Tom Phelan
+[2026-01-27T03:07:31.914253] [DEBUG] Skipping adding websites for person with role and contact info: Charles "Pete" Loftis
+[2026-01-27T03:07:31.916949] [DEBUG] Skipping adding websites for person with role and contact info: Kim Perez
+[2026-01-27T03:07:31.918549] [DEBUG] Skipping adding websites for person with role and contact info: Karen Felker
+[2026-01-27T03:07:31.921306] [DEBUG] Skipping adding websites for person with role and contact info: Bob Lawrence
+[2026-01-27T03:07:31.921845] [DEBUG] Skipping adding websites for person with role and contact info: Tom Phelan
+[2026-01-27T03:07:31.922219] [DEBUG] Skipping adding websites for person with role and contact info: Charles Loftis
+[2026-01-27T03:07:31.923324] [INFO] links updated: [Link(url='https://www.borgertx.gov/204/city-council', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?eid=35', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?eid=36', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?eid=34', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?eid=146', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?did=', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?did=5', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/your-city-council', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?eid=33', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/204/Your-City-Council', status='done', folder_name='www_borgertx_gov_204_your-city-council', is_profile_page=False), Link(url='https://www.borgertx.gov/directory.aspx', status='done', folder_name='www_borgertx_gov_directory_aspx', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?did=17', status='done', folder_name='www_borgertx_gov_directory_aspx?did=17', is_profile_page=True)]
+[2026-01-27T03:07:32.017144] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.borgertx.gov/204/city-council
+[2026-01-27T03:07:35.245713] [DEBUG] Skipping blacklisted or invalid image: https://www.borgertx.gov/Common/images/ajax-loader.gif
+[2026-01-27T03:07:35.257704] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:07:35.259264] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:07:35.484788] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:07:35.500892] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:07:35.501839] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:07:35.847560] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:07:35.862842] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:07:35.864157] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:07:36.102894] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:07:36.117507] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:07:36.118382] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:07:36.370705] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:07:36.386486] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:07:36.387657] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:07:37.068296] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:07:37.082459] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=339
+[2026-01-27T03:07:37.087385] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=339
+[2026-01-27T03:07:37.565236] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/6d15b7d0dffd.png
+[2026-01-27T03:07:37.577433] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1247
+[2026-01-27T03:07:37.578703] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1247
+[2026-01-27T03:07:38.229201] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/c821d95c627c.png
+[2026-01-27T03:07:38.244481] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=337
+[2026-01-27T03:07:38.245373] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=337
+[2026-01-27T03:07:38.674297] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/efedc4b1c1a3.png
+[2026-01-27T03:07:38.690324] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=2136
+[2026-01-27T03:07:38.691577] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=2136
+[2026-01-27T03:07:38.926723] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/2f01132ba3af.png
+[2026-01-27T03:07:38.941528] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=2234
+[2026-01-27T03:07:38.942562] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=2234
+[2026-01-27T03:07:39.431316] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/df43eccfeb92.png
+[2026-01-27T03:07:39.447013] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:07:39.447978] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:07:39.821216] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:07:40.070645] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.borgertx.gov/204/city-council
+[2026-01-27T03:07:40.128853] [DEBUG] -> Preprocessing with identities: {'Karen Felker': ['Karen Felker'], 'Kim Perez': ['Kim Perez'], 'Charles "Pete" Loftis': ['Charles "Pete" Loftis'], 'Robert L. Lawrence': ['Robert L. Lawrence'], 'Thomas Phelan': ['Thomas Phelan']}
+[2026-01-27T03:07:44.198368] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-27T03:07:44.198656] [INFO] -> Elapsed time: 4.13 seconds
+[2026-01-27T03:07:44.199041] [INFO] -> Average elapsed time: 3.78 seconds
+[2026-01-27T03:07:44.199430] [INFO] -> Total elapsed time: 15.13 seconds
+[2026-01-27T03:07:44.280365] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.borgertx.gov/204/city-council
+[2026-01-27T03:07:44.282904] [INFO] Running OpenAI prompt
+[2026-01-27T03:07:44.283590] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-27T03:07:44.284362] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:08:01.856332] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1186, Output tokens: 1328, Total cost: $0.002952
+[2026-01-27T03:08:01.856845] [INFO] Page relevance check found related urls: ['https://www.borgertx.gov/YourCityCouncil.aspx', 'https://www.borgertx.gov/Directory.aspx']
+[2026-01-27T03:08:01.857562] [INFO] Running Gemini prompt
+[2026-01-27T03:08:01.857968] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only extract people who are currently serving as officials as of 2026-01-27. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-27
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-27) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-27T03:08:09.723677] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 2254, Output tokens: 540, Total cost: $0.002026
+[2026-01-27T03:08:09.727788] [INFO] gemini gemini-2.5-flash LLM call took 7.87 seconds
+[2026-01-27T03:08:09.730920] [INFO] Running OpenAI prompt
+[2026-01-27T03:08:09.731616] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only extract people who are currently serving as officials as of 2026-01-27. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-27
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-27T03:08:09.733997] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:09:07.835234] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1945, Output tokens: 2723, Total cost: $0.005932
+[2026-01-27T03:09:07.839041] [DEBUG] Skipping adding websites for person with role and contact info: Charles Loftis
+[2026-01-27T03:09:07.839429] [DEBUG] Skipping adding websites for person with role and contact info: Kim Perez
+[2026-01-27T03:09:07.839825] [DEBUG] Skipping adding websites for person with role and contact info: Karen Felker
+[2026-01-27T03:09:07.840172] [DEBUG] Skipping adding websites for person with role and contact info: Tom Phelan
+[2026-01-27T03:09:07.840811] [DEBUG] Skipping adding websites for person with role and contact info: Charles "Pete" Loftis
+[2026-01-27T03:09:07.841085] [DEBUG] Skipping adding websites for person with role and contact info: Kim Perez
+[2026-01-27T03:09:07.842508] [DEBUG] Skipping adding websites for person with role and contact info: Karen Felker
+[2026-01-27T03:09:07.843492] [DEBUG] Skipping adding websites for person with role and contact info: Bob Lawrence
+[2026-01-27T03:09:07.844789] [DEBUG] Skipping adding websites for person with role and contact info: Tom Phelan
+[2026-01-27T03:09:07.845214] [DEBUG] Skipping adding websites for person with role and contact info: Charles Loftis
+[2026-01-27T03:09:07.846863] [INFO] links updated: [Link(url='https://www.borgertx.gov/yourcitycouncil.aspx', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?eid=33', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx', status='done', folder_name='www_borgertx_gov_directory_aspx', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?eid=35', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?eid=36', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?eid=34', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?eid=146', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?did=', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/directory.aspx?did=5', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/your-city-council', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.borgertx.gov/204/Your-City-Council', status='done', folder_name='www_borgertx_gov_204_your-city-council', is_profile_page=False), Link(url='https://www.borgertx.gov/directory.aspx?did=17', status='done', folder_name='www_borgertx_gov_directory_aspx?did=17', is_profile_page=True), Link(url='https://www.borgertx.gov/204/city-council', status='done', folder_name='www_borgertx_gov_204_city-council', is_profile_page=True)]
+[2026-01-27T03:09:07.944642] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.borgertx.gov/yourcitycouncil.aspx
+[2026-01-27T03:09:10.431026] [DEBUG] Skipping blacklisted or invalid image: https://www.borgertx.gov/Common/images/ajax-loader.gif
+[2026-01-27T03:09:10.451204] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:09:10.453053] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:09:10.682471] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:09:10.700142] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:09:10.701126] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:09:10.952312] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:09:10.973647] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:09:10.977774] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:09:11.273461] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:09:11.286174] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:09:11.287793] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:09:11.591724] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:09:11.608645] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:09:11.609945] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:09:11.987915] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:09:12.003424] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:09:12.004330] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:09:12.272662] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:09:12.598093] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.borgertx.gov/yourcitycouncil.aspx
+[2026-01-27T03:09:12.654212] [DEBUG] -> Preprocessing with identities: {'Karen Felker': ['Karen Felker'], 'Kim Perez': ['Kim Perez'], 'Charles "Pete" Loftis': ['Charles "Pete" Loftis'], 'Robert L. Lawrence': ['Robert L. Lawrence'], 'Thomas Phelan': ['Thomas Phelan']}
+[2026-01-27T03:09:15.111110] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-27T03:09:15.111352] [INFO] -> Elapsed time: 2.51 seconds
+[2026-01-27T03:09:15.111613] [INFO] -> Average elapsed time: 3.50 seconds
+[2026-01-27T03:09:15.111942] [INFO] -> Total elapsed time: 17.51 seconds
+[2026-01-27T03:09:18.572000] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.borgertx.gov/yourcitycouncil.aspx
+[2026-01-27T03:09:18.575400] [INFO] Running OpenAI prompt
+[2026-01-27T03:09:18.575899] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-27T03:09:18.576435] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:09:33.910066] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 665, Output tokens: 1036, Total cost: $0.002238
+[2026-01-27T03:09:33.913004] [INFO] Page relevance check found related urls: ['https://www.borgertx.gov/Directory.aspx', 'https://www.borgertx.gov/government/city-council', 'https://www.borgertx.gov/departments', 'https://www.borgertx.gov/government/mayor-and-city-council']
+[2026-01-27T03:09:34.101832] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.borgertx.gov/government/city-council
+[2026-01-27T03:09:36.739155] [DEBUG] Skipping blacklisted or invalid image: https://www.borgertx.gov/Common/images/ajax-loader.gif
+[2026-01-27T03:09:36.748131] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:09:36.749337] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:09:36.968942] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:09:36.989530] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:09:36.990356] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:09:37.214550] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:09:37.232144] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:09:37.233312] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:09:37.454622] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:09:37.467135] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:09:37.468400] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:09:37.691158] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:09:37.703263] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:09:37.705038] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:09:38.076099] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:09:38.090725] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:09:38.091677] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:09:38.450766] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:09:38.792970] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.borgertx.gov/government/city-council
+[2026-01-27T03:09:38.854601] [DEBUG] -> Preprocessing with identities: {'Karen Felker': ['Karen Felker'], 'Kim Perez': ['Kim Perez'], 'Charles "Pete" Loftis': ['Charles "Pete" Loftis'], 'Robert L. Lawrence': ['Robert L. Lawrence'], 'Thomas Phelan': ['Thomas Phelan']}
+[2026-01-27T03:09:41.501359] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-27T03:09:41.501621] [INFO] -> Elapsed time: 2.71 seconds
+[2026-01-27T03:09:41.502009] [INFO] -> Average elapsed time: 3.28 seconds
+[2026-01-27T03:09:41.502437] [INFO] -> Total elapsed time: 19.71 seconds
+[2026-01-27T03:09:41.584551] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.borgertx.gov/government/city-council
+[2026-01-27T03:09:41.586895] [INFO] Running OpenAI prompt
+[2026-01-27T03:09:41.587395] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-27T03:09:41.588043] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:10:01.843900] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 764, Output tokens: 1481, Total cost: $0.003153
+[2026-01-27T03:10:01.844731] [INFO] Page relevance check found related urls: ['https://www.borgertx.gov/government', 'https://www.borgertx.gov/government/city-council', 'https://www.borgertx.gov/government/mayor-and-city-council', 'https://www.borgertx.gov/government/boards-and-commissions']
+[2026-01-27T03:10:01.999809] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.borgertx.gov/government
+[2026-01-27T03:10:04.936171] [DEBUG] Skipping blacklisted or invalid image: https://www.borgertx.gov/Common/images/ajax-loader.gif
+[2026-01-27T03:10:04.953729] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:10:04.955483] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:10:05.274030] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:10:05.293517] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:10:05.294597] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:10:05.527828] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:10:05.542657] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:10:05.544325] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:10:05.769819] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:10:05.784021] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:10:05.785306] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:10:06.119466] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:10:06.139547] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:10:06.140438] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:10:06.530635] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:10:06.545415] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:10:06.546231] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:10:06.833007] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:10:07.046837] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.borgertx.gov/government
+[2026-01-27T03:10:07.091765] [DEBUG] -> Preprocessing with identities: {'Karen Felker': ['Karen Felker'], 'Kim Perez': ['Kim Perez'], 'Charles "Pete" Loftis': ['Charles "Pete" Loftis'], 'Robert L. Lawrence': ['Robert L. Lawrence'], 'Thomas Phelan': ['Thomas Phelan']}
+[2026-01-27T03:10:10.549722] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-27T03:10:10.550247] [INFO] -> Elapsed time: 3.50 seconds
+[2026-01-27T03:10:10.551081] [INFO] -> Average elapsed time: 3.21 seconds
+[2026-01-27T03:10:10.552759] [INFO] -> Total elapsed time: 22.50 seconds
+[2026-01-27T03:10:10.769567] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.borgertx.gov/government
+[2026-01-27T03:10:10.773243] [INFO] Running OpenAI prompt
+[2026-01-27T03:10:10.773788] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-27T03:10:10.774327] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:10:29.856225] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 665, Output tokens: 1372, Total cost: $0.002910
+[2026-01-27T03:10:29.858298] [INFO] Page relevance check found related urls: ['https://www.borgertx.gov/Directory.aspx', 'https://www.borgertx.gov/government/mayor_and_city_council.php', 'https://city-borger-tx-projects.cleargov.com/']
+[2026-01-27T03:10:30.862044] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.borgertx.gov/government/mayor_and_city_council.php
+[2026-01-27T03:10:33.726407] [DEBUG] Skipping blacklisted or invalid image: https://www.borgertx.gov/Common/images/ajax-loader.gif
+[2026-01-27T03:10:33.740661] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:10:33.741502] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:10:34.055657] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:10:34.075053] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:10:34.075922] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:10:34.371106] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:10:34.387025] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:10:34.388044] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:10:34.610512] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:10:34.629882] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:10:34.631117] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:10:34.863807] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:10:34.880179] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:10:34.881070] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:10:35.245454] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:10:35.261550] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:10:35.263199] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:10:35.612486] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:10:35.870934] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.borgertx.gov/government/mayor_and_city_council.php
+[2026-01-27T03:10:35.930281] [DEBUG] -> Preprocessing with identities: {'Karen Felker': ['Karen Felker'], 'Kim Perez': ['Kim Perez'], 'Charles "Pete" Loftis': ['Charles "Pete" Loftis'], 'Robert L. Lawrence': ['Robert L. Lawrence'], 'Thomas Phelan': ['Thomas Phelan']}
+[2026-01-27T03:10:38.694145] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-27T03:10:38.694543] [INFO] -> Elapsed time: 2.82 seconds
+[2026-01-27T03:10:38.694925] [INFO] -> Average elapsed time: 3.10 seconds
+[2026-01-27T03:10:38.695434] [INFO] -> Total elapsed time: 24.82 seconds
+[2026-01-27T03:10:38.791484] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.borgertx.gov/government/mayor_and_city_council.php
+[2026-01-27T03:10:38.793993] [INFO] Running OpenAI prompt
+[2026-01-27T03:10:38.794475] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-27T03:10:38.795061] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:10:53.162517] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 665, Output tokens: 1147, Total cost: $0.002460
+[2026-01-27T03:10:53.163464] [INFO] Page relevance check found related urls: ['https://city-borger-tx-projects.cleargov.com/', 'https://www.borgertx.gov/government', 'https://www.borgertx.gov/government/city_council', 'https://www.borgertx.gov/government/boards_commissions', 'https://www.borgertx.gov/directory.aspx', 'https://www.borgertx.gov/contact']
+[2026-01-27T03:10:53.273862] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.borgertx.gov/government/city_council
+[2026-01-27T03:10:55.497479] [DEBUG] Skipping blacklisted or invalid image: https://www.borgertx.gov/Common/images/ajax-loader.gif
+[2026-01-27T03:10:55.512735] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:10:55.513654] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:10:55.829465] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:10:55.848641] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:10:55.849835] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:10:56.079484] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:10:56.103446] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:10:56.104583] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:10:56.394027] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:10:56.412697] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:10:56.413607] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:10:56.710950] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:10:56.719657] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:10:56.720485] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:10:57.223525] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:10:57.249534] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:10:57.250860] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:10:57.520916] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:10:57.767808] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.borgertx.gov/government/city_council
+[2026-01-27T03:10:57.814259] [DEBUG] -> Preprocessing with identities: {'Karen Felker': ['Karen Felker'], 'Kim Perez': ['Kim Perez'], 'Charles "Pete" Loftis': ['Charles "Pete" Loftis'], 'Robert L. Lawrence': ['Robert L. Lawrence'], 'Thomas Phelan': ['Thomas Phelan']}
+[2026-01-27T03:11:00.417159] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-27T03:11:00.417511] [INFO] -> Elapsed time: 2.65 seconds
+[2026-01-27T03:11:00.417889] [INFO] -> Average elapsed time: 2.96 seconds
+[2026-01-27T03:11:00.418313] [INFO] -> Total elapsed time: 26.65 seconds
+[2026-01-27T03:11:00.507217] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.borgertx.gov/government/city_council
+[2026-01-27T03:11:00.509346] [INFO] Running OpenAI prompt
+[2026-01-27T03:11:00.509746] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-27T03:11:00.511224] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:11:20.075053] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 665, Output tokens: 1408, Total cost: $0.002982
+[2026-01-27T03:11:20.075611] [INFO] Page relevance check found related urls: ['https://www.borgertx.gov/government', 'https://www.borgertx.gov/city-council', 'https://www.borgertx.gov/directory.aspx', 'https://city-borger-tx-projects.cleargov.com/']
+[2026-01-27T03:11:20.173850] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.borgertx.gov/city-council
+[2026-01-27T03:11:22.973582] [DEBUG] Skipping blacklisted or invalid image: https://www.borgertx.gov/Common/images/ajax-loader.gif
+[2026-01-27T03:11:22.996596] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:11:22.997278] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:11:23.301876] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:11:23.318981] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:11:23.320381] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:11:23.542387] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:11:23.559734] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:11:23.560922] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:11:23.792423] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:11:23.808891] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:11:23.810395] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:11:24.032217] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:11:24.050076] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:11:24.051426] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:11:24.415236] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:11:24.428819] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:11:24.430317] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:11:24.728489] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:11:25.150246] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.borgertx.gov/city-council
+[2026-01-27T03:11:25.200207] [DEBUG] -> Preprocessing with identities: {'Karen Felker': ['Karen Felker'], 'Kim Perez': ['Kim Perez'], 'Charles "Pete" Loftis': ['Charles "Pete" Loftis'], 'Robert L. Lawrence': ['Robert L. Lawrence'], 'Thomas Phelan': ['Thomas Phelan']}
+[2026-01-27T03:11:28.777456] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-27T03:11:28.777892] [INFO] -> Elapsed time: 3.63 seconds
+[2026-01-27T03:11:28.778642] [INFO] -> Average elapsed time: 2.96 seconds
+[2026-01-27T03:11:28.778947] [INFO] -> Total elapsed time: 29.63 seconds
+[2026-01-27T03:11:28.891792] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.borgertx.gov/city-council
+[2026-01-27T03:11:28.913814] [INFO] Running OpenAI prompt
+[2026-01-27T03:11:28.915363] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-27T03:11:28.918569] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:11:46.309689] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 762, Output tokens: 1205, Total cost: $0.002600
+[2026-01-27T03:11:46.310569] [INFO] Page relevance check found related urls: ['https://www.borgertx.gov/city-council', 'https://www.borgertx.gov/government', 'https://www.borgertx.gov/departments']
+[2026-01-27T03:11:46.436585] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.borgertx.gov/departments
+[2026-01-27T03:11:49.391834] [DEBUG] Skipping blacklisted or invalid image: https://www.borgertx.gov/Common/images/ajax-loader.gif
+[2026-01-27T03:11:49.398919] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:11:49.399986] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:11:49.622148] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:11:49.637058] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:11:49.637921] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:11:49.893418] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:11:49.910380] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:11:49.911218] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:11:50.132551] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:11:50.147160] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:11:50.148263] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:11:50.411483] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:11:50.431355] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:11:50.432335] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:11:50.801301] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:11:50.817746] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:11:50.818726] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:11:51.089963] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:11:51.344500] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.borgertx.gov/departments
+[2026-01-27T03:11:51.387759] [DEBUG] -> Preprocessing with identities: {'Karen Felker': ['Karen Felker'], 'Kim Perez': ['Kim Perez'], 'Charles "Pete" Loftis': ['Charles "Pete" Loftis'], 'Robert L. Lawrence': ['Robert L. Lawrence'], 'Thomas Phelan': ['Thomas Phelan']}
+[2026-01-27T03:11:54.635632] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-27T03:11:54.636092] [INFO] -> Elapsed time: 3.29 seconds
+[2026-01-27T03:11:54.636432] [INFO] -> Average elapsed time: 2.94 seconds
+[2026-01-27T03:11:54.636913] [INFO] -> Total elapsed time: 32.29 seconds
+[2026-01-27T03:11:54.729056] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.borgertx.gov/departments
+[2026-01-27T03:11:54.730877] [INFO] Running OpenAI prompt
+[2026-01-27T03:11:54.731195] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-27T03:11:54.731507] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:12:08.871617] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 665, Output tokens: 990, Total cost: $0.002146
+[2026-01-27T03:12:08.872432] [INFO] Page relevance check found related urls: ['https://www.borgertx.gov/government/city_council', 'https://www.borgertx.gov/directory.aspx', 'https://www.borgertx.gov/government/mayor_and_council', 'https://www.borgertx.gov/departments']
+[2026-01-27T03:12:08.966110] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.borgertx.gov/government/mayor_and_council
+[2026-01-27T03:12:11.865642] [DEBUG] Skipping blacklisted or invalid image: https://www.borgertx.gov/Common/images/ajax-loader.gif
+[2026-01-27T03:12:11.878461] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:12:11.879382] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:12:12.112733] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:12:12.137665] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:12:12.139970] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:12:12.383566] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:12:12.407535] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:12:12.408985] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:12:12.641132] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:12:12.658589] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:12:12.659461] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:12:12.961285] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:12:12.977957] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:12:12.978851] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:12:13.344096] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:12:13.361950] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:12:13.362857] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:12:13.643812] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:12:13.969810] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.borgertx.gov/government/mayor_and_council
+[2026-01-27T03:12:14.027198] [DEBUG] -> Preprocessing with identities: {'Karen Felker': ['Karen Felker'], 'Kim Perez': ['Kim Perez'], 'Charles "Pete" Loftis': ['Charles "Pete" Loftis'], 'Robert L. Lawrence': ['Robert L. Lawrence'], 'Thomas Phelan': ['Thomas Phelan']}
+[2026-01-27T03:12:16.521644] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-27T03:12:16.521992] [INFO] -> Elapsed time: 2.55 seconds
+[2026-01-27T03:12:16.522413] [INFO] -> Average elapsed time: 2.88 seconds
+[2026-01-27T03:12:16.523139] [INFO] -> Total elapsed time: 34.55 seconds
+[2026-01-27T03:12:16.603097] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.borgertx.gov/government/mayor_and_council
+[2026-01-27T03:12:16.606608] [INFO] Running OpenAI prompt
+[2026-01-27T03:12:16.606941] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-27T03:12:16.607274] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:12:32.242168] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 665, Output tokens: 1202, Total cost: $0.002570
+[2026-01-27T03:12:32.242915] [INFO] Page relevance check found related urls: ['https://www.borgertx.gov/government/city-council', 'https://www.borgertx.gov/government/mayor-s-office', 'https://www.borgertx.gov/government/city-manager', 'https://www.borgertx.gov/directory.aspx', 'https://www.borgertx.gov/departments']
+[2026-01-27T03:12:32.324792] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.borgertx.gov/government/mayor-s-office
+[2026-01-27T03:12:34.982993] [DEBUG] Skipping blacklisted or invalid image: https://www.borgertx.gov/Common/images/ajax-loader.gif
+[2026-01-27T03:12:34.994603] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:12:34.996092] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:12:35.233490] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:12:35.251621] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:12:35.252496] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:12:35.471779] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:12:35.489544] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:12:35.490409] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:12:35.711400] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:12:35.727249] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:12:35.728085] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:12:35.956876] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:12:35.965964] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:12:35.966921] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:12:36.336529] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:12:36.363944] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:12:36.364943] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:12:36.702934] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:12:37.091140] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.borgertx.gov/government/mayor-s-office
+[2026-01-27T03:12:37.192631] [DEBUG] -> Preprocessing with identities: {'Karen Felker': ['Karen Felker'], 'Kim Perez': ['Kim Perez'], 'Charles "Pete" Loftis': ['Charles "Pete" Loftis'], 'Robert L. Lawrence': ['Robert L. Lawrence'], 'Thomas Phelan': ['Thomas Phelan']}
+[2026-01-27T03:12:40.827615] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-27T03:12:40.827916] [INFO] -> Elapsed time: 3.73 seconds
+[2026-01-27T03:12:40.828211] [INFO] -> Average elapsed time: 2.90 seconds
+[2026-01-27T03:12:40.828528] [INFO] -> Total elapsed time: 37.73 seconds
+[2026-01-27T03:12:40.924265] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.borgertx.gov/government/mayor-s-office
+[2026-01-27T03:12:40.928701] [INFO] Running OpenAI prompt
+[2026-01-27T03:12:40.929113] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-27T03:12:40.929753] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:12:51.349229] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 764, Output tokens: 702, Total cost: $0.001595
+[2026-01-27T03:12:51.349954] [INFO] Page relevance check found related urls: ['https://www.borgertx.gov/government/mayor-s-office', 'https://www.borgertx.gov/government', 'https://www.borgertx.gov/government/city-council', 'https://www.borgertx.gov/government/boards-and-commissions', 'https://www.borgertx.gov/departments', 'https://www.borgertx.gov/government/administration']
+[2026-01-27T03:12:53.593473] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.borgertx.gov/government/city-manager
+[2026-01-27T03:12:57.840949] [DEBUG] Skipping blacklisted or invalid image: https://www.borgertx.gov/Common/images/ajax-loader.gif
+[2026-01-27T03:12:57.860724] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:12:57.862436] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:12:58.246882] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:12:58.270654] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:12:58.271867] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:12:58.501184] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:12:58.519961] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:12:58.520931] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:12:58.776661] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:12:58.793568] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:12:58.795641] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:12:59.114574] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:12:59.129963] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:12:59.131058] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:12:59.502663] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:12:59.519381] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:12:59.520760] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:12:59.874448] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:13:00.134236] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.borgertx.gov/government/city-manager
+[2026-01-27T03:13:00.191027] [DEBUG] -> Preprocessing with identities: {'Karen Felker': ['Karen Felker'], 'Kim Perez': ['Kim Perez'], 'Charles "Pete" Loftis': ['Charles "Pete" Loftis'], 'Robert L. Lawrence': ['Robert L. Lawrence'], 'Thomas Phelan': ['Thomas Phelan']}
+[2026-01-27T03:13:03.085775] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-27T03:13:03.086261] [INFO] -> Elapsed time: 2.95 seconds
+[2026-01-27T03:13:03.086581] [INFO] -> Average elapsed time: 2.85 seconds
+[2026-01-27T03:13:03.086899] [INFO] -> Total elapsed time: 39.95 seconds
+[2026-01-27T03:13:03.183106] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.borgertx.gov/government/city-manager
+[2026-01-27T03:13:03.187692] [INFO] Running OpenAI prompt
+[2026-01-27T03:13:03.188267] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-27T03:13:03.188681] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:13:24.546056] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 762, Output tokens: 1528, Total cost: $0.003246
+[2026-01-27T03:13:24.546937] [INFO] Page relevance check found related urls: ['https://www.borgertx.gov/government', 'https://www.borgertx.gov/government/city-council', 'https://www.borgertx.gov/government/city-manager', 'https://www.borgertx.gov/departments']
+[2026-01-27T03:13:24.654566] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.borgertx.gov/government/boards-and-commissions
+[2026-01-27T03:13:27.859853] [DEBUG] Skipping blacklisted or invalid image: https://www.borgertx.gov/Common/images/ajax-loader.gif
+[2026-01-27T03:13:27.874340] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:13:27.888984] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:13:28.175884] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:13:28.194797] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:13:28.195870] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:13:28.519326] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:13:28.534996] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:13:28.536071] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:13:28.975188] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:13:28.994065] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:13:28.996347] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:13:29.259948] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:13:29.280955] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:13:29.281944] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:13:29.790466] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:13:29.805765] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:13:29.806581] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:13:30.084320] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:13:30.379478] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.borgertx.gov/government/boards-and-commissions
+[2026-01-27T03:13:30.460541] [DEBUG] -> Preprocessing with identities: {'Karen Felker': ['Karen Felker'], 'Kim Perez': ['Kim Perez'], 'Charles "Pete" Loftis': ['Charles "Pete" Loftis'], 'Robert L. Lawrence': ['Robert L. Lawrence'], 'Thomas Phelan': ['Thomas Phelan']}
+[2026-01-27T03:13:33.187960] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-27T03:13:33.188174] [INFO] -> Elapsed time: 2.81 seconds
+[2026-01-27T03:13:33.188471] [INFO] -> Average elapsed time: 2.79 seconds
+[2026-01-27T03:13:33.188883] [INFO] -> Total elapsed time: 41.81 seconds
+[2026-01-27T03:13:33.269142] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.borgertx.gov/government/boards-and-commissions
+[2026-01-27T03:13:33.271277] [INFO] Running OpenAI prompt
+[2026-01-27T03:13:33.271606] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-27T03:13:33.272013] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:13:53.944690] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 665, Output tokens: 1338, Total cost: $0.002842
+[2026-01-27T03:13:53.945538] [INFO] Page relevance check found related urls: ['https://www.borgertx.gov/government', 'https://www.borgertx.gov/government/city_council', 'https://www.borgertx.gov/Directory.aspx']
+[2026-01-27T03:13:54.042387] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.borgertx.gov/government/administration
+[2026-01-27T03:13:56.154498] [DEBUG] Skipping blacklisted or invalid image: https://www.borgertx.gov/Common/images/ajax-loader.gif
+[2026-01-27T03:13:56.164592] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:13:56.167502] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1550
+[2026-01-27T03:13:56.404258] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:13:56.423839] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:13:56.425141] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:13:56.657823] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:13:56.672809] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:13:56.673626] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1552
+[2026-01-27T03:13:56.893902] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:13:56.906797] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:13:56.908155] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1557
+[2026-01-27T03:13:57.213566] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:13:57.230377] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:13:57.231541] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentID=1553
+[2026-01-27T03:13:57.728393] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:13:57.743489] [DEBUG] Attempting to intercept and save image for: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:13:57.744098] [DEBUG] Loading image from URL: https://www.borgertx.gov/ImageRepository/Document?documentId=1558
+[2026-01-27T03:13:58.012970] [INFO] Image saved: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:13:58.922614] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.borgertx.gov/government/administration
+[2026-01-27T03:13:58.970225] [DEBUG] -> Preprocessing with identities: {'Karen Felker': ['Karen Felker'], 'Kim Perez': ['Kim Perez'], 'Charles "Pete" Loftis': ['Charles "Pete" Loftis'], 'Robert L. Lawrence': ['Robert L. Lawrence'], 'Thomas Phelan': ['Thomas Phelan']}
+[2026-01-27T03:14:01.498357] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-27T03:14:01.498743] [INFO] -> Elapsed time: 2.58 seconds
+[2026-01-27T03:14:01.498997] [INFO] -> Average elapsed time: 2.72 seconds
+[2026-01-27T03:14:01.499286] [INFO] -> Total elapsed time: 43.58 seconds
+[2026-01-27T03:14:01.594799] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.borgertx.gov/government/administration
+[2026-01-27T03:14:01.598011] [INFO] Running OpenAI prompt
+[2026-01-27T03:14:01.598535] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karen Felker, Kim Perez, Charles "Pete" Loftis, Robert L. Lawrence, Thomas Phelan
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-27T03:14:01.599485] [INFO] openai LLM call took 0.00 seconds
+[2026-01-27T03:14:21.815112] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 665, Output tokens: 1365, Total cost: $0.002896
+[2026-01-27T03:14:21.816591] [INFO] Page relevance check found related urls: ['https://www.borgertx.gov/Directory.aspx', 'https://www.borgertx.gov/189/City-Council', 'https://www.borgertx.gov/190/Mayor-City-Council']
+[2026-01-27T03:14:22.315430] [INFO] Step 8: WorkflowStatus.FORMAT_OUTPUT Formatting output data.
+[2026-01-27T03:14:22.399482] [INFO] Step 9: CLEANUP
+[2026-01-27T03:14:22.481067] [DEBUG] Image files to keep: {'c821d95c627c.png', '2f01132ba3af.png', 'efedc4b1c1a3.png', 'df43eccfeb92.png', '6d15b7d0dffd.png'}
+[2026-01-27T03:14:22.481432] [DEBUG] All image map data: {'https://www.borgertx.gov/ImageRepository/Document?documentID=1550': '8fca8a1c0751.png', 'https://www.borgertx.gov/ImageRepository/Document?documentID=1552': '937258e00b95.png', 'https://www.borgertx.gov/ImageRepository/Document?documentID=1557': 'f548781ed0a6.png', 'https://www.borgertx.gov/ImageRepository/Document?documentID=1553': '21e2000aa29a.png', 'https://www.borgertx.gov/ImageRepository/Document?documentId=1558': '06c2572ba08e.png', 'https://www.borgertx.gov/ImageRepository/Document?documentID=339': '6d15b7d0dffd.png', 'https://www.borgertx.gov/ImageRepository/Document?documentID=1247': 'c821d95c627c.png', 'https://www.borgertx.gov/ImageRepository/Document?documentID=337': 'efedc4b1c1a3.png', 'https://www.borgertx.gov/ImageRepository/Document?documentID=2136': '2f01132ba3af.png', 'https://www.borgertx.gov/ImageRepository/Document?documentID=2234': 'df43eccfeb92.png'}
+[2026-01-27T03:14:22.484894] [DEBUG] Checking image file: 06c2572ba08e.png
+[2026-01-27T03:14:22.485900] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_borger/images/06c2572ba08e.png
+[2026-01-27T03:14:22.487183] [DEBUG] Checking image file: 937258e00b95.png
+[2026-01-27T03:14:22.489517] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_borger/images/937258e00b95.png
+[2026-01-27T03:14:22.491040] [DEBUG] Checking image file: f548781ed0a6.png
+[2026-01-27T03:14:22.492168] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_borger/images/f548781ed0a6.png
+[2026-01-27T03:14:22.493372] [DEBUG] Checking image file: c821d95c627c.png
+[2026-01-27T03:14:22.496033] [DEBUG] Checking image file: image_map.json
+[2026-01-27T03:14:22.496727] [DEBUG] Checking image file: df43eccfeb92.png
+[2026-01-27T03:14:22.497580] [DEBUG] Checking image file: efedc4b1c1a3.png
+[2026-01-27T03:14:22.499092] [DEBUG] Checking image file: 8fca8a1c0751.png
+[2026-01-27T03:14:22.500755] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_borger/images/8fca8a1c0751.png
+[2026-01-27T03:14:22.502871] [DEBUG] Checking image file: 2f01132ba3af.png
+[2026-01-27T03:14:22.504344] [DEBUG] Checking image file: 6d15b7d0dffd.png
+[2026-01-27T03:14:22.505127] [DEBUG] Checking image file: 21e2000aa29a.png
+[2026-01-27T03:14:22.507220] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_borger/images/21e2000aa29a.png
+[2026-01-27T03:14:22.508838] [ERROR] Missing images that were expected to be found: {'c821d95c627c.png', '2f01132ba3af.png', 'efedc4b1c1a3.png', 'df43eccfeb92.png', '6d15b7d0dffd.png'}
+[2026-01-27T03:14:22.614223] [INFO] Step 10: WorkflowStatus.SAVE_OUTPUT Saving output data and config files.
+[2026-01-27T03:14:22.792476] [INFO] Step 11: MAYBE_SEND_TO_GITHUB
+[2026-01-27T03:14:22.792824] [INFO] CRUDDER_UPLOAD_URL: https://api.civicpatch.org/api/internal/pipelines/github_intake
