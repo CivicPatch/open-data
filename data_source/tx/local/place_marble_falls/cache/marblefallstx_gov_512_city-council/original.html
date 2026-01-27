@@ -1,0 +1,2712 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n3-active wf-muli-n4-active wf-muli-i4-active wf-muli-n7-active wf-active has-webFonts"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:200,300italic,700,regular|Muli:200,regular|Roboto:500,500italic,700,700italic,900,900italic,italic,regular|" media="all"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-353L2QTV1Z&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61q0"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-353L2QTV1Z';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	
+	<meta name="category0" content="Home">
+<meta name="category1" content="Government">
+<meta name="category2" content="City Council">
+<meta name="category3" content="City Council">
+
+	
+	<meta name="theme-color" content="rgb(34, 54, 82)">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>City Council | Marble Falls, TX - Official Website</title>
+
+		<meta name="description" content="Meet and email your Mayor and  City Councilmembers.">
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '390px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/2086129484.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style></head>
+<body class="wide cpTextResizeOn doneLoading"><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="https://marblefallstx.gov/Common/images/ajax-loader.gif" alt="Loading" title="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks">
+<a href="https://marblefallstx.gov/512/City-Council#cc170f82f9-81ce-4baa-b0c6-13274adfdc69" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="6">
+    <input type="hidden" id="hdnContentCollectionID" value="702e442d-c96e-4f9b-8b74-cabaafacd13d">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="20">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID">
+    <input type="hidden" id="pagePageID" value="512">
+
+            <img id="imgLogoPrintPreview" src="https://marblefallstx.gov/ImageRepository/Document?documentID=8828" alt="Marble Falls, TX">
+<div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700); 
+.alertText .customAlert {
+    color: #EAEAEA;
+    display: inline-block;
+    font-family: 'Open Sans Condensed', sans-serif; 
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 27px;
+    left: 57px;
+    line-height: 27px;
+    overflow: hidden;
+    position: absolute;
+    top: 15px;
+    white-space: nowrap;
+    width: 268px;
+}
+</style>
+  <div id="1_divAlertBar" class="alertToolbar cpToolbar" style="background: rgb(34, 34, 34); z-index: 2;">
+    <div id="1_divAlertToolbarInner" class="alertToolbarInner" style="font-size: 16px;">
+        <a href="https://marblefallstx.gov/AlertCenter.aspx" id="1_lnkAlertText" class="alertText" style="border-right: 1px solid #000000;">
+            <img src="https://marblefallstx.gov/Common/Images/AlertCenter/alertBarBlink.svg" id="1_imgDot" alt="Emergency Alert" class="redDot">
+            <span id="1_customAlert" class="customAlert">ALERTS</span>
+        </a>
+        <span id="1_spnAlertContainer" class="alertContainer"><a href="https://marblefallstx.gov/AlertCenter.aspx?AID=Burn-Ban-in-Effect-12" target="_self" class="alert" style="border-left: 1px solid #635e65; border-right: 1px solid #000000;background: #030303 url(/Common/images/AlertCenter/alertBarBlackTextBckg.png) repeat-x; color: #FFFFFF;">
+	Burn Ban in Effect
+	<span style="color: #FC4C2F;">Read On...</span>
+</a>
+<a href="https://marblefallstx.gov/AlertCenter.aspx?AID=Drought-Contingency-Status-STAGE-3-Manda-75" target="_self" class="alert" style="border-left: 1px solid #635e65; border-right: 1px solid #000000;background: #030303 url(/Common/images/AlertCenter/alertBarBlackTextBckg.png) repeat-x; color: #FFFFFF;">
+	Drought Contingency Status - STAGE 3 Mandatory Water Restrictions
+	<span style="color: #FC4C2F;">Read On...</span>
+</a>
+</span>
+    </div>
+  </div>
+  <div id="1_divAlertBarEmpty" class="alertBarEmpty"></div>
+  
+
+
+
+<!-- Begin Signed Out Bar -->
+<div class="cpToolbar user public" style="z-index: 1;">
+    <div class="inner selfClear">
+        <p class="dropdown"><a href="https://marblefallstx.gov/MyAccount/ProfileCreate" role="link" class="myConnections" id="signedOutToolbarCreateProfileButton">Create a Website Account</a> <span class="welcomeMessage">- Manage notification subscriptions, save form progress and more. &nbsp;&nbsp;</span></p>
+        <ul class="nav secondary">
+	        <li><a href="https://marblefallstx.gov/MyAccount" role="link" class="button" id="loggedOutToolbarSignInButton"><span>Website Sign In</span></a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#signedOutToolbarCreateProfileButton').keypress(function (e) { if (e.which === 0) return; $(this).click(); });
+        $('#signedOutToolbarCreateProfileButton').click(function (event) {
+        	event.preventDefault();
+        	window.location.href = '/MyAccount/ProfileCreate?from=url&url=/&dn=' + window.location.origin;
+        });
+
+			
+				$('#loggedOutToolbarSignInButton').click(function (event) {
+					event.preventDefault();
+					window.location.href = '/MyAccount/?from=url&url=' + encodeURIComponent(window.location.href.replace(window.location.origin, '')) + '&dn=' + window.location.host;
+				});
+			
+
+		if ('False' == 'True') {
+            $('#loggedOutToolbarSignInButton').hide();
+		}
+    })
+</script>
+<!-- End Signed Out Bar -->
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 92px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="bodyContainerTS">
+<!-- Header Container --><header data-cprole="structuralContainer" id="headerContainerTS" class="fixedTopTS" style="top: 0px;">
+<div class="siteWrap" id="flexHeaderTS"><div data-cprole="banner" id="bannerLogoTS" class="bannerLogoTS empty">
+
+
+
+
+				<a id="bannerLogoTS-60" style="			display: block; text-align: center;
+" class="bannerObject" href="https://marblefallstx.gov/" target="_self"><img alt="Marble Falls TX Homepage" class="bannerObject" height="80" src="https://marblefallstx.gov/ImageRepository/Document?documentID=8833" width="224"></a>
+</div><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem31" class="topMenuItem" role="none" data-pageid="31" data-displaymegamenu="True" style="width: 18.3926%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavOurCommunity" class="navMainItem mainNavItem mainNavItem1 " href="https://marblefallstx.gov/31/Our-Community" target="_self" style="font-size: 19px;"><span style="display: inline;">   Our Community </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem27" class="topMenuItem" role="none" data-pageid="27" data-displaymegamenu="True" style="width: 16.0211%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem2 " href="https://marblefallstx.gov/27/Government" target="_self" style="font-size: 19px;"><span style="display: inline;">   Government </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem132" class="topMenuItem" role="none" data-pageid="132" data-displaymegamenu="True" style="width: 16.5744%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavDepartments" class="navMainItem mainNavItem mainNavItem3 " href="https://marblefallstx.gov/132/Departments" target="_self" style="font-size: 19px;"><span style="display: inline;">   Departments </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem101" class="topMenuItem" role="none" data-pageid="101" data-displaymegamenu="True" style="width: 17.9974%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavDoingBusiness" class="navMainItem mainNavItem mainNavItem4 " href="https://marblefallstx.gov/101/Doing-Business" target="_self" style="font-size: 19px;"><span style="display: inline;">   Doing Business </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem35" class="topMenuItem" role="none" data-pageid="35" data-displaymegamenu="True" style="width: 18.5507%;"><!--
+			--><!--
+			--> <a role="menuitem" id="mainNavProjectPortal" class="navMainItem mainNavItem mainNavItem5" href="https://experience.arcgis.com/experience/b2ca0b0b191b403baf0db917ccc2617b" target="_blank" aria-label="   Project Portal  Opens in new window" style="font-size: 19px;" rel="noopener"><span style="display: inline;">   Project Portal </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem9" class="topMenuItem" role="none" data-pageid="9" data-displaymegamenu="True" style="width: 12.4638%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavHowDoI" class="navMainItem mainNavItem mainNavItem6 " href="https://marblefallstx.gov/9/How-Do-I" target="_self" style="font-size: 19px;"><span style="display: inline;">   How Do I </span></a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=20&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = true;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="1"></aside></nav><div data-cprole="contentContainer" id="searchTS">	<div id="cc0342cccd-e152-4e98-ab5a-3faa81a48259" data-containerid="0342cccd-e152-4e98-ab5a-3faa81a48259" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="23">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="height: auto;" data-widgetcontainerid="dd290d20-341c-4ed6-9583-042930450458">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last ide37e37c9-9f6f-4359-bd93-cd4ade845863" style="height: 68px;" data-widgetcontainerid="e37e37c9-9f6f-4359-bd93-cd4ade845863">
+	
+<div data-widget-id="795cf512-93b1-4f8e-84a4-15c7779c3bc5" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget795cf512-93b1-4f8e-84a4-15c7779c3bc5" class="widget widgetGraphicLinks skin81 widgetOptionSet60 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row autoWidths center wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.facebook.com/MarbleFallsGov/" target="_self" aria-label="Facebook graphic"><img src="https://marblefallstx.gov/ImageRepository/Document?documentID=8843" class="graphicButtonLink" alt="Facebook" onmouseover="this.src='/ImageRepository/Document?documentID=8843'" onmouseout="this.src='/ImageRepository/Document?documentID=8843'" onfocus="this.src='/ImageRepository/Document?documentID=8843'" onblur="this.src='/ImageRepository/Document?documentID=8843'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://marblefallstx.gov/nextdoor" target="_self" aria-label="Nextdoor graphic"><img src="https://marblefallstx.gov/ImageRepository/Document?documentID=8846" class="graphicButtonLink" alt="Nextdoor" onmouseover="this.src='/ImageRepository/Document?documentID=8846'" onmouseout="this.src='/ImageRepository/Document?documentID=8846'" onfocus="this.src='/ImageRepository/Document?documentID=8846'" onblur="this.src='/ImageRepository/Document?documentID=8846'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.linkedin.com/company/city-of-marble-falls-tx/mycompany/" target="_self" aria-label="Linkedin graphic"><img src="https://marblefallstx.gov/ImageRepository/Document?documentID=8845" class="graphicButtonLink" alt="Linkedin" onmouseover="this.src='/ImageRepository/Document?documentID=8845'" onmouseout="this.src='/ImageRepository/Document?documentID=8845'" onfocus="this.src='/ImageRepository/Document?documentID=8845'" onblur="this.src='/ImageRepository/Document?documentID=8845'"> </a></li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col16 last" style="height: auto;" data-widgetcontainerid="3e255922-8727-4f15-b014-3c284e9b199f">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col16 first last id57e1c3fb-7745-4688-a4d1-bb075ce8651b" style="height: 68px;" data-widgetcontainerid="57e1c3fb-7745-4688-a4d1-bb075ce8651b">
+	
+<div data-widget-id="e8cddddc-9b71-4737-b52c-b10fd3fd76f8" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButtone8cddddc-9b71-4737-b52c-b10fd3fd76f8").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDepte8cddddc-9b71-4737-b52c-b10fd3fd76f8").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchFielde8cddddc-9b71-4737-b52c-b10fd3fd76f8").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDepte8cddddc-9b71-4737-b52c-b10fd3fd76f8").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDepte8cddddc-9b71-4737-b52c-b10fd3fd76f8").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchFielde8cddddc-9b71-4737-b52c-b10fd3fd76f8").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDepte8cddddc-9b71-4737-b52c-b10fd3fd76f8").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchFielde8cddddc-9b71-4737-b52c-b10fd3fd76f8").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchFielde8cddddc-9b71-4737-b52c-b10fd3fd76f8"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin76 widgetOptionSet63" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBoxe8cddddc-9b71-4737-b52c-b10fd3fd76f8 ui-autocomplete-input" cp5ph="true" id="searchFielde8cddddc-9b71-4737-b52c-b10fd3fd76f8" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search..." title="Search..." type="text" value="" autocomplete="off">
+						<a href="https://marblefallstx.gov/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButtone8cddddc-9b71-4737-b52c-b10fd3fd76f8" role="button"><img alt="Go to Site Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=8835" data-image="/ImageRepository/Document?documentID=8834" src="https://marblefallstx.gov/ImageRepository/Document?documentID=8834"></a>
+
+			<label class="searchLabel" for="searchFielde8cddddc-9b71-4737-b52c-b10fd3fd76f8">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: rgba(255, 255, 255, 1);
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: rgba(255, 255, 255, 1);
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: rgba(255, 255, 255, 1);
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: rgba(255, 255, 255, 1);
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBoxe8cddddc-9b71-4737-b52c-b10fd3fd76f8
+	{
+		color: rgba(255, 255, 255, 1);
+		background: transparent;
+border: 2px solid rgba(129, 150, 175, 1);
+border-radius: 34px;
+font-family: Roboto;
+font-size: 1.1em;
+font-weight: 500;
+height: 68px;
+padding: 0 70px 0 20px;
+	}
+	.widgetSearch .widgetBody .widgetSearchButtone8cddddc-9b71-4737-b52c-b10fd3fd76f8
+	{
+		margin: 7px 7px 0 0;
+	}
+	.widgetSearch .widgetSearch-onlyDepte8cddddc-9b71-4737-b52c-b10fd3fd76f8
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDepte8cddddc-9b71-4737-b52c-b10fd3fd76f8
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchFielde8cddddc-9b71-4737-b52c-b10fd3fd76f8").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</header><!-- Banner --><div data-cprole="structuralContainer" id="bannerContainerTS" class="noOverflowTS">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="bannerSizingTS">
+<div data-cprole="structuralContainer" id="bannerSearchTS">
+<div class="siteWrap2"><div data-cprole="contentContainer" id="welcomeTS">	<div id="cca7180ad1-3398-4c67-b76a-8159faa2ef15" data-containerid="a7180ad1-3398-4c67-b76a-8159faa2ef15" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+
+
+
+		<div id="bannerImagesJSON61" class="hidden"></div><div class="bannerObject external fixedBanner" id="bannerDivbanner1" style="min-height: 374px; top: 0px; left: 0px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img class="bannerObject" width="1265px" style="position: absolute; left: 0px; margin: 0px; width: 1265px;" src="https://marblefallstx.gov/ImageRepository/Document?documentID=8831" data-is-delayed="false" alt=""></div>
+		
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner1',
+								{"BannerOptionID":61,"ThemeID":20,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":2,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":172,"BannerOptionID":61,"FileName":"/ImageRepository/Document?documentID=8832","Height":650,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":173,"BannerOptionID":61,"FileName":"/ImageRepository/Document?documentID=8831","Height":650,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":2,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":174,"BannerOptionID":61,"FileName":"/ImageRepository/Document?documentID=8830","Height":650,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":3,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":175,"BannerOptionID":61,"FileName":"/ImageRepository/Document?documentID=8829","Height":650,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":4,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""}],"BannerVideos":[{"BannerVideoID":4,"BannerOptionID":61,"VideoFileName":"","ImageFileName":"EmptyBannerBkg202401090821401445.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								'/App_Themes/Interior/Images/',
+								'Rotating');
+						});
+				});
+			</script>
+
+</div>
+</div><!-- Content container --><div data-cprole="structuralContainer" id="mainContainerTS">
+<div class="siteWrap2"><div data-cprole="structuralContainer" id="mainWrapTS" class="mainWrap" role="main">
+<div data-cprole="structuralContainer" id="siteSidebarTS" class="siteSidebar">
+<aside data-cprole="contentContainer" id="sidebarContainer1TS">	<div id="cc7b7d1461-3a9b-4cd0-b31c-d87f73fef439" data-containerid="7b7d1461-3a9b-4cd0-b31c-d87f73fef439" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav">
+
+
+
+
+
+	<ol role="menu" id="secondaryMenusecondaryNav" data-parent="130" class="rootNavMenu accordionNav">
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem215" data-pageid="215">
+		<div class="accordionNavItem">
+			<a href="https://marblefallstx.gov/215/Mayors-Desk" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Mayor's Desk</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem131" data-pageid="131">
+		<div class="accordionNavItem">
+			<a href="https://marblefallstx.gov/131/City-Elections" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">City Elections</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem512" data-pageid="512">
+		<div class="accordionNavItem">
+			<a href="https://marblefallstx.gov/512/City-Council" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">City Council</a>
+		</div>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = false;
+		});
+	</script>
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			$('*[id^="SideItem"]').each(function () {
+				var ids = $('[id="' + this.id + '"]');
+				if (ids.length > 1)
+					$.each(ids, function (index, value) {
+						value.id = value.id + '_' + index;
+					});
+			});
+
+			$('.hasAccordionChildren .openAccordionNav').click(function (e) {
+				e.preventDefault();
+				showHideAccordionMenuForSecondaryNav($(this));
+			});
+
+			$("#secondaryNav .grippy").each(function () {
+				menuManager.setupDraggableElement($(this), SIDE_MENU, '#secondaryNav');
+			});
+
+			$("#secondaryNav li").each(function () {
+				menuManager.setupDroppableAccordionElement($(this), SIDE_MENU);
+			});
+		});
+	</script>
+
+
+
+</nav><aside data-cprole="contentContainer" id="sidebarContainer2TS">	<div id="ccd03a3cc6-ff1b-41f5-b042-8624e25ab04b" data-containerid="d03a3cc6-ff1b-41f5-b042-8624e25ab04b" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="outerContentWrapTS" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="contentWrapTS" class="contentWrap">
+<div data-cprole="breadCrumbs" id="breadCrumbs" class="breadCrumbContainer">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="https://marblefallstx.gov/">Home</a></li><li><a class="breadCrumb" href="https://marblefallstx.gov/27/Government">Government</a></li><li><a class="breadCrumb" href="https://marblefallstx.gov/130/City-Council">City Council</a></li><li id="currentBCPage" data-pageid="512">City Council</li>
+		</ol>
+
+	   
+    
+</div><div data-cprole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="512">
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="130">
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="6765">
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="City Council">
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="False">
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False">
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published">
+
+				<h1 id="versionHeadLine" class="headline">
+
+City Council		</h1>
+	
+		<div id="cc170f82f9-81ce-4baa-b0c6-13274adfdc69" data-containerid="170f82f9-81ce-4baa-b0c6-13274adfdc69" class="pageContent cpGrid cpGrid24" data-contentcontainerbreakpoint="30">
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="fcd86382-b511-4f81-b684-740f71d360ac">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last idec78a472-9149-4fbf-9223-71a1cde1283a" style="height: 793px;" data-widgetcontainerid="ec78a472-9149-4fbf-9223-71a1cde1283a">
+	
+<div class="widget editor pageStyles wide" id="divEditor948bb54b-c17f-46df-9e09-d2c13a5c9835" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h2 class="subhead1" style="text-align: justify;">Vision and Strategic Priorities</h2><h3 class="subhead2" style="text-align: justify;">The City Council's vision is to foster and preserve the small-town culture in our growing community. The culture of Marble Falls is unique and reflects our historical heritage, traditions, close-knit community, and shared sense of identity.</h3><h2><br></h2><h3 class="subhead2" style="text-align: center;"><a href="https://marblefallstx.gov/DocumentCenter/View/9982/2025-2027-City-Council-Strategic-Goals" target="_blank" rel="noopener" aria-label="2025-2027 Strategic Priorities Opens in new window" class="docaccess-activated" data-docaccess-source-url="https://marblefallstx.gov/DocumentCenter/View/9982/2025-2027-City-Council-Strategic-Goals" data-url-hash="83a2c44ba9a0c92a9133ab90ef1268d0b95250aa52541feb2c4658c533bbd2c9" data-url-status="disabled">2025-2027 Strategic Priorities</a></h3><p><span class="hyperlink" id="isPasted"><strong><img src="https://marblefallstx.gov/ImageRepository/Document?documentId=9923" class="fr-dib" alt="Council_May 2025"></strong></span><br></p><p><br></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '948bb54b-c17f-46df-9e09-d2c13a5c9835'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col6 first" style="height: auto;" data-widgetcontainerid="85b88cdd-371b-45b2-9423-646285b2b182">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id8af5bc97-399d-44d2-bb62-9c2a6ce1d12b" style="height: 518px;" data-widgetcontainerid="8af5bc97-399d-44d2-bb62-9c2a6ce1d12b">
+	
+<div class="widget editor pageStyles narrow" id="divEditor444de232-1e09-432f-9812-33d1f27ec01e" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <p><img src="https://marblefallstx.gov/ImageRepository/Document?documentId=9922" class="fr-fil fr-dib" alt="Packer, John_NEW">John Packer<br>Mayor<br>Elected May 2025<br>Serving First Term<br><a href="mailto:jpacker@marblefallstx.gov">Email</a></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '444de232-1e09-432f-9812-33d1f27ec01e'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="height: auto;" data-widgetcontainerid="dd21a3cc-ddb7-4a04-bae7-6ae26ef2f4d6">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id86dd468d-1cef-4b55-a8e3-3e82b542df9f" style="height: 518px;" data-widgetcontainerid="86dd468d-1cef-4b55-a8e3-3e82b542df9f">
+	
+<div class="widget editor pageStyles narrow" id="divEditor8d873a86-aa09-4dda-98e7-880917602c4f" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>Griff Morris<br>Council Place 1 <a class="Hyperlink" href="mailto:cmagerkurth@marblefallstx.gov" target="_blank" aria-label=" Opens in new window" rel="noopener"></a><br>Elected May 2022<br>Serving Second Term<br><a href="mailto:gmorris@marblefallstx.gov" id="isPasted">Email</a></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '8d873a86-aa09-4dda-98e7-880917602c4f'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="height: auto;" data-widgetcontainerid="174754a8-0089-4f8f-af5d-2bc7d911fe0a">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last idc6b259ec-cb65-4c2f-90af-1415de46f725" style="height: 518px;" data-widgetcontainerid="c6b259ec-cb65-4c2f-90af-1415de46f725">
+	
+<div class="widget editor pageStyles narrow" id="divEditor4f1115c9-4758-4149-8339-a7d30ba597e5" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <p><img src="https://marblefallstx.gov/ImageRepository/Document?documentId=9920" class="fr-fil fr-dib" alt="D. Haddock"></p><p>William D. (Dee) Haddock<br>Council Place 2<a href="mailto:kcauble@marblefallstx.gov"></a><a href="mailto:kcauble@marblefallstx.gov"></a><a href="mailto:kcauble@marblefallstx.gov"></a><a href="mailto:kcauble@marblefallstx.gov"></a><a href="mailto:kcauble@marblefallstx.gov"></a><br>Elected May 2025<br>Serving First Term<br><a href="mailto:dhaddock@marblefallstx.gov">Email</a></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '4f1115c9-4758-4149-8339-a7d30ba597e5'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6 last" style="height: auto;" data-widgetcontainerid="c7f85cef-a280-4df1-ae21-c8382ec00629">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last idd2ed3385-7459-4cf2-ba74-c22d392f59db" style="height: 518px;" data-widgetcontainerid="d2ed3385-7459-4cf2-ba74-c22d392f59db">
+	
+<div class="widget editor pageStyles narrow" id="divEditor38b3c667-322f-43a9-a7c4-20ebd2bb997c" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <p><img src="https://marblefallstx.gov/ImageRepository/Document?documentId=9143" class="fr-fil fr-dib" alt="L. Haltom">Lauren Haltom<br>Place 3 <a class="Hyperlink" href="mailto:dhaddock@marblefallstx.gov" target="_blank" aria-label=" Opens in new window" rel="noopener"></a><br>Elected May 2022<br>Serving Second Term<br><a href="mailto:lhaltom@marblefallstx.gov" id="isPasted">Email</a></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '38b3c667-322f-43a9-a7c4-20ebd2bb997c'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col6 first" style="height: auto;" data-widgetcontainerid="8db904de-1c39-442a-8798-34c291a505f8">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id80a26e9e-b181-4e81-bea9-ccf8c4ce7aae" style="height: 535px;" data-widgetcontainerid="80a26e9e-b181-4e81-bea9-ccf8c4ce7aae">
+	
+<div class="widget editor pageStyles narrow" id="divEditor560da6f9-36ba-4bca-99b5-0f1661162ee4" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <p><img data-fr-image-pasted="true" src="https://marblefallstx.gov/ImageRepository/Document?documentId=9139" alt="K. Cauble" style="box-sizing: border-box; border: 0px; height: auto; max-width: 100%; cursor: pointer; padding: 0px 1px; user-select: none; text-align: left; color: rgb(56, 56, 56); font-family: Roboto; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" id="isPasted" class="fr-fil fr-dib">Karlee Hubble<br>Place 4<br>Elected May 2025<br>Serving First Term<br><a href="mailto:khubble@marblefallstx.gov">Email</a></p><p><br></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '560da6f9-36ba-4bca-99b5-0f1661162ee4'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="height: auto;" data-widgetcontainerid="959107f5-a6f3-425e-87a3-cf6d4125ccc0">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id75146f82-dd3e-4d41-bfd8-fee597ab3e61" style="height: 535px;" data-widgetcontainerid="75146f82-dd3e-4d41-bfd8-fee597ab3e61">
+	
+<div class="widget editor pageStyles narrow" id="divEditord5b625d6-042f-44a9-9d06-ab5f1b4ec25a" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <p><img src="https://marblefallstx.gov/ImageRepository/Document?documentId=9330" class="fr-fil fr-dib" alt="Richard Westerman">Richard Westerman<br>Place 5&nbsp;<br>Elected May 2024<br>Serving First Term<br><a href="mailto:rwesterman@marblefallstx.gov">Email</a></p><p><br></p><p><br></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + 'd5b625d6-042f-44a9-9d06-ab5f1b4ec25a'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="height: auto;" data-widgetcontainerid="3d174bf7-3f59-4435-b0c6-4d8301840c95">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id16b3ea04-41bd-4a2b-944b-4940eddebce9" style="height: 535px;" data-widgetcontainerid="16b3ea04-41bd-4a2b-944b-4940eddebce9">
+	
+<div class="widget editor pageStyles narrow" id="divEditor08a8acf9-ef77-453e-8dff-7a866fb81b2d" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <p><img src="https://marblefallstx.gov/ImageRepository/Document?documentId=9141" class="fr-fil fr-dib" alt="C. Magerkurth">Craig Magerkurth<br>Place 6 - Mayor Pro-Tem<br>Elected May 2025<br>Serving Third Term<br><a href="mailto:cmagerkurth@marblefallstx.gov">Email</a></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '08a8acf9-ef77-453e-8dff-7a866fb81b2d'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6 last" style="height: auto;" data-widgetcontainerid="f8899c16-f1e2-469a-bdf2-9d8e0e5d26c7">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id02b5fe36-cb84-4697-a580-b5c6f136ca4b" style="height: 535px;" data-widgetcontainerid="02b5fe36-cb84-4697-a580-b5c6f136ca4b">
+	
+
+<div class="widget widgetSpacer" id="71d2b48b-34f7-4977-bd60-5965b7e9795b" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="9a01f94f-751a-4f8c-bf44-826911813d7d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id8527a98b-8ef1-40e6-966d-2cf0d5337cc0" style="height: 94px;" data-widgetcontainerid="8527a98b-8ef1-40e6-966d-2cf0d5337cc0">
+	
+
+
+
+	<section class="widget widgetRelatedDocuments skin76 wide" id="widgetRelDoc661c97ca-3e48-405d-a872-cf05c43f442c" data-widgetid="661c97ca-3e48-405d-a872-cf05c43f442c" data-sections="[{&quot;Title&quot;:&quot;Mayor and City Council Past Members&quot;,&quot;DocumentIDs&quot;:&quot;6430,&quot;,&quot;FolderIds&quot;:&quot;,&quot;,&quot;SortedDocumentIds&quot;:&quot;8529,&quot;}]" data-columncount="1" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Related Documents">
+			<div id="divRelatedDocuments_661c97ca-3e48-405d-a872-cf05c43f442c" class="relatedDocuments">
+		<div class="widgetBody cpGrid cpGrid1">
+			
+<div class="row sortableWidgetTitle wide">
+        <div class="relatedDocumentsSection selfClear" data-documentids="6430," data-folderids="," data-sorteddocumentids="8529,">
+                    <h4 class="widgetTitle" style="clear:left;">Mayor and City Council Past Members</h4>
+
+	<div class=" first last">
+		<ol class="semanticList bullets" style="min-height:8px;">
+					<li class="widgetItem" data-documentid="6430"><a target="_blank" href="https://marblefallstx.gov/DocumentCenter/View/6430/City-Council-Historical-Information" class="fileType pdf docaccess-activated" aria-label="City Council Historical Information Opens in new window" data-docaccess-source-url="https://marblefallstx.gov/DocumentCenter/View/6430/City-Council-Historical-Information" data-url-hash="69f0dcdfff7bd85b744170f96c17e056a7914cac361aadb54d6789065c64a974" data-url-status="disabled" rel="noopener">City Council Historical Information</a>
+					</li>
+
+		</ol>
+	</div>
+                    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //Remove section heading when it is empty and live edit is off.
+        if ('false' === 'false') {
+            var jqh4Selector = $('#widgetRelDoc' + '661c97ca-3e48-405d-a872-cf05c43f442c').find('div.widgetBody div.row div.relatedDocumentsSection h4.widgetTitle');
+    		if (jqh4Selector.val() == "") {
+    			jqh4Selector
+                    .filter(function () {
+                        return $.trim($(this).text()) === ''
+                    })
+                    .remove();
+            }
+        }
+    });
+</script>
+		</div>
+
+</div>
+
+	</section>
+
+
+<script type="text/javascript">
+    var documentsToInsert = [];
+    var foldersToInsert = [];
+
+    $(document).ready(function () {
+        var hasEditRights = false;        
+        if (window.File && window.FileList && window.FileReader && hasEditRights) {
+            var RelatedDocumentsWidget = 5;
+            makeWidgetAreaDroppable('661c97ca-3e48-405d-a872-cf05c43f442c', $('#widgetRelDoc' + '661c97ca-3e48-405d-a872-cf05c43f442c'), RelatedDocumentsWidget, true, RelatedDocumentsCallback);
+        }
+
+		if(hasEditRights)
+    		browserVersionNotCompatibleWithDragDropTextUpdate($('#addFile' + '661c97ca-3e48-405d-a872-cf05c43f442c'), 'Add a new file');
+    });
+
+    function RelatedDocumentsCallback(widgetID, response)
+    {
+        if (window.ContentCollectionInstance.IsWorkingCopy) {
+        	$('#widgetRelDoc' + widgetID).replaceWith(response);            
+            contentUpdated();
+            attachRelatedDocumentsHandlers();            
+        }
+        else {
+            ContentCollectionInstance.reloadContent();
+        }      
+    }
+</script>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: none;">	<div id="cc2e519f0d-d018-48a0-999a-e0a428048e6b" data-containerid="2e519f0d-d018-48a0-999a-e0a428048e6b" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div><!-- GBs --><div data-cprole="structuralContainer" id="gbsContainerTS">
+<div class="siteWrap2"><div data-cprole="contentContainer" id="gbsTS">	<div id="cc4e67a7cc-ce90-442d-ba37-64cbdb63b442" data-containerid="4e67a7cc-ce90-442d-ba37-64cbdb63b442" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="35">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="height: auto;" data-widgetcontainerid="e7d2d528-9d5b-44db-91fa-fa6735d3faf6">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id9d2b3360-0a6a-48af-9e26-bbc1f097a259" style="height: 168px;" data-widgetcontainerid="9d2b3360-0a6a-48af-9e26-bbc1f097a259">
+	
+<div data-widget-id="b42c9ac5-0601-49b9-a5fb-e6dc9b789a3f" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetb42c9ac5-0601-49b9-a5fb-e6dc9b789a3f" class="widget widgetGraphicLinks skin79 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:22em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://marblefallstx.opengov.com/" target="_self" class="fancyButton fancyButton412 ">
+		<span>
+			<span><span class="text">Financial Transparency</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton412.fancyButton:link,.fancyButton412.fancyButton:visited, .fancyButton412div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=8840');
+	background-repeat: no-repeat;
+	background-position: center 8px ;
+transition: all .3s ease-in-out;
+position: relative;
+}
+
+.fancyButton412::after {
+content: "";
+position: absolute;
+left: 50%;
+top: 100px;
+transform: translateX(-50%);
+width: 100%;
+max-width: 100px;
+height: 3px;
+background: rgba(129, 150, 175, 1);
+transition: all .3s ease-in-out;
+}
+.fancyButton412.fancyButton:hover,.fancyButton412.fancyButton:focus,.fancyButton412.fancyButton:active,.fancyButton412.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center 0px ;
+}
+
+.fancyButton412:is(:hover,:focus,:active)::after {
+max-width: 120px;}
+.fancyButton412.fancyButton:link > span,.fancyButton412.fancyButton:visited > span, .fancyButton412div.fancyButton > span{
+}
+.fancyButton412.fancyButton:hover > span,.fancyButton412.fancyButton:focus > span,.fancyButton412.fancyButton:active > span,.fancyButton412.fancyButton.hover > span{
+}
+.fancyButton412.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Roboto";
+	padding-top: 115px;
+	padding-bottom: 12px;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 115px;
+	padding-bottom: 12px;
+	background-repeat: no-repeat;
+	background-position: left top;
+line-height: 1.2;
+}
+.fancyButton412.fancyButton:hover .text,.fancyButton412.fancyButton:focus .text,.fancyButton412.fancyButton:active .text,.fancyButton412.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://marblefallstx.gov/541/Development-Activity" target="_self" class="fancyButton fancyButton413 ">
+		<span>
+			<span><span class="text">Development Activity</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton413.fancyButton:link,.fancyButton413.fancyButton:visited, .fancyButton413div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=8838');
+	background-repeat: no-repeat;
+	background-position: center 8px ;
+transition: all .3s ease-in-out;
+position: relative;
+}
+
+.fancyButton413::after {
+content: "";
+position: absolute;
+left: 50%;
+top: 100px;
+transform: translateX(-50%);
+width: 100%;
+max-width: 100px;
+height: 3px;
+background: rgba(129, 150, 175, 1);
+transition: all .3s ease-in-out;
+}
+.fancyButton413.fancyButton:hover,.fancyButton413.fancyButton:focus,.fancyButton413.fancyButton:active,.fancyButton413.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center 0px ;
+}
+
+.fancyButton413:is(:hover,:focus,:active)::after {
+max-width: 120px;}
+.fancyButton413.fancyButton:link > span,.fancyButton413.fancyButton:visited > span, .fancyButton413div.fancyButton > span{
+}
+.fancyButton413.fancyButton:hover > span,.fancyButton413.fancyButton:focus > span,.fancyButton413.fancyButton:active > span,.fancyButton413.fancyButton.hover > span{
+}
+.fancyButton413.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Roboto";
+	padding-top: 115px;
+	padding-bottom: 12px;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 115px;
+	padding-bottom: 12px;
+	background-repeat: no-repeat;
+	background-position: left top;
+line-height: 1.2;
+}
+.fancyButton413.fancyButton:hover .text,.fancyButton413.fancyButton:focus .text,.fancyButton413.fancyButton:active .text,.fancyButton413.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8" style="height: auto;" data-widgetcontainerid="47c1588d-e5da-4ab3-a751-2701cbebda53">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id0e138797-689b-4d9f-92b2-6cf0717e3bfb" style="height: 168px;" data-widgetcontainerid="0e138797-689b-4d9f-92b2-6cf0717e3bfb">
+	
+<div data-widget-id="5b943c8d-3c6a-4b72-8905-00274bdbc227" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget5b943c8d-3c6a-4b72-8905-00274bdbc227" class="widget widgetGraphicLinks skin79 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:22em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://marblefallstx.applicantpro.com/jobs/" target="_self" class="fancyButton fancyButton425 ">
+		<span>
+			<span><span class="text">Employment</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton425.fancyButton:link,.fancyButton425.fancyButton:visited, .fancyButton425div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=8839');
+	background-repeat: no-repeat;
+	background-position: center 8px ;
+transition: all .3s ease-in-out;
+position: relative;
+}
+
+.fancyButton425::after {
+content: "";
+position: absolute;
+left: 50%;
+top: 100px;
+transform: translateX(-50%);
+width: 100%;
+max-width: 100px;
+height: 3px;
+background: rgba(129, 150, 175, 1);
+transition: all .3s ease-in-out;
+}
+.fancyButton425.fancyButton:hover,.fancyButton425.fancyButton:focus,.fancyButton425.fancyButton:active,.fancyButton425.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center 0px ;
+}
+
+.fancyButton425:is(:hover,:focus,:active)::after {
+max-width: 120px;}
+.fancyButton425.fancyButton:link > span,.fancyButton425.fancyButton:visited > span, .fancyButton425div.fancyButton > span{
+}
+.fancyButton425.fancyButton:hover > span,.fancyButton425.fancyButton:focus > span,.fancyButton425.fancyButton:active > span,.fancyButton425.fancyButton.hover > span{
+}
+.fancyButton425.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Roboto";
+	padding-top: 115px;
+	padding-bottom: 12px;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 115px;
+	padding-bottom: 12px;
+	background-repeat: no-repeat;
+	background-position: left top;
+line-height: 1.2;
+}
+.fancyButton425.fancyButton:hover .text,.fancyButton425.fancyButton:focus .text,.fancyButton425.fancyButton:active .text,.fancyButton425.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://marblefallstx.gov/459/Park-Reservations" target="_self" class="fancyButton fancyButton426 ">
+		<span>
+			<span><span class="text">Park Reservations</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton426.fancyButton:link,.fancyButton426.fancyButton:visited, .fancyButton426div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=8841');
+	background-repeat: no-repeat;
+	background-position: center 8px ;
+transition: all .3s ease-in-out;
+position: relative;
+}
+
+.fancyButton426::after {
+content: "";
+position: absolute;
+left: 50%;
+top: 100px;
+transform: translateX(-50%);
+width: 100%;
+max-width: 100px;
+height: 3px;
+background: rgba(129, 150, 175, 1);
+transition: all .3s ease-in-out;
+}
+.fancyButton426.fancyButton:hover,.fancyButton426.fancyButton:focus,.fancyButton426.fancyButton:active,.fancyButton426.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center 0px ;
+}
+
+.fancyButton426:is(:hover,:focus,:active)::after {
+max-width: 120px;}
+.fancyButton426.fancyButton:link > span,.fancyButton426.fancyButton:visited > span, .fancyButton426div.fancyButton > span{
+}
+.fancyButton426.fancyButton:hover > span,.fancyButton426.fancyButton:focus > span,.fancyButton426.fancyButton:active > span,.fancyButton426.fancyButton.hover > span{
+}
+.fancyButton426.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Roboto";
+	padding-top: 115px;
+	padding-bottom: 12px;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 115px;
+	padding-bottom: 12px;
+	background-repeat: no-repeat;
+	background-position: left top;
+line-height: 1.2;
+}
+.fancyButton426.fancyButton:hover .text,.fancyButton426.fancyButton:focus .text,.fancyButton426.fancyButton:active .text,.fancyButton426.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8 last" style="height: auto;" data-widgetcontainerid="580284c9-b3bc-40b4-aafb-5f819b571999">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last ided16bc05-671d-4144-a23d-bf0b6468f0a5" style="height: 168px;" data-widgetcontainerid="ed16bc05-671d-4144-a23d-bf0b6468f0a5">
+	
+<div data-widget-id="d8271076-ad07-4d21-920a-934f983a011b" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetd8271076-ad07-4d21-920a-934f983a011b" class="widget widgetGraphicLinks skin79 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:22em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://marblefallstx.gov/493/Pay" target="_self" class="fancyButton fancyButton427 ">
+		<span>
+			<span><span class="text">Pay Online</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton427.fancyButton:link,.fancyButton427.fancyButton:visited, .fancyButton427div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=8842');
+	background-repeat: no-repeat;
+	background-position: center 8px ;
+transition: all .3s ease-in-out;
+position: relative;
+}
+
+.fancyButton427::after {
+content: "";
+position: absolute;
+left: 50%;
+top: 100px;
+transform: translateX(-50%);
+width: 100%;
+max-width: 100px;
+height: 3px;
+background: rgba(129, 150, 175, 1);
+transition: all .3s ease-in-out;
+}
+.fancyButton427.fancyButton:hover,.fancyButton427.fancyButton:focus,.fancyButton427.fancyButton:active,.fancyButton427.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center 0px ;
+}
+
+.fancyButton427:is(:hover,:focus,:active)::after {
+max-width: 120px;}
+.fancyButton427.fancyButton:link > span,.fancyButton427.fancyButton:visited > span, .fancyButton427div.fancyButton > span{
+}
+.fancyButton427.fancyButton:hover > span,.fancyButton427.fancyButton:focus > span,.fancyButton427.fancyButton:active > span,.fancyButton427.fancyButton.hover > span{
+}
+.fancyButton427.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Roboto";
+	padding-top: 115px;
+	padding-bottom: 12px;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 115px;
+	padding-bottom: 12px;
+	background-repeat: no-repeat;
+	background-position: left top;
+line-height: 1.2;
+}
+.fancyButton427.fancyButton:hover .text,.fancyButton427.fancyButton:focus .text,.fancyButton427.fancyButton:active .text,.fancyButton427.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://marblefallstx.gov/agendacenter" target="_self" class="fancyButton fancyButton428 ">
+		<span>
+			<span><span class="text">Agendas &amp; Minutes</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton428.fancyButton:link,.fancyButton428.fancyButton:visited, .fancyButton428div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=8837');
+	background-repeat: no-repeat;
+	background-position: center 8px ;
+transition: all .3s ease-in-out;
+position: relative;
+}
+
+.fancyButton428::after {
+content: "";
+position: absolute;
+left: 50%;
+top: 100px;
+transform: translateX(-50%);
+width: 100%;
+max-width: 100px;
+height: 3px;
+background: rgba(129, 150, 175, 1);
+transition: all .3s ease-in-out;
+}
+.fancyButton428.fancyButton:hover,.fancyButton428.fancyButton:focus,.fancyButton428.fancyButton:active,.fancyButton428.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center 0px ;
+}
+
+.fancyButton428:is(:hover,:focus,:active)::after {
+max-width: 120px;}
+.fancyButton428.fancyButton:link > span,.fancyButton428.fancyButton:visited > span, .fancyButton428div.fancyButton > span{
+}
+.fancyButton428.fancyButton:hover > span,.fancyButton428.fancyButton:focus > span,.fancyButton428.fancyButton:active > span,.fancyButton428.fancyButton.hover > span{
+}
+.fancyButton428.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Roboto";
+	padding-top: 115px;
+	padding-bottom: 12px;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 115px;
+	padding-bottom: 12px;
+	background-repeat: no-repeat;
+	background-position: left top;
+line-height: 1.2;
+}
+.fancyButton428.fancyButton:hover .text,.fancyButton428.fancyButton:focus .text,.fancyButton428.fancyButton:active .text,.fancyButton428.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Footer --><footer data-cprole="structuralContainer" id="footerContainerTS">
+<div class="siteWrap2"><div data-cprole="contentContainer" id="footerTS">	<div id="cc2d0c322e-356b-46c6-8e38-5f04972240b5" data-containerid="2d0c322e-356b-46c6-8e38-5f04972240b5" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="60">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col5 first" style="height: auto;" data-widgetcontainerid="c1b40fd1-c90d-4499-a2b2-0926fde5f3c9">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col5 first last id60ee0177-e257-417a-9316-f01d92fb5881" style="height: 170px;" data-widgetcontainerid="60ee0177-e257-417a-9316-f01d92fb5881">
+	
+    <div data-widget-id="5d343404-4ef2-46aa-92e9-97e861840fad" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv5d343404-4ef2-46aa-92e9-97e861840fad" class="widget widgetInfoAdvanced skin76 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="header5d343404-4ef2-46aa-92e9-97e861840fad">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="https://marblefallstx.gov/"><img src="https://marblefallstx.gov/ImageRepository/Document?documentId=8836" class="fr-dib" alt="Marble Falls TX Homepage"></a></p><p><br></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv5d343404-4ef2-46aa-92e9-97e861840fad .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest wide">
+
+	
+	<div class="inner col col5 first last id65d7aa08-a25c-4276-81f8-59c4ff228789" style="height: 74px;" data-widgetcontainerid="65d7aa08-a25c-4276-81f8-59c4ff228789">
+	
+<div data-widget-id="d2f280f4-f6c2-443e-858a-8aca19130479" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetd2f280f4-f6c2-443e-858a-8aca19130479" class="widget widgetGraphicLinks skin76 widgetOptionSet4 narrow" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 "> 	
+				<ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://marblefallstx.gov/MyAccount" target="_self" class="fancyButton fancyButton420 ">
+		<span>
+			<span><span class="text">Website Sign In</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton420.fancyButton:link,.fancyButton420.fancyButton:visited, .fancyButton420div.fancyButton{
+	background-color: rgb(255, 255, 255);
+	-webkit-border-top-left-radius: 31px;
+	-moz-border-top-left-radius: 31px;
+	-khtml-border-top-left-radius: 31px;
+	border-top-left-radius: 31px;
+	-webkit-border-top-right-radius: 31px;
+	-moz-border-top-right-radius: 31px;
+	-khtml-border-top-right-radius: 31px;
+	border-top-right-radius: 31px;
+	-webkit-border-bottom-left-radius: 31px;
+	-moz-border-bottom-left-radius: 31px;
+	-khtml-border-bottom-left-radius: 31px;
+	border-bottom-left-radius: 31px;
+	-webkit-border-bottom-right-radius: 31px;
+	-moz-border-bottom-right-radius: 31px;
+	-khtml-border-bottom-right-radius: 31px;
+	border-bottom-right-radius: 31px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-top: 2px solid rgb(129, 150, 175);
+	border-left: 2px solid rgb(129, 150, 175);
+	border-right: 2px solid rgb(129, 150, 175);
+	border-bottom: 2px solid rgb(129, 150, 175);
+box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+max-width: 250px;
+margin: 0 auto;
+transition: all .2s ease-in-out;}
+.fancyButton420.fancyButton:hover,.fancyButton420.fancyButton:focus,.fancyButton420.fancyButton:active,.fancyButton420.fancyButton.hover{
+	background-color: rgb(34, 54, 82);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton420.fancyButton:link > span,.fancyButton420.fancyButton:visited > span, .fancyButton420div.fancyButton > span{
+}
+.fancyButton420.fancyButton:hover > span,.fancyButton420.fancyButton:focus > span,.fancyButton420.fancyButton:active > span,.fancyButton420.fancyButton.hover > span{
+}
+.fancyButton420.fancyButton .text{
+	color: rgb(34, 54, 82);
+	font-size: 1.1em;
+	font-family: "Roboto";
+	padding-right: 1em;
+	padding-left: 1em;
+	font-weight: 700;
+	text-decoration: none;
+	padding-right: 1em;
+	padding-left: 1em;
+	background-repeat: no-repeat;
+	background-position: left top;
+height: 60px;
+line-height: 1.2;
+text-transform: uppercase;
+}
+.fancyButton420.fancyButton:hover .text,.fancyButton420.fancyButton:focus .text,.fancyButton420.fancyButton:active .text,.fancyButton420.fancyButton.hover .text{
+	color: rgb(255, 255, 255);
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+				--></ul>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col5 first last ida30a4e6e-ff7a-4ab0-aab9-f40214023640" style="height: 66px;" data-widgetcontainerid="a30a4e6e-ff7a-4ab0-aab9-f40214023640">
+	
+<div data-widget-id="e6ba07f4-7bea-4a7e-aca9-30e9d4d36414" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgete6ba07f4-7bea-4a7e-aca9-30e9d4d36414" class="widget widgetGraphicLinks skin81 widgetOptionSet60 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row autoWidths center wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.facebook.com/MarbleFallsGov/" target="_self" aria-label="Facebook graphic"><img src="https://marblefallstx.gov/ImageRepository/Document?documentID=8855" class="graphicButtonLink" alt="Facebook" onmouseover="this.src='/ImageRepository/Document?documentID=8855'" onmouseout="this.src='/ImageRepository/Document?documentID=8855'" onfocus="this.src='/ImageRepository/Document?documentID=8855'" onblur="this.src='/ImageRepository/Document?documentID=8855'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://marblefallstx.gov/nextdoor" target="_self" aria-label="Nextdoor graphic"><img src="https://marblefallstx.gov/ImageRepository/Document?documentID=8858" class="graphicButtonLink" alt="Nextdoor" onmouseover="this.src='/ImageRepository/Document?documentID=8858'" onmouseout="this.src='/ImageRepository/Document?documentID=8858'" onfocus="this.src='/ImageRepository/Document?documentID=8858'" onblur="this.src='/ImageRepository/Document?documentID=8858'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.linkedin.com/company/city-of-marble-falls-tx/mycompany/" target="_self" aria-label="Linkedin graphic"><img src="https://marblefallstx.gov/ImageRepository/Document?documentID=8857" class="graphicButtonLink" alt="Linkedin" onmouseover="this.src='/ImageRepository/Document?documentID=8857'" onmouseout="this.src='/ImageRepository/Document?documentID=8857'" onfocus="this.src='/ImageRepository/Document?documentID=8857'" onblur="this.src='/ImageRepository/Document?documentID=8857'"> </a></li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="6ce9578c-135c-4ebb-bd3b-44402c5982f4">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id0ca90756-9240-46d6-85a6-1dc362d64c7b" style="height: 312px;" data-widgetcontainerid="0ca90756-9240-46d6-85a6-1dc362d64c7b">
+	
+
+<div class="widget widgetSpacer" id="e1621bde-7842-437c-8f6c-522a9f17cdd8" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8" style="height: auto;" data-widgetcontainerid="c226ed73-e0f5-4448-9510-6e085638e4dc">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id7e9d88fa-24b2-4500-910c-1a763586998b" style="height: 312px;" data-widgetcontainerid="7e9d88fa-24b2-4500-910c-1a763586998b">
+	
+    <div data-widget-id="1afdfc14-c1b6-4c96-8f6c-c2d08bd52182" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv1afdfc14-c1b6-4c96-8f6c-c2d08bd52182" class="widget widgetInfoAdvanced skin80 widgetOptionSet5 wide" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="header1afdfc14-c1b6-4c96-8f6c-c2d08bd52182">
+			<header class="widgetHeader" id="header1afdfc14-c1b6-4c96-8f6c-c2d08bd52182">
+		<div class="">
+					<h3>Contact Us</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid2 ">
+		<div class="row wide">
+					<div class="col col1 first ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>City of Marble Falls<br>800 3rd Street<br>Marble Falls, TX 78654</p><p>Phone: <a href="tel:830-693-3615">830-693-3615</a><br>Fax: 830-693-6737</p><p><a href="mailto:cmcdonald@marblefallstx.gov">Webmaster</a></p>
+</li>						</ol>
+					</div>
+					<div class="col col1  last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<h2 class="subhead1">Hours </h2><p>Monday through Thursday<br>8 a.m. to 5:30 pm.</p><p>Friday<br>8 a.m. to 5 p.m.</p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv1afdfc14-c1b6-4c96-8f6c-c2d08bd52182 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="7a063d8f-6f2b-4f0c-b446-997b0d4284fa">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id2ffe1369-13a9-4fae-8d93-d1266255e55b" style="height: 312px;" data-widgetcontainerid="2ffe1369-13a9-4fae-8d93-d1266255e55b">
+	
+
+<div class="widget widgetSpacer" id="3fd1bdbd-28c4-4af5-9df1-330a351dd4fa" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4" style="height: auto;" data-widgetcontainerid="80b15ec7-26aa-4adb-bd57-2879be55fe49">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last id2579342b-1f87-4d16-8ed1-d1c38bb17aa2" style="height: 312px;" data-widgetcontainerid="2579342b-1f87-4d16-8ed1-d1c38bb17aa2">
+	
+	<div data-widget-id="cbd8227b-482c-4f9f-a9da-92b2ce49f139" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklinkcbd8227b-482c-4f9f-a9da-92b2ce49f139" class="widget widgetQuickLinks skin80 widgetOptionSet49 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeadercbd8227b-482c-4f9f-a9da-92b2ce49f139">
+			<header class="widgetHeader" id="quickLinksHeadercbd8227b-482c-4f9f-a9da-92b2ce49f139">
+		<div class="">
+					<h3><a style="" href="https://marblefallstx.gov/QuickLinks.aspx?CID=76">Quick Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://marblefallstx.gov/130/City-Council" target="_self">City Council</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://marblefallstx.gov/139/City-Manager" target="_self">City Manager</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://marblefallstx.gov/140/City-Secretary" target="_self">City Secretary</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://marblefallstx.gov/132/Departments" target="_self">Departments</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://marblefallstx.gov/131/Elections" target="_self">Elections</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://marblefallstx.gov/523/Job-Opportunities" target="_self">Employment Opportunities</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://login.microsoftonline.com/loginex.srf" target="_self">Council/Employee Email</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://marblefallstx.gov/623/Employee-Intranet" target="_self">InnerFalls</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="6600680a-8a33-4267-a5a2-64aea4520d7e">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id3f1641ae-372a-477c-9839-da5495a8e2dd" style="height: 312px;" data-widgetcontainerid="3f1641ae-372a-477c-9839-da5495a8e2dd">
+	
+
+<div class="widget widgetSpacer" id="6bba4478-5e1a-4e8e-87d7-c514bc143894" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4 last" style="height: auto;" data-widgetcontainerid="e5305947-f645-4581-b5e4-da62693afb0b">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last id7df9c2c3-61e4-4888-865e-31e93083a2bb" style="height: 312px;" data-widgetcontainerid="7df9c2c3-61e4-4888-865e-31e93083a2bb">
+	
+	<div data-widget-id="f110daa7-89b7-40bb-86f3-e5e79acd4481" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklinkf110daa7-89b7-40bb-86f3-e5e79acd4481" class="widget widgetQuickLinks skin80 widgetOptionSet49 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeaderf110daa7-89b7-40bb-86f3-e5e79acd4481">
+			<header class="widgetHeader" id="quickLinksHeaderf110daa7-89b7-40bb-86f3-e5e79acd4481">
+		<div class="">
+					<h3><a style="" href="https://marblefallstx.gov/QuickLinks.aspx?CID=79">Site Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://marblefallstx.gov/" target="_self">Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://marblefallstx.gov/sitemap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://marblefallstx.gov/directory" target="_self">Contact Us</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://marblefallstx.gov/accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://marblefallstx.gov/site/copyright" target="_self">Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</footer><!-- GBs --><div data-cprole="structuralContainer" id="gbs2ContainerTS">
+<div class="siteWrap2"><div data-cprole="contentContainer" id="gbs2TS">	<div id="cc254d29e5-4b84-491d-8537-ba358f64b39c" data-containerid="254d29e5-4b84-491d-8537-ba358f64b39c" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="40">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col12 first" style="height: auto;" data-widgetcontainerid="fa305b29-0ce1-4bbc-ad55-5f89f4da9e1c">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last id3740c8e2-f6aa-4954-a36f-0449ba20b2b0" style="height: 103px;" data-widgetcontainerid="3740c8e2-f6aa-4954-a36f-0449ba20b2b0">
+	
+<div data-widget-id="99e796f9-df81-49d9-a8db-78c81b1024a3" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget99e796f9-df81-49d9-a8db-78c81b1024a3" class="widget widgetGraphicLinks skin79 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:20em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://marblefallstx.gov/" target="_self" aria-label="The Texas Highways Magazine Top 40 Travel Destinations logo graphic"><img src="https://marblefallstx.gov/ImageRepository/Document?documentID=8869" class="graphicButtonLink" alt="The Texas Highways Magazine Top 40 Travel Destinations logo" onmouseover="this.src='/ImageRepository/Document?documentID=8869'" onmouseout="this.src='/ImageRepository/Document?documentID=8869'" onfocus="this.src='/ImageRepository/Document?documentID=8869'" onblur="this.src='/ImageRepository/Document?documentID=8869'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://marblefallstx.gov/" target="_self" aria-label="Proud to be a Certified Scenic City logo graphic"><img src="https://marblefallstx.gov/ImageRepository/Document?documentID=8868" class="graphicButtonLink" alt="Proud to be a Certified Scenic City logo" onmouseover="this.src='/ImageRepository/Document?documentID=8868'" onmouseout="this.src='/ImageRepository/Document?documentID=8868'" onfocus="this.src='/ImageRepository/Document?documentID=8868'" onblur="this.src='/ImageRepository/Document?documentID=8868'"> </a></li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col12 last" style="height: auto;" data-widgetcontainerid="e49a7aa1-58c4-4921-a179-94ce21e316ef">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last id64dbc0f9-ec9a-4c73-bc44-8b3640d0b237" style="height: 103px;" data-widgetcontainerid="64dbc0f9-ec9a-4c73-bc44-8b3640d0b237">
+	
+<div data-widget-id="bb222a51-a736-473c-84b7-8d2cc82dcc31" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetbb222a51-a736-473c-84b7-8d2cc82dcc31" class="widget widgetGraphicLinks skin79 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:20em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://marblefallstx.gov/" target="_self" aria-label="Keep Texas Beautiful Affiliate logo graphic"><img src="https://marblefallstx.gov/ImageRepository/Document?documentID=8867" class="graphicButtonLink" alt="Keep Texas Beautiful Affiliate logo" onmouseover="this.src='/ImageRepository/Document?documentID=8867'" onmouseout="this.src='/ImageRepository/Document?documentID=8867'" onfocus="this.src='/ImageRepository/Document?documentID=8867'" onblur="this.src='/ImageRepository/Document?documentID=8867'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://marblefallstx.gov/" target="_self" aria-label="Film Friendy Texas Community Texas Film Commission Certified logo graphic"><img src="https://marblefallstx.gov/ImageRepository/Document?documentID=8866" class="graphicButtonLink" alt="Film Friendy Texas Community Texas Film Commission Certified logo" onmouseover="this.src='/ImageRepository/Document?documentID=8866'" onmouseout="this.src='/ImageRepository/Document?documentID=8866'" onfocus="this.src='/ImageRepository/Document?documentID=8866'" onblur="this.src='/ImageRepository/Document?documentID=8866'"> </a></li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Powered By --><div data-cprole="structuralContainer" id="poweredByContainerTS">
+<div class="siteWrap2"><div data-cprole="contentContainer" id="poweredByTS">	<div id="ccab693328-c198-4476-a19f-d0a330295934" data-containerid="ab693328-c198-4476-a19f-d0a330295934" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="e117ab34-e53f-47fb-94b6-97f4717dcd58">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last idfefbbc25-1f2e-4bc9-8146-9f24fbb3cc1f" style="height: 64px;" data-widgetcontainerid="fefbbc25-1f2e-4bc9-8146-9f24fbb3cc1f">
+	
+ 
+	<div data-widget-id="a8f3c9d5-991f-4705-9e18-37e414ffb73d" data-modulename="customHtml" id="widgetCustomHtmla8f3c9d5-991f-4705-9e18-37e414ffb73d" class="widget widgetCustomHtml skin82 narrow">
+	<div class="widgetBody pageStyles" id="widgetBodya8f3c9d5-991f-4705-9e18-37e414ffb73d">
+		<div id="customHtmla8f3c9d5-991f-4705-9e18-37e414ffb73d"><div><style>
+  /* CP icon */
+  .cpBylineIconTS {
+  }
+  /* CP Text */
+  .cpBylineTextTS,
+  .cpBylineTextTS a:link {
+  }
+
+  .cpBylineTS {
+    text-align: center;
+  }
+  
+  .cpBylineIconTS {
+    fill: currentColor;
+    width: 39px;
+    height: 26px;
+    display: inline;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="widgetItem cpBylineTS">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="cpBylineIconTS">
+    <path class="c" d="M73.4,23.2h-19v16.7h19c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5h-19v28.4h5.5l11.3-11.7h2.2c11.9,0,21.6-9.7,21.6-21.6C95,33,85.3,23.2,73.4,23.2"></path>
+    <path class="p" d="M45.8,66.5H26.6C14.7,66.5,5,56.8,5,44.9C5,33,14.7,23.2,26.6,23.2h19.1v16.7H26.6c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h19.1V66.5z"></path>
+  </svg>
+  <span class="cpBylineTextTS">Government Websites by <a href="https://connect.civicplus.com/referral">CivicPlus®</a></span>
+</div>
+</div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><a class="translateWidget" title="Enable Google Translate" style="background-color: #FFF;border-color: #9b9b9b #d5d5d5 transparent #d5d5d5;border-style: solid;border-width: 1px 1px 0 1px;bottom: 0px;color: #000;cursor: pointer;font-size: .9em;padding: 2px 6px 3px 4px;position: fixed;right: 20px;z-index: 5;"><img alt="Google Translate Icon" src="https://marblefallstx.gov/Assets/Images/GoogleTranslate.gif" style="box-sizing: content-box !important;height:19px;margin: -2px 0 0 -2px;padding-right: 5px;width:19px;">Enable Google Translate</a>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '512',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!-- Google Translate -->
+
+	<script type="text/javascript">
+	var translateActiveCookie = getCookieValue('translateActive');
+
+	if (translateActiveCookie == 'true') {
+		enableGoogleTranslate();
+	} else {
+		var button = '<a class="translateWidget" title="Enable Google Translate" style="background-color: #FFF;border-color: #9b9b9b #d5d5d5 transparent #d5d5d5;border-style: solid;border-width: 1px 1px 0 1px;bottom: 0px;color: #000;cursor: pointer;font-size: .9em;padding: 2px 6px 3px 4px;position: fixed;right: 20px;z-index: 5;">';
+		button += '<img alt="Google Translate Icon" src="/Assets/Images/GoogleTranslate.gif" style="box-sizing: content-box !important;height:19px;margin: -2px 0 0 -2px;padding-right: 5px;width:19px;">Enable Google Translate</a>';
+		$('div[data-cprole="structuralContainer"]').last().after(button);
+	}
+
+	function googleTranslateElementInit() {
+  		var el = document.getElementById("google_translate_element");
+  		if (el && el.innerHTML.trim() !== "") {
+  		    return;
+  		}
+
+  		new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+	}
+
+	function enableGoogleTranslate() {
+		$('#google_translate_element').show();
+		var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+		sz.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+		$('div[data-cprole="structuralContainer"]').last().after('<div id="google_translate_element" style="position: fixed; bottom: 0px; right: 20px; z-index: 5;"></div>');
+	        document.cookie = "translateActive=true; expires=12/31/2999; path=/";
+	}
+
+	$('a.translateWidget').unbind('click').click(function (e) {
+		$(this).hide();
+		enableGoogleTranslate();
+	});
+	</script>
+
+	<!-- End Google Translate -->
+
+<!-- Fixed Nav Adjustment -->
+<script>
+  function getValueTS(elem, attr) {
+    const val = elem.css(attr);
+    if (val === undefined) return undefined;
+    const num = parseInt(val, 10);
+    if (num === NaN) return undefined;
+    return num;
+  }
+
+  function clampTS(number, min, max) {
+    return Math.min(Math.max(number, min), max);
+  }
+
+  function isPageEditingTS() {
+    return (
+      $("#doneEditing").length > 0 || // In live edit
+      typeof DesignCenter !== "undefined" // In theme manager
+    );
+  }
+
+  const bgColorRegexTS = /rgba\((\d+), (\d+), (\d+), (\d*\.?\d*)\)/;
+  function isTransparentTS(elem) {
+    const bg = elem.css('background-color');
+    if (typeof bg !== "string" || !bg.startsWith('rgba(')) return false;
+    const matchState = bg.match(bgColorRegexTS);
+    if (!matchState || matchState.length !== 5) return false;
+    const alpha = parseFloat(matchState[4], 10);
+    if (!(alpha >= 0 && alpha < 1)) return false;
+    return true;
+  }
+
+  function iterateLeftpads(cb) {
+    const containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (let i = 0; i < containersTS.length; i++) {
+      const containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-leftpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-leftpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  const anchor = $("#divToolbars");
+
+  // Outer banner padding (push banner down)
+  const outerSizingTS = $("#bannerContainerTS");
+  // Inner banner padding (push banner content down) - Transparent header OR on attaching headers
+  const innerSizingTS = $("#bannerSizingTS");
+  const bodyContainerTS = $("#bodyContainerTS");
+
+  const forceUnfixClassTS = "forceUnfixTS";
+
+  const fixedTopTS = $(".fixedTopTS");
+  const fixedBottomTS = $(".fixedBottomTS");
+  const fixedLeftTS = $(".fixedLeftTS");
+
+  var initialTopTS;
+  var topAttachTS;
+  if (fixedTopTS && fixedTopTS.length === 1) {
+    initialTopTS = getValueTS(fixedTopTS, 'top');
+    const attachment = fixedTopTS.attr('data-attach');
+    if (attachment) topAttachTS = $("#" + attachment);
+    if (!topAttachTS || topAttachTS.length !== 1) topAttachTS = undefined;
+  }
+
+  function resizeAdjustmentTS() {
+    const editing = isPageEditingTS();
+
+    // Fixed top script
+    (function () {
+      if (!fixedTopTS || fixedTopTS.length !== 1 || initialTopTS === undefined) return;
+
+      if (editing) {
+        fixedTopTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedTopTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      const topPosition = fixedTopTS.css('position');
+      if (topPosition === 'fixed') {
+        if (topAttachTS) {
+          scrollAdjustmentTS();
+        } else {
+          const anchorHeight = anchor.outerHeight() - 1;
+          fixedTopTS.css('top', anchorHeight + initialTopTS);
+        }
+      } else {
+        fixedTopTS.css('top', initialTopTS);
+      }
+
+      if (topPosition === 'fixed' || topPosition === 'absolute') {
+        // Bump the banner content down
+        if (isTransparentTS(fixedTopTS)) {
+          innerSizingTS.css('padding-top', initialTopTS + fixedTopTS.outerHeight() - 1);
+          outerSizingTS.css('padding-top', '');
+
+          try {
+            window.Pages.onResizeHandlersExecute();
+          } catch (e) { }
+        } else {
+          outerSizingTS.css('padding-top', fixedTopTS.outerHeight() - 1);
+          innerSizingTS.css('padding-top', '');
+        }
+      } else {
+        innerSizingTS.css('padding-top', '');
+        outerSizingTS.css('padding-top', '');
+      }
+    })();
+
+    // Fixed bottom script
+    (function () {
+      if (!fixedBottomTS || fixedBottomTS.length === 0) return;
+
+      // If the widget has gone narrow, force unfix
+      if (editing || fixedBottomTS.outerHeight() > 200) {
+        fixedBottomTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedBottomTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedBottomTS.css('position') === 'fixed') {
+        bodyContainerTS.css('padding-bottom', fixedBottomTS.outerHeight());
+      } else {
+        bodyContainerTS.css('padding-bottom', '');
+      }
+    })();
+
+    // Fixed left script
+    (function () {
+      if (!fixedLeftTS || fixedLeftTS.length === 0) return;
+
+      if (editing) {
+        fixedLeftTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedLeftTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedLeftTS.css('position') === 'fixed') {
+        const anchorHeight = anchor.outerHeight() - 1;
+        fixedLeftTS.css('top', anchorHeight);
+        const leftBoundingTS = fixedLeftTS[0].getBoundingClientRect();
+        iterateLeftpads(function (containerTS) {
+          const containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.left <= leftBoundingTS.right) {
+            $(containerTS).css('padding-left', leftBoundingTS.width + 16);
+          }
+        });
+      } else {
+        fixedLeftTS.css('top', '');
+        iterateLeftpads(function (containerTS) {
+          $(containerTS).css('padding-left', '');
+        });
+      }
+    })();
+  }
+
+  function scrollAdjustmentTS() {
+    if (!fixedTopTS || fixedTopTS.length !== 1 || !topAttachTS || topAttachTS.length !== 1) return;
+    const topPosition = fixedTopTS.css('position');
+    if (topPosition === 'fixed' || topPosition === 'absolute') {
+      const anchorBounding = anchor[0].getBoundingClientRect();
+      const attachBounding = topAttachTS[0].getBoundingClientRect();
+      const scrollTop = $(window).scrollTop();
+
+      fixedTopTS.css('top', Math.max(anchorBounding.bottom - 1, attachBounding.bottom));
+    } else {
+      fixedTopTS.css('top', initialTopTS);
+    }
+  }
+
+  $(window).load(function () {
+    setTimeout(function () {
+      resizeAdjustmentTS();
+    }, 350);
+
+    $(window).scroll(function () {
+      scrollAdjustmentTS();
+    });
+
+    var adjustTimeoutTS;
+    $(window).resize(function () {
+      clearTimeout(adjustTimeoutTS);
+      adjustTimeoutTS = setTimeout(function () {
+        resizeAdjustmentTS();
+      }, 350);
+    });
+
+    $.when(window.Pages.angularToolbarComplete).done(function () {
+      resizeAdjustmentTS();
+    });
+  });
+</script>
+<!-- End Fixed Nav Adjustment -->
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Montserrat:200,300italic,700,regular|Muli:200,regular|Roboto:500,500italic,700,700italic,900,900italic,italic,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu31" class="contentTop mainNavMegaMenu megaMenuContainer pageID_31 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 0px; width: 1265px; top: 259.375px;">	<div id="cc5381520c-4966-4a2b-abd6-1879feed3072" data-containerid="5381520c-4966-4a2b-abd6-1879feed3072" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu27" class="contentTop mainNavMegaMenu megaMenuContainer pageID_27 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 0px; width: 1265px; top: 259.375px;">	<div id="cc5d25ae7c-1678-4546-b16e-2451e65c024e" data-containerid="5d25ae7c-1678-4546-b16e-2451e65c024e" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu132" class="contentTop mainNavMegaMenu megaMenuContainer pageID_132 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 0px; width: 1265px; top: 259.375px;">	<div id="ccd321bc0f-3955-432e-849a-519b992e1acd" data-containerid="d321bc0f-3955-432e-849a-519b992e1acd" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu101" class="contentTop mainNavMegaMenu megaMenuContainer pageID_101 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 0px; width: 1265px; top: 259.375px;">	<div id="cc977585d5-3a9a-4491-a317-b4d325c8616f" data-containerid="977585d5-3a9a-4491-a317-b4d325c8616f" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu35" class="contentTop mainNavMegaMenu megaMenuContainer pageID_35 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 0px; width: 1265px; top: 259.375px;">	<div id="cc97aff9b3-37fc-4d00-9571-73c61d292b37" data-containerid="97aff9b3-37fc-4d00-9571-73c61d292b37" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu9" class="contentTop mainNavMegaMenu megaMenuContainer pageID_9 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 0px; width: 1265px; top: 259.375px;">	<div id="ccebe984a3-be32-4be6-a04b-854d6cfaf46d" data-containerid="ebe984a3-be32-4be6-a04b-854d6cfaf46d" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b>&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div><div id="bannerSlideshowControls_banner1" class="bannerSlideshowControlsNew none " style="display:none">
+			<a id="arrowPrev_banner1" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner1" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div></body></html>
