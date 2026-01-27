@@ -12,7 +12,7 @@ Councilmember Bobby Watson | Fredericksburg, TX - Official Website
 ![Fredericksburg TX Homepage](https://www.fbgtx.org/ImageRepository/Document?documentID=7799)
 ![Search](https://www.fbgtx.org/ImageRepository/Document?documentID=7499)
 
-![](https://www.fbgtx.org/ImageRepository/Document?documentID=7337)
+![](https://www.fbgtx.org/ImageRepository/Document?documentID=7339)
 
 
 

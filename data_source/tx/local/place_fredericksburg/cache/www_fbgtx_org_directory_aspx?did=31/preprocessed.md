@@ -12,7 +12,7 @@ Staff Directory • City Council
 ![Fredericksburg TX Homepage](https://www.fbgtx.org/ImageRepository/Document?documentID=7799)
 ![Search](https://www.fbgtx.org/ImageRepository/Document?documentID=7499)
 
-![](https://www.fbgtx.org/ImageRepository/Document?documentID=7339)
+![](https://www.fbgtx.org/ImageRepository/Document?documentID=7337)
 
 
 
