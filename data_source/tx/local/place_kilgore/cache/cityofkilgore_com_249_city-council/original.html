@@ -1,0 +1,2578 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n3-active wf-muli-n4-active wf-muli-i4-active wf-muli-n7-active wf-active has-webFonts"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Cabin:500,700,regular|Open+Sans:300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,italic,regular|" media="all"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-GN8ED2PN7J&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61n1"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-GN8ED2PN7J';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	
+	<meta name="category0" content="Home">
+<meta name="category1" content="Government">
+<meta name="category2" content="City Council">
+
+	
+	<meta name="theme-color" content="rgb(7, 53, 83)">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>City Council | Kilgore, TX</title>
+
+		<meta name="description" content="Learn about the City Council of Kilgore Texas.">
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '390px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/1649346174.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style></head>
+<body class="wide  withFeatureColumn cpTextResizeOn doneLoading"><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="https://cityofkilgore.com/Common/images/ajax-loader.gif" alt="Loading" title="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks">
+<a href="https://cityofkilgore.com/249/City-Council#ccf7d43101-af5b-41c9-bcd2-1bb0bed009b2" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="8">
+    <input type="hidden" id="hdnContentCollectionID" value="e649ed84-d7cb-475d-bafa-f5658a5d973e">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="19">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID">
+    <input type="hidden" id="pagePageID" value="249">
+
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+
+
+
+                </div>
+            <div id="bodyWrapper">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="bodyContainerTS">
+<!-- Header Container --><header data-cprole="structuralContainer" id="headerContainerTS" class="fixedTopTS" style="top: -1px;">
+<div class="siteWrap3"><div data-cprole="banner" id="bannerLogoTS" class="bannerLogoTS empty">
+
+
+
+
+				<a id="bannerLogoTS-66" style="			display: block; text-align: center;
+" class="bannerObject" href="https://cityofkilgore.com/" target="_self"><img alt="TX Kilgore Home Page" class="bannerObject" height="398" src="https://cityofkilgore.com/ImageRepository/Document?documentID=2906" width="398"></a>
+</div><div data-cprole="contentContainer" id="searchTS">	<div id="ccbffee1a5-bfc9-4e5f-8a43-e13574895c21" data-containerid="bffee1a5-bfc9-4e5f-8a43-e13574895c21" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="height: auto;" data-widgetcontainerid="573f74a3-2685-4703-9b44-2147cc9da5f9">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id4fa70806-59be-48f7-bc34-498421c193a6" style="height: 68px;" data-widgetcontainerid="4fa70806-59be-48f7-bc34-498421c193a6">
+	
+<div data-widget-id="cc9a9b10-b2ce-4a0c-9197-4ac0e764cc9f" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetcc9a9b10-b2ce-4a0c-9197-4ac0e764cc9f" class="widget widgetGraphicLinks skin67 widgetOptionSet49 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofkilgore.com/facebook" target="_blank" class="fancyButton fancyButton1140 " aria-label="Facebook Opens in new window" rel="noopener">
+		<span>
+			<span><span class="text">Facebook</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1140.fancyButton:link,.fancyButton1140.fancyButton:visited, .fancyButton1140div.fancyButton{
+	background-color: rgb(10, 82, 130);
+	height: 45px;
+	width: 45px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-top: 2px solid rgb(10, 82, 130);
+	border-left: 2px solid rgb(10, 82, 130);
+	border-right: 2px solid rgb(10, 82, 130);
+	border-bottom: 2px solid rgb(10, 82, 130);
+border-radius: 100px;
+margin: 0 auto;}
+.fancyButton1140.fancyButton:hover,.fancyButton1140.fancyButton:focus,.fancyButton1140.fancyButton:active,.fancyButton1140.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-top: 2px solid rgb(118, 203, 255);
+	border-left: 2px solid rgb(118, 203, 255);
+	border-right: 2px solid rgb(118, 203, 255);
+	border-bottom: 2px solid rgb(118, 203, 255);
+}
+.fancyButton1140.fancyButton:link > span,.fancyButton1140.fancyButton:visited > span, .fancyButton1140div.fancyButton > span{
+}
+.fancyButton1140.fancyButton:hover > span,.fancyButton1140.fancyButton:focus > span,.fancyButton1140.fancyButton:active > span,.fancyButton1140.fancyButton.hover > span{
+}
+.fancyButton1140.fancyButton .text{
+	padding-top: 1em;
+	text-decoration: none;
+	padding-top: 1em;
+	background-image: url('/ImageRepository/Document?documentID=2909');
+	background-repeat: no-repeat;
+	background-position: center 7px ;
+background-size: 27px;
+max-width: 41px;color: #ffffff00;}
+.fancyButton1140.fancyButton:hover .text,.fancyButton1140.fancyButton:focus .text,.fancyButton1140.fancyButton:active .text,.fancyButton1140.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: center 7px ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.youtube.com/@cityofkilgore9033" target="_blank" class="fancyButton fancyButton1170 " aria-label="Youtube Opens in new window" rel="noopener">
+		<span>
+			<span><span class="text">Youtube</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1170.fancyButton:link,.fancyButton1170.fancyButton:visited, .fancyButton1170div.fancyButton{
+	background-color: rgb(10, 82, 130);
+	height: 45px;
+	width: 45px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-top: 2px solid rgb(10, 82, 130);
+	border-left: 2px solid rgb(10, 82, 130);
+	border-right: 2px solid rgb(10, 82, 130);
+	border-bottom: 2px solid rgb(10, 82, 130);
+border-radius: 100px;
+margin: 0 auto;}
+.fancyButton1170.fancyButton:hover,.fancyButton1170.fancyButton:focus,.fancyButton1170.fancyButton:active,.fancyButton1170.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-top: 2px solid rgb(118, 203, 255);
+	border-left: 2px solid rgb(118, 203, 255);
+	border-right: 2px solid rgb(118, 203, 255);
+	border-bottom: 2px solid rgb(118, 203, 255);
+}
+.fancyButton1170.fancyButton:link > span,.fancyButton1170.fancyButton:visited > span, .fancyButton1170div.fancyButton > span{
+}
+.fancyButton1170.fancyButton:hover > span,.fancyButton1170.fancyButton:focus > span,.fancyButton1170.fancyButton:active > span,.fancyButton1170.fancyButton.hover > span{
+}
+.fancyButton1170.fancyButton .text{
+	padding-top: 1em;
+	text-decoration: none;
+	padding-top: 1em;
+	background-image: url('/ImageRepository/Document?documentID=2912');
+	background-repeat: no-repeat;
+	background-position: center 7px ;
+background-size: 27px;
+max-width: 41px;color: #ffffff00;}
+.fancyButton1170.fancyButton:hover .text,.fancyButton1170.fancyButton:focus .text,.fancyButton1170.fancyButton:active .text,.fancyButton1170.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: center 7px ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofkilgore.com/386/Smart911" target="_self" class="fancyButton fancyButton1229 ">
+		<span>
+			<span><span class="text">Smart 911</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1229.fancyButton:link,.fancyButton1229.fancyButton:visited, .fancyButton1229div.fancyButton{
+	background-color: rgb(10, 82, 130);
+	height: 45px;
+	width: 45px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-top: 2px solid rgb(10, 82, 130);
+	border-left: 2px solid rgb(10, 82, 130);
+	border-right: 2px solid rgb(10, 82, 130);
+	border-bottom: 2px solid rgb(10, 82, 130);
+border-radius: 100px;
+margin: 0 auto;}
+.fancyButton1229.fancyButton:hover,.fancyButton1229.fancyButton:focus,.fancyButton1229.fancyButton:active,.fancyButton1229.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-top: 2px solid rgb(118, 203, 255);
+	border-left: 2px solid rgb(118, 203, 255);
+	border-right: 2px solid rgb(118, 203, 255);
+	border-bottom: 2px solid rgb(118, 203, 255);
+}
+.fancyButton1229.fancyButton:link > span,.fancyButton1229.fancyButton:visited > span, .fancyButton1229div.fancyButton > span{
+}
+.fancyButton1229.fancyButton:hover > span,.fancyButton1229.fancyButton:focus > span,.fancyButton1229.fancyButton:active > span,.fancyButton1229.fancyButton.hover > span{
+}
+.fancyButton1229.fancyButton .text{
+	padding-top: 1em;
+	text-decoration: none;
+	padding-top: 1em;
+	background-image: url('/ImageRepository/Document?documentID=3215');
+	background-repeat: no-repeat;
+	background-position: center 7px ;
+background-size: 18px;
+max-width: 41px;color: #ffffff00;}
+.fancyButton1229.fancyButton:hover .text,.fancyButton1229.fancyButton:focus .text,.fancyButton1229.fancyButton:active .text,.fancyButton1229.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: center 7px ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="3922ad49-f63c-4408-84f9-9f7e256106b4">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last idbcda0a5d-6451-4b66-b59b-587734b2f35c" style="height: 68px;" data-widgetcontainerid="bcda0a5d-6451-4b66-b59b-587734b2f35c">
+	
+
+<div class="widget widgetSpacer" id="18e5e13d-647c-4edd-901d-aace91524b56" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col15 last" style="height: auto;" data-widgetcontainerid="27115df4-ff59-4cae-8668-69729ca2692a">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col15 first last id849162c5-497e-4f85-9bcd-770f141df8f4" style="height: 68px;" data-widgetcontainerid="849162c5-497e-4f85-9bcd-770f141df8f4">
+	
+<div data-widget-id="b81a8069-04c8-4790-a3dc-4e45b93fbeae" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButtonb81a8069-04c8-4790-a3dc-4e45b93fbeae").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDeptb81a8069-04c8-4790-a3dc-4e45b93fbeae").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchFieldb81a8069-04c8-4790-a3dc-4e45b93fbeae").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDeptb81a8069-04c8-4790-a3dc-4e45b93fbeae").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDeptb81a8069-04c8-4790-a3dc-4e45b93fbeae").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (false) {
+					var currentRequest = null;
+					var $searchField = $("#searchFieldb81a8069-04c8-4790-a3dc-4e45b93fbeae").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDeptb81a8069-04c8-4790-a3dc-4e45b93fbeae").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchFieldb81a8069-04c8-4790-a3dc-4e45b93fbeae").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchFieldb81a8069-04c8-4790-a3dc-4e45b93fbeae"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin60 widgetOptionSet48" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBoxb81a8069-04c8-4790-a3dc-4e45b93fbeae" cp5ph="true" id="searchFieldb81a8069-04c8-4790-a3dc-4e45b93fbeae" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search..." title="Search..." type="text" value="">
+						<a href="https://cityofkilgore.com/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButtonb81a8069-04c8-4790-a3dc-4e45b93fbeae" role="button"><img alt="Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=2907" data-image="/ImageRepository/Document?documentID=2908" src="https://cityofkilgore.com/ImageRepository/Document?documentID=2908"></a>
+
+			<label class="searchLabel" for="searchFieldb81a8069-04c8-4790-a3dc-4e45b93fbeae">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #fff;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #fff;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #fff;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #fff;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBoxb81a8069-04c8-4790-a3dc-4e45b93fbeae
+	{
+		color: #fff;
+		font-family: Open Sans;
+margin-top: .35em;
+font-size: 1.1em;
+background: #0a5282;
+border-radius: 100px;
+height: 57px;
+border: none;
+padding: 0 80px 0 25px;
+	}
+	.widgetSearch .widgetBody .widgetSearchButtonb81a8069-04c8-4790-a3dc-4e45b93fbeae
+	{
+		margin: 11px 7px 5px 5px;
+width: 45px;
+	}
+	.widgetSearch .widgetSearch-onlyDeptb81a8069-04c8-4790-a3dc-4e45b93fbeae
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDeptb81a8069-04c8-4790-a3dc-4e45b93fbeae
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchFieldb81a8069-04c8-4790-a3dc-4e45b93fbeae").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem153" class="topMenuItem" role="none" data-pageid="153" data-displaymegamenu="True" style="width: 9.08772%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavAbout" class="navMainItem mainNavItem mainNavItem1 " href="https://cityofkilgore.com/153/About" target="_self">   About </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem27" class="topMenuItem" role="none" data-pageid="27" data-displaymegamenu="True" style="width: 22.0702%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem2 " href="https://cityofkilgore.com/27/Government" target="_self">   Government </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem101" class="topMenuItem" role="none" data-pageid="101" data-displaymegamenu="True" style="width: 23.4737%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavDepartments" class="navMainItem mainNavItem mainNavItem3 " href="https://cityofkilgore.com/101/Departments" target="_self">   Departments </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem31" class="topMenuItem" role="none" data-pageid="31" data-displaymegamenu="True" style="width: 27.1579%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavDoingBusiness" class="navMainItem mainNavItem mainNavItem4 " href="https://cityofkilgore.com/31/Doing-Business" target="_self">   Doing Business </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem9" class="topMenuItem" role="none" data-pageid="9" data-displaymegamenu="True" style="width: 18.2105%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavHowDoI" class="navMainItem mainNavItem mainNavItem5 " href="https://cityofkilgore.com/9/How-Do-I" target="_self">   How Do I... </a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=19&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = false;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="1"></aside></nav></div>
+</header><!-- Banner --><div data-cprole="structuralContainer" id="bannerContainerTS" class="noOverflowTS" style="padding-top: 97px;">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="bannerSizingTS">
+<div class="siteWrap"><div data-cprole="structuralContainer" id="bannerContentTS">
+<div data-cprole="contentContainer" id="bannerContentTSa">	<div id="cc8e4c2f90-ed30-41a4-a1e0-73fa8f5cc2f2" data-containerid="8e4c2f90-ed30-41a4-a1e0-73fa8f5cc2f2" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</div>
+</div></div>
+</div>
+
+
+
+
+		<div class="bannerObject external" id="bannerDivbanner1" style="min-height: 420px ;top: 0px; left: 0px; right: 0; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="false"><img alt="" class="bannerObject" src="https://cityofkilgore.com/ImageRepository/Document?documentID=2978" width="2200px" style="position: absolute; left: 50%; margin: 0px 0px 0px -1100px;"></div>
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderBanner('banner1-67',
+								'banner1',
+								{"BannerOptionID":67,"ThemeID":19,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":1,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":false,"ImageAlignment":2,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":143,"BannerOptionID":67,"FileName":"/ImageRepository/Document?documentID=2978","Height":420,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null}],"BannerVideos":[{"BannerVideoID":2,"BannerOptionID":67,"VideoFileName":"","ImageFileName":"EmptyBannerBkg202306211328251642.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								{"BannerImageID":143,"BannerOptionID":67,"FileName":"/ImageRepository/Document?documentID=2978","Height":420,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null},
+								'/App_Themes/Interior/Images/',
+								'<img alt="" class="bannerObject" src="/ImageRepository/Document?documentID=2978" />');
+						});
+				});
+			</script>
+
+</div>
+</div><!-- Content container --><div data-cprole="structuralContainer" id="mainContainerTS">
+<div class="siteWrap"><div data-cprole="structuralContainer" id="mainWrapTS" class="mainWrap" role="main">
+<div data-cprole="structuralContainer" id="outerContentWrapTS" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="contentWrapTS" class="contentWrap">
+<div data-cprole="breadCrumbs" id="breadCrumbs" class="breadCrumbContainer">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="https://cityofkilgore.com/">Home</a></li><li><a class="breadCrumb" href="https://cityofkilgore.com/27/Government">Government</a></li><li id="currentBCPage" data-pageid="249">City Council</li>
+		</ol>
+
+	   
+    
+</div><div data-cprole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="249">
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="27">
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="1817">
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="City Council">
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="True">
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False">
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published">
+
+				<h1 id="versionHeadLine" class="headline">
+
+City Council		</h1>
+	
+		<div id="ccf7d43101-af5b-41c9-bcd2-1bb0bed009b2" data-containerid="f7d43101-af5b-41c9-bcd2-1bb0bed009b2" class="pageContent cpGrid cpGrid24">
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="16ab5d5e-f7b5-4e78-bc20-7c70b4a36b6f">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id5a732e70-a4df-4f0f-8931-6efc2bcc5f40" style="height: 924px;" data-widgetcontainerid="5a732e70-a4df-4f0f-8931-6efc2bcc5f40">
+	
+<div class="widget editor pageStyles wide" id="divEditor6f38ed4d-519d-407d-9962-5d5272f803ae" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <p><img src="https://cityofkilgore.com/ImageRepository/Document?documentId=3546" class="fr-fil fr-dib" alt="City Council Group photo May 2024"></p><p>City Council is comprised of a Mayor and 4 City Council members. &nbsp;Members of City Council serve a two-year term, with elections conducted every year, allowing for staggered terms. Together they constitute the legislative body of the City. The City of Kilgore operates under the Council-Manager form of government. The current City Council Members are Mayor Ronnie Spradlin, Mayor Pro Tem Victor Boyd, Council Place 1 Randy Renshaw, Council Place 2, Alan VanDoren, and Council Place 3, Daniel Gantt.</p><h2 class="subhead1 ">Meetings</h2><p>City Council Meetings are generally held every 2nd and 4th Tuesday of the month at 5:30 p.m. at Kilgore City Hall at 815 N. Kilgore St. Special meetings or work sessions may be called as needed. The Annual Meeting Calendar can be found in the <a aria-label="City Meeting Calendar section. Opens in new window" href="https://cityofkilgore.civicweb.net/Portal/MeetingSchedule.aspx" rel="noopener" target="_blank">City Meeting Calendar section.</a></p><h2 class="subhead1 ">Agendas &amp; Minutes</h2><p>Agendas are available prior to the meetings. Minutes are available following approval.</p><p><a href="https://cityofkilgore.civicweb.net/Portal/" rel="noopener" target="_blank" aria-label="View Agendas and Minutes Opens in new window">View Agendas and Minutes</a></p><h2 class="subhead1 "><br></h2>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '6f38ed4d-519d-407d-9962-5d5272f803ae'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: block;">	<div id="ccd37ec8e1-0e30-460a-b26e-aa151df5dd5f" data-containerid="d37ec8e1-0e30-460a-b26e-aa151df5dd5f" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="71478b21-2ac5-4841-a972-4f23c31be09c">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id400fde85-645a-4b47-b348-2ffa33effeb0" style="height: 684px;" data-widgetcontainerid="400fde85-645a-4b47-b348-2ffa33effeb0">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="26eed0c8-93e8-4ce3-b18f-35cd758f6e4b" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidget26eed0c8-93e8-4ce3-b18f-35cd758f6e4b" class="widget widgetStaffDirectory skin61 wide">
+			<div class="widgetHeader">
+					<h3><a style="" href="https://cityofkilgore.com/Directory.aspx">Contact Us</a></h3>
+							</div>
+						<ol class="semanticList">
+			<li class="widgetItem h-card">
+
+
+				<h4 class="widgetTitle field p-name">
+					Ronnie E. Spradlin III
+					
+				</h4>
+				<div class="field p-job-title">Mayor</div>
+						<div class="field u-email"><a href="mailto:ronnie.spradlin@cityofkilgore.com">Email R.E. Spradlin III </a></div>
+
+
+
+
+
+				<br>
+			</li>
+			<li class="widgetItem h-card">
+
+
+				<h4 class="widgetTitle field p-name">
+					Victor Boyd
+					
+				</h4>
+				<div class="field p-job-title">Mayor Pro Tem</div>
+						<div class="field u-email"><a href="mailto:victor.boyd@cityofkilgore.com">Email Victor Boyd </a></div>
+
+
+
+
+
+				<br>
+			</li>
+			<li class="widgetItem h-card">
+
+
+				<h4 class="widgetTitle field p-name">
+					Randy  Renshaw
+					
+				</h4>
+				<div class="field p-job-title">City Council, Place 1</div>
+						<div class="field u-email"><a href="mailto:randy.renshaw@cityofkilgore.com">Email Randy Renshaw </a></div>
+
+
+
+
+
+				<br>
+			</li>
+			<li class="widgetItem h-card">
+
+
+				<h4 class="widgetTitle field p-name">
+					Alan VanDoren
+					
+				</h4>
+				<div class="field p-job-title">Council Member, Place 2</div>
+						<div class="field u-email"><a href="mailto:alan.vandoren@cityofkilgore.com">Email Alan VanDoren </a></div>
+
+
+
+
+
+				<br>
+			</li>
+			<li class="widgetItem h-card">
+
+
+				<h4 class="widgetTitle field p-name">
+					Daniel Gantt
+					
+				</h4>
+				<div class="field p-job-title">City Council, Place 3</div>
+						<div class="field u-email"><a href="mailto:daniel.gantt@cityofkilgore.com">Email Daniel Gantt </a></div>
+
+
+
+
+
+				<br>
+			</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="siteSidebarTS" class="siteSidebar">
+<aside data-cprole="contentContainer" id="sidebarContainer1TS">	<div id="cc795db7b1-eb2c-4b23-89a1-804ea0472366" data-containerid="795db7b1-eb2c-4b23-89a1-804ea0472366" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav">
+
+
+
+
+
+	<ol role="menu" id="secondaryMenusecondaryNav" data-parent="249" class="rootNavMenu accordionNav">
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem250" data-pageid="250">
+		<div class="accordionNavItem">
+			<a href="https://cityofkilgore.com/250/RE-Spradlin-III" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">R.E. Spradlin III</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem254" data-pageid="254">
+		<div class="accordionNavItem">
+			<a href="https://cityofkilgore.com/254/Victor-Boyd" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Victor Boyd</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem544" data-pageid="544">
+		<div class="accordionNavItem">
+			<a href="https://cityofkilgore.com/544/Randy-Renshaw" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Randy Renshaw</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem531" data-pageid="531">
+		<div class="accordionNavItem">
+			<a href="https://cityofkilgore.com/531/Alan-VanDoren" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Alan VanDoren</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem543" data-pageid="543">
+		<div class="accordionNavItem">
+			<a href="https://cityofkilgore.com/543/Daniel-Gantt" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Daniel Gantt</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem540" data-pageid="540">
+		<div class="accordionNavItem">
+			<a href="https://cityofkilgore.com/DocumentCenter/View/3412/Council-Rules-Protocol-and-Ethics-06272023-" target="_blank" class="navMainItem secondaryNavItem cpComponent docaccess-activated" data-type="SecondaryMainItem" aria-label="City Council Rules, Protocol, and Ethics Opens in new window" data-docaccess-source-url="https://www.cityofkilgore.com/DocumentCenter/View/3412/Council-Rules-Protocol-and-Ethics-06272023-" data-url-hash="cee9dfb47635fcbfeca31ce7634bbf805fac2aa81dbb6a11b69d7e311922b2e6" data-url-status="disabled" rel="noopener">City Council Rules, Protocol, and Ethics</a>
+		</div>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = false;
+		});
+	</script>
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			$('*[id^="SideItem"]').each(function () {
+				var ids = $('[id="' + this.id + '"]');
+				if (ids.length > 1)
+					$.each(ids, function (index, value) {
+						value.id = value.id + '_' + index;
+					});
+			});
+
+			$('.hasAccordionChildren .openAccordionNav').click(function (e) {
+				e.preventDefault();
+				showHideAccordionMenuForSecondaryNav($(this));
+			});
+
+			$("#secondaryNav .grippy").each(function () {
+				menuManager.setupDraggableElement($(this), SIDE_MENU, '#secondaryNav');
+			});
+
+			$("#secondaryNav li").each(function () {
+				menuManager.setupDroppableAccordionElement($(this), SIDE_MENU);
+			});
+		});
+	</script>
+
+
+
+</nav><aside data-cprole="contentContainer" id="sidebarContainer2TS">	<div id="cc9440b58b-3672-452f-a0c6-396e1d5a4489" data-containerid="9440b58b-3672-452f-a0c6-396e1d5a4489" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div><!-- GBs --><div data-cprole="structuralContainer" id="gbsContainerTS">
+<div class="siteWrap3"><div data-cprole="contentContainer" id="gbsTS">	<div id="cc54d21130-ab66-4c19-90ff-382106dbd687" data-containerid="54d21130-ab66-4c19-90ff-382106dbd687" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="55">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col6 first" style="height: auto;" data-widgetcontainerid="c40c2956-b5f6-4069-b3d1-ee75e7fb5810">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id53afa7e6-772f-4f53-b222-e05530cee49a" style="height: 200px;" data-widgetcontainerid="53afa7e6-772f-4f53-b222-e05530cee49a">
+	
+<div data-widget-id="6a9457da-43b2-440a-8202-b7011e858eef" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget6a9457da-43b2-440a-8202-b7011e858eef" class="widget widgetGraphicLinks skin63 widgetOptionSet49 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.municipalonlinepayments.com/kilgoretx" target="_self" class="fancyButton fancyButton1145 ">
+		<span>
+			<span><span class="text">Utility Billing<br><span class="textStyle1">Pay your bill online</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1145.fancyButton:link,.fancyButton1145.fancyButton:visited, .fancyButton1145div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2915');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 110px;
+transition:.2s ease-in-out;}
+.fancyButton1145.fancyButton:hover,.fancyButton1145.fancyButton:focus,.fancyButton1145.fancyButton:active,.fancyButton1145.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton1145.fancyButton:link > span,.fancyButton1145.fancyButton:visited > span, .fancyButton1145div.fancyButton > span{
+}
+.fancyButton1145.fancyButton:hover > span,.fancyButton1145.fancyButton:focus > span,.fancyButton1145.fancyButton:active > span,.fancyButton1145.fancyButton.hover > span{
+}
+.fancyButton1145.fancyButton .text{
+	color: #000000;
+	font-family: "Open Sans";
+	padding-top: 8.5em;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 8.5em;
+	background-image: url('/ImageRepository/Document?documentID=2919');
+	background-repeat: no-repeat;
+	background-position: center 2.5em ;
+background-size: 60px;
+transition:.2s ease-in-out;
+}
+.fancyButton1145.fancyButton:hover .text,.fancyButton1145.fancyButton:focus .text,.fancyButton1145.fancyButton:active .text,.fancyButton1145.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 1.5em ;
+
+
+}
+.fancyButton1145.fancyButton .textStyle1{
+	color: #0a5282;
+	font-size: .8em;
+	font-style: italic;
+	text-decoration: none;
+
+}
+.fancyButton1145.fancyButton:hover .textStyle1, .fancyButton1145.fancyButton.hover .textStyle1{
+	text-decoration: underline;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofkilgore.com/295/Interactive-Map-Gallery" target="_self" class="fancyButton fancyButton1146 ">
+		<span>
+			<span><span class="text">GIS Maps<br><span class="textStyle1">Interactive map gallery</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1146.fancyButton:link,.fancyButton1146.fancyButton:visited, .fancyButton1146div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2915');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 110px;
+transition:.2s ease-in-out;}
+.fancyButton1146.fancyButton:hover,.fancyButton1146.fancyButton:focus,.fancyButton1146.fancyButton:active,.fancyButton1146.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton1146.fancyButton:link > span,.fancyButton1146.fancyButton:visited > span, .fancyButton1146div.fancyButton > span{
+}
+.fancyButton1146.fancyButton:hover > span,.fancyButton1146.fancyButton:focus > span,.fancyButton1146.fancyButton:active > span,.fancyButton1146.fancyButton.hover > span{
+}
+.fancyButton1146.fancyButton .text{
+	color: #000000;
+	font-family: "Open Sans";
+	padding-top: 8.5em;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 8.5em;
+	background-image: url('/ImageRepository/Document?documentID=2917');
+	background-repeat: no-repeat;
+	background-position: center 2.5em ;
+background-size: 60px;
+transition:.2s ease-in-out;
+}
+.fancyButton1146.fancyButton:hover .text,.fancyButton1146.fancyButton:focus .text,.fancyButton1146.fancyButton:active .text,.fancyButton1146.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 1.5em ;
+
+
+}
+.fancyButton1146.fancyButton .textStyle1{
+	color: #0a5282;
+	font-size: .8em;
+	font-style: italic;
+	text-decoration: none;
+
+}
+.fancyButton1146.fancyButton:hover .textStyle1, .fancyButton1146.fancyButton.hover .textStyle1{
+	text-decoration: underline;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="height: auto;" data-widgetcontainerid="a9ba3753-3d89-4ac3-ab00-9fb23af474fe">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id11777178-3090-4eff-8359-e25dc5a79c7e" style="height: 200px;" data-widgetcontainerid="11777178-3090-4eff-8359-e25dc5a79c7e">
+	
+<div data-widget-id="a46e434f-32f9-48c0-b57e-3a5562490326" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgeta46e434f-32f9-48c0-b57e-3a5562490326" class="widget widgetGraphicLinks skin63 widgetOptionSet49 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofkilgore.com/463/Permits" target="_self" class="fancyButton fancyButton1147 ">
+		<span>
+			<span><span class="text">Permits<br><span class="textStyle1">Apply for a permit</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1147.fancyButton:link,.fancyButton1147.fancyButton:visited, .fancyButton1147div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2915');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 110px;
+transition:.2s ease-in-out;}
+.fancyButton1147.fancyButton:hover,.fancyButton1147.fancyButton:focus,.fancyButton1147.fancyButton:active,.fancyButton1147.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton1147.fancyButton:link > span,.fancyButton1147.fancyButton:visited > span, .fancyButton1147div.fancyButton > span{
+}
+.fancyButton1147.fancyButton:hover > span,.fancyButton1147.fancyButton:focus > span,.fancyButton1147.fancyButton:active > span,.fancyButton1147.fancyButton.hover > span{
+}
+.fancyButton1147.fancyButton .text{
+	color: #000000;
+	font-family: "Open Sans";
+	padding-top: 8.5em;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 8.5em;
+	background-image: url('/ImageRepository/Document?documentID=2920');
+	background-repeat: no-repeat;
+	background-position: center 2.5em ;
+background-size: 60px;
+transition:.2s ease-in-out;
+}
+.fancyButton1147.fancyButton:hover .text,.fancyButton1147.fancyButton:focus .text,.fancyButton1147.fancyButton:active .text,.fancyButton1147.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 1.5em ;
+
+
+}
+.fancyButton1147.fancyButton .textStyle1{
+	color: #0a5282;
+	font-size: .8em;
+	font-style: italic;
+	text-decoration: none;
+
+}
+.fancyButton1147.fancyButton:hover .textStyle1, .fancyButton1147.fancyButton.hover .textStyle1{
+	text-decoration: underline;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.trafficpayment.com/" target="_self" class="fancyButton fancyButton1148 ">
+		<span>
+			<span><span class="text">Ticket Payment<br><span class="textStyle1">Municipal Court</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1148.fancyButton:link,.fancyButton1148.fancyButton:visited, .fancyButton1148div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2915');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 110px;
+transition:.2s ease-in-out;}
+.fancyButton1148.fancyButton:hover,.fancyButton1148.fancyButton:focus,.fancyButton1148.fancyButton:active,.fancyButton1148.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton1148.fancyButton:link > span,.fancyButton1148.fancyButton:visited > span, .fancyButton1148div.fancyButton > span{
+}
+.fancyButton1148.fancyButton:hover > span,.fancyButton1148.fancyButton:focus > span,.fancyButton1148.fancyButton:active > span,.fancyButton1148.fancyButton.hover > span{
+}
+.fancyButton1148.fancyButton .text{
+	color: #000000;
+	font-family: "Open Sans";
+	padding-top: 8.5em;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 8.5em;
+	background-image: url('/ImageRepository/Document?documentID=2918');
+	background-repeat: no-repeat;
+	background-position: center 2.5em ;
+background-size: 60px;
+transition:.2s ease-in-out;
+}
+.fancyButton1148.fancyButton:hover .text,.fancyButton1148.fancyButton:focus .text,.fancyButton1148.fancyButton:active .text,.fancyButton1148.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 1.5em ;
+
+
+}
+.fancyButton1148.fancyButton .textStyle1{
+	color: #0a5282;
+	font-size: .8em;
+	font-style: italic;
+	text-decoration: none;
+
+}
+.fancyButton1148.fancyButton:hover .textStyle1, .fancyButton1148.fancyButton.hover .textStyle1{
+	text-decoration: underline;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="height: auto;" data-widgetcontainerid="af5c8634-81ef-4ed0-ba85-25f64b304e2d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last idf1fbce9b-596d-4a06-834b-81b41f5f49d3" style="height: 200px;" data-widgetcontainerid="f1fbce9b-596d-4a06-834b-81b41f5f49d3">
+	
+<div data-widget-id="2c1b8c47-1675-4329-9124-dfb79cd5d693" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget2c1b8c47-1675-4329-9124-dfb79cd5d693" class="widget widgetGraphicLinks skin63 widgetOptionSet49 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofkilgore.com/280/Report-A-Problem" target="_self" class="fancyButton fancyButton1149 ">
+		<span>
+			<span><span class="text">Report a Problem<br><span class="textStyle1">Submit an issue with MyKilgore</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1149.fancyButton:link,.fancyButton1149.fancyButton:visited, .fancyButton1149div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2915');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 110px;
+transition:.2s ease-in-out;}
+.fancyButton1149.fancyButton:hover,.fancyButton1149.fancyButton:focus,.fancyButton1149.fancyButton:active,.fancyButton1149.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton1149.fancyButton:link > span,.fancyButton1149.fancyButton:visited > span, .fancyButton1149div.fancyButton > span{
+}
+.fancyButton1149.fancyButton:hover > span,.fancyButton1149.fancyButton:focus > span,.fancyButton1149.fancyButton:active > span,.fancyButton1149.fancyButton.hover > span{
+}
+.fancyButton1149.fancyButton .text{
+	color: #000000;
+	font-family: "Open Sans";
+	padding-top: 8.5em;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 8.5em;
+	background-image: url('/ImageRepository/Document?documentID=2922');
+	background-repeat: no-repeat;
+	background-position: center 2.5em ;
+background-size: 60px;
+transition:.2s ease-in-out;
+}
+.fancyButton1149.fancyButton:hover .text,.fancyButton1149.fancyButton:focus .text,.fancyButton1149.fancyButton:active .text,.fancyButton1149.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 1.5em ;
+
+
+}
+.fancyButton1149.fancyButton .textStyle1{
+	color: #0a5282;
+	font-size: .8em;
+	font-style: italic;
+	text-decoration: none;
+
+}
+.fancyButton1149.fancyButton:hover .textStyle1, .fancyButton1149.fancyButton.hover .textStyle1{
+	text-decoration: underline;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofkilgore.civicweb.net/Portal/" target="_self" class="fancyButton fancyButton1150 ">
+		<span>
+			<span><span class="text">Agendas &amp; Minutes<br><span class="textStyle1">Stay up to date</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1150.fancyButton:link,.fancyButton1150.fancyButton:visited, .fancyButton1150div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2915');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 110px;
+transition:.2s ease-in-out;}
+.fancyButton1150.fancyButton:hover,.fancyButton1150.fancyButton:focus,.fancyButton1150.fancyButton:active,.fancyButton1150.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton1150.fancyButton:link > span,.fancyButton1150.fancyButton:visited > span, .fancyButton1150div.fancyButton > span{
+}
+.fancyButton1150.fancyButton:hover > span,.fancyButton1150.fancyButton:focus > span,.fancyButton1150.fancyButton:active > span,.fancyButton1150.fancyButton.hover > span{
+}
+.fancyButton1150.fancyButton .text{
+	color: #000000;
+	font-family: "Open Sans";
+	padding-top: 8.5em;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 8.5em;
+	background-image: url('/ImageRepository/Document?documentID=2914');
+	background-repeat: no-repeat;
+	background-position: center 2.5em ;
+background-size: 60px;
+transition:.2s ease-in-out;
+}
+.fancyButton1150.fancyButton:hover .text,.fancyButton1150.fancyButton:focus .text,.fancyButton1150.fancyButton:active .text,.fancyButton1150.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 1.5em ;
+
+
+}
+.fancyButton1150.fancyButton .textStyle1{
+	color: #0a5282;
+	font-size: .8em;
+	font-style: italic;
+	text-decoration: none;
+
+}
+.fancyButton1150.fancyButton:hover .textStyle1, .fancyButton1150.fancyButton.hover .textStyle1{
+	text-decoration: underline;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6 last" style="height: auto;" data-widgetcontainerid="bf5ce8fb-aa52-4ea4-a990-edf8e9809488">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last idaa71da51-dd6e-4441-9558-3570de7765a7" style="height: 200px;" data-widgetcontainerid="aa71da51-dd6e-4441-9558-3570de7765a7">
+	
+<div data-widget-id="9540f178-e235-40a4-9db1-1335893a76e1" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget9540f178-e235-40a4-9db1-1335893a76e1" class="widget widgetGraphicLinks skin63 widgetOptionSet49 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofkilgore.com/155/Police" target="_self" class="fancyButton fancyButton1151 ">
+		<span>
+			<span><span class="text">Police Dept.<br><span class="textStyle1">Protect &amp; serve</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1151.fancyButton:link,.fancyButton1151.fancyButton:visited, .fancyButton1151div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2915');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 110px;
+transition:.2s ease-in-out;}
+.fancyButton1151.fancyButton:hover,.fancyButton1151.fancyButton:focus,.fancyButton1151.fancyButton:active,.fancyButton1151.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton1151.fancyButton:link > span,.fancyButton1151.fancyButton:visited > span, .fancyButton1151div.fancyButton > span{
+}
+.fancyButton1151.fancyButton:hover > span,.fancyButton1151.fancyButton:focus > span,.fancyButton1151.fancyButton:active > span,.fancyButton1151.fancyButton.hover > span{
+}
+.fancyButton1151.fancyButton .text{
+	color: #000000;
+	font-family: "Open Sans";
+	padding-top: 8.5em;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 8.5em;
+	background-image: url('/ImageRepository/Document?documentID=2921');
+	background-repeat: no-repeat;
+	background-position: center 2.5em ;
+background-size: 60px;
+transition:.2s ease-in-out;
+}
+.fancyButton1151.fancyButton:hover .text,.fancyButton1151.fancyButton:focus .text,.fancyButton1151.fancyButton:active .text,.fancyButton1151.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 1.5em ;
+
+
+}
+.fancyButton1151.fancyButton .textStyle1{
+	color: #0a5282;
+	font-size: .8em;
+	font-style: italic;
+	text-decoration: none;
+
+}
+.fancyButton1151.fancyButton:hover .textStyle1, .fancyButton1151.fancyButton.hover .textStyle1{
+	text-decoration: underline;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofkilgore.com/154/Library" target="_self" class="fancyButton fancyButton1152 ">
+		<span>
+			<span><span class="text">Library<br><span class="textStyle1">View available resources</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1152.fancyButton:link,.fancyButton1152.fancyButton:visited, .fancyButton1152div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2915');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 110px;
+transition:.2s ease-in-out;}
+.fancyButton1152.fancyButton:hover,.fancyButton1152.fancyButton:focus,.fancyButton1152.fancyButton:active,.fancyButton1152.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton1152.fancyButton:link > span,.fancyButton1152.fancyButton:visited > span, .fancyButton1152div.fancyButton > span{
+}
+.fancyButton1152.fancyButton:hover > span,.fancyButton1152.fancyButton:focus > span,.fancyButton1152.fancyButton:active > span,.fancyButton1152.fancyButton.hover > span{
+}
+.fancyButton1152.fancyButton .text{
+	color: #000000;
+	font-family: "Open Sans";
+	padding-top: 8.5em;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 8.5em;
+	background-image: url('/ImageRepository/Document?documentID=2916');
+	background-repeat: no-repeat;
+	background-position: center 2.5em ;
+background-size: 60px;
+transition:.2s ease-in-out;
+}
+.fancyButton1152.fancyButton:hover .text,.fancyButton1152.fancyButton:focus .text,.fancyButton1152.fancyButton:active .text,.fancyButton1152.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 1.5em ;
+
+
+}
+.fancyButton1152.fancyButton .textStyle1{
+	color: #0a5282;
+	font-size: .8em;
+	font-style: italic;
+	text-decoration: none;
+
+}
+.fancyButton1152.fancyButton:hover .textStyle1, .fancyButton1152.fancyButton.hover .textStyle1{
+	text-decoration: underline;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Calendar/Carousel --><!-- <div data-cpRole="structuralContainer" id="homeContainer1">
+    <div class="siteWrap">
+      <div data-cpRole="contentContainer" id="homeContent1a"></div>
+    </div>
+  </div> --><!-- Footer --><footer data-cprole="structuralContainer" id="footerContainerTS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="footerTS">	<div id="cc6f8f8406-010e-4ee2-bdb0-182f3322f10c" data-containerid="6f8f8406-010e-4ee2-bdb0-182f3322f10c" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="55">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col5 first" style="height: auto;" data-widgetcontainerid="7e03b047-d351-48d4-9597-eb2eb7aa0c86">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last id99b1e255-e507-4efc-b827-db889dfee3b2" style="height: 350px;" data-widgetcontainerid="99b1e255-e507-4efc-b827-db889dfee3b2">
+	
+    <div data-widget-id="d02870d8-6491-4d21-8413-9e751855498c" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdvd02870d8-6491-4d21-8413-9e751855498c" class="widget widgetInfoAdvanced skin71 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="headerd02870d8-6491-4d21-8413-9e751855498c">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="https://cityofkilgore.com/"><img src="https://cityofkilgore.com/ImageRepository/Document?documentId=3011" class="fr-dib" alt="TX Kilgore logo"></a></p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="https://cityofkilgore.com/"><img src="https://cityofkilgore.com/ImageRepository/Document?documentId=3106" class="fr-dib" alt="TX Kilgore logo" style="width: 187px;"></a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdvd02870d8-6491-4d21-8413-9e751855498c .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="4b0d2f94-2ad8-4545-87b3-ebe03e188b2a">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id668cf39b-900d-4456-a563-6fc295371656" style="height: 350px;" data-widgetcontainerid="668cf39b-900d-4456-a563-6fc295371656">
+	
+
+<div class="widget widgetSpacer" id="431294fa-4038-4a54-968f-2124eaaf8815" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="height: auto;" data-widgetcontainerid="b4655104-696a-44ae-9715-2153b0553ad7">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last idf76dfbc4-90e0-48d7-aee5-031fcfa65f51" style="height: 350px;" data-widgetcontainerid="f76dfbc4-90e0-48d7-aee5-031fcfa65f51">
+	
+    <div data-widget-id="a1ef22f6-1425-450e-91d3-2ca419c255c0" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdva1ef22f6-1425-450e-91d3-2ca419c255c0" class="widget widgetInfoAdvanced skin62 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="headera1ef22f6-1425-450e-91d3-2ca419c255c0">
+			<header class="widgetHeader" id="headera1ef22f6-1425-450e-91d3-2ca419c255c0">
+		<div class="">
+					<h3>Contact Us</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p id="isPasted"><strong>City of Kilgore&nbsp;</strong><br>815 N Kilgore Street<br>Kilgore, TX 75662&nbsp;<br>Phone: <a href="tel: 903-984-5081">903-984-5081</a></p><p>By contacting us, you agree to receive SMS messages from the City of Kilgore. We will not send marketing messages and only contact you regarding the services requested.</p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdva1ef22f6-1425-450e-91d3-2ca419c255c0 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="754fec07-b68c-406d-9c4b-e989925184e3">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last idf3af47d1-89ce-4778-8efd-a5a917088e52" style="height: 350px;" data-widgetcontainerid="f3af47d1-89ce-4778-8efd-a5a917088e52">
+	
+
+<div class="widget widgetSpacer" id="3bf918b7-2531-447c-b79c-b121c8f4f558" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="height: auto;" data-widgetcontainerid="7752d1e1-b341-45fd-ba91-bdb5a6ec2765">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id3975761d-9875-4c85-9c8c-9b515055fcc5" style="height: 350px;" data-widgetcontainerid="3975761d-9875-4c85-9c8c-9b515055fcc5">
+	
+	<div data-widget-id="4025a210-3673-44ac-95e6-edfe99d1c447" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink4025a210-3673-44ac-95e6-edfe99d1c447" class="widget widgetQuickLinks skin62 widgetOptionSet38 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeader4025a210-3673-44ac-95e6-edfe99d1c447">
+			<header class="widgetHeader" id="quickLinksHeader4025a210-3673-44ac-95e6-edfe99d1c447">
+		<div class="">
+					<h3><a style="" href="https://cityofkilgore.com/QuickLinks.aspx?CID=39">Helpful Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink docaccess-activated" href="https://cityofkilgore.com/DocumentCenter/View/3833/Municipal-Energy-Usage-2023-PDFCNV" target="_self" data-docaccess-source-url="https://www.cityofkilgore.com/DocumentCenter/View/3833/Municipal-Energy-Usage-2023-PDFCNV" data-url-hash="46509cac9d3a8263eb2b06a2bb631c86721476f44387a441a69e566a21602ea8" data-url-status="disabled">Municipal Energy Usage: Compliance with HB 3693</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink docaccess-activated" href="https://cityofkilgore.com/DocumentCenter/View/4107/2024-Annual-Drinking-Water-Quality-Report" target="_blank" aria-label="2024 Annual Drinking Water Quality Report Opens in new window" data-docaccess-source-url="https://www.cityofkilgore.com/DocumentCenter/View/4107/2024-Annual-Drinking-Water-Quality-Report" data-url-hash="2afca6f32751fa96bc07ca5e456186d12d5e6584be4a3a88b024499e1855de6d" data-url-status="disabled" rel="noopener">2024 Annual Drinking Water Quality Report</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://kilgore-edc.com/" target="_blank" aria-label="Kilgore Economic Development Corporation Opens in new window" rel="noopener">Kilgore Economic Development Corporation</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.kilgorechamber.com/" target="_blank" aria-label="Kilgore Chamber of Commerce Opens in new window" rel="noopener">Kilgore Chamber of Commerce</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://www.kisd.org/" target="_blank" aria-label="Kilgore Independent School District Opens in new window" rel="noopener">Kilgore Independent School District</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://www.kilgore.edu/" target="_blank" aria-label="Kilgore College Opens in new window" rel="noopener">Kilgore College</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://www.easttexasoilmuseum.com/" target="_blank" aria-label="East Texas Oil Museum Opens in new window" rel="noopener">East Texas Oil Museum</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://visitkilgore.com/" target="_blank" aria-label="Visit Kilgore Website Opens in new window" rel="noopener">Visit Kilgore Website</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="961619be-fcfd-4c3a-ab24-12af420fff37">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id1cf4ec72-7cb9-4d43-a2ff-7deecedfc6d1" style="height: 350px;" data-widgetcontainerid="1cf4ec72-7cb9-4d43-a2ff-7deecedfc6d1">
+	
+
+<div class="widget widgetSpacer" id="40551865-405e-4682-9748-26cdc190dc08" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4 last" style="height: auto;" data-widgetcontainerid="5fe0fa65-c4d0-4b80-9ba7-7ffb6df0ecde">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last id13c4afc5-46cb-4fd7-9d88-8b1dcbef9889" style="height: 350px;" data-widgetcontainerid="13c4afc5-46cb-4fd7-9d88-8b1dcbef9889">
+	
+	<div data-widget-id="ef884002-32c4-41c7-8dfd-f3197d705db4" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklinkef884002-32c4-41c7-8dfd-f3197d705db4" class="widget widgetQuickLinks skin62 widgetOptionSet38 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeaderef884002-32c4-41c7-8dfd-f3197d705db4">
+			<header class="widgetHeader" id="quickLinksHeaderef884002-32c4-41c7-8dfd-f3197d705db4">
+		<div class="">
+					<h3><a style="" href="https://cityofkilgore.com/QuickLinks.aspx?CID=17">Site Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofkilgore.com/" target="_self">Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofkilgore.com/SiteMap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofkilgore.com/Accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofkilgore.com/disclaimer" target="_self">Disclaimer</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofkilgore.com/site/copyright" target="_self">Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofkilgore.com/admin" target="_self">Website Login</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</footer><!-- Powered By --><div data-cprole="structuralContainer" id="poweredByContainerTS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="poweredByTS">	<div id="cc1618e31b-25ee-4fc8-9053-1514548c7f9f" data-containerid="1618e31b-25ee-4fc8-9053-1514548c7f9f" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="ca857d32-4d7b-4d77-8292-096e975171fb">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id6da79861-d498-44ba-93b2-05318348dd80" style="height: 34px;" data-widgetcontainerid="6da79861-d498-44ba-93b2-05318348dd80">
+	
+ 
+	<div data-widget-id="0e2ced4d-bac5-45a5-8a38-a7b5dc7e7462" data-modulename="customHtml" id="widgetCustomHtml0e2ced4d-bac5-45a5-8a38-a7b5dc7e7462" class="widget widgetCustomHtml skin62 narrow">
+	<div class="widgetBody pageStyles" id="widgetBody0e2ced4d-bac5-45a5-8a38-a7b5dc7e7462">
+		<div id="customHtml0e2ced4d-bac5-45a5-8a38-a7b5dc7e7462"><div><style>
+  /* CP icon */
+  .cpBylineIconTS {
+    color: #fff;
+  }
+  /* CP Text */
+  .cpBylineTextTS,
+  .cpBylineTextTS a:link {
+    color: #fff;
+  }
+
+  .cpBylineTS {
+    text-align: center;
+  }
+  
+  .cpBylineIconTS {
+    fill: currentColor;
+    width: 39px;
+    height: 26px;
+    display: inline;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="widgetItem cpBylineTS">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="cpBylineIconTS">
+    <path class="c" d="M73.4,23.2h-19v16.7h19c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5h-19v28.4h5.5l11.3-11.7h2.2c11.9,0,21.6-9.7,21.6-21.6C95,33,85.3,23.2,73.4,23.2"></path>
+    <path class="p" d="M45.8,66.5H26.6C14.7,66.5,5,56.8,5,44.9C5,33,14.7,23.2,26.6,23.2h19.1v16.7H26.6c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h19.1V66.5z"></path>
+  </svg>
+  <span class="cpBylineTextTS">Government Websites by <a href="https://connect.civicplus.com/referral">CivicPlus®</a></span>
+</div>
+</div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '249',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!-- Fixed Nav Adjustment -->
+<script>
+  function getValueTS(elem, attr) {
+    var val = elem.css(attr);
+    if (val === undefined) return undefined;
+    var num = parseInt(val, 10);
+    if (num === NaN) return undefined;
+    return num;
+  }
+
+  function clampTS(number, min, max) {
+    return Math.min(Math.max(number, min), max);
+  }
+
+  function isPageEditingTS() {
+    return (
+      $("#doneEditing").length > 0 || // In live edit
+      typeof DesignCenter !== "undefined" // In theme manager
+    );
+  }
+
+  var bgColorRegexTS = new RegExp("rgba\((\d+), (\d+), (\d+), (\d*\.?\d*)\)");
+  function isTransparentTS(elem) {
+    var bg = elem.css('background-color');
+    if (typeof bg !== "string") return false;
+    if (bg === "transparent") return true;
+    if (!bg.startsWith('rgba(')) return false;
+    var matchState = bg.match(bgColorRegexTS);
+    if (!matchState || matchState.length !== 5) return false;
+    var alpha = parseFloat(matchState[4], 10);
+    if (!(alpha >= 0 && alpha < 1)) return false;
+    return true;
+  }
+
+  function iterateLeftpads(cb) {
+    var containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (var i = 0; i < containersTS.length; i++) {
+      var containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-leftpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-leftpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  function iterateRightpads(cb) {
+    var containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (var i = 0; i < containersTS.length; i++) {
+      var containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-rightpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-rightpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  var anchor = $("#divToolbars");
+  var bodyContainerTS = $("#bodyContainerTS");
+
+  // Outer banner padding (push banner down)
+  var outerSizingTS = $("#bannerContainerTS");
+  // Inner banner padding (push banner content down) - Transparent header OR on attaching headers
+  var innerSizingTS = $("#bannerSizingTS");
+
+  var forceUnfixClassTS = "forceUnfixTS";
+
+  var fixedTopTS = $(".fixedTopTS");
+  var fixedBottomTS = $(".fixedBottomTS");
+  var fixedLeftTS = $(".fixedLeftTS");
+  var fixedRightTS = $(".fixedRightTS");
+
+  var initialTopTS;
+  var topAttachTS;
+  if (fixedTopTS && fixedTopTS.length === 1) {
+    initialTopTS = getValueTS(fixedTopTS, 'top');
+    var attachment = fixedTopTS.attr('data-attach');
+    if (attachment) topAttachTS = $("#" + attachment);
+    if (!topAttachTS || topAttachTS.length !== 1) topAttachTS = undefined;
+  }
+
+  function resizeAdjustmentTS() {
+    var editing = isPageEditingTS();
+
+    // Fixed top script
+    (function () {
+      if (!fixedTopTS || fixedTopTS.length !== 1 || initialTopTS === undefined) return;
+
+      if (editing) {
+        fixedTopTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedTopTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      var topPosition = fixedTopTS.css('position');
+      if (topPosition === 'fixed') {
+        if (topAttachTS) {
+          scrollAdjustmentTS();
+        } else {
+          var anchorHeight = anchor.outerHeight() - 1;
+          fixedTopTS.css('top', anchorHeight + initialTopTS);
+        }
+      } else {
+        fixedTopTS.css('top', initialTopTS);
+      }
+
+      if (topPosition === 'fixed' || topPosition === 'absolute') {
+        // Bump the banner content down
+        if (isTransparentTS(fixedTopTS)) {
+          innerSizingTS.css('padding-top', initialTopTS + fixedTopTS.outerHeight());
+          outerSizingTS.css('padding-top', '');
+
+          try {
+            window.Pages.onResizeHandlersExecute();
+          } catch (e) { }
+        } else {
+          outerSizingTS.css('padding-top', fixedTopTS.outerHeight() - 1);
+          innerSizingTS.css('padding-top', '');
+        }
+      } else {
+        innerSizingTS.css('padding-top', '');
+        outerSizingTS.css('padding-top', '');
+      }
+    })();
+
+    // Fixed bottom script
+    (function () {
+      if (!fixedBottomTS || fixedBottomTS.length === 0) return;
+
+      // If the widget has gone narrow, force unfix
+      if (editing || fixedBottomTS.outerHeight() > 200) {
+        fixedBottomTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedBottomTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedBottomTS.css('position') === 'fixed') {
+        bodyContainerTS.css('padding-bottom', fixedBottomTS.outerHeight());
+      } else {
+        bodyContainerTS.css('padding-bottom', '');
+      }
+    })();
+
+    // Fixed left script
+    (function () {
+      if (!fixedLeftTS || fixedLeftTS.length === 0) return;
+
+      if (editing) {
+        fixedLeftTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedLeftTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedLeftTS.css('position') === 'fixed') {
+        var anchorHeight = anchor.outerHeight() - 1;
+        fixedLeftTS.css('top', anchorHeight);
+        var leftBoundingTS = fixedLeftTS[0].getBoundingClientRect();
+        iterateLeftpads(function (containerTS) {
+          var containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.left <= leftBoundingTS.right) {
+            $(containerTS).css('padding-left', leftBoundingTS.width + 16);
+          } else {
+            $(containerTS).css('padding-left', '');
+          }
+        });
+      } else {
+        fixedLeftTS.css('top', '');
+        iterateLeftpads(function (containerTS) {
+          $(containerTS).css('padding-left', '');
+        });
+      }
+    })();
+
+    // Fixed right script
+    (function () {
+      if (!fixedRightTS || fixedRightTS.length === 0) return;
+
+      if (editing) {
+        fixedRightTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedRightTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedRightTS.css('position') === 'fixed') {
+        var anchorHeight = anchor.outerHeight() - 1;
+        fixedRightTS.css('top', anchorHeight);
+        var rightBoundingTS = fixedRightTS[0].getBoundingClientRect();
+        iterateRightpads(function (containerTS) {
+          var containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.right >= rightBoundingTS.left) {
+            $(containerTS).css('padding-right', rightBoundingTS.width + 16);
+          }
+        });
+      } else {
+        fixedRightTS.css('top', '');
+        iterateRightpads(function (containerTS) {
+          $(containerTS).css('padding-right', '');
+        });
+      }
+    })();
+  }
+
+  function scrollAdjustmentTS() {
+    if (!fixedTopTS || fixedTopTS.length !== 1 || !topAttachTS || topAttachTS.length !== 1) return;
+    var topPosition = fixedTopTS.css('position');
+    if (topPosition === 'fixed' || topPosition === 'absolute') {
+      var anchorBounding = anchor[0].getBoundingClientRect();
+      var attachBounding = topAttachTS[0].getBoundingClientRect();
+      var scrollTop = $(window).scrollTop();
+
+      fixedTopTS.css('top', Math.max(anchorBounding.bottom - 1, attachBounding.bottom));
+    } else {
+      fixedTopTS.css('top', initialTopTS);
+    }
+  }
+
+  $(window).load(function () {
+    setTimeout(function () {
+      try {
+        resizeAdjustmentTS();
+      } catch (e) {
+        console.error(e);
+      }
+    }, 350);
+
+    $(window).scroll(function () {
+      try {
+        scrollAdjustmentTS();
+      } catch (e) {
+        console.error(e);
+      }
+    });
+
+    var adjustTimeoutTS;
+    $(window).resize(function () {
+      clearTimeout(adjustTimeoutTS);
+      adjustTimeoutTS = setTimeout(function () {
+        try {
+          resizeAdjustmentTS();
+        } catch (e) {
+          console.error(e);
+        }
+      }, 350);
+    });
+
+    $.when(window.Pages.angularToolbarComplete).done(function () {
+      try {
+        resizeAdjustmentTS();
+      } catch (e) {
+        console.error(e);
+      }
+    });
+  });
+</script>
+<!-- End Fixed Nav Adjustment -->
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Cabin:500,700,regular|Open+Sans:300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,italic,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu153" class="contentTop mainNavMegaMenu megaMenuContainer pageID_153 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 97px;">	<div id="ccf69975f6-d129-496b-8570-97654c7783c2" data-containerid="f69975f6-d129-496b-8570-97654c7783c2" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu27" class="contentTop mainNavMegaMenu megaMenuContainer pageID_27 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 97px;">	<div id="cc4ef1c434-1643-438d-ba5e-5b05574559b1" data-containerid="4ef1c434-1643-438d-ba5e-5b05574559b1" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu101" class="contentTop mainNavMegaMenu megaMenuContainer pageID_101 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 97px;">	<div id="ccc175e164-5e97-4f3f-b2c9-981b20ec72a4" data-containerid="c175e164-5e97-4f3f-b2c9-981b20ec72a4" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu31" class="contentTop mainNavMegaMenu megaMenuContainer pageID_31 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 97px;">	<div id="cc8dab2820-0d64-4eda-a27f-e28f07319408" data-containerid="8dab2820-0d64-4eda-a27f-e28f07319408" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu9" class="contentTop mainNavMegaMenu megaMenuContainer pageID_9 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 97px;">	<div id="ccd11259a6-ddec-4b8a-b676-185c4af97f11" data-containerid="d11259a6-ddec-4b8a-b676-185c4af97f11" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b>&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div></body></html>
