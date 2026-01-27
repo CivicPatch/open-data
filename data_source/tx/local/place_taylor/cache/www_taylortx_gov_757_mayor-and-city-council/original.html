@@ -1,0 +1,2509 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-i4-active wf-muli-n7-active wf-muli-n3-active wf-muli-n4-active wf-active has-webFonts" style="height: 100%;"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Arimo:700,700italic,italic,regular|Open+Sans:300,300italic,500,600,600italic,700,700italic,800,800italic,italic,regular|Open+Sans+Condensed:300,700|Oswald:200,300,500,600,700,regular|" media="all"><script type="text/javascript" src="//cdn.monsido.com/page-assist/v2/mon-page-assist-loader.js"></script><script type="text/javascript" src="//pagecorrect.monsido.com/v1/page-correct.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-QHN6TM4D13&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61n1"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-QHN6TM4D13';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	
+	<meta name="category0" content="Home">
+<meta name="category1" content="Government">
+<meta name="category2" content="Mayor and City Council">
+
+	
+	<meta name="theme-color" content="rgb(0, 136, 63)">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>Mayor and City Council | Taylor, TX - Official Website</title>
+
+		<meta name="description" content="Biographical information about council members.">
+		<meta name="keywords" content="council,council member,mayor,mayor pro tem,councilmember">
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '350px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/-1611622699.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.2f3WBw8L4SI.L.W.O/am=AAQD/d=0/rs=AN8SPfrXXtxuFpMMBoYgp93jo68L3iC3ZQ/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/_/translate_http/_/js/k=translate_http.tr.en_US.gm28aokwBeQ.O/am=AAAQ/d=1/exm=el_conf/ed=1/rs=AN8SPfo-cjsGcRTUC_jpauJJ5fve_ZlsdQ/m=el_main"></script></head>
+<body class="wide cpTextResizeOn doneLoading monsido-toolbar-body-container" style="position: relative; min-height: 100%; top: 0px;"><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="https://www.taylortx.gov/Common/images/ajax-loader.gif" alt="Loading" title="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks">
+<a href="https://www.taylortx.gov/757/Mayor-and-City-Council#cc1ccff710-225a-4dd4-a652-f462795d3542" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="9">
+    <input type="hidden" id="hdnContentCollectionID" value="61fbef93-bad2-4ef9-a7e2-81ff1d96cb48">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="22">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID">
+    <input type="hidden" id="pagePageID" value="757">
+
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700); 
+.alertText .customAlert {
+    color: #EAEAEA;
+    display: inline-block;
+    font-family: 'Open Sans Condensed', sans-serif; 
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 27px;
+    left: 57px;
+    line-height: 27px;
+    overflow: hidden;
+    position: absolute;
+    top: 15px;
+    white-space: nowrap;
+    width: 268px;
+}
+</style>
+  <div id="1_divAlertBar" class="alertToolbar cpToolbar" style="background: rgb(34, 34, 34); z-index: 1;">
+    <div id="1_divAlertToolbarInner" class="alertToolbarInner" style="font-size: 16px;">
+        <a href="https://www.taylortx.gov/AlertCenter.aspx" id="1_lnkAlertText" class="alertText" style="border-right: 1px solid #000000;">
+            <img src="https://www.taylortx.gov/Common/Images/AlertCenter/alertBarBlink.svg" id="1_imgDot" alt="Emergency Alert" class="redDot">
+            <span id="1_customAlert" class="customAlert">Weather Alert</span>
+        </a>
+        <span id="1_spnAlertContainer" class="alertContainer"><a href="https://www.taylortx.gov/AlertCenter.aspx?AID=City-Offices-Opening-at-100-PM-on-Tuesda-29" target="_self" class="alert" style="border-left: 1px solid #635e65; border-right: 1px solid #000000;background: #030303 url(/Common/images/AlertCenter/alertBarBlackTextBckg.png) repeat-x; color: #FFFFFF;">
+	City Offices Opening at 1:00 PM on Tuesday
+	<span style="color: #FC4C2F;">Icy road conditions remain</span>
+</a>
+</span>
+    </div>
+  </div>
+  <div id="1_divAlertBarEmpty" class="alertBarEmpty"></div>
+  
+
+
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 57px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="bodyContainerTS">
+<div data-cprole="structuralContainer" id="bannerContainerTS" class="noOverflowTS">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="bannerSizingTS">
+<!-- Header Container --><header data-cprole="structuralContainer" id="headerContainerTS">
+<div class="siteWrap3"><div data-cprole="structuralContainer" id="flexHeaderTS">
+<div data-cprole="banner" id="bannerLogoTS" class="bannerLogoTS empty">
+
+
+
+
+				<a id="bannerLogoTS-52" style="			display: block; text-align: center;
+" class="bannerObject" href="https://www.taylortx.gov/" target="_self"><img alt="City of Taylor Sesquicentennial Logo" class="bannerObject" height="1141" src="https://www.taylortx.gov/ImageRepository/Document?documentID=15748" width="900"></a>
+</div><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem6" class="topMenuItem" role="none" data-pageid="6" data-displaymegamenu="True" style="width: 23.1678%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem1 " href="https://www.taylortx.gov/6/Government" target="_self">   Government </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem7" class="topMenuItem" role="none" data-pageid="7" data-displaymegamenu="True" style="width: 23.5705%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavDepartments" class="navMainItem mainNavItem mainNavItem2 " href="https://www.taylortx.gov/7/Departments" target="_self">   Departments </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem9" class="topMenuItem" role="none" data-pageid="9" data-displaymegamenu="True" style="width: 17.1275%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavBusiness" class="navMainItem mainNavItem mainNavItem3 " href="https://www.taylortx.gov/9/Business" target="_self">   Business </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem559" class="topMenuItem" role="none" data-pageid="559" data-displaymegamenu="True" style="width: 16.9933%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavVisitors" class="navMainItem mainNavItem mainNavItem4 " href="https://taylormadetexas.com/" target="_blank" aria-label="   Visitors  Opens in new window" rel="noopener">   Visitors </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem1223" class="topMenuItem" role="none" data-pageid="1223" data-displaymegamenu="True" style="width: 19.1409%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavHowDoI" class="navMainItem mainNavItem mainNavItem5 " href="https://www.taylortx.gov/1223/How-Do-I" target="_self">   How Do I... </a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=22&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = false;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="0"></aside></nav><div data-cprole="contentContainer" id="socialsTS">	<div id="cca62efba3-0f4d-4095-aba3-8c0cf44ee598" data-containerid="a62efba3-0f4d-4095-aba3-8c0cf44ee598" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="47a1f580-09dd-460f-b3cb-2ef43c7fc7cb">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id385c5e3e-6204-41ac-aed0-df5747651f35" style="height: 33px;" data-widgetcontainerid="385c5e3e-6204-41ac-aed0-df5747651f35">
+	
+<div data-widget-id="7b80d578-5353-4e70-ab3c-359f777d6326" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget7b80d578-5353-4e70-ab3c-359f777d6326" class="widget widgetGraphicLinks skin113 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid5 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.facebook.com/cityoftaylortexas" target="_self" aria-label="Facebook graphic"><img src="https://www.taylortx.gov/ImageRepository/Document?documentID=14762" class="graphicButtonLink" alt="Facebook" onmouseover="this.src='/ImageRepository/Document?documentID=14762'" onmouseout="this.src='/ImageRepository/Document?documentID=14762'" onfocus="this.src='/ImageRepository/Document?documentID=14762'" onblur="this.src='/ImageRepository/Document?documentID=14762'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://x.com/cityoftaylor" target="_self" aria-label="X graphic"><img src="https://www.taylortx.gov/ImageRepository/Document?documentID=14765" class="graphicButtonLink" alt="X" onmouseover="this.src='/ImageRepository/Document?documentID=14765'" onmouseout="this.src='/ImageRepository/Document?documentID=14765'" onfocus="this.src='/ImageRepository/Document?documentID=14765'" onblur="this.src='/ImageRepository/Document?documentID=14765'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.youtube.com/@cityoftaylortx" target="_self" aria-label="YouTube graphic"><img src="https://www.taylortx.gov/ImageRepository/Document?documentID=14766" class="graphicButtonLink" alt="YouTube" onmouseover="this.src='/ImageRepository/Document?documentID=14766'" onmouseout="this.src='/ImageRepository/Document?documentID=14766'" onfocus="this.src='/ImageRepository/Document?documentID=14766'" onblur="this.src='/ImageRepository/Document?documentID=14766'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.instagram.com/cityoftaylortx" target="_self" aria-label="Instagram graphic"><img src="https://www.taylortx.gov/ImageRepository/Document?documentID=14763" class="graphicButtonLink" alt="Instagram" onmouseover="this.src='/ImageRepository/Document?documentID=14763'" onmouseout="this.src='/ImageRepository/Document?documentID=14763'" onfocus="this.src='/ImageRepository/Document?documentID=14763'" onblur="this.src='/ImageRepository/Document?documentID=14763'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://nextdoor.com/agency-detail/tx/taylor/city-of-taylor-1/" target="_self" aria-label="Nextdoor graphic"><img src="https://www.taylortx.gov/ImageRepository/Document?documentID=14764" class="graphicButtonLink" alt="Nextdoor" onmouseover="this.src='/ImageRepository/Document?documentID=14764'" onmouseout="this.src='/ImageRepository/Document?documentID=14764'" onfocus="this.src='/ImageRepository/Document?documentID=14764'" onblur="this.src='/ImageRepository/Document?documentID=14764'"> </a></li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div>
+</div></div>
+</header><!-- Banner --><div data-cprole="structuralContainer" id="bannerSearchTS">
+<div class="siteWrap2"><div data-cprole="contentContainer" id="welcomeTS">	<div id="cc0e29408b-e49c-46d0-87dc-5ecfae849781" data-containerid="0e29408b-e49c-46d0-87dc-5ecfae849781" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="334ce733-2e01-41b0-9a30-01815b5c4a79">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id6a71607a-9a1d-4562-9695-9a7a870ea565" style="height: 55px;" data-widgetcontainerid="6a71607a-9a1d-4562-9695-9a7a870ea565">
+	
+<div data-widget-id="666ccdc6-281b-43e2-ae08-e69b6f94cdb4" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButton666ccdc6-281b-43e2-ae08-e69b6f94cdb4").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDept666ccdc6-281b-43e2-ae08-e69b6f94cdb4").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchField666ccdc6-281b-43e2-ae08-e69b6f94cdb4").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDept666ccdc6-281b-43e2-ae08-e69b6f94cdb4").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDept666ccdc6-281b-43e2-ae08-e69b6f94cdb4").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchField666ccdc6-281b-43e2-ae08-e69b6f94cdb4").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDept666ccdc6-281b-43e2-ae08-e69b6f94cdb4").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchField666ccdc6-281b-43e2-ae08-e69b6f94cdb4").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchField666ccdc6-281b-43e2-ae08-e69b6f94cdb4"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin108 widgetOptionSet32" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBox666ccdc6-281b-43e2-ae08-e69b6f94cdb4 ui-autocomplete-input" cp5ph="true" id="searchField666ccdc6-281b-43e2-ae08-e69b6f94cdb4" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search..." title="Search..." type="text" value="" autocomplete="off">
+						<a href="https://www.taylortx.gov/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButton666ccdc6-281b-43e2-ae08-e69b6f94cdb4" role="button"><img alt="Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=14760" data-image="/ImageRepository/Document?documentID=14761" src="https://www.taylortx.gov/ImageRepository/Document?documentID=14761"></a>
+
+			<label class="searchLabel" for="searchField666ccdc6-281b-43e2-ae08-e69b6f94cdb4">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #fff;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #fff;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #fff;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #fff;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBox666ccdc6-281b-43e2-ae08-e69b6f94cdb4
+	{
+		color: #fff;
+		font-family: Open Sans;
+height: 55px;
+border: none;
+padding: 0 80px 0 20px;
+border-radius: 100px;
+box-shadow: 0px 3px 10px #00000033;
+background: #00883F;
+	}
+	.widgetSearch .widgetBody .widgetSearchButton666ccdc6-281b-43e2-ae08-e69b6f94cdb4
+	{
+		margin: 6px;
+width: 45px;
+	}
+	.widgetSearch .widgetSearch-onlyDept666ccdc6-281b-43e2-ae08-e69b6f94cdb4
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDept666ccdc6-281b-43e2-ae08-e69b6f94cdb4
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchField666ccdc6-281b-43e2-ae08-e69b6f94cdb4").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+
+
+
+		<div id="bannerImagesJSON51" class="hidden"></div><div class="bannerObject external fixedBanner" id="bannerDivbanner1" style="min-height: 420px; top: 0px; left: -27.5px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img class="bannerObject" width="1265px" style="position: absolute; left: 0px; margin: 0px; width: 1320px;" src="https://www.taylortx.gov/ImageRepository/Document?documentID=14755" data-is-delayed="false" alt=""></div>
+		
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner1',
+								{"BannerOptionID":51,"ThemeID":22,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":2,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":false,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":105,"BannerOptionID":51,"FileName":"/ImageRepository/Document?documentID=14756","Height":700,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":106,"BannerOptionID":51,"FileName":"/ImageRepository/Document?documentID=14755","Height":700,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":2,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":107,"BannerOptionID":51,"FileName":"/ImageRepository/Document?documentID=14754","Height":700,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":3,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""}],"BannerVideos":[{"BannerVideoID":6,"BannerOptionID":51,"VideoFileName":"","ImageFileName":"EmptyBannerBkg202504011140550554.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								'/App_Themes/2025 - Interior/Images/',
+								'Rotating');
+						});
+				});
+			</script>
+
+</div>
+</div><!-- Content container --><div data-cprole="structuralContainer" id="mainContainerTS">
+<div class="siteWrap"><div data-cprole="structuralContainer" id="mainWrapTS" class="mainWrap" role="main">
+<div data-cprole="structuralContainer" id="siteSidebarTS" class="siteSidebar">
+<aside data-cprole="contentContainer" id="sidebarContainer1TS">	<div id="ccbaea8a3a-d314-45c3-95d0-eebb9b5a9652" data-containerid="baea8a3a-d314-45c3-95d0-eebb9b5a9652" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav">
+
+
+
+
+
+	<ol role="menu" id="secondaryMenusecondaryNav" data-parent="6" class="rootNavMenu accordionNav">
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem757" data-pageid="757">
+		<div class="accordionNavItem">
+			<a href="https://www.taylortx.gov/757/Mayor-and-City-Council" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Mayor and City Council</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem18" data-pageid="18">
+		<div class="accordionNavItem">
+			<a href="https://www.taylortx.gov/18/Agendas-and-Minutes" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Agendas and Minutes</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1103" data-pageid="1103">
+		<div class="accordionNavItem">
+			<a href="http://www.taylortx.gov/1055/Annual-Reports" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Annual Reports</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1049" data-pageid="1049">
+		<div class="accordionNavItem">
+			<a href="https://www.taylortx.gov/813/Boards-Commissions" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Boards and Commissions</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem662" data-pageid="662">
+		<div class="accordionNavItem">
+			<a href="https://www.taylortx.gov/251/City-Elections" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">City Elections</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem642" data-pageid="642">
+		<div class="accordionNavItem">
+			<a href="https://www.taylortx.gov/642/Council-Meetings" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Council Meetings</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1027" data-pageid="1027">
+		<div class="accordionNavItem">
+			<a href="https://library.municode.com/tx/taylor/codes/code_of_ordinances" target="_blank" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem" aria-label="City Ordinances Opens in new window" rel="noopener">City Ordinances</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem253" data-pageid="253">
+		<div class="accordionNavItem">
+			<a href="https://www.taylortx.gov/253/Strategic-and-Master-Plans" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Strategic and Master Plans</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1173" data-pageid="1173">
+		<div class="accordionNavItem">
+			<a href="https://www.taylortx.gov/1173/Proclamation-Requests" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Proclamation Requests</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1246" data-pageid="1246">
+		<div class="accordionNavItem">
+			<a href="https://us-west-2.protection.sophos.com/?d=arcgis.com&amp;u=aHR0cHM6Ly9tYWxsYXJkLm1hcHMuYXJjZ2lzLmNvbS9hcHBzL2luc3RhbnQvbG9va3VwL2luZGV4Lmh0bWw_YXBwaWQ9Y2U4M2UzMjNiNWJlNGNjMzg0YTA5M2Q1Y2U4NjFhODM=&amp;p=m&amp;i=NjY3YWVlNjIzYjY4ODE3MDU0OTE0MTkz&amp;t=QjBicnl2ZDFZQmhXRWFnT3psdWhPYzhrdEczUndQZjM0OExvNnpDSUZkRT0=&amp;h=76d4f8cd0bed4171b09d1c0d5b4d846c&amp;s=AVNPUEhUT0NFTkNSWVBUSVaL0KE6sigQk5U8B6Dhxre_H-vu1hfLg-qGsZj8d6EZmg" target="_blank" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem" aria-label="Find Your Council District Opens in new window" rel="noopener">Find Your Council District</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1294" data-pageid="1294">
+		<div class="accordionNavItem">
+			<a href="https://www.taylortx.gov/1294/Title-VI-Information" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Title VI Information</a>
+		</div>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = false;
+		});
+	</script>
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			$('*[id^="SideItem"]').each(function () {
+				var ids = $('[id="' + this.id + '"]');
+				if (ids.length > 1)
+					$.each(ids, function (index, value) {
+						value.id = value.id + '_' + index;
+					});
+			});
+
+			$('.hasAccordionChildren .openAccordionNav').click(function (e) {
+				e.preventDefault();
+				showHideAccordionMenuForSecondaryNav($(this));
+			});
+
+			$("#secondaryNav .grippy").each(function () {
+				menuManager.setupDraggableElement($(this), SIDE_MENU, '#secondaryNav');
+			});
+
+			$("#secondaryNav li").each(function () {
+				menuManager.setupDroppableAccordionElement($(this), SIDE_MENU);
+			});
+		});
+	</script>
+
+
+
+</nav><aside data-cprole="contentContainer" id="sidebarContainer2TS">	<div id="cc3c8a4b54-58e6-478d-afac-e512fb0bb4b8" data-containerid="3c8a4b54-58e6-478d-afac-e512fb0bb4b8" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="outerContentWrapTS" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="contentWrapTS" class="contentWrap">
+<div data-cprole="breadCrumbs" id="breadCrumbs" class="breadCrumbContainer">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="https://www.taylortx.gov/">Home</a></li><li><a class="breadCrumb" href="https://www.taylortx.gov/6/Government">Government</a></li><li id="currentBCPage" data-pageid="757">Mayor and City Council</li>
+		</ol>
+
+	   
+    
+</div><div data-cprole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="757">
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="6">
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="20891">
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="Mayor and City Council">
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="False">
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False">
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published">
+
+				<h1 id="versionHeadLine" class="headline">
+
+Mayor and City Council		</h1>
+	
+		<div id="cc1ccff710-225a-4dd4-a652-f462795d3542" data-containerid="1ccff710-225a-4dd4-a652-f462795d3542" class="pageContent cpGrid cpGrid24">
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="deb1aab6-1545-4f4b-af19-cdd6d916d1ba">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col24 first last id1ffb3a88-f1b9-4697-b8f8-205cc7021cc0" style="height: 304px;" data-widgetcontainerid="1ffb3a88-f1b9-4697-b8f8-205cc7021cc0">
+	
+<div class="widget editor pageStyles wide" id="divEditor751b1b33-7590-4392-8ec2-f6b44f54a900" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view responsiveEditor">
+
+
+        <table style="width: 100%;"><tbody><tr><td style="width: 19.9521%; background-color: rgb(255, 255, 255);"><img src="https://www.taylortx.gov/ImageRepository/Document?documentId=15504" class="fr-dib" alt="Greg Redden - District 1" style="width: 115px;"><h3 class="subhead2" style="text-align: center;"><strong>District 1</strong></h3><p style="text-align: center;"><a href="https://www.taylortx.gov/948/15119/Greg-Redden" target="_blank" rel="noopener" aria-label="Greg Redden Opens in new window"><strong>Greg Redden</strong></a><br><em>(<a href="mailto:greg.redden@taylortx.gov" id="isPasted">email</a>)</em></p></td><td style="width: 19.9708%; background-color: rgb(255, 255, 255);"><h3 class="subhead2" style="text-align: center;"><img src="https://www.taylortx.gov/ImageRepository/Document?documentId=15502" class="fr-dib" alt="Shelli Cobb - District 2" style="width: 115px;"><strong>District 2</strong></h3><div style="text-align: center;"><a href="https://www.taylortx.gov/1191/20087/Shelli-Cobb" target="_blank" rel="noopener" aria-label="Shelli Cobb Opens in new window"><strong>Shelli Cobb</strong></a><strong>&nbsp;</strong></div><div style="text-align: center;">(<a href="mailto: shelli.cobb@taylortx.gov">email</a>)</div></td><td style="background-color: rgb(255, 255, 255);"><div style="text-align: center;"><img src="https://www.taylortx.gov/ImageRepository/Document?documentId=15506" class="fr-dib" alt="Kelly Cmerek - District 3" style="width: 115px;"></div><h3 class="subhead2" style="text-align: center;"><strong>District 3</strong></h3><div style="text-align: center;"><a href="https://www.taylortx.gov/1192/20088/Kelly-Cmerek" target="_blank" rel="noopener" aria-label="Kelly Cmerek Opens in new window"><strong>Kelly Cmerek</strong></a><br><strong><em>Mayor Pro Tem</em></strong></div><div style="text-align: center;">(<a href="mailto: kelly.cmerek@taylortx.gov" id="isPasted">email</a>)</div></td><td style="width: 19.9709%; background-color: rgb(255, 255, 255);"><h3 class="subhead2" style="text-align: center;"><img src="https://www.taylortx.gov/ImageRepository/Document?documentId=15505" class="fr-dib" alt="Heather Long - District 4" style="width: 115px;"><strong>District 4</strong></h3><div style="text-align: center;"><a href="https://www.taylortx.gov/1286/Heather-Long" target="_blank" rel="noopener" aria-label="Heather Long Opens in new window"><strong>Heather Long</strong></a></div><div style="text-align: center;">(<a href="mailto:heather.long@taylortx.gov">email</a>)</div></td><td style="width: 19.9523%; background-color: rgb(255, 255, 255);"><h3 class="subhead2" style="text-align: center;"><img src="https://www.taylortx.gov/ImageRepository/Document?documentId=15503" class="fr-dib" alt="Dwayne Ariola - At Large" style="width: 115px;"><strong>At Large</strong></h3><div style="text-align: center;"><a href="https://www.taylortx.gov/557/Dwayne-Ariola" target="_blank" rel="noopener" aria-label="Dwayne Ariola Opens in new window"><strong>Dwayne Ariola</strong></a></div><p style="text-align: center;"><strong><em>Mayor</em></strong><br>(<a href="mailto: dwayne.ariola@taylortx.gov">email</a>)</p></td></tr></tbody></table>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '751b1b33-7590-4392-8ec2-f6b44f54a900'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col24 first last id230727ba-81d7-40af-807b-c9d767d00892" style="height: 1251px;" data-widgetcontainerid="230727ba-81d7-40af-807b-c9d767d00892">
+	
+<div class="widget editor pageStyles wide" id="divEditor29e1f39e-c662-4131-a6ce-e055faf1bdc9" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h2 class="subhead1">City Government</h2><p id="isPasted">The City of Taylor has an elected City Council that is comprised of five Council Members, four of whom are elected from single member districts and one Member elected At-Large (see who represents you on the city <a href="https://mallard.maps.arcgis.com/apps/instant/lookup/index.html?appid=ce83e323b5be4cc384a093d5ce861a83" target="_blank" rel="noopener" aria-label="District Map Opens in new window">District Map</a>). Council members elect from their number a Mayor and a Mayor Pro Tem.</p><p>Taylor is a Home Rule City, which means that the Council can enact legislation, adopt budgets, and determine policies, subject only to limitations imposed by the State Constitution and <a></a>the <a href="https://www.taylortx.gov/DocumentCenter/View/11763/City-Charter-2020-FINAL" target="_blank" aria-label="City Charter Opens in new window" rel="noopener">City Charter</a>. The City Council is also guided by the <a href="https://www.taylortx.gov/DocumentCenter/View/15794" target="_blank" rel="noopener" aria-label="Rules of Decorum Opens in new window">Rules of Decorum</a> and <a href="https://www.taylortx.gov/DocumentCenter/View/15795" target="_blank" rel="noopener" aria-label="Elected Officials Social Media Policy Opens in new window">Elected Officials Social Media Policy</a> to ensure their commitment to preserving the integrity of local government.</p><p>Presently, the Mayor and Mayor Pro Tem are appointed by the council following each election for a one-year term. In May 2024, voters elected to amend the City Charter to change the at-large council position to Mayor. This change will take effect in May 2026 when the at-large position is up for reelection. Visit the <a href="https://www.taylortx.gov/251/City-Elections" target="_self" title="Election page">Election page</a> for more information regarding the election process.</p><p><a href="https://www.taylortx.gov/DocumentCenter/View/10025/Previous-Commissioners-by-date-WEBSITE" target="_blank" rel="noopener" aria-label="Historical list of City Commissioners/Council Members Opens in new window">Historical list of City Commissioners/Council Members</a></p><h2>Meetings</h2><p>Council meetings are held at 6 p.m. the second and fourth Thursdays of each month at City Hall, 400 Porter Street.</p><p><a href="https://www.taylortx.gov/965/Videos" target="_blank" rel="noopener" aria-label="Click here to visit our video page to watch live or view at a later date Opens in new window">Click here to visit our video page to watch live or view at a later date</a>.</p><ul><li>Special meetings are called as needed and are posted on this website and at City Hall 72 hours prior to the meeting date and time.&nbsp;</li><li>Sign up through our <a aria-label="Notify Me&nbsp; Opens in new window" href="http://www.taylortx.gov/list.aspx" target="_blank" title="Notify Me registration page" rel="noopener">Notify Me&nbsp;</a>service to automatically receive agendas at the time they are posted or visit our <a href="https://www.taylortx.gov/642/Council-Meetings?amp;ART=3123&amp;ADMIN=1" target="_blank" title="About Council Meetings" aria-label="Meetings Opens in new window" rel="noopener">Meetings</a> page for more information.</li><li>Citizens who wish to address the City Council may do so by filling out a <a href="https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCMuItxmAon97AZey4BJ9vwovlhYLDRDPCjHuhyKDdyeCNfjPJkToaGny7sWeneFoo*" target="_blank" rel="noopener" aria-label="Citizens Communication Opens in new window">Citizens Communication</a> form 15 minutes in advance of the meeting at City Council Chambers.</li></ul><h2>Vision</h2><p>Taylor is a vibrant, diverse, friendly, growing community that has retained our historic character and small-town feel. We are financially stable and are known for our ...</p><ul><li>Exceptional mobility/connectivity</li><li>Diversity of housing and businesses</li><li>Beautiful parks</li><li>Engage citizens</li><li>Facilities and programs for people in every stage of life</li></ul><p><span style="font-size: 15.2px;">The City Council vision statement is part of the 2020 adopted Strategic Plan to guide City Staff in developing programs and strategies for the good of the community. <a aria-label="To view the Strategic Plan, click here. Opens in new window" href="http://www.taylortx.gov/253/Strategic-Plan" rel="noopener" target="_blank">To view the Strategic Plan, click here.</a>&nbsp;</span></p><p><strong>For requests for media interviews</strong>, please contact the City of Taylor Communications Department at 512-352-5448 or email: &nbsp;communications@taylortx.gov&nbsp;</p><h2 class="subhead1">Important Links</h2><ul><li><a href="https://us-west-2.protection.sophos.com/?d=arcgis.com&amp;u=aHR0cHM6Ly9tYWxsYXJkLm1hcHMuYXJjZ2lzLmNvbS9hcHBzL2luc3RhbnQvbG9va3VwL2luZGV4Lmh0bWw_YXBwaWQ9Y2U4M2UzMjNiNWJlNGNjMzg0YTA5M2Q1Y2U4NjFhODM=&amp;p=m&amp;i=NjY3YWVlNjIzYjY4ODE3MDU0OTE0MTkz&amp;t=QjBicnl2ZDFZQmhXRWFnT3psdWhPYzhrdEczUndQZjM0OExvNnpDSUZkRT0=&amp;h=76d4f8cd0bed4171b09d1c0d5b4d846c&amp;s=AVNPUEhUT0NFTkNSWVBUSVaL0KE6sigQk5U8B6Dhxre_H-vu1hfLg-qGsZj8d6EZmg" target="_blank" id="isPasted" rel="noopener" aria-label="Find Your District Opens in new window">Find Your District</a></li><li><a href="https://www.taylortx.gov/DocumentCenter/View/11641/Council-public-contact-info-May-2024" target="_blank" rel="noopener" aria-label="Council Contact Information Opens in new window">Council Contact Information</a></li><li><a href="http://www.taylortx.gov/642/Council-Meetings" target="_blank" title="Calendar of meetings" aria-label="Meetings Opens in new window" rel="noopener">Meetings</a> and <a href="https://www.taylortx.gov/18/Agendas-and-Minutes" target="_blank" title="Council Meeting Agendas" rel="noopener" aria-label="Agendas Opens in new window">Agendas</a></li><li><a href="https://www.taylortx.gov/1027/City-Ordinances" target="_blank" title="Code of Ordinances" rel="noopener" aria-label="Municipal Code Opens in new window">Municipal Code</a></li><li><a href="http://www.taylortx.gov/526/Budget" target="_blank" title="Budget info" aria-label="Budget Opens in new window" rel="noopener">Budget</a></li></ul>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '29e1f39e-c662-4131-a6ce-e055faf1bdc9'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: none;">	<div id="cc7c3c26c9-f777-451b-b1f6-7542f1ed409d" data-containerid="7c3c26c9-f777-451b-b1f6-7542f1ed409d" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div><!-- GBs --><div data-cprole="structuralContainer" id="gbsContainerTS">
+<div class="siteWrap2"><div data-cprole="contentContainer" id="gbsTS">	<div id="cc86d6c0b9-7319-4c21-8edb-9388282b3c12" data-containerid="86d6c0b9-7319-4c21-8edb-9388282b3c12" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="1">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col12 first" style="height: auto;" data-widgetcontainerid="d7118f5c-7a36-4c29-a73b-5b56de250006">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last id134f8a08-e40e-47d0-ae81-99469865692f" style="height: 170px;" data-widgetcontainerid="134f8a08-e40e-47d0-ae81-99469865692f">
+	
+<div data-widget-id="2f918f81-8ca6-4c95-8f9d-9af2ef09f16e" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget2f918f81-8ca6-4c95-8f9d-9af2ef09f16e" class="widget widgetGraphicLinks skin110 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.taylortx.gov/603/Adopt-a-Pet" target="_self" class="fancyButton fancyButton200 ">
+		<span>
+			<span><span class="text">Adopt a Pet</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton200.fancyButton:link,.fancyButton200.fancyButton:visited, .fancyButton200div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=14768');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 110px;
+transition: all .3s ease-in-out;}
+.fancyButton200.fancyButton:hover,.fancyButton200.fancyButton:focus,.fancyButton200.fancyButton:active,.fancyButton200.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=14863');
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton200.fancyButton:link > span,.fancyButton200.fancyButton:visited > span, .fancyButton200div.fancyButton > span{
+}
+.fancyButton200.fancyButton:hover > span,.fancyButton200.fancyButton:focus > span,.fancyButton200.fancyButton:active > span,.fancyButton200.fancyButton.hover > span{
+}
+.fancyButton200.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Open Sans";
+	padding-top: 9em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9em;
+	background-image: url('/ImageRepository/Document?documentID=14767');
+	background-repeat: no-repeat;
+	background-position: center 2.5em ;
+background-size: 65px;
+transition: all .3s ease-in-out;
+}
+.fancyButton200.fancyButton:hover .text,.fancyButton200.fancyButton:focus .text,.fancyButton200.fancyButton:active .text,.fancyButton200.fancyButton.hover .text{
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=14862');
+	background-repeat: no-repeat;
+	background-position: center 1.5em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.taylortx.gov/938" target="_self" class="fancyButton fancyButton201 ">
+		<span>
+			<span><span class="text">Emergency Alerts</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton201.fancyButton:link,.fancyButton201.fancyButton:visited, .fancyButton201div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=14768');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 110px;
+transition: all .3s ease-in-out;}
+.fancyButton201.fancyButton:hover,.fancyButton201.fancyButton:focus,.fancyButton201.fancyButton:active,.fancyButton201.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=14863');
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton201.fancyButton:link > span,.fancyButton201.fancyButton:visited > span, .fancyButton201div.fancyButton > span{
+}
+.fancyButton201.fancyButton:hover > span,.fancyButton201.fancyButton:focus > span,.fancyButton201.fancyButton:active > span,.fancyButton201.fancyButton.hover > span{
+}
+.fancyButton201.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Open Sans";
+	padding-top: 9em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9em;
+	background-image: url('/ImageRepository/Document?documentID=14769');
+	background-repeat: no-repeat;
+	background-position: center 2.5em ;
+background-size: 65px;
+transition: all .3s ease-in-out;
+}
+.fancyButton201.fancyButton:hover .text,.fancyButton201.fancyButton:focus .text,.fancyButton201.fancyButton:active .text,.fancyButton201.fancyButton.hover .text{
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=14864');
+	background-repeat: no-repeat;
+	background-position: center 1.5em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.municipalonlinepayments.com/taylortx" target="_self" class="fancyButton fancyButton202 ">
+		<span>
+			<span><span class="text">Payments</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton202.fancyButton:link,.fancyButton202.fancyButton:visited, .fancyButton202div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=14768');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 110px;
+transition: all .3s ease-in-out;}
+.fancyButton202.fancyButton:hover,.fancyButton202.fancyButton:focus,.fancyButton202.fancyButton:active,.fancyButton202.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=14863');
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton202.fancyButton:link > span,.fancyButton202.fancyButton:visited > span, .fancyButton202div.fancyButton > span{
+}
+.fancyButton202.fancyButton:hover > span,.fancyButton202.fancyButton:focus > span,.fancyButton202.fancyButton:active > span,.fancyButton202.fancyButton.hover > span{
+}
+.fancyButton202.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Open Sans";
+	padding-top: 9em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9em;
+	background-image: url('/ImageRepository/Document?documentID=14772');
+	background-repeat: no-repeat;
+	background-position: center 2.5em ;
+background-size: 65px;
+transition: all .3s ease-in-out;
+}
+.fancyButton202.fancyButton:hover .text,.fancyButton202.fancyButton:focus .text,.fancyButton202.fancyButton:active .text,.fancyButton202.fancyButton.hover .text{
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=14867');
+	background-repeat: no-repeat;
+	background-position: center 1.5em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col12 last" style="height: auto;" data-widgetcontainerid="df23fa25-1ed5-423e-8924-14a52f96baeb">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last id366ab4ce-222f-4ed8-8756-030209fc33c4" style="height: 170px;" data-widgetcontainerid="366ab4ce-222f-4ed8-8756-030209fc33c4">
+	
+<div data-widget-id="ffab12b2-1ec2-4a6d-a3e1-6b423003438c" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetffab12b2-1ec2-4a6d-a3e1-6b423003438c" class="widget widgetGraphicLinks skin110 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.taylortx.gov/31/Employment-Opportunities" target="_self" class="fancyButton fancyButton204 ">
+		<span>
+			<span><span class="text">Employment</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton204.fancyButton:link,.fancyButton204.fancyButton:visited, .fancyButton204div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=14768');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 110px;
+transition: all .3s ease-in-out;}
+.fancyButton204.fancyButton:hover,.fancyButton204.fancyButton:focus,.fancyButton204.fancyButton:active,.fancyButton204.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=14863');
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton204.fancyButton:link > span,.fancyButton204.fancyButton:visited > span, .fancyButton204div.fancyButton > span{
+}
+.fancyButton204.fancyButton:hover > span,.fancyButton204.fancyButton:focus > span,.fancyButton204.fancyButton:active > span,.fancyButton204.fancyButton.hover > span{
+}
+.fancyButton204.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Open Sans";
+	padding-top: 9em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9em;
+	background-image: url('/ImageRepository/Document?documentID=14770');
+	background-repeat: no-repeat;
+	background-position: center 2.5em ;
+background-size: 65px;
+transition: all .3s ease-in-out;
+}
+.fancyButton204.fancyButton:hover .text,.fancyButton204.fancyButton:focus .text,.fancyButton204.fancyButton:active .text,.fancyButton204.fancyButton.hover .text{
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=14865');
+	background-repeat: no-repeat;
+	background-position: center 1.5em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.taylortx.gov/773/Parks-and-Trails" target="_self" class="fancyButton fancyButton205 ">
+		<span>
+			<span><span class="text">Parks</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton205.fancyButton:link,.fancyButton205.fancyButton:visited, .fancyButton205div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=14768');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 110px;
+transition: all .3s ease-in-out;}
+.fancyButton205.fancyButton:hover,.fancyButton205.fancyButton:focus,.fancyButton205.fancyButton:active,.fancyButton205.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=14863');
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton205.fancyButton:link > span,.fancyButton205.fancyButton:visited > span, .fancyButton205div.fancyButton > span{
+}
+.fancyButton205.fancyButton:hover > span,.fancyButton205.fancyButton:focus > span,.fancyButton205.fancyButton:active > span,.fancyButton205.fancyButton.hover > span{
+}
+.fancyButton205.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Open Sans";
+	padding-top: 9em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9em;
+	background-image: url('/ImageRepository/Document?documentID=14771');
+	background-repeat: no-repeat;
+	background-position: center 2.5em ;
+background-size: 65px;
+transition: all .3s ease-in-out;
+}
+.fancyButton205.fancyButton:hover .text,.fancyButton205.fancyButton:focus .text,.fancyButton205.fancyButton:active .text,.fancyButton205.fancyButton.hover .text{
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=14866');
+	background-repeat: no-repeat;
+	background-position: center 1.5em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.taylortx.gov/51/Utility-Billing" target="_self" class="fancyButton fancyButton206 ">
+		<span>
+			<span><span class="text">Utilities</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton206.fancyButton:link,.fancyButton206.fancyButton:visited, .fancyButton206div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=14768');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 110px;
+transition: all .3s ease-in-out;}
+.fancyButton206.fancyButton:hover,.fancyButton206.fancyButton:focus,.fancyButton206.fancyButton:active,.fancyButton206.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=14863');
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton206.fancyButton:link > span,.fancyButton206.fancyButton:visited > span, .fancyButton206div.fancyButton > span{
+}
+.fancyButton206.fancyButton:hover > span,.fancyButton206.fancyButton:focus > span,.fancyButton206.fancyButton:active > span,.fancyButton206.fancyButton.hover > span{
+}
+.fancyButton206.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-family: "Open Sans";
+	padding-top: 9em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9em;
+	background-image: url('/ImageRepository/Document?documentID=14773');
+	background-repeat: no-repeat;
+	background-position: center 2.5em ;
+background-size: 65px;
+transition: all .3s ease-in-out;
+}
+.fancyButton206.fancyButton:hover .text,.fancyButton206.fancyButton:focus .text,.fancyButton206.fancyButton:active .text,.fancyButton206.fancyButton.hover .text{
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=14868');
+	background-repeat: no-repeat;
+	background-position: center 1.5em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Calendar/Carousel --><!-- <div data-cpRole="structuralContainer" id="homeContainer1">
+    <div class="siteWrap2">
+      <div data-cpRole="contentContainer" id="homeContent1a"></div>
+    </div>
+  </div> --><!-- Footer --><footer data-cprole="structuralContainer" id="footerContainerTS">
+<div class="siteWrap2"><div data-cprole="contentContainer" id="footerTS">	<div id="cc050a6b86-6448-494e-89ea-249d28a892ea" data-containerid="050a6b86-6448-494e-89ea-249d28a892ea" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="55">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col5 first" style="height: auto;" data-widgetcontainerid="b338c7bf-14dd-405f-8071-5091321c209b">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col5 first last id02a80273-f0f4-493a-be5c-d0b7313e6871" style="height: 245px;" data-widgetcontainerid="02a80273-f0f4-493a-be5c-d0b7313e6871">
+	
+    <div data-widget-id="0dae320c-788b-42da-a2b4-0b02f6e02234" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv0dae320c-788b-42da-a2b4-0b02f6e02234" class="widget widgetInfoAdvanced skin114 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="header0dae320c-788b-42da-a2b4-0b02f6e02234">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="https://www.taylortx.gov/"><img src="https://www.taylortx.gov/ImageRepository/Document?documentId=14774" class="fr-dib" alt="Taylor Texas Homepage"></a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv0dae320c-788b-42da-a2b4-0b02f6e02234 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col5 first last ided39f0ab-99a6-4afd-a7b9-a78cb4d3df11" style="height: 33px;" data-widgetcontainerid="ed39f0ab-99a6-4afd-a7b9-a78cb4d3df11">
+	
+<div data-widget-id="c071a17a-a8dd-449a-ab14-600924429a04" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetc071a17a-a8dd-449a-ab14-600924429a04" class="widget widgetGraphicLinks skin113 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid5 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.facebook.com/cityoftaylortexas" target="_self" aria-label="Facebook graphic"><img src="https://www.taylortx.gov/ImageRepository/Document?documentID=14762" class="graphicButtonLink" alt="Facebook" onmouseover="this.src='/ImageRepository/Document?documentID=14762'" onmouseout="this.src='/ImageRepository/Document?documentID=14762'" onfocus="this.src='/ImageRepository/Document?documentID=14762'" onblur="this.src='/ImageRepository/Document?documentID=14762'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://x.com/cityoftaylor" target="_self" aria-label="X graphic"><img src="https://www.taylortx.gov/ImageRepository/Document?documentID=14765" class="graphicButtonLink" alt="X" onmouseover="this.src='/ImageRepository/Document?documentID=14765'" onmouseout="this.src='/ImageRepository/Document?documentID=14765'" onfocus="this.src='/ImageRepository/Document?documentID=14765'" onblur="this.src='/ImageRepository/Document?documentID=14765'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.youtube.com/@cityoftaylortx" target="_self" aria-label="YouTube graphic"><img src="https://www.taylortx.gov/ImageRepository/Document?documentID=14766" class="graphicButtonLink" alt="YouTube" onmouseover="this.src='/ImageRepository/Document?documentID=14766'" onmouseout="this.src='/ImageRepository/Document?documentID=14766'" onfocus="this.src='/ImageRepository/Document?documentID=14766'" onblur="this.src='/ImageRepository/Document?documentID=14766'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.instagram.com/cityoftaylortx" target="_self" aria-label="Instagram graphic"><img src="https://www.taylortx.gov/ImageRepository/Document?documentID=14763" class="graphicButtonLink" alt="Instagram" onmouseover="this.src='/ImageRepository/Document?documentID=14763'" onmouseout="this.src='/ImageRepository/Document?documentID=14763'" onfocus="this.src='/ImageRepository/Document?documentID=14763'" onblur="this.src='/ImageRepository/Document?documentID=14763'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://nextdoor.com/agency-detail/tx/taylor/city-of-taylor-1/" target="_self" aria-label="Nextdoor graphic"><img src="https://www.taylortx.gov/ImageRepository/Document?documentID=14764" class="graphicButtonLink" alt="Nextdoor" onmouseover="this.src='/ImageRepository/Document?documentID=14764'" onmouseout="this.src='/ImageRepository/Document?documentID=14764'" onfocus="this.src='/ImageRepository/Document?documentID=14764'" onblur="this.src='/ImageRepository/Document?documentID=14764'"> </a></li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col2" style="height: auto;" data-widgetcontainerid="54e27735-8292-4d3a-a233-3166b6d41920">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col2 first last idbf524397-cebc-41ad-92da-096c3d07d2c2" style="height: 327px;" data-widgetcontainerid="bf524397-cebc-41ad-92da-096c3d07d2c2">
+	
+
+<div class="widget widgetSpacer" id="e33837b8-ef85-4f18-907c-b95dfa79d877" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4" style="height: auto;" data-widgetcontainerid="3ea06523-275d-4b3c-b131-8a247ef3e286">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last id6cdb04be-00ab-4d35-a0a0-b55870eae441" style="height: 327px;" data-widgetcontainerid="6cdb04be-00ab-4d35-a0a0-b55870eae441">
+	
+    <div data-widget-id="b5f0fc18-b9a5-4ad7-9c2f-64ca2b144a23" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdvb5f0fc18-b9a5-4ad7-9c2f-64ca2b144a23" class="widget widgetInfoAdvanced skin112 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="headerb5f0fc18-b9a5-4ad7-9c2f-64ca2b144a23">
+			<header class="widgetHeader" id="headerb5f0fc18-b9a5-4ad7-9c2f-64ca2b144a23">
+		<div class="">
+					<h3>Contact Us</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><strong>City Hal</strong><strong>l</strong><br>400 Porter Street<br>Taylor, TX 76574<br>Phone: <a href="tel:%20512-352-3675">512-352-3675</a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdvb5f0fc18-b9a5-4ad7-9c2f-64ca2b144a23 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col2" style="height: auto;" data-widgetcontainerid="c9476c2e-9f66-45b8-93ab-d53c55e94aee">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col2 first last idb1344c72-800c-427e-b333-0498e82d09b8" style="height: 327px;" data-widgetcontainerid="b1344c72-800c-427e-b333-0498e82d09b8">
+	
+
+<div class="widget widgetSpacer" id="ba076f36-0c21-49dc-bfc8-60279dc8b71c" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col5" style="height: auto;" data-widgetcontainerid="d9860816-79fc-4fdd-b174-909d6e7adb6f">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last idbc487088-cbab-4886-9fb5-8b5c28eae7fa" style="height: 327px;" data-widgetcontainerid="bc487088-cbab-4886-9fb5-8b5c28eae7fa">
+	
+	<div data-widget-id="4533e8a9-8e38-46c1-86cb-a11a84fe3af7" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink4533e8a9-8e38-46c1-86cb-a11a84fe3af7" class="widget widgetQuickLinks skin112 widgetOptionSet25 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeader4533e8a9-8e38-46c1-86cb-a11a84fe3af7">
+			<header class="widgetHeader" id="quickLinksHeader4533e8a9-8e38-46c1-86cb-a11a84fe3af7">
+		<div class="">
+					<h3><a style="" href="https://www.taylortx.gov/QuickLinks.aspx?CID=1">Quick Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.taylortx.gov/MyAccount" target="_self">Web Login</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.taylortx.gov/965/Videos" target="_self">Watch Live and Archived Meetings</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.taylortx.gov/DocumentCenter/View/6981/FY2025-26-Fee-Schedule" target="_blank" aria-label="City Fee Schedule Opens in new window" rel="noopener">City Fee Schedule</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.taylortx.gov/254/2018-Schedule-of-Community-Events" target="_blank" aria-label="Community Events Calendar Opens in new window" rel="noopener">Community Events Calendar</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.taylortx.gov/index.asp?NID=31" target="_blank" aria-label="Employment  Opens in new window" rel="noopener">Employment </a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.taylortx.gov/526/Budget" target="_self">Budget/Finance</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.taylortx.gov/list.aspx" target="_blank" aria-label="Notify Me: subscribe to get automatic notifications Opens in new window" rel="noopener">Notify Me: subscribe to get automatic notifications</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.taylortx.gov/archive.aspx" target="_blank" aria-label="Archive Center Opens in new window" rel="noopener">Archive Center</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col2" style="height: auto;" data-widgetcontainerid="54a6746a-8040-4e03-819d-2231c9855d98">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col2 first last idf540a8e8-2c20-43a7-b880-ffaf5ff7aa7a" style="height: 327px;" data-widgetcontainerid="f540a8e8-2c20-43a7-b880-ffaf5ff7aa7a">
+	
+
+<div class="widget widgetSpacer" id="2c1b26a3-1035-4c29-bff9-607c342d400e" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4 last" style="height: auto;" data-widgetcontainerid="fbac5900-7f91-4a4a-99d6-54d15c432758">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last id9d838793-542e-40b2-a7a2-6771a8184a16" style="height: 327px;" data-widgetcontainerid="9d838793-542e-40b2-a7a2-6771a8184a16">
+	
+	<div data-widget-id="a5735fac-bd68-4cfd-b22e-46cfa554fcca" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklinka5735fac-bd68-4cfd-b22e-46cfa554fcca" class="widget widgetQuickLinks skin112 widgetOptionSet25 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeadera5735fac-bd68-4cfd-b22e-46cfa554fcca">
+			<header class="widgetHeader" id="quickLinksHeadera5735fac-bd68-4cfd-b22e-46cfa554fcca">
+		<div class="">
+					<h3><a style="" href="https://www.taylortx.gov/QuickLinks.aspx?CID=43">Site Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.taylortx.gov/" target="_self">Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.taylortx.gov/sitemap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.taylortx.gov/directory.aspx" target="_self">Contact Us</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.taylortx.gov/accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.taylortx.gov/copyright" target="_self">Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.taylortx.gov/privacy" target="_self">Privacy Policy</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div><div data-cprole="contentContainer" id="poweredByTS">	<div id="cc2e98db7e-0e12-481c-9488-74260eb5de89" data-containerid="2e98db7e-0e12-481c-9488-74260eb5de89" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="2498cea9-ac37-4997-84d4-40d3be00aecf">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id6276a6fd-ec14-4b20-9ede-5af92e00284b" style="height: 34px;" data-widgetcontainerid="6276a6fd-ec14-4b20-9ede-5af92e00284b">
+	
+ 
+	<div data-widget-id="cd51cae4-e0c3-4a1e-be24-3702a1e9a329" data-modulename="customHtml" id="widgetCustomHtmlcd51cae4-e0c3-4a1e-be24-3702a1e9a329" class="widget widgetCustomHtml skin112 narrow">
+	<div class="widgetBody pageStyles" id="widgetBodycd51cae4-e0c3-4a1e-be24-3702a1e9a329">
+		<div id="customHtmlcd51cae4-e0c3-4a1e-be24-3702a1e9a329"><div><!-- CP BAR -->
+  <style>
+    /* CP icon */
+    .cpBylineIconTS {
+        color: #000;
+    }
+    /* CP Text */
+    .cpBylineTextTS,
+    .cpBylineTextTS a:link,
+    .cpBylineTextTS a:visited,
+    .cpBylineTextTS a:hover,
+    .cpBylineTextTS a:focus,
+    .cpBylineTextTS a:active {
+        color: #000!important;
+    }
+
+    .cpBylineTextTS a:link,
+    .cpBylineTextTS a:visited,
+    .cpBylineTextTS a:hover,
+    .cpBylineTextTS a:focus,
+    .cpBylineTextTS a:active {
+        text-decoration: underline !important;
+    }
+
+    .cpBylineTS {
+        text-align: center;
+    }
+    .cpBylineIconTS {
+        fill: currentColor;
+        width: 39px;
+        height: 26px;
+        display: inline;
+        vertical-align: middle;
+    }
+  </style>
+    
+  <div class="widgetItem cpBylineTS">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="cpBylineIconTS">
+      <path class="c" d="M73.4,23.2h-19v16.7h19c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5h-19v28.4h5.5l11.3-11.7h2.2c11.9,0,21.6-9.7,21.6-21.6C95,33,85.3,23.2,73.4,23.2"></path>
+      <path class="p" d="M45.8,66.5H26.6C14.7,66.5,5,56.8,5,44.9C5,33,14.7,23.2,26.6,23.2h19.1v16.7H26.6c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h19.1V66.5z"></path>
+    </svg>
+    <span class="cpBylineTextTS">Government Websites by <a href="https://connect.civicplus.com/referral">CivicPlus®</a></span>
+  </div></div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</footer>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '757',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!----------Google Translate (Mobile Friendly)--------->
+
+<style>
+  #google-translate-container {
+    float: right;
+    padding: 3px 5px 0px 0px;
+    position: fixed; 
+    bottom: 16px; 
+    right: 10px; 
+    z-index: 5;
+  }
+  
+  .goog-te-combo, .goog-te-banner *, .goog-te-ftab *, .goog-te-menu *, .goog-te-menu2 *, .goog-te-balloon * {
+    font-family: arial;
+    font-size: 10pt;
+    background-image: url("https://www.gstatic.com/images/branding/product/2x/translate_24dp.png");
+    background-position: 5px 5px;
+    background-size: 18px;
+    background-repeat: no-repeat;
+    text-indent: 16px;
+    background-color: #fff;
+    color: #000 !important;
+  }
+  
+  .goog-logo-link {
+    display: none !important;
+  }
+  
+  .goog-te-gadget {
+    color: transparent !important;
+  }
+  
+  .goog-te-gadget .goog-te-combo {
+    margin: 2px 0 !important;
+    border-radius: 15px !important;
+    }
+  
+  .goog-te-combo{
+    border: 1px solid !important;
+    border-color: #bcc9d7 #96a3b1 #96a3b1 #bcc9d7 !important;
+    border-radius: 50px !important;
+    height:31px !important;
+    padding: 0 1px 0 .25rem !important;
+                width: 156px;
+  }
+
+  #launcher-wrapper {
+    bottom: 50px !important;
+  }
+
+</style>
+
+<div id="google-translate-container">
+  <div id="google_translate_element">
+  <div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo" aria-label="google translate languages"><option value="">Select Language</option><option value="ab">Abkhaz</option><option value="ace">Acehnese</option><option value="ach">Acholi</option><option value="aa">Afar</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="alz">Alur</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="as">Assamese</option><option value="av">Avar</option><option value="awa">Awadhi</option><option value="ay">Aymara</option><option value="az">Azerbaijani</option><option value="ban">Balinese</option><option value="bal">Baluchi</option><option value="bm">Bambara</option><option value="bci">Baoulé</option><option value="ba">Bashkir</option><option value="eu">Basque</option><option value="btx">Batak Karo</option><option value="bts">Batak Simalungun</option><option value="bbc">Batak Toba</option><option value="be">Belarusian</option><option value="bem">Bemba</option><option value="bn">Bengali</option><option value="bew">Betawi</option><option value="bho">Bhojpuri</option><option value="bik">Bikol</option><option value="bs">Bosnian</option><option value="br">Breton</option><option value="bg">Bulgarian</option><option value="bua">Buryat</option><option value="yue">Cantonese</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ch">Chamorro</option><option value="ce">Chechen</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="chk">Chuukese</option><option value="cv">Chuvash</option><option value="co">Corsican</option><option value="crh">Crimean Tatar (Cyrillic)</option><option value="crh-Latn">Crimean Tatar (Latin)</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="fa-AF">Dari</option><option value="dv">Dhivehi</option><option value="din">Dinka</option><option value="doi">Dogri</option><option value="dov">Dombe</option><option value="nl">Dutch</option><option value="dyu">Dyula</option><option value="dz">Dzongkha</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="ee">Ewe</option><option value="fo">Faroese</option><option value="fj">Fijian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fon">Fon</option><option value="fr">French</option><option value="fr-CA">French (Canada)</option><option value="fy">Frisian</option><option value="fur">Friulian</option><option value="ff">Fulani</option><option value="gaa">Ga</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gn">Guarani</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="cnh">Hakha Chin</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hil">Hiligaynon</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="hrx">Hunsrik</option><option value="iba">Iban</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="ilo">Ilocano</option><option value="id">Indonesian</option><option value="iu-Latn">Inuktut (Latin)</option><option value="iu">Inuktut (Syllabics)</option><option value="ga">Irish</option><option value="it">Italian</option><option value="jam">Jamaican Patois</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kac">Jingpo</option><option value="kl">Kalaallisut</option><option value="kn">Kannada</option><option value="kr">Kanuri</option><option value="pam">Kapampangan</option><option value="kk">Kazakh</option><option value="kha">Khasi</option><option value="km">Khmer</option><option value="cgg">Kiga</option><option value="kg">Kikongo</option><option value="rw">Kinyarwanda</option><option value="ktu">Kituba</option><option value="trp">Kokborok</option><option value="kv">Komi</option><option value="gom">Konkani</option><option value="ko">Korean</option><option value="kri">Krio</option><option value="ku">Kurdish (Kurmanji)</option><option value="ckb">Kurdish (Sorani)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="ltg">Latgalian</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lij">Ligurian</option><option value="li">Limburgish</option><option value="ln">Lingala</option><option value="lt">Lithuanian</option><option value="lmo">Lombard</option><option value="lg">Luganda</option><option value="luo">Luo</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mad">Madurese</option><option value="mai">Maithili</option><option value="mak">Makassar</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ms-Arab">Malay (Jawi)</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mam">Mam</option><option value="gv">Manx</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mh">Marshallese</option><option value="mwr">Marwadi</option><option value="mfe">Mauritian Creole</option><option value="chm">Meadow Mari</option><option value="mni-Mtei">Meiteilon (Manipuri)</option><option value="min">Minang</option><option value="lus">Mizo</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="nhe">Nahuatl (Eastern Huasteca)</option><option value="ndc-ZW">Ndau</option><option value="nr">Ndebele (South)</option><option value="new">Nepalbhasa (Newari)</option><option value="ne">Nepali</option><option value="bm-Nkoo">NKo</option><option value="no">Norwegian</option><option value="nus">Nuer</option><option value="oc">Occitan</option><option value="or">Odia (Oriya)</option><option value="om">Oromo</option><option value="os">Ossetian</option><option value="pag">Pangasinan</option><option value="pap">Papiamento</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese (Brazil)</option><option value="pt-PT">Portuguese (Portugal)</option><option value="pa">Punjabi (Gurmukhi)</option><option value="pa-Arab">Punjabi (Shahmukhi)</option><option value="qu">Quechua</option><option value="kek">Qʼeqchiʼ</option><option value="rom">Romani</option><option value="ro">Romanian</option><option value="rn">Rundi</option><option value="ru">Russian</option><option value="se">Sami (North)</option><option value="sm">Samoan</option><option value="sg">Sango</option><option value="sa">Sanskrit</option><option value="sat-Latn">Santali (Latin)</option><option value="sat">Santali (Ol Chiki)</option><option value="gd">Scots Gaelic</option><option value="nso">Sepedi</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="crs">Seychellois Creole</option><option value="shn">Shan</option><option value="sn">Shona</option><option value="scn">Sicilian</option><option value="szl">Silesian</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sus">Susu</option><option value="sw">Swahili</option><option value="ss">Swati</option><option value="sv">Swedish</option><option value="ty">Tahitian</option><option value="tg">Tajik</option><option value="ber-Latn">Tamazight</option><option value="ber">Tamazight (Tifinagh)</option><option value="ta">Tamil</option><option value="tt">Tatar</option><option value="te">Telugu</option><option value="tet">Tetum</option><option value="th">Thai</option><option value="bo">Tibetan</option><option value="ti">Tigrinya</option><option value="tiv">Tiv</option><option value="tpi">Tok Pisin</option><option value="to">Tongan</option><option value="lua">Tshiluba</option><option value="ts">Tsonga</option><option value="tn">Tswana</option><option value="tcy">Tulu</option><option value="tum">Tumbuka</option><option value="tr">Turkish</option><option value="tk">Turkmen</option><option value="tyv">Tuvan</option><option value="ak">Twi</option><option value="udm">Udmurt</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="ug">Uyghur</option><option value="uz">Uzbek</option><option value="ve">Venda</option><option value="vec">Venetian</option><option value="vi">Vietnamese</option><option value="war">Waray</option><option value="cy">Welsh</option><option value="wo">Wolof</option><option value="xh">Xhosa</option><option value="sah">Yakut</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="yua">Yucatec Maya</option><option value="zap">Zapotec</option><option value="zu">Zulu</option></select></div>Powered by <span style="white-space:nowrap"><a class="VIpgJd-ZVi9od-l4eHX-hSRGPd" href="https://translate.google.com" target="_blank" rel="noopener"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate">Translate</a></span></div></div>
+</div>
+
+<script>
+
+  function googleTranslateElementInit() {
+    var el = document.getElementById("google_translate_element");
+    if (el && el.innerHTML.trim() !== "") {
+        return;
+    }
+
+    new google.translate.TranslateElement({ pageLanguage: "en" }, "google_translate_element");
+    // begin accessibility compliance
+    $('img.goog-te-gadget-icon').attr('alt','Google Translate');
+    $('div#goog-gt-tt div.logo img').attr('alt','translate');
+    $('div#goog-gt-tt .original-text').css('text-align','left');
+    $('.goog-te-gadget-simple .goog-te-menu-value span').css('color','#000000');
+    $('.goog-te-combo').attr('aria-label','google translate languages');
+    $('svg.goog-te-spinner').attr('title','Google Translate Spinner');
+    $('.goog-te-gadget-simple .goog-te-menu-value span').css('color','#000000');
+  }
+
+  $(function() {
+    $.getScript("//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit");
+  });
+
+</script>
+
+<!--------------End Google Translate----------------->
+
+<script type="text/javascript">
+    window._monsido = window._monsido || {
+        token: "Mcm8dVMT4U840EaS_5_-Ow",
+        statistics: {
+            enabled: true,
+            cookieLessTracking: false,
+            documentTracking: {
+                enabled: true,
+                documentCls: "monsido_download",
+                documentIgnoreCls: "monsido_ignore_download",
+                documentExt: [],
+            },
+        },
+        pageCorrect: {
+            enabled: true,
+        },
+        pageAssistV2: {
+            enabled: true,
+            theme: "light",
+            mainColor: "#783CE2",
+            textColor: "#ffffff",
+            linkColor: "#783CE2",
+            buttonHoverColor: "#783CE2",
+            mainDarkColor: "#052942",
+            textDarkColor: "#ffffff",
+            linkColorDark: "#FFCF4B",
+            buttonHoverDarkColor: "#FFCF4B",
+            greeting: "Discover your personalization options",
+            direction: "leftbottom",
+            coordinates: "   ",
+            iconShape: "circle",
+            title: "Personalization Options",
+            titleText: "Welcome to PageAssist toolbar! Adjust the options below to cater the website to your accessibility needs.",
+            iconPictureUrl: "logo",
+            logoPictureUrl: "",
+            logoPictureBase64: "",
+            languages: ["en-US", "es-MX"],
+            defaultLanguage: "en-US",
+            skipTo: false,
+            alwaysOnTop: false,
+            hotkeyEnabled:false,
+        },
+    };
+</script>
+<script type="text/javascript" async="" src="https://app-script.monsido.com/v2/monsido-script.js"></script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Arimo:700,700italic,italic,regular|Open+Sans:300,300italic,500,600,600italic,700,700italic,800,800italic,italic,regular|Open+Sans+Condensed:300,700|Oswald:200,300,500,600,700,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu6" class="contentTop mainNavMegaMenu megaMenuContainer pageID_6 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 134.969px; width: 745px; top: 187.625px;">	<div id="ccdaa1a6a0-16eb-4e22-a7ac-a070b8d6ff77" data-containerid="daa1a6a0-16eb-4e22-a7ac-a070b8d6ff77" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu7" class="contentTop mainNavMegaMenu megaMenuContainer pageID_7 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 134.969px; width: 745px; top: 187.625px;">	<div id="cc47a74725-12fe-422c-967f-15924a8f9542" data-containerid="47a74725-12fe-422c-967f-15924a8f9542" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu9" class="contentTop mainNavMegaMenu megaMenuContainer pageID_9 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 134.969px; width: 745px; top: 187.625px;">	<div id="ccb0c4f15b-09f9-4ae7-856b-1569ab603d1a" data-containerid="b0c4f15b-09f9-4ae7-856b-1569ab603d1a" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu559" class="contentTop mainNavMegaMenu megaMenuContainer pageID_559 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 134.969px; width: 745px; top: 187.625px;">	<div id="cc19331dbd-93d4-4c13-b209-e43b5e59056a" data-containerid="19331dbd-93d4-4c13-b209-e43b5e59056a" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr"><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""><div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr">Original text</div></div><div class="VIpgJd-yAWNEb-hvhgNd-k77Iif"><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Rate this translation</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Your feedback will be used to help improve Google Translate</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Good translation" aria-label="Good translation" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Poor translation" aria-label="Poor translation" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu1223" class="contentTop mainNavMegaMenu megaMenuContainer pageID_1223 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 134.969px; width: 745px; top: 187.625px;">	<div id="cc131c8ad5-3baa-449f-bd8a-f404dccb22ca" data-containerid="131c8ad5-3baa-449f-bd8a-f404dccb22ca" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><div id="bannerSlideshowControls_banner1" class="bannerSlideshowControlsNew none " style="display:none">
+			<a id="arrowPrev_banner1" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner1" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div><button class="mon-logo-container mon-light-theme" mon-position="leftbottom" aria-labelledby="mon-pa-pageassist-label mon-pa-logo-label" id="monsido-pageassist" aria-expanded="false"><span id="mon-pa-pageassist-label" class="mon-pa-efsc">PageAssist</span>
+        <span id="mon-pa-logo-label" class="mon-logo-text-content">Discover your personalization options</span>
+        <span class="mon-logo-image-wrapper-content">
+            <span class="mon-logo-image-wrapper ">
+                <span class="mon-pageassist-close-img mon-pa-efsc">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><path class="a mon-pa-efsc" d="M10.343,87.5l4.264-4.264a1.341,1.341,0,0,0,0-1.9l-.948-.948a1.341,1.341,0,0,0-1.9,0L7.5,84.657,3.236,80.392a1.341,1.341,0,0,0-1.9,0l-.948.948a1.341,1.341,0,0,0,0,1.9L4.657,87.5.392,91.764a1.341,1.341,0,0,0,0,1.9l.948.948a1.341,1.341,0,0,0,1.9,0L7.5,90.343l4.264,4.264a1.341,1.341,0,0,0,1.9,0l.948-.948a1.341,1.341,0,0,0,0-1.9Z" transform="translate(0 -80)"></path></svg>
+                </span>
+                <span class="mon-pageassist-check-img mon-pa-efsc">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7.457" viewBox="0 0 10 7.457"><path class="a mon-pa-efsc" d="M3.4,72.409l-3.25-3.25a.5.5,0,0,1,0-.707l.707-.707a.5.5,0,0,1,.707,0L3.75,69.934,8.44,65.245a.5.5,0,0,1,.707,0l.707.707a.5.5,0,0,1,0,.707L4.1,72.409a.5.5,0,0,1-.707,0Z" transform="translate(0 -65.098)"></path></svg>
+                </span>
+                <span class="mon-logo-image-bg">
+                    <img class="mon-logo-image" src="//cdn.monsido.com/page-assist/v2/assets/img/uaccess.svg" alt="PageAssist Personalization Options">
+                </span>
+                <img class="mon-spinner mon-pa-efsc" src="//cdn.monsido.com/page-assist/v2/assets/img/default-spinner.png" alt="PageAssist Loading">
+            </span>
+        </span>
+        <style type="text/css">
+    
+    @keyframes monLogoRight {
+        from {
+            right: -60px !important;
+        }
+        to {
+            right: 20px !important;
+        }
+    }
+    @keyframes monLogoLeft {
+        from {
+            left: -60px !important;
+        }
+        to {
+            left: 20px !important;
+        }
+    }
+    @keyframes monLogoBottom {
+        from {
+            bottom: -60px !important;
+        }
+        to {
+            bottom: 5px !important;
+        }
+    }
+    @keyframes monLogoTop {
+        from {
+            top: -60px !important;
+        }
+        to {
+            top: 5px !important;
+        }
+    }
+    @keyframes monSpinner {
+        from {
+            transform: rotate(0);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container {
+        background: transparent !important;
+        border: none !important;
+        box-sizing: content-box !important;
+        font-family: 'Roboto', Arial, sans-serif !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        cursor: pointer !important;
+        position: fixed !important;
+        bottom: 3px !important;
+        z-index: 2147483640 !important;
+        text-transform: none !important;
+        transition: right 0.2s ease;
+        animation: monLogoLeft 0.3s normal forwards;
+        align-items: center !important;
+        display: flex !important;
+        outline: none !important;
+        padding: 10px !important;
+        margin: 0 !important;
+        max-width: 200px !important;
+        white-space: normal !important;
+        height: auto !important;
+        width: auto !important;
+    }
+
+    .mon-logo-container {
+        --mon-pa-distance-from-popup: 3;
+    }
+
+    .mon-pa-button-border {
+        border: 3px solid var(--mon-pa-button-border-color);
+    }
+
+    #mon-pa-pageassist-label {
+        border: 0 !important;
+        clip: rect(1px, 1px, 1px, 1px) !important;
+        clip-path: inset(50%) !important;
+        height: 1px !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: absolute !important;
+        width: 1px !important;
+        white-space: nowrap !important;
+    }
+
+    body.monsido-toolbar-body-container > mon-pa-dashboard + .mon-logo-container {
+        animation:unset;
+        transition:unset;
+    }
+
+    .mon-logo-container[mon-loading] img.mon-spinner {
+        display: block !important;
+        margin: auto !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]):hover {
+        background-color:#783CE2 !important;
+        border-radius: 3px !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]).mon-dark-theme:hover {
+        background-color: #052942 !important;
+        border-radius: 3px !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    .mon-logo-image-wrapper img.mon-spinner {
+        display: none !important;
+        animation-name:monSpinner;
+        animation-duration:3s;
+        animation-iteration-count:infinite;
+        animation-timing-function:linear;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content {
+        order:0 !important;
+    }
+
+    body.monsido-toolbar-body-container>.mon-logo-container[mon-position="right"] .mon-logo-image-wrapper-content,
+    body.monsido-toolbar-body-container>.mon-logo-container[mon-position="righttop"] .mon-logo-image-wrapper-content,
+    body.monsido-toolbar-body-container>.mon-logo-container[mon-position="rightbottom"] .mon-logo-image-wrapper-content {
+        order:1 !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper .mon-logo-image-bg {
+        background: #783CE2 !important;
+        display: none !important;
+        width: 36px !important;
+        height: 36px !important;
+        margin: auto !important;
+        border-radius: 50% !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-image-wrapper .mon-logo-image-bg {
+        background-color: #052942 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper .mon-logo-image-bg {
+        display: block !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper .mon-logo-image-bg img.mon-logo-image {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"])[mon-loading].mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img,
+    body.monsido-toolbar-body-container .mon-logo-container[mon-loading] .mon-logo-image-wrapper .mon-logo-image-bg,
+    body.monsido-toolbar-body-container .mon-logo-container[mon-loading].mon-dark-theme .mon-logo-image-wrapper .mon-pageassist-check-img,
+    body.monsido-toolbar-body-container .mon-logo-container[mon-loading].mon-dark-theme .mon-logo-image-wrapper .mon-logo-image-bg {
+        display: none !important;
+    }
+
+    
+    body.monsido-toolbar-body-container>.mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        display:block !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color: #783CE2 !important;
+        border-radius: 50% !important;
+        box-sizing: border-box !important;
+        padding: 0 !important;
+        width: 60px !important;
+        height: 60px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-rounded-box .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        border-radius: 3px !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:focus .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        box-shadow: 0px 0px 1px 5px #1c86db !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:hover:not([aria-expanded="true"]) .mon-logo-image-wrapper-content .mon-logo-image-wrapper{
+        box-shadow: 0px 0px 1px 2px #ffffff !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img,
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img {
+        display: none !important;
+        margin: 4px 0 0 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img svg,
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img svg {
+        width: 15px !important;
+        height: 15px !important;
+        vertical-align: unset !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img svg .a,
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img svg .a {
+        fill: #ffffff !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#052942 !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#052942 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img svg .a,
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img svg .a {
+        fill: #ffffff !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img  {
+        display: block !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#783CE2 !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"].mon-dark-theme .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#052942 !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper .mon-pageassist-check-img,
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper .mon-logo-image-bg {
+        display: none !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]).mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img  {
+        display: block !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#783CE2 !important;
+    }
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme.mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#052942 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-styles-applied .mon-logo-image-wrapper .mon-pageassist-close-img,
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-styles-applied .mon-logo-image-wrapper .mon-logo-image-bg {
+        display: none !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-text-content {
+        display:none !important;
+        letter-spacing: normal !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]):hover .mon-logo-text-content {
+        display: block !important;
+        text-align: left !important;
+        line-height: 1.3 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-text-content {
+        order:1 !important;
+        padding-right:20px !important;
+        padding-left:10px !important;
+        display:none !important;
+        color:#ffffff !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-text-content {
+        color:#ffffff !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='centertop'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='centerbottom'] {
+        animation: monLogoBottom 0.3s normal forwards;
+        left: 50% !important;
+        margin-left: -40px !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='centerbottom'] {
+        animation: monLogoBottom 0.3s normal forwards;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='centertop'] {
+        top: 5px !important;
+        animation: monLogoTop 0.3s normal forwards;
+        bottom: auto !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='lefttop'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='righttop'] {
+        top: 5px !important;
+        bottom: auto !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='right'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='left'] {
+        bottom: 50% !important;
+        margin-top: 40px !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='left'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='leftbottom'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='lefttop'] {
+        left: 20px !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='right'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='rightbottom'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='righttop'] {
+        animation: monLogoRight 0.3s normal forwards;
+        right: 20px !important;
+    }
+
+    
+    @media (max-height: 920px) {
+        body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] {
+            display: none !important;
+        }
+    }
+
+    @media print {
+        body.monsido-toolbar-body-container .mon-logo-container {
+            display: none !important;
+        }
+    }
+
+    
+    button.skip-to-pageassist {
+        left: -999px !important;
+        position: fixed !important;
+        top: auto !important;
+        width: 1px !important;
+        height: 1px !important;
+        overflow: hidden !important;
+        z-index: -999 !important;
+    }
+
+    button.skip-to-pageassist:focus, button.skip-to-pageassist:active {
+        color: #fff !important;
+        background-color: #000 !important;
+        top: 4px !important;
+        left: 4px !important;
+        right: auto !important;
+        height: auto !important;
+        width: auto !important;
+        overflow: auto !important;
+        padding: 5px !important;
+        text-align: center !important;
+        font-size: 1.2em !important;
+        z-index: 9999999999999999999999999999 !important;
+    }
+
+    
+        body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            color: #ffffff !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            color: #ffffff !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]):hover {
+            background-color: #783CE2 !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container:hover .mon-logo-image-wrapper .mon-logo-image-bg {
+            background-color: #783CE2 !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper .mon-logo-image-bg {
+            background-color: #783CE2 !important;
+        }
+    
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"].mon-dark-theme .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme.mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            color: #ffffff !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:not([aria-expanded="true"]):hover {
+            background-color: #783CE2 !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-image-wrapper .mon-logo-image-bg {
+            background-color: #783CE2 !important;
+        }
+    
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-coordinates-bottom {
+        animation: monLogoBottom 0.3s normal forwards;
+        bottom: var(--mon-pa-button-bottom) !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-coordinates-top {
+        top: var(--mon-pa-button-top) !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-coordinates-left {
+        left: var(--mon-pa-button-left) !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-coordinates-right {
+        right: var(--mon-pa-button-right) !important;
+    }
+    
+
+</style></button></body></html>
