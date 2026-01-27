@@ -1,0 +1,2465 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n3-active wf-muli-n4-active wf-muli-i4-active wf-muli-n7-active wf-active has-webFonts"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:500,500italic,600,600italic,700,700italic,italic,regular|" media="all"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-7HCRRE02C4&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61q0"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-7HCRRE02C4';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = true;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	
+	<meta name="category0" content="Home">
+<meta name="category1" content="Government">
+<meta name="category2" content="City Council">
+
+	
+	<meta name="theme-color" content="#11799a">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>City Council | Ingleside, TX</title>
+
+		<meta name="description" content="The City Council is the legislative and policy-making body of the City of Ingleside, a “home-rule” city, operating under the authority of the City Charter.">
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '390px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/706012397.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style></head>
+<body class="wide cpTextResizeOn doneLoading"><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="https://inglesidetx.gov/Common/images/ajax-loader.gif" alt="Loading" title="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks">
+<a href="https://inglesidetx.gov/306/City-Council#cc5f8c90dc-b4cb-431b-90ee-10648f8df655" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="1">
+    <input type="hidden" id="hdnContentCollectionID" value="1609592c-57c4-4b66-9ff2-5ca94719bb5a">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="1">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID">
+    <input type="hidden" id="pagePageID" value="306">
+
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+
+
+
+<!-- Begin Signed Out Bar -->
+<div class="cpToolbar user public" style="z-index: 1;">
+    <div class="inner selfClear">
+        <p class="dropdown"><a href="https://inglesidetx.gov/MyAccount/ProfileCreate" role="link" class="myConnections" id="signedOutToolbarCreateProfileButton">Create a Website Account</a> <span class="welcomeMessage">- Manage notification subscriptions, save form progress and more. &nbsp;&nbsp;</span></p>
+        <ul class="nav secondary">
+	        <li><a href="https://inglesidetx.gov/MyAccount" role="link" class="button" id="loggedOutToolbarSignInButton"><span>Website Sign In</span></a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#signedOutToolbarCreateProfileButton').keypress(function (e) { if (e.which === 0) return; $(this).click(); });
+        $('#signedOutToolbarCreateProfileButton').click(function (event) {
+        	event.preventDefault();
+        	window.location.href = '/MyAccount/ProfileCreate?from=url&url=/&dn=' + window.location.origin;
+        });
+
+			
+				$('#loggedOutToolbarSignInButton').click(function (event) {
+					event.preventDefault();
+					window.location.href = '/MyAccount/?from=url&url=' + encodeURIComponent(window.location.href.replace(window.location.origin, '')) + '&dn=' + window.location.host;
+				});
+			
+
+		if ('False' == 'True') {
+            $('#loggedOutToolbarSignInButton').hide();
+		}
+    })
+</script>
+<!-- End Signed Out Bar -->
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 35px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="bodyContainerTS">
+<!-- Header Container --><header data-cprole="structuralContainer" id="headerContainerTS" class="fixedTopTS" style="top: 34px;">
+<div class="siteWrap3"><div data-cprole="banner" id="bannerLogoTS" class="bannerLogoTS empty">
+
+
+
+
+				<a id="bannerLogoTS-48" style="			display: block; text-align: center;
+" class="bannerObject" href="https://inglesidetx.gov/" target="_self"><img alt="Home Page" class="bannerObject" height="183" src="https://inglesidetx.gov/ImageRepository/Document?documentID=63" width="753"></a>
+</div><div data-cprole="contentContainer" id="searchTS">	<div id="ccc23b6d59-833c-4766-b181-8a4e4af514d4" data-containerid="c23b6d59-833c-4766-b181-8a4e4af514d4" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="351b7cb8-f8b5-496f-b8ea-8e6ac32d8141">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id8058b22a-8571-4637-8204-69336c40a341" style="height: 65px;" data-widgetcontainerid="8058b22a-8571-4637-8204-69336c40a341">
+	
+<div data-widget-id="0f63aef3-ccac-4212-b9e0-a4ed5c65f067" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButton0f63aef3-ccac-4212-b9e0-a4ed5c65f067").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDept0f63aef3-ccac-4212-b9e0-a4ed5c65f067").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchField0f63aef3-ccac-4212-b9e0-a4ed5c65f067").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDept0f63aef3-ccac-4212-b9e0-a4ed5c65f067").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDept0f63aef3-ccac-4212-b9e0-a4ed5c65f067").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchField0f63aef3-ccac-4212-b9e0-a4ed5c65f067").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDept0f63aef3-ccac-4212-b9e0-a4ed5c65f067").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchField0f63aef3-ccac-4212-b9e0-a4ed5c65f067").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchField0f63aef3-ccac-4212-b9e0-a4ed5c65f067"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin39 widgetOptionSet15" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBox0f63aef3-ccac-4212-b9e0-a4ed5c65f067 ui-autocomplete-input" cp5ph="true" id="searchField0f63aef3-ccac-4212-b9e0-a4ed5c65f067" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search..." title="Search..." type="text" value="" autocomplete="off">
+						<a href="https://inglesidetx.gov/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButton0f63aef3-ccac-4212-b9e0-a4ed5c65f067" role="button"><img alt="Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=77" data-image="/ImageRepository/Document?documentID=78" src="https://inglesidetx.gov/ImageRepository/Document?documentID=78"></a>
+
+			<label class="searchLabel" for="searchField0f63aef3-ccac-4212-b9e0-a4ed5c65f067">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #fff;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #fff;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #fff;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #fff;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBox0f63aef3-ccac-4212-b9e0-a4ed5c65f067
+	{
+		color: #fff;
+		font-family: Arial;
+height: 65px;
+border-radius: 33px;
+border: 1px solid rgba(255,255,255,1);
+background: #11799a;
+padding: 0 80px 0 20px;
+box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.11);
+	}
+	.widgetSearch .widgetBody .widgetSearchButton0f63aef3-ccac-4212-b9e0-a4ed5c65f067
+	{
+		margin: 5px; padding-top: .50em; 
+padding-right: .75em;
+	}
+	.widgetSearch .widgetSearch-onlyDept0f63aef3-ccac-4212-b9e0-a4ed5c65f067
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDept0f63aef3-ccac-4212-b9e0-a4ed5c65f067
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchField0f63aef3-ccac-4212-b9e0-a4ed5c65f067").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem27" class="topMenuItem" role="none" data-pageid="27" data-displaymegamenu="True" style="width: 19.1475%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem1 " href="https://inglesidetx.gov/27/Government" target="_self" style="font-size: 13px;"><span style="display: inline;">   Government </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem31" class="topMenuItem" role="none" data-pageid="31" data-displaymegamenu="True" style="width: 14.3934%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavResidents" class="navMainItem mainNavItem mainNavItem2 " href="https://inglesidetx.gov/31/Residents" target="_self" style="font-size: 13px;"><span style="display: inline;">   Residents </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem1525" class="topMenuItem" role="none" data-pageid="1525" data-displaymegamenu="True" style="width: 38%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavTransparencytoCitizens" class="navMainItem mainNavItem mainNavItem3 " href="https://inglesidetx.gov/1525/Transparency-to-Citizens" target="_self" style="font-size: 13px;"><span style="display: inline;">   Transparency to Citizens </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem35" class="topMenuItem" role="none" data-pageid="35" data-displaymegamenu="True" style="width: 12.918%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavBusiness" class="navMainItem mainNavItem mainNavItem4 " href="https://inglesidetx.gov/35/Business" target="_self" style="font-size: 13px;"><span style="display: inline;">   Business </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem9" class="topMenuItem" role="none" data-pageid="9" data-displaymegamenu="True" style="width: 15.541%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavHowDoI" class="navMainItem mainNavItem mainNavItem5 " href="https://inglesidetx.gov/9/How-Do-I" target="_self" style="font-size: 13px;"><span style="display: inline;">   How Do I... </span></a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=1&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = true;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="0"></aside></nav></div>
+</header><!-- Banner --><div data-cprole="structuralContainer" id="bannerContainerTS">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="bannerSizingTS" style="padding-top: 95px;">
+<div class="siteWrap"><div data-cprole="structuralContainer" id="bannerContentTS">
+<div data-cprole="contentContainer" id="welcomeTS">	<div id="cc89d17937-d7b3-4f74-82ed-6a7608bac98f" data-containerid="89d17937-d7b3-4f74-82ed-6a7608bac98f" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</div>
+</div></div>
+</div>
+
+
+
+
+		<div class="bannerObject external" id="bannerDivbanner1" style="min-height: 315px; top: 0px; left: 0px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="false"><img alt="" class="bannerObject" src="https://inglesidetx.gov/ImageRepository/Document?documentID=1927" width="2200px" style="position: absolute; left: 50%; margin: 0px 0px 0px -1100px; width: 2200px;"></div>
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderBanner('banner1-2',
+								'banner1',
+								{"BannerOptionID":2,"ThemeID":1,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":1,"SlideShowSlideTiming":"3","SlideshowTransition":0,"SlideShowTransitionTiming":"3","ImageScale":false,"ImageAlignment":2,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":84,"BannerOptionID":2,"FileName":"/ImageRepository/Document?documentID=1927","Height":400,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":2,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null}],"BannerVideos":[],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								{"BannerImageID":84,"BannerOptionID":2,"FileName":"/ImageRepository/Document?documentID=1927","Height":400,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":2,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null},
+								'/App_Themes/Interior/Images/',
+								'<img alt="" class="bannerObject" src="/ImageRepository/Document?documentID=1927" />');
+						});
+				});
+			</script>
+
+</div>
+</div><!-- Content container --><div data-cprole="structuralContainer" id="mainContainerTS">
+<div class="siteWrap"><div data-cprole="structuralContainer" id="mainWrapTS" class="mainWrap" role="main">
+<div data-cprole="structuralContainer" id="outerContentWrapTS" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="contentWrapTS" class="contentWrap">
+<div data-cprole="breadCrumbs" id="breadCrumbs" class="breadCrumbContainer">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="https://inglesidetx.gov/">Home</a></li><li><a class="breadCrumb" href="https://inglesidetx.gov/27/Government">Government</a></li><li id="currentBCPage" data-pageid="306">City Council</li>
+		</ol>
+
+	   
+    
+</div><div data-cprole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="306">
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="27">
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="2240">
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="City Council">
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="False">
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False">
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published">
+
+				<h1 id="versionHeadLine" class="headline">
+
+City Council		</h1>
+	
+		<div id="cc5f8c90dc-b4cb-431b-90ee-10648f8df655" data-containerid="5f8c90dc-b4cb-431b-90ee-10648f8df655" class="pageContent cpGrid cpGrid24" data-contentcontainerbreakpoint="30">
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="1ee06cd4-46f2-419a-a15f-693df5afe164">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id96444c6f-6a7e-4c2f-8164-21f0e1ff5f61" style="height: 61px;" data-widgetcontainerid="96444c6f-6a7e-4c2f-8164-21f0e1ff5f61">
+	
+<div class="widget editor pageStyles wide" id="divEditor2cb70f65-f5c3-491d-b647-bb9de7f02586" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h2 id="isPasted">Meetings</h2>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '2cb70f65-f5c3-491d-b647-bb9de7f02586'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col12 first" style="height: auto;" data-widgetcontainerid="ac90ac9c-0e06-446e-b04f-8028445e61fe">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last id7aa6b66c-a1e1-43c6-aa0f-a81f8ff70bce" style="height: 646px;" data-widgetcontainerid="7aa6b66c-a1e1-43c6-aa0f-a81f8ff70bce">
+	
+<div class="widget editor pageStyles wide" id="divEditor815ab3b1-b18a-4c7b-b014-8001cddcd3dc" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h3 class="subhead2">Regular Meetings</h3><ul id="isPasted"><li>6:30 pm</li><li>2nd and 4th Tuesday of each month (except November and December when meetings are held just the 2nd Tuesday)</li><li>City Hall<br>2671 San Angelo Street<br>Ingleside, TX 78362</li></ul><p><strong>Citizen Participation during Council Meetings:</strong></p><p style="text-align: justify;">Citizen's who sign up to speak during the Citizens Comments and Reports section on the City Council Meeting Agenda may speak for three minutes. Only one citizen may speak at a time. They may speak on any topic listed on the agenda or otherwise. This is not a question-and-answer session, and the council will not respond to questions or issues posed by any speaker. However, council may address certain questions or issues later if they appear on the agenda.</p><p style="text-align: justify;">Citizen Participation Forms can be filled out the night of the meeting and presented to the City Secretary. The City Secretary will call each citizen to speak in the order they were received.</p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '815ab3b1-b18a-4c7b-b014-8001cddcd3dc'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col12 last" style="height: auto;" data-widgetcontainerid="f8596cb0-fb36-4d2f-8002-cf6679ae3190">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last idb31258e3-34ee-4874-9503-7cf7e078c97d" style="height: 646px;" data-widgetcontainerid="b31258e3-34ee-4874-9503-7cf7e078c97d">
+	
+<div class="widget editor pageStyles wide" id="divEditor0d29c301-8704-41c4-8e18-fbd78d81c3d8" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h3 class="subhead2">Special Meetings</h3><ul><li>Special meetings may be held on the call of the Mayor or three Council Members</li></ul>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '0d29c301-8704-41c4-8e18-fbd78d81c3d8'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="3252d381-384f-4587-95a0-038b036cdab2">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id52ca36d9-eeea-45db-afef-0267015d0718" style="height: 176px;" data-widgetcontainerid="52ca36d9-eeea-45db-afef-0267015d0718">
+	
+<div class="widget editor pageStyles wide" id="divEditor680ccf17-3f22-4f07-9f69-d6dcd84dd2a2" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h2 class="subhead1 ">Agendas &amp; Minutes</h2><p>Agendas are available prior to the meetings. Minutes are available following approval.</p><p><a class="Hyperlink" href="https://inglesidetx.portal.civicclerk.com/" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);">View Most Recent Agendas and Minutes</a></p><h2 class="subhead1 ">Members</h2>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '680ccf17-3f22-4f07-9f69-d6dcd84dd2a2'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="height: auto;" data-widgetcontainerid="42826461-a17b-49ed-9d3e-dde01e777670">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last idbe1e69ca-a901-47de-a27f-c452261a67e0" style="height: 655px;" data-widgetcontainerid="be1e69ca-a901-47de-a27f-c452261a67e0">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="8104ba76-b912-47b3-9c2f-1f7295466a54" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidget8104ba76-b912-47b3-9c2f-1f7295466a54" class="widget widgetStaffDirectory skin43 wide">
+			<div class="widgetHeader">
+							</div>
+			</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8" style="height: auto;" data-widgetcontainerid="b87eb21a-0e81-4663-8369-0989b363c639">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last idfd02e86a-a99d-4deb-be6f-3a951fb22ab4" style="height: 655px;" data-widgetcontainerid="fd02e86a-a99d-4deb-be6f-3a951fb22ab4">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="bbb6130c-7005-4370-8fd6-c0aa9d9a7195" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidgetbbb6130c-7005-4370-8fd6-c0aa9d9a7195" class="widget widgetStaffDirectory skin43 wide">
+			<div class="widgetHeader">
+							</div>
+						<ol class="semanticList">
+			<li class="widgetItem h-card">
+
+					<img src="https://inglesidetx.gov/ImageRepository/Document?documentID=10111" alt="Mayor Oscar O. Adame" title="Mayor Oscar O. Adame" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name">
+					Oscar Adame
+					
+				</h4>
+				<div class="field p-job-title">Mayor</div>
+						<div class="field u-email"><a href="mailto:mayor@inglesidetx.gov">Email Pedro Oscar Adame </a></div>
+
+
+
+
+					<div class="field p-note">
+
+						<p fr-original-style="" style="margin: 0px 0px 1.4em; box-sizing: inherit; font-style: normal; font-weight: 400; font-family: Arial; color: rgb(69, 69, 69); line-height: 1.5;">Terms:</p><ul fr-original-style="" style="list-style: disc; box-sizing: inherit; margin-top: 1em; margin-bottom: 1.4em; padding-left: 2em; font-family: Arial; font-style: normal; font-weight: 400; color: rgb(69, 69, 69); line-height: 1.5;"><li fr-original-style="" style="box-sizing: inherit; margin-bottom: 0.35em; font-style: normal; font-weight: 400;">Mayor May 2022 through May 2024, 1<sup fr-original-style="" style="top: -0.5em; font-size: 75%; line-height: 0; position: relative; vertical-align: initial; box-sizing: inherit;">st</sup> Term</li><li fr-original-style="" style="box-sizing: inherit; margin-bottom: 0.35em; font-style: normal; font-weight: 400;">Mayor May 2024 through May 2026, 2<sup fr-original-style="" style="top: -0.5em; font-size: 75%; line-height: 0; position: relative; vertical-align: initial; box-sizing: inherit;">nd</sup> Term</li></ul>
+					</div>
+
+				<br>
+			</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8 last" style="height: auto;" data-widgetcontainerid="d7b6c939-5c15-4176-b8ac-a78387d98525">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id73b57312-5e7b-4dab-bb20-7dd0309e49ba" style="height: 655px;" data-widgetcontainerid="73b57312-5e7b-4dab-bb20-7dd0309e49ba">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="472aa186-efce-4719-8ff8-883ab4fe5354" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidget472aa186-efce-4719-8ff8-883ab4fe5354" class="widget widgetStaffDirectory skin43 wide">
+			<div class="widgetHeader">
+							</div>
+			</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="height: auto;" data-widgetcontainerid="e92234ab-d1a9-4e3c-9e12-0fa4fbdb2674">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last idebc729c2-25d5-4a5f-ab3e-129253212a6c" style="height: 706px;" data-widgetcontainerid="ebc729c2-25d5-4a5f-ab3e-129253212a6c">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="a38f6a8a-e9bd-45bd-96c8-6689bbffb8ce" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidgeta38f6a8a-e9bd-45bd-96c8-6689bbffb8ce" class="widget widgetStaffDirectory skin43 wide">
+			<div class="widgetHeader">
+							</div>
+						<ol class="semanticList">
+			<li class="widgetItem h-card">
+
+					<img src="https://inglesidetx.gov/ImageRepository/Document?documentID=10130" alt="no_image" title="no_image" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name">
+					Julio Salinas
+					
+				</h4>
+				<div class="field p-job-title">Council Member Place 1</div>
+						<div class="field u-email"><a href="mailto:julio.council@inglesidetx.gov">Email Julio Salinas </a></div>
+
+
+
+
+					<div class="field p-note">
+
+						<p fr-original-style="" style="margin: 0px 0px 1.4em; box-sizing: inherit; font-style: normal; font-weight: 400; font-family: Arial; color: rgb(69, 69, 69); line-height: 1.5;">Terms:</p><ul fr-original-style="" style="list-style: disc; box-sizing: inherit; margin-top: 1em; margin-bottom: 1.4em; padding-left: 2em; font-family: Arial; font-style: normal; font-weight: 400; color: rgb(69, 69, 69); line-height: 1.5;"><li fr-original-style="" style="box-sizing: inherit; margin-bottom: 0.35em; font-style: normal; font-weight: 400;">May 2021 through May 2023, 1<sup fr-original-style="" style="top: -0.5em; font-size: 75%; line-height: 0; position: relative; vertical-align: initial; box-sizing: inherit;">st</sup> Term</li><li fr-original-style="" style="box-sizing: inherit; margin-bottom: 0.35em; font-style: normal; font-weight: 400;">May 2023 through May 2025, 2<sup id="isPasted" fr-original-style="" style="top: -0.5em; font-size: 75%; line-height: 0; position: relative; vertical-align: initial; box-sizing: inherit;">nd</sup> Term</li><li id="isPasted" fr-original-style="" style="box-sizing: inherit; margin-bottom: 0.35em; font-style: normal; font-weight: 400;">May 2025 through May 2027, 3<sup fr-original-style="" style="top: -0.5em; font-size: 75%; line-height: 0; position: relative; vertical-align: initial; box-sizing: inherit;">rd</sup> <sup fr-original-style="" style="top: -0.5em; font-size: 75%; line-height: 0; position: relative; vertical-align: initial; box-sizing: inherit;">&nbsp;</sup>Term</li></ul>
+					</div>
+
+				<br>
+			</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8" style="height: auto;" data-widgetcontainerid="d20b7c6a-4b5e-4540-aba8-f71dbc80baec">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last ide1c45b29-1b37-4cbc-8fb4-54cdfea8d869" style="height: 706px;" data-widgetcontainerid="e1c45b29-1b37-4cbc-8fb4-54cdfea8d869">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="c8ca5422-cde8-4a65-9e92-9f2766ed7db8" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidgetc8ca5422-cde8-4a65-9e92-9f2766ed7db8" class="widget widgetStaffDirectory skin43 wide">
+			<div class="widgetHeader">
+							</div>
+						<ol class="semanticList">
+			<li class="widgetItem h-card">
+
+					<img src="https://inglesidetx.gov/ImageRepository/Document?documentID=10107" alt="Councilmember James Pruitt" title="Councilmember James Pruitt" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name">
+					David Pruitt
+					
+				</h4>
+				<div class="field p-job-title">Council Member Place 2</div>
+						<div class="field u-email"><a href="mailto:david.council@inglesidetx.gov">Email David Pruitt </a></div>
+
+
+
+
+					<div class="field p-note">
+
+						<p fr-original-style="" style="margin: 0px 0px 1.4em; box-sizing: inherit; font-style: normal; font-weight: 400; font-family: Arial; color: rgb(69, 69, 69); line-height: 1.5;">Terms:</p><ul fr-original-style="" style="list-style: disc; box-sizing: inherit; margin-top: 1em; margin-bottom: 1.4em; padding-left: 2em; font-family: Arial; font-style: normal; font-weight: 400; color: rgb(69, 69, 69); line-height: 1.5;"><li fr-original-style="" style="box-sizing: inherit; margin-bottom: 0.35em; font-style: normal; font-weight: 400;">May 2020 through May 2022, 1<sup fr-original-style="" style="top: -0.5em; font-size: 75%; line-height: 0; position: relative; vertical-align: initial; box-sizing: inherit;">st</sup> Term</li><li fr-original-style="" style="box-sizing: inherit; margin-bottom: 0.35em; font-style: normal; font-weight: 400;">May 2022 through May 2024, 2<sup fr-original-style="" style="top: -0.5em; font-size: 75%; line-height: 0; position: relative; vertical-align: initial; box-sizing: inherit;">nd</sup> Term</li><li fr-original-style="" style="box-sizing: inherit; margin-bottom: 0.35em; font-style: normal; font-weight: 400;">May 2024 through May 2026, 3<sup fr-original-style="" style="top: -0.5em; font-size: 75%; line-height: 0; position: relative; vertical-align: initial; box-sizing: inherit;">rd</sup> Term</li></ul>
+					</div>
+
+				<br>
+			</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8 last" style="height: auto;" data-widgetcontainerid="856bd591-1c48-4135-9eff-20d3ae1b7123">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last idf1d128b5-2418-4a3e-a5e7-4d6b5311017b" style="height: 706px;" data-widgetcontainerid="f1d128b5-2418-4a3e-a5e7-4d6b5311017b">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="71686d31-435a-406c-a824-85f68d7152df" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidget71686d31-435a-406c-a824-85f68d7152df" class="widget widgetStaffDirectory skin43 wide">
+			<div class="widgetHeader">
+							</div>
+						<ol class="semanticList">
+			<li class="widgetItem h-card">
+
+					<img src="https://inglesidetx.gov/ImageRepository/Document?documentID=10108" alt="Councilmember James Steward" title="Councilmember James Steward" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name">
+					James Steward
+					
+				</h4>
+				<div class="field p-job-title">Council Member Place 3</div>
+						<div class="field u-email"><a href="mailto:jsteward@inglesidetx.gov">Email James Steward </a></div>
+
+
+
+
+					<div class="field p-note">
+
+						<p id="isPasted" fr-original-style="" style="margin: 0px 0px 1.4em; box-sizing: inherit; font-style: normal; font-weight: 400; font-family: Arial; color: rgb(69, 69, 69); line-height: 1.5;">Terms:</p><ul fr-original-style="" style="list-style: disc; box-sizing: inherit; margin-top: 1em; margin-bottom: 1.4em; padding-left: 2em; font-family: Arial; font-style: normal; font-weight: 400; color: rgb(69, 69, 69); line-height: 1.5;"><li id="isPasted" fr-original-style="" style="box-sizing: inherit; margin-bottom: 0.35em; font-style: normal; font-weight: 400;">May 2025 through May 2027, 1<sup fr-original-style="" style="top: -0.5em; font-size: 75%; line-height: 0; position: relative; vertical-align: initial; box-sizing: inherit;">st&nbsp;</sup>Term</li></ul>
+					</div>
+
+				<br>
+			</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="height: auto;" data-widgetcontainerid="891a3c8a-f2ba-4b39-bea8-8fb1938fe132">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last idbdf3de12-b043-4240-9c34-6360e53252d5" style="height: 808px;" data-widgetcontainerid="bdf3de12-b043-4240-9c34-6360e53252d5">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="e20d7f06-4f49-4a00-954c-cbb84beb731c" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidgete20d7f06-4f49-4a00-954c-cbb84beb731c" class="widget widgetStaffDirectory skin43 wide">
+			<div class="widgetHeader">
+							</div>
+						<ol class="semanticList">
+			<li class="widgetItem h-card">
+
+					<img src="https://inglesidetx.gov/ImageRepository/Document?documentID=10112" alt="Mayor Pro-Tem Tracy Long" title="Mayor Pro-Tem Tracy Long" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name">
+					Tracy Long
+					
+				</h4>
+				<div class="field p-job-title">Council Member Place 4</div>
+						<div class="field u-email"><a href="mailto:tracy.council@inglesidetx.gov">Email Tracy Long </a></div>
+
+
+
+
+					<div class="field p-note">
+
+						<p fr-original-style="" style="margin: 0px 0px 1.4em; box-sizing: inherit; font-style: normal; font-weight: 400; font-family: Arial; color: rgb(69, 69, 69); line-height: 1.5;">Terms:</p><ul fr-original-style="" style="list-style: disc; box-sizing: inherit; margin-top: 1em; margin-bottom: 1.4em; padding-left: 2em; font-family: Arial; font-style: normal; font-weight: 400; color: rgb(69, 69, 69); line-height: 1.5;"><li fr-original-style="" style="box-sizing: inherit; margin-bottom: 0.35em; font-style: normal; font-weight: 400;">May 2022 through May 2024, 1<sup fr-original-style="" style="top: -0.5em; font-size: 75%; line-height: 0; position: relative; vertical-align: initial; box-sizing: inherit;">st</sup> Term</li><li fr-original-style="" style="box-sizing: inherit; margin-bottom: 0.35em; font-style: normal; font-weight: 400;">Mayor Pro-Tem May 2022 through May 2023</li><li fr-original-style="" style="box-sizing: inherit; margin-bottom: 0.35em; font-style: normal; font-weight: 400;">Mayor Pro-Tem May 2023 through May 2024</li><li fr-original-style="" style="box-sizing: inherit; margin-bottom: 0.35em; font-style: normal; font-weight: 400;">Mayor Pro-Tem May 2024 - May 2025</li><li fr-original-style="" style="box-sizing: inherit; margin-bottom: 0.35em; font-style: normal; font-weight: 400;">May 2024 through May 2026, 2<sup fr-original-style="" style="top: -0.5em; font-size: 75%; line-height: 0; position: relative; vertical-align: initial; box-sizing: inherit;">nd</sup> Term</li></ul>
+					</div>
+
+				<br>
+			</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8" style="height: auto;" data-widgetcontainerid="bf3c00c2-2d6f-4601-8474-f89ebecac11e">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id40765cff-e6b4-459b-8a5c-3df450a58684" style="height: 808px;" data-widgetcontainerid="40765cff-e6b4-459b-8a5c-3df450a58684">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="a521e715-e895-40d8-9ef4-cbbeb0c00c30" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidgeta521e715-e895-40d8-9ef4-cbbeb0c00c30" class="widget widgetStaffDirectory skin43 wide">
+			<div class="widgetHeader">
+							</div>
+						<ol class="semanticList">
+			<li class="widgetItem h-card">
+
+					<img src="https://inglesidetx.gov/ImageRepository/Document?documentID=10110" alt="Councilmember Linda Timmerman" title="Councilmember Linda Timmerman" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name">
+					Linda Timmerman
+					
+				</h4>
+				<div class="field p-job-title">Council Member Place 5</div>
+						<div class="field u-email"><a href="mailto:ltimmerman@inglesidetx.gov">Email Linda Timmerman </a></div>
+
+
+
+
+					<div class="field p-note">
+
+						<p id="isPasted" fr-original-style="" style="margin: 0px 0px 1.4em; box-sizing: inherit; font-style: normal; font-weight: 400; font-family: Arial; color: rgb(69, 69, 69); line-height: 1.5;">Terms:</p><ul fr-original-style="" style="list-style: disc; box-sizing: inherit; margin-top: 1em; margin-bottom: 1.4em; padding-left: 2em; font-family: Arial; font-style: normal; font-weight: 400; color: rgb(69, 69, 69); line-height: 1.5;"><li id="isPasted" fr-original-style="" style="box-sizing: inherit; margin-bottom: 0.35em; font-style: normal; font-weight: 400;">May 2025 through May 2027, 1<sup fr-original-style="" style="top: -0.5em; font-size: 75%; line-height: 0; position: relative; vertical-align: initial; box-sizing: inherit;">st&nbsp;</sup>Term</li></ul>
+					</div>
+
+				<br>
+			</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8 last" style="height: auto;" data-widgetcontainerid="45fa7fd9-0d22-433e-8f7e-cad0ee9becce">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id0e3c05e8-730d-4233-8fd4-56abbdb12558" style="height: 808px;" data-widgetcontainerid="0e3c05e8-730d-4233-8fd4-56abbdb12558">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="3636fa8b-604c-4d2a-b421-2d67b610752d" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidget3636fa8b-604c-4d2a-b421-2d67b610752d" class="widget widgetStaffDirectory skin43 wide">
+			<div class="widgetHeader">
+							</div>
+						<ol class="semanticList">
+			<li class="widgetItem h-card">
+
+					<img src="https://inglesidetx.gov/ImageRepository/Document?documentID=10109" alt="Councilmember John Salinas" title="Councilmember John Salinas" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name">
+					John Salinas
+					
+				</h4>
+				<div class="field p-job-title">Council Member Place 6</div>
+						<div class="field u-email"><a href="mailto:jsalinas.council@inglesidetx.gov">Email John Salinas </a></div>
+
+
+
+
+					<div class="field p-note">
+
+						<p fr-original-style="" style="margin: 0px 0px 1.4em; box-sizing: inherit; font-style: normal; font-weight: 400; font-family: Arial; color: rgb(69, 69, 69); line-height: 1.5;">Terms:</p><ul fr-original-style="" style="list-style: disc; box-sizing: inherit; margin-top: 1em; margin-bottom: 1.4em; padding-left: 2em; font-family: Arial; font-style: normal; font-weight: 400; color: rgb(69, 69, 69); line-height: 1.5;"><li fr-original-style="" style="box-sizing: inherit; margin-bottom: 0.35em; font-style: normal; font-weight: 400;">May 2022 through May 2024, 1<sup fr-original-style="" style="top: -0.5em; font-size: 75%; line-height: 0; position: relative; vertical-align: initial; box-sizing: inherit;">st&nbsp;</sup>Term<br fr-original-style="" style="box-sizing: inherit;">May 2024 through May 2026, 2<sup fr-original-style="" style="top: -0.5em; font-size: 75%; line-height: 0; position: relative; vertical-align: initial; box-sizing: inherit;">nd&nbsp;</sup>Term</li></ul>
+					</div>
+
+				<br>
+			</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="87ad1dfc-f043-44de-9c19-d0fd5be0767f">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id832cdd11-9731-4583-b1f5-9291f219c5d3" style="height: 432px;" data-widgetcontainerid="832cdd11-9731-4583-b1f5-9291f219c5d3">
+	
+<div class="widget editor pageStyles wide" id="divEditor9561a108-9ff1-4ce1-bf20-0b4282b03f67" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <p>City Councilors are elected and represent the city "at large." Council Members serve staggered two-year terms with three members up for reelection each year. The Mayor is also elected at large and serves a two-year term. No Mayor or Council Member may serve more than three consecutive terms, whether partial or complete terms, whether elected or appointed.</p><h2 class="subhead1">Duties</h2><p id="isPasted">The City Council is the legislative and policy-making body of the City of Ingleside, a "home-rule" city, operating under the authority of the City Charter. The Council enacts legislation, adopts the budget, sets the tax rate, determines policies, approves the appointment of the City Manager, City Attorney, Municipal Court of Record Judge, Municipal Court of Record Clerk, and all Boards and Commission Members.</p><p>The City Council receives information from the following groups to decide issues and set policy:</p><ul><li>Recommendations from City Staff based upon study and analysis</li><li>Inquiries and information from citizens</li><li>Decisions and advice from the City Boards and Commissions</li><li>Professional advisers/consultants as needed</li></ul>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '9561a108-9ff1-4ce1-bf20-0b4282b03f67'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: none;">	<div id="ccd6923f64-2522-4bce-8783-61ad1b416b69" data-containerid="d6923f64-2522-4bce-8783-61ad1b416b69" class="pageContent cpGrid cpGrid24 showInMobile" data-contentcontainerbreakpoint="50">
+				                
+
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="siteSidebarTS" class="siteSidebar">
+<aside data-cprole="contentContainer" id="sidebarContainer1TS">	<div id="ccf01332ec-b4c1-4eb7-940a-006679835cc9" data-containerid="f01332ec-b4c1-4eb7-940a-006679835cc9" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav">
+
+
+
+
+
+	<ol role="menu" id="secondaryMenusecondaryNav" data-parent="1545" class="rootNavMenu accordionNav">
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1624" data-pageid="1624">
+		<div class="accordionNavItem">
+			<a href="https://inglesidetx.gov/DocumentCenter/View/9485/2024-10-24-Elected-and-Appointed-Officials-Handbook_FINAL" target="_blank" class="navMainItem secondaryNavItem cpComponent docaccess-activated" data-type="SecondaryMainItem" aria-label="Elected and Appointed Officials Handbook Opens in new window" data-docaccess-source-url="https://www.inglesidetx.gov/DocumentCenter/View/9485/2024-10-24-Elected-and-Appointed-Officials-Handbook_FINAL" data-url-hash="2477dcd69f4ab53d23d9df9fa3c23cdedb2ab0ef241bd040b15e65fe719b042e" data-url-status="disabled" rel="noopener">Elected and Appointed Officials Handbook</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem1546" data-pageid="1546">
+		<div class="accordionNavItem">
+			<a href="https://inglesidetx.gov/129/Agendas-Minutes" target="_blank" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem" aria-label="View Agenda, Minutes &amp; Videos Opens in new window" rel="noopener">View Agenda, Minutes &amp; Videos</a>
+		</div>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = true;
+		});
+	</script>
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			$('*[id^="SideItem"]').each(function () {
+				var ids = $('[id="' + this.id + '"]');
+				if (ids.length > 1)
+					$.each(ids, function (index, value) {
+						value.id = value.id + '_' + index;
+					});
+			});
+
+			$('.hasAccordionChildren .openAccordionNav').click(function (e) {
+				e.preventDefault();
+				showHideAccordionMenuForSecondaryNav($(this));
+			});
+
+			$("#secondaryNav .grippy").each(function () {
+				menuManager.setupDraggableElement($(this), SIDE_MENU, '#secondaryNav');
+			});
+
+			$("#secondaryNav li").each(function () {
+				menuManager.setupDroppableAccordionElement($(this), SIDE_MENU);
+			});
+		});
+	</script>
+
+
+
+</nav><aside data-cprole="contentContainer" id="sidebarContainer2TS">	<div id="cc5d1697a9-0712-481b-a82f-653b66346210" data-containerid="5d1697a9-0712-481b-a82f-653b66346210" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div><!-- GBs --><div data-cprole="structuralContainer" id="gbsContainerTS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="gbsTS">	<div id="cc6b7c9a49-efbd-4062-a5a5-e7f4ea01dc6e" data-containerid="6b7c9a49-efbd-4062-a5a5-e7f4ea01dc6e" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="45">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col12 first" style="height: auto;" data-widgetcontainerid="9585852a-ada6-4ce4-90ce-8b237d14ebee">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last id8b6bef10-bfae-42fc-a94a-63f68bf19136" style="height: 186px;" data-widgetcontainerid="8b6bef10-bfae-42fc-a94a-63f68bf19136">
+	
+<div data-widget-id="56d86551-f1e2-421f-bcf6-1ad0cd47b183" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget56d86551-f1e2-421f-bcf6-1ad0cd47b183" class="widget widgetGraphicLinks skin43 widgetOptionSet46 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:18em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://inglesidetx.portal.civicclerk.com/" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self" class="fancyButton fancyButton48 ">
+		<span>
+			<span><span class="text">Agendas &amp; Minutes</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton48.fancyButton:link,.fancyButton48.fancyButton:visited, .fancyButton48div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=74');
+	background-repeat: no-repeat;
+	background-position: center 6.5em ;
+background-size: 90px;
+transition:.2s ease-in-out;}
+.fancyButton48.fancyButton:hover,.fancyButton48.fancyButton:focus,.fancyButton48.fancyButton:active,.fancyButton48.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=75');
+	background-repeat: no-repeat;
+	background-position: center 6.4em ;
+background-size: 105px;}
+.fancyButton48.fancyButton:link > span,.fancyButton48.fancyButton:visited > span, .fancyButton48div.fancyButton > span{
+}
+.fancyButton48.fancyButton:hover > span,.fancyButton48.fancyButton:focus > span,.fancyButton48.fancyButton:active > span,.fancyButton48.fancyButton.hover > span{
+}
+.fancyButton48.fancyButton .text{
+	color: #454545;
+	font-size: 1em;
+	font-family: "Open Sans";
+	padding-top: 130px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 130px;
+	background-image: url('/ImageRepository/Document?documentID=69');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 100px;
+transition:.2s ease-in-out;
+}
+.fancyButton48.fancyButton:hover .text,.fancyButton48.fancyButton:focus .text,.fancyButton48.fancyButton:active .text,.fancyButton48.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://inglesidetx.gov/224/Employment-Opportunities" target="_self" class="fancyButton fancyButton51 ">
+		<span>
+			<span><span class="text">Employment Opportunities</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton51.fancyButton:link,.fancyButton51.fancyButton:visited, .fancyButton51div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=74');
+	background-repeat: no-repeat;
+	background-position: center 6.5em ;
+background-size: 90px;
+transition:.2s ease-in-out;}
+.fancyButton51.fancyButton:hover,.fancyButton51.fancyButton:focus,.fancyButton51.fancyButton:active,.fancyButton51.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=75');
+	background-repeat: no-repeat;
+	background-position: center 6.4em ;
+background-size: 105px;}
+.fancyButton51.fancyButton:link > span,.fancyButton51.fancyButton:visited > span, .fancyButton51div.fancyButton > span{
+}
+.fancyButton51.fancyButton:hover > span,.fancyButton51.fancyButton:focus > span,.fancyButton51.fancyButton:active > span,.fancyButton51.fancyButton.hover > span{
+}
+.fancyButton51.fancyButton .text{
+	color: #454545;
+	font-size: 1em;
+	font-family: "Open Sans";
+	padding-top: 130px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 130px;
+	background-image: url('/ImageRepository/Document?documentID=72');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 100px;
+transition:.2s ease-in-out;
+}
+.fancyButton51.fancyButton:hover .text,.fancyButton51.fancyButton:focus .text,.fancyButton51.fancyButton:active .text,.fancyButton51.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.municipalonlinepayments.com/inglesidetx" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self" class="fancyButton fancyButton52 ">
+		<span>
+			<span><span class="text">Utility and Court Bill Pay</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton52.fancyButton:link,.fancyButton52.fancyButton:visited, .fancyButton52div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=74');
+	background-repeat: no-repeat;
+	background-position: center 6.5em ;
+background-size: 90px;
+transition:.2s ease-in-out;}
+.fancyButton52.fancyButton:hover,.fancyButton52.fancyButton:focus,.fancyButton52.fancyButton:active,.fancyButton52.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=75');
+	background-repeat: no-repeat;
+	background-position: center 6.4em ;
+background-size: 105px;}
+.fancyButton52.fancyButton:link > span,.fancyButton52.fancyButton:visited > span, .fancyButton52div.fancyButton > span{
+}
+.fancyButton52.fancyButton:hover > span,.fancyButton52.fancyButton:focus > span,.fancyButton52.fancyButton:active > span,.fancyButton52.fancyButton.hover > span{
+}
+.fancyButton52.fancyButton .text{
+	color: #454545;
+	font-size: 1em;
+	font-family: "Open Sans";
+	padding-top: 130px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 130px;
+	background-image: url('/ImageRepository/Document?documentID=76');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 100px;
+transition:.2s ease-in-out;
+}
+.fancyButton52.fancyButton:hover .text,.fancyButton52.fancyButton:focus .text,.fancyButton52.fancyButton:active .text,.fancyButton52.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col12 last" style="height: auto;" data-widgetcontainerid="291aefed-7436-437e-858d-e126106b63b7">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last ida519ad2e-1ac6-4ad1-ac03-d638b1db5364" style="height: 186px;" data-widgetcontainerid="a519ad2e-1ac6-4ad1-ac03-d638b1db5364">
+	
+<div data-widget-id="e2e5ff7c-ad99-489c-a208-aa22deb6f21f" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgete2e5ff7c-ad99-489c-a208-aa22deb6f21f" class="widget widgetGraphicLinks skin43 widgetOptionSet46 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:18em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://r.i-info.com/rc/cbcan" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self" class="fancyButton fancyButton53 ">
+		<span>
+			<span><span class="text">Emergency Notifications</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton53.fancyButton:link,.fancyButton53.fancyButton:visited, .fancyButton53div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=74');
+	background-repeat: no-repeat;
+	background-position: center 6.5em ;
+background-size: 90px;
+transition:.2s ease-in-out;}
+.fancyButton53.fancyButton:hover,.fancyButton53.fancyButton:focus,.fancyButton53.fancyButton:active,.fancyButton53.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=75');
+	background-repeat: no-repeat;
+	background-position: center 6.4em ;
+background-size: 105px;}
+.fancyButton53.fancyButton:link > span,.fancyButton53.fancyButton:visited > span, .fancyButton53div.fancyButton > span{
+}
+.fancyButton53.fancyButton:hover > span,.fancyButton53.fancyButton:focus > span,.fancyButton53.fancyButton:active > span,.fancyButton53.fancyButton.hover > span{
+}
+.fancyButton53.fancyButton .text{
+	color: #454545;
+	font-size: 1em;
+	font-family: "Open Sans";
+	padding-top: 130px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 130px;
+	background-image: url('/ImageRepository/Document?documentID=71');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 100px;
+transition:.2s ease-in-out;
+}
+.fancyButton53.fancyButton:hover .text,.fancyButton53.fancyButton:focus .text,.fancyButton53.fancyButton:active .text,.fancyButton53.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://inglesidetx.gov/FormCenter/General-10/Report-a-Concern-104" target="_self" class="fancyButton fancyButton54 ">
+		<span>
+			<span><span class="text">Citizen Notifications</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton54.fancyButton:link,.fancyButton54.fancyButton:visited, .fancyButton54div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=74');
+	background-repeat: no-repeat;
+	background-position: center 6.5em ;
+background-size: 90px;
+transition:.2s ease-in-out;}
+.fancyButton54.fancyButton:hover,.fancyButton54.fancyButton:focus,.fancyButton54.fancyButton:active,.fancyButton54.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=75');
+	background-repeat: no-repeat;
+	background-position: center 6.4em ;
+background-size: 105px;}
+.fancyButton54.fancyButton:link > span,.fancyButton54.fancyButton:visited > span, .fancyButton54div.fancyButton > span{
+}
+.fancyButton54.fancyButton:hover > span,.fancyButton54.fancyButton:focus > span,.fancyButton54.fancyButton:active > span,.fancyButton54.fancyButton.hover > span{
+}
+.fancyButton54.fancyButton .text{
+	color: #454545;
+	font-size: 1em;
+	font-family: "Open Sans";
+	padding-top: 130px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 130px;
+	background-image: url('/ImageRepository/Document?documentID=73');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 100px;
+transition:.2s ease-in-out;
+}
+.fancyButton54.fancyButton:hover .text,.fancyButton54.fancyButton:focus .text,.fancyButton54.fancyButton:active .text,.fancyButton54.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.inglesidetx.gov/1632/Bid-Procurement" target="_self" class="fancyButton fancyButton55 ">
+		<span>
+			<span><span class="text">Bids &amp; Proposals</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton55.fancyButton:link,.fancyButton55.fancyButton:visited, .fancyButton55div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=74');
+	background-repeat: no-repeat;
+	background-position: center 6.5em ;
+background-size: 90px;
+transition:.2s ease-in-out;}
+.fancyButton55.fancyButton:hover,.fancyButton55.fancyButton:focus,.fancyButton55.fancyButton:active,.fancyButton55.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=75');
+	background-repeat: no-repeat;
+	background-position: center 6.4em ;
+background-size: 105px;}
+.fancyButton55.fancyButton:link > span,.fancyButton55.fancyButton:visited > span, .fancyButton55div.fancyButton > span{
+}
+.fancyButton55.fancyButton:hover > span,.fancyButton55.fancyButton:focus > span,.fancyButton55.fancyButton:active > span,.fancyButton55.fancyButton.hover > span{
+}
+.fancyButton55.fancyButton .text{
+	color: #454545;
+	font-size: 1em;
+	font-family: "Open Sans";
+	padding-top: 130px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 130px;
+	background-image: url('/ImageRepository/Document?documentID=70');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 100px;
+transition:.2s ease-in-out;
+}
+.fancyButton55.fancyButton:hover .text,.fancyButton55.fancyButton:focus .text,.fancyButton55.fancyButton:active .text,.fancyButton55.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Calendar/Carousel --><!-- <div data-cpRole="structuralContainer" id="homeContainer1">
+    <div class="siteWrap">
+      <div data-cpRole="contentContainer" id="homeContent1a"></div>
+    </div>
+  </div> --><!-- Footer --><footer data-cprole="structuralContainer" id="footerContainerTS">
+<div data-cprole="banner" id="banner2"><div data-cprole="structuralContainer" id="bannerSizing2TS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="footerTS">	<div id="cce2e270e0-dfdc-471d-9947-73cf5ebb5708" data-containerid="e2e270e0-dfdc-471d-9947-73cf5ebb5708" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="45">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col6 first" style="height: auto;" data-widgetcontainerid="88f1ee2c-5bd4-41a3-8e4b-1f586a18486e">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id54a1850a-9d9a-445d-b871-2141bd401276" style="height: 261px;" data-widgetcontainerid="54a1850a-9d9a-445d-b871-2141bd401276">
+	
+    <div data-widget-id="5fad34c0-05e9-434c-9286-7f455f84ebc5" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv5fad34c0-05e9-434c-9286-7f455f84ebc5" class="widget widgetInfoAdvanced skin39 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="header5fad34c0-05e9-434c-9286-7f455f84ebc5">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><img src="https://inglesidetx.gov/ImageRepository/Document?documentId=68" class="fr-dib" alt="City of Ingleside"></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv5fad34c0-05e9-434c-9286-7f455f84ebc5 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="4eaddd80-4ccf-444c-a0f0-ca442b73a0c7">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id21c38cba-f8e7-445a-ad98-a1f6e93f7206" style="height: 261px;" data-widgetcontainerid="21c38cba-f8e7-445a-ad98-a1f6e93f7206">
+	
+
+<div class="widget widgetSpacer" id="a122033c-bc60-4f84-a76f-5b1e33be20fa" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="height: auto;" data-widgetcontainerid="6dec3952-0a64-4336-a921-4f9cc0a66775">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id43e02782-1d35-4ca0-a116-ae532b1bae95" style="height: 261px;" data-widgetcontainerid="43e02782-1d35-4ca0-a116-ae532b1bae95">
+	
+    <div data-widget-id="05f3981e-6a3c-4a33-bf50-475cfc53b12f" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv05f3981e-6a3c-4a33-bf50-475cfc53b12f" class="widget widgetInfoAdvanced skin37 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="header05f3981e-6a3c-4a33-bf50-475cfc53b12f">
+			<header class="widgetHeader" id="header05f3981e-6a3c-4a33-bf50-475cfc53b12f">
+		<div class="">
+					<h3>Contact Us</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><strong>Ingleside City Hall</strong><br>2671 San Angelo<br>P.O. Drawer 400 <br>Ingleside, Texas 78362</p><p>Phone: <a href="tel:361-776-2517">361-776-2517</a><br><a href="https://inglesidetx.gov/directory.aspx">City Directory</a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv05f3981e-6a3c-4a33-bf50-475cfc53b12f .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="height: auto;" data-widgetcontainerid="7e578826-db35-418a-9746-45a59a52d2f1">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last idba5a114c-2175-40dd-9f03-2e52b2d2f146" style="height: 261px;" data-widgetcontainerid="ba5a114c-2175-40dd-9f03-2e52b2d2f146">
+	
+	<div data-widget-id="14479380-3ed9-4b2a-8a04-18a27bd3f729" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink14479380-3ed9-4b2a-8a04-18a27bd3f729" class="widget widgetQuickLinks skin37 widgetOptionSet40 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeader14479380-3ed9-4b2a-8a04-18a27bd3f729">
+			<header class="widgetHeader" id="quickLinksHeader14479380-3ed9-4b2a-8a04-18a27bd3f729">
+		<div class="">
+					<h3><a style="" href="https://inglesidetx.gov/QuickLinks.aspx?CID=15">Quick Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://inglesidetx.gov/158/Animal-Control" target="_self">Animal Control</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://inglesidetx.gov/167/Registrations-Permits-Forms" target="_self">Building Permits</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://inglesidetx.gov/276/Utilities-Billing" target="_self">Utilities &amp; Billing</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://inglesidetx.gov/267/Drought-Contingency-Plan" target="_self">Water Restrictions</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.office.com/" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_blank" aria-label="Employee Email Opens in new window" rel="noopener">Employee Email</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://1.municipal.cc/Inglesidewebportal/home.aspx" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_blank" aria-label="Municipal Court Payments Opens in new window" rel="noopener">Municipal Court Payments</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col5 last" style="height: auto;" data-widgetcontainerid="d454b00f-2a15-44c8-bb18-3c94956a3f6b">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last id838afdf0-d433-4de5-a4de-78f153acadef" style="height: 261px;" data-widgetcontainerid="838afdf0-d433-4de5-a4de-78f153acadef">
+	
+	<div data-widget-id="7ef2f3ef-d915-42d6-9e73-e6012bf0a467" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink7ef2f3ef-d915-42d6-9e73-e6012bf0a467" class="widget widgetQuickLinks skin37 widgetOptionSet40 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeader7ef2f3ef-d915-42d6-9e73-e6012bf0a467">
+			<header class="widgetHeader" id="quickLinksHeader7ef2f3ef-d915-42d6-9e73-e6012bf0a467">
+		<div class="">
+					<h3><a style="" href="https://inglesidetx.gov/QuickLinks.aspx?CID=16">Helpful Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://inglesidetx.gov/" target="_self">Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://inglesidetx.gov/sitemap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://inglesidetx.gov/directory.aspx" target="_self">Contact Us</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://inglesidetx.gov/accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://inglesidetx.gov/copyright" target="_self">Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://inglesidetx.gov/privacy" target="_self">Privacy Policy</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+
+
+
+
+		<div class="bannerObject external" id="bannerDivbanner2" style="min-height: 393px; top: 0px; left: 0px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img alt="" class="bannerObject" src="https://inglesidetx.gov/ImageRepository/Document?documentID=67" width="1265px" style="position: absolute; left: 0px; margin: 0px; width: 1265px;"></div>
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderBanner('banner2-9',
+								'banner2',
+								{"BannerOptionID":9,"ThemeID":1,"SlotName":"banner2","Name":"Default","IsDefault":true,"BannerMode":1,"SlideShowSlideTiming":null,"SlideshowTransition":0,"SlideShowTransitionTiming":null,"ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":62,"BannerOptionID":9,"FileName":"/ImageRepository/Document?documentID=67","Height":683,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null}],"BannerVideos":[],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								{"BannerImageID":62,"BannerOptionID":9,"FileName":"/ImageRepository/Document?documentID=67","Height":683,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null},
+								'/App_Themes/Interior/Images/',
+								'<img alt="" class="bannerObject" src="/ImageRepository/Document?documentID=67" />');
+						});
+				});
+			</script>
+
+</div>
+</footer><!-- Powered By --><div data-cprole="structuralContainer" id="poweredByContainerTS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="poweredByTS">	<div id="cccc6fa88a-13b1-4a93-8389-a7c11155eaf1" data-containerid="cc6fa88a-13b1-4a93-8389-a7c11155eaf1" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="7b25bfe2-98fb-4641-b89a-e652f62739d8">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id6697da50-d341-4f07-93cb-f2baae896245" style="height: 34px;" data-widgetcontainerid="6697da50-d341-4f07-93cb-f2baae896245">
+	
+ 
+	<div data-widget-id="17b48561-78f0-49ac-8cef-48ca6d424765" data-modulename="customHtml" id="widgetCustomHtml17b48561-78f0-49ac-8cef-48ca6d424765" class="widget widgetCustomHtml skin39 narrow">
+	<div class="widgetBody pageStyles" id="widgetBody17b48561-78f0-49ac-8cef-48ca6d424765">
+		<div id="customHtml17b48561-78f0-49ac-8cef-48ca6d424765"><div><style>
+  /* CP icon */
+  .cpBylineIconTS {
+    color: #fff;
+  }
+  /* CP Text */
+  .cpBylineTextTS,
+  .cpBylineTextTS a:link {
+    color: #fff;
+  }
+
+  .cpBylineTS {
+    text-align: center;
+  }
+  
+  .cpBylineIconTS {
+    fill: currentColor;
+    width: 39px;
+    height: 26px;
+    display: inline;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="widgetItem cpBylineTS">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="cpBylineIconTS">
+    <path class="c" d="M73.4,23.2h-19v16.7h19c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5h-19v28.4h5.5l11.3-11.7h2.2c11.9,0,21.6-9.7,21.6-21.6C95,33,85.3,23.2,73.4,23.2"></path>
+    <path class="p" d="M45.8,66.5H26.6C14.7,66.5,5,56.8,5,44.9C5,33,14.7,23.2,26.6,23.2h19.1v16.7H26.6c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h19.1V66.5z"></path>
+  </svg>
+  <span class="cpBylineTextTS">Government Websites by <a href="https://connect.civicplus.com/referral" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);">CivicPlus®</a></span>
+</div>
+</div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '306',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!-- Fixed Nav Adjustment -->
+<script>
+  function getValueTS(elem, attr) {
+    const val = elem.css(attr);
+    if (val === undefined) return undefined;
+    const num = parseInt(val, 10);
+    if (num === NaN) return undefined;
+    return num;
+  }
+
+  function clampTS(number, min, max) {
+    return Math.min(Math.max(number, min), max);
+  }
+
+  function isPageEditingTS() {
+    return (
+      $("#doneEditing").length > 0 || // In live edit
+      typeof DesignCenter !== "undefined" // In theme manager
+    );
+  }
+
+  const bgColorRegexTS = /rgba\((\d+), (\d+), (\d+), (\d*\.?\d*)\)/;
+  function isTransparentTS(elem) {
+    const bg = elem.css('background-color');
+    if (typeof bg !== "string" || !bg.startsWith('rgba(')) return false;
+    const matchState = bg.match(bgColorRegexTS);
+    if (!matchState || matchState.length !== 5) return false;
+    const alpha = parseFloat(matchState[4], 10);
+    if (!(alpha >= 0 && alpha < 1)) return false;
+    return true;
+  }
+
+  function iterateLeftpads(cb) {
+    const containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (let i = 0; i < containersTS.length; i++) {
+      const containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-leftpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-leftpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  const anchor = $("#divToolbars");
+  const bodyContainerTS = $("#bodyContainerTS");
+
+  // Outer banner padding (push banner down)
+  const outerSizingTS = $("#bannerContainerTS");
+  // Inner banner padding (push banner content down) - Transparent header OR on attaching headers
+  const innerSizingTS = $("#bannerSizingTS");
+
+  const forceUnfixClassTS = "forceUnfixTS";
+
+  const fixedTopTS = $(".fixedTopTS");
+  const fixedBottomTS = $(".fixedBottomTS");
+  const fixedLeftTS = $(".fixedLeftTS");
+
+  var initialTopTS;
+  var topAttachTS;
+  if (fixedTopTS && fixedTopTS.length === 1) {
+    initialTopTS = getValueTS(fixedTopTS, 'top');
+    const attachment = fixedTopTS.attr('data-attach');
+    if (attachment) topAttachTS = $("#" + attachment);
+    if (!topAttachTS || topAttachTS.length !== 1) topAttachTS = undefined;
+  }
+
+  function resizeAdjustmentTS() {
+    const editing = isPageEditingTS();
+
+    // Fixed top script
+    (function () {
+      if (!fixedTopTS || fixedTopTS.length !== 1 || initialTopTS === undefined) return;
+
+      if (editing) {
+        fixedTopTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedTopTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      const topPosition = fixedTopTS.css('position');
+      if (topPosition === 'fixed') {
+        if (topAttachTS) {
+          scrollAdjustmentTS();
+        } else {
+          const anchorHeight = anchor.outerHeight() - 1;
+          fixedTopTS.css('top', anchorHeight + initialTopTS);
+        }
+      } else {
+        fixedTopTS.css('top', initialTopTS);
+      }
+
+      if (topPosition === 'fixed' || topPosition === 'absolute') {
+        // Bump the banner content down
+        if (isTransparentTS(fixedTopTS)) {
+          innerSizingTS.css('padding-top', initialTopTS + fixedTopTS.outerHeight());
+          outerSizingTS.css('padding-top', '');
+
+          try {
+            window.Pages.onResizeHandlersExecute();
+          } catch (e) { }
+        } else {
+          outerSizingTS.css('padding-top', fixedTopTS.outerHeight());
+          innerSizingTS.css('padding-top', '');
+        }
+      } else {
+        innerSizingTS.css('padding-top', '');
+        outerSizingTS.css('padding-top', '');
+      }
+    })();
+
+    // Fixed bottom script
+    (function () {
+      if (!fixedBottomTS || fixedBottomTS.length === 0) return;
+
+      // If the widget has gone narrow, force unfix
+      if (editing || fixedBottomTS.outerHeight() > 200) {
+        fixedBottomTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedBottomTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedBottomTS.css('position') === 'fixed') {
+        bodyContainerTS.css('padding-bottom', fixedBottomTS.outerHeight());
+      } else {
+        bodyContainerTS.css('padding-bottom', '');
+      }
+    })();
+
+    // Fixed left script
+    (function () {
+      if (!fixedLeftTS || fixedLeftTS.length === 0) return;
+
+      if (editing) {
+        fixedLeftTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedLeftTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedLeftTS.css('position') === 'fixed') {
+        const anchorHeight = anchor.outerHeight() - 1;
+        fixedLeftTS.css('top', anchorHeight);
+        const leftBoundingTS = fixedLeftTS[0].getBoundingClientRect();
+        iterateLeftpads(function (containerTS) {
+          const containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.left <= leftBoundingTS.right) {
+            $(containerTS).css('padding-left', leftBoundingTS.width + 16);
+          }
+        });
+      } else {
+        fixedLeftTS.css('top', '');
+        iterateLeftpads(function (containerTS) {
+          $(containerTS).css('padding-left', '');
+        });
+      }
+    })();
+  }
+
+  function scrollAdjustmentTS() {
+    if (!fixedTopTS || fixedTopTS.length !== 1 || !topAttachTS || topAttachTS.length !== 1) return;
+    const topPosition = fixedTopTS.css('position');
+    if (topPosition === 'fixed' || topPosition === 'absolute') {
+      const anchorBounding = anchor[0].getBoundingClientRect();
+      const attachBounding = topAttachTS[0].getBoundingClientRect();
+      const scrollTop = $(window).scrollTop();
+
+      fixedTopTS.css('top', Math.max(anchorBounding.bottom - 1, attachBounding.bottom));
+    } else {
+      fixedTopTS.css('top', initialTopTS);
+    }
+  }
+
+  $(window).load(function () {
+    setTimeout(function () {
+      try {
+        resizeAdjustmentTS();
+      } catch (e) {
+        console.error(e);
+      }
+    }, 350);
+
+    $(window).scroll(function () {
+      try {
+        scrollAdjustmentTS();
+      } catch (e) {
+        console.error(e);
+      }
+    });
+
+    var adjustTimeoutTS;
+    $(window).resize(function () {
+      clearTimeout(adjustTimeoutTS);
+      adjustTimeoutTS = setTimeout(function () {
+        try {
+          resizeAdjustmentTS();
+        } catch (e) {
+          console.error(e);
+        }
+      }, 350);
+    });
+
+    $.when(window.Pages.angularToolbarComplete).done(function () {
+      try {
+        resizeAdjustmentTS();
+      } catch (e) {
+        console.error(e);
+      }
+    });
+  });
+</script>
+<!-- End Fixed Nav Adjustment -->
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Open+Sans:500,500italic,600,600italic,700,700italic,italic,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu27" class="contentTop mainNavMegaMenu megaMenuContainer pageID_27 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 338.656px; width: 610px; top: 97px;">	<div id="cca2dcafc0-47d9-48bc-8f46-609e2d7bc52f" data-containerid="a2dcafc0-47d9-48bc-8f46-609e2d7bc52f" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu31" class="contentTop mainNavMegaMenu megaMenuContainer pageID_31 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 338.656px; width: 610px; top: 97px;">	<div id="cc847c4293-4953-4944-9bfc-5c01bba51be7" data-containerid="847c4293-4953-4944-9bfc-5c01bba51be7" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu1525" class="contentTop mainNavMegaMenu megaMenuContainer pageID_1525 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 338.656px; width: 610px; top: 97px;">	<div id="cc78d1546e-ebfb-4e86-8bad-775f1104cd82" data-containerid="78d1546e-ebfb-4e86-8bad-775f1104cd82" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu35" class="contentTop mainNavMegaMenu megaMenuContainer pageID_35 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 338.656px; width: 610px; top: 97px;">	<div id="cc93ddc085-3504-4b12-9053-02a406708af6" data-containerid="93ddc085-3504-4b12-9053-02a406708af6" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu9" class="contentTop mainNavMegaMenu megaMenuContainer pageID_9 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 338.656px; width: 610px; top: 97px;">	<div id="cc84d63334-52ed-40fe-bf0d-b1107442bff7" data-containerid="84d63334-52ed-40fe-bf0d-b1107442bff7" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b>&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div></body></html>
