@@ -113,11 +113,9 @@ jobs:
 
           # Commit only specific files
           if [ -n "$(git status --porcelain)" ]; then
-            # Fetch latest without touching working directory
+            # Fetch latest changes
             git fetch origin main
-            
-            # Reset to remote (keeps working directory changes)
-            git reset --soft origin/main
+            git merge --no-commit --no-ff origin/main
             
             git add .
             git commit -m "Update jurisdiction_metadata.yml [skip ci]"
