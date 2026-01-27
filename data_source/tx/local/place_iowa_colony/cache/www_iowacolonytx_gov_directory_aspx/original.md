@@ -177,8 +177,6 @@ Slideshow Right Arrow
 
 ### Live Edit
 
-Close **×**
-
 Opens in new window
 
 PDF Download
@@ -202,3 +200,5 @@ Document Download
 
 
 close carousel
+
+Close **×**

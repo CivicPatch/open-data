@@ -1,7 +1,7 @@
 Mayor | Iowa Colony, TX
 
 
-![Loading](https://www.iowacolonytx.gov/Common/images/ajax-loader.gif "Loading")
+![Loading](https://www.iowacolonytx.gov/Common/images/ajax-loader.gif)
 
 
 ![City of Iowa Colony Texas Homepage](https://www.iowacolonytx.gov/ImageRepository/Document?documentID=89)
