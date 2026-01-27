@@ -17,7 +17,7 @@ City Council | Cleveland, TX - Official Website
 ![YouTube](https://www.clevelandtexas.com/ImageRepository/Document?documentID=2841)
 ![More](https://www.clevelandtexas.com/ImageRepository/Document?documentID=2842)
 
-![](https://www.clevelandtexas.com/ImageRepository/Document?documentID=3670)
+![](https://www.clevelandtexas.com/ImageRepository/Document?documentID=2823)
 
 
 1. [City Officials](https://www.clevelandtexas.com/418/City-Officials)
@@ -71,7 +71,7 @@ In addition, the Cleveland City Council has all other powers allowed to cities u
 2. ![Council Julius](https://www.clevelandtexas.com/ImageRepository/Document?documentID=3185 "Council Julius")
 
    #### Council Member Julius Buckley Position 1
-3. ![Council Roscoe](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 "Council Roscoe")
+3. ![Council Roscoe](/ImageRepository/Document?documentID=3186 "Council Roscoe")
 
    #### Council Member Roscoe Warrick Jr. Position 2
 4. ![Desiree](https://www.clevelandtexas.com/ImageRepository/Document?documentID=3225 "Desiree")
