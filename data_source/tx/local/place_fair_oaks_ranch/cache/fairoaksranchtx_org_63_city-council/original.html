@@ -1,0 +1,3332 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n4-active wf-muli-i4-active wf-muli-n7-active wf-muli-n3-active wf-active has-webFonts" style="height: 100%;"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:500,500italic,600,600italic,700,700italic,italic,regular|Volkhov:700,700italic,italic,regular|" media="all"><script type="text/javascript" src="//heatmaps.monsido.com/v1/heatmaps.js"></script><script type="text/javascript" src="//cdn.monsido.com/page-assist/v2/mon-page-assist-loader.js"></script><script type="text/javascript" src="//pagecorrect.monsido.com/v1/page-correct.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-684GKGX2Y0&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61n1"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-684GKGX2Y0';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	<!-- Google tag (gtag.js) --> <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3F42R96SCR"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-3F42R96SCR'); </script>
+
+	<meta name="category0" content="Home">
+<meta name="category1" content="Government">
+<meta name="category2" content="Government Leadership">
+<meta name="category3" content="City Council">
+
+	
+	<meta name="theme-color" content="rgb(25, 39, 55)">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>City Council | Fair Oaks Ranch, TX - Official Website</title>
+
+		<meta name="description" content="Fair Oaks Ranch is a Home Rule city. City Council is elected at-large representing all residents within the City limits. Council members including the Mayor serve staggered three-year terms with City Elections held each year. The Mayor Pro Tem is selected by the council members each year after the election.">
+		<meta name="keywords" content="City Council">
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '350px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/-851499458.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all"><style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.2f3WBw8L4SI.L.W.O/am=AAQD/d=0/rs=AN8SPfrXXtxuFpMMBoYgp93jo68L3iC3ZQ/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/_/translate_http/_/js/k=translate_http.tr.en_US.gm28aokwBeQ.O/am=AAAQ/d=1/exm=el_conf/ed=1/rs=AN8SPfo-cjsGcRTUC_jpauJJ5fve_ZlsdQ/m=el_main"></script><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style></head>
+<body class="wide cpTextResizeOn doneLoading monsido-toolbar-body-container" style="position: relative; min-height: 100%; top: 0px;" data-mon-page-fix="done"><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="http://fairoaksranchtx.org/Common/images/ajax-loader.gif" alt="Loading" title="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks">
+<a href="http://fairoaksranchtx.org/63/City-Council#cc9ef8e1cb-dedf-45ed-8cba-450ee6f758c6" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="5">
+    <input type="hidden" id="hdnContentCollectionID" value="b94bfe27-41bf-4cf0-892b-512940e47367">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="7">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID">
+    <input type="hidden" id="pagePageID" value="63">
+
+            <img id="imgLogoPrintPreview" src="http://fairoaksranchtx.org/ImageRepository/Document?documentID=5284" alt="City of Fair Oaks Ranch">
+<div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+<style>
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700); 
+.alertText .customAlert {
+    color: #EAEAEA;
+    display: inline-block;
+    font-family: 'Open Sans Condensed', sans-serif; 
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 27px;
+    left: 57px;
+    line-height: 27px;
+    overflow: hidden;
+    position: absolute;
+    top: 15px;
+    white-space: nowrap;
+    width: 268px;
+}
+</style>
+  <div id="1_divAlertBar" class="alertToolbar cpToolbar" style="background: rgb(34, 34, 34); z-index: 1;">
+    <div id="1_divAlertToolbarInner" class="alertToolbarInner" style="font-size: 16px;">
+        <a href="https://www.fairoaksranchtx.org/223/Water-Conservation" id="1_lnkAlertText" class="alertText" style="border-right: 1px solid #000000;">
+            <img src="http://fairoaksranchtx.org/Common/Images/AlertCenter/alertBarBlink.svg" id="1_imgDot" alt="Emergency Alert" class="redDot">
+            <span id="1_customAlert" class="customAlert">Reminder</span>
+        </a>
+        <span id="1_spnAlertContainer" class="alertContainer"><a href="https://www.fairoaksranchtx.org/223/Water-Conservation" target="_blank" class="alert" style="border-left: 1px solid #635e65; border-right: 1px solid #000000;background: #030303 url(/Common/images/AlertCenter/alertBarBlackTextBckg.png) repeat-x; color: #FFFFFF;" aria-label="
+	Stage 2 of Drought Contingency Plan in Effect
+	Learn More About Water Conservation
+ Opens in new window" rel="noopener">
+	Stage 2 of Drought Contingency Plan in Effect
+	<span style="color: #FC4C2F;">Learn More About Water Conservation</span>
+</a>
+</span>
+    </div>
+  </div>
+  <div id="1_divAlertBarEmpty" class="alertBarEmpty"></div>
+  
+
+
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 57px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="bodyContainerTS">
+<!-- Header Container --><header data-cprole="structuralContainer" id="headerContainerTS" class="fixedTopTS" style="top: 0px;">
+<div data-cprole="structuralContainer" id="topWrapTS">
+<div class="siteWrap" id="flexHeaderTS"><div data-cprole="structuralContainer" id="logoWrapTS">
+<div data-cprole="banner" id="bannerLogoTS" class="bannerLogoTS empty">
+
+
+
+
+				<a id="bannerLogoTS-12" style="			display: block; text-align: center;
+" class="bannerObject" href="http://fairoaksranchtx.org/" target="_self"><img alt="Fair Oaks Ranch TX Homepage " class="bannerObject" height="129" src="http://fairoaksranchtx.org/ImageRepository/Document?documentID=5283" width="142"></a>
+</div><div data-cprole="banner" id="bannerLogo2TS" class="bannerLogo2TS empty">
+
+
+
+
+				<a id="bannerLogo2TS-13" style="			display: block; text-align: center;
+" class="bannerObject" href="http://fairoaksranchtx.org/" target="_self"><img alt="City of Fair Oaks Ranch Texas Homepage" class="bannerObject" height="45" src="http://fairoaksranchtx.org/ImageRepository/Document?documentID=5282" width="240"></a>
+</div>
+</div><div data-cprole="contentContainer" id="searchTS">	<div id="ccfc48e061-4612-46bf-a7ab-369699eb0b8a" data-containerid="fc48e061-4612-46bf-a7ab-369699eb0b8a" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="40">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col14 first" style="height: auto;" data-widgetcontainerid="c6b42663-b44e-45fd-99b4-e2d369ca38a9">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first id2bc35e03-7bb2-42bb-9d77-79bcc488981e" style="height: 50px;" data-widgetcontainerid="2bc35e03-7bb2-42bb-9d77-79bcc488981e">
+	
+ 
+	<div data-widget-id="b5162dc0-4617-47a0-9606-9ba1586eb86f" data-modulename="customHtml" id="widgetCustomHtmlb5162dc0-4617-47a0-9606-9ba1586eb86f" class="widget widgetCustomHtml skin20 narrow">
+	<div class="widgetBody pageStyles" id="widgetBodyb5162dc0-4617-47a0-9606-9ba1586eb86f">
+		<div id="customHtmlb5162dc0-4617-47a0-9606-9ba1586eb86f"><div>Follow us on</div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+	<div class="inner col col9 last id108a8294-259a-44ca-8622-b32e65b2a747" style="height: 50px;" data-widgetcontainerid="108a8294-259a-44ca-8622-b32e65b2a747">
+	
+<div data-widget-id="a7ca456a-5709-44af-a306-727cec67710b" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgeta7ca456a-5709-44af-a306-727cec67710b" class="widget widgetGraphicLinks skin18 widgetOptionSet26 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid5 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row autoWidths center wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.facebook.com/fairoaksranchtx/" target="_self" aria-label="Facebook graphic"><img src="http://fairoaksranchtx.org/ImageRepository/Document?documentID=5304" class="graphicButtonLink" alt="Facebook" onmouseover="this.src='/ImageRepository/Document?documentID=5304'" onmouseout="this.src='/ImageRepository/Document?documentID=5304'" onfocus="this.src='/ImageRepository/Document?documentID=5304'" onblur="this.src='/ImageRepository/Document?documentID=5304'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://youtube.com/@cityoffairoaksranch2868?si=it8m95Z0pyZq8-y2" target="_self" aria-label="YouTube graphic"><img src="http://fairoaksranchtx.org/ImageRepository/Document?documentID=5314" class="graphicButtonLink" alt="YouTube" onmouseover="this.src='/ImageRepository/Document?documentID=5314'" onmouseout="this.src='/ImageRepository/Document?documentID=5314'" onfocus="this.src='/ImageRepository/Document?documentID=5314'" onblur="this.src='/ImageRepository/Document?documentID=5314'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.linkedin.com/company/10309274/" target="_self" aria-label="Linkedin graphic"><img src="http://fairoaksranchtx.org/ImageRepository/Document?documentID=5306" class="graphicButtonLink" alt="Linkedin" onmouseover="this.src='/ImageRepository/Document?documentID=5306'" onmouseout="this.src='/ImageRepository/Document?documentID=5306'" onfocus="this.src='/ImageRepository/Document?documentID=5306'" onblur="this.src='/ImageRepository/Document?documentID=5306'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://nextdoor.com/pages/city-of-fair-oaks-ranch?init_source=copy_link_share" target="_self" aria-label="Nextdoor graphic"><img src="http://fairoaksranchtx.org/ImageRepository/Document?documentID=5307" class="graphicButtonLink" alt="Nextdoor" onmouseover="this.src='/ImageRepository/Document?documentID=5307'" onmouseout="this.src='/ImageRepository/Document?documentID=5307'" onfocus="this.src='/ImageRepository/Document?documentID=5307'" onblur="this.src='/ImageRepository/Document?documentID=5307'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col10 last" style="height: auto;" data-widgetcontainerid="808be64e-839a-4028-8277-fae6c8950ccf">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col10 first last id19540f6d-f1de-462c-bafa-a73416ef253a" style="height: 50px;" data-widgetcontainerid="19540f6d-f1de-462c-bafa-a73416ef253a">
+	
+<div data-widget-id="45c02eb5-65ef-464d-8a13-684f936fdbba" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButton45c02eb5-65ef-464d-8a13-684f936fdbba").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDept45c02eb5-65ef-464d-8a13-684f936fdbba").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchField45c02eb5-65ef-464d-8a13-684f936fdbba").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDept45c02eb5-65ef-464d-8a13-684f936fdbba").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDept45c02eb5-65ef-464d-8a13-684f936fdbba").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchField45c02eb5-65ef-464d-8a13-684f936fdbba").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDept45c02eb5-65ef-464d-8a13-684f936fdbba").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchField45c02eb5-65ef-464d-8a13-684f936fdbba").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchField45c02eb5-65ef-464d-8a13-684f936fdbba"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin11 widgetOptionSet29" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBox45c02eb5-65ef-464d-8a13-684f936fdbba ui-autocomplete-input" cp5ph="true" id="searchField45c02eb5-65ef-464d-8a13-684f936fdbba" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search our site…" title="Search our site…" type="text" value="" autocomplete="off">
+						<a href="http://fairoaksranchtx.org/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButton45c02eb5-65ef-464d-8a13-684f936fdbba" role="button"><img alt="Go to Site Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=5289" data-image="/ImageRepository/Document?documentID=5290" src="http://fairoaksranchtx.org/ImageRepository/Document?documentID=5290"></a>
+
+			<label class="searchLabel" for="searchField45c02eb5-65ef-464d-8a13-684f936fdbba">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: rgba(237, 244, 252, 1);
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: rgba(237, 244, 252, 1);
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: rgba(237, 244, 252, 1);
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: rgba(237, 244, 252, 1);
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBox45c02eb5-65ef-464d-8a13-684f936fdbba
+	{
+		color: rgba(237, 244, 252, 1);
+		background: none;
+border: 0;
+border-left: 5px solid rgba(166, 72, 80, 1);
+height: 50px;
+font-family: Lora;
+font-size: 1em;
+padding: 0 70px 0 20px;
+	}
+	.widgetSearch .widgetBody .widgetSearchButton45c02eb5-65ef-464d-8a13-684f936fdbba
+	{
+		margin: 0;
+	}
+	.widgetSearch .widgetSearch-onlyDept45c02eb5-65ef-464d-8a13-684f936fdbba
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDept45c02eb5-65ef-464d-8a13-684f936fdbba
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchField45c02eb5-65ef-464d-8a13-684f936fdbba").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><div data-cprole="structuralContainer" id="navWrapperTS">
+<div class="siteWrap"><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem27" class="topMenuItem" role="none" data-pageid="27" data-displaymegamenu="True" style="width: 23.8057%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem1 " href="http://fairoaksranchtx.org/27/Government" target="_self" style="font-size: 19px;"><span style="display: inline;">   Government </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem307" class="topMenuItem" role="none" data-pageid="307" data-displaymegamenu="True" style="width: 27.8543%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavResidentServices" class="navMainItem mainNavItem mainNavItem2 " href="http://fairoaksranchtx.org/307/Resident-Services" target="_self" style="font-size: 19px;"><span style="display: inline;">   Resident Services </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem332" class="topMenuItem" role="none" data-pageid="332" data-displaymegamenu="True" style="width: 25.9919%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavDoingBusiness" class="navMainItem mainNavItem mainNavItem3 " href="http://fairoaksranchtx.org/332/Doing-Business" target="_self" style="font-size: 19px;"><span style="display: inline;">   Doing Business </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem362" class="topMenuItem" role="none" data-pageid="362" data-displaymegamenu="True" style="width: 22.3482%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavHowDoI" class="navMainItem mainNavItem mainNavItem4 " href="http://fairoaksranchtx.org/362/How-Do-I" target="_self" style="font-size: 19px;"><span style="display: inline;">   How Do I... </span></a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=7&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = true;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="1"></aside></nav></div>
+</div>
+</header><!-- Banner --><div data-cprole="structuralContainer" id="bannerContainerTS" class="noOverflowTS">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="bannerSizingTS">
+<div data-cprole="structuralContainer" id="bannerSearchTS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="welcomeTS">	<div id="ccf83547b4-8495-4a44-b89d-26cb844954c4" data-containerid="f83547b4-8495-4a44-b89d-26cb844954c4" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+
+
+
+		<div id="bannerImagesJSON14" class="hidden"></div><div class="bannerObject external fixedBanner" id="bannerDivbanner1" style="min-height: 232px; top: 0px; left: -218.167px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img class="bannerObject" width="1265px" style="position: absolute; left: 0px; margin: 0px; width: 1701.33px;" src="http://fairoaksranchtx.org/ImageRepository/Document?documentID=5286" data-is-delayed="false" alt=""></div>
+		
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner1',
+								{"BannerOptionID":14,"ThemeID":7,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":2,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":36,"BannerOptionID":14,"FileName":"/ImageRepository/Document?documentID=5287","Height":300,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":37,"BannerOptionID":14,"FileName":"/ImageRepository/Document?documentID=5286","Height":300,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":2,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""}],"BannerVideos":[{"BannerVideoID":10,"BannerOptionID":14,"VideoFileName":"","ImageFileName":"EmptyBannerBkg202402291315024664.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								'/App_Themes/Interior/Images/',
+								'Rotating');
+						});
+				});
+			</script>
+
+</div>
+</div><div data-cprole="structuralContainer" id="mainContainerWrapTS">
+<!-- Content container --><div data-cprole="structuralContainer" id="mainContainerTS">
+<div class="siteWrap"><div data-cprole="structuralContainer" id="mainWrapTS" class="mainWrap" role="main">
+<div data-cprole="structuralContainer" id="siteSidebarTS" class="siteSidebar">
+<aside data-cprole="contentContainer" id="sidebarContainer1TS">	<div id="cc34d8a551-b886-4def-a18a-860ee4acdee6" data-containerid="34d8a551-b886-4def-a18a-860ee4acdee6" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav">
+
+
+
+
+
+	<ol role="menu" id="secondaryMenusecondaryNav" data-parent="284" class="rootNavMenu accordionNav">
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem285" data-pageid="285">
+		<div class="accordionNavItem">
+			<a href="http://fairoaksranchtx.org/285/Mayor" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Mayor</a>
+				<a href="http://fairoaksranchtx.org/63/City-Council#" class="openAccordionNav accordionSecondaryNavItem" title="Expand Mayor Submenu"></a>
+		</div>
+					<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" style="display: none;" data-parent="285">
+						<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem535" data-pageid="535">
+			<div class="accordionNavItem">
+				<a href="http://fairoaksranchtx.org/27/Our-Government" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Our Government</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem530" data-pageid="530">
+			<div class="accordionNavItem">
+				<a href="http://fairoaksranchtx.org/530/Mayors-Monthly-Messages" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Mayor's Monthly Messages</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem536" data-pageid="536">
+			<div class="accordionNavItem">
+				<a href="http://fairoaksranchtx.org/536/State-of-the-City" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">State of the City</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem537" data-pageid="537">
+			<div class="accordionNavItem">
+				<a href="http://fairoaksranchtx.org/63/City-Council" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">City Council</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem63" data-pageid="63">
+		<div class="accordionNavItem">
+			<a href="http://fairoaksranchtx.org/63/City-Council" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">City Council</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem102" data-pageid="102">
+		<div class="accordionNavItem">
+			<a href="http://fairoaksranchtx.org/102/Mission-Priorities" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Mission &amp; Priorities</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem286" data-pageid="286">
+		<div class="accordionNavItem">
+			<a href="http://fairoaksranchtx.org/286/Committees" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Committees</a>
+				<a href="http://fairoaksranchtx.org/63/City-Council#" class="openAccordionNav accordionSecondaryNavItem" title="Expand Committees Submenu"></a>
+		</div>
+					<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" style="display: none;" data-parent="286">
+						<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem493" data-pageid="493">
+			<div class="accordionNavItem">
+				<a href="http://fairoaksranchtx.org/493/Board-of-Appeals" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Board of Appeals</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem494" data-pageid="494">
+			<div class="accordionNavItem">
+				<a href="http://fairoaksranchtx.org/494/Capital-Improvements-Advisory-Committee" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Capital Improvements Advisory Committee</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem495" data-pageid="495">
+			<div class="accordionNavItem">
+				<a href="http://fairoaksranchtx.org/495/Municipal-Development-District-Board-of-" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Municipal Development District Board of Directors</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem496" data-pageid="496">
+			<div class="accordionNavItem">
+				<a href="http://fairoaksranchtx.org/496/Planning-Zoning-Commission" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Planning &amp; Zoning Commission</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem497" data-pageid="497">
+			<div class="accordionNavItem">
+				<a href="http://fairoaksranchtx.org/497/Zoning-Board-of-Adjustment" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Zoning Board of Adjustment</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem160" data-pageid="160">
+			<div class="accordionNavItem">
+				<a href="http://fairoaksranchtx.org/160/Wildlife-Education" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Wildlife Education</span></a>
+					<a href="http://fairoaksranchtx.org/63/City-Council#" class="openAccordionNav accordionNavMenuItem" title="Expand Wildlife Education Submenu"></a>
+			</div>
+							<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl2" style="display: none;" data-parent="160">
+							<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem271" data-pageid="271">
+			<div class="accordionNavItem">
+				<a href="http://fairoaksranchtx.org/271/History" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">History</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem277" data-pageid="277">
+			<div class="accordionNavItem">
+				<a href="http://fairoaksranchtx.org/DocumentCenter/View/1522" target="_self" class="navMenuItem cpComponent docaccess-activated" data-type="SecondaryMenuItem" data-docaccess-source-url="http://fairoaksranchtx.org/DocumentCenter/View/1522"><span lang="en">Brochure</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem274" data-pageid="274">
+			<div class="accordionNavItem">
+				<a href="http://fairoaksranchtx.org/DocumentCenter/View/2008/Wildlife-Education-Committee-Library" target="_self" class="navMenuItem cpComponent docaccess-activated" data-type="SecondaryMenuItem" data-docaccess-source-url="http://fairoaksranchtx.org/DocumentCenter/View/2008/Wildlife-Education-Committee-Library"><span lang="en">Resources &amp; Links</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem275" data-pageid="275">
+			<div class="accordionNavItem">
+				<a href="http://fairoaksranchtx.org/archive.aspx" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Minutes and Documents</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem276" data-pageid="276">
+			<div class="accordionNavItem">
+				<a href="http://fairoaksranchtx.org/276/Wildlife-Photos" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Wildlife Photos</span></a>
+			</div>
+					</li>
+
+				</ol>
+		</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem635" data-pageid="635">
+			<div class="accordionNavItem">
+				<a href="http://fairoaksranchtx.org/635/Transportation-Safety-Advisory-Committee" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Transportation Safety Advisory Committee</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem287" data-pageid="287">
+		<div class="accordionNavItem">
+			<a href="http://fairoaksranchtx.org/287/Municipal-Development-District" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Municipal Development District</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem93" data-pageid="93">
+		<div class="accordionNavItem">
+			<a href="http://fairoaksranchtx.org/93/Other-Elected-Officials" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Other Elected Officials</a>
+		</div>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = false;
+		});
+	</script>
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			$('*[id^="SideItem"]').each(function () {
+				var ids = $('[id="' + this.id + '"]');
+				if (ids.length > 1)
+					$.each(ids, function (index, value) {
+						value.id = value.id + '_' + index;
+					});
+			});
+
+			$('.hasAccordionChildren .openAccordionNav').click(function (e) {
+				e.preventDefault();
+				showHideAccordionMenuForSecondaryNav($(this));
+			});
+
+			$("#secondaryNav .grippy").each(function () {
+				menuManager.setupDraggableElement($(this), SIDE_MENU, '#secondaryNav');
+			});
+
+			$("#secondaryNav li").each(function () {
+				menuManager.setupDroppableAccordionElement($(this), SIDE_MENU);
+			});
+		});
+	</script>
+
+
+
+</nav><aside data-cprole="contentContainer" id="sidebarContainer2TS">	<div id="cc315b2038-7dc2-4079-be39-c379849db4d0" data-containerid="315b2038-7dc2-4079-be39-c379849db4d0" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="outerContentWrapTS" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="contentWrapTS" class="contentWrap">
+<div data-cprole="breadCrumbs" id="breadCrumbs" class="breadCrumbContainer">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="http://fairoaksranchtx.org/">Home</a></li><li><a class="breadCrumb" href="http://fairoaksranchtx.org/27/Government">Government</a></li><li><a class="breadCrumb" href="http://fairoaksranchtx.org/284/Government-Leadership">Government Leadership</a></li><li id="currentBCPage" data-pageid="63">City Council</li>
+		</ol>
+
+	   
+    
+</div><div data-cprole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="63">
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="284">
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="9506">
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="City Council">
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="False">
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False">
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published">
+
+				<h1 id="versionHeadLine" class="headline">
+
+City Council		</h1>
+	
+		<div id="cc9ef8e1cb-dedf-45ed-8cba-450ee6f758c6" data-containerid="9ef8e1cb-dedf-45ed-8cba-450ee6f758c6" class="pageContent cpGrid cpGrid24" data-contentcontainerbreakpoint="30">
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="dc2d41e9-abad-4c1e-bbf3-5e4e65a71e61">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id8b41dfec-8829-4bd4-aa5a-ee708075bd09" style="height: 1311px;" data-widgetcontainerid="8b41dfec-8829-4bd4-aa5a-ee708075bd09">
+	
+<div class="widget editor pageStyles wide" id="divEditor48a116f9-26dd-40e5-8d7a-fd84beb8b7b4" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view responsiveEditor">
+
+
+        <h2 class="subhead1 "><strong><span style="font-family: Verdana, Geneva, sans-serif; font-size: 18px;">Overview</span></strong></h2><p><span style="font-size: 18px; font-family: Verdana, Geneva, sans-serif;">Fair Oaks Ranch is a Home Rule city. City Council is elected at-large representing all residents within the City limits. Council members including the Mayor serve staggered three-year terms with <a href="http://tx-fairoaksranch2.civicplus.com/134/City-Elections" target="_self" title="City Elections">City Elections</a> held each year. The Mayor Pro Tem is selected by the council members each year after the election.</span></p><p><span style="font-size: 18px; font-family: Verdana, Geneva, sans-serif;">The City Council meets the first and third Thursday at 6:30 p.m. every month in the City Hall Council Chambers. &nbsp;When needed, City Council will hold Special Meetings, Workshops and Public Hearings in addition to the regular city council meetings.</span></p><p><span style="font-size: 18px; font-family: Verdana, Geneva, sans-serif;">As required by law, all <a href="https://fairoaksranch-tx.municodemeetings.com/" rel="noopener" target="_blank" aria-label="meeting agendas Opens in new window">meeting agendas</a> are posted 72 hours in advance of the meeting on the City Hall's bulletin board which is the city's official posting place. &nbsp;The bulletin board is located just outside of the City Hall's front door for easy access. &nbsp;As required by law, Public Hearing notices are also published in the <a aria-label="Boerne Star Opens in new window" href="http://www.boernestar.com/" target="_blank" title="Boerne str" rel="noopener">Boerne Star</a> which is the city's official newspaper noted by City Resolution. &nbsp;</span></p><h2 class="subhead1 ">Council Members - Elected at Large</h2><table style="width: 100%;"><tbody><tr><td style="width: 33.33%; text-align: center;"><img src="http://fairoaksranchtx.org/ImageRepository/Document?documentId=4365" class="fr-dib" alt="Emily Stroup" style="width: 177px;"><strong>Emily Stroup&nbsp;</strong><br>Place 1<br>2024-2027<br><a data-fr-linked="true" href="mailto:estroup@fairoaksranchtx.org" id="isPasted">estroup@fairoaksranchtx.org</a><br></td><td style="width: 33.33%; text-align: center;"><img class="fr-dib" style="width: 143px; height: 214.967px;" alt="Keith Rhoden" src="http://fairoaksranchtx.org/ImageRepository/Document?documentId=4856"><strong>Keith Rhoden,&nbsp;</strong>Mayor Pro Tem<br>Place 2<br>2023-2026<br><a data-fr-linked="true" href="mailto:krhoden@fairoaksranchtx.org" id="isPasted">krhoden@fairoaksranchtx.org</a><br></td><td style="width: 33.33%; text-align: center;"><img src="http://fairoaksranchtx.org/ImageRepository/Document?documentId=5157" class="fr-dib" alt="Olvera, Ruben J. (2)" style="width: 146px;"><strong>Ruben J. Olvera</strong><br>Place 3<br>2025-2028<br><a data-fr-linked="true" href="mailto:rolvera@fairoaksranchtx.org" id="isPasted">rolvera@fairoaksranchtx.org</a><br></td></tr><tr><td style="width: 33.33%; text-align: center;"><img class="fr-dib" style="width: 140px; height: 210px;" alt="Dale Pearson" src="http://fairoaksranchtx.org/ImageRepository/Document?documentId=6452"><strong>Dale Pearson</strong><br>Place 4<br>2025-2028<br><a data-fr-linked="true" href="mailto:dpearson@fairoaksranchtx.org" id="isPasted">dpearson@fairoaksranchtx.org</a><br></td><td style="width: 33.33%; text-align: center;"><img src="http://fairoaksranchtx.org/ImageRepository/Document?documentId=3806" class="fr-dib" alt="Scott Parker 2" style="width: 183px;"><strong>Scott Parker</strong><br>Place 5<br>2025-2028<br><a data-fr-linked="true" href="mailto:sparker@fairoaksranchtx.org" id="isPasted">sparker@fairoaksranchtx.org</a><br></td><td style="width: 33.33%; text-align: center;"><img src="http://fairoaksranchtx.org/ImageRepository/Document?documentId=6218" class="fr-dib" alt="Jonathan Swarek" style="width: 144px;"><strong>Jonathan Swarek</strong><br>Place 6<br>2025-2026<br><a data-fr-linked="true" href="mailto:jswarek@fairoaksranchtx.org" id="isPasted">jswarek@fairoaksranchtx.org</a><a href="mailto:jswarek@fairoaksranchtx.org"></a><br></td></tr></tbody></table><p style="text-align: center;"><br></p><p style="text-align: center;">&nbsp;<span style="font-size: 18px; font-family: Verdana, Geneva, sans-serif;">A phone message may be left for any Council member at City Hall, (210) 698-0900.</span></p><p><br></p><p><br></p><p><br></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '48a116f9-26dd-40e5-8d7a-fd84beb8b7b4'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: none;">	<div id="cc7e4e4320-2862-4ab9-a037-947b9942daa6" data-containerid="7e4e4320-2862-4ab9-a037-947b9942daa6" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div><!-- GBs --><div data-cprole="structuralContainer" id="gbsContainerTS">
+<div class="siteWrap2"><div data-cprole="contentContainer" id="gbsTS">	<div id="cc54491541-9937-49e3-94c5-182f601f18b2" data-containerid="54491541-9937-49e3-94c5-182f601f18b2" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="86">
+				                
+
+		<div class="row outer"><!--
+--><div class="outer col col5 first" style="height: auto;" data-widgetcontainerid="a4bea563-d1ef-4029-a301-eb4e6328ac2b">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last id1643dc0c-138f-4878-97aa-35ff7ec26ff7" style="height: 245px;" data-widgetcontainerid="1643dc0c-138f-4878-97aa-35ff7ec26ff7">
+	
+<div data-widget-id="7882ecd8-d545-456f-ae0f-e3acd73d8cc2" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget7882ecd8-d545-456f-ae0f-e3acd73d8cc2" class="widget widgetGraphicLinks skin17 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 "> 	
+				<ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://fairoaksranchtx.org/list.aspx" target="_self" class="fancyButton fancyButton216 ">
+		<span>
+			<span><span class="text"><span class="textStyle1">Notify Me</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton216.fancyButton:link,.fancyButton216.fancyButton:visited, .fancyButton216div.fancyButton{
+	background-color: rgb(25, 39, 55);
+	background-image: url('/ImageRepository/Document?documentID=5449');
+	background-repeat: no-repeat;
+	background-position: center center;
+background-size: cover;
+max-width: 400px;
+margin: 0 auto;
+position: relative;
+z-index: 1;
+}
+
+.fancyButton216 > span > span {
+height: 225px;
+display: flex;
+flex-direction: column;
+align-items: stretch;
+justify-content: flex-end;
+}
+
+.row.outer.wide .fancyButton216 > span > span {
+height: 470px;
+}
+
+.fancyButton216::after,
+.fancyButton216::before {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+height: 100%;
+width: 100%;
+transition: all .2s ease-in-out;
+z-index: -1;
+}
+
+.fancyButton216::after {
+background: linear-gradient(180deg, rgba(28, 39, 54, 0.3) 0%, rgba(28, 39, 54, 1) 100%);
+opacity: 1;
+}
+
+.fancyButton216::before {
+background: linear-gradient(180deg, rgba(28, 39, 54, .7) 0%, rgba(28, 39, 54, .7) 100%);
+opacity: 0;}
+.fancyButton216.fancyButton:hover,.fancyButton216.fancyButton:focus,.fancyButton216.fancyButton:active,.fancyButton216.fancyButton.hover{
+}
+
+.fancyButton216:is(:hover,:focus,:active)::before {
+opacity: 1;}
+.fancyButton216.fancyButton:link > span,.fancyButton216.fancyButton:visited > span, .fancyButton216div.fancyButton > span{
+}
+.fancyButton216.fancyButton:hover > span,.fancyButton216.fancyButton:focus > span,.fancyButton216.fancyButton:active > span,.fancyButton216.fancyButton.hover > span{
+}
+.fancyButton216.fancyButton .text{
+	text-align: left;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	text-decoration: none;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	background-repeat: no-repeat;
+	background-position: left top;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+}
+.fancyButton216.fancyButton:hover .text,.fancyButton216.fancyButton:focus .text,.fancyButton216.fancyButton:active .text,.fancyButton216.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton216.fancyButton .textStyle1{
+	color: rgb(237, 244, 252);
+	font-size: 1.3em;
+	font-family: Lora;
+	font-weight: 700;
+	text-decoration: none;
+position: relative;
+padding-bottom: 10px;
+}
+
+.fancyButton216 .textStyle1::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 50px;
+height: 5px;
+border-radius: 3px;
+background: rgba(212, 202, 150, 1);
+transition: all .2s ease-in-out;}
+.fancyButton216.fancyButton:hover .textStyle1, .fancyButton216.fancyButton.hover .textStyle1{
+	text-decoration: underline;
+}
+
+.fancyButton216:is(:hover,:focus,:active) .textStyle1::after {
+width: 75px;}
+</style>
+
+ </li><!--
+				--></ul>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col14" style="height: auto;" data-widgetcontainerid="4b760e5d-29b7-4e37-b98f-8192ad60fa69">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col14 first last idf889df4f-f4cd-41ce-a2ac-33092d8e8cd9" style="height: 490px;" data-widgetcontainerid="f889df4f-f4cd-41ce-a2ac-33092d8e8cd9">
+	
+<div data-widget-id="8b63f6d7-feaf-42ad-8247-47c732e4573f" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget8b63f6d7-feaf-42ad-8247-47c732e4573f" class="widget widgetGraphicLinks skin17 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:50em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://fairoaksranchtx.portal.civicclerk.com/" target="_self" class="fancyButton fancyButton210 ">
+		<span>
+			<span><span class="text"><span class="textStyle1">Agendas &amp; Minutes</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton210.fancyButton:link,.fancyButton210.fancyButton:visited, .fancyButton210div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=5315');
+	background-repeat: no-repeat;
+	background-position: center center;
+background-size: cover;
+max-width: 400px;
+margin: 0 auto;
+position: relative;
+z-index: 1;
+}
+
+.fancyButton210 > span > span {
+height: 225px;
+display: flex;
+flex-direction: column;
+align-items: stretch;
+justify-content: flex-end;
+}
+
+.fancyButton210::after,
+.fancyButton210::before {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+height: 100%;
+width: 100%;
+transition: all .2s ease-in-out;
+z-index: -1;
+}
+
+.fancyButton210::after {
+background: linear-gradient(180deg, rgba(28, 39, 54, 0.3) 0%, rgba(28, 39, 54, 1) 100%);
+opacity: 1;
+}
+
+.fancyButton210::before {
+background: linear-gradient(180deg, rgba(28, 39, 54, .7) 0%, rgba(28, 39, 54, .7) 100%);
+opacity: 0;}
+.fancyButton210.fancyButton:hover,.fancyButton210.fancyButton:focus,.fancyButton210.fancyButton:active,.fancyButton210.fancyButton.hover{
+}
+
+.fancyButton210:is(:hover,:focus,:active)::before {
+opacity: 1;}
+.fancyButton210.fancyButton:link > span,.fancyButton210.fancyButton:visited > span, .fancyButton210div.fancyButton > span{
+}
+.fancyButton210.fancyButton:hover > span,.fancyButton210.fancyButton:focus > span,.fancyButton210.fancyButton:active > span,.fancyButton210.fancyButton.hover > span{
+}
+.fancyButton210.fancyButton .text{
+	text-align: left;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	text-decoration: none;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	background-repeat: no-repeat;
+	background-position: left top;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+}
+.fancyButton210.fancyButton:hover .text,.fancyButton210.fancyButton:focus .text,.fancyButton210.fancyButton:active .text,.fancyButton210.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton210.fancyButton .textStyle1{
+	color: rgb(237, 244, 252);
+	font-size: 1.3em;
+	font-family: Lora;
+	font-weight: 700;
+	text-decoration: none;
+position: relative;
+padding-bottom: 10px;
+}
+
+.fancyButton210 .textStyle1::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 50px;
+height: 5px;
+border-radius: 3px;
+background: rgba(212, 202, 150, 1);
+transition: all .2s ease-in-out;}
+.fancyButton210.fancyButton:hover .textStyle1, .fancyButton210.fancyButton.hover .textStyle1{
+	text-decoration: underline;
+}
+
+.fancyButton210:is(:hover,:focus,:active) .textStyle1::after {
+width: 75px;}
+</style>
+
+ </li><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="http://fairoaksranchtx.org/134/City-Elections" target="_self" class="fancyButton fancyButton217 ">
+		<span>
+			<span><span class="text"><span class="textStyle1">Elections</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton217.fancyButton:link,.fancyButton217.fancyButton:visited, .fancyButton217div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=5469');
+	background-repeat: no-repeat;
+	background-position: center 23% ;
+background-size: cover;
+max-width: 400px;
+margin: 0 auto;
+position: relative;
+z-index: 1;
+}
+
+.fancyButton217 > span > span {
+height: 225px;
+display: flex;
+flex-direction: column;
+align-items: stretch;
+justify-content: flex-end;
+}
+
+.fancyButton217::after,
+.fancyButton217::before {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+height: 100%;
+width: 100%;
+transition: all .2s ease-in-out;
+z-index: -1;
+}
+
+.fancyButton217::after {
+background: linear-gradient(180deg, rgba(28, 39, 54, 0.3) 0%, rgba(28, 39, 54, 1) 100%);
+opacity: 1;
+}
+
+.fancyButton217::before {
+background: linear-gradient(180deg, rgba(28, 39, 54, .7) 0%, rgba(28, 39, 54, .7) 100%);
+opacity: 0;}
+.fancyButton217.fancyButton:hover,.fancyButton217.fancyButton:focus,.fancyButton217.fancyButton:active,.fancyButton217.fancyButton.hover{
+}
+
+.fancyButton217:is(:hover,:focus,:active)::before {
+opacity: 1;}
+.fancyButton217.fancyButton:link > span,.fancyButton217.fancyButton:visited > span, .fancyButton217div.fancyButton > span{
+}
+.fancyButton217.fancyButton:hover > span,.fancyButton217.fancyButton:focus > span,.fancyButton217.fancyButton:active > span,.fancyButton217.fancyButton.hover > span{
+}
+.fancyButton217.fancyButton .text{
+	text-align: left;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	text-decoration: none;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	background-repeat: no-repeat;
+	background-position: left top;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+}
+.fancyButton217.fancyButton:hover .text,.fancyButton217.fancyButton:focus .text,.fancyButton217.fancyButton:active .text,.fancyButton217.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton217.fancyButton .textStyle1{
+	color: rgb(237, 244, 252);
+	font-size: 1.3em;
+	font-family: Lora;
+	font-weight: 700;
+	text-decoration: none;
+position: relative;
+padding-bottom: 10px;
+}
+
+.fancyButton217 .textStyle1::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 50px;
+height: 5px;
+border-radius: 3px;
+background: rgba(212, 202, 150, 1);
+transition: all .2s ease-in-out;}
+.fancyButton217.fancyButton:hover .textStyle1, .fancyButton217.fancyButton.hover .textStyle1{
+	text-decoration: underline;
+}
+
+.fancyButton217:is(:hover,:focus,:active) .textStyle1::after {
+width: 75px;}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.municipalonlinepayments.com/fairoaksranchtx" target="_self" class="fancyButton fancyButton218 ">
+		<span>
+			<span><span class="text"><span class="textStyle1">Online Services</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton218.fancyButton:link,.fancyButton218.fancyButton:visited, .fancyButton218div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=5320');
+	background-repeat: no-repeat;
+	background-position: center center;
+background-size: cover;
+max-width: 400px;
+margin: 0 auto;
+position: relative;
+z-index: 1;
+}
+
+.fancyButton218 > span > span {
+height: 225px;
+display: flex;
+flex-direction: column;
+align-items: stretch;
+justify-content: flex-end;
+}
+
+.fancyButton218::after,
+.fancyButton218::before {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+height: 100%;
+width: 100%;
+transition: all .2s ease-in-out;
+z-index: -1;
+}
+
+.fancyButton218::after {
+background: linear-gradient(180deg, rgba(28, 39, 54, 0.3) 0%, rgba(28, 39, 54, 1) 100%);
+opacity: 1;
+}
+
+.fancyButton218::before {
+background: linear-gradient(180deg, rgba(28, 39, 54, .7) 0%, rgba(28, 39, 54, .7) 100%);
+opacity: 0;}
+.fancyButton218.fancyButton:hover,.fancyButton218.fancyButton:focus,.fancyButton218.fancyButton:active,.fancyButton218.fancyButton.hover{
+}
+
+.fancyButton218:is(:hover,:focus,:active)::before {
+opacity: 1;}
+.fancyButton218.fancyButton:link > span,.fancyButton218.fancyButton:visited > span, .fancyButton218div.fancyButton > span{
+}
+.fancyButton218.fancyButton:hover > span,.fancyButton218.fancyButton:focus > span,.fancyButton218.fancyButton:active > span,.fancyButton218.fancyButton.hover > span{
+}
+.fancyButton218.fancyButton .text{
+	text-align: left;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	text-decoration: none;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	background-repeat: no-repeat;
+	background-position: left top;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+}
+.fancyButton218.fancyButton:hover .text,.fancyButton218.fancyButton:focus .text,.fancyButton218.fancyButton:active .text,.fancyButton218.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton218.fancyButton .textStyle1{
+	color: rgb(237, 244, 252);
+	font-size: 1.3em;
+	font-family: Lora;
+	font-weight: 700;
+	text-decoration: none;
+position: relative;
+padding-bottom: 10px;
+}
+
+.fancyButton218 .textStyle1::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 50px;
+height: 5px;
+border-radius: 3px;
+background: rgba(212, 202, 150, 1);
+transition: all .2s ease-in-out;}
+.fancyButton218.fancyButton:hover .textStyle1, .fancyButton218.fancyButton.hover .textStyle1{
+	text-decoration: underline;
+}
+
+.fancyButton218:is(:hover,:focus,:active) .textStyle1::after {
+width: 75px;}
+</style>
+
+ </li><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://fairoaksranchtx.applicantpro.com/jobs/" target="_blank" class="fancyButton fancyButton219 " aria-label="Employment Opens in new window" rel="noopener">
+		<span>
+			<span><span class="text"><span class="textStyle1">Employment</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton219.fancyButton:link,.fancyButton219.fancyButton:visited, .fancyButton219div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=5318');
+	background-repeat: no-repeat;
+	background-position: center center;
+background-size: cover;
+max-width: 400px;
+margin: 0 auto;
+position: relative;
+z-index: 1;
+}
+
+.fancyButton219 > span > span {
+height: 225px;
+display: flex;
+flex-direction: column;
+align-items: stretch;
+justify-content: flex-end;
+}
+
+.fancyButton219::after,
+.fancyButton219::before {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+height: 100%;
+width: 100%;
+transition: all .2s ease-in-out;
+z-index: -1;
+}
+
+.fancyButton219::after {
+background: linear-gradient(180deg, rgba(28, 39, 54, 0.3) 0%, rgba(28, 39, 54, 1) 100%);
+opacity: 1;
+}
+
+.fancyButton219::before {
+background: linear-gradient(180deg, rgba(28, 39, 54, .7) 0%, rgba(28, 39, 54, .7) 100%);
+opacity: 0;}
+.fancyButton219.fancyButton:hover,.fancyButton219.fancyButton:focus,.fancyButton219.fancyButton:active,.fancyButton219.fancyButton.hover{
+}
+
+.fancyButton219:is(:hover,:focus,:active)::before {
+opacity: 1;}
+.fancyButton219.fancyButton:link > span,.fancyButton219.fancyButton:visited > span, .fancyButton219div.fancyButton > span{
+}
+.fancyButton219.fancyButton:hover > span,.fancyButton219.fancyButton:focus > span,.fancyButton219.fancyButton:active > span,.fancyButton219.fancyButton.hover > span{
+}
+.fancyButton219.fancyButton .text{
+	text-align: left;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	text-decoration: none;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	background-repeat: no-repeat;
+	background-position: left top;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+}
+.fancyButton219.fancyButton:hover .text,.fancyButton219.fancyButton:focus .text,.fancyButton219.fancyButton:active .text,.fancyButton219.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton219.fancyButton .textStyle1{
+	color: rgb(237, 244, 252);
+	font-size: 1.3em;
+	font-family: Lora;
+	font-weight: 700;
+	text-decoration: none;
+position: relative;
+padding-bottom: 10px;
+}
+
+.fancyButton219 .textStyle1::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 50px;
+height: 5px;
+border-radius: 3px;
+background: rgba(212, 202, 150, 1);
+transition: all .2s ease-in-out;}
+.fancyButton219.fancyButton:hover .textStyle1, .fancyButton219.fancyButton.hover .textStyle1{
+	text-decoration: underline;
+}
+
+.fancyButton219:is(:hover,:focus,:active) .textStyle1::after {
+width: 75px;}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://fairtx.aquahawk.us/login" target="_self" class="fancyButton fancyButton220 ">
+		<span>
+			<span><span class="text"><span class="textStyle1">AquaHawk</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton220.fancyButton:link,.fancyButton220.fancyButton:visited, .fancyButton220div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=5451');
+	background-repeat: no-repeat;
+	background-position: center center;
+background-size: cover;
+max-width: 400px;
+margin: 0 auto;
+position: relative;
+z-index: 1;
+}
+
+.fancyButton220 > span > span {
+height: 225px;
+display: flex;
+flex-direction: column;
+align-items: stretch;
+justify-content: flex-end;
+}
+
+.fancyButton220::after,
+.fancyButton220::before {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+height: 100%;
+width: 100%;
+transition: all .2s ease-in-out;
+z-index: -1;
+}
+
+.fancyButton220::after {
+background: linear-gradient(180deg, rgba(28, 39, 54, 0.3) 0%, rgba(28, 39, 54, 1) 100%);
+opacity: 1;
+}
+
+.fancyButton220::before {
+background: linear-gradient(180deg, rgba(28, 39, 54, .7) 0%, rgba(28, 39, 54, .7) 100%);
+opacity: 0;}
+.fancyButton220.fancyButton:hover,.fancyButton220.fancyButton:focus,.fancyButton220.fancyButton:active,.fancyButton220.fancyButton.hover{
+}
+
+.fancyButton220:is(:hover,:focus,:active)::before {
+opacity: 1;}
+.fancyButton220.fancyButton:link > span,.fancyButton220.fancyButton:visited > span, .fancyButton220div.fancyButton > span{
+}
+.fancyButton220.fancyButton:hover > span,.fancyButton220.fancyButton:focus > span,.fancyButton220.fancyButton:active > span,.fancyButton220.fancyButton.hover > span{
+}
+.fancyButton220.fancyButton .text{
+	text-align: left;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	text-decoration: none;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	background-repeat: no-repeat;
+	background-position: left top;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+}
+.fancyButton220.fancyButton:hover .text,.fancyButton220.fancyButton:focus .text,.fancyButton220.fancyButton:active .text,.fancyButton220.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton220.fancyButton .textStyle1{
+	color: rgb(237, 244, 252);
+	font-size: 1.3em;
+	font-family: Lora;
+	font-weight: 700;
+	text-decoration: none;
+position: relative;
+padding-bottom: 10px;
+}
+
+.fancyButton220 .textStyle1::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 50px;
+height: 5px;
+border-radius: 3px;
+background: rgba(212, 202, 150, 1);
+transition: all .2s ease-in-out;}
+.fancyButton220.fancyButton:hover .textStyle1, .fancyButton220.fancyButton.hover .textStyle1{
+	text-decoration: underline;
+}
+
+.fancyButton220:is(:hover,:focus,:active) .textStyle1::after {
+width: 75px;}
+</style>
+
+ </li><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="http://fairoaksranchtx.org/620/Managers-Weekly-Memo" target="_self" class="fancyButton fancyButton221 ">
+		<span>
+			<span><span class="text"><span class="textStyle1">Manager's Weekly Memo</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton221.fancyButton:link,.fancyButton221.fancyButton:visited, .fancyButton221div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=6427');
+	background-repeat: no-repeat;
+	background-position: center center;
+background-size: cover;
+max-width: 400px;
+margin: 0 auto;
+position: relative;
+z-index: 1;
+}
+
+.fancyButton221 > span > span {
+height: 225px;
+display: flex;
+flex-direction: column;
+align-items: stretch;
+justify-content: flex-end;
+}
+
+.fancyButton221::after,
+.fancyButton221::before {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+height: 100%;
+width: 100%;
+transition: all .2s ease-in-out;
+z-index: -1;
+}
+
+.fancyButton221::after {
+background: linear-gradient(180deg, rgba(28, 39, 54, 0.3) 0%, rgba(28, 39, 54, 1) 100%);
+opacity: 1;
+}
+
+.fancyButton221::before {
+background: linear-gradient(180deg, rgba(28, 39, 54, .7) 0%, rgba(28, 39, 54, .7) 100%);
+opacity: 0;}
+.fancyButton221.fancyButton:hover,.fancyButton221.fancyButton:focus,.fancyButton221.fancyButton:active,.fancyButton221.fancyButton.hover{
+}
+
+.fancyButton221:is(:hover,:focus,:active)::before {
+opacity: 1;}
+.fancyButton221.fancyButton:link > span,.fancyButton221.fancyButton:visited > span, .fancyButton221div.fancyButton > span{
+}
+.fancyButton221.fancyButton:hover > span,.fancyButton221.fancyButton:focus > span,.fancyButton221.fancyButton:active > span,.fancyButton221.fancyButton.hover > span{
+}
+.fancyButton221.fancyButton .text{
+	text-align: left;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	text-decoration: none;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	background-repeat: no-repeat;
+	background-position: left top;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+}
+.fancyButton221.fancyButton:hover .text,.fancyButton221.fancyButton:focus .text,.fancyButton221.fancyButton:active .text,.fancyButton221.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton221.fancyButton .textStyle1{
+	color: rgb(237, 244, 252);
+	font-size: 1.3em;
+	font-family: Lora;
+	font-weight: 700;
+	text-decoration: none;
+position: relative;
+padding-bottom: 10px;
+}
+
+.fancyButton221 .textStyle1::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 50px;
+height: 5px;
+border-radius: 3px;
+background: rgba(212, 202, 150, 1);
+transition: all .2s ease-in-out;}
+.fancyButton221.fancyButton:hover .textStyle1, .fancyButton221.fancyButton.hover .textStyle1{
+	text-decoration: underline;
+}
+
+.fancyButton221:is(:hover,:focus,:active) .textStyle1::after {
+width: 75px;}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col5 last" style="height: auto;" data-widgetcontainerid="5ba8f5fd-33a4-4156-9dd2-1d22a1ccf5c2">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last id416ada32-eb04-4fd2-9d49-1032a1e5bbcc" style="height: 245px;" data-widgetcontainerid="416ada32-eb04-4fd2-9d49-1032a1e5bbcc">
+	
+<div data-widget-id="a0629e38-147a-4d08-8bb8-4b7acff9bf58" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgeta0629e38-147a-4d08-8bb8-4b7acff9bf58" class="widget widgetGraphicLinks skin17 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 "> 	
+				<ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="http://fairoaksranchtx.org/408/Emergency-Notifications" target="_self" class="fancyButton fancyButton222 ">
+		<span>
+			<span><span class="text"><span class="textStyle1">Emergency Notifications</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton222.fancyButton:link,.fancyButton222.fancyButton:visited, .fancyButton222div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=5322');
+	background-repeat: no-repeat;
+	background-position: center center;
+background-size: cover;
+max-width: 400px;
+margin: 0 auto;
+position: relative;
+z-index: 1;
+}
+
+.fancyButton222 > span > span {
+height: 225px;
+display: flex;
+flex-direction: column;
+align-items: stretch;
+justify-content: flex-end;
+}
+
+.row.outer.wide .fancyButton222 > span > span {
+height: 470px;
+}
+
+.fancyButton222::after,
+.fancyButton222::before {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+height: 100%;
+width: 100%;
+transition: all .2s ease-in-out;
+z-index: -1;
+}
+
+.fancyButton222::after {
+background: linear-gradient(180deg, rgba(28, 39, 54, 0.3) 0%, rgba(28, 39, 54, 1) 100%);
+opacity: 1;
+}
+
+.fancyButton222::before {
+background: linear-gradient(180deg, rgba(28, 39, 54, .7) 0%, rgba(28, 39, 54, .7) 100%);
+opacity: 0;}
+.fancyButton222.fancyButton:hover,.fancyButton222.fancyButton:focus,.fancyButton222.fancyButton:active,.fancyButton222.fancyButton.hover{
+}
+
+.fancyButton222:is(:hover,:focus,:active)::before {
+opacity: 1;}
+.fancyButton222.fancyButton:link > span,.fancyButton222.fancyButton:visited > span, .fancyButton222div.fancyButton > span{
+}
+.fancyButton222.fancyButton:hover > span,.fancyButton222.fancyButton:focus > span,.fancyButton222.fancyButton:active > span,.fancyButton222.fancyButton.hover > span{
+}
+.fancyButton222.fancyButton .text{
+	text-align: left;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	text-decoration: none;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	background-repeat: no-repeat;
+	background-position: left top;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+}
+.fancyButton222.fancyButton:hover .text,.fancyButton222.fancyButton:focus .text,.fancyButton222.fancyButton:active .text,.fancyButton222.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton222.fancyButton .textStyle1{
+	color: rgb(237, 244, 252);
+	font-size: 1.3em;
+	font-family: Lora;
+	font-weight: 700;
+	text-decoration: none;
+position: relative;
+padding-bottom: 10px;
+}
+
+.fancyButton222 .textStyle1::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 50px;
+height: 5px;
+border-radius: 3px;
+background: rgba(212, 202, 150, 1);
+transition: all .2s ease-in-out;}
+.fancyButton222.fancyButton:hover .textStyle1, .fancyButton222.fancyButton.hover .textStyle1{
+	text-decoration: underline;
+}
+
+.fancyButton222:is(:hover,:focus,:active) .textStyle1::after {
+width: 75px;}
+</style>
+
+ </li><!--
+				--></ul>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div><!-- Footer --><footer data-cprole="structuralContainer" id="footerContainerTS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="footerTS">	<div id="cc59b39cca-e094-4a14-a0e9-15b7ff32c1c5" data-containerid="59b39cca-e094-4a14-a0e9-15b7ff32c1c5" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="607ba936-c927-4e13-b668-db46f9c28743">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id2c71dbee-4e18-474d-acda-8447c5a86fd0" style="height: 130px;" data-widgetcontainerid="2c71dbee-4e18-474d-acda-8447c5a86fd0">
+	
+    <div data-widget-id="a9c3c2af-1de0-490d-b3f6-c137ce37013b" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdva9c3c2af-1de0-490d-b3f6-c137ce37013b" class="widget widgetInfoAdvanced skin14 widgetOptionSet5 wide" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="headera9c3c2af-1de0-490d-b3f6-c137ce37013b">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row wide">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="http://fairoaksranchtx.org/"><img src="http://fairoaksranchtx.org/ImageRepository/Document?documentId=5291" class="fr-dib" alt="Fair Oaks Ranch TX Homepage"></a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdva9c3c2af-1de0-490d-b3f6-c137ce37013b .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="fc950a71-091a-4e93-b9c8-6ceaf9686b7d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id1d44ed1f-8bac-40ee-884b-60681cead535" style="height: 91px;" data-widgetcontainerid="1d44ed1f-8bac-40ee-884b-60681cead535">
+	
+    <div data-widget-id="b2977276-d06d-4056-bf8d-a47736339675" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdvb2977276-d06d-4056-bf8d-a47736339675" class="widget widgetInfoAdvanced skin13 widgetOptionSet31 wide" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="headerb2977276-d06d-4056-bf8d-a47736339675">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid7 ">
+		<div class="row autoWidths center wide">
+					<div class="col col1 first ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>7286 Dietz Elkhorn</p>
+</li>						</ol>
+					</div>
+					<div class="col col1  ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Fair Oaks Ranch, TX 78015</p>
+</li>						</ol>
+					</div>
+					<div class="col col1  ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Phone: <a href="tel:210-698-0900">210-698-0900</a></p>
+</li>						</ol>
+					</div>
+					<div class="col col1  ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Fax: 210-698-3565</p>
+</li>						</ol>
+					</div>
+					<div class="col col1  ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="http://fairoaksranchtx.org/directory.aspx">Email Us</a></p>
+</li>						</ol>
+					</div>
+					<div class="col col1  ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Non-Emergency Police &amp; After Hours Utilities Dispatch: <a href="tel:830-249-8645">830-249-8645</a></p>
+</li>						</ol>
+					</div>
+					<div class="col col1  last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="https://fairoaksranchtx.org/679/">Council Resources</a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdvb2977276-d06d-4056-bf8d-a47736339675 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="85189ee2-db40-43ce-8c1f-f181c7908b44">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id4e125a2f-d7ba-4708-be1b-defad85f8832" style="height: 62px;" data-widgetcontainerid="4e125a2f-d7ba-4708-be1b-defad85f8832">
+	
+<div data-widget-id="7f298811-f37a-4564-b8f4-de2e19da71a0" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget7f298811-f37a-4564-b8f4-de2e19da71a0" class="widget widgetGraphicLinks skin15 widgetOptionSet26 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid5 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row autoWidths center wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.facebook.com/fairoaksranchtx/" target="_self" aria-label="Facebook graphic"><img src="http://fairoaksranchtx.org/ImageRepository/Document?documentID=5292" class="graphicButtonLink" alt="Facebook" onmouseover="this.src='/ImageRepository/Document?documentID=5292'" onmouseout="this.src='/ImageRepository/Document?documentID=5292'" onfocus="this.src='/ImageRepository/Document?documentID=5292'" onblur="this.src='/ImageRepository/Document?documentID=5292'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://youtube.com/@cityoffairoaksranch2868?si=it8m95Z0pyZq8-y2" target="_self" aria-label="YouTube graphic"><img src="http://fairoaksranchtx.org/ImageRepository/Document?documentID=5303" class="graphicButtonLink" alt="YouTube" onmouseover="this.src='/ImageRepository/Document?documentID=5303'" onmouseout="this.src='/ImageRepository/Document?documentID=5303'" onfocus="this.src='/ImageRepository/Document?documentID=5303'" onblur="this.src='/ImageRepository/Document?documentID=5303'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://nextdoor.com/city/feed/?" target="_self" aria-label="Nextdoor graphic"><img src="http://fairoaksranchtx.org/ImageRepository/Document?documentID=5295" class="graphicButtonLink" alt="Nextdoor" onmouseover="this.src='/ImageRepository/Document?documentID=5295'" onmouseout="this.src='/ImageRepository/Document?documentID=5295'" onfocus="this.src='/ImageRepository/Document?documentID=5295'" onblur="this.src='/ImageRepository/Document?documentID=5295'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="30d4ce3c-ce9f-40cf-81ab-1ede1545f016">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id2c376283-a1e7-471d-91cc-c7955e2df118" style="height: 61px;" data-widgetcontainerid="2c376283-a1e7-471d-91cc-c7955e2df118">
+	
+	<div data-widget-id="6b1f5c64-a069-4592-8afc-ef0e159d4941" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink6b1f5c64-a069-4592-8afc-ef0e159d4941" class="widget widgetQuickLinks skin13 widgetOptionSet30 wide" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Quick Links">
+			<header class="widgetHeader" id="quickLinksHeader6b1f5c64-a069-4592-8afc-ef0e159d4941">
+		<div class="">
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid5 ">
+        <div class="row autoWidths center wide">
+				<div class="col col1 first ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://fairoaksranchtx.org/" target="_self">Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://fairoaksranchtx.org/sitemap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://fairoaksranchtx.org/directory.aspx" target="_self">Contact Us</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://fairoaksranchtx.org/Accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://fairoaksranchtx.org/site/copyright" target="_self">Privacy/Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</footer><!-- Powered By --><div data-cprole="structuralContainer" id="poweredByContainerTS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="poweredByTS">	<div id="ccc8e717ca-9b5d-4f14-b672-b841e6763864" data-containerid="c8e717ca-9b5d-4f14-b672-b841e6763864" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="0544a8e4-d6c9-46b3-a55c-06a0260ce843">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last ide03896b9-148a-42c7-b439-8ef049d96857" style="height: 64px;" data-widgetcontainerid="e03896b9-148a-42c7-b439-8ef049d96857">
+	
+ 
+	<div data-widget-id="c8ad3497-969c-4e9d-85cf-0c1d528e120b" data-modulename="customHtml" id="widgetCustomHtmlc8ad3497-969c-4e9d-85cf-0c1d528e120b" class="widget widgetCustomHtml skin16 narrow">
+	<div class="widgetBody pageStyles" id="widgetBodyc8ad3497-969c-4e9d-85cf-0c1d528e120b">
+		<div id="customHtmlc8ad3497-969c-4e9d-85cf-0c1d528e120b"><div><style>
+  /* CP icon */
+  .cpBylineIconTS {
+  }
+  /* CP Text */
+  .cpBylineTextTS,
+  .cpBylineTextTS a:link {
+  }
+
+  .cpBylineTS {
+  }
+  
+  .cpBylineIconTS {
+    fill: currentColor;
+    width: 39px;
+    height: 26px;
+    display: inline;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="widgetItem cpBylineTS">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="cpBylineIconTS">
+    <path class="c" style="color: rgba(0, 0, 0, 1);" d="M73.4,23.2h-19v16.7h19c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5h-19v28.4h5.5l11.3-11.7h2.2c11.9,0,21.6-9.7,21.6-21.6C95,33,85.3,23.2,73.4,23.2"></path>
+    <path class="p" style="color: rgba(175, 40, 46, 1);" d="M45.8,66.5H26.6C14.7,66.5,5,56.8,5,44.9C5,33,14.7,23.2,26.6,23.2h19.1v16.7H26.6c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h19.1V66.5z"></path>
+  </svg>
+  <span class="cpBylineTextTS">Government Websites by <a href="https://connect.civicplus.com/referral">CivicPlus®</a></span>
+</div>
+</div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '63',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!-- Fixed Nav Adjustment -->
+<script>
+  function getValueTS(elem, attr) {
+    const val = elem.css(attr);
+    if (val === undefined) return undefined;
+    const num = parseInt(val, 10);
+    if (num === NaN) return undefined;
+    return num;
+  }
+
+  function clampTS(number, min, max) {
+    return Math.min(Math.max(number, min), max);
+  }
+
+  function isPageEditingTS() {
+    return (
+      $("#doneEditing").length > 0 || // In live edit
+      typeof DesignCenter !== "undefined" // In theme manager
+    );
+  }
+
+  const bgColorRegexTS = /rgba\((\d+), (\d+), (\d+), (\d*\.?\d*)\)/;
+  function isTransparentTS(elem) {
+    const bg = elem.css('background-color');
+    if (typeof bg !== "string" || !bg.startsWith('rgba(')) return false;
+    const matchState = bg.match(bgColorRegexTS);
+    if (!matchState || matchState.length !== 5) return false;
+    const alpha = parseFloat(matchState[4], 10);
+    if (!(alpha >= 0 && alpha < 1)) return false;
+    return true;
+  }
+
+  function iterateLeftpads(cb) {
+    const containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (let i = 0; i < containersTS.length; i++) {
+      const containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-leftpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-leftpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  const anchor = $("#divToolbars");
+
+  // Outer banner padding (push banner down)
+  const outerSizingTS = $("#bannerContainerTS");
+  // Inner banner padding (push banner content down) - Transparent header OR on attaching headers
+  const innerSizingTS = $("#bannerSizingTS");
+  const bodyContainerTS = $("#bodyContainerTS");
+
+  const forceUnfixClassTS = "forceUnfixTS";
+
+  const fixedTopTS = $(".fixedTopTS");
+  const fixedBottomTS = $(".fixedBottomTS");
+  const fixedLeftTS = $(".fixedLeftTS");
+
+  var initialTopTS;
+  var topAttachTS;
+  if (fixedTopTS && fixedTopTS.length === 1) {
+    initialTopTS = getValueTS(fixedTopTS, 'top');
+    const attachment = fixedTopTS.attr('data-attach');
+    if (attachment) topAttachTS = $("#" + attachment);
+    if (!topAttachTS || topAttachTS.length !== 1) topAttachTS = undefined;
+  }
+
+  function resizeAdjustmentTS() {
+    const editing = isPageEditingTS();
+
+    // Fixed top script
+    (function () {
+      if (!fixedTopTS || fixedTopTS.length !== 1 || initialTopTS === undefined) return;
+
+      if (editing) {
+        fixedTopTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedTopTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      const topPosition = fixedTopTS.css('position');
+      if (topPosition === 'fixed') {
+        if (topAttachTS) {
+          scrollAdjustmentTS();
+        } else {
+          const anchorHeight = anchor.outerHeight() - 1;
+          fixedTopTS.css('top', anchorHeight + initialTopTS);
+        }
+      } else {
+        fixedTopTS.css('top', initialTopTS);
+      }
+
+      if (topPosition === 'fixed' || topPosition === 'absolute') {
+        // Bump the banner content down
+        if (isTransparentTS(fixedTopTS)) {
+          innerSizingTS.css('padding-top', initialTopTS + fixedTopTS.outerHeight() - 1);
+          outerSizingTS.css('padding-top', '');
+
+          try {
+            window.Pages.onResizeHandlersExecute();
+          } catch (e) { }
+        } else {
+          outerSizingTS.css('padding-top', fixedTopTS.outerHeight() - 1);
+          innerSizingTS.css('padding-top', '');
+        }
+      } else {
+        innerSizingTS.css('padding-top', '');
+        outerSizingTS.css('padding-top', '');
+      }
+    })();
+
+    // Fixed bottom script
+    (function () {
+      if (!fixedBottomTS || fixedBottomTS.length === 0) return;
+
+      // If the widget has gone narrow, force unfix
+      if (editing || fixedBottomTS.outerHeight() > 200) {
+        fixedBottomTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedBottomTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedBottomTS.css('position') === 'fixed') {
+        bodyContainerTS.css('padding-bottom', fixedBottomTS.outerHeight());
+      } else {
+        bodyContainerTS.css('padding-bottom', '');
+      }
+    })();
+
+    // Fixed left script
+    (function () {
+      if (!fixedLeftTS || fixedLeftTS.length === 0) return;
+
+      if (editing) {
+        fixedLeftTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedLeftTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedLeftTS.css('position') === 'fixed') {
+        const anchorHeight = anchor.outerHeight() - 1;
+        fixedLeftTS.css('top', anchorHeight);
+        const leftBoundingTS = fixedLeftTS[0].getBoundingClientRect();
+        iterateLeftpads(function (containerTS) {
+          const containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.left <= leftBoundingTS.right) {
+            $(containerTS).css('padding-left', leftBoundingTS.width + 16);
+          }
+        });
+      } else {
+        fixedLeftTS.css('top', '');
+        iterateLeftpads(function (containerTS) {
+          $(containerTS).css('padding-left', '');
+        });
+      }
+    })();
+  }
+
+  function scrollAdjustmentTS() {
+    if (!fixedTopTS || fixedTopTS.length !== 1 || !topAttachTS || topAttachTS.length !== 1) return;
+    const topPosition = fixedTopTS.css('position');
+    if (topPosition === 'fixed' || topPosition === 'absolute') {
+      const anchorBounding = anchor[0].getBoundingClientRect();
+      const attachBounding = topAttachTS[0].getBoundingClientRect();
+      const scrollTop = $(window).scrollTop();
+
+      fixedTopTS.css('top', Math.max(anchorBounding.bottom - 1, attachBounding.bottom));
+    } else {
+      fixedTopTS.css('top', initialTopTS);
+    }
+  }
+
+  $(window).load(function () {
+    setTimeout(function () {
+      resizeAdjustmentTS();
+    }, 350);
+
+    $(window).scroll(function () {
+      scrollAdjustmentTS();
+    });
+
+    var adjustTimeoutTS;
+    $(window).resize(function () {
+      clearTimeout(adjustTimeoutTS);
+      adjustTimeoutTS = setTimeout(function () {
+        resizeAdjustmentTS();
+      }, 350);
+    });
+
+    $.when(window.Pages.angularToolbarComplete).done(function () {
+      resizeAdjustmentTS();
+    });
+  });
+</script>
+<!-- End Fixed Nav Adjustment -->
+
+<!-- Monsido script requested in 818607 -->
+<script type="text/javascript">
+    window._monsido = window._monsido || {
+        token: "iVBquhmkgFPqJgNqWFWALg",
+        statistics: {
+            enabled: true,
+            cookieLessTracking: false,
+            documentTracking: {
+                enabled: true,
+                documentCls: "monsido_download",
+                documentIgnoreCls: "monsido_ignore_download",
+                documentExt: [],
+            },
+        },
+        heatmap: {
+            enabled: true,
+        },
+        pageCorrect: {
+            enabled: true,
+        },
+        pageAssistV2: {
+            enabled: true,
+            theme: "light",
+            mainColor: "#783CE2",
+            textColor: "#ffffff",
+            linkColor: "#783CE2",
+            buttonHoverColor: "#783CE2",
+            mainDarkColor: "#052942",
+            textDarkColor: "#ffffff",
+            linkColorDark: "#FFCF4B",
+            buttonHoverDarkColor: "#FFCF4B",
+            greeting: "Discover your personalization options",
+            direction: "leftbottom",
+            coordinates: "undefined undefined undefined undefined",
+            iconShape: "circle",
+            title: "Personalization Options",
+            titleText: "Welcome to PageAssist&#8482; toolbar! Adjust the options below to cater the website to your accessibility needs.",
+            iconPictureUrl: "logo",
+            logoPictureUrl: "",
+            logoPictureBase64: "",
+            languages: [""],
+            defaultLanguage: "",
+            skipTo: false,
+            alwaysOnTop: false,
+        },
+    };
+</script>
+<script type="text/javascript" async="" src="https://app-script.monsido.com/v2/monsido-script.js"></script>
+<!-- End Monsido script -->
+
+<!----------Google Translate (Mobile Friendly)--------->
+<style>#google-translate-container {float: right;padding: 3px 5px 0px 0px;}.goog-te-combo,.goog-te-banner *,.goog-te-ftab *,.goog-te-menu *,.goog-te-menu2 *,.goog-te-balloon * {font-family: arial;font-size: 10pt;background-image: url("https://theme.zdassets.com/theme_assets/958586/bae8aa24db8d43595871692a9d259186f2db3fb4.png");background-position: 3px 4px;background-size: 22px;background-repeat: no-repeat;text-indent: 20px;background-color: #fff;color: #000 !important;}.goog-logo-link {display: none !important;}.goog-te-gadget {color: transparent !important;}.goog-te-gadget .goog-te-combo {margin: 2px 0 !important;border-radius: 15px !important;}.goog-te-combo{border: 1px solid !important;border-color: #bcc9d7 #96a3b1 #96a3b1 #bcc9d7 !important;border-radius: 0 !important;height:32px; !important;padding: 0 1px 0 .25rem !important;}
+
+#launcher-wrapper {bottom: 50px !important;}
+
+</style>
+
+<div id="google-translate-container">
+
+<div id="google_translate_element" style="position: fixed; bottom: 0px; right: 20px; z-index: 5;"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo" aria-label="google translate languages"><option value="">Select Language</option><option value="ab">Abkhaz</option><option value="ace">Acehnese</option><option value="ach">Acholi</option><option value="aa">Afar</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="alz">Alur</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="as">Assamese</option><option value="av">Avar</option><option value="awa">Awadhi</option><option value="ay">Aymara</option><option value="az">Azerbaijani</option><option value="ban">Balinese</option><option value="bal">Baluchi</option><option value="bm">Bambara</option><option value="bci">Baoulé</option><option value="ba">Bashkir</option><option value="eu">Basque</option><option value="btx">Batak Karo</option><option value="bts">Batak Simalungun</option><option value="bbc">Batak Toba</option><option value="be">Belarusian</option><option value="bem">Bemba</option><option value="bn">Bengali</option><option value="bew">Betawi</option><option value="bho">Bhojpuri</option><option value="bik">Bikol</option><option value="bs">Bosnian</option><option value="br">Breton</option><option value="bg">Bulgarian</option><option value="bua">Buryat</option><option value="yue">Cantonese</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ch">Chamorro</option><option value="ce">Chechen</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="chk">Chuukese</option><option value="cv">Chuvash</option><option value="co">Corsican</option><option value="crh">Crimean Tatar (Cyrillic)</option><option value="crh-Latn">Crimean Tatar (Latin)</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="fa-AF">Dari</option><option value="dv">Dhivehi</option><option value="din">Dinka</option><option value="doi">Dogri</option><option value="dov">Dombe</option><option value="nl">Dutch</option><option value="dyu">Dyula</option><option value="dz">Dzongkha</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="ee">Ewe</option><option value="fo">Faroese</option><option value="fj">Fijian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fon">Fon</option><option value="fr">French</option><option value="fr-CA">French (Canada)</option><option value="fy">Frisian</option><option value="fur">Friulian</option><option value="ff">Fulani</option><option value="gaa">Ga</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gn">Guarani</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="cnh">Hakha Chin</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hil">Hiligaynon</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="hrx">Hunsrik</option><option value="iba">Iban</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="ilo">Ilocano</option><option value="id">Indonesian</option><option value="iu-Latn">Inuktut (Latin)</option><option value="iu">Inuktut (Syllabics)</option><option value="ga">Irish</option><option value="it">Italian</option><option value="jam">Jamaican Patois</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kac">Jingpo</option><option value="kl">Kalaallisut</option><option value="kn">Kannada</option><option value="kr">Kanuri</option><option value="pam">Kapampangan</option><option value="kk">Kazakh</option><option value="kha">Khasi</option><option value="km">Khmer</option><option value="cgg">Kiga</option><option value="kg">Kikongo</option><option value="rw">Kinyarwanda</option><option value="ktu">Kituba</option><option value="trp">Kokborok</option><option value="kv">Komi</option><option value="gom">Konkani</option><option value="ko">Korean</option><option value="kri">Krio</option><option value="ku">Kurdish (Kurmanji)</option><option value="ckb">Kurdish (Sorani)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="ltg">Latgalian</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lij">Ligurian</option><option value="li">Limburgish</option><option value="ln">Lingala</option><option value="lt">Lithuanian</option><option value="lmo">Lombard</option><option value="lg">Luganda</option><option value="luo">Luo</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mad">Madurese</option><option value="mai">Maithili</option><option value="mak">Makassar</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ms-Arab">Malay (Jawi)</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mam">Mam</option><option value="gv">Manx</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mh">Marshallese</option><option value="mwr">Marwadi</option><option value="mfe">Mauritian Creole</option><option value="chm">Meadow Mari</option><option value="mni-Mtei">Meiteilon (Manipuri)</option><option value="min">Minang</option><option value="lus">Mizo</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="nhe">Nahuatl (Eastern Huasteca)</option><option value="ndc-ZW">Ndau</option><option value="nr">Ndebele (South)</option><option value="new">Nepalbhasa (Newari)</option><option value="ne">Nepali</option><option value="bm-Nkoo">NKo</option><option value="no">Norwegian</option><option value="nus">Nuer</option><option value="oc">Occitan</option><option value="or">Odia (Oriya)</option><option value="om">Oromo</option><option value="os">Ossetian</option><option value="pag">Pangasinan</option><option value="pap">Papiamento</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese (Brazil)</option><option value="pt-PT">Portuguese (Portugal)</option><option value="pa">Punjabi (Gurmukhi)</option><option value="pa-Arab">Punjabi (Shahmukhi)</option><option value="qu">Quechua</option><option value="kek">Qʼeqchiʼ</option><option value="rom">Romani</option><option value="ro">Romanian</option><option value="rn">Rundi</option><option value="ru">Russian</option><option value="se">Sami (North)</option><option value="sm">Samoan</option><option value="sg">Sango</option><option value="sa">Sanskrit</option><option value="sat-Latn">Santali (Latin)</option><option value="sat">Santali (Ol Chiki)</option><option value="gd">Scots Gaelic</option><option value="nso">Sepedi</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="crs">Seychellois Creole</option><option value="shn">Shan</option><option value="sn">Shona</option><option value="scn">Sicilian</option><option value="szl">Silesian</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sus">Susu</option><option value="sw">Swahili</option><option value="ss">Swati</option><option value="sv">Swedish</option><option value="ty">Tahitian</option><option value="tg">Tajik</option><option value="ber-Latn">Tamazight</option><option value="ber">Tamazight (Tifinagh)</option><option value="ta">Tamil</option><option value="tt">Tatar</option><option value="te">Telugu</option><option value="tet">Tetum</option><option value="th">Thai</option><option value="bo">Tibetan</option><option value="ti">Tigrinya</option><option value="tiv">Tiv</option><option value="tpi">Tok Pisin</option><option value="to">Tongan</option><option value="lua">Tshiluba</option><option value="ts">Tsonga</option><option value="tn">Tswana</option><option value="tcy">Tulu</option><option value="tum">Tumbuka</option><option value="tr">Turkish</option><option value="tk">Turkmen</option><option value="tyv">Tuvan</option><option value="ak">Twi</option><option value="udm">Udmurt</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="ug">Uyghur</option><option value="uz">Uzbek</option><option value="ve">Venda</option><option value="vec">Venetian</option><option value="vi">Vietnamese</option><option value="war">Waray</option><option value="cy">Welsh</option><option value="wo">Wolof</option><option value="xh">Xhosa</option><option value="sah">Yakut</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="yua">Yucatec Maya</option><option value="zap">Zapotec</option><option value="zu">Zulu</option></select></div>Powered by <span style="white-space:nowrap"><a class="VIpgJd-ZVi9od-l4eHX-hSRGPd" href="https://translate.google.com" target="_blank" rel="noopener"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate">Translate</a></span></div></div>
+
+</div>
+
+<script>
+
+function googleTranslateElementInit() {
+var el = document.getElementById("google_translate_element");
+if (el && el.innerHTML.trim() !== "") {
+    return;
+}
+
+
+new google.translate.TranslateElement({ pageLanguage: "en" }, "google_translate_element");
+
+// begin accessibility compliance
+
+$('img.goog-te-gadget-icon').attr('alt','Google Translate');
+
+$('div#goog-gt-tt div.logo img').attr('alt','translate');
+
+$('div#goog-gt-tt .original-text').css('text-align','left');
+
+$('.goog-te-gadget-simple .goog-te-menu-value span').css('color','#000000');
+
+$('.goog-te-combo').attr('aria-label','google translate languages');
+
+$('svg.goog-te-spinner').attr('title','Google Translate Spinner');
+
+$('.goog-te-gadget-simple .goog-te-menu-value span').css('color','#000000');
+
+}
+
+$(function() {
+
+$.getScript("//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit");
+
+});
+
+</script>
+
+
+
+<!--------------End Google Translate----------------->
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Lora:500,500italic,600,600italic,700,700italic,italic,regular|Volkhov:700,700italic,italic,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu27" class="contentTop mainNavMegaMenu megaMenuContainer pageID_27 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 15.2px; width: 1234.6px; top: 274px;">	<div id="cca9431b02-eefa-4636-98a4-ef93b2e6cdc4" data-containerid="a9431b02-eefa-4636-98a4-ef93b2e6cdc4" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu307" class="contentTop mainNavMegaMenu megaMenuContainer pageID_307 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 15.2px; width: 1234.6px; top: 274px;">	<div id="ccd6b19ef6-87f2-4290-b49f-f363f72b1fa5" data-containerid="d6b19ef6-87f2-4290-b49f-f363f72b1fa5" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu332" class="contentTop mainNavMegaMenu megaMenuContainer pageID_332 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 15.2px; width: 1234.6px; top: 274px;">	<div id="cc004258ae-ca53-47c3-b4d2-71c43d5e3aa6" data-containerid="004258ae-ca53-47c3-b4d2-71c43d5e3aa6" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu362" class="contentTop mainNavMegaMenu megaMenuContainer pageID_362 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 15.2px; width: 1234.6px; top: 274px;">	<div id="cc60c935f0-d296-44f8-a924-52d7d0f8721a" data-containerid="60c935f0-d296-44f8-a924-52d7d0f8721a" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr"><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""><div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr">Original text</div></div><div class="VIpgJd-yAWNEb-hvhgNd-k77Iif"><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Rate this translation</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Your feedback will be used to help improve Google Translate</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Good translation" aria-label="Good translation" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Poor translation" aria-label="Poor translation" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b>&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div><div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><div id="bannerSlideshowControls_banner1" class="bannerSlideshowControlsNew none " style="display:none">
+			<a id="arrowPrev_banner1" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner1" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div><button class="mon-logo-container mon-light-theme" mon-position="leftbottom" aria-labelledby="mon-pa-pageassist-label mon-pa-logo-label" id="monsido-pageassist" aria-expanded="false"><span id="mon-pa-pageassist-label" class="mon-pa-efsc">PageAssist</span>
+        <span id="mon-pa-logo-label" class="mon-logo-text-content">Discover your personalization options</span>
+        <span class="mon-logo-image-wrapper-content">
+            <span class="mon-logo-image-wrapper ">
+                <span class="mon-pageassist-close-img mon-pa-efsc">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><path class="a mon-pa-efsc" d="M10.343,87.5l4.264-4.264a1.341,1.341,0,0,0,0-1.9l-.948-.948a1.341,1.341,0,0,0-1.9,0L7.5,84.657,3.236,80.392a1.341,1.341,0,0,0-1.9,0l-.948.948a1.341,1.341,0,0,0,0,1.9L4.657,87.5.392,91.764a1.341,1.341,0,0,0,0,1.9l.948.948a1.341,1.341,0,0,0,1.9,0L7.5,90.343l4.264,4.264a1.341,1.341,0,0,0,1.9,0l.948-.948a1.341,1.341,0,0,0,0-1.9Z" transform="translate(0 -80)"></path></svg>
+                </span>
+                <span class="mon-pageassist-check-img mon-pa-efsc">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7.457" viewBox="0 0 10 7.457"><path class="a mon-pa-efsc" d="M3.4,72.409l-3.25-3.25a.5.5,0,0,1,0-.707l.707-.707a.5.5,0,0,1,.707,0L3.75,69.934,8.44,65.245a.5.5,0,0,1,.707,0l.707.707a.5.5,0,0,1,0,.707L4.1,72.409a.5.5,0,0,1-.707,0Z" transform="translate(0 -65.098)"></path></svg>
+                </span>
+                <span class="mon-logo-image-bg">
+                    <img class="mon-logo-image" src="//cdn.monsido.com/page-assist/v2/assets/img/uaccess.svg" alt="PageAssist Personalization Options">
+                </span>
+                <img class="mon-spinner mon-pa-efsc" src="//cdn.monsido.com/page-assist/v2/assets/img/default-spinner.png" alt="PageAssist Loading">
+            </span>
+        </span>
+        <style type="text/css">
+    
+    @keyframes monLogoRight {
+        from {
+            right: -60px !important;
+        }
+        to {
+            right: 20px !important;
+        }
+    }
+    @keyframes monLogoLeft {
+        from {
+            left: -60px !important;
+        }
+        to {
+            left: 20px !important;
+        }
+    }
+    @keyframes monLogoBottom {
+        from {
+            bottom: -60px !important;
+        }
+        to {
+            bottom: 5px !important;
+        }
+    }
+    @keyframes monLogoTop {
+        from {
+            top: -60px !important;
+        }
+        to {
+            top: 5px !important;
+        }
+    }
+    @keyframes monSpinner {
+        from {
+            transform: rotate(0);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container {
+        background: transparent !important;
+        border: none !important;
+        box-sizing: content-box !important;
+        font-family: 'Roboto', Arial, sans-serif !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        cursor: pointer !important;
+        position: fixed !important;
+        bottom: 3px !important;
+        z-index: 2147483640 !important;
+        text-transform: none !important;
+        transition: right 0.2s ease;
+        animation: monLogoLeft 0.3s normal forwards;
+        align-items: center !important;
+        display: flex !important;
+        outline: none !important;
+        padding: 10px !important;
+        margin: 0 !important;
+        max-width: 200px !important;
+        white-space: normal !important;
+        height: auto !important;
+        width: auto !important;
+    }
+
+    .mon-logo-container {
+        --mon-pa-distance-from-popup: 3;
+    }
+
+    .mon-pa-button-border {
+        border: 3px solid var(--mon-pa-button-border-color);
+    }
+
+    #mon-pa-pageassist-label {
+        border: 0 !important;
+        clip: rect(1px, 1px, 1px, 1px) !important;
+        clip-path: inset(50%) !important;
+        height: 1px !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: absolute !important;
+        width: 1px !important;
+        white-space: nowrap !important;
+    }
+
+    body.monsido-toolbar-body-container > mon-pa-dashboard + .mon-logo-container {
+        animation:unset;
+        transition:unset;
+    }
+
+    .mon-logo-container[mon-loading] img.mon-spinner {
+        display: block !important;
+        margin: auto !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]):hover {
+        background-color:#783CE2 !important;
+        border-radius: 3px !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]).mon-dark-theme:hover {
+        background-color: #052942 !important;
+        border-radius: 3px !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    .mon-logo-image-wrapper img.mon-spinner {
+        display: none !important;
+        animation-name:monSpinner;
+        animation-duration:3s;
+        animation-iteration-count:infinite;
+        animation-timing-function:linear;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content {
+        order:0 !important;
+    }
+
+    body.monsido-toolbar-body-container>.mon-logo-container[mon-position="right"] .mon-logo-image-wrapper-content,
+    body.monsido-toolbar-body-container>.mon-logo-container[mon-position="righttop"] .mon-logo-image-wrapper-content,
+    body.monsido-toolbar-body-container>.mon-logo-container[mon-position="rightbottom"] .mon-logo-image-wrapper-content {
+        order:1 !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper .mon-logo-image-bg {
+        background: #783CE2 !important;
+        display: none !important;
+        width: 36px !important;
+        height: 36px !important;
+        margin: auto !important;
+        border-radius: 50% !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-image-wrapper .mon-logo-image-bg {
+        background-color: #052942 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper .mon-logo-image-bg {
+        display: block !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper .mon-logo-image-bg img.mon-logo-image {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"])[mon-loading].mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img,
+    body.monsido-toolbar-body-container .mon-logo-container[mon-loading] .mon-logo-image-wrapper .mon-logo-image-bg,
+    body.monsido-toolbar-body-container .mon-logo-container[mon-loading].mon-dark-theme .mon-logo-image-wrapper .mon-pageassist-check-img,
+    body.monsido-toolbar-body-container .mon-logo-container[mon-loading].mon-dark-theme .mon-logo-image-wrapper .mon-logo-image-bg {
+        display: none !important;
+    }
+
+    
+    body.monsido-toolbar-body-container>.mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        display:block !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color: #783CE2 !important;
+        border-radius: 50% !important;
+        box-sizing: border-box !important;
+        padding: 0 !important;
+        width: 60px !important;
+        height: 60px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-rounded-box .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        border-radius: 3px !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:focus .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        box-shadow: 0px 0px 1px 5px #1c86db !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:hover:not([aria-expanded="true"]) .mon-logo-image-wrapper-content .mon-logo-image-wrapper{
+        box-shadow: 0px 0px 1px 2px #ffffff !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img,
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img {
+        display: none !important;
+        margin: 4px 0 0 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img svg,
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img svg {
+        width: 15px !important;
+        height: 15px !important;
+        vertical-align: unset !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img svg .a,
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img svg .a {
+        fill: #ffffff !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#052942 !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#052942 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img svg .a,
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img svg .a {
+        fill: #ffffff !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-close-img  {
+        display: block !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#783CE2 !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"].mon-dark-theme .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#052942 !important;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper .mon-pageassist-check-img,
+    body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper .mon-logo-image-bg {
+        display: none !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]).mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper .mon-pageassist-check-img  {
+        display: block !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#783CE2 !important;
+    }
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme.mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+        background-color:#052942 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-styles-applied .mon-logo-image-wrapper .mon-pageassist-close-img,
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-styles-applied .mon-logo-image-wrapper .mon-logo-image-bg {
+        display: none !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-text-content {
+        display:none !important;
+        letter-spacing: normal !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]):hover .mon-logo-text-content {
+        display: block !important;
+        text-align: left !important;
+        line-height: 1.3 !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container .mon-logo-text-content {
+        order:1 !important;
+        padding-right:20px !important;
+        padding-left:10px !important;
+        display:none !important;
+        color:#ffffff !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-text-content {
+        color:#ffffff !important;
+    }
+
+    
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='centertop'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='centerbottom'] {
+        animation: monLogoBottom 0.3s normal forwards;
+        left: 50% !important;
+        margin-left: -40px !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='centerbottom'] {
+        animation: monLogoBottom 0.3s normal forwards;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='centertop'] {
+        top: 5px !important;
+        animation: monLogoTop 0.3s normal forwards;
+        bottom: auto !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='lefttop'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='righttop'] {
+        top: 5px !important;
+        bottom: auto !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='right'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='left'] {
+        bottom: 50% !important;
+        margin-top: 40px !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='left'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='leftbottom'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='lefttop'] {
+        left: 20px !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='right'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='rightbottom'],
+    body.monsido-toolbar-body-container .mon-logo-container[mon-position='righttop'] {
+        animation: monLogoRight 0.3s normal forwards;
+        right: 20px !important;
+    }
+
+    
+    @media (max-height: 920px) {
+        body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] {
+            display: none !important;
+        }
+    }
+
+    @media print {
+        body.monsido-toolbar-body-container .mon-logo-container {
+            display: none !important;
+        }
+    }
+
+    
+    button.skip-to-pageassist {
+        left: -999px !important;
+        position: fixed !important;
+        top: auto !important;
+        width: 1px !important;
+        height: 1px !important;
+        overflow: hidden !important;
+        z-index: -999 !important;
+    }
+
+    button.skip-to-pageassist:focus, button.skip-to-pageassist:active {
+        color: #fff !important;
+        background-color: #000 !important;
+        top: 4px !important;
+        left: 4px !important;
+        right: auto !important;
+        height: auto !important;
+        width: auto !important;
+        overflow: auto !important;
+        padding: 5px !important;
+        text-align: center !important;
+        font-size: 1.2em !important;
+        z-index: 9999999999999999999999999999 !important;
+    }
+
+    
+        body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            color: #ffffff !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"] .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            color: #ffffff !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container:not([aria-expanded="true"]):hover {
+            background-color: #783CE2 !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container:hover .mon-logo-image-wrapper .mon-logo-image-bg {
+            background-color: #783CE2 !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container .mon-logo-image-wrapper .mon-logo-image-bg {
+            background-color: #783CE2 !important;
+        }
+    
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container[aria-expanded="true"].mon-dark-theme .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme.mon-pa-styles-applied .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            box-shadow: 0px 0px 6px #00000029;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:hover .mon-logo-image-wrapper-content .mon-logo-image-wrapper {
+            background-color: #783CE2 !important;
+            color: #ffffff !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme:not([aria-expanded="true"]):hover {
+            background-color: #783CE2 !important;
+        }
+
+        body.monsido-toolbar-body-container .mon-logo-container.mon-dark-theme .mon-logo-image-wrapper .mon-logo-image-bg {
+            background-color: #783CE2 !important;
+        }
+    
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-coordinates-bottom {
+        animation: monLogoBottom 0.3s normal forwards;
+        bottom: var(--mon-pa-button-bottom) !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-coordinates-top {
+        top: var(--mon-pa-button-top) !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-coordinates-left {
+        left: var(--mon-pa-button-left) !important;
+    }
+
+    body.monsido-toolbar-body-container .mon-logo-container.mon-pa-coordinates-right {
+        right: var(--mon-pa-button-right) !important;
+    }
+    
+
+</style></button></body></html>
