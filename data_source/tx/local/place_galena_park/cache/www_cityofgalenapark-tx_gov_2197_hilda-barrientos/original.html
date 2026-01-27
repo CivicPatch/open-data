@@ -1,0 +1,1559 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n3-active wf-muli-n4-active wf-muli-i4-active wf-muli-n7-active wf-active has-webFonts"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:700,regular|" media="all"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K18LPM1FYQ&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61q0h2"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-K18LPM1FYQ';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	
+	<meta name="category0" content="Home">
+<meta name="category1" content="Government">
+<meta name="category2" content="City Council">
+<meta name="category3" content="Hilda Barrientos">
+
+	
+	<meta name="theme-color" content="#000a39">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>Hilda Barrientos, Commissioner Position 4&nbsp; | Galena Park, TX</title>
+
+		<meta name="description" content="">
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '390px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/-1802734704.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style></head>
+<body class="wide cpTextResizeOn doneLoading"><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="http://www.cityofgalenapark-tx.gov/Common/images/ajax-loader.gif" alt="Loading" title="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks">
+<a href="http://www.cityofgalenapark-tx.gov/2197/Hilda-Barrientos#cc85856225-6f19-472f-900a-e19d4ec5814c" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="1">
+    <input type="hidden" id="hdnContentCollectionID" value="75a5ab15-0625-4441-bd77-2ced3c041a70">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="1">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID">
+    <input type="hidden" id="pagePageID" value="2197">
+
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+
+
+
+<!-- Begin Signed Out Bar -->
+<div class="cpToolbar user public" style="z-index: 1;">
+    <div class="inner selfClear">
+        <p class="dropdown"><a href="http://www.cityofgalenapark-tx.gov/MyAccount/ProfileCreate" role="link" class="myConnections" id="signedOutToolbarCreateProfileButton">Create a Website Account</a> <span class="welcomeMessage">- Manage notification subscriptions, save form progress and more. &nbsp;&nbsp;</span></p>
+        <ul class="nav secondary">
+	        <li><a href="http://www.cityofgalenapark-tx.gov/MyAccount" role="link" class="button" id="loggedOutToolbarSignInButton"><span>Website Sign In</span></a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#signedOutToolbarCreateProfileButton').keypress(function (e) { if (e.which === 0) return; $(this).click(); });
+        $('#signedOutToolbarCreateProfileButton').click(function (event) {
+        	event.preventDefault();
+        	window.location.href = '/MyAccount/ProfileCreate?from=url&url=/&dn=' + window.location.origin;
+        });
+
+			
+				$('#loggedOutToolbarSignInButton').click(function (event) {
+					event.preventDefault();
+					window.location.href = '/MyAccount/?from=url&url=' + encodeURIComponent(window.location.href.replace(window.location.origin, '')) + '&dn=' + window.location.host;
+				});
+			
+
+		if ('False' == 'True') {
+            $('#loggedOutToolbarSignInButton').hide();
+		}
+    })
+</script>
+<!-- End Signed Out Bar -->
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 35px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="structuralContainer1">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="structuralContainer2" style="min-height: 173px;">
+<div class="siteWrap"><header class="siteHeader"><h1 data-cprole="banner" id="banner2" class="logo empty">
+
+
+
+
+				<a id="banner2-1" style="			display: block; text-align: left;
+" class="bannerObject" href="http://www.cityofgalenapark-tx.gov/" target="_self"><img alt="Galena Park Texas " class="bannerObject" height="83" src="http://www.cityofgalenapark-tx.gov/ImageRepository/Document?documentID=49" width="399"></a>
+</h1><aside data-cprole="contentContainer" id="contentContainer1" class="topLinks">	<div id="cc99a3de58-2799-4484-b0c2-9a71050a674b" data-containerid="99a3de58-2799-4484-b0c2-9a71050a674b" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="1">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col16 first" style="height: auto;" data-widgetcontainerid="d3caf9e2-0ea4-43e2-ba5d-588574d8e488">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col16 first last ida28e63cb-c420-414b-bb62-b2bf6b8b6236" style="height: 26px; min-height: 0px;" data-widgetcontainerid="a28e63cb-c420-414b-bb62-b2bf6b8b6236">
+	
+
+<div class="widget widgetSpacer" id="2046107c-1f0d-4566-8840-ea35edd34d99" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="c002e824-b6e0-487d-ba41-5d6978c8aa88">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id3ddcb41a-4585-473f-bc75-72e51508c349" style="height: 26px; min-height: 0px;" data-widgetcontainerid="3ddcb41a-4585-473f-bc75-72e51508c349">
+	
+<div data-widget-id="b077147f-6537-4387-a555-40d0456684b8" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetb077147f-6537-4387-a555-40d0456684b8" class="widget widgetGraphicLinks skin7 widgetOptionSet35 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="http://www.cityofgalenapark-tx.gov/twitter" target="_self" aria-label="Twitter graphic"><img src="http://www.cityofgalenapark-tx.gov/ImageRepository/Document?documentID=47" class="graphicButtonLink" alt="Twitter" onmouseover="this.src='/ImageRepository/Document?documentID=48'" onmouseout="this.src='/ImageRepository/Document?documentID=47'" onfocus="this.src='/ImageRepository/Document?documentID=48'" onblur="this.src='/ImageRepository/Document?documentID=47'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.facebook.com/CityofGalenaPark/" target="_blank" aria-label="Facebook Opens in new window" rel="noopener"><img src="http://www.cityofgalenapark-tx.gov/ImageRepository/Document?documentID=45" class="graphicButtonLink" alt="Facebook Opens in new window" onmouseover="this.src='/ImageRepository/Document?documentID=46'" onmouseout="this.src='/ImageRepository/Document?documentID=45'" onfocus="this.src='/ImageRepository/Document?documentID=46'" onblur="this.src='/ImageRepository/Document?documentID=45'"> </a></li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="36735b28-b6e3-4c8e-8c4a-dd699bbb01a6">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id2b58b29d-cf23-4c46-aef7-a3e461b6b5f0" style="height: 26px; min-height: 0px;" data-widgetcontainerid="2b58b29d-cf23-4c46-aef7-a3e461b6b5f0">
+	
+
+<div class="widget widgetSpacer" id="13220bdb-9632-49cd-a47d-efe6f63fad9f" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col2" style="height: auto;" data-widgetcontainerid="72ca3716-9c27-4278-a78b-a3e460405fc0">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col2 first last id015a306e-fe51-4901-ad66-5fcb2e799694" style="height: 26px; min-height: 0px;" data-widgetcontainerid="015a306e-fe51-4901-ad66-5fcb2e799694">
+	
+<div data-widget-id="7db169a9-af3a-4965-9637-d16da560f5eb" data-widget-controller-path="/Layout/WidgetShare">
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				setWidgetServiceClicking($("#widgetShareHeader7db169a9-af3a-4965-9637-d16da560f5eb"), true, function () {
+					var $widgetBody = $('#widgetShareBody7db169a9-af3a-4965-9637-d16da560f5eb');
+
+					if ($widgetBody.is(':visible')) {
+						var menuItems = $('.widgetItem a', $widgetBody);
+
+						$(menuItems[0]).focus();
+
+						$('.widgetItem', $widgetBody).unbind("keydown").bind("keydown", function (e) {
+
+							if (e.which === 9) {
+								var index = menuItems.index(e.target);
+
+								if ((index === 0 && e.shiftKey) || (index === (menuItems.length - 1) && !e.shiftKey)) {
+									$("#widgetShareHeader7db169a9-af3a-4965-9637-d16da560f5eb").trigger('click').focus();
+								}
+							}
+			});
+					} else {
+						$('.widgetItem', $widgetBody).unbind("keydown");
+					}
+				});
+			});
+		</script>
+
+	<section id="widgetShare7db169a9-af3a-4965-9637-d16da560f5eb" class="widget widgetShare skin1 widgetOptionSet6 flyOutParent wide" aria-label="Share">
+			<header id="widgetShareHeader7db169a9-af3a-4965-9637-d16da560f5eb" class="widgetHeader" tabindex="0" role="button" aria-haspopup="true">
+				<h3><img alt="Share" class="imageHover" data-hover="/ImageRepository/Document?documentID=53" data-image="/ImageRepository/Document?documentID=52" src="http://www.cityofgalenapark-tx.gov/ImageRepository/Document?documentID=52"></h3>
+	</header>
+    
+
+	</section>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4 last" style="height: auto;" data-widgetcontainerid="757de31d-ab8a-4315-9d25-9f257bce6f50">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last idccc06041-a6f9-41f9-9fbc-b520940e615c" style="height: 26px; min-height: 0px;" data-widgetcontainerid="ccc06041-a6f9-41f9-9fbc-b520940e615c">
+	
+<div data-widget-id="287d9794-b563-4457-900c-f67b94c71059" data-widget-controller-path="/Layout/WidgetSiteTools">
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				setWidgetServiceClicking($("#widgetSiteToolsHeader287d9794-b563-4457-900c-f67b94c71059"), true, function () {
+					var $widgetBody = $('#widgetSiteToolsBody287d9794-b563-4457-900c-f67b94c71059');
+
+					if ($widgetBody.is(':visible')) {
+						var menuItems = $('.widgetItem a', $widgetBody);
+
+						$(menuItems[0]).focus();
+
+						$('.widgetItem', $widgetBody).unbind("keydown").bind("keydown", function (e) {
+
+							if (e.which === 9) {
+								var index = menuItems.index(e.target);
+
+								if ((index === 0 && e.shiftKey) || (index === (menuItems.length - 1) && !e.shiftKey)) {
+									$("#widgetSiteToolsHeader287d9794-b563-4457-900c-f67b94c71059").trigger('click').focus();
+								}
+							}
+						});
+					} else {
+						$('.widgetItem', $widgetBody).unbind("keydown");
+					}
+				});
+			});
+		</script>
+
+	<section id="widgetSiteTools287d9794-b563-4457-900c-f67b94c71059" class="widget widgetSiteTools skin1 widgetOptionSet7 flyOutParent wide" aria-label="Site Tools">
+				<header id="widgetSiteToolsHeader287d9794-b563-4457-900c-f67b94c71059" class="widgetHeader" tabindex="0" role="button" aria-haspopup="true">
+			<h3><img alt="Site Tools" class="imageHover" data-hover="/ImageRepository/Document?documentID=55" data-image="/ImageRepository/Document?documentID=54" src="http://www.cityofgalenapark-tx.gov/ImageRepository/Document?documentID=54"></h3>
+		</header>
+	
+
+	</section>
+
+
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem27" class="topMenuItem" role="none" data-pageid="27" data-displaymegamenu="True" style="width: 21.7652%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem1 " href="http://www.cityofgalenapark-tx.gov/27/Government" target="_self" style="font-size: 20px;"><span style="display: inline;">   Government </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem64" class="topMenuItem" role="none" data-pageid="64" data-displaymegamenu="True" style="width: 18.7677%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavServices" class="navMainItem mainNavItem mainNavItem2 " href="http://www.cityofgalenapark-tx.gov/64/Services" target="_self" style="font-size: 20px;"><span style="display: inline;">   Services </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem31" class="topMenuItem" role="none" data-pageid="31" data-displaymegamenu="True" style="width: 21.0991%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavCommunity" class="navMainItem mainNavItem mainNavItem3 " href="http://www.cityofgalenapark-tx.gov/31/Community" target="_self" style="font-size: 20px;"><span style="display: inline;">   Community </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem35" class="topMenuItem" role="none" data-pageid="35" data-displaymegamenu="True" style="width: 19.3505%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavBusiness" class="navMainItem mainNavItem mainNavItem4 " href="http://www.cityofgalenapark-tx.gov/35/Business" target="_self" style="font-size: 20px;"><span style="display: inline;">   Business </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem68" class="topMenuItem" role="none" data-pageid="68" data-displaymegamenu="True" style="width: 19.0175%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavHowDoI" class="navMainItem mainNavItem mainNavItem5 " href="http://www.cityofgalenapark-tx.gov/68/How-Do-I" target="_self" style="font-size: 20px;"><span style="display: inline;">   How Do I </span></a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=1&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = true;
+				if (0.99 > 0)
+					menuManager.mainMenuTextResizerRatio = 0.99;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="1"></aside></nav></header></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer3">
+<div class="siteWrap"><div data-cprole="structuralContainer" id="structuralContainer4" class="mainWrap" role="main">
+<div data-cprole="structuralContainer" id="structuralContainer5" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="structuralContainer6" class="contentWrap">
+<div data-cprole="breadCrumbs" class="breadCrumbContainer" id="breadCrumbs">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="http://www.cityofgalenapark-tx.gov/">Home</a></li><li><a class="breadCrumb" href="http://www.cityofgalenapark-tx.gov/27/Government">Government</a></li><li><a class="breadCrumb" href="http://www.cityofgalenapark-tx.gov/2164/City-Council">City Council</a></li><li id="currentBCPage" data-pageid="2197">Hilda Barrientos</li>
+		</ol>
+
+	   
+    
+</div><div data-cprole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="2197">
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="2164">
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="5077">
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="Hilda Barrientos">
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="False">
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False">
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published">
+
+				<h1 id="versionHeadLine" class="headline">
+
+Hilda Barrientos, Commissioner Position 4&nbsp;		</h1>
+	
+		<div id="cc85856225-6f19-472f-900a-e19d4ec5814c" data-containerid="85856225-6f19-472f-900a-e19d4ec5814c" class="pageContent cpGrid cpGrid24" data-contentcontainerbreakpoint="40">
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="19e0d41a-4037-4422-ba79-57415a9e53c1">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id514dfbd7-005a-43b1-95c2-6369d8fc3b07" style="height: 29px;" data-widgetcontainerid="514dfbd7-005a-43b1-95c2-6369d8fc3b07">
+	
+<div class="widget editor pageStyles wide" id="divEditora07d7a9c-665b-4b85-9905-3ad341190d86" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + 'a07d7a9c-665b-4b85-9905-3ad341190d86'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: none;">	<div id="ccf16699b5-05ad-4931-b9f9-002740566da0" data-containerid="f16699b5-05ad-4931-b9f9-002740566da0" class="pageContent cpGrid cpGrid24 showInMobile" data-contentcontainerbreakpoint="40">
+				                
+
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="structuralContainer7" class="siteSidebar">
+<div data-cprole="structuralContainer" id="structuralContainer8">
+<aside data-cprole="contentContainer" id="contentContainer2">	<div id="cc20d99fae-28e7-4024-9ea4-cd6770e9c705" data-containerid="20d99fae-28e7-4024-9ea4-cd6770e9c705" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="1">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="b179aef3-9454-4545-be08-97b5cf262253">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id8927d028-9464-4c73-8d76-93f8ae3d3fa6" style="height: 40px;" data-widgetcontainerid="8927d028-9464-4c73-8d76-93f8ae3d3fa6">
+	
+<div data-widget-id="5d2faa68-7a8e-4483-a242-1a4af143a4e1" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButton5d2faa68-7a8e-4483-a242-1a4af143a4e1").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDept5d2faa68-7a8e-4483-a242-1a4af143a4e1").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchField5d2faa68-7a8e-4483-a242-1a4af143a4e1").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDept5d2faa68-7a8e-4483-a242-1a4af143a4e1").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDept5d2faa68-7a8e-4483-a242-1a4af143a4e1").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchField5d2faa68-7a8e-4483-a242-1a4af143a4e1").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDept5d2faa68-7a8e-4483-a242-1a4af143a4e1").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchField5d2faa68-7a8e-4483-a242-1a4af143a4e1").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchField5d2faa68-7a8e-4483-a242-1a4af143a4e1"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin1 widgetOptionSet11" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBox5d2faa68-7a8e-4483-a242-1a4af143a4e1 ui-autocomplete-input" cp5ph="true" id="searchField5d2faa68-7a8e-4483-a242-1a4af143a4e1" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search here..." title="Search here..." type="text" value="" autocomplete="off">
+						<a href="http://www.cityofgalenapark-tx.gov/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButton5d2faa68-7a8e-4483-a242-1a4af143a4e1" role="button"><img alt="search" class="imageHover" data-hover="/ImageRepository/Document?documentID=57" data-image="/ImageRepository/Document?documentID=56" src="http://www.cityofgalenapark-tx.gov/ImageRepository/Document?documentID=56"></a>
+
+			<label class="searchLabel" for="searchField5d2faa68-7a8e-4483-a242-1a4af143a4e1">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #1e4e7e;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #1e4e7e;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #1e4e7e;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #1e4e7e;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBox5d2faa68-7a8e-4483-a242-1a4af143a4e1
+	{
+		color: #1e4e7e;
+		height:40px; padding:0 3em 0 1em; background:#ffffff; border:none; font-size:0.9em;
+	}
+	.widgetSearch .widgetBody .widgetSearchButton5d2faa68-7a8e-4483-a242-1a4af143a4e1
+	{
+		margin:9px 14px 0 0;
+	}
+	.widgetSearch .widgetSearch-onlyDept5d2faa68-7a8e-4483-a242-1a4af143a4e1
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDept5d2faa68-7a8e-4483-a242-1a4af143a4e1
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchField5d2faa68-7a8e-4483-a242-1a4af143a4e1").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside><nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav">
+
+
+
+
+
+	<ol role="menu" id="secondaryMenusecondaryNav" data-parent="2164" class="rootNavMenu flyoutNav">
+	<li role="menuitem" aria-haspopup="false" id="SideItem2165" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="2165" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="http://www.cityofgalenapark-tx.gov/2165/Esmeralda-Moya" target="_self" aria-haspopup="false">Esmeralda Moya</a>
+			</li>
+	<li role="menuitem" aria-haspopup="false" id="SideItem2194" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="2194" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="http://www.cityofgalenapark-tx.gov/2194/Jorge-Flores-Pere" target="_self" aria-haspopup="false">Jorge Flores-Pere</a>
+			</li>
+	<li role="menuitem" aria-haspopup="false" id="SideItem2205" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="2205" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="http://www.cityofgalenapark-tx.gov/2205/Jorge-Rodriguez" target="_self" aria-haspopup="false">Jorge Rodriguez</a>
+			</li>
+	<li role="menuitem" aria-haspopup="false" id="SideItem2196" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="2196" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="http://www.cityofgalenapark-tx.gov/2196/Jahaira-Lopez" target="_self" aria-haspopup="false">Jahaira Lopez</a>
+			</li>
+	<li role="menuitem" aria-haspopup="false" id="SideItem2197" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="2197" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="http://www.cityofgalenapark-tx.gov/2197/Hilda-Barrientos" target="_self" aria-haspopup="false" onclick="return false;">Hilda Barrientos</a>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = false;
+		});
+	</script>
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//Init secondary menu
+			var setupDraggable = menuManager.isSideMenuEditable;
+			var urlToGetHiddenMenus = '/Pages/MenuSecondary/HiddenSecondarySubMenus?pageID=2197&moduleID=&themeID=1&menuContainerID=secondaryNav';
+			var menuID = 'secondaryMenusecondaryNav';
+			menuManager.setMOMMode(2, SIDE_MENU);
+			menuManager.setupMenu(menuID, 'secondaryNav', SIDE_MENU, setupDraggable, urlToGetHiddenMenus);
+		});
+	</script>
+
+
+
+
+</nav>
+</div><aside data-cprole="contentContainer" id="contentContainer3">	<div id="cc07af2443-226f-4437-9381-aa405ed2e399" data-containerid="07af2443-226f-4437-9381-aa405ed2e399" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="1">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="c8c352ad-b602-4e90-8566-07548b6e072d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id37f629cc-e9cd-4347-b545-88bc416c9810" style="height: 318px;" data-widgetcontainerid="37f629cc-e9cd-4347-b545-88bc416c9810">
+	
+<div data-widget-id="f42200da-5d7a-4544-b10d-1d2d704ceb32" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetf42200da-5d7a-4544-b10d-1d2d704ceb32" class="widget widgetGraphicLinks skin9 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="http://www.cityofgalenapark-tx.gov/DocumentCenter/Index/69" target="_self" class="fancyButton fancyButton117 ">
+		<span>
+			<span><span class="text">Agendas &amp; Minutes</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton117.fancyButton:link,.fancyButton117.fancyButton:visited, .fancyButton117div.fancyButton{
+	padding-left: 0px;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.fancyButton117.fancyButton:hover,.fancyButton117.fancyButton:focus,.fancyButton117.fancyButton:active,.fancyButton117.fancyButton.hover{
+	background-repeat: no-repeat;
+}
+.fancyButton117.fancyButton:link > span,.fancyButton117.fancyButton:visited > span, .fancyButton117div.fancyButton > span{
+}
+.fancyButton117.fancyButton:hover > span,.fancyButton117.fancyButton:focus > span,.fancyButton117.fancyButton:active > span,.fancyButton117.fancyButton.hover > span{
+}
+.fancyButton117.fancyButton .text{
+	color: #fff;
+	font-size: 1.1em;
+	font-family: "Arial";
+	text-align: left;
+	padding-right: 20px;
+	padding-left: 82px;
+	font-style: normal;
+	text-decoration: none;
+	padding-right: 20px;
+	padding-left: 82px;
+	background-image: url('/ImageRepository/Document?documentID=37');
+	background-repeat: no-repeat;
+	background-position: 15px  center;
+height:62px;
+}
+.fancyButton117.fancyButton:hover .text,.fancyButton117.fancyButton:focus .text,.fancyButton117.fancyButton:active .text,.fancyButton117.fancyButton.hover .text{
+	color: #fff;
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=38');
+	background-repeat: no-repeat;
+
+
+}
+</style>
+
+ </li><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="http://www.cityofgalenapark-tx.gov/list.aspx" target="_self" class="fancyButton fancyButton118 ">
+		<span>
+			<span><span class="text">Notify Me®</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton118.fancyButton:link,.fancyButton118.fancyButton:visited, .fancyButton118div.fancyButton{
+	padding-left: 0px;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.fancyButton118.fancyButton:hover,.fancyButton118.fancyButton:focus,.fancyButton118.fancyButton:active,.fancyButton118.fancyButton.hover{
+	background-repeat: no-repeat;
+}
+.fancyButton118.fancyButton:link > span,.fancyButton118.fancyButton:visited > span, .fancyButton118div.fancyButton > span{
+}
+.fancyButton118.fancyButton:hover > span,.fancyButton118.fancyButton:focus > span,.fancyButton118.fancyButton:active > span,.fancyButton118.fancyButton.hover > span{
+}
+.fancyButton118.fancyButton .text{
+	color: #fff;
+	font-size: 1.1em;
+	font-family: "Arial";
+	text-align: left;
+	padding-right: 20px;
+	padding-left: 82px;
+	font-style: normal;
+	text-decoration: none;
+	padding-right: 20px;
+	padding-left: 82px;
+	background-image: url('/ImageRepository/Document?documentID=39');
+	background-repeat: no-repeat;
+	background-position: 15px  center;
+height:62px;
+}
+.fancyButton118.fancyButton:hover .text,.fancyButton118.fancyButton:focus .text,.fancyButton118.fancyButton:active .text,.fancyButton118.fancyButton.hover .text{
+	color: #fff;
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=40');
+	background-repeat: no-repeat;
+
+
+}
+</style>
+
+ </li><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="http://www.cityofgalenapark-tx.gov/2161/Utility-Billing" target="_self" class="fancyButton fancyButton119 ">
+		<span>
+			<span><span class="text">Online Bill Pay</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton119.fancyButton:link,.fancyButton119.fancyButton:visited, .fancyButton119div.fancyButton{
+	padding-left: 0px;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.fancyButton119.fancyButton:hover,.fancyButton119.fancyButton:focus,.fancyButton119.fancyButton:active,.fancyButton119.fancyButton.hover{
+	background-repeat: no-repeat;
+}
+.fancyButton119.fancyButton:link > span,.fancyButton119.fancyButton:visited > span, .fancyButton119div.fancyButton > span{
+}
+.fancyButton119.fancyButton:hover > span,.fancyButton119.fancyButton:focus > span,.fancyButton119.fancyButton:active > span,.fancyButton119.fancyButton.hover > span{
+}
+.fancyButton119.fancyButton .text{
+	color: #fff;
+	font-size: 1.1em;
+	font-family: "Arial";
+	text-align: left;
+	padding-right: 20px;
+	padding-left: 82px;
+	font-style: normal;
+	text-decoration: none;
+	padding-right: 20px;
+	padding-left: 82px;
+	background-image: url('/ImageRepository/Document?documentID=41');
+	background-repeat: no-repeat;
+	background-position: 15px  center;
+height:62px;
+}
+.fancyButton119.fancyButton:hover .text,.fancyButton119.fancyButton:focus .text,.fancyButton119.fancyButton:active .text,.fancyButton119.fancyButton.hover .text{
+	color: #fff;
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=42');
+	background-repeat: no-repeat;
+
+
+}
+</style>
+
+ </li><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="http://www.cityofgalenapark-tx.gov/FormCenter/Request-Forms-2/Fix-It-Form-33" target="_self" class="fancyButton fancyButton120 ">
+		<span>
+			<span><span class="text">Report a Concern</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton120.fancyButton:link,.fancyButton120.fancyButton:visited, .fancyButton120div.fancyButton{
+	padding-left: 0px;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.fancyButton120.fancyButton:hover,.fancyButton120.fancyButton:focus,.fancyButton120.fancyButton:active,.fancyButton120.fancyButton.hover{
+	background-repeat: no-repeat;
+}
+.fancyButton120.fancyButton:link > span,.fancyButton120.fancyButton:visited > span, .fancyButton120div.fancyButton > span{
+}
+.fancyButton120.fancyButton:hover > span,.fancyButton120.fancyButton:focus > span,.fancyButton120.fancyButton:active > span,.fancyButton120.fancyButton.hover > span{
+}
+.fancyButton120.fancyButton .text{
+	color: #fff;
+	font-size: 1.1em;
+	font-family: "Arial";
+	text-align: left;
+	padding-right: 20px;
+	padding-left: 82px;
+	font-style: normal;
+	text-decoration: none;
+	padding-right: 20px;
+	padding-left: 82px;
+	background-image: url('/ImageRepository/Document?documentID=43');
+	background-repeat: no-repeat;
+	background-position: 15px  center;
+height:62px;
+}
+.fancyButton120.fancyButton:hover .text,.fancyButton120.fancyButton:focus .text,.fancyButton120.fancyButton:active .text,.fancyButton120.fancyButton.hover .text{
+	color: #fff;
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=44');
+	background-repeat: no-repeat;
+
+
+}
+</style>
+
+ </li><!--
+						--></ul>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer9">
+<div class="siteWrap"><footer data-cprole="contentContainer" id="contentContainer4" class="siteFooter">	<div id="ccdc7f3f64-1efb-43e2-b880-50bf7c372b24" data-containerid="dc7f3f64-1efb-43e2-b880-50bf7c372b24" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="1">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col2 first" style="height: auto;" data-widgetcontainerid="168c8cf0-83d3-40a7-a304-4ca31ac23e20">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col2 first last idbc946ccd-af85-4a6c-aa52-43e883bb12cf" style="height: 162px;" data-widgetcontainerid="bc946ccd-af85-4a6c-aa52-43e883bb12cf">
+	
+
+<div class="widget widgetSpacer" id="3123243d-fa30-4d49-ab0c-2254cc7d52f4" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4" style="height: auto;" data-widgetcontainerid="3c359a50-bfa4-4ccd-bd7f-ed9781fb2696">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last id3dcc4dfc-f929-47a6-9b78-c508f604301f" style="height: 162px;" data-widgetcontainerid="3dcc4dfc-f929-47a6-9b78-c508f604301f">
+	
+
+<div class="widget image pageStyles" id="divImageOuter2e102c9e-ab3c-4805-bb4e-6e7719f79591" data-widget-id="2e102c9e-ab3c-4805-bb4e-6e7719f79591">
+    
+	<div class="widgetBody " id="divImage2e102c9e-ab3c-4805-bb4e-6e7719f79591">
+<img src="http://www.cityofgalenapark-tx.gov/ImageRepository/Document?documentID=58" alt="City of Galena Park" title="City of Galena Park">	</div>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col15" style="height: auto;" data-widgetcontainerid="d4fa9335-7fa6-4943-9e8b-7d032b722f3d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col15 first last id27ec05b4-7a16-4a7d-93ab-e1e18b27f5ad" style="height: 162px;" data-widgetcontainerid="27ec05b4-7a16-4a7d-93ab-e1e18b27f5ad">
+	
+    <div data-widget-id="478d2689-d7eb-4ffe-afa1-708b0d4a63f3" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv478d2689-d7eb-4ffe-afa1-708b0d4a63f3" class="widget widgetInfoAdvanced skin10 widgetOptionSet37 wide" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="header478d2689-d7eb-4ffe-afa1-708b0d4a63f3">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row wide">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	2000 Clinton Drive <span style="padding: 0px 1em;">|</span> Galena Park, TX 77547-3406
+<span style="padding: 0px 1em;">|</span>
+Phone: <a href="http://www.cityofgalenapark-tx.gov/" target="_self" class="Hyperlink">713-672-2556</a>
+<span style="padding: 0px 1em;">|</span>
+Fax: 713-672-1840
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<a href="http://www.cityofgalenapark-tx.gov/">Home</a>
+<span style="padding: 0px 1em;">|</span>
+<a href="http://www.cityofgalenapark-tx.gov/accessibility">Accessibility</a>
+<span style="padding: 0px 1em;">|</span>
+<a href="http://www.cityofgalenapark-tx.gov/sitemap">Site Map</a>
+<span style="padding: 0px 1em;">|</span>
+<a href="http://www.cityofgalenapark-tx.gov/directory.aspx">Contact Us</a>
+<span style="padding: 0px 1em;">|</span>
+<a href="http://www.cityofgalenapark-tx.gov/site/copyright">Copyright</a>
+<span style="padding: 0px 1em;">|</span>
+<a href="http://civicplus.com/referral">Government Websites by CivicPlus®</a>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv478d2689-d7eb-4ffe-afa1-708b0d4a63f3 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col3 last" style="height: auto;" data-widgetcontainerid="d4c2ca01-2b49-428e-bc41-4c647ba8e402">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col3 first last idc86273d3-d30b-4c67-a48e-d65031817d21" style="height: 162px;" data-widgetcontainerid="c86273d3-d30b-4c67-a48e-d65031817d21">
+	
+
+<div class="widget widgetSpacer" id="84ed404d-69aa-4039-a53f-2354535180b5" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</footer></div>
+</div>
+
+
+
+
+		<div class="bannerObject external" id="bannerDivbanner1" style="min-height: 1114px ;top: 0px; left: 0px; right: 0; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="false"><img alt="" class="bannerObject" src="http://www.cityofgalenapark-tx.gov/ImageRepository/Document?documentID=51" width="1800px" style="position: absolute; left: 50%; margin: 0px 0px 0px -900px;"></div>
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderBanner('banner1-2',
+								'banner1',
+								{"BannerOptionID":2,"ThemeID":1,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":1,"SlideShowSlideTiming":null,"SlideshowTransition":0,"SlideShowTransitionTiming":null,"ImageScale":false,"ImageAlignment":2,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":48,"BannerOptionID":2,"FileName":"/ImageRepository/Document?documentID=51","Height":750,"Width":1800,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null}],"BannerVideos":[],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								{"BannerImageID":48,"BannerOptionID":2,"FileName":"/ImageRepository/Document?documentID=51","Height":750,"Width":1800,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null},
+								'/App_Themes/Interior/Images/',
+								'<img alt="" class="bannerObject" src="/ImageRepository/Document?documentID=51" />');
+						});
+				});
+			</script>
+
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '2197',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	<script type="text/javascript">function dynamicStretchContainers () {Core.Layout.stretchContainers('#structuralContainer2');}</script>
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Montserrat:700,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu27" class="contentTop mainNavMegaMenu megaMenuContainer pageID_27 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 203.984px;">	<div id="cc61f56574-1e7b-44eb-b256-1a19cec3bcc9" data-containerid="61f56574-1e7b-44eb-b256-1a19cec3bcc9" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu64" class="contentTop mainNavMegaMenu megaMenuContainer pageID_64 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 203.984px;">	<div id="cca734c6ec-f428-4575-8ffc-291cf1da71d4" data-containerid="a734c6ec-f428-4575-8ffc-291cf1da71d4" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu31" class="contentTop mainNavMegaMenu megaMenuContainer pageID_31 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 203.984px;">	<div id="cc4e1c773a-533e-4894-acc7-dd27e1e4b234" data-containerid="4e1c773a-533e-4894-acc7-dd27e1e4b234" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu35" class="contentTop mainNavMegaMenu megaMenuContainer pageID_35 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 203.984px;">	<div id="cc874c72e0-cb86-49c0-bd50-fec01c8b8304" data-containerid="874c72e0-cb86-49c0-bd50-fec01c8b8304" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu68" class="contentTop mainNavMegaMenu megaMenuContainer pageID_68 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 203.984px;">	<div id="cc325ea28f-e417-4820-8a6a-c3cc94e708ce" data-containerid="325ea28f-e417-4820-8a6a-c3cc94e708ce" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><div id="widgetShareBody7db169a9-af3a-4965-9637-d16da560f5eb" class="widgetBody flyOut bottom leftEdge widget widgetShare skin1 cpGrid cpGrid1 moved" style="display: none; position: absolute; z-index: 100; top: 71.7969px; left: 1085.94px;" data-parentid="widgetShare7db169a9-af3a-4965-9637-d16da560f5eb">
+        <div class="row                   
+ wide">
+	<div class="col col1 first last">
+		<ol class="semanticList">
+                <li class="widgetItem"><a tabindex="0" role="button" class="widgetShareFacebook shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="http://www.cityofgalenapark-tx.gov/Layout/WidgetShare/ShareLink/Facebook" target="_blank" aria-label="Facebook Opens in new window" rel="noopener">Facebook</a></li>
+                <li class="widgetItem"><a tabindex="0" role="button" class="widgetShareTwitter shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="http://www.cityofgalenapark-tx.gov/Layout/WidgetShare/ShareLink/Twitter" target="_blank" aria-label="Twitter Opens in new window" rel="noopener">Twitter</a></li>
+                <li class="widgetItem"><a tabindex="0" role="button" class="widgetSharePinterest shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="http://www.cityofgalenapark-tx.gov/Layout/WidgetShare/ShareLink/Pinterest" target="_blank" aria-label="Pinterest Opens in new window" rel="noopener">Pinterest</a></li>
+                <li class="widgetItem"><a tabindex="0" role="button" class="widgetShareDelicious shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="http://www.cityofgalenapark-tx.gov/Layout/WidgetShare/ShareLink/Delicious" target="_blank" aria-label="Delicious Opens in new window" rel="noopener">Delicious</a></li>
+                <li class="widgetItem"><a tabindex="0" role="button" class="widgetShareBlogger shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="http://www.cityofgalenapark-tx.gov/Layout/WidgetShare/ShareLink/Blogger" target="_blank" aria-label="Blogger Opens in new window" rel="noopener">Blogger</a></li>
+                <li class="widgetItem"><a tabindex="0" role="button" class="widgetShareLinkedIn shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="http://www.cityofgalenapark-tx.gov/Layout/WidgetShare/ShareLink/LinkedIn" target="_blank" aria-label="LinkedIn Opens in new window" rel="noopener">LinkedIn</a></li>
+		</ol>
+	</div>
+
+        </div>
+    </div><div id="widgetSiteToolsBody287d9794-b563-4457-900c-f67b94c71059" class="widgetBody whiteIcons flyOut bottom leftEdge widget widgetSiteTools skin1 cpGrid cpGrid1 moved" style="display: none; position: absolute; z-index: 100; top: 71.7969px; left: 1134.98px;" data-parentid="widgetSiteTools287d9794-b563-4457-900c-f67b94c71059">
+         <div class="row                   
+ wide">
+	<div class="col col1 first last">
+		<ol class="semanticList">
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Home" class="widgetSiteToolsHome siteToolsService" href="http://www.cityofgalenapark-tx.gov/">Home</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools My Account" class="widgetSiteToolsMyAccount siteToolsService" href="http://www.cityofgalenapark-tx.gov/MyAccount">My Account</a></li>
+					<li id="PrinterFriendly287d9794-b563-4457-900c-f67b94c71059" class="widgetItem"><a tabindex="0" aria-label="Site Tools Printer Friendly opens in new window" role="button" class="widgetSiteToolsPrinterFriendly siteToolsService" onkeypress="if (event.which == 13) { this.onclick(); }" onclick="Core.Layout.dynamicJavascript('printPreview();'); return false;" href="http://www.cityofgalenapark-tx.gov/2197/Hilda-Barrientos#PrinterFriendly287d9794-b563-4457-900c-f67b94c71059">Printer Friendly</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Email Page" class="widgetSiteToolsEmailPage siteToolsService" href="http://www.cityofgalenapark-tx.gov/EmailPage">Email Page</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Contact Us" class="widgetSiteToolsContactUs siteToolsService" href="http://www.cityofgalenapark-tx.gov/directory.aspx">Contact Us</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools RSS" class="widgetSiteToolsRSS siteToolsService" href="http://www.cityofgalenapark-tx.gov/rss.aspx">RSS</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Site Map" class="widgetSiteToolsSiteMap siteToolsService" href="http://www.cityofgalenapark-tx.gov/SiteMap">Site Map</a></li>
+					<li id="TranslatePage287d9794-b563-4457-900c-f67b94c71059" class="widgetItem"><a tabindex="0" aria-label="Site Tools Translate Page opens in new window" role="button" class="widgetSiteToolsTranslatePage siteToolsService" onkeypress="if (event.which == 13) { this.onclick(); }" onclick="Core.Layout.dynamicJavascript('window.open(\'https://translate.google.com/translate?js=n&amp;sl=auto&amp;tl=es&amp;u=\' + document.location.href, \&quot;TranslateWindow\&quot;);'); return false;" href="http://www.cityofgalenapark-tx.gov/2197/Hilda-Barrientos#TranslatePage287d9794-b563-4457-900c-f67b94c71059">Translate Page</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Notifications" class="widgetSiteToolsNotifications siteToolsService" href="http://www.cityofgalenapark-tx.gov/list.aspx">Notifications</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Documents" class="widgetSiteToolsDocuments siteToolsService" href="http://www.cityofgalenapark-tx.gov/DocumentCenter">Documents</a></li>
+		</ol>
+	</div>
+
+		 </div>
+	</div><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b>&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div></body></html>
