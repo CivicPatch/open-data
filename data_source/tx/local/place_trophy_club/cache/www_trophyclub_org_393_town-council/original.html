@@ -1,0 +1,3225 @@
+<!DOCTYPE html><html lang="en" class="removeSetHeights js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n3-active wf-muli-n4-active wf-muli-i4-active wf-muli-n7-active wf-active has-webFonts" style="height: 100%;"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,700,700italic,900,900italic,italic,regular|Montserrat:500,600,700,italic,regular|Noto+Sans:700,700italic,italic,regular|Noto+Serif:700,700italic,italic,regular|Open+Sans:300,300italic,600,600italic,700,700italic,800,800italic,italic,regular|Sorts+Mill+Goudy:regular|" media="all"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/destination?id=DC-14066283&amp;cx=c&amp;gtm=4e61n1"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-HLCY8M36BC&amp;cx=c&amp;gtm=4e61n1"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-9DT0MZ1P32&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61n1h1"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MXMLB4W9"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-9DT0MZ1P32';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= true;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	<!-- Favicon MetaTags -->
+<link rel="icon" type="image/png" sizes="192x192" href="/DocumentCenter/View/1090">
+
+<link rel="icon" type="image/png" sizes="256x256" href="/DocumentCenter/View/1091">
+<link rel="apple-touch-icon" sizes="120x120" href="/DocumentCenter/View/1092">
+<link rel="icon" type="image/png" sizes="16x16" href="/DocumentCenter/View/1093">
+<link rel="icon" type="image/png" sizes="32x32" href="/DocumentCenter/View/1094">
+<meta rel="msapplication-config" content="/DocumentCenter/View/1095">
+<link rel="icon" type="image/png" sizes="150x150" href="/DocumentCenter/View/1095">
+<link rel="mask-icon" href="/DocumentCenter/View/1097">
+<link rel="shortcut icon" href="/DocumentCenter/View/1098">
+<link rel="manifest" href="/DocumentCenter/View/1099">
+<meta name="msapplication-TileColor" content="#ffffff">
+<!--<meta name="theme-color" content="#ff0000">-->
+<!-- End Favicon MetaTags -->
+
+	<meta name="category0" content="Home">
+<meta name="category1" content="Government">
+<meta name="category2" content="Town Council">
+
+	
+	<meta name="theme-color" content="#0e122c">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>Town Council | Trophy Club, TX</title>
+
+		<meta name="description" content="The Town Council meets on the second and fourth Tuesday of each month at 7 p.m. (sometimes earlier for Workshop Sessions).">
+		<meta name="keywords" content="government,town council,trophy club council,city council,mayor,council members,Nick Sanders,Philip Soffner,Alicia Fleury,Eric Jensen,Rhylan Rowe,Tim Kurtz,Greg Lamont">
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '390px';
+	var order = '';
+//--></script>
+	
+<link href="/-681783051.css" rel="stylesheet" type="text/css">	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/1876776346.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all"><style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><script type="text/javascript" src="/Assets/Scripts/GoogleMaps.js"></script><link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.2f3WBw8L4SI.L.W.O/am=AAQD/d=0/rs=AN8SPfrXXtxuFpMMBoYgp93jo68L3iC3ZQ/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/_/translate_http/_/js/k=translate_http.tr.en_US.gm28aokwBeQ.O/am=AAAQ/d=1/exm=el_conf/ed=1/rs=AN8SPfo-cjsGcRTUC_jpauJJ5fve_ZlsdQ/m=el_main"></script><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style><link rel="stylesheet" type="text/css" href="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-14/compliance.css"><link rel="stylesheet" type="text/css" href="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-14/fullCSS.bundle.css"><style>
+      .audioeye-skip-link {
+        display: inline-block !important;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        z-index: 50000 !important;
+      }
+      .audioeye-skip-link:focus, .audioeye-skip-link:active {
+        left: 0;
+        width: auto;
+        height: auto;
+        background: #fff;
+        color: #000;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.5;
+        margin-bottom: 8px;
+        padding: 5px;
+        border: 3px solid #000;
+        transition: none;
+      }
+    </style></head>
+<body class="wide withFeatureColumn cpTextResizeOn doneLoading ae-town-council-h1" style="position: relative; min-height: 100%; top: 0px;" data-audioeye-lang="en" data-audioeye-device-desktop="" data-audioeye-launcher=""><div id="ae_enabled_site" class="ae-blurb-noaudio" role="status" aria-live="polite" data-nosnippet="" style="display: none;"><div><p data-modulename="launcher">This website is AudioEye enabled and is being optimized for accessibility. To open the AudioEye Toolbar, press "shift + =". Some assistive technologies may require the use of a passthrough function before this keystroke. For more information, activate the button labeled “Explore your accessibility options”.</p></div></div><a href="#mainWrapTS" class="audioeye-skip-link">Skip To Main Content</a><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="https://www.trophyclub.org/Common/images/ajax-loader.gif" alt="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks" class="ae-exclude" role="presentation" aria-hidden="true" tabindex="-1">
+<a href="https://www.trophyclub.org/393/Town-Council#ccba3fa0b5-38aa-4b60-9f68-875a42a1f78f" target="_self" class="skipToContentLink ae-exclude" role="presentation" aria-hidden="true" tabindex="-1">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs" role="presentation"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="8">
+    <input type="hidden" id="hdnContentCollectionID" value="7a7b58cc-7330-41e3-a45b-0b2b37e1f5c9">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="19">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID">
+    <input type="hidden" id="pagePageID" value="393">
+
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700); 
+.alertText .customAlert {
+    color: #EAEAEA;
+    display: inline-block;
+    font-family: 'Open Sans Condensed', sans-serif; 
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 27px;
+    left: 57px;
+    line-height: 27px;
+    overflow: hidden;
+    position: absolute;
+    top: 15px;
+    white-space: nowrap;
+    width: 268px;
+}
+</style>
+  <div id="1_divAlertBar" class="alertToolbar cpToolbar" style="background: rgb(14, 18, 44); z-index: 1;">
+    <div id="1_divAlertToolbarInner" class="alertToolbarInner" style="font-size: 16px;">
+        <a href="https://www.trophyclub.org/624" id="1_lnkAlertText" class="alertText" style="border-right: 1px solid #6D879E;">
+            <img src="https://www.trophyclub.org/ImageRepository/Document?documentID=5559" id="1_imgDot" alt="Emergency Alert" class="redDot">
+            <span id="1_customAlert" class="customAlert">Community News</span>
+        </a>
+        <span id="1_spnAlertContainer" class="alertContainer"><a href="https://www.trophyclub.org/624" target="_self" class="alert" style="border-left: 1px solid #6D879E; border-right: 1px solid #6D879E;background: #030303 url(/Common/images/AlertCenter/alertBarBlackTextBckg.png) repeat-x; color: #FFFFFF;">
+	Be Weather Aware in Trophy Club
+	<span style="color: #D9D9DB;">Read On...</span>
+</a>
+<a href="https://www.trophyclub.org/800" target="_self" class="alert" style="border-left: 1px solid #6D879E; border-right: 1px solid #6D879E;background: #030303 url(/Common/images/AlertCenter/alertBarBlackTextBckg.png) repeat-x; color: #FFFFFF;">
+	Read the Latest Town Weekly Newsletter
+	<span style="color: #D9D9DB;">Read On...</span>
+</a>
+</span>
+    </div>
+  </div>
+  <div id="1_divAlertBarEmpty" class="alertBarEmpty"></div>
+  
+
+
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 57px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="bodyContainerTS">
+<!-- Header Container --><header data-cprole="structuralContainer" id="headerContainerTS" class="fixedTopTS" style="top: 56px;">
+<div class="siteWrap9"><div data-cprole="structuralContainer" id="headerTS" class="flexTS">
+<div data-cprole="structuralContainer" id="logoContainerTS">
+<div data-cprole="banner" id="bannerLogoTS" class="bannerLogoTS empty">
+
+
+
+
+				<a id="bannerLogoTS-63" style="			display: block; text-align: center;
+" class="bannerObject" href="https://www.trophyclub.org/" target="_self"><img alt="Home Page" class="bannerObject" height="66" src="https://www.trophyclub.org/ImageRepository/Document?documentID=5283" width="330"></a>
+</div>
+</div><div data-cprole="contentContainer" id="searchTS">	<div id="cc58ebd741-4022-4abc-9cf8-a454d927ae4b" data-containerid="58ebd741-4022-4abc-9cf8-a454d927ae4b" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="e519eb77-395e-4bda-96df-a73d96927480">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id9b9f8375-7299-4f5a-a0f0-8fbd752e1bcb" style="" data-widgetcontainerid="9b9f8375-7299-4f5a-a0f0-8fbd752e1bcb">
+	
+<div data-widget-id="4344ca3b-401c-430f-aceb-05949f3988c9" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButton4344ca3b-401c-430f-aceb-05949f3988c9").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDept4344ca3b-401c-430f-aceb-05949f3988c9").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchField4344ca3b-401c-430f-aceb-05949f3988c9").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDept4344ca3b-401c-430f-aceb-05949f3988c9").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDept4344ca3b-401c-430f-aceb-05949f3988c9").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchField4344ca3b-401c-430f-aceb-05949f3988c9").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDept4344ca3b-401c-430f-aceb-05949f3988c9").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchField4344ca3b-401c-430f-aceb-05949f3988c9").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchField4344ca3b-401c-430f-aceb-05949f3988c9"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin64 widgetOptionSet39" style="display: block;">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBox4344ca3b-401c-430f-aceb-05949f3988c9 ui-autocomplete-input" cp5ph="true" id="searchField4344ca3b-401c-430f-aceb-05949f3988c9" name="searchField" onchange="searchBtnApplyQuery();" placeholder="How may we help you?" title="How may we help you?" type="text" value="" autocomplete="off" aria-label="Search Site">
+						<a href="https://www.trophyclub.org/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButton4344ca3b-401c-430f-aceb-05949f3988c9"><img alt="Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=5285" data-image="/ImageRepository/Document?documentID=5288" src="https://www.trophyclub.org/ImageRepository/Document?documentID=5288"></a>
+
+			<label class="searchLabel" for="searchField4344ca3b-401c-430f-aceb-05949f3988c9">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #676767;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #676767;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #676767;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #676767;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBox4344ca3b-401c-430f-aceb-05949f3988c9
+	{
+		color: #333333;
+		background: #FFFFFF;
+border: 0;
+min-height: 62px;
+border-radius: 100px;
+padding: 0 62px 0 20px;
+font-family: Montserrat;
+font-weight: 500;
+font-size: .85em;
+box-shadow: inset 0px 3px 6px rgba(14, 18, 44, 0.16);
+	}
+	.widgetSearch .widgetBody .widgetSearchButton4344ca3b-401c-430f-aceb-05949f3988c9
+	{
+		filter: drop-shadow(0px 3px 6px rgba(14, 18, 44, 0.2));
+margin: 8px 8px 0 0;
+	}
+	.widgetSearch .widgetSearch-onlyDept4344ca3b-401c-430f-aceb-05949f3988c9
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDept4344ca3b-401c-430f-aceb-05949f3988c9
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchField4344ca3b-401c-430f-aceb-05949f3988c9").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation" aria-label="Main">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem35" class="topMenuItem" role="none" data-pageid="35" data-displaymegamenu="True" style="width: 21.4583%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavAboutUs" class="navMainItem mainNavItem mainNavItem1 " href="https://www.trophyclub.org/35/About-Us" target="_self" style="font-size: 20px;"><span style="display: inline;">   About Us </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem27" class="topMenuItem" role="none" data-pageid="27" data-displaymegamenu="True" style="width: 26.1806%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem2 " href="https://www.trophyclub.org/27/Government" target="_self" style="font-size: 20px;"><span style="display: inline;">   Government </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem101" class="topMenuItem" role="none" data-pageid="101" data-displaymegamenu="True" style="width: 27.2917%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavDepartments" class="navMainItem mainNavItem mainNavItem3 " href="https://www.trophyclub.org/101/Departments" target="_self" style="font-size: 20px;"><span style="display: inline;">   Departments </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem31" class="topMenuItem" role="none" data-pageid="31" data-displaymegamenu="True" style="width: 25.0694%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavCommunity" class="navMainItem mainNavItem mainNavItem4 " href="https://www.trophyclub.org/31/Community" target="_self" style="font-size: 20px;"><span style="display: inline;">   Community </span></a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=19&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = true;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="1"></aside></nav>
+</div></div>
+</header><!-- Banner --><div data-cprole="structuralContainer" id="bannerContainerTS" class="noOverflowTS">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="bannerSizingTS" style="padding-top: 96px;">
+<div data-cprole="structuralContainer" id="bannerContentTS">
+<div class="siteWrap9"><div data-cprole="contentContainer" id="contentTS">	<div id="cc4c80d7c5-48b7-4e05-b98c-10ac2aea6800" data-containerid="4c80d7c5-48b7-4e05-b98c-10ac2aea6800" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+
+
+
+		<div class="bannerObject external" id="bannerDivbanner1" style="min-height: 546px; top: 0px; left: -467.5px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img alt="" class="bannerObject" src="https://www.trophyclub.org/ImageRepository/Document?documentID=5284" width="1813.186813186813px" style="position: absolute; left: 0px; margin: 0px; width: 2200px;"></div>
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderBanner('banner1-64',
+								'banner1',
+								{"BannerOptionID":64,"ThemeID":19,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":1,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":176,"BannerOptionID":64,"FileName":"/ImageRepository/Document?documentID=5284","Height":546,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":3,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null}],"BannerVideos":[{"BannerVideoID":2,"BannerOptionID":64,"VideoFileName":"","ImageFileName":"EmptyBannerBkg202212051428540537.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								{"BannerImageID":176,"BannerOptionID":64,"FileName":"/ImageRepository/Document?documentID=5284","Height":546,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":3,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null},
+								'/App_Themes/2022 - Interior/Images/',
+								'<img alt="" class="bannerObject" src="/ImageRepository/Document?documentID=5284" />');
+						});
+				});
+			</script>
+
+</div>
+</div><div data-cprole="structuralContainer" id="bgWrapTS">
+<!-- Content container --><div data-cprole="structuralContainer" id="mainContainerTS">
+<div class="siteWrap5"><div data-cprole="structuralContainer" id="mainWrapTS" class="mainWrap" role="main" tabindex="-1">
+<div data-cprole="structuralContainer" id="outerContentWrapTS" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="contentWrapTS" class="contentWrap">
+<div data-cprole="breadCrumbs" id="breadCrumbs" class="breadCrumbContainer" role="navigation" aria-label="Breadcrumb">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="https://www.trophyclub.org/">Home</a></li><li><a class="breadCrumb" href="https://www.trophyclub.org/27/Government">Government</a></li><li id="currentBCPage" data-pageid="393">Town Council</li>
+		</ol>
+
+	   
+    
+</div><div data-cprole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="393">
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="27">
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="15834">
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="Town Council">
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="True">
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False">
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published">
+
+				<h1 id="versionHeadLine" class="headline">
+
+Town Council		</h1>
+	
+		<div id="ccba3fa0b5-38aa-4b60-9f68-875a42a1f78f" data-containerid="ba3fa0b5-38aa-4b60-9f68-875a42a1f78f" class="pageContent cpGrid cpGrid24">
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="2b2dc741-4835-4ed7-b34c-92e5b5ab381a">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id294c2b83-c92a-4631-a858-0cafc6bbbb91" style="" data-widgetcontainerid="294c2b83-c92a-4631-a858-0cafc6bbbb91">
+	
+<div class="widget editor pageStyles wide" id="divEditorce8ac3d5-7558-4ae7-a491-969ba8e0ae96" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h2 class="subhead1" style="text-align: justify;">About Town Council:</h2><p style="text-align: justify;"><img src="https://www.trophyclub.org/ImageRepository/Document?documentId=1409" class="fr-fir fr-dii fr-bordered" alt="Town Council" style="width: 407px;">The Town Council serves as a link between the residents of Trophy Club and their municipal government. The Town of Trophy Club operates under a council-manager form of government as approved by voters through the adoption of the Town of Trophy Club Charter.&nbsp;</p><p style="text-align: justify;">The Trophy Club Charter provides that the Trophy Club Town Council shall consist of the Mayor and six Council members elected by numbered places and are elected at-large by the registered voters of Trophy Club to serve three-year, staggered terms of office.&nbsp;</p><p style="text-align: justify;">Councilors help constituents by connecting them to resources, services, and Town departments. Town Council also administers the Town's goals, major projects and infrastructure improvements ranging from community growth to land use to finances and strategic planning. They serve as advocates for all Trophy Club residents.</p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + 'ce8ac3d5-7558-4ae7-a491-969ba8e0ae96'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="b9f16839-7c68-45f4-917c-94741fdbc02b">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id86dfdf2d-4b3f-42bb-91ec-45a912abcc88" style="" data-widgetcontainerid="86dfdf2d-4b3f-42bb-91ec-45a912abcc88">
+	
+<div class="widget editor pageStyles wide" id="divEditor98eb1069-5f80-479d-8269-15264d7eab66" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h2 class="subhead1 ">Meetings<br><br></h2><ul><li>7 p.m.&nbsp;</li><li>2nd and 4th Monday of every month</li><li>Council Chambers<br>1 Trophy Wood Drive<br>Trophy Club, TX 76262</li><li>Residents are welcome and encouraged to attend</li><li>You can LIVE STREAM the Council Meetings from the <a href="https://www.trophyclub.org/809/Agendas-and-Minutes" target="_blank" rel="noopener" aria-describedby="audioeye_new_window_message" aria-label="agenda center&nbsp; Opens in new window">agenda center&nbsp;</a>or on Facebook&nbsp;<a href="https://www.facebook.com/TrophyClubGov" rel="noopener" target="_blank" aria-describedby="audioeye_new_window_message" aria-label="@TrophyClubGov Opens in new window">@TrophyClubGov</a>.<br style="color: rgb(0, 0, 0); font-family: Arial; font-size: 14.4px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">You can also visit the <a href="https://www.youtube.com/user/TrophyClubGov" rel="noopener" style="color: rgb(159, 45, 51); text-decoration: underline;" target="_blank" aria-describedby="audioeye_new_window_message" aria-label="Town of Trophy Club YouTube Opens in new window">Town of Trophy Club YouTube</a> Channel and watch it from there <a href="https://www.youtube.com/watch?v=pD4nzklnfAk&amp;list=PLPq8M84j7QlX6t3rhIPtb8rOeRxCcpqLQ" rel="noopener" target="_blank" aria-describedby="audioeye_new_window_message" aria-label="@TownCouncilMeetingReplays Opens in new window">@TownCouncilMeetingReplays</a>&nbsp;</li></ul><h2 class="subhead1 ">Council Members</h2><p><a href="mailto:MayorAndCouncil@trophyclub.org">Email entire Town Council</a></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '98eb1069-5f80-479d-8269-15264d7eab66'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col12 first" style="" data-widgetcontainerid="ad2dc55b-4d53-46ab-8545-4617f492f9f1">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last id97b3398f-b95d-4273-b2f5-8ecc3a5c9d9b" style="" data-widgetcontainerid="97b3398f-b95d-4273-b2f5-8ecc3a5c9d9b">
+	
+<div class="widget editor pageStyles narrow" id="divEditor1dbc4d1d-baa3-40ac-96e1-c5a78d16055d" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <ul><li>Jeannette Tiffany, Mayor<br>Term expires: 2026</li><li id="isPasted">Rhylan Rowe, Mayor Pro Tem / Place 4<br>Term expires: 2027</li><li>Stacey Bauer, Place 1<br>Term expires: 2026</li><li>Jeff Beach, Place 2<br>Term expires: 2026</li></ul>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '1dbc4d1d-baa3-40ac-96e1-c5a78d16055d'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col12 last" style="" data-widgetcontainerid="04e26db9-8391-41ee-9937-8edecd4fab3b">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last idf269003e-33ed-4def-b86d-cfc908440cc9" style="" data-widgetcontainerid="f269003e-33ed-4def-b86d-cfc908440cc9">
+	
+<div class="widget editor pageStyles narrow" id="divEditorcffff972-8a96-4065-b47d-d88578b3e57e" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <ul><li>Dennis Sheridan, Place 3<br>Term expires: 2027</li><li><a aria-hidden="true" href="https://www.trophyclub.org/400/Greg-Lamont" tabindex="-1"><span class="ae-compliance-indent" style="display: none;">&nbsp;/400/Greg-Lamont&nbsp;</span></a>Garry Ash, Place 5<br>Term expires: 2028</li><li id="isPasted">Steve Flynn, Place 6<br>Term expires: 2028</li></ul>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + 'cffff972-8a96-4065-b47d-d88578b3e57e'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col6 first" style="" data-widgetcontainerid="a42b03dc-51aa-443a-b516-a2c0551a9f1b">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id1b6ca9bd-6820-4ec5-9cd2-ec18a1e51607" style="" data-widgetcontainerid="1b6ca9bd-6820-4ec5-9cd2-ec18a1e51607">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="30e8eee6-b95b-4873-9627-d2970f9350fa" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidget30e8eee6-b95b-4873-9627-d2970f9350fa" class="widget widgetStaffDirectory skin64 wide">
+			<div class="widgetHeader">
+							</div>
+						<ol class="semanticList" role="presentation">
+			<li class="widgetItem h-card">
+
+					<img src="https://www.trophyclub.org/ImageRepository/Document?documentID=5883" alt="" title="Mayor Tiffany Website" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name" role="heading" aria-level="3">
+					Jeannette Tiffany
+					
+				</h4>
+				<div class="field p-job-title">Mayor</div>
+						<div class="field u-email"><a href="mailto:jtiffany@trophyclub.org">Email Mayor Tiffany </a></div>
+
+
+
+
+
+				<br>
+			</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="" data-widgetcontainerid="67b7cf66-18b0-477a-b68f-311340c5a986">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id0f207510-1280-4f3b-a611-e43947d2f981" style="" data-widgetcontainerid="0f207510-1280-4f3b-a611-e43947d2f981">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="a130f0ac-def1-4e05-ac53-c0e10e8b0b99" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidgeta130f0ac-def1-4e05-ac53-c0e10e8b0b99" class="widget widgetStaffDirectory skin64 wide">
+			<div class="widgetHeader">
+							</div>
+						<ol class="semanticList" role="presentation">
+			<li class="widgetItem h-card">
+
+					<img src="https://www.trophyclub.org/ImageRepository/Document?documentID=8482" alt="" title="CM Rowe" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name" role="heading" aria-level="3">
+					Rhylan Rowe
+					
+				</h4>
+				<div class="field p-job-title">Mayor Pro Tem / Council Member, Place 4</div>
+						<div class="field u-email"><a href="mailto:rrowe@trophyclub.org">Email Mayor Pro Tem Rowe </a></div>
+
+
+
+
+
+				<br>
+			</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="" data-widgetcontainerid="34b8d6e1-d570-4e8d-8f64-0dcd0fe7be64">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id92998637-8ad3-42e1-a0a0-0eb3a0407e0a" style="" data-widgetcontainerid="92998637-8ad3-42e1-a0a0-0eb3a0407e0a">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="1d43e8b6-33d7-43a7-8bc4-bc3742ddcbcc" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidget1d43e8b6-33d7-43a7-8bc4-bc3742ddcbcc" class="widget widgetStaffDirectory skin64 wide">
+			<div class="widgetHeader">
+							</div>
+						<ol class="semanticList" role="presentation">
+			<li class="widgetItem h-card">
+
+					<img src="https://www.trophyclub.org/ImageRepository/Document?documentID=9479" alt="" title="Bauer" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name" role="heading" aria-level="3">
+					Stacey Bauer
+					
+				</h4>
+				<div class="field p-job-title">Council Member, Place 1</div>
+						<div class="field u-email"><a href="mailto:sbauer@trophyclub.org">Email Council Member Bauer </a></div>
+
+
+
+
+
+				<br>
+			</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6 last" style="" data-widgetcontainerid="2ef2a2d2-f163-4189-a3c1-c9dc8ab657b8">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id5cae8c4e-436d-461c-8343-e772ea5d3288" style="" data-widgetcontainerid="5cae8c4e-436d-461c-8343-e772ea5d3288">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="211f51d1-d87b-47c7-9b67-4ecb134a99d5" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidget211f51d1-d87b-47c7-9b67-4ecb134a99d5" class="widget widgetStaffDirectory skin64 wide">
+			<div class="widgetHeader">
+							</div>
+						<ol class="semanticList" role="presentation">
+			<li class="widgetItem h-card">
+
+					<img src="https://www.trophyclub.org/ImageRepository/Document?documentID=4210" alt="" title="CM Beach Web 22" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name" role="heading" aria-level="3">
+					Jeff Beach
+					
+				</h4>
+				<div class="field p-job-title">Council Member, Place 2</div>
+						<div class="field u-email"><a href="mailto:jbeach@trophyclub.org">Email Council Member Beach </a></div>
+
+
+
+
+
+				<br>
+			</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col3 first" style="" data-widgetcontainerid="64fa9473-4168-4276-8b7e-a259b865a3f9">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col3 first last ide9c28af1-2242-414d-8e8f-1e4a51529884" style="" data-widgetcontainerid="e9c28af1-2242-414d-8e8f-1e4a51529884">
+	
+
+<div class="widget widgetSpacer" id="703a91db-0fa7-4cec-83ce-9d90b9a9f5b3"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="" data-widgetcontainerid="ffb7ef2b-f5db-4cc6-adc0-2c2b914e1a9a">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id00b83215-5b78-4510-9a12-a177c516fdda" style="" data-widgetcontainerid="00b83215-5b78-4510-9a12-a177c516fdda">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="8ce458f3-96c6-4217-bd0d-8cb5c58eb442" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidget8ce458f3-96c6-4217-bd0d-8cb5c58eb442" class="widget widgetStaffDirectory skin64 wide">
+			<div class="widgetHeader">
+							</div>
+						<ol class="semanticList" role="presentation">
+			<li class="widgetItem h-card">
+
+					<img src="https://www.trophyclub.org/ImageRepository/Document?documentID=3374" alt="" title="CM Sheridan Web" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name" role="heading" aria-level="3">
+					Dennis Sheridan
+					
+				</h4>
+				<div class="field p-job-title">Council Member, Place 3</div>
+						<div class="field u-email"><a href="mailto:dsheridan@trophyclub.org">Email Council Member Sheridan </a></div>
+
+
+
+
+
+				<br>
+			</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="" data-widgetcontainerid="f79894cb-ccb6-4f33-9028-f057e3028de5">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last idab69a5b2-d7a4-4aac-876d-da623a03b6f6" style="" data-widgetcontainerid="ab69a5b2-d7a4-4aac-876d-da623a03b6f6">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="a87b7edc-fc30-4552-a938-cd12548690ce" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidgeta87b7edc-fc30-4552-a938-cd12548690ce" class="widget widgetStaffDirectory skin64 wide">
+			<div class="widgetHeader">
+							</div>
+						<ol class="semanticList" role="presentation">
+			<li class="widgetItem h-card">
+
+					<img src="https://www.trophyclub.org/ImageRepository/Document?documentID=10452" alt="" title="Gash" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name" role="heading" aria-level="3">
+					Garry Ash
+					
+				</h4>
+				<div class="field p-job-title">Council Member, Place 5</div>
+						<div class="field u-email"><a href="mailto:gash@trophyclub.org">Email Council Member Ash </a></div>
+
+
+
+
+
+				<br>
+			</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="" data-widgetcontainerid="86a87d51-23e6-4d5c-95b6-540f4d71a250">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id17427d7b-e4a0-4751-932f-2b23e1dd3d3c" style="" data-widgetcontainerid="17427d7b-e4a0-4751-932f-2b23e1dd3d3c">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="ec92d945-9662-431d-873c-3b9b4b001132" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidgetec92d945-9662-431d-873c-3b9b4b001132" class="widget widgetStaffDirectory skin64 wide">
+			<div class="widgetHeader">
+							</div>
+						<ol class="semanticList" role="presentation">
+			<li class="widgetItem h-card">
+
+					<img src="https://www.trophyclub.org/ImageRepository/Document?documentID=9480" alt="" title="Flynn" class="field u-photo">
+
+				<h4 class="widgetTitle field p-name" role="heading" aria-level="3">
+					Steve Flynn
+					
+				</h4>
+				<div class="field p-job-title">Council Member, Place 6</div>
+						<div class="field u-email"><a href="mailto:sflynn@trophyclub.org">Email Council Member Flynn </a></div>
+
+
+
+
+
+				<br>
+			</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col3 last" style="" data-widgetcontainerid="2ca1fe4e-8eb7-4e72-b063-01c5171bc6e9">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col3 first last id79a668a2-eb73-4d6e-ba38-be0e6c6c28d5" style="" data-widgetcontainerid="79a668a2-eb73-4d6e-ba38-be0e6c6c28d5">
+	
+
+<div class="widget widgetSpacer" id="5b67bf3b-7449-4df4-8b32-b58022da105a"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col12 first" style="" data-widgetcontainerid="cf0ae02e-e789-4627-af9a-0a47ce02c589">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last idbabbfddb-9369-48d3-b57d-52603669d604" style="" data-widgetcontainerid="babbfddb-9369-48d3-b57d-52603669d604">
+	
+
+<div class="widget widgetSpacer" id="9a16f746-31b6-4ba4-9316-248b06c46622"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col12 last" style="" data-widgetcontainerid="4fb84f4c-5f95-489f-824d-88a627eec4fc">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last id1871cfc5-557e-42c9-804f-3ce5500c7b8e" style="" data-widgetcontainerid="1871cfc5-557e-42c9-804f-3ce5500c7b8e">
+	
+
+<div class="widget widgetSpacer" id="e77933a6-8cf3-400d-bfda-8e66782b28a7"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="ab50b530-cb9c-4ebd-aaf2-fe2514d08756">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id13c36a9e-9acb-4318-960c-3f43b4388a5c" style="" data-widgetcontainerid="13c36a9e-9acb-4318-960c-3f43b4388a5c">
+	
+<div class="widget editor pageStyles wide" id="divEditorb3aa1ead-d178-47c3-80a2-fe2672ba7043" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <h2 class="subhead1">Current and Upcoming Council Meeting Agendas</h2><p style="text-align: justify;"><br>All Town Council and Board and Commission meeting materials, effective October 1, 2023, are being posted on the new <a href="https://www.trophyclub.org/809" target="_blank" rel="noopener" aria-describedby="audioeye_new_window_message" aria-label="Agenda Center Opens in new window">Agenda Center</a> webpage. Meeting agendas, minutes, and videos prior to October 2023 can be found at the following locations:&nbsp;</p><ul><li style="text-align: justify;">Meeting <strong><em>agendas</em></strong> and <strong><em>minutes</em></strong> can be found<em>&nbsp;</em>at <a href="http://www.trophyclub.org/meetingandagendaarchive" target="_blank" rel="noopener" aria-describedby="audioeye_new_window_message" aria-label="trophyclub.org/meetingandagendaarchive Opens in new window">trophyclub.org/meetingandagendaarchive</a></li><li style="text-align: justify;">Meeting <strong><em>videos</em></strong> can be found on our YouTube page at <a href="http://www.trophyclub.org/meetingvideoarchive" target="_blank" rel="noopener" aria-describedby="audioeye_new_window_message" aria-label="trophyclub.org/meetingvideoarchive Opens in new window">trophyclub.org/meetingvideoarchive</a></li></ul><p style="text-align: justify;">Thank you for your patience and understanding as we make improvements to your experience while we work to serve you better.</p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + 'b3aa1ead-d178-47c3-80a2-fe2672ba7043'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: block;">	<div id="cc46a5a1e4-1309-4c68-bd43-076d6f366423" data-containerid="46a5a1e4-1309-4c68-bd43-076d6f366423" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="df43fb31-add9-489c-8bbe-781e05452001">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col24 first last id65708c00-5726-4ade-a4a3-e69ab441a7bd" style="" data-widgetcontainerid="65708c00-5726-4ade-a4a3-e69ab441a7bd">
+	
+
+
+
+
+
+
+
+
+<div data-widget-id="70ae9b42-58bd-47db-905f-8b265ebd2101" data-modulewidgettype="cityDirectory" data-widget-controller-path="/CityDirectory/Widget">
+	<div id="cityDirectoryWidget70ae9b42-58bd-47db-905f-8b265ebd2101" class="widget widgetStaffDirectory skin65 wide">
+			<div class="widgetHeader">
+					<h3 role="heading" aria-level="2"><a style="" href="https://www.trophyclub.org/Directory.aspx">Contact Us</a></h3>
+							</div>
+						<ol class="semanticList">
+	<li class="widgetItem h-card">
+
+			<img src="https://www.trophyclub.org/ImageRepository/Document?documentID=1012" alt="" title="Town of Trophy Club Sign" class="field u-photo">
+		<h4 class="widgetTitle field p-name" role="heading" aria-level="3">
+			Town of Trophy Club
+			
+		</h4>
+		<div class="field p-job-title"></div>
+
+			<div class="field p-tel">Phone: <a href="tel:6822372900">682-237-2900</a></div>
+				
+		<br>
+	</li>
+		<li class="widgetItem h-card">
+
+
+
+
+				<div class="field h-adr">
+					<strong>Physical Address</strong>
+<button class="viewMap" data-moduleid="4" onclick="new CivicPlus.Maps().LoadMap(document.getElementById('googleMap21'), '100%', $(document.getElementById('googleMap21')).next('.infotext').children('.address').text());">View Map</button>					<br>
+					<span class="p-street-address">1 Trophy Wood Drive</span><br>
+					<span class="locality">Trophy Club</span>, <span class="p-region">TX</span> <span class="p-postal-code">76262</span>
+
+				</div>
+				<br>
+
+					<script type="text/javascript">
+							$(document).ready(function () {
+								var mode = 2;
+								loadGoogleMapsScript(mode, 'loadMaps');
+							});
+					</script>
+					<div class="field">
+						<br>
+						<div class="mapWrapLazyLoaded">
+							<div id="googleMap21" class="googleMap" style=""></div>
+							<div style="display: none" class="infotext">
+								<div class="address">1 Trophy Wood Drive  Trophy Club TX 76262</div>
+							</div>
+						</div>
+						<a href="https://www.google.com/maps/place/1+Trophy+Wood+Drive++Trophy+Club+TX+76262" class="mapLink" title="Open location on Google Maps">Directions</a>
+					</div>
+					<br>
+
+
+									
+
+
+		</li>
+									</ol>
+	</div>
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col24 first last id01a7aea9-3363-46f8-9820-fa7c7b40fa93" style="" data-widgetcontainerid="01a7aea9-3363-46f8-9820-fa7c7b40fa93">
+	
+
+
+
+	<section class="widget widgetRelatedDocuments skin65 narrow" id="widgetRelDoc6fe28aea-ecb1-436a-9a7e-1d57fb29364e" data-widgetid="6fe28aea-ecb1-436a-9a7e-1d57fb29364e" data-sections="[{&quot;Title&quot;:&quot;&quot;,&quot;DocumentIDs&quot;:&quot;368,366,259,1141,11601,&quot;,&quot;FolderIds&quot;:&quot;,&quot;,&quot;SortedDocumentIds&quot;:&quot;&quot;}]" data-columncount="1" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="header6fe28aea-ecb1-436a-9a7e-1d57fb29364e">
+			<div id="divRelatedDocuments_6fe28aea-ecb1-436a-9a7e-1d57fb29364e" class="relatedDocuments">
+				<header class="widgetHeader" id="header6fe28aea-ecb1-436a-9a7e-1d57fb29364e" role="presentation"><div><h3>Documents</h3></div></header>
+		<div class="widgetBody cpGrid cpGrid1">
+			
+<div class="row narrow sortableWidgetTitle">
+        <div class="relatedDocumentsSection selfClear" data-documentids="368,366,259,1141,11601," data-folderids="," data-sorteddocumentids="">
+        
+	<div class=" first last">
+		<ol class="semanticList bullets" style="min-height:8px;">
+					<li class="widgetItem" data-documentid="1141"><a target="_blank" href="https://www.trophyclub.org/DocumentCenter/View/1141/Council-Thru-The-Years-PDF" class="fileType pdf docaccess-activated" aria-label="Council Thru The Years (PDF) Opens in new window" data-docaccess-source-url="https://www.trophyclub.org/DocumentCenter/View/1141/Council-Thru-The-Years-PDF" data-url-hash="8cb13d97dcf40d7e832addef85b80bc8d74bd586cbad1a0199187b6a68355372" data-url-status="disabled" rel="noopener">Council Thru The Years (PDF)</a>
+					</li>
+					<li class="widgetItem" data-documentid="366"><a target="_blank" href="https://www.trophyclub.org/DocumentCenter/View/366/Strategy-Map-" class="fileType png docaccess-activated" aria-label="Strategy Map  Opens in new window" data-docaccess-source-url="https://www.trophyclub.org/DocumentCenter/View/366/Strategy-Map-" data-url-hash="archived" data-url-status="archived" rel="noopener">Strategy Map </a>
+					</li>
+					<li class="widgetItem" data-documentid="259"><a target="_blank" href="https://www.trophyclub.org/DocumentCenter/View/259/Town-Charter-PDF" class="fileType pdf docaccess-activated" aria-label="Town Charter (PDF) Opens in new window" data-docaccess-source-url="https://www.trophyclub.org/DocumentCenter/View/259/Town-Charter-PDF" data-url-hash="68c68aa0460b13c387f753d8224ee87534e818e74b09701f6c6d66b3d65c3af0" data-url-status="disabled" rel="noopener">Town Charter (PDF)</a>
+					</li>
+					<li class="widgetItem" data-documentid="368"><a target="_blank" href="https://www.trophyclub.org/DocumentCenter/View/368/Town-Council-History-PDF" class="fileType pdf docaccess-activated" aria-label="Town Council History (PDF) Opens in new window" data-docaccess-source-url="https://www.trophyclub.org/DocumentCenter/View/368/Town-Council-History-PDF" data-url-hash="8cb13d97dcf40d7e832addef85b80bc8d74bd586cbad1a0199187b6a68355372" data-url-status="disabled" rel="noopener">Town Council History (PDF)</a>
+					</li>
+					<li class="widgetItem" data-documentid="11601"><a target="_blank" href="https://www.trophyclub.org/DocumentCenter/View/11601/Town-Council-Rules-of-Procedure-adopted-01122026" class="fileType pdf docaccess-activated" aria-label="Town Council Rules of Procedure adopted 01.12.2026 Opens in new window" data-docaccess-source-url="https://www.trophyclub.org/DocumentCenter/View/11601/Town-Council-Rules-of-Procedure-adopted-01122026" data-url-hash="b6de5b8edc9e8e193b28e3ad09d290ba470cfc3b002849b91d64d91299a95d1c" data-url-status="disabled" rel="noopener">Town Council Rules of Procedure adopted 01.12.2026<span class="ae-compliance-indent" style="display:none;"> PDF</span></a>
+					</li>
+
+		</ol>
+	</div>
+                    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //Remove section heading when it is empty and live edit is off.
+        if ('false' === 'false') {
+            var jqh4Selector = $('#widgetRelDoc' + '6fe28aea-ecb1-436a-9a7e-1d57fb29364e').find('div.widgetBody div.row div.relatedDocumentsSection h4.widgetTitle');
+    		if (jqh4Selector.val() == "") {
+    			jqh4Selector
+                    .filter(function () {
+                        return $.trim($(this).text()) === ''
+                    })
+                    .remove();
+            }
+        }
+    });
+</script>
+		</div>
+
+</div>
+
+	</section>
+
+
+<script type="text/javascript">
+    var documentsToInsert = [];
+    var foldersToInsert = [];
+
+    $(document).ready(function () {
+        var hasEditRights = false;        
+        if (window.File && window.FileList && window.FileReader && hasEditRights) {
+            var RelatedDocumentsWidget = 5;
+            makeWidgetAreaDroppable('6fe28aea-ecb1-436a-9a7e-1d57fb29364e', $('#widgetRelDoc' + '6fe28aea-ecb1-436a-9a7e-1d57fb29364e'), RelatedDocumentsWidget, true, RelatedDocumentsCallback);
+        }
+
+		if(hasEditRights)
+    		browserVersionNotCompatibleWithDragDropTextUpdate($('#addFile' + '6fe28aea-ecb1-436a-9a7e-1d57fb29364e'), 'Add a new file');
+    });
+
+    function RelatedDocumentsCallback(widgetID, response)
+    {
+        if (window.ContentCollectionInstance.IsWorkingCopy) {
+        	$('#widgetRelDoc' + widgetID).replaceWith(response);            
+            contentUpdated();
+            attachRelatedDocumentsHandlers();            
+        }
+        else {
+            ContentCollectionInstance.reloadContent();
+        }      
+    }
+</script>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="siteSidebarTS" class="siteSidebar">
+<aside data-cprole="contentContainer" id="sidebarContainer1TS">	<div id="cc1ec4bbe9-68bf-42f8-8935-a27aba7a02ef" data-containerid="1ec4bbe9-68bf-42f8-8935-a27aba7a02ef" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav" aria-label="Secondary">
+
+
+
+
+
+	<ol id="secondaryMenusecondaryNav" data-parent="393" class="rootNavMenu accordionNav">
+	<li aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem821" data-pageid="821">
+		<div class="accordionNavItem">
+			<a href="https://www.trophyclub.org/821/Welcome-from-the-Mayor" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Welcome from the Mayor</a>
+		</div>
+			</li>
+	<li aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem566" data-pageid="566">
+		<div class="accordionNavItem">
+			<a href="https://www.trophyclub.org/809" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Agendas</a>
+		</div>
+			</li>
+	<li aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem457" data-pageid="457">
+		<div class="accordionNavItem">
+			<a href="https://www.trophyclub.org/457/Town-Council-Meeting-Videos" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Town Council Meeting Videos</a>
+		</div>
+			</li>
+	<li aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem490" data-pageid="490">
+		<div class="accordionNavItem">
+			<a href="https://www.trophyclub.org/490/Town-Council-Meeting-Recaps" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Town Council Meeting Recaps</a>
+		</div>
+			</li>
+	<li aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem458" data-pageid="458">
+		<div class="accordionNavItem">
+			<a href="http://weblink.trophyclub.org/WebLink/browse.aspx?dbid=0&amp;repo=TrophyClub" target="_blank" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem" aria-label="Online Records Opens in new window" rel="noopener">Online Records</a>
+		</div>
+			</li>
+	<li aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem526" data-pageid="526">
+		<div class="accordionNavItem">
+			<a href="https://www.trophyclub.org/calendar.aspx?CID=26" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Town Council Upcoming Meeting Dates</a>
+		</div>
+			</li>
+	<li aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem761" data-pageid="761">
+		<div class="accordionNavItem">
+			<a href="https://www.trophyclub.org/761/Community-Spotlight" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Community Spotlight</a>
+		</div>
+			</li>
+	<li aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem892" data-pageid="892">
+		<div class="accordionNavItem">
+			<a href="https://www.trophyclub.org/888/Strategic-Plan-2025---2029" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Strategic Plan 2025 - 2029</a>
+		</div>
+			</li>
+	<li aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem891" data-pageid="891">
+		<div class="accordionNavItem">
+			<a href="https://www.trophyclub.org/866/Business-Plan-2025" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Business Plan 2025</a>
+		</div>
+			</li>
+	<li aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem470" data-pageid="470">
+		<div class="accordionNavItem">
+			<a href="https://www.trophyclub.org/470/Contact-Town-Council" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Contact Town Council</a>
+		</div>
+			</li>
+	<li aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem492" data-pageid="492">
+		<div class="accordionNavItem">
+			<a href="https://www.trophyclub.org/492/Ethics-and-Conflicts-of-Interest" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Ethics and Conflicts of Interest</a>
+				<a href="https://www.trophyclub.org/393/Town-Council#" class="openAccordionNav accordionSecondaryNavItem" title="Expand Ethics and Conflicts of Interest Submenu" role="button" tabindex="0" aria-expanded="false" aria-label="Ethics and Conflicts of Interest submenu"></a>
+		</div>
+					<ol aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" style="display: none;" data-parent="492">
+						<li aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem497" data-pageid="497">
+			<div class="accordionNavItem">
+				<a href="https://www.trophyclub.org/497/Conflict-of-Interest" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Conflict of Interest</span></a>
+			</div>
+					</li>
+		<li aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem498" data-pageid="498">
+			<div class="accordionNavItem">
+				<a href="https://www.trophyclub.org/498/Local-Government-Code-Synopsis" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Local Government Code Synopsis</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem911" data-pageid="911">
+		<div class="accordionNavItem">
+			<a href="https://www.trophyclub.org/DocumentCenter/View/11601/Town-Council-Rules-of-Procedure-adopted-01122026" target="_blank" class="navMainItem secondaryNavItem cpComponent docaccess-activated" data-type="SecondaryMainItem" aria-label="Town Council Rules of Procedure Opens in new window" data-docaccess-source-url="https://www.trophyclub.org/DocumentCenter/View/11601/Town-Council-Rules-of-Procedure-adopted-01122026" data-url-hash="b6de5b8edc9e8e193b28e3ad09d290ba470cfc3b002849b91d64d91299a95d1c" data-url-status="disabled" rel="noopener">Town Council Rules of Procedure</a>
+		</div>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = false;
+		});
+	</script>
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			$('*[id^="SideItem"]').each(function () {
+				var ids = $('[id="' + this.id + '"]');
+				if (ids.length > 1)
+					$.each(ids, function (index, value) {
+						value.id = value.id + '_' + index;
+					});
+			});
+
+			$('.hasAccordionChildren .openAccordionNav').click(function (e) {
+				e.preventDefault();
+				showHideAccordionMenuForSecondaryNav($(this));
+			});
+
+			$("#secondaryNav .grippy").each(function () {
+				menuManager.setupDraggableElement($(this), SIDE_MENU, '#secondaryNav');
+			});
+
+			$("#secondaryNav li").each(function () {
+				menuManager.setupDroppableAccordionElement($(this), SIDE_MENU);
+			});
+		});
+	</script>
+
+
+
+</nav><aside data-cprole="contentContainer" id="sidebarContainer2TS">	<div id="ccb92524e9-d2d2-41c9-89e7-612998bc6f47" data-containerid="b92524e9-d2d2-41c9-89e7-612998bc6f47" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div><!-- GBs --><div data-cprole="structuralContainer" id="gbsContainerTS">
+<div class="siteWrap5"><div data-cprole="contentContainer" id="gbsTS">	<div id="cc1fd03d4b-b348-4720-8f40-7ee6bbb6cf9f" data-containerid="1fd03d4b-b348-4720-8f40-7ee6bbb6cf9f" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="40">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col12 first" style="" data-widgetcontainerid="c8395cbe-a0db-4761-a882-0fe8f8104511">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last idef17cc43-bd7e-4c75-b5b8-c1b6c9e01c36" style="" data-widgetcontainerid="ef17cc43-bd7e-4c75-b5b8-c1b6c9e01c36">
+	
+<div data-widget-id="25473d99-20f1-4ddf-8f7b-2a1f3807abe4" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget25473d99-20f1-4ddf-8f7b-2a1f3807abe4" class="widget widgetGraphicLinks skin67 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.trophyclub.org/254" target="_self" class="fancyButton fancyButton231 ">
+		<span>
+			<span><span class="text">Community Events</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton231.fancyButton:link,.fancyButton231.fancyButton:visited, .fancyButton231div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=5311');
+	background-repeat: no-repeat;
+	background-position: center .75em ;
+transition: all .3s ease-in-out;
+background-size: 6.75em;}
+.fancyButton231.fancyButton:hover,.fancyButton231.fancyButton:focus,.fancyButton231.fancyButton:active,.fancyButton231.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=5310');
+	background-repeat: no-repeat;
+	background-position: center top;
+background-size: 7em;}
+.fancyButton231.fancyButton:link > span,.fancyButton231.fancyButton:visited > span, .fancyButton231div.fancyButton > span{
+}
+.fancyButton231.fancyButton:hover > span,.fancyButton231.fancyButton:focus > span,.fancyButton231.fancyButton:active > span,.fancyButton231.fancyButton.hover > span{
+}
+.fancyButton231.fancyButton .text{
+	color: #383838;
+	font-size: 1em;
+	font-family: "Montserrat";
+	padding-top: 7.25em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 7.25em;
+	background-image: url('/ImageRepository/Document?documentID=5302');
+	background-repeat: no-repeat;
+	background-position: center 2.325em ;
+transition: all .3s ease-in-out;
+background-size: 3.05em;
+}
+.fancyButton231.fancyButton:hover .text,.fancyButton231.fancyButton:focus .text,.fancyButton231.fancyButton:active .text,.fancyButton231.fancyButton.hover .text{
+	color: #383838;
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=5301');
+	background-repeat: no-repeat;
+	background-position: center 1.75em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.trophyclub.org/550/TC-Alerts" target="_self" class="fancyButton fancyButton232 ">
+		<span>
+			<span><span class="text">TC Alerts</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton232.fancyButton:link,.fancyButton232.fancyButton:visited, .fancyButton232div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=5303');
+	background-repeat: no-repeat;
+	background-position: center .75em ;
+transition: all .3s ease-in-out;
+background-size: 6.75em;}
+.fancyButton232.fancyButton:hover,.fancyButton232.fancyButton:focus,.fancyButton232.fancyButton:active,.fancyButton232.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=5300');
+	background-repeat: no-repeat;
+	background-position: center top;
+background-size: 7em;}
+.fancyButton232.fancyButton:link > span,.fancyButton232.fancyButton:visited > span, .fancyButton232div.fancyButton > span{
+}
+.fancyButton232.fancyButton:hover > span,.fancyButton232.fancyButton:focus > span,.fancyButton232.fancyButton:active > span,.fancyButton232.fancyButton.hover > span{
+}
+.fancyButton232.fancyButton .text{
+	color: #383838;
+	font-size: 1em;
+	font-family: "Montserrat";
+	padding-top: 7.25em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 7.25em;
+	background-image: url('/ImageRepository/Document?documentID=5313');
+	background-repeat: no-repeat;
+	background-position: center 2.425em ;
+transition: all .3s ease-in-out;
+background-size: 3.05em;
+}
+.fancyButton232.fancyButton:hover .text,.fancyButton232.fancyButton:focus .text,.fancyButton232.fancyButton:active .text,.fancyButton232.fancyButton.hover .text{
+	color: #383838;
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=5312');
+	background-repeat: no-repeat;
+	background-position: center 1.75em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.trophyclub.org/847" target="_self" class="fancyButton fancyButton260 ">
+		<span>
+			<span><span class="text">Join Our Team</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton260.fancyButton:link,.fancyButton260.fancyButton:visited, .fancyButton260div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=5311');
+	background-repeat: no-repeat;
+	background-position: center .75em ;
+transition: all .3s ease-in-out;
+background-size: 6.75em;}
+.fancyButton260.fancyButton:hover,.fancyButton260.fancyButton:focus,.fancyButton260.fancyButton:active,.fancyButton260.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=5310');
+	background-repeat: no-repeat;
+	background-position: center top;
+background-size: 7em;}
+.fancyButton260.fancyButton:link > span,.fancyButton260.fancyButton:visited > span, .fancyButton260div.fancyButton > span{
+}
+.fancyButton260.fancyButton:hover > span,.fancyButton260.fancyButton:focus > span,.fancyButton260.fancyButton:active > span,.fancyButton260.fancyButton.hover > span{
+}
+.fancyButton260.fancyButton .text{
+	color: #383838;
+	font-size: 1em;
+	font-family: "Montserrat";
+	padding-top: 7.25em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 7.25em;
+	background-image: url('/ImageRepository/Document?documentID=5305');
+	background-repeat: no-repeat;
+	background-position: center 2.325em ;
+transition: all .3s ease-in-out;
+background-size: 3.05em;
+}
+.fancyButton260.fancyButton:hover .text,.fancyButton260.fancyButton:focus .text,.fancyButton260.fancyButton:active .text,.fancyButton260.fancyButton.hover .text{
+	color: #383838;
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=5304');
+	background-repeat: no-repeat;
+	background-position: center 1.75em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col12 last" style="" data-widgetcontainerid="840a2c6c-be7c-414f-aac4-4caf33da8fe9">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last id8707550c-182c-46f0-8201-fc79dbb3dd9a" style="" data-widgetcontainerid="8707550c-182c-46f0-8201-fc79dbb3dd9a">
+	
+<div data-widget-id="862ab61e-fe64-4426-bde3-d3fd9808f5bd" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget862ab61e-fe64-4426-bde3-d3fd9808f5bd" class="widget widgetGraphicLinks skin67 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.trophyclub.org/187/Permitting" target="_self" class="fancyButton fancyButton261 ">
+		<span>
+			<span><span class="text">Inspections &amp;<br>Permits</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton261.fancyButton:link,.fancyButton261.fancyButton:visited, .fancyButton261div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=5309');
+	background-repeat: no-repeat;
+	background-position: center .75em ;
+transition: all .3s ease-in-out;
+background-size: 6.75em;}
+.fancyButton261.fancyButton:hover,.fancyButton261.fancyButton:focus,.fancyButton261.fancyButton:active,.fancyButton261.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=5308');
+	background-repeat: no-repeat;
+	background-position: center top;
+background-size: 7em;}
+.fancyButton261.fancyButton:link > span,.fancyButton261.fancyButton:visited > span, .fancyButton261div.fancyButton > span{
+}
+.fancyButton261.fancyButton:hover > span,.fancyButton261.fancyButton:focus > span,.fancyButton261.fancyButton:active > span,.fancyButton261.fancyButton.hover > span{
+}
+.fancyButton261.fancyButton .text{
+	color: #383838;
+	font-size: 1em;
+	font-family: "Montserrat";
+	padding-top: 7.25em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 7.25em;
+	background-image: url('/ImageRepository/Document?documentID=5307');
+	background-repeat: no-repeat;
+	background-position: center 2.325em ;
+transition: all .3s ease-in-out;
+background-size: 3.05em;
+}
+.fancyButton261.fancyButton:hover .text,.fancyButton261.fancyButton:focus .text,.fancyButton261.fancyButton:active .text,.fancyButton261.fancyButton.hover .text{
+	color: #383838;
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=5306');
+	background-repeat: no-repeat;
+	background-position: center 1.75em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.trophyclub.org/915" target="_self" class="fancyButton fancyButton233 ">
+		<span>
+			<span><span class="text">Trash &amp; Recycling</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton233.fancyButton:link,.fancyButton233.fancyButton:visited, .fancyButton233div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=5303');
+	background-repeat: no-repeat;
+	background-position: center .75em ;
+transition: all .3s ease-in-out;
+background-size: 6.75em;}
+.fancyButton233.fancyButton:hover,.fancyButton233.fancyButton:focus,.fancyButton233.fancyButton:active,.fancyButton233.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=5300');
+	background-repeat: no-repeat;
+	background-position: center top;
+background-size: 7em;}
+.fancyButton233.fancyButton:link > span,.fancyButton233.fancyButton:visited > span, .fancyButton233div.fancyButton > span{
+}
+.fancyButton233.fancyButton:hover > span,.fancyButton233.fancyButton:focus > span,.fancyButton233.fancyButton:active > span,.fancyButton233.fancyButton.hover > span{
+}
+.fancyButton233.fancyButton .text{
+	color: #383838;
+	font-size: 1em;
+	font-family: "Montserrat";
+	padding-top: 7.25em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 7.25em;
+	background-image: url('/ImageRepository/Document?documentID=5315');
+	background-repeat: no-repeat;
+	background-position: center 2.425em ;
+transition: all .3s ease-in-out;
+background-size: 3.05em;
+}
+.fancyButton233.fancyButton:hover .text,.fancyButton233.fancyButton:focus .text,.fancyButton233.fancyButton:active .text,.fancyButton233.fancyButton.hover .text{
+	color: #383838;
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=5314');
+	background-repeat: no-repeat;
+	background-position: center 1.75em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.trophyclub.org/269" target="_self" class="fancyButton fancyButton395 ">
+		<span>
+			<span><span class="text">Elections &amp; Voting</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton395.fancyButton:link,.fancyButton395.fancyButton:visited, .fancyButton395div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=5309');
+	background-repeat: no-repeat;
+	background-position: center .75em ;
+transition: all .3s ease-in-out;
+background-size: 6.75em;}
+.fancyButton395.fancyButton:hover,.fancyButton395.fancyButton:focus,.fancyButton395.fancyButton:active,.fancyButton395.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=5308');
+	background-repeat: no-repeat;
+	background-position: center top;
+background-size: 7em;}
+.fancyButton395.fancyButton:link > span,.fancyButton395.fancyButton:visited > span, .fancyButton395div.fancyButton > span{
+}
+.fancyButton395.fancyButton:hover > span,.fancyButton395.fancyButton:focus > span,.fancyButton395.fancyButton:active > span,.fancyButton395.fancyButton.hover > span{
+}
+.fancyButton395.fancyButton .text{
+	color: #383838;
+	font-size: 1em;
+	font-family: "Montserrat";
+	padding-top: 7.25em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 7.25em;
+	background-image: url('/ImageRepository/Document?documentID=6497');
+	background-repeat: no-repeat;
+	background-position: center 2.5em ;
+transition: all .3s ease-in-out;
+background-size: 3.05em;
+}
+.fancyButton395.fancyButton:hover .text,.fancyButton395.fancyButton:focus .text,.fancyButton395.fancyButton:active .text,.fancyButton395.fancyButton.hover .text{
+	color: #383838;
+	text-decoration: underline;
+	background-image: url('/ImageRepository/Document?documentID=6496');
+	background-repeat: no-repeat;
+	background-position: center 2em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div><!-- Calendar/Carousel --><!-- <div data-cpRole="structuralContainer" id="homeContainer1">
+    <div class="siteWrap2">
+      <div data-cpRole="contentContainer" id="homeContent1a"></div>
+    </div>
+  </div> --><!-- Footer --><footer data-cprole="structuralContainer" id="footerContainerTS">
+<div class="siteWrap5"><div data-cprole="contentContainer" id="footerTS">	<div id="ccb8ee0570-4f4e-45ea-8aa7-69771e2efc04" data-containerid="b8ee0570-4f4e-45ea-8aa7-69771e2efc04" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="60">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="" data-widgetcontainerid="6fda0c06-9c35-46a5-8b8a-535d52c10795">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id26da6de7-ce1e-4f06-941b-d317ee218e5a" style="" data-widgetcontainerid="26da6de7-ce1e-4f06-941b-d317ee218e5a">
+	
+    <div data-widget-id="ff920579-7375-44f6-8f9b-3afa051a72e0" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdvff920579-7375-44f6-8f9b-3afa051a72e0" class="widget widgetInfoAdvanced skin68 widgetOptionSet5 wide" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="headerff920579-7375-44f6-8f9b-3afa051a72e0">
+			<header class="widgetHeader" id="headerff920579-7375-44f6-8f9b-3afa051a72e0" role="presentation">
+		<div class="">
+					<h3 role="heading" aria-level="2">Contact Us</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid2 ">
+		<div class="row wide">
+					<div class="col col1 first ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Town of Trophy Club</p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>1 Trophy Wood Drive</p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Trophy Club, TX 76262</p>
+</li>						</ol>
+					</div>
+					<div class="col col1  last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Phone: <a href="tel:6822372900">682-237-2900</a></p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="mailto:info@trophyclub.org" rel="noopener" target="_blank" aria-label="Email Opens in new window">Email</a></p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="https://www.trophyclub.org/directory">Contact Us</a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdvff920579-7375-44f6-8f9b-3afa051a72e0 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="" data-widgetcontainerid="cfc989c5-87a1-4d13-ad42-e6beb678e575">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last idd5efb43c-150b-4b40-99c2-096596b7c2de" style="" data-widgetcontainerid="d5efb43c-150b-4b40-99c2-096596b7c2de">
+	
+
+<div class="widget widgetSpacer" id="c7a7991f-a18f-42a1-8741-48725103ddf6"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col5" style="" data-widgetcontainerid="7a9853c8-dd97-4d15-a1c7-e25dd036fd13">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last ida00a095c-fd99-4d53-9f98-dab33ce0b256" style="" data-widgetcontainerid="a00a095c-fd99-4d53-9f98-dab33ce0b256">
+	
+	<div data-widget-id="3a20c7fd-a6fd-4353-812e-62980ec5901f" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink3a20c7fd-a6fd-4353-812e-62980ec5901f" class="widget widgetQuickLinks skin68 widgetOptionSet25 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeader3a20c7fd-a6fd-4353-812e-62980ec5901f">
+			<header class="widgetHeader" id="quickLinksHeader3a20c7fd-a6fd-4353-812e-62980ec5901f" role="presentation">
+		<div class="">
+					<h3 role="heading" aria-level="2"><a style="" href="https://www.trophyclub.org/QuickLinks.aspx?CID=14">Quick Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.trophyclub.org/809" target="_self">Agendas &amp; Minutes</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.trophyclub.org/557" target="_blank" aria-label="Flag Status Opens in new window" rel="noopener">Flag Status</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.trophyclub.org/FormCenter/Community-6/Submit-A-Compliment-Complaint-or-Concern-73" target="_blank" aria-label="Submit Feedback Opens in new window" rel="noopener">Submit Feedback</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.trophyclub.org/CivicAlerts.aspx?CID=1" target="_self">Town News</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.trophyclub.org/393/Town-Council" target="_self">Town Council</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://ecode360.com/TR3145" target="_blank" aria-label="Town Ordinances Opens in new window" rel="noopener">Town Ordinances</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="" data-widgetcontainerid="3d5ae038-bee6-4e3c-b19d-63b0308ec19b">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id95888d0c-78bb-467f-b0ab-20120a29859e" style="" data-widgetcontainerid="95888d0c-78bb-467f-b0ab-20120a29859e">
+	
+
+<div class="widget widgetSpacer" id="5cd20583-81dc-4229-b563-c49955e2e162"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4" style="" data-widgetcontainerid="bd09905e-c0fc-4e85-9b95-db36cd0850ae">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last ided843169-0cfd-47c5-a456-bcb77b57808a" style="" data-widgetcontainerid="ed843169-0cfd-47c5-a456-bcb77b57808a">
+	
+	<div data-widget-id="b7d141bb-ebdf-4d6b-9a6e-bca4e5ef3585" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklinkb7d141bb-ebdf-4d6b-9a6e-bca4e5ef3585" class="widget widgetQuickLinks skin68 widgetOptionSet26 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeaderb7d141bb-ebdf-4d6b-9a6e-bca4e5ef3585">
+			<header class="widgetHeader" id="quickLinksHeaderb7d141bb-ebdf-4d6b-9a6e-bca4e5ef3585" role="presentation">
+		<div class="">
+					<h3 role="heading" aria-level="2"><a style="" href="https://www.trophyclub.org/QuickLinks.aspx?CID=15">Site Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.trophyclub.org/home" target="_self">Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.trophyclub.org/accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.trophyclub.org/sitemap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.trophyclub.org/site/copyright" target="_self">Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="" data-widgetcontainerid="5c24099f-542c-4026-aef3-d721b8d34a5b">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last idc72e6ed9-cefa-48f3-a801-ef99352d7b8e" style="" data-widgetcontainerid="c72e6ed9-cefa-48f3-a801-ef99352d7b8e">
+	
+
+<div class="widget widgetSpacer" id="57b5583e-74f5-4fdc-a6de-f9b7e07f3dad"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4 last" style="" data-widgetcontainerid="2ecec7be-a032-4c0a-a848-6c5049441685">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col4 first last ida9c92d26-23a7-424d-8ea0-e8372c1953df" style="" data-widgetcontainerid="a9c92d26-23a7-424d-8ea0-e8372c1953df">
+	
+    <div data-widget-id="8d9d509e-3638-4355-9eda-cc9a87001a3e" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv8d9d509e-3638-4355-9eda-cc9a87001a3e" class="widget widgetInfoAdvanced skin69 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn">
+			<header class="widgetHeader" id="header8d9d509e-3638-4355-9eda-cc9a87001a3e" role="presentation">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList" role="presentation">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="https://www.trophyclub.org/home"><img src="https://www.trophyclub.org/ImageRepository/Document?documentId=5319" class="fr-dib" alt="Home Page"></a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv8d9d509e-3638-4355-9eda-cc9a87001a3e .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col4 first last id410b8a42-4630-4f03-8b04-8d9d6e3a9460" style="" data-widgetcontainerid="410b8a42-4630-4f03-8b04-8d9d6e3a9460">
+	
+<div data-widget-id="41447957-b511-4b94-b08a-39e2306a1932" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget41447957-b511-4b94-b08a-39e2306a1932" class="widget widgetGraphicLinks skin70 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid4 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.trophyclub.org/facebook" target="_self"><img src="https://www.trophyclub.org/ImageRepository/Document?documentID=5321" class="graphicButtonLink" alt="Facebook " onmouseover="this.src='/ImageRepository/Document?documentID=5320'" onmouseout="this.src='/ImageRepository/Document?documentID=5321'" onfocus="this.src='/ImageRepository/Document?documentID=5320'" onblur="this.src='/ImageRepository/Document?documentID=5321'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.trophyclub.org/twitter" target="_self"><img src="https://www.trophyclub.org/ImageRepository/Document?documentID=5325" class="graphicButtonLink" alt="Twitter" onmouseover="this.src='/ImageRepository/Document?documentID=5324'" onmouseout="this.src='/ImageRepository/Document?documentID=5325'" onfocus="this.src='/ImageRepository/Document?documentID=5324'" onblur="this.src='/ImageRepository/Document?documentID=5325'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.trophyclub.org/youtube" target="_self"><img src="https://www.trophyclub.org/ImageRepository/Document?documentID=5327" class="graphicButtonLink" alt="YouTube" onmouseover="this.src='/ImageRepository/Document?documentID=5326'" onmouseout="this.src='/ImageRepository/Document?documentID=5327'" onfocus="this.src='/ImageRepository/Document?documentID=5326'" onblur="this.src='/ImageRepository/Document?documentID=5327'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.trophyclub.org/alertcenter" target="_self"><img src="https://www.trophyclub.org/ImageRepository/Document?documentID=5323" class="graphicButtonLink" alt="TC Alerts" onmouseover="this.src='/ImageRepository/Document?documentID=5322'" onmouseout="this.src='/ImageRepository/Document?documentID=5323'" onfocus="this.src='/ImageRepository/Document?documentID=5322'" onblur="this.src='/ImageRepository/Document?documentID=5323'"> </a></li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</footer><!-- Powered By --><div data-cprole="structuralContainer" id="poweredByContainerTS">
+<div class="siteWrap5"><div data-cprole="contentContainer" id="poweredByTS">	<div id="ccea6cd2de-3d36-4a67-9af8-29eacf7458b3" data-containerid="ea6cd2de-3d36-4a67-9af8-29eacf7458b3" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="a68a2482-3d27-46cc-9cbf-e7fa2a6cbbea">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id36559e88-c1ad-4742-ab34-a12489dbaef3" style="" data-widgetcontainerid="36559e88-c1ad-4742-ab34-a12489dbaef3">
+	
+ 
+	<div data-widget-id="46bc76f1-a7ab-46f4-a85a-4960c71008f9" data-modulename="customHtml" id="widgetCustomHtml46bc76f1-a7ab-46f4-a85a-4960c71008f9" class="widget widgetCustomHtml skin71 narrow">
+	<div class="widgetBody pageStyles" id="widgetBody46bc76f1-a7ab-46f4-a85a-4960c71008f9">
+		<div id="customHtml46bc76f1-a7ab-46f4-a85a-4960c71008f9"><div><style>
+  /* CP icon */
+  .cpBylineIconTS {
+    color: #fff;
+  }
+  /* CP Text */
+  .cpBylineTextTS,
+  .cpBylineTextTS a:link {
+    color: #fff;
+  }
+
+  .cpBylineTS {
+    text-align: center;
+  }
+  
+  .cpBylineIconTS {
+    fill: currentColor;
+    width: 39px;
+    height: 26px;
+    display: inline;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="widgetItem cpBylineTS">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="cpBylineIconTS">
+    <path class="c" d="M73.4,23.2h-19v16.7h19c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5h-19v28.4h5.5l11.3-11.7h2.2c11.9,0,21.6-9.7,21.6-21.6C95,33,85.3,23.2,73.4,23.2"></path>
+    <path class="p" d="M45.8,66.5H26.6C14.7,66.5,5,56.8,5,44.9C5,33,14.7,23.2,26.6,23.2h19.1v16.7H26.6c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h19.1V66.5z"></path>
+  </svg>
+  <span class="cpBylineTextTS">Government Websites by <a href="https://connect.civicplus.com/referral">CivicPlus®</a></span>
+</div>
+</div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '393',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!-- Fixed Nav Adjustment -->
+<script>
+  function getValueTS(elem, attr) {
+    const val = elem.css(attr);
+    if (val === undefined) return undefined;
+    const num = parseInt(val, 10);
+    if (num === NaN) return undefined;
+    return num;
+  }
+
+  function clampTS(number, min, max) {
+    return Math.min(Math.max(number, min), max);
+  }
+
+  function isPageEditingTS() {
+    return (
+      $("#doneEditing").length > 0 || // In live edit
+      typeof DesignCenter !== "undefined" // In theme manager
+    );
+  }
+
+  const bgColorRegexTS = /rgba\((\d+), (\d+), (\d+), (\d*\.?\d*)\)/;
+  function isTransparentTS(elem) {
+    const bg = elem.css('background-color');
+    if (typeof bg !== "string" || !bg.startsWith('rgba(')) return false;
+    const matchState = bg.match(bgColorRegexTS);
+    if (!matchState || matchState.length !== 5) return false;
+    const alpha = parseFloat(matchState[4], 10);
+    if (!(alpha >= 0 && alpha < 1)) return false;
+    return true;
+  }
+
+  function iterateLeftpads(cb) {
+    const containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (let i = 0; i < containersTS.length; i++) {
+      const containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-leftpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-leftpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  const anchor = $("#divToolbars");
+
+  // Outer banner padding (push banner down)
+  const outerSizingTS = $("#bannerContainerTS");
+  // Inner banner padding (push banner content down) - Transparent header OR on attaching headers
+  const innerSizingTS = $("#bannerSizingTS");
+  const bodyContainerTS = $("#bodyContainerTS");
+
+  const forceUnfixClassTS = "forceUnfixTS";
+
+  const fixedTopTS = $(".fixedTopTS");
+  const fixedBottomTS = $(".fixedBottomTS");
+  const fixedLeftTS = $(".fixedLeftTS");
+
+  var initialTopTS;
+  var topAttachTS;
+  if (fixedTopTS && fixedTopTS.length === 1) {
+    initialTopTS = getValueTS(fixedTopTS, 'top');
+    const attachment = fixedTopTS.attr('data-attach');
+    if (attachment) topAttachTS = $("#" + attachment);
+    if (!topAttachTS || topAttachTS.length !== 1) topAttachTS = undefined;
+  }
+
+  function resizeAdjustmentTS() {
+    const editing = isPageEditingTS();
+
+    // Fixed top script
+    (function () {
+      if (!fixedTopTS || fixedTopTS.length !== 1 || initialTopTS === undefined) return;
+
+      if (editing) {
+        fixedTopTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedTopTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      const topPosition = fixedTopTS.css('position');
+      if (topPosition === 'fixed') {
+        if (topAttachTS) {
+          scrollAdjustmentTS();
+        } else {
+          const anchorHeight = anchor.outerHeight() - 1;
+          fixedTopTS.css('top', anchorHeight + initialTopTS);
+        }
+      } else {
+        fixedTopTS.css('top', initialTopTS);
+      }
+
+      if (topPosition === 'fixed' || topPosition === 'absolute') {
+        // Bump the banner content down
+        if (isTransparentTS(fixedTopTS)) {
+          innerSizingTS.css('padding-top', initialTopTS + fixedTopTS.outerHeight() - 1);
+          outerSizingTS.css('padding-top', '');
+
+          try {
+            window.Pages.onResizeHandlersExecute();
+          } catch (e) { }
+        } else {
+          outerSizingTS.css('padding-top', fixedTopTS.outerHeight() - 1);
+          innerSizingTS.css('padding-top', '');
+        }
+      } else {
+        innerSizingTS.css('padding-top', '');
+        outerSizingTS.css('padding-top', '');
+      }
+    })();
+
+    // Fixed bottom script
+    (function () {
+      if (!fixedBottomTS || fixedBottomTS.length === 0) return;
+
+      // If the widget has gone narrow, force unfix
+      if (editing || fixedBottomTS.outerHeight() > 200) {
+        fixedBottomTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedBottomTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedBottomTS.css('position') === 'fixed') {
+        bodyContainerTS.css('padding-bottom', fixedBottomTS.outerHeight());
+      } else {
+        bodyContainerTS.css('padding-bottom', '');
+      }
+    })();
+
+    // Fixed left script
+    (function () {
+      if (!fixedLeftTS || fixedLeftTS.length === 0) return;
+
+      if (editing) {
+        fixedLeftTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedLeftTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedLeftTS.css('position') === 'fixed') {
+        const anchorHeight = anchor.outerHeight() - 1;
+        fixedLeftTS.css('top', anchorHeight);
+        const leftBoundingTS = fixedLeftTS[0].getBoundingClientRect();
+        iterateLeftpads(function (containerTS) {
+          const containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.left <= leftBoundingTS.right) {
+            $(containerTS).css('padding-left', leftBoundingTS.width + 16);
+          }
+        });
+      } else {
+        fixedLeftTS.css('top', '');
+        iterateLeftpads(function (containerTS) {
+          $(containerTS).css('padding-left', '');
+        });
+      }
+    })();
+  }
+
+  function scrollAdjustmentTS() {
+    if (!fixedTopTS || fixedTopTS.length !== 1 || !topAttachTS || topAttachTS.length !== 1) return;
+    const topPosition = fixedTopTS.css('position');
+    if (topPosition === 'fixed' || topPosition === 'absolute') {
+      const anchorBounding = anchor[0].getBoundingClientRect();
+      const attachBounding = topAttachTS[0].getBoundingClientRect();
+      const scrollTop = $(window).scrollTop();
+
+      fixedTopTS.css('top', Math.max(anchorBounding.bottom - 1, attachBounding.bottom));
+    } else {
+      fixedTopTS.css('top', initialTopTS);
+    }
+  }
+
+  $(window).load(function () {
+    setTimeout(function () {
+      resizeAdjustmentTS();
+    }, 350);
+
+    $(window).scroll(function () {
+      scrollAdjustmentTS();
+    });
+
+    var adjustTimeoutTS;
+    $(window).resize(function () {
+      clearTimeout(adjustTimeoutTS);
+      adjustTimeoutTS = setTimeout(function () {
+        resizeAdjustmentTS();
+      }, 350);
+    });
+
+    $.when(window.Pages.angularToolbarComplete).done(function () {
+      resizeAdjustmentTS();
+    });
+  });
+</script>
+<!-- End Fixed Nav Adjustment -->
+
+<!-- Favicon MetaTags -->
+<link rel="icon" type="image/png" sizes="192x192" href="/DocumentCenter/View/398">
+
+<link rel="icon" type="image/png" sizes="256x256" href="/DocumentCenter/View/399">
+<link rel="apple-touch-icon" sizes="120x120" href="/DocumentCenter/View/400">
+<link rel="icon" type="image/png" sizes="16x16" href="/DocumentCenter/View/401">
+<link rel="icon" type="image/png" sizes="32x32" href="/DocumentCenter/View/402">
+<meta rel="msapplication-config" content="/DocumentCenter/View/403">
+<link rel="icon" type="image/png" sizes="150x150" href="/DocumentCenter/View/403">
+<link rel="mask-icon" href="/DocumentCenter/View/405">
+<link rel="shortcut icon" href="/DocumentCenter/View/406">
+<link rel="manifest" href="/DocumentCenter/View/407">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+<!-- End Favicon MetaTags -->
+
+
+<!----------Google Translate (Mobile Friendly)--------->
+
+<style>
+  #google-translate-container {
+    float: left;
+    padding: 3px 5px 0px 0px;
+    position: fixed; 
+    bottom: 12px; 
+    left: 16px; 
+    z-index: 5;
+  }
+  
+  .goog-te-combo, .goog-te-banner *, .goog-te-ftab *, .goog-te-menu *, .goog-te-menu2 *, .goog-te-balloon * {
+    font-family: arial;
+    font-size: 10pt;
+    background-image: url("https://www.gstatic.com/images/branding/product/2x/translate_24dp.png");
+    background-position: 5px 5px;
+    background-size: 18px;
+    background-repeat: no-repeat;
+    text-indent: 16px;
+    background-color: #fff;
+    color: #000 !important;
+  }
+  
+  .goog-logo-link {
+    display: none !important;
+  }
+  
+  .goog-te-gadget {
+    color: transparent !important;
+  }
+  
+  .goog-te-gadget .goog-te-combo {
+    margin: 2px 0 !important;
+    border-radius: 15px !important;
+    }
+  
+  .goog-te-combo{
+    border: 1px solid !important;
+    border-color: #bcc9d7 #96a3b1 #96a3b1 #bcc9d7 !important;
+    border-radius: 50px !important;
+    height:31px !important;
+    padding: 0 1px 0 .25rem !important;
+                width: 156px;
+  }
+
+  #launcher-wrapper {
+    bottom: 50px !important;
+  }
+
+</style>
+
+<div id="google-translate-container">
+  <div id="google_translate_element">
+  <div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo" aria-label="google translate languages"><option value="">Select Language</option><option value="ab">Abkhaz</option><option value="ace">Acehnese</option><option value="ach">Acholi</option><option value="aa">Afar</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="alz">Alur</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="as">Assamese</option><option value="av">Avar</option><option value="awa">Awadhi</option><option value="ay">Aymara</option><option value="az">Azerbaijani</option><option value="ban">Balinese</option><option value="bal">Baluchi</option><option value="bm">Bambara</option><option value="bci">Baoulé</option><option value="ba">Bashkir</option><option value="eu">Basque</option><option value="btx">Batak Karo</option><option value="bts">Batak Simalungun</option><option value="bbc">Batak Toba</option><option value="be">Belarusian</option><option value="bem">Bemba</option><option value="bn">Bengali</option><option value="bew">Betawi</option><option value="bho">Bhojpuri</option><option value="bik">Bikol</option><option value="bs">Bosnian</option><option value="br">Breton</option><option value="bg">Bulgarian</option><option value="bua">Buryat</option><option value="yue">Cantonese</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ch">Chamorro</option><option value="ce">Chechen</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="chk">Chuukese</option><option value="cv">Chuvash</option><option value="co">Corsican</option><option value="crh">Crimean Tatar (Cyrillic)</option><option value="crh-Latn">Crimean Tatar (Latin)</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="fa-AF">Dari</option><option value="dv">Dhivehi</option><option value="din">Dinka</option><option value="doi">Dogri</option><option value="dov">Dombe</option><option value="nl">Dutch</option><option value="dyu">Dyula</option><option value="dz">Dzongkha</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="ee">Ewe</option><option value="fo">Faroese</option><option value="fj">Fijian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fon">Fon</option><option value="fr">French</option><option value="fr-CA">French (Canada)</option><option value="fy">Frisian</option><option value="fur">Friulian</option><option value="ff">Fulani</option><option value="gaa">Ga</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gn">Guarani</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="cnh">Hakha Chin</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hil">Hiligaynon</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="hrx">Hunsrik</option><option value="iba">Iban</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="ilo">Ilocano</option><option value="id">Indonesian</option><option value="iu-Latn">Inuktut (Latin)</option><option value="iu">Inuktut (Syllabics)</option><option value="ga">Irish</option><option value="it">Italian</option><option value="jam">Jamaican Patois</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kac">Jingpo</option><option value="kl">Kalaallisut</option><option value="kn">Kannada</option><option value="kr">Kanuri</option><option value="pam">Kapampangan</option><option value="kk">Kazakh</option><option value="kha">Khasi</option><option value="km">Khmer</option><option value="cgg">Kiga</option><option value="kg">Kikongo</option><option value="rw">Kinyarwanda</option><option value="ktu">Kituba</option><option value="trp">Kokborok</option><option value="kv">Komi</option><option value="gom">Konkani</option><option value="ko">Korean</option><option value="kri">Krio</option><option value="ku">Kurdish (Kurmanji)</option><option value="ckb">Kurdish (Sorani)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="ltg">Latgalian</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lij">Ligurian</option><option value="li">Limburgish</option><option value="ln">Lingala</option><option value="lt">Lithuanian</option><option value="lmo">Lombard</option><option value="lg">Luganda</option><option value="luo">Luo</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mad">Madurese</option><option value="mai">Maithili</option><option value="mak">Makassar</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ms-Arab">Malay (Jawi)</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mam">Mam</option><option value="gv">Manx</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mh">Marshallese</option><option value="mwr">Marwadi</option><option value="mfe">Mauritian Creole</option><option value="chm">Meadow Mari</option><option value="mni-Mtei">Meiteilon (Manipuri)</option><option value="min">Minang</option><option value="lus">Mizo</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="nhe">Nahuatl (Eastern Huasteca)</option><option value="ndc-ZW">Ndau</option><option value="nr">Ndebele (South)</option><option value="new">Nepalbhasa (Newari)</option><option value="ne">Nepali</option><option value="bm-Nkoo">NKo</option><option value="no">Norwegian</option><option value="nus">Nuer</option><option value="oc">Occitan</option><option value="or">Odia (Oriya)</option><option value="om">Oromo</option><option value="os">Ossetian</option><option value="pag">Pangasinan</option><option value="pap">Papiamento</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese (Brazil)</option><option value="pt-PT">Portuguese (Portugal)</option><option value="pa">Punjabi (Gurmukhi)</option><option value="pa-Arab">Punjabi (Shahmukhi)</option><option value="qu">Quechua</option><option value="kek">Qʼeqchiʼ</option><option value="rom">Romani</option><option value="ro">Romanian</option><option value="rn">Rundi</option><option value="ru">Russian</option><option value="se">Sami (North)</option><option value="sm">Samoan</option><option value="sg">Sango</option><option value="sa">Sanskrit</option><option value="sat-Latn">Santali (Latin)</option><option value="sat">Santali (Ol Chiki)</option><option value="gd">Scots Gaelic</option><option value="nso">Sepedi</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="crs">Seychellois Creole</option><option value="shn">Shan</option><option value="sn">Shona</option><option value="scn">Sicilian</option><option value="szl">Silesian</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sus">Susu</option><option value="sw">Swahili</option><option value="ss">Swati</option><option value="sv">Swedish</option><option value="ty">Tahitian</option><option value="tg">Tajik</option><option value="ber-Latn">Tamazight</option><option value="ber">Tamazight (Tifinagh)</option><option value="ta">Tamil</option><option value="tt">Tatar</option><option value="te">Telugu</option><option value="tet">Tetum</option><option value="th">Thai</option><option value="bo">Tibetan</option><option value="ti">Tigrinya</option><option value="tiv">Tiv</option><option value="tpi">Tok Pisin</option><option value="to">Tongan</option><option value="lua">Tshiluba</option><option value="ts">Tsonga</option><option value="tn">Tswana</option><option value="tcy">Tulu</option><option value="tum">Tumbuka</option><option value="tr">Turkish</option><option value="tk">Turkmen</option><option value="tyv">Tuvan</option><option value="ak">Twi</option><option value="udm">Udmurt</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="ug">Uyghur</option><option value="uz">Uzbek</option><option value="ve">Venda</option><option value="vec">Venetian</option><option value="vi">Vietnamese</option><option value="war">Waray</option><option value="cy">Welsh</option><option value="wo">Wolof</option><option value="xh">Xhosa</option><option value="sah">Yakut</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="yua">Yucatec Maya</option><option value="zap">Zapotec</option><option value="zu">Zulu</option></select></div>Powered by <span style="white-space:nowrap"><a class="VIpgJd-ZVi9od-l4eHX-hSRGPd" href="https://translate.google.com" target="_blank" rel="noopener" aria-describedby="audioeye_new_window_message"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate">Translate</a></span></div></div>
+</div>
+
+<script>
+
+  function googleTranslateElementInit() {
+    var el = document.getElementById("google_translate_element");
+    if (el && el.innerHTML.trim() !== "") {
+        return;
+    }
+
+    new google.translate.TranslateElement({ pageLanguage: "en" }, "google_translate_element");
+    // begin accessibility compliance
+    $('img.goog-te-gadget-icon').attr('alt','Google Translate');
+    $('div#goog-gt-tt div.logo img').attr('alt','translate');
+    $('div#goog-gt-tt .original-text').css('text-align','left');
+    $('.goog-te-gadget-simple .goog-te-menu-value span').css('color','#000000');
+    $('.goog-te-combo').attr('aria-label','google translate languages');
+    $('svg.goog-te-spinner').attr('title','Google Translate Spinner');
+    $('.goog-te-gadget-simple .goog-te-menu-value span').css('color','#000000');
+  }
+
+  $(function() {
+    $.getScript("//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit");
+  });
+
+</script>
+
+<!--------------End Google Translate----------------->
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23583078-2"></script>
+
+<script>
+
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){dataLayer.push(arguments);}
+
+gtag('js', new Date());
+
+gtag('config', 'UA-23583078-2');
+
+</script>
+
+
+
+<!---End Google Analytics--->
+
+<!-- Google Tag Manager -->
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+
+})(window,document,'script','dataLayer','GTM-MXMLB4W9');</script>
+
+<!-- End Google Tag Manager -->
+
+<script type="text/javascript">!function(){var b=function(){window.__AudioEyeSiteHash = "1cd37a6a3e89961a0dc2a458efc8c63d"; var a=document.createElement("script");a.src="https://wsmcdn.audioeye.com/aem.js";a.type="text/javascript";a.setAttribute("async","");document.getElementsByTagName("body")[0].appendChild(a)};"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",b):window.attachEvent&&window.attachEvent("onload",b):b()}();</script>
+
+<!-- Chatbot city provided -->
+<script id="citibot-chatscript" type="text/javascript" src="https://webchat-ui.citibot.net/script.js?account_id=67194b4164bee153d0babc63"></script>
+<!-- End Chatbot city provided -->
+
+<!-- Start client-requested 3rd party embed positional adjustments -->
+<style>
+#ae_launcher.ae-cta-position-preset-left-lower {
+bottom: 72px;
+}
+
+#launcher {
+    right: 144px !important;
+}
+</style>
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;" role="presentation" aria-hidden="true" tabindex="-1">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,700,700italic,900,900italic,italic,regular|Montserrat:500,600,700,italic,regular|Noto+Sans:700,700italic,italic,regular|Noto+Serif:700,700italic,italic,regular|Open+Sans:300,300italic,600,600italic,700,700italic,800,800italic,italic,regular|Sorts+Mill+Goudy:regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" role="presentation" aria-hidden="true" tabindex="-1">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;" role="presentation"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><script id="GoogleMapsJS" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784&amp;callback=downloadGoogleMapsCustomScript"></script><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu35" class="contentTop mainNavMegaMenu megaMenuContainer pageID_35 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 90px;">	<div id="cce3e6c85c-4267-43c1-b575-4b55d016af3d" data-containerid="e3e6c85c-4267-43c1-b575-4b55d016af3d" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu27" class="contentTop mainNavMegaMenu megaMenuContainer pageID_27 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 90px;">	<div id="cc8f30fc2e-e25a-4a8b-af0b-89f5576efbc1" data-containerid="8f30fc2e-e25a-4a8b-af0b-89f5576efbc1" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu101" class="contentTop mainNavMegaMenu megaMenuContainer pageID_101 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 90px;">	<div id="cc38ecfa47-2f1b-4add-b7af-3d4b6b997f63" data-containerid="38ecfa47-2f1b-4add-b7af-3d4b6b997f63" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu31" class="contentTop mainNavMegaMenu megaMenuContainer pageID_31 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 90px;">	<div id="cc1b0057c0-b897-4532-9dcf-2ae5e8191359" data-containerid="1b0057c0-b897-4532-9dcf-2ae5e8191359" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><iframe height="0" width="0" style="display: none; visibility: hidden;" id="ae_iframe_m4n4i8i2"></iframe><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr"><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""><div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr">Original text</div></div><div class="VIpgJd-yAWNEb-hvhgNd-k77Iif"><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Rate this translation</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Your feedback will be used to help improve Google Translate</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Good translation" aria-label="Good translation" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Poor translation" aria-label="Poor translation" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0" title="voting" id="ae_iframe_muh6c1yc"></iframe></div></div></div><iframe title="Support chatbot" id="citibot-chat-frame" srcdoc="
+    &lt;head&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&lt;/head&gt;
+    &lt;div id=&quot;citibot_support_chat&quot; data-account_id=&quot;67194b4164bee153d0babc63&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://webchat-ui.citibot.net/index.css&quot; /&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;https://webchat-ui.citibot.net/index.js&quot;&gt;&lt;/script&gt;
+  " aria-hidden="true" style="position: fixed; bottom: 20px; right: 20px; border: none; z-index: 2147483000; width: 165px; height: 165px;"></iframe><iframe height="0" width="0" src="https://14066283.fls.doubleclick.net/activityi;src=14066283;type=visit0;cat=allpa0;ord=9334064895574;npa=0;auiddc=361480526.1769480209;u1=%2F393%2FTown-Council;uaa=x86;uab=64;uafvl=Not%253DA%253FBrand%3B24.0.0.0%7CChromium%3B140.0.7339.16;uamb=0;uam=;uap=Linux;uapv=6.11.0;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe61n1v9188093436z89175859961za20gzb9175859961zd9175859961xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=102015666~103116026~103200004~104527906~104528501~104684208~104684211~105391252~115938466~115938469~116185181~116185182~116682876~117041588~117223559~117223565;epver=2;dc_random=1769480209_fk_R-vpBYA31fFAQoz5FyOvRiSd8hCaXcg;_dc_test=1;~oref=https%3A%2F%2Fwww.trophyclub.org%2F393%2FTown-Council?" style="display: none; visibility: hidden;" id="ae_iframe_6rjjt05j"></iframe><div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b role="emphasis">&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div><script src="https://wsmcdn.audioeye.com/aem.js" type="text/javascript" async=""></script><script src="https://wsv3cdn.audioeye.com/bootstrap.js?h=1cd37a6a3e89961a0dc2a458efc8c63d" type="text/javascript" async=""></script><script async="" crossorigin="anonymous" src="https://wsv3cdn.audioeye.com/v2/scripts/loader.js?h=1cd37a6a3e89961a0dc2a458efc8c63d&amp;lang=en&amp;cb=2026-01-14"></script><script type="text/javascript" src="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-14/startup.bundle.js"></script><div id="ae_app" data-nosnippet="">
+    
+        <!--
+        Layout, Style or Voice Helpers
+    -->
+    <div id="ae_helpers" class="ae-module" style="display: none;">
+
+    
+<script type="text/javascript">
+AudioEye.layoutHelpers.push(function(ele){
+
+// Tabset function setup - Active Class is the class the li gets when the element is active
+// Function includes tabsetup, tab labels and keylooping
+function tabSet(listParent, listItem, listAnchor, activeClass, tabPanels){
+  // Setting roles and initial values
+  $ae(listParent).each(function(){
+    if ($ae(this).find(listItem).length > 1) {
+      if($ae(this).css('display') !== 'none'){
+        $ae(this).attr({'role':'tablist'});
+      }
+
+      $ae(this).find(listItem).attr({'role':'presentation'});
+      $ae(this).find(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+      $ae(this).find(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+      $ae(this).find(tabPanels).each(function(){
+        if($ae(this).parent().find(listParent).css('display') !== 'none'){
+          $ae(this).attr({'role':'tabpanel'});
+        }
+      });
+    }
+  });
+
+
+  // Encapsulate events - Key Navigation for tabsets without tabindex
+  ele.outerFind(listParent).each(function(){
+    if ($ae(this).find(listItem).length > 1) {
+      // Change active tab onclick event
+      $ae(this).find('a').click(function(){
+        $ae(listParent).find('a').attr({'aria-selected':'false', 'tabindex':'-1'});	
+        $ae(listParent).find('li.active a').attr({'aria-selected':'true', 'tabindex':'0'});	
+      });
+
+
+      // tabset keylooping
+      $ae(this).find('a').on('keydown', function(e){
+        if(e.keyCode === 13 || e.keyCode === 32){
+          e.preventDefault();
+          this.click();
+        }
+        else if(e.keyCode === 37 && ($ae(this)[0] === $ae(this).closest('ol').find('a').first()[0])){
+          AudioEye.focusElement($ae(this).closest('ol').find('a').eq(-1));
+        }
+        else if( e.keyCode === 39 && ($ae(this)[0] === $ae(this).closest('ol').find('a').last()[0])){
+          AudioEye.focusElement($ae(this).closest('ol').find('a').first());
+        }
+        else if(e.keyCode === 37 ){
+          AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+        }
+        else if(e.keyCode === 39 ){
+          AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+        }
+      });
+    }
+
+  });	// Close encapsulated actions
+}
+// tabset function call
+tabSet('ol.tabbedWidget.cpTabs','ol.tabbedWidget.cpTabs li','ol.tabbedWidget.cpTabs li > a','active','.cpTabPanels');
+/* end */
+
+
+/* Start new tabset */
+// Facilites Map & Listing Tabset
+function  facilitiesTabSet(listParent, listItem, listAnchor, activeClass, tabPanels){
+
+  // Setting roles and initial values
+  $ae(listParent).attr({'role':'tablist'});
+  $ae(listItem).attr({'role':'presentation'});
+  $ae(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+  $ae(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+  $ae(tabPanels).attr({'role':'tabpanel'});
+
+  $ae(listAnchor).click(function(){
+    $ae(listAnchor).attr({'aria-selected':'false', 'tabindex':'-1'});
+    $ae(this).attr({'aria-selected':'true', 'tabindex':'0'});
+  });
+
+  ele.outerFind('.searchResults > ol.tabs').each(function(){
+
+    $ae(this).find('a').on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+      else if((e.keyCode === 37 || e.keyCode === 38) && ($ae(this)[0] === $ae(this).closest('ol').find('a').first()[0])){
+        AudioEye.focusElement($ae(this).closest('ol').find('a').eq(-1));
+      }
+      else if((e.keyCode === 39 || e.keyCode === 40) && ($ae(this)[0] === $ae(this).closest('ol').find('a').last()[0])){
+        AudioEye.focusElement($ae(this).closest('ol').find('a').first());
+      }
+      else if(e.keyCode === 37 || e.keyCode === 38){
+        AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+      }
+      else if(e.keyCode === 39 || e.keyCode === 40){
+        AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+      }
+    });
+
+  }); 
+
+}
+
+facilitiesTabSet('.searchResults > ol.tabs','.searchResults > ol.tabs > li','.searchResults > ol.tabs > li > a','active','.searchResults > div');
+/* -END- */
+
+/* Start new tabset */
+// Facilitites Sidebar Tabset
+function sideBarTabset(listParent, listItem, listAnchor, activeClass, tabPanels){
+
+  // Setting roles and initial values
+  $ae(listParent).attr({'role':'tablist'});
+  $ae(listItem).attr({'role':'presentation'});
+  $ae(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+  $ae(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+  //$ae(tabPanels).attr({'role':'tabpanel'});
+
+  $ae(listAnchor).click(function(){
+    $ae(listAnchor).attr({'aria-selected':'false', 'tabindex':'-1'});
+    $ae(this).attr({'aria-selected':'true', 'tabindex':'0'});
+  });
+
+  ele.outerFind('ul.tabs.searchCriteria').each(function(){
+
+    $ae(this).find('a').on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+      else if((e.keyCode === 37 || e.keyCode === 38) && ($ae(this)[0] === $ae(this).closest('ul').find('a').first()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').eq(-1));
+      }
+      else if((e.keyCode === 39 || e.keyCode === 40) && ($ae(this)[0] === $ae(this).closest('ul').find('a').last()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').first());
+      }
+      else if(e.keyCode === 37 || e.keyCode === 38){
+        AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+      }
+      else if(e.keyCode === 39 || e.keyCode === 40){
+        AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+      }
+    });
+
+  }); 
+
+}
+
+sideBarTabset('ul.tabs.searchCriteria','ul.tabs.searchCriteria > li','ul.tabs.searchCriteria > li > a','active','ul.tabs.searchCriteria + div.sidebar > div');
+/* End */
+
+/* Start new tabset */
+function calendarTabset(listParent, listItem, listAnchor, activeClass, tabPanels){
+
+  // Setting roles and initial values
+  $ae(listParent).attr({'role':'tablist'});
+  $ae(listItem).attr({'role':'presentation'});
+  $ae(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+  $ae(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+  $ae(tabPanels).attr({'role':'tabpanel'});
+
+  $ae(listAnchor).click(function(){
+    $ae(listAnchor).attr({'aria-selected':'false', 'tabindex':'-1'});
+    $ae(this).attr({'aria-selected':'true', 'tabindex':'0'});
+  });
+
+  $ae('.header > #subheader ul.tabs').each(function(){
+
+    $ae(this).find('a').on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+      else if((e.keyCode === 37 || e.keyCode === 38)  && ($ae(this)[0] === $ae(this).closest('ul').find('a').first()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').eq(-1));
+      }
+      else if((e.keyCode === 39 || e.keyCode === 40) && ($ae(this)[0] === $ae(this).closest('ul').find('a').last()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').first());
+      }
+      else if(e.keyCode === 37 || e.keyCode === 38){
+        AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+      }
+      else if(e.keyCode === 39 || e.keyCode === 40) {
+        AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+      }
+    });
+
+  }); 
+
+}
+
+calendarTabset('.header > #subheader ul.tabs','.header > #subheader ul.tabs > li','.header > #subheader ul.tabs > li > a','active','.header > .list');
+/* end */
+
+// Tabset for Agenda Center Years
+// AE -  Agenda Center Tabset [AEI-40486]
+ele.outerFind('ul.years').each(function(){
+
+  tabset($ae(this), $ae(this).find('li'), $ae(this).find('a[id^="a"]'),'current', $ae(this).parent().find('table'));
+
+  function tabset(tablist, li, tabs, activeClass, tabPanel){
+    tablist.attr('role','tablist');
+    li.attr('role', 'presentation');
+    tabs.attr({'role': 'tab', 'tabindex':'-1', 'aria-selected':'false'});
+    $ae(li.selector +'.' + activeClass +' > '+ tabs.selector).attr({'aria-selected':'true', 'tabindex':'0'});
+    tabPanel.attr('role', 'tabpanel');
+
+    // individual tabs TODO - Update so it is dynamic
+    var tab = tablist.find('>'+li.selector+'>a');
+
+    tab.on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+    }).click(function(){
+      $ae('body').data({'ae-year-tab': '#' + $ae(this).attr('id')});
+      setTimeout(function(){
+        AudioEye.focusElement($ae('body').data('ae-year-tab'));
+        $ae($ae('body').data('ae-year-tab')).attr('tabindex','0');
+      }, 1000);
+    });
+  }
+
+});
+
+}); // layout helpers push close brackets
+</script>
+
+    </div>
+    
+
+        <!--
+        Compliance
+    -->
+    <div id="ae_compliance" class="ae-module" style="display: none;">
+
+        <!-- For autoSmartRem addNewWindowWarnings div is referenced in an aria-describedby -->
+        <div id="audioeye_new_window_message" style="display:none">Opens in new window</div>
+        <div id="audioeye_pdf_message" style="display:none">PDF Download</div>
+        <div id="audioeye_word_message" style="display:none">Word Download</div>
+        <div id="audioeye_excel_message" style="display:none">Excel Download</div>
+        <div id="audioeye_powerpoint_message" style="display:none">PowerPoint Download</div>
+        <div id="audioeye_document_message" style="display:none">Document Download</div>
+
+                    </div>
+    
+    <!--
+        Versioning Control Panel if versioning = true !
+    -->
+        
+    <!--
+        Launcher
+    -->
+    <aside id="ae_launcher" style="display: none" class="ae-module aetipsytip ae-active ae-cta-position-preset-left-lower" aria-label="Accessibility Help Desk">
+  <button aria-label="Explore your accessibility options">
+    <div style="display: none" class="ae-left">
+      <span>Explore your accessibility options</span>
+    </div>
+
+    <div class="ae-right">
+      <span class="icomoon-wrapper">
+        <div>
+          <span class="icomoon-cta ae-icon-launcher-universalaccess ae-initial-cta">
+            <span class="icomoon-cta path1 a11y-icon-figure-and-border"></span>
+            <span class="icomoon-cta path2 a11y-icon-background" style="color: rgb(18, 117, 179);"></span>
+          </span>
+        </div>
+      </span>
+    </div>
+  </button>
+</aside>
+
+    <!-- Toolbar -->
+
+    <span id="ae_placeholder_toolbar" style="display: none;" aria-hidden="true"></span>
+
+    <!--
+        Site Menu
+    -->
+    <span id="ae_placeholder_site-menu" style="display: none;" aria-hidden="true"></span>
+
+    
+    <!--
+        Generic Aria Live message container
+    -->
+    <div class="ae-blurb-noaudio" id="ae_enabled_messages" aria-relevant="additions" aria-live="assertive"></div>
+
+    
+    <!-- Symbol definitions -->
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="icon-close-carousel" viewBox="0 0 32 32">
+                <title>close carousel</title>
+                <path fill="#ffffff" style="fill: var(--color1, #ffffff)" d="M28.992 0l-12.992 12.992-12.992-12.992-3.008 3.008 12.992 12.992-12.992 12.992 3.008 3.008 12.992-12.992 12.992 12.992 3.008-3.008-12.992-12.992 12.992-12.992-3.008-3.008z"></path>
+            </symbol>
+        </defs>
+    </svg>
+
+</div><!-- end #ae_app --><style> body[data-audioeye-carousel-modal-active] .pageContent .col, body[data-audioeye-carousel-modal-active] .pageContent .row, body[data-audioeye-carousel-modal-active] .widget, body[data-audioeye-carousel-modal-active] [data-cprole$=Container], body[data-audioeye-carousel-modal-active] [data-cprole=banner], body[data-audioeye-carousel-modal-active] [data-cprole=nav] { z-index: unset !important; }</style></body></html>
