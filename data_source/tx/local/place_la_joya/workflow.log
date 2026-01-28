@@ -1,0 +1,1592 @@
+[2026-01-28T05:46:51.823084] [INFO] Step 1: RESEARCH_MUNICIPALITY
+[2026-01-28T05:46:51.862462] [INFO] Running Gemini prompt
+[2026-01-28T05:46:51.862840] [DEBUG] Prompt: 
+
+    Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
+
+    Municipality: La Joya city, tx
+
+    Instructions:
+
+    1. Determine the government type of the city. Available government types:
+- mayor_commission
+- mayor_council
+- township_committee
+- select_board
+- aldermen
+
+    2. Identify the elected officials in the local government, 
+       including the Mayor (if applicable).
+       2.1. For each official, extract the following details:
+            - name: Full name only (no titles)
+            - roles: List of active municipal roles (e.g., Mayor, Council Member)
+            - divisions: List of (ward, district), only if applicable
+
+    3. Create a JSON object with the following structure:
+       ```json
+       {
+         "government_type": examples - "mayor_council" or "mayor_commission", etc.,
+         "people": [
+           {
+             "name": "Full name of the official or null if uncertain",
+             "roles": ["Mayor", "Council Member", "Commissioner", etc.],
+             "divisions": ["Ward 1", "District 2", etc.] or [],
+           }
+         ],
+         "notes": "Brief notes about the search and results"
+       }
+       ```
+
+    IMPORTANT: If the response contains anything other than a valid JSON object,
+    it will be considered incorrect. Ensure the response is strictly JSON.
+    Verify that the response is valid JSON before returning it.
+    If it is not valid JSON, retry the generation.
+    
+[2026-01-28T05:46:57.630082] [DEBUG] Gemini raw response: {'government_type': 'mayor_council', 'people': [{'name': 'Isidro Casanova', 'roles': ['Mayor'], 'divisions': ['At-Large']}, {'name': 'Enrique Cantu', 'roles': ['Council Member', 'Mayor Pro-Tem'], 'divisions': ['Place 2']}, {'name': 'Angie Garza', 'roles': ['Council Member'], 'divisions': ['Place 3']}, {'name': 'Laura Mendiola Macias', 'roles': ['Council Member'], 'divisions': ['Place 4']}, {'name': 'Irma Veloz', 'roles': ['Council Member'], 'divisions': ['Place 1']}], 'notes': "La Joya, TX operates under a Council-Manager form of government with a Mayor and four Councilmembers elected at-large. The Councilmembers also have specific 'Place' designations."}
+[2026-01-28T05:46:57.635510] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 365, Output tokens: 885, Total cost: $0.002322
+[2026-01-28T05:46:57.636199] [INFO] gemini gemini-2.5-flash LLM call took 5.77 seconds
+[2026-01-28T05:46:57.637222] [INFO] Source URLs provided, skipping link search.
+[2026-01-28T05:46:57.720711] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.cityoflajoya.com/officials/
+[2026-01-28T05:47:01.098160] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:47:01.099180] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:47:01.449949] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:47:01.458830] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:47:01.459450] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:47:01.816083] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:47:01.837726] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:47:01.839477] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:47:02.190448] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:47:02.204236] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:47:02.205567] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:47:02.554006] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:47:02.565361] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/baner-blog-joya-6.png
+[2026-01-28T05:47:02.568687] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/baner-blog-joya-6.png
+[2026-01-28T05:47:02.917305] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/2eafd376e757.png
+[2026-01-28T05:47:02.935483] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2024/01/Mayor-Isidro-Casanova-736x1024.png
+[2026-01-28T05:47:02.938056] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2024/01/Mayor-Isidro-Casanova-736x1024.png
+[2026-01-28T05:47:03.671595] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/418c62a74ee2.png
+[2026-01-28T05:47:04.007003] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/officials/
+[2026-01-28T05:47:04.125282] [DEBUG] -> Preprocessing with identities: {'Isidro Casanova': ['Isidro Casanova'], 'Enrique Cantu': ['Enrique Cantu'], 'Angie Garza': ['Angie Garza'], 'Laura Mendiola Macias': ['Laura Mendiola Macias'], 'Irma Veloz': ['Irma Veloz']}
+[2026-01-28T05:47:14.274217] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-28T05:47:14.274730] [INFO] -> Elapsed time: 10.25 seconds
+[2026-01-28T05:47:14.275237] [INFO] -> Average elapsed time: 10.25 seconds
+[2026-01-28T05:47:14.275775] [INFO] -> Total elapsed time: 10.25 seconds
+[2026-01-28T05:47:14.373731] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/officials/
+[2026-01-28T05:47:14.383646] [INFO] Running OpenAI prompt
+[2026-01-28T05:47:14.384726] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-28T05:47:14.385808] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T05:47:38.607757] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 870, Output tokens: 1312, Total cost: $0.002842
+[2026-01-28T05:47:38.608919] [INFO] Page relevance check found related urls: ['https://www.cityoflajoya.com/government-officials/', 'https://www.cityoflajoya.com/mayor/', 'https://www.cityoflajoya.com/city-council/', 'https://www.cityoflajoya.com/city-manager/']
+[2026-01-28T05:47:38.609806] [INFO] Running Gemini prompt
+[2026-01-28T05:47:38.610265] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only extract people who are currently serving as officials as of 2026-01-28. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-28
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-28) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-28T05:47:44.829520] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 1949, Output tokens: 207, Total cost: $0.001102
+[2026-01-28T05:47:44.833779] [INFO] gemini gemini-2.5-flash LLM call took 6.22 seconds
+[2026-01-28T05:47:44.835288] [INFO] Running OpenAI prompt
+[2026-01-28T05:47:44.835732] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only extract people who are currently serving as officials as of 2026-01-28. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-28
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-28T05:47:44.836400] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T05:48:04.414043] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1629, Output tokens: 1352, Total cost: $0.003111
+[2026-01-28T05:48:04.416563] [INFO] links updated: [Link(url='https://www.cityoflajoya.com/government-officials', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.cityoflajoya.com/mayor', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.cityoflajoya.com/city-council', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.cityoflajoya.com/city-manager', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.cityoflajoya.com/officials/', status='done', folder_name='www_cityoflajoya_com_officials_', is_profile_page=False)]
+[2026-01-28T05:48:04.529214] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.cityoflajoya.com/government-officials
+[2026-01-28T05:48:09.353174] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:48:09.354011] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:48:09.701870] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:48:09.720816] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:48:09.722741] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:48:10.071928] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:48:10.081584] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:48:10.083672] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:48:10.436367] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:48:10.457465] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:48:10.458409] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:48:10.811586] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:48:10.838146] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:48:10.839716] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:48:11.474417] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/50d49b9e730c.png
+[2026-01-28T05:48:11.497798] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T05:48:11.498866] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T05:48:11.730753] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/1608de193aaa.png
+[2026-01-28T05:48:11.769179] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:48:11.770571] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:48:12.612125] [WARNING] Failed to load image https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png: HTTP 404
+[2026-01-28T05:48:12.613062] [DEBUG] Attempting to create a canvas and load image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:48:13.524519] [WARNING] Failed to create canvas for image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - Page.evaluate: Event
+[2026-01-28T05:48:13.525125] [DEBUG] Attempting to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:48:43.538310] [WARNING] Failed to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - ElementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking element screenshot
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+    - waiting 20ms
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+      - waiting 100ms
+    55 × waiting for element to be stable
+       - element is not visible
+     - retrying scroll into view action
+       - waiting 500ms
+
+[2026-01-28T05:48:43.553756] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:48:43.555436] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:48:43.588877] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/3f3f3a8d0882.png
+[2026-01-28T05:48:43.598910] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-28T05:48:43.824883] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/government-officials
+[2026-01-28T05:48:43.899858] [DEBUG] -> Preprocessing with identities: {'Isidro Casanova': ['Isidro Casanova'], 'Enrique Cantu': ['Enrique Cantu'], 'Angie Garza': ['Angie Garza'], 'Laura Mendiola Macias': ['Laura Mendiola Macias'], 'Irma Veloz': ['Irma Veloz']}
+[2026-01-28T05:48:48.409289] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-28T05:48:48.409555] [INFO] -> Elapsed time: 4.58 seconds
+[2026-01-28T05:48:48.409814] [INFO] -> Average elapsed time: 7.29 seconds
+[2026-01-28T05:48:48.410060] [INFO] -> Total elapsed time: 14.58 seconds
+[2026-01-28T05:48:48.481836] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/government-officials
+[2026-01-28T05:48:48.485109] [INFO] Running OpenAI prompt
+[2026-01-28T05:48:48.485562] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-28T05:48:48.486211] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T05:49:03.696471] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 810, Output tokens: 936, Total cost: $0.002074
+[2026-01-28T05:49:03.697164] [INFO] Page relevance check found related urls: ['https://www.cityoflajoya.com/government', 'https://www.cityoflajoya.com/government/city-council', 'https://www.cityoflajoya.com/city-hall', 'https://www.cityoflajoya.com/departments/administration', 'https://www.cityoflajoya.com/about-us']
+[2026-01-28T05:49:03.776551] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.cityoflajoya.com/government
+[2026-01-28T05:49:07.947540] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:49:07.953765] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:49:08.324160] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:49:08.338117] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:49:08.339723] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:49:08.686693] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:49:08.704141] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:49:08.705712] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:49:09.070481] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:49:09.089312] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:49:09.090477] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:49:09.439784] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:49:09.451354] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:49:09.452833] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:49:10.072156] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/50d49b9e730c.png
+[2026-01-28T05:49:10.082950] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T05:49:10.084502] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T05:49:10.308675] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/1608de193aaa.png
+[2026-01-28T05:49:10.320675] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:49:10.321655] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:49:11.139481] [WARNING] Failed to load image https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png: HTTP 404
+[2026-01-28T05:49:11.142041] [DEBUG] Attempting to create a canvas and load image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:49:11.901981] [WARNING] Failed to create canvas for image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - Page.evaluate: Event
+[2026-01-28T05:49:11.902548] [DEBUG] Attempting to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:49:41.913966] [WARNING] Failed to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - ElementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking element screenshot
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+    - waiting 20ms
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+      - waiting 100ms
+    55 × waiting for element to be stable
+       - element is not visible
+     - retrying scroll into view action
+       - waiting 500ms
+
+[2026-01-28T05:49:41.928873] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:49:41.932351] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:49:42.039583] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/3f3f3a8d0882.png
+[2026-01-28T05:49:42.056001] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-28T05:49:42.362666] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/government
+[2026-01-28T05:49:42.437706] [DEBUG] -> Preprocessing with identities: {'Isidro Casanova': ['Isidro Casanova'], 'Enrique Cantu': ['Enrique Cantu'], 'Angie Garza': ['Angie Garza'], 'Laura Mendiola Macias': ['Laura Mendiola Macias'], 'Irma Veloz': ['Irma Veloz']}
+[2026-01-28T05:49:49.469127] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-28T05:49:49.469738] [INFO] -> Elapsed time: 7.11 seconds
+[2026-01-28T05:49:49.470067] [INFO] -> Average elapsed time: 7.04 seconds
+[2026-01-28T05:49:49.470505] [INFO] -> Total elapsed time: 21.11 seconds
+[2026-01-28T05:49:49.563911] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/government
+[2026-01-28T05:49:49.565898] [INFO] Running OpenAI prompt
+[2026-01-28T05:49:49.566249] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-28T05:49:49.567884] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T05:50:07.869395] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 810, Output tokens: 1172, Total cost: $0.002546
+[2026-01-28T05:50:07.870188] [INFO] Page relevance check found related urls: ['https://www.cityoflajoya.com/government/', 'https://www.cityoflajoya.com/city-council/', 'https://www.cityoflajoya.com/departments/', 'https://www.cityoflajoya.com/about-us/']
+[2026-01-28T05:50:07.964404] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.cityoflajoya.com/government/city-council
+[2026-01-28T05:50:12.543277] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:50:12.544253] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:50:12.902834] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:50:12.912338] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:50:12.913339] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:50:13.258315] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:50:13.283526] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:50:13.284660] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:50:13.633602] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:50:13.654783] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:50:13.655792] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:50:14.009165] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:50:14.020526] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:50:14.021702] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:50:14.712250] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/50d49b9e730c.png
+[2026-01-28T05:50:14.731477] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:50:14.732509] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:50:15.671579] [WARNING] Failed to load image https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png: HTTP 404
+[2026-01-28T05:50:15.673656] [DEBUG] Attempting to create a canvas and load image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:50:16.384296] [WARNING] Failed to create canvas for image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - Page.evaluate: Event
+[2026-01-28T05:50:16.384669] [DEBUG] Attempting to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:50:46.400361] [WARNING] Failed to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - ElementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking element screenshot
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+    - waiting 20ms
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+      - waiting 100ms
+    55 × waiting for element to be stable
+       - element is not visible
+     - retrying scroll into view action
+       - waiting 500ms
+
+[2026-01-28T05:50:46.412999] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:50:46.414022] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:50:46.444300] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/3f3f3a8d0882.png
+[2026-01-28T05:50:46.452749] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-28T05:50:46.675602] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/government/city-council
+[2026-01-28T05:50:46.735919] [DEBUG] -> Preprocessing with identities: {'Isidro Casanova': ['Isidro Casanova'], 'Enrique Cantu': ['Enrique Cantu'], 'Angie Garza': ['Angie Garza'], 'Laura Mendiola Macias': ['Laura Mendiola Macias'], 'Irma Veloz': ['Irma Veloz']}
+[2026-01-28T05:50:51.205662] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-28T05:50:51.206145] [INFO] -> Elapsed time: 4.53 seconds
+[2026-01-28T05:50:51.206670] [INFO] -> Average elapsed time: 6.38 seconds
+[2026-01-28T05:50:51.207618] [INFO] -> Total elapsed time: 25.53 seconds
+[2026-01-28T05:50:51.299419] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/government/city-council
+[2026-01-28T05:50:51.304721] [INFO] Running OpenAI prompt
+[2026-01-28T05:50:51.305120] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-28T05:50:51.305550] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T05:51:11.665129] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 787, Output tokens: 1235, Total cost: $0.002667
+[2026-01-28T05:51:11.666705] [INFO] Page relevance check found related urls: ['https://www.cityoflajoya.com/city-council/', 'https://www.cityoflajoya.com/government/', 'https://www.cityoflajoya.com/mayor-and-council/']
+[2026-01-28T05:51:11.779274] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.cityoflajoya.com/city-council
+[2026-01-28T05:51:15.721768] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:51:15.722552] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:51:16.070950] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:51:16.081882] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:51:16.082660] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:51:16.434357] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:51:16.453539] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:51:16.454676] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:51:16.804870] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:51:16.819248] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:51:16.820210] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:51:17.166020] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:51:17.174987] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:51:17.176296] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:51:17.864595] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/50d49b9e730c.png
+[2026-01-28T05:51:17.885457] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:51:17.886276] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:51:18.671973] [WARNING] Failed to load image https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png: HTTP 404
+[2026-01-28T05:51:18.672836] [DEBUG] Attempting to create a canvas and load image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:51:19.403628] [WARNING] Failed to create canvas for image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - Page.evaluate: Event
+[2026-01-28T05:51:19.404165] [DEBUG] Attempting to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:51:49.406428] [WARNING] Failed to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - ElementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking element screenshot
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+    - waiting 20ms
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+      - waiting 100ms
+    55 × waiting for element to be stable
+       - element is not visible
+     - retrying scroll into view action
+       - waiting 500ms
+
+[2026-01-28T05:51:49.634719] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/city-council
+[2026-01-28T05:51:49.694682] [DEBUG] -> Preprocessing with identities: {'Isidro Casanova': ['Isidro Casanova'], 'Enrique Cantu': ['Enrique Cantu'], 'Angie Garza': ['Angie Garza'], 'Laura Mendiola Macias': ['Laura Mendiola Macias'], 'Irma Veloz': ['Irma Veloz']}
+[2026-01-28T05:51:53.684567] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-28T05:51:53.684945] [INFO] -> Elapsed time: 4.05 seconds
+[2026-01-28T05:51:53.685179] [INFO] -> Average elapsed time: 5.81 seconds
+[2026-01-28T05:51:53.685484] [INFO] -> Total elapsed time: 29.05 seconds
+[2026-01-28T05:51:53.778047] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/city-council
+[2026-01-28T05:51:53.781213] [INFO] Running OpenAI prompt
+[2026-01-28T05:51:53.781681] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-28T05:51:53.782107] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T05:52:12.917133] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 787, Output tokens: 1286, Total cost: $0.002769
+[2026-01-28T05:52:12.917866] [INFO] Page relevance check found related urls: ['https://www.cityoflajoya.com/city-council/', 'https://www.cityoflajoya.com/government/', 'https://www.cityoflajoya.com/mayor/']
+[2026-01-28T05:52:13.003773] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.cityoflajoya.com/mayor-and-council
+[2026-01-28T05:52:16.813562] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:52:16.814606] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:52:17.158094] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:52:17.171785] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:52:17.172659] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:52:17.516510] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:52:17.529549] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:52:17.530751] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:52:17.876269] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:52:17.891971] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:52:17.892902] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:52:18.243461] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:52:18.258242] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:52:18.259472] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:52:18.942669] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/50d49b9e730c.png
+[2026-01-28T05:52:18.956552] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T05:52:18.957410] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T05:52:19.173946] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/1608de193aaa.png
+[2026-01-28T05:52:19.187847] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:52:19.188746] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:52:19.941560] [WARNING] Failed to load image https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png: HTTP 404
+[2026-01-28T05:52:19.942649] [DEBUG] Attempting to create a canvas and load image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:52:20.623494] [WARNING] Failed to create canvas for image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - Page.evaluate: Event
+[2026-01-28T05:52:20.623836] [DEBUG] Attempting to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:52:50.636834] [WARNING] Failed to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - ElementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking element screenshot
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+    - waiting 20ms
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+      - waiting 100ms
+    55 × waiting for element to be stable
+       - element is not visible
+     - retrying scroll into view action
+       - waiting 500ms
+
+[2026-01-28T05:52:50.669712] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:52:50.672550] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:52:50.726690] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/3f3f3a8d0882.png
+[2026-01-28T05:52:50.749469] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-28T05:52:51.259457] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/mayor-and-council
+[2026-01-28T05:52:51.402391] [DEBUG] -> Preprocessing with identities: {'Isidro Casanova': ['Isidro Casanova'], 'Enrique Cantu': ['Enrique Cantu'], 'Angie Garza': ['Angie Garza'], 'Laura Mendiola Macias': ['Laura Mendiola Macias'], 'Irma Veloz': ['Irma Veloz']}
+[2026-01-28T05:52:58.329480] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-28T05:52:58.330140] [INFO] -> Elapsed time: 7.07 seconds
+[2026-01-28T05:52:58.330465] [INFO] -> Average elapsed time: 6.01 seconds
+[2026-01-28T05:52:58.330931] [INFO] -> Total elapsed time: 36.07 seconds
+[2026-01-28T05:52:58.416910] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/mayor-and-council
+[2026-01-28T05:52:58.419664] [INFO] Running OpenAI prompt
+[2026-01-28T05:52:58.420115] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-28T05:52:58.420988] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T05:53:14.498680] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 810, Output tokens: 957, Total cost: $0.002116
+[2026-01-28T05:53:14.499626] [INFO] Page relevance check found related urls: ['https://www.cityoflajoya.com/government/', 'https://www.cityoflajoya.com/city-council/', 'https://www.cityoflajoya.com/our-city-officials/', 'https://www.cityoflajoya.com/departments/', 'https://www.cityoflajoya.com/contact-directory/']
+[2026-01-28T05:53:14.614806] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.cityoflajoya.com/our-city-officials
+[2026-01-28T05:53:18.916449] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:53:18.917231] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:53:19.262728] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:53:19.281480] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:53:19.282534] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:53:19.634289] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:53:19.664664] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:53:19.665662] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:53:20.018671] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:53:20.039667] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:53:20.040646] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:53:20.401250] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:53:20.440423] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:53:20.441835] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:53:21.070768] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/50d49b9e730c.png
+[2026-01-28T05:53:21.092532] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T05:53:21.094175] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T05:53:21.316262] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/1608de193aaa.png
+[2026-01-28T05:53:21.334149] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:53:21.335161] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:53:22.224314] [WARNING] Failed to load image https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png: HTTP 404
+[2026-01-28T05:53:22.225142] [DEBUG] Attempting to create a canvas and load image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:53:22.977432] [WARNING] Failed to create canvas for image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - Page.evaluate: Event
+[2026-01-28T05:53:22.978171] [DEBUG] Attempting to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:53:52.997431] [WARNING] Failed to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - ElementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking element screenshot
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+    - waiting 20ms
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+      - waiting 100ms
+    55 × waiting for element to be stable
+       - element is not visible
+     - retrying scroll into view action
+       - waiting 500ms
+
+[2026-01-28T05:53:53.020445] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:53:53.023838] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:53:53.055266] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/3f3f3a8d0882.png
+[2026-01-28T05:53:53.066143] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-28T05:53:53.346395] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/our-city-officials
+[2026-01-28T05:53:53.407196] [DEBUG] -> Preprocessing with identities: {'Isidro Casanova': ['Isidro Casanova'], 'Enrique Cantu': ['Enrique Cantu'], 'Angie Garza': ['Angie Garza'], 'Laura Mendiola Macias': ['Laura Mendiola Macias'], 'Irma Veloz': ['Irma Veloz']}
+[2026-01-28T05:53:57.202474] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-28T05:53:57.202920] [INFO] -> Elapsed time: 3.86 seconds
+[2026-01-28T05:53:57.203173] [INFO] -> Average elapsed time: 5.69 seconds
+[2026-01-28T05:53:57.203430] [INFO] -> Total elapsed time: 39.86 seconds
+[2026-01-28T05:53:57.272860] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/our-city-officials
+[2026-01-28T05:53:57.274406] [INFO] Running OpenAI prompt
+[2026-01-28T05:53:57.274891] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-28T05:53:57.275774] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T05:54:11.024044] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 810, Output tokens: 819, Total cost: $0.001840
+[2026-01-28T05:54:11.024654] [INFO] Page relevance check found related urls: ['https://www.cityoflajoya.com/government/', 'https://www.cityoflajoya.com/city-council/', 'https://www.cityoflajoya.com/departments/', 'https://www.cityoflajoya.com/officials/', 'https://www.cityoflajoya.com/contact/']
+[2026-01-28T05:54:11.118779] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.cityoflajoya.com/departments
+[2026-01-28T05:54:15.393788] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:54:15.395986] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:54:15.746343] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:54:15.758941] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:54:15.759915] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:54:16.111776] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:54:16.129836] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:54:16.130932] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:54:16.486023] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:54:16.507575] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:54:16.509365] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:54:16.863874] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:54:16.882007] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:54:16.883100] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:54:17.508845] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/50d49b9e730c.png
+[2026-01-28T05:54:17.527885] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T05:54:17.528777] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T05:54:17.752539] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/1608de193aaa.png
+[2026-01-28T05:54:17.771971] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:54:17.772938] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:54:18.649642] [WARNING] Failed to load image https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png: HTTP 404
+[2026-01-28T05:54:18.651442] [DEBUG] Attempting to create a canvas and load image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:54:19.383581] [WARNING] Failed to create canvas for image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - Page.evaluate: Event
+[2026-01-28T05:54:19.384322] [DEBUG] Attempting to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:54:49.407363] [WARNING] Failed to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - ElementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking element screenshot
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+    - waiting 20ms
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+      - waiting 100ms
+    54 × waiting for element to be stable
+       - element is not visible
+     - retrying scroll into view action
+       - waiting 500ms
+
+[2026-01-28T05:54:49.426856] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:54:49.429186] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:54:49.458605] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/3f3f3a8d0882.png
+[2026-01-28T05:54:49.472248] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-28T05:54:49.693936] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/departments
+[2026-01-28T05:54:49.759349] [DEBUG] -> Preprocessing with identities: {'Isidro Casanova': ['Isidro Casanova'], 'Enrique Cantu': ['Enrique Cantu'], 'Angie Garza': ['Angie Garza'], 'Laura Mendiola Macias': ['Laura Mendiola Macias'], 'Irma Veloz': ['Irma Veloz']}
+[2026-01-28T05:54:54.037742] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-28T05:54:54.038104] [INFO] -> Elapsed time: 4.34 seconds
+[2026-01-28T05:54:54.038487] [INFO] -> Average elapsed time: 5.42 seconds
+[2026-01-28T05:54:54.038854] [INFO] -> Total elapsed time: 43.34 seconds
+[2026-01-28T05:54:54.111702] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/departments
+[2026-01-28T05:54:54.113987] [INFO] Running OpenAI prompt
+[2026-01-28T05:54:54.114400] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-28T05:54:54.114720] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T05:55:11.774591] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 810, Output tokens: 1271, Total cost: $0.002744
+[2026-01-28T05:55:11.776763] [INFO] Page relevance check found related urls: ['https://www.cityoflajoya.com/government', 'https://www.cityoflajoya.com/city-council', 'https://www.cityoflajoya.com/mayor-and-council', 'https://www.cityoflajoya.com/departments', 'https://www.cityoflajoya.com/contact-us']
+[2026-01-28T05:55:11.891464] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.cityoflajoya.com/contact-us
+[2026-01-28T05:55:16.258952] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:55:16.259692] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:55:16.602851] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:55:16.615549] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:55:16.616305] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:55:16.966500] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:55:16.989649] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:55:16.990848] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:55:17.342810] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:55:17.365412] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:55:17.366797] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:55:17.715520] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:55:17.733616] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/baner-blog-joya-3.png
+[2026-01-28T05:55:17.734713] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/baner-blog-joya-3.png
+[2026-01-28T05:55:18.090549] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/ad40c844f72c.png
+[2026-01-28T05:55:18.118645] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:55:18.119684] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:55:18.884364] [WARNING] Failed to load image https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png: HTTP 404
+[2026-01-28T05:55:18.886094] [DEBUG] Attempting to create a canvas and load image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:55:19.617436] [WARNING] Failed to create canvas for image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - Page.evaluate: Event
+[2026-01-28T05:55:19.617959] [DEBUG] Attempting to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:55:49.641887] [WARNING] Failed to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - ElementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking element screenshot
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+    - waiting 20ms
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+      - waiting 100ms
+    54 × waiting for element to be stable
+       - element is not visible
+     - retrying scroll into view action
+       - waiting 500ms
+
+[2026-01-28T05:55:49.660142] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:55:49.662688] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:55:49.693690] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/3f3f3a8d0882.png
+[2026-01-28T05:55:49.703236] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-28T05:55:49.948289] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/contact-us
+[2026-01-28T05:55:50.022806] [DEBUG] -> Preprocessing with identities: {'Isidro Casanova': ['Isidro Casanova'], 'Enrique Cantu': ['Enrique Cantu'], 'Angie Garza': ['Angie Garza'], 'Laura Mendiola Macias': ['Laura Mendiola Macias'], 'Irma Veloz': ['Irma Veloz']}
+[2026-01-28T05:55:54.752641] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-28T05:55:54.753027] [INFO] -> Elapsed time: 4.80 seconds
+[2026-01-28T05:55:54.753453] [INFO] -> Average elapsed time: 5.31 seconds
+[2026-01-28T05:55:54.754014] [INFO] -> Total elapsed time: 47.80 seconds
+[2026-01-28T05:55:55.073143] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/contact-us
+[2026-01-28T05:55:55.077743] [INFO] Running OpenAI prompt
+[2026-01-28T05:55:55.078266] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-28T05:55:55.079221] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T05:56:13.169280] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 808, Output tokens: 912, Total cost: $0.002026
+[2026-01-28T05:56:13.170332] [INFO] Page relevance check found related urls: ['https://www.cityoflajoya.com/government/', 'https://www.cityoflajoya.com/city-council/', 'https://www.cityoflajoya.com/mayor/', 'https://www.cityoflajoya.com/departments/']
+[2026-01-28T05:56:13.273906] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.cityoflajoya.com/mayor
+[2026-01-28T05:56:17.439016] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:56:17.440102] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:56:17.782327] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:56:17.797413] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:56:17.798334] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:56:18.150833] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:56:18.176433] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:56:18.178804] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:56:18.520900] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:56:18.543633] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:56:18.545722] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:56:18.895367] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:56:18.916190] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:56:18.918223] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:56:19.544099] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/50d49b9e730c.png
+[2026-01-28T05:56:19.563389] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T05:56:19.566466] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T05:56:19.794120] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/1608de193aaa.png
+[2026-01-28T05:56:19.804692] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:56:19.805662] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:56:20.609291] [WARNING] Failed to load image https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png: HTTP 404
+[2026-01-28T05:56:20.610901] [DEBUG] Attempting to create a canvas and load image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:56:21.333076] [WARNING] Failed to create canvas for image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - Page.evaluate: Event
+[2026-01-28T05:56:21.333519] [DEBUG] Attempting to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:56:51.348930] [WARNING] Failed to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - ElementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking element screenshot
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+    - waiting 20ms
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+      - waiting 100ms
+    55 × waiting for element to be stable
+       - element is not visible
+     - retrying scroll into view action
+       - waiting 500ms
+
+[2026-01-28T05:56:51.373394] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:56:51.374802] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:56:51.424894] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/3f3f3a8d0882.png
+[2026-01-28T05:56:51.438053] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-28T05:56:51.704550] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/mayor
+[2026-01-28T05:56:51.775495] [DEBUG] -> Preprocessing with identities: {'Isidro Casanova': ['Isidro Casanova'], 'Enrique Cantu': ['Enrique Cantu'], 'Angie Garza': ['Angie Garza'], 'Laura Mendiola Macias': ['Laura Mendiola Macias'], 'Irma Veloz': ['Irma Veloz']}
+[2026-01-28T05:56:55.650835] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-28T05:56:55.651082] [INFO] -> Elapsed time: 3.95 seconds
+[2026-01-28T05:56:55.651355] [INFO] -> Average elapsed time: 5.09 seconds
+[2026-01-28T05:56:55.651681] [INFO] -> Total elapsed time: 50.95 seconds
+[2026-01-28T05:56:55.726825] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/mayor
+[2026-01-28T05:56:55.729605] [INFO] Running OpenAI prompt
+[2026-01-28T05:56:55.730052] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-28T05:56:55.730341] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T05:57:15.626890] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 810, Output tokens: 1265, Total cost: $0.002732
+[2026-01-28T05:57:15.628238] [INFO] Page relevance check found related urls: ['https://www.cityoflajoya.com/government/', 'https://www.cityoflajoya.com/government/city-council/', 'https://www.cityoflajoya.com/government/boards-and-commissions/', 'https://www.cityoflajoya.com/departments/administration/', 'https://www.cityoflajoya.com/contact/']
+[2026-01-28T05:57:15.714994] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.cityoflajoya.com/government/boards-and-commissions
+[2026-01-28T05:57:19.809350] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:57:19.810382] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:57:20.156666] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:57:20.171461] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:57:20.172906] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:57:20.530173] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:57:20.546598] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:57:20.547677] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:57:20.901370] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:57:20.931940] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:57:20.933138] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:57:21.286604] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:57:21.317850] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:57:21.318783] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:57:21.939497] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/50d49b9e730c.png
+[2026-01-28T05:57:21.960915] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T05:57:21.961710] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T05:57:22.184476] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/1608de193aaa.png
+[2026-01-28T05:57:22.205564] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:57:22.207092] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:57:23.034439] [WARNING] Failed to load image https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png: HTTP 404
+[2026-01-28T05:57:23.035359] [DEBUG] Attempting to create a canvas and load image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:57:23.794325] [WARNING] Failed to create canvas for image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - Page.evaluate: Event
+[2026-01-28T05:57:23.795079] [DEBUG] Attempting to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:57:53.818798] [WARNING] Failed to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - ElementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking element screenshot
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+    - waiting 20ms
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+      - waiting 100ms
+    54 × waiting for element to be stable
+       - element is not visible
+     - retrying scroll into view action
+       - waiting 500ms
+
+[2026-01-28T05:57:53.838288] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:57:53.840994] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:57:53.870235] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/3f3f3a8d0882.png
+[2026-01-28T05:57:53.880821] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-28T05:57:54.117420] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/government/boards-and-commissions
+[2026-01-28T05:57:54.180667] [DEBUG] -> Preprocessing with identities: {'Isidro Casanova': ['Isidro Casanova'], 'Enrique Cantu': ['Enrique Cantu'], 'Angie Garza': ['Angie Garza'], 'Laura Mendiola Macias': ['Laura Mendiola Macias'], 'Irma Veloz': ['Irma Veloz']}
+[2026-01-28T05:57:57.803209] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-28T05:57:57.803534] [INFO] -> Elapsed time: 3.69 seconds
+[2026-01-28T05:57:57.803836] [INFO] -> Average elapsed time: 4.88 seconds
+[2026-01-28T05:57:57.804300] [INFO] -> Total elapsed time: 53.69 seconds
+[2026-01-28T05:57:57.887789] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/government/boards-and-commissions
+[2026-01-28T05:57:57.889733] [INFO] Running OpenAI prompt
+[2026-01-28T05:57:57.890044] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-28T05:57:57.890685] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T05:58:12.487065] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 810, Output tokens: 1042, Total cost: $0.002286
+[2026-01-28T05:58:12.488595] [INFO] Page relevance check found related urls: ['https://www.cityoflajoya.com/about-us/', 'https://www.cityoflajoya.com/government/', 'https://www.cityoflajoya.com/city-council/', 'https://www.cityoflajoya.com/departments/city-hall/', 'https://www.cityoflajoya.com/contact/']
+[2026-01-28T05:58:12.582853] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.cityoflajoya.com/about-us
+[2026-01-28T05:58:16.602198] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:58:16.603330] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:58:16.955870] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:58:16.975662] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:58:16.976760] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:58:17.331113] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:58:17.352810] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:58:17.355136] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:58:17.703657] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:58:17.714789] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:58:17.716097] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:58:18.065306] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:58:18.078999] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:58:18.080084] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T05:58:18.712876] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/50d49b9e730c.png
+[2026-01-28T05:58:18.729437] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T05:58:18.730313] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T05:58:18.951517] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/1608de193aaa.png
+[2026-01-28T05:58:18.972590] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:58:18.974031] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:58:19.826033] [WARNING] Failed to load image https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png: HTTP 404
+[2026-01-28T05:58:19.828052] [DEBUG] Attempting to create a canvas and load image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:58:20.602187] [WARNING] Failed to create canvas for image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - Page.evaluate: Event
+[2026-01-28T05:58:20.603039] [DEBUG] Attempting to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:58:50.620576] [WARNING] Failed to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - ElementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking element screenshot
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+    - waiting 20ms
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+      - waiting 100ms
+    55 × waiting for element to be stable
+       - element is not visible
+     - retrying scroll into view action
+       - waiting 500ms
+
+[2026-01-28T05:58:50.644722] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:58:50.645963] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:58:50.680821] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/3f3f3a8d0882.png
+[2026-01-28T05:58:50.702565] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-28T05:58:51.113678] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/about-us
+[2026-01-28T05:58:51.280414] [DEBUG] -> Preprocessing with identities: {'Isidro Casanova': ['Isidro Casanova'], 'Enrique Cantu': ['Enrique Cantu'], 'Angie Garza': ['Angie Garza'], 'Laura Mendiola Macias': ['Laura Mendiola Macias'], 'Irma Veloz': ['Irma Veloz']}
+[2026-01-28T05:58:55.806912] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-28T05:58:55.807550] [INFO] -> Elapsed time: 4.69 seconds
+[2026-01-28T05:58:55.808082] [INFO] -> Average elapsed time: 4.81 seconds
+[2026-01-28T05:58:55.808482] [INFO] -> Total elapsed time: 57.69 seconds
+[2026-01-28T05:58:55.879595] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/about-us
+[2026-01-28T05:58:55.881575] [INFO] Running OpenAI prompt
+[2026-01-28T05:58:55.881908] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-28T05:58:55.882442] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T05:59:06.448846] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 810, Output tokens: 875, Total cost: $0.001952
+[2026-01-28T05:59:06.451041] [INFO] Page relevance check found related urls: ['https://www.cityoflajoya.com/government', 'https://www.cityoflajoya.com/about-us', 'https://www.cityoflajoya.com/city-council', 'https://www.cityoflajoya.com/departments', 'https://www.cityoflajoya.com/contact']
+[2026-01-28T05:59:06.542537] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.cityoflajoya.com/contact
+[2026-01-28T05:59:10.853192] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:59:10.854138] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:59:11.204974] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:59:11.220261] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:59:11.221290] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T05:59:11.569208] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T05:59:11.594990] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:59:11.596073] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:59:11.941445] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:59:11.954506] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:59:11.955776] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T05:59:12.303918] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T05:59:12.317836] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/baner-blog-joya-3.png
+[2026-01-28T05:59:12.318631] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/baner-blog-joya-3.png
+[2026-01-28T05:59:12.665750] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/ad40c844f72c.png
+[2026-01-28T05:59:12.675486] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:59:12.676813] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:59:13.493342] [WARNING] Failed to load image https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png: HTTP 404
+[2026-01-28T05:59:13.494525] [DEBUG] Attempting to create a canvas and load image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:59:14.230565] [WARNING] Failed to create canvas for image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - Page.evaluate: Event
+[2026-01-28T05:59:14.231356] [DEBUG] Attempting to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T05:59:44.253686] [WARNING] Failed to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - ElementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking element screenshot
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+    - waiting 20ms
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+      - waiting 100ms
+    55 × waiting for element to be stable
+       - element is not visible
+     - retrying scroll into view action
+       - waiting 500ms
+
+[2026-01-28T05:59:44.271761] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:59:44.273360] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T05:59:44.305360] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/3f3f3a8d0882.png
+[2026-01-28T05:59:44.318248] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-28T05:59:44.534645] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/contact
+[2026-01-28T05:59:44.616977] [DEBUG] -> Preprocessing with identities: {'Isidro Casanova': ['Isidro Casanova'], 'Enrique Cantu': ['Enrique Cantu'], 'Angie Garza': ['Angie Garza'], 'Laura Mendiola Macias': ['Laura Mendiola Macias'], 'Irma Veloz': ['Irma Veloz']}
+[2026-01-28T05:59:49.622426] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-28T05:59:49.622835] [INFO] -> Elapsed time: 5.09 seconds
+[2026-01-28T05:59:49.623159] [INFO] -> Average elapsed time: 4.78 seconds
+[2026-01-28T05:59:49.623485] [INFO] -> Total elapsed time: 62.09 seconds
+[2026-01-28T05:59:49.704670] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/contact
+[2026-01-28T05:59:49.706832] [INFO] Running OpenAI prompt
+[2026-01-28T05:59:49.707236] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-28T05:59:49.707781] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T06:00:04.635716] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 808, Output tokens: 979, Total cost: $0.002160
+[2026-01-28T06:00:04.636758] [INFO] Page relevance check found related urls: ['https://www.cityoflajoya.com/city-government/', 'https://www.cityoflajoya.com/city-council/', 'https://www.cityoflajoya.com/government/']
+[2026-01-28T06:00:04.721014] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.cityoflajoya.com/city-government
+[2026-01-28T06:00:09.437002] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T06:00:09.439532] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T06:00:09.787949] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T06:00:09.806312] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T06:00:09.810046] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T06:00:10.163266] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T06:00:10.177035] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T06:00:10.178082] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T06:00:10.526118] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T06:00:10.533259] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T06:00:10.534472] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T06:00:10.876634] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T06:00:10.888702] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T06:00:10.889563] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T06:00:11.645593] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/50d49b9e730c.png
+[2026-01-28T06:00:11.662827] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T06:00:11.663764] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T06:00:11.878451] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/1608de193aaa.png
+[2026-01-28T06:00:11.891532] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T06:00:11.892320] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T06:00:12.836425] [WARNING] Failed to load image https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png: HTTP 404
+[2026-01-28T06:00:12.837127] [DEBUG] Attempting to create a canvas and load image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T06:00:13.787015] [WARNING] Failed to create canvas for image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - Page.evaluate: Event
+[2026-01-28T06:00:13.789235] [DEBUG] Attempting to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T06:00:43.807634] [WARNING] Failed to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - ElementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking element screenshot
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+    - waiting 20ms
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+      - waiting 100ms
+    55 × waiting for element to be stable
+       - element is not visible
+     - retrying scroll into view action
+       - waiting 500ms
+
+[2026-01-28T06:00:43.822182] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T06:00:43.823550] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T06:00:43.850626] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/3f3f3a8d0882.png
+[2026-01-28T06:00:43.863222] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-28T06:00:44.096149] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/city-government
+[2026-01-28T06:00:44.160394] [DEBUG] -> Preprocessing with identities: {'Isidro Casanova': ['Isidro Casanova'], 'Enrique Cantu': ['Enrique Cantu'], 'Angie Garza': ['Angie Garza'], 'Laura Mendiola Macias': ['Laura Mendiola Macias'], 'Irma Veloz': ['Irma Veloz']}
+[2026-01-28T06:00:47.769151] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-28T06:00:47.769541] [INFO] -> Elapsed time: 3.67 seconds
+[2026-01-28T06:00:47.769839] [INFO] -> Average elapsed time: 4.69 seconds
+[2026-01-28T06:00:47.770138] [INFO] -> Total elapsed time: 65.67 seconds
+[2026-01-28T06:00:47.837886] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/city-government
+[2026-01-28T06:00:47.840022] [INFO] Running OpenAI prompt
+[2026-01-28T06:00:47.840396] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-28T06:00:47.840720] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T06:01:07.302111] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 810, Output tokens: 1481, Total cost: $0.003164
+[2026-01-28T06:01:07.303711] [INFO] Page relevance check found related urls: ['https://www.cityoflajoya.com/government/city-council/', 'https://www.cityoflajoya.com/government/mayor-and-council/', 'https://www.cityoflajoya.com/departments/city-secretary/', 'https://www.cityoflajoya.com/our-government/elected-officials/', 'https://www.cityoflajoya.com/about-us/']
+[2026-01-28T06:01:07.413162] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.cityoflajoya.com/government/mayor-and-council
+[2026-01-28T06:01:11.754876] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T06:01:11.755854] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T06:01:12.098638] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T06:01:12.113984] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T06:01:12.114870] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T06:01:12.461634] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T06:01:12.470327] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T06:01:12.471012] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T06:01:12.823793] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T06:01:12.833195] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T06:01:12.834033] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T06:01:13.187575] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T06:01:13.212718] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T06:01:13.214125] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T06:01:13.895106] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/50d49b9e730c.png
+[2026-01-28T06:01:13.913995] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T06:01:13.914744] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png
+[2026-01-28T06:01:14.135193] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/1608de193aaa.png
+[2026-01-28T06:01:14.153898] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T06:01:14.155156] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T06:01:15.137868] [WARNING] Failed to load image https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png: HTTP 404
+[2026-01-28T06:01:15.141486] [DEBUG] Attempting to create a canvas and load image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T06:01:15.968803] [WARNING] Failed to create canvas for image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - Page.evaluate: Event
+[2026-01-28T06:01:15.969262] [DEBUG] Attempting to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T06:01:45.982495] [WARNING] Failed to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - ElementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking element screenshot
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+    - waiting 20ms
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+      - waiting 100ms
+    55 × waiting for element to be stable
+       - element is not visible
+     - retrying scroll into view action
+       - waiting 500ms
+
+[2026-01-28T06:01:45.992820] [DEBUG] Attempting to intercept and save image for: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T06:01:45.993905] [DEBUG] Loading image from URL: https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png
+[2026-01-28T06:01:46.023666] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/3f3f3a8d0882.png
+[2026-01-28T06:01:46.033349] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-28T06:01:46.299634] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/government/mayor-and-council
+[2026-01-28T06:01:46.388498] [DEBUG] -> Preprocessing with identities: {'Isidro Casanova': ['Isidro Casanova'], 'Enrique Cantu': ['Enrique Cantu'], 'Angie Garza': ['Angie Garza'], 'Laura Mendiola Macias': ['Laura Mendiola Macias'], 'Irma Veloz': ['Irma Veloz']}
+[2026-01-28T06:01:51.021449] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-28T06:01:51.021917] [INFO] -> Elapsed time: 4.72 seconds
+[2026-01-28T06:01:51.022301] [INFO] -> Average elapsed time: 4.65 seconds
+[2026-01-28T06:01:51.023015] [INFO] -> Total elapsed time: 69.72 seconds
+[2026-01-28T06:01:51.119800] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/government/mayor-and-council
+[2026-01-28T06:01:51.122010] [INFO] Running OpenAI prompt
+[2026-01-28T06:01:51.122413] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-28T06:01:51.122815] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T06:02:05.640729] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 810, Output tokens: 1135, Total cost: $0.002472
+[2026-01-28T06:02:05.642461] [INFO] Page relevance check found related urls: ['https://www.cityoflajoya.com/government/', 'https://www.cityoflajoya.com/city-council/', 'https://www.cityoflajoya.com/administration/', 'https://www.cityoflajoya.com/meet-the-mayor-and-council/']
+[2026-01-28T06:02:05.732908] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.cityoflajoya.com/administration
+[2026-01-28T06:02:10.288281] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T06:02:10.289363] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T06:02:10.636571] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T06:02:10.649249] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T06:02:10.650486] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png
+[2026-01-28T06:02:10.994179] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T06:02:11.008675] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T06:02:11.009569] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T06:02:11.371926] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T06:02:11.384740] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T06:02:11.391882] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png
+[2026-01-28T06:02:11.737426] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T06:02:11.748622] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T06:02:11.749686] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png
+[2026-01-28T06:02:12.430010] [INFO] Image saved: /app/data_source/tx/local/place_la_joya/images/50d49b9e730c.png
+[2026-01-28T06:02:12.440737] [DEBUG] Attempting to intercept and save image for: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T06:02:12.441716] [DEBUG] Loading image from URL: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T06:02:13.357509] [WARNING] Failed to load image https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png: HTTP 404
+[2026-01-28T06:02:13.359451] [DEBUG] Attempting to create a canvas and load image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T06:02:14.235926] [WARNING] Failed to create canvas for image: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - Page.evaluate: Event
+[2026-01-28T06:02:14.237881] [DEBUG] Attempting to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png
+[2026-01-28T06:02:44.263685] [WARNING] Failed to screenshot image element: https://www.cityoflajoya.com/wp-content/uploads/2019/11/theGov_light.png - ElementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking element screenshot
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+    - waiting 20ms
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying scroll into view action
+      - waiting 100ms
+    55 × waiting for element to be stable
+       - element is not visible
+     - retrying scroll into view action
+       - waiting 500ms
+
+[2026-01-28T06:02:44.542725] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/administration
+[2026-01-28T06:02:44.609338] [DEBUG] -> Preprocessing with identities: {'Isidro Casanova': ['Isidro Casanova'], 'Enrique Cantu': ['Enrique Cantu'], 'Angie Garza': ['Angie Garza'], 'Laura Mendiola Macias': ['Laura Mendiola Macias'], 'Irma Veloz': ['Irma Veloz']}
+[2026-01-28T06:02:49.025336] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-28T06:02:49.026018] [INFO] -> Elapsed time: 4.48 seconds
+[2026-01-28T06:02:49.026505] [INFO] -> Average elapsed time: 4.59 seconds
+[2026-01-28T06:02:49.027371] [INFO] -> Total elapsed time: 73.48 seconds
+[2026-01-28T06:02:49.120092] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.cityoflajoya.com/administration
+[2026-01-28T06:02:49.122204] [INFO] Running OpenAI prompt
+[2026-01-28T06:02:49.122575] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-28T06:02:49.123297] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T06:03:14.192186] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 796, Output tokens: 1459, Total cost: $0.003117
+[2026-01-28T06:03:14.193122] [INFO] Page relevance check found related urls: ['https://www.cityoflajoya.com/administration/', 'https://www.cityoflajoya.com/about-us/', 'https://www.cityoflajoya.com/city-council/']
+[2026-01-28T06:03:14.193913] [INFO] Running Gemini prompt
+[2026-01-28T06:03:14.194324] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only extract people who are currently serving as officials as of 2026-01-28. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-28
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-28) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-28T06:03:17.756436] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 1887, Output tokens: 139, Total cost: $0.000914
+[2026-01-28T06:03:17.761298] [INFO] gemini gemini-2.5-flash LLM call took 3.57 seconds
+[2026-01-28T06:03:17.764182] [INFO] Running OpenAI prompt
+[2026-01-28T06:03:17.765307] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Isidro Casanova, Enrique Cantu, Angie Garza, Laura Mendiola Macias, Irma Veloz
+
+    Only extract people who are currently serving as officials as of 2026-01-28. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-28
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-28T06:03:17.766495] [INFO] openai LLM call took 0.00 seconds
+[2026-01-28T06:03:36.397649] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1555, Output tokens: 1334, Total cost: $0.003057
+[2026-01-28T06:03:36.399418] [INFO] links updated: [Link(url='https://www.cityoflajoya.com/meet-the-mayor-and-council', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.cityoflajoya.com/city-council', status='processed_irrelevant', folder_name='www_cityoflajoya_com_city-council', is_profile_page=True), Link(url='https://www.cityoflajoya.com/about-us', status='processed_irrelevant', folder_name='www_cityoflajoya_com_about-us', is_profile_page=True), Link(url='https://www.cityoflajoya.com/government', status='processed_irrelevant', folder_name='www_cityoflajoya_com_government', is_profile_page=True), Link(url='https://www.cityoflajoya.com/departments/city-secretary', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.cityoflajoya.com/our-government/elected-officials', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.cityoflajoya.com/government/city-council', status='processed_irrelevant', folder_name='www_cityoflajoya_com_government_city-council', is_profile_page=True), Link(url='https://www.cityoflajoya.com/departments', status='processed_irrelevant', folder_name='www_cityoflajoya_com_departments', is_profile_page=True), Link(url='https://www.cityoflajoya.com/departments/city-hall', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.cityoflajoya.com/departments/administration', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.cityoflajoya.com/mayor-and-council', status='processed_irrelevant', folder_name='www_cityoflajoya_com_mayor-and-council', is_profile_page=True), Link(url='https://www.cityoflajoya.com/officials', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.cityoflajoya.com/contact-directory', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.cityoflajoya.com/city-hall', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.cityoflajoya.com/city-manager', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.cityoflajoya.com/officials/', status='done', folder_name='www_cityoflajoya_com_officials_', is_profile_page=False), Link(url='https://www.cityoflajoya.com/government-officials', status='processed_irrelevant', folder_name='www_cityoflajoya_com_government-officials', is_profile_page=True), Link(url='https://www.cityoflajoya.com/our-city-officials', status='processed_irrelevant', folder_name='www_cityoflajoya_com_our-city-officials', is_profile_page=True), Link(url='https://www.cityoflajoya.com/contact-us', status='processed_irrelevant', folder_name='www_cityoflajoya_com_contact-us', is_profile_page=True), Link(url='https://www.cityoflajoya.com/mayor', status='processed_irrelevant', folder_name='www_cityoflajoya_com_mayor', is_profile_page=True), Link(url='https://www.cityoflajoya.com/government/boards-and-commissions', status='processed_irrelevant', folder_name='www_cityoflajoya_com_government_boards-and-commissions', is_profile_page=True), Link(url='https://www.cityoflajoya.com/contact', status='processed_irrelevant', folder_name='www_cityoflajoya_com_contact', is_profile_page=True), Link(url='https://www.cityoflajoya.com/city-government', status='processed_irrelevant', folder_name='www_cityoflajoya_com_city-government', is_profile_page=True), Link(url='https://www.cityoflajoya.com/government/mayor-and-council', status='processed_irrelevant', folder_name='www_cityoflajoya_com_government_mayor-and-council', is_profile_page=True), Link(url='https://www.cityoflajoya.com/administration', status='done', folder_name='www_cityoflajoya_com_administration', is_profile_page=True)]
+[2026-01-28T06:03:36.650413] [INFO] Step 8: WorkflowStatus.FORMAT_OUTPUT Formatting output data.
+[2026-01-28T06:03:36.728797] [INFO] Step 9: CLEANUP
+[2026-01-28T06:03:36.780225] [DEBUG] Image files to keep: {'418c62a74ee2.png'}
+[2026-01-28T06:03:36.780483] [DEBUG] All image map data: {'https://www.cityoflajoya.com/wp-content/uploads/2020/03/logo-head-1.png': '53f847cecb6f.png', 'https://www.cityoflajoya.com/wp-content/uploads/2020/03/mobile-logo-head-1.png': '76ff0c8c7288.png', 'https://www.cityoflajoya.com/wp-content/uploads/2020/03/About-us-edited-1.png': '50d49b9e730c.png', 'https://www.cityoflajoya.com/wp-content/themes/thegov/img/404.png': '1608de193aaa.png', 'https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png': '3f3f3a8d0882.png', 'https://www.cityoflajoya.com/wp-content/uploads/2020/03/baner-blog-joya-3.png': 'ad40c844f72c.png', 'https://www.cityoflajoya.com/wp-content/uploads/2020/03/baner-blog-joya-6.png': '2eafd376e757.png', 'https://www.cityoflajoya.com/wp-content/uploads/2024/01/Mayor-Isidro-Casanova-736x1024.png': '418c62a74ee2.png'}
+[2026-01-28T06:03:36.782453] [DEBUG] Checking image file: image_map.json
+[2026-01-28T06:03:36.782886] [DEBUG] Checking image file: 76ff0c8c7288.png
+[2026-01-28T06:03:36.783870] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_la_joya/images/76ff0c8c7288.png
+[2026-01-28T06:03:36.785128] [DEBUG] Checking image file: 418c62a74ee2.png
+[2026-01-28T06:03:36.786268] [DEBUG] Checking image file: 1608de193aaa.png
+[2026-01-28T06:03:36.787629] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_la_joya/images/1608de193aaa.png
+[2026-01-28T06:03:36.789322] [DEBUG] Checking image file: 53f847cecb6f.png
+[2026-01-28T06:03:36.790264] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_la_joya/images/53f847cecb6f.png
+[2026-01-28T06:03:36.791052] [DEBUG] Checking image file: 3f3f3a8d0882.png
+[2026-01-28T06:03:36.792497] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_la_joya/images/3f3f3a8d0882.png
+[2026-01-28T06:03:36.793623] [DEBUG] Checking image file: 2eafd376e757.png
+[2026-01-28T06:03:36.794306] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_la_joya/images/2eafd376e757.png
+[2026-01-28T06:03:36.795799] [DEBUG] Checking image file: 50d49b9e730c.png
+[2026-01-28T06:03:36.797312] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_la_joya/images/50d49b9e730c.png
+[2026-01-28T06:03:36.799561] [DEBUG] Checking image file: ad40c844f72c.png
+[2026-01-28T06:03:36.800619] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_la_joya/images/ad40c844f72c.png
+[2026-01-28T06:03:36.803111] [ERROR] Missing images that were expected to be found: {'418c62a74ee2.png'}
+[2026-01-28T06:03:37.017293] [INFO] Step 10: WorkflowStatus.SAVE_OUTPUT Saving output data and config files.
+[2026-01-28T06:03:37.179377] [INFO] Step 11: MAYBE_SEND_TO_GITHUB
+[2026-01-28T06:03:37.179684] [INFO] CRUDDER_UPLOAD_URL: https://api.civicpatch.org/api/internal/pipelines/github_intake
