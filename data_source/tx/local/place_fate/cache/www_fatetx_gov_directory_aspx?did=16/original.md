@@ -14,7 +14,7 @@ Staff Directory • City Council
 
 Loading
 
-[Skip to Main Content](https://www.fatetx.gov/Directory.aspx?did=16#contentarea)
+[Skip to Main Content](https://www.fatetx.gov/directory.aspx?did=16#contentarea)
 
 
 
