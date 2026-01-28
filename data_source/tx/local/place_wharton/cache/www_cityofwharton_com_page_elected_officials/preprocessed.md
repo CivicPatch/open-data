@@ -127,6 +127,10 @@ Wharton, Texas 77488
 
 Copyright © 2011-2016 City of Wharton. All Rights Reserved.
 
+|  |  |
+| --- | --- |
+|  | Sort by:  Relevance  Relevance  Date |
+
 
 
 ![Web
