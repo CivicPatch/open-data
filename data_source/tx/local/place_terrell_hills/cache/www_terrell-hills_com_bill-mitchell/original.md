@@ -1,6 +1,6 @@
 City of Terrell Hills - Bill Mitchell
 
-Press Alt+1 for screen-reader mode, Alt+0 to cancel[Accessibility Screen-Reader Guide, Feedback, and Issue Reporting | New window](https://accessibe.com/blog/knowledgebase/screen-reader-guide)
+[Accessibility Screen-Reader Guide, Feedback, and Issue Reporting | New window](https://accessibe.com/blog/knowledgebase/screen-reader-guide)
 
 [![City of Terrell Hills](https://www.terrell-hills.com/images/logo.png)](https://www.terrell-hills.com/ "City of Terrell Hills")
 ×
