@@ -10,7 +10,7 @@ Staff Directory • City Council
 
 
 
-![Loading](https://www.athenstx.gov/Common/images/ajax-loader.gif)
+![Loading](https://www.athenstx.gov/Common/images/ajax-loader.gif "Loading")
 
 Loading
 
@@ -45,7 +45,7 @@ Search
 4. [Business](https://www.athenstx.gov/35/Business)
 5. [How Do I...](https://www.athenstx.gov/9/How-Do-I)
 
-![](https://www.athenstx.gov/ImageRepository/Document?documentID=167)
+![](https://www.athenstx.gov/ImageRepository/Document?documentID=166)
 
 1. [Home](https://www.athenstx.gov/)
 2. Staff Directory
@@ -162,8 +162,6 @@ Slideshow Right Arrow
 
 ### Live Edit
 
-Close **×**
-
 Opens in new window
 
 PDF Download
@@ -187,3 +185,5 @@ Document Download
 
 
 close carousel
+
+Close **×**
