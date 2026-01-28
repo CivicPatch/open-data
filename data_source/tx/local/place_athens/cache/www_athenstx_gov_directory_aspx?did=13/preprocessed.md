@@ -1,14 +1,14 @@
 Staff Directory • City Council
 
 
-![Loading](https://www.athenstx.gov/Common/images/ajax-loader.gif)
+![Loading](https://www.athenstx.gov/Common/images/ajax-loader.gif "Loading")
 
 ![Athens, TX](https://www.athenstx.gov/ImageRepository/Document?documentID=27)
 
 ![Athens TX Homepage Logo](https://www.athenstx.gov/ImageRepository/Document?documentID=164)
 ![Search](https://www.athenstx.gov/ImageRepository/Document?documentID=159)
 
-![](https://www.athenstx.gov/ImageRepository/Document?documentID=167)
+![](https://www.athenstx.gov/ImageRepository/Document?documentID=166)
 
 
 City Council
