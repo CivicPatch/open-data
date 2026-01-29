@@ -2,7 +2,7 @@ Government | City of Clifton               [Skip to content](https://cityofclift
 
 ![Bell](https://cityofclifton.org/wp-content/themes/clifton/assets/images/icon/bell.svg)
 
-[\*\*\* Clifton City Council will hold a called meeting on Wednesday, January 28th, at 6PM in the Clifton Civic Center Council Chambers at 403 W 3rd Street. \*\*\* City offices will be closed on Monday, January 19th for Martin Luther King Jr. Day. \*\*\* Sanitation services changed on October 1st to a once weekly cart pick up and weekly bulk/brush pick up. You can find more information on the Public Notices page of our website. \*\*\*](https://cityofclifton.org/government/#)
+[\*\*\* The Clifton City Council is scheduled for Tuesday, February 10th, at 6PM in the Clifton Civic Center Council Chambers at 403 W 3rd Street. \*\*\* City offices will be closed on Monday, February 16th for Presidents' Day. \*\*\* Sanitation services changed on October 1st to a once weekly cart pick up and weekly bulk/brush pick up. You can find more information on the Public Notices page of our website. \*\*\*](https://cityofclifton.org/government/#)
 
 * Call us: [(254) 675-8337](tel:(254) 675-8337)
 * [![Facebook](https://cityofclifton.org/wp-content/themes/clifton/assets/images/icon/facebook.svg)](https://www.facebook.com/TheCityofClifton/posts/pfbid0vLAxeYyxtAnRDAmbzsfXuPSATzuJcrjJhXQDEnPPFwGfGWego8s6aKtzTD8WsE7Jl "Facebook")
@@ -99,22 +99,6 @@ Clifton operates under a General Law, Type A, form of city government. It seats 
 
 Document Search
 
-* ![](https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.folder+limited-access)![](https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.folder+limited-access)
-
-  [Agendas and Minutes](https://drive.google.com/drive/folders/1PI839t1NJ5KnxNdUNNr3CtL9mfy7VBdY)
-* ![](https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.folder)![](https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.folder)
-
-  [Boards and Commissions](https://drive.google.com/drive/folders/1VFpF_EaCMaIzBGPvm4oaR7qqtiOpOxc-)
-* ![](https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.folder)![](https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.folder)
-
-  [Elections](https://drive.google.com/drive/folders/1bphng6PqFADtfQ40vXVCM1pR3_ahc10V)
-* ![](https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.folder)![](https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.folder)
-
-  [Fair Housing](https://drive.google.com/drive/folders/1Vqv0QFcPQfRgeWpf63mKl81oF7_UUL2N)
-* ![](https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.folder+limited-access)![](https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.folder+limited-access)
-
-  [Finance](https://drive.google.com/drive/folders/1SlnRTaJ4QGFam5S8oSBRIW_NZ0DC7tej)
-
 Search could not be performed at this time. Please try again later.
 
 [Government](https://cityofclifton.org/government/)
@@ -132,9 +116,9 @@ Search could not be performed at this time. Please try again later.
 * [Public Records Request](https://cityofclifton.org/government/city-documents/public-information/)
 * [Transparency](https://cityofclifton.org/government/transparency/)
 
-* [![Clifton Texas](https://cityofclifton.org/wp-content/uploads/sites/6/2022/03/main_street_logo.jpg)](https://cityofclifton.org/government/#)
-* + [![](https://cityofclifton.org/wp-content/uploads/sites/6/2022/03/texas_art_logo.jpg)](https://cityofclifton.org/government/#)
-  + [![Texas Commission](https://cityofclifton.org/wp-content/uploads/sites/6/2022/03/texas_brazos_trail.jpg)](https://cityofclifton.org/government/#)
+* [![Clifton Texas](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==)](https://cityofclifton.org/government/#)
+* + [![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==)](https://cityofclifton.org/government/#)
+  + [![Texas Commission](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==)](https://cityofclifton.org/government/#)
 
 #### City of Clifton
 

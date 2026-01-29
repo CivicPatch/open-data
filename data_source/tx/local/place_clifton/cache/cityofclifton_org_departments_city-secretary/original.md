@@ -2,7 +2,7 @@ City Secretary | City of Clifton               [Skip to content](https://cityofc
 
 ![Bell](https://cityofclifton.org/wp-content/themes/clifton/assets/images/icon/bell.svg)
 
-[\*\*\* Clifton City Council will hold a called meeting on Wednesday, January 28th, at 6PM in the Clifton Civic Center Council Chambers at 403 W 3rd Street. \*\*\* City offices will be closed on Monday, January 19th for Martin Luther King Jr. Day. \*\*\* Sanitation services changed on October 1st to a once weekly cart pick up and weekly bulk/brush pick up. You can find more information on the Public Notices page of our website. \*\*\*](https://cityofclifton.org/departments/city-secretary/#)
+[\*\*\* The Clifton City Council is scheduled for Tuesday, February 10th, at 6PM in the Clifton Civic Center Council Chambers at 403 W 3rd Street. \*\*\* City offices will be closed on Monday, February 16th for Presidents' Day. \*\*\* Sanitation services changed on October 1st to a once weekly cart pick up and weekly bulk/brush pick up. You can find more information on the Public Notices page of our website. \*\*\*](https://cityofclifton.org/departments/city-secretary/#)
 
 * Call us: [(254) 675-8337](tel:(254) 675-8337)
 * [![Facebook](https://cityofclifton.org/wp-content/themes/clifton/assets/images/icon/facebook.svg)](https://www.facebook.com/TheCityofClifton/posts/pfbid0vLAxeYyxtAnRDAmbzsfXuPSATzuJcrjJhXQDEnPPFwGfGWego8s6aKtzTD8WsE7Jl "Facebook")

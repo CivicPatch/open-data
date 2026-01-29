@@ -7,7 +7,7 @@ Page not found | City of Clifton
 
 ![Bell](https://cityofclifton.org/wp-content/themes/clifton/assets/images/icon/bell.svg)
 
-[\*\*\* Clifton City Council will hold a called meeting on Wednesday, January 28th, at 6PM in the Clifton Civic Center Council Chambers at 403 W 3rd Street. \*\*\* City offices will be closed on Monday, January 19th for Martin Luther King Jr. Day. \*\*\* Sanitation services changed on October 1st to a once weekly cart pick up and weekly bulk/brush pick up. You can find more information on the Public Notices page of our website. \*\*\*](https://cityofclifton.org/government/boards-commissions#)
+[\*\*\* The Clifton City Council is scheduled for Tuesday, February 10th, at 6PM in the Clifton Civic Center Council Chambers at 403 W 3rd Street. \*\*\* City offices will be closed on Monday, February 16th for Presidents' Day. \*\*\* Sanitation services changed on October 1st to a once weekly cart pick up and weekly bulk/brush pick up. You can find more information on the Public Notices page of our website. \*\*\*](https://cityofclifton.org/government/boards-commissions#)
 
 * Call us:
   [(254) 675-8337](tel:(254) 675-8337)
