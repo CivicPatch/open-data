@@ -115,10 +115,11 @@ jobs:
           git push -u origin ${{ steps.extract_branch.outputs.branch_name }}
 
           echo ${{ github.actor }}
+          PR_BODY=$(poetry run python scripts/github_actions/pull_request_body_markdown.py "${{ github.event.inputs.jurisdiction_ocdid }}" "${{ github.event.inputs.request_id }}")
 
           github_pull_request_url=$(gh pr create \
             --title "Data intake for ${{ github.event.inputs.jurisdiction_ocdid }} by ${{ github.event.inputs.user_email }}" \
-            --body "Automated data intake for request ID: ${{ github.event.inputs.request_id }}. Please review the data before merging." \
+            --body "$PR_BODY" \
             --base main
           )
           github_pr_number=$(basename "$github_pull_request_url")
