@@ -1,0 +1,1876 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n3-active wf-muli-n4-active wf-muli-i4-active wf-muli-n7-active wf-active has-webFonts"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira+Sans:600,700,regular|Lato:700,regular|" media="all"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-16W4H53DTG&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61r1"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-16W4H53DTG';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	
+	<meta name="category0" content="Home">
+<meta name="category1" content="Resources">
+<meta name="category2" content="Tax Rate">
+
+	
+	<meta name="theme-color" content="#1b1b1b">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>Tax Rate | Brownfield, TX</title>
+
+		<meta name="description" content="View the current tax rate for the City of Brownfield.">
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '390px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/-1469961533.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style></head>
+<body class="wide cpTextResizeOn doneLoading"><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="https://www.ci.brownfield.tx.us/Common/images/ajax-loader.gif" alt="Loading" title="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks">
+<a href="https://www.ci.brownfield.tx.us/211/Tax-Rate#cc5f8c90dc-b4cb-431b-90ee-10648f8df655" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="1">
+    <input type="hidden" id="hdnContentCollectionID" value="97453fcc-d887-4171-b56b-450393f1ed06">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="1">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID">
+    <input type="hidden" id="pagePageID" value="211">
+
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+
+
+
+<!-- Begin Signed Out Bar -->
+<div class="cpToolbar user public" style="z-index: 1;">
+    <div class="inner selfClear">
+        <p class="dropdown"><a href="https://www.ci.brownfield.tx.us/MyAccount/ProfileCreate" role="link" class="myConnections" id="signedOutToolbarCreateProfileButton">Create a Website Account</a> <span class="welcomeMessage">- Manage notification subscriptions, save form progress and more. &nbsp;&nbsp;</span></p>
+        <ul class="nav secondary">
+	        <li><a href="https://www.ci.brownfield.tx.us/MyAccount" role="link" class="button" id="loggedOutToolbarSignInButton"><span>Website Sign In</span></a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#signedOutToolbarCreateProfileButton').keypress(function (e) { if (e.which === 0) return; $(this).click(); });
+        $('#signedOutToolbarCreateProfileButton').click(function (event) {
+        	event.preventDefault();
+        	window.location.href = '/MyAccount/ProfileCreate?from=url&url=/&dn=' + window.location.origin;
+        });
+
+			
+				$('#loggedOutToolbarSignInButton').click(function (event) {
+					event.preventDefault();
+					window.location.href = '/MyAccount/?from=url&url=' + encodeURIComponent(window.location.href.replace(window.location.origin, '')) + '&dn=' + window.location.host;
+				});
+			
+
+		if ('False' == 'True') {
+            $('#loggedOutToolbarSignInButton').hide();
+		}
+    })
+</script>
+<!-- End Signed Out Bar -->
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 35px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="structuralContainer1" style="min-height: 1603px;">
+<div data-cprole="banner" id="banner1"><div data-cprole="stickyStructuralContainer" id="stickyStructuralContainer"><div id="stickyStructuralContainer_c2198b70-59fd-415f-a592-40138de34709" class="stickyInnerDiv  ">
+<header class="siteHeader"><div data-cprole="structuralContainer" id="structuralContainer2">
+<div class="siteWrap"><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem31" class="topMenuItem" role="none" data-pageid="31" data-displaymegamenu="True" style="width: 18.7677%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavAboutUs" class="navMainItem mainNavItem mainNavItem1 " href="https://www.ci.brownfield.tx.us/31/About-Us" target="_self" style="font-size: 21px;"><span style="display: inline;">   About Us </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem193" class="topMenuItem" role="none" data-pageid="193" data-displaymegamenu="True" style="width: 22.015%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavDepartments" class="navMainItem mainNavItem mainNavItem2 " href="https://www.ci.brownfield.tx.us/193/Departments" target="_self" style="font-size: 21px;"><span style="display: inline;">   Departments </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem27" class="topMenuItem" role="none" data-pageid="27" data-displaymegamenu="True" style="width: 21.4321%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem3 " href="https://www.ci.brownfield.tx.us/27/Government" target="_self" style="font-size: 21px;"><span style="display: inline;">   Government </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem9" class="topMenuItem" role="none" data-pageid="9" data-displaymegamenu="True" style="width: 19.6836%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavResources" class="navMainItem mainNavItem mainNavItem4 " href="https://www.ci.brownfield.tx.us/9/Resources" target="_self" style="font-size: 21px;"><span style="display: inline;">   Resources </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem35" class="topMenuItem" role="none" data-pageid="35" data-displaymegamenu="True" style="width: 18.1016%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavServices" class="navMainItem mainNavItem mainNavItem5 " href="https://www.ci.brownfield.tx.us/35/Services" target="_self" style="font-size: 21px;"><span style="display: inline;">   Services </span></a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=1&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = true;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="1"></aside></nav></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer3" style="min-height: 94px;">
+<div class="siteWrap"><div class="logo" data-cprole="structuralContainer" id="structuralContainer4">
+<div data-cprole="banner" id="banner2" class="imageBig empty">
+
+
+
+
+				<a id="banner2-9" style="			display: block; text-align: center;
+" class="bannerObject" href="https://www.ci.brownfield.tx.us/" target="_self"><img alt="Home Page" class="bannerObject" height="159" src="https://www.ci.brownfield.tx.us/ImageRepository/Document?documentID=29" width="289"></a>
+</div>
+</div><aside data-cprole="contentContainer" id="contentContainer1" class="searchCWK">	<div id="cc4f1ce383-10fc-453f-8f8c-79e71a956b20" data-containerid="4f1ce383-10fc-453f-8f8c-79e71a956b20" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="25">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col10 first" style="height: auto;" data-widgetcontainerid="4078f8b2-b3c3-499c-973b-0709ba52f1d9">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col10 first last id62d0a7b5-4531-49e8-b3e2-484a8641159d" style="height: 65px; min-height: 0px;" data-widgetcontainerid="62d0a7b5-4531-49e8-b3e2-484a8641159d">
+	
+<div data-widget-id="45565c4e-8f2c-4e13-815f-090c8e1e5d85" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget45565c4e-8f2c-4e13-815f-090c8e1e5d85" class="widget widgetGraphicLinks skin57 widgetOptionSet26 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid4 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.ci.brownfield.tx.us/facebook" target="_self" aria-label="Facebook graphic"><img src="https://www.ci.brownfield.tx.us/ImageRepository/Document?documentID=50" class="graphicButtonLink" alt="Facebook" onmouseover="this.src='/ImageRepository/Document?documentID=49'" onmouseout="this.src='/ImageRepository/Document?documentID=50'" onfocus="this.src='/ImageRepository/Document?documentID=49'" onblur="this.src='/ImageRepository/Document?documentID=50'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.ci.brownfield.tx.us/LinkedIn" target="_self" aria-label="LinkedIn graphic"><img src="https://www.ci.brownfield.tx.us/ImageRepository/Document?documentID=107" class="graphicButtonLink" alt="LinkedIn" onmouseover="this.src='/ImageRepository/Document?documentID=108'" onmouseout="this.src='/ImageRepository/Document?documentID=107'" onfocus="this.src='/ImageRepository/Document?documentID=108'" onblur="this.src='/ImageRepository/Document?documentID=107'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.ci.brownfield.tx.us/instagram" target="_self" aria-label="Instagram graphic"><img src="https://www.ci.brownfield.tx.us/ImageRepository/Document?documentID=52" class="graphicButtonLink" alt="Instagram" onmouseover="this.src='/ImageRepository/Document?documentID=51'" onmouseout="this.src='/ImageRepository/Document?documentID=52'" onfocus="this.src='/ImageRepository/Document?documentID=51'" onblur="this.src='/ImageRepository/Document?documentID=52'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.ci.brownfield.tx.us/youtube" target="_self" aria-label="YouTube graphic"><img src="https://www.ci.brownfield.tx.us/ImageRepository/Document?documentID=56" class="graphicButtonLink" alt="YouTube" onmouseover="this.src='/ImageRepository/Document?documentID=55'" onmouseout="this.src='/ImageRepository/Document?documentID=56'" onfocus="this.src='/ImageRepository/Document?documentID=55'" onblur="this.src='/ImageRepository/Document?documentID=56'"> </a></li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col14 last" style="height: auto;" data-widgetcontainerid="91345675-d7d3-420c-9f61-0b187d3d8391">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col14 first last idb8ede81a-980a-48f8-9f9c-ce9f922884a2" style="height: 65px; min-height: 0px;" data-widgetcontainerid="b8ede81a-980a-48f8-9f9c-ce9f922884a2">
+	
+<div data-widget-id="c1dedb6b-d2e1-41da-9389-fd2de64c731c" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButtonc1dedb6b-d2e1-41da-9389-fd2de64c731c").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDeptc1dedb6b-d2e1-41da-9389-fd2de64c731c").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchFieldc1dedb6b-d2e1-41da-9389-fd2de64c731c").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDeptc1dedb6b-d2e1-41da-9389-fd2de64c731c").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDeptc1dedb6b-d2e1-41da-9389-fd2de64c731c").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchFieldc1dedb6b-d2e1-41da-9389-fd2de64c731c").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDeptc1dedb6b-d2e1-41da-9389-fd2de64c731c").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchFieldc1dedb6b-d2e1-41da-9389-fd2de64c731c").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchFieldc1dedb6b-d2e1-41da-9389-fd2de64c731c"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin17 widgetOptionSet15" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBoxc1dedb6b-d2e1-41da-9389-fd2de64c731c ui-autocomplete-input" cp5ph="true" id="searchFieldc1dedb6b-d2e1-41da-9389-fd2de64c731c" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search" title="Search" type="text" value="" autocomplete="off">
+						<a href="https://www.ci.brownfield.tx.us/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButtonc1dedb6b-d2e1-41da-9389-fd2de64c731c" role="button"><img alt="Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=32" data-image="/ImageRepository/Document?documentID=31" src="https://www.ci.brownfield.tx.us/ImageRepository/Document?documentID=31"></a>
+
+			<label class="searchLabel" for="searchFieldc1dedb6b-d2e1-41da-9389-fd2de64c731c">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #000000;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #000000;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #000000;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #000000;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBoxc1dedb6b-d2e1-41da-9389-fd2de64c731c
+	{
+		color: #000000;
+		background: transparent; padding: 18px 40px 17px 20px;  border:0; border-bottom: 3px solid #1a1f23; 
+	}
+	.widgetSearch .widgetBody .widgetSearchButtonc1dedb6b-d2e1-41da-9389-fd2de64c731c
+	{
+		margin-top: 15px; margin-right: 15px;
+	}
+	.widgetSearch .widgetSearch-onlyDeptc1dedb6b-d2e1-41da-9389-fd2de64c731c
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDeptc1dedb6b-d2e1-41da-9389-fd2de64c731c
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchFieldc1dedb6b-d2e1-41da-9389-fd2de64c731c").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside></div>
+</div></header></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer5">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer2" class="slide_ts">	<div id="cc32219e87-d7d7-4b3e-b4c0-59bdfc7f4c0c" data-containerid="32219e87-d7d7-4b3e-b4c0-59bdfc7f4c0c" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer7">
+<div class="siteWrap"><div data-cprole="structuralContainer" id="structuralContainer8" class="mainWrap" role="main">
+<div data-cprole="structuralContainer" id="structuralContainer9" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="structuralContainer13" class="contentWrap" style="min-height: 536.8px;">
+<div data-cprole="breadCrumbs" class="breadCrumbContainer" id="breadCrumbs">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="https://www.ci.brownfield.tx.us/">Home</a></li><li><a class="breadCrumb" href="https://www.ci.brownfield.tx.us/9/Resources">Resources</a></li><li id="currentBCPage" data-pageid="211">Tax Rate</li>
+		</ol>
+
+	   
+    
+</div><div data-cprole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="211">
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="9">
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="1792">
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="Tax Rate">
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="False">
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False">
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published">
+
+				<h1 id="versionHeadLine" class="headline">
+
+Tax Rate		</h1>
+	
+		<div id="cc5f8c90dc-b4cb-431b-90ee-10648f8df655" data-containerid="5f8c90dc-b4cb-431b-90ee-10648f8df655" class="pageContent cpGrid cpGrid24" data-contentcontainerbreakpoint="30">
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="57c52e06-c8ee-466c-b032-82674a925d9d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id3b049ec4-3bbd-4af2-acfc-a16f3ca29e31" style="height: 441px; min-height: 0px;" data-widgetcontainerid="3b049ec4-3bbd-4af2-acfc-a16f3ca29e31">
+	
+<div class="widget editor pageStyles wide" id="divEditor756d98ca-e270-4bce-b086-c577510034d7" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}">
+	    <div class="fr-view">
+
+
+        <ul><li>Sales Tax: 8.25%&nbsp;<ul><li>(State: 6.25%, County: 0.50%, City 1.0%, BIDCorp 0.50%)</li></ul></li><li><span style="font-size: 14.4px;">Property Tax &nbsp;$$0.539139 per $100 Valuation</span><br><span style="font-size: 14.4px;">The City of Brownfield has adopted the no-new-revenue tax rate is the tax rate for the 2021 tax year which will raise the same amount&nbsp;</span><span style="font-size: 14.4px;">of property tax revenue for City of Brownfield from the same properties in both the 2020 tax year&nbsp;</span><span style="font-size: 14.4px;">and the 2021 tax year.<br></span><br><span style="font-size: 14.4px;"><br></span><span style="font-size: 14.4px;">For assistance with tax calculations, please contact the tax assessor for City of Brownfield at&nbsp;</span><br><span style="font-size: 14.4px;">806-637-6966 winddstream.net, or visit 421 W. Powell for more information.</span><br><br><br><br></li></ul><p><span style="font-size: 14.4px;"><br></span></p><p><br></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '756d98ca-e270-4bce-b086-c577510034d7'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: none;">	<div id="ccd6923f64-2522-4bce-8783-61ad1b416b69" data-containerid="d6923f64-2522-4bce-8783-61ad1b416b69" class="pageContent cpGrid cpGrid24 showInMobile" data-contentcontainerbreakpoint="40">
+				                
+
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="structuralContainer14" class="siteSidebar" style="min-height: 580px;">
+<aside data-cprole="contentContainer" id="contentContainer7">	<div id="cc838b5f42-1a5a-4e51-b4b6-d95cbec64b56" data-containerid="838b5f42-1a5a-4e51-b4b6-d95cbec64b56" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav">
+
+
+
+
+
+	<ol role="menu" id="secondaryMenusecondaryNav" data-parent="9" class="rootNavMenu accordionNav">
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem215" data-pageid="215">
+		<div class="accordionNavItem">
+			<a href="https://www.brownfieldbidc.com/" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Brownfield Industrial Development Corporation</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem209" data-pageid="209">
+		<div class="accordionNavItem">
+			<a href="https://www.ci.brownfield.tx.us/209/Contact" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Contact</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem223" data-pageid="223">
+		<div class="accordionNavItem">
+			<a href="https://www.ci.brownfield.tx.us/FAQ.aspx?TID=16" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">FAQs</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem216" data-pageid="216">
+		<div class="accordionNavItem">
+			<a href="https://www.ci.brownfield.tx.us/216/Public-Documents" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Public Documents</a>
+				<a href="https://www.ci.brownfield.tx.us/211/Tax-Rate#" class="openAccordionNav accordionSecondaryNavItem" title="Expand Public Documents Submenu"></a>
+		</div>
+					<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" style="display: none;" data-parent="216">
+						<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem224" data-pageid="224">
+			<div class="accordionNavItem">
+				<a href="https://www.ci.brownfield.tx.us/DocumentCenter/View/153/2020-Classification-and-Compensation-Study-and-Analysis-PDF" target="_self" class="navMenuItem cpComponent docaccess-activated" data-type="SecondaryMenuItem" data-docaccess-source-url="https://ci.brownfield.tx.us/DocumentCenter/View/153/2020-Classification-and-Compensation-Study-and-Analysis-PDF" data-url-hash="093126154887f6c0e9cfad5f419d33606141d36ed7bab2b2bb6e66ab0d864c02" data-url-status="disabled"><span lang="en">2020 Classification &amp; Compensation Study &amp; Analysis (PDF)</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem217" data-pageid="217">
+			<div class="accordionNavItem">
+				<a href="https://www.ci.brownfield.tx.us/217/City-Ordinances" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">City Ordinances</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem218" data-pageid="218">
+			<div class="accordionNavItem">
+				<a href="https://www.ci.brownfield.tx.us/218/Financial-Documents" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Financial Documents</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem225" data-pageid="225">
+			<div class="accordionNavItem">
+				<a href="https://www.ci.brownfield.tx.us/225/Government-Orders" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Government Orders</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem219" data-pageid="219">
+			<div class="accordionNavItem">
+				<a href="https://www.ci.brownfield.tx.us/219/Notices" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Notices</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem220" data-pageid="220">
+			<div class="accordionNavItem">
+				<a href="https://www.ci.brownfield.tx.us/220/Terry-County-Project-Overview" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Terry County Project Overview</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem253" data-pageid="253">
+			<div class="accordionNavItem">
+				<a href="https://www.ci.brownfield.tx.us/253/Building-Official-Documents" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Building Official Documents</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem254" data-pageid="254">
+			<div class="accordionNavItem">
+				<a href="https://www.ci.brownfield.tx.us/254/Utility-Documents" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Utility Documents</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem211" data-pageid="211">
+		<div class="accordionNavItem">
+			<a href="https://www.ci.brownfield.tx.us/211/Tax-Rate" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Tax Rate</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem249" data-pageid="249">
+		<div class="accordionNavItem">
+			<a href="https://www.ci.brownfield.tx.us/249/Official-Maps" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Official Maps </a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem256" data-pageid="256">
+		<div class="accordionNavItem">
+			<a href="https://www.ci.brownfield.tx.us/256/Public-Information-Request" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Public Information Request </a>
+		</div>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = false;
+		});
+	</script>
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			$('*[id^="SideItem"]').each(function () {
+				var ids = $('[id="' + this.id + '"]');
+				if (ids.length > 1)
+					$.each(ids, function (index, value) {
+						value.id = value.id + '_' + index;
+					});
+			});
+
+			$('.hasAccordionChildren .openAccordionNav').click(function (e) {
+				e.preventDefault();
+				showHideAccordionMenuForSecondaryNav($(this));
+			});
+
+			$("#secondaryNav .grippy").each(function () {
+				menuManager.setupDraggableElement($(this), SIDE_MENU, '#secondaryNav');
+			});
+
+			$("#secondaryNav li").each(function () {
+				menuManager.setupDroppableAccordionElement($(this), SIDE_MENU);
+			});
+		});
+	</script>
+
+
+
+</nav><aside data-cprole="contentContainer" id="contentContainer6">	<div id="cc7e33c007-a92d-4e0b-a28a-4fca2d132de9" data-containerid="7e33c007-a92d-4e0b-a28a-4fca2d132de9" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="40">
+				                
+
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div>
+
+
+
+
+		<div class="bannerObject external" id="bannerDivbanner1" style="min-height: 1122px; top: 0px; left: 0px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="false"><img alt="" class="bannerObject" src="https://www.ci.brownfield.tx.us/ImageRepository/Document?documentID=28" width="1920px" style="position: absolute; left: 50%; margin: 0px 0px 0px -960px;"></div>
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderBanner('banner1-2',
+								'banner1',
+								{"BannerOptionID":2,"ThemeID":1,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":1,"SlideShowSlideTiming":null,"SlideshowTransition":0,"SlideShowTransitionTiming":null,"ImageScale":false,"ImageAlignment":2,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":57,"BannerOptionID":2,"FileName":"/ImageRepository/Document?documentID=28","Height":998,"Width":1920,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null}],"BannerVideos":[],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								{"BannerImageID":57,"BannerOptionID":2,"FileName":"/ImageRepository/Document?documentID=28","Height":998,"Width":1920,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null},
+								'/App_Themes/Interior/Images/',
+								'<img alt="" class="bannerObject" src="/ImageRepository/Document?documentID=28" />');
+						});
+				});
+			</script>
+
+</div><div data-cprole="structuralContainer" id="structuralContainer6">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer3">	<div id="cc17fc1b17-a660-41d3-b47a-b7691b8b110a" data-containerid="17fc1b17-a660-41d3-b47a-b7691b8b110a" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="64">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col12 first" style="height: auto;" data-widgetcontainerid="b13c5777-06e8-47d7-bd7c-7b564b720447">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last idd0eecd46-03a3-47a9-b94e-b0a2ac0c9861" style="height: 204px; min-height: 0px;" data-widgetcontainerid="d0eecd46-03a3-47a9-b94e-b0a2ac0c9861">
+	
+<div data-widget-id="144b46af-8efe-490b-9a2f-d348d7066494" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget144b46af-8efe-490b-9a2f-d348d7066494" class="widget widgetGraphicLinks skin45 widgetOptionSet25 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:32em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.ci.brownfield.tx.us/Facilities" target="_self" class="fancyButton fancyButton56 ">
+		<span>
+			<span><span class="text">Facilities</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton56.fancyButton:link,.fancyButton56.fancyButton:visited, .fancyButton56div.fancyButton{
+	background-color: #000000;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-right: 1em;
+	padding-left: 1em;
+	background-repeat: no-repeat;
+	background-position: left top;
+border-radius: 6px;
+transition: all 0.3s ease-in-out;
+transition: background-image 0.3s ease-in-out .2s;}
+.fancyButton56.fancyButton:hover,.fancyButton56.fancyButton:focus,.fancyButton56.fancyButton:active,.fancyButton56.fancyButton.hover{
+	background-color: #f4f4f4;
+	background-repeat: repeat;
+	background-position: left top;
+}
+.fancyButton56.fancyButton:link > span,.fancyButton56.fancyButton:visited > span, .fancyButton56div.fancyButton > span{
+}
+.fancyButton56.fancyButton:hover > span,.fancyButton56.fancyButton:focus > span,.fancyButton56.fancyButton:active > span,.fancyButton56.fancyButton.hover > span{
+}
+.fancyButton56.fancyButton .text{
+	color: #fff;
+	font-size: 1.2em;
+	font-family: "Lato";
+	text-align: center;
+	padding-top: 80px;
+	padding-bottom: 1.5em;
+	padding-right: .75em;
+	padding-left: .75em;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 80px;
+	padding-bottom: 1.5em;
+	padding-right: .75em;
+	padding-left: .75em;
+	background-image: url('/ImageRepository/Document?documentID=91');
+	background-repeat: no-repeat;
+	background-position: center 25px ;
+	border-top: 3px solid #b42726;
+	border-left: 3px solid #b42726;
+	border-right: 3px solid #b42726;
+	border-bottom: 3px solid #b42726;
+height: 165px;
+border-radius: 3px;
+transition: all 0.5s ease-in-out;line-height: 1.2;}
+.fancyButton56.fancyButton:hover .text,.fancyButton56.fancyButton:focus .text,.fancyButton56.fancyButton:active .text,.fancyButton56.fancyButton.hover .text{
+	color: #2d363d;
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=92');
+	border-top: 3px solid #3a2b33;
+	border-left: 3px solid #3a2b33;
+	border-right: 3px solid #3a2b33;
+	border-bottom: 3px solid #3a2b33;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.ci.brownfield.tx.us/Jobs.aspx" target="_self" class="fancyButton fancyButton65 ">
+		<span>
+			<span><span class="text">Employment</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton65.fancyButton:link,.fancyButton65.fancyButton:visited, .fancyButton65div.fancyButton{
+	background-color: #000000;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-right: 1em;
+	padding-left: 1em;
+	background-repeat: no-repeat;
+	background-position: left top;
+border-radius: 6px;
+transition: all 0.3s ease-in-out;
+transition: background-image 0.3s ease-in-out .2s;}
+.fancyButton65.fancyButton:hover,.fancyButton65.fancyButton:focus,.fancyButton65.fancyButton:active,.fancyButton65.fancyButton.hover{
+	background-color: #f4f4f4;
+	background-repeat: repeat;
+	background-position: left top;
+}
+.fancyButton65.fancyButton:link > span,.fancyButton65.fancyButton:visited > span, .fancyButton65div.fancyButton > span{
+}
+.fancyButton65.fancyButton:hover > span,.fancyButton65.fancyButton:focus > span,.fancyButton65.fancyButton:active > span,.fancyButton65.fancyButton.hover > span{
+}
+.fancyButton65.fancyButton .text{
+	color: #fff;
+	font-size: 1.2em;
+	font-family: "Lato";
+	text-align: center;
+	padding-top: 80px;
+	padding-bottom: 1.5em;
+	padding-right: .75em;
+	padding-left: .75em;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 80px;
+	padding-bottom: 1.5em;
+	padding-right: .75em;
+	padding-left: .75em;
+	background-image: url('/ImageRepository/Document?documentID=89');
+	background-repeat: no-repeat;
+	background-position: center 25px ;
+	border-top: 3px solid #b42726;
+	border-left: 3px solid #b42726;
+	border-right: 3px solid #b42726;
+	border-bottom: 3px solid #b42726;
+height: 165px;
+border-radius: 3px;
+transition: all 0.5s ease-in-out;line-height: 1.2;}
+.fancyButton65.fancyButton:hover .text,.fancyButton65.fancyButton:focus .text,.fancyButton65.fancyButton:active .text,.fancyButton65.fancyButton.hover .text{
+	color: #2d363d;
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=90');
+	border-top: 3px solid #3a2b33;
+	border-left: 3px solid #3a2b33;
+	border-right: 3px solid #3a2b33;
+	border-bottom: 3px solid #3a2b33;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.ci.brownfield.tx.us/FormCenter" target="_self" class="fancyButton fancyButton66 ">
+		<span>
+			<span><span class="text">Forms</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton66.fancyButton:link,.fancyButton66.fancyButton:visited, .fancyButton66div.fancyButton{
+	background-color: #000000;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-right: 1em;
+	padding-left: 1em;
+	background-repeat: no-repeat;
+	background-position: left top;
+border-radius: 6px;
+transition: all 0.3s ease-in-out;
+transition: background-image 0.3s ease-in-out .2s;}
+.fancyButton66.fancyButton:hover,.fancyButton66.fancyButton:focus,.fancyButton66.fancyButton:active,.fancyButton66.fancyButton.hover{
+	background-color: #f4f4f4;
+	background-repeat: repeat;
+	background-position: left top;
+}
+.fancyButton66.fancyButton:link > span,.fancyButton66.fancyButton:visited > span, .fancyButton66div.fancyButton > span{
+}
+.fancyButton66.fancyButton:hover > span,.fancyButton66.fancyButton:focus > span,.fancyButton66.fancyButton:active > span,.fancyButton66.fancyButton.hover > span{
+}
+.fancyButton66.fancyButton .text{
+	color: #fff;
+	font-size: 1.2em;
+	font-family: "Lato";
+	text-align: center;
+	padding-top: 80px;
+	padding-bottom: 1.5em;
+	padding-right: .75em;
+	padding-left: .75em;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 80px;
+	padding-bottom: 1.5em;
+	padding-right: .75em;
+	padding-left: .75em;
+	background-image: url('/ImageRepository/Document?documentID=93');
+	background-repeat: no-repeat;
+	background-position: center 25px ;
+	border-top: 3px solid #b42726;
+	border-left: 3px solid #b42726;
+	border-right: 3px solid #b42726;
+	border-bottom: 3px solid #b42726;
+height: 165px;
+border-radius: 3px;
+transition: all 0.5s ease-in-out;line-height: 1.2;}
+.fancyButton66.fancyButton:hover .text,.fancyButton66.fancyButton:focus .text,.fancyButton66.fancyButton:active .text,.fancyButton66.fancyButton.hover .text{
+	color: #2d363d;
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=94');
+	border-top: 3px solid #3a2b33;
+	border-left: 3px solid #3a2b33;
+	border-right: 3px solid #3a2b33;
+	border-bottom: 3px solid #3a2b33;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col12 last" style="height: auto;" data-widgetcontainerid="ecc7d973-bab8-4ea5-b3b4-63981847be6f">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last id1bd56d84-3989-47b0-ad1e-25ac34a5c209" style="height: 204px; min-height: 0px;" data-widgetcontainerid="1bd56d84-3989-47b0-ad1e-25ac34a5c209">
+	
+<div data-widget-id="c00a9fd2-c1f3-40bb-b5cb-635922d19e33" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetc00a9fd2-c1f3-40bb-b5cb-635922d19e33" class="widget widgetGraphicLinks skin45 widgetOptionSet25 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:32em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.fastgovpay.com/brownfield" target="_self" class="fancyButton fancyButton68 ">
+		<span>
+			<span><span class="text">Online Bill Pay</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton68.fancyButton:link,.fancyButton68.fancyButton:visited, .fancyButton68div.fancyButton{
+	background-color: rgb(255, 0, 0);
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-right: 1em;
+	padding-left: 1em;
+	background-repeat: no-repeat;
+	background-position: left top;
+border-radius: 6px;
+transition: all 0.3s ease-in-out;
+transition: background-image 0.3s ease-in-out .2s;}
+.fancyButton68.fancyButton:hover,.fancyButton68.fancyButton:focus,.fancyButton68.fancyButton:active,.fancyButton68.fancyButton.hover{
+	background-color: #f4f4f4;
+	background-repeat: repeat;
+	background-position: left top;
+}
+.fancyButton68.fancyButton:link > span,.fancyButton68.fancyButton:visited > span, .fancyButton68div.fancyButton > span{
+}
+.fancyButton68.fancyButton:hover > span,.fancyButton68.fancyButton:focus > span,.fancyButton68.fancyButton:active > span,.fancyButton68.fancyButton.hover > span{
+}
+.fancyButton68.fancyButton .text{
+	color: #fff;
+	font-size: 1.2em;
+	font-family: "Lato";
+	text-align: center;
+	padding-top: 80px;
+	padding-bottom: 1.5em;
+	padding-right: .75em;
+	padding-left: .75em;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 80px;
+	padding-bottom: 1.5em;
+	padding-right: .75em;
+	padding-left: .75em;
+	background-image: url('/ImageRepository/Document?documentID=98');
+	background-repeat: no-repeat;
+	background-position: center 25px ;
+	border-top: 3px solid #b42726;
+	border-left: 3px solid #b42726;
+	border-right: 3px solid #b42726;
+	border-bottom: 3px solid #b42726;
+height: 165px;
+border-radius: 3px;
+transition: all 0.5s ease-in-out;line-height: 1.2;}
+.fancyButton68.fancyButton:hover .text,.fancyButton68.fancyButton:focus .text,.fancyButton68.fancyButton:active .text,.fancyButton68.fancyButton.hover .text{
+	color: #2d363d;
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=97');
+	border-top: 3px solid #3a2b33;
+	border-left: 3px solid #3a2b33;
+	border-right: 3px solid #3a2b33;
+	border-bottom: 3px solid #3a2b33;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.ci.brownfield.tx.us/list.aspx" target="_self" class="fancyButton fancyButton67 ">
+		<span>
+			<span><span class="text">Notify Me®</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton67.fancyButton:link,.fancyButton67.fancyButton:visited, .fancyButton67div.fancyButton{
+	background-color: #000000;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-right: 1em;
+	padding-left: 1em;
+	background-repeat: no-repeat;
+	background-position: left top;
+border-radius: 6px;
+transition: all 0.3s ease-in-out;
+transition: background-image 0.3s ease-in-out .2s;}
+.fancyButton67.fancyButton:hover,.fancyButton67.fancyButton:focus,.fancyButton67.fancyButton:active,.fancyButton67.fancyButton.hover{
+	background-color: #f4f4f4;
+	background-repeat: repeat;
+	background-position: left top;
+}
+.fancyButton67.fancyButton:link > span,.fancyButton67.fancyButton:visited > span, .fancyButton67div.fancyButton > span{
+}
+.fancyButton67.fancyButton:hover > span,.fancyButton67.fancyButton:focus > span,.fancyButton67.fancyButton:active > span,.fancyButton67.fancyButton.hover > span{
+}
+.fancyButton67.fancyButton .text{
+	color: #fff;
+	font-size: 1.2em;
+	font-family: "Lato";
+	text-align: center;
+	padding-top: 80px;
+	padding-bottom: 1.5em;
+	padding-right: .75em;
+	padding-left: .75em;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 80px;
+	padding-bottom: 1.5em;
+	padding-right: .75em;
+	padding-left: .75em;
+	background-image: url('/ImageRepository/Document?documentID=95');
+	background-repeat: no-repeat;
+	background-position: center 25px ;
+	border-top: 3px solid #b42726;
+	border-left: 3px solid #b42726;
+	border-right: 3px solid #b42726;
+	border-bottom: 3px solid #b42726;
+height: 165px;
+border-radius: 3px;
+transition: all 0.5s ease-in-out;line-height: 1.2;}
+.fancyButton67.fancyButton:hover .text,.fancyButton67.fancyButton:focus .text,.fancyButton67.fancyButton:active .text,.fancyButton67.fancyButton.hover .text{
+	color: #2d363d;
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=96');
+	border-top: 3px solid #3a2b33;
+	border-left: 3px solid #3a2b33;
+	border-right: 3px solid #3a2b33;
+	border-bottom: 3px solid #3a2b33;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.ci.brownfield.tx.us/RequestTracker.aspx" target="_self" class="fancyButton fancyButton69 ">
+		<span>
+			<span><span class="text">Report a Concern</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton69.fancyButton:link,.fancyButton69.fancyButton:visited, .fancyButton69div.fancyButton{
+	background-color: #000000;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-right: 1em;
+	padding-left: 1em;
+	background-repeat: no-repeat;
+	background-position: left top;
+border-radius: 6px;
+transition: all 0.3s ease-in-out;
+transition: background-image 0.3s ease-in-out .2s;}
+.fancyButton69.fancyButton:hover,.fancyButton69.fancyButton:focus,.fancyButton69.fancyButton:active,.fancyButton69.fancyButton.hover{
+	background-color: #f4f4f4;
+	background-repeat: repeat;
+	background-position: left top;
+}
+.fancyButton69.fancyButton:link > span,.fancyButton69.fancyButton:visited > span, .fancyButton69div.fancyButton > span{
+}
+.fancyButton69.fancyButton:hover > span,.fancyButton69.fancyButton:focus > span,.fancyButton69.fancyButton:active > span,.fancyButton69.fancyButton.hover > span{
+}
+.fancyButton69.fancyButton .text{
+	color: #fff;
+	font-size: 1.2em;
+	font-family: "Lato";
+	text-align: center;
+	padding-top: 80px;
+	padding-bottom: 1.5em;
+	padding-right: .75em;
+	padding-left: .75em;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 80px;
+	padding-bottom: 1.5em;
+	padding-right: .75em;
+	padding-left: .75em;
+	background-image: url('/ImageRepository/Document?documentID=99');
+	background-repeat: no-repeat;
+	background-position: center 25px ;
+	border-top: 3px solid #b42726;
+	border-left: 3px solid #b42726;
+	border-right: 3px solid #b42726;
+	border-bottom: 3px solid #b42726;
+height: 165px;
+border-radius: 3px;
+transition: all 0.5s ease-in-out;line-height: 1.2;}
+.fancyButton69.fancyButton:hover .text,.fancyButton69.fancyButton:focus .text,.fancyButton69.fancyButton:active .text,.fancyButton69.fancyButton.hover .text{
+	color: #2d363d;
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=100');
+	border-top: 3px solid #3a2b33;
+	border-left: 3px solid #3a2b33;
+	border-right: 3px solid #3a2b33;
+	border-bottom: 3px solid #3a2b33;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer10">
+<div data-cprole="structuralContainer" id="structuralContainer11">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer4">	<div id="cc59051760-3cf5-4d76-b748-0f1d3a9a7a96" data-containerid="59051760-3cf5-4d76-b748-0f1d3a9a7a96" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="60">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col6 first" style="height: auto;" data-widgetcontainerid="6f686cff-5dfe-4743-9538-2850a33cc7e7">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id47b0f40f-b573-480b-bf21-75058cf025b8" style="height: 90px; min-height: 0px;" data-widgetcontainerid="47b0f40f-b573-480b-bf21-75058cf025b8">
+	
+<div data-widget-id="6fb45843-de34-4423-9bdc-3510a3c38a69" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget6fb45843-de34-4423-9bdc-3510a3c38a69" class="widget widgetGraphicLinks skin45 widgetOptionSet4 narrow" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 "> 	
+				<ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.ci.brownfield.tx.us/" target="_self" aria-label="City of Brownfield graphic"><img src="https://www.ci.brownfield.tx.us/ImageRepository/Document?documentID=57" class="graphicButtonLink" alt="City of Brownfield" onmouseover="this.src='/ImageRepository/Document?documentID=57'" onmouseout="this.src='/ImageRepository/Document?documentID=57'" onfocus="this.src='/ImageRepository/Document?documentID=57'" onblur="this.src='/ImageRepository/Document?documentID=57'"> </a></li><!--
+				--></ul>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col18 last" style="height: auto;" data-widgetcontainerid="a524380c-29d1-46ba-8cfe-88dfa4347df1">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col18 first last id2bb8d525-0973-4d69-b39a-3e6b60204f9d" style="height: 90px; min-height: 0px;" data-widgetcontainerid="2bb8d525-0973-4d69-b39a-3e6b60204f9d">
+	
+    <div data-widget-id="892ac126-f3bd-4561-9a5a-63c723849f6a" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+<style type="text/css">@media  (min-width: 62em) {
+.widgetOptionSet27 .cpGrid .autoWidths.center {
+text-align: right;
+}
+}
+</style>
+
+	<section id="divInfoAdv892ac126-f3bd-4561-9a5a-63c723849f6a" class="widget widgetInfoAdvanced skin37 widgetOptionSet27 wide" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="header892ac126-f3bd-4561-9a5a-63c723849f6a">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid4 ">
+		<div class="row autoWidths center wide">
+					<div class="col col1 first ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>201 W Broadway</p>
+</li>						</ol>
+					</div>
+					<div class="col col1  ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Brownfield, TX 79316</p>
+</li>						</ol>
+					</div>
+					<div class="col col1  ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Phone: 806-637-4547</p>
+</li>						</ol>
+					</div>
+					<div class="col col1  last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Fax: 806-637-9369</p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv892ac126-f3bd-4561-9a5a-63c723849f6a .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer12">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer5">	<div id="cc52fccc4b-5a08-45ca-b7c2-c6cf56c923a5" data-containerid="52fccc4b-5a08-45ca-b7c2-c6cf56c923a5" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="60">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="3299d3c6-d3cc-4e29-bab8-953bbe88d06d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id0e30cee9-dd3b-4827-886f-fd3e41ff7393" style="height: 29px; min-height: 0px;" data-widgetcontainerid="0e30cee9-dd3b-4827-886f-fd3e41ff7393">
+	
+	<div data-widget-id="36a77a6e-2271-4a92-9b6b-9ed7127f138f" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+<style type="text/css">@media  (min-width: 62em) {
+.widgetOptionSet28 .cpGrid .autoWidths.center {
+text-align: right;
+}
+}
+</style>
+	<section id="widgetQuicklink36a77a6e-2271-4a92-9b6b-9ed7127f138f" class="widget widgetQuickLinks skin56 widgetOptionSet28 wide" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Quick Links">
+			<header class="widgetHeader" id="quickLinksHeader36a77a6e-2271-4a92-9b6b-9ed7127f138f">
+		<div class="">
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid7 ">
+        <div class="row autoWidths center wide">
+				<div class="col col1 first ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.ci.brownfield.tx.us/directory.aspx" target="_self">Contact Us</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.ci.brownfield.tx.us/sitemap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.ci.brownfield.tx.us/Accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.ci.brownfield.tx.us/site/copyright" target="_self">Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.ci.brownfield.tx.us/privacy" target="_self">Privacy Policy</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.ci.brownfield.tx.us/disclaimer" target="_self">Disclaimer</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://www.civicplus.com/" target="_self">Government Websites by CivicPlus®</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside></div>
+</div>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '211',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	<script type="text/javascript">function dynamicStretchContainers () {Core.Layout.stretchContainers('#structuralContainer13, #structuralContainer1, #structuralContainer3, #structuralContainer14');}</script>
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Fira+Sans:600,700,regular|Lato:700,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu31" class="contentTop mainNavMegaMenu megaMenuContainer pageID_31 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 111px;">	<div id="ccc908c8fe-6b89-450b-8023-7f1996f2c78c" data-containerid="c908c8fe-6b89-450b-8023-7f1996f2c78c" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu193" class="contentTop mainNavMegaMenu megaMenuContainer pageID_193 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 111px;">	<div id="cc8bcab773-c850-4d3b-b8e3-08ce7422b9ba" data-containerid="8bcab773-c850-4d3b-b8e3-08ce7422b9ba" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu27" class="contentTop mainNavMegaMenu megaMenuContainer pageID_27 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 111px;">	<div id="cc21ce42e9-acf6-47e8-9abb-89c25e9297fa" data-containerid="21ce42e9-acf6-47e8-9abb-89c25e9297fa" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu9" class="contentTop mainNavMegaMenu megaMenuContainer pageID_9 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 111px;">	<div id="cc2630c765-1896-41f1-8edb-1b7d51f760f1" data-containerid="2630c765-1896-41f1-8edb-1b7d51f760f1" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu35" class="contentTop mainNavMegaMenu megaMenuContainer pageID_35 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 111px;">	<div id="cc3eeb0b08-dd15-4eec-8be0-c738d4c9760c" data-containerid="3eeb0b08-dd15-4eec-8be0-c738d4c9760c" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b>&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div></body></html>
