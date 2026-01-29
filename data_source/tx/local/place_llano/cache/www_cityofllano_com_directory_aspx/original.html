@@ -1,0 +1,2864 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n3-active wf-muli-n4-active wf-muli-i4-active wf-muli-n7-active wf-active has-webFonts" style="height: 100%;"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:700,regular|Raleway:500,500italic,600,600italic,700,700italic,800,800italic,italic,regular|" media="all"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-QQZCYPP0BP&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61s0h2"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-QQZCYPP0BP';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	
+	
+	
+	<meta name="theme-color" content="rgb(0, 87, 116)">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>Staff Directory • Llano, TX • CivicEngage</title>
+
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '390px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/-1091223899.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+	
+	<link rel="stylesheet" href="/App_Themes/CP/nmenu.css" type="text/css">
+
+    
+	<!-- Dynamic Header Scripts -->
+	
+	<!--Reference Stylesheet-->
+	
+    
+		<!--Dynamic Header Styles-->
+	<style type="text/css">
+	
+	</style>
+	
+	
+	
+
+
+
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.2f3WBw8L4SI.L.W.O/am=AAQD/d=0/rs=AN8SPfrXXtxuFpMMBoYgp93jo68L3iC3ZQ/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/_/translate_http/_/js/k=translate_http.tr.en_US.gm28aokwBeQ.O/am=AAAQ/d=1/exm=el_conf/ed=1/rs=AN8SPfo-cjsGcRTUC_jpauJJ5fve_ZlsdQ/m=el_main"></script><style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style></head>
+<body class="wide cpTextResizeOn doneLoading" style="position: relative; min-height: 100%; top: 0px; cursor: default;"><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="https://www.cityofllano.com/Common/images/ajax-loader.gif" alt="Loading" title="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks">
+<a href="https://www.cityofllano.com/directory.aspx#contentarea" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="6">
+    <input type="hidden" id="hdnContentCollectionID" value="3c3cb27f-a685-4b16-9f8e-c3fc9e67d91c">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="16">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID" value="4">
+    <input type="hidden" id="pagePageID">
+
+        <input type="hidden" id="hdnModuleID" value="4">
+            <img id="imgLogoPrintPreview" src="https://www.cityofllano.com/ImageRepository/Document?documentID=2796" alt="Llano, TX">
+<div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+
+
+
+<!-- Begin Signed Out Bar -->
+<div class="cpToolbar user public" style="z-index: 1;">
+    <div class="inner selfClear">
+        <p class="dropdown"><a href="https://www.cityofllano.com/MyAccount/ProfileCreate" role="link" class="myConnections" id="signedOutToolbarCreateProfileButton">Create a Website Account</a> <span class="welcomeMessage">- Manage notification subscriptions, save form progress and more. &nbsp;&nbsp;</span></p>
+        <ul class="nav secondary">
+	        <li><a href="https://www.cityofllano.com/MyAccount" role="link" class="button" id="loggedOutToolbarSignInButton"><span>Website Sign In</span></a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#signedOutToolbarCreateProfileButton').keypress(function (e) { if (e.which === 0) return; $(this).click(); });
+        $('#signedOutToolbarCreateProfileButton').click(function (event) {
+        	event.preventDefault();
+        	window.location.href = '/MyAccount/ProfileCreate?from=url&url=/&dn=' + window.location.origin;
+        });
+
+			
+				$('#loggedOutToolbarSignInButton').click(function (event) {
+					event.preventDefault();
+					window.location.href = '/MyAccount/?from=url&url=' + encodeURIComponent(window.location.href.replace(window.location.origin, '')) + '&dn=' + window.location.host;
+				});
+			
+
+		if ('False' == 'True') {
+            $('#loggedOutToolbarSignInButton').hide();
+		}
+    })
+</script>
+<!-- End Signed Out Bar -->
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 35px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="bodyContainerTS">
+<!-- Header Container --><header data-cprole="structuralContainer" id="headerContainerTS" class="fixedTopTS" style="top: 34px;">
+<div class="siteWrap" id="flexHeaderTS"><div data-cprole="banner" id="bannerLogoTS" class="bannerLogoTS empty">
+
+
+
+
+				<a id="bannerLogoTS-51" style="			display: block; text-align: center;
+" class="bannerObject" href="https://www.cityofllano.com/" target="_self"><img alt="Llano Texas home page" class="bannerObject" height="110" src="https://www.cityofllano.com/ImageRepository/Document?documentID=2802" width="110"></a>
+</div><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem27" class="topMenuItem" role="none" data-pageid="27" data-displaymegamenu="True" style="width: 24%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem1 " href="https://www.cityofllano.com/27/Government" target="_self">   Government </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem101" class="topMenuItem" role="none" data-pageid="101" data-displaymegamenu="True" style="width: 17.1818%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavServices" class="navMainItem mainNavItem mainNavItem2 " href="https://www.cityofllano.com/101/Services" target="_self">   Services </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem31" class="topMenuItem" role="none" data-pageid="31" data-displaymegamenu="True" style="width: 21.7273%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavCommunity" class="navMainItem mainNavItem mainNavItem3 " href="https://www.cityofllano.com/31/Community" target="_self">   Community </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem35" class="topMenuItem" role="none" data-pageid="35" data-displaymegamenu="True" style="width: 17.7879%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavBusiness" class="navMainItem mainNavItem mainNavItem4 " href="https://www.cityofllano.com/35/Business" target="_self">   Business </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem9" class="topMenuItem" role="none" data-pageid="9" data-displaymegamenu="True" style="width: 19.303%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavHowDoI" class="navMainItem mainNavItem mainNavItem5 " href="https://www.cityofllano.com/9/How-Do-I" target="_self">   How Do I... </a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=4&themeID=16&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = false;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="1"></aside></nav><div data-cprole="contentContainer" id="searchTS">	<div id="ccd91a7d7e-f19a-4553-8cf7-b5378dc149af" data-containerid="d91a7d7e-f19a-4553-8cf7-b5378dc149af" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="48e2b9df-814e-4d8a-9dbf-f9ce38815fbd">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id28fbf7de-cdf8-44aa-a143-3b63aabff799" style="height: 90px;" data-widgetcontainerid="28fbf7de-cdf8-44aa-a143-3b63aabff799">
+	
+<div data-widget-id="0018c3d4-cea1-4fcd-b19c-2e465233da4d" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButton0018c3d4-cea1-4fcd-b19c-2e465233da4d").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDept0018c3d4-cea1-4fcd-b19c-2e465233da4d").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchField0018c3d4-cea1-4fcd-b19c-2e465233da4d").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDept0018c3d4-cea1-4fcd-b19c-2e465233da4d").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDept0018c3d4-cea1-4fcd-b19c-2e465233da4d").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchField0018c3d4-cea1-4fcd-b19c-2e465233da4d").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDept0018c3d4-cea1-4fcd-b19c-2e465233da4d").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchField0018c3d4-cea1-4fcd-b19c-2e465233da4d").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchField0018c3d4-cea1-4fcd-b19c-2e465233da4d"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin56 widgetOptionSet36" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBox0018c3d4-cea1-4fcd-b19c-2e465233da4d ui-autocomplete-input" cp5ph="true" id="searchField0018c3d4-cea1-4fcd-b19c-2e465233da4d" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search..." title="Search..." type="text" value="" autocomplete="off">
+						<a href="https://www.cityofllano.com/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButton0018c3d4-cea1-4fcd-b19c-2e465233da4d" role="button"><img alt="Go to Site Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=2804" data-image="/ImageRepository/Document?documentID=2803" src="https://www.cityofllano.com/ImageRepository/Document?documentID=2803"></a>
+
+			<label class="searchLabel" for="searchField0018c3d4-cea1-4fcd-b19c-2e465233da4d">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #FFFFFF;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #FFFFFF;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #FFFFFF;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #FFFFFF;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBox0018c3d4-cea1-4fcd-b19c-2e465233da4d
+	{
+		color: #FFFFFF;
+		background-color: #3E716E;
+border: 0;
+border-left: 6px solid #BE9039;
+height: 90px;
+padding: 0 90px 0 20px;
+font-family: Raleway;
+font-size: 1.2em;
+	}
+	.widgetSearch .widgetBody .widgetSearchButton0018c3d4-cea1-4fcd-b19c-2e465233da4d
+	{
+		margin: 16px 16px 0 0;
+	}
+	.widgetSearch .widgetSearch-onlyDept0018c3d4-cea1-4fcd-b19c-2e465233da4d
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDept0018c3d4-cea1-4fcd-b19c-2e465233da4d
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchField0018c3d4-cea1-4fcd-b19c-2e465233da4d").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</header><!-- Banner --><div data-cprole="structuralContainer" id="bannerContainerTS" class="noOverflowTS" style="padding-top: 89px;">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="bannerSizingTS">
+<div data-cprole="structuralContainer" id="bannerSearchTS">
+<div class="siteWrap2"><div data-cprole="contentContainer" id="welcomeTS">	<div id="cc1d84cfa8-906c-4a89-9fee-b33055fe4f0e" data-containerid="1d84cfa8-906c-4a89-9fee-b33055fe4f0e" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+
+
+
+		<div id="bannerImagesJSON52" class="hidden"></div><div class="bannerObject external fixedBanner" id="bannerDivbanner1" style="min-height: 313px; top: 0px; left: -351.214px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img class="bannerObject" width="1265px" style="position: absolute; left: 0px; margin: 0px; width: 1967.43px;" src="https://www.cityofllano.com/ImageRepository/Document?documentID=2797" data-is-delayed="false" alt=""></div>
+		
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner1',
+								{"BannerOptionID":52,"ThemeID":16,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":2,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":91,"BannerOptionID":52,"FileName":"/ImageRepository/Document?documentID=2797","Height":350,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":92,"BannerOptionID":52,"FileName":"/ImageRepository/Document?documentID=2798","Height":350,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":2,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":93,"BannerOptionID":52,"FileName":"/ImageRepository/Document?documentID=2799","Height":350,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":3,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":94,"BannerOptionID":52,"FileName":"/ImageRepository/Document?documentID=2800","Height":350,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":4,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":95,"BannerOptionID":52,"FileName":"/ImageRepository/Document?documentID=2801","Height":350,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":5,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""}],"BannerVideos":[{"BannerVideoID":2,"BannerOptionID":52,"VideoFileName":"","ImageFileName":"EmptyBannerBkg202308150951465614.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								'/App_Themes/Interior/Images/',
+								'Rotating');
+						});
+				});
+			</script>
+
+</div>
+</div><div data-cprole="structuralContainer" id="mainContainerWrapTS">
+<!-- Content container --><div data-cprole="structuralContainer" id="mainContainerTS">
+<div class="siteWrap2"><div data-cprole="structuralContainer" id="mainWrapTS" class="mainWrap" role="main">
+<div data-cprole="structuralContainer" id="siteSidebarTS" class="siteSidebar">
+<aside data-cprole="contentContainer" id="sidebarContainer1TS">	<div id="ccc97469e0-9c6f-43d8-815d-1fff11ef598a" data-containerid="c97469e0-9c6f-43d8-815d-1fff11ef598a" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav">
+
+
+
+
+
+	<ol role="menu" id="secondaryMenusecondaryNav" data-parent="4" class="rootNavMenu accordionNav">
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem370" data-pageid="370">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofllano.com/DocumentCenter/View/2970/Ordinance-1523-Water-Conservation-Plan" target="_blank" class="navMainItem secondaryNavItem cpComponent docaccess-activated" data-type="SecondaryMainItem" aria-label="Water Conservation Plan Opens in new window" data-docaccess-source-url="https://www.cityofllano.com/DocumentCenter/View/2970/Ordinance-1523-Water-Conservation-Plan" data-url-hash="9c8d9e8cd64d3e9809a5b89f02b156292f65b6865e184adb77e929d16369eccb" data-url-status="disabled" rel="noopener">Water Conservation Plan</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem439" data-pageid="439">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofllano.com/DocumentCenter/View/2969/Ordinance-1522-Drought-Contingency-Plan" target="_self" class="navMainItem secondaryNavItem cpComponent docaccess-activated" data-type="SecondaryMainItem" data-docaccess-source-url="https://www.cityofllano.com/DocumentCenter/View/2969/Ordinance-1522-Drought-Contingency-Plan" data-url-hash="948e01090b896fc604d67c3d0605f7aee35756385567efc7e9cf2837730265bc" data-url-status="disabled">Drought Contingency Plan</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem318" data-pageid="318">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofllano.com/205/Agendas-Minutes" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Agendas &amp; Minutes</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem336" data-pageid="336">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofllano.com/336/Master-Fee-Schedule" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Master Fee Schedule</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem319" data-pageid="319">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofllano.com/jobs.aspx" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Job Opportunities</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem320" data-pageid="320">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofllano.com/list.aspx" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Notify Me</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem418" data-pageid="418">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofllano.com/418/Residential-Bulk-Pick-up" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Residential Bulk Pick-up </a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem321" data-pageid="321">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofllano.com/171/Community-Profile" target="_blank" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem" aria-label="Community Profile Opens in new window" rel="noopener">Community Profile</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem375" data-pageid="375">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofllano.com/DocumentCenter/View/3123/2024-CCR-pdf" target="_blank" class="navMainItem secondaryNavItem cpComponent docaccess-activated" data-type="SecondaryMainItem" aria-label="Consumer Confidence Report (CCR) Opens in new window" data-docaccess-source-url="https://www.cityofllano.com/DocumentCenter/View/3123/2024-CCR-pdf" data-url-hash="archived" data-url-status="archived" rel="noopener">Consumer Confidence Report (CCR)</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem415" data-pageid="415">
+		<div class="accordionNavItem">
+			<a href="https://dww2.tceq.texas.gov/DWW/JSP/AnalyteListByCode.jsp?tinwsys_is_number=4352&amp;tinwsys_st_code=TX&amp;wsnumber=TX1500001%20%20%20&amp;DWWState=rTX" target="_blank" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem" aria-label="TCEQ Public Drinking Water System Details (External Link) Opens in new window" rel="noopener">TCEQ Public Drinking Water System Details (External Link)</a>
+		</div>
+			</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem406" data-pageid="406">
+		<div class="accordionNavItem">
+			<a href="https://www.cityofllano.com/405/Budget" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Budget</a>
+		</div>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = true;
+		});
+	</script>
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			$('*[id^="SideItem"]').each(function () {
+				var ids = $('[id="' + this.id + '"]');
+				if (ids.length > 1)
+					$.each(ids, function (index, value) {
+						value.id = value.id + '_' + index;
+					});
+			});
+
+			$('.hasAccordionChildren .openAccordionNav').click(function (e) {
+				e.preventDefault();
+				showHideAccordionMenuForSecondaryNav($(this));
+			});
+
+			$("#secondaryNav .grippy").each(function () {
+				menuManager.setupDraggableElement($(this), SIDE_MENU, '#secondaryNav');
+			});
+
+			$("#secondaryNav li").each(function () {
+				menuManager.setupDroppableAccordionElement($(this), SIDE_MENU);
+			});
+		});
+	</script>
+
+
+
+</nav><aside data-cprole="contentContainer" id="sidebarContainer2TS">	<div id="cc49c72bfb-a165-4241-8bf2-6dd60951f476" data-containerid="49c72bfb-a165-4241-8bf2-6dd60951f476" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="outerContentWrapTS" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="contentWrapTS" class="contentWrap">
+<div data-cprole="breadCrumbs" id="breadCrumbs" class="breadCrumbContainer">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="https://www.cityofllano.com/">Home</a></li><li>Staff Directory</li>
+		</ol>
+
+	   
+    
+</div>
+<div data-cprole="mainContentContainer" id="moduleContent">
+
+<div id="ctl00_ctl00_MainContent_BodyWrapper">
+	
+	<script type="text/javascript"><!--
+	var isie6 = false, isie7 = false, isie6or7 = false;
+	var intCountryCode = 840;
+
+	function setUrlLength(editor) {
+		//Toggle Image Context Menu Items
+		setMenuItems(editor);
+		//setContentBackgroundColor(editor);
+		removeIEParagraphs(editor);
+	}
+	function setUrlLengthAndToolToggle(editor) {
+		var minToolsGroups = 2; // Number of MinimumSetOfTools tools groups.
+		
+		// Hide the MinimumSetOfTools on load.
+		var toolbar = editor.get_toolContainer(); // Get toolbar container.
+		var toolgroups = toolbar.getElementsByTagName("UL"); // Get all toolgroups containers.
+		
+		for (var i = toolgroups.length - 1; i >= minToolsGroups; i--)			toolgroups[i].style.display = "none";
+		
+		if (editor.isIE) {
+			var elem = editor.get_element();
+			elem.style.height = "430px";
+ 			elem.style.minHeight = "430px";
+		}
+		
+		// Toggle Image Context Menu Items.
+		setMenuItems(editor);
+		//setContentBackgroundColor(editor);
+		removeIEParagraphs(editor);
+	}
+//--></script><!--[if IE 6]><script type="text/javascript">isie6 = true; isie6or7 = true;</script><![endif]-->
+<!--[if IE 7]><script type="text/javascript">isie7 = true; isie6or7 = true;</script><![endif]-->
+
+	
+
+	<form name="aspnetForm" method="post" action="./directory.aspx" id="aspnetForm" style="display:inline;" onsubmit="return headerValidationCallback();" enctype="multipart/form-data" autocomplete="off">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="g3NedCS4zT+BmPFF6yxaglbLC/6YAqAFlLSWFYE4Hkn3RgMBQa5NF3O9y0FgC09o4t6iu967M0kvulzpQedH9S8Vczh+EM0o2XzJdLew5nUlWjGE3KWWg+a+Qq3uFEcI">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZDLabodcikOjfaxGftwY9HZ4kdGjeaKe0dWaPQB1vgEd44eKAO0Ba1XMxE47-4twmw2&amp;t=638901361900000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=inLNP31wjqiaI82QcH4u7I71VHLIImzSRVoQAsV6_PNnrOu35oSrP-fktZb38yN1iHsxOuYTpPgebuvS3itkNDLQybUfBynodkPwcNYuu-5d7dEEJZPI3T2Vm57A0oUefZV704Z-0E62UXTckXj_X_urLROZ7xCT0LlKVHEeZf55MwRhNUf-qoYv7TXZNOcfRkghmszkBchwDCBZrMbNwwBUFz9bMFENu7H3ZkagHhGUNhiZSJJ_6rKgB8JZT9HTTpwkKUZBVrWA-S1010VS5Ob6lDwN9zNSwRQIL4BFNHXoQKw87hXTih7r4GO7vfq9srwqbRxzNCwrmjbkqxS8PKvq3JrNg9F8Yzi5r8_QnUw8wnSAXB3cGwR-Oug_rBjSvh1H2m1dhLMfnrFII3aXyZHVFuHavV3Jq2X9dFwARhK6bD6UgXxog8zmfpLJ6WuLe1SOWsSp6nBTLbtzTkaRqQV5ezsjtJAY_BjxLBRMSuqCK3ndsYNX2uDXn8OU1aFYN7YRkehqMOG2DZDJN3je3le0UoSpMEP119RvNyCBDd3fFfEROn22W2Zy-nkYf66ujs8p5jJJk9qUQcNjKmE-72VQP6-3ZlE78IqOcbGpJjJWLsqLv5a8Qrfz-bHTJfA7HQK17c_eRCCcdbgekRrNJ7DUshbeGeZZxU6mDOMM0fgY7UNyFSNn1dRISJr64r5_4nSCb2qU5aLOXTahkfUoU8LYfD9sfSesIHRwVM0dEZYw_fNzolVFS1omlCXY1C6wm_ZyHwvxNChMm56m_LNnwTXM-14U_Aj7mxxcUeel5LCis9bNX9XAMZfTXFcWd5Z_AfhU8RWVsb9-PorEp_06SpgGOenb5xBqGLxeKltoBnI1" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="42A65EF5">
+</div>
+		<!--for archiving purpose-->
+		<input name="ysnNotifyMe" type="hidden">
+		<input name="strPage" type="hidden">
+		<input name="intArchMainCatID" type="hidden">
+		<input name="intArchMainItemID" type="hidden">
+		 <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$MainContent$scriptManager', 'aspnetForm', [], [], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+		<script type="text/javascript">
+			Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(beginRequest);
+			Sys.WebForms.PageRequestManager.getInstance().add_pageLoaded(pageLoaded);
+		</script>
+		
+		<div id="modulecontent" name="modulecontent.aspx" style="padding-top: 0px;">
+<div id="contentarea"></div>
+
+<!-- BEGIN CityDirectoryContent.aspx ***** -->
+<style>
+	#moduleContent,
+	#moduleContent * {
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+		box-sizing: content-box;
+	}
+
+	table[summary="Search Directory"], table[summary="Employee Info"], table[summary="Table for layout purposes"] {
+		width: 100%
+	}
+</style>
+
+<link href="/Common/Modules/CityDirectory/RWDCityDirectory.css" rel="stylesheet" type="text/css">
+<script src="/Common/Modules/CityDirectory/RWDCityDirectory.js" type="text/javascript"></script>
+
+<script type="text/javascript" language="javascript" src="/common/nMenu.js"></script>
+<style type="text/css">
+	td.r { text-align: right; margin: 0px; margin-left: auto;}
+	td.l { text-align: left; margin: 0px; margin-right: auto; }
+	td.c { text-align: center; margin: 0px auto; }
+	tr.qcol { background: rgb(245; }
+	a.archLinkColor { color: rgb(39,; }tr.alt { background-color: rgb(224; }	.DirectoryCategoryText, .BioName {
+		font-family: arial;
+		font-size: 10pt;
+		color: Black;
+		font-weight: bold;
+	}
+	.DirectoryNormalText, .BioText { 
+		font-family: arial;
+		font-size: 10pt;
+		color: Black;
+		font-weight: normal;
+	}
+	.DirectoryLinksText, .BioLink { 
+		font-family: arial;
+		font-size: 10pt;
+		color: Black;
+		font-weight: normal;
+	}
+	.BioLink { 
+		color: rgb(125;
+	}
+	.BioName { 
+		border: 0px;
+		padding: 0px;
+		color: rgb(0, ;
+	}
+	.DirectoryNormalText label { font-weight: bold; }
+	.DirectoryCategoryText { margin-bottom: 1em; }
+	.DirectoryNormalText p { margin: 0px 0px 10px 0px; }
+</style>
+
+<div id="CityDirectoryLeftMargin" style="margin-left: 20px;">
+		<div summary="Table for layout purposes">
+	<h1 class="visuallyHidden" style="font-family: arial; font-size: 12pt; color: rgb(0, 87, 116); font-weight: bold;">
+		Staff Directory
+	</h1>
+	<span style="font-family: arial; font-size: 12pt; color: Black;">
+		
+	</span>
+<script language="javascript" type="text/javascript"><!--
+
+		function validQuery(frmItem) {
+
+			var txtQuery=frmItem.value;
+
+			if (txtQuery.length==0) {
+
+				frmItem.focus(); return false;
+
+			}
+
+			var tmp=txtQuery.replace(' ','');
+
+			if (tmp.length==0 || tmp=='%') {
+
+				frmItem.focus(); return false;
+
+			}
+
+			return true;
+
+		}
+
+		function verifyFields() {
+
+            var frmSearch = document.aspnetForm;
+
+			if (frmSearch.lngCityDepartmentID.selectedIndex==0) {
+
+				if (!validQuery(frmSearch.txtFirstName) && !validQuery(frmSearch.txtLastName)) {
+
+					alert("Please enter a criteria to search by."); frmSearch.txtFirstName.focus(); return false;
+
+				}
+
+			}
+
+	        return true;
+
+		}
+
+		addHeaderValidator(verifyFields)
+	//--></script>
+
+   <div class="pageStyles">
+		<div summary="Search Directory" class="searchDirectory">
+
+			<div class="searchDirectoryHeader listHeader">
+
+				<span>Search the Directory</span>
+
+				<span>
+
+        		</span>
+
+        	</div>
+
+			<div class="searchDirectoryBody listItems">
+
+				<div class="searchCategory listItemsRow">
+
+					<label for="lngCityDepartmentID">Category:</label>
+
+					<select name="lngCityDepartmentID" id="lngCityDepartmentID" title="Category" style="width: 98%;">						
+
+<option class="rights_v" value="0">Staff Directory</option><option class="rights_v" value="27">&nbsp;&nbsp;&nbsp;&nbsp;City Council</option><option class="rights_v" value="4">&nbsp;&nbsp;&nbsp;&nbsp;City Manager</option><option class="rights_v" value="5">&nbsp;&nbsp;&nbsp;&nbsp;City Secretary</option><option class="rights_v" value="41">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Boards and Commissions</option><option class="rights_v" value="42">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Airport Advisory Board</option><option class="rights_v" value="15">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Board of Adjustments</option><option class="rights_v" value="43">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christmas Lighting/Rockn Riverfest Committee</option><option class="rights_v" value="18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Economic Development Corporation Board</option><option class="rights_v" value="19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Firefighters Pension Board</option><option class="rights_v" value="20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hotel / Motel Tax Funds Distribution Committee</option><option class="rights_v" value="21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Housing Authority</option><option class="rights_v" value="25">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Main Street Advisory Board</option><option class="rights_v" value="26">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Planning &amp; Zoning Commission</option><option class="rights_v" value="32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Community Development Director</option><option class="rights_v" value="44">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Historical Preservation Board</option><option class="rights_v" value="45">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Historical Preservation Board</option><option class="rights_v" value="9">&nbsp;&nbsp;&nbsp;&nbsp;Finance Department</option><option class="rights_v" value="30">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Utilities</option><option class="rights_v" value="22">&nbsp;&nbsp;&nbsp;&nbsp;Fire Department</option><option class="rights_v" value="23">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Officers</option><option class="rights_v" value="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Volunteer Firefighters</option><option class="rights_v" value="16">&nbsp;&nbsp;&nbsp;&nbsp;Municipal Court</option><option class="rights_v" value="40">&nbsp;&nbsp;&nbsp;&nbsp;Parks and Recreation</option><option class="rights_v" value="14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cemetery</option><option class="rights_v" value="31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Golf Course</option><option class="rights_v" value="33">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JLK Arena &amp; Events Center</option><option class="rights_v" value="29">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parks Department</option><option class="rights_v" value="8">&nbsp;&nbsp;&nbsp;&nbsp;Police Department</option><option class="rights_v" value="28">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Code Enforcement/Permits/Inspections</option><option class="rights_v" value="11">&nbsp;&nbsp;&nbsp;&nbsp;Electric Department</option><option class="rights_v" value="13">&nbsp;&nbsp;&nbsp;&nbsp;Water / Wastewater Department</option><option class="rights_v" value="46">&nbsp;&nbsp;&nbsp;&nbsp;Historic Preservation Board</option><option class="rights_v" value="47">&nbsp;&nbsp;&nbsp;&nbsp;Human Resources</option>					</select>
+
+					<input type="hidden" name="lngCityDepartmentID2" value="0">
+
+				</div>
+
+				<div class="searchName listItemsRow">
+
+					<div class="column">
+
+						<label for="txtFirstName">First Name:</label>
+
+						<input type="text" id="txtFirstName" onfocus="this.select();" name="txtFirstName" title="First Name" maxlength="30" value="
+
+">
+
+					</div>
+
+					<div class="column">
+
+						<label for="txtLastName">Last Name:</label>
+
+						<input type="text" id="txtLastName" onfocus="this.select();" name="txtLastName" title="Last Name" maxlength="30" value="
+
+">
+
+					</div>
+
+					<div class="r">
+
+						<label for="searchButton" class="visuallyHidden">Search</label>
+
+						<input id="searchButton" type="submit" title="Staff Directory Search" value="Search &gt;&gt;">
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+   </div>
+	</div>
+	<span style="font-family: arial; font-size: 8; color: Black;">
+	</span>
+  <div class="pageStyles">	<table summary="Employee Info" id="tblDirectoryTree" style="border: none; margin-top: 6px;" padding="3" border-spacing="0">
+       <thead>
+		<tr>
+			<th style="width:70%">
+				<span>
+Categories
+				</span>
+			</th>
+			<th class="r" style="width:30%; text-align:right">
+				<span>
+Telephone				</span>
+			</th>
+		</tr>
+       </thead>
+		<tbody><tr>
+			<td colspan="2" style="width:100%; font: 10pt arial; padding: 0px; padding-right: 1px;">
+<div class="topmenu" id="div0" style="left: 0px; padding-top: 1px; margin-left: 0px; width: 100%; top: 0px; position: relative; z-index: 99;">
+   
+ <div id="div39" cnstatus="10" style="position: relative; display: block;">
+
+	</div>
+ <div id="div27" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=27" target="_self" id="catLine27" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 0px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category27" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 27); } catch(ex) {}">City Council</span></a><a class="catLinePhone" href="tel:3252474158" style="text-decoration: none;"><span>325-247-4158</span></a></div>
+	</div>
+ <div id="div4" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing shaded" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';" style="background-color: rgb(224;">				<a href="https://www.cityofllano.com/Directory.aspx?did=4" target="_self" id="catLine4" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 0px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category4" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 4); } catch(ex) {}">City Manager</span><span> 325.247.4158 x 106</span></a></div>
+	</div>
+ <div id="div5" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=5" target="_self" id="catLine5" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 0px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="3" cn="3" cnloaded="1" id="category5" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 5); } catch(ex) {}">City Secretary</span><span> 325.247.4158 x 107</span></a></div>
+ <div id="div41" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing shaded" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';" style="background-color: rgb(224;">				<a href="https://www.cityofllano.com/Directory.aspx?did=41" target="_self" id="catLine41" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 20px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="9" cn="9" cnloaded="1" id="category41" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 41); } catch(ex) {}">Boards and Commissions</span><span> </span></a></div>
+ <div id="div42" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=42" target="_self" id="catLine42" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 40px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category42" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 42); } catch(ex) {}">Airport Advisory Board</span><span> </span></a></div>
+	</div>
+ <div id="div15" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing shaded" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';" style="background-color: rgb(224;">				<a href="https://www.cityofllano.com/Directory.aspx?did=15" target="_self" id="catLine15" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 40px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category15" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 15); } catch(ex) {}">Board of Adjustments</span><span> </span></a></div>
+	</div>
+ <div id="div43" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=43" target="_self" id="catLine43" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 40px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category43" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 43); } catch(ex) {}">Christmas Lighting/Rockn Riverfest Committee</span><span> </span></a></div>
+	</div>
+ <div id="div18" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing shaded" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';" style="background-color: rgb(224;">				<a href="https://www.cityofllano.com/Directory.aspx?did=18" target="_self" id="catLine18" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 40px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category18" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 18); } catch(ex) {}">Economic Development Corporation Board</span><span> </span></a></div>
+	</div>
+ <div id="div19" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=19" target="_self" id="catLine19" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 40px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category19" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 19); } catch(ex) {}">Firefighters Pension Board</span><span> </span></a></div>
+	</div>
+ <div id="div20" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing shaded" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';" style="background-color: rgb(224;">				<a href="https://www.cityofllano.com/Directory.aspx?did=20" target="_self" id="catLine20" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 40px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category20" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 20); } catch(ex) {}">Hotel / Motel Tax Funds Distribution Committee</span><span> </span></a></div>
+	</div>
+ <div id="div21" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=21" target="_self" id="catLine21" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 40px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category21" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 21); } catch(ex) {}">Housing Authority</span></a><a class="catLinePhone" href="tel:3252474931" style="text-decoration: none;"><span>325-247-4931</span></a></div>
+	</div>
+ <div id="div25" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing shaded" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';" style="background-color: rgb(224;">				<a href="https://www.cityofllano.com/Directory.aspx?did=25" target="_self" id="catLine25" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 40px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category25" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 25); } catch(ex) {}">Main Street Advisory Board</span></a><a class="catLinePhone" href="tel:3252474158" style="text-decoration: none;"><span>325-247-4158</span></a></div>
+	</div>
+ <div id="div26" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=26" target="_self" id="catLine26" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 40px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category26" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 26); } catch(ex) {}">Planning &amp; Zoning Commission</span></a><a class="catLinePhone" href="tel:3252474158" style="text-decoration: none;"><span>325-247-4158</span></a></div>
+	</div>
+	</div>
+ <div id="div32" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing shaded" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';" style="background-color: rgb(224;">				<a href="https://www.cityofllano.com/Directory.aspx?did=32" target="_self" id="catLine32" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 20px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category32" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 32); } catch(ex) {}">Community Development Director</span><span> 325.247.4158 x 109</span></a></div>
+	</div>
+ <div id="div44" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=44" target="_self" id="catLine44" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 20px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="1" cn="1" cnloaded="1" id="category44" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 44); } catch(ex) {}">Historical Preservation Board</span></a><a class="catLinePhone" href="tel:3252474158" style="text-decoration: none;"><span>325-247-4158</span></a></div>
+ <div id="div45" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing shaded" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';" style="background-color: rgb(224;">				<a href="https://www.cityofllano.com/Directory.aspx?did=45" target="_self" id="catLine45" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 40px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category45" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 45); } catch(ex) {}">Historical Preservation Board</span></a><a class="catLinePhone" href="tel:3252474158" style="text-decoration: none;"><span>325-247-4158</span></a></div>
+	</div>
+	</div>
+	</div>
+ <div id="div9" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=9" target="_self" id="catLine9" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 0px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="1" cn="1" cnloaded="1" id="category9" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 9); } catch(ex) {}">Finance Department</span></a><a class="catLinePhone" href="tel:3252474158" style="text-decoration: none;"><span>325-247-4158</span></a></div>
+ <div id="div30" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing shaded" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';" style="background-color: rgb(224;">				<a href="https://www.cityofllano.com/Directory.aspx?did=30" target="_self" id="catLine30" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 20px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category30" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 30); } catch(ex) {}">Utilities</span><span> 325.247.4158 x 101</span></a></div>
+	</div>
+	</div>
+ <div id="div22" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=22" target="_self" id="catLine22" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 0px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="2" cn="2" cnloaded="1" id="category22" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 22); } catch(ex) {}">Fire Department</span></a><a class="catLinePhone" href="tel:3252474646" style="text-decoration: none;"><span>325-247-4646</span></a></div>
+ <div id="div23" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing shaded" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';" style="background-color: rgb(224;">				<a href="https://www.cityofllano.com/Directory.aspx?did=23" target="_self" id="catLine23" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 20px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category23" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 23); } catch(ex) {}">Officers</span></a><a class="catLinePhone" href="tel:3252474646" style="text-decoration: none;"><span>325-247-4646</span></a></div>
+	</div>
+ <div id="div24" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=24" target="_self" id="catLine24" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 20px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category24" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 24); } catch(ex) {}">Volunteer Firefighters</span></a><a class="catLinePhone" href="tel:3252474646" style="text-decoration: none;"><span>325-247-4646</span></a></div>
+	</div>
+	</div>
+ <div id="div16" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing shaded" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';" style="background-color: rgb(224;">				<a href="https://www.cityofllano.com/Directory.aspx?did=16" target="_self" id="catLine16" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 0px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category16" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 16); } catch(ex) {}">Municipal Court</span></a><a class="catLinePhone" href="tel:3252471928" style="text-decoration: none;"><span>325-247-1928</span></a></div>
+	</div>
+ <div id="div40" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=40" target="_self" id="catLine40" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 0px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="4" cn="4" cnloaded="1" id="category40" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 40); } catch(ex) {}">Parks and Recreation</span><span> </span></a></div>
+ <div id="div14" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing shaded" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';" style="background-color: rgb(224;">				<a href="https://www.cityofllano.com/Directory.aspx?did=14" target="_self" id="catLine14" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 20px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category14" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 14); } catch(ex) {}">Cemetery</span><span> 325-247-4158, ext. 104</span></a></div>
+	</div>
+ <div id="div31" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=31" target="_self" id="catLine31" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 20px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category31" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 31); } catch(ex) {}">Golf Course</span></a><a class="catLinePhone" href="tel:3252475100" style="text-decoration: none;"><span>325-247-5100</span></a></div>
+	</div>
+ <div id="div33" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing shaded" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';" style="background-color: rgb(224;">				<a href="https://www.cityofllano.com/Directory.aspx?did=33" target="_self" id="catLine33" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 20px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category33" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 33); } catch(ex) {}">JLK Arena &amp; Events Center</span></a><a class="catLinePhone" href="tel:3252485937" style="text-decoration: none;"><span>325.248.5937</span></a></div>
+	</div>
+ <div id="div29" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=29" target="_self" id="catLine29" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 20px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category29" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 29); } catch(ex) {}">Parks Department</span><span> </span></a></div>
+	</div>
+	</div>
+ <div id="div8" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing shaded" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';" style="background-color: rgb(224;">				<a href="https://www.cityofllano.com/Directory.aspx?did=8" target="_self" id="catLine8" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 0px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="1" cn="1" cnloaded="1" id="category8" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 8); } catch(ex) {}">Police Department</span></a><a class="catLinePhone" href="tel:3252473028" style="text-decoration: none;"><span>325-247-3028</span></a></div>
+ <div id="div28" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=28" target="_self" id="catLine28" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 20px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category28" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 28); } catch(ex) {}">Code Enforcement/Permits/Inspections</span><span> 325-247-4158 Ext 110</span></a></div>
+	</div>
+	</div>
+ <div id="div11" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing shaded" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';" style="background-color: rgb(224;">				<a href="https://www.cityofllano.com/Directory.aspx?did=11" target="_self" id="catLine11" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 0px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category11" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 11); } catch(ex) {}">Electric Department</span><span> 325.247.4158 x 101</span></a></div>
+	</div>
+ <div id="div13" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=13" target="_self" id="catLine13" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 0px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category13" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 13); } catch(ex) {}">Water / Wastewater Department</span><span> </span></a></div>
+	</div>
+ <div id="div3" cnstatus="10" style="position: relative; display: block;">
+
+	</div>
+ <div id="div7" cnstatus="10" style="position: relative; display: block;">
+
+	</div>
+ <div id="div46" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing shaded" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';" style="background-color: rgb(224;">				<a href="https://www.cityofllano.com/Directory.aspx?did=46" target="_self" id="catLine46" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 0px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category46" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 46); } catch(ex) {}">Historic Preservation Board</span></a><a class="catLinePhone" href="tel:3252169970" style="text-decoration: none;"><span>3252169970</span></a></div>
+	</div>
+ <div id="div47" cnstatus="40" style="position: relative; display: block;">
+   <div class="catListing" onblur="this.onmouseout();" onmouseout="this.style.backgroundColor = (this.classList.contains('shaded')?'rgb(224':'transparent');" onfocus="this.onmouseover();" onmouseover="this.style.backgroundColor='rgb(245';">				<a href="https://www.cityofllano.com/Directory.aspx?did=47" target="_self" id="catLine47" style="margin: 0px; white-space: nowrap; display: block; text-decoration: none; height: 1.3em; padding: 0px;"><span style="padding-left: 0px;"></span><span style="text-decoration: underline;" cn_i="0" cn_c="0" cn="0" cnloaded="1" id="category47" background="#6ea8d8" onfocus="this.onmouseover();" onmouseover="try {  eventMouseOver(this); } catch(ex) {}" onblur="this.onmouseout();" onmouseout="try {  eventMouseOut(this, 1, 47); } catch(ex) {}">Human Resources</span></a><a class="catLinePhone" href="tel:3252169970" style="text-decoration: none;"><span>3252169970</span></a></div>
+	</div></div><script type="text/javascript" language="javascript">
+<!--
+moduleID=4;imagesPath='';usageFlag=4;extraParam1=0;extraParam2=0;homenodes[0]=0;expandAll(-1, 0, 0, 0);		//--></script>
+		<label for="addressHold" style="display: none;">Address Holder</label>
+		<textarea title="Address" id="addressHold" style="display: none;">http://www.cityofllano.com/directory.aspx?DID=</textarea>
+			</td>
+		</tr>
+    </tbody></table>
+  </div><script language="javascript" type="text/javascript">
+<!--
+		var dt = document.getElementById("tblDirectoryTree");
+		if (dt && dt.style) dt.style.display = '';
+    //-->
+</script>
+    <noscript class="DirectoryNormalText">
+		Enter search terms to display a list of entries in the Staff Directory.<br><br>
+		JavaScript is required, and must be turned on, for a listing to appear on this Directory entry page. We apologize for any inconvenience this may cause.
+    </noscript>
+	<br>
+	<span style="font-family: arial; font-size: 12pt; color: Black;">
+		
+	</span>
+</div>
+<!-- END CityDirectoryContent.aspx ***** -->
+</div>
+<script type="text/javascript">order+='ModuleContent\n'</script>
+
+		<input type="submit" name="ctl00$ctl00$MainContent$ctl00_liveEditSpawnWindow" value="" id="ctl00_ctl00_MainContent_ctl00_liveEditSpawnWindow" disabled="disabled" aria-hidden="true" style="display: none;">
+	
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","CancelControlID":"ctl00_LiveEditCloseButton","PopupControlID":"ctl00_ctl00_MainContent_ctl00_liveEditPopupWindow","PopupDragHandleControlID":"ctl00_liveEditTitleBar","dynamicServicePath":"/directory.aspx","id":"editItemBehavior"}, null, null, $get("ctl00_ctl00_MainContent_ctl00_liveEditSpawnWindow"));
+});
+//]]>
+</script>
+<input name="__RequestVerificationToken" type="hidden" value="O2l98nW6vk2fhhwd_2lRqB4lqpbROJBFLXUYkvJJKXL3TA-VUYzIFmfhNBdc1rDITjALs7PyYPSWDONahP-Rz9X7iuTZW5DpwlTCb_YLsYk1"></form>
+	<form id="aspnetSearchForm" name="aspnetSearchForm" style="display:none;" action="/Search.aspx" method="get">
+		<input name="SearchString" type="hidden" value="">
+	</form>
+	
+	
+	
+	</div>
+	 
+</div>	
+
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: none;">	<div id="ccd2f70eff-8cb9-4a63-b529-abd37ab614b6" data-containerid="d2f70eff-8cb9-4a63-b529-abd37ab614b6" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div><!-- GBs --><div data-cprole="structuralContainer" id="gbsContainerTS">
+<div class="siteWrap2"><div data-cprole="contentContainer" id="gbsTS">	<div id="cca90eff19-8860-43fc-a2f9-5e05dada5a6e" data-containerid="a90eff19-8860-43fc-a2f9-5e05dada5a6e" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="33">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="height: auto;" data-widgetcontainerid="9e3dde92-b8f1-4690-935e-43e2f854d6a3">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id47aef990-43bc-44a7-b416-6a7c83b774d2" style="height: 145px;" data-widgetcontainerid="47aef990-43bc-44a7-b416-6a7c83b774d2">
+	
+<div data-widget-id="498c2068-3755-4abe-861f-1ee272eae160" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget498c2068-3755-4abe-861f-1ee272eae160" class="widget widgetGraphicLinks skin59 widgetOptionSet32 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:22em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofllano.com/agendacenter" target="_self" class="fancyButton fancyButton194 ">
+		<span>
+			<span><span class="text">Agendas &amp; Minutes</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton194.fancyButton:link,.fancyButton194.fancyButton:visited, .fancyButton194div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2817');
+	background-repeat: no-repeat;
+	background-position: center 5px ;
+position: relative;
+transition: all .3s ease-in-out;
+}
+
+.fancyButton194::after {
+content: "";
+position: absolute;
+left: 50%;
+top: 77px;
+transform: translateX(-50%);
+width: 0;
+height: 3px;
+background: #BE9039;
+transition: all .3s ease-in-out;}
+.fancyButton194.fancyButton:hover,.fancyButton194.fancyButton:focus,.fancyButton194.fancyButton:active,.fancyButton194.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center 0px ;
+}
+
+.fancyButton194:is(:hover,:focus,:active)::after {
+width: 80px;}
+.fancyButton194.fancyButton:link > span,.fancyButton194.fancyButton:visited > span, .fancyButton194div.fancyButton > span{
+}
+.fancyButton194.fancyButton:hover > span,.fancyButton194.fancyButton:focus > span,.fancyButton194.fancyButton:active > span,.fancyButton194.fancyButton.hover > span{
+}
+.fancyButton194.fancyButton .text{
+	color: rgb(39, 39, 39);
+	font-size: 1.1em;
+	font-family: "Raleway";
+	padding-top: 95px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 95px;
+	background-repeat: no-repeat;
+	background-position: left top;
+line-height: 1.2;
+}
+.fancyButton194.fancyButton:hover .text,.fancyButton194.fancyButton:focus .text,.fancyButton194.fancyButton:active .text,.fancyButton194.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.municipalonlinepayments.com/llanotx" target="_self" class="fancyButton fancyButton195 ">
+		<span>
+			<span><span class="text">Utility Payments</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton195.fancyButton:link,.fancyButton195.fancyButton:visited, .fancyButton195div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2822');
+	background-repeat: no-repeat;
+	background-position: center 5px ;
+position: relative;
+transition: all .3s ease-in-out;
+}
+
+.fancyButton195::after {
+content: "";
+position: absolute;
+left: 50%;
+top: 77px;
+transform: translateX(-50%);
+width: 0;
+height: 3px;
+background: #BE9039;
+transition: all .3s ease-in-out;}
+.fancyButton195.fancyButton:hover,.fancyButton195.fancyButton:focus,.fancyButton195.fancyButton:active,.fancyButton195.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center 0px ;
+}
+
+.fancyButton195:is(:hover,:focus,:active)::after {
+width: 80px;}
+.fancyButton195.fancyButton:link > span,.fancyButton195.fancyButton:visited > span, .fancyButton195div.fancyButton > span{
+}
+.fancyButton195.fancyButton:hover > span,.fancyButton195.fancyButton:focus > span,.fancyButton195.fancyButton:active > span,.fancyButton195.fancyButton.hover > span{
+}
+.fancyButton195.fancyButton .text{
+	color: rgb(39, 39, 39);
+	font-size: 1.1em;
+	font-family: "Raleway";
+	padding-top: 95px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 95px;
+	background-repeat: no-repeat;
+	background-position: left top;
+line-height: 1.2;
+}
+.fancyButton195.fancyButton:hover .text,.fancyButton195.fancyButton:focus .text,.fancyButton195.fancyButton:active .text,.fancyButton195.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8" style="height: auto;" data-widgetcontainerid="664a7128-872f-4e38-9ebf-8e4db212fef2">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id8dfee00c-2aa9-421e-af73-3f72f3ef5b04" style="height: 145px;" data-widgetcontainerid="8dfee00c-2aa9-421e-af73-3f72f3ef5b04">
+	
+<div data-widget-id="731bfc97-eff7-4f3b-b4f1-d8c434a1cd21" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget731bfc97-eff7-4f3b-b4f1-d8c434a1cd21" class="widget widgetGraphicLinks skin59 widgetOptionSet32 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:22em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.municipalonlinepayments.com/llanotx" target="_self" class="fancyButton fancyButton202 ">
+		<span>
+			<span><span class="text">Court Payments</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton202.fancyButton:link,.fancyButton202.fancyButton:visited, .fancyButton202div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2819');
+	background-repeat: no-repeat;
+	background-position: center 5px ;
+position: relative;
+transition: all .3s ease-in-out;
+}
+
+.fancyButton202::after {
+content: "";
+position: absolute;
+left: 50%;
+top: 77px;
+transform: translateX(-50%);
+width: 0;
+height: 3px;
+background: #BE9039;
+transition: all .3s ease-in-out;}
+.fancyButton202.fancyButton:hover,.fancyButton202.fancyButton:focus,.fancyButton202.fancyButton:active,.fancyButton202.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center 0px ;
+}
+
+.fancyButton202:is(:hover,:focus,:active)::after {
+width: 80px;}
+.fancyButton202.fancyButton:link > span,.fancyButton202.fancyButton:visited > span, .fancyButton202div.fancyButton > span{
+}
+.fancyButton202.fancyButton:hover > span,.fancyButton202.fancyButton:focus > span,.fancyButton202.fancyButton:active > span,.fancyButton202.fancyButton.hover > span{
+}
+.fancyButton202.fancyButton .text{
+	color: rgb(39, 39, 39);
+	font-size: 1.1em;
+	font-family: "Raleway";
+	padding-top: 95px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 95px;
+	background-repeat: no-repeat;
+	background-position: left top;
+line-height: 1.2;
+}
+.fancyButton202.fancyButton:hover .text,.fancyButton202.fancyButton:focus .text,.fancyButton202.fancyButton:active .text,.fancyButton202.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofllano.com/330/Code-Enforcement-Department" target="_self" class="fancyButton fancyButton203 ">
+		<span>
+			<span><span class="text">Permits</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton203.fancyButton:link,.fancyButton203.fancyButton:visited, .fancyButton203div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2820');
+	background-repeat: no-repeat;
+	background-position: center 5px ;
+position: relative;
+transition: all .3s ease-in-out;
+}
+
+.fancyButton203::after {
+content: "";
+position: absolute;
+left: 50%;
+top: 77px;
+transform: translateX(-50%);
+width: 0;
+height: 3px;
+background: #BE9039;
+transition: all .3s ease-in-out;}
+.fancyButton203.fancyButton:hover,.fancyButton203.fancyButton:focus,.fancyButton203.fancyButton:active,.fancyButton203.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center 0px ;
+}
+
+.fancyButton203:is(:hover,:focus,:active)::after {
+width: 80px;}
+.fancyButton203.fancyButton:link > span,.fancyButton203.fancyButton:visited > span, .fancyButton203div.fancyButton > span{
+}
+.fancyButton203.fancyButton:hover > span,.fancyButton203.fancyButton:focus > span,.fancyButton203.fancyButton:active > span,.fancyButton203.fancyButton.hover > span{
+}
+.fancyButton203.fancyButton .text{
+	color: rgb(39, 39, 39);
+	font-size: 1.1em;
+	font-family: "Raleway";
+	padding-top: 95px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 95px;
+	background-repeat: no-repeat;
+	background-position: left top;
+line-height: 1.2;
+}
+.fancyButton203.fancyButton:hover .text,.fancyButton203.fancyButton:focus .text,.fancyButton203.fancyButton:active .text,.fancyButton203.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8 last" style="height: auto;" data-widgetcontainerid="202268ea-1e1e-4e56-8952-7660481d67a3">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last idb3d704e2-355a-45d2-9a62-3f5c12a479ba" style="height: 145px;" data-widgetcontainerid="b3d704e2-355a-45d2-9a62-3f5c12a479ba">
+	
+<div data-widget-id="9376d242-ada7-4277-9e2e-43d85c5b7078" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget9376d242-ada7-4277-9e2e-43d85c5b7078" class="widget widgetGraphicLinks skin59 widgetOptionSet32 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:22em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofllano.com/requesttracker.aspx" target="_self" class="fancyButton fancyButton204 ">
+		<span>
+			<span><span class="text">Report a Concern</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton204.fancyButton:link,.fancyButton204.fancyButton:visited, .fancyButton204div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2821');
+	background-repeat: no-repeat;
+	background-position: center 5px ;
+position: relative;
+transition: all .3s ease-in-out;
+}
+
+.fancyButton204::after {
+content: "";
+position: absolute;
+left: 50%;
+top: 77px;
+transform: translateX(-50%);
+width: 0;
+height: 3px;
+background: #BE9039;
+transition: all .3s ease-in-out;}
+.fancyButton204.fancyButton:hover,.fancyButton204.fancyButton:focus,.fancyButton204.fancyButton:active,.fancyButton204.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center 0px ;
+}
+
+.fancyButton204:is(:hover,:focus,:active)::after {
+width: 80px;}
+.fancyButton204.fancyButton:link > span,.fancyButton204.fancyButton:visited > span, .fancyButton204div.fancyButton > span{
+}
+.fancyButton204.fancyButton:hover > span,.fancyButton204.fancyButton:focus > span,.fancyButton204.fancyButton:active > span,.fancyButton204.fancyButton.hover > span{
+}
+.fancyButton204.fancyButton .text{
+	color: rgb(39, 39, 39);
+	font-size: 1.1em;
+	font-family: "Raleway";
+	padding-top: 95px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 95px;
+	background-repeat: no-repeat;
+	background-position: left top;
+line-height: 1.2;
+}
+.fancyButton204.fancyButton:hover .text,.fancyButton204.fancyButton:focus .text,.fancyButton204.fancyButton:active .text,.fancyButton204.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofllano.com/list.aspx" target="_self" class="fancyButton fancyButton205 ">
+		<span>
+			<span><span class="text">Alert Sign Up</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton205.fancyButton:link,.fancyButton205.fancyButton:visited, .fancyButton205div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2818');
+	background-repeat: no-repeat;
+	background-position: center 5px ;
+position: relative;
+transition: all .3s ease-in-out;
+}
+
+.fancyButton205::after {
+content: "";
+position: absolute;
+left: 50%;
+top: 77px;
+transform: translateX(-50%);
+width: 0;
+height: 3px;
+background: #BE9039;
+transition: all .3s ease-in-out;}
+.fancyButton205.fancyButton:hover,.fancyButton205.fancyButton:focus,.fancyButton205.fancyButton:active,.fancyButton205.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center 0px ;
+}
+
+.fancyButton205:is(:hover,:focus,:active)::after {
+width: 80px;}
+.fancyButton205.fancyButton:link > span,.fancyButton205.fancyButton:visited > span, .fancyButton205div.fancyButton > span{
+}
+.fancyButton205.fancyButton:hover > span,.fancyButton205.fancyButton:focus > span,.fancyButton205.fancyButton:active > span,.fancyButton205.fancyButton.hover > span{
+}
+.fancyButton205.fancyButton .text{
+	color: rgb(39, 39, 39);
+	font-size: 1.1em;
+	font-family: "Raleway";
+	padding-top: 95px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-top: 95px;
+	background-repeat: no-repeat;
+	background-position: left top;
+line-height: 1.2;
+}
+.fancyButton205.fancyButton:hover .text,.fancyButton205.fancyButton:focus .text,.fancyButton205.fancyButton:active .text,.fancyButton205.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Footer --><footer data-cprole="structuralContainer" id="footerContainerTS">
+<div class="siteWrap2"><div data-cprole="structuralContainer" id="footerWrapTS">
+<div data-cprole="contentContainer" id="footerTS">	<div id="cc0bb5e0d6-a2b6-42ec-9b51-9634cd16809a" data-containerid="0bb5e0d6-a2b6-42ec-9b51-9634cd16809a" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="50">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col6 first" style="height: auto;" data-widgetcontainerid="8fc4fc71-e1a7-49b4-8cc2-3e6b5ec48730">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id81c07c7a-5aa3-49b9-a85a-08016c2b0aa3" style="height: 286px;" data-widgetcontainerid="81c07c7a-5aa3-49b9-a85a-08016c2b0aa3">
+	
+    <div data-widget-id="c0ef674c-3814-4701-9cd1-f7ce9e3598f4" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdvc0ef674c-3814-4701-9cd1-f7ce9e3598f4" class="widget widgetInfoAdvanced skin56 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="headerc0ef674c-3814-4701-9cd1-f7ce9e3598f4">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="https://www.cityofllano.com/"><img src="https://www.cityofllano.com/ImageRepository/Document?documentId=2805" class="fr-dib" alt=""></a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdvc0ef674c-3814-4701-9cd1-f7ce9e3598f4 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="height: auto;" data-widgetcontainerid="f962020e-870a-463d-9e5f-8dd30da02abd">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id42d4f432-1d4e-47e0-b025-9c28f8ffc269" style="height: 286px;" data-widgetcontainerid="42d4f432-1d4e-47e0-b025-9c28f8ffc269">
+	
+    <div data-widget-id="62da0dd7-82a0-4e18-820d-971c79d24fc8" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv62da0dd7-82a0-4e18-820d-971c79d24fc8" class="widget widgetInfoAdvanced skin58 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="header62da0dd7-82a0-4e18-820d-971c79d24fc8">
+			<header class="widgetHeader" id="header62da0dd7-82a0-4e18-820d-971c79d24fc8">
+		<div class="">
+					<h3>Contact Us</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>The City of Llano<br>301 West Main<br>Llano, TX 78643<br>Phone: <a href="tel:325-247-4158">325-247-4158</a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv62da0dd7-82a0-4e18-820d-971c79d24fc8 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="height: auto;" data-widgetcontainerid="cc0d7ddf-81b8-4906-839d-bdf07586ef51">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last ida9119083-5584-43e2-b504-9082a5bd1e76" style="height: 286px;" data-widgetcontainerid="a9119083-5584-43e2-b504-9082a5bd1e76">
+	
+	<div data-widget-id="51ac5c44-9521-49e2-a5cc-c93b2e2a89f1" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink51ac5c44-9521-49e2-a5cc-c93b2e2a89f1" class="widget widgetQuickLinks skin58 widgetOptionSet22 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeader51ac5c44-9521-49e2-a5cc-c93b2e2a89f1">
+			<header class="widgetHeader" id="quickLinksHeader51ac5c44-9521-49e2-a5cc-c93b2e2a89f1">
+		<div class="">
+					<h3><a style="" href="https://www.cityofllano.com/QuickLinks.aspx?CID=43">Quick Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofllano.com/faq.aspx" target="_self">FAQs</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofllano.com/jobs.aspx" target="_self">Career Opportunities</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://ecode360.com/LL6391" target="_blank" aria-label="City of Llano Ordinances Opens in new window" rel="noopener">City of Llano Ordinances</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://map.3cgeo.com/fist/fistMainT2.php?site=llanopublic" target="_blank" aria-label="GIS Public Opens in new window" rel="noopener">GIS Public</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://map.3cgeo.com/fist/fistSiteLoginForm.php?page=/fist/fistMainT2.php&amp;site=llanostaff" target="_blank" aria-label="GIS Staff Opens in new window" rel="noopener">GIS Staff</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofllano.com/documentcenterii.aspx" target="_self">File Repository</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6 last" style="height: auto;" data-widgetcontainerid="b2327e53-a0f5-45e0-9c67-48197c915396">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id7e118533-ad42-41f9-8a8c-3c03661595db" style="height: 286px;" data-widgetcontainerid="7e118533-ad42-41f9-8a8c-3c03661595db">
+	
+	<div data-widget-id="cd710593-88a0-488e-8253-0203e0fa306a" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklinkcd710593-88a0-488e-8253-0203e0fa306a" class="widget widgetQuickLinks skin58 widgetOptionSet22 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeadercd710593-88a0-488e-8253-0203e0fa306a">
+			<header class="widgetHeader" id="quickLinksHeadercd710593-88a0-488e-8253-0203e0fa306a">
+		<div class="">
+					<h3><a style="" href="https://www.cityofllano.com/QuickLinks.aspx?CID=11">Site Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofllano.com/FormCenter/Contact-Form-3/Contact-Form-43" target="_self">Contact Us</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofllano.com/124/1503/Privacy-Policy" target="_self">Privacy Policy</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofllano.com/sitemap.aspx" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofllano.com/Accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofllano.com/314/Website-Photo-Credits" target="_self">Website Photo Credits</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofllano.com/copyright" target="_self">Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div><div data-cprole="contentContainer" id="socialTS">	<div id="cc68bc4275-25f9-43d4-8de5-f02a21cb7797" data-containerid="68bc4275-25f9-43d4-8de5-f02a21cb7797" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="30">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="height: auto;" data-widgetcontainerid="7fafb208-bcab-4455-b1fe-0d51ebf6bbf6">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id1551b5e2-f1b3-47a0-9566-3c363ee4e474" style="height: 48px;" data-widgetcontainerid="1551b5e2-f1b3-47a0-9566-3c363ee4e474">
+	
+<div data-widget-id="16c4ad0a-c624-4215-a9e2-c6ddccb4f5c8" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget16c4ad0a-c624-4215-a9e2-c6ddccb4f5c8" class="widget widgetGraphicLinks skin60 widgetOptionSet32 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:20em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofllano.com/facebook" target="_self" class="fancyButton fancyButton196 ">
+		<span>
+			<span><span class="text">Facebook</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton196.fancyButton:link,.fancyButton196.fancyButton:visited, .fancyButton196div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2823');
+	background-repeat: no-repeat;
+max-width: 115px;
+margin: 0 auto;}
+.fancyButton196.fancyButton:hover,.fancyButton196.fancyButton:focus,.fancyButton196.fancyButton:active,.fancyButton196.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton196.fancyButton:link > span,.fancyButton196.fancyButton:visited > span, .fancyButton196div.fancyButton > span{
+}
+.fancyButton196.fancyButton:hover > span,.fancyButton196.fancyButton:focus > span,.fancyButton196.fancyButton:active > span,.fancyButton196.fancyButton.hover > span{
+}
+.fancyButton196.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-size: 1.1em;
+	font-family: "Raleway";
+	text-align: left;
+	padding-left: 35px;
+	font-style: normal;
+	text-decoration: none;
+	padding-left: 35px;
+	background-repeat: no-repeat;
+	background-position: left top;
+height: 24px;
+}
+.fancyButton196.fancyButton:hover .text,.fancyButton196.fancyButton:focus .text,.fancyButton196.fancyButton:active .text,.fancyButton196.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofllano.com/x" target="_self" class="fancyButton fancyButton197 ">
+		<span>
+			<span><span class="text">X</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton197.fancyButton:link,.fancyButton197.fancyButton:visited, .fancyButton197div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2833');
+	background-repeat: no-repeat;
+max-width: 50px;
+margin: 0 auto;}
+.fancyButton197.fancyButton:hover,.fancyButton197.fancyButton:focus,.fancyButton197.fancyButton:active,.fancyButton197.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton197.fancyButton:link > span,.fancyButton197.fancyButton:visited > span, .fancyButton197div.fancyButton > span{
+}
+.fancyButton197.fancyButton:hover > span,.fancyButton197.fancyButton:focus > span,.fancyButton197.fancyButton:active > span,.fancyButton197.fancyButton.hover > span{
+}
+.fancyButton197.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-size: 1.1em;
+	font-family: "Raleway";
+	text-align: left;
+	padding-left: 35px;
+	font-style: normal;
+	text-decoration: none;
+	padding-left: 35px;
+	background-repeat: no-repeat;
+	background-position: left top;
+height: 24px;
+}
+.fancyButton197.fancyButton:hover .text,.fancyButton197.fancyButton:focus .text,.fancyButton197.fancyButton:active .text,.fancyButton197.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8" style="height: auto;" data-widgetcontainerid="e73ff692-080c-4b15-8401-fce2ac360a7c">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id5d3d391a-ce1c-4d1b-ba24-532710fcfdcf" style="height: 48px;" data-widgetcontainerid="5d3d391a-ce1c-4d1b-ba24-532710fcfdcf">
+	
+<div data-widget-id="2985a83c-5155-4d96-b789-312ce33f4ac4" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget2985a83c-5155-4d96-b789-312ce33f4ac4" class="widget widgetGraphicLinks skin60 widgetOptionSet32 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:20em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofllano.com/instagram" target="_self" class="fancyButton fancyButton198 ">
+		<span>
+			<span><span class="text">Instagram</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton198.fancyButton:link,.fancyButton198.fancyButton:visited, .fancyButton198div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2824');
+	background-repeat: no-repeat;
+max-width: 120px;
+margin: 0 auto;}
+.fancyButton198.fancyButton:hover,.fancyButton198.fancyButton:focus,.fancyButton198.fancyButton:active,.fancyButton198.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton198.fancyButton:link > span,.fancyButton198.fancyButton:visited > span, .fancyButton198div.fancyButton > span{
+}
+.fancyButton198.fancyButton:hover > span,.fancyButton198.fancyButton:focus > span,.fancyButton198.fancyButton:active > span,.fancyButton198.fancyButton.hover > span{
+}
+.fancyButton198.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-size: 1.1em;
+	font-family: "Raleway";
+	text-align: left;
+	padding-left: 35px;
+	font-style: normal;
+	text-decoration: none;
+	padding-left: 35px;
+	background-repeat: no-repeat;
+	background-position: left top;
+height: 24px;
+}
+.fancyButton198.fancyButton:hover .text,.fancyButton198.fancyButton:focus .text,.fancyButton198.fancyButton:active .text,.fancyButton198.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofllano.com/youtube" target="_self" class="fancyButton fancyButton199 ">
+		<span>
+			<span><span class="text">YouTube</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton199.fancyButton:link,.fancyButton199.fancyButton:visited, .fancyButton199div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2834');
+	background-repeat: no-repeat;
+max-width: 105px;
+margin: 0 auto;}
+.fancyButton199.fancyButton:hover,.fancyButton199.fancyButton:focus,.fancyButton199.fancyButton:active,.fancyButton199.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton199.fancyButton:link > span,.fancyButton199.fancyButton:visited > span, .fancyButton199div.fancyButton > span{
+}
+.fancyButton199.fancyButton:hover > span,.fancyButton199.fancyButton:focus > span,.fancyButton199.fancyButton:active > span,.fancyButton199.fancyButton.hover > span{
+}
+.fancyButton199.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-size: 1.1em;
+	font-family: "Raleway";
+	text-align: left;
+	padding-left: 35px;
+	font-style: normal;
+	text-decoration: none;
+	padding-left: 35px;
+	background-repeat: no-repeat;
+	background-position: left top;
+height: 24px;
+}
+.fancyButton199.fancyButton:hover .text,.fancyButton199.fancyButton:focus .text,.fancyButton199.fancyButton:active .text,.fancyButton199.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8 last" style="height: auto;" data-widgetcontainerid="574c112e-9421-4343-a11f-ba504b19c2e2">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last idb84dbd3f-774a-4e06-8b6e-33bb1b15f622" style="height: 48px;" data-widgetcontainerid="b84dbd3f-774a-4e06-8b6e-33bb1b15f622">
+	
+<div data-widget-id="1de297f1-afb9-489f-a77f-5da735124615" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget1de297f1-afb9-489f-a77f-5da735124615" class="widget widgetGraphicLinks skin60 widgetOptionSet32 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:20em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofllano.com/linkedin" target="_self" class="fancyButton fancyButton200 ">
+		<span>
+			<span><span class="text">LinkedIn</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton200.fancyButton:link,.fancyButton200.fancyButton:visited, .fancyButton200div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2825');
+	background-repeat: no-repeat;
+max-width: 105px;
+margin: 0 auto;}
+.fancyButton200.fancyButton:hover,.fancyButton200.fancyButton:focus,.fancyButton200.fancyButton:active,.fancyButton200.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton200.fancyButton:link > span,.fancyButton200.fancyButton:visited > span, .fancyButton200div.fancyButton > span{
+}
+.fancyButton200.fancyButton:hover > span,.fancyButton200.fancyButton:focus > span,.fancyButton200.fancyButton:active > span,.fancyButton200.fancyButton.hover > span{
+}
+.fancyButton200.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-size: 1.1em;
+	font-family: "Raleway";
+	text-align: left;
+	padding-left: 35px;
+	font-style: normal;
+	text-decoration: none;
+	padding-left: 35px;
+	background-repeat: no-repeat;
+	background-position: left top;
+height: 24px;
+}
+.fancyButton200.fancyButton:hover .text,.fancyButton200.fancyButton:focus .text,.fancyButton200.fancyButton:active .text,.fancyButton200.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofllano.com/indeed" target="_self" class="fancyButton fancyButton201 ">
+		<span>
+			<span><span class="text">Indeed</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton201.fancyButton:link,.fancyButton201.fancyButton:visited, .fancyButton201div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=2835');
+	background-repeat: no-repeat;
+max-width: 95px;
+margin: 0 auto;}
+.fancyButton201.fancyButton:hover,.fancyButton201.fancyButton:focus,.fancyButton201.fancyButton:active,.fancyButton201.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton201.fancyButton:link > span,.fancyButton201.fancyButton:visited > span, .fancyButton201div.fancyButton > span{
+}
+.fancyButton201.fancyButton:hover > span,.fancyButton201.fancyButton:focus > span,.fancyButton201.fancyButton:active > span,.fancyButton201.fancyButton.hover > span{
+}
+.fancyButton201.fancyButton .text{
+	color: rgb(255, 255, 255);
+	font-size: 1.1em;
+	font-family: "Raleway";
+	text-align: left;
+	padding-left: 35px;
+	font-style: normal;
+	text-decoration: none;
+	padding-left: 35px;
+	background-repeat: no-repeat;
+	background-position: left top;
+height: 24px;
+}
+.fancyButton201.fancyButton:hover .text,.fancyButton201.fancyButton:focus .text,.fancyButton201.fancyButton:active .text,.fancyButton201.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div>
+</div></div>
+</footer><!-- Powered By --><div data-cprole="structuralContainer" id="poweredByContainerTS">
+<div class="siteWrap2"><div data-cprole="contentContainer" id="poweredByTS">	<div id="cc27d13687-de1c-4025-bcc9-3fc36931fec4" data-containerid="27d13687-de1c-4025-bcc9-3fc36931fec4" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="443fa604-f107-446d-b955-aec255e6661c">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id2ad18103-15dc-4a23-9e7d-0f0506acee1a" style="height: 79px;" data-widgetcontainerid="2ad18103-15dc-4a23-9e7d-0f0506acee1a">
+	
+ 
+	<div data-widget-id="bec01210-1db9-4bcd-a62b-01b9d927937b" data-modulename="customHtml" id="widgetCustomHtmlbec01210-1db9-4bcd-a62b-01b9d927937b" class="widget widgetCustomHtml skin58 narrow">
+	<div class="widgetBody pageStyles" id="widgetBodybec01210-1db9-4bcd-a62b-01b9d927937b">
+		<div id="customHtmlbec01210-1db9-4bcd-a62b-01b9d927937b"><div><style>
+  /* CP icon */
+  .cpBylineIconTS {
+    color: #fff;
+  }
+  /* CP Text */
+  .cpBylineTextTS,
+  .cpBylineTextTS a:link {
+    color: #fff;
+  }
+
+  .cpBylineTS {
+    text-align: center;
+  }
+  
+  .cpBylineIconTS {
+    fill: currentColor;
+    width: 39px;
+    height: 26px;
+    display: inline;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="widgetItem cpBylineTS">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="cpBylineIconTS">
+    <path class="c" d="M73.4,23.2h-19v16.7h19c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5h-19v28.4h5.5l11.3-11.7h2.2c11.9,0,21.6-9.7,21.6-21.6C95,33,85.3,23.2,73.4,23.2"></path>
+    <path class="p" d="M45.8,66.5H26.6C14.7,66.5,5,56.8,5,44.9C5,33,14.7,23.2,26.6,23.2h19.1v16.7H26.6c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h19.1V66.5z"></path>
+  </svg>
+  <span class="cpBylineTextTS">Government Websites by <a href="https://connect.civicplus.com/referral">CivicPlus®</a></span>
+</div>
+</div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '',
+				targetType: 0
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+	
+	
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!--Start Translate Code--><div id="google_translate_element" style="position: fixed; bottom: 0px; right: 25px; z-index:4;"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage" class="goog-te-gadget-simple" style="white-space: nowrap;"><img src="https://www.google.com/images/cleardot.gif" class="goog-te-gadget-icon" alt="" style="background-image: url(&quot;https://translate.googleapis.com/translate_static/img/te_ctrl3.gif&quot;); background-position: -65px 0px;"><span style="vertical-align: middle;"><a aria-haspopup="true" class="VIpgJd-ZVi9od-xl07Ob-lTBxed" href="https://www.cityofllano.com/directory.aspx#"><span>Select Language</span><img src="https://www.google.com/images/cleardot.gif" alt="" width="1" height="1"><span style="border-left: 1px solid rgb(187, 187, 187);">​</span><img src="https://www.google.com/images/cleardot.gif" alt="" width="1" height="1"><span aria-hidden="true" style="color: rgb(118, 118, 118);">▼</span></a></span></div></div></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  var el = document.getElementById("google_translate_element");
+  if (el && el.innerHTML.trim() !== "") {
+      return;
+  }
+
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><!--End Translate Code-->
+
+
+<!-- Fixed Nav Adjustment -->
+<script>
+  function getValueTS(elem, attr) {
+    const val = elem.css(attr);
+    if (val === undefined) return undefined;
+    const num = parseInt(val, 10);
+    if (num === NaN) return undefined;
+    return num;
+  }
+
+  function clampTS(number, min, max) {
+    return Math.min(Math.max(number, min), max);
+  }
+
+  function isPageEditingTS() {
+    return (
+      $("#doneEditing").length > 0 || // In live edit
+      typeof DesignCenter !== "undefined" // In theme manager
+    );
+  }
+
+  const bgColorRegexTS = /rgba\((\d+), (\d+), (\d+), (\d*\.?\d*)\)/;
+  function isTransparentTS(elem) {
+    const bg = elem.css('background-color');
+    if (typeof bg !== "string" || !bg.startsWith('rgba(')) return false;
+    const matchState = bg.match(bgColorRegexTS);
+    if (!matchState || matchState.length !== 5) return false;
+    const alpha = parseFloat(matchState[4], 10);
+    if (!(alpha >= 0 && alpha < 1)) return false;
+    return true;
+  }
+
+  function iterateLeftpads(cb) {
+    const containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (let i = 0; i < containersTS.length; i++) {
+      const containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-leftpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-leftpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  const anchor = $("#divToolbars");
+
+  // Outer banner padding (push banner down)
+  const outerSizingTS = $("#bannerContainerTS");
+  // Inner banner padding (push banner content down) - Transparent header OR on attaching headers
+  const innerSizingTS = $("#bannerSizingTS");
+  const bodyContainerTS = $("#bodyContainerTS");
+
+  const forceUnfixClassTS = "forceUnfixTS";
+
+  const fixedTopTS = $(".fixedTopTS");
+  const fixedBottomTS = $(".fixedBottomTS");
+  const fixedLeftTS = $(".fixedLeftTS");
+
+  var initialTopTS;
+  var topAttachTS;
+  if (fixedTopTS && fixedTopTS.length === 1) {
+    initialTopTS = getValueTS(fixedTopTS, 'top');
+    const attachment = fixedTopTS.attr('data-attach');
+    if (attachment) topAttachTS = $("#" + attachment);
+    if (!topAttachTS || topAttachTS.length !== 1) topAttachTS = undefined;
+  }
+
+  function resizeAdjustmentTS() {
+    const editing = isPageEditingTS();
+
+    // Fixed top script
+    (function () {
+      if (!fixedTopTS || fixedTopTS.length !== 1 || initialTopTS === undefined) return;
+
+      if (editing) {
+        fixedTopTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedTopTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      const topPosition = fixedTopTS.css('position');
+      if (topPosition === 'fixed') {
+        if (topAttachTS) {
+          scrollAdjustmentTS();
+        } else {
+          const anchorHeight = anchor.outerHeight() - 1;
+          fixedTopTS.css('top', anchorHeight + initialTopTS);
+        }
+      } else {
+        fixedTopTS.css('top', initialTopTS);
+      }
+
+      if (topPosition === 'fixed' || topPosition === 'absolute') {
+        // Bump the banner content down
+        if (isTransparentTS(fixedTopTS)) {
+          innerSizingTS.css('padding-top', initialTopTS + fixedTopTS.outerHeight() - 1);
+          outerSizingTS.css('padding-top', '');
+
+          try {
+            window.Pages.onResizeHandlersExecute();
+          } catch (e) { }
+        } else {
+          outerSizingTS.css('padding-top', fixedTopTS.outerHeight() - 1);
+          innerSizingTS.css('padding-top', '');
+        }
+      } else {
+        innerSizingTS.css('padding-top', '');
+        outerSizingTS.css('padding-top', '');
+      }
+    })();
+
+    // Fixed bottom script
+    (function () {
+      if (!fixedBottomTS || fixedBottomTS.length === 0) return;
+
+      // If the widget has gone narrow, force unfix
+      if (editing || fixedBottomTS.outerHeight() > 200) {
+        fixedBottomTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedBottomTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedBottomTS.css('position') === 'fixed') {
+        bodyContainerTS.css('padding-bottom', fixedBottomTS.outerHeight());
+      } else {
+        bodyContainerTS.css('padding-bottom', '');
+      }
+    })();
+
+    // Fixed left script
+    (function () {
+      if (!fixedLeftTS || fixedLeftTS.length === 0) return;
+
+      if (editing) {
+        fixedLeftTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedLeftTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedLeftTS.css('position') === 'fixed') {
+        const anchorHeight = anchor.outerHeight() - 1;
+        fixedLeftTS.css('top', anchorHeight);
+        const leftBoundingTS = fixedLeftTS[0].getBoundingClientRect();
+        iterateLeftpads(function (containerTS) {
+          const containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.left <= leftBoundingTS.right) {
+            $(containerTS).css('padding-left', leftBoundingTS.width + 16);
+          }
+        });
+      } else {
+        fixedLeftTS.css('top', '');
+        iterateLeftpads(function (containerTS) {
+          $(containerTS).css('padding-left', '');
+        });
+      }
+    })();
+  }
+
+  function scrollAdjustmentTS() {
+    if (!fixedTopTS || fixedTopTS.length !== 1 || !topAttachTS || topAttachTS.length !== 1) return;
+    const topPosition = fixedTopTS.css('position');
+    if (topPosition === 'fixed' || topPosition === 'absolute') {
+      const anchorBounding = anchor[0].getBoundingClientRect();
+      const attachBounding = topAttachTS[0].getBoundingClientRect();
+      const scrollTop = $(window).scrollTop();
+
+      fixedTopTS.css('top', Math.max(anchorBounding.bottom - 1, attachBounding.bottom));
+    } else {
+      fixedTopTS.css('top', initialTopTS);
+    }
+  }
+
+  $(window).load(function () {
+    setTimeout(function () {
+      resizeAdjustmentTS();
+    }, 350);
+
+    $(window).scroll(function () {
+      scrollAdjustmentTS();
+    });
+
+    var adjustTimeoutTS;
+    $(window).resize(function () {
+      clearTimeout(adjustTimeoutTS);
+      adjustTimeoutTS = setTimeout(function () {
+        resizeAdjustmentTS();
+      }, 350);
+    });
+
+    $.when(window.Pages.angularToolbarComplete).done(function () {
+      resizeAdjustmentTS();
+    });
+  });
+</script>
+<!-- End Fixed Nav Adjustment -->
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Montserrat:700,regular|Raleway:500,500italic,600,600italic,700,700italic,800,800italic,italic,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div id="ctl00_ctl00_MainContent_ctl00_liveEditPopupWindow" class="modalContainer modalContainerCP" style="display: none; position: fixed; z-index: 100001;">
+	<div id="ctl00_liveEditTitleBar" class="modalTitleLeft"><h3 id="ctl00_LiveEditModalTitle" class="modalTitle">Live Edit</h3><a id="ctl00_LiveEditCloseButton" class="modalClose" aria-label="Close this modal" href="https://www.cityofllano.com/" title="Close this window"><svg viewBox="0 0 25 25" id="modalIconClose"><polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon></svg></a></div><div id="ctl00_liveEditContentLeft" class="modalContentLeft"><div id="ctl00_liveEditContentRight" class="modalContentRight"><div id="ctl00_liveEditContent" class="modalContent"><iframe style="display: none; border: none;" src="about:blank" id="liveEditDialog" title="Live Edit Dialog" name="liveEditDialog"></iframe></div></div></div><div id="ctl00_liveEditFooter" class="modalBottomLeft"><div id="ctl00_liveEditfooterbar" class="modalBottomRight"><div id="ctl00_liveEditfooterbar1" class="modalBottom"></div></div></div>
+</div><div id="editItemBehavior_backgroundElement" class="modalBackground" style="display: none; position: fixed; left: 0px; top: 0px; z-index: 10000;"></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu27" class="contentTop mainNavMegaMenu megaMenuContainer pageID_27 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 0px; width: 1265px; top: 89.5469px;">	<div id="cc27dd1bd3-7484-4f18-9370-465942263170" data-containerid="27dd1bd3-7484-4f18-9370-465942263170" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu101" class="contentTop mainNavMegaMenu megaMenuContainer pageID_101 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 0px; width: 1265px; top: 89.5469px;">	<div id="ccb04e7831-810b-4809-bcc9-9f5c8e55679e" data-containerid="b04e7831-810b-4809-bcc9-9f5c8e55679e" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu31" class="contentTop mainNavMegaMenu megaMenuContainer pageID_31 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 0px; width: 1265px; top: 89.5469px;">	<div id="ccc03046d1-0eec-4d4c-846b-e49ba4127dee" data-containerid="c03046d1-0eec-4d4c-846b-e49ba4127dee" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu35" class="contentTop mainNavMegaMenu megaMenuContainer pageID_35 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 0px; width: 1265px; top: 89.5469px;">	<div id="cc499187f1-f050-4091-9c5c-bb57a3a7cacf" data-containerid="499187f1-f050-4091-9c5c-bb57a3a7cacf" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr"><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""><div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr">Original text</div></div><div class="VIpgJd-yAWNEb-hvhgNd-k77Iif"><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Rate this translation</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Your feedback will be used to help improve Google Translate</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Good translation" aria-label="Good translation" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Poor translation" aria-label="Poor translation" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu9" class="contentTop mainNavMegaMenu megaMenuContainer pageID_9 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 0px; width: 1265px; top: 89.5469px;">	<div id="cc4f37498c-879a-4582-9b3b-dccfae5bf14e" data-containerid="4f37498c-879a-4582-9b3b-dccfae5bf14e" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><iframe frameborder="0" class="VIpgJd-ZVi9od-xl07Ob-OEVmcd skiptranslate" title="Language Translate Widget" style="visibility: visible; box-sizing: content-box; width: 2622px; height: 263px; display: none;"></iframe><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b>&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div><div id="bannerSlideshowControls_banner1" class="bannerSlideshowControlsNew none " style="display:none">
+			<a id="arrowPrev_banner1" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner1" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div></body></html>
