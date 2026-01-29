@@ -1,0 +1,111 @@
+City of Howe - Agendas & Minutes
+
+[Skip to main content](https://cityofhowetx.gov/agendasandminutes?def2=dxSUle38HydHWKA4yUrliw%3D%3D#firstSection)
+
+[![logo](https://cityofhowetx.gov/api/blob/viewBlob?i=49UsezgMMyHnJ%2F4DmJWL6lz%2FGPzhkh16fWZgoHEdp0hTqzQRakiSH8QTdgkA1DdB&s=large)](https://cityofhowetx.gov/index)
+
+* [Home](https://cityofhowetx.gov/index)
+* Government
+  + Main Menu / Government
+  + Government
+  + [Mayor & City Council](https://cityofhowetx.gov/electedofficials)
+  + [Planning & Zoning Commission](https://cityofhowetx.gov/planning)
+  + [Agendas & Minutes](https://cityofhowetx.gov/agendasandminutes)
+  + [Live Stream](https://cityofhowetx.gov/livestream)
+  + [Forms & Permits](https://cityofhowetx.gov/formsandpermits)
+  + [Development](https://cityofhowetx.gov/development)
+  + [Ordinances](https://cityofhowetx.gov/ordinances)
+  + [Financial Transparency](https://cityofhowetx.gov/finances)
+  + [Consumer Confidence Reports](https://cityofhowetx.gov/ccr)
+  + [Municipal Energy Usage](https://cityofhowetx.gov/energyusage)
+  + [Open Records Requests](https://cityofhowetx.gov/recordrequest)
+  + [Job Postings](https://cityofhowetx.gov/jobs)
+* Departments
+  + Main Menu / Departments
+  + Departments
+  + [Administration](https://cityofhowetx.gov/administration)
+  + [Code Enforcement](https://cityofhowetx.gov/codeenforcement)
+  + [Municipal Court](https://cityofhowetx.gov/court)
+  + [Economic Development](https://howetexas.org/)
+  + [Fire Department](https://cityofhowetx.gov/fire)
+  + [Permit Department](https://cityofhowetx.gov/permits)
+  + [Police Department](https://cityofhowetx.gov/police)
+  + [Public Works](https://cityofhowetx.gov/publicworks)
+  + [Utilities](https://cityofhowetx.gov/utilities)
+* Community
+  + Main Menu / Community
+  + Community
+  + [Explore Howe](https://cityofhowetx.gov/explore)
+  + [Make a Payment](https://cityofhowetx.gov/makeapayment)
+  + [News](https://cityofhowetx.gov/news)
+  + [Code Red](https://cityofhowetx.gov/codered)
+  + [Trash Pickup](https://frontierwaste.com/city-of-howe/)
+  + [Keep Howe Beautiful](https://cityofhowetx.gov/keephowebeautiful)
+  + [Founders Day Festival](https://howechamber.com/2023/05/founders-day/)
+  + [Summit Gardens Rentals](https://summitgardens.setmore.com/)
+  + [Chamber of Commerce](https://howechamber.com/)
+  + [Chamber Membership](https://howechamber.recdesk.com/Community/Home)
+* [Calendar](https://cityofhowetx.gov/calendar)
+* Know Howe
+  + Main Menu / Know Howe
+  + Know Howe
+  + [History](https://cityofhowetx.gov/history)
+  + [Maps](https://cityofhowetx.gov/maps)
+  + [Contact Us](https://cityofhowetx.gov/contactus)
+
+
+
+
+![](https://cityofhowetx.gov/api/blob/viewBlob?i=EtZc28KekCbHMeYcsysngxHoodqSmPBYYDg%252B6O7Xgkelg7Vx60eSVJC70A7dn1LP&s=xlarge)
+
+Agendas & Minutes
+Agendas & Minutes
+![Logo](https://cityofhowetx.gov/api/blob/viewBlob?i=hUe5zHVOmqRnadBTynaqBEVkeLjcTdmfLhcU3WASjhkbPp%252BxnGjE%252BDFEzUJR8gT5&s=xlarge)
+
+The City Council meets on the third Tuesday of each month. The meetings are held at Summit Gardens located at 100 E. O’Connell St. at 6:00 p.m. Please check posted agendas to be sure of meeting locations and times.
+
+Citizens and business owners are encouraged to sign up to address the Council at the beginning of every meeting if desired. If you would like to have an item placed on the agenda for discussion and/or action, complete an [Agenda Request Form](https://cityofhowetx.gov/agendasandminutes?def2=dxSUle38HydHWKA4yUrliw%3D%3D) and submit to the City Secretary’s office at City Hall no later than noon on the Wednesday prior to the regularly scheduled City Council Meeting.
+
+<mwjsresources-obj></mwjsresources-obj><script type="module">import mwjsResources from "https://app.membershipware.com/api/public/mwjsResources?et=RbR1c7L0jmE1NXuVI69JgQ%3d%3d&eb=caiz5BSBhEKRcgmwzyeanw%3d%3d&tg=Zn%252BADNcx%252BPsf3Nw9VddrPQ%3d%3d&xtg=";</script>
+
+![](https://cityofhowetx.gov/api/blob/viewBlob?i=49UsezgMMyHnJ%2F4DmJWL6lz%2FGPzhkh16fWZgoHEdp0hTqzQRakiSH8QTdgkA1DdB&s=large)
+
+  
+116 E. Haning St., Howe, TX 75459   
+[(903) 532-5571](tel:9035325571)
+
+Powered By [Munibit](javascript:;) | © 2026[Terms & Privacy](https://cityofhowetx.gov/termsandprivacy)[Login](javascript:;) | [Accessibility](https://cityofhowetx.gov/siteaccessibility)
+
+Tools
+
+My Account
+
+### Section Tools
+
+Hello
+-----
+
+
+
+Create your Passkey
+
+Remove your Passkey
+
+**What is a Passkey?**  
+Imagine signing into your account as easily as unlocking your phone—no more worrying about remembering or typing a password. A passkey is a secure digital key that uses the safety features in your device to keep your account protected. It’s designed to be both simple to use and highly secure.  
+Ready to experience a simpler, safer sign-in? Click the button above to create your passkey now.
+
+  
+  
+
+Logout
+
+
+
+
+
+ 
+
+
+
+Agenda Request Form
