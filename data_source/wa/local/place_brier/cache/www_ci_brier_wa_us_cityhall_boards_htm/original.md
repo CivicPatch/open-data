@@ -1,0 +1,17 @@
+Boards and Commissions - The City of Brier, Washington 98036
+
+
+
+
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| ![City of Brier, Washington](http://ci.brier.wa.us/gif/header.jpg)   |  | | --- | | City Hall  City Hall  Levy  Levy  FAQ  FAQ  Public Works  Public Works  Police/Fire  Police/Fire  Community  Community  Public Notices  Public Notices  Contact Us  Contact Us  Home  Home |  |  |  | | --- | --- | | |  | | --- | | **Boards and Commissions**    The following board and commission members are appointed by the Mayor and confirmed by the City Council.   If you are interested in participating, send the Mayor a short letter to request consideration for a position. Be sure to include which board or commission you are interested in.   [***dkaemingk@ci.brier.wa.us***](mailto:dkaemingk@ci.brier.wa.us?SUBJECT=Request%20to%20serve%20on%20a%20board%20or%20commission)    ---  **Planning Commission**   The seven member commission is responsible for reviewing and making recommendations to the City Council on the City's Comprehensive Plan, land use management legislation and regulations, potential annexations, and sub-area planning. Commission members serve two-year terms. Meetings are held every third Wednesday of the month at 7:00 p.m. in the Brier City Council Chambers.- **For Agendas and Minutes -**[**Click Here**](http://ci.brier.wa.us/PC_Agendas_Minutes/index.html)      ---        **Library Board**     Six members serve four-year terms and meet the first Thursday of the month at 7:00 p.m. in February, April, June, September, and November at the library.          ---        **Parks & Recreation Board**    The Park Board    The Park Board advises the Council on matters concerning parks and recreation. Seven members serve four-year terms and meet on the second Wednesday of each month at 7:00 p.m. in the Brier City Council Chambers.   In addition, this team produces and manages several [**annual events**](http://ci.brier.wa.us/cityhall/events.htm) including Music in the Park, [**SeaScare**](http://seascare.com), Dog-O-Ween, Holiday Tree Lighting and the Traditional Egg Hunt. Plus they participate in and support National Night Out, SeaCumber Day and KidScare.           ---        **Civil Service Commission**     A Civil Service Commission for the Police Department is required by state law. The commission oversees entry level and promotional examinations and disciplinary action for police personnel. Three members serve six-year terms. Meeting times vary based on the availability of the commissioners. - **For Agendas and Minutes -** [**Click Here**](http://www.ci.brier.wa.us/civilservice/index.html) | | |
+
+  
+
+|  |
+| --- |
+| **Brier City Hall | 2901 228th St. SW | Brier, Washington 98036  (425) 775-5440 | Fax (425) 672-9025 | [***info@ci.brier.wa.us***](mailto:info@ci.brier.wa.us?SUBJECT=Web%20Request)** |
+
+  
