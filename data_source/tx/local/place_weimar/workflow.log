@@ -1,0 +1,166 @@
+[2026-01-29T20:01:48.383847] [INFO] Step 1: RESEARCH_MUNICIPALITY
+[2026-01-29T20:01:48.408856] [INFO] Running Gemini prompt
+[2026-01-29T20:01:48.409132] [DEBUG] Prompt: 
+
+    Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
+
+    Municipality: Weimar city, tx
+
+    Instructions:
+
+    1. Determine the government type of the city. Available government types:
+- mayor_commission
+- mayor_council
+- township_committee
+- select_board
+- aldermen
+
+    2. Identify the elected officials in the local government, 
+       including the Mayor (if applicable).
+       2.1. For each official, extract the following details:
+            - name: Full name only (no titles)
+            - roles: List of active municipal roles (e.g., Mayor, Council Member)
+            - divisions: List of (ward, district), only if applicable
+
+    3. Create a JSON object with the following structure:
+       ```json
+       {
+         "government_type": examples - "mayor_council" or "mayor_commission", etc.,
+         "people": [
+           {
+             "name": "Full name of the official or null if uncertain",
+             "roles": ["Mayor", "Council Member", "Commissioner", etc.],
+             "divisions": ["Ward 1", "District 2", etc.] or [],
+           }
+         ],
+         "notes": "Brief notes about the search and results"
+       }
+       ```
+
+    IMPORTANT: If the response contains anything other than a valid JSON object,
+    it will be considered incorrect. Ensure the response is strictly JSON.
+    Verify that the response is valid JSON before returning it.
+    If it is not valid JSON, retry the generation.
+    
+[2026-01-29T20:01:53.909614] [DEBUG] Gemini raw response: {'government_type': 'mayor_council', 'people': [{'name': 'Carlton Tucker', 'roles': ['Mayor'], 'divisions': []}, {'name': 'Becky Roberts', 'roles': ['Mayor Pro-Tem', 'Council Member'], 'divisions': ['Place 1']}, {'name': 'Kyle Christen', 'roles': ['Council Member'], 'divisions': ['Place 2']}, {'name': 'Ronell Wilson', 'roles': ['Council Member'], 'divisions': ['Place 3']}, {'name': 'Rex Kloesel', 'roles': ['Council Member'], 'divisions': ['Place 4']}, {'name': 'Kurt Scardino', 'roles': ['Council Member'], 'divisions': ['Place 5']}], 'notes': "Weimar, TX operates under a General Law Type A government, which is a form of mayor-council government. The elected officials and their respective places were identified from the City of Weimar's official website and the Texas Municipal League directory. While an article from December 2023 mentioned 'Mayor Koller', more recent official directories list Carlton Tucker as the current Mayor."}
+[2026-01-29T20:01:53.911930] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 363, Output tokens: 854, Total cost: $0.002244
+[2026-01-29T20:01:53.912458] [INFO] gemini gemini-2.5-flash LLM call took 5.50 seconds
+[2026-01-29T20:01:53.913161] [INFO] Source URLs not found, using search engine for links.
+[2026-01-29T20:01:54.005628] [INFO] Step 2: SEARCH_LINKS from website: https://weimartexas.org
+[2026-01-29T20:01:54.044316] [INFO] Using government type: mayor_council for keyword selection with keywords: {'elected officials': ['elected officials', 'government officials', 'officials', 'city administration', 'index', 'government', 'bios', 'meet', 'about'], 'mayor': ['mayor and city council', 'about mayor', 'meet the mayor', 'about the mayor', 'mayor', 'council president', 'council manager'], 'council members': ['meet the council', 'city council members', 'council bios', 'council members', 'councilmembers', 'counsel member', 'city council', 'board of trustees', 'council districts', 'city hall', 'council', 'municipal directory']}
+[2026-01-29T20:01:54.044898] [INFO] Searching for keyword term: elected officials, keywords: ['elected officials', 'government officials', 'officials', 'city administration', 'index', 'government', 'bios', 'meet', 'about']
+[2026-01-29T20:01:54.045749] [INFO] Searching with google for Weimar city elected officials
+[2026-01-29T20:01:54.223803] [INFO] -> https://weimartexas.org/
+[2026-01-29T20:01:54.225879] [INFO] Search successful with google. Found 1 results.
+[2026-01-29T20:01:54.226900] [INFO] Searching for keyword term: mayor, keywords: ['mayor and city council', 'about mayor', 'meet the mayor', 'about the mayor', 'mayor', 'council president', 'council manager']
+[2026-01-29T20:01:54.227876] [INFO] Searching with google for Weimar city mayor
+[2026-01-29T20:01:54.386475] [INFO] -> https://weimartexas.org/
+[2026-01-29T20:01:54.387570] [INFO] Search successful with google. Found 1 results.
+[2026-01-29T20:01:54.388379] [INFO] Searching for keyword term: council members, keywords: ['meet the council', 'city council members', 'council bios', 'council members', 'councilmembers', 'counsel member', 'city council', 'board of trustees', 'council districts', 'city hall', 'council', 'municipal directory']
+[2026-01-29T20:01:54.389731] [INFO] Searching with google for Weimar city council members
+[2026-01-29T20:01:54.558622] [INFO] -> https://weimartexas.org/
+[2026-01-29T20:01:54.560511] [INFO] Search successful with google. Found 1 results.
+[2026-01-29T20:01:54.660784] [INFO] Step 3: SCRAPE_PAGE: scraping https://weimartexas.org/
+[2026-01-29T20:01:57.256110] [DEBUG] Attempting to intercept and save image for: https://weimartx.gov/wp-content/themes/weimar/images/logo.png
+[2026-01-29T20:01:57.256776] [DEBUG] Loading image from URL: https://weimartx.gov/wp-content/themes/weimar/images/logo.png
+[2026-01-29T20:01:57.490776] [INFO] Image saved: /app/data_source/tx/local/place_weimar/images/57cfa167a5fa.png
+[2026-01-29T20:01:57.549952] [DEBUG] Attempting to intercept and save image for: https://weimartx.gov/wp-content/themes/weimar/images/search_icon.png
+[2026-01-29T20:01:57.550745] [DEBUG] Loading image from URL: https://weimartx.gov/wp-content/themes/weimar/images/search_icon.png
+[2026-01-29T20:01:57.781170] [INFO] Image saved: /app/data_source/tx/local/place_weimar/images/66a75b0e7953.png
+[2026-01-29T20:01:57.794024] [DEBUG] Attempting to intercept and save image for: https://weimartx.gov/wp-content/uploads/2016/08/banner-1.jpg
+[2026-01-29T20:01:57.794852] [DEBUG] Loading image from URL: https://weimartx.gov/wp-content/uploads/2016/08/banner-1.jpg
+[2026-01-29T20:01:57.837503] [INFO] Image saved: /app/data_source/tx/local/place_weimar/images/5672f740d045.png
+[2026-01-29T20:01:57.848539] [DEBUG] Attempting to intercept and save image for: https://weimartx.gov/wp-content/themes/weimar/images/economy.png
+[2026-01-29T20:01:57.849549] [DEBUG] Loading image from URL: https://weimartx.gov/wp-content/themes/weimar/images/economy.png
+[2026-01-29T20:01:57.876745] [INFO] Image saved: /app/data_source/tx/local/place_weimar/images/dca02c5d3947.png
+[2026-01-29T20:01:57.887281] [DEBUG] Attempting to intercept and save image for: https://weimartx.gov/wp-content/themes/weimar/images/visitor.png
+[2026-01-29T20:01:57.888365] [DEBUG] Loading image from URL: https://weimartx.gov/wp-content/themes/weimar/images/visitor.png
+[2026-01-29T20:01:58.109522] [INFO] Image saved: /app/data_source/tx/local/place_weimar/images/2188c5d7714f.png
+[2026-01-29T20:01:58.130080] [DEBUG] Attempting to intercept and save image for: https://weimartx.gov/wp-content/themes/weimar/images/court.png
+[2026-01-29T20:01:58.131381] [DEBUG] Loading image from URL: https://weimartx.gov/wp-content/themes/weimar/images/court.png
+[2026-01-29T20:01:58.173874] [INFO] Image saved: /app/data_source/tx/local/place_weimar/images/d43bda6d74f7.png
+[2026-01-29T20:01:58.189032] [DEBUG] Attempting to intercept and save image for: https://weimartx.gov/wp-content/themes/weimar/images/communication.png
+[2026-01-29T20:01:58.190447] [DEBUG] Loading image from URL: https://weimartx.gov/wp-content/themes/weimar/images/communication.png
+[2026-01-29T20:01:58.229205] [INFO] Image saved: /app/data_source/tx/local/place_weimar/images/2476f4cbb4eb.png
+[2026-01-29T20:01:58.239984] [DEBUG] Attempting to intercept and save image for: https://weimartx.gov/wp-content/themes/weimar/images/resident.png
+[2026-01-29T20:01:58.242093] [DEBUG] Loading image from URL: https://weimartx.gov/wp-content/themes/weimar/images/resident.png
+[2026-01-29T20:01:58.279584] [INFO] Image saved: /app/data_source/tx/local/place_weimar/images/03d6e6f35ca3.png
+[2026-01-29T20:01:58.287095] [DEBUG] Attempting to intercept and save image for: https://weimartx.gov/wp-content/themes/weimar/images/median_income.png
+[2026-01-29T20:01:58.287896] [DEBUG] Loading image from URL: https://weimartx.gov/wp-content/themes/weimar/images/median_income.png
+[2026-01-29T20:01:58.572763] [INFO] Image saved: /app/data_source/tx/local/place_weimar/images/31384d2dda80.png
+[2026-01-29T20:01:58.587718] [DEBUG] Attempting to intercept and save image for: https://weimartx.gov/wp-content/themes/weimar/images/tax_rate.png
+[2026-01-29T20:01:58.588720] [DEBUG] Loading image from URL: https://weimartx.gov/wp-content/themes/weimar/images/tax_rate.png
+[2026-01-29T20:01:58.815545] [INFO] Image saved: /app/data_source/tx/local/place_weimar/images/f315f251d45d.png
+[2026-01-29T20:01:58.827161] [DEBUG] Attempting to intercept and save image for: https://weimartx.gov/wp-content/themes/weimar/images/median_age.png
+[2026-01-29T20:01:58.828904] [DEBUG] Loading image from URL: https://weimartx.gov/wp-content/themes/weimar/images/median_age.png
+[2026-01-29T20:01:59.114626] [INFO] Image saved: /app/data_source/tx/local/place_weimar/images/69074340df68.png
+[2026-01-29T20:01:59.134005] [DEBUG] Attempting to intercept and save image for: https://weimartx.gov/wp-content/themes/weimar/images/logo.png
+[2026-01-29T20:01:59.134958] [DEBUG] Loading image from URL: https://weimartx.gov/wp-content/themes/weimar/images/logo.png
+[2026-01-29T20:01:59.170253] [INFO] Image saved: /app/data_source/tx/local/place_weimar/images/57cfa167a5fa.png
+[2026-01-29T20:01:59.183003] [DEBUG] Skipping blacklisted or invalid image: https://weimartx.gov/wp-content/themes/weimar/images/cave-consulting-logo.svg
+[2026-01-29T20:01:59.198783] [DEBUG] Skipping blacklisted or invalid image: https://weimartx.gov/wp-content/themes/weimar/images/gforgov-dark.svg
+[2026-01-29T20:01:59.430126] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://weimartexas.org/
+[2026-01-29T20:01:59.486400] [DEBUG] -> Preprocessing with identities: {'Carlton Tucker': ['Carlton Tucker'], 'Becky Roberts': ['Becky Roberts'], 'Kyle Christen': ['Kyle Christen'], 'Ronell Wilson': ['Ronell Wilson'], 'Rex Kloesel': ['Rex Kloesel'], 'Kurt Scardino': ['Kurt Scardino']}
+[2026-01-29T20:02:03.679449] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T20:02:03.680014] [INFO] -> Elapsed time: 4.25 seconds
+[2026-01-29T20:02:03.680393] [INFO] -> Average elapsed time: 4.25 seconds
+[2026-01-29T20:02:03.681038] [INFO] -> Total elapsed time: 4.25 seconds
+[2026-01-29T20:02:03.820915] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://weimartexas.org/
+[2026-01-29T20:02:03.824206] [INFO] Running OpenAI prompt
+[2026-01-29T20:02:03.824708] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Carlton Tucker, Becky Roberts, Kyle Christen, Ronell Wilson, Rex Kloesel, Kurt Scardino
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T20:02:03.825736] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T20:02:23.529146] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1353, Output tokens: 1238, Total cost: $0.002814
+[2026-01-29T20:02:23.531169] [INFO] Page relevance check found related urls: ['https://weimartx.gov/contact-us/', 'https://weimartx.gov/government/', 'https://weimartx.gov/city-council/', 'https://weimartx.gov/departments/']
+[2026-01-29T20:02:23.661143] [INFO] No pending links left to scrape.
+[2026-01-29T20:02:23.856354] [INFO] Step 8: WorkflowStatus.FORMAT_OUTPUT Formatting output data.
+[2026-01-29T20:02:23.981930] [INFO] Step 9: CLEANUP
+[2026-01-29T20:02:23.984684] [DEBUG] Image files to keep: set()
+[2026-01-29T20:02:23.985115] [DEBUG] All image map data: {'https://weimartx.gov/wp-content/themes/weimar/images/logo.png': '57cfa167a5fa.png', 'https://weimartx.gov/wp-content/themes/weimar/images/search_icon.png': '66a75b0e7953.png', 'https://weimartx.gov/wp-content/uploads/2016/08/banner-1.jpg': '5672f740d045.png', 'https://weimartx.gov/wp-content/themes/weimar/images/economy.png': 'dca02c5d3947.png', 'https://weimartx.gov/wp-content/themes/weimar/images/visitor.png': '2188c5d7714f.png', 'https://weimartx.gov/wp-content/themes/weimar/images/court.png': 'd43bda6d74f7.png', 'https://weimartx.gov/wp-content/themes/weimar/images/communication.png': '2476f4cbb4eb.png', 'https://weimartx.gov/wp-content/themes/weimar/images/resident.png': '03d6e6f35ca3.png', 'https://weimartx.gov/wp-content/themes/weimar/images/median_income.png': '31384d2dda80.png', 'https://weimartx.gov/wp-content/themes/weimar/images/tax_rate.png': 'f315f251d45d.png', 'https://weimartx.gov/wp-content/themes/weimar/images/median_age.png': '69074340df68.png'}
+[2026-01-29T20:02:23.987589] [DEBUG] Checking image file: 5672f740d045.png
+[2026-01-29T20:02:23.988278] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_weimar/images/5672f740d045.png
+[2026-01-29T20:02:23.990005] [DEBUG] Checking image file: f315f251d45d.png
+[2026-01-29T20:02:23.991894] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_weimar/images/f315f251d45d.png
+[2026-01-29T20:02:23.993034] [DEBUG] Checking image file: 57cfa167a5fa.png
+[2026-01-29T20:02:23.994169] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_weimar/images/57cfa167a5fa.png
+[2026-01-29T20:02:23.996286] [DEBUG] Checking image file: 69074340df68.png
+[2026-01-29T20:02:23.999107] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_weimar/images/69074340df68.png
+[2026-01-29T20:02:24.001888] [DEBUG] Checking image file: image_map.json
+[2026-01-29T20:02:24.004145] [DEBUG] Checking image file: dca02c5d3947.png
+[2026-01-29T20:02:24.005518] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_weimar/images/dca02c5d3947.png
+[2026-01-29T20:02:24.006669] [DEBUG] Checking image file: d43bda6d74f7.png
+[2026-01-29T20:02:24.009150] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_weimar/images/d43bda6d74f7.png
+[2026-01-29T20:02:24.010130] [DEBUG] Checking image file: 2476f4cbb4eb.png
+[2026-01-29T20:02:24.013281] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_weimar/images/2476f4cbb4eb.png
+[2026-01-29T20:02:24.015169] [DEBUG] Checking image file: 03d6e6f35ca3.png
+[2026-01-29T20:02:24.016173] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_weimar/images/03d6e6f35ca3.png
+[2026-01-29T20:02:24.017450] [DEBUG] Checking image file: 66a75b0e7953.png
+[2026-01-29T20:02:24.018917] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_weimar/images/66a75b0e7953.png
+[2026-01-29T20:02:24.019950] [DEBUG] Checking image file: 2188c5d7714f.png
+[2026-01-29T20:02:24.020823] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_weimar/images/2188c5d7714f.png
+[2026-01-29T20:02:24.022142] [DEBUG] Checking image file: 31384d2dda80.png
+[2026-01-29T20:02:24.023783] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_weimar/images/31384d2dda80.png
+[2026-01-29T20:02:24.134939] [INFO] Step 10: WorkflowStatus.SAVE_OUTPUT Saving output data and config files.
+[2026-01-29T20:02:24.320445] [INFO] Step 11: MAYBE_SEND_TO_GITHUB
+[2026-01-29T20:02:24.320767] [INFO] CRUDDER_UPLOAD_URL: https://api.civicpatch.org/api/internal/pipelines/github_intake
