@@ -1,0 +1,261 @@
+[2026-01-29T21:30:51.970250] [INFO] Step 1: RESEARCH_MUNICIPALITY
+[2026-01-29T21:30:51.970746] [INFO] Running Gemini prompt
+[2026-01-29T21:30:51.971163] [DEBUG] Prompt: 
+
+    Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
+
+    Municipality: Joshua city, tx
+
+    Instructions:
+
+    1. Determine the government type of the city. Available government types:
+- mayor_commission
+- mayor_council
+- township_committee
+- select_board
+- aldermen
+
+    2. Identify the elected officials in the local government, 
+       including the Mayor (if applicable).
+       2.1. For each official, extract the following details:
+            - name: Full name only (no titles)
+            - roles: List of active municipal roles (e.g., Mayor, Council Member)
+            - divisions: List of (ward, district), only if applicable
+
+    3. Create a JSON object with the following structure:
+       ```json
+       {
+         "government_type": examples - "mayor_council" or "mayor_commission", etc.,
+         "people": [
+           {
+             "name": "Full name of the official or null if uncertain",
+             "roles": ["Mayor", "Council Member", "Commissioner", etc.],
+             "divisions": ["Ward 1", "District 2", etc.] or [],
+           }
+         ],
+         "notes": "Brief notes about the search and results"
+       }
+       ```
+
+    IMPORTANT: If the response contains anything other than a valid JSON object,
+    it will be considered incorrect. Ensure the response is strictly JSON.
+    Verify that the response is valid JSON before returning it.
+    If it is not valid JSON, retry the generation.
+    
+[2026-01-29T21:30:57.279179] [DEBUG] Gemini raw response: {'government_type': 'mayor_council', 'people': [{'name': 'Scott Kimble', 'roles': ['Mayor'], 'divisions': []}, {'name': 'Dustin Dees', 'roles': ['Council Member'], 'divisions': ['Place 1']}, {'name': 'Mike Kidd', 'roles': ['Council Member'], 'divisions': ['Place 2']}, {'name': 'Angela Nichols', 'roles': ['Council Member'], 'divisions': ['Place 3']}, {'name': 'Merle Breitenstein', 'roles': ['Council Member'], 'divisions': ['Place 4']}, {'name': 'Dakota Marshall', 'roles': ['Council Member'], 'divisions': ['Place 5']}, {'name': 'Shelly Anderson', 'roles': ['Council Member'], 'divisions': ['Place 6']}], 'notes': "Joshua, TX operates under a Council-City Manager form of government, which aligns with the 'mayor_council' type. All council members are elected at large. There was a discrepancy for Council Member Place 1, with one source listing Johnny Waldrip and multiple other sources, including the city's own meeting directory, listing Dustin Dees. Dustin Dees was chosen based on the majority and more recent information from the city's official sources."}
+[2026-01-29T21:30:57.283192] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 363, Output tokens: 868, Total cost: $0.002279
+[2026-01-29T21:30:57.283629] [INFO] gemini gemini-2.5-flash LLM call took 5.31 seconds
+[2026-01-29T21:30:57.284539] [INFO] Source URLs provided, skipping link search.
+[2026-01-29T21:30:57.371535] [INFO] Step 3: SCRAPE_PAGE: scraping https://joshua-tx.municodemeetings.com/bc-citycouncil/page/city-council
+[2026-01-29T21:30:58.918940] [DEBUG] Attempting to intercept and save image for: https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/themes/mmportal_subtheme/logo.png
+[2026-01-29T21:30:58.919687] [DEBUG] Loading image from URL: https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/themes/mmportal_subtheme/logo.png
+[2026-01-29T21:30:59.203329] [INFO] Image saved: /app/data_source/tx/local/place_joshua/images/3b14f4ffa88e.png
+[2026-01-29T21:30:59.212301] [DEBUG] Attempting to intercept and save image for: https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4401/11_scottkimble_headshot.jpg?itok=i1pFv98E
+[2026-01-29T21:30:59.212992] [DEBUG] Loading image from URL: https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4401/11_scottkimble_headshot.jpg?itok=i1pFv98E
+[2026-01-29T21:30:59.433123] [INFO] Image saved: /app/data_source/tx/local/place_joshua/images/77b33753ed8e.png
+[2026-01-29T21:30:59.448159] [DEBUG] Attempting to intercept and save image for: https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/default_images/profile-photo-placeholder.jpg?itok=P1IXrYhK
+[2026-01-29T21:30:59.448962] [DEBUG] Loading image from URL: https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/default_images/profile-photo-placeholder.jpg?itok=P1IXrYhK
+[2026-01-29T21:30:59.665308] [INFO] Image saved: /app/data_source/tx/local/place_joshua/images/d50723f296b0.png
+[2026-01-29T21:30:59.679863] [DEBUG] Attempting to intercept and save image for: https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4421/15_kidd_mike_headshot.jpg?itok=7XOp8wXa
+[2026-01-29T21:30:59.680771] [DEBUG] Loading image from URL: https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4421/15_kidd_mike_headshot.jpg?itok=7XOp8wXa
+[2026-01-29T21:30:59.885711] [INFO] Image saved: /app/data_source/tx/local/place_joshua/images/777b9691ff6e.png
+[2026-01-29T21:30:59.894488] [DEBUG] Attempting to intercept and save image for: https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4431/12_andreanichols_headshot.jpg?itok=HCa3Rg_K
+[2026-01-29T21:30:59.895530] [DEBUG] Loading image from URL: https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4431/12_andreanichols_headshot.jpg?itok=HCa3Rg_K
+[2026-01-29T21:31:00.184832] [INFO] Image saved: /app/data_source/tx/local/place_joshua/images/574022162afc.png
+[2026-01-29T21:31:00.195788] [DEBUG] Attempting to intercept and save image for: https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4441/16_merlebreitenstein_headshot.jpg?itok=TXeL0Fag
+[2026-01-29T21:31:00.196525] [DEBUG] Loading image from URL: https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4441/16_merlebreitenstein_headshot.jpg?itok=TXeL0Fag
+[2026-01-29T21:31:00.447162] [INFO] Image saved: /app/data_source/tx/local/place_joshua/images/7367b4991438.png
+[2026-01-29T21:31:00.458177] [DEBUG] Attempting to intercept and save image for: https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4451/dakota_city-of-joshua_headshot_2.jpg?itok=LcC0AAup
+[2026-01-29T21:31:00.459095] [DEBUG] Loading image from URL: https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4451/dakota_city-of-joshua_headshot_2.jpg?itok=LcC0AAup
+[2026-01-29T21:31:00.681028] [INFO] Image saved: /app/data_source/tx/local/place_joshua/images/ba72164da9f5.png
+[2026-01-29T21:31:00.688715] [DEBUG] Attempting to intercept and save image for: https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4461/17_shellyanderson_headshot.jpg?itok=UjcIAD2i
+[2026-01-29T21:31:00.689876] [DEBUG] Loading image from URL: https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4461/17_shellyanderson_headshot.jpg?itok=UjcIAD2i
+[2026-01-29T21:31:00.921998] [INFO] Image saved: /app/data_source/tx/local/place_joshua/images/436835c394a7.png
+[2026-01-29T21:31:00.938252] [DEBUG] Attempting to intercept and save image for: https://joshua-tx.municodemeetings.com/sites/all/modules/print/icons/print_icon.png
+[2026-01-29T21:31:00.939602] [DEBUG] Loading image from URL: https://joshua-tx.municodemeetings.com/sites/all/modules/print/icons/print_icon.png
+[2026-01-29T21:31:01.217419] [INFO] Image saved: /app/data_source/tx/local/place_joshua/images/1da3073c74fe.png
+[2026-01-29T21:31:01.462634] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://joshua-tx.municodemeetings.com/bc-citycouncil/page/city-council
+[2026-01-29T21:31:01.485289] [DEBUG] -> Preprocessing with identities: {'Scott Kimble': ['Scott Kimble'], 'Dustin Dees': ['Dustin Dees'], 'Mike Kidd': ['Mike Kidd'], 'Angela Nichols': ['Angela Nichols'], 'Merle Breitenstein': ['Merle Breitenstein'], 'Dakota Marshall': ['Dakota Marshall'], 'Shelly Anderson': ['Shelly Anderson']}
+[2026-01-29T21:31:03.111303] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T21:31:03.111618] [INFO] -> Elapsed time: 1.65 seconds
+[2026-01-29T21:31:03.111958] [INFO] -> Average elapsed time: 0.82 seconds
+[2026-01-29T21:31:03.112315] [INFO] -> Total elapsed time: 1.65 seconds
+[2026-01-29T21:31:03.190614] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://joshua-tx.municodemeetings.com/bc-citycouncil/page/city-council
+[2026-01-29T21:31:03.194712] [INFO] Running OpenAI prompt
+[2026-01-29T21:31:03.195274] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Scott Kimble, Dustin Dees, Mike Kidd, Angela Nichols, Merle Breitenstein, Dakota Marshall, Shelly Anderson
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T21:31:03.195845] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:31:24.825777] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1597, Output tokens: 1517, Total cost: $0.003433
+[2026-01-29T21:31:24.827065] [INFO] Page relevance check found related urls: ['https://joshua-tx.municodemeetings.com/bc-citycouncil/page/city-council#main-content', 'https://joshua-tx.municodemeetings.com/bc/directory', 'https://joshua-tx.municodemeetings.com/directory-listing/scott-kimble', 'https://joshua-tx.municodemeetings.com/directory-listing/dustin-dees-0', 'https://joshua-tx.municodemeetings.com/directory-listing/mike-kidd-0', 'https://joshua-tx.municodemeetings.com/directory-listing/angela-nichols-0', 'https://joshua-tx.municodemeetings.com/directory-listing/merle-breitenstein-0', 'https://joshua-tx.municodemeetings.com/directory-listing/dakota-marshall', 'https://joshua-tx.municodemeetings.com/directory-listing/shelly-anderson-0']
+[2026-01-29T21:31:24.828175] [INFO] Running Gemini prompt
+[2026-01-29T21:31:24.829077] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Scott Kimble, Dustin Dees, Mike Kidd, Angela Nichols, Merle Breitenstein, Dakota Marshall, Shelly Anderson
+
+    Only extract people who are currently serving as officials as of 2026-01-29. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-29
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-29) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-29T21:31:31.906683] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 2765, Output tokens: 1237, Total cost: $0.003922
+[2026-01-29T21:31:31.910935] [INFO] gemini gemini-2.5-flash LLM call took 7.08 seconds
+[2026-01-29T21:31:31.913257] [INFO] Running OpenAI prompt
+[2026-01-29T21:31:31.913946] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Scott Kimble, Dustin Dees, Mike Kidd, Angela Nichols, Merle Breitenstein, Dakota Marshall, Shelly Anderson
+
+    Only extract people who are currently serving as officials as of 2026-01-29. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-29
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-29T21:31:31.915536] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:32:08.677641] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 2356, Output tokens: 2277, Total cost: $0.005143
+[2026-01-29T21:32:08.683234] [INFO] links updated: [Link(url='https://joshua-tx.municodemeetings.com/bc-citycouncil/page/city-council', status='done', folder_name='joshua-tx_municodemeetings_com_bc-citycouncil_page_city-council', is_profile_page=False)]
+[2026-01-29T21:32:08.772492] [INFO] No pending links left to scrape.
+[2026-01-29T21:32:09.051108] [INFO] Step 8: WorkflowStatus.FORMAT_OUTPUT Formatting output data.
+[2026-01-29T21:32:09.141458] [INFO] Step 9: CLEANUP
+[2026-01-29T21:32:09.148635] [DEBUG] Image files to keep: {'436835c394a7.png', 'ba72164da9f5.png', '77b33753ed8e.png', '777b9691ff6e.png', 'd50723f296b0.png', '574022162afc.png', '7367b4991438.png'}
+[2026-01-29T21:32:09.149212] [DEBUG] All image map data: {'https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/themes/mmportal_subtheme/logo.png': '3b14f4ffa88e.png', 'https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4401/11_scottkimble_headshot.jpg?itok=i1pFv98E': '77b33753ed8e.png', 'https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/default_images/profile-photo-placeholder.jpg?itok=P1IXrYhK': 'd50723f296b0.png', 'https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4421/15_kidd_mike_headshot.jpg?itok=7XOp8wXa': '777b9691ff6e.png', 'https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4431/12_andreanichols_headshot.jpg?itok=HCa3Rg_K': '574022162afc.png', 'https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4441/16_merlebreitenstein_headshot.jpg?itok=TXeL0Fag': '7367b4991438.png', 'https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4451/dakota_city-of-joshua_headshot_2.jpg?itok=LcC0AAup': 'ba72164da9f5.png', 'https://joshua-tx.municodemeetings.com/sites/joshua-tx.municodemeetings.com/files/styles/board_listings/public/imageattachments/directory/4461/17_shellyanderson_headshot.jpg?itok=UjcIAD2i': '436835c394a7.png', 'https://joshua-tx.municodemeetings.com/sites/all/modules/print/icons/print_icon.png': '1da3073c74fe.png'}
+[2026-01-29T21:32:09.153855] [DEBUG] Checking image file: 77b33753ed8e.png
+[2026-01-29T21:32:09.154833] [DEBUG] Checking image file: 574022162afc.png
+[2026-01-29T21:32:09.155910] [DEBUG] Checking image file: image_map.json
+[2026-01-29T21:32:09.156628] [DEBUG] Checking image file: 436835c394a7.png
+[2026-01-29T21:32:09.158443] [DEBUG] Checking image file: 7367b4991438.png
+[2026-01-29T21:32:09.159447] [DEBUG] Checking image file: 777b9691ff6e.png
+[2026-01-29T21:32:09.160310] [DEBUG] Checking image file: d50723f296b0.png
+[2026-01-29T21:32:09.161214] [DEBUG] Checking image file: ba72164da9f5.png
+[2026-01-29T21:32:09.162080] [DEBUG] Checking image file: 1da3073c74fe.png
+[2026-01-29T21:32:09.163450] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_joshua/images/1da3073c74fe.png
+[2026-01-29T21:32:09.164486] [DEBUG] Checking image file: 3b14f4ffa88e.png
+[2026-01-29T21:32:09.165243] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_joshua/images/3b14f4ffa88e.png
+[2026-01-29T21:32:09.166142] [ERROR] Missing images that were expected to be found: {'436835c394a7.png', 'ba72164da9f5.png', '77b33753ed8e.png', '777b9691ff6e.png', 'd50723f296b0.png', '574022162afc.png', '7367b4991438.png'}
+[2026-01-29T21:32:09.245494] [INFO] Step 10: WorkflowStatus.SAVE_OUTPUT Saving output data and config files.
+[2026-01-29T21:32:09.435995] [INFO] Step 11: MAYBE_SEND_TO_GITHUB
+[2026-01-29T21:32:09.436404] [INFO] CRUDDER_UPLOAD_URL: https://api.civicpatch.org/api/internal/pipelines/github_intake
