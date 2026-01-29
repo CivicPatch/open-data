@@ -1,0 +1,1538 @@
+[2026-01-29T21:45:05.939119] [INFO] Step 1: RESEARCH_MUNICIPALITY
+[2026-01-29T21:45:05.939640] [INFO] Running Gemini prompt
+[2026-01-29T21:45:05.940004] [DEBUG] Prompt: 
+
+    Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
+
+    Municipality: Ennis city, tx
+
+    Instructions:
+
+    1. Determine the government type of the city. Available government types:
+- mayor_commission
+- mayor_council
+- township_committee
+- select_board
+- aldermen
+
+    2. Identify the elected officials in the local government, 
+       including the Mayor (if applicable).
+       2.1. For each official, extract the following details:
+            - name: Full name only (no titles)
+            - roles: List of active municipal roles (e.g., Mayor, Council Member)
+            - divisions: List of (ward, district), only if applicable
+
+    3. Create a JSON object with the following structure:
+       ```json
+       {
+         "government_type": examples - "mayor_council" or "mayor_commission", etc.,
+         "people": [
+           {
+             "name": "Full name of the official or null if uncertain",
+             "roles": ["Mayor", "Council Member", "Commissioner", etc.],
+             "divisions": ["Ward 1", "District 2", etc.] or [],
+           }
+         ],
+         "notes": "Brief notes about the search and results"
+       }
+       ```
+
+    IMPORTANT: If the response contains anything other than a valid JSON object,
+    it will be considered incorrect. Ensure the response is strictly JSON.
+    Verify that the response is valid JSON before returning it.
+    If it is not valid JSON, retry the generation.
+    
+[2026-01-29T21:45:13.063487] [DEBUG] Gemini raw response: {'government_type': 'mayor_commission', 'people': [{'name': 'Kameron Raburn', 'roles': ['Mayor'], 'divisions': []}, {'name': 'Lynda Isbell', 'roles': ['Mayor Pro Tem'], 'divisions': []}, {'name': 'Rowdy Pruitt', 'roles': ['Commissioner'], 'divisions': ['Ward 1']}, {'name': 'Bruce Jones', 'roles': ['Commissioner'], 'divisions': ['Ward 2']}, {'name': 'Scott Hejny', 'roles': ['Commissioner'], 'divisions': ['Ward 3']}, {'name': 'Shirley Watson', 'roles': ['Commissioner'], 'divisions': ['Ward 4']}, {'name': 'Eric Pierce', 'roles': ['Commissioner'], 'divisions': ['Ward 5']}], 'notes': 'Ennis, TX operates under a Commission-Manager form of government, with a Mayor and six Commissioners. The Mayor and Mayor Pro Tem are elected at large, while five Commissioners are elected from single-member wards. The information reflects officials sworn in as of May 2024.'}
+[2026-01-29T21:45:13.065977] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 363, Output tokens: 1327, Total cost: $0.003426
+[2026-01-29T21:45:13.066505] [INFO] gemini gemini-2.5-flash LLM call took 7.13 seconds
+[2026-01-29T21:45:13.066974] [INFO] Source URLs provided, skipping link search.
+[2026-01-29T21:45:13.165054] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/CityCommission
+[2026-01-29T21:45:22.521790] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:45:22.523457] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:45:22.568373] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:45:22.579835] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/CityCommission/Commission Standing.jpg?width=468
+[2026-01-29T21:45:22.580449] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/CityCommission/Commission Standing.jpg?width=468
+[2026-01-29T21:45:22.755864] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/07f2339134b8.png
+[2026-01-29T21:45:22.765851] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:45:22.766641] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:45:22.800923] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:45:22.813530] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:45:22.821428] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:45:22.827817] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:45:22.835454] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T21:45:23.127559] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/CityCommission
+[2026-01-29T21:45:23.195484] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T21:45:50.952564] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 13% (32/229)
+[2026-01-29T21:45:53.676172] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T21:45:53.676428] [INFO] -> Elapsed time: 30.55 seconds
+[2026-01-29T21:45:53.676726] [INFO] -> Average elapsed time: 7.64 seconds
+[2026-01-29T21:45:53.676970] [INFO] -> Total elapsed time: 30.55 seconds
+[2026-01-29T21:45:53.752582] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/CityCommission
+[2026-01-29T21:45:53.755631] [INFO] Running OpenAI prompt
+[2026-01-29T21:45:53.756104] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T21:45:53.756520] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:46:10.870823] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1291, Output tokens: 1155, Total cost: $0.002633
+[2026-01-29T21:46:10.872953] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/CityCommission', 'https://www.ennistx.gov/departments/mayor', 'https://www.ennistx.gov/Mayor-Pro-Tem-At-Large', 'https://www.ennistx.gov/commissioner-ward-1', 'https://www.ennistx.gov/Commissioner-Ward-2', 'https://www.ennistx.gov/Commissioner-Ward-3', 'https://www.ennistx.gov/Commissioner-Ward-4', 'https://www.ennistx.gov/Commissioner-Ward-5']
+[2026-01-29T21:46:10.874708] [INFO] Running Gemini prompt
+[2026-01-29T21:46:10.875639] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only extract people who are currently serving as officials as of 2026-01-29. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-29
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-29) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-29T21:46:23.260847] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 2372, Output tokens: 898, Total cost: $0.002957
+[2026-01-29T21:46:23.264955] [INFO] gemini gemini-2.5-flash LLM call took 12.39 seconds
+[2026-01-29T21:46:23.266937] [INFO] Running OpenAI prompt
+[2026-01-29T21:46:23.267477] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only extract people who are currently serving as officials as of 2026-01-29. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-29
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-29T21:46:23.270322] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:46:58.401563] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 2032, Output tokens: 2198, Total cost: $0.004904
+[2026-01-29T21:46:58.407189] [INFO] links updated: [Link(url='https://www.ennistx.gov/citycommission', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-1', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-4', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/mayor-pro-tem-at-large', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-2', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-5', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/departments/mayor', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-3', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/CityCommission', status='done', folder_name='www_ennistx_gov_citycommission', is_profile_page=False)]
+[2026-01-29T21:46:58.495641] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/citycommission
+[2026-01-29T21:47:07.090281] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:47:07.091221] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:47:07.137188] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:47:07.153297] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/CityCommission/Commission Standing.jpg?width=468
+[2026-01-29T21:47:07.154454] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/CityCommission/Commission Standing.jpg?width=468
+[2026-01-29T21:47:07.192104] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/07f2339134b8.png
+[2026-01-29T21:47:07.207276] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:47:07.208251] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:47:07.253318] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:47:07.267216] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:47:07.277224] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:47:07.287181] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:47:07.296348] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T21:47:07.577737] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/citycommission
+[2026-01-29T21:47:07.651212] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T21:47:32.262437] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 13% (32/229)
+[2026-01-29T21:47:34.762937] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T21:47:34.763149] [INFO] -> Elapsed time: 27.18 seconds
+[2026-01-29T21:47:34.763364] [INFO] -> Average elapsed time: 11.44 seconds
+[2026-01-29T21:47:34.763570] [INFO] -> Total elapsed time: 57.18 seconds
+[2026-01-29T21:47:34.852718] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/citycommission
+[2026-01-29T21:47:34.856188] [INFO] Running OpenAI prompt
+[2026-01-29T21:47:34.856633] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T21:47:34.857331] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:47:48.851621] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1291, Output tokens: 1022, Total cost: $0.002367
+[2026-01-29T21:47:48.852405] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/CityCommission', 'https://www.ennistx.gov/departments/mayor', 'https://www.ennistx.gov/Mayor-Pro-Tem-At-Large', 'https://www.ennistx.gov/commissioner-ward-1', 'https://www.ennistx.gov/Commissioner-Ward-2', 'https://www.ennistx.gov/Commissioner-Ward-3', 'https://www.ennistx.gov/Commissioner-Ward-4', 'https://www.ennistx.gov/Commissioner-Ward-5']
+[2026-01-29T21:47:48.853590] [INFO] Running Gemini prompt
+[2026-01-29T21:47:48.854152] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only extract people who are currently serving as officials as of 2026-01-29. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-29
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-29) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-29T21:47:57.069807] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 2372, Output tokens: 829, Total cost: $0.002784
+[2026-01-29T21:47:57.072038] [INFO] gemini gemini-2.5-flash LLM call took 8.22 seconds
+[2026-01-29T21:47:57.073511] [INFO] Running OpenAI prompt
+[2026-01-29T21:47:57.073803] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only extract people who are currently serving as officials as of 2026-01-29. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-29
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-29T21:47:57.074322] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:48:39.134547] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 2032, Output tokens: 2539, Total cost: $0.005586
+[2026-01-29T21:48:39.139836] [INFO] links updated: [Link(url='https://www.ennistx.gov/commissioner-ward-1', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-4', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/mayor-pro-tem-at-large', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-2', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-5', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/departments/mayor', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-3', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/CityCommission', status='done', folder_name='www_ennistx_gov_citycommission', is_profile_page=False), Link(url='https://www.ennistx.gov/citycommission', status='done', folder_name='www_ennistx_gov_citycommission', is_profile_page=True)]
+[2026-01-29T21:48:39.227177] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/commissioner-ward-1
+[2026-01-29T21:48:43.139944] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:48:43.140504] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:48:43.191475] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:48:43.208525] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Ward_Maps_3_25/Ward 1 Map.jpg?width=300
+[2026-01-29T21:48:43.209291] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Ward_Maps_3_25/Ward 1 Map.jpg?width=300
+[2026-01-29T21:48:48.552264] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/5f374490c702.png
+[2026-01-29T21:48:48.564323] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/New Site Files/C92A6772.jpg?width=300
+[2026-01-29T21:48:48.565164] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/New Site Files/C92A6772.jpg?width=300
+[2026-01-29T21:48:51.581912] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/70839176d59d.png
+[2026-01-29T21:48:51.595134] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:48:51.597118] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:48:51.634293] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:48:51.662666] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:48:51.677844] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:48:51.690651] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:48:51.701504] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T21:48:51.985576] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/commissioner-ward-1
+[2026-01-29T21:48:52.069360] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T21:49:15.758173] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 5% (32/622)
+[2026-01-29T21:49:19.888810] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T21:49:19.889055] [INFO] -> Elapsed time: 27.90 seconds
+[2026-01-29T21:49:19.889258] [INFO] -> Average elapsed time: 14.15 seconds
+[2026-01-29T21:49:19.889530] [INFO] -> Total elapsed time: 84.90 seconds
+[2026-01-29T21:49:19.990208] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/commissioner-ward-1
+[2026-01-29T21:49:19.992284] [INFO] Running OpenAI prompt
+[2026-01-29T21:49:19.992592] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T21:49:19.992957] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:49:47.240753] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 2141, Output tokens: 1402, Total cost: $0.003339
+[2026-01-29T21:49:47.242091] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/commissioner-ward-1', 'https://www.ennistx.gov/CityCommission', 'https://www.ennistx.gov/departments/mayor', 'https://www.ennistx.gov/mayor-pro-tem-at-large', 'https://www.ennistx.gov/commissioner-ward-2', 'https://ennistx.civicweb.net/Portal/']
+[2026-01-29T21:49:47.242769] [INFO] Running Gemini prompt
+[2026-01-29T21:49:47.243080] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only extract people who are currently serving as officials as of 2026-01-29. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-29
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-29) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-29T21:49:52.468839] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 3369, Output tokens: 229, Total cost: $0.001583
+[2026-01-29T21:49:52.472845] [INFO] gemini gemini-2.5-flash LLM call took 5.23 seconds
+[2026-01-29T21:49:52.474643] [INFO] Running OpenAI prompt
+[2026-01-29T21:49:52.475033] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only extract people who are currently serving as officials as of 2026-01-29. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-29
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-29T21:49:52.475968] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:50:12.845569] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 2882, Output tokens: 1350, Total cost: $0.003420
+[2026-01-29T21:50:12.852571] [WARNING] Role 'commissioner ward 1' not found in aliases for government type 'mayor_commission'. Keeping original.
+[2026-01-29T21:50:12.858116] [DEBUG] Skipping adding websites for person with role and contact info: Cathy Falkenbach
+[2026-01-29T21:50:12.859013] [DEBUG] Skipping adding websites for person with role and contact info: Cathy Falkenbach
+[2026-01-29T21:50:12.861337] [INFO] links updated: [Link(url='https://www.ennistx.gov/commissioner-ward-4', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/mayor-pro-tem-at-large', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-2', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-5', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/departments/mayor', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-3', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/citycommission', status='done', folder_name='www_ennistx_gov_citycommission', is_profile_page=True), Link(url='https://www.ennistx.gov/CityCommission', status='done', folder_name='www_ennistx_gov_citycommission', is_profile_page=False), Link(url='https://www.ennistx.gov/commissioner-ward-1', status='done', folder_name='www_ennistx_gov_commissioner-ward-1', is_profile_page=True)]
+[2026-01-29T21:50:12.953885] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/commissioner-ward-4
+[2026-01-29T21:50:20.474324] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:50:20.475513] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:50:20.517595] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:50:20.527494] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Redistricting 2023/Ward 4 Map.jpg?width=300
+[2026-01-29T21:50:20.529019] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Redistricting 2023/Ward 4 Map.jpg?width=300
+[2026-01-29T21:50:20.697518] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/3ced16b78307.png
+[2026-01-29T21:50:20.713804] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/New Commission/WATSON.jpg?width=300
+[2026-01-29T21:50:20.714613] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/New Commission/WATSON.jpg?width=300
+[2026-01-29T21:50:20.872164] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/10383a439eaf.png
+[2026-01-29T21:50:20.891067] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:50:20.892232] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:50:20.949783] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:50:20.960201] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:50:20.969883] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:50:20.981299] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:50:20.993224] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T21:50:21.270060] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/commissioner-ward-4
+[2026-01-29T21:50:21.319483] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T21:50:44.591730] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 16% (32/196)
+[2026-01-29T21:50:46.951378] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T21:50:46.951650] [INFO] -> Elapsed time: 25.68 seconds
+[2026-01-29T21:50:46.951937] [INFO] -> Average elapsed time: 15.67 seconds
+[2026-01-29T21:50:46.952345] [INFO] -> Total elapsed time: 109.68 seconds
+[2026-01-29T21:50:47.029546] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/commissioner-ward-4
+[2026-01-29T21:50:47.031439] [INFO] Running OpenAI prompt
+[2026-01-29T21:50:47.031714] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T21:50:47.032024] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:50:58.802172] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1061, Output tokens: 793, Total cost: $0.001851
+[2026-01-29T21:50:58.802849] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/commissioner-ward-4', 'https://www.ennistx.gov/CityCommission']
+[2026-01-29T21:50:58.803773] [INFO] Running Gemini prompt
+[2026-01-29T21:50:58.804260] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only extract people who are currently serving as officials as of 2026-01-29. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-29
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-29) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-29T21:51:02.240935] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 2118, Output tokens: 200, Total cost: $0.001135
+[2026-01-29T21:51:02.245655] [INFO] gemini gemini-2.5-flash LLM call took 3.44 seconds
+[2026-01-29T21:51:02.247930] [INFO] Running OpenAI prompt
+[2026-01-29T21:51:02.250015] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only extract people who are currently serving as officials as of 2026-01-29. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-29
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-29T21:51:02.252891] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:51:23.076039] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1802, Output tokens: 1269, Total cost: $0.002988
+[2026-01-29T21:51:23.086730] [WARNING] Role 'commissioner, ward 4' not found in aliases for government type 'mayor_commission'. Keeping original.
+[2026-01-29T21:51:23.088627] [DEBUG] Skipping adding websites for person with role and contact info: Cathy Falkenbach
+[2026-01-29T21:51:23.089728] [DEBUG] Skipping adding websites for person with role and contact info: Shirley Watson
+[2026-01-29T21:51:23.091048] [DEBUG] Skipping adding websites for person with role and contact info: Cathy Falkenbach
+[2026-01-29T21:51:23.091920] [DEBUG] Skipping adding websites for person with role and contact info: Shirley Watson
+[2026-01-29T21:51:23.093485] [INFO] links updated: [Link(url='https://www.ennistx.gov/mayor-pro-tem-at-large', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-2', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-5', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/departments/mayor', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-3', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/citycommission', status='done', folder_name='www_ennistx_gov_citycommission', is_profile_page=True), Link(url='https://www.ennistx.gov/CityCommission', status='done', folder_name='www_ennistx_gov_citycommission', is_profile_page=False), Link(url='https://www.ennistx.gov/commissioner-ward-1', status='done', folder_name='www_ennistx_gov_commissioner-ward-1', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-4', status='done', folder_name='www_ennistx_gov_commissioner-ward-4', is_profile_page=True)]
+[2026-01-29T21:51:23.184817] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/mayor-pro-tem-at-large
+[2026-01-29T21:51:28.657671] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:51:28.658461] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:51:28.704210] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:51:28.716836] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/CityCommission/ISBELL.jpg?width=300
+[2026-01-29T21:51:28.717625] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/CityCommission/ISBELL.jpg?width=300
+[2026-01-29T21:51:28.875302] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/edf4e2d02257.png
+[2026-01-29T21:51:28.889335] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:51:28.890165] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:51:28.932299] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:51:28.946614] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:51:28.955594] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:51:28.964041] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:51:28.975316] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T21:51:29.336174] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/mayor-pro-tem-at-large
+[2026-01-29T21:51:29.386339] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T21:51:52.446045] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 16% (32/195)
+[2026-01-29T21:51:54.511450] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T21:51:54.511652] [INFO] -> Elapsed time: 25.17 seconds
+[2026-01-29T21:51:54.511892] [INFO] -> Average elapsed time: 16.77 seconds
+[2026-01-29T21:51:54.512126] [INFO] -> Total elapsed time: 134.17 seconds
+[2026-01-29T21:51:54.617937] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/mayor-pro-tem-at-large
+[2026-01-29T21:51:54.621145] [INFO] Running OpenAI prompt
+[2026-01-29T21:51:54.621849] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T21:51:54.622703] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:52:12.774041] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 854, Output tokens: 851, Total cost: $0.001916
+[2026-01-29T21:52:12.775969] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/mayor-pro-tem-at-large', 'https://www.ennistx.gov/CityCommission', 'https://www.ennistx.gov/voice-a-concern-mayor-pro-tem']
+[2026-01-29T21:52:12.778198] [INFO] Running Gemini prompt
+[2026-01-29T21:52:12.779160] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only extract people who are currently serving as officials as of 2026-01-29. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner
+    Target Divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-29
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-29) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-29T21:52:16.446601] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 1881, Output tokens: 180, Total cost: $0.001014
+[2026-01-29T21:52:16.451713] [INFO] gemini gemini-2.5-flash LLM call took 3.67 seconds
+[2026-01-29T21:52:16.454241] [INFO] Running OpenAI prompt
+[2026-01-29T21:52:16.455260] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only extract people who are currently serving as officials as of 2026-01-29. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner
+    Target divisions: ward, district, at-large, position, seat
+    Current Date: 2026-01-29
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-29T21:52:16.456803] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:52:33.053788] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1595, Output tokens: 1085, Total cost: $0.002569
+[2026-01-29T21:52:33.060220] [WARNING] Role 'mayor pro tem at large' not found in aliases for government type 'mayor_commission'. Keeping original.
+[2026-01-29T21:52:33.062342] [DEBUG] Skipping adding websites for person with role and contact info: Lynda Isbell
+[2026-01-29T21:52:33.062713] [DEBUG] Skipping adding websites for person with role and contact info: Cathy Falkenbach
+[2026-01-29T21:52:33.063103] [DEBUG] Skipping adding websites for person with role and contact info: Shirley Watson
+[2026-01-29T21:52:33.063485] [DEBUG] Skipping adding websites for person with role and contact info: Lynda Isbell
+[2026-01-29T21:52:33.063850] [DEBUG] Skipping adding websites for person with role and contact info: Cathy Falkenbach
+[2026-01-29T21:52:33.064452] [DEBUG] Skipping adding websites for person with role and contact info: Shirley Watson
+[2026-01-29T21:52:33.065805] [INFO] links updated: [Link(url='https://www.ennistx.gov/voice-a-concern-mayor-pro-tem', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-2', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-5', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/departments/mayor', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-3', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.ennistx.gov/citycommission', status='done', folder_name='www_ennistx_gov_citycommission', is_profile_page=True), Link(url='https://www.ennistx.gov/CityCommission', status='done', folder_name='www_ennistx_gov_citycommission', is_profile_page=False), Link(url='https://www.ennistx.gov/commissioner-ward-1', status='done', folder_name='www_ennistx_gov_commissioner-ward-1', is_profile_page=True), Link(url='https://www.ennistx.gov/commissioner-ward-4', status='done', folder_name='www_ennistx_gov_commissioner-ward-4', is_profile_page=True), Link(url='https://www.ennistx.gov/mayor-pro-tem-at-large', status='done', folder_name='www_ennistx_gov_mayor-pro-tem-at-large', is_profile_page=True)]
+[2026-01-29T21:52:33.161875] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/voice-a-concern-mayor-pro-tem
+[2026-01-29T21:52:35.102361] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:52:35.103522] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:52:35.183608] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:52:35.194094] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:52:35.195343] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:52:35.236402] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:52:35.249926] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:52:35.263051] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:52:35.272520] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:52:35.282047] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T21:52:35.698936] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/voice-a-concern-mayor-pro-tem
+[2026-01-29T21:52:35.761762] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T21:52:59.822189] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 10% (34/317)
+[2026-01-29T21:53:03.133476] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T21:53:03.133676] [INFO] -> Elapsed time: 27.43 seconds
+[2026-01-29T21:53:03.133805] [INFO] -> Average elapsed time: 17.94 seconds
+[2026-01-29T21:53:03.134023] [INFO] -> Total elapsed time: 161.43 seconds
+[2026-01-29T21:53:03.232715] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/voice-a-concern-mayor-pro-tem
+[2026-01-29T21:53:03.233985] [INFO] Running OpenAI prompt
+[2026-01-29T21:53:03.234199] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T21:53:03.234386] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:53:33.488251] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 729, Output tokens: 1500, Total cost: $0.003182
+[2026-01-29T21:53:33.489207] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/government/city-council', 'https://www.ennistx.gov/government/mayor-and-council', 'https://www.ennistx.gov/government/city-departments/city-clerk', 'https://www.ennistx.gov/government/boards-commissions']
+[2026-01-29T21:53:33.592847] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/government/city-council
+[2026-01-29T21:53:37.160586] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:53:37.162093] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:53:37.215866] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:53:37.238330] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:53:37.240285] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:53:37.299539] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:53:37.322483] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:53:37.340005] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:53:37.354163] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:53:37.371974] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T21:53:37.828888] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/government/city-council
+[2026-01-29T21:53:37.908778] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T21:54:03.663669] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 18% (32/171)
+[2026-01-29T21:54:05.646235] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T21:54:05.646468] [INFO] -> Elapsed time: 27.82 seconds
+[2026-01-29T21:54:05.646691] [INFO] -> Average elapsed time: 18.88 seconds
+[2026-01-29T21:54:05.646928] [INFO] -> Total elapsed time: 188.82 seconds
+[2026-01-29T21:54:05.724141] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/government/city-council
+[2026-01-29T21:54:05.725523] [INFO] Running OpenAI prompt
+[2026-01-29T21:54:05.725749] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T21:54:05.725958] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:54:22.405881] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 698, Output tokens: 1175, Total cost: $0.002524
+[2026-01-29T21:54:22.407498] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/government/city-council', 'https://www.ennistx.gov/government', 'https://www.ennistx.gov/government/mayor-and-council']
+[2026-01-29T21:54:22.494454] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/government/city-departments/city-clerk
+[2026-01-29T21:54:24.221298] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:54:24.222223] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:54:24.258310] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:54:24.271340] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:54:24.272476] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:54:24.308577] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:54:24.320009] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:54:24.331057] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:54:24.339849] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:54:24.348255] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T21:54:24.661816] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/government/city-departments/city-clerk
+[2026-01-29T21:54:24.725986] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T21:54:46.026408] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 18% (32/171)
+[2026-01-29T21:54:47.962555] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T21:54:47.962763] [INFO] -> Elapsed time: 23.30 seconds
+[2026-01-29T21:54:47.962919] [INFO] -> Average elapsed time: 19.21 seconds
+[2026-01-29T21:54:47.963141] [INFO] -> Total elapsed time: 211.30 seconds
+[2026-01-29T21:54:48.041264] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/government/city-departments/city-clerk
+[2026-01-29T21:54:48.043719] [INFO] Running OpenAI prompt
+[2026-01-29T21:54:48.044180] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T21:54:48.044578] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:55:07.280338] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 702, Output tokens: 1107, Total cost: $0.002390
+[2026-01-29T21:55:07.280982] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/government/city-departments/city-clerk#', 'https://www.ennistx.gov/government/city-council', 'https://www.ennistx.gov/government/boards-commissions']
+[2026-01-29T21:55:07.359445] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/government/city-departments/city-clerk#
+[2026-01-29T21:55:08.851087] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:55:08.852036] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:55:08.888166] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:55:08.903432] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:55:08.905394] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:55:08.941939] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:55:08.950786] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:55:08.962250] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:55:08.972196] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:55:08.979796] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T21:55:09.273064] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/government/city-departments/city-clerk#
+[2026-01-29T21:55:09.325724] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T21:55:32.653835] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 18% (32/171)
+[2026-01-29T21:55:34.670292] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T21:55:34.670533] [INFO] -> Elapsed time: 25.40 seconds
+[2026-01-29T21:55:34.670866] [INFO] -> Average elapsed time: 19.70 seconds
+[2026-01-29T21:55:34.671095] [INFO] -> Total elapsed time: 236.40 seconds
+[2026-01-29T21:55:34.809790] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/government/city-departments/city-clerk#
+[2026-01-29T21:55:34.812310] [INFO] Running OpenAI prompt
+[2026-01-29T21:55:34.812714] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T21:55:34.813210] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:55:51.252114] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 702, Output tokens: 991, Total cost: $0.002158
+[2026-01-29T21:55:51.253358] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/government/city-departments/city-clerk#', 'https://www.ennistx.gov/government', 'https://www.ennistx.gov/government/city-council']
+[2026-01-29T21:55:51.351012] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/government/boards-commissions
+[2026-01-29T21:55:54.903613] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:55:54.904665] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:55:54.944719] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:55:54.958370] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:55:54.959214] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:55:54.994744] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:55:55.006608] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:55:55.020284] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:55:55.030113] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:55:55.040018] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T21:55:55.343350] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/government/boards-commissions
+[2026-01-29T21:55:55.400106] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T21:56:17.857789] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 18% (32/171)
+[2026-01-29T21:56:19.965062] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T21:56:19.965262] [INFO] -> Elapsed time: 24.62 seconds
+[2026-01-29T21:56:19.965492] [INFO] -> Average elapsed time: 20.05 seconds
+[2026-01-29T21:56:19.965733] [INFO] -> Total elapsed time: 260.62 seconds
+[2026-01-29T21:56:20.069872] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/government/boards-commissions
+[2026-01-29T21:56:20.073967] [INFO] Running OpenAI prompt
+[2026-01-29T21:56:20.074560] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T21:56:20.075269] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:56:40.869980] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 698, Output tokens: 1448, Total cost: $0.003070
+[2026-01-29T21:56:40.872003] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/government/boards-commissions#', 'https://www.ennistx.gov/government/', 'https://www.ennistx.gov/government/mayor-and-city-council']
+[2026-01-29T21:56:40.958176] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/government/boards-commissions#
+[2026-01-29T21:56:44.985391] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:56:44.986383] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:56:45.031846] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:56:45.065844] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:56:45.066744] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:56:45.117089] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:56:45.132325] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:56:45.148554] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:56:45.159897] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:56:45.171969] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T21:56:45.547475] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/government/boards-commissions#
+[2026-01-29T21:56:45.605424] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T21:57:14.016760] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 18% (32/171)
+[2026-01-29T21:57:16.335043] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T21:57:16.335271] [INFO] -> Elapsed time: 30.79 seconds
+[2026-01-29T21:57:16.335456] [INFO] -> Average elapsed time: 20.77 seconds
+[2026-01-29T21:57:16.335699] [INFO] -> Total elapsed time: 290.79 seconds
+[2026-01-29T21:57:16.452515] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/government/boards-commissions#
+[2026-01-29T21:57:16.455162] [INFO] Running OpenAI prompt
+[2026-01-29T21:57:16.455940] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T21:57:16.456712] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:57:36.498062] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 698, Output tokens: 1208, Total cost: $0.002590
+[2026-01-29T21:57:36.499196] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/government/mayor-and-council', 'https://www.ennistx.gov/government/city-council', 'https://www.ennistx.gov/government/boards-commissions', 'https://www.ennistx.gov/government/departments', 'https://www.ennistx.gov/government/city-manager']
+[2026-01-29T21:57:36.596061] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/government/mayor-and-council
+[2026-01-29T21:57:39.776252] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:57:39.777091] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:57:39.831733] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:57:39.854119] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:57:39.855628] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:57:39.912444] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:57:39.930575] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:57:39.948628] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:57:39.962665] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:57:39.981660] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T21:57:40.391676] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/government/mayor-and-council
+[2026-01-29T21:57:40.506260] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T21:58:07.345411] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 18% (32/171)
+[2026-01-29T21:58:09.660325] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T21:58:09.660746] [INFO] -> Elapsed time: 29.27 seconds
+[2026-01-29T21:58:09.661081] [INFO] -> Average elapsed time: 21.28 seconds
+[2026-01-29T21:58:09.661464] [INFO] -> Total elapsed time: 319.27 seconds
+[2026-01-29T21:58:09.742694] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/government/mayor-and-council
+[2026-01-29T21:58:09.744149] [INFO] Running OpenAI prompt
+[2026-01-29T21:58:09.744362] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T21:58:09.744627] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:58:28.787639] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 700, Output tokens: 924, Total cost: $0.002023
+[2026-01-29T21:58:28.788951] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/government/mayor-and-council', 'https://www.ennistx.gov/government']
+[2026-01-29T21:58:28.918803] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/government/departments
+[2026-01-29T21:58:33.361654] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:58:33.362596] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:58:33.403346] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:58:33.417133] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:58:33.417856] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:58:33.461912] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:58:33.475603] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:58:33.488274] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:58:33.499900] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:58:33.512384] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T21:58:33.858762] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/government/departments
+[2026-01-29T21:58:33.913785] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T21:59:02.057560] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 18% (32/171)
+[2026-01-29T21:59:04.752580] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T21:59:04.753155] [INFO] -> Elapsed time: 30.89 seconds
+[2026-01-29T21:59:04.753822] [INFO] -> Average elapsed time: 21.87 seconds
+[2026-01-29T21:59:04.754521] [INFO] -> Total elapsed time: 349.89 seconds
+[2026-01-29T21:59:04.847811] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/government/departments
+[2026-01-29T21:59:04.850375] [INFO] Running OpenAI prompt
+[2026-01-29T21:59:04.850713] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T21:59:04.851088] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T21:59:23.025062] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 696, Output tokens: 1207, Total cost: $0.002588
+[2026-01-29T21:59:23.026635] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/government/city-council', 'https://www.ennistx.gov/government/departments#', 'https://www.ennistx.gov/government/boards-commissions', 'https://www.ennistx.gov/directory']
+[2026-01-29T21:59:23.188132] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/government/departments#
+[2026-01-29T21:59:26.608846] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:59:26.610312] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:59:26.647234] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:59:26.665144] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:59:26.668862] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T21:59:26.714830] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T21:59:26.731855] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:59:26.748159] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:59:26.762237] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T21:59:26.828571] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T21:59:27.153960] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/government/departments#
+[2026-01-29T21:59:27.210030] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T21:59:54.474034] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 18% (32/171)
+[2026-01-29T21:59:56.893411] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T21:59:56.893647] [INFO] -> Elapsed time: 29.74 seconds
+[2026-01-29T21:59:56.894051] [INFO] -> Average elapsed time: 22.28 seconds
+[2026-01-29T21:59:56.894336] [INFO] -> Total elapsed time: 378.74 seconds
+[2026-01-29T21:59:57.000192] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/government/departments#
+[2026-01-29T21:59:57.003557] [INFO] Running OpenAI prompt
+[2026-01-29T21:59:57.004062] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T21:59:57.004671] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T22:00:14.031794] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 696, Output tokens: 1066, Total cost: $0.002306
+[2026-01-29T22:00:14.033130] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/government/departments#', 'https://www.ennistx.gov/government', 'https://www.ennistx.gov/government/city-council', 'https://www.ennistx.gov/government/mayor-and-council', 'https://www.ennistx.gov/government/boards-commissions']
+[2026-01-29T22:00:14.174024] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/directory
+[2026-01-29T22:00:26.687410] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T22:00:26.688221] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T22:00:26.724803] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T22:00:26.740990] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T22:00:26.762297] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T22:00:26.800824] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T22:00:26.818505] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T22:00:26.829006] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T22:00:26.841239] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T22:00:26.853319] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T22:00:27.171603] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/directory
+[2026-01-29T22:00:27.334210] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T22:00:51.852715] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 2% (34/1623)
+[2026-01-29T22:01:01.869586] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 90% (1467/1623)
+[2026-01-29T22:01:06.975087] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T22:01:06.975317] [INFO] -> Elapsed time: 39.80 seconds
+[2026-01-29T22:01:06.975531] [INFO] -> Average elapsed time: 23.21 seconds
+[2026-01-29T22:01:06.975770] [INFO] -> Total elapsed time: 417.80 seconds
+[2026-01-29T22:01:07.080602] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/directory
+[2026-01-29T22:01:07.083188] [INFO] Running OpenAI prompt
+[2026-01-29T22:01:07.083487] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T22:01:07.083803] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T22:01:33.100205] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 5560, Output tokens: 1801, Total cost: $0.004992
+[2026-01-29T22:01:33.101115] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/directory/Administration', 'https://www.ennistx.gov/directory', 'https://www.ennistx.gov/government/city-council', 'https://www.ennistx.gov/government']
+[2026-01-29T22:01:33.194265] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/directory/administration
+[2026-01-29T22:01:35.449521] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T22:01:35.450418] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T22:01:35.486649] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T22:01:35.504713] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T22:01:35.505800] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T22:01:35.556527] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T22:01:35.592947] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T22:01:35.609408] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T22:01:35.623421] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T22:01:35.632000] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T22:01:35.921759] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/directory/administration
+[2026-01-29T22:01:36.004779] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T22:02:01.643575] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 14% (34/234)
+[2026-01-29T22:02:07.514919] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T22:02:07.515166] [INFO] -> Elapsed time: 31.59 seconds
+[2026-01-29T22:02:07.515386] [INFO] -> Average elapsed time: 23.61 seconds
+[2026-01-29T22:02:07.515642] [INFO] -> Total elapsed time: 448.59 seconds
+[2026-01-29T22:02:07.593647] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/directory/administration
+[2026-01-29T22:02:07.595752] [INFO] Running OpenAI prompt
+[2026-01-29T22:02:07.596168] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T22:02:07.596971] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T22:02:22.556669] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1061, Output tokens: 1093, Total cost: $0.002451
+[2026-01-29T22:02:22.557407] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/departments/staff_directory/Administration/', 'https://www.ennistx.gov/departments/Administration/contact-us', 'https://www.ennistx.gov/directory/administration#']
+[2026-01-29T22:02:22.634983] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.ennistx.gov/departments/staff_directory/administration
+[2026-01-29T22:02:24.667602] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T22:02:24.668656] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T22:02:24.708038] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T22:02:24.725446] [DEBUG] Attempting to intercept and save image for: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T22:02:24.726237] [DEBUG] Loading image from URL: https://www.ennistx.gov/media/Design%20Files/NewLogo.png
+[2026-01-29T22:02:24.768657] [INFO] Image saved: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T22:02:24.787766] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T22:02:24.799472] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T22:02:24.810633] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-29T22:02:24.823868] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-29T22:02:25.208363] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.ennistx.gov/departments/staff_directory/administration
+[2026-01-29T22:02:25.293051] [DEBUG] -> Preprocessing with identities: {'Kameron Raburn': ['Kameron Raburn'], 'Lynda Isbell': ['Lynda Isbell'], 'Rowdy Pruitt': ['Rowdy Pruitt'], 'Bruce Jones': ['Bruce Jones'], 'Scott Hejny': ['Scott Hejny'], 'Shirley Watson': ['Shirley Watson'], 'Eric Pierce': ['Eric Pierce']}
+[2026-01-29T22:02:52.467196] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 9% (34/359)
+[2026-01-29T22:02:59.014974] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-29T22:02:59.015182] [INFO] -> Elapsed time: 33.81 seconds
+[2026-01-29T22:02:59.015407] [INFO] -> Average elapsed time: 24.09 seconds
+[2026-01-29T22:02:59.015665] [INFO] -> Total elapsed time: 481.81 seconds
+[2026-01-29T22:02:59.104727] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.ennistx.gov/departments/staff_directory/administration
+[2026-01-29T22:02:59.106906] [INFO] Running OpenAI prompt
+[2026-01-29T22:02:59.107244] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kameron Raburn, Lynda Isbell, Rowdy Pruitt, Bruce Jones, Scott Hejny, Shirley Watson, Eric Pierce
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-29T22:02:59.107846] [INFO] openai LLM call took 0.00 seconds
+[2026-01-29T22:03:20.670027] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1327, Output tokens: 1378, Total cost: $0.003088
+[2026-01-29T22:03:20.671146] [INFO] Page relevance check found related urls: ['https://www.ennistx.gov/departments/Administration', 'https://www.ennistx.gov/departments/Administration/contact-us', 'https://www.ennistx.gov/departments/staff_directory/Administration/', 'https://www.ennistx.gov/departments/staff_directory/administration#']
+[2026-01-29T22:03:21.175118] [INFO] Step 8: WorkflowStatus.FORMAT_OUTPUT Formatting output data.
+[2026-01-29T22:03:21.258072] [INFO] Step 9: CLEANUP
+[2026-01-29T22:03:21.261756] [DEBUG] Image files to keep: {'70839176d59d.png', 'edf4e2d02257.png'}
+[2026-01-29T22:03:21.262009] [DEBUG] All image map data: {'https://www.ennistx.gov/media/Design%20Files/NewLogo.png': 'd34ecadeced7.png', 'https://www.ennistx.gov/media/CityCommission/ISBELL.jpg?width=300': 'edf4e2d02257.png', 'https://www.ennistx.gov/media/Redistricting 2023/Ward 4 Map.jpg?width=300': '3ced16b78307.png', 'https://www.ennistx.gov/media/New Commission/WATSON.jpg?width=300': '10383a439eaf.png', 'https://www.ennistx.gov/media/Ward_Maps_3_25/Ward 1 Map.jpg?width=300': '5f374490c702.png', 'https://www.ennistx.gov/media/New Site Files/C92A6772.jpg?width=300': '70839176d59d.png', 'https://www.ennistx.gov/media/CityCommission/Commission Standing.jpg?width=468': '07f2339134b8.png'}
+[2026-01-29T22:03:21.263783] [DEBUG] Checking image file: 3ced16b78307.png
+[2026-01-29T22:03:21.264420] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_ennis/images/3ced16b78307.png
+[2026-01-29T22:03:21.266300] [DEBUG] Checking image file: 10383a439eaf.png
+[2026-01-29T22:03:21.267238] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_ennis/images/10383a439eaf.png
+[2026-01-29T22:03:21.268281] [DEBUG] Checking image file: edf4e2d02257.png
+[2026-01-29T22:03:21.270915] [DEBUG] Checking image file: 5f374490c702.png
+[2026-01-29T22:03:21.272064] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_ennis/images/5f374490c702.png
+[2026-01-29T22:03:21.273107] [DEBUG] Checking image file: image_map.json
+[2026-01-29T22:03:21.273481] [DEBUG] Checking image file: 70839176d59d.png
+[2026-01-29T22:03:21.274172] [DEBUG] Checking image file: d34ecadeced7.png
+[2026-01-29T22:03:21.274775] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_ennis/images/d34ecadeced7.png
+[2026-01-29T22:03:21.275954] [DEBUG] Checking image file: 07f2339134b8.png
+[2026-01-29T22:03:21.276876] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_ennis/images/07f2339134b8.png
+[2026-01-29T22:03:21.277932] [ERROR] Missing images that were expected to be found: {'70839176d59d.png', 'edf4e2d02257.png'}
+[2026-01-29T22:03:21.360926] [INFO] Step 10: WorkflowStatus.SAVE_OUTPUT Saving output data and config files.
+[2026-01-29T22:03:21.584693] [INFO] Step 11: MAYBE_SEND_TO_GITHUB
+[2026-01-29T22:03:21.585135] [INFO] CRUDDER_UPLOAD_URL: https://api.civicpatch.org/api/internal/pipelines/github_intake
