@@ -1,0 +1,95 @@
+City of Dilley, Texas
+
+
+[Skip Navigation](https://www.cityofdilleytx.com/page/city.directory#contentrightin "Press enter to skip to the Navigation")
+
+
+
+
+
+
+
+Close
+
+![LightBox Active](data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D)
+
+Image 1 of 1
+
+MaximizeRestore image
+
+
+
+[Main Logo
+=========](https://www.cityofdilleytx.com/page/city.homepage)
+
+![Search Button Icon](https://www.cityofdilleytx.com/templates/t_images/search.png)
+
+[Home](https://www.cityofdilleytx.com/page/city.homepage)  |  [Sitemap](https://www.cityofdilleytx.com/page/city.sitemaplist)  |  [Contact Us](https://www.cityofdilleytx.com/page/city.contact)  |  [Translate](https://www.cityofdilleytx.com/page/city.directory#)
+
+* [Home](https://www.cityofdilleytx.com/page/city.homepage)
+* Government
+
+  + [City Council](https://www.cityofdilleytx.com/page/city.council) 
+
+    - [Agendas & Minutes](https://www.cityofdilleytx.com/page/city.cc.agendas)
+    - [City Budget](http://www.cityofdilleytx.com/page/City%20Budgets)
+  + [City Ordinances](https://www.cityofdilleytx.com/page/city.ordinances)
+* Administration 
+
+  + [Directory](https://www.cityofdilleytx.com/page/city.directory)
+  + [Office Staff](https://www.cityofdilleytx.com/page/city.admin)
+  + [City Media](https://www.cityofdilleytx.com/page/Media)
+* Economic Development
+
+  + [Links](https://www.cityofdilleytx.com/page/Links)
+
+Find-it-Fast
+
+* [City Services](https://www.cityofdilleytx.com/page/city.forms)
+
+  + [Download Forms](https://www.cityofdilleytx.com/page/city.forms)
+* [Dilley Library](https://www.cityofdilleytx.com/page/library.home)
+* [Employment in Dilley](https://www.cityofdilleytx.com/page/city.jobs)
+* [Municipal Court](https://www.cityofdilleytx.com/page/Municipal.Court)
+* [Police](https://www.cityofdilleytx.com/page/police.homepage)
+* Parks and Recreation
+* [City Calendar](https://www.cityofdilleytx.com/page/city.calendar)
+* Fire Department
+* Staff Email Login
+* [Public Works](https://www.cityofdilleytx.com/page/city.water_reports)
+* [City Map](https://www.cityofdilleytx.com/page/city.sitemap)
+
+  + [Dilley City Map](https://www.cityofdilleytx.com/upload/page/0176/docs/ETJ%20map.pdf)
+* [Election Information](https://www.cityofdilleytx.com/page/city.elections)
+* [City Budget](https://www.cityofdilleytx.com/page/City%20Budgets)
+
+City of Dilley, Emergency Contact Numbers
+
+| Department | Phone Number |
+| --- | --- |
+| Dilley Police Department (Frio Dispatch) | 830-965-2113 |
+| Emergency - Police\*Fire\*Ambulance | Dial 911 |
+| Frio County Clerk | 830-505-2987 |
+| Frio County Judge | 830-505-2988 |
+| Frio County Sheriff | 830-505-7153 |
+| Frio Regional Hospital | 830-334-3617 |
+
+Page 1 of 1
+
+Dilley City Hall  |  City of Dilley, Texas  |  116 E. Miller  |  Dilley, TX 78017  |  Phone: (830) 965-1624
+
+|  |
+| --- |
+|  |
+| Dilley City Hall, City of Dilley, Texas  116 E. Miller  Dilley, TX 78017  Phone: (830) 965-1624 |
+
+|  |
+| --- |
+|  |
+| Dilley City Hall, City of Dilley, Texas  116 E. Miller  Dilley, TX 78017  Phone: (830) 965-1624 |
+
+Copyright © 2026 - Dilley, Texas.
+
+powered by
+[**ezTask**Titanium](http://www.eztask.com/ "ezTask: Exceptional websites that are affordable and easy to
+    update!") TM
