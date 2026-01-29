@@ -1,0 +1,152 @@
+City Secretary | Clyde TX
+
+
+
+[Skip to main content](https://www.clyde-tx.gov/comm-development/page/city-secretary#main-content)
+
+[📢 City Office Closure & Trash Service Update📢](https://www.clyde-tx.gov/community/page/city-office-closure-trash-service-update)
+
+[\*\*Clyde Connect Notification System\*\*](https://www.clyde-tx.gov/community/page/clyde-connect-notification-system)
+
+Toggle Navigation
+
+[![Clyde Texas Home Page](https://www.clyde-tx.gov/themes/custom/clydetx/clydetx_theme/logo.png)](https://www.clyde-tx.gov/)
+
+Close Navigation
+
+Header Links
+------------
+
+* [Home](https://www.clyde-tx.gov/)
+* [Contact Us](https://www.clyde-tx.gov/contact-us)
+
+Main navigation
+---------------
+
+* [Government](https://www.clyde-tx.gov/bc)
+
+  + [Mayor & City Council](https://www.clyde-tx.gov/bc-cc)
+  + [Economic Development](https://www.clyde-tx.gov/bc-ed)
+  + [Ordinances & Resolutions](https://ecode360.com/CL6278 " (opens in a new window)")
+* [Departments](https://www.clyde-tx.gov/departments)
+
+  + [Animal Control](https://www.clyde-tx.gov/animal-control)
+  + [Fire Department](https://www.clyde-tx.gov/fire-department)
+  + [Municipal Court](https://www.clyde-tx.gov/municipal-court)
+  + [Parks & Recreation](https://www.clyde-tx.gov/parks-rec)
+  + [Police Department](https://www.clyde-tx.gov/police-department)
+  + [Public Works](https://www.clyde-tx.gov/public-works)
+* [Community](https://www.clyde-tx.gov/community)
+
+  + [About Us](https://www.clyde-tx.gov/about-us)
+  + [Library](https://www.clyde-tx.gov/library)
+  + [Clyde Economic Development Corporation](https://www.clyde-tx.gov/clyde-edc)
+  + [Community Development](https://www.clyde-tx.gov/comm-development)
+  + [Job Openings](https://www.clyde-tx.gov/jobs)
+  + [Hanner Sports Complex](https://www.clyde-tx.gov/community/page/hanner-sports-complex "Hanner Sports Complex")
+
+Your Search
+
+ Departments & Committees
+ Type
+ Event Date
+
+Breadcrumb
+----------
+
+1. [Home](https://www.clyde-tx.gov/)
+2. [Community Development](https://www.clyde-tx.gov/comm-development)
+
+Toggle Menu
+
+City Secretary
+==============
+
+City Code of Ordinances
+-----------------------
+
+The City of Clyde's Code of Ordinances is available electronically through the [Franklin Legal Publishing website](https://z2.franklinlegal.net/franklin/Z2Browser2.html?showset=clydeset "(opens in a new window)").
+
+Operational Ordinances, such as the Annual Budget, Utility Rates, and the Tax Levy Ordinance, are not included on the Franklin Legal Publishing website but are available here.
+
+To send a Request for Public Information, send us a [Public Information Request email](mailto:cthornton@clydecityhall.com) or fill out the form attached to the bottom of this page and email or mail it to us. Allow up to ten (10) business days for a response.
+
+Contact Information
+-------------------
+
+**In Person:**  
+222 Oak Street, Clyde, TX 79510
+
+**By Mail:**  
+PO Box 1155, Clyde, TX 79510
+
+**Telephone:**  
+325.893.0068
+
+**Fax:**  
+325.893.5010
+
+Email
+
+[Annual Budget](https://www.clyde-tx.gov/comm-development/page/annual-budget)
+
+Supporting Documents
+--------------------
+
+* [Public Information Request Form (PDF)
+  139.04 KB](https://www.clyde-tx.gov/media/2471)
+
+[Print](https://www.clyde-tx.gov/print/pdf/node/2838)
+
+[Community Development
+---------------------](https://www.clyde-tx.gov/comm-development)
+
+* [Building Permits](https://www.clyde-tx.gov/comm-development/page/building-permits)
+* [City Administrator](https://www.clyde-tx.gov/comm-development/page/city-administrator)
+* City Secretary
+  [City Secretary](https://www.clyde-tx.gov/comm-development/page/city-secretary)
+
+  + [Agendas & Minutes](https://www.clyde-tx.gov/meetings)
+  + Election Information
+    [Election Information](https://www.clyde-tx.gov/comm-development/page/election-information)
+
+    - [Election Information Documents](https://www.clyde-tx.gov/comm-development/page/election-information-documents)
+    - [Documentos de Información Electoral](https://www.clyde-tx.gov/about-us/page/documentos-de-informacion-electoral)
+  + Budget & Taxes
+    [Budget & Taxes](https://www.clyde-tx.gov/comm-development/page/budget-taxes)
+
+    - [Annual Budget Archive](https://www.clyde-tx.gov/comm-development/page/annual-budget-archive)
+    - [Annual Budget](https://www.clyde-tx.gov/comm-development/page/annual-budget)
+    - [Financial Information](https://www.clyde-tx.gov/about-us/page/financial-information)
+* [Code Enforcement](https://www.clyde-tx.gov/comm-development/page/code-enforcement)
+* [Citation Payment](https://www.clyde-tx.gov/comm-development/page/citation-payment)
+
+Contact Information
+-------------------
+
+Phone Number
+
+325.893.4234
+
+Email
+
+[Contact Group](https://www.clyde-tx.gov/email-contact/node/2224/field_email/contact_information "(opens in a new window)")
+
+Address
+
+222 Oak Street  
+P.O Box 1155  
+Clyde, TX 79510
+
+
+
+Utility Links Menu
+------------------
+
+* [Home](https://www.clyde-tx.gov/)
+* [Staff Login](https://www.clyde-tx.gov/login?destination=/comm-development/page/city-secretary)
+* [Accessibility](https://www.clyde-tx.gov/library/page/website-accessibility)
+
+City of Clyde, Texas | PO Box 1155, 222 Oak Street | Clyde, Texas 79510 | 325-893-4234
+
+[Government Websites by CivicPlus®](https://www.civicplus.com/ "(opens in a new window)")
