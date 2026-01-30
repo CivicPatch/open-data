@@ -1,0 +1,2332 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-i4-active wf-muli-n7-active wf-muli-n3-active wf-muli-n4-active wf-active has-webFonts"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,italic,regular|" media="all"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-MNH2VHE2ZG&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61r1"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-MNH2VHE2ZG';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = true;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	
+	<meta name="category0" content="Home">
+<meta name="category1" content="How Do I...">
+
+	
+	<meta name="theme-color" content="#000000">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>How Do I... | Alvin, TX</title>
+
+		<meta name="description" content="Find answers to commonly sought after information. ">
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '390px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/-2120979401.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style></head>
+<body class="wide cpTextResizeOn doneLoading"><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="https://www.alvin.gov/Common/images/ajax-loader.gif" alt="Loading" title="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks">
+<a href="https://www.alvin.gov/9/How-Do-I#cc5f8c90dc-b4cb-431b-90ee-10648f8df655" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="1">
+    <input type="hidden" id="hdnContentCollectionID" value="8c331bbb-f4fa-4f00-ac19-44fb1eddc0a2">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="1">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID">
+    <input type="hidden" id="pagePageID" value="9">
+
+            <img id="imgLogoPrintPreview" src="https://www.alvin.gov/ImageRepository/Document?documentID=27" alt="Alvin, TX">
+<div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+
+
+
+<!-- Begin Signed Out Bar -->
+<div class="cpToolbar user public" style="z-index: 1;">
+    <div class="inner selfClear">
+        <p class="dropdown"><a href="https://www.alvin.gov/MyAccount/ProfileCreate" role="link" class="myConnections" id="signedOutToolbarCreateProfileButton">Create a Website Account</a> <span class="welcomeMessage">- Manage notification subscriptions, save form progress and more. &nbsp;&nbsp;</span></p>
+        <ul class="nav secondary">
+	        <li><a href="https://www.alvin.gov/MyAccount" role="link" class="button" id="loggedOutToolbarSignInButton"><span>Website Sign In</span></a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#signedOutToolbarCreateProfileButton').keypress(function (e) { if (e.which === 0) return; $(this).click(); });
+        $('#signedOutToolbarCreateProfileButton').click(function (event) {
+        	event.preventDefault();
+        	window.location.href = '/MyAccount/ProfileCreate?from=url&url=/&dn=' + window.location.origin;
+        });
+
+			
+				$('#loggedOutToolbarSignInButton').click(function (event) {
+					event.preventDefault();
+					window.location.href = '/MyAccount/?from=url&url=' + encodeURIComponent(window.location.href.replace(window.location.origin, '')) + '&dn=' + window.location.host;
+				});
+			
+
+		if ('False' == 'True') {
+            $('#loggedOutToolbarSignInButton').hide();
+		}
+    })
+</script>
+<!-- End Signed Out Bar -->
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 35px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="bodyContainerTS">
+<!-- Scroll Logo --><div data-cprole="structuralContainer" id="scrollLogoContainerTS">
+<div class="siteWrap3"><div data-cprole="structuralContainer" id="scrollLogoContainerTSa">
+<div data-cprole="banner" id="scrollLogoTS" class="scrollLogoTS empty">
+
+
+
+
+				<a id="scrollLogoTS-49" style="			display: block; text-align: center;
+" class="bannerObject" href="https://www.alvin.gov/" target="_self"><img alt="Home Page" class="bannerObject" height="358" src="https://www.alvin.gov/ImageRepository/Document?documentID=68" width="391"></a>
+</div>
+</div></div>
+</div><!-- Header Container --><header data-cprole="structuralContainer" id="headerContainerTS" class="fixedTopTS" style="top: 34px;">
+<div class="siteWrap3"><div data-cprole="banner" id="bannerLogoTS" class="bannerLogoTS empty">
+
+
+
+
+				<a id="bannerLogoTS-48" style="			display: block; text-align: center;
+" class="bannerObject" href="https://www.alvin.gov/" target="_self"><img alt="Home Page" class="bannerObject" height="278" src="https://www.alvin.gov/ImageRepository/Document?documentID=67" width="366"></a>
+</div><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem27" class="topMenuItem" role="none" data-pageid="27" data-displaymegamenu="True" style="width: 21.3333%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem1 " href="https://www.alvin.gov/27/Government" target="_self">   Government </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem101" class="topMenuItem" role="none" data-pageid="101" data-displaymegamenu="True" style="width: 21.6036%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavDepartments" class="navMainItem mainNavItem mainNavItem2 " href="https://www.alvin.gov/101/Departments" target="_self">   Departments </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem31" class="topMenuItem" role="none" data-pageid="31" data-displaymegamenu="True" style="width: 20.2523%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavCommunity" class="navMainItem mainNavItem mainNavItem3 " href="https://www.alvin.gov/31/Community" target="_self">   Community </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem35" class="topMenuItem" role="none" data-pageid="35" data-displaymegamenu="True" style="width: 17.4595%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavServices" class="navMainItem mainNavItem mainNavItem4 " href="https://www.alvin.gov/35/Services" target="_self">   Services </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem9" class="topMenuItem" role="none" data-pageid="9" data-displaymegamenu="True" style="width: 19.3514%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavHowDoI" class="navMainItem mainNavItem mainNavItem5 " href="https://www.alvin.gov/9/How-Do-I" target="_self">   How Do I... </a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=1&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = false;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="0"></aside></nav></div>
+</header><!-- Banner --><div data-cprole="structuralContainer" id="bannerContainerTS" class="noOverflowTS" style="padding-top: 90px;">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="bannerSizingTS">
+<div class="siteWrap"><div data-cprole="structuralContainer" id="bannerContentTS">
+<div data-cprole="contentContainer" id="searchTS">	<div id="cc8a495835-f800-4ba4-b10e-725092d3f143" data-containerid="8a495835-f800-4ba4-b10e-725092d3f143" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="5bcb7c41-8999-41ed-8f20-c5e30d1952b0">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id45ea93d8-1eca-43ea-a110-e814eff930be" style="height: 65px;" data-widgetcontainerid="45ea93d8-1eca-43ea-a110-e814eff930be">
+	
+<div data-widget-id="8a69c864-dc7d-4171-90ea-173b7bd14c5e" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButton8a69c864-dc7d-4171-90ea-173b7bd14c5e").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDept8a69c864-dc7d-4171-90ea-173b7bd14c5e").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchField8a69c864-dc7d-4171-90ea-173b7bd14c5e").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDept8a69c864-dc7d-4171-90ea-173b7bd14c5e").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDept8a69c864-dc7d-4171-90ea-173b7bd14c5e").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchField8a69c864-dc7d-4171-90ea-173b7bd14c5e").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDept8a69c864-dc7d-4171-90ea-173b7bd14c5e").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchField8a69c864-dc7d-4171-90ea-173b7bd14c5e").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchField8a69c864-dc7d-4171-90ea-173b7bd14c5e"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin43 widgetOptionSet15" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBox8a69c864-dc7d-4171-90ea-173b7bd14c5e ui-autocomplete-input" cp5ph="true" id="searchField8a69c864-dc7d-4171-90ea-173b7bd14c5e" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search..." title="Search..." type="text" value="" autocomplete="off">
+						<a href="https://www.alvin.gov/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButton8a69c864-dc7d-4171-90ea-173b7bd14c5e" role="button"><img alt="Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=80" data-image="/ImageRepository/Document?documentID=81" src="https://www.alvin.gov/ImageRepository/Document?documentID=81"></a>
+
+			<label class="searchLabel" for="searchField8a69c864-dc7d-4171-90ea-173b7bd14c5e">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #373330;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #373330;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #373330;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #373330;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBox8a69c864-dc7d-4171-90ea-173b7bd14c5e
+	{
+		color: #373330;
+		font-family: Open Sans;
+font-size: 1.1em;
+border-radius: 100px;
+height: 65px;
+border: 5px solid rgba(255,255,255,.5);
+background-clip: padding-box;
+padding: 0 80px 0 25px;
+	}
+	.widgetSearch .widgetBody .widgetSearchButton8a69c864-dc7d-4171-90ea-173b7bd14c5e
+	{
+		margin: 10px;
+width: 45px;
+	}
+	.widgetSearch .widgetSearch-onlyDept8a69c864-dc7d-4171-90ea-173b7bd14c5e
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDept8a69c864-dc7d-4171-90ea-173b7bd14c5e
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchField8a69c864-dc7d-4171-90ea-173b7bd14c5e").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div>
+</div></div>
+</div>
+
+
+
+
+		<div id="bannerImagesJSON2" class="hidden"></div><div class="bannerObject external fixedBanner" id="bannerDivbanner1" style="min-height: 420px; top: 0px; left: -27.5px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img class="bannerObject" width="1265px" style="position: absolute; left: 0px; margin: 0px; width: 1320px;" src="https://www.alvin.gov/ImageRepository/Document?documentID=65" data-is-delayed="false" alt=""></div>
+		
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner1',
+								{"BannerOptionID":2,"ThemeID":1,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":2,"SlideShowSlideTiming":null,"SlideshowTransition":0,"SlideShowTransitionTiming":null,"ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":59,"BannerOptionID":2,"FileName":"/ImageRepository/Document?documentID=63","Height":700,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":57,"BannerOptionID":2,"FileName":"/ImageRepository/Document?documentID=65","Height":700,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":2,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":58,"BannerOptionID":2,"FileName":"/ImageRepository/Document?documentID=64","Height":700,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":3,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""}],"BannerVideos":[],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								'/App_Themes/Interior/Images/',
+								'Rotating');
+						});
+				});
+			</script>
+
+</div>
+</div><!-- Content container --><div data-cprole="structuralContainer" id="mainContainerTS">
+<div class="siteWrap"><div data-cprole="structuralContainer" id="mainWrapTS" class="mainWrap" role="main">
+<div data-cprole="structuralContainer" id="outerContentWrapTS" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="contentWrapTS" class="contentWrap">
+<div data-cprole="breadCrumbs" id="breadCrumbs" class="breadCrumbContainer">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="https://www.alvin.gov/">Home</a></li><li id="currentBCPage" data-pageid="9">How Do I...</li>
+		</ol>
+
+	   
+    
+</div><div data-cprole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="9">
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="1">
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="1120">
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="How Do I...">
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="False">
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False">
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published">
+
+				<h1 id="versionHeadLine" class="headline">
+
+How Do I...		</h1>
+	
+		<div id="cc5f8c90dc-b4cb-431b-90ee-10648f8df655" data-containerid="5f8c90dc-b4cb-431b-90ee-10648f8df655" class="pageContent cpGrid cpGrid24" data-contentcontainerbreakpoint="15" data-smoothscrolling="True">
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="0d54a982-f95a-48d9-91d9-22b7df577e9c">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id1a7ed41d-41e3-40b3-b6cf-66e31d551132" style="height: 398px;" data-widgetcontainerid="1a7ed41d-41e3-40b3-b6cf-66e31d551132">
+	
+    <section class="widget clear dynamicSubpage widgetPages skin43 wide" id="widgetPage4e26d2fe-0cdb-4d81-b91c-6e0dda6b6a69" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Pages">
+		<div class="hidden widgetTypeID">9</div>
+		<div class="hidden depth">2</div>
+		<div class="hidden cols">2</div>
+		<div class="hidden format">3</div>		
+		<div class="widgetBody">
+			
+	<div class="widgetBody cpGrid cpGrid2 ">
+		<div class="row wide">
+					<div class="col col1">
+						<ol class="semanticList layout3" role="menu">
+			<li class="megaMenuItem widgetItem level1" data-pageid="143" role="none">
+				<h4 class="widgetTitle">
+					<a role="menuitem" href="https://www.alvin.gov/143/Apply-For" target="_self">Apply For</a>
+				</h4>
+						<ol class="semanticList" role="menu">
+								<li class="megaMenuItem level2" role="none" data-pageid="498">
+								<a role="menuitem" href="https://www.alvin.gov/172/Alvin-Upfront-Citizens-Academy" target="_self">Alvin Upfront Citizens Academy</a>											</li>
+					<li class="megaMenuItem level2" role="none" data-pageid="163">
+								<a role="menuitem" href="https://www.alvin.gov/162/Volunteer-Program" target="_self">Animal Shelter Volunteer Program</a>											</li>
+					<li class="megaMenuItem level2" role="none" data-pageid="304">
+								<a role="menuitem" href="https://www.alvin.gov/FormCenter/City-Secretary-4/Consent-and-Willingness-to-Serve-on-a-Bo-54" target="_self">Board or Commission Position</a>											</li>
+					<li class="megaMenuItem level2" role="none" data-pageid="135">
+								<a role="menuitem" href="https://cityofalvin.applicantpro.com/jobs/" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self">Employment Opportunities</a>											</li>
+		</ol>
+
+			</li>			<li class="megaMenuItem widgetItem level1" data-pageid="142" role="none">
+				<h4 class="widgetTitle">
+					<a role="menuitem" href="https://www.alvin.gov/142/Contact" target="_self">Contact</a>
+				</h4>
+						<ol class="semanticList" role="menu">
+								<li class="megaMenuItem level2" role="none" data-pageid="171">
+								<a role="menuitem" href="https://www.alvin.gov/165/Boards-Commissions" target="_self">Boards &amp; Commissions</a>											</li>
+		</ol>
+
+			</li>			<li class="megaMenuItem widgetItem level1" data-pageid="144" role="none">
+				<h4 class="widgetTitle">
+					<a role="menuitem" href="https://www.alvin.gov/144/Find" target="_self">Find</a>
+				</h4>
+						<ol class="semanticList" role="menu">
+								<li class="megaMenuItem level2" role="none" data-pageid="141">
+								<a role="menuitem" href="https://www.alvin.gov/BusinessDirectoryii.aspx" target="_self">Business Directory</a>											</li>
+					<li class="megaMenuItem level2" role="none" data-pageid="357">
+								<a role="menuitem" href="https://www.alvin.gov/351/Online-Services" target="_self">Online Services</a>											</li>
+					<li class="megaMenuItem level2" role="none" data-pageid="359">
+								<a role="menuitem" href="https://www.petfinder.com/" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self">Pets to Adopt</a>											</li>
+		</ol>
+
+			</li>			<li class="megaMenuItem widgetItem level1" data-pageid="427" role="none">
+				<h4 class="widgetTitle">
+					<a role="menuitem" href="https://www.alvin.gov/427/Purchase" target="_self">Purchase</a>
+				</h4>
+						<ol class="semanticList" role="menu">
+								<li class="megaMenuItem level2" role="none" data-pageid="428">
+								<a role="menuitem" href="https://www.alvin.gov/178/Oak-Park-Cemetery" target="_self">A Space in Oak Park Cemetery</a>											</li>
+		</ol>
+
+			</li>						</ol>
+					</div>
+					<div class="col col1">
+						<ol class="semanticList layout3" role="menu">
+			<li class="megaMenuItem widgetItem level1" data-pageid="145" role="none">
+				<h4 class="widgetTitle">
+					<a role="menuitem" href="https://www.alvin.gov/145/Sign-Up-For" target="_self">Sign Up For</a>
+				</h4>
+						<ol class="semanticList" role="menu">
+								<li class="megaMenuItem level2" role="none" data-pageid="136">
+								<a role="menuitem" href="https://member.everbridge.net/index/892807736729012#/login" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self">Alerts from Everbridge</a>											</li>
+					<li class="megaMenuItem level2" role="none" data-pageid="299">
+								<a role="menuitem" href="https://www.alvin.gov/298/Residential-Commercial-Garbage-Collectio" target="_self">Garbage Collection</a>											</li>
+					<li class="megaMenuItem level2" role="none" data-pageid="130">
+								<a role="menuitem" href="https://www.alvin.gov/199/Hurricane-Preparedness" target="_self">Hurricane Alerts</a>											</li>
+		</ol>
+
+			</li>			<li class="megaMenuItem widgetItem level1" data-pageid="146" role="none">
+				<h4 class="widgetTitle">
+					<a role="menuitem" href="https://www.alvin.gov/146/Submit" target="_self">Submit</a>
+				</h4>
+						<ol class="semanticList" role="menu">
+								<li class="megaMenuItem level2" role="none" data-pageid="392">
+								<a role="menuitem" href="https://www.alvin.gov/bids.aspx" target="_self">Bid Proposal</a>											</li>
+					<li class="megaMenuItem level2" role="none" data-pageid="221">
+								<a role="menuitem" href="https://www.alvin.gov/FormCenter/Fire-Department-5/Request-a-Class-47" target="_self">Fire Education Request</a>											</li>
+					<li class="megaMenuItem level2" role="none" data-pageid="181">
+								<a role="menuitem" href="https://www.alvin.gov/166/Public-Information" target="_self">Public Information Request</a>											</li>
+					<li class="megaMenuItem level2" role="none" data-pageid="139">
+								<a role="menuitem" href="https://www.alvin.gov/FormCenter/City-Secretary-4/Submit-Questions-or-Concerns-55" target="_self">Questions &amp; Concerns</a>											</li>
+					<li class="megaMenuItem level2" role="none" data-pageid="220">
+								<a role="menuitem" href="https://www.alvin.gov/FormCenter/Fire-Department-5/Request-for-Inspection-48" target="_self">Request for a Fire Inspection</a>											</li>
+					<li class="megaMenuItem level2" role="none" data-pageid="137">
+								<a role="menuitem" href="https://www.alvin.gov/301/Payment-Options-Penalties" target="_self">Utility Payments</a>											</li>
+		</ol>
+
+			</li>						</ol>
+					</div>
+		</div>
+	</div>
+
+
+
+
+		</div>
+	</section>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: none;">	<div id="ccd6923f64-2522-4bce-8783-61ad1b416b69" data-containerid="d6923f64-2522-4bce-8783-61ad1b416b69" class="pageContent cpGrid cpGrid24 showInMobile" data-contentcontainerbreakpoint="40">
+				                
+
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="siteSidebarTS" class="siteSidebar">
+<aside data-cprole="contentContainer" id="sidebarContainer1TS">	<div id="cc27c6bac0-21f6-40b1-8f21-2ec5e2fef6ae" data-containerid="27c6bac0-21f6-40b1-8f21-2ec5e2fef6ae" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav">
+
+
+
+
+
+	<ol role="menu" id="secondaryMenusecondaryNav" data-parent="9" class="rootNavMenu accordionNav">
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem143" data-pageid="143">
+		<div class="accordionNavItem">
+			<a href="https://www.alvin.gov/143/Apply-For" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Apply For</a>
+				<a href="https://www.alvin.gov/9/How-Do-I#" class="openAccordionNav accordionSecondaryNavItem" title="Expand Apply For Submenu"></a>
+		</div>
+					<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" style="display: none;" data-parent="143">
+						<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem498" data-pageid="498">
+			<div class="accordionNavItem">
+				<a href="https://www.alvin.gov/172/Alvin-Upfront-Citizens-Academy" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Alvin Upfront Citizens Academy</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem163" data-pageid="163">
+			<div class="accordionNavItem">
+				<a href="https://www.alvin.gov/162/Volunteer-Program" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Animal Shelter Volunteer Program</span></a>
+					<a href="https://www.alvin.gov/9/How-Do-I#" class="openAccordionNav accordionNavMenuItem" title="Expand Animal Shelter Volunteer Program Submenu"></a>
+			</div>
+							<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl2" style="display: none;" data-parent="163">
+							<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem497" data-pageid="497">
+			<div class="accordionNavItem">
+				<a href="https://www.alvin-tx.gov/172/Alvin-Upfront-Citizens-Academy" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Alvin Upfront Citizens Academy</span></a>
+			</div>
+					</li>
+
+				</ol>
+		</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem304" data-pageid="304">
+			<div class="accordionNavItem">
+				<a href="https://www.alvin.gov/FormCenter/City-Secretary-4/Consent-and-Willingness-to-Serve-on-a-Bo-54" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Board or Commission Position</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem135" data-pageid="135">
+			<div class="accordionNavItem">
+				<a href="https://cityofalvin.applicantpro.com/jobs/" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Employment Opportunities</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem142" data-pageid="142">
+		<div class="accordionNavItem">
+			<a href="https://www.alvin.gov/142/Contact" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Contact</a>
+				<a href="https://www.alvin.gov/9/How-Do-I#" class="openAccordionNav accordionSecondaryNavItem" title="Expand Contact Submenu"></a>
+		</div>
+					<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" style="display: none;" data-parent="142">
+						<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem171" data-pageid="171">
+			<div class="accordionNavItem">
+				<a href="https://www.alvin.gov/165/Boards-Commissions" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Boards &amp; Commissions</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem144" data-pageid="144">
+		<div class="accordionNavItem">
+			<a href="https://www.alvin.gov/144/Find" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Find</a>
+				<a href="https://www.alvin.gov/9/How-Do-I#" class="openAccordionNav accordionSecondaryNavItem" title="Expand Find Submenu"></a>
+		</div>
+					<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" style="display: none;" data-parent="144">
+						<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem141" data-pageid="141">
+			<div class="accordionNavItem">
+				<a href="https://www.alvin.gov/BusinessDirectoryii.aspx" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Business Directory</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem357" data-pageid="357">
+			<div class="accordionNavItem">
+				<a href="https://www.alvin.gov/351/Online-Services" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Online Services</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem359" data-pageid="359">
+			<div class="accordionNavItem">
+				<a href="https://www.petfinder.com/" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Pets to Adopt</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem427" data-pageid="427">
+		<div class="accordionNavItem">
+			<a href="https://www.alvin.gov/427/Purchase" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Purchase</a>
+				<a href="https://www.alvin.gov/9/How-Do-I#" class="openAccordionNav accordionSecondaryNavItem" title="Expand Purchase Submenu"></a>
+		</div>
+					<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" style="display: none;" data-parent="427">
+						<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem428" data-pageid="428">
+			<div class="accordionNavItem">
+				<a href="https://www.alvin.gov/178/Oak-Park-Cemetery" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">A Space in Oak Park Cemetery</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem145" data-pageid="145">
+		<div class="accordionNavItem">
+			<a href="https://www.alvin.gov/145/Sign-Up-For" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Sign Up For</a>
+				<a href="https://www.alvin.gov/9/How-Do-I#" class="openAccordionNav accordionSecondaryNavItem" title="Expand Sign Up For Submenu"></a>
+		</div>
+					<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" style="display: none;" data-parent="145">
+						<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem136" data-pageid="136">
+			<div class="accordionNavItem">
+				<a href="https://member.everbridge.net/index/892807736729012#/login" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Alerts from Everbridge</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem299" data-pageid="299">
+			<div class="accordionNavItem">
+				<a href="https://www.alvin.gov/298/Residential-Commercial-Garbage-Collectio" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Garbage Collection</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem130" data-pageid="130">
+			<div class="accordionNavItem">
+				<a href="https://www.alvin.gov/199/Hurricane-Preparedness" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Hurricane Alerts</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li role="menuitem" aria-haspopup="true" class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem146" data-pageid="146">
+		<div class="accordionNavItem">
+			<a href="https://www.alvin.gov/146/Submit" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Submit</a>
+				<a href="https://www.alvin.gov/9/How-Do-I#" class="openAccordionNav accordionSecondaryNavItem" title="Expand Submit Submenu"></a>
+		</div>
+					<ol role="menu" aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" style="display: none;" data-parent="146">
+						<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem392" data-pageid="392">
+			<div class="accordionNavItem">
+				<a href="https://www.alvin.gov/bids.aspx" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Bid Proposal</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem221" data-pageid="221">
+			<div class="accordionNavItem">
+				<a href="https://www.alvin.gov/FormCenter/Fire-Department-5/Request-a-Class-47" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Fire Education Request</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem181" data-pageid="181">
+			<div class="accordionNavItem">
+				<a href="https://www.alvin.gov/166/Public-Information" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Public Information Request</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem139" data-pageid="139">
+			<div class="accordionNavItem">
+				<a href="https://www.alvin.gov/FormCenter/City-Secretary-4/Submit-Questions-or-Concerns-55" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Questions &amp; Concerns</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem220" data-pageid="220">
+			<div class="accordionNavItem">
+				<a href="https://www.alvin.gov/FormCenter/Fire-Department-5/Request-for-Inspection-48" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Request for a Fire Inspection</span></a>
+			</div>
+					</li>
+		<li role="menuitem" aria-haspopup="true" class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem137" data-pageid="137">
+			<div class="accordionNavItem">
+				<a href="https://www.alvin.gov/301/Payment-Options-Penalties" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Utility Payments</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = false;
+		});
+	</script>
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			$('*[id^="SideItem"]').each(function () {
+				var ids = $('[id="' + this.id + '"]');
+				if (ids.length > 1)
+					$.each(ids, function (index, value) {
+						value.id = value.id + '_' + index;
+					});
+			});
+
+			$('.hasAccordionChildren .openAccordionNav').click(function (e) {
+				e.preventDefault();
+				showHideAccordionMenuForSecondaryNav($(this));
+			});
+
+			$("#secondaryNav .grippy").each(function () {
+				menuManager.setupDraggableElement($(this), SIDE_MENU, '#secondaryNav');
+			});
+
+			$("#secondaryNav li").each(function () {
+				menuManager.setupDroppableAccordionElement($(this), SIDE_MENU);
+			});
+		});
+	</script>
+
+
+
+</nav><aside data-cprole="contentContainer" id="sidebarContainer2TS">	<div id="cc522b4d67-17f8-4bc8-a71b-b715ec595a39" data-containerid="522b4d67-17f8-4bc8-a71b-b715ec595a39" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div><!-- GBs --><div data-cprole="structuralContainer" id="gbsContainerTS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="gbsTS">	<div id="cc233746d0-3319-4ec1-af90-88d50a8220ca" data-containerid="233746d0-3319-4ec1-af90-88d50a8220ca" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="1">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col10 first" style="height: auto;" data-widgetcontainerid="afeb7f59-7880-4f09-951b-2cd4ecc64018">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col10 first last idb6e00ade-313d-43a6-933f-4ca68c5042ed" style="height: 193px;" data-widgetcontainerid="b6e00ade-313d-43a6-933f-4ca68c5042ed">
+	
+<div data-widget-id="027eb27b-ba38-473a-a6a1-687c5be82f4a" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget027eb27b-ba38-473a-a6a1-687c5be82f4a" class="widget widgetGraphicLinks skin45 widgetOptionSet47 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.alvin.gov/399/Online-Payments" target="_self" class="fancyButton fancyButton46 ">
+		<span>
+			<span><span class="text">Online Payments</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton46.fancyButton:link,.fancyButton46.fancyButton:visited, .fancyButton46div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=72');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 120px;
+transition:.2s ease-in-out;}
+.fancyButton46.fancyButton:hover,.fancyButton46.fancyButton:focus,.fancyButton46.fancyButton:active,.fancyButton46.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton46.fancyButton:link > span,.fancyButton46.fancyButton:visited > span, .fancyButton46div.fancyButton > span{
+}
+.fancyButton46.fancyButton:hover > span,.fancyButton46.fancyButton:focus > span,.fancyButton46.fancyButton:active > span,.fancyButton46.fancyButton.hover > span{
+}
+.fancyButton46.fancyButton .text{
+	color: #000000;
+	font-family: "Open Sans";
+	padding-top: 9em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9em;
+	background-image: url('/ImageRepository/Document?documentID=75');
+	background-repeat: no-repeat;
+	background-position: center 2.75em ;
+background-size: 60px;
+transition:.2s ease-in-out;
+}
+.fancyButton46.fancyButton:hover .text,.fancyButton46.fancyButton:focus .text,.fancyButton46.fancyButton:active .text,.fancyButton46.fancyButton.hover .text{
+	color: #000000;
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 1.75em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.alvin.gov/232/Municipal-Court" target="_self" class="fancyButton fancyButton47 ">
+		<span>
+			<span><span class="text">Municipal Court</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton47.fancyButton:link,.fancyButton47.fancyButton:visited, .fancyButton47div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=72');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 120px;
+transition:.2s ease-in-out;}
+.fancyButton47.fancyButton:hover,.fancyButton47.fancyButton:focus,.fancyButton47.fancyButton:active,.fancyButton47.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton47.fancyButton:link > span,.fancyButton47.fancyButton:visited > span, .fancyButton47div.fancyButton > span{
+}
+.fancyButton47.fancyButton:hover > span,.fancyButton47.fancyButton:focus > span,.fancyButton47.fancyButton:active > span,.fancyButton47.fancyButton.hover > span{
+}
+.fancyButton47.fancyButton .text{
+	color: #000000;
+	font-family: "Open Sans";
+	padding-top: 9em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9em;
+	background-image: url('/ImageRepository/Document?documentID=77');
+	background-repeat: no-repeat;
+	background-position: center 2.75em ;
+background-size: 60px;
+transition:.2s ease-in-out;
+}
+.fancyButton47.fancyButton:hover .text,.fancyButton47.fancyButton:focus .text,.fancyButton47.fancyButton:active .text,.fancyButton47.fancyButton.hover .text{
+	color: #000000;
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 1.75em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofalvin.applicantpro.com/jobs/" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self" class="fancyButton fancyButton48 ">
+		<span>
+			<span><span class="text">Employment</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton48.fancyButton:link,.fancyButton48.fancyButton:visited, .fancyButton48div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=72');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 120px;
+transition:.2s ease-in-out;}
+.fancyButton48.fancyButton:hover,.fancyButton48.fancyButton:focus,.fancyButton48.fancyButton:active,.fancyButton48.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton48.fancyButton:link > span,.fancyButton48.fancyButton:visited > span, .fancyButton48div.fancyButton > span{
+}
+.fancyButton48.fancyButton:hover > span,.fancyButton48.fancyButton:focus > span,.fancyButton48.fancyButton:active > span,.fancyButton48.fancyButton.hover > span{
+}
+.fancyButton48.fancyButton .text{
+	color: #000000;
+	font-family: "Open Sans";
+	padding-top: 9em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9em;
+	background-image: url('/ImageRepository/Document?documentID=73');
+	background-repeat: no-repeat;
+	background-position: center 2.75em ;
+background-size: 60px;
+transition:.2s ease-in-out;
+}
+.fancyButton48.fancyButton:hover .text,.fancyButton48.fancyButton:focus .text,.fancyButton48.fancyButton:active .text,.fancyButton48.fancyButton.hover .text{
+	color: #000000;
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 1.75em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col14 last" style="height: auto;" data-widgetcontainerid="5200b126-204c-4032-845e-7d4ba7b7b452">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col14 first last id86da6095-bfce-4420-b71e-a192790299ee" style="height: 193px;" data-widgetcontainerid="86da6095-bfce-4420-b71e-a192790299ee">
+	
+<div data-widget-id="b573afde-08a0-4db7-8138-97722b410295" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetb573afde-08a0-4db7-8138-97722b410295" class="widget widgetGraphicLinks skin45 widgetOptionSet47 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid4 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.alvin.gov/AgendaCenter" target="_self" class="fancyButton fancyButton49 ">
+		<span>
+			<span><span class="text">Agendas &amp; Minutes</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton49.fancyButton:link,.fancyButton49.fancyButton:visited, .fancyButton49div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=72');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 120px;
+transition:.2s ease-in-out;}
+.fancyButton49.fancyButton:hover,.fancyButton49.fancyButton:focus,.fancyButton49.fancyButton:active,.fancyButton49.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton49.fancyButton:link > span,.fancyButton49.fancyButton:visited > span, .fancyButton49div.fancyButton > span{
+}
+.fancyButton49.fancyButton:hover > span,.fancyButton49.fancyButton:focus > span,.fancyButton49.fancyButton:active > span,.fancyButton49.fancyButton.hover > span{
+}
+.fancyButton49.fancyButton .text{
+	color: #000000;
+	font-family: "Open Sans";
+	padding-top: 9em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9em;
+	background-image: url('/ImageRepository/Document?documentID=71');
+	background-repeat: no-repeat;
+	background-position: center 2.75em ;
+background-size: 60px;
+transition:.2s ease-in-out;
+}
+.fancyButton49.fancyButton:hover .text,.fancyButton49.fancyButton:focus .text,.fancyButton49.fancyButton:active .text,.fancyButton49.fancyButton.hover .text{
+	color: #000000;
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 1.75em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.alvin.gov/265/Utility-Billing" target="_self" class="fancyButton fancyButton50 ">
+		<span>
+			<span><span class="text">Utility Billing</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton50.fancyButton:link,.fancyButton50.fancyButton:visited, .fancyButton50div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=72');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 120px;
+transition:.2s ease-in-out;}
+.fancyButton50.fancyButton:hover,.fancyButton50.fancyButton:focus,.fancyButton50.fancyButton:active,.fancyButton50.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton50.fancyButton:link > span,.fancyButton50.fancyButton:visited > span, .fancyButton50div.fancyButton > span{
+}
+.fancyButton50.fancyButton:hover > span,.fancyButton50.fancyButton:focus > span,.fancyButton50.fancyButton:active > span,.fancyButton50.fancyButton.hover > span{
+}
+.fancyButton50.fancyButton .text{
+	color: #000000;
+	font-family: "Open Sans";
+	padding-top: 9em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9em;
+	background-image: url('/ImageRepository/Document?documentID=74');
+	background-repeat: no-repeat;
+	background-position: center 2.75em ;
+background-size: 60px;
+transition:.2s ease-in-out;
+}
+.fancyButton50.fancyButton:hover .text,.fancyButton50.fancyButton:focus .text,.fancyButton50.fancyButton:active .text,.fancyButton50.fancyButton.hover .text{
+	color: #000000;
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 1.75em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.alvin.gov/192/Permits-Inspections" target="_self" class="fancyButton fancyButton51 ">
+		<span>
+			<span><span class="text">Permits</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton51.fancyButton:link,.fancyButton51.fancyButton:visited, .fancyButton51div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=72');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 120px;
+transition:.2s ease-in-out;}
+.fancyButton51.fancyButton:hover,.fancyButton51.fancyButton:focus,.fancyButton51.fancyButton:active,.fancyButton51.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton51.fancyButton:link > span,.fancyButton51.fancyButton:visited > span, .fancyButton51div.fancyButton > span{
+}
+.fancyButton51.fancyButton:hover > span,.fancyButton51.fancyButton:focus > span,.fancyButton51.fancyButton:active > span,.fancyButton51.fancyButton.hover > span{
+}
+.fancyButton51.fancyButton .text{
+	color: #000000;
+	font-family: "Open Sans";
+	padding-top: 9em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9em;
+	background-image: url('/ImageRepository/Document?documentID=76');
+	background-repeat: no-repeat;
+	background-position: center 2.75em ;
+background-size: 60px;
+transition:.2s ease-in-out;
+}
+.fancyButton51.fancyButton:hover .text,.fancyButton51.fancyButton:focus .text,.fancyButton51.fancyButton:active .text,.fancyButton51.fancyButton.hover .text{
+	color: #000000;
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 1.75em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.alvin-tx.gov/166/Public-Information-Request" target="_self" class="fancyButton fancyButton383 ">
+		<span>
+			<span><span class="text">Public Information Request</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton383.fancyButton:link,.fancyButton383.fancyButton:visited, .fancyButton383div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=72');
+	background-repeat: no-repeat;
+	background-position: center 1em ;
+background-size: 120px;
+transition:.2s ease-in-out;}
+.fancyButton383.fancyButton:hover,.fancyButton383.fancyButton:focus,.fancyButton383.fancyButton:active,.fancyButton383.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton383.fancyButton:link > span,.fancyButton383.fancyButton:visited > span, .fancyButton383div.fancyButton > span{
+}
+.fancyButton383.fancyButton:hover > span,.fancyButton383.fancyButton:focus > span,.fancyButton383.fancyButton:active > span,.fancyButton383.fancyButton.hover > span{
+}
+.fancyButton383.fancyButton .text{
+	color: #000000;
+	font-family: "Open Sans";
+	padding-top: 9em;
+	font-weight: 500;
+	text-decoration: none;
+	padding-top: 9em;
+	background-image: url('/ImageRepository/Document?documentID=1409');
+	background-repeat: no-repeat;
+	background-position: center 2.75em ;
+background-size: 60px;
+transition:.2s ease-in-out;
+}
+.fancyButton383.fancyButton:hover .text,.fancyButton383.fancyButton:focus .text,.fancyButton383.fancyButton:active .text,.fancyButton383.fancyButton.hover .text{
+	color: #000000;
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: center 1.75em ;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Calendar/Carousel --><!-- <div data-cpRole="structuralContainer" id="homeContainer1">
+    <div class="siteWrap">
+      <div data-cpRole="contentContainer" id="homeContent1a"></div>
+    </div>
+  </div> --><!-- Footer --><div data-cprole="structuralContainer" id="bannerContainerTS2" class="noOverflowTS">
+<div data-cprole="banner" id="banner2"><div data-cprole="structuralContainer" id="bannerSizingTS2">
+<footer data-cprole="structuralContainer" id="footerContainerTS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="footerTS">	<div id="cc6d1c4151-492e-41e1-b6f8-9f0da10f6ca7" data-containerid="6d1c4151-492e-41e1-b6f8-9f0da10f6ca7" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="55">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col4 first" style="height: auto;" data-widgetcontainerid="121282db-86d9-4356-b5ec-d967a6fd8020">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col4 first last id9d651c60-d8e2-4278-8337-5695a2cefbc1" style="height: 217px;" data-widgetcontainerid="9d651c60-d8e2-4278-8337-5695a2cefbc1">
+	
+    <div data-widget-id="75dba834-1264-4ce1-a797-095be615ab25" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv75dba834-1264-4ce1-a797-095be615ab25" class="widget widgetInfoAdvanced skin56 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="header75dba834-1264-4ce1-a797-095be615ab25">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><img src="https://www.alvin.gov/ImageRepository/Document?documentId=79" class="fr-dib" alt="Alvin Logo"></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv75dba834-1264-4ce1-a797-095be615ab25 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col4 first last idb2716f1b-2915-4f2b-b1f1-dd46ef8c10ce" style="height: 27px;" data-widgetcontainerid="b2716f1b-2915-4f2b-b1f1-dd46ef8c10ce">
+	
+<div data-widget-id="889c655b-577d-4385-b8cb-6b31a5be5564" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget889c655b-577d-4385-b8cb-6b31a5be5564" class="widget widgetGraphicLinks skin55 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid4 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.facebook.com/cityofalvingov" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self" aria-label=" Facebook graphic"><img src="https://www.alvin.gov/ImageRepository/Document?documentID=48" class="graphicButtonLink" alt=" Facebook" onmouseover="this.src='/ImageRepository/Document?documentID=48'" onmouseout="this.src='/ImageRepository/Document?documentID=48'" onfocus="this.src='/ImageRepository/Document?documentID=48'" onblur="this.src='/ImageRepository/Document?documentID=48'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://twitter.com/CityofAlvinTx" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self" aria-label=" Twitter graphic"><img src="https://www.alvin.gov/ImageRepository/Document?documentID=50" class="graphicButtonLink" alt=" Twitter" onmouseover="this.src='/ImageRepository/Document?documentID=50'" onmouseout="this.src='/ImageRepository/Document?documentID=50'" onfocus="this.src='/ImageRepository/Document?documentID=50'" onblur="this.src='/ImageRepository/Document?documentID=50'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.instagram.com/cityofalvintx/?hl=en" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self" aria-label=" Instagram graphic"><img src="https://www.alvin.gov/ImageRepository/Document?documentID=49" class="graphicButtonLink" alt=" Instagram" onmouseover="this.src='/ImageRepository/Document?documentID=49'" onmouseout="this.src='/ImageRepository/Document?documentID=49'" onfocus="this.src='/ImageRepository/Document?documentID=49'" onblur="this.src='/ImageRepository/Document?documentID=49'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.alvin.gov/youtube" target="_self" aria-label=" YouTube graphic"><img src="https://www.alvin.gov/ImageRepository/Document?documentID=51" class="graphicButtonLink" alt=" YouTube" onmouseover="this.src='/ImageRepository/Document?documentID=51'" onmouseout="this.src='/ImageRepository/Document?documentID=51'" onfocus="this.src='/ImageRepository/Document?documentID=51'" onblur="this.src='/ImageRepository/Document?documentID=51'"> </a></li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col3" style="height: auto;" data-widgetcontainerid="87823e0c-1d66-4a62-9b3b-193d11db7878">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col3 first last id8b279614-866d-475a-80af-c70ec992d4fe" style="height: 248px;" data-widgetcontainerid="8b279614-866d-475a-80af-c70ec992d4fe">
+	
+
+<div class="widget widgetSpacer" id="733122ab-1581-49ba-801b-d41535011919" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col3" style="height: auto;" data-widgetcontainerid="ccdd07c1-8210-4e29-996b-7858174acaf2">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col3 first last id007a8489-384f-4387-b83f-efbefb82b84d" style="height: 248px;" data-widgetcontainerid="007a8489-384f-4387-b83f-efbefb82b84d">
+	
+    <div data-widget-id="07051f5e-2d63-4e1c-bf42-b21f96b63a75" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv07051f5e-2d63-4e1c-bf42-b21f96b63a75" class="widget widgetInfoAdvanced skin37 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="header07051f5e-2d63-4e1c-bf42-b21f96b63a75">
+			<header class="widgetHeader" id="header07051f5e-2d63-4e1c-bf42-b21f96b63a75">
+		<div class="">
+					<h3>Contact Us</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p id="isPasted"><strong>Alvin City Hall</strong><br>216 West Sealy Street<br>Alvin, TX 77511<br>Phone: <a href="tel: 281-388-4200">281-388-4200</a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv07051f5e-2d63-4e1c-bf42-b21f96b63a75 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col3" style="height: auto;" data-widgetcontainerid="1b5f41a1-0dcd-49f2-9f10-b2d2221ab4e5">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col3 first last idc20105af-142b-4c1a-a606-0e85520964bc" style="height: 248px;" data-widgetcontainerid="c20105af-142b-4c1a-a606-0e85520964bc">
+	
+
+<div class="widget widgetSpacer" id="088a2c95-127d-4fef-8472-0c3620e7c97d" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4" style="height: auto;" data-widgetcontainerid="41ea9e20-491e-43df-bf4e-c0f55819374e">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last id8c56d24e-7133-4ed6-a77d-210df6c6ff4f" style="height: 248px;" data-widgetcontainerid="8c56d24e-7133-4ed6-a77d-210df6c6ff4f">
+	
+	<div data-widget-id="b2e8df18-f103-461c-87e9-e9b6a192d23a" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklinkb2e8df18-f103-461c-87e9-e9b6a192d23a" class="widget widgetQuickLinks skin37 widgetOptionSet42 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeaderb2e8df18-f103-461c-87e9-e9b6a192d23a">
+			<header class="widgetHeader" id="quickLinksHeaderb2e8df18-f103-461c-87e9-e9b6a192d23a">
+		<div class="">
+					<h3><a style="" href="https://www.alvin.gov/QuickLinks.aspx?CID=15">Quick Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.alvin.gov/176/City-Council" target="_self">City Council</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.alvin.gov/184/Public-Services" target="_self">Public Services</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://member.everbridge.net/892807736729012/login" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self">Alvin Alerts Notification System</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://library.municode.com/tx/alvin/codes/code_of_ordinances" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);" target="_self">Code of Ordinances</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.alvin.gov/165/Boards-Commissions" target="_self">Boards and Commissions</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col3" style="height: auto;" data-widgetcontainerid="02907167-09be-4e29-a440-f3459bf0646d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col3 first last id3933d06b-d44a-49d2-a885-f5474ce52491" style="height: 248px;" data-widgetcontainerid="3933d06b-d44a-49d2-a885-f5474ce52491">
+	
+
+<div class="widget widgetSpacer" id="50b6e2d0-5c24-444c-9b52-a0537e029011" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4 last" style="height: auto;" data-widgetcontainerid="00a31003-bf00-424d-a1ca-8ce4f2bc42e8">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last idd4af06e5-1381-4ee7-bb43-bfe9ea000f7c" style="height: 248px;" data-widgetcontainerid="d4af06e5-1381-4ee7-bb43-bfe9ea000f7c">
+	
+	<div data-widget-id="969e732e-3dd8-4cad-828b-30af4cbc37cb" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink969e732e-3dd8-4cad-828b-30af4cbc37cb" class="widget widgetQuickLinks skin37 widgetOptionSet42 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeader969e732e-3dd8-4cad-828b-30af4cbc37cb">
+			<header class="widgetHeader" id="quickLinksHeader969e732e-3dd8-4cad-828b-30af4cbc37cb">
+		<div class="">
+					<h3><a style="" href="https://www.alvin.gov/QuickLinks.aspx?CID=16">Helpful Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.alvin.gov/" target="_self">Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.alvin.gov/sitemap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.alvin.gov/directory.aspx" target="_self">Contact Us</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.alvin.gov/accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.alvin.gov/copyright" target="_self">Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.alvin.gov/privacy" target="_self">Privacy Policy</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</footer>
+</div>
+
+
+
+
+		<div class="bannerObject external" id="bannerDivbanner2" style="min-height: 690px; top: 0px; left: 0px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img alt="" class="bannerObject" src="https://www.alvin.gov/ImageRepository/Document?documentID=66" width="1265px" style="position: absolute; left: 0px; margin: 0px; width: 1265px;"></div>
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderBanner('banner2-9',
+								'banner2',
+								{"BannerOptionID":9,"ThemeID":1,"SlotName":"banner2","Name":"Default","IsDefault":true,"BannerMode":1,"SlideShowSlideTiming":null,"SlideshowTransition":0,"SlideShowTransitionTiming":null,"ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":61,"BannerOptionID":9,"FileName":"/ImageRepository/Document?documentID=66","Height":651,"Width":1800,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null}],"BannerVideos":[],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								{"BannerImageID":61,"BannerOptionID":9,"FileName":"/ImageRepository/Document?documentID=66","Height":651,"Width":1800,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null},
+								'/App_Themes/Interior/Images/',
+								'<img alt="" class="bannerObject" src="/ImageRepository/Document?documentID=66" />');
+						});
+				});
+			</script>
+
+</div>
+</div><!-- Powered By --><div data-cprole="structuralContainer" id="poweredByContainerTS">
+<div class="siteWrap"><div data-cprole="contentContainer" id="poweredByTS">	<div id="ccafdb7b6e-15a5-42e9-a271-99498b282b32" data-containerid="afdb7b6e-15a5-42e9-a271-99498b282b32" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="69cafc5e-864c-40f7-84c3-a19d54b66874">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id02cd75a7-bd23-49ae-bdb0-9ff92431794e" style="height: 34px;" data-widgetcontainerid="02cd75a7-bd23-49ae-bdb0-9ff92431794e">
+	
+ 
+	<div data-widget-id="bf8f67ff-2684-4653-9e44-ff200f3dc76e" data-modulename="customHtml" id="widgetCustomHtmlbf8f67ff-2684-4653-9e44-ff200f3dc76e" class="widget widgetCustomHtml skin37 narrow">
+	<div class="widgetBody pageStyles" id="widgetBodybf8f67ff-2684-4653-9e44-ff200f3dc76e">
+		<div id="customHtmlbf8f67ff-2684-4653-9e44-ff200f3dc76e"><div><style>
+  /* CP icon */
+  .cpBylineIconTS {
+    color: #fff;
+  }
+  /* CP Text */
+  .cpBylineTextTS,
+  .cpBylineTextTS a:link {
+    color: #fff;
+  }
+
+  .cpBylineTS {
+    text-align: center;
+  }
+  
+  .cpBylineIconTS {
+    fill: currentColor;
+    width: 39px;
+    height: 26px;
+    display: inline;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="widgetItem cpBylineTS">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="cpBylineIconTS">
+    <path class="c" d="M73.4,23.2h-19v16.7h19c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5h-19v28.4h5.5l11.3-11.7h2.2c11.9,0,21.6-9.7,21.6-21.6C95,33,85.3,23.2,73.4,23.2"></path>
+    <path class="p" d="M45.8,66.5H26.6C14.7,66.5,5,56.8,5,44.9C5,33,14.7,23.2,26.6,23.2h19.1v16.7H26.6c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h19.1V66.5z"></path>
+  </svg>
+  <span class="cpBylineTextTS">Government Websites by <a href="https://connect.civicplus.com/referral" onkeypress="this.onclick();" onclick="return showExternalSiteDialog(this);">CivicPlus®</a></span>
+</div></div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '9',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!-- Fixed Nav Adjustment -->
+<script>
+  function getValueTS(elem, attr) {
+    var val = elem.css(attr);
+    if (val === undefined) return undefined;
+    var num = parseInt(val, 10);
+    if (num === NaN) return undefined;
+    return num;
+  }
+
+  function clampTS(number, min, max) {
+    return Math.min(Math.max(number, min), max);
+  }
+
+  function isPageEditingTS() {
+    return (
+      $("#doneEditing").length > 0 || // In live edit
+      typeof DesignCenter !== "undefined" // In theme manager
+    );
+  }
+
+  var bgColorRegexTS = new RegExp("rgba\((\d+), (\d+), (\d+), (\d*\.?\d*)\)");
+  function isTransparentTS(elem) {
+    var bg = elem.css('background-color');
+    if (typeof bg !== "string") return false;
+    if (bg === "transparent") return true;
+    if (!bg.startsWith('rgba(')) return false;
+    var matchState = bg.match(bgColorRegexTS);
+    if (!matchState || matchState.length !== 5) return false;
+    var alpha = parseFloat(matchState[4], 10);
+    if (!(alpha >= 0 && alpha < 1)) return false;
+    return true;
+  }
+
+  function iterateLeftpads(cb) {
+    var containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (var i = 0; i < containersTS.length; i++) {
+      var containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-leftpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-leftpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  function iterateRightpads(cb) {
+    var containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (var i = 0; i < containersTS.length; i++) {
+      var containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-rightpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-rightpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  var anchor = $("#divToolbars");
+  var bodyContainerTS = $("#bodyContainerTS");
+
+  // Outer banner padding (push banner down)
+  var outerSizingTS = $("#bannerContainerTS");
+  // Inner banner padding (push banner content down) - Transparent header OR on attaching headers
+  var innerSizingTS = $("#bannerSizingTS");
+
+  var forceUnfixClassTS = "forceUnfixTS";
+
+  var fixedTopTS = $(".fixedTopTS");
+  var fixedBottomTS = $(".fixedBottomTS");
+  var fixedLeftTS = $(".fixedLeftTS");
+  var fixedRightTS = $(".fixedRightTS");
+
+  var initialTopTS;
+  var topAttachTS;
+  if (fixedTopTS && fixedTopTS.length === 1) {
+    initialTopTS = getValueTS(fixedTopTS, 'top');
+    var attachment = fixedTopTS.attr('data-attach');
+    if (attachment) topAttachTS = $("#" + attachment);
+    if (!topAttachTS || topAttachTS.length !== 1) topAttachTS = undefined;
+  }
+
+  function resizeAdjustmentTS() {
+    var editing = isPageEditingTS();
+
+    // Fixed top script
+    (function () {
+      if (!fixedTopTS || fixedTopTS.length !== 1 || initialTopTS === undefined) return;
+
+      if (editing) {
+        fixedTopTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedTopTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      var topPosition = fixedTopTS.css('position');
+      if (topPosition === 'fixed') {
+        if (topAttachTS) {
+          scrollAdjustmentTS();
+        } else {
+          var anchorHeight = anchor.outerHeight() - 1;
+          fixedTopTS.css('top', anchorHeight + initialTopTS);
+        }
+      } else {
+        fixedTopTS.css('top', initialTopTS);
+      }
+
+      if (topPosition === 'fixed' || topPosition === 'absolute') {
+        // Bump the banner content down
+        if (isTransparentTS(fixedTopTS)) {
+          innerSizingTS.css('padding-top', initialTopTS + fixedTopTS.outerHeight());
+          outerSizingTS.css('padding-top', '');
+
+          try {
+            window.Pages.onResizeHandlersExecute();
+          } catch (e) { }
+        } else {
+          outerSizingTS.css('padding-top', fixedTopTS.outerHeight() - 1);
+          innerSizingTS.css('padding-top', '');
+        }
+      } else {
+        innerSizingTS.css('padding-top', '');
+        outerSizingTS.css('padding-top', '');
+      }
+    })();
+
+    // Fixed bottom script
+    (function () {
+      if (!fixedBottomTS || fixedBottomTS.length === 0) return;
+
+      // If the widget has gone narrow, force unfix
+      if (editing || fixedBottomTS.outerHeight() > 200) {
+        fixedBottomTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedBottomTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedBottomTS.css('position') === 'fixed') {
+        bodyContainerTS.css('padding-bottom', fixedBottomTS.outerHeight());
+      } else {
+        bodyContainerTS.css('padding-bottom', '');
+      }
+    })();
+
+    // Fixed left script
+    (function () {
+      if (!fixedLeftTS || fixedLeftTS.length === 0) return;
+
+      if (editing) {
+        fixedLeftTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedLeftTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedLeftTS.css('position') === 'fixed') {
+        var anchorHeight = anchor.outerHeight() - 1;
+        fixedLeftTS.css('top', anchorHeight);
+        var leftBoundingTS = fixedLeftTS[0].getBoundingClientRect();
+        iterateLeftpads(function (containerTS) {
+          var containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.left <= leftBoundingTS.right) {
+            $(containerTS).css('padding-left', leftBoundingTS.width + 16);
+          } else {
+            $(containerTS).css('padding-left', '');
+          }
+        });
+      } else {
+        fixedLeftTS.css('top', '');
+        iterateLeftpads(function (containerTS) {
+          $(containerTS).css('padding-left', '');
+        });
+      }
+    })();
+
+    // Fixed right script
+    (function () {
+      if (!fixedRightTS || fixedRightTS.length === 0) return;
+
+      if (editing) {
+        fixedRightTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedRightTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedRightTS.css('position') === 'fixed') {
+        var anchorHeight = anchor.outerHeight() - 1;
+        fixedRightTS.css('top', anchorHeight);
+        var rightBoundingTS = fixedRightTS[0].getBoundingClientRect();
+        iterateRightpads(function (containerTS) {
+          var containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.right >= rightBoundingTS.left) {
+            $(containerTS).css('padding-right', rightBoundingTS.width + 16);
+          }
+        });
+      } else {
+        fixedRightTS.css('top', '');
+        iterateRightpads(function (containerTS) {
+          $(containerTS).css('padding-right', '');
+        });
+      }
+    })();
+  }
+
+  function scrollAdjustmentTS() {
+    if (!fixedTopTS || fixedTopTS.length !== 1 || !topAttachTS || topAttachTS.length !== 1) return;
+    var topPosition = fixedTopTS.css('position');
+    if (topPosition === 'fixed' || topPosition === 'absolute') {
+      var anchorBounding = anchor[0].getBoundingClientRect();
+      var attachBounding = topAttachTS[0].getBoundingClientRect();
+      var scrollTop = $(window).scrollTop();
+
+      fixedTopTS.css('top', Math.max(anchorBounding.bottom - 1, attachBounding.bottom));
+    } else {
+      fixedTopTS.css('top', initialTopTS);
+    }
+  }
+
+  $(window).load(function () {
+    setTimeout(function () {
+      try {
+        resizeAdjustmentTS();
+      } catch (e) {
+        console.error(e);
+      }
+    }, 350);
+
+    $(window).scroll(function () {
+      try {
+        scrollAdjustmentTS();
+      } catch (e) {
+        console.error(e);
+      }
+    });
+
+    var adjustTimeoutTS;
+    $(window).resize(function () {
+      clearTimeout(adjustTimeoutTS);
+      adjustTimeoutTS = setTimeout(function () {
+        try {
+          resizeAdjustmentTS();
+        } catch (e) {
+          console.error(e);
+        }
+      }, 350);
+    });
+
+    $.when(window.Pages.angularToolbarComplete).done(function () {
+      try {
+        resizeAdjustmentTS();
+      } catch (e) {
+        console.error(e);
+      }
+    });
+  });
+</script>
+<!-- End Fixed Nav Adjustment -->
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Open+Sans:300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,italic,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu27" class="contentTop mainNavMegaMenu megaMenuContainer pageID_27 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 139.891px; width: 1110px; top: 91px;">	<div id="cce7c7ae86-a735-4049-855a-0d508d36f722" data-containerid="e7c7ae86-a735-4049-855a-0d508d36f722" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu101" class="contentTop mainNavMegaMenu megaMenuContainer pageID_101 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 139.891px; width: 1110px; top: 91px;">	<div id="cc3b684677-26d9-4deb-be06-d8a77d3fd7dd" data-containerid="3b684677-26d9-4deb-be06-d8a77d3fd7dd" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu31" class="contentTop mainNavMegaMenu megaMenuContainer pageID_31 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 139.891px; width: 1110px; top: 91px;">	<div id="ccb8e50534-0acf-46b8-9300-b93d694c1bd7" data-containerid="b8e50534-0acf-46b8-9300-b93d694c1bd7" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu35" class="contentTop mainNavMegaMenu megaMenuContainer pageID_35 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 139.891px; width: 1110px; top: 91px;">	<div id="ccd89d6071-1d44-46a3-95dd-e8615cd54211" data-containerid="d89d6071-1d44-46a3-95dd-e8615cd54211" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu9" class="contentTop mainNavMegaMenu megaMenuContainer pageID_9 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 139.891px; width: 1110px; top: 91px;">	<div id="cccb80723b-dcda-45f6-a9eb-3a057389a317" data-containerid="cb80723b-dcda-45f6-a9eb-3a057389a317" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><div id="bannerSlideshowControls_banner1" class="bannerSlideshowControlsNew none " style="display:none">
+			<a id="arrowPrev_banner1" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner1" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div></body></html>
