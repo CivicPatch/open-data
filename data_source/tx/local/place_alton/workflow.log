@@ -1,0 +1,511 @@
+[2026-01-30T02:03:29.414784] [INFO] Step 1: RESEARCH_MUNICIPALITY
+[2026-01-30T02:03:29.415158] [INFO] Running Gemini prompt
+[2026-01-30T02:03:29.415433] [DEBUG] Prompt: 
+
+    Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
+
+    Municipality: Alton city, tx
+
+    Instructions:
+
+    1. Determine the government type of the city. Available government types:
+- mayor_commission
+- mayor_council
+- township_committee
+- select_board
+- aldermen
+
+    2. Identify the elected officials in the local government, 
+       including the Mayor (if applicable).
+       2.1. For each official, extract the following details:
+            - name: Full name only (no titles)
+            - roles: List of active municipal roles (e.g., Mayor, Council Member)
+            - divisions: List of (ward, district), only if applicable
+
+    3. Create a JSON object with the following structure:
+       ```json
+       {
+         "government_type": examples - "mayor_council" or "mayor_commission", etc.,
+         "people": [
+           {
+             "name": "Full name of the official or null if uncertain",
+             "roles": ["Mayor", "Council Member", "Commissioner", etc.],
+             "divisions": ["Ward 1", "District 2", etc.] or [],
+           }
+         ],
+         "notes": "Brief notes about the search and results"
+       }
+       ```
+
+    IMPORTANT: If the response contains anything other than a valid JSON object,
+    it will be considered incorrect. Ensure the response is strictly JSON.
+    Verify that the response is valid JSON before returning it.
+    If it is not valid JSON, retry the generation.
+    
+[2026-01-30T02:03:35.055897] [DEBUG] Gemini raw response: {'government_type': 'mayor_commission', 'people': [{'name': 'Salvador Vela', 'roles': ['Mayor'], 'divisions': []}, {'name': 'Arturo R. Galvan, Jr.', 'roles': ['Mayor Pro Tem', 'Commissioner'], 'divisions': ['Place 1']}, {'name': 'Ricardo Garza', 'roles': ['Commissioner'], 'divisions': ['Place 2']}, {'name': 'Richard Arevalo', 'roles': ['Commissioner'], 'divisions': ['Place 3']}, {'name': 'Emilio Cantu, Jr.', 'roles': ['Commissioner'], 'divisions': ['Place 4']}], 'notes': "Alton, Texas operates under a Home Rule government type. The elected officials include a Mayor, Mayor Pro Tem, and Commissioners, indicating a mayor-commission form of government. The 'Place' designations refer to their specific positions within the commission rather than geographical divisions."}
+[2026-01-30T02:03:35.058553] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 363, Output tokens: 941, Total cost: $0.002461
+[2026-01-30T02:03:35.058927] [INFO] gemini gemini-2.5-flash LLM call took 5.64 seconds
+[2026-01-30T02:03:35.059697] [INFO] Source URLs provided, skipping link search.
+[2026-01-30T02:03:35.150422] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.alton-tx.gov/government/elected_officials.php
+[2026-01-30T02:03:50.845217] [WARNING] Warning: navigation to https://www.alton-tx.gov/government/elected_officials.php with wait_until=networkidle failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://www.alton-tx.gov/government/elected_officials.php", waiting until "networkidle"
+
+[2026-01-30T02:03:51.824430] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/_assets_/images/logo.png
+[2026-01-30T02:03:51.825515] [DEBUG] Loading image from URL: https://www.alton-tx.gov/_assets_/images/logo.png
+[2026-01-30T02:03:52.555908] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/81833aad8d43.png
+[2026-01-30T02:03:52.582912] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/uploadfiles/header-facebook-icon.png
+[2026-01-30T02:03:52.584048] [DEBUG] Loading image from URL: https://www.alton-tx.gov/uploadfiles/header-facebook-icon.png
+[2026-01-30T02:03:53.122207] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/2f10c87cef5b.png
+[2026-01-30T02:03:53.133725] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-30T02:03:53.147747] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-30T02:03:53.155980] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-30T02:03:53.165205] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/_assets_/images/translate-icon.png
+[2026-01-30T02:03:53.166093] [DEBUG] Loading image from URL: https://www.alton-tx.gov/_assets_/images/translate-icon.png
+[2026-01-30T02:03:53.691266] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/802971545179.png
+[2026-01-30T02:03:53.709678] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/_assets_/images/search-icon.png
+[2026-01-30T02:03:53.710667] [DEBUG] Loading image from URL: https://www.alton-tx.gov/_assets_/images/search-icon.png
+[2026-01-30T02:03:54.238037] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/be791a3285bc.png
+[2026-01-30T02:03:54.260960] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/government/_assets_/images/freeform-slide-1.jpg
+[2026-01-30T02:03:54.262388] [DEBUG] Loading image from URL: https://www.alton-tx.gov/government/_assets_/images/freeform-slide-1.jpg
+[2026-01-30T02:03:54.790582] [WARNING] Failed to load image https://www.alton-tx.gov/government/_assets_/images/freeform-slide-1.jpg: HTTP 404
+[2026-01-30T02:03:54.793604] [DEBUG] Attempting to create a canvas and load image: https://www.alton-tx.gov/government/_assets_/images/freeform-slide-1.jpg
+[2026-01-30T02:03:55.239642] [WARNING] Failed to create canvas for image: https://www.alton-tx.gov/government/_assets_/images/freeform-slide-1.jpg - Page.evaluate: Event
+[2026-01-30T02:03:55.240225] [DEBUG] Attempting to screenshot image element: https://www.alton-tx.gov/government/_assets_/images/freeform-slide-1.jpg
+[2026-01-30T02:03:55.473739] [DEBUG] Image captured via element screenshot: 949b35b1904b.png
+[2026-01-30T02:03:55.485444] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/_assets_/images/ada-icon.png
+[2026-01-30T02:03:55.486148] [DEBUG] Loading image from URL: https://www.alton-tx.gov/_assets_/images/ada-icon.png
+[2026-01-30T02:03:55.853228] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/f18a240fbf11.png
+[2026-01-30T02:03:55.870344] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/Salvador%20Vela-Mayor%20-%20Copy.JPG
+[2026-01-30T02:03:55.871370] [DEBUG] Loading image from URL: https://www.alton-tx.gov/Salvador%20Vela-Mayor%20-%20Copy.JPG
+[2026-01-30T02:03:56.721963] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/5a003a8bcd4f.png
+[2026-01-30T02:03:56.730445] [DEBUG] Skipping blacklisted or invalid image: None
+[2026-01-30T02:03:56.739616] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/government/elected%20officials/Arturo%20Galvan%20Jr.-Mayor%20Pro%20Tem%20-%20Copy%20(2).JPG
+[2026-01-30T02:03:56.740153] [DEBUG] Loading image from URL: https://www.alton-tx.gov/government/elected%20officials/Arturo%20Galvan%20Jr.-Mayor%20Pro%20Tem%20-%20Copy%20(2).JPG
+[2026-01-30T02:03:57.601791] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/65d2515790c0.png
+[2026-01-30T02:03:57.614480] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/government/elected%20officials/Ricardo%20Garza-Commissioner%20-%20Copy%20(2).JPG
+[2026-01-30T02:03:57.615417] [DEBUG] Loading image from URL: https://www.alton-tx.gov/government/elected%20officials/Ricardo%20Garza-Commissioner%20-%20Copy%20(2).JPG
+[2026-01-30T02:03:58.541881] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/044b7edab6c2.png
+[2026-01-30T02:03:58.558256] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/government/elected%20officials/Richard%20Arevalo-Commissioner%20-%20Copy.JPG
+[2026-01-30T02:03:58.559020] [DEBUG] Loading image from URL: https://www.alton-tx.gov/government/elected%20officials/Richard%20Arevalo-Commissioner%20-%20Copy.JPG
+[2026-01-30T02:03:59.739282] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/650598e396d6.png
+[2026-01-30T02:03:59.753317] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/government/elected%20officials/Emilio%20Cantu%20Jr.-Commissioner%20-%20Copy.JPG
+[2026-01-30T02:03:59.754763] [DEBUG] Loading image from URL: https://www.alton-tx.gov/government/elected%20officials/Emilio%20Cantu%20Jr.-Commissioner%20-%20Copy.JPG
+[2026-01-30T02:04:00.458440] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/891517c1a107.png
+[2026-01-30T02:04:00.474509] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/uploadfiles/footer-facebook-icon.png
+[2026-01-30T02:04:00.475417] [DEBUG] Loading image from URL: https://www.alton-tx.gov/uploadfiles/footer-facebook-icon.png
+[2026-01-30T02:04:00.993126] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/dca3d825ee05.png
+[2026-01-30T02:04:01.012348] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-30T02:04:01.232892] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.alton-tx.gov/government/elected_officials.php
+[2026-01-30T02:04:01.293156] [DEBUG] -> Preprocessing with identities: {'Salvador Vela': ['Salvador Vela'], 'Arturo R. Galvan, Jr.': ['Arturo R. Galvan, Jr.'], 'Ricardo Garza': ['Ricardo Garza'], 'Richard Arevalo': ['Richard Arevalo'], 'Emilio Cantu, Jr.': ['Emilio Cantu, Jr.']}
+[2026-01-30T02:04:04.149272] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-30T02:04:04.149672] [INFO] -> Elapsed time: 2.92 seconds
+[2026-01-30T02:04:04.149875] [INFO] -> Average elapsed time: 1.46 seconds
+[2026-01-30T02:04:04.150161] [INFO] -> Total elapsed time: 2.92 seconds
+[2026-01-30T02:04:04.255130] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.alton-tx.gov/government/elected_officials.php
+[2026-01-30T02:04:04.258103] [INFO] Running OpenAI prompt
+[2026-01-30T02:04:04.258698] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Salvador Vela, Arturo R. Galvan, Jr., Ricardo Garza, Richard Arevalo, Emilio Cantu, Jr.
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-30T02:04:04.259276] [INFO] openai LLM call took 0.00 seconds
+[2026-01-30T02:04:19.618390] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1963, Output tokens: 843, Total cost: $0.002177
+[2026-01-30T02:04:19.619469] [INFO] Page relevance check found related urls: ['https://www.alton-tx.gov/government/elected_officials.php', 'https://www.alton-tx.gov/government/elected_officials.php#freeform-wrap']
+[2026-01-30T02:04:19.621223] [INFO] Running Gemini prompt
+[2026-01-30T02:04:19.622049] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Salvador Vela, Arturo R. Galvan, Jr., Ricardo Garza, Richard Arevalo, Emilio Cantu, Jr.
+
+    Only extract people who are currently serving as officials as of 2026-01-30. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner
+    Target Divisions: ward, district, at-large, position, seat, place, precinct
+    Current Date: 2026-01-30
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-30) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-30T02:04:27.547342] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 3076, Output tokens: 704, Total cost: $0.002683
+[2026-01-30T02:04:27.550421] [INFO] gemini gemini-2.5-flash LLM call took 7.93 seconds
+[2026-01-30T02:04:27.551084] [INFO] Running OpenAI prompt
+[2026-01-30T02:04:27.551321] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Salvador Vela, Arturo R. Galvan, Jr., Ricardo Garza, Richard Arevalo, Emilio Cantu, Jr.
+
+    Only extract people who are currently serving as officials as of 2026-01-30. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner
+    Target divisions: ward, district, at-large, position, seat, place, precinct
+    Current Date: 2026-01-30
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-30T02:04:27.551866] [INFO] openai LLM call took 0.00 seconds
+[2026-01-30T02:05:06.180613] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 2708, Output tokens: 2637, Total cost: $0.005951
+[2026-01-30T02:05:06.186547] [INFO] links updated: [Link(url='https://www.alton-tx.gov/government/elected_officials.php#freeform-wrap', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.alton-tx.gov/government/elected_officials.php', status='done', folder_name='www_alton-tx_gov_government_elected_officials_php', is_profile_page=False)]
+[2026-01-30T02:05:06.280583] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.alton-tx.gov/government/elected_officials.php#freeform-wrap
+[2026-01-30T02:05:21.987628] [WARNING] Warning: navigation to https://www.alton-tx.gov/government/elected_officials.php#freeform-wrap with wait_until=networkidle failed: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://www.alton-tx.gov/government/elected_officials.php#freeform-wrap", waiting until "networkidle"
+
+[2026-01-30T02:05:22.186675] [DEBUG] Skipping blacklisted or invalid image: https://cdn.userway.org/widgetapp/images/spin_wh.svg
+[2026-01-30T02:05:22.201120] [DEBUG] Skipping blacklisted or invalid image: https://cdn.userway.org/widgetapp/images/body_wh.svg
+[2026-01-30T02:05:22.215019] [DEBUG] Skipping blacklisted or invalid image: https://cdn.userway.org/widgetapp/images/spin_wh.svg
+[2026-01-30T02:05:22.225736] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/_assets_/images/logo.png
+[2026-01-30T02:05:22.226566] [DEBUG] Loading image from URL: https://www.alton-tx.gov/_assets_/images/logo.png
+[2026-01-30T02:05:22.782957] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/81833aad8d43.png
+[2026-01-30T02:05:22.799797] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/uploadfiles/header-facebook-icon.png
+[2026-01-30T02:05:22.800656] [DEBUG] Loading image from URL: https://www.alton-tx.gov/uploadfiles/header-facebook-icon.png
+[2026-01-30T02:05:23.325500] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/2f10c87cef5b.png
+[2026-01-30T02:05:23.338067] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-30T02:05:23.357878] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-30T02:05:23.369656] [DEBUG] Skipping blacklisted or invalid image: https://www.google.com/images/cleardot.gif
+[2026-01-30T02:05:23.379815] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/_assets_/images/translate-icon.png
+[2026-01-30T02:05:23.380935] [DEBUG] Loading image from URL: https://www.alton-tx.gov/_assets_/images/translate-icon.png
+[2026-01-30T02:05:23.907025] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/802971545179.png
+[2026-01-30T02:05:23.920367] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/_assets_/images/search-icon.png
+[2026-01-30T02:05:23.921190] [DEBUG] Loading image from URL: https://www.alton-tx.gov/_assets_/images/search-icon.png
+[2026-01-30T02:05:24.439322] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/be791a3285bc.png
+[2026-01-30T02:05:24.457508] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/government/_assets_/images/freeform-slide-1.jpg
+[2026-01-30T02:05:24.458641] [DEBUG] Loading image from URL: https://www.alton-tx.gov/government/_assets_/images/freeform-slide-1.jpg
+[2026-01-30T02:05:24.974539] [WARNING] Failed to load image https://www.alton-tx.gov/government/_assets_/images/freeform-slide-1.jpg: HTTP 404
+[2026-01-30T02:05:24.977596] [DEBUG] Attempting to create a canvas and load image: https://www.alton-tx.gov/government/_assets_/images/freeform-slide-1.jpg
+[2026-01-30T02:05:25.420065] [WARNING] Failed to create canvas for image: https://www.alton-tx.gov/government/_assets_/images/freeform-slide-1.jpg - Page.evaluate: Event
+[2026-01-30T02:05:25.420510] [DEBUG] Attempting to screenshot image element: https://www.alton-tx.gov/government/_assets_/images/freeform-slide-1.jpg
+[2026-01-30T02:05:25.613062] [DEBUG] Image captured via element screenshot: 949b35b1904b.png
+[2026-01-30T02:05:25.624363] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/_assets_/images/ada-icon.png
+[2026-01-30T02:05:25.625608] [DEBUG] Loading image from URL: https://www.alton-tx.gov/_assets_/images/ada-icon.png
+[2026-01-30T02:05:26.145737] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/f18a240fbf11.png
+[2026-01-30T02:05:26.167064] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/Salvador%20Vela-Mayor%20-%20Copy.JPG
+[2026-01-30T02:05:26.168095] [DEBUG] Loading image from URL: https://www.alton-tx.gov/Salvador%20Vela-Mayor%20-%20Copy.JPG
+[2026-01-30T02:05:27.066554] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/5a003a8bcd4f.png
+[2026-01-30T02:05:27.084514] [DEBUG] Skipping blacklisted or invalid image: None
+[2026-01-30T02:05:27.092019] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/government/elected%20officials/Arturo%20Galvan%20Jr.-Mayor%20Pro%20Tem%20-%20Copy%20(2).JPG
+[2026-01-30T02:05:27.092731] [DEBUG] Loading image from URL: https://www.alton-tx.gov/government/elected%20officials/Arturo%20Galvan%20Jr.-Mayor%20Pro%20Tem%20-%20Copy%20(2).JPG
+[2026-01-30T02:05:27.992957] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/65d2515790c0.png
+[2026-01-30T02:05:28.010190] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/government/elected%20officials/Ricardo%20Garza-Commissioner%20-%20Copy%20(2).JPG
+[2026-01-30T02:05:28.011065] [DEBUG] Loading image from URL: https://www.alton-tx.gov/government/elected%20officials/Ricardo%20Garza-Commissioner%20-%20Copy%20(2).JPG
+[2026-01-30T02:05:28.859441] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/044b7edab6c2.png
+[2026-01-30T02:05:28.875823] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/government/elected%20officials/Richard%20Arevalo-Commissioner%20-%20Copy.JPG
+[2026-01-30T02:05:28.876669] [DEBUG] Loading image from URL: https://www.alton-tx.gov/government/elected%20officials/Richard%20Arevalo-Commissioner%20-%20Copy.JPG
+[2026-01-30T02:05:29.833720] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/650598e396d6.png
+[2026-01-30T02:05:29.854945] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/government/elected%20officials/Emilio%20Cantu%20Jr.-Commissioner%20-%20Copy.JPG
+[2026-01-30T02:05:29.855871] [DEBUG] Loading image from URL: https://www.alton-tx.gov/government/elected%20officials/Emilio%20Cantu%20Jr.-Commissioner%20-%20Copy.JPG
+[2026-01-30T02:05:30.711612] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/891517c1a107.png
+[2026-01-30T02:05:30.728643] [DEBUG] Attempting to intercept and save image for: https://www.alton-tx.gov/uploadfiles/footer-facebook-icon.png
+[2026-01-30T02:05:30.729817] [DEBUG] Loading image from URL: https://www.alton-tx.gov/uploadfiles/footer-facebook-icon.png
+[2026-01-30T02:05:31.240498] [INFO] Image saved: /app/data_source/tx/local/place_alton/images/dca3d825ee05.png
+[2026-01-30T02:05:31.256429] [DEBUG] Skipping blacklisted or invalid image: https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg
+[2026-01-30T02:05:31.579305] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.alton-tx.gov/government/elected_officials.php#freeform-wrap
+[2026-01-30T02:05:31.636257] [DEBUG] -> Preprocessing with identities: {'Salvador Vela': ['Salvador Vela'], 'Arturo R. Galvan, Jr.': ['Arturo R. Galvan, Jr.'], 'Ricardo Garza': ['Ricardo Garza'], 'Richard Arevalo': ['Richard Arevalo'], 'Emilio Cantu, Jr.': ['Emilio Cantu, Jr.']}
+[2026-01-30T02:05:34.370611] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-30T02:05:34.370888] [INFO] -> Elapsed time: 2.79 seconds
+[2026-01-30T02:05:34.371109] [INFO] -> Average elapsed time: 1.60 seconds
+[2026-01-30T02:05:34.371358] [INFO] -> Total elapsed time: 4.79 seconds
+[2026-01-30T02:05:34.457732] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.alton-tx.gov/government/elected_officials.php#freeform-wrap
+[2026-01-30T02:05:34.460248] [INFO] Running OpenAI prompt
+[2026-01-30T02:05:34.460593] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Salvador Vela, Arturo R. Galvan, Jr., Ricardo Garza, Richard Arevalo, Emilio Cantu, Jr.
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-30T02:05:34.460984] [INFO] openai LLM call took 0.00 seconds
+[2026-01-30T02:05:52.612298] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1963, Output tokens: 1060, Total cost: $0.002611
+[2026-01-30T02:05:52.613458] [INFO] Page relevance check found related urls: ['https://www.alton-tx.gov/government/elected_officials.php']
+[2026-01-30T02:05:52.615232] [INFO] Running Gemini prompt
+[2026-01-30T02:05:52.616164] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Salvador Vela, Arturo R. Galvan, Jr., Ricardo Garza, Richard Arevalo, Emilio Cantu, Jr.
+
+    Only extract people who are currently serving as officials as of 2026-01-30. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner
+    Target Divisions: ward, district, at-large, position, seat, place, precinct
+    Current Date: 2026-01-30
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-30) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-30T02:05:59.146983] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 3076, Output tokens: 542, Total cost: $0.002278
+[2026-01-30T02:05:59.150775] [INFO] gemini gemini-2.5-flash LLM call took 6.53 seconds
+[2026-01-30T02:05:59.152595] [INFO] Running OpenAI prompt
+[2026-01-30T02:05:59.153119] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Salvador Vela, Arturo R. Galvan, Jr., Ricardo Garza, Richard Arevalo, Emilio Cantu, Jr.
+
+    Only extract people who are currently serving as officials as of 2026-01-30. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, vice mayor, commission president, commissioner vice president, commissioner
+    Target divisions: ward, district, at-large, position, seat, place, precinct
+    Current Date: 2026-01-30
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-30T02:05:59.154015] [INFO] openai LLM call took 0.00 seconds
+[2026-01-30T02:06:39.363442] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 2708, Output tokens: 2643, Total cost: $0.005963
+[2026-01-30T02:06:39.371529] [DEBUG] Skipping adding websites for person with role and contact info: Salvador Vela
+[2026-01-30T02:06:39.372218] [DEBUG] Skipping adding websites for person with role and contact info: Arturo Galvan Jr.
+[2026-01-30T02:06:39.373666] [DEBUG] Skipping adding websites for person with role and contact info: Ricardo Garza
+[2026-01-30T02:06:39.374281] [DEBUG] Skipping adding websites for person with role and contact info: Richard Arevalo
+[2026-01-30T02:06:39.375309] [DEBUG] Skipping adding websites for person with role and contact info: Emilio Cantu Jr.
+[2026-01-30T02:06:39.376666] [INFO] links updated: [Link(url='https://www.alton-tx.gov/government/elected_officials.php', status='done', folder_name='www_alton-tx_gov_government_elected_officials_php', is_profile_page=False), Link(url='https://www.alton-tx.gov/government/elected_officials.php#freeform-wrap', status='done', folder_name='www_alton-tx_gov_government_elected_officials_php#freeform-wrap', is_profile_page=True)]
+[2026-01-30T02:06:39.479463] [INFO] No pending links left to scrape.
+[2026-01-30T02:06:39.738614] [INFO] Step 8: WorkflowStatus.FORMAT_OUTPUT Formatting output data.
+[2026-01-30T02:06:39.807919] [INFO] Step 9: CLEANUP
+[2026-01-30T02:06:39.812372] [DEBUG] Image files to keep: {'044b7edab6c2.png', '650598e396d6.png', '891517c1a107.png', '5a003a8bcd4f.png', '65d2515790c0.png'}
+[2026-01-30T02:06:39.812840] [DEBUG] All image map data: {'https://www.alton-tx.gov/_assets_/images/logo.png': '81833aad8d43.png', 'https://www.alton-tx.gov/uploadfiles/header-facebook-icon.png': '2f10c87cef5b.png', 'https://www.alton-tx.gov/_assets_/images/translate-icon.png': '802971545179.png', 'https://www.alton-tx.gov/_assets_/images/search-icon.png': 'be791a3285bc.png', 'https://www.alton-tx.gov/government/_assets_/images/freeform-slide-1.jpg': '949b35b1904b.png', 'https://www.alton-tx.gov/_assets_/images/ada-icon.png': 'f18a240fbf11.png', 'https://www.alton-tx.gov/Salvador%20Vela-Mayor%20-%20Copy.JPG': '5a003a8bcd4f.png', 'https://www.alton-tx.gov/government/elected%20officials/Arturo%20Galvan%20Jr.-Mayor%20Pro%20Tem%20-%20Copy%20(2).JPG': '65d2515790c0.png', 'https://www.alton-tx.gov/government/elected%20officials/Ricardo%20Garza-Commissioner%20-%20Copy%20(2).JPG': '044b7edab6c2.png', 'https://www.alton-tx.gov/government/elected%20officials/Richard%20Arevalo-Commissioner%20-%20Copy.JPG': '650598e396d6.png', 'https://www.alton-tx.gov/government/elected%20officials/Emilio%20Cantu%20Jr.-Commissioner%20-%20Copy.JPG': '891517c1a107.png', 'https://www.alton-tx.gov/uploadfiles/footer-facebook-icon.png': 'dca3d825ee05.png'}
+[2026-01-30T02:06:39.814993] [DEBUG] Checking image file: 891517c1a107.png
+[2026-01-30T02:06:39.816629] [DEBUG] Checking image file: f18a240fbf11.png
+[2026-01-30T02:06:39.818216] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_alton/images/f18a240fbf11.png
+[2026-01-30T02:06:39.821338] [DEBUG] Checking image file: 2f10c87cef5b.png
+[2026-01-30T02:06:39.822570] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_alton/images/2f10c87cef5b.png
+[2026-01-30T02:06:39.824782] [DEBUG] Checking image file: image_map.json
+[2026-01-30T02:06:39.825211] [DEBUG] Checking image file: be791a3285bc.png
+[2026-01-30T02:06:39.827232] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_alton/images/be791a3285bc.png
+[2026-01-30T02:06:39.828797] [DEBUG] Checking image file: 81833aad8d43.png
+[2026-01-30T02:06:39.829671] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_alton/images/81833aad8d43.png
+[2026-01-30T02:06:39.831291] [DEBUG] Checking image file: 5a003a8bcd4f.png
+[2026-01-30T02:06:39.834010] [DEBUG] Checking image file: dca3d825ee05.png
+[2026-01-30T02:06:39.835027] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_alton/images/dca3d825ee05.png
+[2026-01-30T02:06:39.836205] [DEBUG] Checking image file: 650598e396d6.png
+[2026-01-30T02:06:39.836729] [DEBUG] Checking image file: 802971545179.png
+[2026-01-30T02:06:39.837379] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_alton/images/802971545179.png
+[2026-01-30T02:06:39.838306] [DEBUG] Checking image file: 65d2515790c0.png
+[2026-01-30T02:06:39.839418] [DEBUG] Checking image file: 044b7edab6c2.png
+[2026-01-30T02:06:39.840221] [ERROR] Missing images that were expected to be found: {'044b7edab6c2.png', '650598e396d6.png', '891517c1a107.png', '5a003a8bcd4f.png', '65d2515790c0.png'}
+[2026-01-30T02:06:39.921166] [INFO] Step 10: WorkflowStatus.SAVE_OUTPUT Saving output data and config files.
+[2026-01-30T02:06:40.101209] [INFO] Step 11: MAYBE_SEND_TO_GITHUB
+[2026-01-30T02:06:40.101644] [INFO] CRUDDER_UPLOAD_URL: https://api.civicpatch.org/api/internal/pipelines/github_intake
