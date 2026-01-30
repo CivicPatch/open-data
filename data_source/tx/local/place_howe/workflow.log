@@ -1,0 +1,293 @@
+[2026-01-30T01:05:30.748869] [INFO] Step 1: RESEARCH_MUNICIPALITY
+[2026-01-30T01:05:30.782469] [INFO] Running Gemini prompt
+[2026-01-30T01:05:30.783068] [DEBUG] Prompt: 
+
+    Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
+
+    Municipality: Howe town, tx
+
+    Instructions:
+
+    1. Determine the government type of the city. Available government types:
+- mayor_commission
+- mayor_council
+- township_committee
+- select_board
+- aldermen
+
+    2. Identify the elected officials in the local government, 
+       including the Mayor (if applicable).
+       2.1. For each official, extract the following details:
+            - name: Full name only (no titles)
+            - roles: List of active municipal roles (e.g., Mayor, Council Member)
+            - divisions: List of (ward, district), only if applicable
+
+    3. Create a JSON object with the following structure:
+       ```json
+       {
+         "government_type": examples - "mayor_council" or "mayor_commission", etc.,
+         "people": [
+           {
+             "name": "Full name of the official or null if uncertain",
+             "roles": ["Mayor", "Council Member", "Commissioner", etc.],
+             "divisions": ["Ward 1", "District 2", etc.] or [],
+           }
+         ],
+         "notes": "Brief notes about the search and results"
+       }
+       ```
+
+    IMPORTANT: If the response contains anything other than a valid JSON object,
+    it will be considered incorrect. Ensure the response is strictly JSON.
+    Verify that the response is valid JSON before returning it.
+    If it is not valid JSON, retry the generation.
+    
+[2026-01-30T01:05:39.589489] [DEBUG] Gemini raw response: {'government_type': 'mayor_council', 'people': [{'name': 'Karla McDonald', 'roles': ['Mayor'], 'divisions': []}, {'name': 'Billie Ingram', 'roles': ['Mayor Pro-Tem', 'Council Member'], 'divisions': []}, {'name': 'Ricky Price', 'roles': ['Council Member'], 'divisions': []}, {'name': 'Shawn Tyler', 'roles': ['Council Member'], 'divisions': []}, {'name': 'Chad Woods', 'roles': ['Council Member'], 'divisions': []}, {'name': 'Ed Whitfield', 'roles': ['Council Member'], 'divisions': []}], 'notes': 'Howe, TX operates under a General Law Type A government, which is a form of mayor-council. The list of council members is based on the most recent official directories. Some sources may show slight variations in the number of listed council members.'}
+[2026-01-30T01:05:39.592629] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 363, Output tokens: 1786, Total cost: $0.004574
+[2026-01-30T01:05:39.593242] [INFO] gemini gemini-2.5-flash LLM call took 8.81 seconds
+[2026-01-30T01:05:39.594209] [INFO] Source URLs provided, skipping link search.
+[2026-01-30T01:05:39.684268] [INFO] Step 3: SCRAPE_PAGE: scraping https://cityofhowetx.gov/electedofficials
+[2026-01-30T01:05:42.717308] [DEBUG] Attempting to intercept and save image for: https://cityofhowetx.gov/api/blob/viewBlob?i=49UsezgMMyHnJ%2F4DmJWL6lz%2FGPzhkh16fWZgoHEdp0hTqzQRakiSH8QTdgkA1DdB&s=large
+[2026-01-30T01:05:42.718493] [DEBUG] Loading image from URL: https://cityofhowetx.gov/api/blob/viewBlob?i=49UsezgMMyHnJ%2F4DmJWL6lz%2FGPzhkh16fWZgoHEdp0hTqzQRakiSH8QTdgkA1DdB&s=large
+[2026-01-30T01:05:42.928086] [WARNING] Failed to load image https://cityofhowetx.gov/api/blob/viewBlob?i=49UsezgMMyHnJ%2F4DmJWL6lz%2FGPzhkh16fWZgoHEdp0hTqzQRakiSH8QTdgkA1DdB&s=large: HTTP 400
+[2026-01-30T01:05:42.931541] [DEBUG] Attempting to create a canvas and load image: https://cityofhowetx.gov/api/blob/viewBlob?i=49UsezgMMyHnJ%2F4DmJWL6lz%2FGPzhkh16fWZgoHEdp0hTqzQRakiSH8QTdgkA1DdB&s=large
+[2026-01-30T01:05:43.007149] [DEBUG] Image saved from canvas: 1c4f11dec882.png
+[2026-01-30T01:05:43.019203] [DEBUG] Attempting to intercept and save image for: https://cityofhowetx.gov/api/blob/viewBlob?i=EtZc28KekCbHMeYcsysngxHoodqSmPBYYDg%252B6O7Xgkelg7Vx60eSVJC70A7dn1LP&s=xlarge
+[2026-01-30T01:05:43.019995] [DEBUG] Loading image from URL: https://cityofhowetx.gov/api/blob/viewBlob?i=EtZc28KekCbHMeYcsysngxHoodqSmPBYYDg%252B6O7Xgkelg7Vx60eSVJC70A7dn1LP&s=xlarge
+[2026-01-30T01:05:43.227362] [WARNING] Failed to load image https://cityofhowetx.gov/api/blob/viewBlob?i=EtZc28KekCbHMeYcsysngxHoodqSmPBYYDg%252B6O7Xgkelg7Vx60eSVJC70A7dn1LP&s=xlarge: HTTP 400
+[2026-01-30T01:05:43.229987] [DEBUG] Attempting to create a canvas and load image: https://cityofhowetx.gov/api/blob/viewBlob?i=EtZc28KekCbHMeYcsysngxHoodqSmPBYYDg%252B6O7Xgkelg7Vx60eSVJC70A7dn1LP&s=xlarge
+[2026-01-30T01:05:43.630289] [DEBUG] Image saved from canvas: 633dea616a0a.png
+[2026-01-30T01:05:43.650154] [DEBUG] Attempting to intercept and save image for: https://cityofhowetx.gov/api/blob/viewBlob?i=hUe5zHVOmqRnadBTynaqBEVkeLjcTdmfLhcU3WASjhkbPp%252BxnGjE%252BDFEzUJR8gT5&s=xlarge
+[2026-01-30T01:05:43.651508] [DEBUG] Loading image from URL: https://cityofhowetx.gov/api/blob/viewBlob?i=hUe5zHVOmqRnadBTynaqBEVkeLjcTdmfLhcU3WASjhkbPp%252BxnGjE%252BDFEzUJR8gT5&s=xlarge
+[2026-01-30T01:05:43.893195] [WARNING] Failed to load image https://cityofhowetx.gov/api/blob/viewBlob?i=hUe5zHVOmqRnadBTynaqBEVkeLjcTdmfLhcU3WASjhkbPp%252BxnGjE%252BDFEzUJR8gT5&s=xlarge: HTTP 400
+[2026-01-30T01:05:43.894502] [DEBUG] Attempting to create a canvas and load image: https://cityofhowetx.gov/api/blob/viewBlob?i=hUe5zHVOmqRnadBTynaqBEVkeLjcTdmfLhcU3WASjhkbPp%252BxnGjE%252BDFEzUJR8gT5&s=xlarge
+[2026-01-30T01:05:44.098297] [DEBUG] Image saved from canvas: 2375b9968f18.png
+[2026-01-30T01:05:44.115638] [DEBUG] Attempting to intercept and save image for: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=%252Bl%252Bh6FOkOdvgmRt50C0%2FgOJv0aLBFgCxwPZ3JR7xXqfHvKXfGNQPVTuHO2lX9rDf&s=large
+[2026-01-30T01:05:44.116977] [DEBUG] Loading image from URL: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=%252Bl%252Bh6FOkOdvgmRt50C0%2FgOJv0aLBFgCxwPZ3JR7xXqfHvKXfGNQPVTuHO2lX9rDf&s=large
+[2026-01-30T01:05:44.738040] [INFO] Image saved: /app/data_source/tx/local/place_howe/images/7a54525e7f33.png
+[2026-01-30T01:05:44.746293] [DEBUG] Attempting to intercept and save image for: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=F5%2FvzkOL9h1U1oVL5NEKYeefrDPhneYTxPpbqUiphBVWonuPnSYXFBkkUdmP6x8a&s=large
+[2026-01-30T01:05:44.747014] [DEBUG] Loading image from URL: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=F5%2FvzkOL9h1U1oVL5NEKYeefrDPhneYTxPpbqUiphBVWonuPnSYXFBkkUdmP6x8a&s=large
+[2026-01-30T01:05:45.264388] [INFO] Image saved: /app/data_source/tx/local/place_howe/images/22dfa7b0ec32.png
+[2026-01-30T01:05:45.279430] [DEBUG] Attempting to intercept and save image for: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=wcztKzmBgqDb9OXHKjVoVNzri00Vy0fvnXlVat7yavj9fKG5sBiA34KB9%2Fgmhj1j&s=large
+[2026-01-30T01:05:45.280113] [DEBUG] Loading image from URL: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=wcztKzmBgqDb9OXHKjVoVNzri00Vy0fvnXlVat7yavj9fKG5sBiA34KB9%2Fgmhj1j&s=large
+[2026-01-30T01:05:45.581659] [INFO] Image saved: /app/data_source/tx/local/place_howe/images/38c94c74224e.png
+[2026-01-30T01:05:45.591788] [DEBUG] Attempting to intercept and save image for: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=wcejMT5Gjr1C3PUhj6%2Fldzp76%252BNu6EQaq9QReqMuZOHO7Z5EZSHeb3o8iZYrAwme&s=large
+[2026-01-30T01:05:45.592567] [DEBUG] Loading image from URL: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=wcejMT5Gjr1C3PUhj6%2Fldzp76%252BNu6EQaq9QReqMuZOHO7Z5EZSHeb3o8iZYrAwme&s=large
+[2026-01-30T01:05:45.840895] [INFO] Image saved: /app/data_source/tx/local/place_howe/images/0da43c3265ef.png
+[2026-01-30T01:05:45.863898] [DEBUG] Attempting to intercept and save image for: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=4oCJOHJxavJpnvlilP1ejQNxrWVKGYoHmGmBTtQ3WfS7152A0VEFxBj0fLoLN9ez&s=large
+[2026-01-30T01:05:45.865183] [DEBUG] Loading image from URL: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=4oCJOHJxavJpnvlilP1ejQNxrWVKGYoHmGmBTtQ3WfS7152A0VEFxBj0fLoLN9ez&s=large
+[2026-01-30T01:05:46.471982] [INFO] Image saved: /app/data_source/tx/local/place_howe/images/cc87d99416af.png
+[2026-01-30T01:05:46.483352] [DEBUG] Attempting to intercept and save image for: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=umY3iOnQJwBM9%252BBrKVWqd39pn5E8nYjAriTO7L%252BJUfh2Q8cQU4L0tYtF9ldSQp2j&s=large
+[2026-01-30T01:05:46.484579] [DEBUG] Loading image from URL: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=umY3iOnQJwBM9%252BBrKVWqd39pn5E8nYjAriTO7L%252BJUfh2Q8cQU4L0tYtF9ldSQp2j&s=large
+[2026-01-30T01:05:47.369174] [INFO] Image saved: /app/data_source/tx/local/place_howe/images/d39058bd95bd.png
+[2026-01-30T01:05:47.381667] [DEBUG] Attempting to intercept and save image for: https://cityofhowetx.gov/api/blob/viewBlob?i=49UsezgMMyHnJ%2F4DmJWL6lz%2FGPzhkh16fWZgoHEdp0hTqzQRakiSH8QTdgkA1DdB&s=large
+[2026-01-30T01:05:47.382383] [DEBUG] Loading image from URL: https://cityofhowetx.gov/api/blob/viewBlob?i=49UsezgMMyHnJ%2F4DmJWL6lz%2FGPzhkh16fWZgoHEdp0hTqzQRakiSH8QTdgkA1DdB&s=large
+[2026-01-30T01:05:47.582518] [WARNING] Failed to load image https://cityofhowetx.gov/api/blob/viewBlob?i=49UsezgMMyHnJ%2F4DmJWL6lz%2FGPzhkh16fWZgoHEdp0hTqzQRakiSH8QTdgkA1DdB&s=large: HTTP 400
+[2026-01-30T01:05:47.583634] [DEBUG] Attempting to create a canvas and load image: https://cityofhowetx.gov/api/blob/viewBlob?i=49UsezgMMyHnJ%2F4DmJWL6lz%2FGPzhkh16fWZgoHEdp0hTqzQRakiSH8QTdgkA1DdB&s=large
+[2026-01-30T01:05:47.597183] [DEBUG] Image saved from canvas: 1c4f11dec882.png
+[2026-01-30T01:05:47.620465] [DEBUG] Attempting to intercept and save image for: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=%252Bl%252Bh6FOkOdvgmRt50C0%2FgOJv0aLBFgCxwPZ3JR7xXqfHvKXfGNQPVTuHO2lX9rDf&s=large
+[2026-01-30T01:05:47.621498] [DEBUG] Loading image from URL: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=%252Bl%252Bh6FOkOdvgmRt50C0%2FgOJv0aLBFgCxwPZ3JR7xXqfHvKXfGNQPVTuHO2lX9rDf&s=large
+[2026-01-30T01:05:48.221713] [INFO] Image saved: /app/data_source/tx/local/place_howe/images/7a54525e7f33.png
+[2026-01-30T01:05:48.232664] [DEBUG] Attempting to intercept and save image for: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=F5%2FvzkOL9h1U1oVL5NEKYeefrDPhneYTxPpbqUiphBVWonuPnSYXFBkkUdmP6x8a&s=large
+[2026-01-30T01:05:48.233678] [DEBUG] Loading image from URL: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=F5%2FvzkOL9h1U1oVL5NEKYeefrDPhneYTxPpbqUiphBVWonuPnSYXFBkkUdmP6x8a&s=large
+[2026-01-30T01:05:48.972778] [INFO] Image saved: /app/data_source/tx/local/place_howe/images/22dfa7b0ec32.png
+[2026-01-30T01:05:48.983167] [DEBUG] Attempting to intercept and save image for: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=wcztKzmBgqDb9OXHKjVoVNzri00Vy0fvnXlVat7yavj9fKG5sBiA34KB9%2Fgmhj1j&s=large
+[2026-01-30T01:05:48.984041] [DEBUG] Loading image from URL: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=wcztKzmBgqDb9OXHKjVoVNzri00Vy0fvnXlVat7yavj9fKG5sBiA34KB9%2Fgmhj1j&s=large
+[2026-01-30T01:05:49.265534] [INFO] Image saved: /app/data_source/tx/local/place_howe/images/38c94c74224e.png
+[2026-01-30T01:05:49.278534] [DEBUG] Attempting to intercept and save image for: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=wcejMT5Gjr1C3PUhj6%2Fldzp76%252BNu6EQaq9QReqMuZOHO7Z5EZSHeb3o8iZYrAwme&s=large
+[2026-01-30T01:05:49.280558] [DEBUG] Loading image from URL: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=wcejMT5Gjr1C3PUhj6%2Fldzp76%252BNu6EQaq9QReqMuZOHO7Z5EZSHeb3o8iZYrAwme&s=large
+[2026-01-30T01:05:49.581386] [INFO] Image saved: /app/data_source/tx/local/place_howe/images/0da43c3265ef.png
+[2026-01-30T01:05:49.597351] [DEBUG] Attempting to intercept and save image for: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=4oCJOHJxavJpnvlilP1ejQNxrWVKGYoHmGmBTtQ3WfS7152A0VEFxBj0fLoLN9ez&s=large
+[2026-01-30T01:05:49.600694] [DEBUG] Loading image from URL: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=4oCJOHJxavJpnvlilP1ejQNxrWVKGYoHmGmBTtQ3WfS7152A0VEFxBj0fLoLN9ez&s=large
+[2026-01-30T01:05:50.085416] [INFO] Image saved: /app/data_source/tx/local/place_howe/images/cc87d99416af.png
+[2026-01-30T01:05:50.097237] [DEBUG] Attempting to intercept and save image for: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=umY3iOnQJwBM9%252BBrKVWqd39pn5E8nYjAriTO7L%252BJUfh2Q8cQU4L0tYtF9ldSQp2j&s=large
+[2026-01-30T01:05:50.100080] [DEBUG] Loading image from URL: https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=umY3iOnQJwBM9%252BBrKVWqd39pn5E8nYjAriTO7L%252BJUfh2Q8cQU4L0tYtF9ldSQp2j&s=large
+[2026-01-30T01:05:51.266317] [INFO] Image saved: /app/data_source/tx/local/place_howe/images/d39058bd95bd.png
+[2026-01-30T01:05:51.539271] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://cityofhowetx.gov/electedofficials
+[2026-01-30T01:05:51.600582] [DEBUG] -> Preprocessing with identities: {'Karla McDonald': ['Karla McDonald'], 'Billie Ingram': ['Billie Ingram'], 'Ricky Price': ['Ricky Price'], 'Shawn Tyler': ['Shawn Tyler'], 'Chad Woods': ['Chad Woods'], 'Ed Whitfield': ['Ed Whitfield']}
+[2026-01-30T01:06:02.976105] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 79% (271/342)
+[2026-01-30T01:06:05.322833] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-30T01:06:05.323156] [INFO] -> Elapsed time: 13.78 seconds
+[2026-01-30T01:06:05.323468] [INFO] -> Average elapsed time: 13.78 seconds
+[2026-01-30T01:06:05.323784] [INFO] -> Total elapsed time: 13.78 seconds
+[2026-01-30T01:06:05.439839] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://cityofhowetx.gov/electedofficials
+[2026-01-30T01:06:05.441827] [INFO] Running OpenAI prompt
+[2026-01-30T01:06:05.442189] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Karla McDonald, Billie Ingram, Ricky Price, Shawn Tyler, Chad Woods, Ed Whitfield
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-30T01:06:05.442522] [INFO] openai LLM call took 0.00 seconds
+[2026-01-30T01:06:08.240106] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1623, Output tokens: 102, Total cost: $0.000610
+[2026-01-30T01:06:08.240984] [INFO] Page relevance check found related urls: ['https://cityofhowetx.gov/electedofficials']
+[2026-01-30T01:06:08.241896] [INFO] Running Gemini prompt
+[2026-01-30T01:06:08.242381] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Karla McDonald, Billie Ingram, Ricky Price, Shawn Tyler, Chad Woods, Ed Whitfield
+
+    Only extract people who are currently serving as officials as of 2026-01-30. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target Divisions: ward, district, at-large, position, seat, place, precinct
+    Current Date: 2026-01-30
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-30) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-30T01:06:17.180038] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 2767, Output tokens: 1068, Total cost: $0.003500
+[2026-01-30T01:06:17.184311] [INFO] gemini gemini-2.5-flash LLM call took 8.94 seconds
+[2026-01-30T01:06:17.186787] [INFO] Running OpenAI prompt
+[2026-01-30T01:06:17.187511] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Karla McDonald, Billie Ingram, Ricky Price, Shawn Tyler, Chad Woods, Ed Whitfield
+
+    Only extract people who are currently serving as officials as of 2026-01-30. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target divisions: ward, district, at-large, position, seat, place, precinct
+    Current Date: 2026-01-30
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-30T01:06:17.188808] [INFO] openai LLM call took 0.00 seconds
+[2026-01-30T01:07:00.470898] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 2386, Output tokens: 2886, Total cost: $0.006368
+[2026-01-30T01:07:00.475182] [INFO] links updated: [Link(url='https://cityofhowetx.gov/electedofficials', status='done', folder_name='cityofhowetx_gov_electedofficials', is_profile_page=False)]
+[2026-01-30T01:07:00.578099] [INFO] No pending links left to scrape.
+[2026-01-30T01:07:00.848783] [INFO] Step 8: WorkflowStatus.FORMAT_OUTPUT Formatting output data.
+[2026-01-30T01:07:00.954856] [INFO] Step 9: CLEANUP
+[2026-01-30T01:07:00.958823] [DEBUG] Image files to keep: {'7a54525e7f33.png', '38c94c74224e.png', 'd39058bd95bd.png', 'cc87d99416af.png', '0da43c3265ef.png'}
+[2026-01-30T01:07:00.959195] [DEBUG] All image map data: {'https://cityofhowetx.gov/api/blob/viewBlob?i=49UsezgMMyHnJ%2F4DmJWL6lz%2FGPzhkh16fWZgoHEdp0hTqzQRakiSH8QTdgkA1DdB&s=large': '1c4f11dec882.png', 'https://cityofhowetx.gov/api/blob/viewBlob?i=EtZc28KekCbHMeYcsysngxHoodqSmPBYYDg%252B6O7Xgkelg7Vx60eSVJC70A7dn1LP&s=xlarge': '633dea616a0a.png', 'https://cityofhowetx.gov/api/blob/viewBlob?i=hUe5zHVOmqRnadBTynaqBEVkeLjcTdmfLhcU3WASjhkbPp%252BxnGjE%252BDFEzUJR8gT5&s=xlarge': '2375b9968f18.png', 'https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=%252Bl%252Bh6FOkOdvgmRt50C0%2FgOJv0aLBFgCxwPZ3JR7xXqfHvKXfGNQPVTuHO2lX9rDf&s=large': '7a54525e7f33.png', 'https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=F5%2FvzkOL9h1U1oVL5NEKYeefrDPhneYTxPpbqUiphBVWonuPnSYXFBkkUdmP6x8a&s=large': '22dfa7b0ec32.png', 'https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=wcztKzmBgqDb9OXHKjVoVNzri00Vy0fvnXlVat7yavj9fKG5sBiA34KB9%2Fgmhj1j&s=large': '38c94c74224e.png', 'https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=wcejMT5Gjr1C3PUhj6%2Fldzp76%252BNu6EQaq9QReqMuZOHO7Z5EZSHeb3o8iZYrAwme&s=large': '0da43c3265ef.png', 'https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=4oCJOHJxavJpnvlilP1ejQNxrWVKGYoHmGmBTtQ3WfS7152A0VEFxBj0fLoLN9ez&s=large': 'cc87d99416af.png', 'https://cityofhowetx.gov/api/blob/viewBlob?rf=t&i=umY3iOnQJwBM9%252BBrKVWqd39pn5E8nYjAriTO7L%252BJUfh2Q8cQU4L0tYtF9ldSQp2j&s=large': 'd39058bd95bd.png'}
+[2026-01-30T01:07:00.965625] [DEBUG] Checking image file: 7a54525e7f33.png
+[2026-01-30T01:07:00.990891] [DEBUG] Checking image file: d39058bd95bd.png
+[2026-01-30T01:07:00.997251] [DEBUG] Checking image file: 0da43c3265ef.png
+[2026-01-30T01:07:01.005192] [DEBUG] Checking image file: 38c94c74224e.png
+[2026-01-30T01:07:01.007004] [DEBUG] Checking image file: cc87d99416af.png
+[2026-01-30T01:07:01.007892] [DEBUG] Checking image file: 1c4f11dec882.png
+[2026-01-30T01:07:01.009652] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_howe/images/1c4f11dec882.png
+[2026-01-30T01:07:01.010903] [DEBUG] Checking image file: 22dfa7b0ec32.png
+[2026-01-30T01:07:01.013337] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_howe/images/22dfa7b0ec32.png
+[2026-01-30T01:07:01.017332] [DEBUG] Checking image file: image_map.json
+[2026-01-30T01:07:01.017697] [DEBUG] Checking image file: 2375b9968f18.png
+[2026-01-30T01:07:01.022228] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_howe/images/2375b9968f18.png
+[2026-01-30T01:07:01.024230] [DEBUG] Checking image file: 633dea616a0a.png
+[2026-01-30T01:07:01.025032] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_howe/images/633dea616a0a.png
+[2026-01-30T01:07:01.027067] [ERROR] Missing images that were expected to be found: {'7a54525e7f33.png', '38c94c74224e.png', 'd39058bd95bd.png', 'cc87d99416af.png', '0da43c3265ef.png'}
+[2026-01-30T01:07:01.114327] [INFO] Step 10: WorkflowStatus.SAVE_OUTPUT Saving output data and config files.
+[2026-01-30T01:07:01.317512] [INFO] Step 11: MAYBE_SEND_TO_GITHUB
+[2026-01-30T01:07:01.317831] [INFO] CRUDDER_UPLOAD_URL: https://api.civicpatch.org/api/internal/pipelines/github_intake
