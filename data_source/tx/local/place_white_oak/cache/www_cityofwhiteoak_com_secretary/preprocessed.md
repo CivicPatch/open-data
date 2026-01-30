@@ -1,0 +1,76 @@
+City of White Oak - City Secretary / Finance Director
+
+
+[Skip to main content](https://www.cityofwhiteoak.com/secretary#firstSection)
+
+[![logo](https://www.cityofwhiteoak.com/api/blob/viewBlob?i=YusEL%252B1fJxc6Lk2N1diNRziLCbTCckaAYWDO72qJ8EnTdMFbVI78xYUQJ5aBitzJ&s=large)](https://www.cityofwhiteoak.com/index)
+
+* + [Mayor & City Council](https://www.cityofwhiteoak.com/electedofficials)
+* + [City Coordinator](https://www.cityofwhiteoak.com/coordinator)
+  + [City Secretary / Finance Director](https://www.cityofwhiteoak.com/secretary)
+* + [Contact Us](https://www.cityofwhiteoak.com/contactus)
+
+
+
+![](https://www.cityofwhiteoak.com/api/blob/viewBlob?i=3MglExLRChsRHRStmh7k%252Bj01RQdBPGx9QIJ%2Fi4HOZipZeGQaTMnS3MN4jgQwBKV3&s=xlarge)
+City Secretary / Finance Director
+City Secretary / Finance Director
+
+<mwjspeople-obj></mwjspeople-obj><script type="module">import mwjsPeople from "https://app.membershipware.com/api/public/mwjsPeople?et=iTHtQsN%252BzLRkDWUwxwKY3A%3d%3d&eb=DdOO2yUd1z9YcQI%2fNqxYrg%3d%3d";</script>
+
+
+![](https://www.cityofwhiteoak.com/api/blob/viewBlob?rf=t&i=IbqquUGBlzMhnpzxDb%2FPfAZMl08rlZkMI%2FVXNoVkmiqe8Gye1%252BgU70Zrn0ZIpR1s&s=large)
+
+Kristine Toon
+
+City Secretary / Finance Director
+
+(903) 759-3936 x7024
+
+citysecretary@cityofwhiteoak.com
+
+906 S. White Oak Rd., White Oak TX, 75693
+
+Monday-Thursday: 7:30 a.m. - 4:30 p.m.
+Friday: 7:30 a.m. - 3:00 p.m.
+
+![](../ic?i=project&c2=transparent&c1=%235c0223&c3=%23ededed)
+![](../ic?i=doc&c2=transparent&c1=%235c0223&c3=%23ededed)
+![](../ic?i=money&c2=transparent&c1=%235c0223&c3=%23ededed)
+![](../ic?i=home&c2=transparent&c1=%235c0223&c3=%23ededed)
+
+[Elections](javascript:;)
+[Open Records Request](https://www.cityofwhiteoak.com/openrecordsrequest)
+[Alcoholic Beverage Sales](https://www.cityofwhiteoak.com/beveragesales)
+[Unclaimed Property](https://www.cityofwhiteoak.com/unclaimedproperty)
+
+Job Summary - City Secretary
+
+The City Secretary attends and records proceedings of official meetings of the City and is the manager and custodian of official records.  The City Secretary prepares and posts meeting agendas in compliance with the Open Meetings Act.  She serves as an informational resource as well as a vital connection between city government and its citizenry.  As public information officer, the City Secretary provides requested information pursuant to the Public Information Act (also referred to as the Freedom of Information Act).  The City Secretary administers the Oath of Office, attests contracts, assessment certificates, and other legal documents when executed by authorized officers of the city.  The City Secretary serves as the election official for all city elections and performs other duties as may be required by the Charter, City Council or state law.
+
+The Finance Department is responsible for the managing of the day to day finances of the City. It is the goal of city staff to provide excellent customer service with prompt and courteous handling of all accounts payable, accounts receivable, utility billing, municipal court, and payroll functions. The Finance Department is also responsible for budget document creation, cash management activities including investments, debt management, fixed asset schedules, and monthly, quarterly, and annual financial statements. The Finance Director also serves as the City Secretary.
+
+* Payment of all City obligations
+* Preparation of monthly financial reports for management
+* Preparation of the annual budget document
+* The preparation of the annual audit and audited financial statements
+
+The City is proud of healthy fund balances and is committed to a level of sustainability for its citizens. Every effort has been made to ensure current and easy accessibility to City financial information for citizens and other stakeholders. The documents and other information available below, provide a comprehensive picture of the City's financial condition.  Please direct questions about these documents to the
+[Director of Finance](javascript:;)
+. For information not included below, please fill out a
+[Public Information Request](https://www.cityofwhiteoak.com/formsandpermits?def2=DTRV2duDOlR6O9Q%252B5h8r5w%3D%3D)
+and follow the instructions on the form.
+
+![](https://www.cityofwhiteoak.com/api/blob/viewBlob?i=YusEL%252B1fJxc6Lk2N1diNRziLCbTCckaAYWDO72qJ8EnTdMFbVI78xYUQJ5aBitzJ&s=large)
+906 S. White Oak Road, White Oak, TX 75693
+[(903) 759-3936](tel:9037593936)
+|
+[info@cityofwhiteoak.com](mailto:info@cityofwhiteoak.com)
+
+[Munibit](javascript:;)
+[Terms & Privacy](https://www.cityofwhiteoak.com/termsandprivacy)
+[Login](javascript:;)
+[Accessibility](https://www.cityofwhiteoak.com/siteaccessibility)
+
+Imagine signing into your account as easily as unlocking your phone—no more worrying about remembering or typing a password. A passkey is a secure digital key that uses the safety features in your device to keep your account protected. It’s designed to be both simple to use and highly secure.
+Ready to experience a simpler, safer sign-in? Click the button above to create your passkey now.
