@@ -1,0 +1,200 @@
+City Council – 01/09/2023 | City of Henrietta
+
+
+
+
+* [City of Henrietta
+  City of Henrietta](https://cityofhenrietta.com/ "City of Henrietta")
+  =======================================================================================
+* [Menu](https://cityofhenrietta.com/agendas/city-council-01-09-2023/#)
+
+
+
+* [Home](https://cityofhenrietta.com/)
+* Government
+  + ##### [Back](https://cityofhenrietta.com/agendas/city-council-01-09-2023/#)
+  + [Administration](https://cityofhenrietta.com/departments/administration/)
+  + [Animal Control](https://cityofhenrietta.com/departments/animal-control/)
+  + [City Council](https://cityofhenrietta.com/departments/city-council-administration/)
+  + [Municipal Court](https://cityofhenrietta.com/municipal-court/)
+  + [Bulky Waste/Convenience Center](https://cityofhenrietta.com/departments/convenience-center/)
+  + [Volunteer Fire Dept.](https://cityofhenrietta.com/departments/henrietta-volunteer-fire-department/)
+  + [Hope Cemetery](https://cityofhenrietta.com/departments/hope-cemetery/)
+  + [City Parks](https://cityofhenrietta.com/departments/parks/)
+  + [Streets](https://cityofhenrietta.com/departments/streets/)
+  + [Water & Sewer](https://cityofhenrietta.com/departments/water-sewer/)
+  + [TCEQ](https://cityofhenrietta.com/tceq/)
+* [Visit Henrietta](https://cityofhenrietta.com/visit-henrietta/)
+  + ##### [Back](https://cityofhenrietta.com/agendas/city-council-01-09-2023/#)
+  + [Attractions](https://cityofhenrietta.com/visit-henrietta/attractions/)
+  + [News](https://cityofhenrietta.com/visit-henrietta/news/)
+  + [Relocation Info](https://cityofhenrietta.com/visit-henrietta/relocation-info/)
+  + [Henrietta ISD](http://www.henrietta-isd.net)
+* [Economic Development](https://cityofhenrietta.com/economic-development/)
+  + ##### [Back](https://cityofhenrietta.com/agendas/city-council-01-09-2023/#)
+  + [Board Members](https://cityofhenrietta.com/economic-development/board-members/)
+  + [Director](https://cityofhenrietta.com/economic-development/director/)
+  + [Economic Data](http://grownorthtexas.com/henrietta/community-data/)
+  + [Recent EDC Projects](https://cityofhenrietta.com/economic-development/retail/)
+  + [Useful Links](https://cityofhenrietta.com/economic-development/useful-links/)
+* [Election Info](https://cityofhenrietta.com/election-materials/)
+* [Contact](https://cityofhenrietta.com/contact/)
+* [Bill Pay](https://www.municipalonlinepayments.com/cityofhenriettatx)
+
+City Council – 01/09/2023
+-------------------------
+
+[Meeting Document](https://cityofhenrietta.com/wp-content/uploads/2023/01/Untitled_2023010609424727.pdf)
+
+* [City Council – 07/27/2023](https://cityofhenrietta.com/agendas/city-council-07-27-2023/)
+* [City Council – 06/10/2024](https://cityofhenrietta.com/agendas/city-council-06-10-2024/)
+* [City Council – 05/13/2024](https://cityofhenrietta.com/agendas/city-council-05-13-2024/)
+* [City Council – 04/08/2024](https://cityofhenrietta.com/agendas/city-council-04-08-2024/)
+* [City Council – 03/11/2024](https://cityofhenrietta.com/agendas/city-council-03-11-2024/)
+* [City Council – 02/12/2024](https://cityofhenrietta.com/agendas/city-council-02-12-2024/)
+* [City Council – 01/08/2024](https://cityofhenrietta.com/agendas/auto-draft-34/)
+* [City Council – 12/11/2023](https://cityofhenrietta.com/agendas/city-council-12-11-2023/)
+* [City Council – 11/13/2023](https://cityofhenrietta.com/agendas/city-council-11-13-2023/)
+* [City Council – 10/09/2023](https://cityofhenrietta.com/agendas/city-council-10-09-2023/)
+* [Budget – 2023](https://cityofhenrietta.com/agendas/budget-2023/)
+* [City Council – 09/11/2023](https://cityofhenrietta.com/agendas/city-council-09-11-2023/)
+* [City Council – 08/21/2023](https://cityofhenrietta.com/agendas/city-council-08-21-2023-2/)
+* [City Council – 07/05/2024](https://cityofhenrietta.com/agendas/auto-draft-35/)
+* [City Council – 07/20/2023](https://cityofhenrietta.com/agendas/city-council-07-20-2023/)
+* [City Council – 07/10/2023](https://cityofhenrietta.com/agendas/auto-draft-33/)
+* [City Council – 06/22/2023](https://cityofhenrietta.com/agendas/city-council-06-22-2023/)
+* [City Council – 06/12/2023](https://cityofhenrietta.com/agendas/city-council-06-12-2023/)
+* [City Council – 05/22/2023](https://cityofhenrietta.com/agendas/city-council-05-22-2023/)
+* [City Council – 05/15/2023](https://cityofhenrietta.com/agendas/auto-draft-32/)
+* [City Council – 05/08/2023](https://cityofhenrietta.com/agendas/auto-draft-31/)
+* [City Council – 04/10/2023](https://cityofhenrietta.com/agendas/city-council-04-10-2023/)
+* [City Council – 03/13/2023](https://cityofhenrietta.com/agendas/auto-draft-30/)
+* [City Council – 02/13/2023](https://cityofhenrietta.com/agendas/city-council-02-13-2023/)
+* [City Council – 01/09/2023](https://cityofhenrietta.com/agendas/city-council-01-09-2023/)
+* [City Council – 04/14/2025](https://cityofhenrietta.com/agendas/city-council-04-14-2025/)
+* [City Council – 01/12/2026](https://cityofhenrietta.com/agendas/auto-draft-43/)
+* [Budget – 10/01/2025](https://cityofhenrietta.com/agendas/budget-10-01-2025-2/)
+* [City Council – 12/08/2025](https://cityofhenrietta.com/agendas/auto-draft-42/)
+* [City Council – 11/10/2025](https://cityofhenrietta.com/agendas/auto-draft-41/)
+* [City Council – 10/13/2025](https://cityofhenrietta.com/agendas/city-council-10-13-2025/)
+* [City Council – 09/08/2025](https://cityofhenrietta.com/agendas/city-council-09-08-2025/)
+* [Budget – 10/01/2025](https://cityofhenrietta.com/agendas/budget-10-01-2025/)
+* [City Council – 08/11/2025](https://cityofhenrietta.com/agendas/auto-draft-40/)
+* [City Council – 07/22/2025](https://cityofhenrietta.com/agendas/auto-draft-39/)
+* [City Council – 07/14/2025](https://cityofhenrietta.com/agendas/auto-draft-38/)
+* [City Council – 06/09/2025](https://cityofhenrietta.com/agendas/auto-draft-37/)
+* [City Council – 05/12/2025](https://cityofhenrietta.com/agendas/city-council-05-12-2025/)
+* [City Council – 12/12/2022](https://cityofhenrietta.com/agendas/city-council-12-12-2022/)
+* [City Council – 03/10/2025](https://cityofhenrietta.com/agendas/city-council-03-10-2025/)
+* [City Council – 02/10/2025](https://cityofhenrietta.com/agendas/city-council-02-10-2025/)
+* [City Council – 01/13/2025](https://cityofhenrietta.com/agendas/city-council-01-13-2025/)
+* [City Council – 12/09/2024](https://cityofhenrietta.com/agendas/city-council-12-09-2024/)
+* [City Council – 11/18/2024](https://cityofhenrietta.com/agendas/city-council-11-18-2024/)
+* [City Council – 10/14/2024](https://cityofhenrietta.com/agendas/city-council-10-14-2024/)
+* [Budget – 10/01/2024](https://cityofhenrietta.com/agendas/budget-10-01-2024-2/)
+* [City Council – 09/06/2024](https://cityofhenrietta.com/agendas/city-council-09-06-2024/)
+* [City Council – 08/19/2024](https://cityofhenrietta.com/agendas/city-council-08-19-2024/)
+* [City Council – 08/12/2024](https://cityofhenrietta.com/agendas/city-council-08-12-2024/)
+* [City Council – 07/17/2024](https://cityofhenrietta.com/agendas/auto-draft-36/)
+* [City Council – 07/13/2020](https://cityofhenrietta.com/agendas/auto-draft-5/)
+* [City Council – 05/10/2021](https://cityofhenrietta.com/agendas/city-council-05-10-2021/)
+* [City Council – 04/12/2021](https://cityofhenrietta.com/agendas/1413-2/)
+* [City Council – 11/09/2020](https://cityofhenrietta.com/agendas/city-council-11-09-2020/)
+* [City Council – 03/12/2021](https://cityofhenrietta.com/agendas/auto-draft-9/)
+* [City Council – 03/08/2021](https://cityofhenrietta.com/agendas/auto-draft-8/)
+* [City Council – 02/08/2021](https://cityofhenrietta.com/agendas/city-council-02-08-2021/)
+* [City Council – 01/11/2021](https://cityofhenrietta.com/agendas/city-council-01-11-2021/)
+* [City Council – 12/14/2020](https://cityofhenrietta.com/agendas/auto-draft-7/)
+* [City Council – 10/12/2020](https://cityofhenrietta.com/agendas/auto-draft-6/)
+* [City Council – 09/14/2020](https://cityofhenrietta.com/agendas/city-council-09-14-2020/)
+* [City Council – 08/31/2020](https://cityofhenrietta.com/agendas/1251-2/)
+* [City Council – 08/10/2020](https://cityofhenrietta.com/agendas/1239-2/)
+* [City Council – 06/14/2021](https://cityofhenrietta.com/agendas/auto-draft-10/)
+* [City Council – 06/08/2020](https://cityofhenrietta.com/agendas/city-council-06-08-2020/)
+* [City Council – 05/11/2020](https://cityofhenrietta.com/agendas/city-council-05-11-2020/)
+* [City Council – 04/13/2020](https://cityofhenrietta.com/agendas/city-council-04-13-2020/)
+* [City Council – 04/03/2020](https://cityofhenrietta.com/agendas/auto-draft-4/)
+* [City Council – 04/01/2020](https://cityofhenrietta.com/agendas/city-council-04-01-2020/)
+* [City Council – 03/30/2020](https://cityofhenrietta.com/agendas/city-council-03-30-2020-2/)
+* [City Council – 03/30/2020](https://cityofhenrietta.com/agendas/city-council-03-30-2020/)
+* [City Council – 02/24/2020](https://cityofhenrietta.com/agendas/auto-draft-3/)
+* [City Council – 02/10/2020](https://cityofhenrietta.com/agendas/auto-draft-2/)
+* [City Council – 01/13/2020](https://cityofhenrietta.com/agendas/auto-draft/)
+* [City Council – 12/09/2019](https://cityofhenrietta.com/agendas/1001-2/)
+* [City Council – 03/14/2022](https://cityofhenrietta.com/agendas/auto-draft-19/)
+* [City Council – 11/14/2022](https://cityofhenrietta.com/agendas/auto-draft-29/)
+* [City Council – 10/10/2022](https://cityofhenrietta.com/agendas/auto-draft-28/)
+* [City Council – 09/12/2022](https://cityofhenrietta.com/agendas/auto-draft-27/)
+* [City Council – 08/22/2022](https://cityofhenrietta.com/agendas/city-council-08-22-2022/)
+* [City Council – 08/16/2022](https://cityofhenrietta.com/agendas/auto-draft-26/)
+* [City Council – 08/08/2022](https://cityofhenrietta.com/agendas/auto-draft-25/)
+* [City Council – 07/11/2022](https://cityofhenrietta.com/agendas/auto-draft-24/)
+* [City Council – 06/13/2022](https://cityofhenrietta.com/agendas/auto-draft-23/)
+* [City Council – 06/13/2022](https://cityofhenrietta.com/agendas/city-council-06-13-2022/)
+* [City Council – 05/09/2022](https://cityofhenrietta.com/agendas/auto-draft-22/)
+* [City Council – 04/11/2022](https://cityofhenrietta.com/agendas/auto-draft-21/)
+* [City Council – 03/28/2022](https://cityofhenrietta.com/agendas/auto-draft-20/)
+* [City Council – 11/11/2019](https://cityofhenrietta.com/agendas/988-2/)
+* [City Council – 02/14/2022](https://cityofhenrietta.com/agendas/auto-draft-18/)
+* [City Council – 01/10/2022](https://cityofhenrietta.com/agendas/auto-draft-17/)
+* [City Council – 01/10/2022](https://cityofhenrietta.com/agendas/auto-draft-16/)
+* [City Council – 12/13/2021](https://cityofhenrietta.com/agendas/auto-draft-15/)
+* [City Council – 11/08/2021](https://cityofhenrietta.com/agendas/auto-draft-14/)
+* [City Council – 10/11/2021](https://cityofhenrietta.com/agendas/city-council-10-11-2021/)
+* [City Council – 09/13/2021](https://cityofhenrietta.com/agendas/auto-draft-13/)
+* [City Council – 08/23/2021](https://cityofhenrietta.com/agendas/1538-2/)
+* [City Council – 08/09/2021](https://cityofhenrietta.com/agendas/auto-draft-12/)
+* [City Council – 07/19/2021](https://cityofhenrietta.com/agendas/1516-2/)
+* [City Council – 07/12/2021](https://cityofhenrietta.com/agendas/auto-draft-11/)
+
+### News
+
+#### [Public Hearing 2025-2026](https://cityofhenrietta.com/public-hearing-2025-2026/)
+
+Posted: 8/12/2025
+
+[Untitled]\_2025081213270017Download
+…
+
+[Read More](https://cityofhenrietta.com/public-hearing-2025-2026/)
+
+#### [Lillie’s Coffee](https://cityofhenrietta.com/lillies-coffee/)
+
+Posted: 11/27/2024
+
+109 W Omega Street
+…
+
+[Read More](https://cityofhenrietta.com/lillies-coffee/)
+
+#### [Milano’s Pizza & Chicken](https://cityofhenrietta.com/milanos-pizza-chicken/)
+
+Posted: 11/27/2024
+
+204 S Bridge Street
+…
+
+[Read More](https://cityofhenrietta.com/milanos-pizza-chicken/)
+
+[News Archives](https://cityofhenrietta.com/news/)
+
+* [##### City Ordinances](http://www.municode.com/Resources/gateway.asp?pid=10244&sid=43)
+* [##### Minutes](http://www.mccinnovations.com/weblink/login.aspx?LogName=Henrietta)
+* [##### Agenda](https://cityofhenrietta.com/agendas/)
+
+**City Hall:** 101 North Main Henrietta, TX 76365
+
+**Phone:** 940-538-4316  
+**Fax:** 940-538-4974
+
+[![Site Powered by Crane | West](https://cityofhenrietta.com/wp-content/themes/henrietta/img/cw-light.png)](http://crane-west.com/)
+
+© 2026 City of Henrietta, All Rights Reserved.
+
+* [Home](https://cityofhenrietta.com/)
+* Government
+* [Visit Henrietta](https://cityofhenrietta.com/visit-henrietta/)
+* [Economic Development](https://cityofhenrietta.com/economic-development/)
+* [Election Info](https://cityofhenrietta.com/election-materials/)
+* [Contact](https://cityofhenrietta.com/contact/)
+* [Bill Pay](https://www.municipalonlinepayments.com/cityofhenriettatx)
