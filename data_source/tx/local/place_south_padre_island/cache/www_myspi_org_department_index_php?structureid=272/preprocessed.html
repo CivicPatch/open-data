@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Human Verification
+  </title>
+  <style>
+   /*@font-face {
+    font-family:AmazonEmber;
+    src: url("https://a0.awsstatic.com/libra-css/fonts/amazon-ember/AmazonEmber_Rg.woff2") format("woff2"), url("https://a0.awsstatic.com/libra-css/fonts/amazon-ember/AmazonEmber_Rg.woff") format("woff");
+}*/
+
+html,
+body {
+    height: 100%;
+}
+
+#captcha {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 100%;
+}
+
+.btn {
+    box-sizing: border-box;
+    border-radius: 2px;
+    padding: 5px 17px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #FF9902;
+    color: black;
+    border: 1px solid #FF9902;
+    font-weight: bold;
+}
+.btn-primary:hover {
+    background-color: #EC7210;
+    border: 1px solid #EC7210;
+    font-weight: bold;
+}
+
+.btn-icon {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    padding-inline-start: 6px;
+    padding-inline-end: 6px;
+}
+
+.amzn-captcha-modal {
+    background-color: #fff,
+}
+
+/* TODO: Fix this so the root uses classes instead of an ID */
+#root select,
+#root button {
+    font-size: inherit;
+}
+
+/* Consistent keyboard focus styling */
+#root *:focus {
+    outline: 3px solid #0972d3;
+    outline-offset: 1px;
+}
+
+.amzn-captcha-state-container {
+    max-width: 100px;
+}
+
+#root-instructions {
+    max-width: 350px;
+}
+
+#verification-status {
+    max-width: 250px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ label > img {
+    transform: scale(2);
+    background: rgb(255, 255, 255);
+    box-shadow: 1px 2px 2px rgb(117, 117, 117), -1px 2px 2px rgb(117, 117, 117);
+    cursor: zoom-out;
+}
+
+input[type="text"],
+select,
+.btn {
+    font-family: 'Amazon Ember', Helvetica, Arial, sans-serif;
+    font-size: inherit;
+}
+
+.element img {
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+}
+
+.grid-category {
+    text-decoration: underline;
+    font-family: 'Amazon Ember', Helvetica, Arial, sans-serif;
+    font-weight:'heavy';
+}
+
+.amzn-captcha-lang-selector {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: transparent;
+}
+
+.amzn-captcha-audio-play-btn {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    background-color: #18817E;
+    border: 1px solid #18817E;
+}
+
+.amzn-grid-focus {
+    position: absolute;
+    background: transparent;
+    outline: 3px solid #0972d3;
+    outline-offset: 1px;
+    pointer-events: none;
+}
+  </style>
+ </head>
+ <body>
+  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDhDMCAxMi40MTgzIDMuNTgxNzIgMTYgOCAxNkMxMi40MTgzIDE2IDE2IDEyLjQxODMgMTYgOEMxNiAzLjU4MTcyIDEyLjQxODMgMCA4IDBDMy41ODE3MiAwIDAgMy41ODE3MiAwIDhaTTE0IDhDMTQgMTEuMzEzNyAxMS4zMTM3IDE0IDggMTRDNC42ODYyOSAxNCAyIDExLjMxMzcgMiA4QzIgNC42ODYyOSA0LjY4NjI5IDIgOCAyQzExLjMxMzcgMiAxNCA0LjY4NjI5IDE0IDhaTTYuNTg1NzkgOEw0LjQ2Mjg5IDEwLjEyMjlMNS44NzcxMSAxMS41MzcxTDggOS40MTQyMUwxMC4xMjI5IDExLjUzNzFMMTEuNTM3MSAxMC4xMjI5TDkuNDE0MjEgOEwxMS41MzcxIDUuODc3MTFMMTAuMTIyOSA0LjQ2Mjg5TDggNi41ODU3OUw1Ljg3NzExIDQuNDYyODlMNC40NjI4OSA1Ljg3NzExTDYuNTg1NzkgOFoiIGZpbGw9IiNEMTMyMTIiLz4gPC9zdmc+IA=="/>
+  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDhDMCAxMi40MTgzIDMuNTgxNzIgMTYgOCAxNkMxMi40MTgzIDE2IDE2IDEyLjQxODMgMTYgOEMxNiAzLjU4MTcyIDEyLjQxODMgMCA4IDBDMy41ODE3MiAwIDAgMy41ODE3MiAwIDhaTTE0IDhDMTQgMTEuMzEzNyAxMS4zMTM3IDE0IDggMTRDNC42ODYyOSAxNCAyIDExLjMxMzcgMiA4QzIgNC42ODYyOSA0LjY4NjI5IDIgOCAyQzExLjMxMzcgMiAxNCA0LjY4NjI5IDE0IDhaTTYuNTg1NzkgOEw0LjQ2Mjg5IDEwLjEyMjlMNS44NzcxMSAxMS41MzcxTDggOS40MTQyMUwxMC4xMjI5IDExLjUzNzFMMTEuNTM3MSAxMC4xMjI5TDkuNDE0MjEgOEwxMS41MzcxIDUuODc3MTFMMTAuMTIyOSA0LjQ2Mjg5TDggNi41ODU3OUw1Ljg3NzExIDQuNDYyODlMNC40NjI4OSA1Ljg3NzExTDYuNTg1NzkgOFoiIGZpbGw9IiNEMTMyMTIiLz4gPC9zdmc+IA=="/>
+  <button class="amzn-captcha-verify-button btn btn-primary" id="amzn-captcha-verify-button" style="display: flex; padding: 5px 30px;" type="button">
+   Begin
+   <img alt="begin" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDkgMTQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+IDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMS43ODQ2NyAwTDAuNTAwMjA1IDEuMjg0NDZMNi4yMTUwMyA3TDAuNTAwMjA1IDEyLjcxNTVMMS43ODQ2NyAxNEw4Ljc4NDY3IDdMMS43ODQ2NyAwWiIgZmlsbD0iYmxhY2siLz4gPC9zdmc+IA==" style="margin-left: 5px;"/>
+  </button>
+ </body>
+</html>
