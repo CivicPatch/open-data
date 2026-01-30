@@ -1,0 +1,280 @@
+City Council Meeting - City of Abernathy
+
+
+
+[Skip to content](https://cityofabernathy.org/event/city-council-meeting-131-4-22-2/#content_start)
+
+[![City of Abernathy](https://cityofabernathy.org/wp-content/uploads/2022/11/Abernathy-Website-Logo-Linear.png)](https://cityofabernathy.org/)
+
+Menu
+
+
+* [Living & Working HereResident & Business Services↓](https://cityofabernathy.org/event/city-council-meeting-131-4-22-2/#)
+  + [Resident Services↓](https://cityofabernathy.org/event/city-council-meeting-131-4-22-2/#)
+    - [New in Town?](https://cityofabernathy.org/new-residents/ "Resources for new residents")
+    - [City Services](https://cityofabernathy.org/new-residents/#cityServices)
+    - [Utilities](https://cityofabernathy.org/your-government/public-works/)
+    - [Emergency Services](https://cityofabernathy.org/your-government/police-department/)
+    - [Weather](https://weather.com/weather/today/l/USTX0002)
+  + [More City Services↓](https://cityofabernathy.org/event/city-council-meeting-131-4-22-2/#)
+    - [News](https://cityofabernathy.org/news/)
+    - [Permits & Forms](https://cityofabernathy.org/business-services/permits/)
+    - [Senior & Veteran Services](https://cityofabernathy.org/about-abernathy/senior-veteran-services/ "Area Senior Services and Veterans Resources")
+    - [Contracted Services](https://cityofabernathy.org/directory/contracted-services/)
+  + [Business Services↓](https://cityofabernathy.org/event/city-council-meeting-131-4-22-2/#)
+    - [Bids & Proposal Announcements](https://cityofabernathy.org/business-services/bids-proposal-announcements/)
+    - [Business Permits & Licenses](https://cityofabernathy.org/business-services/permits/)
+    - [Water & Sewer Rates](https://cityofabernathy.org/your-government/public-works/utility-rates/ "View the water and sewer rates in Abernathy")
+    - [Economic Development Opportunities](https://cityofabernathy.org/business-services/economic-development/)
+* [Your GovernmentAdministration & Departments↓](https://cityofabernathy.org/event/city-council-meeting-131-4-22-2/#)
+  + [Accessibility & Accommodations↓](https://cityofabernathy.org/accessibility/)
+    - [ADA Grievance Procedures](https://cityofabernathy.org/accessibility/#ada)
+  + [Department Directory↓](https://cityofabernathy.org/directory/ "View the staff directory")
+    - [Administration](https://cityofabernathy.org/your-government/city-administration/)
+    - [Abernathy Police Department](https://cityofabernathy.org/your-government/police-department/)
+    - [Abernathy Volunteer Fire Department](https://cityofabernathy.org/your-government/volunteer-fire-department/)
+    - [City Library](https://cityofabernathy.org/your-government/library/)
+    - [Public Works](https://cityofabernathy.org/your-government/public-works/)
+    - [Municipal Court](https://cityofabernathy.org/your-government/court/ "View the Municipal Court webpage")
+    - [Code Enforcement and Animal Control](https://cityofabernathy.org/your-government/code-enforcement/)
+  + [Government Resources↓](https://cityofabernathy.org/event/city-council-meeting-131-4-22-2/#)
+    - [Mission, Vision, and Values](https://cityofabernathy.org/about-abernathy/#mission)
+    - [Agendas & Minutes](https://cityofabernathy.org/documents/#agendacenter)
+    - [Code of Ordinances](https://cityofabernathy.org/your-government/code-of-ordinances/)
+    - [Municipal Basemap](https://cityofabernathy.org/wp-content/uploads/2023/01/Basemap.pdf)
+    - [Financial Transparency](https://cityofabernathy.org/your-government/city-administration/financial-transparency/)
+    - [Utility Rates](https://cityofabernathy.org/your-government/public-works/utility-rates/)
+    - [Employment Opportunities](https://cityofabernathy.org/careers)
+  + [City Council↓](https://cityofabernathy.org/your-government/city-council/)
+    - [Mayor & City Council](https://cityofabernathy.org/your-government/city-council/)
+* [ExploreAbout Abernathy↓](https://cityofabernathy.org/event/city-council-meeting-131-4-22-2/#)
+  + [About Abernathy](https://cityofabernathy.org/about-abernathy/)
+  + [Dining and Shopping](https://cityofabernathy.org/about-abernathy/dining-and-shopping/)
+  + [Things to Do](https://cityofabernathy.org/about-abernathy/things-to-do/)
+  + [Education](https://cityofabernathy.org/about-abernathy/education/)
+  + [Events](https://cityofabernathy.org/events)
+* [How to…Resources↓](https://cityofabernathy.org/event/city-council-meeting-131-4-22-2/#)
+  + [Apply for a Building Permit](https://cityofabernathy.org/your-government/building-codes/building-permits/#permits)
+  + [Contact↓](https://cityofabernathy.org/contact/)
+    - [Contact the City](https://cityofabernathy.org/contact/)
+  + [Jobs↓](https://cityofabernathy.org/careers)
+    - [View Opportunities](https://cityofabernathy.org/careers)
+  + Make a Payment↓
+    - [Water Bill](https://cityofabernathy.org/your-government/public-works/utility-account-access-portal/)
+    - [Court Fees](https://cityofabernathy.org/your-government/court/#payment)
+  + Report↓
+    - [Code Violation](https://cityofabernathy.org/contact/?category=Code%20Violation#contactform)
+    - [File a Complaint](https://cityofabernathy.org/your-government/police-department/file-a-complaint/)
+    - [Street Light Outage](https://cityofabernathy.org/contact/?category=Street%20Light%20Outage#contactform)
+    - [Street Work Order](https://cityofabernathy.org/your-government/public-works/#workorder)
+    - [Animal Control Request](https://cityofabernathy.org/your-government/animal-control/#animal-control-request-form)
+  + View↓
+    - [Building Codes & Requirements](https://cityofabernathy.org/your-government/building-codes/)
+    - [Building Permits](https://cityofabernathy.org/your-government/building-codes/building-permits/)
+    - [City Ordinances](https://cityofabernathy.org/your-government/code-of-ordinances/ "Learn more about City ordinances")
+    - [City Directory](https://cityofabernathy.org/directory/)
+    - [Document Center](https://cityofabernathy.org/documents/)
+    - [Found Pets](https://cityofabernathy.org/your-government/code-enforcement/#FoundPaws)
+  + [Volunteer](https://cityofabernathy.org/volunteer/)
+  + [Vote](https://cityofabernathy.org/your-government/elections/)
+* [Contact](https://cityofabernathy.org/contact/ "Contact the City of Abernathy")
+
+Quick Links:
+
+* [Accessibility](https://cityofabernathy.org/accessibility/)
+* [Contact](https://cityofabernathy.org/contact/)
+* [Public Notices](https://cityofabernathy.org/your-government/public-notices/)
+* [Sitemap](https://cityofabernathy.org/sitemap/)
+* [Open Records](https://cityofabernathy.org/your-government/open-records/)
+* [Utility Payments](https://abs207.abswebserver.com/abs/Books07/index.html "Pay your utility bill online")
+
+* [Facebook](https://www.facebook.com/cityofabernathy "Facebook")
+* [Open Search Window](https://cityofabernathy.org/event/city-council-meeting-131-4-22-2/)
+
+![Loading Events](https://cityofabernathy.org/wp-content/plugins/the-events-calendar/src/resources/images/tribe-loading.gif)
+
+[« All Events](https://cityofabernathy.org/events/)
+
+Event Series: 
+[City Council Meeting](https://cityofabernathy.org/series/city-council-meeting/)
+
+City Council Meeting
+====================
+
+February 12 @ 6:30 pm - 7:30 pm
+-------------------------------
+
+* [« Council Workshop](https://cityofabernathy.org/event/council-workshop/)
+* [City Council Meeting »](https://cityofabernathy.org/event/city-council-meeting-131-4-22-2-2/2026-03-09/)
+
+![Abernathy City Council Meeting](https://cityofabernathy.org/wp-content/uploads/2023/01/Abernathy-City-Council-Meeting.jpg)
+
+##### Open Meetings Act
+
+All meetings are conducted in accordance with the [Open Meetings Act, Gov. Code 551](https://statutes.capitol.texas.gov/Docs/GV/htm/GV.551.htm "Texas Government Code 551, Open Meetings"). The City Council reserves the right to enter closed session at any time during the meeting as allowed by law.
+
+Meetings are also conducted in accordance with the [Disabilities Act (42 U.S.C. of 1991)](https://www.ada.gov/topics/intro-to-ada/ "Americans with Disabilities Act (ADA)"). The facility where the meeting is held is wheelchair accessible and handicapped parking is available. Other handicapped services are available upon request if received at least 48 hours prior to the meeting.
+
+Add to calendar
+
+* [Google Calendar](https://www.google.com/calendar/event?action=TEMPLATE&dates=20260212T183000/20260212T193000&text=City%20Council%20Meeting&location=Abernathy%20City%20Hall,%20811%20Avenue%20D,%20Abernathy,%20TX,%2079311,%20United%20States&trp=false&ctz=America/Chicago&sprop=website:https://cityofabernathy.org)
+* [iCalendar](webcal://cityofabernathy.org/event/city-council-meeting-131-4-22-2/?ical=1)
+* [Outlook 365](https://outlook.office.com/owa/?path=/calendar/action/compose&rrv=addevent&startdt=2026-02-12T18%3A30%3A00-06%3A00&enddt=2026-02-12T19%3A30%3A00-06%3A00&location=Abernathy%20City%20Hall,%20811%20Avenue%20D,%20Abernathy,%20TX,%2079311,%20United%20States&subject=City%20Council%20Meeting&body)
+* [Outlook Live](https://outlook.live.com/owa/?path=/calendar/action/compose&rrv=addevent&startdt=2026-02-12T18%3A30%3A00-06%3A00&enddt=2026-02-12T19%3A30%3A00-06%3A00&location=Abernathy%20City%20Hall,%20811%20Avenue%20D,%20Abernathy,%20TX,%2079311,%20United%20States&subject=City%20Council%20Meeting&body)
+
+Details
+-------
+
+* Date:
+
+   February 12
+* Time:
+
+
+  6:30 pm - 7:30 pm
+
+Series:
+:   [City Council Meeting](https://cityofabernathy.org/series/city-council-meeting/ "City Council Meeting")
+* Event Categories: [City Council Meetings](https://cityofabernathy.org/events/category/city-council-meetings/), [Regular](https://cityofabernathy.org/events/category/city-council-meetings/regular/)
+
+Organizer
+---------
+
+* [City of Abernathy](https://cityofabernathy.org/organizer/city-of-abernathy/ "City of Abernathy")
+* Phone 
+
+  (806) 298-2546
+* [View Organizer Website](https://www.cityofabernathy.org)
+
+Venue
+-----
+
+* [Abernathy City Hall](https://cityofabernathy.org/venue/abernathy-city-hall/)
+* 811 Avenue D
+    
+  Abernathy,
+  TX
+  79311
+  United States
+  [+ Google Map](https://www.google.com/maps/search/?api=1&query=33.8318506%2C-101.8436014 "Click to view a Google Map")
+* Phone
+   (806) 298-2546
+* [View Venue Website](https://www.cityofabernathy.org)
+
+|  |  |
+| --- | --- |
+| `←` | Move left |
+| `→` | Move right |
+| `↑` | Move up |
+| `↓` | Move down |
+| `+` | Zoom in |
+| `-` | Zoom out |
+| `Home` | Jump left by 75% |
+| `End` | Jump right by 75% |
+| `Page Up` | Jump up by 75% |
+| `Page Down` | Jump down by 75% |
+
+![](https://maps.gstatic.com/mapfiles/openhand_8_8.cur)
+
+Map
+
+* Terrain
+
+Satellite
+
+* Labels
+
+![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%200v6h2V2h4V0H0zm16%200h-4v2h4v4h2V0h-2zm0%2016h-4v2h6v-6h-2v4zM2%2012H0v6h6v-2H2v-4z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%200v6h2V2h4V0H0zm16%200h-4v2h4v4h2V0h-2zm0%2016h-4v2h6v-6h-2v4zM2%2012H0v6h6v-2H2v-4z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%200v6h2V2h4V0H0zm16%200h-4v2h4v4h2V0h-2zm0%2016h-4v2h6v-6h-2v4zM2%2012H0v6h6v-2H2v-4z%22/%3E%3C/svg%3E)
+
+![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12.06%209.06%204-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74%201.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22m12.06%209.06%204-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74%201.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22m12.06%209.06%204-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74%201.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12.06%209.06%204-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74%201.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22m12.06%209.06%204-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74%201.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22m12.06%209.06%204-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74%201.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2016%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%2016h8V9H0v7zm10%200h8V9h-8v7zM0%207h8V0H0v7zm10-7v7h8V0h-8z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2016%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%2016h8V9H0v7zm10%200h8V9h-8v7zM0%207h8V0H0v7zm10-7v7h8V0h-8z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2016%22%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%2016h8V9H0v7zm10%200h8V9h-8v7zM0%207h8V0H0v7zm10-7v7h8V0h-8z%22/%3E%3C/svg%3E)
+
+![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12%2019.175%202.125-2.125%201.425%201.4L12%2022l-3.55-3.55%201.425-1.4L12%2019.175zM4.825%2012l2.125%202.125-1.4%201.425L2%2012l3.55-3.55%201.4%201.425L4.825%2012zm14.35%200L17.05%209.875l1.4-1.425L22%2012l-3.55%203.55-1.4-1.425L19.175%2012zM12%204.825%209.875%206.95%208.45%205.55%2012%202l3.55%203.55-1.425%201.4L12%204.825z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12%2019.175%202.125-2.125%201.425%201.4L12%2022l-3.55-3.55%201.425-1.4L12%2019.175zM4.825%2012l2.125%202.125-1.4%201.425L2%2012l3.55-3.55%201.4%201.425L4.825%2012zm14.35%200L17.05%209.875l1.4-1.425L22%2012l-3.55%203.55-1.4-1.425L19.175%2012zM12%204.825%209.875%206.95%208.45%205.55%2012%202l3.55%203.55-1.425%201.4L12%204.825z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%231A73E8%22%20d%3D%22m12%2019.175%202.125-2.125L15.55%2018.45%2012%2022%208.45%2018.45%209.875%2017.05%2012%2019.175ZM4.825%2012l2.125%202.125L5.55%2015.55%202%2012%205.55%208.45%206.95%209.875%204.825%2012ZM19.175%2012%2017.05%209.875%2018.45%208.45%2022%2012%2018.45%2015.55%2017.05%2014.125%2019.175%2012ZM12%204.825%209.875%206.95%208.45%205.55%2012%202%2015.55%205.55%2014.125%206.95%2012%204.825Z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23D1D1D1%22%20d%3D%22m12%2019.175%202.125-2.125L15.55%2018.45%2012%2022%208.45%2018.45%209.875%2017.05%2012%2019.175ZM4.825%2012l2.125%202.125L5.55%2015.55%202%2012%205.55%208.45%206.95%209.875%204.825%2012ZM19.175%2012%2017.05%209.875%2018.45%208.45%2022%2012%2018.45%2015.55%2017.05%2014.125%2019.175%2012ZM12%204.825%209.875%206.95%208.45%205.55%2012%202%2015.55%205.55%2014.125%206.95%2012%204.825Z%22/%3E%3C/svg%3E)- ![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12%2010.8-4.6%204.6L6%2014l6-6%206%206-1.4%201.4-4.6-4.6z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22m12%2010.8-4.6%204.6L6%2014l6-6%206%206L16.6%2015.4%2012%2010.8Z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12%2010.8-4.6%204.6L6%2014l6-6%206%206-1.4%201.4-4.6-4.6z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23D1D1D1%22%20d%3D%22m12%2010.8-4.6%204.6L6%2014l6-6%206%206L16.6%2015.4%2012%2010.8Z%22/%3E%3C/svg%3E)
+- ![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m14%2018-6-6%206-6%201.4%201.4-4.6%204.6%204.6%204.6L14%2018z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22m14%2018-6-6%206-6L15.4%207.4%2010.8%2012%2015.4%2016.6%2014%2018Z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m14%2018-6-6%206-6%201.4%201.4-4.6%204.6%204.6%204.6L14%2018z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23D1D1D1%22%20d%3D%22m14%2018-6-6%206-6L15.4%207.4%2010.8%2012%2015.4%2016.6%2014%2018Z%22/%3E%3C/svg%3E)
+- ![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M12.6%2012%208%207.4%209.4%206l6%206-6%206L8%2016.6l4.6-4.6z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M12.6%2012%208%207.4%209.4%206l6%206-6%206L8%2016.6%2012.6%2012Z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M12.6%2012%208%207.4%209.4%206l6%206-6%206L8%2016.6l4.6-4.6z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23D1D1D1%22%20d%3D%22M12.6%2012%208%207.4%209.4%206l6%206-6%206L8%2016.6%2012.6%2012Z%22/%3E%3C/svg%3E)
+- ![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12%2015.4-6-6L7.4%208l4.6%204.6L16.6%208%2018%209.4l-6%206z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22m12%2015.4-6-6L7.4%208l4.6%204.6L16.6%208%2018%209.4l-6%206Z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12%2015.4-6-6L7.4%208l4.6%204.6L16.6%208%2018%209.4l-6%206Z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12%2015.4-6-6L7.4%208l4.6%204.6L16.6%208%2018%209.4l-6%206z%22/%3E%3C/svg%3E)
+- ![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23666%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23333%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23111%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23d1d1d1%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z%22/%3E%3C/svg%3E)
+- ![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23666%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22M200-440v-80h560v80H200Z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23333%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22M200-440v-80h560v80H200Z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23111%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22M200-440v-80h560v80H200Z%22/%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23d1d1d1%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22M200-440v-80h560v80H200Z%22/%3E%3C/svg%3E)
+
+![Street View Pegman Control](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2023%2038%22%3E%3Cpath%20d%3D%22M16.6%2038.1h-5.5l-.2-2.9-.2%202.9h-5.5L5%2025.3l-.8%202a1.53%201.53%200%2001-1.9.9l-1.2-.4a1.58%201.58%200%2001-1-1.9v-.1c.3-.9%203.1-11.2%203.1-11.2a2.66%202.66%200%20012.3-2l.6-.5a6.93%206.93%200%20014.7-12%206.8%206.8%200%20014.9%202%207%207%200%20012%204.9%206.65%206.65%200%2001-2.2%205l.7.5a2.78%202.78%200%20012.4%202s2.9%2011.2%202.9%2011.3a1.53%201.53%200%2001-.9%201.9l-1.3.4a1.63%201.63%200%2001-1.9-.9l-.7-1.8-.1%2012.7Zm-3.6-2h1.7L14.9%2020.3l1.9-.3%202.4%206.3.3-.1c-.2-.8-.8-3.2-2.8-10.9a.63.63%200%2000-.6-.5h-.6l-1.1-.9h-1.9l-.3-2a4.83%204.83%200%20003.5-4.7A4.78%204.78%200%200011%202.3H10.8a4.9%204.9%200%2000-1.4%209.6l-.3%202h-1.9l-1%20.9h-.6a.74.74%200%2000-.6.5c-2%207.5-2.7%2010-3%2010.9l.3.1L4.8%2020l1.9.3.2%2015.8h1.6l.6-8.4a1.52%201.52%200%20011.5-1.4%201.5%201.5%200%20011.5%201.4l.9%208.4Zm-10.9-9.6Zm17.5-.1Z%22%20style%3D%22isolation%3Aisolate%22%20fill%3D%22%23333%22%20opacity%3D%22.7%22/%3E%3Cpath%20d%3D%22m5.9%2013.6%201.1-.9h7.8l1.2.9%22%20fill%3D%22%23ce592c%22/%3E%3Cellipse%20cx%3D%2210.9%22%20cy%3D%2213.1%22%20rx%3D%222.7%22%20ry%3D%22.3%22%20style%3D%22isolation%3Aisolate%22%20fill%3D%22%23ce592c%22%20opacity%3D%22.5%22/%3E%3Cpath%20d%3D%22m20.6%2026.1-2.9-11.3a1.71%201.71%200%2000-1.6-1.2H5.699999999999999a1.69%201.69%200%2000-1.5%201.3l-3.1%2011.3a.61.61%200%2000.3.7l1.1.4a.61.61%200%2000.7-.3l2.7-6.7.2%2016.8h3.6l.6-9.3a.47.47%200%2001.44-.5h.06c.4%200%20.4.2.5.5l.6%209.3h3.6L15.7%2020.3l2.5%206.6a.52.52%200%2000.66.31l1.2-.4a.57.57%200%2000.5-.7Z%22%20fill%3D%22%23fdbf2d%22/%3E%3Cpath%20d%3D%22m7%2013.6%203.9%206.7%203.9-6.7%22%20style%3D%22isolation%3Aisolate%22%20fill%3D%22%23cf572e%22%20opacity%3D%22.6%22/%3E%3Ccircle%20cx%3D%2210.9%22%20cy%3D%227%22%20r%3D%225.9%22%20fill%3D%22%23fdbf2d%22/%3E%3C/svg%3E)![Pegman is on top of the Map](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2038%22%3E%3Cpath%20d%3D%22m22%2026.6-2.9-11.3a2.78%202.78%200%2000-2.4-2l-.7-.5a6.82%206.82%200%20002.2-5%206.9%206.9%200%2000-13.8%200%207%207%200%20002.2%205.1l-.6.5a2.55%202.55%200%2000-2.3%202s-3%2011.1-3%2011.2v.1a1.58%201.58%200%20001%201.9l1.2.4a1.63%201.63%200%20001.9-.9l.8-2%20.2%2012.8h11.3l.2-12.6.7%201.8a1.54%201.54%200%20001.5%201%201.09%201.09%200%2000.5-.1l1.3-.4a1.85%201.85%200%2000.7-2Zm-1.2.9-1.2.4a.61.61%200%2001-.7-.3l-2.5-6.6-.2%2016.8h-9.4L6.6%2021l-2.7%206.7a.52.52%200%2001-.66.31l-1.1-.4a.52.52%200%2001-.31-.66l3.1-11.3a1.69%201.69%200%20011.5-1.3h.2l1-.9h2.3a5.9%205.9%200%20113.2%200h2.3l1.1.9h.2a1.71%201.71%200%20011.6%201.2l2.9%2011.3a.84.84%200%2001-.4.7Z%22%20fill%3D%22%23333%22%20fill-opacity%3D%22.2%22/%3E%26quot%3B%3C/svg%3E)![Street View Pegman Control](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2040%2050%22%3E%3Cpath%20d%3D%22m34-30.4-2.9-11.3a2.78%202.78%200%2000-2.4-2l-.7-.5a6.82%206.82%200%20002.2-5%206.9%206.9%200%2000-13.8%200%207%207%200%20002.2%205.1l-.6.5a2.55%202.55%200%2000-2.3%202s-3%2011.1-3%2011.2v.1a1.58%201.58%200%20001%201.9l1.2.4a1.63%201.63%200%20001.9-.9l.8-2%20.2%2012.8h11.3l.2-12.6.7%201.8a1.54%201.54%200%20001.5%201%201.09%201.09%200%2000.5-.1l1.3-.4a1.85%201.85%200%2000.7-2Zm-1.2.9-1.2.4a.61.61%200%2001-.7-.3L28.4-36l-.2%2016.8h-9.4L18.6-36l-2.7%206.7a.52.52%200%2001-.66.31l-1.1-.4a.52.52%200%2001-.31-.66l3.1-11.3a1.69%201.69%200%20011.5-1.3h.2l1-.9h2.3a5.9%205.9%200%20113.2%200h2.3l1.1.9h.2a1.71%201.71%200%20011.6%201.2l2.9%2011.3a.84.84%200%2001-.4.7ZM34%2029.6l-2.9-11.3a2.78%202.78%200%2000-2.4-2l-.7-.5a6.82%206.82%200%20002.2-5%206.9%206.9%200%2000-13.8%200%207%207%200%20002.2%205.1l-.6.5a2.55%202.55%200%2000-2.3%202s-3%2011.1-3%2011.2v.1a1.58%201.58%200%20001%201.9l1.2.4a1.63%201.63%200%20001.9-.9l.8-2%20.2%2012.8h11.3l.2-12.6.7%201.8a1.54%201.54%200%20001.5%201%201.09%201.09%200%2000.5-.1l1.3-.4a1.85%201.85%200%2000.7-2Zm-1.2.9-1.2.4a.61.61%200%2001-.7-.3L28.4%2024l-.2%2016.8h-9.4L18.6%2024l-2.7%206.7a.52.52%200%2001-.66.31l-1.1-.4a.52.52%200%2001-.31-.66l3.1-11.3a1.69%201.69%200%20011.5-1.3h.2l1-.9h2.3a5.9%205.9%200%20113.2%200h2.3l1.1.9h.2a1.71%201.71%200%20011.6%201.2l2.9%2011.3a.84.84%200%2001-.4.7Z%22%20fill%3D%22%23333%22%20fill-opacity%3D%22.2%22/%3E%3Cpath%20d%3D%22M15.4%2038.8h-4a1.64%201.64%200%2001-1.4-1.1l-3.1-8a.9.9%200%2001-.5.1l-1.4.1a1.62%201.62%200%2001-1.6-1.4L2.3%2015.4l1.6-1.3a6.87%206.87%200%2001-3-4.6A7.14%207.14%200%20012%204a7.6%207.6%200%20014.7-3.1A7.14%207.14%200%200112.2%202a7.28%207.28%200%20012.3%209.6l2.1-.1.1%201c0%20.2.1.5.1.8a2.41%202.41%200%20011%201s1.9%203.2%202.8%204.9c.7%201.2%202.1%204.2%202.8%205.9a2.1%202.1%200%2001-.8%202.6l-.6.4a1.63%201.63%200%2001-1.5.2l-.6-.3a8.93%208.93%200%2000.5%201.3%207.91%207.91%200%20001.8%202.6l.6.3v4.6l-4.5-.1a7.32%207.32%200%2001-2.5-1.5l-.4%203.6Zm-10-19.2%203.5%209.8%202.9%207.5h1.6V35l-1.9-9.4%203.1%205.4a8.24%208.24%200%20003.8%203.8h2.1v-1.4a14%2014%200%2001-2.2-3.1%2044.55%2044.55%200%2001-2.2-8l-1.3-6.3%203.2%205.6c.6%201.1%202.1%203.6%202.8%204.9l.6-.4c-.8-1.6-2.1-4.6-2.8-5.8-.9-1.7-2.8-4.9-2.8-4.9a.54.54%200%2000-.4-.3l-.7-.1-.1-.7a4.33%204.33%200%2000-.1-.5l-5.3.3%202.2-1.9a4.3%204.3%200%2000.9-1%205.17%205.17%200%2000.8-4%205.67%205.67%200%2000-2.2-3.4%205.09%205.09%200%2000-4-.8%205.67%205.67%200%2000-3.4%202.2%205.17%205.17%200%2000-.8%204%205.67%205.67%200%20002.2%203.4%203.13%203.13%200%20001%20.5l1.6.6-3.2%202.6%201%2011.5h.4l-.3-8.2Z%22%20fill%3D%22%23333%22/%3E%3Cpath%20d%3D%22m3.35%2015.9%201.1%2012.5a.39.39%200%2000.36.42h.14l1.4-.1a.66.66%200%2000.5-.4l-.2-3.8-3.3-8.6Z%22%20fill%3D%22%23fdbf2d%22/%3E%3Cpath%20d%3D%22m5.2%2028.8%201.1-.1a.66.66%200%2000.5-.4l-.2-3.8-1.2-3.1Z%22%20fill%3D%22%23ce592b%22%20fill-opacity%3D%22.25%22/%3E%3Cpath%20d%3D%22m21.4%2035.7-3.8-1.2-2.7-7.8L12%2015.5l3.4-2.9c.2%202.4%202.2%2014.1%203.7%2017.1%200%200%201.3%202.6%202.3%203.1v2.9m-8.4-8.1-2-.3%202.5%2010.1.9.4v-2.9%22%20fill%3D%22%23e5892b%22/%3E%3Cpath%20d%3D%22M17.8%2025.4c-.4-1.5-.7-3.1-1.1-4.8-.1-.4-.1-.7-.2-1.1l-1.1-2-1.7-1.6s.9%205%202.4%207.1a19.12%2019.12%200%20001.7%202.4Z%22%20style%3D%22isolation%3Aisolate%22%20fill%3D%22%23cf572e%22%20opacity%3D%22.6%22/%3E%3Cpath%20d%3D%22M14.4%2037.8h-3a.43.43%200%2001-.4-.4l-3-7.8-1.7-4.8-3-9%208.9-.4s2.9%2011.3%204.3%2014.4c1.9%204.1%203.1%204.7%205%205.8h-3.2s-4.1-1.2-5.9-7.7a.59.59%200%2000-.6-.4.62.62%200%2000-.3.7s.5%202.4.9%203.6a34.87%2034.87%200%20002%206Z%22%20fill%3D%22%23fdbf2d%22/%3E%3Cpath%20d%3D%22m15.4%2012.7-3.3%202.9-8.9.4%203.3-2.7%22%20fill%3D%22%23ce592b%22/%3E%3Cpath%20d%3D%22m9.1%2021.1%201.4-6.2-5.9.5%22%20style%3D%22isolation%3Aisolate%22%20fill%3D%22%23cf572e%22%20opacity%3D%22.6%22/%3E%3Cpath%20d%3D%22M12%2013.5a4.75%204.75%200%2001-2.6%201.1c-1.5.3-2.9.2-2.9%200s1.1-.6%202.7-1%22%20fill%3D%22%23bb3d19%22/%3E%3Ccircle%20cx%3D%227.92%22%20cy%3D%228.19%22%20r%3D%226.3%22%20fill%3D%22%23fdbf2d%22/%3E%3Cpath%20d%3D%22M4.7%2013.6a6.21%206.21%200%20008.4-1.9v-.1a8.89%208.89%200%2001-8.4%202Z%22%20fill%3D%22%23ce592b%22%20fill-opacity%3D%22.25%22/%3E%3Cpath%20d%3D%22m21.2%2027.2.6-.4a1.09%201.09%200%2000.4-1.3c-.7-1.5-2.1-4.6-2.8-5.8-.9-1.7-2.8-4.9-2.8-4.9a1.6%201.6%200%2000-2.17-.65l-.23.15a1.68%201.68%200%2000-.4%202.1s2.3%203.9%203.1%205.3c.6%201%202.1%203.7%202.9%205.1a.94.94%200%20001.24.49l.16-.09Z%22%20fill%3D%22%23fdbf2d%22/%3E%3Cpath%20d%3D%22M19.4%2019.8c-.9-1.7-2.8-4.9-2.8-4.9a1.6%201.6%200%2000-2.17-.65l-.23.15-.3.3c1.1%201.5%202.9%203.8%203.9%205.4%201.1%201.8%202.9%205%203.8%206.7l.1-.1a1.09%201.09%200%2000.4-1.3%2057.67%2057.67%200%2000-2.7-5.6Z%22%20fill%3D%22%23ce592b%22%20fill-opacity%3D%22.25%22/%3E%3C/svg%3E)
+
+[![Google](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2069%2029%22%3E%3Cg%20fill%3D%22%23fff%22%20stroke%3D%22%23fff%22%20stroke-width%3D%221.5%22%20opacity%3D%22.6%22%3E%3Cpath%20d%3D%22M17.4706%207.33616%2018.0118%206.79504%2017.4599%206.26493C16.0963%204.95519%2014.2582%203.94522%2011.7008%203.94522c-4.613699999999999%200-8.50262%203.75517-8.50262%208.395779999999998C3.19818%2016.9817%207.0871%2020.7368%2011.7008%2020.7368%2014.1712%2020.7368%2016.0773%2019.918%2017.574%2018.3689%2019.1435%2016.796%2019.5956%2014.6326%2019.5956%2012.957%2019.5956%2012.4338%2019.5516%2011.9316%2019.4661%2011.5041L19.3455%2010.9012H10.9508V14.4954H15.7809C15.6085%2015.092%2015.3488%2015.524%2015.0318%2015.8415%2014.403%2016.4629%2013.4495%2017.1509%2011.7008%2017.1509%209.04835%2017.1509%206.96482%2015.0197%206.96482%2012.341%206.96482%209.66239%209.04835%207.53119%2011.7008%207.53119%2013.137%207.53119%2014.176%208.09189%2014.9578%208.82348L15.4876%209.31922%2016.0006%208.80619%2017.4706%207.33616Z%22/%3E%3Cpath%20d%3D%22M24.8656%2020.7286C27.9546%2020.7286%2030.4692%2018.3094%2030.4692%2015.0594%2030.4692%2011.7913%2027.953%209.39011%2024.8656%209.39011%2021.7783%209.39011%2019.2621%2011.7913%2019.2621%2015.0594c0%203.25%202.514499999999998%205.6692%205.6035%205.6692ZM24.8656%2012.8282C25.8796%2012.8282%2026.8422%2013.6652%2026.8422%2015.0594%2026.8422%2016.4399%2025.8769%2017.2905%2024.8656%2017.2905%2023.8557%2017.2905%2022.8891%2016.4331%2022.8891%2015.0594%2022.8891%2013.672%2023.853%2012.8282%2024.8656%2012.8282Z%22/%3E%3Cpath%20d%3D%22M35.7511%2017.2905H35.7469C34.737%2017.2905%2033.7703%2016.4331%2033.7703%2015.0594%2033.7703%2013.672%2034.7343%2012.8282%2035.7469%2012.8282%2036.7608%2012.8282%2037.7234%2013.6652%2037.7234%2015.0594%2037.7234%2016.4439%2036.7554%2017.2962%2035.7511%2017.2905ZM35.7387%2020.7286C38.8277%2020.7286%2041.3422%2018.3094%2041.3422%2015.0594%2041.3422%2011.7913%2038.826%209.39011%2035.7387%209.39011%2032.6513%209.39011%2030.1351%2011.7913%2030.1351%2015.0594%2030.1351%2018.3102%2032.6587%2020.7286%2035.7387%2020.7286Z%22/%3E%3Cpath%20d%3D%22M51.953%2010.4357V9.68573H48.3999V9.80826C47.8499%209.54648%2047.1977%209.38187%2046.4808%209.38187%2043.5971%209.38187%2041.0168%2011.8998%2041.0168%2015.0758%2041.0168%2017.2027%2042.1808%2019.0237%2043.8201%2019.9895L43.7543%2020.0168%2041.8737%2020.797%2041.1808%2021.0844%2041.4684%2021.7772C42.0912%2023.2776%2043.746%2025.1469%2046.5219%2025.1469%2047.9324%2025.1469%2049.3089%2024.7324%2050.3359%2023.7376%2051.3691%2022.7367%2051.953%2021.2411%2051.953%2019.2723v-8.8366Zm-7.2194%209.9844L44.7334%2020.4196C45.2886%2020.6201%2045.878%2020.7286%2046.4808%2020.7286%2047.1616%2020.7286%2047.7866%2020.5819%2048.3218%2020.3395%2048.2342%2020.7286%2048.0801%2021.0105%2047.8966%2021.2077%2047.6154%2021.5099%2047.1764%2021.7088%2046.5219%2021.7088%2045.61%2021.7088%2045.0018%2021.0612%2044.7336%2020.4201ZM46.6697%2012.8282C47.6419%2012.8282%2048.5477%2013.6765%2048.5477%2015.084%2048.5477%2016.4636%2047.6521%2017.2987%2046.6697%2017.2987%2045.6269%2017.2987%2044.6767%2016.4249%2044.6767%2015.084%2044.6767%2013.7086%2045.6362%2012.8282%2046.6697%2012.8282ZM55.7387%205.22083v-.75H52.0788V20.4412H55.7387V5.220829999999999Z%22/%3E%3Cpath%20d%3D%22M63.9128%2016.0614%2063.2945%2015.6492%2062.8766%2016.2637C62.4204%2016.9346%2061.8664%2017.3069%2061.0741%2017.3069%2060.6435%2017.3069%2060.3146%2017.2088%2060.0544%2017.0447%2059.9844%2017.0006%2059.9161%2016.9496%2059.8498%2016.8911L65.5497%2014.5286%2066.2322%2014.2456%2065.9596%2013.5589%2065.7406%2013.0075C65.2878%2011.8%2063.8507%209.39832%2060.8278%209.39832%2057.8445%209.39832%2055.5034%2011.7619%2055.5034%2015.0676%2055.5034%2018.2151%2057.8256%2020.7369%2061.0659%2020.7369%2063.6702%2020.7369%2065.177%2019.1378%2065.7942%2018.2213L66.2152%2017.5963%2065.5882%2017.1783%2063.9128%2016.0614ZM61.3461%2012.8511%2059.4108%2013.6526C59.7903%2013.0783%2060.4215%2012.7954%2060.9017%2012.7954%2061.067%2012.7954%2061.2153%2012.8161%2061.3461%2012.8511Z%22/%3E%3C/g%3E%3Cpath%20fill%3D%22%234285F4%22%20d%3D%22M11.7008%2019.9868C7.48776%2019.9868%203.94818%2016.554%203.94818%2012.341%203.94818%208.12803%207.48776%204.69522%2011.7008%204.69522%2014.0331%204.69522%2015.692%205.60681%2016.9403%206.80583L15.4703%208.27586C14.5751%207.43819%2013.3597%206.78119%2011.7008%206.78119%208.62108%206.78119%206.21482%209.26135%206.21482%2012.341%206.21482%2015.4207%208.62108%2017.9009%2011.7008%2017.9009%2013.6964%2017.9009%2014.8297%2017.0961%2015.5606%2016.3734%2016.1601%2015.7738%2016.5461%2014.9197%2016.6939%2013.7454h-4.9931V11.6512h7.0298C18.8045%2012.0207%2018.8456%2012.4724%2018.8456%2012.957%2018.8456%2014.5255%2018.4186%2016.4637%2017.0389%2017.8434%2015.692%2019.2395%2013.9838%2019.9868%2011.7008%2019.9868Z%22/%3E%3Cpath%20fill%3D%22%23E94235%22%20d%3D%22M29.7192%2015.0594C29.7192%2017.8927%2027.5429%2019.9786%2024.8656%2019.9786%2022.1884%2019.9786%2020.0121%2017.8927%2020.0121%2015.0594%2020.0121%2012.2096%2022.1884%2010.1401%2024.8656%2010.1401%2027.5429%2010.1401%2029.7192%2012.2096%2029.7192%2015.0594ZM27.5922%2015.0594C27.5922%2013.2855%2026.3274%2012.0782%2024.8656%2012.0782S22.1391%2013.2937%2022.1391%2015.0594C22.1391%2016.8086%2023.4038%2018.0405%2024.8656%2018.0405S27.5922%2016.8168%2027.5922%2015.0594Z%22/%3E%3Cpath%20fill%3D%22%23FABB05%22%20d%3D%22M40.5922%2015.0594C40.5922%2017.8927%2038.4159%2019.9786%2035.7387%2019.9786%2033.0696%2019.9786%2030.8851%2017.8927%2030.8851%2015.0594%2030.8851%2012.2096%2033.0614%2010.1401%2035.7387%2010.1401%2038.4159%2010.1401%2040.5922%2012.2096%2040.5922%2015.0594ZM38.4734%2015.0594C38.4734%2013.2855%2037.2087%2012.0782%2035.7469%2012.0782%2034.2851%2012.0782%2033.0203%2013.2937%2033.0203%2015.0594%2033.0203%2016.8086%2034.2851%2018.0405%2035.7469%2018.0405%2037.2087%2018.0487%2038.4734%2016.8168%2038.4734%2015.0594Z%22/%3E%3Cpath%20fill%3D%22%234285F4%22%20d%3D%22M51.203%2010.4357v8.8366C51.203%2022.9105%2049.0595%2024.3969%2046.5219%2024.3969%2044.132%2024.3969%2042.7031%2022.7955%2042.161%2021.4897L44.0417%2020.7095C44.3784%2021.5143%2045.1997%2022.4588%2046.5219%2022.4588%2048.1479%2022.4588%2049.1499%2021.4487%2049.1499%2019.568V18.8617H49.0759C48.5914%2019.4612%2047.6552%2019.9786%2046.4808%2019.9786%2044.0171%2019.9786%2041.7668%2017.8352%2041.7668%2015.0758%2041.7668%2012.3%2044.0253%2010.1319%2046.4808%2010.1319%2047.6552%2010.1319%2048.5914%2010.6575%2049.0759%2011.2323H49.1499V10.4357H51.203ZM49.2977%2015.084C49.2977%2013.3512%2048.1397%2012.0782%2046.6697%2012.0782%2045.175%2012.0782%2043.9267%2013.3429%2043.9267%2015.084%2043.9267%2016.8004%2045.175%2018.0487%2046.6697%2018.0487%2048.1397%2018.0487%2049.2977%2016.8004%2049.2977%2015.084Z%22/%3E%3Cpath%20fill%3D%22%2334A853%22%20d%3D%22M54.9887%205.22083V19.6912H52.8288V5.220829999999999H54.9887Z%22/%3E%3Cpath%20fill%3D%22%23E94235%22%20d%3D%22M63.4968%2016.6854%2065.1722%2017.8023C64.6301%2018.6072%2063.3244%2019.9869%2061.0659%2019.9869%2058.2655%2019.9869%2056.2534%2017.827%2056.2534%2015.0676%2056.2534%2012.1439%2058.2901%2010.1483%2060.8278%2010.1483%2063.3818%2010.1483%2064.6301%2012.1768%2065.0408%2013.2773L65.2625%2013.8357%2058.6843%2016.5623C59.1853%2017.5478%2059.9737%2018.0569%2061.0741%2018.0569%2062.1746%2018.0569%2062.9384%2017.5067%2063.4968%2016.6854ZM58.3312%2014.9115%2062.7331%2013.0884C62.4867%2012.4724%2061.764%2012.0454%2060.9017%2012.0454%2059.8012%2012.0454%2058.2737%2013.0145%2058.3312%2014.9115Z%22/%3E%3C/svg%3E)](https://maps.google.com/maps?ll=33.831851,-101.843601&z=10&t=m&hl=en-US&gl=US&mapclient=apiv3 "Open this area in Google Maps (opens a new window)")
+
+![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2016%2010%22%3E%3Cpath%20fill%3D%22%233C4043%22%20fill-rule%3D%22evenodd%22%20d%3D%22M1.5%200C.671573%200%200%20.671573%200%201.5v7C0%209.32843.671573%2010%201.5%2010h13C15.3284%2010%2016%209.32843%2016%208.5v-7C16%20.671573%2015.3284%200%2014.5%200h-13ZM5%207C4.44772%207%204%207.44772%204%208%204%208.55229%204.44772%209%205%209h6C11.5523%209%2012%208.55229%2012%208%2012%207.44772%2011.5523%207%2011%207H5ZM1%204.25c0-.13807.11193-.25.25-.25h1.5c.13807%200%20.25.11193.25.25v1.5c0%20.13807-.11193.25-.25.25H1.5C1.22386%206%201%205.77614%201%205.5V4.25ZM1.5%201c-.27614%200-.5.22386-.5.5v1.25c0%20.13807.11193.25.25.25h1.5c.13807%200%20.25-.11193.25-.25v-1.5C3%201.11193%202.88807%201%202.75%201H1.5ZM4%204.25c0-.13807.11193-.25.25-.25h1.5c.13807%200%20.25.11193.25.25v1.5c0%20.13807-.11193.25-.25.25h-1.5C4.11193%206%204%205.88807%204%205.75v-1.5ZM4.25%201c-.13807%200-.25.11193-.25.25v1.5c0%20.13807.11193.25.25.25h1.5c.13807%200%20.25-.11193.25-.25v-1.5C6%201.11193%205.88807%201%205.75%201h-1.5ZM7%204.25c0-.13807.11193-.25.25-.25h1.5C8.88807%204%209%204.11193%209%204.25v1.5C9%205.88807%208.88807%206%208.75%206h-1.5C7.11193%206%207%205.88807%207%205.75v-1.5ZM7.25%201c-.13807%200-.25.11193-.25.25v1.5c0%20.13807.11193.25.25.25h1.5C8.88807%203%209%202.88807%209%202.75v-1.5C9%201.11193%208.88807%201%208.75%201h-1.5ZM10%204.25C10%204.11193%2010.1119%204%2010.25%204h1.5C11.8881%204%2012%204.11193%2012%204.25v1.5C12%205.88807%2011.8881%206%2011.75%206h-1.5C10.1119%206%2010%205.88807%2010%205.75v-1.5ZM10.25%201C10.1119%201%2010%201.11193%2010%201.25v1.5C10%202.88807%2010.1119%203%2010.25%203h1.5C11.8881%203%2012%202.88807%2012%202.75v-1.5C12%201.11193%2011.8881%201%2011.75%201h-1.5ZM13%204.25C13%204.11193%2013.1119%204%2013.25%204h1.5C14.8881%204%2015%204.11193%2015%204.25V5.5C15%205.77614%2014.7761%206%2014.5%206h-1.25C13.1119%206%2013%205.88807%2013%205.75v-1.5ZM13.25%201C13.1119%201%2013%201.11193%2013%201.25v1.5C13%202.88807%2013.1119%203%2013.25%203h1.5C14.8881%203%2015%202.88807%2015%202.75V1.5C15%201.22386%2014.7761%201%2014.5%201h-1.25Z%22%20clip-rule%3D%22evenodd%22/%3E%3C/svg%3E)
+
+Map DataMap data ©2026
+
+Map data ©2026
+
+10 km
+
+Click to toggle between metric and imperial units
+
+[Terms](https://www.google.com/intl/en-US_US/help/terms_maps.html)
+
+[![](data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%2021q-1.625%200-3.012-.8Q7.6%2019.4%206.8%2018H4v-2h2.1q-.075-.5-.087-1Q6%2014.5%206%2014H4v-2h2q0-.5.013-1%20.012-.5.087-1H4V8h2.8q.35-.575.788-1.075.437-.5%201.012-.875L7%204.4%208.4%203l2.15%202.15q.7-.225%201.425-.225.725%200%201.425.225L15.6%203%2017%204.4l-1.65%201.65q.575.375%201.038.862Q16.85%207.4%2017.2%208H20v2h-2.1q.075.5.088%201%20.012.5.012%201h2v2h-2q0%20.5-.012%201-.013.5-.088%201H20v2h-2.8q-.8%201.4-2.188%202.2-1.387.8-3.012.8Zm0-2q1.65%200%202.825-1.175Q16%2016.65%2016%2015v-4q0-1.65-1.175-2.825Q13.65%207%2012%207q-1.65%200-2.825%201.175Q8%209.35%208%2011v4q0%201.65%201.175%202.825Q10.35%2019%2012%2019Zm-2-3h4v-2h-4Zm0-4h4v-2h-4Zm2%201Z%22/%3E%3C/svg%3E)](https://www.google.com/maps/@33.8318506,-101.8436014,10z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3 "Report errors in the road map or imagery to Google")
+
+
+
+* [« Council Workshop](https://cityofabernathy.org/event/council-workshop/)
+* [City Council Meeting »](https://cityofabernathy.org/event/city-council-meeting-131-4-22-2-2/2026-03-09/)
+
+[![City of Abernathy](https://cityofabernathy.org/wp-content/uploads/2023/01/Abernathy-Website-Logo_final.png)](https://cityofabernathy.org/)
+
+#### City of Abernathy
+
+PO Box 310 • 811 Avenue D  
+Abernathy, TX 79311
+
+Phone: [(806) 298-2546](tel:8062982546)
+
+Hours:  
+Monday – Thursday, 7:00 am – 5:00 pm  
+Friday, 8:00 am – 12:00 noon
+
+### Helpful Links
+
+* [Hale Central Appraisal District](https://propaccess.trueautomation.com/clientdb/?cid=41)
+* [Lubbock Central Appraisal District](https://lubbockcad.org/)
+* [Texas Municipal League](https://www.tml.org/)
+* [Texas Constitution and Statutes](https://statutes.capitol.texas.gov/)
+* [National Weather Service](https://radar.weather.gov/radar_lite.php?product=NCR&rid=LBB&loop=yes)
+* [State of Texas](https://www.texas.gov/)
+* [UMC Emergent Care](https://www.umchealthsystem.com/medical-services/emergent-care)
+* [City Sales and Use Tax](https://comptroller.texas.gov/transparency/local/allocations/sales-tax/cities.php)
+
+### Quick Links
+
+* [Accessibility](https://cityofabernathy.org/accessibility/)
+* [Contact](https://cityofabernathy.org/contact/)
+* [Public Notices](https://cityofabernathy.org/your-government/public-notices/)
+* [Sitemap](https://cityofabernathy.org/sitemap/)
+* [Open Records](https://cityofabernathy.org/your-government/open-records/)
+* [Utility Payments](https://abs207.abswebserver.com/abs/Books07/index.html "Pay your utility bill online")
+
+* [Facebook](https://www.facebook.com/cityofabernathy "Facebook")
+* [Open Search Window](https://cityofabernathy.org/event/city-council-meeting-131-4-22-2/)
+
+Small city with great servant leadership focus.
+-----------------------------------------------
+
+* [Document Center](https://cityofabernathy.org/documents/)
+* [Announcements](https://cityofabernathy.org/news/)
+* [Terms of Service](https://cityofabernathy.org/terms-of-service/)
+* [Privacy Policy](https://cityofabernathy.org/privacy-policy/)
+* [![en](https://cityofabernathy.org/wp-content/plugins/gtranslate/flags/svg/en-us.svg) English▼](https://cityofabernathy.org/event/city-council-meeting-131-4-22-2/#)
+
+  [![en]() English](https://cityofabernathy.org/event/city-council-meeting-131-4-22-2/#)[![es]() Spanish](https://cityofabernathy.org/event/city-council-meeting-131-4-22-2/#)
+
+© 2026 City of Abernathy • All content copyright City of Abernathy and its representatives. All rights reserved. Website developed and maintained by [Antero Group](https://www.anterogroup.com/?ref=abernathy "The Antero Group LLC"). [Login](https://cityofabernathy.org/wp-login.php "Employee Access")
+
+Search for:
+
+ Search
+Close Search Window
+
+↑
+
+
+
+
+ 
