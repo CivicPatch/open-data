@@ -1,0 +1,3284 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n3-active wf-muli-n4-active wf-muli-i4-active wf-muli-n7-active wf-active has-webFonts" style="height: 100%;"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:500,600,700,regular|Open+Sans:600,700,regular|" media="all"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-8GQK97EJQK&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61r1"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-8GQK97EJQK';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	
+	
+	
+	<meta name="theme-color" content="#373981">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>Staff Directory • City Staff</title>
+
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '390px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/1706493230.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+	
+	<link rel="stylesheet" href="/App_Themes/CP/nmenu.css" type="text/css">
+
+    
+	<!-- Dynamic Header Scripts -->
+	
+	<!--Reference Stylesheet-->
+	
+    
+		<!--Dynamic Header Styles-->
+	<style type="text/css">
+	
+	</style>
+	
+	
+	
+
+
+
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all"><style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.2f3WBw8L4SI.L.W.O/am=AAQD/d=0/rs=AN8SPfrXXtxuFpMMBoYgp93jo68L3iC3ZQ/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/_/translate_http/_/js/k=translate_http.tr.en_US.gm28aokwBeQ.O/am=AAAQ/d=1/exm=el_conf/ed=1/rs=AN8SPfo-cjsGcRTUC_jpauJJ5fve_ZlsdQ/m=el_main"></script><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style><link rel="stylesheet" type="text/css" href="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-28/compliance.css"><link rel="stylesheet" type="text/css" href="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-28/fullCSS.bundle.css"></head>
+<body class="wide cpTextResizeOn doneLoading" style="position: relative; min-height: 100%; top: 0px; cursor: default;" data-audioeye-lang="en" data-audioeye-device-desktop=""><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="https://www.haslet.org/Common/images/ajax-loader.gif" alt="Loading" title="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks">
+<a href="https://www.haslet.org/directory.aspx?did=4#contentarea" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="3">
+    <input type="hidden" id="hdnContentCollectionID" value="9870b40e-451e-490c-968e-6c0e29b9d0bb">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="5">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID" value="4">
+    <input type="hidden" id="pagePageID">
+
+        <input type="hidden" id="hdnModuleID" value="4">
+    <div id="stickyPlaceholder" style="height: 0px;"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+
+
+
+<!-- Begin Signed Out Bar -->
+<div class="cpToolbar user public" style="z-index: 1;">
+    <div class="inner selfClear">
+        <p class="dropdown"><a href="https://www.haslet.org/MyAccount/ProfileCreate" role="link" class="myConnections" id="signedOutToolbarCreateProfileButton">Create a Website Account</a> <span class="welcomeMessage">- Manage notification subscriptions, save form progress and more. &nbsp;&nbsp;</span></p>
+        <ul class="nav secondary">
+	        <li><a href="https://www.haslet.org/MyAccount" role="link" class="button" id="loggedOutToolbarSignInButton"><span>Website Sign In</span></a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#signedOutToolbarCreateProfileButton').keypress(function (e) { if (e.which === 0) return; $(this).click(); });
+        $('#signedOutToolbarCreateProfileButton').click(function (event) {
+        	event.preventDefault();
+        	window.location.href = '/MyAccount/ProfileCreate?from=url&url=/&dn=' + window.location.origin;
+        });
+
+			
+				$('#loggedOutToolbarSignInButton').click(function (event) {
+					event.preventDefault();
+					window.location.href = '/MyAccount/?from=url&url=' + encodeURIComponent(window.location.href.replace(window.location.origin, '')) + '&dn=' + window.location.host;
+				});
+			
+
+		if ('False' == 'True') {
+            $('#loggedOutToolbarSignInButton').hide();
+		}
+    })
+</script>
+<!-- End Signed Out Bar -->
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 35px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="structuralContainer1">
+<div data-cprole="stickyStructuralContainer" id="stickyStructuralContainer" class="stickyStructuralContainer stickyStickyCollapsedWhenScrolled stickyStickyFadeAnimation" style="top: auto;"><div id="stickyStructuralContainer_36c32a61-c408-4e4b-b23f-20d7d9d35d37" class="stickyInnerDiv stickyCollapsedWhenScrolled stickyFadeAnimation">
+<header class="siteHeader"><div data-cprole="structuralContainer" id="structuralContainer2">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer9">	<div id="cc418202c6-c762-4dcc-9ca1-62c03c9a0929" data-containerid="418202c6-c762-4dcc-9ca1-62c03c9a0929" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="576ad5e5-e536-4b60-9dbc-538d9a03cae3">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id45aaae26-a544-4ed1-9c5e-b059bdc0e0c7" style="height: 37px;" data-widgetcontainerid="45aaae26-a544-4ed1-9c5e-b059bdc0e0c7">
+	
+<div data-widget-id="b884180b-e2b8-4125-9e46-08191cf35ccf" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetb884180b-e2b8-4125-9e46-08191cf35ccf" class="widget widgetGraphicLinks skin1 widgetOptionSet4 narrow" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 "> 	
+				<ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.haslet.org/" target="_self" class="fancyButton fancyButton268 ">
+		<span>
+			<span><span class="text">Click to home</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton268.fancyButton:link,.fancyButton268.fancyButton:visited, .fancyButton268div.fancyButton{
+	height: 30px;
+	width: 30px;
+	background-image: url('/ImageRepository/Document?documentID=1556');
+	background-repeat: no-repeat;
+	background-position: left center;
+opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;}
+.fancyButton268.fancyButton:hover,.fancyButton268.fancyButton:focus,.fancyButton268.fancyButton:active,.fancyButton268.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=1555');
+	background-repeat: no-repeat;
+	background-position: left center;
+opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;}
+.fancyButton268.fancyButton:link > span,.fancyButton268.fancyButton:visited > span, .fancyButton268div.fancyButton > span{
+}
+.fancyButton268.fancyButton:hover > span,.fancyButton268.fancyButton:focus > span,.fancyButton268.fancyButton:active > span,.fancyButton268.fancyButton.hover > span{
+}
+.fancyButton268.fancyButton .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+opacity:0.0;}
+.fancyButton268.fancyButton:hover .text,.fancyButton268.fancyButton:focus .text,.fancyButton268.fancyButton:active .text,.fancyButton268.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+				--></ul>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem103" class="topMenuItem" role="none" data-pageid="103" data-displaymegamenu="True" style="width: 21.3953%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem1 " href="https://www.haslet.org/103/Government" target="_self" style="font-size: 17px;"><span style="display: inline;">   Government </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem179" class="topMenuItem" role="none" data-pageid="179" data-displaymegamenu="True" style="width: 21.9983%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavDepartments" class="navMainItem mainNavItem mainNavItem2 " href="https://www.haslet.org/179/Departments" target="_self" style="font-size: 17px;"><span style="display: inline;">   Departments </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem163" class="topMenuItem" role="none" data-pageid="163" data-displaymegamenu="True" style="width: 19.3282%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavResidents" class="navMainItem mainNavItem mainNavItem3 " href="https://www.haslet.org/163/Residents" target="_self" style="font-size: 17px;"><span style="display: inline;">   Residents </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem93" class="topMenuItem" role="none" data-pageid="93" data-displaymegamenu="True" style="width: 18.553%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavBusiness" class="navMainItem mainNavItem mainNavItem4 " href="https://www.haslet.org/93/Business" target="_self" style="font-size: 17px;"><span style="display: inline;">   Business </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem131" class="topMenuItem" role="none" data-pageid="131" data-displaymegamenu="True" style="width: 18.7252%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavHowDoI" class="navMainItem mainNavItem mainNavItem5 " href="https://www.haslet.org/131/How-Do-I" target="_self" style="font-size: 17px;"><span style="display: inline;">   How Do I </span></a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=4&themeID=5&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = true;
+				if (0.99 > 0)
+					menuManager.mainMenuTextResizerRatio = 0.99;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="1"></aside></nav></div>
+</div></header></div>
+</div><div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="structuralContainer3">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer8">	<div id="ccc8e63830-bafc-4347-ad1c-7a09c21b18b4" data-containerid="c8e63830-bafc-4347-ad1c-7a09c21b18b4" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="1">
+				                
+
+		<div class="row outer autoWidths center wide"><!--
+--><div class="outer col col12 first" style="height: auto;" data-widgetcontainerid="2f7fca7b-d448-4507-8221-8f31cf6843b1">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last idb4fcbbb1-d81f-4212-9cf9-0ce6734efe4e" style="height: 25px;" data-widgetcontainerid="b4fcbbb1-d81f-4212-9cf9-0ce6734efe4e">
+	
+<div data-widget-id="927d4ef4-cd92-4f57-8561-c6718119bf9d" data-widget-controller-path="/Layout/WidgetSiteTools">
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				setWidgetServiceClicking($("#widgetSiteToolsHeader927d4ef4-cd92-4f57-8561-c6718119bf9d"), true, function () {
+					var $widgetBody = $('#widgetSiteToolsBody927d4ef4-cd92-4f57-8561-c6718119bf9d');
+
+					if ($widgetBody.is(':visible')) {
+						var menuItems = $('.widgetItem a', $widgetBody);
+
+						$(menuItems[0]).focus();
+
+						$('.widgetItem', $widgetBody).unbind("keydown").bind("keydown", function (e) {
+
+							if (e.which === 9) {
+								var index = menuItems.index(e.target);
+
+								if ((index === 0 && e.shiftKey) || (index === (menuItems.length - 1) && !e.shiftKey)) {
+									$("#widgetSiteToolsHeader927d4ef4-cd92-4f57-8561-c6718119bf9d").trigger('click').focus();
+								}
+							}
+						});
+					} else {
+						$('.widgetItem', $widgetBody).unbind("keydown");
+					}
+				});
+			});
+		</script>
+
+	<section id="widgetSiteTools927d4ef4-cd92-4f57-8561-c6718119bf9d" class="widget widgetSiteTools skin6 widgetOptionSet8 flyOutParent wide" aria-label="Site Tools">
+				<header id="widgetSiteToolsHeader927d4ef4-cd92-4f57-8561-c6718119bf9d" class="widgetHeader" tabindex="0" role="button" aria-haspopup="true">
+			<h3><img alt="Site Tools" class="imageHover" data-hover="/ImageRepository/Document?documentID=1582" data-image="/ImageRepository/Document?documentID=1580" src="https://www.haslet.org/ImageRepository/Document?documentID=1580"></h3>
+		</header>
+	
+
+	</section>
+
+
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col12 last" style="height: auto;" data-widgetcontainerid="66a96e08-b527-45f8-9767-92ca6fabad3a">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last id4860c2de-3371-4cba-ac49-0338dc76987e" style="height: 25px;" data-widgetcontainerid="4860c2de-3371-4cba-ac49-0338dc76987e">
+	
+<div data-widget-id="c8f237eb-c401-4b96-aeb6-d5741f8ed378" data-widget-controller-path="/Layout/WidgetShare">
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				setWidgetServiceClicking($("#widgetShareHeaderc8f237eb-c401-4b96-aeb6-d5741f8ed378"), true, function () {
+					var $widgetBody = $('#widgetShareBodyc8f237eb-c401-4b96-aeb6-d5741f8ed378');
+
+					if ($widgetBody.is(':visible')) {
+						var menuItems = $('.widgetItem a', $widgetBody);
+
+						$(menuItems[0]).focus();
+
+						$('.widgetItem', $widgetBody).unbind("keydown").bind("keydown", function (e) {
+
+							if (e.which === 9) {
+								var index = menuItems.index(e.target);
+
+								if ((index === 0 && e.shiftKey) || (index === (menuItems.length - 1) && !e.shiftKey)) {
+									$("#widgetShareHeaderc8f237eb-c401-4b96-aeb6-d5741f8ed378").trigger('click').focus();
+								}
+							}
+			});
+					} else {
+						$('.widgetItem', $widgetBody).unbind("keydown");
+					}
+				});
+			});
+		</script>
+
+	<section id="widgetSharec8f237eb-c401-4b96-aeb6-d5741f8ed378" class="widget widgetShare skin6 widgetOptionSet6 flyOutParent wide" aria-label="Share">
+			<header id="widgetShareHeaderc8f237eb-c401-4b96-aeb6-d5741f8ed378" class="widgetHeader" tabindex="0" role="button" aria-haspopup="true">
+				<h3><img alt="Share" class="imageHover" data-hover="/ImageRepository/Document?documentID=1583" data-image="/ImageRepository/Document?documentID=1579" src="https://www.haslet.org/ImageRepository/Document?documentID=1579"></h3>
+	</header>
+    
+
+	</section>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside><aside data-cprole="contentContainer" id="contentContainer1" class="searchCWK">	<div id="cc2797fd7a-a562-4ac3-829f-ab9107895b02" data-containerid="2797fd7a-a562-4ac3-829f-ab9107895b02" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="da6e5354-b0bb-4f07-a6b4-2db39e42d71b">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last iddfc8976b-6705-4533-ad35-425e4b9ccd48" style="height: 45px;" data-widgetcontainerid="dfc8976b-6705-4533-ad35-425e4b9ccd48">
+	
+<div data-widget-id="f6e5507e-bb33-4f63-ad62-5c768ff533fd" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButtonf6e5507e-bb33-4f63-ad62-5c768ff533fd").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDeptf6e5507e-bb33-4f63-ad62-5c768ff533fd").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchFieldf6e5507e-bb33-4f63-ad62-5c768ff533fd").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDeptf6e5507e-bb33-4f63-ad62-5c768ff533fd").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDeptf6e5507e-bb33-4f63-ad62-5c768ff533fd").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchFieldf6e5507e-bb33-4f63-ad62-5c768ff533fd").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDeptf6e5507e-bb33-4f63-ad62-5c768ff533fd").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchFieldf6e5507e-bb33-4f63-ad62-5c768ff533fd").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchFieldf6e5507e-bb33-4f63-ad62-5c768ff533fd"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin2 widgetOptionSet12" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBoxf6e5507e-bb33-4f63-ad62-5c768ff533fd ui-autocomplete-input" cp5ph="true" id="searchFieldf6e5507e-bb33-4f63-ad62-5c768ff533fd" name="searchField" onchange="searchBtnApplyQuery();" placeholder="I'm looking for..." title="I'm looking for..." type="text" value="" autocomplete="off">
+						<a href="https://www.haslet.org/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButtonf6e5507e-bb33-4f63-ad62-5c768ff533fd" role="button"><img alt="Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=1561" data-image="/ImageRepository/Document?documentID=1562" src="https://www.haslet.org/ImageRepository/Document?documentID=1562"></a>
+
+			<label class="searchLabel" for="searchFieldf6e5507e-bb33-4f63-ad62-5c768ff533fd">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #757575;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #757575;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #757575;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #757575;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBoxf6e5507e-bb33-4f63-ad62-5c768ff533fd
+	{
+		color: #757575;
+		background-color: rgba(255, 255, 255, .95);box-shadow: 0px 0px 5.64px 0.36px rgba(0, 0, 0, 0.4);
+border:none;padding:1em 0 1em 1em;height:45px;
+	}
+	.widgetSearch .widgetBody .widgetSearchButtonf6e5507e-bb33-4f63-ad62-5c768ff533fd
+	{
+		
+	}
+	.widgetSearch .widgetSearch-onlyDeptf6e5507e-bb33-4f63-ad62-5c768ff533fd
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDeptf6e5507e-bb33-4f63-ad62-5c768ff533fd
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchFieldf6e5507e-bb33-4f63-ad62-5c768ff533fd").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside><div class="logo" data-cprole="structuralContainer" id="structuralContainer20">
+<h1 data-cprole="banner" id="banner2" class="imageBig empty">
+
+
+
+
+				<a id="banner2-9" style="			display: block; text-align: center;
+" class="bannerObject" href="https://www.haslet.org/" target="_self"><img alt="Click to Home" class="bannerObject" height="133" src="https://www.haslet.org/ImageRepository/Document?documentID=1531" width="141"></a>
+</h1>
+</div></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer4">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer3">	<div id="ccf49d1602-73af-4052-851e-e17b9315b085" data-containerid="f49d1602-73af-4052-851e-e17b9315b085" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside></div>
+</div>
+
+
+
+
+		<div id="bannerImagesJSON8" class="hidden"></div><div class="bannerObject external fixedBanner" id="bannerDivbanner1" style="min-height: 219px; top: 0px; left: 0px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="false"><img class="bannerObject" width="2200px" style="position: absolute; left: 50%; margin: 0 0 0 -1100px;" src="https://www.haslet.org/ImageRepository/Document?documentID=1533" data-is-delayed="false" alt=""></div>
+		
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner1',
+								{"BannerOptionID":8,"ThemeID":5,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":2,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":false,"ImageAlignment":2,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":13,"BannerOptionID":8,"FileName":"/ImageRepository/Document?documentID=1533","Height":232,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":14,"BannerOptionID":8,"FileName":"/ImageRepository/Document?documentID=1532","Height":232,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":2,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":15,"BannerOptionID":8,"FileName":"/ImageRepository/Document?documentID=1534","Height":232,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":3,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":16,"BannerOptionID":8,"FileName":"/ImageRepository/Document?documentID=1535","Height":232,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":4,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""}],"BannerVideos":[],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								'/App_Themes/Simple/Images/',
+								'Rotating');
+						});
+				});
+			</script>
+
+</div><div data-cprole="structuralContainer" id="structuralContainer5">
+<div class="siteWrap"><div data-cprole="structuralContainer" id="structuralContainer6" class="mainWrap" role="main">
+<div data-cprole="structuralContainer" id="structuralContainer7" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="structuralContainer8" class="contentWrap">
+<div data-cprole="breadCrumbs" class="breadCrumbContainer" id="breadCrumbs">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="https://www.haslet.org/">Home</a></li><li>Staff Directory</li>
+		</ol>
+
+	   
+    
+</div>
+<div data-cprole="mainContentContainer" id="moduleContent">
+
+<div id="ctl00_ctl00_MainContent_BodyWrapper">
+	
+	<script type="text/javascript"><!--
+	var isie6 = false, isie7 = false, isie6or7 = false;
+	var intCountryCode = 840;
+
+	function setUrlLength(editor) {
+		//Toggle Image Context Menu Items
+		setMenuItems(editor);
+		//setContentBackgroundColor(editor);
+		removeIEParagraphs(editor);
+	}
+	function setUrlLengthAndToolToggle(editor) {
+		var minToolsGroups = 2; // Number of MinimumSetOfTools tools groups.
+		
+		// Hide the MinimumSetOfTools on load.
+		var toolbar = editor.get_toolContainer(); // Get toolbar container.
+		var toolgroups = toolbar.getElementsByTagName("UL"); // Get all toolgroups containers.
+		
+		for (var i = toolgroups.length - 1; i >= minToolsGroups; i--)			toolgroups[i].style.display = "none";
+		
+		if (editor.isIE) {
+			var elem = editor.get_element();
+			elem.style.height = "430px";
+ 			elem.style.minHeight = "430px";
+		}
+		
+		// Toggle Image Context Menu Items.
+		setMenuItems(editor);
+		//setContentBackgroundColor(editor);
+		removeIEParagraphs(editor);
+	}
+//--></script><!--[if IE 6]><script type="text/javascript">isie6 = true; isie6or7 = true;</script><![endif]-->
+<!--[if IE 7]><script type="text/javascript">isie7 = true; isie6or7 = true;</script><![endif]-->
+
+	
+
+	<form name="aspnetForm" method="post" action="./directory.aspx?did=4" id="aspnetForm" style="display:inline;" onsubmit="return headerValidationCallback();" enctype="multipart/form-data" autocomplete="off">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="R4bL9Rah6O8aqCqtxOMLAJh1//Z1kidwIEm9HLlaHTl7z0kWNsKvTFdUE8kkqAYErnzHg6NkueRgYiqtFXbRhhSwOH4dyQknVwkvd3Qb1R/ipZiOzHlYg7yOSdnRcg3o">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZDLabodcikOjfaxGftwY9HZ4kdGjeaKe0dWaPQB1vgEd44eKAO0Ba1XMxE47-4twmw2&amp;t=638901361900000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=inLNP31wjqiaI82QcH4u7I71VHLIImzSRVoQAsV6_PNnrOu35oSrP-fktZb38yN1iHsxOuYTpPgebuvS3itkNDLQybUfBynodkPwcNYuu-5d7dEEJZPI3T2Vm57A0oUefZV704Z-0E62UXTckXj_X_urLROZ7xCT0LlKVHEeZf55MwRhNUf-qoYv7TXZNOcfRkghmszkBchwDCBZrMbNwwBUFz9bMFENu7H3ZkagHhGUNhiZSJJ_6rKgB8JZT9HTTpwkKUZBVrWA-S1010VS5Ob6lDwN9zNSwRQIL4BFNHXoQKw87hXTih7r4GO7vfq9srwqbRxzNCwrmjbkqxS8PKvq3JrNg9F8Yzi5r8_QnUw8wnSAXB3cGwR-Oug_rBjSvh1H2m1dhLMfnrFII3aXyZHVFuHavV3Jq2X9dFwARhK6bD6UgXxog8zmfpLJ6WuLe1SOWsSp6nBTLbtzTkaRqQV5ezsjtJAY_BjxLBRMSuqCK3ndsYNX2uDXn8OU1aFYN7YRkehqMOG2DZDJN3je3le0UoSpMEP119RvNyCBDd3fFfEROn22W2Zy-nkYf66ujs8p5jJJk9qUQcNjKmE-72VQP6-3ZlE78IqOcbGpJjJWLsqLv5a8Qrfz-bHTJfA7HQK17c_eRCCcdbgekRrNJ7DUshbeGeZZxU6mDOMM0fgY7UNyFSNn1dRISJr64r5_4nSCb2qU5aLOXTahkfUoU8LYfD9sfSesIHRwVM0dEZYw_fNzolVFS1omlCXY1C6wm_ZyHwvxNChMm56m_LNnwTXM-14U_Aj7mxxcUeel5LCis9bNX9XAMZfTXFcWd5Z_AfhU8RWVsb9-PorEp_06SpgGOenb5xBqGLxeKltoBnI1" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="42A65EF5">
+</div>
+		<!--for archiving purpose-->
+		<input name="ysnNotifyMe" type="hidden">
+		<input name="strPage" type="hidden">
+		<input name="intArchMainCatID" type="hidden">
+		<input name="intArchMainItemID" type="hidden">
+		 <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$MainContent$scriptManager', 'aspnetForm', [], [], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+		<script type="text/javascript">
+			Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(beginRequest);
+			Sys.WebForms.PageRequestManager.getInstance().add_pageLoaded(pageLoaded);
+		</script>
+		
+		<div id="modulecontent" name="modulecontent.aspx" style="padding-top: 0px;">
+<div id="contentarea"></div>
+
+<!-- BEGIN CityDirectoryContent.aspx ***** -->
+<style>
+	#moduleContent,
+	#moduleContent * {
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+		box-sizing: content-box;
+	}
+
+	table[summary="Search Directory"], table[summary="Employee Info"], table[summary="Table for layout purposes"] {
+		width: 100%
+	}
+</style>
+
+<link href="/Common/Modules/CityDirectory/RWDCityDirectory.css" rel="stylesheet" type="text/css">
+<script src="/Common/Modules/CityDirectory/RWDCityDirectory.js" type="text/javascript"></script>
+
+<script type="text/javascript" language="javascript" src="/common/nMenu.js"></script>
+<style type="text/css">
+	td.r { text-align: right; margin: 0px; margin-left: auto;}
+	td.l { text-align: left; margin: 0px; margin-right: auto; }
+	td.c { text-align: center; margin: 0px auto; }
+	tr.qcol { background: #efeeee; }
+	a.archLinkColor { color: ; }tr.alt { background-color: #e4e4e4; }	.DirectoryCategoryText, .BioName {
+		font-family: arial;
+		font-size: 10pt;
+		color: Black;
+		font-weight: bold;
+	}
+	.DirectoryNormalText, .BioText { 
+		font-family: arial;
+		font-size: 10pt;
+		color: Black;
+		font-weight: normal;
+	}
+	.DirectoryLinksText, .BioLink { 
+		font-family: arial;
+		font-size: 10pt;
+		color: Black;
+		font-weight: normal;
+	}
+	.BioLink { 
+		color: #3a4b93;
+	}
+	.BioName { 
+		border: 0px;
+		padding: 0px;
+		color: #264190;
+	}
+	.DirectoryNormalText label { font-weight: bold; }
+	.DirectoryCategoryText { margin-bottom: 1em; }
+	.DirectoryNormalText p { margin: 0px 0px 10px 0px; }
+</style>
+
+<div id="CityDirectoryLeftMargin" style="margin-left: 20px;">
+	<div style="position: relative;" class="DirectoryCategoryText"><h1 style="margin-bottom: -0.5em;">City Staff</h1>&nbsp;</div><span class="DirectoryNormalText"><label>Physical Address:</label><p>Haslet, TX&nbsp;76052</p><br><div class="fr-view">Staff contact information.</div>				<br></span>
+                 <div class="pageStyles">					<table id="cityDirectoryDepartmentDetails_1" summary="City Directory" style="width: 100%; margin: 0px; padding: 0px; ">
+                      <thead>						<tr>
+							<th scope="col" colspan="5">
+								<div style="font-weight: bold;">
+									<span style="float: left;">Staff</span>
+								</div>
+							</th>
+						</tr>
+						<tr>
+							<th scope="col">
+								<span style="font-weight: bold;">
+									Name
+								</span>
+							</th>
+							<th scope="col">
+								<span style="font-weight: bold;">
+Title								</span>
+							</th>
+							<th scope="col">
+								<span style="font-weight: bold;">
+									Email
+								</span>
+							</th>
+							<th scope="col">
+								<span style="font-weight: bold;">
+									Phone
+								</span>
+							</th>
+							<th scope="col">
+								<span style="font-weight: bold;">
+									Additional Phone
+								</span>
+							</th>
+						</tr>
+                      </thead>				<tbody><tr>
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=63">Davis-Doarn, Jana							</a>
+						</span>
+					</td>
+<td>
+<span>Adult Services Librarian</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "jdoarn";
+var x = "haslet.org";
+var y = "Jdoarn" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:jdoarn@haslet.org">Jdoarn@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174394278;210">817-439-4278 Ext. 210</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr class="alt">
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=70">Deleanu, Razvan							</a>
+						</span>
+					</td>
+<td>
+<span>Firefighter/Engineer</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "rdeleanu";
+var x = "haslet.org";
+var y = "rdeleanu" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:rdeleanu@haslet.org">rdeleanu@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174391048">817-439-1048</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=56">Deuchler, Sabine							</a>
+						</span>
+					</td>
+<td>
+<span>Accounts Payable/Utility Billing Accountant</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "sdeuchler";
+var x = "haslet.org";
+var y = "sdeuchler" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:sdeuchler@haslet.org">sdeuchler@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931;101">817-439-5931 Ext. 101</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr class="alt">
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=58">Fowler, Katarina							</a>
+						</span>
+					</td>
+<td>
+<span>Building Permit Technician</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "permits";
+var x = "haslet.org";
+var y = "permits" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:permits@haslet.org">permits@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931;115">817-439-5931 Ext. 115</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=81">Fullingim, Vista							</a>
+						</span>
+					</td>
+<td>
+<span>Deputy Court Clerk</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "vfullingim";
+var x = "haslet.org";
+var y = "vfullingim" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:vfullingim@haslet.org">vfullingim@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931;108">817-439-5931 Ext. 108</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr class="alt">
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=31">Gullahorn, David							</a>
+						</span>
+					</td>
+<td>
+<span>Public Works Crew Leader</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "dgullahorn";
+var x = "haslet.org";
+var y = "dgullahorn" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:dgullahorn@haslet.org">dgullahorn@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931;401">817-439-5931 Ext. 401</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=26">Harvey, Steven							</a>
+						</span>
+					</td>
+<td>
+<span>Interim Fire Chief</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "sharvey";
+var x = "haslet.org";
+var y = "sharvey" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:sharvey@haslet.org">sharvey@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8178403954">817-840-3954</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr class="alt">
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=71">Hudson, Bryan							</a>
+						</span>
+					</td>
+<td>
+<span>Parks Maintenance Worker</span>
+</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=47">Lamb, Marcy							</a>
+						</span>
+					</td>
+<td>
+<span>Finance Director</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "mlamb";
+var x = "haslet.org";
+var y = "mlamb" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:mlamb@haslet.org">mlamb@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931;105">817-439-5931 Ext. 105</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr class="alt">
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=76">White, Katrina							</a>
+						</span>
+					</td>
+<td>
+<span>Administrative Assistant/Events Coordinator</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "kwhite";
+var x = "haslet.org ";
+var y = "kwhite" + '@' + "haslet.org ";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:kwhite@haslet.org">kwhite@haslet.org </a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931">817-439-5931 </a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=67">Morgan, Jeb							</a>
+						</span>
+					</td>
+<td>
+<span>Fire Engineer/Fire Fighter</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "jmorgan";
+var x = "haslet.org";
+var y = "jmorgan" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:jmorgan@haslet.org">jmorgan@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931">817-439-5931</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr class="alt">
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=79">White, Katrina							</a>
+						</span>
+					</td>
+<td>
+<span>City Secretary</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "hasletcitysecretary";
+var x = "haslet.org";
+var y = "hasletcitysecretary" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:hasletcitysecretary@haslet.org">hasletcitysecretary@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931">817-439-5931</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=50">O'Neil, John							</a>
+						</span>
+					</td>
+<td>
+<span>Public Works Maintenance Worker</span>
+</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr class="alt">
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=37">Potts, Katie							</a>
+						</span>
+					</td>
+<td>
+<span>Court Administrator</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "kpotts";
+var x = "haslet.org";
+var y = "kpotts" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:kpotts@haslet.org">kpotts@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931;108">817-439-5931 Ext. 108</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=7">Rogers, David							</a>
+						</span>
+					</td>
+<td>
+<span>City Services &amp; Construction Coordinator</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "drogers";
+var x = "haslet.org";
+var y = "drogers" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:drogers@haslet.org">drogers@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931;104">817-439-5931 Ext. 104</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr class="alt">
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=68">Selzer, Dennis							</a>
+						</span>
+					</td>
+<td>
+<span>Fire Engineer/Fire Fighter</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "dselzer";
+var x = "haslet.org";
+var y = "dselzer" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:dselzer@haslet.org">dselzer@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931">817-439-5931</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=77">Smith, Pamela							</a>
+						</span>
+					</td>
+<td>
+<span>Code Enforcement Officer</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "psmith";
+var x = "haslet.org";
+var y = "psmith" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:psmith@haslet.org">psmith@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931;112">817-439-5931 Ext. 112</a>						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8173430710">817-343-0710</a>						</span>
+					</td>
+				</tr>
+				<tr class="alt">
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=11">Thetford, Mike							</a>
+						</span>
+					</td>
+<td>
+<span>Building Official</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "mthetford";
+var x = "haslet.org";
+var y = "mthetford" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:mthetford@haslet.org">mthetford@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931;107">817-439-5931 Ext. 107</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=9">Tucker, James							</a>
+						</span>
+					</td>
+<td>
+<span>Public Works Director</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "jtucker";
+var x = "haslet.org";
+var y = "jtucker" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:jtucker@haslet.org">jtucker@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931;401">817-439-5931 Ext. 401</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr class="alt">
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=66">Turner, Kelly							</a>
+						</span>
+					</td>
+<td>
+<span>Library Director</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "kturner";
+var x = "haslet.org";
+var y = "kturner" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:kturner@haslet.org">kturner@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174394278;203">817-439-4278 Ext. 203</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=61">Walter, Emily							</a>
+						</span>
+					</td>
+<td>
+<span>Public Works Office Manager</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "ewalter";
+var x = "haslet.org";
+var y = "ewalter" + '@' + "haslet.org ";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:ewalter@haslet.org">ewalter@haslet.org </a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931;121">817-439-5931 Ext. 121</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr class="alt">
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=49">White, Briana							</a>
+						</span>
+					</td>
+<td>
+<span>Youth Services Librarian</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "bwhite";
+var x = "haslet.org";
+var y = "bwhite" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:bwhite@haslet.org">bwhite@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174394278;202">817-439-4278 Ext. 202</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=5">White, Katrina							</a>
+						</span>
+					</td>
+<td>
+<span>Acting City Secretary/Special Events Coordinator</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "kwhite";
+var x = "haslet.org";
+var y = "kwhite" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:kwhite@haslet.org">kwhite@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931;100">817-439-5931 Ext. 100</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr class="alt">
+					<td>
+						<span>
+							<a href="https://www.haslet.org/directory.aspx?EID=80">Waits, Sydney							</a>
+						</span>
+					</td>
+<td>
+<span>Public Works Administrative Assistant</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "swaits";
+var x = "haslet.org";
+var y = "swaits" + '@' + "haslet.org";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:swaits@haslet.org">swaits@haslet.org</a>
+						</span>
+					</td>
+					<td>
+						<span>
+<a href="tel:8174395931;114">8174395931 Ext. 114</a>						</span>
+					</td>
+					<td>
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+ </tbody></table></div><br>
+<div style="margin-left: 1px"><a href="https://www.haslet.org/Directory.aspx" class="DirectoryLinksText" style="font-weight: bold;">Return to Staff Directory</a></div><br>
+
+	<br>
+	<span style="font-family: arial; font-size: 12pt; color: Black;">
+		
+	</span>
+</div>
+<!-- END CityDirectoryContent.aspx ***** -->
+</div>
+<script type="text/javascript">order+='ModuleContent\n'</script>
+
+		<input type="submit" name="ctl00$ctl00$MainContent$ctl00_liveEditSpawnWindow" value="" id="ctl00_ctl00_MainContent_ctl00_liveEditSpawnWindow" disabled="disabled" aria-hidden="true" style="display: none;">
+	
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","CancelControlID":"ctl00_LiveEditCloseButton","PopupControlID":"ctl00_ctl00_MainContent_ctl00_liveEditPopupWindow","PopupDragHandleControlID":"ctl00_liveEditTitleBar","dynamicServicePath":"/directory.aspx","id":"editItemBehavior"}, null, null, $get("ctl00_ctl00_MainContent_ctl00_liveEditSpawnWindow"));
+});
+//]]>
+</script>
+<input name="__RequestVerificationToken" type="hidden" value="7x5jBJcFRv5ROAOshAYjxylZRJBZgp5jv2h5IgO1HHDye2jUSPQR2_V6GgvvU1bhJrmaqOz_bakX88FKox8v6x0jGQV4W-jSDGDh7lf582E1"></form>
+	<form id="aspnetSearchForm" name="aspnetSearchForm" style="display:none;" action="/Search.aspx" method="get">
+		<input name="SearchString" type="hidden" value="">
+	</form>
+	
+	
+	
+	</div>
+	 
+</div>	
+
+</div>
+</div>
+</div></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer10">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer4">	<div id="cc94a86381-f7ac-41a0-a56e-8fafd94b8c1e" data-containerid="94a86381-f7ac-41a0-a56e-8fafd94b8c1e" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="53">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col12 first" style="height: auto;" data-widgetcontainerid="6612ea24-18c2-41b7-9325-19b74c86d288">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last id49b7850d-7588-4fd7-9bfb-88d0520a501a" style="height: 186px;" data-widgetcontainerid="49b7850d-7588-4fd7-9bfb-88d0520a501a">
+	
+<div data-widget-id="69b86edc-1119-44af-ab1b-5398812b9d49" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget69b86edc-1119-44af-ab1b-5398812b9d49" class="widget widgetGraphicLinks skin7 widgetOptionSet16 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.haslet.org/Jobs.aspx?CID=98" target="_self" class="fancyButton fancyButton263 ">
+		<span>
+			<span><span class="text">Employment<br>Opportunities<br style="font-size: 20.8px;"><br></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton263.fancyButton:link,.fancyButton263.fancyButton:visited, .fancyButton263div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=1553');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;}
+.fancyButton263.fancyButton:hover,.fancyButton263.fancyButton:focus,.fancyButton263.fancyButton:active,.fancyButton263.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=1554');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;}
+.fancyButton263.fancyButton:link > span,.fancyButton263.fancyButton:visited > span, .fancyButton263div.fancyButton > span{
+}
+.fancyButton263.fancyButton:hover > span,.fancyButton263.fancyButton:focus > span,.fancyButton263.fancyButton:active > span,.fancyButton263.fancyButton.hover > span{
+}
+.fancyButton263.fancyButton .text{
+	color: #fff;
+	font-size: 1.3em;
+	font-family: "Montserrat";
+	text-align: center;
+	padding-top: 90px;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 90px;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+line-height:120%;}
+.fancyButton263.fancyButton:hover .text,.fancyButton263.fancyButton:focus .text,.fancyButton263.fancyButton:active .text,.fancyButton263.fancyButton.hover .text{
+	text-align: center;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton263.fancyButton .textStyle1{
+	color: #fff;
+	font-size: .6em;
+	font-style: normal;
+	text-decoration: none;
+line-height:120%;}
+.fancyButton263.fancyButton:hover .textStyle1, .fancyButton263.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+.fancyButton263.fancyButton .textStyle2{
+	color: #ffffff;
+	font-size: .6em;
+	font-style: normal;
+	text-decoration: none;
+line-height:120%;}
+.fancyButton263.fancyButton:hover .textStyle2, .fancyButton263.fancyButton.hover .textStyle2{
+	text-decoration: none;
+
+}
+.fancyButton263.fancyButton .textStyle3{
+	color: #ffffff;
+	font-size: .6em;
+	font-style: normal;
+	text-decoration: none;
+line-height:120%;}
+.fancyButton263.fancyButton:hover .textStyle3, .fancyButton263.fancyButton.hover .textStyle3{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.haslet.org/226/Planning-Department" target="_self" class="fancyButton fancyButton264 ">
+		<span>
+			<span><span class="text">Planning &amp; Development<br><span class="textStyle1">Permits/Inspections/Zoning</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton264.fancyButton:link,.fancyButton264.fancyButton:visited, .fancyButton264div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=1551');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;}
+.fancyButton264.fancyButton:hover,.fancyButton264.fancyButton:focus,.fancyButton264.fancyButton:active,.fancyButton264.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=1552');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;}
+.fancyButton264.fancyButton:link > span,.fancyButton264.fancyButton:visited > span, .fancyButton264div.fancyButton > span{
+}
+.fancyButton264.fancyButton:hover > span,.fancyButton264.fancyButton:focus > span,.fancyButton264.fancyButton:active > span,.fancyButton264.fancyButton.hover > span{
+}
+.fancyButton264.fancyButton .text{
+	color: #fff;
+	font-size: 1.3em;
+	font-family: "Montserrat";
+	text-align: center;
+	padding-top: 90px;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 90px;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+line-height:120%;}
+.fancyButton264.fancyButton:hover .text,.fancyButton264.fancyButton:focus .text,.fancyButton264.fancyButton:active .text,.fancyButton264.fancyButton.hover .text{
+	text-align: center;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton264.fancyButton .textStyle1{
+	color: #fff;
+	font-size: .6em;
+	font-style: normal;
+	text-decoration: none;
+line-height:120%;}
+.fancyButton264.fancyButton:hover .textStyle1, .fancyButton264.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.haslet.org/241/Pay-for" target="_self" class="fancyButton fancyButton265 ">
+		<span>
+			<span><span class="text">Make a Payment<br><span class="textStyle1">Utility Bill/Traffic Citation</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton265.fancyButton:link,.fancyButton265.fancyButton:visited, .fancyButton265div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=1545');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;}
+.fancyButton265.fancyButton:hover,.fancyButton265.fancyButton:focus,.fancyButton265.fancyButton:active,.fancyButton265.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=1546');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;}
+.fancyButton265.fancyButton:link > span,.fancyButton265.fancyButton:visited > span, .fancyButton265div.fancyButton > span{
+}
+.fancyButton265.fancyButton:hover > span,.fancyButton265.fancyButton:focus > span,.fancyButton265.fancyButton:active > span,.fancyButton265.fancyButton.hover > span{
+}
+.fancyButton265.fancyButton .text{
+	color: #fff;
+	font-size: 1.3em;
+	font-family: "Montserrat";
+	text-align: center;
+	padding-top: 90px;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 90px;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+line-height:120%;}
+.fancyButton265.fancyButton:hover .text,.fancyButton265.fancyButton:focus .text,.fancyButton265.fancyButton:active .text,.fancyButton265.fancyButton.hover .text{
+	text-align: center;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton265.fancyButton .textStyle1{
+	color: #fff;
+	font-size: .6em;
+	font-style: normal;
+	text-decoration: none;
+line-height:120%;}
+.fancyButton265.fancyButton:hover .textStyle1, .fancyButton265.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col12 last" style="height: auto;" data-widgetcontainerid="4ae15447-df96-440b-8937-4b6f13a4cbe9">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last id70ee0995-3ea2-4038-b80c-383121999f4b" style="height: 186px;" data-widgetcontainerid="70ee0995-3ea2-4038-b80c-383121999f4b">
+	
+<div data-widget-id="9a194566-99ef-4502-b4b0-334a0b5f2e09" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget9a194566-99ef-4502-b4b0-334a0b5f2e09" class="widget widgetGraphicLinks skin7 widgetOptionSet16 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.haslet.org/166/Ordinances" target="_self" class="fancyButton fancyButton266 ">
+		<span>
+			<span><span class="text">Ordinances<br>&amp; Codes<br><span class="textStyle1">Look Up Regulations</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton266.fancyButton:link,.fancyButton266.fancyButton:visited, .fancyButton266div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=1549');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;}
+.fancyButton266.fancyButton:hover,.fancyButton266.fancyButton:focus,.fancyButton266.fancyButton:active,.fancyButton266.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=1550');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;}
+.fancyButton266.fancyButton:link > span,.fancyButton266.fancyButton:visited > span, .fancyButton266div.fancyButton > span{
+}
+.fancyButton266.fancyButton:hover > span,.fancyButton266.fancyButton:focus > span,.fancyButton266.fancyButton:active > span,.fancyButton266.fancyButton.hover > span{
+}
+.fancyButton266.fancyButton .text{
+	color: #fff;
+	font-size: 1.3em;
+	font-family: "Montserrat";
+	text-align: center;
+	padding-top: 90px;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 90px;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+line-height:120%;}
+.fancyButton266.fancyButton:hover .text,.fancyButton266.fancyButton:focus .text,.fancyButton266.fancyButton:active .text,.fancyButton266.fancyButton.hover .text{
+	text-align: center;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton266.fancyButton .textStyle1{
+	color: #fff;
+	font-size: .6em;
+	font-style: normal;
+	text-decoration: none;
+line-height:120%;}
+.fancyButton266.fancyButton:hover .textStyle1, .fancyButton266.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.haslet.org/list.aspx" target="_self" class="fancyButton fancyButton267 ">
+		<span>
+			<span><span class="text">Notify Me®<br><span class="textStyle1">Sign Up for Notifications</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton267.fancyButton:link,.fancyButton267.fancyButton:visited, .fancyButton267div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=1547');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;}
+.fancyButton267.fancyButton:hover,.fancyButton267.fancyButton:focus,.fancyButton267.fancyButton:active,.fancyButton267.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=1548');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;}
+.fancyButton267.fancyButton:link > span,.fancyButton267.fancyButton:visited > span, .fancyButton267div.fancyButton > span{
+}
+.fancyButton267.fancyButton:hover > span,.fancyButton267.fancyButton:focus > span,.fancyButton267.fancyButton:active > span,.fancyButton267.fancyButton.hover > span{
+}
+.fancyButton267.fancyButton .text{
+	color: #fff;
+	font-size: 1.3em;
+	font-family: "Montserrat";
+	text-align: center;
+	padding-top: 90px;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 90px;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+line-height:120%;}
+.fancyButton267.fancyButton:hover .text,.fancyButton267.fancyButton:focus .text,.fancyButton267.fancyButton:active .text,.fancyButton267.fancyButton.hover .text{
+	text-align: center;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton267.fancyButton .textStyle1{
+	color: #fff;
+	font-size: .6em;
+	font-style: normal;
+	text-decoration: none;
+line-height:120%;}
+.fancyButton267.fancyButton:hover .textStyle1, .fancyButton267.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.haslet.org/403/Election-Information" target="_self" class="fancyButton fancyButton331 ">
+		<span>
+			<span><span class="text">Elections<br><span class="textStyle1">General Information</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton331.fancyButton:link,.fancyButton331.fancyButton:visited, .fancyButton331div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=3457');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;}
+.fancyButton331.fancyButton:hover,.fancyButton331.fancyButton:focus,.fancyButton331.fancyButton:active,.fancyButton331.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=3456');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;}
+.fancyButton331.fancyButton:link > span,.fancyButton331.fancyButton:visited > span, .fancyButton331div.fancyButton > span{
+}
+.fancyButton331.fancyButton:hover > span,.fancyButton331.fancyButton:focus > span,.fancyButton331.fancyButton:active > span,.fancyButton331.fancyButton.hover > span{
+}
+.fancyButton331.fancyButton .text{
+	color: #fff;
+	font-size: 1.3em;
+	font-family: "Montserrat";
+	text-align: center;
+	padding-top: 90px;
+	font-style: normal;
+	text-decoration: none;
+	padding-top: 90px;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+line-height:120%;}
+.fancyButton331.fancyButton:hover .text,.fancyButton331.fancyButton:focus .text,.fancyButton331.fancyButton:active .text,.fancyButton331.fancyButton.hover .text{
+	text-align: center;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton331.fancyButton .textStyle1{
+	color: #fff;
+	font-size: .6em;
+	font-style: normal;
+	text-decoration: none;
+line-height:120%;}
+.fancyButton331.fancyButton:hover .textStyle1, .fancyButton331.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer11">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer5">	<div id="ccd0309dc3-3f8f-46c7-b60d-db33d44017e2" data-containerid="d0309dc3-3f8f-46c7-b60d-db33d44017e2" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="48">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col3 first" style="height: auto;" data-widgetcontainerid="5d774aad-da2e-4315-a892-df407203bddc">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col3 first last id96ec9117-39ab-4e07-9be1-a963a566a4b2" style="height: 297px;" data-widgetcontainerid="96ec9117-39ab-4e07-9be1-a963a566a4b2">
+	
+    <div data-widget-id="8b49b54a-298e-4983-9a22-049cbb8ec926" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv8b49b54a-298e-4983-9a22-049cbb8ec926" class="widget widgetInfoAdvanced skin5 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="header8b49b54a-298e-4983-9a22-049cbb8ec926">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<a href="https://www.haslet.org/"><img src="https://www.haslet.org/ImageRepository/Document?documentID=1540" alt="Click to home" title="Click to home"></a>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv8b49b54a-298e-4983-9a22-049cbb8ec926 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="930d7316-1688-4935-9758-4558258d4371">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id849516a3-7dae-4b6a-ad9b-ad9dd47685b9" style="height: 297px;" data-widgetcontainerid="849516a3-7dae-4b6a-ad9b-ad9dd47685b9">
+	
+
+<div class="widget widgetSpacer" id="c27afba1-05fe-4e9e-b5a6-dc9017437e36" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col7" style="height: auto;" data-widgetcontainerid="1c54b1b2-8e60-48f5-85a7-e5031dbf373d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first id1bad6008-8db1-49d8-a631-38ef573e6656" style="height: 297px;" data-widgetcontainerid="1bad6008-8db1-49d8-a631-38ef573e6656">
+	
+    <div data-widget-id="f35fdf90-783b-4322-898c-b72ee36dec7d" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdvf35fdf90-783b-4322-898c-b72ee36dec7d" class="widget widgetInfoAdvanced skin5 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="headerf35fdf90-783b-4322-898c-b72ee36dec7d">
+			<header class="widgetHeader" id="headerf35fdf90-783b-4322-898c-b72ee36dec7d">
+		<div class="">
+					<h3>Contact Us</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid2 ">
+		<div class="row narrow">
+					<div class="col col1 first ">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>City of Haslet<br>101 Main Street<br>Haslet, TX 76052<a href="tel:817-439-5931"></a><br><a href="tel:817-439-5931">817-439-5931</a></p>
+</li>						</ol>
+					</div>
+					<div class="col col1  last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><span style="font-size: 14.4px;">Hours 8 a.m. to 5 p.m.</span><br><span style="font-size: 14.4px;">Monday thru Friday</span></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdvf35fdf90-783b-4322-898c-b72ee36dec7d .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+	<div class="inner col col1 last id5d57f6d2-7be2-45c4-9f17-f2f19901bdb5" style="height: 297px;" data-widgetcontainerid="5d57f6d2-7be2-45c4-9f17-f2f19901bdb5">
+	
+
+<div class="widget widgetSpacer" id="5b48de47-506c-49ca-9746-f5e88e7e0f79" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col7" style="height: auto;" data-widgetcontainerid="aa514c63-fdd9-4000-a539-aa84687e0d05">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col7 first last idb7aa08c5-d070-4828-a685-6759612488f3" style="height: 297px;" data-widgetcontainerid="b7aa08c5-d070-4828-a685-6759612488f3">
+	
+<div data-widget-id="e50c977a-b4d3-488a-8c2d-be47407a8516" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgete50c977a-b4d3-488a-8c2d-be47407a8516" class="widget widgetGraphicLinks skin5 widgetOptionSet4 narrow" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+			<h3>Social Media</h3>
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.haslet.org/Facebook" target="_self" class="fancyButton fancyButton253 ">
+		<span>
+			<span><span class="text">Facebook</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton253.fancyButton:link,.fancyButton253.fancyButton:visited, .fancyButton253div.fancyButton{
+	height: 30px;
+	background-image: url('/ImageRepository/Document?documentID=1542');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.fancyButton253.fancyButton:hover,.fancyButton253.fancyButton:focus,.fancyButton253.fancyButton:active,.fancyButton253.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=1541');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.fancyButton253.fancyButton:link > span,.fancyButton253.fancyButton:visited > span, .fancyButton253div.fancyButton > span{
+}
+.fancyButton253.fancyButton:hover > span,.fancyButton253.fancyButton:focus > span,.fancyButton253.fancyButton:active > span,.fancyButton253.fancyButton.hover > span{
+}
+.fancyButton253.fancyButton .text{
+	color: #fff;
+	font-family: "Open Sans";
+	text-align: left;
+	padding-left: 2.5em;
+	font-style: normal;
+	text-decoration: none;
+	padding-left: 2.5em;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+height:30px;}
+.fancyButton253.fancyButton:hover .text,.fancyButton253.fancyButton:focus .text,.fancyButton253.fancyButton:active .text,.fancyButton253.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://twitter.com/cityofhaslet" target="_self" class="fancyButton fancyButton254 ">
+		<span>
+			<span><span class="text">Twitter</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton254.fancyButton:link,.fancyButton254.fancyButton:visited, .fancyButton254div.fancyButton{
+	height: 30px;
+	background-image: url('/ImageRepository/Document?documentID=1544');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.fancyButton254.fancyButton:hover,.fancyButton254.fancyButton:focus,.fancyButton254.fancyButton:active,.fancyButton254.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=1543');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.fancyButton254.fancyButton:link > span,.fancyButton254.fancyButton:visited > span, .fancyButton254div.fancyButton > span{
+}
+.fancyButton254.fancyButton:hover > span,.fancyButton254.fancyButton:focus > span,.fancyButton254.fancyButton:active > span,.fancyButton254.fancyButton.hover > span{
+}
+.fancyButton254.fancyButton .text{
+	color: #fff;
+	font-family: "Open Sans";
+	text-align: left;
+	padding-left: 2.5em;
+	font-style: normal;
+	text-decoration: none;
+	padding-left: 2.5em;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+height:30px;}
+.fancyButton254.fancyButton:hover .text,.fancyButton254.fancyButton:focus .text,.fancyButton254.fancyButton:active .text,.fancyButton254.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.facebook.com/Haslet-Fire-Rescue-195075330554130/" target="_self" class="fancyButton fancyButton255 ">
+		<span>
+			<span><span class="text">Facebook/Fire Department</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton255.fancyButton:link,.fancyButton255.fancyButton:visited, .fancyButton255div.fancyButton{
+	height: 30px;
+	background-image: url('/ImageRepository/Document?documentID=1542');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.fancyButton255.fancyButton:hover,.fancyButton255.fancyButton:focus,.fancyButton255.fancyButton:active,.fancyButton255.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=1541');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.fancyButton255.fancyButton:link > span,.fancyButton255.fancyButton:visited > span, .fancyButton255div.fancyButton > span{
+}
+.fancyButton255.fancyButton:hover > span,.fancyButton255.fancyButton:focus > span,.fancyButton255.fancyButton:active > span,.fancyButton255.fancyButton.hover > span{
+}
+.fancyButton255.fancyButton .text{
+	color: #fff;
+	font-family: "Open Sans";
+	text-align: left;
+	padding-left: 2.5em;
+	font-style: normal;
+	text-decoration: none;
+	padding-left: 2.5em;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+height:30px;}
+.fancyButton255.fancyButton:hover .text,.fancyButton255.fancyButton:focus .text,.fancyButton255.fancyButton:active .text,.fancyButton255.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.facebook.com/hasletpubliclibrary/" target="_self" class="fancyButton fancyButton256 ">
+		<span>
+			<span><span class="text">Facebook/Library</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton256.fancyButton:link,.fancyButton256.fancyButton:visited, .fancyButton256div.fancyButton{
+	height: 30px;
+	background-image: url('/ImageRepository/Document?documentID=1542');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.fancyButton256.fancyButton:hover,.fancyButton256.fancyButton:focus,.fancyButton256.fancyButton:active,.fancyButton256.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=1541');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.fancyButton256.fancyButton:link > span,.fancyButton256.fancyButton:visited > span, .fancyButton256div.fancyButton > span{
+}
+.fancyButton256.fancyButton:hover > span,.fancyButton256.fancyButton:focus > span,.fancyButton256.fancyButton:active > span,.fancyButton256.fancyButton.hover > span{
+}
+.fancyButton256.fancyButton .text{
+	color: #fff;
+	font-family: "Open Sans";
+	text-align: left;
+	padding-left: 2.5em;
+	font-style: normal;
+	text-decoration: none;
+	padding-left: 2.5em;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+height:30px;}
+.fancyButton256.fancyButton:hover .text,.fancyButton256.fancyButton:focus .text,.fancyButton256.fancyButton:active .text,.fancyButton256.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+						--></ul>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="b6f6810e-01d2-47c6-9696-af0e31d88143">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id9a1a3b2d-9c4f-43c2-9cec-088615af05e2" style="height: 297px;" data-widgetcontainerid="9a1a3b2d-9c4f-43c2-9cec-088615af05e2">
+	
+
+<div class="widget widgetSpacer" id="60cf9c2a-a2bf-4a3d-ba26-a535fa20a554" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col5 last" style="height: auto;" data-widgetcontainerid="b0d5ebf3-df3d-4daf-8cf8-5a43bab9d983">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last idc7158357-e0b6-4e65-b4dd-5302fe9c545b" style="height: 297px;" data-widgetcontainerid="c7158357-e0b6-4e65-b4dd-5302fe9c545b">
+	
+	<div data-widget-id="ee8b60f7-f057-4443-baf5-997261a51118" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklinkee8b60f7-f057-4443-baf5-997261a51118" class="widget widgetQuickLinks skin5 widgetOptionSet15 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeaderee8b60f7-f057-4443-baf5-997261a51118">
+			<header class="widgetHeader" id="quickLinksHeaderee8b60f7-f057-4443-baf5-997261a51118">
+		<div class="">
+					<h3><a style="" href="https://www.haslet.org/QuickLinks.aspx?CID=113">Helpful Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.haslet.org/" target="_self">Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.haslet.org/sitemap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.haslet.org/directory" target="_self">Email Us</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.haslet.org/accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.haslet.org/privacy" target="_self">Privacy</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.haslet.org/site/copyright" target="_self">Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer12">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer6">	<div id="cc5513da98-b394-4ef8-854e-ea136355c5ea" data-containerid="5513da98-b394-4ef8-854e-ea136355c5ea" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside></div>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '',
+				targetType: 0
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+	
+	
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!----------281608 Google Translate (Mobile Friendly)--------->
+<style>#google-translate-container {float: left;padding: 3px 5px 0px 0px;}.goog-te-combo,.goog-te-banner *,.goog-te-ftab *,.goog-te-menu *,.goog-te-menu2 *,.goog-te-balloon * {font-family: arial;font-size: 10pt;background-image: url("https://theme.zdassets.com/theme_assets/958586/bae8aa24db8d43595871692a9d259186f2db3fb4.png");background-position: 3px 4px;background-size: 22px;background-repeat: no-repeat;text-indent: 20px;background-color: #fff;color: #000 !important;}.goog-logo-link {display: none !important;}.goog-te-gadget {color: transparent !important;}.goog-te-gadget .goog-te-combo {margin: 2px 0 !important;border-radius: 15px !important;}.goog-te-combo{border: 1px solid !important;border-color: #bcc9d7 #96a3b1 #96a3b1 #bcc9d7 !important;border-radius: 0 !important;height:32px; !important;padding: 0 1px 0 .25rem !important;}
+#launcher-wrapper {bottom: 50px !important;}
+</style>
+<div id="google-translate-container">
+<div id="google_translate_element" style="position: fixed; bottom: 0px; left: 20px; z-index: 5;"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo" aria-label="google translate languages"><option value="">Select Language</option><option value="ab">Abkhaz</option><option value="ace">Acehnese</option><option value="ach">Acholi</option><option value="aa">Afar</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="alz">Alur</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="as">Assamese</option><option value="av">Avar</option><option value="awa">Awadhi</option><option value="ay">Aymara</option><option value="az">Azerbaijani</option><option value="ban">Balinese</option><option value="bal">Baluchi</option><option value="bm">Bambara</option><option value="bci">Baoulé</option><option value="ba">Bashkir</option><option value="eu">Basque</option><option value="btx">Batak Karo</option><option value="bts">Batak Simalungun</option><option value="bbc">Batak Toba</option><option value="be">Belarusian</option><option value="bem">Bemba</option><option value="bn">Bengali</option><option value="bew">Betawi</option><option value="bho">Bhojpuri</option><option value="bik">Bikol</option><option value="bs">Bosnian</option><option value="br">Breton</option><option value="bg">Bulgarian</option><option value="bua">Buryat</option><option value="yue">Cantonese</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ch">Chamorro</option><option value="ce">Chechen</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="chk">Chuukese</option><option value="cv">Chuvash</option><option value="co">Corsican</option><option value="crh">Crimean Tatar (Cyrillic)</option><option value="crh-Latn">Crimean Tatar (Latin)</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="fa-AF">Dari</option><option value="dv">Dhivehi</option><option value="din">Dinka</option><option value="doi">Dogri</option><option value="dov">Dombe</option><option value="nl">Dutch</option><option value="dyu">Dyula</option><option value="dz">Dzongkha</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="ee">Ewe</option><option value="fo">Faroese</option><option value="fj">Fijian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fon">Fon</option><option value="fr">French</option><option value="fr-CA">French (Canada)</option><option value="fy">Frisian</option><option value="fur">Friulian</option><option value="ff">Fulani</option><option value="gaa">Ga</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gn">Guarani</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="cnh">Hakha Chin</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hil">Hiligaynon</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="hrx">Hunsrik</option><option value="iba">Iban</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="ilo">Ilocano</option><option value="id">Indonesian</option><option value="iu-Latn">Inuktut (Latin)</option><option value="iu">Inuktut (Syllabics)</option><option value="ga">Irish</option><option value="it">Italian</option><option value="jam">Jamaican Patois</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kac">Jingpo</option><option value="kl">Kalaallisut</option><option value="kn">Kannada</option><option value="kr">Kanuri</option><option value="pam">Kapampangan</option><option value="kk">Kazakh</option><option value="kha">Khasi</option><option value="km">Khmer</option><option value="cgg">Kiga</option><option value="kg">Kikongo</option><option value="rw">Kinyarwanda</option><option value="ktu">Kituba</option><option value="trp">Kokborok</option><option value="kv">Komi</option><option value="gom">Konkani</option><option value="ko">Korean</option><option value="kri">Krio</option><option value="ku">Kurdish (Kurmanji)</option><option value="ckb">Kurdish (Sorani)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="ltg">Latgalian</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lij">Ligurian</option><option value="li">Limburgish</option><option value="ln">Lingala</option><option value="lt">Lithuanian</option><option value="lmo">Lombard</option><option value="lg">Luganda</option><option value="luo">Luo</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mad">Madurese</option><option value="mai">Maithili</option><option value="mak">Makassar</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ms-Arab">Malay (Jawi)</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mam">Mam</option><option value="gv">Manx</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mh">Marshallese</option><option value="mwr">Marwadi</option><option value="mfe">Mauritian Creole</option><option value="chm">Meadow Mari</option><option value="mni-Mtei">Meiteilon (Manipuri)</option><option value="min">Minang</option><option value="lus">Mizo</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="nhe">Nahuatl (Eastern Huasteca)</option><option value="ndc-ZW">Ndau</option><option value="nr">Ndebele (South)</option><option value="new">Nepalbhasa (Newari)</option><option value="ne">Nepali</option><option value="bm-Nkoo">NKo</option><option value="no">Norwegian</option><option value="nus">Nuer</option><option value="oc">Occitan</option><option value="or">Odia (Oriya)</option><option value="om">Oromo</option><option value="os">Ossetian</option><option value="pag">Pangasinan</option><option value="pap">Papiamento</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese (Brazil)</option><option value="pt-PT">Portuguese (Portugal)</option><option value="pa">Punjabi (Gurmukhi)</option><option value="pa-Arab">Punjabi (Shahmukhi)</option><option value="qu">Quechua</option><option value="kek">Qʼeqchiʼ</option><option value="rom">Romani</option><option value="ro">Romanian</option><option value="rn">Rundi</option><option value="ru">Russian</option><option value="se">Sami (North)</option><option value="sm">Samoan</option><option value="sg">Sango</option><option value="sa">Sanskrit</option><option value="sat-Latn">Santali (Latin)</option><option value="sat">Santali (Ol Chiki)</option><option value="gd">Scots Gaelic</option><option value="nso">Sepedi</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="crs">Seychellois Creole</option><option value="shn">Shan</option><option value="sn">Shona</option><option value="scn">Sicilian</option><option value="szl">Silesian</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sus">Susu</option><option value="sw">Swahili</option><option value="ss">Swati</option><option value="sv">Swedish</option><option value="ty">Tahitian</option><option value="tg">Tajik</option><option value="ber-Latn">Tamazight</option><option value="ber">Tamazight (Tifinagh)</option><option value="ta">Tamil</option><option value="tt">Tatar</option><option value="te">Telugu</option><option value="tet">Tetum</option><option value="th">Thai</option><option value="bo">Tibetan</option><option value="ti">Tigrinya</option><option value="tiv">Tiv</option><option value="tpi">Tok Pisin</option><option value="to">Tongan</option><option value="lua">Tshiluba</option><option value="ts">Tsonga</option><option value="tn">Tswana</option><option value="tcy">Tulu</option><option value="tum">Tumbuka</option><option value="tr">Turkish</option><option value="tk">Turkmen</option><option value="tyv">Tuvan</option><option value="ak">Twi</option><option value="udm">Udmurt</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="ug">Uyghur</option><option value="uz">Uzbek</option><option value="ve">Venda</option><option value="vec">Venetian</option><option value="vi">Vietnamese</option><option value="war">Waray</option><option value="cy">Welsh</option><option value="wo">Wolof</option><option value="xh">Xhosa</option><option value="sah">Yakut</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="yua">Yucatec Maya</option><option value="zap">Zapotec</option><option value="zu">Zulu</option></select></div>Powered by <span style="white-space:nowrap"><a class="VIpgJd-ZVi9od-l4eHX-hSRGPd" href="https://translate.google.com" target="_blank" rel="noopener"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate">Translate</a></span></div></div>
+</div>
+<script>
+function googleTranslateElementInit() {
+var el = document.getElementById("google_translate_element");
+if (el && el.innerHTML.trim() !== "") {
+    return;
+}
+
+new google.translate.TranslateElement({ pageLanguage: "en" }, "google_translate_element");
+// begin accessibility compliance
+$('img.goog-te-gadget-icon').attr('alt','Google Translate');
+$('div#goog-gt-tt div.logo img').attr('alt','translate');
+$('div#goog-gt-tt .original-text').css('text-align','left');
+$('.goog-te-gadget-simple .goog-te-menu-value span').css('color','#000000');
+$('.goog-te-combo').attr('aria-label','google translate languages');
+$('svg.goog-te-spinner').attr('title','Google Translate Spinner');
+$('.goog-te-gadget-simple .goog-te-menu-value span').css('color','#000000');
+}
+$(function() {
+$.getScript("//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit");
+});
+</script>
+<!--------------281608 End Google Translate----------------->
+
+<script type="text/javascript">!function(){var b=function(){window.__AudioEyeSiteHash = "5e5f5050ddfb36bb6ff1cb4e90debf7a"; var a=document.createElement("script");a.src="https://wsmcdn.audioeye.com/aem.js";a.type="text/javascript";a.setAttribute("async","");document.getElementsByTagName("body")[0].appendChild(a)};"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",b):window.attachEvent&&window.attachEvent("onload",b):b()}();</script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Montserrat:500,600,700,regular|Open+Sans:600,700,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div id="ctl00_ctl00_MainContent_ctl00_liveEditPopupWindow" class="modalContainer modalContainerCP" style="display: none; position: fixed; z-index: 100001;">
+	<div id="ctl00_liveEditTitleBar" class="modalTitleLeft"><h3 id="ctl00_LiveEditModalTitle" class="modalTitle">Live Edit</h3><a id="ctl00_LiveEditCloseButton" class="modalClose" aria-label="Close this modal" href="https://www.haslet.org/" title="Close this window"><svg viewBox="0 0 25 25" id="modalIconClose"><polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon></svg></a></div><div id="ctl00_liveEditContentLeft" class="modalContentLeft"><div id="ctl00_liveEditContentRight" class="modalContentRight"><div id="ctl00_liveEditContent" class="modalContent"><iframe style="display: none; border: none;" src="about:blank" id="liveEditDialog" title="Live Edit Dialog" name="liveEditDialog"></iframe></div></div></div><div id="ctl00_liveEditFooter" class="modalBottomLeft"><div id="ctl00_liveEditfooterbar" class="modalBottomRight"><div id="ctl00_liveEditfooterbar1" class="modalBottom"></div></div></div>
+</div><div id="editItemBehavior_backgroundElement" class="modalBackground" style="display: none; position: fixed; left: 0px; top: 0px; z-index: 10000;"></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu103" class="contentTop mainNavMegaMenu megaMenuContainer pageID_103 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 80px;">	<div id="cc7385c9d3-be9b-4de5-8e00-5c0424a10e3a" data-containerid="7385c9d3-be9b-4de5-8e00-5c0424a10e3a" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu179" class="contentTop mainNavMegaMenu megaMenuContainer pageID_179 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 80px;">	<div id="cc27aae382-83e0-44d1-95fd-861828cd206d" data-containerid="27aae382-83e0-44d1-95fd-861828cd206d" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu163" class="contentTop mainNavMegaMenu megaMenuContainer pageID_163 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 80px;">	<div id="cc058f1d8f-5339-41a6-936b-f785b6c94fe7" data-containerid="058f1d8f-5339-41a6-936b-f785b6c94fe7" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu93" class="contentTop mainNavMegaMenu megaMenuContainer pageID_93 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 80px;">	<div id="cc710c411f-5b46-4364-95e8-6fc6b0667fde" data-containerid="710c411f-5b46-4364-95e8-6fc6b0667fde" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu131" class="contentTop mainNavMegaMenu megaMenuContainer pageID_131 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 80px;">	<div id="cc961d696b-0ce5-4dc6-a46b-bacb8ef378e1" data-containerid="961d696b-0ce5-4dc6-a46b-bacb8ef378e1" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><div id="widgetSiteToolsBody927d4ef4-cd92-4f57-8561-c6718119bf9d" class="widgetBody whiteIcons flyOut bottom rightEdge widget widgetSiteTools skin6 cpGrid cpGrid1 moved" style="display: none; position: absolute; z-index: 100; top: 125.781px; left: 62px;" data-parentid="widgetSiteTools927d4ef4-cd92-4f57-8561-c6718119bf9d">
+         <div class="row                   
+ wide">
+	<div class="col col1 first last">
+		<ol class="semanticList">
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Home" class="widgetSiteToolsHome siteToolsService" href="https://www.haslet.org/">Home</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools My Account" class="widgetSiteToolsMyAccount siteToolsService" href="https://www.haslet.org/MyAccount">My Account</a></li>
+					<li id="PrinterFriendly927d4ef4-cd92-4f57-8561-c6718119bf9d" class="widgetItem"><a tabindex="0" aria-label="Site Tools Printer Friendly opens in new window" role="button" class="widgetSiteToolsPrinterFriendly siteToolsService" onkeypress="if (event.which == 13) { this.onclick(); }" onclick="Core.Layout.dynamicJavascript('printPreview();'); return false;" href="https://www.haslet.org/directory.aspx?did=4#PrinterFriendly927d4ef4-cd92-4f57-8561-c6718119bf9d">Printer Friendly</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Email Page" class="widgetSiteToolsEmailPage siteToolsService" href="https://www.haslet.org/EmailPage">Email Page</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Contact Us" class="widgetSiteToolsContactUs siteToolsService" href="https://www.haslet.org/directory.aspx">Contact Us</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Hear This Page" class="widgetSiteToolsHearThisPage siteToolsService" href="https://www.haslet.org/">Hear This Page</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools RSS" class="widgetSiteToolsRSS siteToolsService" href="https://www.haslet.org/rss.aspx">RSS</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Site Map" class="widgetSiteToolsSiteMap siteToolsService" href="https://www.haslet.org/SiteMap">Site Map</a></li>
+					<li id="TranslatePage927d4ef4-cd92-4f57-8561-c6718119bf9d" class="widgetItem"><a tabindex="0" aria-label="Site Tools Translate Page opens in new window" role="button" class="widgetSiteToolsTranslatePage siteToolsService" onkeypress="if (event.which == 13) { this.onclick(); }" onclick="Core.Layout.dynamicJavascript('window.open(\'https://translate.google.com/translate?js=n&amp;sl=auto&amp;tl=es&amp;u=\' + document.location.href, \&quot;TranslateWindow\&quot;);'); return false;" href="https://www.haslet.org/directory.aspx?did=4#TranslatePage927d4ef4-cd92-4f57-8561-c6718119bf9d">Translate Page</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Notifications" class="widgetSiteToolsNotifications siteToolsService" href="https://www.haslet.org/list.aspx">Notifications</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Documents" class="widgetSiteToolsDocuments siteToolsService" href="https://www.haslet.org/DocumentCenter">Documents</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Help" class="widgetSiteToolsHelp siteToolsService" href="https://www.haslet.org/">Help</a></li>
+		</ol>
+	</div>
+
+		 </div>
+	</div><div id="widgetShareBodyc8f237eb-c401-4b96-aeb6-d5741f8ed378" class="widgetBody flyOut bottom rightEdge widget widgetShare skin6 cpGrid cpGrid1 moved" style="display: none; position: absolute; z-index: 100; top: 125.781px; left: 214.031px;" data-parentid="widgetSharec8f237eb-c401-4b96-aeb6-d5741f8ed378">
+        <div class="row                   
+ wide">
+	<div class="col col1 first last">
+		<ol class="semanticList">
+                <li class="widgetItem"><a tabindex="0" role="button" class="widgetShareFacebook shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.haslet.org/Layout/WidgetShare/ShareLink/Facebook" target="_blank" aria-label="Facebook Opens in new window" rel="noopener">Facebook</a></li>
+                <li class="widgetItem"><a tabindex="0" role="button" class="widgetShareTwitter shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.haslet.org/Layout/WidgetShare/ShareLink/Twitter" target="_blank" aria-label="Twitter Opens in new window" rel="noopener">Twitter</a></li>
+                <li class="widgetItem"><a tabindex="0" role="button" class="widgetSharePinterest shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.haslet.org/Layout/WidgetShare/ShareLink/Pinterest" target="_blank" aria-label="Pinterest Opens in new window" rel="noopener">Pinterest</a></li>
+                <li class="widgetItem"><a tabindex="0" role="button" class="widgetShareDelicious shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.haslet.org/Layout/WidgetShare/ShareLink/Delicious" target="_blank" aria-label="Delicious Opens in new window" rel="noopener">Delicious</a></li>
+                <li class="widgetItem"><a tabindex="0" role="button" class="widgetShareBlogger shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.haslet.org/Layout/WidgetShare/ShareLink/Blogger" target="_blank" aria-label="Blogger Opens in new window" rel="noopener">Blogger</a></li>
+                <li class="widgetItem"><a tabindex="0" role="button" class="widgetShareLinkedIn shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.haslet.org/Layout/WidgetShare/ShareLink/LinkedIn" target="_blank" aria-label="LinkedIn Opens in new window" rel="noopener">LinkedIn</a></li>
+		</ol>
+	</div>
+
+        </div>
+    </div><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr"><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""><div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr">Original text</div></div><div class="VIpgJd-yAWNEb-hvhgNd-k77Iif"><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Rate this translation</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Your feedback will be used to help improve Google Translate</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Good translation" aria-label="Good translation" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Poor translation" aria-label="Poor translation" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b>&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div><div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><div id="bannerSlideshowControls_banner1" class="bannerSlideshowControlsNew none " style="display:none">
+			<a id="arrowPrev_banner1" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner1" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div><script src="https://wsmcdn.audioeye.com/aem.js" type="text/javascript" async=""></script><script src="https://wsv3cdn.audioeye.com/bootstrap.js?h=5e5f5050ddfb36bb6ff1cb4e90debf7a" type="text/javascript" async=""></script><script async="" crossorigin="anonymous" src="https://wsv3cdn.audioeye.com/v2/scripts/loader.js?h=5e5f5050ddfb36bb6ff1cb4e90debf7a&amp;lang=en&amp;cb=2026-01-28"></script><script type="text/javascript" src="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-28/startup.bundle.js"></script><div id="ae_app" data-nosnippet="">
+    
+        <!--
+        Layout, Style or Voice Helpers
+    -->
+    <div id="ae_helpers" class="ae-module" style="display: none;">
+
+    
+<script type="text/javascript">
+AudioEye.layoutHelpers.push(function(ele){
+
+// Tabset function setup - Active Class is the class the li gets when the element is active
+// Function includes tabsetup, tab labels and keylooping
+function tabSet(listParent, listItem, listAnchor, activeClass, tabPanels){
+  // Setting roles and initial values
+  $ae(listParent).each(function(){
+    if ($ae(this).find(listItem).length > 1) {
+      if($ae(this).css('display') !== 'none'){
+        $ae(this).attr({'role':'tablist'});
+      }
+
+      $ae(this).find(listItem).attr({'role':'presentation'});
+      $ae(this).find(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+      $ae(this).find(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+      $ae(this).find(tabPanels).each(function(){
+        if($ae(this).parent().find(listParent).css('display') !== 'none'){
+          $ae(this).attr({'role':'tabpanel'});
+        }
+      });
+    }
+  });
+
+
+  // Encapsulate events - Key Navigation for tabsets without tabindex
+  ele.outerFind(listParent).each(function(){
+    if ($ae(this).find(listItem).length > 1) {
+      // Change active tab onclick event
+      $ae(this).find('a').click(function(){
+        $ae(listParent).find('a').attr({'aria-selected':'false', 'tabindex':'-1'});	
+        $ae(listParent).find('li.active a').attr({'aria-selected':'true', 'tabindex':'0'});	
+      });
+
+
+      // tabset keylooping
+      $ae(this).find('a').on('keydown', function(e){
+        if(e.keyCode === 13 || e.keyCode === 32){
+          e.preventDefault();
+          this.click();
+        }
+        else if(e.keyCode === 37 && ($ae(this)[0] === $ae(this).closest('ol').find('a').first()[0])){
+          AudioEye.focusElement($ae(this).closest('ol').find('a').eq(-1));
+        }
+        else if( e.keyCode === 39 && ($ae(this)[0] === $ae(this).closest('ol').find('a').last()[0])){
+          AudioEye.focusElement($ae(this).closest('ol').find('a').first());
+        }
+        else if(e.keyCode === 37 ){
+          AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+        }
+        else if(e.keyCode === 39 ){
+          AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+        }
+      });
+    }
+
+  });	// Close encapsulated actions
+}
+// tabset function call
+tabSet('ol.tabbedWidget.cpTabs','ol.tabbedWidget.cpTabs li','ol.tabbedWidget.cpTabs li > a','active','.cpTabPanels');
+/* end */
+
+
+/* Start new tabset */
+// Facilites Map & Listing Tabset
+function  facilitiesTabSet(listParent, listItem, listAnchor, activeClass, tabPanels){
+
+  // Setting roles and initial values
+  $ae(listParent).attr({'role':'tablist'});
+  $ae(listItem).attr({'role':'presentation'});
+  $ae(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+  $ae(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+  $ae(tabPanels).attr({'role':'tabpanel'});
+
+  $ae(listAnchor).click(function(){
+    $ae(listAnchor).attr({'aria-selected':'false', 'tabindex':'-1'});
+    $ae(this).attr({'aria-selected':'true', 'tabindex':'0'});
+  });
+
+  ele.outerFind('.searchResults > ol.tabs').each(function(){
+
+    $ae(this).find('a').on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+      else if((e.keyCode === 37 || e.keyCode === 38) && ($ae(this)[0] === $ae(this).closest('ol').find('a').first()[0])){
+        AudioEye.focusElement($ae(this).closest('ol').find('a').eq(-1));
+      }
+      else if((e.keyCode === 39 || e.keyCode === 40) && ($ae(this)[0] === $ae(this).closest('ol').find('a').last()[0])){
+        AudioEye.focusElement($ae(this).closest('ol').find('a').first());
+      }
+      else if(e.keyCode === 37 || e.keyCode === 38){
+        AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+      }
+      else if(e.keyCode === 39 || e.keyCode === 40){
+        AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+      }
+    });
+
+  }); 
+
+}
+
+facilitiesTabSet('.searchResults > ol.tabs','.searchResults > ol.tabs > li','.searchResults > ol.tabs > li > a','active','.searchResults > div');
+/* -END- */
+
+/* Start new tabset */
+// Facilitites Sidebar Tabset
+function sideBarTabset(listParent, listItem, listAnchor, activeClass, tabPanels){
+
+  // Setting roles and initial values
+  $ae(listParent).attr({'role':'tablist'});
+  $ae(listItem).attr({'role':'presentation'});
+  $ae(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+  $ae(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+  //$ae(tabPanels).attr({'role':'tabpanel'});
+
+  $ae(listAnchor).click(function(){
+    $ae(listAnchor).attr({'aria-selected':'false', 'tabindex':'-1'});
+    $ae(this).attr({'aria-selected':'true', 'tabindex':'0'});
+  });
+
+  ele.outerFind('ul.tabs.searchCriteria').each(function(){
+
+    $ae(this).find('a').on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+      else if((e.keyCode === 37 || e.keyCode === 38) && ($ae(this)[0] === $ae(this).closest('ul').find('a').first()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').eq(-1));
+      }
+      else if((e.keyCode === 39 || e.keyCode === 40) && ($ae(this)[0] === $ae(this).closest('ul').find('a').last()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').first());
+      }
+      else if(e.keyCode === 37 || e.keyCode === 38){
+        AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+      }
+      else if(e.keyCode === 39 || e.keyCode === 40){
+        AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+      }
+    });
+
+  }); 
+
+}
+
+sideBarTabset('ul.tabs.searchCriteria','ul.tabs.searchCriteria > li','ul.tabs.searchCriteria > li > a','active','ul.tabs.searchCriteria + div.sidebar > div');
+/* End */
+
+/* Start new tabset */
+function calendarTabset(listParent, listItem, listAnchor, activeClass, tabPanels){
+
+  // Setting roles and initial values
+  $ae(listParent).attr({'role':'tablist'});
+  $ae(listItem).attr({'role':'presentation'});
+  $ae(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+  $ae(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+  $ae(tabPanels).attr({'role':'tabpanel'});
+
+  $ae(listAnchor).click(function(){
+    $ae(listAnchor).attr({'aria-selected':'false', 'tabindex':'-1'});
+    $ae(this).attr({'aria-selected':'true', 'tabindex':'0'});
+  });
+
+  $ae('.header > #subheader ul.tabs').each(function(){
+
+    $ae(this).find('a').on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+      else if((e.keyCode === 37 || e.keyCode === 38)  && ($ae(this)[0] === $ae(this).closest('ul').find('a').first()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').eq(-1));
+      }
+      else if((e.keyCode === 39 || e.keyCode === 40) && ($ae(this)[0] === $ae(this).closest('ul').find('a').last()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').first());
+      }
+      else if(e.keyCode === 37 || e.keyCode === 38){
+        AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+      }
+      else if(e.keyCode === 39 || e.keyCode === 40) {
+        AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+      }
+    });
+
+  }); 
+
+}
+
+calendarTabset('.header > #subheader ul.tabs','.header > #subheader ul.tabs > li','.header > #subheader ul.tabs > li > a','active','.header > .list');
+/* end */
+
+// Tabset for Agenda Center Years
+// AE -  Agenda Center Tabset [AEI-40486]
+ele.outerFind('ul.years').each(function(){
+
+  tabset($ae(this), $ae(this).find('li'), $ae(this).find('a[id^="a"]'),'current', $ae(this).parent().find('table'));
+
+  function tabset(tablist, li, tabs, activeClass, tabPanel){
+    tablist.attr('role','tablist');
+    li.attr('role', 'presentation');
+    tabs.attr({'role': 'tab', 'tabindex':'-1', 'aria-selected':'false'});
+    $ae(li.selector +'.' + activeClass +' > '+ tabs.selector).attr({'aria-selected':'true', 'tabindex':'0'});
+    tabPanel.attr('role', 'tabpanel');
+
+    // individual tabs TODO - Update so it is dynamic
+    var tab = tablist.find('>'+li.selector+'>a');
+
+    tab.on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+    }).click(function(){
+      $ae('body').data({'ae-year-tab': '#' + $ae(this).attr('id')});
+      setTimeout(function(){
+        AudioEye.focusElement($ae('body').data('ae-year-tab'));
+        $ae($ae('body').data('ae-year-tab')).attr('tabindex','0');
+      }, 1000);
+    });
+  }
+
+});
+
+}); // layout helpers push close brackets
+</script>
+
+    </div>
+    
+
+        <!--
+        Compliance
+    -->
+    <div id="ae_compliance" class="ae-module" style="display: none;">
+
+        <!-- For autoSmartRem addNewWindowWarnings div is referenced in an aria-describedby -->
+        <div id="audioeye_new_window_message" style="display:none">Opens in new window</div>
+        <div id="audioeye_pdf_message" style="display:none">PDF Download</div>
+        <div id="audioeye_word_message" style="display:none">Word Download</div>
+        <div id="audioeye_excel_message" style="display:none">Excel Download</div>
+        <div id="audioeye_powerpoint_message" style="display:none">PowerPoint Download</div>
+        <div id="audioeye_document_message" style="display:none">Document Download</div>
+
+                    </div>
+    
+    <!--
+        Versioning Control Panel if versioning = true !
+    -->
+        
+    <!--
+        Launcher
+    -->
+    <span id="ae_placeholder_launcher" style="display: none;" aria-hidden="true"></span>
+
+    <!-- Toolbar -->
+
+    <span id="ae_placeholder_toolbar" style="display: none;" aria-hidden="true"></span>
+
+    <!--
+        Site Menu
+    -->
+    <span id="ae_placeholder_site-menu" style="display: none;" aria-hidden="true"></span>
+
+    
+    <!--
+        Generic Aria Live message container
+    -->
+    <div class="ae-blurb-noaudio" id="ae_enabled_messages" aria-relevant="additions" aria-live="assertive"></div>
+
+    
+    <!-- Symbol definitions -->
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="icon-close-carousel" viewBox="0 0 32 32">
+                <title>close carousel</title>
+                <path fill="#ffffff" style="fill: var(--color1, #ffffff)" d="M28.992 0l-12.992 12.992-12.992-12.992-3.008 3.008 12.992 12.992-12.992 12.992 3.008 3.008 12.992-12.992 12.992 12.992 3.008-3.008-12.992-12.992 12.992-12.992-3.008-3.008z"></path>
+            </symbol>
+        </defs>
+    </svg>
+
+</div><!-- end #ae_app --></body></html>
