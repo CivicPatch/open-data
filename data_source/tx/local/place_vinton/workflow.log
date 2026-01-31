@@ -1,0 +1,293 @@
+[2026-01-31T00:23:27.459591] [INFO] Step 1: RESEARCH_MUNICIPALITY
+[2026-01-31T00:23:27.460125] [INFO] Running Gemini prompt
+[2026-01-31T00:23:27.460745] [DEBUG] Prompt: 
+
+    Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
+
+    Municipality: Vinton village, tx
+
+    Instructions:
+
+    1. Determine the government type of the city. Available government types:
+- mayor_commission
+- mayor_council
+- township_committee
+- select_board
+- aldermen
+
+    2. Identify the elected officials in the local government, 
+       including the Mayor (if applicable).
+       2.1. For each official, extract the following details:
+            - name: Full name only (no titles)
+            - roles: List of active municipal roles (e.g., Mayor, Council Member)
+            - divisions: List of (ward, district), only if applicable
+
+    3. Create a JSON object with the following structure:
+       ```json
+       {
+         "government_type": examples - "mayor_council" or "mayor_commission", etc.,
+         "people": [
+           {
+             "name": "Full name of the official or null if uncertain",
+             "roles": ["Mayor", "Council Member", "Commissioner", etc.],
+             "divisions": ["Ward 1", "District 2", etc.] or [],
+           }
+         ],
+         "notes": "Brief notes about the search and results"
+       }
+       ```
+
+    IMPORTANT: If the response contains anything other than a valid JSON object,
+    it will be considered incorrect. Ensure the response is strictly JSON.
+    Verify that the response is valid JSON before returning it.
+    If it is not valid JSON, retry the generation.
+    
+[2026-01-31T00:23:33.369222] [DEBUG] Gemini raw response: {'government_type': 'mayor_council', 'people': [{'name': 'Rachel Quintana', 'roles': ['Mayor'], 'divisions': []}, {'name': 'Lourdes Cloud', 'roles': ['Mayor Pro Tem', 'Alderman'], 'divisions': ['Place 4']}, {'name': 'Paula Jannette Monrreal', 'roles': ['Alderman'], 'divisions': ['Place 3']}, {'name': 'David Duran', 'roles': ['Alderman'], 'divisions': ['Place 1']}, {'name': 'Leticia Gonzalez', 'roles': ['Alderman'], 'divisions': ['Place 2']}, {'name': 'Santos Lucero', 'roles': ['Alderman'], 'divisions': ['Place 5']}], 'notes': 'The Village of Vinton, TX operates under a General Law Type A government, which is a form of mayor-council system. Rachel Quintana is identified as the current Mayor. The other elected officials serve as Aldermen, with Lourdes Cloud also holding the role of Mayor Pro Tem.'}
+[2026-01-31T00:23:33.373172] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 364, Output tokens: 1076, Total cost: $0.002799
+[2026-01-31T00:23:33.373641] [INFO] gemini gemini-2.5-flash LLM call took 5.91 seconds
+[2026-01-31T00:23:33.374517] [INFO] Source URLs provided, skipping link search.
+[2026-01-31T00:23:33.461523] [INFO] Step 3: SCRAPE_PAGE: scraping https://vintontx.govoffice2.com/citycouncil
+[2026-01-31T00:23:35.922488] [DEBUG] Attempting to intercept and save image for: https://vintontx.govoffice2.com/repository/designs/templates/GO_vinton-tx_resp/images/title.png
+[2026-01-31T00:23:35.923456] [DEBUG] Loading image from URL: https://vintontx.govoffice2.com/repository/designs/templates/GO_vinton-tx_resp/images/title.png
+[2026-01-31T00:23:36.142017] [INFO] Image saved: /app/data_source/tx/local/place_vinton/images/3d2baab1c38d.png
+[2026-01-31T00:23:36.162590] [DEBUG] Attempting to intercept and save image for: https://vintontx.govoffice2.com/repository/designs/images/fb_24.png
+[2026-01-31T00:23:36.163932] [DEBUG] Loading image from URL: https://vintontx.govoffice2.com/repository/designs/images/fb_24.png
+[2026-01-31T00:23:36.381053] [INFO] Image saved: /app/data_source/tx/local/place_vinton/images/38fe0c25e331.png
+[2026-01-31T00:23:36.399734] [DEBUG] Attempting to intercept and save image for: https://vintontx.govoffice2.com/repository/designs/images/tw_24.png
+[2026-01-31T00:23:36.400688] [DEBUG] Loading image from URL: https://vintontx.govoffice2.com/repository/designs/images/tw_24.png
+[2026-01-31T00:23:36.622069] [INFO] Image saved: /app/data_source/tx/local/place_vinton/images/e907c2508ca1.png
+[2026-01-31T00:23:36.643724] [DEBUG] Attempting to intercept and save image for: https://vintontx.govoffice2.com/repository/designs/templates/GO_vinton-tx_resp/images/title.png
+[2026-01-31T00:23:36.644586] [DEBUG] Loading image from URL: https://vintontx.govoffice2.com/repository/designs/templates/GO_vinton-tx_resp/images/title.png
+[2026-01-31T00:23:36.855749] [INFO] Image saved: /app/data_source/tx/local/place_vinton/images/3d2baab1c38d.png
+[2026-01-31T00:23:36.874404] [DEBUG] Attempting to intercept and save image for: https://vintontx.govoffice2.com/repository/designs/images/fb_24.png
+[2026-01-31T00:23:36.875212] [DEBUG] Loading image from URL: https://vintontx.govoffice2.com/repository/designs/images/fb_24.png
+[2026-01-31T00:23:37.091164] [INFO] Image saved: /app/data_source/tx/local/place_vinton/images/38fe0c25e331.png
+[2026-01-31T00:23:37.111811] [DEBUG] Attempting to intercept and save image for: https://vintontx.govoffice2.com/repository/designs/images/tw_24.png
+[2026-01-31T00:23:37.112808] [DEBUG] Loading image from URL: https://vintontx.govoffice2.com/repository/designs/images/tw_24.png
+[2026-01-31T00:23:37.324281] [INFO] Image saved: /app/data_source/tx/local/place_vinton/images/e907c2508ca1.png
+[2026-01-31T00:23:37.337366] [DEBUG] Attempting to intercept and save image for: https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Rachel_Quintana_Web.jpg
+[2026-01-31T00:23:37.338296] [DEBUG] Loading image from URL: https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Rachel_Quintana_Web.jpg
+[2026-01-31T00:23:37.705965] [INFO] Image saved: /app/data_source/tx/local/place_vinton/images/ec18e69122aa.png
+[2026-01-31T00:23:37.727057] [DEBUG] Attempting to intercept and save image for: https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/David_Duran_Web.jpg
+[2026-01-31T00:23:37.728317] [DEBUG] Loading image from URL: https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/David_Duran_Web.jpg
+[2026-01-31T00:23:38.022892] [INFO] Image saved: /app/data_source/tx/local/place_vinton/images/c8de4f43f8ed.png
+[2026-01-31T00:23:38.036369] [DEBUG] Attempting to intercept and save image for: https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Leticia_Gonzalez_Web.jpg
+[2026-01-31T00:23:38.037503] [DEBUG] Loading image from URL: https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Leticia_Gonzalez_Web.jpg
+[2026-01-31T00:23:38.328917] [INFO] Image saved: /app/data_source/tx/local/place_vinton/images/c21cb9a53f69.png
+[2026-01-31T00:23:38.343018] [DEBUG] Attempting to intercept and save image for: https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Monrreal_Web.jpg
+[2026-01-31T00:23:38.344372] [DEBUG] Loading image from URL: https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Monrreal_Web.jpg
+[2026-01-31T00:23:38.657111] [INFO] Image saved: /app/data_source/tx/local/place_vinton/images/66fa429704d7.png
+[2026-01-31T00:23:38.679728] [DEBUG] Attempting to intercept and save image for: https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Cloud_Web.jpg
+[2026-01-31T00:23:38.680777] [DEBUG] Loading image from URL: https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Cloud_Web.jpg
+[2026-01-31T00:23:38.979911] [INFO] Image saved: /app/data_source/tx/local/place_vinton/images/ea6c1025097a.png
+[2026-01-31T00:23:38.999332] [DEBUG] Attempting to intercept and save image for: https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Lucero_Web.jpg
+[2026-01-31T00:23:39.000225] [DEBUG] Loading image from URL: https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Lucero_Web.jpg
+[2026-01-31T00:23:39.295314] [INFO] Image saved: /app/data_source/tx/local/place_vinton/images/5f3b0a654d5f.png
+[2026-01-31T00:23:39.312573] [DEBUG] Attempting to intercept and save image for: https://vintontx.govoffice2.com/repository/designs/templates/GO_vinton-tx_resp/images/footerlogo.png
+[2026-01-31T00:23:39.313452] [DEBUG] Loading image from URL: https://vintontx.govoffice2.com/repository/designs/templates/GO_vinton-tx_resp/images/footerlogo.png
+[2026-01-31T00:23:39.590859] [INFO] Image saved: /app/data_source/tx/local/place_vinton/images/7599a7cccb86.png
+[2026-01-31T00:23:39.603149] [DEBUG] Attempting to intercept and save image for: https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Vinton-Badge.png
+[2026-01-31T00:23:39.604010] [DEBUG] Loading image from URL: https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Vinton-Badge.png
+[2026-01-31T00:23:39.902655] [INFO] Image saved: /app/data_source/tx/local/place_vinton/images/729101905683.png
+[2026-01-31T00:23:40.200516] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://vintontx.govoffice2.com/citycouncil
+[2026-01-31T00:23:40.278307] [DEBUG] -> Preprocessing with identities: {'Rachel Quintana': ['Rachel Quintana'], 'Lourdes Cloud': ['Lourdes Cloud']}
+[2026-01-31T00:24:11.845531] [INFO] -> PREPROCESS_PAGE_CONTENT Page Progress: 2% (15/548)
+[2026-01-31T00:24:12.315683] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-01-31T00:24:12.316083] [INFO] -> Elapsed time: 32.11 seconds
+[2026-01-31T00:24:12.316536] [INFO] -> Average elapsed time: 16.06 seconds
+[2026-01-31T00:24:12.316816] [INFO] -> Total elapsed time: 32.11 seconds
+[2026-01-31T00:24:12.394134] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://vintontx.govoffice2.com/citycouncil
+[2026-01-31T00:24:12.396024] [INFO] Running OpenAI prompt
+[2026-01-31T00:24:12.396281] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Rachel Quintana, Lourdes Cloud
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-01-31T00:24:12.396580] [INFO] openai LLM call took 0.00 seconds
+[2026-01-31T00:24:15.087040] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 7108, Output tokens: 117, Total cost: $0.003030
+[2026-01-31T00:24:15.087675] [INFO] Page relevance check found related urls: ['https://vintontx.govoffice2.com/citycouncil']
+[2026-01-31T00:24:15.088253] [INFO] Running Gemini prompt
+[2026-01-31T00:24:15.088947] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Rachel Quintana, Lourdes Cloud
+
+    Only extract people who are currently serving as officials as of 2026-01-31. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target Divisions: ward, district, at-large, position, seat, place, precinct
+    Current Date: 2026-01-31
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Roles extraction:
+        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member).
+    - Division extraction:
+        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: "Ward 1", "District 2"
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text or formatted as Markdown link text.
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-01-31) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-01-31T00:24:25.390236] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 9921, Output tokens: 1167, Total cost: $0.005894
+[2026-01-31T00:24:25.394257] [INFO] gemini gemini-2.5-flash LLM call took 10.30 seconds
+[2026-01-31T00:24:25.396950] [INFO] Running OpenAI prompt
+[2026-01-31T00:24:25.397750] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Rachel Quintana, Lourdes Cloud
+
+    Only extract people who are currently serving as officials as of 2026-01-31. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
+    Target divisions: ward, district, at-large, position, seat, place, precinct
+    Current Date: 2026-01-31
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - divisions: (Array of strings) Specific district/ward names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-01-31T00:24:25.398833] [INFO] openai LLM call took 0.00 seconds
+[2026-01-31T00:24:52.636125] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 18219, Output tokens: 1899, Total cost: $0.010326
+[2026-01-31T00:24:52.651668] [DEBUG] Skipping adding websites for person with role and contact info: Rachel Quintana
+[2026-01-31T00:24:52.652154] [DEBUG] Skipping adding websites for person with role and contact info: David Duran
+[2026-01-31T00:24:52.652427] [DEBUG] Skipping adding websites for person with role and contact info: Leticia Gonzalez
+[2026-01-31T00:24:52.652687] [DEBUG] Skipping adding websites for person with role and contact info: Paula Monrreal
+[2026-01-31T00:24:52.652993] [DEBUG] Skipping adding websites for person with role and contact info: Lourdes Cloud
+[2026-01-31T00:24:52.653393] [DEBUG] Skipping adding websites for person with role and contact info: Santos Lucero
+[2026-01-31T00:24:52.653704] [DEBUG] Skipping adding websites for person with role and contact info: Rachel Quintana
+[2026-01-31T00:24:52.653989] [DEBUG] Skipping adding websites for person with role and contact info: David Duran
+[2026-01-31T00:24:52.654333] [DEBUG] Skipping adding websites for person with role and contact info: Leticia Gonzalez
+[2026-01-31T00:24:52.654580] [DEBUG] Skipping adding websites for person with role and contact info: Paula Monrreal
+[2026-01-31T00:24:52.654844] [DEBUG] Skipping adding websites for person with role and contact info: Lourdes "Lulu" Cloud
+[2026-01-31T00:24:52.655179] [DEBUG] Skipping adding websites for person with role and contact info: Santos Lucero
+[2026-01-31T00:24:52.655698] [INFO] links updated: [Link(url='https://vintontx.govoffice2.com/citycouncil', status='done', folder_name='vintontx_govoffice2_com_citycouncil', is_profile_page=False)]
+[2026-01-31T00:24:52.951384] [INFO] Step 8: WorkflowStatus.FORMAT_OUTPUT Formatting output data.
+[2026-01-31T00:24:53.028181] [INFO] Step 9: CLEANUP
+[2026-01-31T00:24:53.033903] [DEBUG] Image files to keep: {'c8de4f43f8ed.png', 'c21cb9a53f69.png', '5f3b0a654d5f.png', '66fa429704d7.png', 'ec18e69122aa.png', 'ea6c1025097a.png'}
+[2026-01-31T00:24:53.034251] [DEBUG] All image map data: {'https://vintontx.govoffice2.com/repository/designs/templates/GO_vinton-tx_resp/images/title.png': '3d2baab1c38d.png', 'https://vintontx.govoffice2.com/repository/designs/images/fb_24.png': '38fe0c25e331.png', 'https://vintontx.govoffice2.com/repository/designs/images/tw_24.png': 'e907c2508ca1.png', 'https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Rachel_Quintana_Web.jpg': 'ec18e69122aa.png', 'https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/David_Duran_Web.jpg': 'c8de4f43f8ed.png', 'https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Leticia_Gonzalez_Web.jpg': 'c21cb9a53f69.png', 'https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Monrreal_Web.jpg': '66fa429704d7.png', 'https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Cloud_Web.jpg': 'ea6c1025097a.png', 'https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Lucero_Web.jpg': '5f3b0a654d5f.png', 'https://vintontx.govoffice2.com/repository/designs/templates/GO_vinton-tx_resp/images/footerlogo.png': '7599a7cccb86.png', 'https://vintontx.govoffice2.com/vertical/Sites/%7B9571B011-F39E-4B6F-A49E-0B16AB6056A3%7D/uploads/Vinton-Badge.png': '729101905683.png'}
+[2026-01-31T00:24:53.038124] [DEBUG] Checking image file: 3d2baab1c38d.png
+[2026-01-31T00:24:53.039138] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_vinton/images/3d2baab1c38d.png
+[2026-01-31T00:24:53.040342] [DEBUG] Checking image file: c21cb9a53f69.png
+[2026-01-31T00:24:53.042745] [DEBUG] Checking image file: ea6c1025097a.png
+[2026-01-31T00:24:53.044320] [DEBUG] Checking image file: image_map.json
+[2026-01-31T00:24:53.044847] [DEBUG] Checking image file: 5f3b0a654d5f.png
+[2026-01-31T00:24:53.047255] [DEBUG] Checking image file: 66fa429704d7.png
+[2026-01-31T00:24:53.049680] [DEBUG] Checking image file: 729101905683.png
+[2026-01-31T00:24:53.050669] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_vinton/images/729101905683.png
+[2026-01-31T00:24:53.052620] [DEBUG] Checking image file: c8de4f43f8ed.png
+[2026-01-31T00:24:53.053577] [DEBUG] Checking image file: 38fe0c25e331.png
+[2026-01-31T00:24:53.054510] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_vinton/images/38fe0c25e331.png
+[2026-01-31T00:24:53.056594] [DEBUG] Checking image file: 7599a7cccb86.png
+[2026-01-31T00:24:53.057488] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_vinton/images/7599a7cccb86.png
+[2026-01-31T00:24:53.058347] [DEBUG] Checking image file: e907c2508ca1.png
+[2026-01-31T00:24:53.058979] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_vinton/images/e907c2508ca1.png
+[2026-01-31T00:24:53.060291] [DEBUG] Checking image file: ec18e69122aa.png
+[2026-01-31T00:24:53.061367] [ERROR] Missing images that were expected to be found: {'c8de4f43f8ed.png', 'c21cb9a53f69.png', '5f3b0a654d5f.png', '66fa429704d7.png', 'ec18e69122aa.png', 'ea6c1025097a.png'}
+[2026-01-31T00:24:53.136619] [INFO] Step 10: WorkflowStatus.SAVE_OUTPUT Saving output data and config files.
+[2026-01-31T00:24:53.309410] [INFO] Step 11: MAYBE_SEND_TO_GITHUB
+[2026-01-31T00:24:53.309681] [INFO] CRUDDER_UPLOAD_URL: https://api.civicpatch.org/api/internal/pipelines/github_intake
