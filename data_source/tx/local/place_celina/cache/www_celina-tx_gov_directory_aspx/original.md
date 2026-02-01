@@ -1,0 +1,230 @@
+Staff Directory • Celina, TX • CivicEngage
+
+
+
+
+
+
+
+  
+
+
+
+This website is AudioEye enabled and is being optimized for accessibility. To open the AudioEye Toolbar, press "shift + =". Some assistive technologies may require the use of a passthrough function before this keystroke. For more information, activate the button labeled "Explore your accessibility options".
+
+[Skip To Main Content](https://www.celina-tx.gov/directory.aspx#mainWrapTS)
+
+![](https://www.celina-tx.gov/Common/images/ajax-loader.gif "Loading")
+
+Loading
+
+[Skip to Main Content](https://www.celina-tx.gov/directory.aspx#contentarea)
+
+
+
+
+
+
+
+
+
+
+
+
+[![Emergency Alert](https://www.celina-tx.gov/Common/Images/AlertCenter/alertBarBlink.svg)
+Weather Update](https://www.celina-tx.gov/AlertCenter.aspx)
+[Winter Weather Update: Trash Services
+Read On...](https://www.celina-tx.gov/AlertCenter.aspx?AID=Winter-Weather-Update-Trash-Services-66)
+
+[Create a Website Account](https://www.celina-tx.gov/MyAccount/ProfileCreate) - Manage notification subscriptions, save form progress and more.   
+
+* [Website Sign In](https://www.celina-tx.gov/MyAccount)
+
+![](https://www.celina-tx.gov/ImageRepository/Document?documentID=14737)
+
+1. [Government](https://www.celina-tx.gov/27/Government)
+2. [Departments](https://www.celina-tx.gov/8/Departments)
+3. [Residents](https://www.celina-tx.gov/31/Residents)
+4. [Business](https://www.celina-tx.gov/35/Business)
+
+* [![Facebook](https://www.celina-tx.gov/ImageRepository/Document?documentID=12531)](https://www.facebook.com/cityofcelina)
+
+* [![Instagram](https://www.celina-tx.gov/ImageRepository/Document?documentID=12532)](https://www.instagram.com/celina_texas/)
+
+* [![Twitter](https://www.celina-tx.gov/ImageRepository/Document?documentID=12541)](https://twitter.com/cityofcelina)
+
+* [![Linkedin Opens in new window](https://www.celina-tx.gov/ImageRepository/Document?documentID=12533)](https://www.linkedin.com/company/cityofcelinatx)
+
+* [![Nextdoor Opens in new window](https://www.celina-tx.gov/ImageRepository/Document?documentID=12534)](https://nextdoor.com/agency-detail/tx/celina/city-of-celina/)
+
+[![Go to Site Search](https://www.celina-tx.gov/ImageRepository/Document?documentID=12544)](https://www.celina-tx.gov/Search/Results)
+Search
+
+![](https://www.celina-tx.gov/ImageRepository/Document?documentID=13843)
+
+1. [City Council Agendas, Packets, and Minutes](http://celinacitytx.iqm2.com/Citizens/Default.aspx)
+2. [Boards and Commissions Agendas and Packets](https://www.celina-tx.gov/AgendaCenter)
+3. [How Do I?](https://www.celina-tx.gov/68/How-Do-I)
+
+   1. [Adopt a Cat or Dog](http://www.collincountytx.gov/animal_services/Pages/default.aspx)
+   2. [Apply for New Utility Service](https://www.celina-tx.gov/DocumentCenter/View/2036)
+   3. [Report a Code Violation](https://www.celina-tx.gov/FormCenter/Code-Enforcement-5/Report-a-Code-Violation-36)
+   4. [Report a Street Light Outage](https://www.celina-tx.gov/929/Report-a-Street-Light-Outage)
+   5. [View the Municipal Code](http://z2.franklinlegal.net/franklin/Z2Browser2.html?showset=celinaset)
+4. [Fire Chief](https://www.celina-tx.gov/1925/Fire-Chief)
+5. [Apparatus](https://www.celina-tx.gov/1926/Apparatus)
+
+1. [Home](https://www.celina-tx.gov/)
+2. Staff Directory
+
+Staff Directory
+===============
+
+
+
+
+Search the Directory
+
+Category:
+
+Staff Directory    City Council    Building Services    City Manager's Office    City Secretary    Code Services    Development Services    Engineering    Finance    Fire Department    Geographic Information Services (GIS)    Human Resources    Library    Marketing & Communications    Municipal Courts    Parks & Recreation    Permitting    Planning    Police Department    Procurement    Public Works    Strategic Services    Utility Customer Service
+
+First Name:
+
+Last Name:
+
+Search
+
+
+
+| Categories | Telephone |
+| --- | --- |
+| [City Council](https://www.celina-tx.gov/Directory.aspx?did=4)  [Building Services](https://www.celina-tx.gov/Directory.aspx?did=69)  [City Manager's Office](https://www.celina-tx.gov/Directory.aspx?did=50)  [City Secretary](https://www.celina-tx.gov/Directory.aspx?did=51)  [Code Services](https://www.celina-tx.gov/Directory.aspx?did=67)  [Development Services](https://www.celina-tx.gov/Directory.aspx?did=66)  [Engineering](https://www.celina-tx.gov/Directory.aspx?did=56)  [Finance](https://www.celina-tx.gov/Directory.aspx?did=59)  [Fire Department](https://www.celina-tx.gov/Directory.aspx?did=63)  [Geographic Information Services (GIS)](https://www.celina-tx.gov/Directory.aspx?did=54)  [Human Resources](https://www.celina-tx.gov/Directory.aspx?did=53)  [Library](https://www.celina-tx.gov/Directory.aspx?did=62)  [Marketing & Communications](https://www.celina-tx.gov/Directory.aspx?did=52)  [Municipal Courts](https://www.celina-tx.gov/Directory.aspx?did=57)  [Parks & Recreation](https://www.celina-tx.gov/Directory.aspx?did=65)  [Permitting](https://www.celina-tx.gov/Directory.aspx?did=68)  [Planning](https://www.celina-tx.gov/Directory.aspx?did=55)  [Police Department](https://www.celina-tx.gov/Directory.aspx?did=58)  [Procurement](https://www.celina-tx.gov/Directory.aspx?did=60)  [Public Works](https://www.celina-tx.gov/Directory.aspx?did=70)  [Strategic Services](https://www.celina-tx.gov/Directory.aspx?did=61)  [Utility Customer Service](https://www.celina-tx.gov/Directory.aspx?did=64)  Address Holder http://www.celina-tx.gov/directory.aspx?DID= | |
+
+
+Enter search terms to display a list of entries in the Staff Directory.  
+  
+JavaScript is required, and must be turned on, for a listing to appear on this Directory entry page. We apologize for any inconvenience this may cause.
+
+* [Online Payments](https://www.municipalonlinepayments.com/celinatx)
+
+* [Employment](https://www.celina-tx.gov/1018/Employment-Opportunities)
+
+* [Trash & Recycling](https://www.celina-tx.gov/1140/Trash-Recycling)
+
+* [Get a Permit](https://www.celina-tx.gov/920)
+
+* [Utility Billing](https://www.celina-tx.gov/937)
+
+* [Agenda & Packets](https://celinatx.portal.civicclerk.com/)
+
+1. [![Celina Texas Homepage](https://www.celina-tx.gov/ImageRepository/Document?documentId=12518)](https://www.celina-tx.gov/)
+
+* [![Facebook](https://www.celina-tx.gov/ImageRepository/Document?documentID=12519)](https://www.facebook.com/cityofcelina)
+
+* [![Instagram](https://www.celina-tx.gov/ImageRepository/Document?documentID=12520)](https://www.instagram.com/celina_texas/)
+
+* [![Twitter](https://www.celina-tx.gov/ImageRepository/Document?documentID=12529)](https://twitter.com/cityofcelina)
+
+* [![undefined Opens in new window](https://www.celina-tx.gov/ImageRepository/Document?documentID=12521)](https://www.linkedin.com/company/cityofcelinatx)
+
+* [![undefined Opens in new window](https://www.celina-tx.gov/ImageRepository/Document?documentID=12522)](https://nextdoor.com/agency-detail/tx/celina/city-of-celina/)
+
+### Contact Us
+
+1. **City of Celina**  
+   City Hall  
+   142 N Ohio St  
+   Celina, TX 75009  
+   Phone: [(972) 382-2682](tel:972-382-2682)  
+   Fax: (972) 382-3736
+
+   **City Hall Hours**  
+   Monday - Thursday  
+   7:30 AM - 5:30 PM
+
+### [Quick Links](https://www.celina-tx.gov/QuickLinks.aspx?CID=12)
+
+1. [Request Public Records](https://celinatx.justfoia.com/publicportal/home/newrequest)
+2. [ISO CLASS 3 LETTER](https://celina-tx.gov/DocumentCenter/View/9864/ISO-RATING-LETTER)
+3. [North Texas Fire Investigator’s Association](http://www.ntfia.org/)
+
+/QuickLinks.aspx
+
+### [Site Links](https://www.celina-tx.gov/QuickLinks.aspx?CID=24)
+
+1. [Site Map](https://www.celina-tx.gov/sitemap)
+2. [Mission](https://www.celina-tx.gov/295/Mayors-Office)
+3. [Accessibility](https://www.celina-tx.gov/accessibility)
+4. [Copyright Notices](https://www.celina-tx.gov/site/copyright)
+
+/QuickLinks.aspx
+
+Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)
+
+Loading
+
+Loading
+
+Do Not Show Again
+Close
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Arrow Left
+
+
+Arrow Right
+
+Slideshow Left Arrow
+
+
+Slideshow Right Arrow
+
+
+
+### Live Edit
+
+Close **×**
+
+Opens in new window
+
+PDF Download
+
+Word Download
+
+Excel Download
+
+PowerPoint Download
+
+Document Download
+
+
+
+
+
+Explore your accessibility options
+
+
+
+
+
+
+
+
+
+close carousel
