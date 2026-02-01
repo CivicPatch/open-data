@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta charset="utf-8"/>
+  <script>
+   (()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.4",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),o([])},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();
+  </script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <style>
+   img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }
+  </style>
+  <!-- This site is optimized with the Yoast SEO plugin v26.8 - https://yoast.com/product/yoast-seo-wordpress/ -->
+  <title>
+   Budgets, Financial Statements &amp; Audits Archives - City of Hereford
+  </title>
+  <meta content="en_US" property="og:locale"/>
+  <meta content="article" property="og:type"/>
+  <meta content="Budgets, Financial Statements &amp; Audits Archives - City of Hereford" property="og:title"/>
+  <meta content="https://hereford-tx.com/category/budgets-financial-statements-audits/" property="og:url"/>
+  <meta content="City of Hereford" property="og:site_name"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <script class="yoast-schema-graph" type="application/ld+json">
+   {"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://hereford-tx.com/category/budgets-financial-statements-audits/","url":"https://hereford-tx.com/category/budgets-financial-statements-audits/","name":"Budgets, Financial Statements &amp; Audits Archives - City of Hereford","isPartOf":{"@id":"https://hereford-tx.com/#website"},"breadcrumb":{"@id":"https://hereford-tx.com/category/budgets-financial-statements-audits/#breadcrumb"},"inLanguage":"en-US"},{"@type":"BreadcrumbList","@id":"https://hereford-tx.com/category/budgets-financial-statements-audits/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hereford-tx.com/"},{"@type":"ListItem","position":2,"name":"Budgets, Financial Statements &amp; Audits"}]},{"@type":"WebSite","@id":"https://hereford-tx.com/#website","url":"https://hereford-tx.com/","name":"City of Hereford","description":"Beef Capital of the World","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://hereford-tx.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}
+  </script>
+  <!-- / Yoast SEO plugin. -->
+  <style id="classic-theme-styles-inline-css">
+   /*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+  </style>
+  <style id="global-styles-inline-css">
+   :root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--fl-heading-text: #000000;--wp--preset--color--fl-body-bg: #f2f2f2;--wp--preset--color--fl-body-text: #000000;--wp--preset--color--fl-accent: #4d4c4c;--wp--preset--color--fl-accent-hover: #c1782b;--wp--preset--color--fl-topbar-bg: #ffffff;--wp--preset--color--fl-topbar-text: #000000;--wp--preset--color--fl-topbar-link: #444444;--wp--preset--color--fl-topbar-hover: #444444;--wp--preset--color--fl-header-bg: #ffffff;--wp--preset--color--fl-header-text: #000000;--wp--preset--color--fl-header-link: #444444;--wp--preset--color--fl-header-hover: #444444;--wp--preset--color--fl-nav-bg: #ffffff;--wp--preset--color--fl-nav-link: #444444;--wp--preset--color--fl-nav-hover: #444444;--wp--preset--color--fl-content-bg: #ffffff;--wp--preset--color--fl-footer-widgets-bg: #ffffff;--wp--preset--color--fl-footer-widgets-text: #000000;--wp--preset--color--fl-footer-widgets-link: #444444;--wp--preset--color--fl-footer-widgets-hover: #444444;--wp--preset--color--fl-footer-bg: #ffffff;--wp--preset--color--fl-footer-text: #000000;--wp--preset--color--fl-footer-link: #444444;--wp--preset--color--fl-footer-hover: #444444;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+  </style>
+  <meta content="https://hereford-tx.com/wp-content/uploads/2020/09/Favicon.png" name="msapplication-TileImage"/>
+  <style id="wp-custom-css">
+   body p, 
+.entry-content p, 
+.entry-content ul li,  
+.entry-content ul,  
+.entry-content a, 
+.pp-sub-heading p {
+
+}
+a:focus {
+    	outline: none;
+}
+.list li {
+ 			width: 50%;
+  		float: left;
+}
+
+.adv-post .uabb-blog-post-content .uabb-read-more-text a {
+			color: #c1782b;
+}
+
+.uabb-blog-post-content .uabb-read-more-text a:visited {
+			color: #000;
+}
+
+#menu-item-43 a .menu-item-text{
+			color: #4d4c4c !important;
+}
+#menu-item-43 a .menu-item-text:hover{
+			color: #3d8ac6 !important;
+}
+
+.blog-button p.form-submit  input[type=submit] {
+	color: #4d4c4c;
+      font-family: muli;
+    	font-weight: 400;
+    	font-size: 17px;
+    	text-transform: uppercase;
+    	border-style: solid;
+    	border-width: 1px;
+    	border-color: #4d4c4c;
+    	border-radius: 25px;
+			background-color: none !important;
+			padding: 10px 40px;
+}
+
+.blog-button p.form-submit  input[type=submit]:hover {
+			color: #fff;
+     	border-color: #04a39f;
+    	border-radius: 25px;
+			background-color: #04a39f;
+}
+
+/*--------------------------------
+            HEADER 
+---------------------------------*/
+.uabb-blog-post-inner-wrap.uabb-thumbnail-position-left a {
+    	color: #c1782b;
+}
+.uabb-blog-post-inner-wrap.uabb-thumbnail-position-left a:hover {
+    	color: #000000;
+}
+
+div#head4header .fl-row-content-wrap
+{
+			box-shadow: none;
+}
+
+/*---
+  Media queries? Y/N
+---*/
+
+@media screen and (max-width: 768px) {
+.fl-builder-content .header-contact .uabb-info-list-item .uabb-info-list-content-wrapper .uabb-info-list-icon {
+			margin-bottom: 0;
+}
+}
+
+@media screen and (min-width: 1020px) and (max-width: 1366px) { 
+.hcol1 {
+			width: 50%;
+}
+	
+.hcol2 {
+			width: 7%;
+}
+	
+.hcol3 {
+			width: 11%;
+}
+
+}
+
+
+
+/*-------------------------------
+            NAVIGATION
+--------------------------------*/
+/*---
+  Media queries? Y/N
+---*/
+.uabb-creative-menu .menu.uabb-creative-menu-horizontal ul.sub-menu > li a span.uabb-menu-toggle {
+    float: none;
+}
+
+/*--------------------------------
+            BUTTONS
+----------------------------------*/
+/*---
+  Media queries? Y/N
+---*/
+
+a.button, 
+span.fl-button-text, 
+span.uabb-button-text.uabb-creative-button-text, 
+.gform_button.button, 
+a.fl-button {
+
+}
+
+
+
+/*----------------------------------
+            FOOTER
+---------------------------------*/
+footer ul li a {
+  		display: inline-block;
+}
+
+footer .footernav .menu a {
+ 			margin-left: 10px;
+			margin-right: 10px;
+}
+
+
+/*---
+  Media queries? Y/N
+---*/
+
+@media screen and (max-width: 768px) {
+.fl-builder-content .footerinfo .uabb-info-list-item .uabb-info-list-content-wrapper .uabb-info-list-icon {
+			margin-bottom: 0;
+}
+	
+footer .footernav .menu a {
+    	padding-top: 10px;
+    	padding-bottom: 10px;
+}
+
+}
+
+@media screen and (min-width: 1020px) and (max-width: 1366px) { 
+
+
+}
+
+
+/*------------------------------
+            BB MODULES
+---------------------------------*/
+.uabb-blog-post-content a {
+    color: #c1782b !important;
+}
+.uabb-blog-post-content a:hover {
+    color: #4d4d4d !important;
+}
+span.fl-button-text {
+    text-transform: uppercase;
+}
+.uabb-creative-menu:not(.off-canvas):not(.full-screen):not(.menu-item) .uabb-creative-menu .sub-menu {
+    min-width: 350px !important;
+}
+/*---
+  MODULE NAME
+  Description of section
+  Media queries? Y/N
+---*/
+
+
+/*------------------------------
+            PAGE SPECIFIC 
+---------------------------------*/
+
+/*---
+  PAGE NAME
+  Description of section
+  Media queries? Y/N
+---*/
+
+
+
+/*-------------------------------
+        LARGE SCREENS ONLY
+---------------------------------*/
+
+@media screen and (min-width: 769px){ 
+
+
+}
+
+
+/*-------------------------------
+        LAPTOP SCREEN - 1366
+---------------------------------*/
+
+@media screen and (min-width: 1020px) and (max-width: 1366px){ 
+.herdford-mun-airport .fl-row-content-wrap {
+			padding-left: 20px;
+			padding-right: 20px;
+}
+	
+
+.inner-hero .pp-infobox-title-prefix {
+       font-size: 40px;
+    
+}
+	
+.col1 {
+			width: 30%;
+}
+		
+.col2 {
+			width: 40%;
+}
+		
+.col3 {
+			width: 30%;
+}
+}
+	
+	@media screen and (width: 1280px) {
+.inner-hero .pp-infobox-title-prefix {
+    	font-size: 40px;
+}
+		
+.col1 {
+			width: 28%;
+}
+		
+.col2 {
+			width: 44%;
+}
+		
+.col3 {
+			width: 28%;
+}
+
+}
+
+
+/*-------------------------------
+      IPAD PRO SCREENS - 1024
+---------------------------------*/
+
+@media screen and (max-width: 1024px){ 
+
+
+}
+
+
+/*--------------------------------
+    TABLET SCREENS AND SMALLER
+--------------------------------*/
+
+@media screen and (max-width: 768px){
+.fl-builder-content[data-overlay="1"]:not(.fl-theme-builder-header-sticky) {
+  		position: relative;
+}
+.fl-col-small {
+  		max-width: 100%;
+}
+	
+.uabb-creative-menu .menu > li > .uabb-has-submenu-container a span.menu-item-text > span.uabb-menu-toggle {
+    	position: relative;
+    	right: 65px;
+}
+	
+.c-info	.uabb-info-list-wrapper.uabb-info-list-top li {
+    	width: 100%;
+    	display: block;
+}
+}
+
+
+/*-------------------------------
+        MOBILE SCREENS ONLY
+---------------------------------*/
+
+@media screen and (max-width: 480px){ 
+.list li {
+ 			width: 100%;
+  		float: left;
+}
+	
+.fl-builder-content .hcol1 {
+    	width: 100% !important;
+}
+	
+.fl-col-small.fl-col-small-full-width.hcol2, .fl-col-small.fl-col-small-full-width.hcol3 {
+    	width: 100% !important;
+}
+
+.hcol2 .fl-col-content {
+			padding-bottom: 20px;
+} 
+	
+.hcol3 .fl-col-content {
+			padding-bottom: 5px;
+} 
+	
+.fb-icon .fl-module-content {
+			margin-bottom: 0;
+}
+	
+.fb-icon .pp-responsive-left {
+    	text-align: center;
+			margin-bottom: 20px;
+}
+	
+.mail-header .fl-module-content {
+			margin-right: 20px !important;
+}
+	
+.ham-header .fl-module-content {
+			margin-right: 20px;
+}
+}
+  </style>
+  <meta content="WP Rocket 3.20.0.3" data-wpr-features="wpr_delay_js wpr_defer_js wpr_minify_js wpr_preconnect_external_domains wpr_automatic_lazy_rendering wpr_oci wpr_image_dimensions wpr_preload_links" name="generator"/>
+ </head>
+ <body class="archive category category-budgets-financial-statements-audits category-19 wp-theme-bb-theme fl-builder-2-10 fl-themer-1-5-2 fl-theme-1-7-19 fl-no-js fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-theme-builder-archive fl-theme-builder-archive-categories fl-framework-base-4 fl-preset-default fl-full-width fl-scroll-to-top fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+  <a aria-label="Skip to content" class="fl-screen-reader-text" href="https://hereford-tx.com/category/budgets-financial-statements-audits/#fl-main-content">
+   Skip to content
+  </a>
+  <header class="fl-builder-content fl-builder-content-74 fl-builder-global-templates-locked" data-overlay="0" data-overlay-bg="transparent" data-post-id="74" data-shrink="0" data-shrink-image-height="50px" data-sticky="0" data-sticky-breakpoint="medium" data-sticky-on="" data-type="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
+   <a aria-label="Facebook" href="https://www.facebook.com/Hereford.TX/" itemprop="sameAs" rel="noopener noreferrer external" role="button" target="_blank" title="Facebook">
+    <i class="ua-icon ua-icon-facebook22">
+    </i>
+   </a>
+   <ul class="uabb-info-list-wrapper uabb-info-list-left">
+    <li class="uabb-info-list-item info-list-item-dynamic0">
+     <p>
+      <a href="tel:8063637100">
+       (806) 363-7100
+      </a>
+     </p>
+    </li>
+   </ul>
+   <ul class="uabb-info-list-wrapper uabb-info-list-left">
+    <li class="uabb-info-list-item info-list-item-dynamic0">
+     <p>
+      <a href="mailto:info@hereford-tx.com">
+       info@hereford-tx.com
+      </a>
+     </p>
+    </li>
+   </ul>
+   <a href="https://hereford-tx.com" itemprop="url" target="_self">
+    <img alt="City of Hereford" class="fl-photo-img wp-image-604 size-full" data-no-lazy="1" decoding="async" height="112" itemprop="image" sizes="(max-width: 311px) 100vw, 311px" src="https://hereford-tx.com/wp-content/uploads/2020/09/new-logo.png" srcset="https://hereford-tx.com/wp-content/uploads/2020/09/new-logo.png 311w, https://hereford-tx.com/wp-content/uploads/2020/09/new-logo-300x108.png 300w" title="new logo" width="311"/>
+   </a>
+   <ul class="menu uabb-creative-menu-horizontal uabb-toggle-arrows" id="menu-header-menu">
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home uabb-creative-menu uabb-cm-style" id="menu-item-26">
+     <a href="https://hereford-tx.com/">
+      HOME
+     </a>
+    </li>
+    <li aria-haspopup="true" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children uabb-has-submenu uabb-creative-menu uabb-cm-style" id="menu-item-27">
+     <a href="https://hereford-tx.com/category/budgets-financial-statements-audits/#">
+      DEPARTMENTS
+     </a>
+     <ul class="sub-menu">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page uabb-creative-menu uabb-cm-style" id="menu-item-35">
+       <a href="https://hereford-tx.com/admin-elected-officials/">
+        ADMIN &amp; ELECTED OFFICIALS
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page uabb-creative-menu uabb-cm-style" id="menu-item-39">
+       <a href="https://hereford-tx.com/building-zoning/">
+        BUILDING &amp; ZONING
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page uabb-creative-menu uabb-cm-style" id="menu-item-36">
+       <a href="https://hereford-tx.com/food-safety/">
+        FOOD SAFETY
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page uabb-creative-menu uabb-cm-style" id="menu-item-37">
+       <a href="https://hereford-tx.com/fire-police-municipal-court-animal-control/">
+        FIRE, POLICE, MUNICIPAL COURT, &amp; ANIMAL CONTROL
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page uabb-creative-menu uabb-cm-style" id="menu-item-40">
+       <a href="https://hereford-tx.com/hereford-municipal-airport-landfill-street/">
+        HEREFORD MUNICIPAL AIRPORT / LANDFILL / STREET
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page uabb-creative-menu uabb-cm-style" id="menu-item-38">
+       <a href="https://hereford-tx.com/parks-civic-center-golf-course-hereford-aquatic-center/">
+        PARKS &amp; CIVIC CENTER / GOLF COURSE / HEREFORD AQUATIC CENTER
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page uabb-creative-menu uabb-cm-style" id="menu-item-41">
+       <a href="https://hereford-tx.com/water-services-public-works-utility-maintenance-water-production-waste-water-treatment/">
+        WATER SERVICES / PUBLIC WORKS / UTILITY MAINTENANCE / WATER PRODUCTION / WASTE WATER TREATMENT
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li aria-haspopup="true" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent current-menu-ancestor current-menu-parent current_page_ancestor menu-item-has-children uabb-has-submenu uabb-creative-menu uabb-cm-style" id="menu-item-89">
+     <a href="https://hereford-tx.com/blog/">
+      INFORMATION
+     </a>
+     <ul class="sub-menu">
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category uabb-creative-menu uabb-cm-style" id="menu-item-834">
+       <a href="https://hereford-tx.com/category/agendas-city-economic-dev-corp/">
+        Agendas
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item uabb-creative-menu uabb-cm-style" id="menu-item-835">
+       <a href="https://hereford-tx.com/category/budgets-financial-statements-audits/">
+        Budgets
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category uabb-creative-menu uabb-cm-style" id="menu-item-836">
+       <a href="https://hereford-tx.com/category/covid-19/">
+        COVID-19
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category uabb-creative-menu uabb-cm-style" id="menu-item-718">
+       <a href="https://hereford-tx.com/category/elections/">
+        Elections
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category uabb-creative-menu uabb-cm-style" id="menu-item-837">
+       <a href="https://hereford-tx.com/category/job-postings/">
+        Job Postings
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category uabb-creative-menu uabb-cm-style" id="menu-item-838">
+       <a href="https://hereford-tx.com/category/minutes/">
+        Minutes
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category uabb-creative-menu uabb-cm-style" id="menu-item-2210">
+       <a href="https://hereford-tx.com/category/notices/">
+        Notices
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom uabb-creative-menu uabb-cm-style" id="menu-item-43">
+     <a href="https://hereford-tx.com/water-services-public-works-utility-maintenance-water-production-waste-water-treatment/#water-services/">
+      WATER SERVICES
+     </a>
+    </li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom uabb-creative-menu uabb-cm-style" id="menu-item-44">
+     <a href="https://www.municipalonlinepayments.com/herefordtx" rel="noopener" target="_blank">
+      PAY YOUR WATER BILL
+     </a>
+    </li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page uabb-creative-menu uabb-cm-style" id="menu-item-54">
+     <a href="https://hereford-tx.com/contact/">
+      CONTACT
+     </a>
+    </li>
+   </ul>
+   ×
+   <ul class="menu uabb-creative-menu-horizontal uabb-toggle-arrows" id="menu-header-menu-1">
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home uabb-creative-menu uabb-cm-style" id="menu-item-26">
+     <a href="https://hereford-tx.com/">
+      HOME
+     </a>
+    </li>
+    <li aria-haspopup="true" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children uabb-has-submenu uabb-creative-menu uabb-cm-style" id="menu-item-27">
+     <a href="https://hereford-tx.com/category/budgets-financial-statements-audits/#">
+      DEPARTMENTS
+     </a>
+     <ul class="sub-menu">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page uabb-creative-menu uabb-cm-style" id="menu-item-35">
+       <a href="https://hereford-tx.com/admin-elected-officials/">
+        ADMIN &amp; ELECTED OFFICIALS
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page uabb-creative-menu uabb-cm-style" id="menu-item-39">
+       <a href="https://hereford-tx.com/building-zoning/">
+        BUILDING &amp; ZONING
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page uabb-creative-menu uabb-cm-style" id="menu-item-36">
+       <a href="https://hereford-tx.com/food-safety/">
+        FOOD SAFETY
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page uabb-creative-menu uabb-cm-style" id="menu-item-37">
+       <a href="https://hereford-tx.com/fire-police-municipal-court-animal-control/">
+        FIRE, POLICE, MUNICIPAL COURT, &amp; ANIMAL CONTROL
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page uabb-creative-menu uabb-cm-style" id="menu-item-40">
+       <a href="https://hereford-tx.com/hereford-municipal-airport-landfill-street/">
+        HEREFORD MUNICIPAL AIRPORT / LANDFILL / STREET
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page uabb-creative-menu uabb-cm-style" id="menu-item-38">
+       <a href="https://hereford-tx.com/parks-civic-center-golf-course-hereford-aquatic-center/">
+        PARKS &amp; CIVIC CENTER / GOLF COURSE / HEREFORD AQUATIC CENTER
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page uabb-creative-menu uabb-cm-style" id="menu-item-41">
+       <a href="https://hereford-tx.com/water-services-public-works-utility-maintenance-water-production-waste-water-treatment/">
+        WATER SERVICES / PUBLIC WORKS / UTILITY MAINTENANCE / WATER PRODUCTION / WASTE WATER TREATMENT
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li aria-haspopup="true" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent current-menu-ancestor current-menu-parent current_page_ancestor menu-item-has-children uabb-has-submenu uabb-creative-menu uabb-cm-style" id="menu-item-89">
+     <a href="https://hereford-tx.com/blog/">
+      INFORMATION
+     </a>
+     <ul class="sub-menu">
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category uabb-creative-menu uabb-cm-style" id="menu-item-834">
+       <a href="https://hereford-tx.com/category/agendas-city-economic-dev-corp/">
+        Agendas
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item uabb-creative-menu uabb-cm-style" id="menu-item-835">
+       <a href="https://hereford-tx.com/category/budgets-financial-statements-audits/">
+        Budgets
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category uabb-creative-menu uabb-cm-style" id="menu-item-836">
+       <a href="https://hereford-tx.com/category/covid-19/">
+        COVID-19
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category uabb-creative-menu uabb-cm-style" id="menu-item-718">
+       <a href="https://hereford-tx.com/category/elections/">
+        Elections
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category uabb-creative-menu uabb-cm-style" id="menu-item-837">
+       <a href="https://hereford-tx.com/category/job-postings/">
+        Job Postings
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category uabb-creative-menu uabb-cm-style" id="menu-item-838">
+       <a href="https://hereford-tx.com/category/minutes/">
+        Minutes
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category uabb-creative-menu uabb-cm-style" id="menu-item-2210">
+       <a href="https://hereford-tx.com/category/notices/">
+        Notices
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom uabb-creative-menu uabb-cm-style" id="menu-item-43">
+     <a href="https://hereford-tx.com/water-services-public-works-utility-maintenance-water-production-waste-water-treatment/#water-services/">
+      WATER SERVICES
+     </a>
+    </li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom uabb-creative-menu uabb-cm-style" id="menu-item-44">
+     <a href="https://www.municipalonlinepayments.com/herefordtx" rel="noopener" target="_blank">
+      PAY YOUR WATER BILL
+     </a>
+    </li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page uabb-creative-menu uabb-cm-style" id="menu-item-54">
+     <a href="https://hereford-tx.com/contact/">
+      CONTACT
+     </a>
+    </li>
+   </ul>
+  </header>
+  <h3 class="uabb-post-heading uabb-blog-post-section">
+   <a class="" href="https://hereford-tx.com/2025/12/financial-statements-and-independent-auditors-report-for-fye-09-30-2023/" title="Financial Statements and Independent Auditors’ Report for FYE 09/30/2023">
+    Financial Statements and Independent Auditors’ Report for FYE 09/30/2023
+   </a>
+  </h3>
+  <h5 class="uabb-post-meta uabb-blog-post-section">
+   By
+   <a class="url fn n" href="https://hereford-tx.com/author/pwsadmin/">
+    City of Hereford
+   </a>
+   |
+   Dec 24, 2025
+  </h5>
+  2022-2023 AUDITDownload
+  <a href="https://hereford-tx.com/2025/12/financial-statements-and-independent-auditors-report-for-fye-09-30-2023/" target="_self" title="Read More">
+   Read More
+   →
+  </a>
+  <h3 class="uabb-post-heading uabb-blog-post-section">
+   <a class="" href="https://hereford-tx.com/2025/09/budget-for-f-y-e-09-30-2026/" title="Budget for F/Y/E 09/30/2026">
+    Budget for F/Y/E 09/30/2026
+   </a>
+  </h3>
+  <h5 class="uabb-post-meta uabb-blog-post-section">
+   By
+   <a class="url fn n" href="https://hereford-tx.com/author/pwsadmin/">
+    City of Hereford
+   </a>
+   |
+   Sep 11, 2025
+  </h5>
+  Final Budget FY26Download
+  <a href="https://hereford-tx.com/2025/09/budget-for-f-y-e-09-30-2026/" target="_self" title="Read More">
+   Read More
+   →
+  </a>
+  <h3 class="uabb-post-heading uabb-blog-post-section">
+   <a class="" href="https://hereford-tx.com/2025/07/budget-for-f-y-e-09-30-2025/" title="Budget for F/Y/E 09/30/2025">
+    Budget for F/Y/E 09/30/2025
+   </a>
+  </h3>
+  <h5 class="uabb-post-meta uabb-blog-post-section">
+   By
+   <a class="url fn n" href="https://hereford-tx.com/author/pwsadmin/">
+    City of Hereford
+   </a>
+   |
+   Jul 14, 2025
+  </h5>
+  Budget FYE 09.30.25Download
+  <a href="https://hereford-tx.com/2025/07/budget-for-f-y-e-09-30-2025/" target="_self" title="Read More">
+   Read More
+   →
+  </a>
+  <h3 class="uabb-post-heading uabb-blog-post-section">
+   <a class="" href="https://hereford-tx.com/2024/05/financial-statements-and-independent-auditors-report-for-fye-09-30-2022/" title="Financial Statements and Independent Auditors’ Report for FYE 09/30/2022">
+    Financial Statements and Independent Auditors’ Report for FYE 09/30/2022
+   </a>
+  </h3>
+  <h5 class="uabb-post-meta uabb-blog-post-section">
+   By
+   <a class="url fn n" href="https://hereford-tx.com/author/pwsadmin/">
+    City of Hereford
+   </a>
+   |
+   May 14, 2024
+  </h5>
+  09302022-FS-and-Ind-Auditor-RptDownload
+  <a href="https://hereford-tx.com/2024/05/financial-statements-and-independent-auditors-report-for-fye-09-30-2022/" target="_self" title="Read More">
+   Read More
+   →
+  </a>
+  <h3 class="uabb-post-heading uabb-blog-post-section">
+   <a class="" href="https://hereford-tx.com/2023/12/budget-for-f-y-e-09-30-2024/" title="Budget for F/Y/E 09/30/2024">
+    Budget for F/Y/E 09/30/2024
+   </a>
+  </h3>
+  <h5 class="uabb-post-meta uabb-blog-post-section">
+   By
+   <a class="url fn n" href="https://hereford-tx.com/author/pwsadmin/">
+    City of Hereford
+   </a>
+   |
+   Dec 7, 2023
+  </h5>
+  09302024-BudgetDownload
+  <a href="https://hereford-tx.com/2023/12/budget-for-f-y-e-09-30-2024/" target="_self" title="Read More">
+   Read More
+   →
+  </a>
+  <h3 class="uabb-post-heading uabb-blog-post-section">
+   <a class="" href="https://hereford-tx.com/2023/04/09-30-2021-financial-statements-independent-auditors-report/" title="09/30/2021 Financial Statements &amp; Independent Auditors’ Report">
+    09/30/2021 Financial Statements &amp; Independent Auditors’ Report
+   </a>
+  </h3>
+  <h5 class="uabb-post-meta uabb-blog-post-section">
+   By
+   <a class="url fn n" href="https://hereford-tx.com/author/pwsadmin/">
+    City of Hereford
+   </a>
+   |
+   Apr 28, 2023
+  </h5>
+  09302021-Fin-Stmt-and-Ind-AuditDownload
+  <a href="https://hereford-tx.com/2023/04/09-30-2021-financial-statements-independent-auditors-report/" target="_self" title="Read More">
+   Read More
+   →
+  </a>
+  <h3 class="uabb-post-heading uabb-blog-post-section">
+   <a class="" href="https://hereford-tx.com/2022/11/city-of-hereford-municipal-budget-10-01-2022-09-30-2023/" title="City of Hereford Municipal Budget 10/01/2022 – 09/30/2023">
+    City of Hereford Municipal Budget 10/01/2022 – 09/30/2023
+   </a>
+  </h3>
+  <h5 class="uabb-post-meta uabb-blog-post-section">
+   By
+   <a class="url fn n" href="https://hereford-tx.com/author/pwsadmin/">
+    City of Hereford
+   </a>
+   |
+   Nov 21, 2022
+  </h5>
+  2022-2023-BudgetDownload
+  <a href="https://hereford-tx.com/2022/11/city-of-hereford-municipal-budget-10-01-2022-09-30-2023/" target="_self" title="Read More">
+   Read More
+   →
+  </a>
+  <h3 class="uabb-post-heading uabb-blog-post-section">
+   <a class="" href="https://hereford-tx.com/2021/12/budget-for-f-y-e-09-30-2022/" title="Budget for F/Y/E 09/30/2022">
+    Budget for F/Y/E 09/30/2022
+   </a>
+  </h3>
+  <h5 class="uabb-post-meta uabb-blog-post-section">
+   By
+   <a class="url fn n" href="https://hereford-tx.com/author/pwsadmin/">
+    City of Hereford
+   </a>
+   |
+   Dec 13, 2021
+  </h5>
+  Budget 2021 2022Download
+  <a href="https://hereford-tx.com/2021/12/budget-for-f-y-e-09-30-2022/" target="_self" title="Read More">
+   Read More
+   →
+  </a>
+  <h3 class="uabb-post-heading uabb-blog-post-section">
+   <a class="" href="https://hereford-tx.com/2021/08/financial-statements-independent-auditors-report-09-30-2020/" title="Financial Statements &amp; Independent Auditors’ Report 09/30/2020">
+    Financial Statements &amp; Independent Auditors’ Report 09/30/2020
+   </a>
+  </h3>
+  <h5 class="uabb-post-meta uabb-blog-post-section">
+   By
+   <a class="url fn n" href="https://hereford-tx.com/author/pwsadmin/">
+    City of Hereford
+   </a>
+   |
+   Aug 27, 2021
+  </h5>
+  09302020-Audit-and-FS
+  <a href="https://hereford-tx.com/2021/08/financial-statements-independent-auditors-report-09-30-2020/" target="_self" title="Read More">
+   Read More
+   →
+  </a>
+  <a href="https://hereford-tx.com/2021/02/budget/" target="_self" title="Budget">
+   <img alt="City of Hereford" class="lazyload" data-src="https://hereford-tx.com/wp-content/uploads/2021/02/1.jpg" decoding="async" height="442" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" style="--smush-placeholder-width: 556px; --smush-placeholder-aspect-ratio: 556/442;" width="556"/>
+  </a>
+  <h3 class="uabb-post-heading uabb-blog-post-section">
+   <a class="" href="https://hereford-tx.com/2021/02/budget/" title="Budget">
+    Budget
+   </a>
+  </h3>
+  <h5 class="uabb-post-meta uabb-blog-post-section">
+   By
+   <a class="url fn n" href="https://hereford-tx.com/author/pwsadmin/">
+    City of Hereford
+   </a>
+   |
+   Feb 10, 2021
+  </h5>
+  Click Here to See Budget
+  <a href="https://hereford-tx.com/2021/02/budget/" target="_self" title="Read More">
+   Read More
+   →
+  </a>
+  <ul>
+   <li>
+    <a href="https://hereford-tx.com/2026/01/hereford-economic-development-corporation-february-4th-2026-agenda/">
+     Hereford Economic Development Corporation February 4th, 2026 Agenda
+    </a>
+    January 28, 2026
+   </li>
+   <li>
+    <a href="https://hereford-tx.com/2026/01/emergency-and-community-alerts/">
+     Emergency and Community Alerts
+    </a>
+    January 26, 2026
+   </li>
+   <li>
+    <a href="https://hereford-tx.com/2026/01/city-commission-february-2nd-2026-agenda/">
+     City Commission February 2nd, 2026 Agenda
+    </a>
+    January 16, 2026
+   </li>
+   <li>
+    <a href="https://hereford-tx.com/2026/01/hereford-water-wastewater-rate-study-2026/">
+     Hereford Water &amp; Wastewater Rate Study (2026)
+    </a>
+    January 8, 2026
+   </li>
+   <li>
+    <a href="https://hereford-tx.com/2026/01/rate-increase-2026/">
+     Rate Increase 2026
+    </a>
+    January 8, 2026
+   </li>
+  </ul>
+  <form action="https://hereford-tx.com" method="get">
+   <select class="postform" id="cat" name="cat">
+    <option class="level-0" value="18">
+     Agendas – City / Economic Dev Corp
+    </option>
+   </select>
+  </form>
+  Please enter your name.
+  <label class="hidden" for="fl-subscribe-form-email-5f51fba9f1f79">
+   Email Address
+  </label>
+  Please enter a valid email address.
+  <a class="fl-button" role="button" tabindex="0">
+   Sign Me Up!
+  </a>
+  <p>
+   Thanks for subscribing! Please check your email for further instructions.
+  </p>
+  Something went wrong. Please check your entries and try again.
+  <!-- .fl-page-content -->
+  <footer class="fl-builder-content fl-builder-content-76 fl-builder-global-templates-locked" data-post-id="76" data-type="footer" data-wpr-lazyrender="1" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+   <a aria-label="Facebook" href="https://www.facebook.com/Hereford.TX/" itemprop="sameAs" rel="noopener noreferrer external" role="button" target="_blank" title="Facebook">
+    <i class="ua-icon ua-icon-facebook22">
+    </i>
+   </a>
+   <nav aria-label="Menu" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" role="navigation">
+    <ul class="menu fl-menu-horizontal fl-toggle-none" id="menu-5f51ed7ce17ab" role="menu">
+     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home" id="menu-item-56">
+      <a href="https://hereford-tx.com/" role="menuitem">
+       HOME
+      </a>
+     </li>
+     <li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-57">
+      <a href="https://hereford-tx.com/admin-elected-officials/" role="menuitem">
+       ADMIN &amp; ELECTED OFFICIALS
+      </a>
+     </li>
+     <li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-58">
+      <a href="https://hereford-tx.com/building-zoning/" role="menuitem">
+       BUILDING &amp; ZONING
+      </a>
+     </li>
+     <li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-59">
+      <a href="https://hereford-tx.com/food-safety/" role="menuitem">
+       FOOD SAFETY
+      </a>
+     </li>
+     <li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-60">
+      <a href="https://hereford-tx.com/fire-police-municipal-court-animal-control/" role="menuitem">
+       FIRE, POLICE, MUNICIPAL COURT, &amp; ANIMAL CONTROL
+      </a>
+     </li>
+     <li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-61">
+      <a href="https://hereford-tx.com/hereford-municipal-airport-landfill-street/" role="menuitem">
+       HEREFORD MUNICIPAL AIRPORT / LANDFILL / STREET
+      </a>
+     </li>
+     <li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-62">
+      <a href="https://hereford-tx.com/parks-civic-center-golf-course-hereford-aquatic-center/" role="menuitem">
+       PARKS &amp; CIVIC CENTER / GOLF COURSE / HEREFORD AQUATIC CENTER
+      </a>
+     </li>
+     <li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-63">
+      <a href="https://hereford-tx.com/water-services-public-works-utility-maintenance-water-production-waste-water-treatment/" role="menuitem">
+       WATER SERVICES / PUBLIC WORKS / UTILITY MAINTENANCE / WATER PRODUCTION / WASTE WATER TREATMENT
+      </a>
+     </li>
+     <li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent" id="menu-item-91">
+      <a href="https://hereford-tx.com/blog/" role="menuitem">
+       INFORMATION
+      </a>
+     </li>
+     <li class="menu-item menu-item-type-taxonomy menu-item-object-category" id="menu-item-764">
+      <a href="https://hereford-tx.com/category/elections/" role="menuitem">
+       Elections
+      </a>
+     </li>
+     <li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-64">
+      <a href="https://hereford-tx.com/contact/" role="menuitem">
+       CONTACT
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <p>
+    <a href="https://hereford-tx.com/">
+     City of Hereford
+    </a>
+   </p>
+   <ul class="uabb-info-list-wrapper uabb-info-list-left">
+    <li class="uabb-info-list-item info-list-item-dynamic0">
+     <p>
+      <a href="https://goo.gl/maps/ov1yrvFjLxLVNaFX7" rel="noopener" target="_blank">
+       224 N. Lee Avenue
+       <br/>
+       Hereford, Texas 79045
+      </a>
+     </p>
+    </li>
+    <li class="uabb-info-list-item info-list-item-dynamic1">
+     <p>
+      <a href="tel:8063637100">
+       (806) 363-7100
+      </a>
+     </p>
+    </li>
+    <li class="uabb-info-list-item info-list-item-dynamic2">
+     <p>
+      <a href="mailto:info@hereford-tx.com">
+       info@hereford-tx.com
+      </a>
+     </p>
+    </li>
+    <li class="uabb-info-list-item info-list-item-dynamic3">
+     <p>
+      City Hall: M - F:
+      8:00 AM - 5:00 PM |
+      Water Dept.: M - F:
+      8:30 AM - 5:00 PM
+     </p>
+    </li>
+   </ul>
+   <p>
+    © 2026,  City of Hereford. All Rights Reserved.
+   </p>
+   <p>
+    <a href="https://www.godaddy.com/websites/web-design" rel="nofollow noopener" target="_blank">
+     <img alt="GoDaddy Web Design" decoding="async" src="//nebula.wsimg.com/aadc63d8e8dbd533470bdc4e350bc4af?AccessKeyId=B7351D786AE96FEF6EBB&amp;disposition=0&amp;alloworigin=1"/>
+    </a>
+   </p>
+  </footer>
+  <!-- .fl-page -->
+  <a href="https://hereford-tx.com/category/budgets-financial-statements-audits/#" id="fl-to-top" role="button">
+   Scroll To Top
+   <i aria-hidden="true" class="fas fa-chevron-up">
+   </i>
+  </a>
+  <script id="rocket-browser-checker-js-after" type="rocketlazyloadscript">
+   "use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+  </script>
+  <script id="rocket-preload-links-js-after" type="rocketlazyloadscript">
+   (function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+  </script>
+ </body>
+</html>
