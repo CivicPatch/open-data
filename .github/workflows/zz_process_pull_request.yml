@@ -127,9 +127,11 @@ jobs:
           GITHUB_TOKEN: ${{ steps.generate-approve-token.outputs.token }}
         run: |
           PR_NUMBER=${{ inputs.pr_number }}
-          COMMENT=$(mise generate-review-comment --jurisdiction-ocdid ${{ inputs.jurisdiction_ocdid }} )
+          OUTPUT=$(mise generate-review-comment --jurisdiction-ocdid ${{ inputs.jurisdiction_ocdid }})
+          COMMENT=$(echo "$OUTPUT" | jq -r .comment)
+          APPROVED=$(echo "$OUTPUT" | jq -r .approved)
 
-          if [ -n "$REJECTED_REASONS" ]; then
+          if [ "$APPROVED" = "false" ]; then
             gh pr review $PR_NUMBER --request-changes -b "$COMMENT"
           else
             gh pr review $PR_NUMBER --approve -b "$COMMENT"
