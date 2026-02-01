@@ -1,0 +1,348 @@
+City of White Oak - Boards
+
+[Skip to main content](https://www.cityofwhiteoak.com/boards#firstSection)
+
+[![logo](https://www.cityofwhiteoak.com/api/blob/viewBlob?i=YusEL%252B1fJxc6Lk2N1diNRziLCbTCckaAYWDO72qJ8EnTdMFbVI78xYUQJ5aBitzJ&s=large)](https://www.cityofwhiteoak.com/index)
+
+* Government
+  + Main Menu / Government
+  + Government
+  + [Mayor & City Council](https://www.cityofwhiteoak.com/electedofficials)
+  + [Boards](https://www.cityofwhiteoak.com/boards)
+  + [Agendas & Minutes](https://www.cityofwhiteoak.com/agendasandminutes)
+  + [Forms & Permits](https://www.cityofwhiteoak.com/formsandpermits)
+  + [Code of Ordinances](https://library.municode.com/tx/white_oak/codes/code_of_ordinances)
+  + [Employment Opportunities](https://www.cityofwhiteoak.com/employment)
+  + [Financial Transparency](https://www.cityofwhiteoak.com/financialtransparency)
+  + [Election Information](https://www.cityofwhiteoak.com/elections)
+* Departments
+  + Main Menu / Departments
+  + Departments
+  + [City Coordinator](https://www.cityofwhiteoak.com/coordinator)
+  + [City Secretary / Finance Director](https://www.cityofwhiteoak.com/secretary)
+  + [Fire Department / Code Enforcement Officer](https://www.cityofwhiteoak.com/firedept)
+  + [Police](https://www.cityofwhiteoak.com/police)
+  + [Municipal Court](https://www.cityofwhiteoak.com/court)
+  + [Public Works](https://www.cityofwhiteoak.com/publicworks)
+  + [Parks & Recreation](https://www.cityofwhiteoak.com/parks)
+  + [Building Official](https://www.cityofwhiteoak.com/buildingandpermits)
+  + [Water & Wastewater](https://www.cityofwhiteoak.com/water)
+  + [Utility Billing](https://www.cityofwhiteoak.com/utilities)
+* Community
+  + Main Menu / Community
+  + Community
+  + [Explore White Oak](https://www.cityofwhiteoak.com/explore)
+  + [Community Library](https://wolibrary.wonecks.net/)
+  + [Animal Control](https://www.cityofwhiteoak.com/animalcontrol)
+  + [Garbage](https://www.cityofwhiteoak.com/garbage)
+  + [Tax Information](https://www.cityofwhiteoak.com/taxinfo)
+  + [New Residents](https://www.cityofwhiteoak.com/newresidents)
+  + [Submit Feedback](https://www.cityofwhiteoak.com/submitfeedback)
+  + [Make a Payment](https://www.cityofwhiteoak.com/makeapayment)
+  + [News & Notices](https://www.cityofwhiteoak.com/news)
+  + [Photo Gallery](https://www.cityofwhiteoak.com/photos)
+* [Calendar](https://www.cityofwhiteoak.com/calendar)
+* About
+  + Main Menu / About
+  + About
+  + [History](https://www.cityofwhiteoak.com/history)
+  + [Map](https://www.cityofwhiteoak.com/map)
+  + [Contact Us](https://www.cityofwhiteoak.com/contactus)
+
+[Planning & Zoning Board](javascript:;)
+[Zoning Board of Adjustments](javascript:;)
+[Economic Development Board](javascript:;)
+
+No data is available at this time
+
+select a value
+
+[AI Assistant](javascript:;)[Keyword Search](javascript:;)
+
+**Response**
+
+***working...***
+
+
+
+![](https://www.cityofwhiteoak.com/api/blob/viewBlob?i=3MglExLRChsRHRStmh7k%252Bj01RQdBPGx9QIJ%2Fi4HOZipZeGQaTMnS3MN4jgQwBKV3&s=xlarge)
+
+Boards
+Boards
+
+Planning & Zoning Board
+=======================
+
+The Planning and Zoning Board is an advisory body and adjunct to the City Council, and can make recommendations regarding amendments to the Comprehensive Plan and changes in zoning. The White Oak Planning and Zoning Board also has the authority to approve final subdivision plats. The Board meets on an as needed basis.
+
+Board Members
+
+<mwjspeople-obj></mwjspeople-obj><script type="module">import mwjsPeople from "https://app.membershipware.com/api/public/mwjsPeople?et=iTHtQsN%252BzLRkDWUwxwKY3A%3d%3d&eb=8EbMAeHAPI8PdSIbuz14TQ%3d%3d";</script>
+
+No people are available at this time
+
+DP
+
+David Puckett
+
+Chairperson | 01/01/23-12/31/25
+
+AD
+
+Ashley Dusek
+
+Member | 01/01/23-12/31/25
+
+JM
+
+Jimmy McMahon
+
+Member | 1/1/25 - 12/31/27
+
+RH
+
+Robin Hood
+
+Member | 01/01/23-12/31/25
+
+TK
+
+Travis Koonce
+
+Member | 1/1/25 - 12/31/27
+
+SS
+
+Sean Spencer
+
+Member | 1/1/25 - 12/31/27
+
+![](https://www.cityofwhiteoak.com/api/blob/viewBlob?rf=t&i=rrWIAJz%252BwqBq5X5C9bFsSuavlJymMLDLsdGHN2SK6n730rsgYG5zOaMvmrV8NCPn&s=small)
+
+Jimmy Purcell
+
+Zoning Administrator
+
+[(903) 759-3936 x7017](tel:9037593936)
+
+Jimmy Purcell began his career in 1990 with the City of Gladewater as a Firefighter/EMT. During his time at Gladewater Fire Department, he was promoted to Lieutenant and eventually Captain. In 1991 Jimmy went to the Police Academy at night and graduated from the Police Academy in 1992. During his time at Gladewater, he worked as a Reserve Police Officer. Jimmy moved on to Longview Fire Department in 1998, where he spent five years as a Firefighter/Paramedic. He then was promoted to Deputy Fire Marshal as a Fire/Arson Investigator, where he would spend the rest of his time until he retired from the Longview Fire Department in July 2019. In August 2019, Jimmy was hired by the City of White Oak as the Fire Chief of the White Oak Fire Department. He attended the Fire Chief Academy, Certified Public Manager course, as well as completed the Public Administration Certification. Jimmy is a member of the Texas City Management Association, East Texas City Managers Association, and Texas Economic Development Council.   
+  
+As City Manager of White Oak, our mission is to nurture a vibrant community that celebrates its rich heritage while embracing progress and innovation. We are dedicated to providing exceptional services that enhance the quality of life for all residents, businesses, and visitors. With transparency and accountability, we manage resources efficiently, ensuring the responsible stewardship of our city's assets. By fostering collaboration and inclusivity, we strive to create a safe, welcoming, and resilient environment where diversity is celebrated and every voice is heard. Together, we work tirelessly to build a brighter future for White Oak, rooted in integrity, sustainability, and compassion.
+
+*“Even though I’m not from White Oak, my family and I have lived here for about 22 years. I have gotten to know many White Oak citizens and business owners. As the City Manager, I will do my best to ensure that the people of White Oak continue to receive the best services from the city’s employees.”***Hours**  
+Monday-Thursday: 7:30 a.m. - 4:30 p.m.  
+Friday: 7:30 a.m. - 3:00 p.m.  
+*Excluding observed holidays*
+
+![](https://www.cityofwhiteoak.com/api/blob/viewBlob?rf=t&i=IbqquUGBlzMhnpzxDb%2FPfAZMl08rlZkMI%2FVXNoVkmiqe8Gye1%252BgU70Zrn0ZIpR1s&s=small)
+
+Kristine Toon
+
+City Secretary / Finance Director
+
+[(903) 759-3936 x7024](tel:9037593936)
+
+**Hours**  
+Monday-Thursday: 7:30 a.m. - 4:30 p.m.  
+Friday: 7:30 a.m. - 3:00 p.m.  
+*Excluding observed holidays*
+
+Zoning Board of Adjustments
+===========================
+
+The Zoning Board of Adjustments was created to make special exceptions to the terms of the Zoning Ordinance that are consistent with the general purpose and intent of the Ordinance. The Board of Adjustments is made up of five (5) City Council appointed members and two (2) alternate members, who shall act and serve as members of the Board when a regular member is absent. Meetings are only called when needed and must have four (4) members present for a quorum.
+
+The Board of Adjustments is allowed to:
+
+* Reverse an order, requirement, decision or determination of an administrative official
+* Decide in favor of an application on a matter on which the Board is required to review under the Zoning Ordinance
+* Authorize a variance from the terms of the Zoning Ordinance
+* Grant special exceptions, as permitted in the Zoning Ordinance under §10.6; Variances.
+
+**ALL DECISIONS OF THE ZONING BOARD OF ADJUSTMENTS ARE FINAL AND BINDING**
+
+Board Members
+
+<mwjspeople-obj></mwjspeople-obj><script type="module">import mwjsPeople from "https://app.membershipware.com/api/public/mwjsPeople?et=iTHtQsN%252BzLRkDWUwxwKY3A%3d%3d&eb=72qBWvX6bzDZIVNeHI%252ByUg%3d%3d";</script>
+
+No people are available at this time
+
+SB
+
+Stewart Brinkoeter
+
+Vice-Chair | 01/01/24-12/31/25
+
+ST
+
+Selina Tabor
+
+Member | 01/01/25-12/31/26
+
+SA
+
+Stacy Anderson
+
+Member | 01/01/24-12/31/25
+
+KJ
+
+Kelly Johnson
+
+Member | 01/01/24-12/31/25
+
+![](https://www.cityofwhiteoak.com/api/blob/viewBlob?rf=t&i=rrWIAJz%252BwqBq5X5C9bFsSuavlJymMLDLsdGHN2SK6n730rsgYG5zOaMvmrV8NCPn&s=small)
+
+Jimmy Purcell
+
+City Coordinator/Zoning Administrator
+
+[(903) 759-3936 x7017](tel:9037593936)
+
+906 S. White Oak Rd., White Oak TX, 75693
+
+Jimmy Purcell began his career in 1990 with the City of Gladewater as a Firefighter/EMT. During his time at Gladewater Fire Department, he was promoted to Lieutenant and eventually Captain. In 1991 Jimmy went to the Police Academy at night and graduated from the Police Academy in 1992. During his time at Gladewater, he worked as a Reserve Police Officer. Jimmy moved on to Longview Fire Department in 1998, where he spent five years as a Firefighter/Paramedic. He then was promoted to Deputy Fire Marshal as a Fire/Arson Investigator, where he would spend the rest of his time until he retired from the Longview Fire Department in July 2019. In August 2019, Jimmy was hired by the City of White Oak as the Fire Chief of the White Oak Fire Department. He attended the Fire Chief Academy, Certified Public Manager course, as well as completed the Public Administration Certification. Jimmy is a member of the Texas City Management Association, East Texas City Managers Association, and Texas Economic Development Council.   
+  
+As City Manager of White Oak, our mission is to nurture a vibrant community that celebrates its rich heritage while embracing progress and innovation. We are dedicated to providing exceptional services that enhance the quality of life for all residents, businesses, and visitors. With transparency and accountability, we manage resources efficiently, ensuring the responsible stewardship of our city's assets. By fostering collaboration and inclusivity, we strive to create a safe, welcoming, and resilient environment where diversity is celebrated and every voice is heard. Together, we work tirelessly to build a brighter future for White Oak, rooted in integrity, sustainability, and compassion.
+
+*“Even though I’m not from White Oak, my family and I have lived here for about 22 years. I have gotten to know many White Oak citizens and business owners. As the City Manager, I will do my best to ensure that the people of White Oak continue to receive the best services from the city’s employees.”***Hours**  
+Monday-Thursday: 7:30 a.m. - 4:30 p.m.  
+Friday: 7:30 a.m. - 3:00 p.m.  
+*Excluding observed holidays*
+
+![](https://www.cityofwhiteoak.com/api/blob/viewBlob?rf=t&i=IbqquUGBlzMhnpzxDb%2FPfAZMl08rlZkMI%2FVXNoVkmiqe8Gye1%252BgU70Zrn0ZIpR1s&s=small)
+
+Kristine Toon
+
+City Secretary / Finance Director
+
+[(903) 759-3936 x7024](tel:9037593936)
+
+906 S. White Oak Rd., White Oak TX, 75693
+
+**Hours**  
+Monday-Thursday: 7:30 a.m. - 4:30 p.m.  
+Friday: 7:30 a.m. - 3:00 p.m.  
+*Excluding observed holidays*
+
+Economic Development Board
+==========================
+
+The White Oak Economic Development Corporation (WOEDC) was developed in 1995 when the citizens voted to approve a ½ cent sales tax to boost the economic development effort in the community. The City Coordinator (Manager) performs the role of Executive Director and organizes all economic development activities. Over the past several years White Oak EDC has continued its efforts in maintaining the quality of life in White Oak as well as increasing the tax base. White Oak EDC has been involved in many relocation projects, business retention projects, and development projects. The Board is made of seven (7) volunteer Board of Directors.  
+  
+[Click here to review business incentives](https://www.cityofwhiteoak.com/incentives)
+
+Board of Directors
+
+<mwjspeople-obj></mwjspeople-obj><script type="module">import mwjsPeople from "https://app.membershipware.com/api/public/mwjsPeople?et=iTHtQsN%252BzLRkDWUwxwKY3A%3d%3d&eb=chVen%252BzRltd%252BTR6VPSuDVg%3d%3d";</script>
+
+No people are available at this time
+
+![](https://www.cityofwhiteoak.com/api/blob/viewBlob?rf=t&i=4NcLoz8CeToyrRM36szLa6eBajj7KCDigqXry2s8XIFY6YBcBF%2FT2mUkGIjkYknM&s=small)
+
+Thomas Cash
+
+President | 2/1/24 - 1/31/26
+
+CS
+
+Curtis Smith
+
+Vice President | 2/1/24 - 1/31/26
+
+DM
+
+Dana Mizell
+
+Member | 02/01/24 - 01/31-26
+
+JW
+
+Julie Weeks
+
+Member | 2/1/24 - 1/31/26
+
+JS
+
+John Spitler
+
+Treasurer | 2/1/25 - 1/31/27
+
+JC
+
+James Crump
+
+Member | 2/1/25 - 1/31/27
+
+![](https://www.cityofwhiteoak.com/api/blob/viewBlob?rf=t&i=ZwMJKSMh4BxCe8FN8rYW2AJJFXlSfL92p3i9ChYOocSbycefnkXRBSY2gs%2F8yjNp&s=small)
+
+Kevin Hood
+
+Member | 2/1/25 - 1/31/27
+
+![](https://www.cityofwhiteoak.com/api/blob/viewBlob?rf=t&i=rrWIAJz%252BwqBq5X5C9bFsSuavlJymMLDLsdGHN2SK6n730rsgYG5zOaMvmrV8NCPn&s=small)
+
+Jimmy Purcell
+
+Administrator
+
+[(903) 759-3936 x7017](tel:9037593936)
+
+Jimmy Purcell began his career in 1990 with the City of Gladewater as a Firefighter/EMT. During his time at Gladewater Fire Department, he was promoted to Lieutenant and eventually Captain. In 1991 Jimmy went to the Police Academy at night and graduated from the Police Academy in 1992. During his time at Gladewater, he worked as a Reserve Police Officer. Jimmy moved on to Longview Fire Department in 1998, where he spent five years as a Firefighter/Paramedic. He then was promoted to Deputy Fire Marshal as a Fire/Arson Investigator, where he would spend the rest of his time until he retired from the Longview Fire Department in July 2019. In August 2019, Jimmy was hired by the City of White Oak as the Fire Chief of the White Oak Fire Department. He attended the Fire Chief Academy, Certified Public Manager course, as well as completed the Public Administration Certification. Jimmy is a member of the Texas City Management Association, East Texas City Managers Association, and Texas Economic Development Council.   
+  
+As City Manager of White Oak, our mission is to nurture a vibrant community that celebrates its rich heritage while embracing progress and innovation. We are dedicated to providing exceptional services that enhance the quality of life for all residents, businesses, and visitors. With transparency and accountability, we manage resources efficiently, ensuring the responsible stewardship of our city's assets. By fostering collaboration and inclusivity, we strive to create a safe, welcoming, and resilient environment where diversity is celebrated and every voice is heard. Together, we work tirelessly to build a brighter future for White Oak, rooted in integrity, sustainability, and compassion.
+
+*“Even though I’m not from White Oak, my family and I have lived here for about 22 years. I have gotten to know many White Oak citizens and business owners. As the City Manager, I will do my best to ensure that the people of White Oak continue to receive the best services from the city’s employees.”***Hours**  
+Monday-Thursday: 7:30 a.m. - 4:30 p.m.  
+Friday: 7:30 a.m. - 3:00 p.m.  
+*Excluding observed holidays*
+
+![](https://www.cityofwhiteoak.com/api/blob/viewBlob?rf=t&i=IbqquUGBlzMhnpzxDb%2FPfAZMl08rlZkMI%2FVXNoVkmiqe8Gye1%252BgU70Zrn0ZIpR1s&s=small)
+
+Kristine Toon
+
+City Secretary / Finance Director
+
+[(903) 759-3936 x7024](tel:9037593936)
+
+**Hours**  
+Monday-Thursday: 7:30 a.m. - 4:30 p.m.  
+Friday: 7:30 a.m. - 3:00 p.m.  
+*Excluding observed holidays*
+
+![](https://www.cityofwhiteoak.com/api/blob/viewBlob?i=YusEL%252B1fJxc6Lk2N1diNRziLCbTCckaAYWDO72qJ8EnTdMFbVI78xYUQJ5aBitzJ&s=large)
+
+906 S. White Oak Road, White Oak, TX 75693  
+[(903) 759-3936](tel:9037593936) | [info@cityofwhiteoak.com](mailto:info@cityofwhiteoak.com)
+
+Powered By [Munibit](javascript:;) | © 2026[Terms & Privacy](https://www.cityofwhiteoak.com/termsandprivacy)[Login](javascript:;) | [Accessibility](https://www.cityofwhiteoak.com/siteaccessibility)
+
+Tools
+
+My Account
+
+### Section Tools
+
+Hello
+-----
+
+
+
+Create your Passkey
+
+Remove your Passkey
+
+**What is a Passkey?**  
+Imagine signing into your account as easily as unlocking your phone—no more worrying about remembering or typing a password. A passkey is a secure digital key that uses the safety features in your device to keep your account protected. It’s designed to be both simple to use and highly secure.  
+Ready to experience a simpler, safer sign-in? Click the button above to create your passkey now.
+
+  
+  
+
+Logout
+
+
+
+
+
+ 
