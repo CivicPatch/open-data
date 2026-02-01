@@ -1,0 +1,2528 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n7-active wf-muli-n3-active wf-muli-n4-active wf-muli-i4-active wf-active has-webFonts"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather+Sans:700,700italic,italic,regular|" media="all"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-WKSYTXGE7H&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e61r1"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-WKSYTXGE7H';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	
+	
+	
+	<meta name="theme-color" content="#34424d">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>Staff Directory • City Council</title>
+
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '390px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/-2109792684.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+	
+	<link rel="stylesheet" href="/App_Themes/CP/nmenu.css" type="text/css">
+
+    
+	<!-- Dynamic Header Scripts -->
+	
+	<!--Reference Stylesheet-->
+	
+    
+		<!--Dynamic Header Styles-->
+	<style type="text/css">
+	
+	</style>
+	
+	
+	
+
+
+
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style><link rel="stylesheet" type="text/css" href="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-28/compliance.css"><link rel="stylesheet" type="text/css" href="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-28/fullCSS.bundle.css"><style>
+      .audioeye-skip-link {
+        display: inline-block !important;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        z-index: 50000 !important;
+      }
+      .audioeye-skip-link:focus, .audioeye-skip-link:active {
+        left: 0;
+        width: auto;
+        height: auto;
+        background: #fff;
+        color: #000;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.5;
+        margin-bottom: 8px;
+        padding: 5px;
+        border: 3px solid #000;
+        transition: none;
+      }
+    </style></head>
+<body class="wide cpTextResizeOn doneLoading" style="cursor: default;" data-audioeye-lang="en" data-audioeye-device-desktop=""><a href="#structuralContainer1" class="audioeye-skip-link">Skip To Main Content</a><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 722px; width: 1267px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 720px; width: 1265px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 360px; display: none;"><img src="https://www.cityofcorsicana.com/Common/images/ajax-loader.gif" alt="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks" class="ae-exclude" role="presentation" aria-hidden="true" tabindex="-1">
+<a href="https://www.cityofcorsicana.com/directory.aspx?did=11#contentarea" target="_self" class="skipToContentLink ae-exclude" role="presentation" aria-hidden="true" tabindex="-1">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs" role="presentation"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="1">
+    <input type="hidden" id="hdnContentCollectionID" value="a5c7a729-3df8-4b1d-acec-a2d139c7c677">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="1">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID" value="4">
+    <input type="hidden" id="pagePageID">
+
+        <input type="hidden" id="hdnModuleID" value="4">
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+
+
+
+                </div>
+            <div id="bodyWrapper">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="structuralContainer5">
+<div data-cprole="structuralContainer" id="structuralContainer6">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="structuralContainer11">
+<div data-cprole="structuralContainer" id="structuralContainer100">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer2" class="search_ts" role="presentation">	<div id="cc60530e81-f275-498c-a981-a5a3e7e63ed6" data-containerid="60530e81-f275-498c-a981-a5a3e7e63ed6" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="23">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col11 first" style="height: auto;" data-widgetcontainerid="22c45e11-e9ec-43d7-a062-2e526829e8bd">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col11 first last id7b42d712-9690-4a41-9c26-19937babf153" style="height: 56px;" data-widgetcontainerid="7b42d712-9690-4a41-9c26-19937babf153">
+	
+<div data-widget-id="7b74e11c-3ff9-4fe9-ab6f-30889a2deb28" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget7b74e11c-3ff9-4fe9-ab6f-30889a2deb28" class="widget widgetGraphicLinks skin4 widgetOptionSet20 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.cityofcorsicana.com/facebook" target="_self"><img src="https://www.cityofcorsicana.com/ImageRepository/Document?documentID=2979" class="graphicButtonLink" alt="Facebook" onmouseover="this.src='/ImageRepository/Document?documentID=2980'" onmouseout="this.src='/ImageRepository/Document?documentID=2979'" onfocus="this.src='/ImageRepository/Document?documentID=2980'" onblur="this.src='/ImageRepository/Document?documentID=2979'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.cityofcorsicana.com/twitter" target="_self"><img src="https://www.cityofcorsicana.com/ImageRepository/Document?documentID=2983" class="graphicButtonLink" alt="Twitter" onmouseover="this.src='/ImageRepository/Document?documentID=2984'" onmouseout="this.src='/ImageRepository/Document?documentID=2983'" onfocus="this.src='/ImageRepository/Document?documentID=2984'" onblur="this.src='/ImageRepository/Document?documentID=2983'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList" role="presentation"><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col13 last" style="height: auto;" data-widgetcontainerid="df4408d0-083f-46a1-8a04-5ce3c4fa2b50">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col13 first last idc074a9cf-7aca-466d-b5c4-a2a26a5c2ffe" style="height: 56px;" data-widgetcontainerid="c074a9cf-7aca-466d-b5c4-a2a26a5c2ffe">
+	
+<div data-widget-id="8e07d487-3d54-499a-a0d6-b4f3ac86744a" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButton8e07d487-3d54-499a-a0d6-b4f3ac86744a").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDept8e07d487-3d54-499a-a0d6-b4f3ac86744a").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchField8e07d487-3d54-499a-a0d6-b4f3ac86744a").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDept8e07d487-3d54-499a-a0d6-b4f3ac86744a").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDept8e07d487-3d54-499a-a0d6-b4f3ac86744a").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchField8e07d487-3d54-499a-a0d6-b4f3ac86744a").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDept8e07d487-3d54-499a-a0d6-b4f3ac86744a").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchField8e07d487-3d54-499a-a0d6-b4f3ac86744a").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchField8e07d487-3d54-499a-a0d6-b4f3ac86744a"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin1 widgetOptionSet12" style="display: block;">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBox8e07d487-3d54-499a-a0d6-b4f3ac86744a ui-autocomplete-input" cp5ph="true" id="searchField8e07d487-3d54-499a-a0d6-b4f3ac86744a" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search . . ." title="Search . . ." type="text" value="" autocomplete="off" aria-label="Search Site">
+						<a href="https://www.cityofcorsicana.com/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButton8e07d487-3d54-499a-a0d6-b4f3ac86744a"><img alt="Go to Site Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=2962" data-image="/ImageRepository/Document?documentID=2961" src="https://www.cityofcorsicana.com/ImageRepository/Document?documentID=2961"></a>
+
+			<label class="searchLabel" for="searchField8e07d487-3d54-499a-a0d6-b4f3ac86744a">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #fff;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #fff;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #fff;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #fff;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBox8e07d487-3d54-499a-a0d6-b4f3ac86744a
+	{
+		color: #fff;
+		background: #86959c; border: 0; padding: 16px 50px 16px 15px; font-family: Merriweather Sans; font-size: 1.2em;
+	}
+	.widgetSearch .widgetBody .widgetSearchButton8e07d487-3d54-499a-a0d6-b4f3ac86744a
+	{
+		margin: 14px 15px 0 0;
+	}
+	.widgetSearch .widgetSearch-onlyDept8e07d487-3d54-499a-a0d6-b4f3ac86744a
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDept8e07d487-3d54-499a-a0d6-b4f3ac86744a
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchField8e07d487-3d54-499a-a0d6-b4f3ac86744a").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer10" class="fixedTop_ts">
+<div class="siteWrap"><header class="siteHeader"><aside data-cprole="contentContainer" id="contentContainer1" class="home_ts" role="presentation">	<div id="cc3368e757-c4da-4ee4-b71f-e630de1fd8e1" data-containerid="3368e757-c4da-4ee4-b71f-e630de1fd8e1" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="1c171b9c-a480-4aa3-8a17-3a4163a71a3b">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id1392483a-40f1-4ee9-a04a-ec436c96e0a8" style="height: 56px;" data-widgetcontainerid="1392483a-40f1-4ee9-a04a-ec436c96e0a8">
+	
+<div data-widget-id="12af6e65-dd30-48fe-bec5-a704061ab8c3" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget12af6e65-dd30-48fe-bec5-a704061ab8c3" class="widget widgetGraphicLinks skin4 widgetOptionSet4 narrow" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 "> 	
+				<ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.cityofcorsicana.com/" target="_self"><img src="https://www.cityofcorsicana.com/ImageRepository/Document?documentID=2967" class="graphicButtonLink" alt="Home" onmouseover="this.src='/ImageRepository/Document?documentID=2968'" onmouseout="this.src='/ImageRepository/Document?documentID=2967'" onfocus="this.src='/ImageRepository/Document?documentID=2968'" onblur="this.src='/ImageRepository/Document?documentID=2967'"> </a></li><!--
+				--></ul>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation" aria-label="Main">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem238" class="topMenuItem" role="none" data-pageid="238" data-displaymegamenu="True" style="width: 20.555%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGovernment" class="navMainItem mainNavItem mainNavItem1 " href="https://www.cityofcorsicana.com/238/Government" target="_self" style="font-size: 18px;"><span style="display: inline;">   Government </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem279" class="topMenuItem" role="none" data-pageid="279" data-displaymegamenu="True" style="width: 32.448%;"><!--
+			--><!--
+			--> <a role="menuitem" id="mainNavEconomicDevelopment" class="navMainItem mainNavItem mainNavItem2" href="https://www.cityofcorsicana.com/279/Economic-Development" target="_self" style="font-size: 18px;"><span style="display: inline;">   Economic Development </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem202" class="topMenuItem" role="none" data-pageid="202" data-displaymegamenu="True" style="width: 19.0684%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavCommunity" class="navMainItem mainNavItem mainNavItem3 " href="https://www.cityofcorsicana.com/202/Community" target="_self" style="font-size: 18px;"><span style="display: inline;">   Community </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem93" class="topMenuItem" role="none" data-pageid="93" data-displaymegamenu="False" style="width: 11.8335%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavVisit" class="navMainItem mainNavItem mainNavItem4 " href="http://visitcorsicana.com/" target="_blank" aria-label="   Visit  Opens in new window" style="font-size: 18px;" rel="noopener"><span style="display: inline;">   Visit </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem164" class="topMenuItem" role="none" data-pageid="164" data-displaymegamenu="True" style="width: 16.0951%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavConnect" class="navMainItem mainNavItem mainNavItem5 " href="https://www.cityofcorsicana.com/164/Connect" target="_self" style="font-size: 18px;"><span style="display: inline;">   Connect </span></a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=4&themeID=1&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = true;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;" role="presentation"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="1"></aside></nav></header></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer8">
+<div class="siteWrap"><div data-cprole="banner" id="banner2" class="logo_ts empty">
+
+
+
+
+				<a id="banner2-1" style="			display: block; text-align: center;
+" class="bannerObject" href="https://www.cityofcorsicana.com/" target="_self"><img alt="Click to Home" class="bannerObject" height="177" src="https://www.cityofcorsicana.com/ImageRepository/Document?documentID=2953" width="545"></a>
+</div></div>
+</div>
+</div>
+
+
+
+
+		<div id="bannerImagesJSON2" class="hidden"></div><div class="bannerObject external fixedBanner" id="bannerDivbanner1" style="min-height: 465px; top: 0px; left: -532.914px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img class="bannerObject" width="1265px" style="position: absolute; left: 0px; margin: 0px; width: 2330.83px;" src="https://www.cityofcorsicana.com/ImageRepository/Document?documentID=2956" data-is-delayed="false" alt=""></div>
+		
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner1',
+								{"BannerOptionID":2,"ThemeID":1,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":2,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":9,"BannerOptionID":2,"FileName":"/ImageRepository/Document?documentID=2954","Height":399,"Width":2000,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":10,"BannerOptionID":2,"FileName":"/ImageRepository/Document?documentID=2955","Height":399,"Width":2000,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":2,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":11,"BannerOptionID":2,"FileName":"/ImageRepository/Document?documentID=2956","Height":399,"Width":2000,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":3,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":12,"BannerOptionID":2,"FileName":"/ImageRepository/Document?documentID=2957","Height":399,"Width":2000,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":4,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""}],"BannerVideos":[{"BannerVideoID":2,"BannerOptionID":2,"VideoFileName":"","ImageFileName":"EmptyBannerBkg201804021036262523.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								'/App_Themes/Interior/Images/',
+								'Rotating');
+						});
+				});
+			</script>
+
+</div>
+</div><div data-cprole="structuralContainer" id="structuralContainer4">
+<div class="siteWrap"><div data-cprole="structuralContainer" id="structuralContainer1" class="mainWrap" role="main" tabindex="-1">
+<div data-cprole="structuralContainer" id="structuralContainer12" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="structuralContainer2" class="contentWrap">
+<div data-cprole="breadCrumbs" class="breadCrumbContainer" id="breadCrumbs" role="navigation" aria-label="Breadcrumb">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="https://www.cityofcorsicana.com/">Home</a></li><li>Staff Directory</li>
+		</ol>
+
+	   
+    
+</div>
+<div data-cprole="mainContentContainer" id="moduleContent">
+
+<div id="ctl00_ctl00_MainContent_BodyWrapper">
+	
+	<script type="text/javascript"><!--
+	var isie6 = false, isie7 = false, isie6or7 = false;
+	var intCountryCode = 840;
+
+	function setUrlLength(editor) {
+		//Toggle Image Context Menu Items
+		setMenuItems(editor);
+		//setContentBackgroundColor(editor);
+		removeIEParagraphs(editor);
+	}
+	function setUrlLengthAndToolToggle(editor) {
+		var minToolsGroups = 2; // Number of MinimumSetOfTools tools groups.
+		
+		// Hide the MinimumSetOfTools on load.
+		var toolbar = editor.get_toolContainer(); // Get toolbar container.
+		var toolgroups = toolbar.getElementsByTagName("UL"); // Get all toolgroups containers.
+		
+		for (var i = toolgroups.length - 1; i >= minToolsGroups; i--)			toolgroups[i].style.display = "none";
+		
+		if (editor.isIE) {
+			var elem = editor.get_element();
+			elem.style.height = "430px";
+ 			elem.style.minHeight = "430px";
+		}
+		
+		// Toggle Image Context Menu Items.
+		setMenuItems(editor);
+		//setContentBackgroundColor(editor);
+		removeIEParagraphs(editor);
+	}
+//--></script><!--[if IE 6]><script type="text/javascript">isie6 = true; isie6or7 = true;</script><![endif]-->
+<!--[if IE 7]><script type="text/javascript">isie7 = true; isie6or7 = true;</script><![endif]-->
+
+	
+
+	<form name="aspnetForm" method="post" action="./directory.aspx?did=11" id="aspnetForm" style="display:inline;" onsubmit="return headerValidationCallback();" enctype="multipart/form-data" autocomplete="off" aria-label="City Council">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" role="presentation">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" role="presentation">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="a7cjAs+XDbwFdcsP3Y73GGqTtkYhFTkrrVn/k5NHZo04w+KRXlzk1Yk6XU8fs9yjKl9S9aKoaRoB1xxRL9MqNvsyJwbfGs3uz4epuEiczjqSGWNkiy5lamN40MFIzzBk" role="presentation">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZDLabodcikOjfaxGftwY9HZ4kdGjeaKe0dWaPQB1vgEd44eKAO0Ba1XMxE47-4twmw2&amp;t=638901361900000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=inLNP31wjqiaI82QcH4u7I71VHLIImzSRVoQAsV6_PNnrOu35oSrP-fktZb38yN1iHsxOuYTpPgebuvS3itkNDLQybUfBynodkPwcNYuu-5d7dEEJZPI3T2Vm57A0oUefZV704Z-0E62UXTckXj_X_urLROZ7xCT0LlKVHEeZf55MwRhNUf-qoYv7TXZNOcfRkghmszkBchwDCBZrMbNwwBUFz9bMFENu7H3ZkagHhGUNhiZSJJ_6rKgB8JZT9HTTpwkKUZBVrWA-S1010VS5Ob6lDwN9zNSwRQIL4BFNHXoQKw87hXTih7r4GO7vfq9srwqbRxzNCwrmjbkqxS8PKvq3JrNg9F8Yzi5r8_QnUw8wnSAXB3cGwR-Oug_rBjSvh1H2m1dhLMfnrFII3aXyZHVFuHavV3Jq2X9dFwARhK6bD6UgXxog8zmfpLJ6WuLe1SOWsSp6nBTLbtzTkaRqQV5ezsjtJAY_BjxLBRMSuqCK3ndsYNX2uDXn8OU1aFYN7YRkehqMOG2DZDJN3je3le0UoSpMEP119RvNyCBDd3fFfEROn22W2Zy-nkYf66ujs8p5jJJk9qUQcNjKmE-72VQP6-3ZlE78IqOcbGpJjJWLsqLv5a8Qrfz-bHTJfA7HQK17c_eRCCcdbgekRrNJ7DUshbeGeZZxU6mDOMM0fgY7UNyFSNn1dRISJr64r5_4nSCb2qU5aLOXTahkfUoU8LYfD9sfSesIHRwVM0dEZYw_fNzolVFS1omlCXY1C6wm_ZyHwvxNChMm56m_LNnwTXM-14U_Aj7mxxcUeel5LCis9bNX9XAMZfTXFcWd5Z_AfhU8RWVsb9-PorEp_06SpgGOenb5xBqGLxeKltoBnI1" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="42A65EF5" role="presentation">
+</div>
+		<!--for archiving purpose-->
+		<input name="ysnNotifyMe" type="hidden" role="presentation">
+		<input name="strPage" type="hidden" role="presentation">
+		<input name="intArchMainCatID" type="hidden" role="presentation">
+		<input name="intArchMainItemID" type="hidden" role="presentation">
+		 <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$MainContent$scriptManager', 'aspnetForm', [], [], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+		<script type="text/javascript">
+			Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(beginRequest);
+			Sys.WebForms.PageRequestManager.getInstance().add_pageLoaded(pageLoaded);
+		</script>
+		
+		<div id="modulecontent" name="modulecontent.aspx" style="padding-top: 0px;">
+<div id="contentarea"></div>
+
+<!-- BEGIN CityDirectoryContent.aspx ***** -->
+<style>
+	#moduleContent,
+	#moduleContent * {
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+		box-sizing: content-box;
+	}
+
+	table[summary="Search Directory"], table[summary="Employee Info"], table[summary="Table for layout purposes"] {
+		width: 100%
+	}
+</style>
+
+<link href="/Common/Modules/CityDirectory/RWDCityDirectory.css" rel="stylesheet" type="text/css">
+<script src="/Common/Modules/CityDirectory/RWDCityDirectory.js" type="text/javascript"></script>
+
+<script type="text/javascript" language="javascript" src="/common/nMenu.js"></script>
+<style type="text/css">
+	td.r { text-align: right; margin: 0px; margin-left: auto;}
+	td.l { text-align: left; margin: 0px; margin-right: auto; }
+	td.c { text-align: center; margin: 0px auto; }
+	tr.qcol { background: #e4e0da; }
+	a.archLinkColor { color: #000; }tr.alt { background-color: #f5f3f0; }	.DirectoryCategoryText, .BioName {
+		font-family: arial;
+		font-size: 10pt;
+		color: Black;
+		font-weight: bold;
+	}
+	.DirectoryNormalText, .BioText { 
+		font-family: arial;
+		font-size: 10pt;
+		color: Black;
+		font-weight: normal;
+	}
+	.DirectoryLinksText, .BioLink { 
+		font-family: arial;
+		font-size: 10pt;
+		color: Black;
+		font-weight: normal;
+	}
+	.BioLink { 
+		color: #70271a;
+	}
+	.BioName { 
+		border: 0px;
+		padding: 0px;
+		color: #34424d;
+	}
+	.DirectoryNormalText label { font-weight: bold; }
+	.DirectoryCategoryText { margin-bottom: 1em; }
+	.DirectoryNormalText p { margin: 0px 0px 10px 0px; }
+</style>
+
+<div id="CityDirectoryLeftMargin" style="margin-left: 20px;">
+	<div style="position: relative;" class="DirectoryCategoryText"><h1 style="margin-bottom: -0.5em;">City Council</h1>&nbsp;</div><span class="DirectoryNormalText"><label>Physical Address:</label><p>200 N. 12th St.<br>Corsicana, TX&nbsp;75110</p><label>Phone:</label><p><a href="tel:9036544800">903-654-4800</a></p><label>Fax:</label><p>903-654-4999</p>				<br></span>
+                 <div class="pageStyles">					<table id="cityDirectoryDepartmentDetails_1" summary="City Directory" style="width: 100%; margin: 0px; padding: 0px; ">
+                      <thead>						<tr>
+							<th scope="col" colspan="5">
+								<div style="font-weight: bold;">
+									<span style="float: left;">Staff</span>
+								</div>
+							</th>
+						</tr>
+						<tr>
+							<th scope="col">
+								<span style="font-weight: bold;">
+									Name
+								</span>
+							</th>
+							<th scope="col">
+								<span style="font-weight: bold;">
+Title								</span>
+							</th>
+							<th scope="col">
+								<span style="font-weight: bold;">
+									Email
+								</span>
+							</th>
+							<th scope="col" style="display:none">
+								<span style="font-weight: bold;">
+									Phone
+								</span>
+							</th>
+							<th scope="col" style="display:none">
+								<span style="font-weight: bold;">
+									Additional Phone
+								</span>
+							</th>
+						</tr>
+                      </thead>				<tbody><tr>
+					<td>
+						<span>
+							<a href="https://www.cityofcorsicana.com/directory.aspx?EID=27">Pannell, Jim							</a>
+						</span>
+					</td>
+<td>
+<span>Precinct 1 Councilman</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "jpannell";
+var x = "corsicanatx.gov";
+var y = "Email Jim Pannell";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:jpannell@corsicanatx.gov">Email Jim Pannell</a>
+						</span>
+					</td>
+					<td style="display:none">
+						<span>
+&nbsp;						</span>
+					</td>
+					<td style="display:none">
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr class="alt">
+					<td>
+						<span>
+							<a href="https://www.cityofcorsicana.com/directory.aspx?EID=26">Johnson, Shayla							</a>
+						</span>
+					</td>
+<td>
+<span>Precinct 2 Councilwoman</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "sjohnson";
+var x = "corsicanatx.gov";
+var y = "Email Shayla Johnson";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:sjohnson@corsicanatx.gov">Email Shayla Johnson</a>
+						</span>
+					</td>
+					<td style="display:none">
+						<span>
+&nbsp;						</span>
+					</td>
+					<td style="display:none">
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>
+							<a href="https://www.cityofcorsicana.com/directory.aspx?EID=151">Woolsey, Chris							</a>
+						</span>
+					</td>
+<td>
+<span>Precinct 3 Councilman</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "cwoolsey";
+var x = "corsicanatx.gov";
+var y = "Email Chris";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:cwoolsey@corsicanatx.gov">Email Chris</a>
+						</span>
+					</td>
+					<td style="display:none">
+						<span>
+&nbsp;						</span>
+					</td>
+					<td style="display:none">
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+				<tr class="alt">
+					<td>
+						<span>
+							<a href="https://www.cityofcorsicana.com/directory.aspx?EID=24">Smith, Jeff							</a>
+						</span>
+					</td>
+<td>
+<span>Precinct 4 Councilman</span>
+</td>
+					<td>
+						<span>
+<script type="text/javascript" language="javascript"><!--
+var w = "jsmith";
+var x = "corsicanatx.gov";
+var y = "Email Jeff";
+var z = document.write("<a href=\"mailto:" + w + '@' + x + '\">' + y +'</a>');
+//--></script><a href="mailto:jsmith@corsicanatx.gov">Email Jeff</a>
+						</span>
+					</td>
+					<td style="display:none">
+						<span>
+&nbsp;						</span>
+					</td>
+					<td style="display:none">
+						<span>
+&nbsp;						</span>
+					</td>
+				</tr>
+ </tbody></table></div><br>
+<div style="margin-left: 1px"><a href="https://www.cityofcorsicana.com/Directory.aspx" class="DirectoryLinksText" style="font-weight: bold;">Return to Staff Directory</a></div><br>
+
+	<br>
+	<span style="font-family: arial; font-size: 12pt; color: Black;">
+		
+	</span>
+</div>
+<!-- END CityDirectoryContent.aspx ***** -->
+</div>
+<script type="text/javascript">order+='ModuleContent\n'</script>
+
+		<input type="submit" name="ctl00$ctl00$MainContent$ctl00_liveEditSpawnWindow" value="" id="ctl00_ctl00_MainContent_ctl00_liveEditSpawnWindow" disabled="disabled" aria-hidden="true" style="display: none;">
+	
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","CancelControlID":"ctl00_LiveEditCloseButton","PopupControlID":"ctl00_ctl00_MainContent_ctl00_liveEditPopupWindow","PopupDragHandleControlID":"ctl00_liveEditTitleBar","dynamicServicePath":"/directory.aspx","id":"editItemBehavior"}, null, null, $get("ctl00_ctl00_MainContent_ctl00_liveEditSpawnWindow"));
+});
+//]]>
+</script>
+<input name="__RequestVerificationToken" type="hidden" value="3f4QZuwvrAMtriu_euDk4gtkd_r-RaBjVJg52T2kMmJ6yciZdGXE1BZmP0RbguzJtSaSmmwqOO-9rIdhxw-GRQHpfLMnnFmSCgp2fnf0k0Y1" role="presentation"></form>
+	<form id="aspnetSearchForm" name="aspnetSearchForm" style="display:none;" action="/Search.aspx" method="get" role="presentation">
+		<input name="SearchString" type="hidden" value="" role="presentation">
+	</form>
+	
+	
+	
+	</div>
+	 
+</div>	
+
+</div><aside data-cprole="contentContainer" id="featureColumn" class="secondaryContent" style="display: none;" role="presentation">	<div id="cce418d2bc-5d03-4167-8eb8-3f0decfc8bf1" data-containerid="e418d2bc-5d03-4167-8eb8-3f0decfc8bf1" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div><div data-cprole="structuralContainer" id="structuralContainer3" class="siteSidebar" style="min-height: 651px;">
+<aside data-cprole="contentContainer" id="contentContainer3" role="presentation">	<div id="cc9bed2797-f5e0-4a21-a84b-4d9a28e9beda" data-containerid="9bed2797-f5e0-4a21-a84b-4d9a28e9beda" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><nav data-cprole="nav" id="secondaryNav" class="siteNav secondaryNav" aria-label="Secondary">
+
+
+
+
+
+	<ol id="secondaryMenusecondaryNav" data-parent="4" class="rootNavMenu flyoutNav">
+	<li aria-haspopup="false" id="SideItem196" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="196" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="https://www.cityofcorsicana.com/AgendaCenter/City-Council-1" target="_self" aria-haspopup="false">City Council Agendas</a>
+			</li>
+	<li aria-haspopup="false" id="SideItem197" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="197" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="https://www.cityofcorsicana.com/263/Departments" target="_self" aria-haspopup="false">Departments</a>
+			</li>
+	<li aria-haspopup="false" id="SideItem718" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="718" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="https://www.cityofcorsicana.com/314/Financial-Transparency" target="_self" aria-haspopup="false">Financial Transparency</a>
+			</li>
+	<li aria-haspopup="false" id="SideItem198" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="198" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="https://www.cityofcorsicana.com/Jobs.aspx" target="_self" aria-haspopup="false">Job Opportunities</a>
+			</li>
+	<li aria-haspopup="false" id="SideItem199" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="199" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="https://www.cityofcorsicana.com/309/Finance-City-Secretary" target="_self" aria-haspopup="false">Elections</a>
+			</li>
+	<li aria-haspopup="false" id="SideItem968" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="968" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="https://www.cityofcorsicana.com/965/Live-Broadcast" target="_self" aria-haspopup="false">Live Broadcast Meetings</a>
+			</li>
+	<li aria-haspopup="false" id="SideItem200" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="200" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="https://library.municode.com/tx/corsicana/codes/code_of_ordinances" target="_self" aria-haspopup="false">Municipal Code</a>
+			</li>
+	<li aria-haspopup="false" id="SideItem201" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="201" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="https://www.cityofcorsicana.com/386/Police" target="_self" aria-haspopup="false">Police</a>
+			</li>
+	<li aria-haspopup="false" id="SideItem616" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="616" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="https://www.cityofcorsicana.com/Archive.aspx?AMID=45" target="_self" aria-haspopup="false">Public Notices</a>
+			</li>
+	<li aria-haspopup="false" id="SideItem945" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="945" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="https://www.cityofcorsicana.com/944/Street-Improvement-Fee-Accountability" target="_self" aria-haspopup="false">Street Improvement Fee Accountability</a>
+			</li>
+	<li aria-haspopup="false" id="SideItem1182" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="1182" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="https://tx-municipalities.com/" target="_blank" aria-haspopup="false" aria-label="2021 Texas Municipal Guide Opens in new window" rel="noopener">2021 Texas Municipal Guide</a>
+			</li>
+	<li aria-haspopup="false" id="SideItem1186" class="topMenuItem" data-display-main-item-sub-menu-indicators="True" data-pageid="1186" data-displaymegamenu="False">
+					<a class="navMainItem secondaryNavItem" href="https://www.cityofcorsicana.com/1186/Accessibility" target="_self" aria-haspopup="false">Accessibility</a>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//setup menu manager properties for secondary menu
+			menuManager.isSideMenuEditable = false;
+			menuManager.sideMenuMaxSubMenuLevels = 4;
+			menuManager.sideMenuHasCustomLinks = true;
+		});
+	</script>
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//Init secondary menu
+			var setupDraggable = menuManager.isSideMenuEditable;
+			var urlToGetHiddenMenus = '/Pages/MenuSecondary/HiddenSecondarySubMenus?pageID=1&moduleID=4&themeID=1&menuContainerID=secondaryNav';
+			var menuID = 'secondaryMenusecondaryNav';
+			menuManager.setMOMMode(2, SIDE_MENU);
+			menuManager.setupMenu(menuID, 'secondaryNav', SIDE_MENU, setupDraggable, urlToGetHiddenMenus);
+		});
+	</script>
+
+
+
+
+</nav><aside data-cprole="contentContainer" id="contentContainer4" role="presentation">	<div id="ccff1a2563-2859-4f46-bbde-4e039b68274c" data-containerid="ff1a2563-2859-4f46-bbde-4e039b68274c" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside>
+</div>
+</div></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer9">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer5" role="presentation">	<div id="cc5cb6dc44-ad9e-4379-9d51-239fd8df80a9" data-containerid="5cb6dc44-ad9e-4379-9d51-239fd8df80a9" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="b814e5dd-4596-437d-ad9e-8070ee3b73ba">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id41ecc02c-d56c-4903-9135-12e29c0e7633" style="height: 122px;" data-widgetcontainerid="41ecc02c-d56c-4903-9135-12e29c0e7633">
+	
+<div data-widget-id="76776a34-fd5f-41e4-b6d5-de34f605c19c" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget76776a34-fd5f-41e4-b6d5-de34f605c19c" class="widget widgetGraphicLinks skin6 widgetOptionSet21 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:45em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid6 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://corsicanatx.mycusthelp.com/webapp/_rs/(S(sbutbbtduepv0agmyzp33g1m))/supporthome.aspx" target="_self" class="fancyButton fancyButton18 ">
+		<span>
+			<span><span class="text">Report a Concern</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton18.fancyButton:link,.fancyButton18.fancyButton:visited, .fancyButton18div.fancyButton{
+	padding-top: 85px;
+	background-image: url('/ImageRepository/Document?documentID=2977');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all 0.3s ease-in-out; text-transform: uppercase;}
+.fancyButton18.fancyButton:hover,.fancyButton18.fancyButton:focus,.fancyButton18.fancyButton:active,.fancyButton18.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=2978');
+}
+.fancyButton18.fancyButton:link > span,.fancyButton18.fancyButton:visited > span, .fancyButton18div.fancyButton > span{
+}
+.fancyButton18.fancyButton:hover > span,.fancyButton18.fancyButton:focus > span,.fancyButton18.fancyButton:active > span,.fancyButton18.fancyButton.hover > span{
+}
+.fancyButton18.fancyButton .text{
+	color: #34424d;
+	font-size: 1.1em;
+	font-family: "Merriweather Sans";
+	text-align: center;
+	font-weight: 700;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton18.fancyButton:hover .text,.fancyButton18.fancyButton:focus .text,.fancyButton18.fancyButton:active .text,.fancyButton18.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofcorsicana.com/list.aspx" target="_self" class="fancyButton fancyButton219 ">
+		<span>
+			<span><span class="text">Notify Me</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton219.fancyButton:link,.fancyButton219.fancyButton:visited, .fancyButton219div.fancyButton{
+	padding-top: 85px;
+	background-image: url('/ImageRepository/Document?documentID=2973');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all 0.3s ease-in-out; text-transform: uppercase;}
+.fancyButton219.fancyButton:hover,.fancyButton219.fancyButton:focus,.fancyButton219.fancyButton:active,.fancyButton219.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=2974');
+}
+.fancyButton219.fancyButton:link > span,.fancyButton219.fancyButton:visited > span, .fancyButton219div.fancyButton > span{
+}
+.fancyButton219.fancyButton:hover > span,.fancyButton219.fancyButton:focus > span,.fancyButton219.fancyButton:active > span,.fancyButton219.fancyButton.hover > span{
+}
+.fancyButton219.fancyButton .text{
+	color: #34424d;
+	font-size: 1.1em;
+	font-family: "Merriweather Sans";
+	text-align: center;
+	font-weight: 700;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton219.fancyButton:hover .text,.fancyButton219.fancyButton:focus .text,.fancyButton219.fancyButton:active .text,.fancyButton219.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofcorsicanatx.tylerportico.com/navigator/public/selections" target="_blank" class="fancyButton fancyButton220 " aria-label="Online Payments Opens in new window" rel="noopener">
+		<span>
+			<span><span class="text">Online Payments</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton220.fancyButton:link,.fancyButton220.fancyButton:visited, .fancyButton220div.fancyButton{
+	padding-top: 85px;
+	background-image: url('/ImageRepository/Document?documentID=2975');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all 0.3s ease-in-out; text-transform: uppercase;}
+.fancyButton220.fancyButton:hover,.fancyButton220.fancyButton:focus,.fancyButton220.fancyButton:active,.fancyButton220.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=2976');
+}
+.fancyButton220.fancyButton:link > span,.fancyButton220.fancyButton:visited > span, .fancyButton220div.fancyButton > span{
+}
+.fancyButton220.fancyButton:hover > span,.fancyButton220.fancyButton:focus > span,.fancyButton220.fancyButton:active > span,.fancyButton220.fancyButton.hover > span{
+}
+.fancyButton220.fancyButton .text{
+	color: #34424d;
+	font-size: 1.1em;
+	font-family: "Merriweather Sans";
+	text-align: center;
+	font-weight: 700;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton220.fancyButton:hover .text,.fancyButton220.fancyButton:focus .text,.fancyButton220.fancyButton:active .text,.fancyButton220.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofcorsicana.com/jobs.aspx" target="_self" class="fancyButton fancyButton221 ">
+		<span>
+			<span><span class="text">Jobs</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton221.fancyButton:link,.fancyButton221.fancyButton:visited, .fancyButton221div.fancyButton{
+	padding-top: 85px;
+	background-image: url('/ImageRepository/Document?documentID=2971');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all 0.3s ease-in-out; text-transform: uppercase;}
+.fancyButton221.fancyButton:hover,.fancyButton221.fancyButton:focus,.fancyButton221.fancyButton:active,.fancyButton221.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=2972');
+}
+.fancyButton221.fancyButton:link > span,.fancyButton221.fancyButton:visited > span, .fancyButton221div.fancyButton > span{
+}
+.fancyButton221.fancyButton:hover > span,.fancyButton221.fancyButton:focus > span,.fancyButton221.fancyButton:active > span,.fancyButton221.fancyButton.hover > span{
+}
+.fancyButton221.fancyButton .text{
+	color: #34424d;
+	font-size: 1.1em;
+	font-family: "Merriweather Sans";
+	text-align: center;
+	font-weight: 700;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton221.fancyButton:hover .text,.fancyButton221.fancyButton:focus .text,.fancyButton221.fancyButton:active .text,.fancyButton221.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofcorsicana.com/Archive.aspx?AMID=45" target="_self" class="fancyButton fancyButton222 ">
+		<span>
+			<span><span class="text">public notices</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton222.fancyButton:link,.fancyButton222.fancyButton:visited, .fancyButton222div.fancyButton{
+	padding-top: 85px;
+	background-image: url('/ImageRepository/Document?documentID=3014');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all 0.3s ease-in-out; text-transform: uppercase;}
+.fancyButton222.fancyButton:hover,.fancyButton222.fancyButton:focus,.fancyButton222.fancyButton:active,.fancyButton222.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=3015');
+}
+.fancyButton222.fancyButton:link > span,.fancyButton222.fancyButton:visited > span, .fancyButton222div.fancyButton > span{
+}
+.fancyButton222.fancyButton:hover > span,.fancyButton222.fancyButton:focus > span,.fancyButton222.fancyButton:active > span,.fancyButton222.fancyButton.hover > span{
+}
+.fancyButton222.fancyButton .text{
+	color: #34424d;
+	font-size: 1.1em;
+	font-family: "Merriweather Sans";
+	text-align: center;
+	font-weight: 700;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+NOTIFY ME}
+.fancyButton222.fancyButton:hover .text,.fancyButton222.fancyButton:focus .text,.fancyButton222.fancyButton:active .text,.fancyButton222.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList" role="presentation"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.cityofcorsicana.com/965" target="_self" class="fancyButton fancyButton286 ">
+		<span>
+			<span><span class="text">Broadcasts</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton286.fancyButton:link,.fancyButton286.fancyButton:visited, .fancyButton286div.fancyButton{
+	padding-top: 85px;
+	background-image: url('/ImageRepository/Document?documentID=3053');
+	background-repeat: no-repeat;
+	background-position: center top;
+transition: all 0.3s ease-in-out; text-transform: uppercase;}
+.fancyButton286.fancyButton:hover,.fancyButton286.fancyButton:focus,.fancyButton286.fancyButton:active,.fancyButton286.fancyButton.hover{
+	background-image: url('/ImageRepository/Document?documentID=3054');
+}
+.fancyButton286.fancyButton:link > span,.fancyButton286.fancyButton:visited > span, .fancyButton286div.fancyButton > span{
+}
+.fancyButton286.fancyButton:hover > span,.fancyButton286.fancyButton:focus > span,.fancyButton286.fancyButton:active > span,.fancyButton286.fancyButton.hover > span{
+}
+.fancyButton286.fancyButton .text{
+	color: #34424d;
+	font-size: 1.1em;
+	font-family: "Merriweather Sans";
+	text-align: center;
+	font-weight: 700;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+.fancyButton286.fancyButton:hover .text,.fancyButton286.fancyButton:focus .text,.fancyButton286.fancyButton:active .text,.fancyButton286.fancyButton.hover .text{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside></div>
+</div><div data-cprole="structuralContainer" id="structuralContainer13">
+<div data-cprole="banner" id="banner3"><div data-cprole="structuralContainer" id="structuralContainer7">
+<div class="siteWrap"><footer data-cprole="contentContainer" id="contentContainer6" class="siteFooter">	<div id="cc055a5eb4-1adc-4f84-b2c5-9998f2fc87ed" data-containerid="055a5eb4-1adc-4f84-b2c5-9998f2fc87ed" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="45">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col5 first" style="height: auto;" data-widgetcontainerid="7123a536-f615-460e-9e63-2cb397762432">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col5 first last ida8a5017b-f649-403e-b64f-66e9cae2c2eb" style="height: 15px;" data-widgetcontainerid="a8a5017b-f649-403e-b64f-66e9cae2c2eb">
+	
+
+<div class="widget widgetSpacer" id="35ab3a8e-62b4-46c6-91c1-73fce879f9be" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest wide">
+
+	
+	<div class="inner col col5 first last id843c2bba-bdbe-4918-98cb-8c2077079a7f" style="height: 15px;" data-widgetcontainerid="843c2bba-bdbe-4918-98cb-8c2077079a7f">
+	
+
+<div class="widget widgetSpacer" id="bbe2ff24-7522-481b-9add-5956545b6da6" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col5 first last idc991e107-a6c1-4e04-84e0-fd15c198951a" style="height: 192px;" data-widgetcontainerid="c991e107-a6c1-4e04-84e0-fd15c198951a">
+	
+
+<div class="widget image pageStyles" id="divImageOuter3426a59b-d6ec-43bb-a5be-e48c245ae57d" data-widget-id="3426a59b-d6ec-43bb-a5be-e48c245ae57d">
+    
+	<div class="widgetBody " id="divImage3426a59b-d6ec-43bb-a5be-e48c245ae57d">
+				<a href="https://www.cityofcorsicana.com/" target="_self"><img src="https://www.cityofcorsicana.com/ImageRepository/Document?documentID=2987" alt="Seal of Corsicana, Texas"></a>
+	</div>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="4f096a68-6417-40d1-a98f-3919b6b8c9e0">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id11da79b8-2146-489f-a100-3ccf1fd60a53" style="height: 326px;" data-widgetcontainerid="11da79b8-2146-489f-a100-3ccf1fd60a53">
+	
+
+<div class="widget widgetSpacer" id="2d516121-58bc-4cff-aac0-38bb6511786f" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="height: auto;" data-widgetcontainerid="b96a6b43-8a9b-4843-884e-f34dedaea426">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col6 first last id36b0c3ce-e9e0-43e1-8b77-27a79686d898" style="height: 174px;" data-widgetcontainerid="36b0c3ce-e9e0-43e1-8b77-27a79686d898">
+	
+    <div data-widget-id="42407e73-6342-427b-9e5f-73f1bb2c039d" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv42407e73-6342-427b-9e5f-73f1bb2c039d" class="widget widgetInfoAdvanced skin7 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="header42407e73-6342-427b-9e5f-73f1bb2c039d">
+			<header class="widgetHeader" id="header42407e73-6342-427b-9e5f-73f1bb2c039d" role="presentation">
+		<div class="">
+					<h3 role="heading" aria-level="2">Contact Us</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList" role="presentation">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	200 N 12th Street<br>
+Corsicana, TX 75110<br>
+Phone: <a href="tel:903-654-4800" target="_self" class="Hyperlink">903-654-4800</a><br>
+<br>
+<a href="https://www.cityofcorsicana.com/directory" target="_self" class="Hyperlink">Contact Us</a>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv42407e73-6342-427b-9e5f-73f1bb2c039d .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col6 first last id52637440-8183-40ed-a85b-d2f0a934b680" style="height: 152px;" data-widgetcontainerid="52637440-8183-40ed-a85b-d2f0a934b680">
+	
+    <div data-widget-id="b4d829ec-315c-4eac-bd9d-87de86607c99" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdvb4d829ec-315c-4eac-bd9d-87de86607c99" class="widget widgetInfoAdvanced skin7 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="headerb4d829ec-315c-4eac-bd9d-87de86607c99">
+			<header class="widgetHeader" id="headerb4d829ec-315c-4eac-bd9d-87de86607c99" role="presentation">
+		<div class="">
+					<h3 role="heading" aria-level="2">Helpful Numbers</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList" role="presentation">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	Utility Billing: <a href="tel:903-654-4825" target="_self" class="Hyperlink">903-654-4825</a><br>
+Trash Pickup: <a href="tel:903- 874-8717" target="_self" class="Hyperlink">903- 874-8717</a><br>
+Permits &amp; Inspections: <a href="tel:903-654-4870" target="_self" class="Hyperlink">903-654-4870</a><br>
+Animal Control: <a href="tel:903-654-4929" target="_self" class="Hyperlink">903-654-4929</a>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdvb4d829ec-315c-4eac-bd9d-87de86607c99 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="961541d5-8ef3-4e6a-ae7e-b6c2d58b3080">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id83363503-c388-4fe3-92ae-3777241253b7" style="height: 326px;" data-widgetcontainerid="83363503-c388-4fe3-92ae-3777241253b7">
+	
+
+<div class="widget widgetSpacer" id="5354d252-57cd-44a5-82f4-09285deeb4c2" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col5" style="height: auto;" data-widgetcontainerid="d4c295f3-be83-43b8-ab1d-90a9498cc36b">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last id2deb847e-cd9f-4e6e-8283-ae841fb44c40" style="height: 326px;" data-widgetcontainerid="2deb847e-cd9f-4e6e-8283-ae841fb44c40">
+	
+	<div data-widget-id="057650a4-598d-43a8-9980-eb3554beb2b0" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink057650a4-598d-43a8-9980-eb3554beb2b0" class="widget widgetQuickLinks skin7 widgetOptionSet17 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeader057650a4-598d-43a8-9980-eb3554beb2b0">
+			<header class="widgetHeader" id="quickLinksHeader057650a4-598d-43a8-9980-eb3554beb2b0" role="presentation">
+		<div class="">
+					<h3 role="heading" aria-level="2"><a style="" href="https://www.cityofcorsicana.com/QuickLinks.aspx?CID=79">Quick Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://webgis-cityofcorsicana.hub.arcgis.com/" target="_blank" aria-label="City Maps Opens in new window" rel="noopener">City Maps</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofcorsicana.com/Archive.aspx" target="_self">All Archives</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://corsicana.org/" target="_self">Chamber of Commerce</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://www.cisd.org/" target="_self">Corsicana ISD</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://www.navarrocollege.edu/" target="_self">Navarro College</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://co.navarro.tx.us/" target="_self">Navarro County</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="a4c3252b-e1f9-473e-b25c-7ed5ba7a8a7d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id70c9d646-5c2c-40ec-abfb-31c8e9a3f8af" style="height: 326px;" data-widgetcontainerid="70c9d646-5c2c-40ec-abfb-31c8e9a3f8af">
+	
+
+<div class="widget widgetSpacer" id="5b62b0e9-d3c2-4e14-9041-dd61d973ad21" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col5 last" style="height: auto;" data-widgetcontainerid="3a911e35-8162-41dd-970d-33383d96b13f">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col5 first last idb2a3a95c-be87-4c08-bda7-d57f63c56e22" style="height: 326px;" data-widgetcontainerid="b2a3a95c-be87-4c08-bda7-d57f63c56e22">
+	
+	<div data-widget-id="517b3abb-7af8-49c5-a42a-8256f59b299c" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink517b3abb-7af8-49c5-a42a-8256f59b299c" class="widget widgetQuickLinks skin7 widgetOptionSet17 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeader517b3abb-7af8-49c5-a42a-8256f59b299c">
+			<header class="widgetHeader" id="quickLinksHeader517b3abb-7af8-49c5-a42a-8256f59b299c" role="presentation">
+		<div class="">
+					<h3 role="heading" aria-level="2"><a style="" href="https://www.cityofcorsicana.com/QuickLinks.aspx?CID=117">Site Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofcorsicana.com/" target="_self">Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofcorsicana.com/Accessibility" target="_self">Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofcorsicana.com/directory" target="_self">Contact Us</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofcorsicana.com/sitemap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://www.cityofcorsicana.com/site/copyright" target="_self">Copyright Notices</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</footer></div>
+</div>
+
+
+
+
+		<div class="bannerObject external" id="bannerDivbanner3" style="min-height: 384px; top: 0px; left: -195.086px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img alt="" class="bannerObject" src="https://www.cityofcorsicana.com/ImageRepository/Document?documentID=2959" width="1655.1724137931033px" style="position: absolute; left: 0px; margin: 0px; width: 1655.17px;"></div>
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderBanner('banner3-8',
+								'banner3',
+								{"BannerOptionID":8,"ThemeID":1,"SlotName":"banner3","Name":"Default","IsDefault":true,"BannerMode":1,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":15,"BannerOptionID":8,"FileName":"/ImageRepository/Document?documentID=2959","Height":464,"Width":2000,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null}],"BannerVideos":[{"BannerVideoID":8,"BannerOptionID":8,"VideoFileName":"","ImageFileName":"EmptyBannerBkg201804071438031103.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								{"BannerImageID":15,"BannerOptionID":8,"FileName":"/ImageRepository/Document?documentID=2959","Height":464,"Width":2000,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":null},
+								'/App_Themes/Interior/Images/',
+								'<img alt="" class="bannerObject" src="/ImageRepository/Document?documentID=2959" />');
+						});
+				});
+			</script>
+
+</div>
+</div><div data-cprole="structuralContainer" id="structuralContainer14">
+<div class="siteWrap"><aside data-cprole="contentContainer" id="contentContainer7" class="share_ts" role="presentation">	<div id="cc819704cf-18a0-42d2-864f-9b1dc2b9f928" data-containerid="819704cf-18a0-42d2-864f-9b1dc2b9f928" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="1">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col14 first" style="height: auto;" data-widgetcontainerid="2feec7fb-0c25-46bf-a076-43fa5317ed37">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col14 first last id6a004238-4ba1-4324-ac02-3e0555a35f62" style="height: 21px;" data-widgetcontainerid="6a004238-4ba1-4324-ac02-3e0555a35f62">
+	
+<div data-widget-id="5907675d-f118-4584-8f65-59391308b759" data-widget-controller-path="/Layout/WidgetSiteTools">
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				setWidgetServiceClicking($("#widgetSiteToolsHeader5907675d-f118-4584-8f65-59391308b759"), true, function () {
+					var $widgetBody = $('#widgetSiteToolsBody5907675d-f118-4584-8f65-59391308b759');
+
+					if ($widgetBody.is(':visible')) {
+						var menuItems = $('.widgetItem a', $widgetBody);
+
+						$(menuItems[0]).focus();
+
+						$('.widgetItem', $widgetBody).unbind("keydown").bind("keydown", function (e) {
+
+							if (e.which === 9) {
+								var index = menuItems.index(e.target);
+
+								if ((index === 0 && e.shiftKey) || (index === (menuItems.length - 1) && !e.shiftKey)) {
+									$("#widgetSiteToolsHeader5907675d-f118-4584-8f65-59391308b759").trigger('click').focus();
+								}
+							}
+						});
+					} else {
+						$('.widgetItem', $widgetBody).unbind("keydown");
+					}
+				});
+			});
+		</script>
+
+	<section id="widgetSiteTools5907675d-f118-4584-8f65-59391308b759" class="widget widgetSiteTools skin9 widgetOptionSet8 flyOutParent wide" role="presentation">
+				<header id="widgetSiteToolsHeader5907675d-f118-4584-8f65-59391308b759" class="widgetHeader" role="presentation">
+			<h3 role="presentation"><img alt="Site Tools" class="imageHover" data-hover="/ImageRepository/Document?documentID=2966" data-image="/ImageRepository/Document?documentID=2965" src="https://www.cityofcorsicana.com/ImageRepository/Document?documentID=2965" role="button" tabindex="0" data-ae-blurbtype="button" aria-expanded="false"></h3>
+		</header>
+	
+
+	</section>
+
+
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col10 last" style="height: auto;" data-widgetcontainerid="383984ec-c4f0-4fac-8a6b-afcc6f707d1c">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col10 first last ida6dedcc6-da81-488a-8ff6-c2449ba38777" style="height: 21px;" data-widgetcontainerid="a6dedcc6-da81-488a-8ff6-c2449ba38777">
+	
+<div data-widget-id="ba08e2e7-4eda-4890-9c4a-756aff3607d9" data-widget-controller-path="/Layout/WidgetShare">
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				setWidgetServiceClicking($("#widgetShareHeaderba08e2e7-4eda-4890-9c4a-756aff3607d9"), true, function () {
+					var $widgetBody = $('#widgetShareBodyba08e2e7-4eda-4890-9c4a-756aff3607d9');
+
+					if ($widgetBody.is(':visible')) {
+						var menuItems = $('.widgetItem a', $widgetBody);
+
+						$(menuItems[0]).focus();
+
+						$('.widgetItem', $widgetBody).unbind("keydown").bind("keydown", function (e) {
+
+							if (e.which === 9) {
+								var index = menuItems.index(e.target);
+
+								if ((index === 0 && e.shiftKey) || (index === (menuItems.length - 1) && !e.shiftKey)) {
+									$("#widgetShareHeaderba08e2e7-4eda-4890-9c4a-756aff3607d9").trigger('click').focus();
+								}
+							}
+			});
+					} else {
+						$('.widgetItem', $widgetBody).unbind("keydown");
+					}
+				});
+			});
+		</script>
+
+	<section id="widgetShareba08e2e7-4eda-4890-9c4a-756aff3607d9" class="widget widgetShare skin9 widgetOptionSet6 flyOutParent wide" role="presentation">
+			<header id="widgetShareHeaderba08e2e7-4eda-4890-9c4a-756aff3607d9" class="widgetHeader" role="presentation">
+				<h3 role="presentation"><img alt="Share" class="imageHover" data-hover="/ImageRepository/Document?documentID=2964" data-image="/ImageRepository/Document?documentID=2963" src="https://www.cityofcorsicana.com/ImageRepository/Document?documentID=2963" role="button" tabindex="0" data-ae-blurbtype="button" aria-expanded="false"></h3>
+	</header>
+    
+
+	</section>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside><aside data-cprole="contentContainer" id="contentContainer8" class="powered_ts" role="presentation">	<div id="ccae882272-581f-4048-8f8b-65b76ecf2e83" data-containerid="ae882272-581f-4048-8f8b-65b76ecf2e83" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="1">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="08b0048a-4ba1-4292-93e8-6fb898736cea">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last iddf38e51a-07ee-4887-b0f1-38e22873f5ce" style="height: 20px;" data-widgetcontainerid="df38e51a-07ee-4887-b0f1-38e22873f5ce">
+	
+ 
+	<div data-widget-id="9f59a92a-9673-4c6c-a262-a725ca5beb36" data-modulename="customHtml" id="widgetCustomHtml9f59a92a-9673-4c6c-a262-a725ca5beb36" class="widget widgetCustomHtml skin1 narrow">
+	<div class="widgetBody pageStyles" id="widgetBody9f59a92a-9673-4c6c-a262-a725ca5beb36">
+		<div id="customHtml9f59a92a-9673-4c6c-a262-a725ca5beb36"><div><div><img src="https://www.cityofcorsicana.com/ImageRepository/Document?documentID=2988" style="float:left; padding: .3em .7em 0 0;">
+<div style="color: #18354d;">Government Websites by <a href="https://www.civicplus.com/" style="color: #18354d;">CivicPlus®</a></div></div></div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside></div>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '',
+				targetType: 0
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+	
+	<script type="text/javascript">function dynamicStretchContainers () {Core.Layout.stretchContainers('#structuralContainer3');}</script>
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!-- Code for Retargeting Tag -->
+<script type="text/javascript"> 
+/* <![CDATA[ */ 
+var google_conversion_id = 995852264; 
+var google_custom_params = window.google_tag_params; 
+var google_remarketing_only = true; 
+/* ]]> */ 
+</script>
+
+<script type="text/javascript">!function(){var b=function(){window.__AudioEyeSiteHash = "94fbc54b444f6cc771131ee7d0835ddf"; var a=document.createElement("script");a.src="https://wsmcdn.audioeye.com/aem.js";a.type="text/javascript";a.setAttribute("async","");document.getElementsByTagName("body")[0].appendChild(a)};"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",b):window.attachEvent&&window.attachEvent("onload",b):b()}();</script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;" role="presentation" aria-hidden="true" tabindex="-1">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Merriweather+Sans:700,700italic,italic,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" role="presentation" aria-hidden="true" tabindex="-1">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;" role="presentation"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div id="ctl00_ctl00_MainContent_ctl00_liveEditPopupWindow" class="modalContainer modalContainerCP" style="display: none; position: fixed; z-index: 100001;">
+	<div id="ctl00_liveEditTitleBar" class="modalTitleLeft"><h3 id="ctl00_LiveEditModalTitle" class="modalTitle">Live Edit</h3><a id="ctl00_LiveEditCloseButton" class="modalClose" aria-label="Close this modal" href="https://www.cityofcorsicana.com/" title="Close this window"><svg viewBox="0 0 25 25" id="modalIconClose" role="presentation" aria-hidden="true" tabindex="-1"><polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon></svg></a></div><div id="ctl00_liveEditContentLeft" class="modalContentLeft"><div id="ctl00_liveEditContentRight" class="modalContentRight"><div id="ctl00_liveEditContent" class="modalContent"><iframe style="display: none; border: none;" src="about:blank" id="liveEditDialog" title="Live Edit Dialog" name="liveEditDialog"></iframe></div></div></div><div id="ctl00_liveEditFooter" class="modalBottomLeft"><div id="ctl00_liveEditfooterbar" class="modalBottomRight"><div id="ctl00_liveEditfooterbar1" class="modalBottom"></div></div></div>
+</div><div id="editItemBehavior_backgroundElement" class="modalBackground" style="display: none; position: fixed; left: 0px; top: 0px; z-index: 10000;"></div><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu238" class="contentTop mainNavMegaMenu megaMenuContainer pageID_238 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 176.781px;">	<div id="cc454eb09c-9ab8-4c41-95f9-5d6d3c387de5" data-containerid="454eb09c-9ab8-4c41-95f9-5d6d3c387de5" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu279" class="contentTop mainNavMegaMenu megaMenuContainer pageID_279 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 176.781px;">	<div id="cc9d285cf8-1be4-4752-b673-85fcbe5b606c" data-containerid="9d285cf8-1be4-4752-b673-85fcbe5b606c" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu202" class="contentTop mainNavMegaMenu megaMenuContainer pageID_202 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 176.781px;">	<div id="cc8daac681-89ba-4540-92d8-ac92c302e30c" data-containerid="8daac681-89ba-4540-92d8-ac92c302e30c" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><aside role="presentation" data-cprole="contentContainer" id="mainNavMegaMenu164" class="contentTop mainNavMegaMenu megaMenuContainer pageID_164 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; left: 31.9px; width: 1201.2px; top: 176.781px;">	<div id="ccba49f891-25bf-4174-9993-16d650858303" data-containerid="ba49f891-25bf-4174-9993-16d650858303" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+
+
+	</div>
+</aside><div id="widgetSiteToolsBody5907675d-f118-4584-8f65-59391308b759" class="widgetBody blackIcons flyOut top leftEdge widget widgetSiteTools skin9 cpGrid cpGrid1 moved" style="display: none; position: absolute; z-index: 100; top: 1413.33px; left: 31.8906px;" data-parentid="widgetSiteTools5907675d-f118-4584-8f65-59391308b759">
+         <div class="row                   
+ wide">
+	<div class="col col1 first last">
+		<ol class="semanticList">
+					<li class="widgetItem"><a tabindex="0" role="link" aria-label="Site Tools Home" class="widgetSiteToolsHome siteToolsService" href="https://www.cityofcorsicana.com/" data-ae-ignore-keys="tab shift+tab">Home</a></li>
+					<li class="widgetItem"><a tabindex="0" role="link" aria-label="Site Tools My Account" class="widgetSiteToolsMyAccount siteToolsService" href="https://www.cityofcorsicana.com/MyAccount" data-ae-ignore-keys="tab shift+tab">My Account</a></li>
+					<li id="PrinterFriendly5907675d-f118-4584-8f65-59391308b759" class="widgetItem"><a tabindex="0" aria-label="Site Tools Printer Friendly View opens in a new window" role="link" class="widgetSiteToolsPrinterFriendly siteToolsService" onkeypress="if (event.which == 13) { this.onclick(); }" onclick="Core.Layout.dynamicJavascript('printPreview();'); return false;" href="https://www.cityofcorsicana.com/directory.aspx?did=11#PrinterFriendly5907675d-f118-4584-8f65-59391308b759" data-ae-ignore-keys="tab shift+tab">Printer Friendly</a></li>
+					<li class="widgetItem"><a tabindex="0" role="link" aria-label="Site Tools Email Page" class="widgetSiteToolsEmailPage siteToolsService" href="https://www.cityofcorsicana.com/EmailPage" data-ae-ignore-keys="tab shift+tab">Email Page</a></li>
+					<li class="widgetItem"><a tabindex="0" role="link" aria-label="Site Tools Contact Us" class="widgetSiteToolsContactUs siteToolsService" href="https://www.cityofcorsicana.com/directory.aspx" data-ae-ignore-keys="tab shift+tab">Contact Us</a></li>
+					<li class="widgetItem"><a tabindex="0" role="link" aria-label="Site Tools RSS" class="widgetSiteToolsRSS siteToolsService" href="https://www.cityofcorsicana.com/rss.aspx" data-ae-ignore-keys="tab shift+tab">RSS</a></li>
+					<li class="widgetItem"><a tabindex="0" role="link" aria-label="Site Tools Site Map" class="widgetSiteToolsSiteMap siteToolsService" href="https://www.cityofcorsicana.com/SiteMap" data-ae-ignore-keys="tab shift+tab">Site Map</a></li>
+					<li id="TranslatePage5907675d-f118-4584-8f65-59391308b759" class="widgetItem"><a tabindex="0" aria-label="Site Tools Translate Page opens in a new window" role="link" class="widgetSiteToolsTranslatePage siteToolsService" onkeypress="if (event.which == 13) { this.onclick(); }" onclick="Core.Layout.dynamicJavascript('window.open(\'https://translate.google.com/translate?js=n&amp;sl=auto&amp;tl=es&amp;u=\' + document.location.href, \&quot;TranslateWindow\&quot;);'); return false;" href="https://www.cityofcorsicana.com/directory.aspx?did=11#TranslatePage5907675d-f118-4584-8f65-59391308b759" data-ae-ignore-keys="tab shift+tab">Translate Page</a></li>
+					<li class="widgetItem"><a tabindex="0" role="link" aria-label="Site Tools Notifications" class="widgetSiteToolsNotifications siteToolsService" href="https://www.cityofcorsicana.com/list.aspx" data-ae-ignore-keys="tab shift+tab">Notifications</a></li>
+					<li class="widgetItem"><a tabindex="0" role="link" aria-label="Site Tools Documents" class="widgetSiteToolsDocuments siteToolsService" href="https://www.cityofcorsicana.com/DocumentCenter" data-ae-ignore-keys="tab shift+tab">Documents</a></li>
+		</ol>
+	</div>
+
+		 </div>
+	</div><div id="widgetShareBodyba08e2e7-4eda-4890-9c4a-756aff3607d9" class="widgetBody flyOut top leftEdge widget widgetShare skin9 cpGrid cpGrid1 moved" style="display: none; position: absolute; z-index: 100; top: 1503.33px; left: 172.016px;" data-parentid="widgetShareba08e2e7-4eda-4890-9c4a-756aff3607d9">
+        <div class="row                   
+ wide">
+	<div class="col col1 first last">
+		<ol class="semanticList">
+                <li class="widgetItem"><a tabindex="0" role="link" class="widgetShareFacebook shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.cityofcorsicana.com/Layout/WidgetShare/ShareLink/Facebook" target="_blank" aria-label="Facebook Opens in new window" rel="noopener" data-ae-ignore-keys="tab shift+tab">Facebook</a></li>
+                <li class="widgetItem"><a tabindex="0" role="link" class="widgetShareTwitter shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.cityofcorsicana.com/Layout/WidgetShare/ShareLink/Twitter" target="_blank" aria-label="Twitter Opens in new window" rel="noopener" data-ae-ignore-keys="tab shift+tab">Twitter</a></li>
+                <li class="widgetItem"><a tabindex="0" role="link" class="widgetSharePinterest shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.cityofcorsicana.com/Layout/WidgetShare/ShareLink/Pinterest" target="_blank" aria-label="Pinterest Opens in new window" rel="noopener" data-ae-ignore-keys="tab shift+tab">Pinterest</a></li>
+                <li class="widgetItem"><a tabindex="0" role="link" class="widgetShareDelicious shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.cityofcorsicana.com/Layout/WidgetShare/ShareLink/Delicious" target="_blank" aria-label="Delicious Opens in new window" rel="noopener" data-ae-ignore-keys="tab shift+tab">Delicious</a></li>
+                <li class="widgetItem"><a tabindex="0" role="link" class="widgetShareBlogger shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.cityofcorsicana.com/Layout/WidgetShare/ShareLink/Blogger" target="_blank" aria-label="Blogger Opens in new window" rel="noopener" data-ae-ignore-keys="tab shift+tab">Blogger</a></li>
+                <li class="widgetItem"><a tabindex="0" role="link" class="widgetShareLinkedIn shareService" onkeypress="if(event.which == 13) { this.onclick(); }" href="https://www.cityofcorsicana.com/Layout/WidgetShare/ShareLink/LinkedIn" target="_blank" aria-label="LinkedIn Opens in new window" rel="noopener" data-ae-ignore-keys="tab shift+tab">LinkedIn</a></li>
+		</ol>
+	</div>
+
+        </div>
+    </div><div id="bannerSlideshowControls_banner1" class="bannerSlideshowControlsNew none " style="display:none">
+			<a id="arrowPrev_banner1" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class="" role="presentation" aria-hidden="true" tabindex="-1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner1" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class="" role="presentation" aria-hidden="true" tabindex="-1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div><script src="https://wsmcdn.audioeye.com/aem.js" type="text/javascript" async=""></script><script src="https://wsv3cdn.audioeye.com/bootstrap.js?h=94fbc54b444f6cc771131ee7d0835ddf" type="text/javascript" async=""></script><script async="" crossorigin="anonymous" src="https://wsv3cdn.audioeye.com/v2/scripts/loader.js?h=94fbc54b444f6cc771131ee7d0835ddf&amp;lang=en&amp;cb=2026-01-28"></script><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b role="emphasis">&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div><script type="text/javascript" src="https://wsv3cdn.audioeye.com/static-scripts/v2/2026-01-28/startup.bundle.js"></script><div id="ae_app" data-nosnippet="">
+    
+        <!--
+        Layout, Style or Voice Helpers
+    -->
+    <div id="ae_helpers" class="ae-module" style="display: none;">
+
+    
+<script type="text/javascript">
+AudioEye.layoutHelpers.push(function(ele){
+
+// Tabset function setup - Active Class is the class the li gets when the element is active
+// Function includes tabsetup, tab labels and keylooping
+function tabSet(listParent, listItem, listAnchor, activeClass, tabPanels){
+  // Setting roles and initial values
+  $ae(listParent).each(function(){
+    if ($ae(this).find(listItem).length > 1) {
+      if($ae(this).css('display') !== 'none'){
+        $ae(this).attr({'role':'tablist'});
+      }
+
+      $ae(this).find(listItem).attr({'role':'presentation'});
+      $ae(this).find(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+      $ae(this).find(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+      $ae(this).find(tabPanels).each(function(){
+        if($ae(this).parent().find(listParent).css('display') !== 'none'){
+          $ae(this).attr({'role':'tabpanel'});
+        }
+      });
+    }
+  });
+
+
+  // Encapsulate events - Key Navigation for tabsets without tabindex
+  ele.outerFind(listParent).each(function(){
+    if ($ae(this).find(listItem).length > 1) {
+      // Change active tab onclick event
+      $ae(this).find('a').click(function(){
+        $ae(listParent).find('a').attr({'aria-selected':'false', 'tabindex':'-1'});	
+        $ae(listParent).find('li.active a').attr({'aria-selected':'true', 'tabindex':'0'});	
+      });
+
+
+      // tabset keylooping
+      $ae(this).find('a').on('keydown', function(e){
+        if(e.keyCode === 13 || e.keyCode === 32){
+          e.preventDefault();
+          this.click();
+        }
+        else if(e.keyCode === 37 && ($ae(this)[0] === $ae(this).closest('ol').find('a').first()[0])){
+          AudioEye.focusElement($ae(this).closest('ol').find('a').eq(-1));
+        }
+        else if( e.keyCode === 39 && ($ae(this)[0] === $ae(this).closest('ol').find('a').last()[0])){
+          AudioEye.focusElement($ae(this).closest('ol').find('a').first());
+        }
+        else if(e.keyCode === 37 ){
+          AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+        }
+        else if(e.keyCode === 39 ){
+          AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+        }
+      });
+    }
+
+  });	// Close encapsulated actions
+}
+// tabset function call
+tabSet('ol.tabbedWidget.cpTabs','ol.tabbedWidget.cpTabs li','ol.tabbedWidget.cpTabs li > a','active','.cpTabPanels');
+/* end */
+
+
+/* Start new tabset */
+// Facilites Map & Listing Tabset
+function  facilitiesTabSet(listParent, listItem, listAnchor, activeClass, tabPanels){
+
+  // Setting roles and initial values
+  $ae(listParent).attr({'role':'tablist'});
+  $ae(listItem).attr({'role':'presentation'});
+  $ae(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+  $ae(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+  $ae(tabPanels).attr({'role':'tabpanel'});
+
+  $ae(listAnchor).click(function(){
+    $ae(listAnchor).attr({'aria-selected':'false', 'tabindex':'-1'});
+    $ae(this).attr({'aria-selected':'true', 'tabindex':'0'});
+  });
+
+  ele.outerFind('.searchResults > ol.tabs').each(function(){
+
+    $ae(this).find('a').on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+      else if((e.keyCode === 37 || e.keyCode === 38) && ($ae(this)[0] === $ae(this).closest('ol').find('a').first()[0])){
+        AudioEye.focusElement($ae(this).closest('ol').find('a').eq(-1));
+      }
+      else if((e.keyCode === 39 || e.keyCode === 40) && ($ae(this)[0] === $ae(this).closest('ol').find('a').last()[0])){
+        AudioEye.focusElement($ae(this).closest('ol').find('a').first());
+      }
+      else if(e.keyCode === 37 || e.keyCode === 38){
+        AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+      }
+      else if(e.keyCode === 39 || e.keyCode === 40){
+        AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+      }
+    });
+
+  }); 
+
+}
+
+facilitiesTabSet('.searchResults > ol.tabs','.searchResults > ol.tabs > li','.searchResults > ol.tabs > li > a','active','.searchResults > div');
+/* -END- */
+
+/* Start new tabset */
+// Facilitites Sidebar Tabset
+function sideBarTabset(listParent, listItem, listAnchor, activeClass, tabPanels){
+
+  // Setting roles and initial values
+  $ae(listParent).attr({'role':'tablist'});
+  $ae(listItem).attr({'role':'presentation'});
+  $ae(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+  $ae(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+  //$ae(tabPanels).attr({'role':'tabpanel'});
+
+  $ae(listAnchor).click(function(){
+    $ae(listAnchor).attr({'aria-selected':'false', 'tabindex':'-1'});
+    $ae(this).attr({'aria-selected':'true', 'tabindex':'0'});
+  });
+
+  ele.outerFind('ul.tabs.searchCriteria').each(function(){
+
+    $ae(this).find('a').on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+      else if((e.keyCode === 37 || e.keyCode === 38) && ($ae(this)[0] === $ae(this).closest('ul').find('a').first()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').eq(-1));
+      }
+      else if((e.keyCode === 39 || e.keyCode === 40) && ($ae(this)[0] === $ae(this).closest('ul').find('a').last()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').first());
+      }
+      else if(e.keyCode === 37 || e.keyCode === 38){
+        AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+      }
+      else if(e.keyCode === 39 || e.keyCode === 40){
+        AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+      }
+    });
+
+  }); 
+
+}
+
+sideBarTabset('ul.tabs.searchCriteria','ul.tabs.searchCriteria > li','ul.tabs.searchCriteria > li > a','active','ul.tabs.searchCriteria + div.sidebar > div');
+/* End */
+
+/* Start new tabset */
+function calendarTabset(listParent, listItem, listAnchor, activeClass, tabPanels){
+
+  // Setting roles and initial values
+  $ae(listParent).attr({'role':'tablist'});
+  $ae(listItem).attr({'role':'presentation'});
+  $ae(listAnchor).attr({'aria-selected':'false', 'role':'tab', 'tabindex':'-1'});
+
+  $ae(listItem + '.' + activeClass + ' a').attr({'aria-selected':'true', 'tabindex':'0'});
+  $ae(tabPanels).attr({'role':'tabpanel'});
+
+  $ae(listAnchor).click(function(){
+    $ae(listAnchor).attr({'aria-selected':'false', 'tabindex':'-1'});
+    $ae(this).attr({'aria-selected':'true', 'tabindex':'0'});
+  });
+
+  $ae('.header > #subheader ul.tabs').each(function(){
+
+    $ae(this).find('a').on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+      else if((e.keyCode === 37 || e.keyCode === 38)  && ($ae(this)[0] === $ae(this).closest('ul').find('a').first()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').eq(-1));
+      }
+      else if((e.keyCode === 39 || e.keyCode === 40) && ($ae(this)[0] === $ae(this).closest('ul').find('a').last()[0])){
+        AudioEye.focusElement($ae(this).closest('ul').find('a').first());
+      }
+      else if(e.keyCode === 37 || e.keyCode === 38){
+        AudioEye.focusElement($ae(this).closest('li').prev().find('a'));
+      }
+      else if(e.keyCode === 39 || e.keyCode === 40) {
+        AudioEye.focusElement($ae(this).closest('li').next().find('a'));
+      }
+    });
+
+  }); 
+
+}
+
+calendarTabset('.header > #subheader ul.tabs','.header > #subheader ul.tabs > li','.header > #subheader ul.tabs > li > a','active','.header > .list');
+/* end */
+
+// Tabset for Agenda Center Years
+// AE -  Agenda Center Tabset [AEI-40486]
+ele.outerFind('ul.years').each(function(){
+
+  tabset($ae(this), $ae(this).find('li'), $ae(this).find('a[id^="a"]'),'current', $ae(this).parent().find('table'));
+
+  function tabset(tablist, li, tabs, activeClass, tabPanel){
+    tablist.attr('role','tablist');
+    li.attr('role', 'presentation');
+    tabs.attr({'role': 'tab', 'tabindex':'-1', 'aria-selected':'false'});
+    $ae(li.selector +'.' + activeClass +' > '+ tabs.selector).attr({'aria-selected':'true', 'tabindex':'0'});
+    tabPanel.attr('role', 'tabpanel');
+
+    // individual tabs TODO - Update so it is dynamic
+    var tab = tablist.find('>'+li.selector+'>a');
+
+    tab.on('keydown', function(e){
+      if(e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        this.click();
+      }
+    }).click(function(){
+      $ae('body').data({'ae-year-tab': '#' + $ae(this).attr('id')});
+      setTimeout(function(){
+        AudioEye.focusElement($ae('body').data('ae-year-tab'));
+        $ae($ae('body').data('ae-year-tab')).attr('tabindex','0');
+      }, 1000);
+    });
+  }
+
+});
+
+}); // layout helpers push close brackets
+</script>
+
+    </div>
+    
+
+        <!--
+        Compliance
+    -->
+    <div id="ae_compliance" class="ae-module" style="display: none;">
+
+        <!-- For autoSmartRem addNewWindowWarnings div is referenced in an aria-describedby -->
+        <div id="audioeye_new_window_message" style="display:none">Opens in new window</div>
+        <div id="audioeye_pdf_message" style="display:none">PDF Download</div>
+        <div id="audioeye_word_message" style="display:none">Word Download</div>
+        <div id="audioeye_excel_message" style="display:none">Excel Download</div>
+        <div id="audioeye_powerpoint_message" style="display:none">PowerPoint Download</div>
+        <div id="audioeye_document_message" style="display:none">Document Download</div>
+
+                    </div>
+    
+    <!--
+        Versioning Control Panel if versioning = true !
+    -->
+        
+    <!--
+        Launcher
+    -->
+    <span id="ae_placeholder_launcher" style="display: none;" aria-hidden="true"></span>
+
+    <!-- Toolbar -->
+
+    <span id="ae_placeholder_toolbar" style="display: none;" aria-hidden="true"></span>
+
+    <!--
+        Site Menu
+    -->
+    <span id="ae_placeholder_site-menu" style="display: none;" aria-hidden="true"></span>
+
+    
+    <!--
+        Generic Aria Live message container
+    -->
+    <div class="ae-blurb-noaudio" id="ae_enabled_messages" aria-relevant="additions" aria-live="assertive"></div>
+
+    
+    <!-- Symbol definitions -->
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="icon-close-carousel" viewBox="0 0 32 32">
+                <title>close carousel</title>
+                <path fill="#ffffff" style="fill: var(--color1, #ffffff)" d="M28.992 0l-12.992 12.992-12.992-12.992-3.008 3.008 12.992 12.992-12.992 12.992 3.008 3.008 12.992-12.992 12.992 12.992 3.008-3.008-12.992-12.992 12.992-12.992-3.008-3.008z"></path>
+            </symbol>
+        </defs>
+    </svg>
+
+</div><!-- end #ae_app --><style> body[data-audioeye-carousel-modal-active] .pageContent .col, body[data-audioeye-carousel-modal-active] .pageContent .row, body[data-audioeye-carousel-modal-active] .widget, body[data-audioeye-carousel-modal-active] [data-cprole$=Container], body[data-audioeye-carousel-modal-active] [data-cprole=banner], body[data-audioeye-carousel-modal-active] [data-cprole=nav] { z-index: unset !important; }</style></body></html>
