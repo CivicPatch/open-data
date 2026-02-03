@@ -1,0 +1,166 @@
+Staff Directory • Livingston, TX • CivicEngage
+
+
+
+
+
+
+
+  
+
+
+
+![Loading](https://www.cityoflivingston-tx.com/Common/images/ajax-loader.gif "Loading")
+
+Loading
+
+[Skip to Main Content](https://www.cityoflivingston-tx.com/directory.aspx#contentarea)
+
+
+
+
+
+
+
+
+
+
+
+![Livingston, TX](https://www.cityoflivingston-tx.com/ImageRepository/Document?documentID=1217)
+
+[Create a Website Account](https://www.cityoflivingston-tx.com/MyAccount/ProfileCreate) - Manage notification subscriptions, save form progress and more.   
+
+* [Website Sign In](https://www.cityoflivingston-tx.com/MyAccount)
+
+[![Livingston Texas Homepage](https://www.cityoflivingston-tx.com/ImageRepository/Document?documentID=1201)](https://www.cityoflivingston-tx.com/)
+
+[![Search](https://www.cityoflivingston-tx.com/ImageRepository/Document?documentID=1205)](https://www.cityoflivingston-tx.com/Search/Results)
+Search
+
+1. [Government](https://www.cityoflivingston-tx.com/27/Government)
+2. [Departments](https://www.cityoflivingston-tx.com/101/Departments)
+3. [Residents](https://www.cityoflivingston-tx.com/31/Residents)
+4. [Visitors](https://www.cityoflivingston-tx.com/35/Visitors)
+5. [How Do I?](https://www.cityoflivingston-tx.com/9/How-Do-I)
+
+![](https://www.cityoflivingston-tx.com/ImageRepository/Document?documentID=1203)
+
+1. [Trade Days Information](https://www.cityoflivingston-tx.com/180/Trade-Days-Information)
+
+1. [Home](https://www.cityoflivingston-tx.com/)
+2. Staff Directory
+
+Staff Directory
+===============
+
+
+
+
+Search the Directory
+
+Category:
+
+Staff Directory    Administrative Department        Webmaster    Code Enforcement    Community Development    Electric Department    Finance    Garage Department    Human Resources    Main Street    Livingston Municipal Library    Municipal Airport    Municipal Court    Parks and Recreation        City Swimming Pool        Livingston Golf Course        Trade Days    Police Department        Animal Control        Crime Stoppers    Public Works        Leaks, Stoppages and Outages        Street Department        Water Department        Wastewater Department    Special Events    Trade Days    Utility Billing    Volunteer Fire Department
+
+First Name:
+
+Last Name:
+
+Search
+
+
+
+| Categories | Telephone |
+| --- | --- |
+| [Administrative Department](https://www.cityoflivingston-tx.com/Directory.aspx?did=20)[936-327-4311](tel:9363274311)  [Webmaster](https://www.cityoflivingston-tx.com/Directory.aspx?did=32)  [Code Enforcement](https://www.cityoflivingston-tx.com/Directory.aspx?did=35)[936-327-4311](tel:9363274311)  [Community Development](https://www.cityoflivingston-tx.com/Directory.aspx?did=23)[936-327-4311](tel:9363274311)    [Electric Department](https://www.cityoflivingston-tx.com/Directory.aspx?did=26)[936-327-4311](tel:9363274311)  [Finance](https://www.cityoflivingston-tx.com/Directory.aspx?did=37)[936-327-4311](tel:9363274311)  [Garage Department](https://www.cityoflivingston-tx.com/Directory.aspx?did=25)[936-327-0048](tel:9363270048)  [Human Resources](https://www.cityoflivingston-tx.com/Directory.aspx?did=19)[936-327-4311](tel:9363274311)  [Main Street](https://www.cityoflivingston-tx.com/Directory.aspx?did=24)[936-327-3656](tel:9363273656)  [Livingston Municipal Library](https://www.cityoflivingston-tx.com/Directory.aspx?did=18)[936-327-4252](tel:9363274252)  [Municipal Airport](https://www.cityoflivingston-tx.com/Directory.aspx?did=30)[936-967-8059](tel:9369678059)  [Municipal Court](https://www.cityoflivingston-tx.com/Directory.aspx?did=16)[936-327-9322](tel:9363279322)  [Parks and Recreation](https://www.cityoflivingston-tx.com/Directory.aspx?did=9)[936-327-5242](tel:9363275242)  [City Swimming Pool](https://www.cityoflivingston-tx.com/Directory.aspx?did=10)[936-327-5242](tel:9363275242)  [Livingston Golf Course](https://www.cityoflivingston-tx.com/Directory.aspx?did=34)[936-327-4777](tel:9363274777)  [Trade Days](https://www.cityoflivingston-tx.com/Directory.aspx?did=11)[936-327-3656](tel:9363273656)  [Police Department](https://www.cityoflivingston-tx.com/Directory.aspx?did=6)[936-327-3117](tel:9363273117)  [Animal Control](https://www.cityoflivingston-tx.com/Directory.aspx?did=17)[936-327-3117](tel:9363273117)  [Crime Stoppers](https://www.cityoflivingston-tx.com/Directory.aspx?did=7)[936-327-7867](tel:9363277867)  [Public Works](https://www.cityoflivingston-tx.com/Directory.aspx?did=12)[936-327-4311](tel:9363274311)  [Leaks, Stoppages and Outages](https://www.cityoflivingston-tx.com/Directory.aspx?did=15)  [Street Department](https://www.cityoflivingston-tx.com/Directory.aspx?did=27)  [Water Department](https://www.cityoflivingston-tx.com/Directory.aspx?did=28)  [Wastewater Department](https://www.cityoflivingston-tx.com/Directory.aspx?did=29)  [Special Events](https://www.cityoflivingston-tx.com/Directory.aspx?did=22)[(936) 327-3656](tel:9363273656)  [Trade Days](https://www.cityoflivingston-tx.com/Directory.aspx?did=36)[(936) 327-3656](tel:9363273656)  [Utility Billing](https://www.cityoflivingston-tx.com/Directory.aspx?did=21)[936-327-4311](tel:9363274311)  [Volunteer Fire Department](https://www.cityoflivingston-tx.com/Directory.aspx?did=5)[936-327-8655](tel:9363278655)  Address Holder http://www.cityoflivingston-tx.com/directory.aspx?DID= | |
+
+
+Enter search terms to display a list of entries in the Staff Directory.  
+  
+JavaScript is required, and must be turned on, for a listing to appear on this Directory entry page. We apologize for any inconvenience this may cause.
+
+* [Building Code  
+  Permits & Forms](https://www.cityoflivingston-tx.com/151/Building-Codes-Permits)
+
+* [Agendas & Minutes](https://www.cityoflivingston-tx.com/agendacenter)
+
+* [Records & Archives](https://www.cityoflivingston-tx.com/archive.aspx)
+
+* [Xpress Bill Pay](https://www.xpressbillpay.com/#/?org=livingston10796)
+
+* [Notify Me®](https://www.cityoflivingston-tx.com/list.aspx)
+
+1. ![A Great Place To Call Home](https://www.cityoflivingston-tx.com/ImageRepository/Document?documentId=1214)
+
+1. [![Livingston Texas Homepage](https://www.cityoflivingston-tx.com/ImageRepository/Document?documentId=1213)](https://www.cityoflivingston-tx.com/)
+
+### Contact Us
+
+1. City of Livingston
+
+1. 200 W Church Street
+
+1. Livingston, TX 77351
+
+1. Phone: [936-327-4311](tel:9363274311)
+
+### [Quick Links](https://www.cityoflivingston-tx.com/QuickLinks.aspx?CID=19)
+
+1. [Code of Ordinances](https://www.municode.com/library/tx/livingston/codes/code_of_ordinances)
+
+1. [Xpress Bill Pay Online Utility Payments](https://xpressbillpay.com/#/?org=livingston10796)
+
+1. [Trade Days Information](http://cityoflivingston-tx.com/175/Trade-Days)
+
+1. [Community Calendar](https://www.cityoflivingston-tx.com/calendar.aspx)
+
+1. [Genasys Emergency Notification System](https://livingston.genasys.com/portal/en/register)
+
+1. [Fix-It Form](http://tx-livingston.civicplus.com/forms.aspx?FID=63)
+
+/QuickLinks.aspx
+
+1. [Site Map](https://www.cityoflivingston-tx.com/sitemap)
+
+1. [Accessibility](https://www.cityoflivingston-tx.com/Accessibility)
+
+1. [Copyright / Privacy](https://www.cityoflivingston-tx.com/site/copyright)
+
+/QuickLinks.aspx
+
+Government Websites by [CivicPlus®](https://connect.civicplus.com/referral)
+
+Loading
+
+Loading
+
+Do Not Show Again
+Close
+
+
+
+
+
+
+
+
+
+
+
+
+
+Arrow Left
+
+
+Arrow Right
+
+Slideshow Left Arrow
+
+
+Slideshow Right Arrow
+
+
+
+### Live Edit
+
+Close **×**
