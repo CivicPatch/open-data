@@ -1,6 +1,6 @@
-[2026-01-23T03:08:05.844246] [INFO] Step 1: RESEARCH_MUNICIPALITY
-[2026-01-23T03:08:05.844811] [INFO] Running Gemini prompt
-[2026-01-23T03:08:05.845163] [DEBUG] Prompt: 
+[2026-02-03T01:12:13.495620] [INFO] Step 1: RESEARCH_MUNICIPALITY
+[2026-02-03T01:12:13.510587] [INFO] Running Gemini prompt
+[2026-02-03T01:12:13.511673] [DEBUG] Prompt: 
 
     Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
 
@@ -8,29 +8,21 @@
 
     Instructions:
 
-    1. Determine the government type of the city. Available government types:
-- mayor_commission
-- mayor_council
-- township_committee
-- select_board
-- aldermen
-
-    2. Identify the elected officials in the local government, 
+    1. Identify the elected officials in the local government, 
        including the Mayor (if applicable).
-       2.1. For each official, extract the following details:
+       1.1. For each official, extract the following details:
             - name: Full name only (no titles)
             - roles: List of active municipal roles (e.g., Mayor, Council Member)
-            - divisions: List of (ward, district), only if applicable
+            - designations: List of (ward, district, precinct, position, seat, place, post, at-large), if applicable
 
     3. Create a JSON object with the following structure:
        ```json
        {
-         "government_type": examples - "mayor_council" or "mayor_commission", etc.,
          "people": [
            {
              "name": "Full name of the official or null if uncertain",
              "roles": ["Mayor", "Council Member", "Commissioner", etc.],
-             "divisions": ["Ward 1", "District 2", etc.] or [],
+             "designations": ["Ward 1", "District 2", etc.] or [],
            }
          ],
          "notes": "Brief notes about the search and results"
@@ -42,60 +34,151 @@
     Verify that the response is valid JSON before returning it.
     If it is not valid JSON, retry the generation.
     
-[2026-01-23T03:08:12.699746] [DEBUG] Gemini raw response: {'government_type': 'mayor_council', 'people': [{'name': 'Kirk Watson', 'roles': ['Mayor'], 'divisions': []}, {'name': 'Natasha Harper-Madison', 'roles': ['Council Member'], 'divisions': ['District 1']}, {'name': 'Vanessa Fuentes', 'roles': ['Council Member'], 'divisions': ['District 2']}, {'name': 'José Velásquez', 'roles': ['Council Member'], 'divisions': ['District 3']}, {'name': 'José “Chito” Vela', 'roles': ['Council Member'], 'divisions': ['District 4']}, {'name': 'Ryan Alter', 'roles': ['Council Member'], 'divisions': ['District 5']}, {'name': 'Krista Laine', 'roles': ['Council Member'], 'divisions': ['District 6']}, {'name': 'Mike Siegel', 'roles': ['Council Member'], 'divisions': ['District 7']}, {'name': 'Paige Ellis', 'roles': ['Council Member'], 'divisions': ['District 8']}, {'name': 'Zohaib "Zo" Qadri', 'roles': ['Council Member'], 'divisions': ['District 9']}, {'name': 'Marc Duchen', 'roles': ['Council Member'], 'divisions': ['District 10']}], 'notes': 'Austin, Texas, operates under a council-manager form of government, which is a type of mayor-council system. The Mayor is a member of the City Council. The City Council consists of the Mayor and ten council members, each representing a single-member district.'}
-[2026-01-23T03:08:12.702762] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 363, Output tokens: 1167, Total cost: $0.003026
-[2026-01-23T03:08:12.703187] [INFO] gemini gemini-2.5-flash LLM call took 6.86 seconds
-[2026-01-23T03:08:12.703699] [INFO] Source URLs not found, using search engine for links.
-[2026-01-23T03:08:12.788283] [INFO] Step 2: SEARCH_LINKS from website: https://www.austintexas.gov/
-[2026-01-23T03:08:12.819521] [INFO] Using government type: mayor_council for keyword selection with keywords: {'mayor': ['mayor and city council', 'about mayor', 'meet the mayor', 'about the mayor', 'mayor', 'council president', 'council manager'], 'council members': ['meet the council', 'city council members', 'council bios', 'council members', 'councilmembers', 'counsel member', 'city council', 'board of trustees', 'council districts', 'city hall', 'council', 'municipal directory'], 'elected officials': ['elected officials', 'city administration', 'index', 'government', 'bios', 'meet', 'about']}
-[2026-01-23T03:08:12.820066] [INFO] Searching for keyword term: mayor, keywords: ['mayor and city council', 'about mayor', 'meet the mayor', 'about the mayor', 'mayor', 'council president', 'council manager']
-[2026-01-23T03:08:12.820795] [INFO] Searching with google for Austin city mayor
-[2026-01-23T03:08:12.924802] [ERROR] Error during search with google: Google Search API error: 429 Too Many Requests
-[2026-01-23T03:08:12.925688] [INFO] No links found, re-running step to try next search engine.
-[2026-01-23T03:08:13.119441] [INFO] Step 2: SEARCH_LINKS from website: https://www.austintexas.gov/
-[2026-01-23T03:08:13.147504] [INFO] Using government type: mayor_council for keyword selection with keywords: {'mayor': ['mayor and city council', 'about mayor', 'meet the mayor', 'about the mayor', 'mayor', 'council president', 'council manager'], 'council members': ['meet the council', 'city council members', 'council bios', 'council members', 'councilmembers', 'counsel member', 'city council', 'board of trustees', 'council districts', 'city hall', 'council', 'municipal directory'], 'elected officials': ['elected officials', 'city administration', 'index', 'government', 'bios', 'meet', 'about']}
-[2026-01-23T03:08:13.147828] [INFO] Crawl queue length: 1, crawling page 1 of 10
-[2026-01-23T03:08:13.148242] [INFO] Crawling URL: https://www.austintexas.gov/
-[2026-01-23T03:08:16.034242] [INFO] Crawl queue length: 153, crawling page 2 of 10
-[2026-01-23T03:08:16.034646] [INFO] Crawling URL: https://www.austintexas.gov/#main-content
-[2026-01-23T03:08:18.441804] [INFO] Crawl queue length: 304, crawling page 3 of 10
-[2026-01-23T03:08:18.442533] [INFO] Crawling URL: https://www.austintexas.gov/department/311
-[2026-01-23T03:08:20.895332] [INFO] Crawl queue length: 430, crawling page 4 of 10
-[2026-01-23T03:08:20.895855] [INFO] Crawling URL: https://www.austintexas.gov/resident
-[2026-01-23T03:08:23.402112] [INFO] Crawl queue length: 564, crawling page 5 of 10
-[2026-01-23T03:08:23.402800] [INFO] Crawling URL: https://www.austintexas.gov/resident
-[2026-01-23T03:08:23.403336] [INFO] Crawl queue length: 563, crawling page 5 of 10
-[2026-01-23T03:08:23.404220] [INFO] Crawling URL: https://www.austintexas.gov/resident
-[2026-01-23T03:08:23.404728] [INFO] Crawl queue length: 562, crawling page 5 of 10
-[2026-01-23T03:08:23.405330] [INFO] Crawling URL: https://www.austintexas.gov/resident/household
-[2026-01-23T03:08:26.027135] [INFO] Crawl queue length: 689, crawling page 6 of 10
-[2026-01-23T03:08:26.027733] [INFO] Crawling URL: https://www.austintexas.gov/resident/getting-home
-[2026-01-23T03:08:28.462027] [INFO] Crawl queue length: 804, crawling page 7 of 10
-[2026-01-23T03:08:28.462546] [INFO] Crawling URL: https://www.austintexas.gov/resident/utilities
-[2026-01-23T03:08:31.016310] [INFO] Crawl queue length: 922, crawling page 8 of 10
-[2026-01-23T03:08:31.016767] [INFO] Crawling URL: https://www.austintexas.gov/resident/trash-recycling-and-composting
-[2026-01-23T03:08:33.486958] [INFO] Crawl queue length: 1033, crawling page 9 of 10
-[2026-01-23T03:08:33.487479] [INFO] Crawling URL: https://www.austintexas.gov/page/austin-senior-services-hub
-[2026-01-23T03:08:36.203368] [INFO] Crawl queue length: 1194, crawling page 10 of 10
-[2026-01-23T03:08:36.203952] [INFO] Crawling URL: https://www.austintexas.gov/resident/gardening-and-home-improvements
-[2026-01-23T03:08:38.816199] [INFO] Crawl queue length: 1304, crawling page 11 of 10
-[2026-01-23T03:08:41.159555] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.austintexas.gov/department/city-council/council-meetings
-[2026-01-23T03:08:44.203079] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/world-white.svg
-[2026-01-23T03:08:44.216996] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/dropdown-arrow-white.svg
-[2026-01-23T03:08:44.233965] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/austin-header-branding-logo.svg
-[2026-01-23T03:08:44.249478] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/files/Communications/Web_Content/2015/city-council-banner-700.jpg
-[2026-01-23T03:08:44.250622] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/files/Communications/Web_Content/2015/city-council-banner-700.jpg
-[2026-01-23T03:08:44.372996] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/bc64478aa2fb.png
-[2026-01-23T03:08:44.673604] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.austintexas.gov/department/city-council/council-meetings
-[2026-01-23T03:08:44.733893] [DEBUG] -> Preprocessing with identities: {'Kirk Watson': ['Kirk Watson'], 'Natasha Harper-Madison': ['Natasha Harper-Madison'], 'Vanessa Fuentes': ['Vanessa Fuentes'], 'José Velásquez': ['José Velásquez'], 'José “Chito” Vela': ['José “Chito” Vela'], 'Ryan Alter': ['Ryan Alter'], 'Krista Laine': ['Krista Laine'], 'Mike Siegel': ['Mike Siegel'], 'Paige Ellis': ['Paige Ellis'], 'Zohaib "Zo" Qadri': ['Zohaib "Zo" Qadri'], 'Marc Duchen': ['Marc Duchen']}
-[2026-01-23T03:08:48.827599] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+[2026-02-03T01:12:18.957477] [DEBUG] Gemini raw response: {'people': [{'name': 'Kirk Watson', 'roles': ['Mayor'], 'designations': []}, {'name': 'Natasha Harper-Madison', 'roles': ['Council Member'], 'designations': ['District 1']}, {'name': 'Vanessa Fuentes', 'roles': ['Council Member'], 'designations': ['District 2']}, {'name': 'José Velásquez', 'roles': ['Council Member'], 'designations': ['District 3']}, {'name': 'José "Chito" Vela', 'roles': ['Council Member'], 'designations': ['District 4']}, {'name': 'Ryan Alter', 'roles': ['Council Member'], 'designations': ['District 5']}, {'name': 'Krista Laine', 'roles': ['Council Member'], 'designations': ['District 6']}, {'name': 'Mike Siegel', 'roles': ['Council Member'], 'designations': ['District 7']}, {'name': 'Paige Ellis', 'roles': ['Council Member'], 'designations': ['District 8']}, {'name': 'Zohaib "Zo" Qadri', 'roles': ['Council Member'], 'designations': ['District 9']}, {'name': 'Marc Duchen', 'roles': ['Council Member'], 'designations': ['District 10']}], 'notes': 'The elected officials for Austin, TX, include the Mayor and ten City Council members, each representing a specific district. The information was gathered from the official AustinTexas.gov website and Wikipedia.'}
+[2026-02-03T01:12:18.962763] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 315, Output tokens: 953, Total cost: $0.002477
+[2026-02-03T01:12:18.963768] [INFO] gemini gemini-2.5-flash LLM call took 5.45 seconds
+[2026-02-03T01:12:18.988914] [INFO] Running Gemini prompt
+[2026-02-03T01:12:18.989400] [DEBUG] Prompt: 
 
-[2026-01-23T03:08:48.829381] [INFO] -> Elapsed time: 4.15 seconds
-[2026-01-23T03:08:48.829992] [INFO] -> Average elapsed time: 2.08 seconds
-[2026-01-23T03:08:48.830595] [INFO] -> Total elapsed time: 4.15 seconds
-[2026-01-23T03:08:48.940649] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.austintexas.gov/department/city-council/council-meetings
-[2026-01-23T03:08:48.942859] [INFO] Running OpenAI prompt
-[2026-01-23T03:08:48.943144] [DEBUG] Prompt: 
+    Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
+
+    Municipality: Austin city, tx
+
+    Instructions:
+
+    1. Identify the elected officials in the local government, 
+       including the Mayor (if applicable).
+       1.1. For each official, extract the following details:
+            - name: Full name only (no titles)
+            - roles: List of active municipal roles (e.g., Mayor, Council Member)
+            - designations: List of (ward, district, precinct, position, seat, place, post, at-large), if applicable
+
+    3. Create a JSON object with the following structure:
+       ```json
+       {
+         "people": [
+           {
+             "name": "Full name of the official or null if uncertain",
+             "roles": ["Mayor", "Council Member", "Commissioner", etc.],
+             "designations": ["Ward 1", "District 2", etc.] or [],
+           }
+         ],
+         "notes": "Brief notes about the search and results"
+       }
+       ```
+
+    IMPORTANT: If the response contains anything other than a valid JSON object,
+    it will be considered incorrect. Ensure the response is strictly JSON.
+    Verify that the response is valid JSON before returning it.
+    If it is not valid JSON, retry the generation.
+    
+[2026-02-03T01:12:27.737987] [DEBUG] Gemini raw response: {'people': [{'name': 'Kirk Watson', 'roles': ['Mayor'], 'designations': []}, {'name': 'Marc Duchen', 'roles': ['Council Member'], 'designations': []}, {'name': 'Vanessa Fuentes', 'roles': ['Council Member'], 'designations': []}, {'name': 'Krista Laine', 'roles': ['Council Member'], 'designations': ['District 6']}, {'name': 'Ryan Alter', 'roles': ['Council Member'], 'designations': []}, {'name': 'Paige Ellis', 'roles': ['Council Member'], 'designations': []}, {'name': 'Natasha Harper-Madison', 'roles': ['Council Member'], 'designations': []}, {'name': 'Chito Vela', 'roles': ['Council Member', 'Mayor Pro Tem'], 'designations': []}, {'name': 'José Velásquez', 'roles': ['Council Member'], 'designations': []}, {'name': 'Zo Qadri', 'roles': ['Council Member'], 'designations': []}, {'name': 'Mike Siegel', 'roles': ['Council Member'], 'designations': ['District 7']}], 'notes': 'The current elected officials for Austin, TX include the Mayor and ten City Council members. While specific districts were identified for Krista Laine and Mike Siegel, the districts for other council members were not explicitly stated in the provided search results. Chito Vela is also identified as Mayor Pro Tem.'}
+[2026-02-03T01:12:27.742941] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 315, Output tokens: 1840, Total cost: $0.004694
+[2026-02-03T01:12:27.744075] [INFO] gemini gemini-2.5-flash LLM call took 8.75 seconds
+[2026-02-03T01:12:27.745421] [INFO] Running Gemini prompt
+[2026-02-03T01:12:27.746372] [DEBUG] Prompt: 
+
+    Provide the current elected officials for the specified city, including the Mayor (if applicable) and other elected members of the local government. Format the response as a JSON object.
+
+    Municipality: Austin city, tx
+
+    Instructions:
+
+    1. Identify the elected officials in the local government, 
+       including the Mayor (if applicable).
+       1.1. For each official, extract the following details:
+            - name: Full name only (no titles)
+            - roles: List of active municipal roles (e.g., Mayor, Council Member)
+            - designations: List of (ward, district, precinct, position, seat, place, post, at-large), if applicable
+
+    3. Create a JSON object with the following structure:
+       ```json
+       {
+         "people": [
+           {
+             "name": "Full name of the official or null if uncertain",
+             "roles": ["Mayor", "Council Member", "Commissioner", etc.],
+             "designations": ["Ward 1", "District 2", etc.] or [],
+           }
+         ],
+         "notes": "Brief notes about the search and results"
+       }
+       ```
+
+    IMPORTANT: If the response contains anything other than a valid JSON object,
+    it will be considered incorrect. Ensure the response is strictly JSON.
+    Verify that the response is valid JSON before returning it.
+    If it is not valid JSON, retry the generation.
+    
+[2026-02-03T01:12:35.218949] [DEBUG] Gemini raw response: {'people': [{'name': 'Kirk Watson', 'roles': ['Mayor'], 'designations': []}, {'name': 'Natasha Harper-Madison', 'roles': ['Council Member'], 'designations': ['District 1']}, {'name': 'Vanessa Fuentes', 'roles': ['Council Member', 'Mayor Pro Tempore'], 'designations': ['District 2']}, {'name': 'José Velásquez', 'roles': ['Council Member'], 'designations': ['District 3']}, {'name': 'José “Chito” Vela', 'roles': ['Council Member'], 'designations': ['District 4']}, {'name': 'Ryan Alter', 'roles': ['Council Member'], 'designations': ['District 5']}, {'name': 'Krista Laine', 'roles': ['Council Member'], 'designations': ['District 6']}, {'name': 'Mike Siegel', 'roles': ['Council Member'], 'designations': ['District 7']}, {'name': 'Paige Ellis', 'roles': ['Council Member'], 'designations': ['District 8']}, {'name': 'Zohaib "Zo" Qadri', 'roles': ['Council Member'], 'designations': ['District 9']}, {'name': 'Marc Duchen', 'roles': ['Council Member'], 'designations': ['District 10']}], 'notes': 'The Austin City Council consists of the Mayor and ten Council Members, each representing a single-member district. Vanessa Fuentes is also listed as Mayor Pro Tempore since 2025.'}
+[2026-02-03T01:12:35.222647] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 315, Output tokens: 1110, Total cost: $0.002870
+[2026-02-03T01:12:35.223113] [INFO] gemini gemini-2.5-flash LLM call took 7.48 seconds
+[2026-02-03T01:12:35.224131] [INFO] Source URLs not found, using search engine for links.
+[2026-02-03T01:12:35.242666] [INFO] Step 2: SEARCH_LINKS from website: https://www.austintexas.gov/
+[2026-02-03T01:12:35.251131] [INFO] Searching for keyword term: mayor
+[2026-02-03T01:12:35.251592] [INFO] Searching with google for Austin city mayor
+[2026-02-03T01:12:35.619187] [INFO] -> https://www.austintexas.gov/department/mayor-kirk-watson
+[2026-02-03T01:12:35.619762] [INFO] -> https://www.austintexas.gov/department/city-council/council/council_meeting_info_center.htm
+[2026-02-03T01:12:35.620191] [INFO] -> https://www.austintexas.gov/austin-city-council
+[2026-02-03T01:12:35.620761] [INFO] -> https://www.austintexas.gov/
+[2026-02-03T01:12:35.621343] [INFO] -> https://www.austintexas.gov/government
+[2026-02-03T01:12:35.621854] [INFO] -> https://www.austintexas.gov/department/city-council/2025/20250813-reg.htm
+[2026-02-03T01:12:35.622470] [INFO] -> https://www.austintexas.gov/department/city-council/2025/20250911-reg.htm
+[2026-02-03T01:12:35.623031] [INFO] -> https://www.austintexas.gov/department/history-mayors
+[2026-02-03T01:12:35.623553] [INFO] -> https://www.austintexas.gov/email/all-council-members
+[2026-02-03T01:12:35.624083] [INFO] -> https://www.austintexas.gov/department/city-council/2025/20250925-reg.htm
+[2026-02-03T01:12:35.625174] [INFO] Search successful with google. Found 10 results.
+[2026-02-03T01:12:35.628416] [INFO] Searching for keyword term: council members
+[2026-02-03T01:12:35.629437] [INFO] Searching with google for Austin city council members
+[2026-02-03T01:12:35.895097] [INFO] -> https://www.austintexas.gov/austin-city-council
+[2026-02-03T01:12:35.895659] [INFO] -> https://www.austintexas.gov/department/city-council/about
+[2026-02-03T01:12:35.896310] [INFO] -> https://www.austintexas.gov/page/city-council-district-map
+[2026-02-03T01:12:35.896902] [INFO] -> https://www.austintexas.gov/email/all-council-members
+[2026-02-03T01:12:35.897694] [INFO] -> https://www.austintexas.gov/department/city-council/council/council_meeting_info_center.htm
+[2026-02-03T01:12:35.899012] [INFO] -> https://www.austintexas.gov/government
+[2026-02-03T01:12:35.899890] [INFO] -> https://www.austintexas.gov/department/district-2-council-member
+[2026-02-03T01:12:35.900479] [INFO] -> https://www.austintexas.gov/department/district-4
+[2026-02-03T01:12:35.901188] [INFO] -> https://www.austintexas.gov/department/city-council/2025/20250911-reg.htm
+[2026-02-03T01:12:35.901732] [INFO] -> https://www.austintexas.gov/department/city-council/2025/20250813-reg.htm
+[2026-02-03T01:12:35.904124] [INFO] Search successful with google. Found 10 results.
+[2026-02-03T01:12:35.905014] [INFO] Searching for keyword term: elected officials
+[2026-02-03T01:12:35.905556] [INFO] Searching with google for Austin city elected officials
+[2026-02-03T01:12:36.159224] [INFO] -> https://www.austintexas.gov/austin-city-council
+[2026-02-03T01:12:36.159687] [INFO] -> https://www.austintexas.gov/government
+[2026-02-03T01:12:36.159901] [INFO] -> https://www.austintexas.gov/department/city-council/about
+[2026-02-03T01:12:36.160383] [INFO] -> https://www.austintexas.gov/department/city-council/council/council_meeting_info_center.htm
+[2026-02-03T01:12:36.160796] [INFO] -> https://www.austintexas.gov/
+[2026-02-03T01:12:36.161240] [INFO] -> https://www.austintexas.gov/department/mayor-kirk-watson
+[2026-02-03T01:12:36.162052] [INFO] -> https://www.austintexas.gov/department/austin-city-managers-office
+[2026-02-03T01:12:36.162510] [INFO] -> https://services.austintexas.gov/edims/document.cfm?id=114612
+[2026-02-03T01:12:36.162969] [INFO] -> https://www.austintexas.gov/departments
+[2026-02-03T01:12:36.163419] [INFO] -> https://www.austintexas.gov/edims/document.cfm?id=224455
+[2026-02-03T01:12:36.164547] [INFO] Search successful with google. Found 10 results.
+[2026-02-03T01:12:36.196915] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.austintexas.gov/department/mayor-kirk-watson
+[2026-02-03T01:12:39.366425] [DEBUG] 📄 Standard site - using basic waiting strategy
+[2026-02-03T01:12:40.397530] [DEBUG] ✓ Basic content loaded
+[2026-02-03T01:12:40.490530] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/world-white.svg
+[2026-02-03T01:12:40.496788] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/dropdown-arrow-white.svg
+[2026-02-03T01:12:40.504478] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/austin-header-branding-logo.svg
+[2026-02-03T01:12:40.513188] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:12:40.513885] [DEBUG] Loading image from URL: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:12:40.671197] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/2aea3c207172.png
+[2026-02-03T01:12:40.690027] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:12:40.691962] [DEBUG] Loading image from URL: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:12:40.838110] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/2aea3c207172.png
+[2026-02-03T01:12:40.857354] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/images/Council/Mayor%20Watson-Headshot-240x240.jpg
+[2026-02-03T01:12:40.858339] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/images/Council/Mayor%20Watson-Headshot-240x240.jpg
+[2026-02-03T01:12:40.976029] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/bfbc538adb3c.png
+[2026-02-03T01:12:41.057488] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.austintexas.gov/department/mayor-kirk-watson
+[2026-02-03T01:12:41.098630] [DEBUG] -> Preprocessing with identities: {'Kirk Watson': ['Kirk Watson'], 'Natasha Harper-Madison': ['Natasha Harper-Madison'], 'Vanessa Fuentes': ['Vanessa Fuentes'], 'José Velásquez': ['José Velásquez'], 'José “Chito” Vela': ['José “Chito” Vela'], 'Ryan Alter': ['Ryan Alter'], 'Krista Laine': ['Krista Laine'], 'Mike Siegel': ['Mike Siegel'], 'Paige Ellis': ['Paige Ellis'], 'Zohaib "Zo" Qadri': ['Zohaib "Zo" Qadri'], 'Marc Duchen': ['Marc Duchen']}
+[2026-02-03T01:12:43.317562] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-02-03T01:12:43.317800] [INFO] -> Elapsed time: 2.26 seconds
+[2026-02-03T01:12:43.318015] [INFO] -> Average elapsed time: 2.26 seconds
+[2026-02-03T01:12:43.318448] [INFO] -> Total elapsed time: 2.26 seconds
+[2026-02-03T01:12:43.330892] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.austintexas.gov/department/mayor-kirk-watson
+[2026-02-03T01:12:43.332572] [INFO] Running OpenAI prompt
+[2026-02-03T01:12:43.332936] [DEBUG] Prompt: 
 
     Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
 
@@ -117,73 +200,32 @@
     - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
     - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
     
-[2026-01-23T03:08:48.943467] [INFO] openai LLM call took 0.00 seconds
-[2026-01-23T03:09:12.056662] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1593, Output tokens: 1445, Total cost: $0.003288
-[2026-01-23T03:09:12.061329] [INFO] Page relevance check found related urls: ['https://www.austintexas.gov/department/city-council', 'https://www.austintexas.gov/contact-us']
-[2026-01-23T03:09:12.158286] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.austintexas.gov/department/city-council
-[2026-01-23T03:09:14.550340] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/world-white.svg
-[2026-01-23T03:09:14.566310] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/dropdown-arrow-white.svg
-[2026-01-23T03:09:14.579910] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/austin-header-branding-logo.svg
-[2026-01-23T03:09:14.595169] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/files/Communications/Web_Content/2015/city-council-banner-700.jpg
-[2026-01-23T03:09:14.596367] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/files/Communications/Web_Content/2015/city-council-banner-700.jpg
-[2026-01-23T03:09:14.713097] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/bc64478aa2fb.png
-[2026-01-23T03:09:15.031888] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.austintexas.gov/department/city-council
-[2026-01-23T03:09:15.087160] [DEBUG] -> Preprocessing with identities: {'Kirk Watson': ['Kirk Watson'], 'Natasha Harper-Madison': ['Natasha Harper-Madison'], 'Vanessa Fuentes': ['Vanessa Fuentes'], 'José Velásquez': ['José Velásquez'], 'José “Chito” Vela': ['José “Chito” Vela'], 'Ryan Alter': ['Ryan Alter'], 'Krista Laine': ['Krista Laine'], 'Mike Siegel': ['Mike Siegel'], 'Paige Ellis': ['Paige Ellis'], 'Zohaib "Zo" Qadri': ['Zohaib "Zo" Qadri'], 'Marc Duchen': ['Marc Duchen']}
-[2026-01-23T03:09:18.789215] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+[2026-02-03T01:12:43.333377] [INFO] openai LLM call took 0.00 seconds
+[2026-02-03T01:12:46.773347] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 3896, Output tokens: 138, Total cost: $0.001779
+[2026-02-03T01:12:46.774218] [INFO] Page relevance check found related urls: ['https://www.austintexas.gov/department/mayor-1', 'https://www.austintexas.gov/department/mayor/about', 'https://www.austintexas.gov/department/mayor/contact']
+[2026-02-03T01:12:46.775315] [INFO] Running Gemini prompt
+[2026-02-03T01:12:46.775872] [DEBUG] Prompt: 
 
-[2026-01-23T03:09:18.789575] [INFO] -> Elapsed time: 3.76 seconds
-[2026-01-23T03:09:18.789888] [INFO] -> Average elapsed time: 2.59 seconds
-[2026-01-23T03:09:18.790191] [INFO] -> Total elapsed time: 7.76 seconds
-[2026-01-23T03:09:18.877540] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.austintexas.gov/department/city-council
-[2026-01-23T03:09:18.879793] [INFO] Running OpenAI prompt
-[2026-01-23T03:09:18.880319] [DEBUG] Prompt: 
-
-    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
-
-    Here is a list of known target people (may be missing or include extra): Kirk Watson, Natasha Harper-Madison, Vanessa Fuentes, José Velásquez, José “Chito” Vela, Ryan Alter, Krista Laine, Mike Siegel, Paige Ellis, Zohaib "Zo" Qadri, Marc Duchen
-
-    Only consider people who are currently serving as officials. 
-    Do not include anyone who is described as former, past, resigned, deceased, 
-    or otherwise not currently in office.
-
-    Return a JSON object with "thoughts" explaining your reasoning in the following format:
-    {
-        "thoughts": "Your reasoning goes here",
-        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
-        "is_relevant": true
-    }
-
-    **Guidelines for Identifying Relevant URLs:**
-    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
-    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
-    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
-    
-[2026-01-23T03:09:18.880809] [INFO] openai LLM call took 0.00 seconds
-[2026-01-23T03:09:38.905160] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1593, Output tokens: 1042, Total cost: $0.002482
-[2026-01-23T03:09:38.911249] [INFO] Page relevance check found related urls: ['https://www.austintexas.gov/department/city-council', 'https://www.austintexas.gov/contact-us']
-[2026-01-23T03:09:38.918975] [INFO] Running Gemini prompt
-[2026-01-23T03:09:38.920167] [DEBUG] Prompt: 
-
-    Your task is to extract information about the **current** officials of the target municipality.
+    Your task is to extract information about the **current** elected officials of the target municipality.
 
     If the content includes information about the following people, they are very likely to be on the council: Kirk Watson, Natasha Harper-Madison, Vanessa Fuentes, José Velásquez, José “Chito” Vela, Ryan Alter, Krista Laine, Mike Siegel, Paige Ellis, Zohaib "Zo" Qadri, Marc Duchen
 
-    Only extract people who are currently serving as officials as of 2026-01-23. 
+    Only extract people who are currently serving aselected officials as of 2026-02-03. 
     Do not include anyone who is described as former, past, resigned, deceased, 
     or otherwise not currently in office.
 
-    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
-    Target Divisions: ward, district, at-large, position, seat
-    Current Date: 2026-01-23
+    Roles (examples): Mayor, Council Member, Aldermen, Commissioner
+    Target Designations: ward, district, precinct, position, seat, place, post, at-large
+    Current Date: 2026-02-03
 
     Return a JSON object in the following format, each having:
     - people: (Array of objects) Each object should have:
       - name: (String) Full name only (no titles)
       - image: (String or null) URL to profile image (https://...)
       - roles: (Array of strings) Active municipal roles
-      - divisions: (Array of strings) Specific district/ward names
+      - designations: (Array of strings) Specific district/ward/etc names
       - phone: (String or null) Formatted phone number
-      - email: (String or null) Email address
+      - email: (String or null) Email address in the format of email@domain.tld
       - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
       - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
       - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
@@ -192,11 +234,9 @@
 
     Guidelines:
     - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
-    - Roles extraction:
-        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member).
-    - Division extraction:
-        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
-        - Examples: "Ward 1", "District 2"
+    - Designation extraction:
+        - Extract designations if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: ["Ward 1", "District 2"]
     - Name extraction:
         - Extract full names ONLY, not titles.
     - Phone number extraction:
@@ -204,7 +244,7 @@
     - URL extraction:
         - Extract URLs starting with "http://" or "https://".
     - Email extraction:
-        - Extract email addresses found directly in the text or formatted as Markdown link text.
+        - Extract email addresses found directly in the text
     - Start and End Date Extraction:
         - Extract dates only if explicitly written in the text.
         - **Start Date**:
@@ -223,7 +263,7 @@
     - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
     - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
     - Ensure all extracted details refer to the **current term** of the official.
-    - Use the provided current date (2026-01-23) to filter out officials, roles, 
+    - Use the provided current date (2026-02-03) to filter out officials, roles, 
         or terms that are no longer active.
     - Exclude individuals who have resigned, vacated their roles, or are deceased.
     - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
@@ -233,33 +273,34 @@
       or is referenced in a meeting summary, and there is no structured list or 
       dedicated biography/about/contact section, **return an empty array**.
     
-[2026-01-23T03:09:41.216738] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 2843, Output tokens: 81, Total cost: $0.001055
-[2026-01-23T03:09:41.219884] [INFO] gemini gemini-2.5-flash LLM call took 2.30 seconds
-[2026-01-23T03:09:41.221431] [INFO] Running OpenAI prompt
-[2026-01-23T03:09:41.222231] [DEBUG] Prompt: 
+[2026-02-03T01:12:50.264119] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 5353, Output tokens: 261, Total cost: $0.002258
+[2026-02-03T01:12:50.269203] [INFO] gemini gemini-2.5-flash LLM call took 3.49 seconds
+[2026-02-03T01:12:50.271366] [INFO] Running OpenAI prompt
+[2026-02-03T01:12:50.272051] [DEBUG] Prompt: 
 
-    Your task is to extract information about the **current** officials of the target municipality.
+    Your task is to extract information about the **current** elected officials of the target municipality.
 
     Here is a list of known target people (may be missing or include extra): Kirk Watson, Natasha Harper-Madison, Vanessa Fuentes, José Velásquez, José “Chito” Vela, Ryan Alter, Krista Laine, Mike Siegel, Paige Ellis, Zohaib "Zo" Qadri, Marc Duchen
 
-    Only extract people who are currently serving as officials as of 2026-01-23. 
+    Only extract people who are currently serving as officials as of 2026-02-03. 
     Do not include anyone who is described as former, past, resigned, deceased, 
     or otherwise not currently in office.
 
     First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
 
-    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
-    Target divisions: ward, district, at-large, position, seat
-    Current Date: 2026-01-23
+    Roles (examples): Mayor, Council Member, Aldermen, Select Board Member, Commissioner
+    Target designations: ward, district, precinct, position, seat, place, post, at-large
+    Current Date: 2026-02-03
 
     Return a JSON object in the following format:
     - people: (Array of objects) Each object should have:
       - name: (String) Full name only (no titles)
       - image: (String or null) URL to profile image (https://...)
       - roles: (Array of strings) Active municipal roles
-      - divisions: (Array of strings) Specific district/ward names
+      - designations: (Array) 
+            Example: ["Ward 1", "District 2, Seat 8"]
       - phone: (String or null) Formatted phone number
-      - email: (String or null) Email address
+      - email: (String or null) Email address in the format of email@domain.tld
       - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
       - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
       - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
@@ -267,12 +308,13 @@
  
     **Instructions:**
     - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
-    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, designations, or term dates) are optional but preferred.
     - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
     - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
     - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
     - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
     - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT infer information for officials. Only extract what is explicitly stated (ex: emails).
     - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
     - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
 
@@ -288,64 +330,42 @@
 
     **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
     
-[2026-01-23T03:09:41.223037] [INFO] openai LLM call took 0.00 seconds
-[2026-01-23T03:09:48.503521] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 2360, Output tokens: 552, Total cost: $0.001694
-[2026-01-23T03:09:48.508281] [INFO] links updated: [Link(url='https://www.austintexas.gov/department/city-council/council/council_meeting_info_center.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/government', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/government/city-hall', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/trash-recycling-and-composting', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/austin-city-council', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/legal-notice', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/communications/news', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#AdditionalInformation', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/starting-out', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#HomeRepairProgramsHomeSafetyInformationandotherHousingServices', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/courts', status='pending', folder_name='', is_profile_page=False), Link(url='https://austintexas.gov/pir', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311/about', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/health/about', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#FoodPantryVaccinationandHealthCareResources', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/city-programs-and-initiatives', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/arts-history-and-culture', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/doing-business', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/node/3045', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/outdoor-nature-and-wildlife', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/nonprofits', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/chronic-disease-and-injury-prevention', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/city-jobs', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/doing-business-city', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/sites/default/files/files/Parks/Senior_Activity_Centers/Senior_Transportation__General_Info_update_10.31.23.pdf', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/go-repair-grants', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/services/apply-city-job', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/services/view-your-recycling-composting-and-trash-schedule', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/ogcr', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/voterinfo', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/taxes', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/community', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/parks-senior-transportation', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/water-leaks', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/fullcalendar', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/airport', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/about-city-austin', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/services/share-your-ideas-about-improving-austin', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/public-safety', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-city-managers-office', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/news/kendra-scott-opens-first-ever-airport-store-inside-auss-main-terminal-right-here-city-where-brand-was-born', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/news/save-date-city-summer-camp-registration', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/public-safety-employment', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/residentialservices#:~:text=Austin%20Resource%20Recovery%20provides%20curbside%20collection%20services%20for,as%20trash.%20Recycling%20is%20collected%20every%20other%20week.', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/city-austin', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#LegalServicesforOlderAdults', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/city-venues-and-facilities', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/node/1584', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/minor-home-repair-grants', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#SeniorProgramsServicesandOpportunities', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/resources-renters', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/city-budget', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/getting-home', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/health-screening-services', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/services/apply-become-board-or-commission-member', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-notes', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/notes', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/environmental', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/film-and-music', status='pending', folder_name='', is_profile_page=False), Link(url='http://www.austintexas.gov/events/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/services/find-health-screening-services', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/starting-business', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/household', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/day-labor', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/social', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/animals-and-wildlife', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/transportation-public-works', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/neighborhood-community', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/departments', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/gardening-and-home-improvements', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/city-code', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/email/austin311', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/education', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/public-health', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/transportation', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/pets-and-adoption', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/congregate-meal-program', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/small-business-centers', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311/educational-resources', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/readycentraltexas', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311/open-data-portal', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/parks-and-recreation', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/news/austins-small-business-fundamentals-week-returns', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/news/city-austin-named-one-nations-digital-inclusion-trailblazers-2025', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austintexasgov-feedback', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/housing', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/household#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/trash-recycling-and-composting#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/gardening-and-home-improvements#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/utilities#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/getting-home#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/conservation-and-recycling', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/arts-and-leisure', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/health', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/small-business-development', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/seniors-programs-and-services', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/node/3040', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/fire-safety', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/economic-development', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/incentives-and-grants', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/incentives-and-grants-0', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311/service-request', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-public-health-homeless-assistance', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/records-and-documents', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/records-and-documents', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/relocating-business', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/neighborhoods', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/311', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-energy-rates-and-fees', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/services', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/dsd', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/carbus', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/incentives-and-rebates', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/sites/default/files/files/EMS/Ultimate_Guide_to_Emergency_Preparedness.pdf', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/get-help', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/health', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#TechnologyServicesandTraining', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/americans-disabilities-act-ada', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#AustinAreaEventCalendars', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/landscapedesign', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/pay-online', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#Transportation', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/boards-and-commissions', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/architectural-barrier-removal', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/permits', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/salt-seniors-and-law-enforcement-together', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/watch-atxn-live', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/event/bls-healthcare-provider-initial-course', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/streetsmaps', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/crime', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/services/get-help-neighborhood-centers', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/node/1575', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/services/adopt-a-pet', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/emergency-preparedness', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311/smart-phone-app', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/health/divisions', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#CaregiverResources', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/heat-awareness', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/event/13th-annual-youth-career-fest', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-center-events', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/volunteer-city-austin', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/red-angels-program', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#EmergencyServices', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/event/dougherty-arts-center-energy-healing-expression', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-resource-recovery', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/news/winter-weather-readiness-leads-resiliency', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/gustavo-gus-l-garcia-recreation-center', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/utilities', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/families', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/atxn', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/event/heartsaver-basic-first-aid-cpr-and-aed-online', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/immunizations', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/aviation', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/event/south-austin-recreation-center-art-cahoots', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/libraries', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#NewslettersandEvents', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/jobs', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#Commissions', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/privacy-policy', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/content/commission-aging', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/aarc-senior-programming', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/grants', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/police', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/watershed-protection', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/utilities', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/health/programs', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/email/Austin311', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311/mobile-app', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/aac', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/site/news/rss.xml', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/food-establishments', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311/faq', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#VeteransServices', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/health/services', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/sitemap', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/shelters', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/bicyclepedestrian', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/green-resources', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/node/1588', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/parks', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/animals', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-energy', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/node/2500', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-water-utility-0', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/water', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/mbewbe-program', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/zilker-metropolitan-park', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/health/locations', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/events', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/1-800-827-1000', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/node/91774/311', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/make-right-call-use-9-1-1-emergencies', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/1-800-622-2520', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/1-855-260-3274', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/1-844-698-2311', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/1-877-333-5885', status='pending', folder_name='', is_profile_page=False), Link(url='http://www.austintexas.gov/department/311/smart-phone-app', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/contact-us', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/council-meetings', status='processed_irrelevant', folder_name='www_austintexas_gov_department_city-council_council-meetings', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council', status='done', folder_name='www_austintexas_gov_department_city-council', is_profile_page=True)]
-[2026-01-23T03:09:48.597763] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.austintexas.gov/department/city-council/council/council_meeting_info_center.htm
-[2026-01-23T03:09:51.381836] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/world-white.svg
-[2026-01-23T03:09:51.397313] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/dropdown-arrow-white.svg
-[2026-01-23T03:09:51.412287] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/austin-header-branding-logo.svg
-[2026-01-23T03:09:51.428359] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/files/Communications/Web_Content/2015/city-council-banner-700.jpg
-[2026-01-23T03:09:51.429282] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/files/Communications/Web_Content/2015/city-council-banner-700.jpg
-[2026-01-23T03:09:51.559856] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/bc64478aa2fb.png
-[2026-01-23T03:09:51.821921] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.austintexas.gov/department/city-council/council/council_meeting_info_center.htm
-[2026-01-23T03:09:51.915362] [DEBUG] -> Preprocessing with identities: {'Kirk Watson': ['Kirk Watson'], 'Natasha Harper-Madison': ['Natasha Harper-Madison'], 'Vanessa Fuentes': ['Vanessa Fuentes'], 'José Velásquez': ['José Velásquez'], 'José “Chito” Vela': ['José “Chito” Vela'], 'Ryan Alter': ['Ryan Alter'], 'Krista Laine': ['Krista Laine'], 'Mike Siegel': ['Mike Siegel'], 'Paige Ellis': ['Paige Ellis'], 'Zohaib "Zo" Qadri': ['Zohaib "Zo" Qadri'], 'Marc Duchen': ['Marc Duchen']}
-[2026-01-23T03:09:55.724198] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+[2026-02-03T01:12:50.275319] [INFO] openai LLM call took 0.00 seconds
+[2026-02-03T01:12:53.299630] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 4679, Output tokens: 199, Total cost: $0.002190
+[2026-02-03T01:12:53.303468] [DEBUG] Skipping adding websites for person with role and contact info: Kirk Watson
+[2026-02-03T01:12:53.304252] [DEBUG] Skipping adding websites for person with role and contact info: Kirk Watson
+[2026-02-03T01:12:53.306284] [INFO] links updated: [Link(url='https://www.austintexas.gov/department/mayor-1', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/department/mayor/about', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/department/mayor/contact', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/austin-city-council', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/council/council_meeting_info_center.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/about', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/government', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/city-council-district-map', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/email/all-council-members', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/2025/20250813-reg.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/2025/20250911-reg.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/district-2-council-member', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-city-managers-office', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/history-mayors', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/district-4', status='pending', folder_name='', is_profile_page=False), Link(url='https://services.austintexas.gov/edims/document.cfm?id=114612', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/departments', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/2025/20250925-reg.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/edims/document.cfm?id=224455', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/mayor-kirk-watson', status='done', folder_name='www_austintexas_gov_department_mayor-kirk-watson', is_profile_page=False)]
+[2026-02-03T01:12:53.326924] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.austintexas.gov/department/mayor-1
+[2026-02-03T01:12:55.346314] [DEBUG] 📄 Standard site - using basic waiting strategy
+[2026-02-03T01:12:56.379013] [DEBUG] ✓ Basic content loaded
+[2026-02-03T01:12:56.463285] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/world-white.svg
+[2026-02-03T01:12:56.470656] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/dropdown-arrow-white.svg
+[2026-02-03T01:12:56.478666] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/austin-header-branding-logo.svg
+[2026-02-03T01:12:56.488198] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:12:56.488836] [DEBUG] Loading image from URL: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:12:56.624850] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/2aea3c207172.png
+[2026-02-03T01:12:56.643817] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:12:56.645046] [DEBUG] Loading image from URL: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:12:56.791261] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/2aea3c207172.png
+[2026-02-03T01:12:56.811677] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:12:56.812853] [DEBUG] Loading image from URL: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:12:56.965326] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/2aea3c207172.png
+[2026-02-03T01:12:56.986849] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:12:56.988711] [DEBUG] Loading image from URL: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:12:57.133552] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/2aea3c207172.png
+[2026-02-03T01:12:57.153398] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/images/Council/Mayor%20Watson-Headshot-240x240.jpg
+[2026-02-03T01:12:57.154761] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/images/Council/Mayor%20Watson-Headshot-240x240.jpg
+[2026-02-03T01:12:57.286331] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/bfbc538adb3c.png
+[2026-02-03T01:12:57.376839] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.austintexas.gov/department/mayor-1
+[2026-02-03T01:12:57.446494] [DEBUG] -> Preprocessing with identities: {'Kirk Watson': ['Kirk Watson'], 'Natasha Harper-Madison': ['Natasha Harper-Madison'], 'Vanessa Fuentes': ['Vanessa Fuentes'], 'José Velásquez': ['José Velásquez'], 'José “Chito” Vela': ['José “Chito” Vela'], 'Ryan Alter': ['Ryan Alter'], 'Krista Laine': ['Krista Laine'], 'Mike Siegel': ['Mike Siegel'], 'Paige Ellis': ['Paige Ellis'], 'Zohaib "Zo" Qadri': ['Zohaib "Zo" Qadri'], 'Marc Duchen': ['Marc Duchen']}
+[2026-02-03T01:12:58.459951] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
 
-[2026-01-23T03:09:55.724448] [INFO] -> Elapsed time: 3.90 seconds
-[2026-01-23T03:09:55.724944] [INFO] -> Average elapsed time: 2.73 seconds
-[2026-01-23T03:09:55.725496] [INFO] -> Total elapsed time: 10.90 seconds
-[2026-01-23T03:09:55.809605] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.austintexas.gov/department/city-council/council/council_meeting_info_center.htm
-[2026-01-23T03:09:55.811667] [INFO] Running OpenAI prompt
-[2026-01-23T03:09:55.812095] [DEBUG] Prompt: 
-
-    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
-
-    Here is a list of known target people (may be missing or include extra): Kirk Watson, Natasha Harper-Madison, Vanessa Fuentes, José Velásquez, José “Chito” Vela, Ryan Alter, Krista Laine, Mike Siegel, Paige Ellis, Zohaib "Zo" Qadri, Marc Duchen
-
-    Only consider people who are currently serving as officials. 
-    Do not include anyone who is described as former, past, resigned, deceased, 
-    or otherwise not currently in office.
-
-    Return a JSON object with "thoughts" explaining your reasoning in the following format:
-    {
-        "thoughts": "Your reasoning goes here",
-        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
-        "is_relevant": true
-    }
-
-    **Guidelines for Identifying Relevant URLs:**
-    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
-    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
-    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
-    
-[2026-01-23T03:09:55.812457] [INFO] openai LLM call took 0.00 seconds
-[2026-01-23T03:10:10.081380] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 1593, Output tokens: 1178, Total cost: $0.002754
-[2026-01-23T03:10:10.083469] [INFO] Page relevance check found related urls: ['https://www.austintexas.gov/department/city-council', 'https://www.austintexas.gov/contact-us']
-[2026-01-23T03:10:10.171446] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.austintexas.gov/contact-us
-[2026-01-23T03:10:12.843829] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/world-white.svg
-[2026-01-23T03:10:12.860722] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/dropdown-arrow-white.svg
-[2026-01-23T03:10:12.878630] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/austin-header-branding-logo.svg
-[2026-01-23T03:10:13.156677] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.austintexas.gov/contact-us
-[2026-01-23T03:10:13.449982] [DEBUG] -> Preprocessing with identities: {'Kirk Watson': ['Kirk Watson'], 'Natasha Harper-Madison': ['Natasha Harper-Madison'], 'Vanessa Fuentes': ['Vanessa Fuentes'], 'José Velásquez': ['José Velásquez'], 'José “Chito” Vela': ['José “Chito” Vela'], 'Ryan Alter': ['Ryan Alter'], 'Krista Laine': ['Krista Laine'], 'Mike Siegel': ['Mike Siegel'], 'Paige Ellis': ['Paige Ellis'], 'Zohaib "Zo" Qadri': ['Zohaib "Zo" Qadri'], 'Marc Duchen': ['Marc Duchen']}
-[2026-01-23T03:10:20.825976] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
-
-[2026-01-23T03:10:20.826304] [INFO] -> Elapsed time: 7.67 seconds
-[2026-01-23T03:10:20.826662] [INFO] -> Average elapsed time: 3.53 seconds
-[2026-01-23T03:10:20.827192] [INFO] -> Total elapsed time: 17.67 seconds
-[2026-01-23T03:10:20.923275] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.austintexas.gov/contact-us
-[2026-01-23T03:10:20.926114] [INFO] Running OpenAI prompt
-[2026-01-23T03:10:20.926550] [DEBUG] Prompt: 
+[2026-02-03T01:12:58.460182] [INFO] -> Elapsed time: 1.08 seconds
+[2026-02-03T01:12:58.460476] [INFO] -> Average elapsed time: 1.54 seconds
+[2026-02-03T01:12:58.460707] [INFO] -> Total elapsed time: 3.08 seconds
+[2026-02-03T01:12:58.475769] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.austintexas.gov/department/mayor-1
+[2026-02-03T01:12:58.477556] [INFO] Running OpenAI prompt
+[2026-02-03T01:12:58.477856] [DEBUG] Prompt: 
 
     Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
 
@@ -367,32 +387,32 @@
     - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
     - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
     
-[2026-01-23T03:10:20.927033] [INFO] openai LLM call took 0.00 seconds
-[2026-01-23T03:10:36.985364] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 5799, Output tokens: 1171, Total cost: $0.003792
-[2026-01-23T03:10:36.993008] [INFO] Page relevance check found related urls: ['https://www.austintexas.gov/email/mayorwatson', 'https://www.austintexas.gov/district1', 'https://www.austintexas.gov/district2', 'https://www.austintexas.gov/district3', 'https://www.austintexas.gov/district4', 'https://www.austintexas.gov/district5', 'https://www.austintexas.gov/district6', 'https://www.austintexas.gov/district7', 'https://www.austintexas.gov/district8', 'https://www.austintexas.gov/district9', 'https://www.austintexas.gov/district10', 'https://www.austintexas.gov/department/city-council-0', 'https://www.austintexas.gov/sites/default/files/files/City_Manager/COA-Org-Chart-January-2026.pdf']
-[2026-01-23T03:10:37.000415] [INFO] Running Gemini prompt
-[2026-01-23T03:10:37.000979] [DEBUG] Prompt: 
+[2026-02-03T01:12:58.478160] [INFO] openai LLM call took 0.00 seconds
+[2026-02-03T01:13:00.614974] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 4048, Output tokens: 134, Total cost: $0.001834
+[2026-02-03T01:13:00.616261] [INFO] Page relevance check found related urls: ['https://www.austintexas.gov/department/mayor/about', 'https://www.austintexas.gov/austin-city-council', 'https://www.austintexas.gov/contact-us']
+[2026-02-03T01:13:00.617855] [INFO] Running Gemini prompt
+[2026-02-03T01:13:00.618639] [DEBUG] Prompt: 
 
-    Your task is to extract information about the **current** officials of the target municipality.
+    Your task is to extract information about the **current** elected officials of the target municipality.
 
     If the content includes information about the following people, they are very likely to be on the council: Kirk Watson, Natasha Harper-Madison, Vanessa Fuentes, José Velásquez, José “Chito” Vela, Ryan Alter, Krista Laine, Mike Siegel, Paige Ellis, Zohaib "Zo" Qadri, Marc Duchen
 
-    Only extract people who are currently serving as officials as of 2026-01-23. 
+    Only extract people who are currently serving aselected officials as of 2026-02-03. 
     Do not include anyone who is described as former, past, resigned, deceased, 
     or otherwise not currently in office.
 
-    Target Roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
-    Target Divisions: ward, district, at-large, position, seat
-    Current Date: 2026-01-23
+    Roles (examples): Mayor, Council Member, Aldermen, Commissioner
+    Target Designations: ward, district, precinct, position, seat, place, post, at-large
+    Current Date: 2026-02-03
 
     Return a JSON object in the following format, each having:
     - people: (Array of objects) Each object should have:
       - name: (String) Full name only (no titles)
       - image: (String or null) URL to profile image (https://...)
       - roles: (Array of strings) Active municipal roles
-      - divisions: (Array of strings) Specific district/ward names
+      - designations: (Array of strings) Specific district/ward/etc names
       - phone: (String or null) Formatted phone number
-      - email: (String or null) Email address
+      - email: (String or null) Email address in the format of email@domain.tld
       - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
       - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
       - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
@@ -401,11 +421,9 @@
 
     Guidelines:
     - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
-    - Roles extraction:
-        - Extract roles that match the **target roles** provided (e.g., mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member).
-    - Division extraction:
-        - Extract divisions if explicitly mentioned in the text and relevant to the person's role.
-        - Examples: "Ward 1", "District 2"
+    - Designation extraction:
+        - Extract designations if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: ["Ward 1", "District 2"]
     - Name extraction:
         - Extract full names ONLY, not titles.
     - Phone number extraction:
@@ -413,7 +431,7 @@
     - URL extraction:
         - Extract URLs starting with "http://" or "https://".
     - Email extraction:
-        - Extract email addresses found directly in the text or formatted as Markdown link text.
+        - Extract email addresses found directly in the text
     - Start and End Date Extraction:
         - Extract dates only if explicitly written in the text.
         - **Start Date**:
@@ -432,7 +450,7 @@
     - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
     - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
     - Ensure all extracted details refer to the **current term** of the official.
-    - Use the provided current date (2026-01-23) to filter out officials, roles, 
+    - Use the provided current date (2026-02-03) to filter out officials, roles, 
         or terms that are no longer active.
     - Exclude individuals who have resigned, vacated their roles, or are deceased.
     - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
@@ -442,33 +460,34 @@
       or is referenced in a meeting summary, and there is no structured list or 
       dedicated biography/about/contact section, **return an empty array**.
     
-[2026-01-23T03:10:49.235994] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 8229, Output tokens: 1176, Total cost: $0.005409
-[2026-01-23T03:10:49.241501] [INFO] gemini gemini-2.5-flash LLM call took 12.24 seconds
-[2026-01-23T03:10:49.243876] [INFO] Running OpenAI prompt
-[2026-01-23T03:10:49.244864] [DEBUG] Prompt: 
+[2026-02-03T01:13:05.766652] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 5546, Output tokens: 306, Total cost: $0.002429
+[2026-02-03T01:13:05.772153] [INFO] gemini gemini-2.5-flash LLM call took 5.15 seconds
+[2026-02-03T01:13:05.774088] [INFO] Running OpenAI prompt
+[2026-02-03T01:13:05.774698] [DEBUG] Prompt: 
 
-    Your task is to extract information about the **current** officials of the target municipality.
+    Your task is to extract information about the **current** elected officials of the target municipality.
 
     Here is a list of known target people (may be missing or include extra): Kirk Watson, Natasha Harper-Madison, Vanessa Fuentes, José Velásquez, José “Chito” Vela, Ryan Alter, Krista Laine, Mike Siegel, Paige Ellis, Zohaib "Zo" Qadri, Marc Duchen
 
-    Only extract people who are currently serving as officials as of 2026-01-23. 
+    Only extract people who are currently serving as officials as of 2026-02-03. 
     Do not include anyone who is described as former, past, resigned, deceased, 
     or otherwise not currently in office.
 
     First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
 
-    Target roles: mayor, mayor pro tempore, assistant mayor, deputy mayor, deputy mayor pro tempore, vice mayor, council president, council president pro tem, deputy council president, council vice president, council manager, council member
-    Target divisions: ward, district, at-large, position, seat
-    Current Date: 2026-01-23
+    Roles (examples): Mayor, Council Member, Aldermen, Select Board Member, Commissioner
+    Target designations: ward, district, precinct, position, seat, place, post, at-large
+    Current Date: 2026-02-03
 
     Return a JSON object in the following format:
     - people: (Array of objects) Each object should have:
       - name: (String) Full name only (no titles)
       - image: (String or null) URL to profile image (https://...)
       - roles: (Array of strings) Active municipal roles
-      - divisions: (Array of strings) Specific district/ward names
+      - designations: (Array) 
+            Example: ["Ward 1", "District 2, Seat 8"]
       - phone: (String or null) Formatted phone number
-      - email: (String or null) Email address
+      - email: (String or null) Email address in the format of email@domain.tld
       - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
       - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
       - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
@@ -476,12 +495,13 @@
  
     **Instructions:**
     - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
-    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, division, or term dates) are optional but preferred.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, designations, or term dates) are optional but preferred.
     - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
     - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
     - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
     - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
     - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT infer information for officials. Only extract what is explicitly stated (ex: emails).
     - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
     - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
 
@@ -497,34 +517,633 @@
 
     **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
     
-[2026-01-23T03:10:49.246166] [INFO] openai LLM call took 0.00 seconds
-[2026-01-23T03:11:30.282874] [INFO] LLM Cost added: openai model openai/gpt-5-mini - Input tokens: 6566, Output tokens: 3144, Total cost: $0.007930
-[2026-01-23T03:11:30.325454] [DEBUG] Skipping adding websites for person with role and contact info: Kirk Watson
-[2026-01-23T03:11:30.326016] [DEBUG] Skipping adding websites for person with role and contact info: Natasha Harper-Madison
-[2026-01-23T03:11:30.326402] [DEBUG] Skipping adding websites for person with role and contact info: Vanessa Fuentes
-[2026-01-23T03:11:30.326819] [DEBUG] Skipping adding websites for person with role and contact info: José Velásquez
-[2026-01-23T03:11:30.327217] [DEBUG] Skipping adding websites for person with role and contact info: José “Chito” Vela
-[2026-01-23T03:11:30.327935] [DEBUG] Skipping adding websites for person with role and contact info: Ryan Alter
-[2026-01-23T03:11:30.328599] [DEBUG] Skipping adding websites for person with role and contact info: Krista Laine
-[2026-01-23T03:11:30.329046] [DEBUG] Skipping adding websites for person with role and contact info: Mike Siegel
-[2026-01-23T03:11:30.329620] [DEBUG] Skipping adding websites for person with role and contact info: Paige Ellis
-[2026-01-23T03:11:30.330080] [DEBUG] Skipping adding websites for person with role and contact info: Zohaib “Zo” Qadri
-[2026-01-23T03:11:30.330421] [DEBUG] Skipping adding websites for person with role and contact info: Marc Duchen
-[2026-01-23T03:11:30.331302] [DEBUG] Skipping adding websites for person with role and contact info: T.C. Broadnax
-[2026-01-23T03:11:30.332045] [DEBUG] Skipping adding websites for person with role and contact info: Kirk Watson
-[2026-01-23T03:11:30.332459] [DEBUG] Skipping adding websites for person with role and contact info: Natasha Harper-Madison
-[2026-01-23T03:11:30.333344] [DEBUG] Skipping adding websites for person with role and contact info: Vanessa Fuentes
-[2026-01-23T03:11:30.334125] [DEBUG] Skipping adding websites for person with role and contact info: José Velásquez
-[2026-01-23T03:11:30.334744] [DEBUG] Skipping adding websites for person with role and contact info: Jose "Chito" Vela
-[2026-01-23T03:11:30.335229] [DEBUG] Skipping adding websites for person with role and contact info: Ryan Alter
-[2026-01-23T03:11:30.335848] [DEBUG] Skipping adding websites for person with role and contact info: Krista Laine
-[2026-01-23T03:11:30.336490] [DEBUG] Skipping adding websites for person with role and contact info: Mike Siegel
-[2026-01-23T03:11:30.337113] [DEBUG] Skipping adding websites for person with role and contact info: Paige Ellis
-[2026-01-23T03:11:30.337582] [DEBUG] Skipping adding websites for person with role and contact info: Zohaib “Zo” Qadri
-[2026-01-23T03:11:30.338131] [DEBUG] Skipping adding websites for person with role and contact info: Marc Duchen
-[2026-01-23T03:11:30.344266] [INFO] links updated: [Link(url='https://www.austintexas.gov/email/mayorwatson', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district1', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district2', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district3', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district4', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district5', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district6', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district7', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district8', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district9', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district10', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/department/city-council-0', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/sites/default/files/files/city_manager/coa-org-chart-january-2026.pdf', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/department/city-council', status='done', folder_name='www_austintexas_gov_department_city-council', is_profile_page=True), Link(url='https://www.austintexas.gov/government', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/government/city-hall', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/trash-recycling-and-composting', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/austin-city-council', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/legal-notice', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/communications/news', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#AdditionalInformation', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/starting-out', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#HomeRepairProgramsHomeSafetyInformationandotherHousingServices', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/courts', status='pending', folder_name='', is_profile_page=False), Link(url='https://austintexas.gov/pir', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311/about', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/health/about', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#FoodPantryVaccinationandHealthCareResources', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/city-programs-and-initiatives', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/arts-history-and-culture', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/doing-business', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/node/3045', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/outdoor-nature-and-wildlife', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/nonprofits', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/chronic-disease-and-injury-prevention', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/city-jobs', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/doing-business-city', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/sites/default/files/files/Parks/Senior_Activity_Centers/Senior_Transportation__General_Info_update_10.31.23.pdf', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/go-repair-grants', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/services/apply-city-job', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/services/view-your-recycling-composting-and-trash-schedule', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/ogcr', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/voterinfo', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/taxes', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/community', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/parks-senior-transportation', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/water-leaks', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/fullcalendar', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/airport', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/about-city-austin', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/services/share-your-ideas-about-improving-austin', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/public-safety', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-city-managers-office', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/news/kendra-scott-opens-first-ever-airport-store-inside-auss-main-terminal-right-here-city-where-brand-was-born', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/news/save-date-city-summer-camp-registration', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/public-safety-employment', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/residentialservices#:~:text=Austin%20Resource%20Recovery%20provides%20curbside%20collection%20services%20for,as%20trash.%20Recycling%20is%20collected%20every%20other%20week.', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/city-austin', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#LegalServicesforOlderAdults', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/city-venues-and-facilities', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/node/1584', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/minor-home-repair-grants', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#SeniorProgramsServicesandOpportunities', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/resources-renters', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/city-budget', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/getting-home', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/health-screening-services', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/services/apply-become-board-or-commission-member', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-notes', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/notes', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/environmental', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/film-and-music', status='pending', folder_name='', is_profile_page=False), Link(url='http://www.austintexas.gov/events/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/services/find-health-screening-services', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/starting-business', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/household', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/day-labor', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/social', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/animals-and-wildlife', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/transportation-public-works', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/neighborhood-community', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/departments', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/gardening-and-home-improvements', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/city-code', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/email/austin311', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/education', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/public-health', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/transportation', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/pets-and-adoption', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/congregate-meal-program', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/small-business-centers', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311/educational-resources', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/readycentraltexas', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311/open-data-portal', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/parks-and-recreation', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/news/austins-small-business-fundamentals-week-returns', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/news/city-austin-named-one-nations-digital-inclusion-trailblazers-2025', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austintexasgov-feedback', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/housing', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/household#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/trash-recycling-and-composting#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/gardening-and-home-improvements#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/utilities#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/getting-home#main-content', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/conservation-and-recycling', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/arts-and-leisure', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/health', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/small-business-development', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/seniors-programs-and-services', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/node/3040', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/fire-safety', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/economic-development', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/incentives-and-grants', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/incentives-and-grants-0', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311/service-request', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-public-health-homeless-assistance', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/records-and-documents', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/records-and-documents', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/relocating-business', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/neighborhoods', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/311', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-energy-rates-and-fees', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/services', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/dsd', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/carbus', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/incentives-and-rebates', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/sites/default/files/files/EMS/Ultimate_Guide_to_Emergency_Preparedness.pdf', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/get-help', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/health', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#TechnologyServicesandTraining', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/americans-disabilities-act-ada', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#AustinAreaEventCalendars', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/landscapedesign', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/pay-online', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#Transportation', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/boards-and-commissions', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/architectural-barrier-removal', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/permits', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/salt-seniors-and-law-enforcement-together', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/watch-atxn-live', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/event/bls-healthcare-provider-initial-course', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/streetsmaps', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/crime', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/services/get-help-neighborhood-centers', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/node/1575', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/services/adopt-a-pet', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/emergency-preparedness', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311/smart-phone-app', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/health/divisions', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#CaregiverResources', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/heat-awareness', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/event/13th-annual-youth-career-fest', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-center-events', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/volunteer-city-austin', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/red-angels-program', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#EmergencyServices', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/event/dougherty-arts-center-energy-healing-expression', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-resource-recovery', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/news/winter-weather-readiness-leads-resiliency', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/gustavo-gus-l-garcia-recreation-center', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/utilities', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/families', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/atxn', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/event/heartsaver-basic-first-aid-cpr-and-aed-online', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/immunizations', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/aviation', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/event/south-austin-recreation-center-art-cahoots', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/libraries', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#NewslettersandEvents', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/jobs', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#Commissions', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/privacy-policy', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/content/commission-aging', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/aarc-senior-programming', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/grants', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/police', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/watershed-protection', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/utilities', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/health/programs', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/email/Austin311', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311/mobile-app', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/aac', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/site/news/rss.xml', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/food-establishments', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/311/faq', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/austin-senior-services-hub#VeteransServices', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/health/services', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/sitemap', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/shelters', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/bicyclepedestrian', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/green-resources', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/node/1588', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/parks', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/animals', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-energy', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/node/2500', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-water-utility-0', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/water', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/business/mbewbe-program', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/zilker-metropolitan-park', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/health/locations', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/resident/events', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/1-800-827-1000', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/node/91774/311', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/make-right-call-use-9-1-1-emergencies', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/1-800-622-2520', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/1-855-260-3274', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/1-844-698-2311', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/1-877-333-5885', status='pending', folder_name='', is_profile_page=False), Link(url='http://www.austintexas.gov/department/311/smart-phone-app', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/council-meetings', status='processed_irrelevant', folder_name='www_austintexas_gov_department_city-council_council-meetings', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/council/council_meeting_info_center.htm', status='processed_irrelevant', folder_name='www_austintexas_gov_department_city-council_council_council_meeting_info_center_htm', is_profile_page=False), Link(url='https://www.austintexas.gov/contact-us', status='done', folder_name='www_austintexas_gov_contact-us', is_profile_page=False)]
-[2026-01-23T03:11:31.322849] [INFO] Step 8: WorkflowStatus.FORMAT_OUTPUT Formatting output data.
-[2026-01-23T03:11:31.472308] [INFO] Step 9: CLEANUP
-[2026-01-23T03:11:31.558812] [INFO] Step 10: WorkflowStatus.SAVE_OUTPUT Saving output data and config files.
-[2026-01-23T03:11:31.721299] [INFO] Step 11: MAYBE_SEND_TO_GITHUB
-[2026-01-23T03:11:31.721569] [INFO] CRUDDER_UPLOAD_URL: https://api.civicpatch.org/api/internal/pipelines/github_intake
+[2026-02-03T01:13:05.776096] [INFO] openai LLM call took 0.00 seconds
+[2026-02-03T01:13:09.464342] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 4831, Output tokens: 220, Total cost: $0.002284
+[2026-02-03T01:13:09.475148] [DEBUG] Skipping adding websites for person with role and contact info: Kirk Watson
+[2026-02-03T01:13:09.475637] [DEBUG] Skipping adding websites for person with role and contact info: Kirk Watson
+[2026-02-03T01:13:09.476818] [INFO] links updated: [Link(url='https://www.austintexas.gov/department/mayor/about', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/austin-city-council', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/contact-us', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/department/mayor/contact', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/department/city-council/council/council_meeting_info_center.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/about', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/government', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/city-council-district-map', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/email/all-council-members', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/2025/20250813-reg.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/2025/20250911-reg.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/district-2-council-member', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-city-managers-office', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/history-mayors', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/district-4', status='pending', folder_name='', is_profile_page=False), Link(url='https://services.austintexas.gov/edims/document.cfm?id=114612', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/departments', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/2025/20250925-reg.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/edims/document.cfm?id=224455', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/mayor-kirk-watson', status='done', folder_name='www_austintexas_gov_department_mayor-kirk-watson', is_profile_page=False), Link(url='https://www.austintexas.gov/department/mayor-1', status='done', folder_name='www_austintexas_gov_department_mayor-1', is_profile_page=True)]
+[2026-02-03T01:13:09.492597] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.austintexas.gov/department/mayor/about
+[2026-02-03T01:13:12.207672] [DEBUG] 📄 Standard site - using basic waiting strategy
+[2026-02-03T01:13:13.243219] [DEBUG] ✓ Basic content loaded
+[2026-02-03T01:13:13.345556] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/world-white.svg
+[2026-02-03T01:13:13.354611] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/dropdown-arrow-white.svg
+[2026-02-03T01:13:13.367258] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/austin-header-branding-logo.svg
+[2026-02-03T01:13:13.381861] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:13:13.383768] [DEBUG] Loading image from URL: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:13:13.526806] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/2aea3c207172.png
+[2026-02-03T01:13:13.544936] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:13:13.546182] [DEBUG] Loading image from URL: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:13:13.702637] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/2aea3c207172.png
+[2026-02-03T01:13:13.721951] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:13:13.723154] [DEBUG] Loading image from URL: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:13:13.864237] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/2aea3c207172.png
+[2026-02-03T01:13:13.884388] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:13:13.886110] [DEBUG] Loading image from URL: https://www.austintexas.gov/themes/custom/coa/images/trail.jpg
+[2026-02-03T01:13:14.024905] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/2aea3c207172.png
+[2026-02-03T01:13:14.044778] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/files/Council/Mayor/KirkWatson-Vertical-Web.jpg
+[2026-02-03T01:13:14.045947] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/files/Council/Mayor/KirkWatson-Vertical-Web.jpg
+[2026-02-03T01:13:14.191652] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/5fd3fd1da58c.png
+[2026-02-03T01:13:14.268468] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.austintexas.gov/department/mayor/about
+[2026-02-03T01:13:14.311337] [DEBUG] -> Preprocessing with identities: {'Kirk Watson': ['Kirk Watson'], 'Natasha Harper-Madison': ['Natasha Harper-Madison'], 'Vanessa Fuentes': ['Vanessa Fuentes'], 'José Velásquez': ['José Velásquez'], 'José “Chito” Vela': ['José “Chito” Vela'], 'Ryan Alter': ['Ryan Alter'], 'Krista Laine': ['Krista Laine'], 'Mike Siegel': ['Mike Siegel'], 'Paige Ellis': ['Paige Ellis'], 'Zohaib "Zo" Qadri': ['Zohaib "Zo" Qadri'], 'Marc Duchen': ['Marc Duchen']}
+[2026-02-03T01:13:15.322245] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-02-03T01:13:15.322486] [INFO] -> Elapsed time: 1.05 seconds
+[2026-02-03T01:13:15.322757] [INFO] -> Average elapsed time: 1.35 seconds
+[2026-02-03T01:13:15.323103] [INFO] -> Total elapsed time: 4.05 seconds
+[2026-02-03T01:13:15.336521] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.austintexas.gov/department/mayor/about
+[2026-02-03T01:13:15.338712] [INFO] Running OpenAI prompt
+[2026-02-03T01:13:15.338957] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kirk Watson, Natasha Harper-Madison, Vanessa Fuentes, José Velásquez, José “Chito” Vela, Ryan Alter, Krista Laine, Mike Siegel, Paige Ellis, Zohaib "Zo" Qadri, Marc Duchen
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-02-03T01:13:15.339270] [INFO] openai LLM call took 0.00 seconds
+[2026-02-03T01:13:18.043542] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 4433, Output tokens: 159, Total cost: $0.002028
+[2026-02-03T01:13:18.045210] [INFO] Page relevance check found related urls: ['https://www.austintexas.gov/department/mayor/about', 'https://www.austintexas.gov/austin-city-council', 'https://www.austintexas.gov/department/mayor/contact', 'https://www.austintexas.gov/contact-us']
+[2026-02-03T01:13:18.051030] [INFO] Running Gemini prompt
+[2026-02-03T01:13:18.051800] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** elected officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Kirk Watson, Natasha Harper-Madison, Vanessa Fuentes, José Velásquez, José “Chito” Vela, Ryan Alter, Krista Laine, Mike Siegel, Paige Ellis, Zohaib "Zo" Qadri, Marc Duchen
+
+    Only extract people who are currently serving aselected officials as of 2026-02-03. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Roles (examples): Mayor, Council Member, Aldermen, Commissioner
+    Target Designations: ward, district, precinct, position, seat, place, post, at-large
+    Current Date: 2026-02-03
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - designations: (Array of strings) Specific district/ward/etc names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address in the format of email@domain.tld
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Designation extraction:
+        - Extract designations if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: ["Ward 1", "District 2"]
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-02-03) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-02-03T01:13:21.821511] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 5942, Output tokens: 208, Total cost: $0.002303
+[2026-02-03T01:13:21.826499] [INFO] gemini gemini-2.5-flash LLM call took 3.77 seconds
+[2026-02-03T01:13:21.828236] [INFO] Running OpenAI prompt
+[2026-02-03T01:13:21.828888] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** elected officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Kirk Watson, Natasha Harper-Madison, Vanessa Fuentes, José Velásquez, José “Chito” Vela, Ryan Alter, Krista Laine, Mike Siegel, Paige Ellis, Zohaib "Zo" Qadri, Marc Duchen
+
+    Only extract people who are currently serving as officials as of 2026-02-03. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Roles (examples): Mayor, Council Member, Aldermen, Select Board Member, Commissioner
+    Target designations: ward, district, precinct, position, seat, place, post, at-large
+    Current Date: 2026-02-03
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - designations: (Array) 
+            Example: ["Ward 1", "District 2, Seat 8"]
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address in the format of email@domain.tld
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, designations, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT infer information for officials. Only extract what is explicitly stated (ex: emails).
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-02-03T01:13:21.830876] [INFO] openai LLM call took 0.00 seconds
+[2026-02-03T01:13:25.735726] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 11076, Output tokens: 244, Total cost: $0.004821
+[2026-02-03T01:13:25.740576] [DEBUG] Skipping adding websites for person with role and contact info: Kirk Watson
+[2026-02-03T01:13:25.741807] [DEBUG] Skipping adding websites for person with role and contact info: Kirk Watson
+[2026-02-03T01:13:25.743215] [INFO] links updated: [Link(url='https://www.austintexas.gov/department/city-council/council/council_meeting_info_center.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/about', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/government', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/city-council-district-map', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/email/all-council-members', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/2025/20250813-reg.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/2025/20250911-reg.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/district-2-council-member', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-city-managers-office', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/history-mayors', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/district-4', status='pending', folder_name='', is_profile_page=False), Link(url='https://services.austintexas.gov/edims/document.cfm?id=114612', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/departments', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/2025/20250925-reg.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/edims/document.cfm?id=224455', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/austin-city-council', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/mayor/contact', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/contact-us', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/department/mayor-kirk-watson', status='done', folder_name='www_austintexas_gov_department_mayor-kirk-watson', is_profile_page=False), Link(url='https://www.austintexas.gov/department/mayor-1', status='done', folder_name='www_austintexas_gov_department_mayor-1', is_profile_page=True), Link(url='https://www.austintexas.gov/department/mayor/about', status='done', folder_name='www_austintexas_gov_department_mayor_about', is_profile_page=True)]
+[2026-02-03T01:13:25.770618] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.austintexas.gov/department/city-council/council/council_meeting_info_center.htm
+[2026-02-03T01:13:28.032782] [DEBUG] 📄 Standard site - using basic waiting strategy
+[2026-02-03T01:13:29.065647] [DEBUG] ✓ Basic content loaded
+[2026-02-03T01:13:29.158993] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/world-white.svg
+[2026-02-03T01:13:29.166714] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/dropdown-arrow-white.svg
+[2026-02-03T01:13:29.177370] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/austin-header-branding-logo.svg
+[2026-02-03T01:13:29.185722] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/files/Communications/Web_Content/2015/city-council-banner-700.jpg
+[2026-02-03T01:13:29.186418] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/files/Communications/Web_Content/2015/city-council-banner-700.jpg
+[2026-02-03T01:13:29.298695] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/bc64478aa2fb.png
+[2026-02-03T01:13:29.382915] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.austintexas.gov/department/city-council/council/council_meeting_info_center.htm
+[2026-02-03T01:13:29.447721] [DEBUG] -> Preprocessing with identities: {'Kirk Watson': ['Kirk Watson'], 'Natasha Harper-Madison': ['Natasha Harper-Madison'], 'Vanessa Fuentes': ['Vanessa Fuentes'], 'José Velásquez': ['José Velásquez'], 'José “Chito” Vela': ['José “Chito” Vela'], 'Ryan Alter': ['Ryan Alter'], 'Krista Laine': ['Krista Laine'], 'Mike Siegel': ['Mike Siegel'], 'Paige Ellis': ['Paige Ellis'], 'Zohaib "Zo" Qadri': ['Zohaib "Zo" Qadri'], 'Marc Duchen': ['Marc Duchen']}
+[2026-02-03T01:13:30.620297] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-02-03T01:13:30.620771] [INFO] -> Elapsed time: 1.24 seconds
+[2026-02-03T01:13:30.621184] [INFO] -> Average elapsed time: 1.31 seconds
+[2026-02-03T01:13:30.621469] [INFO] -> Total elapsed time: 5.24 seconds
+[2026-02-03T01:13:30.635962] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.austintexas.gov/department/city-council/council/council_meeting_info_center.htm
+[2026-02-03T01:13:30.637907] [INFO] Running OpenAI prompt
+[2026-02-03T01:13:30.638280] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kirk Watson, Natasha Harper-Madison, Vanessa Fuentes, José Velásquez, José “Chito” Vela, Ryan Alter, Krista Laine, Mike Siegel, Paige Ellis, Zohaib "Zo" Qadri, Marc Duchen
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-02-03T01:13:30.638605] [INFO] openai LLM call took 0.00 seconds
+[2026-02-03T01:13:33.190601] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 4946, Output tokens: 156, Total cost: $0.002228
+[2026-02-03T01:13:33.192132] [INFO] Page relevance check found related urls: ['https://www.austintexas.gov/department/city-council/council-members', 'https://www.austintexas.gov/department/city-council/about']
+[2026-02-03T01:13:33.193633] [INFO] Running Gemini prompt
+[2026-02-03T01:13:33.194613] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** elected officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Kirk Watson, Natasha Harper-Madison, Vanessa Fuentes, José Velásquez, José “Chito” Vela, Ryan Alter, Krista Laine, Mike Siegel, Paige Ellis, Zohaib "Zo" Qadri, Marc Duchen
+
+    Only extract people who are currently serving aselected officials as of 2026-02-03. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Roles (examples): Mayor, Council Member, Aldermen, Commissioner
+    Target Designations: ward, district, precinct, position, seat, place, post, at-large
+    Current Date: 2026-02-03
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - designations: (Array of strings) Specific district/ward/etc names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address in the format of email@domain.tld
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Designation extraction:
+        - Extract designations if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: ["Ward 1", "District 2"]
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-02-03) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-02-03T01:13:35.061650] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 6630, Output tokens: 70, Total cost: $0.002164
+[2026-02-03T01:13:35.065228] [INFO] gemini gemini-2.5-flash LLM call took 1.87 seconds
+[2026-02-03T01:13:35.067405] [INFO] Running OpenAI prompt
+[2026-02-03T01:13:35.068367] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** elected officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Kirk Watson, Natasha Harper-Madison, Vanessa Fuentes, José Velásquez, José “Chito” Vela, Ryan Alter, Krista Laine, Mike Siegel, Paige Ellis, Zohaib "Zo" Qadri, Marc Duchen
+
+    Only extract people who are currently serving as officials as of 2026-02-03. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Roles (examples): Mayor, Council Member, Aldermen, Select Board Member, Commissioner
+    Target designations: ward, district, precinct, position, seat, place, post, at-large
+    Current Date: 2026-02-03
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - designations: (Array) 
+            Example: ["Ward 1", "District 2, Seat 8"]
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address in the format of email@domain.tld
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, designations, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT infer information for officials. Only extract what is explicitly stated (ex: emails).
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-02-03T01:13:35.070008] [INFO] openai LLM call took 0.00 seconds
+[2026-02-03T01:13:36.724021] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 5729, Output tokens: 76, Total cost: $0.002413
+[2026-02-03T01:13:36.725952] [DEBUG] Skipping adding websites for person with role and contact info: Kirk Watson
+[2026-02-03T01:13:36.726273] [DEBUG] Skipping adding websites for person with role and contact info: Kirk Watson
+[2026-02-03T01:13:36.726887] [INFO] links updated: [Link(url='https://www.austintexas.gov/department/city-council/council-members', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/department/city-council/about', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/government', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/city-council-district-map', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/email/all-council-members', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/2025/20250813-reg.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/2025/20250911-reg.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/district-2-council-member', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-city-managers-office', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/history-mayors', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/district-4', status='pending', folder_name='', is_profile_page=False), Link(url='https://services.austintexas.gov/edims/document.cfm?id=114612', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/departments', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/2025/20250925-reg.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/edims/document.cfm?id=224455', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/austin-city-council', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/mayor/contact', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/contact-us', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/department/mayor-kirk-watson', status='done', folder_name='www_austintexas_gov_department_mayor-kirk-watson', is_profile_page=False), Link(url='https://www.austintexas.gov/department/mayor-1', status='done', folder_name='www_austintexas_gov_department_mayor-1', is_profile_page=True), Link(url='https://www.austintexas.gov/department/mayor/about', status='done', folder_name='www_austintexas_gov_department_mayor_about', is_profile_page=True), Link(url='https://www.austintexas.gov/department/city-council/council/council_meeting_info_center.htm', status='done', folder_name='www_austintexas_gov_department_city-council_council_council_meeting_info_center_htm', is_profile_page=False)]
+[2026-02-03T01:13:36.747143] [INFO] Step 3: SCRAPE_PAGE: scraping https://www.austintexas.gov/department/city-council/council-members
+[2026-02-03T01:13:39.646380] [DEBUG] 📄 Standard site - using basic waiting strategy
+[2026-02-03T01:13:40.675459] [DEBUG] ✓ Basic content loaded
+[2026-02-03T01:13:40.779379] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/world-white.svg
+[2026-02-03T01:13:40.785867] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/icons/dropdown-arrow-white.svg
+[2026-02-03T01:13:40.792827] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/themes/custom/coa/images/austin-header-branding-logo.svg
+[2026-02-03T01:13:40.802490] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/sites/default/files/2025-09/info.svg
+[2026-02-03T01:13:40.808910] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/sites/default/files/2025-09/city-council.svg
+[2026-02-03T01:13:40.817958] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/sites/default/files/2020-02/message%20boards.svg
+[2026-02-03T01:13:40.824430] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/sites/default/files/2020-02/email%20council%20members.svg
+[2026-02-03T01:13:40.831982] [DEBUG] Skipping blacklisted or invalid image: https://www.austintexas.gov/sites/default/files/2022-06/location_pin_2.svg
+[2026-02-03T01:13:40.840273] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2023-01/Kirk%20Watson-mayor-Headshot.jpg?itok=7z-pu6wu
+[2026-02-03T01:13:40.840960] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2023-01/Kirk%20Watson-mayor-Headshot.jpg?itok=7z-pu6wu
+[2026-02-03T01:13:40.919648] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/054743547ae5.png
+[2026-02-03T01:13:40.936507] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2021-10/NHarper-Madison_New2021_240x240.jpg?itok=BI5UfJwj
+[2026-02-03T01:13:40.937560] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2021-10/NHarper-Madison_New2021_240x240.jpg?itok=BI5UfJwj
+[2026-02-03T01:13:41.019476] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/951f03ca2c89.png
+[2026-02-03T01:13:41.035155] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2025-03/Fuentes_Vanessa_2025_240x240.png?itok=Dn-ipulG
+[2026-02-03T01:13:41.037156] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2025-03/Fuentes_Vanessa_2025_240x240.png?itok=Dn-ipulG
+[2026-02-03T01:13:41.175545] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/a509b89e112b.png
+[2026-02-03T01:13:41.195773] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2023-04/Jose%20Velasquez-D3Headshot-240x240.jpg?itok=iC8BeCBD
+[2026-02-03T01:13:41.196982] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2023-04/Jose%20Velasquez-D3Headshot-240x240.jpg?itok=iC8BeCBD
+[2026-02-03T01:13:41.283789] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/15e950d1c1d2.png
+[2026-02-03T01:13:41.293740] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2022-05/JVela_240x240-2022.jpg?itok=18BxtJKg
+[2026-02-03T01:13:41.294803] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2022-05/JVela_240x240-2022.jpg?itok=18BxtJKg
+[2026-02-03T01:13:41.374486] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/8f96e1781950.png
+[2026-02-03T01:13:41.381274] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2025-03/Alter_Ryan_2025_240x240.png?itok=DPKrRiK4
+[2026-02-03T01:13:41.382188] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2025-03/Alter_Ryan_2025_240x240.png?itok=DPKrRiK4
+[2026-02-03T01:13:41.516912] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/811a4e366b09.png
+[2026-02-03T01:13:41.533422] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2025-03/Laine_Krista_2025_240x240.png?itok=oeVOciLV
+[2026-02-03T01:13:41.534402] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2025-03/Laine_Krista_2025_240x240.png?itok=oeVOciLV
+[2026-02-03T01:13:41.735777] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/f217cd009e63.png
+[2026-02-03T01:13:41.743672] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2025-03/Seigel_Mike_2025_240x240.png?itok=Jqc8tMc_
+[2026-02-03T01:13:41.744635] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2025-03/Seigel_Mike_2025_240x240.png?itok=Jqc8tMc_
+[2026-02-03T01:13:41.881797] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/f3aca9c4a6e7.png
+[2026-02-03T01:13:41.899011] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2023-03/paige-ellis-headshot.jpg?itok=66LDyH3Z
+[2026-02-03T01:13:41.900134] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2023-03/paige-ellis-headshot.jpg?itok=66LDyH3Z
+[2026-02-03T01:13:42.003924] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/91319399f7d1.png
+[2026-02-03T01:13:42.021641] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2023-03/zo-qadri-headshot.jpg?itok=w2fdrySz
+[2026-02-03T01:13:42.022787] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2023-03/zo-qadri-headshot.jpg?itok=w2fdrySz
+[2026-02-03T01:13:42.121349] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/057baeb4e289.png
+[2026-02-03T01:13:42.137420] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2025-03/Duchen_Marc_2025_240x240.png?itok=pPrJrp0c
+[2026-02-03T01:13:42.138615] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2025-03/Duchen_Marc_2025_240x240.png?itok=pPrJrp0c
+[2026-02-03T01:13:42.279778] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/1b382a2c167e.png
+[2026-02-03T01:13:42.297715] [DEBUG] Attempting to intercept and save image for: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2024-05/TC-Broadnax-Square-240x240.jpg?itok=uuGZ9bvg
+[2026-02-03T01:13:42.298740] [DEBUG] Loading image from URL: https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2024-05/TC-Broadnax-Square-240x240.jpg?itok=uuGZ9bvg
+[2026-02-03T01:13:42.384041] [INFO] Image saved: /app/data_source/tx/local/place_austin/images/d1fe44db453b.png
+[2026-02-03T01:13:42.475357] [INFO] Step 4: PREPROCESS_PAGE_CONTENT: https://www.austintexas.gov/department/city-council/council-members
+[2026-02-03T01:13:42.532153] [DEBUG] -> Preprocessing with identities: {'Kirk Watson': ['Kirk Watson'], 'Natasha Harper-Madison': ['Natasha Harper-Madison'], 'Vanessa Fuentes': ['Vanessa Fuentes'], 'José Velásquez': ['José Velásquez'], 'José “Chito” Vela': ['José “Chito” Vela'], 'Ryan Alter': ['Ryan Alter'], 'Krista Laine': ['Krista Laine'], 'Mike Siegel': ['Mike Siegel'], 'Paige Ellis': ['Paige Ellis'], 'Zohaib "Zo" Qadri': ['Zohaib "Zo" Qadri'], 'Marc Duchen': ['Marc Duchen']}
+[2026-02-03T01:13:43.555278] [INFO] /Step 4: PREPROCESS_PAGE_CONTENT
+
+[2026-02-03T01:13:43.555541] [INFO] -> Elapsed time: 1.08 seconds
+[2026-02-03T01:13:43.555808] [INFO] -> Average elapsed time: 1.22 seconds
+[2026-02-03T01:13:43.556209] [INFO] -> Total elapsed time: 6.08 seconds
+[2026-02-03T01:13:43.574419] [INFO] Step 5: PROCESS_PAGE_CONTENT: https://www.austintexas.gov/department/city-council/council-members
+[2026-02-03T01:13:43.578773] [INFO] Running OpenAI prompt
+[2026-02-03T01:13:43.579300] [DEBUG] Prompt: 
+
+    Your task is to determine if the provided content contains information about the current officials of the target municipality. This includes structured listings (e.g., tables, lists, or directories) or dedicated sections (e.g., biography, contact, or about pages) for officials.
+
+    Here is a list of known target people (may be missing or include extra): Kirk Watson, Natasha Harper-Madison, Vanessa Fuentes, José Velásquez, José “Chito” Vela, Ryan Alter, Krista Laine, Mike Siegel, Paige Ellis, Zohaib "Zo" Qadri, Marc Duchen
+
+    Only consider people who are currently serving as officials. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Return a JSON object with "thoughts" explaining your reasoning in the following format:
+    {
+        "thoughts": "Your reasoning goes here",
+        "related_urls": [],  # List any URLs that are likely to contain more information about the officials or lead to a listing
+        "is_relevant": true
+    }
+
+    **Guidelines for Identifying Relevant URLs:**
+    - Include URLs that are likely to contain structured listings or dedicated sections about officials.
+    - Exclude URLs that are general or unrelated, such as homepages, news articles, event summaries, or meeting minutes.
+    - Focus on pages that are likely to provide detailed information about officials, such as directories, biographies, or contact pages.
+    
+[2026-02-03T01:13:43.580321] [INFO] openai LLM call took 0.00 seconds
+[2026-02-03T01:13:55.006757] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 5276, Output tokens: 333, Total cost: $0.002643
+[2026-02-03T01:13:55.008669] [INFO] Page relevance check found related urls: ['https://www.austintexas.gov/austin-city-council', 'https://www.austintexas.gov/mayor', 'https://www.austintexas.gov/district1', 'https://www.austintexas.gov/district2', 'https://www.austintexas.gov/district3', 'https://www.austintexas.gov/district4', 'https://www.austintexas.gov/district5', 'https://www.austintexas.gov/district6', 'https://www.austintexas.gov/district7', 'https://www.austintexas.gov/district8', 'https://www.austintexas.gov/district9', 'https://www.austintexas.gov/district10', 'https://www.austintexas.gov/department/city-manager']
+[2026-02-03T01:13:55.011505] [INFO] Running Gemini prompt
+[2026-02-03T01:13:55.012375] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** elected officials of the target municipality.
+
+    If the content includes information about the following people, they are very likely to be on the council: Kirk Watson, Natasha Harper-Madison, Vanessa Fuentes, José Velásquez, José “Chito” Vela, Ryan Alter, Krista Laine, Mike Siegel, Paige Ellis, Zohaib "Zo" Qadri, Marc Duchen
+
+    Only extract people who are currently serving aselected officials as of 2026-02-03. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    Roles (examples): Mayor, Council Member, Aldermen, Commissioner
+    Target Designations: ward, district, precinct, position, seat, place, post, at-large
+    Current Date: 2026-02-03
+
+    Return a JSON object in the following format, each having:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - designations: (Array of strings) Specific district/ward/etc names
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address in the format of email@domain.tld
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - related_urls: (Array of strings) URLs that potentially contain more information about the officials, ward/district profiles, etc.
+    - thoughts: (String) Your reasoning process
+
+    Guidelines:
+    - **Only extract information that is explicitly present in the provided content. Do NOT infer or fabricate any details, including email addresses, phone numbers, or URLs.**
+    - Designation extraction:
+        - Extract designations if explicitly mentioned in the text and relevant to the person's role.
+        - Examples: ["Ward 1", "District 2"]
+    - Name extraction:
+        - Extract full names ONLY, not titles.
+    - Phone number extraction:
+        - Extract phone numbers even when formatted as Markdown link text.
+    - URL extraction:
+        - Extract URLs starting with "http://" or "https://".
+    - Email extraction:
+        - Extract email addresses found directly in the text
+    - Start and End Date Extraction:
+        - Extract dates only if explicitly written in the text.
+        - **Start Date**:
+            - Extract the date associated with the **most recent election or appointment**.
+            - Ignore past terms or historical dates unless explicitly stated as the current term.
+            - Example: "Elected in November 2020 and reelected in November 2024" → `start_date`: `2024-11`.
+        - **End Date**:
+            - Extract the date associated with the **current term expiration**.
+            - Example: "Term ends December 2028" → `end_date`: `2028-12`.
+        - If no explicit dates are found, set both `start_date` and `end_date` to `null`.
+
+    Additional Rules:
+    - Only extract officials if their information appears in a **structured listing** (such as a table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - If the content contains any unstructured mentions of officials (e.g., in news articles, event summaries, or meeting notes), **ignore these mentions entirely** and return an empty array if no structured listing or dedicated section is found.
+    - Do NOT infer or guess officials' names, roles, or contact details from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - If the content contains a mix of structured listings and unstructured mentions, only extract information from the structured listings or dedicated sections.
+    - Ensure all extracted details refer to the **current term** of the official.
+    - Use the provided current date (2026-02-03) to filter out officials, roles, 
+        or terms that are no longer active.
+    - Exclude individuals who have resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    Examples of what NOT to extract:
+    - If the content only mentions that an official attended an event, was quoted in a news article, 
+      or is referenced in a meeting summary, and there is no structured list or 
+      dedicated biography/about/contact section, **return an empty array**.
+    
+[2026-02-03T01:14:01.140059] [INFO] LLM Cost added: google_gemini model gemini-2.5-flash - Input tokens: 7109, Output tokens: 1467, Total cost: $0.005800
+[2026-02-03T01:14:01.143045] [INFO] gemini gemini-2.5-flash LLM call took 6.13 seconds
+[2026-02-03T01:14:01.144816] [INFO] Running OpenAI prompt
+[2026-02-03T01:14:01.145230] [DEBUG] Prompt: 
+
+    Your task is to extract information about the **current** elected officials of the target municipality.
+
+    Here is a list of known target people (may be missing or include extra): Kirk Watson, Natasha Harper-Madison, Vanessa Fuentes, José Velásquez, José “Chito” Vela, Ryan Alter, Krista Laine, Mike Siegel, Paige Ellis, Zohaib "Zo" Qadri, Marc Duchen
+
+    Only extract people who are currently serving as officials as of 2026-02-03. 
+    Do not include anyone who is described as former, past, resigned, deceased, 
+    or otherwise not currently in office.
+
+    First, determine if the content contains a **structured listing** (such as a table, list, or directory) of officials, or a **dedicated biography/about/contact section** for an official. If not, return an empty JSON array `[]`.
+
+    Roles (examples): Mayor, Council Member, Aldermen, Select Board Member, Commissioner
+    Target designations: ward, district, precinct, position, seat, place, post, at-large
+    Current Date: 2026-02-03
+
+    Return a JSON object in the following format:
+    - people: (Array of objects) Each object should have:
+      - name: (String) Full name only (no titles)
+      - image: (String or null) URL to profile image (https://...)
+      - roles: (Array of strings) Active municipal roles
+      - designations: (Array) 
+            Example: ["Ward 1", "District 2, Seat 8"]
+      - phone: (String or null) Formatted phone number
+      - email: (String or null) Email address in the format of email@domain.tld
+      - url: (String or null) In order of importance: the official's profile, biography URL, contact form URL, related position listing, or null if none exist.
+      - start_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+      - end_date: (String or null) "YYYY" or "YYYY-MM" or "YYYY-MM-DD"
+    - thoughts: (String) Your reasoning process
+ 
+    **Instructions:**
+    - Only extract officials if their information appears in a **structured listing** (e.g., table, list, or directory) or in a **dedicated biography/about/contact section**.
+    - A **structured listing** must explicitly include names and roles. Additional details (e.g., contact information, designations, or term dates) are optional but preferred.
+    - **Do NOT extract officials based on mentions in news articles, event summaries, meeting notes, or scattered references throughout the content.**
+    - **Do NOT extract officials if the only evidence is a link, heading, or navigation item (e.g., "Mayor And Council") without an actual structured listing or dedicated section in the provided content.**
+    - **Do NOT extract officials based on contextual clues such as dates, roles, or ongoing activities unless they are explicitly part of a structured listing or dedicated section.**
+    - If the only mentions of officials are within news stories, event recaps, meeting summaries, or scattered throughout the text (not in a structured list or dedicated section), return an empty array.
+    - Do NOT infer or guess officials' names or roles from context, prior knowledge, or recent mentions. Only extract if the information is presented in a structured way or in a dedicated section.
+    - Do NOT infer information for officials. Only extract what is explicitly stated (ex: emails).
+    - Do NOT include people whose terms have ended, resigned, vacated their roles, or are deceased.
+    - Ensure only ONE entry exists per unique person's name. Merge all extracted details for the same person into a single record.
+
+    **Examples of what NOT to extract:**
+    - "Mayor John Smith attended the ribbon-cutting ceremony for the new library."
+    - "Councilwoman Jane Doe was quoted in a news article about the town's budget."
+    - "Deputy Mayor Joe Bloggs was present at the community event on March 3, 2024."
+    - "Mayor and Council" is mentioned as a link or heading, but no structured listing or dedicated section is present.
+
+    **Examples of what to extract:**
+    - A table listing officials with their names and roles (e.g., "John Smith - Mayor, Jane Doe - Councilwoman").
+    - A section titled "Mayor and Council" that includes a list of officials with their roles, contact details, and/or biographies.
+
+    **FINAL MANDATORY CHECK:** Review your entire response for accuracy before submitting, paying close attention to the role inference, date extraction, and term identification rules.
+    
+[2026-02-03T01:14:01.145871] [INFO] openai LLM call took 0.00 seconds
+[2026-02-03T01:14:18.120051] [INFO] LLM Cost added: openai model openai/gpt-4.1-mini - Input tokens: 6059, Output tokens: 1250, Total cost: $0.004424
+[2026-02-03T01:14:18.128843] [DEBUG] Skipping adding websites for person with role and contact info: Kirk Watson
+[2026-02-03T01:14:18.129416] [DEBUG] Skipping adding websites for person with role and contact info: Natasha Harper-Madison
+[2026-02-03T01:14:18.129896] [DEBUG] Skipping adding websites for person with role and contact info: Vanessa Fuentes
+[2026-02-03T01:14:18.130651] [DEBUG] Skipping adding websites for person with role and contact info: José Velásquez
+[2026-02-03T01:14:18.131721] [DEBUG] Skipping adding websites for person with role and contact info: José “Chito” Vela
+[2026-02-03T01:14:18.133264] [DEBUG] Skipping adding websites for person with role and contact info: Ryan Alter
+[2026-02-03T01:14:18.134169] [DEBUG] Skipping adding websites for person with role and contact info: Krista Laine
+[2026-02-03T01:14:18.135204] [DEBUG] Skipping adding websites for person with role and contact info: Mike Siegel
+[2026-02-03T01:14:18.138854] [DEBUG] Skipping adding websites for person with role and contact info: Paige Ellis
+[2026-02-03T01:14:18.141249] [DEBUG] Skipping adding websites for person with role and contact info: Zohaib "Zo" Qadri
+[2026-02-03T01:14:18.143284] [DEBUG] Skipping adding websites for person with role and contact info: Marc Duchen
+[2026-02-03T01:14:18.143811] [DEBUG] Skipping adding websites for person with role and contact info: Kirk Watson
+[2026-02-03T01:14:18.144482] [DEBUG] Skipping adding websites for person with role and contact info: Natasha Harper-Madison
+[2026-02-03T01:14:18.145015] [DEBUG] Skipping adding websites for person with role and contact info: Vanessa Fuentes
+[2026-02-03T01:14:18.147204] [DEBUG] Skipping adding websites for person with role and contact info: José Velásquez
+[2026-02-03T01:14:18.149135] [DEBUG] Skipping adding websites for person with role and contact info: José “Chito” Vela
+[2026-02-03T01:14:18.150281] [DEBUG] Skipping adding websites for person with role and contact info: Ryan Alter
+[2026-02-03T01:14:18.150925] [DEBUG] Skipping adding websites for person with role and contact info: Krista Laine
+[2026-02-03T01:14:18.151673] [DEBUG] Skipping adding websites for person with role and contact info: Mike Siegel
+[2026-02-03T01:14:18.152463] [DEBUG] Skipping adding websites for person with role and contact info: Paige Ellis
+[2026-02-03T01:14:18.152846] [DEBUG] Skipping adding websites for person with role and contact info: Zohaib "Zo" Qadri
+[2026-02-03T01:14:18.153241] [DEBUG] Skipping adding websites for person with role and contact info: Marc Duchen
+[2026-02-03T01:14:18.155402] [INFO] links updated: [Link(url='https://www.austintexas.gov/austin-city-council', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/mayor', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district1', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district2', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district3', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district4', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district5', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district6', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district7', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district8', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district9', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/district10', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/department/city-manager', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/department/city-council/about', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/government', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/page/city-council-district-map', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/email/all-council-members', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/2025/20250813-reg.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/2025/20250911-reg.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/district-2-council-member', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/austin-city-managers-office', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/history-mayors', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/district-4', status='pending', folder_name='', is_profile_page=False), Link(url='https://services.austintexas.gov/edims/document.cfm?id=114612', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/departments', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/2025/20250925-reg.htm', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/edims/document.cfm?id=224455', status='pending', folder_name='', is_profile_page=False), Link(url='https://www.austintexas.gov/department/mayor/contact', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/contact-us', status='pending', folder_name='', is_profile_page=True), Link(url='https://www.austintexas.gov/department/mayor-kirk-watson', status='done', folder_name='www_austintexas_gov_department_mayor-kirk-watson', is_profile_page=False), Link(url='https://www.austintexas.gov/department/mayor-1', status='done', folder_name='www_austintexas_gov_department_mayor-1', is_profile_page=True), Link(url='https://www.austintexas.gov/department/mayor/about', status='done', folder_name='www_austintexas_gov_department_mayor_about', is_profile_page=True), Link(url='https://www.austintexas.gov/department/city-council/council/council_meeting_info_center.htm', status='done', folder_name='www_austintexas_gov_department_city-council_council_council_meeting_info_center_htm', is_profile_page=False), Link(url='https://www.austintexas.gov/department/city-council/council-members', status='done', folder_name='www_austintexas_gov_department_city-council_council-members', is_profile_page=True)]
+[2026-02-03T01:14:18.712575] [INFO] Step 8: WorkflowStatus.FORMAT_OUTPUT Formatting output data.
+[2026-02-03T01:14:18.729891] [INFO] Step 9: CLEANUP
+[2026-02-03T01:14:18.734367] [DEBUG] Image files to keep: {'1b382a2c167e.png', '91319399f7d1.png', 'f3aca9c4a6e7.png', 'bfbc538adb3c.png', 'a509b89e112b.png', '951f03ca2c89.png', '811a4e366b09.png', '8f96e1781950.png', '057baeb4e289.png', '15e950d1c1d2.png', 'f217cd009e63.png'}
+[2026-02-03T01:14:18.736530] [DEBUG] All image map data: {'https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2023-01/Kirk%20Watson-mayor-Headshot.jpg?itok=7z-pu6wu': '054743547ae5.png', 'https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2021-10/NHarper-Madison_New2021_240x240.jpg?itok=BI5UfJwj': '951f03ca2c89.png', 'https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2025-03/Fuentes_Vanessa_2025_240x240.png?itok=Dn-ipulG': 'a509b89e112b.png', 'https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2023-04/Jose%20Velasquez-D3Headshot-240x240.jpg?itok=iC8BeCBD': '15e950d1c1d2.png', 'https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2022-05/JVela_240x240-2022.jpg?itok=18BxtJKg': '8f96e1781950.png', 'https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2025-03/Alter_Ryan_2025_240x240.png?itok=DPKrRiK4': '811a4e366b09.png', 'https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2025-03/Laine_Krista_2025_240x240.png?itok=oeVOciLV': 'f217cd009e63.png', 'https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2025-03/Seigel_Mike_2025_240x240.png?itok=Jqc8tMc_': 'f3aca9c4a6e7.png', 'https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2023-03/paige-ellis-headshot.jpg?itok=66LDyH3Z': '91319399f7d1.png', 'https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2023-03/zo-qadri-headshot.jpg?itok=w2fdrySz': '057baeb4e289.png', 'https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2025-03/Duchen_Marc_2025_240x240.png?itok=pPrJrp0c': '1b382a2c167e.png', 'https://www.austintexas.gov/sites/default/files/styles/member_240x240/public/2024-05/TC-Broadnax-Square-240x240.jpg?itok=uuGZ9bvg': 'd1fe44db453b.png', 'https://www.austintexas.gov/sites/default/files/files/Communications/Web_Content/2015/city-council-banner-700.jpg': 'bc64478aa2fb.png', 'https://www.austintexas.gov/themes/custom/coa/images/trail.jpg': '2aea3c207172.png', 'https://www.austintexas.gov/sites/default/files/files/Council/Mayor/KirkWatson-Vertical-Web.jpg': '5fd3fd1da58c.png', 'https://www.austintexas.gov/sites/default/files/images/Council/Mayor%20Watson-Headshot-240x240.jpg': 'bfbc538adb3c.png'}
+[2026-02-03T01:14:18.737958] [DEBUG] Checking image file: f217cd009e63.png
+[2026-02-03T01:14:18.738639] [DEBUG] Checking image file: 951f03ca2c89.png
+[2026-02-03T01:14:18.739494] [DEBUG] Checking image file: f3aca9c4a6e7.png
+[2026-02-03T01:14:18.740496] [DEBUG] Checking image file: bc64478aa2fb.png
+[2026-02-03T01:14:18.741079] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_austin/images/bc64478aa2fb.png
+[2026-02-03T01:14:18.742690] [DEBUG] Checking image file: a509b89e112b.png
+[2026-02-03T01:14:18.743752] [DEBUG] Checking image file: 1b382a2c167e.png
+[2026-02-03T01:14:18.744484] [DEBUG] Checking image file: 057baeb4e289.png
+[2026-02-03T01:14:18.745070] [DEBUG] Checking image file: d1fe44db453b.png
+[2026-02-03T01:14:18.745667] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_austin/images/d1fe44db453b.png
+[2026-02-03T01:14:18.746665] [DEBUG] Checking image file: 054743547ae5.png
+[2026-02-03T01:14:18.748345] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_austin/images/054743547ae5.png
+[2026-02-03T01:14:18.750628] [DEBUG] Checking image file: image_map.json
+[2026-02-03T01:14:18.751332] [DEBUG] Checking image file: 15e950d1c1d2.png
+[2026-02-03T01:14:18.752917] [DEBUG] Checking image file: 2aea3c207172.png
+[2026-02-03T01:14:18.754596] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_austin/images/2aea3c207172.png
+[2026-02-03T01:14:18.758100] [DEBUG] Checking image file: bfbc538adb3c.png
+[2026-02-03T01:14:18.760269] [DEBUG] Checking image file: 91319399f7d1.png
+[2026-02-03T01:14:18.761572] [DEBUG] Checking image file: 5fd3fd1da58c.png
+[2026-02-03T01:14:18.762344] [DEBUG] Removing unreferenced image file: /app/data_source/tx/local/place_austin/images/5fd3fd1da58c.png
+[2026-02-03T01:14:18.763531] [DEBUG] Checking image file: 811a4e366b09.png
+[2026-02-03T01:14:18.765142] [DEBUG] Checking image file: 8f96e1781950.png
+[2026-02-03T01:14:18.766457] [ERROR] Missing images that were expected to be found: {'1b382a2c167e.png', '91319399f7d1.png', 'f3aca9c4a6e7.png', 'bfbc538adb3c.png', 'a509b89e112b.png', '951f03ca2c89.png', '811a4e366b09.png', '8f96e1781950.png', '057baeb4e289.png', '15e950d1c1d2.png', 'f217cd009e63.png'}
+[2026-02-03T01:14:18.784291] [INFO] Step 10: WorkflowStatus.SAVE_OUTPUT Saving output data and config files.
+[2026-02-03T01:14:18.837205] [INFO] Step 11: MAYBE_SEND_TO_GITHUB
+[2026-02-03T01:14:18.837664] [INFO] CRUDDER_UPLOAD_URL: http://api_civicpatch_org:8001/api/internal/pipelines/github_intake
