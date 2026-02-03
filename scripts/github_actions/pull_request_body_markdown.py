@@ -26,7 +26,6 @@ def pull_request_body_markdown(jurisdiction_ocdid: str, request_id: str) -> str:
     jurisdiction_name = config.get("name", "Unknown Jurisdiction")
     jurisdiction_source_urls = config.get("source_urls", [])
     jurisdiction_identities = config.get("identities", [])
-    jurisdiction_government_type = config.get("government_type", "N/A")
 
     source_urls_str = markdown_list_br(jurisdiction_source_urls)
     identities_str = markdown_list_br(jurisdiction_identities)
@@ -43,7 +42,6 @@ Note: some configs, like source_urls and identities, are generated after the scr
 | **Name**               | {jurisdiction_name}                 |
 | **Source URLs**        | {source_urls_str}                   |
 | **Identities**         | {identities_str}                    |
-| **Government Type**    | {jurisdiction_government_type}      |
 
 ## Request Information
 - **Request ID**: {request_id}
