@@ -1,0 +1,2428 @@
+<!DOCTYPE html>
+<html class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-n3-active wf-muli-n4-active wf-muli-i4-active wf-muli-n7-active wf-active has-webFonts" lang="en">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-type"/>
+  <!-- Google Tag Manager for GA4 -->
+  <!-- End Google Tag Manager for GA4 -->
+  <script>
+   function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+  </script>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="rgb(21, 37, 66)" name="theme-color"/>
+  <title>
+   Calendar • Ovilla • CivicEngage
+  </title>
+  <!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+  <!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+  <!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+  <!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+  <script type="text/javascript">
+   window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+  </script>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <!-- Dynamic Header Scripts -->
+  <!--Reference Stylesheet-->
+  <!--Dynamic Header Styles-->
+  <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+  <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+  <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+  <!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+  <style data-docbox-sr-only="true">
+   .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+  </style>
+ </head>
+ <body class="wide cpTextResizeOn doneLoading" style="cursor: default;">
+  <img alt="Loading" src="https://cityofovilla.org/Common/images/ajax-loader.gif" title="Loading"/>
+  <script>
+   jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});
+  </script>
+  <a class="skipToContentLink" href="https://cityofovilla.org/Calendar.aspx#contentarea" target="_self">
+   Skip to Main Content
+  </a>
+  <!-- Begin Signed Out Bar -->
+  <p class="dropdown">
+   <a class="myConnections" href="https://cityofovilla.org/MyAccount/ProfileCreate" id="signedOutToolbarCreateProfileButton" role="link">
+    Create a Website Account
+   </a>
+   - Manage notification subscriptions, save form progress and more.
+  </p>
+  <ul class="nav secondary">
+   <li>
+    <a class="button" href="https://cityofovilla.org/MyAccount" id="loggedOutToolbarSignInButton" role="link">
+     Website Sign In
+    </a>
+   </li>
+  </ul>
+  <script>
+   $(document).ready(function () {
+        $('#signedOutToolbarCreateProfileButton').keypress(function (e) { if (e.which === 0) return; $(this).click(); });
+        $('#signedOutToolbarCreateProfileButton').click(function (event) {
+        	event.preventDefault();
+        	window.location.href = '/MyAccount/ProfileCreate?from=url&url=/&dn=' + window.location.origin;
+        });
+
+			
+				$('#loggedOutToolbarSignInButton').click(function (event) {
+					event.preventDefault();
+					window.location.href = '/MyAccount/?from=url&url=' + encodeURIComponent(window.location.href.replace(window.location.origin, '')) + '&dn=' + window.location.host;
+				});
+			
+
+		if ('False' == 'True') {
+            $('#loggedOutToolbarSignInButton').hide();
+		}
+    })
+  </script>
+  <!-- End Signed Out Bar -->
+  <!-- Header Container -->
+  <header class="fixedTopTS" data-cprole="structuralContainer" id="headerContainerTS" style="top: 34px;">
+   <img alt="" class="bannerObject" height="125" src="https://cityofovilla.org/ImageRepository/Document?documentID=3362" width="252"/>
+   <nav class="siteNav mainNav" data-cprole="nav" id="mainNav" role="navigation">
+    <ol class="rootNavMenu" data-parent="1" id="mainNavMenu" role="menu">
+     <!--
+-->
+     <li class="topMenuItem" data-displaymegamenu="True" data-pageid="27" id="MainItem27" role="none" style="width: 16.4%;">
+      <!--
+-->
+      <!--
+-->
+      <a aria-expanded="false" aria-haspopup="true" class="navMainItem mainNavItem mainNavItem1" href="https://cityofovilla.org/27/Government" id="mainNavGovernment" role="menuitem" target="_self">
+       Government
+      </a>
+      <!--
+-->
+      <!--
+-->
+     </li>
+     <!-- -->
+     <li class="topMenuItem" data-displaymegamenu="True" data-pageid="61" id="MainItem61" role="none" style="width: 23.5818%;">
+      <!--
+-->
+      <!--
+-->
+      <a aria-expanded="false" aria-haspopup="true" class="navMainItem mainNavItem mainNavItem2" href="https://cityofovilla.org/61/Resident-Information" id="mainNavResidentInformation" role="menuitem" target="_self">
+       Resident Information
+      </a>
+      <!--
+-->
+      <!--
+-->
+     </li>
+     <!-- -->
+     <li class="topMenuItem" data-displaymegamenu="True" data-pageid="8" id="MainItem8" role="none" style="width: 20.4%;">
+      <!--
+-->
+      <!--
+-->
+      <a aria-expanded="false" aria-haspopup="true" class="navMainItem mainNavItem mainNavItem3" href="https://cityofovilla.org/8/City-Departments" id="mainNavCityDepartments" role="menuitem" target="_self">
+       City Departments
+      </a>
+      <!--
+-->
+      <!--
+-->
+     </li>
+     <!-- -->
+     <li class="topMenuItem" data-displaymegamenu="True" data-pageid="161" id="MainItem161" role="none" style="width: 24.5818%;">
+      <!--
+-->
+      <!--
+-->
+      <a class="navMainItem mainNavItem mainNavItem4" href="https://cityofovilla.org/122/Economic-Development-Corporation" id="mainNavEconomicDevelopment" role="menuitem" target="_self">
+       Economic Development
+      </a>
+      <!--
+-->
+      <!--
+-->
+     </li>
+     <!-- -->
+     <li class="topMenuItem" data-displaymegamenu="True" data-pageid="7" id="MainItem7" role="none" style="width: 15.0364%;">
+      <!--
+-->
+      <!--
+-->
+      <a aria-expanded="false" aria-haspopup="true" class="navMainItem mainNavItem mainNavItem5" href="https://cityofovilla.org/7/How-Do-I" id="mainNavHowDoI" role="menuitem" target="_self">
+       How Do I...
+      </a>
+      <!--
+-->
+      <!--
+-->
+     </li>
+     <!-- -->
+    </ol>
+   </nav>
+  </header>
+  <!-- Banner -->
+  <!--
+-->
+  <ul class="semanticList">
+   <!--
+-->
+   <li class="widgetItem GraphicLinks">
+    <a aria-label="Facebook graphic" class="widgetDesc widgetGraphicLinksLink" href="https://www.facebook.com/profile.php?id=100090760697531" target="_self">
+     <img alt="Facebook" class="graphicButtonLink" onblur="this.src='/ImageRepository/Document?documentID=3295'" onfocus="this.src='/ImageRepository/Document?documentID=3295'" onmouseout="this.src='/ImageRepository/Document?documentID=3295'" onmouseover="this.src='/ImageRepository/Document?documentID=3295'" src="https://cityofovilla.org/ImageRepository/Document?documentID=3295"/>
+    </a>
+   </li>
+   <!--
+-->
+  </ul>
+  <!-- inner column -->
+  <!-- inner row -->
+  <!-- outer column -->
+  <!-- -->
+  <script defer="" type="text/javascript">
+   $(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButtona95485c3-16e4-494e-8f36-4a220cc9ca62").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDepta95485c3-16e4-494e-8f36-4a220cc9ca62").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchFielda95485c3-16e4-494e-8f36-4a220cc9ca62").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDepta95485c3-16e4-494e-8f36-4a220cc9ca62").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDepta95485c3-16e4-494e-8f36-4a220cc9ca62").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchFielda95485c3-16e4-494e-8f36-4a220cc9ca62").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDepta95485c3-16e4-494e-8f36-4a220cc9ca62").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchFielda95485c3-16e4-494e-8f36-4a220cc9ca62").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchFielda95485c3-16e4-494e-8f36-4a220cc9ca62"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+  </script>
+  <section aria-label="Search" class="widget widgetSearch skin11 widgetOptionSet25" id="widgetPreviewSearch" style="display: block;">
+   <!-- For the button right and inside -->
+   <a class="widgetSearchButton widgetSearchButtona95485c3-16e4-494e-8f36-4a220cc9ca62" href="https://cityofovilla.org/Search/Results" id="btnSearchIcon" role="button">
+    <img alt="Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=3349" data-image="/ImageRepository/Document?documentID=3307" src="https://cityofovilla.org/ImageRepository/Document?documentID=3307"/>
+   </a>
+  </section>
+  <style scoped="">
+   .widgetSearch ::-webkit-input-placeholder {
+		color: #4D4D4D;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #4D4D4D;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #4D4D4D;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #4D4D4D;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBoxa95485c3-16e4-494e-8f36-4a220cc9ca62
+	{
+		color: #4D4D4D;
+		background-color: #FCFCFF;
+border: none;
+border-left: solid 5px #812D2E;
+height: 40px;
+font-family: Poppins;
+font-weight: bold;
+font-size: 15px;
+padding: 0 46px 0 21px;
+	}
+	.widgetSearch .widgetBody .widgetSearchButtona95485c3-16e4-494e-8f36-4a220cc9ca62
+	{
+		
+	}
+	.widgetSearch .widgetSearch-onlyDepta95485c3-16e4-494e-8f36-4a220cc9ca62
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDepta95485c3-16e4-494e-8f36-4a220cc9ca62
+	{
+		position: relative;
+		top: .125em;
+	}
+  </style>
+  <!-- inner column -->
+  <!-- inner row -->
+  <!-- outer column -->
+  <!-- -->
+  <!-- outer row -->
+  <img alt="" class="bannerObject" data-is-delayed="false" src="https://cityofovilla.org/ImageRepository/Document?documentID=3287" style="position: absolute; left: 0px; margin: 0px; width: 2200px;" width="1920px"/>
+  <!-- Content container -->
+  <ol class="semanticList breadCrumbs">
+   <li>
+    <a class="breadCrumb" href="https://cityofovilla.org/">
+     Home
+    </a>
+   </li>
+  </ol>
+  <!--[if IE 6]><script type="text/javascript">isie6 = true; isie6or7 = true;</script><![endif]-->
+  <!--[if IE 7]><script type="text/javascript">isie7 = true; isie6or7 = true;</script><![endif]-->
+  <form action="./Calendar.aspx" autocomplete="off" enctype="multipart/form-data" id="aspnetForm" method="post" name="aspnetForm" onsubmit="return headerValidationCallback();" style="display:inline;">
+   <!--for archiving purpose-->
+   <script type="text/javascript">
+    //<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$MainContent$scriptManager', 'aspnetForm', ['tctl00$ctl00$MainContent$ModuleContent$ctl00$featured','featured','tctl00$ctl00$MainContent$ModuleContent$ctl00$contentUpdatePanelListView','','tctl00$ctl00$MainContent$ModuleContent$ctl00$contentUpdatePanel',''], [], [], 90, 'ctl00$ctl00');
+//]]>
+   </script>
+   View all calendars is the default. Choose Select a Calendar to view a specific calendar.
+   Select the arrows on either side of the current month to change the month.
+   <nav aria-label="Calendar View">
+    <ul class="tabs">
+     <li class="active" id="ctl00_ctl00_MainContent_ModuleContent_ctl00_liListView">
+      <a href="https://cityofovilla.org/" id="ctl00_ctl00_MainContent_ModuleContent_ctl00_lnkListView" onclick="changeView('list', '','','','0'); return false;" onkeypress="return this.onclick();">
+       List
+      </a>
+     </li>
+     <li class="" id="ctl00_ctl00_MainContent_ModuleContent_ctl00_liWeekView">
+      <a href="https://cityofovilla.org/" id="ctl00_ctl00_MainContent_ModuleContent_ctl00_lnkWeekView" onclick="changeView('week', '','','','0'); return false;" onkeypress="return this.onclick();">
+       Week
+      </a>
+     </li>
+     <li class="" id="ctl00_ctl00_MainContent_ModuleContent_ctl00_liMonthView">
+      <a href="https://cityofovilla.org/" id="ctl00_ctl00_MainContent_ModuleContent_ctl00_lnkMonthView" onclick="changeView('month', '','','','0'); return false;" onkeypress="return this.onclick();">
+       Month
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <nav aria-label="Miscellaneous Links">
+    <ul class="misc">
+     <li id="ctl00_ctl00_MainContent_ModuleContent_ctl00_liRSS">
+      <a aria-label="View RSS Feeds for Calendar" href="https://cityofovilla.org/rss.aspx#calendar" title="View RSS Feeds">
+       <svg aria-hidden="true">
+        <use href="#iconRSS">
+        </use>
+       </svg>
+      </a>
+     </li>
+     <li id="ctl00_ctl00_MainContent_ModuleContent_ctl00_liICal">
+      <a aria-label="Subscribe To ICalendar" href="https://cityofovilla.org/iCalendar.aspx" id="ctl00_ctl00_MainContent_ModuleContent_ctl00_lnkiCal">
+       <svg aria-hidden="true">
+        <use href="#iconSubscribeEvent">
+        </use>
+       </svg>
+       Subscribe to iCalendar
+      </a>
+     </li>
+     <li>
+      <a aria-hidden="true" aria-label="Print" href="https://cityofovilla.org/" id="ctl00_ctl00_MainContent_ModuleContent_ctl00_lnkPrint" onclick="printView('list'); return false;">
+       <svg aria-hidden="true">
+        <use href="#iconPrint">
+        </use>
+       </svg>
+       Print
+      </a>
+     </li>
+     <li id="ctl00_ctl00_MainContent_ModuleContent_ctl00_liNotifyMe">
+      <a aria-label="Notify Me" href="https://cityofovilla.org/list.aspx?Mode=Subscribe#calendar">
+       <svg aria-hidden="true">
+        <use href="#iconEmail">
+        </use>
+       </svg>
+       Notify Me
+      </a>
+     </li>
+     <li>
+      <a aria-label="Find a Facility" class="reserveFacility" href="https://cityofovilla.org/Facilities">
+       <svg aria-hidden="true">
+        <use href="#iconFacility">
+        </use>
+       </svg>
+       Find a Facility
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <section aria-label="Calendar Module Search">
+    <label class="calendarInputLabel" for="startDateFromAmsul">
+     Start Date
+    </label>
+    <fieldset class="fieldset__datetimepicker__wrapper">
+     February
+     2026
+     <table aria-controls="P1242698637" aria-readonly="true" class="picker__table" id="P1242698637_table" role="grid">
+      <thead>
+       <tr>
+        <th class="picker__weekday" scope="col" title="Sunday">
+         Sun
+        </th>
+        <th class="picker__weekday" scope="col" title="Monday">
+         Mon
+        </th>
+        <th class="picker__weekday" scope="col" title="Tuesday">
+         Tue
+        </th>
+        <th class="picker__weekday" scope="col" title="Wednesday">
+         Wed
+        </th>
+        <th class="picker__weekday" scope="col" title="Thursday">
+         Thu
+        </th>
+        <th class="picker__weekday" scope="col" title="Friday">
+         Fri
+        </th>
+        <th class="picker__weekday" scope="col" title="Saturday">
+         Sat
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         1
+        </td>
+        <td>
+         2
+        </td>
+        <td>
+         3
+        </td>
+        <td>
+         4
+        </td>
+        <td>
+         5
+        </td>
+        <td>
+         6
+        </td>
+        <td>
+         7
+        </td>
+       </tr>
+       <tr>
+        <td>
+         8
+        </td>
+        <td>
+         9
+        </td>
+        <td>
+         10
+        </td>
+        <td>
+         11
+        </td>
+        <td>
+         12
+        </td>
+        <td>
+         13
+        </td>
+        <td>
+         14
+        </td>
+       </tr>
+       <tr>
+        <td>
+         15
+        </td>
+        <td>
+         16
+        </td>
+        <td>
+         17
+        </td>
+        <td>
+         18
+        </td>
+        <td>
+         19
+        </td>
+        <td>
+         20
+        </td>
+        <td>
+         21
+        </td>
+       </tr>
+       <tr>
+        <td>
+         22
+        </td>
+        <td>
+         23
+        </td>
+        <td>
+         24
+        </td>
+        <td>
+         25
+        </td>
+        <td>
+         26
+        </td>
+        <td>
+         27
+        </td>
+        <td>
+         28
+        </td>
+       </tr>
+       <tr>
+        <td>
+         1
+        </td>
+        <td>
+         2
+        </td>
+        <td>
+         3
+        </td>
+        <td>
+         4
+        </td>
+        <td>
+         5
+        </td>
+        <td>
+         6
+        </td>
+        <td>
+         7
+        </td>
+       </tr>
+       <tr>
+        <td>
+         8
+        </td>
+        <td>
+         9
+        </td>
+        <td>
+         10
+        </td>
+        <td>
+         11
+        </td>
+        <td>
+         12
+        </td>
+        <td>
+         13
+        </td>
+        <td>
+         14
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <button aria-controls="P1242698637" class="picker__button--today" data-pick="1770076800000" disabled="" type="button">
+      Today
+     </button>
+    </fieldset>
+    <label class="calendarInputLabel" for="endDateFromAmsul">
+     End Date
+    </label>
+    <fieldset class="fieldset__datetimepicker__wrapper">
+     February
+     2026
+     <table aria-controls="P1514297286" aria-readonly="true" class="picker__table" id="P1514297286_table" role="grid">
+      <thead>
+       <tr>
+        <th class="picker__weekday" scope="col" title="Sunday">
+         Sun
+        </th>
+        <th class="picker__weekday" scope="col" title="Monday">
+         Mon
+        </th>
+        <th class="picker__weekday" scope="col" title="Tuesday">
+         Tue
+        </th>
+        <th class="picker__weekday" scope="col" title="Wednesday">
+         Wed
+        </th>
+        <th class="picker__weekday" scope="col" title="Thursday">
+         Thu
+        </th>
+        <th class="picker__weekday" scope="col" title="Friday">
+         Fri
+        </th>
+        <th class="picker__weekday" scope="col" title="Saturday">
+         Sat
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         1
+        </td>
+        <td>
+         2
+        </td>
+        <td>
+         3
+        </td>
+        <td>
+         4
+        </td>
+        <td>
+         5
+        </td>
+        <td>
+         6
+        </td>
+        <td>
+         7
+        </td>
+       </tr>
+       <tr>
+        <td>
+         8
+        </td>
+        <td>
+         9
+        </td>
+        <td>
+         10
+        </td>
+        <td>
+         11
+        </td>
+        <td>
+         12
+        </td>
+        <td>
+         13
+        </td>
+        <td>
+         14
+        </td>
+       </tr>
+       <tr>
+        <td>
+         15
+        </td>
+        <td>
+         16
+        </td>
+        <td>
+         17
+        </td>
+        <td>
+         18
+        </td>
+        <td>
+         19
+        </td>
+        <td>
+         20
+        </td>
+        <td>
+         21
+        </td>
+       </tr>
+       <tr>
+        <td>
+         22
+        </td>
+        <td>
+         23
+        </td>
+        <td>
+         24
+        </td>
+        <td>
+         25
+        </td>
+        <td>
+         26
+        </td>
+        <td>
+         27
+        </td>
+        <td>
+         28
+        </td>
+       </tr>
+       <tr>
+        <td>
+         1
+        </td>
+        <td>
+         2
+        </td>
+        <td>
+         3
+        </td>
+        <td>
+         4
+        </td>
+        <td>
+         5
+        </td>
+        <td>
+         6
+        </td>
+        <td>
+         7
+        </td>
+       </tr>
+       <tr>
+        <td>
+         8
+        </td>
+        <td>
+         9
+        </td>
+        <td>
+         10
+        </td>
+        <td>
+         11
+        </td>
+        <td>
+         12
+        </td>
+        <td>
+         13
+        </td>
+        <td>
+         14
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <button aria-controls="P1514297286" class="picker__button--today" data-pick="1770076800000" disabled="" type="button">
+      Today
+     </button>
+    </fieldset>
+    <a aria-controls="calendarSelectors" aria-expanded="false" aria-haspopup="true" class="button" data-cp-toggle="dropdown" href="https://cityofovilla.org/Calendar.aspx#" id="a_calendar" role="button" tabindex="0">
+     Select a Calendar
+    </a>
+   </section>
+   <h3 aria-controls="monthPopout" aria-expanded="false" aria-haspopup="true" data-cp-toggle="dropdown" id="calendarSelectMonth" role="button" tabindex="0">
+    February
+   </h3>
+   <ol role="none">
+    <li role="none">
+     <a aria-selected="false" href="https://cityofovilla.org/Calendar.aspx#changeDateMonthDropDown" onclick="changeDate(2026,1, 'list','0', 'calendarSelectMonth');" onkeypress="return this.onclick();" role="option">
+      January
+     </a>
+    </li>
+    <li role="none">
+     February
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="https://cityofovilla.org/Calendar.aspx#changeDateMonthDropDown" onclick="changeDate(2026,3, 'list','0', 'calendarSelectMonth');" onkeypress="return this.onclick();" role="option">
+      March
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="https://cityofovilla.org/Calendar.aspx#changeDateMonthDropDown" onclick="changeDate(2026,4, 'list','0', 'calendarSelectMonth');" onkeypress="return this.onclick();" role="option">
+      April
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="https://cityofovilla.org/Calendar.aspx#changeDateMonthDropDown" onclick="changeDate(2026,5, 'list','0', 'calendarSelectMonth');" onkeypress="return this.onclick();" role="option">
+      May
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="https://cityofovilla.org/Calendar.aspx#changeDateMonthDropDown" onclick="changeDate(2026,6, 'list','0', 'calendarSelectMonth');" onkeypress="return this.onclick();" role="option">
+      June
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="https://cityofovilla.org/Calendar.aspx#changeDateMonthDropDown" onclick="changeDate(2026,7, 'list','0', 'calendarSelectMonth');" onkeypress="return this.onclick();" role="option">
+      July
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="https://cityofovilla.org/Calendar.aspx#changeDateMonthDropDown" onclick="changeDate(2026,8, 'list','0', 'calendarSelectMonth');" onkeypress="return this.onclick();" role="option">
+      August
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="https://cityofovilla.org/Calendar.aspx#changeDateMonthDropDown" onclick="changeDate(2026,9, 'list','0', 'calendarSelectMonth');" onkeypress="return this.onclick();" role="option">
+      September
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="https://cityofovilla.org/Calendar.aspx#changeDateMonthDropDown" onclick="changeDate(2026,10, 'list','0', 'calendarSelectMonth');" onkeypress="return this.onclick();" role="option">
+      October
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="https://cityofovilla.org/Calendar.aspx#changeDateMonthDropDown" onclick="changeDate(2026,11, 'list','0', 'calendarSelectMonth');" onkeypress="return this.onclick();" role="option">
+      November
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="https://cityofovilla.org/Calendar.aspx#changeDateMonthDropDown" onclick="changeDate(2026,12, 'list','0', 'calendarSelectMonth');" onkeypress="return this.onclick();" role="option">
+      December
+     </a>
+    </li>
+   </ol>
+   <a aria-haspopup="false" class="prevMonth" href="https://cityofovilla.org/Calendar.aspx#prev" id="prevMonth" onclick="changeDate(2026,1,'list','0', 'prevMonth'); return false;" onkeypress="return this.onclick();" role="button">
+    <img alt="Go to previous month" src="https://cityofovilla.org/Common/images/Calendar/MiniCalendarPrev.png"/>
+   </a>
+   <a aria-haspopup="false" class="nextMonth" href="https://cityofovilla.org/Calendar.aspx#next" id="nextMonth" onclick="changeDate(2026,3,'list','0', 'nextMonth'); return false;" onkeypress="return this.onclick();" role="button">
+    <img alt="Go to next month" src="https://cityofovilla.org/Common/images/Calendar/MiniCalendarNext.png"/>
+   </a>
+   <ol role="none">
+    <li role="none">
+     <a aria-selected="false" href="" onclick="changeDate(2021,2,'list','0', 'calendarSelectYear'); return false;" onkeypress="return this.onclick();" role="option">
+      2021
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="" onclick="changeDate(2022,2,'list','0', 'calendarSelectYear'); return false;" onkeypress="return this.onclick();" role="option">
+      2022
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="" onclick="changeDate(2023,2,'list','0', 'calendarSelectYear'); return false;" onkeypress="return this.onclick();" role="option">
+      2023
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="" onclick="changeDate(2024,2,'list','0', 'calendarSelectYear'); return false;" onkeypress="return this.onclick();" role="option">
+      2024
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="" onclick="changeDate(2025,2,'list','0', 'calendarSelectYear'); return false;" onkeypress="return this.onclick();" role="option">
+      2025
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="" onclick="changeDate(2027,2,'list','0', 'calendarSelectYear'); return false;" onkeypress="return this.onclick();" role="option">
+      2027
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="" onclick="changeDate(2028,2,'list','0', 'calendarSelectYear'); return false;" onkeypress="return this.onclick();" role="option">
+      2028
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="" onclick="changeDate(2029,2,'list','0', 'calendarSelectYear'); return false;" onkeypress="return this.onclick();" role="option">
+      2029
+     </a>
+    </li>
+    <li role="none">
+     <a aria-selected="false" href="" onclick="changeDate(2030,2,'list','0', 'calendarSelectYear'); return false;" onkeypress="return this.onclick();" role="option">
+      2030
+     </a>
+    </li>
+   </ol>
+   <!-- BEGIN CALENDAR DISPLAY ***** -->
+   <table aria-labelledby="calendarSelectMonth" role="grid" summary="Calendar Display">
+    <thead role="rowgroup">
+     <tr role="row">
+      <th role="columnheader" scope="col">
+       <abbr title="Sunday">
+        Su
+       </abbr>
+      </th>
+      <th role="columnheader" scope="col">
+       <abbr title="Monday">
+        M
+       </abbr>
+      </th>
+      <th role="columnheader" scope="col">
+       <abbr title="Tuesday">
+        Tu
+       </abbr>
+      </th>
+      <th role="columnheader" scope="col">
+       <abbr title="Wednesday">
+        W
+       </abbr>
+      </th>
+      <th role="columnheader" scope="col">
+       <abbr title="Thursday">
+        Th
+       </abbr>
+      </th>
+      <th role="columnheader" scope="col">
+       <abbr title="Friday">
+        F
+       </abbr>
+      </th>
+      <th role="columnheader" scope="col">
+       <abbr title="Saturday">
+        Sa
+       </abbr>
+      </th>
+     </tr>
+    </thead>
+    <tbody role="rowgroup">
+     <tr role="row">
+      <td aria-colindex="1" aria-rowindex="1" role="gridcell">
+       <time datetime="2026-2-1">
+        1
+       </time>
+      </td>
+      <td aria-colindex="2" aria-rowindex="1" role="gridcell">
+       <time datetime="2026-2-2">
+        2
+       </time>
+      </td>
+      <td aria-colindex="3" aria-rowindex="1" class="today" role="gridcell">
+       <time datetime="2026-2-3">
+        3
+       </time>
+      </td>
+      <td aria-colindex="4" aria-rowindex="1" role="gridcell">
+       <time datetime="2026-2-4">
+        4
+       </time>
+      </td>
+      <td aria-colindex="5" aria-rowindex="1" role="gridcell">
+       <a href="https://cityofovilla.org/calendar.aspx?view=list&amp;year=2026&amp;month=2&amp;day=5" tabindex="0">
+        <time datetime="2026-2-5">
+         5
+        </time>
+       </a>
+      </td>
+      <td aria-colindex="6" aria-rowindex="1" role="gridcell">
+       <time datetime="2026-2-6">
+        6
+       </time>
+      </td>
+      <td aria-colindex="7" aria-rowindex="1" role="gridcell">
+       <time datetime="2026-2-7">
+        7
+       </time>
+      </td>
+     </tr>
+     <tr role="row">
+      <td aria-colindex="1" aria-rowindex="2" role="gridcell">
+       <time datetime="2026-2-8">
+        8
+       </time>
+      </td>
+      <td aria-colindex="2" aria-rowindex="2" role="gridcell">
+       <a href="https://cityofovilla.org/calendar.aspx?view=list&amp;year=2026&amp;month=2&amp;day=9" tabindex="-1">
+        <time datetime="2026-2-9">
+         9
+        </time>
+       </a>
+      </td>
+      <td aria-colindex="3" aria-rowindex="2" role="gridcell">
+       <time datetime="2026-2-10">
+        10
+       </time>
+      </td>
+      <td aria-colindex="4" aria-rowindex="2" role="gridcell">
+       <time datetime="2026-2-11">
+        11
+       </time>
+      </td>
+      <td aria-colindex="5" aria-rowindex="2" role="gridcell">
+       <time datetime="2026-2-12">
+        12
+       </time>
+      </td>
+      <td aria-colindex="6" aria-rowindex="2" role="gridcell">
+       <time datetime="2026-2-13">
+        13
+       </time>
+      </td>
+      <td aria-colindex="7" aria-rowindex="2" role="gridcell">
+       <time datetime="2026-2-14">
+        14
+       </time>
+      </td>
+     </tr>
+     <tr role="row">
+      <td aria-colindex="1" aria-rowindex="3" role="gridcell">
+       <time datetime="2026-2-15">
+        15
+       </time>
+      </td>
+      <td aria-colindex="2" aria-rowindex="3" role="gridcell">
+       <time datetime="2026-2-16">
+        16
+       </time>
+      </td>
+      <td aria-colindex="3" aria-rowindex="3" role="gridcell">
+       <time datetime="2026-2-17">
+        17
+       </time>
+      </td>
+      <td aria-colindex="4" aria-rowindex="3" role="gridcell">
+       <time datetime="2026-2-18">
+        18
+       </time>
+      </td>
+      <td aria-colindex="5" aria-rowindex="3" role="gridcell">
+       <time datetime="2026-2-19">
+        19
+       </time>
+      </td>
+      <td aria-colindex="6" aria-rowindex="3" role="gridcell">
+       <time datetime="2026-2-20">
+        20
+       </time>
+      </td>
+      <td aria-colindex="7" aria-rowindex="3" role="gridcell">
+       <time datetime="2026-2-21">
+        21
+       </time>
+      </td>
+     </tr>
+     <tr role="row">
+      <td aria-colindex="1" aria-rowindex="4" role="gridcell">
+       <time datetime="2026-2-22">
+        22
+       </time>
+      </td>
+      <td aria-colindex="2" aria-rowindex="4" role="gridcell">
+       <time datetime="2026-2-23">
+        23
+       </time>
+      </td>
+      <td aria-colindex="3" aria-rowindex="4" role="gridcell">
+       <time datetime="2026-2-24">
+        24
+       </time>
+      </td>
+      <td aria-colindex="4" aria-rowindex="4" role="gridcell">
+       <time datetime="2026-2-25">
+        25
+       </time>
+      </td>
+      <td aria-colindex="5" aria-rowindex="4" role="gridcell">
+       <time datetime="2026-2-26">
+        26
+       </time>
+      </td>
+      <td aria-colindex="6" aria-rowindex="4" role="gridcell">
+       <time datetime="2026-2-27">
+        27
+       </time>
+      </td>
+      <td aria-colindex="7" aria-rowindex="4" role="gridcell">
+       <time datetime="2026-2-28">
+        28
+       </time>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <!-- END CALENDAR DISPLAY ***** -->
+   <nav aria-labelledby="calendar-nav-header">
+    <ol id="jumpList">
+     <li>
+      <a href="https://cityofovilla.org/Calendar.aspx?CID=19">
+       <img alt="" aria-hidden="true" src="https://cityofovilla.org/common/images/Calendar/calendarcoloroverlay.png" style="background:#333333;"/>
+       Boards and Commissions (1)
+      </a>
+     </li>
+     <li>
+      <a href="https://cityofovilla.org/Calendar.aspx?CID=14">
+       <img alt="" aria-hidden="true" src="https://cityofovilla.org/common/images/Calendar/calendarcoloroverlay.png" style="background:#333333;"/>
+       Calendar of Events (1)
+      </a>
+     </li>
+    </ol>
+   </nav>
+   <ol>
+    <li>
+     <h3>
+      <a href="https://cityofovilla.org/Calendar.aspx?EID=1705&amp;month=2&amp;year=2026&amp;day=3&amp;calType=0" id="eventTitle_1705" onclick="eventDetails(1705, 3, 2, 2026, 0); return false;" onkeypress="return this.onclick();">
+       Special Called Planning and Zoning Commission Meeting
+      </a>
+     </h3>
+     February 5, 2026, 6:00 PM - 10:00 PM
+     Special Called Planning and Zoning Commission Meeting
+     2026-02-05T18:00:00
+     Event Location
+     105 S Cockrell Hill Rd
+     Ovilla
+     TX
+     75154
+     <a aria-labelledby="eventTitle_1705 calendarEvent1705" href="https://cityofovilla.org/Calendar.aspx?EID=1705&amp;month=2&amp;year=2026&amp;day=3&amp;calType=0" id="calendarEvent1705" onclick="eventDetails(1705, 3, 2, 2026, 0); return false;" onkeypress="return this.onclick();">
+      More Details
+     </a>
+    </li>
+   </ol>
+   <ol>
+    <li>
+     <h3>
+      <a href="https://cityofovilla.org/Calendar.aspx?EID=1666&amp;month=2&amp;year=2026&amp;day=3&amp;calType=0" id="eventTitle_1666" onclick="eventDetails(1666, 3, 2, 2026, 0); return false;" onkeypress="return this.onclick();">
+       Regular City Council Meeting
+      </a>
+     </h3>
+     February 9, 2026, 6:00 PM - 10:00 PM
+     Regular City Council Meeting
+     2026-02-09T18:00:00
+     Event Location
+     105 S Cockrell Hill Rd
+     Ovilla
+     TX
+     75154
+     <a aria-labelledby="eventTitle_1666 calendarEvent1666" href="https://cityofovilla.org/Calendar.aspx?EID=1666&amp;month=2&amp;year=2026&amp;day=3&amp;calType=0" id="calendarEvent1666" onclick="eventDetails(1666, 3, 2, 2026, 0); return false;" onkeypress="return this.onclick();">
+      More Details
+     </a>
+    </li>
+   </ol>
+   <!-- SVG Icon -->
+   <svg style="display:none;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="iconFacility" viewbox="0 0 24 24">
+     <title>
+      Facility
+     </title>
+    </symbol>
+    <symbol id="iconSubmitEvent" viewbox="0 0 24 24">
+     <title>
+      Submit Event
+     </title>
+    </symbol>
+    <symbol id="iconPrint" viewbox="0 0 24 24">
+     <title>
+      Print
+     </title>
+    </symbol>
+    <symbol id="iconEmail" viewbox="0 0 24 24">
+     <title>
+      Email
+     </title>
+    </symbol>
+    <symbol id="iconSubscribeEvent" viewbox="0 0 24 24">
+     <title>
+      Event Subscription
+     </title>
+    </symbol>
+    <symbol id="iconRSS" viewbox="0 0 24 24">
+     <title>
+      View RSS Feeds
+     </title>
+    </symbol>
+    <symbol id="iconCalendar" viewbox="0 0 24 24">
+     <title>
+      Select on Calendar
+     </title>
+    </symbol>
+    <symbol id="iconExpand" viewbox="0 0 24 24">
+     <title>
+      Expand
+     </title>
+    </symbol>
+    <symbol id="iconCollapse" viewbox="0 0 24 24">
+     <title>
+      Collapse
+     </title>
+    </symbol>
+    <symbol id="iconChevronPrev" viewbox="0 0 24 24">
+     <title>
+      Previous
+     </title>
+    </symbol>
+    <symbol id="iconChevronNext" viewbox="0 0 24 24">
+     <title>
+      Next
+     </title>
+    </symbol>
+    <symbol id="iconChevronDown" viewbox="0 0 24 24">
+     <title>
+      Down
+     </title>
+    </symbol>
+    <symbol id="iconChevronUp" viewbox="0 0 24 24">
+     <title>
+      Up
+     </title>
+    </symbol>
+    <symbol id="iconMap" viewbox="0 0 24 24">
+     <title>
+      Map
+     </title>
+    </symbol>
+    <symbol id="iconShare" viewbox="0 0 24 24">
+     <title>
+      Share
+     </title>
+    </symbol>
+    <symbol id="iconShowMore" viewbox="0 0 24 24">
+     <title>
+      Show more
+     </title>
+    </symbol>
+   </svg>
+   <!-- SVG Icon -->
+   <!-- SVG Icon Agenda -->
+   <svg style="display:none;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="iconAgenda" svg="" viewbox="0 0 24 24">
+     <title>
+      Agenda
+     </title>
+    </symbol>
+   </svg>
+   <!-- SVG Icon -->
+   <script type="text/javascript">
+    $(window).on("load", function () {
+		$('.icalDescription').urlToLink({ target: '_blank' });
+	});
+
+	var currentTextBox = null;
+	var currentDatePicker = null;
+
+	function hidePopup() {
+		return currentDatePicker && currentDatePicker.hidePopup();
+	}
+
+	//This method is called to handle the onclick and onfocus client side events for the texbox
+	function showPopup(sender, e) {
+		//this is a reference to the texbox which raised the event
+		//see the methods exposed through the $telerik static client library here - http://www.telerik.com/help/aspnet-ajax/telerik-static-client-library.html
+		var textBox = sender.tagName === "INPUT" ? sender : $telerik.getPreviousHtmlNode(sender);
+
+		// hide previous pop-up if open
+		textBox !== currentTextBox && hidePopup();
+
+		currentTextBox = textBox;
+	}
+
+	function dismissHook(e) {
+		return (e.keyCode === 27 || e.keyCode === 9) && hidePopup();
+	}
+
+	function handleKeydown(e) {
+		dismissHook(e) || searchTextHook(e);
+	}
+
+	//this handler is used to set the text of the TextBox to the value of selected from the popup
+	function dateSelected(sender, args) {
+		if (currentTextBox != null) {
+			//currentTextBox is the currently selected TextBox. Its value is set to the newly selected
+			//value of the picker
+			currentTextBox.value = args.get_newValue();
+		}
+	}
+
+	//this function is used to parse the date entered or selected by the user
+	function parseDate(sender, e) {
+		if (currentDatePicker != null) {
+			var date = currentDatePicker.get_dateInput().parseDate(sender.value);
+			var dateInput = currentDatePicker.get_dateInput();
+
+			if (date == null) {
+				date = currentDatePicker.get_selectedDate();
+			}
+
+			var formattedDate = dateInput.get_dateFormatInfo().FormatDate(date, dateInput.get_displayDateFormat());
+			sender.value = formattedDate;
+		}
+	}
+
+	function clearPostBack() {
+		Sys.WebForms.PageRequestManager.getInstance().remove_endRequest(clearPostBack);
+		$('.icalDescription').urlToLink({ target: '_blank' });
+	}
+
+	function redrawContentCalendar() {
+		Sys.WebForms.PageRequestManager.getInstance().add_endRequest(clearPostBack);
+		if (document.aspnetForm.calendarView.value == 'list' || document.aspnetForm.calendarView.value == '')
+			raiseAsyncPostbackCalendar('ctl00_ctl00_MainContent_ModuleContent_ctl00_contentUpdatePanelListView', 0, '');
+		else
+			raiseAsyncPostbackCalendar('ctl00_ctl00_MainContent_ModuleContent_ctl00_contentUpdatePanel', 0, '');
+
+		blockMenuSpawn = false;
+	}
+
+	function previousFeaturedItem(view) {
+		document.aspnetForm.calendarView.value = view;
+		raiseAsyncPostbackCalendar('featured', 0, 'drawFeaturedPrev');
+	}
+
+	function nextFeaturedItem(view) {
+		document.aspnetForm.calendarView.value = view;
+		raiseAsyncPostbackCalendar('featured', 0, 'drawFeaturedNext');
+	}
+   </script>
+  </form>
+  <!-- GBs -->
+  <!--
+-->
+  <nav aria-label="Graphic links" class="widgetGraphicLinksNav">
+   <!--
+-->
+   <ul class="semanticList">
+    <!--
+-->
+    <li class="widgetItem GraphicLinks">
+     <a class="fancyButton fancyButton82" href="https://cityofovilla.org/agendacenter" target="_self">
+      Agendas and minutes
+     </a>
+     <style scoped="scoped">
+      .fancyButton82.fancyButton:link,.fancyButton82.fancyButton:visited, .fancyButton82div.fancyButton{
+	padding-top: 120px;
+	background-image: url('/ImageRepository/Document?documentID=3338');
+	background-repeat: no-repeat;
+	background-position: center 3px ;
+transition: all .3s ease-in-out;}
+.fancyButton82.fancyButton:hover,.fancyButton82.fancyButton:focus,.fancyButton82.fancyButton:active,.fancyButton82.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton82.fancyButton:link > span,.fancyButton82.fancyButton:visited > span, .fancyButton82div.fancyButton > span{
+}
+.fancyButton82.fancyButton:hover > span,.fancyButton82.fancyButton:focus > span,.fancyButton82.fancyButton:active > span,.fancyButton82.fancyButton.hover > span{
+}
+.fancyButton82.fancyButton .text{
+	color: rgb(252, 252, 255);
+	font-size: 1.1em;
+	font-family: "Oswald";
+	padding-bottom: 8px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-bottom: 8px;
+	background-repeat: no-repeat;
+	background-position: left top;
+position: relative;
+text-transform: uppercase;
+}
+
+.fancyButton82 .text:after {
+content: "";
+position: absolute;
+background-color: #E4E1DE;
+height: 5px;
+width: 35px;
+max-width: 100%;
+border-radius: 3px;
+left: 50%;
+bottom: 0;
+transform: translateX(-50%);
+transition: all .3s ease-in-out;
+}
+.fancyButton82.fancyButton:hover .text,.fancyButton82.fancyButton:focus .text,.fancyButton82.fancyButton:active .text,.fancyButton82.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.fancyButton82:is(:hover,:focus,:active) .text:after {
+width: 75px;
+}
+     </style>
+    </li>
+    <!--
+-->
+   </ul>
+   <!-- -->
+   <ul class="semanticList">
+    <!--
+-->
+    <li class="widgetItem GraphicLinks">
+     <a class="fancyButton fancyButton83" href="https://cityofovilla.org/31/Water-Customers" target="_self">
+      Utilities
+     </a>
+     <style scoped="scoped">
+      .fancyButton83.fancyButton:link,.fancyButton83.fancyButton:visited, .fancyButton83div.fancyButton{
+	padding-top: 120px;
+	background-image: url('/ImageRepository/Document?documentID=3343');
+	background-repeat: no-repeat;
+	background-position: center 3px ;
+transition: all .3s ease-in-out;}
+.fancyButton83.fancyButton:hover,.fancyButton83.fancyButton:focus,.fancyButton83.fancyButton:active,.fancyButton83.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton83.fancyButton:link > span,.fancyButton83.fancyButton:visited > span, .fancyButton83div.fancyButton > span{
+}
+.fancyButton83.fancyButton:hover > span,.fancyButton83.fancyButton:focus > span,.fancyButton83.fancyButton:active > span,.fancyButton83.fancyButton.hover > span{
+}
+.fancyButton83.fancyButton .text{
+	color: rgb(252, 252, 255);
+	font-size: 1.1em;
+	font-family: "Oswald";
+	padding-bottom: 8px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-bottom: 8px;
+	background-repeat: no-repeat;
+	background-position: left top;
+position: relative;
+text-transform: uppercase;
+}
+
+.fancyButton83 .text:after {
+content: "";
+position: absolute;
+background-color: #E4E1DE;
+height: 5px;
+width: 35px;
+max-width: 100%;
+border-radius: 3px;
+left: 50%;
+bottom: 0;
+transform: translateX(-50%);
+transition: all .3s ease-in-out;
+}
+.fancyButton83.fancyButton:hover .text,.fancyButton83.fancyButton:focus .text,.fancyButton83.fancyButton:active .text,.fancyButton83.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.fancyButton83:is(:hover,:focus,:active) .text:after {
+width: 75px;
+}
+     </style>
+    </li>
+    <!--
+-->
+   </ul>
+   <!-- -->
+  </nav>
+  <!-- inner column -->
+  <!-- inner row -->
+  <!-- outer column -->
+  <!-- -->
+  <nav aria-label="Graphic links" class="widgetGraphicLinksNav">
+   <!--
+-->
+   <ul class="semanticList">
+    <!--
+-->
+    <li class="widgetItem GraphicLinks">
+     <a class="fancyButton fancyButton84" href="https://cityofovilla.org/168/The-Public-Information-Act" target="_self">
+      Public Information
+     </a>
+     <style scoped="scoped">
+      .fancyButton84.fancyButton:link,.fancyButton84.fancyButton:visited, .fancyButton84div.fancyButton{
+	padding-top: 120px;
+	background-image: url('/ImageRepository/Document?documentID=3342');
+	background-repeat: no-repeat;
+	background-position: center 3px ;
+transition: all .3s ease-in-out;}
+.fancyButton84.fancyButton:hover,.fancyButton84.fancyButton:focus,.fancyButton84.fancyButton:active,.fancyButton84.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton84.fancyButton:link > span,.fancyButton84.fancyButton:visited > span, .fancyButton84div.fancyButton > span{
+}
+.fancyButton84.fancyButton:hover > span,.fancyButton84.fancyButton:focus > span,.fancyButton84.fancyButton:active > span,.fancyButton84.fancyButton.hover > span{
+}
+.fancyButton84.fancyButton .text{
+	color: rgb(252, 252, 255);
+	font-size: 1.1em;
+	font-family: "Oswald";
+	padding-bottom: 8px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-bottom: 8px;
+	background-repeat: no-repeat;
+	background-position: left top;
+position: relative;
+text-transform: uppercase;
+}
+
+.fancyButton84 .text:after {
+content: "";
+position: absolute;
+background-color: #E4E1DE;
+height: 5px;
+width: 35px;
+max-width: 100%;
+border-radius: 3px;
+left: 50%;
+bottom: 0;
+transform: translateX(-50%);
+transition: all .3s ease-in-out;
+}
+.fancyButton84.fancyButton:hover .text,.fancyButton84.fancyButton:focus .text,.fancyButton84.fancyButton:active .text,.fancyButton84.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.fancyButton84:is(:hover,:focus,:active) .text:after {
+width: 75px;
+}
+     </style>
+    </li>
+    <!--
+-->
+   </ul>
+   <!-- -->
+   <ul class="semanticList">
+    <!--
+-->
+    <li class="widgetItem GraphicLinks">
+     <a class="fancyButton fancyButton85" href="https://www.cityofovilla.org/266/May-4-2024-General-Election-Information" target="_self">
+      Elections
+     </a>
+     <style scoped="scoped">
+      .fancyButton85.fancyButton:link,.fancyButton85.fancyButton:visited, .fancyButton85div.fancyButton{
+	padding-top: 120px;
+	background-image: url('/ImageRepository/Document?documentID=3340');
+	background-repeat: no-repeat;
+	background-position: center 3px ;
+transition: all .3s ease-in-out;}
+.fancyButton85.fancyButton:hover,.fancyButton85.fancyButton:focus,.fancyButton85.fancyButton:active,.fancyButton85.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton85.fancyButton:link > span,.fancyButton85.fancyButton:visited > span, .fancyButton85div.fancyButton > span{
+}
+.fancyButton85.fancyButton:hover > span,.fancyButton85.fancyButton:focus > span,.fancyButton85.fancyButton:active > span,.fancyButton85.fancyButton.hover > span{
+}
+.fancyButton85.fancyButton .text{
+	color: rgb(252, 252, 255);
+	font-size: 1.1em;
+	font-family: "Oswald";
+	padding-bottom: 8px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-bottom: 8px;
+	background-repeat: no-repeat;
+	background-position: left top;
+position: relative;
+text-transform: uppercase;
+}
+
+.fancyButton85 .text:after {
+content: "";
+position: absolute;
+background-color: #E4E1DE;
+height: 5px;
+width: 35px;
+max-width: 100%;
+border-radius: 3px;
+left: 50%;
+bottom: 0;
+transform: translateX(-50%);
+transition: all .3s ease-in-out;
+}
+.fancyButton85.fancyButton:hover .text,.fancyButton85.fancyButton:focus .text,.fancyButton85.fancyButton:active .text,.fancyButton85.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.fancyButton85:is(:hover,:focus,:active) .text:after {
+width: 75px;
+}
+     </style>
+    </li>
+    <!--
+-->
+   </ul>
+   <!-- -->
+  </nav>
+  <!-- inner column -->
+  <!-- inner row -->
+  <!-- outer column -->
+  <!-- -->
+  <nav aria-label="Graphic links" class="widgetGraphicLinksNav">
+   <!--
+-->
+   <ul class="semanticList">
+    <!--
+-->
+    <li class="widgetItem GraphicLinks">
+     <a class="fancyButton fancyButton86" href="https://ecode360.com/OV6432" target="_self">
+      Code of ordinances
+     </a>
+     <style scoped="scoped">
+      .fancyButton86.fancyButton:link,.fancyButton86.fancyButton:visited, .fancyButton86div.fancyButton{
+	padding-top: 120px;
+	background-image: url('/ImageRepository/Document?documentID=3339');
+	background-repeat: no-repeat;
+	background-position: center 3px ;
+transition: all .3s ease-in-out;}
+.fancyButton86.fancyButton:hover,.fancyButton86.fancyButton:focus,.fancyButton86.fancyButton:active,.fancyButton86.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton86.fancyButton:link > span,.fancyButton86.fancyButton:visited > span, .fancyButton86div.fancyButton > span{
+}
+.fancyButton86.fancyButton:hover > span,.fancyButton86.fancyButton:focus > span,.fancyButton86.fancyButton:active > span,.fancyButton86.fancyButton.hover > span{
+}
+.fancyButton86.fancyButton .text{
+	color: rgb(252, 252, 255);
+	font-size: 1.1em;
+	font-family: "Oswald";
+	padding-bottom: 8px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-bottom: 8px;
+	background-repeat: no-repeat;
+	background-position: left top;
+position: relative;
+text-transform: uppercase;
+}
+
+.fancyButton86 .text:after {
+content: "";
+position: absolute;
+background-color: #E4E1DE;
+height: 5px;
+width: 35px;
+max-width: 100%;
+border-radius: 3px;
+left: 50%;
+bottom: 0;
+transform: translateX(-50%);
+transition: all .3s ease-in-out;
+}
+.fancyButton86.fancyButton:hover .text,.fancyButton86.fancyButton:focus .text,.fancyButton86.fancyButton:active .text,.fancyButton86.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.fancyButton86:is(:hover,:focus,:active) .text:after {
+width: 75px;
+}
+     </style>
+    </li>
+    <!--
+-->
+   </ul>
+   <!-- -->
+   <ul class="semanticList">
+    <!--
+-->
+    <li class="widgetItem GraphicLinks">
+     <a class="fancyButton fancyButton87" href="https://cityofovilla.org/67/Municipal-Court" target="_self">
+      Municipal court
+     </a>
+     <style scoped="scoped">
+      .fancyButton87.fancyButton:link,.fancyButton87.fancyButton:visited, .fancyButton87div.fancyButton{
+	padding-top: 120px;
+	background-image: url('/ImageRepository/Document?documentID=3341');
+	background-repeat: no-repeat;
+	background-position: center 3px ;
+transition: all .3s ease-in-out;}
+.fancyButton87.fancyButton:hover,.fancyButton87.fancyButton:focus,.fancyButton87.fancyButton:active,.fancyButton87.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fancyButton87.fancyButton:link > span,.fancyButton87.fancyButton:visited > span, .fancyButton87div.fancyButton > span{
+}
+.fancyButton87.fancyButton:hover > span,.fancyButton87.fancyButton:focus > span,.fancyButton87.fancyButton:active > span,.fancyButton87.fancyButton.hover > span{
+}
+.fancyButton87.fancyButton .text{
+	color: rgb(252, 252, 255);
+	font-size: 1.1em;
+	font-family: "Oswald";
+	padding-bottom: 8px;
+	font-weight: 600;
+	text-decoration: none;
+	padding-bottom: 8px;
+	background-repeat: no-repeat;
+	background-position: left top;
+position: relative;
+text-transform: uppercase;
+}
+
+.fancyButton87 .text:after {
+content: "";
+position: absolute;
+background-color: #E4E1DE;
+height: 5px;
+width: 35px;
+max-width: 100%;
+border-radius: 3px;
+left: 50%;
+bottom: 0;
+transform: translateX(-50%);
+transition: all .3s ease-in-out;
+}
+.fancyButton87.fancyButton:hover .text,.fancyButton87.fancyButton:focus .text,.fancyButton87.fancyButton:active .text,.fancyButton87.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.fancyButton87:is(:hover,:focus,:active) .text:after {
+width: 75px;
+}
+     </style>
+    </li>
+    <!--
+-->
+   </ul>
+   <!-- -->
+  </nav>
+  <!-- inner column -->
+  <!-- inner row -->
+  <!-- outer column -->
+  <!-- -->
+  <!-- outer row -->
+  <!-- Calendar/Carousel -->
+  <!-- <div data-cpRole="structuralContainer" id="homeContainer1">
+    <div class="siteWrap2">
+      <div data-cpRole="contentContainer" id="homeContent1a"></div>
+    </div>
+  </div> -->
+  <!-- Footer -->
+  <footer data-cprole="structuralContainer" id="footerContainerTS">
+   <!--
+-->
+   <section aria-label="Info Advanced" class="widget widgetInfoAdvanced skin11 widgetOptionSet5 narrow" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}' data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="infoAdv" id="divInfoAdvf6caf7cb-200e-4c84-9f7f-50865837dd54">
+    <ol class="pageStyles semanticList">
+     <li class="InfoAdvanced widgetItem fr-view">
+      <p>
+       <a href="https://cityofovilla.org/">
+        <img alt="Ovilla TX Homepage" class="fr-dib" src="https://cityofovilla.org/ImageRepository/Document?documentId=3305"/>
+       </a>
+      </p>
+     </li>
+    </ol>
+   </section>
+   <!-- inner column -->
+   <!-- inner row -->
+   <!-- outer column -->
+   <!-- -->
+   <!-- inner column -->
+   <!-- inner row -->
+   <!-- outer column -->
+   <!-- -->
+   <section aria-labelledby="header3419e94a-2121-475c-ac9f-eb2d40a6bc9a" class="widget widgetInfoAdvanced skin13 widgetOptionSet5 narrow" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}' data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="infoAdv" id="divInfoAdv3419e94a-2121-475c-ac9f-eb2d40a6bc9a">
+    <header class="widgetHeader" id="header3419e94a-2121-475c-ac9f-eb2d40a6bc9a">
+     <h3>
+      Contact Us
+     </h3>
+    </header>
+    <ol class="pageStyles semanticList">
+     <li class="InfoAdvanced widgetItem fr-view">
+      <p>
+       City of Ovilla Texas
+       105 Cockrell Hill
+       Ovilla, TX 75154
+       Phone:
+       <a href="tel:9726177262">
+        972-617-7262
+       </a>
+      </p>
+      <p>
+       <a href="mailto:dhenley@cityofovilla.org">
+        Contact us
+       </a>
+      </p>
+     </li>
+    </ol>
+   </section>
+   <!-- inner column -->
+   <!-- inner row -->
+   <!-- outer column -->
+   <!-- -->
+   <!-- inner column -->
+   <!-- inner row -->
+   <!-- outer column -->
+   <!-- -->
+   <section aria-labelledby="quickLinksHeaderfa5e9c8d-4ed9-4ef3-a027-47f9c0d08981" class="widget widgetQuickLinks skin13 widgetOptionSet18 narrow" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}' data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="quickLinks" id="widgetQuicklinkfa5e9c8d-4ed9-4ef3-a027-47f9c0d08981">
+    <header class="widgetHeader" id="quickLinksHeaderfa5e9c8d-4ed9-4ef3-a027-47f9c0d08981">
+     <h3>
+      <a href="https://cityofovilla.org/QuickLinks.aspx?CID=5,1" style="">
+       Helpful Links
+      </a>
+     </h3>
+    </header>
+    <ol class="semanticList">
+     <li class="widgetItem QuickLinks" style="position:relative">
+      <a aria-label="Dallas County Elections Opens in new window" class="widgetDesc widgetQuickLinksLink" href="http://www.dallascountyvotes.org/" rel="noopener" target="_blank">
+       Dallas County Elections
+      </a>
+     </li>
+     <li class="widgetItem QuickLinks" style="position:relative">
+      <a aria-label="Garbage Collection-CWD Opens in new window" class="widgetDesc widgetQuickLinksLink" href="https://communitywastedisposal.com/" rel="noopener" target="_blank">
+       Garbage Collection-CWD
+      </a>
+     </li>
+     <li class="widgetItem QuickLinks" style="position:relative">
+      <a aria-label="Connect-CTY Opens in new window" class="widgetDesc widgetQuickLinksLink" href="https://www.blackboardconnect.com/" rel="noopener" target="_blank">
+       Connect-CTY
+      </a>
+     </li>
+     <li class="widgetItem QuickLinks" style="position:relative">
+      <a aria-label="Ellis County Opens in new window" class="widgetDesc widgetQuickLinksLink" href="http://www.co.ellis.tx.us/" rel="noopener" target="_blank">
+       Ellis County
+      </a>
+     </li>
+     <li class="widgetItem QuickLinks" style="position:relative">
+      <a aria-label="Finding Help in Texas Opens in new window" class="widgetDesc widgetQuickLinksLink" href="https://www.211texas.org/211/" rel="noopener" target="_blank">
+       Finding Help in Texas
+      </a>
+     </li>
+     <li class="widgetItem QuickLinks" style="position:relative">
+      <a aria-label="Local Weather Opens in new window" class="widgetDesc widgetQuickLinksLink" href="https://weather.com/weather/today/l/USTX1688:1:US" rel="noopener" target="_blank">
+       Local Weather
+      </a>
+     </li>
+    </ol>
+    /QuickLinks.aspx
+   </section>
+   <!-- inner column -->
+   <!-- inner row -->
+   <!-- outer column -->
+   <!-- -->
+   <!-- inner column -->
+   <!-- inner row -->
+   <!-- outer column -->
+   <!-- -->
+   <section aria-labelledby="quickLinksHeader02babb49-b859-4a94-a64f-485c5a05d73b" class="widget widgetQuickLinks skin13 widgetOptionSet18 narrow" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}' data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="quickLinks" id="widgetQuicklink02babb49-b859-4a94-a64f-485c5a05d73b">
+    <header class="widgetHeader" id="quickLinksHeader02babb49-b859-4a94-a64f-485c5a05d73b">
+     <h3>
+      <a href="https://cityofovilla.org/QuickLinks.aspx?CID=14" style="">
+       Site Links
+      </a>
+     </h3>
+    </header>
+    <ol class="semanticList">
+     <li class="widgetItem QuickLinks" style="position:relative">
+      <a class="widgetDesc widgetQuickLinksLink" href="https://cityofovilla.org/" target="_self">
+       Home
+      </a>
+     </li>
+     <li class="widgetItem QuickLinks" style="position:relative">
+      <a class="widgetDesc widgetQuickLinksLink" href="https://cityofovilla.org/sitemap" target="_self">
+       Site Map
+      </a>
+     </li>
+     <li class="widgetItem QuickLinks" style="position:relative">
+      <a class="widgetDesc widgetQuickLinksLink" href="https://cityofovilla.org/Accessibility" target="_self">
+       Accessibility
+      </a>
+     </li>
+     <li class="widgetItem QuickLinks" style="position:relative">
+      <a class="widgetDesc widgetQuickLinksLink" href="https://cityofovilla.org/site/copyright" target="_self">
+       Copyright Notices
+      </a>
+     </li>
+    </ol>
+    /QuickLinks.aspx
+   </section>
+   <!-- inner column -->
+   <!-- inner row -->
+   <!-- outer column -->
+   <!-- -->
+   <!-- outer row -->
+  </footer>
+  <!-- Powered By -->
+  <!--
+-->
+  Government Websites by
+  <a href="https://connect.civicplus.com/referral">
+   CivicPlus®
+  </a>
+  <!-- inner column -->
+  <!-- inner row -->
+  <!-- outer column -->
+  <!-- -->
+  <!-- outer row -->
+  <a class="translateWidget" style="background-color: #FFF;border-color: #9b9b9b #d5d5d5 transparent #d5d5d5;border-style: solid;border-width: 1px 1px 0 1px;bottom: 0px;color: #000;cursor: pointer;font-size: .9em;padding: 2px 6px 3px 4px;position: fixed;right: 20px;z-index: 5;" title="Enable Google Translate">
+   <img alt="Google Translate Icon" src="https://cityofovilla.org/Assets/Images/GoogleTranslate.gif" style="box-sizing: content-box !important;height:19px;margin: -2px 0 0 -2px;padding-right: 5px;width:19px;"/>
+   Enable Google Translate
+  </a>
+  Loading
+  <!-- Content from the Froala Editor will go here. -->
+  Loading
+  <!-- Google Translate -->
+  <script type="text/javascript">
+   var translateActiveCookie = getCookieValue('translateActive');
+
+	if (translateActiveCookie == 'true') {
+		enableGoogleTranslate();
+	} else {
+		var button = '<a class="translateWidget" title="Enable Google Translate" style="background-color: #FFF;border-color: #9b9b9b #d5d5d5 transparent #d5d5d5;border-style: solid;border-width: 1px 1px 0 1px;bottom: 0px;color: #000;cursor: pointer;font-size: .9em;padding: 2px 6px 3px 4px;position: fixed;right: 20px;z-index: 5;">';
+		button += '<img alt="Google Translate Icon" src="/Assets/Images/GoogleTranslate.gif" style="box-sizing: content-box !important;height:19px;margin: -2px 0 0 -2px;padding-right: 5px;width:19px;">Enable Google Translate</a>';
+		$('div[data-cprole="structuralContainer"]').last().after(button);
+	}
+
+	function googleTranslateElementInit() {
+  		var el = document.getElementById("google_translate_element");
+  		if (el && el.innerHTML.trim() !== "") {
+  		    return;
+  		}
+
+  		new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+	}
+
+	function enableGoogleTranslate() {
+		$('#google_translate_element').show();
+		var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+		sz.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+		$('div[data-cprole="structuralContainer"]').last().after('<div id="google_translate_element" style="position: fixed; bottom: 0px; right: 20px; z-index: 5;"></div>');
+	        document.cookie = "translateActive=true; expires=12/31/2999; path=/";
+	}
+
+	$('a.translateWidget').unbind('click').click(function (e) {
+		$(this).hide();
+		enableGoogleTranslate();
+	});
+  </script>
+  <!-- End Google Translate -->
+  <!-- Fixed Nav Adjustment -->
+  <script>
+   function getValueTS(elem, attr) {
+    const val = elem.css(attr);
+    if (val === undefined) return undefined;
+    const num = parseInt(val, 10);
+    if (num === NaN) return undefined;
+    return num;
+  }
+
+  function clampTS(number, min, max) {
+    return Math.min(Math.max(number, min), max);
+  }
+
+  function isPageEditingTS() {
+    return (
+      $("#doneEditing").length > 0 || // In live edit
+      typeof DesignCenter !== "undefined" // In theme manager
+    );
+  }
+
+  const bgColorRegexTS = /rgba\((\d+), (\d+), (\d+), (\d*\.?\d*)\)/;
+  function isTransparentTS(elem) {
+    const bg = elem.css('background-color');
+    if (typeof bg !== "string" || !bg.startsWith('rgba(')) return false;
+    const matchState = bg.match(bgColorRegexTS);
+    if (!matchState || matchState.length !== 5) return false;
+    const alpha = parseFloat(matchState[4], 10);
+    if (!(alpha >= 0 && alpha < 1)) return false;
+    return true;
+  }
+
+  function iterateLeftpads(cb) {
+    const containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (let i = 0; i < containersTS.length; i++) {
+      const containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-leftpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-leftpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  const anchor = $("#divToolbars");
+  const anchor2 = $("#headerContainerTS")
+
+  // Outer banner padding (push banner down)
+  const outerSizingTS = $("#bannerContainerTS");
+  // Inner banner padding (push banner content down) - Transparent header OR on attaching headers
+  const innerSizingTS = $("#bannerSizingTS");
+  const bodyContainerTS = $("#bodyContainerTS");
+
+  const forceUnfixClassTS = "forceUnfixTS";
+
+  const fixedTopTS = $(".fixedTopTS");
+  const fixedBottomTS = $(".fixedBottomTS");
+  const fixedLeftTS = $(".fixedLeftTS");
+
+  var initialTopTS;
+  var topAttachTS;
+  if (fixedTopTS && fixedTopTS.length === 1) {
+    initialTopTS = getValueTS(fixedTopTS, 'top');
+    const attachment = fixedTopTS.attr('data-attach');
+    if (attachment) topAttachTS = $("#" + attachment);
+    if (!topAttachTS || topAttachTS.length !== 1) topAttachTS = undefined;
+  }
+
+  function resizeAdjustmentTS() {
+    const editing = isPageEditingTS();
+
+    // Fixed top script
+    (function () {
+      if (!fixedTopTS || fixedTopTS.length !== 1 || initialTopTS === undefined) return;
+
+      if (editing) {
+        fixedTopTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedTopTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      const topPosition = fixedTopTS.css('position');
+      if (topPosition === 'fixed') {
+        if (topAttachTS) {
+          scrollAdjustmentTS();
+        } else {
+          const anchorHeight = anchor.outerHeight() - 1;
+          fixedTopTS.css('top', anchorHeight + initialTopTS);
+        }
+      } else {
+        fixedTopTS.css('top', initialTopTS);
+      }
+
+      if (topPosition === 'fixed' || topPosition === 'absolute') {
+        // Bump the banner content down
+        if (isTransparentTS(fixedTopTS)) {
+          innerSizingTS.css('padding-top', initialTopTS + fixedTopTS.outerHeight() - 1);
+          outerSizingTS.css('padding-top', '');
+
+          try {
+            window.Pages.onResizeHandlersExecute();
+          } catch (e) { }
+        } else {
+          outerSizingTS.css('padding-top', fixedTopTS.outerHeight() - 1);
+          innerSizingTS.css('padding-top', '');
+        }
+      } else {
+        innerSizingTS.css('padding-top', '');
+        outerSizingTS.css('padding-top', '');
+      }
+    })();
+
+    // Fixed bottom script
+    (function () {
+      if (!fixedBottomTS || fixedBottomTS.length === 0) return;
+
+      // If the widget has gone narrow, force unfix
+      if (editing || fixedBottomTS.outerHeight() > 200) {
+        fixedBottomTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedBottomTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedBottomTS.css('position') === 'fixed') {
+        bodyContainerTS.css('padding-bottom', fixedBottomTS.outerHeight());
+      } else {
+        bodyContainerTS.css('padding-bottom', '');
+      }
+    })();
+
+    // Fixed left script
+    (function () {
+      if (!fixedLeftTS || fixedLeftTS.length === 0) return;
+
+      if (editing) {
+        fixedLeftTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedLeftTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedLeftTS.css('position') === 'fixed') {
+        const anchorHeight = anchor.outerHeight() - 1;
+        fixedLeftTS.css('top', anchorHeight);
+        const leftBoundingTS = fixedLeftTS[0].getBoundingClientRect();
+        iterateLeftpads(function (containerTS) {
+          const containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.left <= leftBoundingTS.right) {
+            $(containerTS).css('padding-left', leftBoundingTS.width + 16);
+          }
+        });
+      } else {
+        fixedLeftTS.css('top', '');
+        iterateLeftpads(function (containerTS) {
+          $(containerTS).css('padding-left', '');
+        });
+      }
+    })();
+  }
+
+  function scrollAdjustmentTS() {
+    if (!fixedTopTS || fixedTopTS.length !== 1 || !topAttachTS || topAttachTS.length !== 1) return;
+    const topPosition = fixedTopTS.css('position');
+    if (topPosition === 'fixed' || topPosition === 'absolute') {
+      const anchorBounding = anchor[0].getBoundingClientRect();
+      const attachBounding = topAttachTS[0].getBoundingClientRect();
+      const scrollTop = $(window).scrollTop();
+
+      fixedTopTS.css('top', Math.max(anchorBounding.bottom - 1, attachBounding.bottom));
+    } else {
+      fixedTopTS.css('top', initialTopTS);
+    }
+  }
+
+  $(window).load(function () {
+    setTimeout(function () {
+      resizeAdjustmentTS();
+    }, 350);
+
+    $(window).scroll(function () {
+      scrollAdjustmentTS();
+    });
+
+    var adjustTimeoutTS;
+    $(window).resize(function () {
+      clearTimeout(adjustTimeoutTS);
+      adjustTimeoutTS = setTimeout(function () {
+        resizeAdjustmentTS();
+      }, 350);
+    });
+
+    $.when(window.Pages.angularToolbarComplete).done(function () {
+      resizeAdjustmentTS();
+    });
+  });
+  </script>
+  <!-- End Fixed Nav Adjustment -->
+  <svg style="display:none;" xmlns="http://www.w3.org/2000/svg">
+   <symbol id="iconArrow--left" viewbox="0 0 25 25">
+    <title>
+     Arrow Left
+    </title>
+   </symbol>
+   <symbol id="iconArrow--right" viewbox="0 0 25 25">
+    <title>
+     Arrow Right
+    </title>
+   </symbol>
+  </svg>
+  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+   <symbol id="iconSlideshowArrowLeft" viewbox="0 0 22.68 40">
+    <title>
+     Slideshow Left Arrow
+    </title>
+   </symbol>
+   <symbol id="iconSlideshowArrowRight" viewbox="0 0 22.68 40">
+    <title>
+     Slideshow Right Arrow
+    </title>
+   </symbol>
+  </svg>
+  <a aria-label="Close this modal" class="modalClose" href="https://cityofovilla.org/" id="ctl00_LiveEditCloseButton" title="Close this window">
+   <svg id="modalIconClose" viewbox="0 0 25 25">
+    <polygon points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508" style="fill:currentcolor">
+    </polygon>
+   </svg>
+  </a>
+  <a aria-label="Banner Arrow Previous" class="arrowNew prev" id="arrowPrev_banner1" tabindex="0">
+   <svg class="" style=" ">
+    <use xlink:href="#iconSlideshowArrowLeft" xmlns:xlink="http://www.w3.org/1999/xlink">
+    </use>
+   </svg>
+  </a>
+  <a aria-label="Banner Arrow Next" class="arrowNew next" id="arrowNext_banner1" tabindex="0">
+   <svg class="" style=" ">
+    <use xlink:href="#iconSlideshowArrowRight" xmlns:xlink="http://www.w3.org/1999/xlink">
+    </use>
+   </svg>
+  </a>
+ </body>
+</html>
