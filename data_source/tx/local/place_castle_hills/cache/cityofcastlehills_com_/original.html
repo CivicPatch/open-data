@@ -1,0 +1,3206 @@
+<!DOCTYPE html><html lang="en" class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths wf-muli-i4-active wf-muli-n7-active wf-muli-n3-active wf-muli-n4-active wf-active has-webFonts"><head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager for GA4 -->
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Abril+Fatface:regular|Alex+Brush:regular|Fira+Sans:500,500italic,600,600italic,700,700italic,italic,regular|Lato:700,700italic,900,900italic,italic,regular|Merriweather+Sans:300,300italic,700,700italic,800,800italic,italic,regular|Open+Sans:300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,italic,regular|Satisfy:regular|Source+Sans+Pro:200,200italic,300,300italic,600,600italic,700,700italic,900,900italic,italic,regular|" media="all"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y24X4D90VK&amp;l=cpDataLayerGA4&amp;cx=c&amp;gtm=4e6230h2"></script><script src="/Assets/Mystique/Shared/Scripts/webfontloader/webfont.js" type="text/javascript" async=""></script><script src="/Assets/Scripts/RWD/MediaFramework.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K73C5PS&amp;l=cpDataLayerGA4"></script><script>(function(w,d,s,l,i){w.GAMeasurementID='G-Y24X4D90VK';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type="text/javascript">
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= false;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 40em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async="" src="https://docaccess.com/docbox.js"></script>
+	<meta name="google-site-verification" content="cSlKVHT-YHRDU3DqOPVbMszDhXX7P_24SoMndE_mkuQ">
+
+	<meta name="category0" content="Home">
+
+	
+	<meta name="theme-color" content="rgb(3, 99, 186)">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>Castle Hills, TX - Official Website | Official Website</title>
+
+		<meta name="description" content="">
+		<meta name="keywords" content="Home">
+			<script src="/Assets/Scripts/jQuery/jquery-2.2.4.min.js"></script><script src="https://js.monitor.azure.com/scripts/a/ai.0.js"></script>
+	<script src="/Assets/Scripts/jQuery/jQuery-migrate-1.4.1.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var externalSiteDialogHeight = '390px';
+	var order = '';
+//--></script>
+	
+	<link href="/-1465647691.css" rel="stylesheet" type="text/css">	<link href="/865621148.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/-28722462.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,700" media="all">
+<style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style><style data-docbox-sr-only="true">
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0;
+                }
+                
+                /* Highlight animation for returning focus 
+                .docaccess-returning-focus {
+                    outline: 3px solid #2563eb !important;
+                    outline-offset: 2px !important;
+                    position: relative;
+                    z-index: 10;
+                    animation: docaccess-pulse 2s ease-out;
+                }
+                */
+                
+                @keyframes docaccess-pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                    }
+                    50% {
+                        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                    }
+                }
+            </style></head>
+<body class="wide cpTextResizeOn doneLoading"><div id="divAjaxProgress" style="position: fixed; inset: 0px; text-align: center; border: 1px solid rgb(102, 102, 102); z-index: 90000000; height: 1082px; width: 1922px; display: none;"><div id="divAjaxShade" style="position: fixed; inset: 0px; background: rgb(255, 255, 255); opacity: 0.5; height: 1080px; width: 1920px;"></div><div id="divAjaxImgProgress" class="loading" style="position: relative; top: 540px; display: none;"><img src="https://cityofcastlehills.com/Common/images/ajax-loader.gif" alt="Loading" title="Loading"><p>Loading</p></div></div>
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+
+    <div id="fb-root"></div>
+<div id="skipToContentLinks">
+<a href="https://cityofcastlehills.com/#cca05b5d24-22f5-4ed1-95fe-495f19735a9c" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784">
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="15">
+    <input type="hidden" id="hdnContentCollectionID" value="5a4f19d5-1f5e-40bc-8c47-14662eca163c">
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000">
+    <input type="hidden" id="hdnThemeID" value="51">
+    <input type="hidden" id="pageIsFrontEnd" value="true">
+    <input type="hidden" id="pageModuleID">
+    <input type="hidden" id="pagePageID" value="1">
+
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="overflow: visible;">
+                    
+
+
+
+<!-- Begin Signed Out Bar -->
+<div class="cpToolbar user public" style="z-index: 1;">
+    <div class="inner selfClear">
+        <p class="dropdown"><a href="https://cityofcastlehills.com/MyAccount/ProfileCreate" role="link" class="myConnections" id="signedOutToolbarCreateProfileButton">Create a Website Account</a> <span class="welcomeMessage">- Manage notification subscriptions, save form progress and more. &nbsp;&nbsp;</span></p>
+        <ul class="nav secondary">
+	        <li><a href="https://cityofcastlehills.com/MyAccount" role="link" class="button" id="loggedOutToolbarSignInButton"><span>Website Sign In</span></a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#signedOutToolbarCreateProfileButton').keypress(function (e) { if (e.which === 0) return; $(this).click(); });
+        $('#signedOutToolbarCreateProfileButton').click(function (event) {
+        	event.preventDefault();
+        	window.location.href = '/MyAccount/ProfileCreate?from=url&url=/&dn=' + window.location.origin;
+        });
+
+			
+				$('#loggedOutToolbarSignInButton').click(function (event) {
+					event.preventDefault();
+					window.location.href = '/MyAccount/?from=url&url=' + encodeURIComponent(window.location.href.replace(window.location.origin, '')) + '&dn=' + window.location.host;
+				});
+			
+
+		if ('False' == 'True') {
+            $('#loggedOutToolbarSignInButton').hide();
+		}
+    })
+</script>
+<!-- End Signed Out Bar -->
+
+                </div>
+            <div id="bodyWrapper" style="padding-top: 35px;">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cprole="structuralContainer" id="bodyContainerTS">
+<!-- <div data-cpRole="banner" id="banner2" class="fixedBannerTS"></div> --><!-- Header Container --><header data-cprole="structuralContainer" id="headerContainerTS" class="fixedTopTS" style="top: 34px;">
+<div class="siteWrap10"><div data-cprole="structuralContainer" id="flexHeaderTS">
+<div data-cprole="banner" id="bannerLogoTS" class="bannerLogoTS empty">
+
+
+
+
+				<a id="bannerLogoTS-112" style="			display: block; text-align: center;
+" class="bannerObject" href="https://cityofcastlehills.com/" target="_self"><img alt="TX Castle Hills Homepage" class="bannerObject" height="170" src="https://cityofcastlehills.com/ImageRepository/Document?documentID=3465" width="588"></a>
+</div><nav data-cprole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem2273" class="topMenuItem" role="none" data-pageid="2273" data-displaymegamenu="False" style="width: 17.3299%;"><!--
+			--><!--
+			--> <a role="menuitem" id="mainNavCONTACTUS" class="navMainItem mainNavItem mainNavItem1" href="https://cityofcastlehills.com/2273/CONTACT-US" target="_self" style="font-size: 17px;"><span style="display: inline;">   CONTACT US </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem2143" class="topMenuItem" role="none" data-pageid="2143" data-displaymegamenu="True" style="width: 18.714%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavGOVERNMENT" class="navMainItem mainNavItem mainNavItem2 " href="https://cityofcastlehills.com/2143/GOVERNMENT" target="_self" style="font-size: 17px;"><span style="display: inline;">   GOVERNMENT </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem2146" class="topMenuItem" role="none" data-pageid="2146" data-displaymegamenu="True" style="width: 17.5894%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavCOMMUNITY" class="navMainItem mainNavItem mainNavItem3 " href="https://cityofcastlehills.com/2146/COMMUNITY" target="_self" style="font-size: 17px;"><span style="display: inline;">   COMMUNITY </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem2144" class="topMenuItem" role="none" data-pageid="2144" data-displaymegamenu="True" style="width: 14.6482%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavSERVICES" class="navMainItem mainNavItem mainNavItem4 " href="https://cityofcastlehills.com/2144/SERVICES" target="_self" style="font-size: 17px;"><span style="display: inline;">   SERVICES </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem2145" class="topMenuItem" role="none" data-pageid="2145" data-displaymegamenu="True" style="width: 15.1672%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavBUSINESS" class="navMainItem mainNavItem mainNavItem5 " href="https://cityofcastlehills.com/2145/BUSINESS" target="_self" style="font-size: 17px;"><span style="display: inline;">   BUSINESS </span></a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem2147" class="topMenuItem" role="none" data-pageid="2147" data-displaymegamenu="True" style="width: 16.5513%;"><!--
+			--><!--
+			--> <a role="menuitem" aria-haspopup="true" aria-expanded="false" id="mainNavHOWDOI" class="navMainItem mainNavItem mainNavItem6 " href="https://cityofcastlehills.com/2147/HOW-DO-I" target="_self" style="font-size: 17px;"><span style="display: inline;">   HOW DO I... </span></a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=51&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = true;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cprole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="1"></aside></nav><div data-cprole="contentContainer" id="searchTS">	<div id="cc866f8a5c-659b-48a5-a7ac-0f87d37298ec" data-containerid="866f8a5c-659b-48a5-a7ac-0f87d37298ec" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="c539a588-5066-4937-abe1-9d23ebc5a5b0">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last ida4f641c3-bdd3-4f99-870c-a0fc7a5f0a5d" style="height: 50px;" data-widgetcontainerid="a4f641c3-bdd3-4f99-870c-a0fc7a5f0a5d">
+	
+<div data-widget-id="21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer="" type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer="" src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer="" type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				$(".widgetSearchButton.widgetSearchButton21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2").click(function (e) {
+				e.preventDefault();
+					if (false||$("#ysnSearchOnlyDept21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2").is(':checked'))
+					{
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), Number(0));
+					}
+					else {
+						doWidgetSearch($(this).siblings(".widgetSearchBox").val(), 0);
+					}
+			});
+			$("#searchField21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2").keypress(function (e) {
+				if (window.clipboardData) {
+					if (e.keyCode === 13) {
+						if ($("#ysnSearchOnlyDept21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				} else {
+					if (e.which === 13) {
+						if ($("#ysnSearchOnlyDept21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2").is(':checked') || false) {
+								doWidgetSearch($(this).val(), Number(0));
+							} else {
+								doWidgetSearch($(this).val(), 0);
+							}
+						return false;
+					}
+				}
+				return true;
+			});
+
+				if (true) {
+					var currentRequest = null;
+					var $searchField = $("#searchField21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2").autocomplete({
+						source: function (request, response) {
+							currentRequest = $.ajax({
+								url: '/Search/AutoComplete' + ($("#ysnSearchOnlyDept21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2").is(':checked') || false? '?departmentId=0' : ''),
+								dataType: "json",
+								timeout: 10000,
+								beforeSend: function () {
+									if (currentRequest != null) {
+										currentRequest.abort();
+									}
+								},
+								data:
+								{
+									term: request.term,
+								},
+								success: function (data) {
+									response(data);
+									$('.autoCompleteError').remove();
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "timeout") {
+										if ($("#searchField21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2").siblings('.autoCompleteError').length == 0)
+											$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($("#searchField21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2"));
+									}
+								}
+							});
+						},
+						html: true,
+						delay: 500,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+}
+}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin37 widgetOptionSet57" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBox21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2 ui-autocomplete-input" cp5ph="true" id="searchField21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search..." title="Search..." type="text" value="" autocomplete="off">
+						<a href="https://cityofcastlehills.com/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButton21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2" role="button"><img alt="Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=3468" data-image="/ImageRepository/Document?documentID=3469" src="https://cityofcastlehills.com/ImageRepository/Document?documentID=3469"></a>
+
+			<label class="searchLabel" for="searchField21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped="">
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #4D4D4D;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #4D4D4D;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #4D4D4D;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #4D4D4D;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBox21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2
+	{
+		color: #4D4D4D;
+		height:50px;
+padding:0 50px 0 15px;
+font-family:open sans;
+font-weight:400;
+border-radius: 5px;
+border: 2px solid #0583F2;
+background: #FFF;
+box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.30);
+	}
+	.widgetSearch .widgetBody .widgetSearchButton21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2
+	{
+		margin: 5px;
+	}
+	.widgetSearch .widgetSearch-onlyDept21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDept21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchField21f0c97d-bc2f-45a2-8bb6-c00ee124ccf2").value;
+	}
+	</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div>
+</div></div>
+</header><!-- Banner --><div data-cprole="structuralContainer" id="bannerContainerTS" class="noOverflowTS" style="padding-top: 100px;">
+<div data-cprole="banner" id="banner1"><div data-cprole="structuralContainer" id="bannerSizingTS">
+<div data-cprole="structuralContainer" id="bannerSearchTS">
+<div class="siteWrap8"><div data-cprole="contentContainer" id="welcomeTS">	<div id="cc81f59a8f-5804-4207-badd-1674466637d7" data-containerid="81f59a8f-5804-4207-badd-1674466637d7" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="a46d1e1e-a6fe-4d03-bc78-df8a019464ea">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id12feed18-90bc-4eb1-a35c-7b070b02204b" style="height: 185px;" data-widgetcontainerid="12feed18-90bc-4eb1-a35c-7b070b02204b">
+	
+    <div data-widget-id="8ba02117-ae84-4b6b-8f30-bdae4f283196" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv8ba02117-ae84-4b6b-8f30-bdae4f283196" class="widget widgetInfoAdvanced skin37 widgetOptionSet5 wide" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="header8ba02117-ae84-4b6b-8f30-bdae4f283196">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row wide">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><img src="https://cityofcastlehills.com/ImageRepository/Document?documentId=3485" class="fr-dib" alt="Welcome to Castle Hills Texas"></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv8ba02117-ae84-4b6b-8f30-bdae4f283196 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+
+
+
+		<div id="bannerImagesJSON111" class="hidden"></div><div class="bannerObject external fixedBanner" id="bannerDivbanner1" style="min-height: 550px; top: 0px; left: -140px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img class="bannerObject" width="1920px" style="position: absolute; left: 0px; margin: 0px; width: 2200px; z-index: 2;" src="https://cityofcastlehills.com/ImageRepository/Document?documentID=3481" data-is-delayed="false" alt=""><img class="bannerObject" width="1920px" style="position: absolute; display: none; left: 0px; margin: 0px; width: 2200px;" src="https://cityofcastlehills.com/ImageRepository/Document?documentID=3483" data-is-delayed="true" data-delayed-image="/ImageRepository/Document?documentID=3483" alt=""><img class="bannerObject" width="1920px" style="position: absolute; left: 0px; margin: 0px; width: 2200px; z-index: 3; display: none;" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-is-delayed="true" data-delayed-image="/ImageRepository/Document?documentID=3484" alt=""></div>
+		
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner1',
+								{"BannerOptionID":111,"ThemeID":51,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":3,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":false,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":557,"BannerOptionID":111,"FileName":"/ImageRepository/Document?documentID=3481","Height":550,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":558,"BannerOptionID":111,"FileName":"/ImageRepository/Document?documentID=3483","Height":550,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":2,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""},{"BannerImageID":559,"BannerOptionID":111,"FileName":"/ImageRepository/Document?documentID=3484","Height":550,"Width":2200,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":3,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""}],"BannerVideos":[],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								'/App_Themes/2025 - Home/Images/',
+								'Slideshow');
+						});
+				});
+			</script>
+
+</div>
+</div><!-- Content container --><div data-cprole="structuralContainer" id="mainContainerTS">
+<div class="siteWrap4"><div data-cprole="structuralContainer" id="mainWrapTS" class="mainWrap" role="main">
+<div data-cprole="structuralContainer" id="outerContentWrapTS" class="outerContentWrap">
+<div data-cprole="structuralContainer" id="contentWrapTS" class="contentWrap">
+<div data-cprole="breadCrumbs" id="breadCrumbs" class="breadCrumbContainer" style="display: none;"><script type="text/javascript">$('#breadCrumbs').hide();</script></div><div data-cprole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="1">
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="">
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="7322">
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="Home">
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="False">
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False">
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published">
+
+			
+		<div id="cca05b5d24-22f5-4ed1-95fe-495f19735a9c" data-containerid="a05b5d24-22f5-4ed1-95fe-495f19735a9c" class="pageContent cpGrid cpGrid24">
+			
+
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div>
+</div>
+</div>
+</div></div>
+</div><!-- GBs --><div data-cprole="structuralContainer" id="gbsContainerTS">
+<div class="siteWrap8"><div data-cprole="contentContainer" id="gbsTS">	<div id="cc4f120953-e7ab-4ea6-b73b-0fff4fb2cfc6" data-containerid="4f120953-e7ab-4ea6-b73b-0fff4fb2cfc6" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="53">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col8 first" style="height: auto;" data-widgetcontainerid="1e5d48ba-15e5-41e0-b6c3-448cbdf22ca5">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id4a6d28ff-6b75-4462-aa4b-4792213ae9c1" style="height: 131px;" data-widgetcontainerid="4a6d28ff-6b75-4462-aa4b-4792213ae9c1">
+	
+<div data-widget-id="6c548290-34fe-4a44-8bff-51ca5e142801" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget6c548290-34fe-4a44-8bff-51ca5e142801" class="widget widgetGraphicLinks skin41 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:34em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofcastlehills.com/Archive.aspx" target="_self" class="fancyButton fancyButton167 ">
+		<span>
+			<span><span class="text">Agendas &amp;<br><span style="font-size: 1rem;">Minutes</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton167.fancyButton:link,.fancyButton167.fancyButton:visited, .fancyButton167div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton167.fancyButton:hover,.fancyButton167.fancyButton:focus,.fancyButton167.fancyButton:active,.fancyButton167.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton167.fancyButton:link > span,.fancyButton167.fancyButton:visited > span, .fancyButton167div.fancyButton > span{
+}
+.fancyButton167.fancyButton:hover > span,.fancyButton167.fancyButton:focus > span,.fancyButton167.fancyButton:active > span,.fancyButton167.fancyButton.hover > span{
+}
+.fancyButton167.fancyButton .text{
+	color: rgb(77, 77, 77);
+	font-family: "Open Sans";
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 123px;
+	font-weight: 600;
+	text-decoration: none;
+	background-color: rgb(255, 255, 255);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 123px;
+	background-image: url('/ImageRepository/Document?documentID=3470');
+	background-repeat: no-repeat;
+	background-position: left center;
+min-height:120px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+border-radius: 5px;
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+outline:5px solid rgba(94, 216, 15, 0);
+transition:all .3s ease-in-out;
+}
+.fancyButton167.fancyButton:hover .text,.fancyButton167.fancyButton:focus .text,.fancyButton167.fancyButton:active .text,.fancyButton167.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left center;
+outline:5px solid rgba(94, 216, 15, 1);
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofcastlehills.com/2224/How-to-Obtain-a-Permit" target="_self" class="fancyButton fancyButton168 ">
+		<span>
+			<span><span class="text">Development<span style="font-size: 1rem;">Services/ Permits</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton168.fancyButton:link,.fancyButton168.fancyButton:visited, .fancyButton168div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+letter-spacing:0;}
+.fancyButton168.fancyButton:hover,.fancyButton168.fancyButton:focus,.fancyButton168.fancyButton:active,.fancyButton168.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton168.fancyButton:link > span,.fancyButton168.fancyButton:visited > span, .fancyButton168div.fancyButton > span{
+}
+.fancyButton168.fancyButton:hover > span,.fancyButton168.fancyButton:focus > span,.fancyButton168.fancyButton:active > span,.fancyButton168.fancyButton.hover > span{
+}
+.fancyButton168.fancyButton .text{
+	color: rgb(77, 77, 77);
+	font-family: "Open Sans";
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 123px;
+	font-weight: 600;
+	text-decoration: none;
+	background-color: rgb(255, 255, 255);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 123px;
+	background-image: url('/ImageRepository/Document?documentID=3472');
+	background-repeat: no-repeat;
+	background-position: left center;
+min-height:120px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+word-spacing:-4px;
+border-radius: 5px;
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+outline:5px solid rgba(94, 216, 15, 0);
+transition:all .3s ease-in-out;
+}
+.fancyButton168.fancyButton:hover .text,.fancyButton168.fancyButton:focus .text,.fancyButton168.fancyButton:active .text,.fancyButton168.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left center;
+outline:5px solid rgba(5, 131, 242, 1);
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8" style="height: auto;" data-widgetcontainerid="63718cdc-2b0e-4ded-b0f8-3832ca40a9ba">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last ide8e4a9f4-7237-4d66-b5f4-337a7b35565f" style="height: 131px;" data-widgetcontainerid="e8e4a9f4-7237-4d66-b5f4-337a7b35565f">
+	
+<div data-widget-id="57ef0d6c-469c-4c4c-9dd8-9c99d0487728" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget57ef0d6c-469c-4c4c-9dd8-9c99d0487728" class="widget widgetGraphicLinks skin41 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:34em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofcastlehills.com/FormCenter/Contact-Forms-2/Report-a-Concern-38" target="_self" class="fancyButton fancyButton169 ">
+		<span>
+			<span><span class="text">Report a<br><span style="font-size: 1rem;">Concern</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton169.fancyButton:link,.fancyButton169.fancyButton:visited, .fancyButton169div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton169.fancyButton:hover,.fancyButton169.fancyButton:focus,.fancyButton169.fancyButton:active,.fancyButton169.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton169.fancyButton:link > span,.fancyButton169.fancyButton:visited > span, .fancyButton169div.fancyButton > span{
+}
+.fancyButton169.fancyButton:hover > span,.fancyButton169.fancyButton:focus > span,.fancyButton169.fancyButton:active > span,.fancyButton169.fancyButton.hover > span{
+}
+.fancyButton169.fancyButton .text{
+	color: rgb(77, 77, 77);
+	font-family: "Open Sans";
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 123px;
+	font-weight: 600;
+	text-decoration: none;
+	background-color: rgb(255, 255, 255);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 123px;
+	background-image: url('/ImageRepository/Document?documentID=3475');
+	background-repeat: no-repeat;
+	background-position: left center;
+min-height:120px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+border-radius: 5px;
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+outline:5px solid rgba(94, 216, 15, 0);
+transition:all .3s ease-in-out;
+}
+.fancyButton169.fancyButton:hover .text,.fancyButton169.fancyButton:focus .text,.fancyButton169.fancyButton:active .text,.fancyButton169.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left center;
+outline:5px solid rgba(94, 216, 15, 1);
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofcastlehills.com/2241/Street-Projects" target="_self" class="fancyButton fancyButton170 ">
+		<span>
+			<span><span class="text">Capital<br><span style="font-size: 1rem;">Improvement<br></span><span style="font-size: 1rem;">Projects</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton170.fancyButton:link,.fancyButton170.fancyButton:visited, .fancyButton170div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton170.fancyButton:hover,.fancyButton170.fancyButton:focus,.fancyButton170.fancyButton:active,.fancyButton170.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton170.fancyButton:link > span,.fancyButton170.fancyButton:visited > span, .fancyButton170div.fancyButton > span{
+}
+.fancyButton170.fancyButton:hover > span,.fancyButton170.fancyButton:focus > span,.fancyButton170.fancyButton:active > span,.fancyButton170.fancyButton.hover > span{
+}
+.fancyButton170.fancyButton .text{
+	color: rgb(77, 77, 77);
+	font-family: "Open Sans";
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 123px;
+	font-weight: 600;
+	text-decoration: none;
+	background-color: rgb(255, 255, 255);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 123px;
+	background-image: url('/ImageRepository/Document?documentID=3471');
+	background-repeat: no-repeat;
+	background-position: left center;
+min-height:120px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+border-radius: 5px;
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+outline:5px solid rgba(94, 216, 15, 0);
+transition:all .3s ease-in-out;
+
+}
+.fancyButton170.fancyButton:hover .text,.fancyButton170.fancyButton:focus .text,.fancyButton170.fancyButton:active .text,.fancyButton170.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left center;
+outline:5px solid rgba(5, 131, 242, 1);
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col8 last" style="height: auto;" data-widgetcontainerid="5ebc7aa0-e854-4012-a858-44e0bf84dbc5">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col8 first last id1d4ee98e-789e-435d-8d3e-48b08be5078c" style="height: 131px;" data-widgetcontainerid="1d4ee98e-789e-435d-8d3e-48b08be5078c">
+	
+<div data-widget-id="82e744f0-9650-4ec8-abf0-a01dd39534f7" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget82e744f0-9650-4ec8-abf0-a01dd39534f7" class="widget widgetGraphicLinks skin41 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:34em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofcastlehills.com/2313/Online-Court-Payments" target="_self" class="fancyButton fancyButton171 ">
+		<span>
+			<span><span class="text">Online Court<br><span style="font-size: 1rem;">Payments</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton171.fancyButton:link,.fancyButton171.fancyButton:visited, .fancyButton171div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton171.fancyButton:hover,.fancyButton171.fancyButton:focus,.fancyButton171.fancyButton:active,.fancyButton171.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton171.fancyButton:link > span,.fancyButton171.fancyButton:visited > span, .fancyButton171div.fancyButton > span{
+}
+.fancyButton171.fancyButton:hover > span,.fancyButton171.fancyButton:focus > span,.fancyButton171.fancyButton:active > span,.fancyButton171.fancyButton.hover > span{
+}
+.fancyButton171.fancyButton .text{
+	color: rgb(77, 77, 77);
+	font-family: "Open Sans";
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 123px;
+	font-weight: 600;
+	text-decoration: none;
+	background-color: rgb(255, 255, 255);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 123px;
+	background-image: url('/ImageRepository/Document?documentID=3474');
+	background-repeat: no-repeat;
+	background-position: left center;
+min-height:120px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+border-radius: 5px;
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+outline:5px solid rgba(94, 216, 15, 0);
+transition:all .3s ease-in-out;
+}
+.fancyButton171.fancyButton:hover .text,.fancyButton171.fancyButton:focus .text,.fancyButton171.fancyButton:active .text,.fancyButton171.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left center;
+outline:5px solid rgba(94, 216, 15, 1);
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofcastlehills.com/formcenter" target="_self" class="fancyButton fancyButton172 ">
+		<span>
+			<span><span class="text">Forms</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton172.fancyButton:link,.fancyButton172.fancyButton:visited, .fancyButton172div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton172.fancyButton:hover,.fancyButton172.fancyButton:focus,.fancyButton172.fancyButton:active,.fancyButton172.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton172.fancyButton:link > span,.fancyButton172.fancyButton:visited > span, .fancyButton172div.fancyButton > span{
+}
+.fancyButton172.fancyButton:hover > span,.fancyButton172.fancyButton:focus > span,.fancyButton172.fancyButton:active > span,.fancyButton172.fancyButton.hover > span{
+}
+.fancyButton172.fancyButton .text{
+	color: rgb(77, 77, 77);
+	font-family: "Open Sans";
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 123px;
+	font-weight: 600;
+	text-decoration: none;
+	background-color: rgb(255, 255, 255);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 123px;
+	background-image: url('/ImageRepository/Document?documentID=3473');
+	background-repeat: no-repeat;
+	background-position: left center;
+min-height:120px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+border-radius: 5px;
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+outline:5px solid rgba(5, 131, 242, 0);
+transition:all .3s ease-in-out;
+}
+.fancyButton172.fancyButton:hover .text,.fancyButton172.fancyButton:focus .text,.fancyButton172.fancyButton:active .text,.fancyButton172.fancyButton.hover .text{
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left center;
+outline:5px solid rgba(5, 131, 242, 1);
+}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Photo Buttons --><div data-cprole="structuralContainer" id="homeContainer1">
+<div class="siteWrap4"><div data-cprole="contentContainer" id="homeContent1a">	<div id="ccadca9121-1738-4875-9a5b-e30a294d5e40" data-containerid="adca9121-1738-4875-9a5b-e30a294d5e40" class="pageContent cpGrid cpGrid24 showInMobile" data-contentcontainerbreakpoint="30">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col12 first" style="height: auto;" data-widgetcontainerid="2b543f32-74e2-4ab2-a273-9b5fdd938ed8">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last id3325c88b-8585-4c9c-8434-da6d6ea445d5" style="height: 306px;" data-widgetcontainerid="3325c88b-8585-4c9c-8434-da6d6ea445d5">
+	
+<div data-widget-id="ca381229-7d86-4081-a6b6-413c99e87378" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetca381229-7d86-4081-a6b6-413c99e87378" class="widget widgetGraphicLinks skin44 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofcastlehills.com/2276/City-Leadership" target="_self" class="fancyButton fancyButton184 ">
+		<span>
+			<span><span class="text"><span class="textStyle1">City Leadership</span><span class="textStyle2">Learn More</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton184.fancyButton:link,.fancyButton184.fancyButton:visited, .fancyButton184div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=3486');
+	background-repeat: no-repeat;
+	background-position: center center;
+max-width:320px;
+margin:0 auto;
+min-height:300px;
+position:relative;
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+border-radius: 5px;
+background-size:cover;}
+.fancyButton184.fancyButton:hover,.fancyButton184.fancyButton:focus,.fancyButton184.fancyButton:active,.fancyButton184.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.fancyButton184.fancyButton:link > span,.fancyButton184.fancyButton:visited > span, .fancyButton184div.fancyButton > span{
+}
+.fancyButton184.fancyButton:hover > span,.fancyButton184.fancyButton:focus > span,.fancyButton184.fancyButton:active > span,.fancyButton184.fancyButton.hover > span{
+}
+.fancyButton184.fancyButton .text{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	text-decoration: none;
+	background-color: rgba(77, 77, 77, 0.9);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-top: 2px solid rgba(77, 77, 77, 0.9);
+	border-left: 2px solid rgba(77, 77, 77, 0.9);
+	border-right: 2px solid rgba(77, 77, 77, 0.9);
+	border-bottom: 2px solid rgba(77, 77, 77, 0.9);
+position:absolute;
+left:0;
+bottom:0;
+width:100%;
+min-height:100px;
+display:flex;
+transition:all .3s ease-in-out;
+flex-direction:column;
+justify-content:center;
+border-radius: 0 0 5px 5px;
+transition:all .3s ease-in-out;
+}
+.fancyButton184.fancyButton:hover .text,.fancyButton184.fancyButton:focus .text,.fancyButton184.fancyButton:active .text,.fancyButton184.fancyButton.hover .text{
+	text-decoration: none;
+	background-color: rgba(227, 227, 227, 0.9);
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-top: 2px solid rgb(94, 216, 15);
+	border-left: 2px solid rgb(94, 216, 15);
+	border-right: 2px solid rgb(94, 216, 15);
+	border-bottom: 2px solid rgb(94, 216, 15);
+min-height:300px;
+border-radius:5px;
+}
+.fancyButton184.fancyButton .textStyle1{
+	color: rgb(255, 255, 255);
+	font-size: 1.2em;
+	font-family: Open Sans;
+	font-weight: 700;
+	text-decoration: none;
+text-transform:uppercase;
+display:block;
+transition:all .3s ease-in-out;
+position:relative;
+margin:.65em 0;
+}
+.fancyButton184 .textStyle1::after{ 
+position:absolute;
+transition:all .3s ease-in-out;
+content:"";
+width:50px;
+height:2px;
+border-radius:3px;
+bottom:-5px;
+left:50%;
+transform:translate(-50%);
+background:rgba(5, 131, 242, 1);
+}
+.fancyButton184:hover .textStyle1::after,
+.fancyButton184:focus .textStyle1::after,
+.fancyButton184:active .textStyle1::after{
+width:100px;}
+.fancyButton184.fancyButton:hover .textStyle1, .fancyButton184.fancyButton.hover .textStyle1{
+	color: rgb(77, 77, 77);
+	text-decoration: underline;
+
+}
+.fancyButton184.fancyButton .textStyle2{
+	color: rgb(77, 77, 77);
+	font-family: Open Sans;
+	text-align: center;
+	font-style: normal;
+	text-decoration: none;
+line-height:1.2;
+line-height:0;
+display:block;
+opacity:0;
+transition:all .3s ease-in-out;
+}
+.fancyButton184.fancyButton:hover .textStyle2, .fancyButton184.fancyButton.hover .textStyle2{
+	text-decoration: none;
+line-height:1.2;
+opacity:1;}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofcastlehills.com/2160/Police-Department" target="_self" class="fancyButton fancyButton185 ">
+		<span>
+			<span><span class="text"><span class="textStyle1">Police</span><span class="textStyle2">Learn More</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton185.fancyButton:link,.fancyButton185.fancyButton:visited, .fancyButton185div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=3491');
+	background-repeat: no-repeat;
+	background-position: center center;
+max-width:320px;
+margin:0 auto;
+min-height:300px;
+position:relative;
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+border-radius: 5px;
+background-size:cover;}
+.fancyButton185.fancyButton:hover,.fancyButton185.fancyButton:focus,.fancyButton185.fancyButton:active,.fancyButton185.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.fancyButton185.fancyButton:link > span,.fancyButton185.fancyButton:visited > span, .fancyButton185div.fancyButton > span{
+}
+.fancyButton185.fancyButton:hover > span,.fancyButton185.fancyButton:focus > span,.fancyButton185.fancyButton:active > span,.fancyButton185.fancyButton.hover > span{
+}
+.fancyButton185.fancyButton .text{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	text-decoration: none;
+	background-color: rgba(77, 77, 77, 0.9);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-top: 2px solid rgba(77, 77, 77, 0.9);
+	border-left: 2px solid rgba(77, 77, 77, 0.9);
+	border-right: 2px solid rgba(77, 77, 77, 0.9);
+	border-bottom: 2px solid rgba(77, 77, 77, 0.9);
+position:absolute;
+left:0;
+bottom:0;
+width:100%;
+min-height:100px;
+display:flex;
+transition:all .3s ease-in-out;
+flex-direction:column;
+justify-content:center;
+border-radius: 0 0 5px 5px;
+transition:all .3s ease-in-out;
+}
+.fancyButton185.fancyButton:hover .text,.fancyButton185.fancyButton:focus .text,.fancyButton185.fancyButton:active .text,.fancyButton185.fancyButton.hover .text{
+	text-decoration: none;
+	background-color: rgba(227, 227, 227, 0.9);
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-top: 2px solid rgb(94, 216, 15);
+	border-left: 2px solid rgb(94, 216, 15);
+	border-right: 2px solid rgb(94, 216, 15);
+	border-bottom: 2px solid rgb(94, 216, 15);
+min-height:300px;
+border-radius:5px;
+}
+.fancyButton185.fancyButton .textStyle1{
+	color: rgb(255, 255, 255);
+	font-size: 1.2em;
+	font-family: Open Sans;
+	font-weight: 700;
+	text-decoration: none;
+text-transform:uppercase;
+display:block;
+transition:all .3s ease-in-out;
+position:relative;
+margin:.65em 0;
+}
+.fancyButton185 .textStyle1::after{ 
+position:absolute;
+transition:all .3s ease-in-out;
+content:"";
+width:50px;
+height:2px;
+border-radius:3px;
+bottom:-5px;
+left:50%;
+transform:translate(-50%);
+background:rgba(5, 131, 242, 1);
+}
+.fancyButton185:hover .textStyle1::after,
+.fancyButton185:focus .textStyle1::after,
+.fancyButton185:active .textStyle1::after{
+width:100px;}
+.fancyButton185.fancyButton:hover .textStyle1, .fancyButton185.fancyButton.hover .textStyle1{
+	color: rgb(77, 77, 77);
+	text-decoration: underline;
+
+}
+.fancyButton185.fancyButton .textStyle2{
+	color: rgb(77, 77, 77);
+	font-family: Open Sans;
+	text-align: center;
+	font-style: normal;
+	text-decoration: none;
+line-height:1.2;
+line-height:0;
+display:block;
+opacity:0;
+transition:all .3s ease-in-out;
+}
+.fancyButton185.fancyButton:hover .textStyle2, .fancyButton185.fancyButton.hover .textStyle2{
+	text-decoration: none;
+line-height:1.2;
+opacity:1;}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col12 last" style="height: auto;" data-widgetcontainerid="2d8e9c44-6164-46c3-8232-4fc0ef4cd9fb">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col12 first last id4e9c38a3-b079-4ba0-b700-fc2efd4d4d2f" style="height: 306px;" data-widgetcontainerid="4e9c38a3-b079-4ba0-b700-fc2efd4d4d2f">
+	
+<div data-widget-id="b9d44b54-5cee-492c-a322-1f65bd13560d" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetb9d44b54-5cee-492c-a322-1f65bd13560d" class="widget widgetGraphicLinks skin44 widgetOptionSet4 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofcastlehills.com/2156/Fire-Department" target="_self" class="fancyButton fancyButton186 ">
+		<span>
+			<span><span class="text"><span class="textStyle1">fire</span><span class="textStyle2">Learn More</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton186.fancyButton:link,.fancyButton186.fancyButton:visited, .fancyButton186div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=3490');
+	background-repeat: no-repeat;
+	background-position: center center;
+max-width:320px;
+margin:0 auto;
+min-height:300px;
+position:relative;
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+border-radius: 5px;
+background-size:cover;}
+.fancyButton186.fancyButton:hover,.fancyButton186.fancyButton:focus,.fancyButton186.fancyButton:active,.fancyButton186.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.fancyButton186.fancyButton:link > span,.fancyButton186.fancyButton:visited > span, .fancyButton186div.fancyButton > span{
+}
+.fancyButton186.fancyButton:hover > span,.fancyButton186.fancyButton:focus > span,.fancyButton186.fancyButton:active > span,.fancyButton186.fancyButton.hover > span{
+}
+.fancyButton186.fancyButton .text{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	text-decoration: none;
+	background-color: rgba(77, 77, 77, 0.9);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-top: 2px solid rgba(77, 77, 77, 0.9);
+	border-left: 2px solid rgba(77, 77, 77, 0.9);
+	border-right: 2px solid rgba(77, 77, 77, 0.9);
+	border-bottom: 2px solid rgba(77, 77, 77, 0.9);
+position:absolute;
+left:0;
+bottom:0;
+width:100%;
+min-height:100px;
+display:flex;
+transition:all .3s ease-in-out;
+flex-direction:column;
+justify-content:center;
+border-radius: 0 0 5px 5px;
+transition:all .3s ease-in-out;
+}
+.fancyButton186.fancyButton:hover .text,.fancyButton186.fancyButton:focus .text,.fancyButton186.fancyButton:active .text,.fancyButton186.fancyButton.hover .text{
+	text-decoration: none;
+	background-color: rgba(227, 227, 227, 0.9);
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-top: 2px solid rgb(94, 216, 15);
+	border-left: 2px solid rgb(94, 216, 15);
+	border-right: 2px solid rgb(94, 216, 15);
+	border-bottom: 2px solid rgb(94, 216, 15);
+min-height:300px;
+border-radius:5px;
+}
+.fancyButton186.fancyButton .textStyle1{
+	color: rgb(255, 255, 255);
+	font-size: 1.2em;
+	font-family: Open Sans;
+	font-weight: 700;
+	text-decoration: none;
+text-transform:uppercase;
+display:block;
+transition:all .3s ease-in-out;
+position:relative;
+margin:.65em 0;
+}
+.fancyButton186 .textStyle1::after{ 
+position:absolute;
+transition:all .3s ease-in-out;
+content:"";
+width:50px;
+height:2px;
+border-radius:3px;
+bottom:-5px;
+left:50%;
+transform:translate(-50%);
+background:rgba(5, 131, 242, 1);
+}
+.fancyButton186:hover .textStyle1::after,
+.fancyButton186:focus .textStyle1::after,
+.fancyButton186:active .textStyle1::after{
+width:100px;}
+.fancyButton186.fancyButton:hover .textStyle1, .fancyButton186.fancyButton.hover .textStyle1{
+	color: rgb(77, 77, 77);
+	text-decoration: underline;
+
+}
+.fancyButton186.fancyButton .textStyle2{
+	color: rgb(77, 77, 77);
+	font-family: Open Sans;
+	text-align: center;
+	font-style: normal;
+	text-decoration: none;
+line-height:1.2;
+line-height:0;
+display:block;
+opacity:0;
+transition:all .3s ease-in-out;
+}
+.fancyButton186.fancyButton:hover .textStyle2, .fancyButton186.fancyButton.hover .textStyle2{
+	text-decoration: none;
+line-height:1.2;
+opacity:1;}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://cityofcastlehills.com/2161/Public-Works" target="_self" class="fancyButton fancyButton187 ">
+		<span>
+			<span><span class="text"><span class="textStyle1">Public works<br>(Sanitation, Streets, &amp;<br>Animal Control)</span><span class="textStyle2">Learn More</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton187.fancyButton:link,.fancyButton187.fancyButton:visited, .fancyButton187div.fancyButton{
+	background-image: url('/ImageRepository/Document?documentID=3492');
+	background-repeat: no-repeat;
+	background-position: center center;
+max-width:320px;
+margin:0 auto;
+min-height:300px;
+position:relative;
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+border-radius: 5px;
+background-size:cover;}
+.fancyButton187.fancyButton:hover,.fancyButton187.fancyButton:focus,.fancyButton187.fancyButton:active,.fancyButton187.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.fancyButton187.fancyButton:link > span,.fancyButton187.fancyButton:visited > span, .fancyButton187div.fancyButton > span{
+}
+.fancyButton187.fancyButton:hover > span,.fancyButton187.fancyButton:focus > span,.fancyButton187.fancyButton:active > span,.fancyButton187.fancyButton.hover > span{
+}
+.fancyButton187.fancyButton .text{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	text-decoration: none;
+	background-color: rgba(77, 77, 77, 0.9);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-top: 2px solid rgba(77, 77, 77, 0.9);
+	border-left: 2px solid rgba(77, 77, 77, 0.9);
+	border-right: 2px solid rgba(77, 77, 77, 0.9);
+	border-bottom: 2px solid rgba(77, 77, 77, 0.9);
+position:absolute;
+left:0;
+bottom:0;
+width:100%;
+min-height:100px;
+display:flex;
+transition:all .3s ease-in-out;
+flex-direction:column;
+justify-content:center;
+border-radius: 0 0 5px 5px;
+transition:all .3s ease-in-out;
+}
+.fancyButton187.fancyButton:hover .text,.fancyButton187.fancyButton:focus .text,.fancyButton187.fancyButton:active .text,.fancyButton187.fancyButton.hover .text{
+	text-decoration: none;
+	background-color: rgba(227, 227, 227, 0.9);
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-top: 2px solid rgb(94, 216, 15);
+	border-left: 2px solid rgb(94, 216, 15);
+	border-right: 2px solid rgb(94, 216, 15);
+	border-bottom: 2px solid rgb(94, 216, 15);
+min-height:300px;
+border-radius:5px;
+}
+.fancyButton187.fancyButton .textStyle1{
+	color: rgb(255, 255, 255);
+	font-size: 1.2em;
+	font-family: Open Sans;
+	font-weight: 700;
+	text-decoration: none;
+text-transform:uppercase;
+display:block;
+transition:all .3s ease-in-out;
+position:relative;
+margin:.65em 0;
+}
+.fancyButton187 .textStyle1::after{ 
+position:absolute;
+transition:all .3s ease-in-out;
+content:"";
+width:50px;
+height:2px;
+border-radius:3px;
+bottom:-5px;
+left:50%;
+transform:translate(-50%);
+background:rgba(5, 131, 242, 1);
+}
+.fancyButton187:hover .textStyle1::after,
+.fancyButton187:focus .textStyle1::after,
+.fancyButton187:active .textStyle1::after{
+width:100px;}
+.fancyButton187.fancyButton:hover .textStyle1, .fancyButton187.fancyButton.hover .textStyle1{
+	color: rgb(77, 77, 77);
+	text-decoration: underline;
+
+}
+.fancyButton187.fancyButton .textStyle2{
+	color: rgb(77, 77, 77);
+	font-family: Open Sans;
+	text-align: center;
+	font-style: normal;
+	text-decoration: none;
+line-height:1.2;
+line-height:0;
+display:block;
+opacity:0;
+transition:all .3s ease-in-out;
+}
+.fancyButton187.fancyButton:hover .textStyle2, .fancyButton187.fancyButton.hover .textStyle2{
+	text-decoration: none;
+line-height:1.2;
+opacity:1;}
+</style>
+
+ </li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Carousel --><div data-cprole="structuralContainer" id="homeContainer2">
+<div class="siteWrap4"><div data-cprole="contentContainer" id="homeContent2a">	<div id="cc9119c97c-46d1-41c9-9ced-8fc6b5965472" data-containerid="9119c97c-46d1-41c9-9ced-8fc6b5965472" class="pageContent cpGrid cpGrid24 showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="12a9426d-00d7-430b-b666-f71d8e36161b">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col24 first last ida86bd1ef-8aee-4e16-b882-11af50d4c274" style="height: 94px;" data-widgetcontainerid="a86bd1ef-8aee-4e16-b882-11af50d4c274">
+	
+    <div data-widget-id="399d6ceb-aadf-48d7-9ef0-b3e67eed7ff3" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv399d6ceb-aadf-48d7-9ef0-b3e67eed7ff3" class="widget widgetInfoAdvanced skin45 widgetOptionSet5 wide" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="header399d6ceb-aadf-48d7-9ef0-b3e67eed7ff3">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row wide">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<h1 class="headline" style="text-align: center;">News &amp; Events</h1><p style="text-align: center;">Stay Connected with Castle Hills</p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv399d6ceb-aadf-48d7-9ef0-b3e67eed7ff3 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col24 first last id1ce064c7-90a4-473b-8121-9659a1d413ff" style="height: 341px;" data-widgetcontainerid="1ce064c7-90a4-473b-8121-9659a1d413ff">
+	
+<div data-widget-id="541ca4e1-47f3-4f76-a436-711761da5284" data-widget-controller-path="/NewsFlash/Widget">
+		<script defer="" src="/Areas/NewsFlash/Assets/Scripts/Carousel.jquery.js" type="text/javascript"></script>
+		<script defer="" src="/Areas/NewsFlash/Assets/Scripts/Easing.1.3.jquery.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<section class="widget widgetNewsFlash skin46 widgetOptionSet60 wide" data-modulewidgettype="newsFlash" id="widgetNewsFlash541ca4e1-47f3-4f76-a436-711761da5284" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="News Flash">
+			<div class="widgetBody cpGrid cpGrid1 ">
+
+
+
+
+<div class="cpCarousel cpCarousel541ca4e1-47f3-4f76-a436-711761da5284">
+	<div class="cpWindow cpWindow541ca4e1-47f3-4f76-a436-711761da5284">
+		<ol class="semanticList cpSlider">
+						<li class="widgetItem slide0" data-index="0" style="width: 27.1429%; margin: 0px 36.4286%;">
+						<div class="text">
+								<h4 id="newsFlashItemHeader548" class="widgetTitle">
+		<a href="https://cityofcastlehills.com/CivicAlerts.aspx?AID=548" target="_self">Truth-in-Taxation Information - 2025 Adopted Tax Rate </a>
+	</h4>
+	<div class="widgetDesc">
+Click here to find out Truth in Tax Information and the FY 24 Proposed Tax Rate						<a id="newsFlashReadOn548" href="https://cityofcastlehills.com/CivicAlerts.aspx?AID=548" target="_self" class="readOn" aria-labelledby="newsFlashItemHeader548 newsFlashReadOn548">Read on...</a>
+	</div>
+
+						</div>
+						</li>
+
+		</ol>
+	</div>
+</div>
+<script type="text/javascript">
+	// <!--
+	window.$ = window.$ || window.parent.$;
+
+	$(window).on('load', function () {
+		//Wait for the DOM to load completely before executing carousel logic since its all based on carousel width which wont come out correct until the DOM has loaded. Vishal
+		if(!window.carouselsToInit){
+			window.carouselsToInit = new Array();
+		}
+		var widgetNewsFlash541ca4e147f34f76a436711761da5284 = function()
+		{
+			var widgetWindow = $('#widgetNewsFlash541ca4e1-47f3-4f76-a436-711761da5284').find('.cpWindow')[0];
+			if(widgetWindow){
+				if(widgetWindow.clientWidth != 0){
+					window.setTimeout(function(){
+						$('#widgetNewsFlash541ca4e1-47f3-4f76-a436-711761da5284').adaptiveCarousel({
+							minSlideWidth: 250,
+							maxSlideWidth: 380,
+							gutterWidth: 40,
+							circular: true,
+							teaser: false,
+							transitionTiming: 500,
+							noImageRequired: false
+							});
+					}, 250);
+					var index = window.carouselsToInit.indexOf(widgetNewsFlash541ca4e147f34f76a436711761da5284);
+					if (index > -1) {
+						window.carouselsToInit.splice(index, 1);
+					}
+				}
+			}
+		}
+		var indexCarouselsToInit = window.carouselsToInit.indexOf(widgetNewsFlash541ca4e147f34f76a436711761da5284);
+		if (indexCarouselsToInit === -1) {
+			window.carouselsToInit.push(widgetNewsFlash541ca4e147f34f76a436711761da5284);
+		}
+
+		if (window.carouselsToInit) {
+			window.carouselsToInit.forEach(function (carouselToInit) { carouselToInit(); });
+		}
+
+		if (window.Pages.onResizeHandlers){
+			window.Pages.onResizeHandlers.forEach(function(car){car();});
+		}
+	});
+
+	if (Modernizr.touch) {
+		var $pages = typeof window.Pages == 'undefined' ? window.parent.Pages : window.Pages;
+		$.when($pages.rwdReady).done(function () {
+			//only for responsive sites
+			if (typeof($$) !== 'undefined') {
+				$$('#widgetNewsFlash541ca4e1-47f3-4f76-a436-711761da5284').on('swipeRight', function (e, a) {
+					$(this).adaptiveCarousel("moveBack");
+				});
+				$$('#widgetNewsFlash541ca4e1-47f3-4f76-a436-711761da5284').on('swipeLeft', function (e) {
+					$(this).adaptiveCarousel("moveForward");
+				});
+			}
+		});
+	}
+	// -->
+</script>
+
+				<a id="newsFlashViewAll541ca4e1-47f3-4f76-a436-711761da5284" class="widgetViewAll" style="" href="https://cityofcastlehills.com/CivicAlerts.aspx?CID=1" aria-label="News Flash View All">View All News</a>
+			</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/CivicAlerts.aspx</div>
+	</div>
+
+	</section>
+
+
+
+
+
+
+
+
+</div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div><!-- Calendar --><div data-cprole="structuralContainer" id="homeContainer3">
+<div data-cprole="banner" id="banner2"><div data-cprole="structuralContainer" id="bannerSizing2TS">
+<div class="siteWrap4"><div data-cprole="contentContainer" id="homeContent3a">	<div id="cc17044d8f-b7d2-4122-a3cf-0c13d1f4758a" data-containerid="17044d8f-b7d2-4122-a3cf-0c13d1f4758a" class="pageContent cpGrid cpGrid24 showInMobile" data-contentcontainerbreakpoint="60">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="18ff4614-21a2-4055-8c14-fc6aae287ca2">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last iddef7734c-6725-463e-ad42-75114a044806" style="height: 121px;" data-widgetcontainerid="def7734c-6725-463e-ad42-75114a044806">
+	
+    <div data-widget-id="522c6fd2-3f0d-41dd-bd7a-9a75000f1e0b" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv522c6fd2-3f0d-41dd-bd7a-9a75000f1e0b" class="widget widgetInfoAdvanced skin48 widgetOptionSet5 wide" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="header522c6fd2-3f0d-41dd-bd7a-9a75000f1e0b">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row wide">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<h1 class="headline" style="text-align: center;">Calendar &amp; Updates</h1><p style="text-align: center;">Stay Up To Date</p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv522c6fd2-3f0d-41dd-bd7a-9a75000f1e0b .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="8ae1785d-e514-4d31-8a44-0aa2cdb6387c">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last id0751b3b3-ee72-435e-9e66-c5e4d4d3dc2f" style="height: 596px;" data-widgetcontainerid="0751b3b3-ee72-435e-9e66-c5e4d4d3dc2f">
+	
+<div data-widget-id="1bf5b63b-eeba-4559-af61-c1e8c04d2e80" data-widget-controller-path="/Calendar/Widget">
+	<script src="/Areas/Calendar/Assets/Scripts/Calendar.js"></script>
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="widgetCalendar1bf5b63b-eeba-4559-af61-c1e8c04d2e80" class="widget widgetCalendar skin47 widgetOptionSet59 wide" data-modulewidgettype="calendar" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:60em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn">
+	<div class="widgetBody cpGrid cpGrid2  mediaLeft">
+				<div class="calendarInnerWrapper">
+
+
+<div data-minicalendar="true" class="miniCalendar media" style="width: 50%; ">
+<input type="hidden" name="monthToRender" data-year="2026" data-month="02">
+<h3 class="miniCalendarHeader miniCalendarHeader--hasArrows" id="miniCalendarHeader1bf5b63b-eeba-4559-af61-c1e8c04d2e80"><button aria-label="Previous Month" class="cp-miniCalendar-arrow cp-miniCalendar-arrow--left cp-Btn--nonStyled" disabled=""><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconArrow--left"></use></svg></button><div tabindex="0" class="cp-miniCalendar-title">February 2026</div><button aria-label="Next Month" class="cp-miniCalendar-arrow cp-miniCalendar-arrow--right cp-Btn--nonStyled"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconArrow--right"></use></svg></button></h3>
+	<table role="grid" aria-labelledby="miniCalendarHeader1bf5b63b-eeba-4559-af61-c1e8c04d2e80" summary="This table represents a monthly calendar displaying days of the month in a grid format. Each row corresponds to a week, and each column corresponds to a day of the week, starting with Sunday. The table includes events marked on specific dates.">
+		<thead>											
+			<tr>										
+<th scope="col"><abbr title="
+Sunday
+">
+Sun
+</abbr></th>
+<th scope="col"><abbr title="
+Monday
+">
+Mon
+</abbr></th>
+<th scope="col"><abbr title="
+Tuesday
+">
+Tue
+</abbr></th>
+<th scope="col"><abbr title="
+Wednesday
+">
+Wed
+</abbr></th>
+<th scope="col"><abbr title="
+Thursday
+">
+Thu
+</abbr></th>
+<th scope="col"><abbr title="
+Friday
+">
+Fri
+</abbr></th>
+<th scope="col"><abbr title="
+Saturday
+">
+Sat
+</abbr></th>
+
+			</tr>										
+		</thead>										
+		<tbody>											
+<tr><td><span><time datetime="2026-02-01"> 1</time></span></td>				
+
+<td><span><time datetime="2026-02-02"> 2</time></span></td>				
+
+<td class="today"><a tabindex="0" href="https://cityofcastlehills.com/calendar.aspx?view=list&amp;year=2026&amp;month=2&amp;day=3&amp;CID=33,36,41,43,14,35"><time datetime="2026-02-03"> 3</time></a></td>				
+
+<td><span><time datetime="2026-02-04"> 4</time></span></td>				
+
+<td><span><time datetime="2026-02-05"> 5</time></span></td>				
+
+<td><span><time datetime="2026-02-06"> 6</time></span></td>				
+
+<td><span><time datetime="2026-02-07"> 7</time></span></td>				
+
+</tr>
+<tr><td><span><time datetime="2026-02-08"> 8</time></span></td>				
+
+<td><span><time datetime="2026-02-09"> 9</time></span></td>				
+
+<td><a tabindex="-1" href="https://cityofcastlehills.com/calendar.aspx?view=list&amp;year=2026&amp;month=2&amp;day=10&amp;CID=33,36,41,43,14,35"><time datetime="2026-02-10">10</time></a></td>				
+
+<td><span><time datetime="2026-02-11">11</time></span></td>				
+
+<td><span><time datetime="2026-02-12">12</time></span></td>				
+
+<td><span><time datetime="2026-02-13">13</time></span></td>				
+
+<td><span><time datetime="2026-02-14">14</time></span></td>				
+
+</tr>
+<tr><td><span><time datetime="2026-02-15">15</time></span></td>				
+
+<td><a tabindex="-1" href="https://cityofcastlehills.com/calendar.aspx?view=list&amp;year=2026&amp;month=2&amp;day=16&amp;CID=33,36,41,43,14,35"><time datetime="2026-02-16">16</time></a></td>				
+
+<td><span><time datetime="2026-02-17">17</time></span></td>				
+
+<td><span><time datetime="2026-02-18">18</time></span></td>				
+
+<td><span><time datetime="2026-02-19">19</time></span></td>				
+
+<td><span><time datetime="2026-02-20">20</time></span></td>				
+
+<td><a tabindex="-1" href="https://cityofcastlehills.com/calendar.aspx?view=list&amp;year=2026&amp;month=2&amp;day=21&amp;CID=33,36,41,43,14,35"><time datetime="2026-02-21">21</time></a></td>				
+
+</tr>
+<tr><td><span><time datetime="2026-02-22">22</time></span></td>				
+
+<td><a tabindex="-1" href="https://cityofcastlehills.com/calendar.aspx?view=list&amp;year=2026&amp;month=2&amp;day=23&amp;CID=33,36,41,43,14,35"><time datetime="2026-02-23">23</time></a></td>				
+
+<td><span><time datetime="2026-02-24">24</time></span></td>				
+
+<td><span><time datetime="2026-02-25">25</time></span></td>				
+
+<td><span><time datetime="2026-02-26">26</time></span></td>				
+
+<td><span><time datetime="2026-02-27">27</time></span></td>				
+
+<td><span><time datetime="2026-02-28">28</time></span></td>				
+
+</tr>
+
+		</tbody>										
+	</table>											
+</div>
+
+
+
+		<script src="/Areas/Calendar/Assets/Script/miniCalendar.js"></script>
+	<script>
+		$(function () {
+			var miniCalendar = new MiniCalendar();
+			miniCalendar.init({
+				widgetId: "1bf5b63b-eeba-4559-af61-c1e8c04d2e80",
+				preventNavigationOnArrows: false,
+				displayDatesOutsideOfCurrentMonth: true
+			});
+		});
+	</script>
+					
+
+
+
+
+
+
+
+<div class="row  text wide" style="margin-left: 55%;">
+	
+
+<script src="/Scripts/jquery.urlToLink.min.js"></script>
+<input type="hidden" value="[&quot;2026-02-03&quot;,&quot;2026-02-10&quot;,&quot;2026-02-16&quot;,&quot;2026-02-21&quot;,&quot;2026-02-23&quot;]" name="day-list">
+
+				<div class="col col1 first ">
+					<ol class="semanticList">
+
+
+
+
+
+
+
+
+
+
+
+<li class="widgetItem  " data-event-i-d="1358">
+
+
+		<h4 class="widgetTitle">Tue, Feb 3  </h4>
+		<div style="" class="widgetDesc">
+					<strong><a href="https://cityofcastlehills.com/Calendar.aspx?EID=1358">Zoning Commission Meeting</a></strong>
+
+		</div>
+			<a href="https://cityofcastlehills.com/Calendar.aspx?EID=1358" class="readOn" style="display:block;"><span class="visuallyHidden">Zoning Commission Meeting</span><span aria-hidden="true">Read On...</span></a>
+	</li>
+
+
+
+
+
+
+
+
+
+
+
+<li class="widgetItem  " data-event-i-d="1359">
+
+
+		<h4 class="widgetTitle">Tue, Feb 10  </h4>
+		<div style="" class="widgetDesc">
+					<strong><a href="https://cityofcastlehills.com/Calendar.aspx?EID=1359">Regular City Council Meeting</a></strong>
+
+		</div>
+			<a href="https://cityofcastlehills.com/Calendar.aspx?EID=1359" class="readOn" style="display:block;"><span class="visuallyHidden">Regular City Council Meeting</span><span aria-hidden="true">Read On...</span></a>
+	</li>
+
+
+
+
+
+
+
+
+
+
+
+<li class="widgetItem  " data-event-i-d="1228">
+
+
+		<h4 class="widgetTitle">Mon, Feb 16  </h4>
+		<div style="" class="widgetDesc">
+					<strong><a href="https://cityofcastlehills.com/Calendar.aspx?EID=1228">President's Day - City Hall Closed</a></strong>
+
+		</div>
+			<a href="https://cityofcastlehills.com/Calendar.aspx?EID=1228" class="readOn" style="display:block;"><span class="visuallyHidden">President's Day - City Hall Closed</span><span aria-hidden="true">Read On...</span></a>
+	</li>
+					</ol>
+				</div>
+				<div class="col col1  last">
+					<ol class="semanticList">
+
+
+
+
+
+
+
+
+
+
+
+<li class="widgetItem  " data-event-i-d="1356">
+
+
+		<h4 class="widgetTitle">Sat, Feb 21  </h4>
+		<div style="" class="widgetDesc">
+					<strong><a href="https://cityofcastlehills.com/Calendar.aspx?EID=1356">Parks and Projects Commission Meeting</a></strong>
+
+		</div>
+			<a href="https://cityofcastlehills.com/Calendar.aspx?EID=1356" class="readOn" style="display:block;"><span class="visuallyHidden">Parks and Projects Commission Meeting</span><span aria-hidden="true">Read On...</span></a>
+	</li>
+
+
+
+
+
+
+
+
+
+
+
+<li class="widgetItem  " data-event-i-d="1362">
+
+
+		<h4 class="widgetTitle">Sat, Feb 21  </h4>
+		<div style="" class="widgetDesc">
+					<strong><a href="https://cityofcastlehills.com/Calendar.aspx?EID=1362"> Rodeo BUNCO - Community Room</a></strong>
+
+		</div>
+			<a href="https://cityofcastlehills.com/Calendar.aspx?EID=1362" class="readOn" style="display:block;"><span class="visuallyHidden"> Rodeo BUNCO - Community Room</span><span aria-hidden="true">Read On...</span></a>
+	</li>
+
+
+
+
+
+
+
+
+
+
+
+<li class="widgetItem  " data-event-i-d="1360">
+
+
+		<h4 class="widgetTitle">Mon, Feb 23  </h4>
+		<div style="" class="widgetDesc">
+					<strong><a href="https://cityofcastlehills.com/Calendar.aspx?EID=1360">Board of Adjustment Meeting</a></strong>
+
+		</div>
+			<a href="https://cityofcastlehills.com/Calendar.aspx?EID=1360" class="readOn" style="display:block;"><span class="visuallyHidden">Board of Adjustment Meeting</span><span aria-hidden="true">Read On...</span></a>
+	</li>
+					</ol>
+				</div>
+
+</div>
+									</div>
+					<a id="calendarViewAll1bf5b63b-eeba-4559-af61-c1e8c04d2e80" class="widgetViewAll" style="" href="https://cityofcastlehills.com/calendar.aspx?CID=33,36,41,43,14,35" aria-label="Calendar View All">View All Events</a>
+					</div>
+	<div class="widgetFooter">
+		
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/Calendar.aspx</div>
+	</div>
+</div>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+
+
+
+
+		<div id="bannerImagesJSON113" class="hidden"></div><div class="bannerObject external fixedBanner" id="bannerDivbanner2" style="min-height: 802px; top: 0px; left: -375.695px; right: 0px; position: absolute; overflow: hidden; z-index: -999999; padding: 0px;" data-image-scale="true"><img class="bannerObject" width="1920px" style="position: absolute; left: 0px; margin: 0px; width: 2671.39px;" src="https://cityofcastlehills.com/ImageRepository/Document?documentID=3482" data-is-delayed="false" alt=""></div>
+		
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner2',
+								{"BannerOptionID":113,"ThemeID":51,"SlotName":"banner2","Name":"Default","IsDefault":true,"BannerMode":2,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":true,"ImageAlignment":1,"ImageScroll":true,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":false,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":560,"BannerOptionID":113,"FileName":"/ImageRepository/Document?documentID=3482","Height":550,"Width":1832,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","AltText":""}],"BannerVideos":[{"BannerVideoID":21,"BannerOptionID":113,"VideoFileName":"","ImageFileName":"EmptyBannerBkg202508261759004891.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135575200000)\/"},
+								'/App_Themes/2025 - Home/Images/',
+								'Rotating');
+						});
+				});
+			</script>
+
+</div>
+</div><!-- Footer --><footer data-cprole="structuralContainer" id="footerContainerTS">
+<div class="siteWrap4"><div data-cprole="contentContainer" id="footerTS">	<div id="cc12a85b9d-2fc0-4b53-9a62-524f7b090e0d" data-containerid="12a85b9d-2fc0-4b53-9a62-524f7b090e0d" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="60">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col5 first" style="height: auto;" data-widgetcontainerid="ac62e8e2-c708-4e61-bdd6-e03f5466c867">
+				
+	<div class="row nest first wide">
+
+	
+	<div class="inner col col5 first last id273a600b-657e-4db5-81bc-21162e0152f6" style="height: 227px;" data-widgetcontainerid="273a600b-657e-4db5-81bc-21162e0152f6">
+	
+    <div data-widget-id="f8ec93bd-1194-40fd-a8a5-449d109c7756" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdvf8ec93bd-1194-40fd-a8a5-449d109c7756" class="widget widgetInfoAdvanced skin37 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-label="Info Advanced">
+			<header class="widgetHeader" id="headerf8ec93bd-1194-40fd-a8a5-449d109c7756">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="https://cityofcastlehills.com/"><img src="https://cityofcastlehills.com/ImageRepository/Document?documentId=3479" class="fr-dib" alt="Castle Hills TX Homepage"></a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdvf8ec93bd-1194-40fd-a8a5-449d109c7756 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+
+	
+	<div class="inner col col5 first last ida003d200-f9a0-495c-be11-37f9d29fc533" style="height: 35px;" data-widgetcontainerid="a003d200-f9a0-495c-be11-37f9d29fc533">
+	
+<div data-widget-id="c56d6612-dab0-4a04-945f-a736b1cc0701" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetc56d6612-dab0-4a04-945f-a736b1cc0701" class="widget widgetGraphicLinks skin42 widgetOptionSet58 wide" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:1em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid3 "> 	
+				<nav class="widgetGraphicLinksNav" aria-label="Graphic links">
+					<div class="row autoWidths center wide"><!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://cityofcastlehills.com/facebook" target="_self" aria-label="Facebook graphic"><img src="https://cityofcastlehills.com/ImageRepository/Document?documentID=3476" class="graphicButtonLink" alt="Facebook" onmouseover="this.src='/ImageRepository/Document?documentID=3476'" onmouseout="this.src='/ImageRepository/Document?documentID=3476'" onfocus="this.src='/ImageRepository/Document?documentID=3476'" onblur="this.src='/ImageRepository/Document?documentID=3476'"> </a></li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.instagram.com/cityofcastlehillstx/?hl=en" target="_self" aria-label="Instagram graphic"><img src="https://cityofcastlehills.com/ImageRepository/Document?documentID=3477" class="graphicButtonLink" alt="Instagram" onmouseover="this.src='/ImageRepository/Document?documentID=3477'" onmouseout="this.src='/ImageRepository/Document?documentID=3477'" onfocus="this.src='/ImageRepository/Document?documentID=3477'" onblur="this.src='/ImageRepository/Document?documentID=3477'"> </a></li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+	    --><li class="widgetItem GraphicLinks"><a class="widgetDesc widgetGraphicLinksLink" href="https://www.youtube.com/@cityofcastlehillstexas3998" target="_self" aria-label="YouTube graphic"><img src="https://cityofcastlehills.com/ImageRepository/Document?documentID=3478" class="graphicButtonLink" alt="YouTube" onmouseover="this.src='/ImageRepository/Document?documentID=3478'" onmouseout="this.src='/ImageRepository/Document?documentID=3478'" onfocus="this.src='/ImageRepository/Document?documentID=3478'" onblur="this.src='/ImageRepository/Document?documentID=3478'"> </a></li><!--
+--></ul></div><!--					--></div>
+				</nav>
+	</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="33471073-917d-4c71-aca4-c9715c8be013">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last ide0cd670f-a36e-4306-ac53-6944a6a8fc64" style="height: 262px;" data-widgetcontainerid="e0cd670f-a36e-4306-ac53-6944a6a8fc64">
+	
+
+<div class="widget widgetSpacer" id="e5956326-7124-4876-870f-692f7030ea3b" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="height: auto;" data-widgetcontainerid="ac32b7ee-44e6-48f3-9ec9-3728ff778449">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id774fb3cf-1a92-4a27-b531-be97b0989dc7" style="height: 262px;" data-widgetcontainerid="774fb3cf-1a92-4a27-b531-be97b0989dc7">
+	
+    <div data-widget-id="8f8bc6e3-f632-49d6-91f5-a34e42bdd6e2" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv8f8bc6e3-f632-49d6-91f5-a34e42bdd6e2" class="widget widgetInfoAdvanced skin40 widgetOptionSet5 narrow" data-modulewidgettype="infoAdv" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="header8f8bc6e3-f632-49d6-91f5-a34e42bdd6e2">
+			<header class="widgetHeader" id="header8f8bc6e3-f632-49d6-91f5-a34e42bdd6e2">
+		<div class="">
+					<h3>Contact Us</h3>
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row narrow">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<p id="isPasted">City of Castle Hills</p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>209 Lemonwood Drive</p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Castle Hills, TX 78213</p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Police and Fire Non-Emergency Phone:</p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p><a href="tel:2103422341">210-342-2341</a></p>
+</li>
+<li class="InfoAdvanced widgetItem fr-view">
+	<p>Fax:&nbsp;<a href="tel:2103424525">210-342-4525 </a></p>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv8f8bc6e3-f632-49d6-91f5-a34e42bdd6e2 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="f1aface6-15e3-4937-97b9-5b6253ce4cf3">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id1de600ad-739d-4255-85df-42c0b74d698b" style="height: 262px;" data-widgetcontainerid="1de600ad-739d-4255-85df-42c0b74d698b">
+	
+
+<div class="widget widgetSpacer" id="6cb88d0e-406a-434b-a5f8-5ff6fdeab0d2" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6" style="height: auto;" data-widgetcontainerid="26f07982-12c4-4a69-8867-9117bed8082a">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col6 first last id5fd19063-f942-445d-80e1-4e05c9b5fc00" style="height: 262px;" data-widgetcontainerid="5fd19063-f942-445d-80e1-4e05c9b5fc00">
+	
+	<div data-widget-id="586b2bd5-d9dc-4ec8-be47-37a57428e5c6" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklink586b2bd5-d9dc-4ec8-be47-37a57428e5c6" class="widget widgetQuickLinks skin40 widgetOptionSet35 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeader586b2bd5-d9dc-4ec8-be47-37a57428e5c6">
+			<header class="widgetHeader" id="quickLinksHeader586b2bd5-d9dc-4ec8-be47-37a57428e5c6">
+		<div class="">
+					<h3><a style="" href="https://cityofcastlehills.com/QuickLinks.aspx?CID=78">Popular Pages</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofcastlehills.com/2167/About-Castle-Hills" target="_self">Welcome to Castle Hills</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofcastlehills.com/2162/Collection-Schedules" target="_self">Sanitation Collection &amp; Recycling Services</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofcastlehills.com/2298/Create-Castle-Hills---Comprehensive-Plan" target="_self">Create Castle Hills - Comprehensive Plan</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofcastlehills.com/2220/City-Meeting-Videos" target="_self">City Meeting Videos</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofcastlehills.com/2244/ElectionsElecciones" target="_self">Elections / Elecciones</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofcastlehills.com/faq.aspx" target="_self">FAQs</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col1" style="height: auto;" data-widgetcontainerid="2cfec564-9b44-44b2-a059-3f6202c4fc09">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col1 first last id51ed5279-b41f-4351-a8d7-90dd4388a57e" style="height: 262px;" data-widgetcontainerid="51ed5279-b41f-4351-a8d7-90dd4388a57e">
+	
+
+<div class="widget widgetSpacer" id="aeafc1ec-11fe-4385-ae5f-ec1302921f90" style="height: auto;"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col4 last" style="height: auto;" data-widgetcontainerid="a8c9d410-573c-4647-ad68-b36ef28675fb">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col4 first last id9c79a596-7afd-4689-9996-fb39c50fd0f7" style="height: 262px;" data-widgetcontainerid="9c79a596-7afd-4689-9996-fb39c50fd0f7">
+	
+	<div data-widget-id="c92bdbcf-a28c-43a8-b1d1-85d056b09c14" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+ 
+
+
+	<section id="widgetQuicklinkc92bdbcf-a28c-43a8-b1d1-85d056b09c14" class="widget widgetQuickLinks skin40 widgetOptionSet35 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses="{&quot;wide-narrow&quot;:&quot;min-width:25em&quot;}" data-elementquerymatch="matchMultiColumn" data-elementqueryunmatch="unmatchMultiColumn" aria-labelledby="quickLinksHeaderc92bdbcf-a28c-43a8-b1d1-85d056b09c14">
+			<header class="widgetHeader" id="quickLinksHeaderc92bdbcf-a28c-43a8-b1d1-85d056b09c14">
+		<div class="">
+					<h3><a style="" href="https://cityofcastlehills.com/QuickLinks.aspx?CID=67">Site Links</a></h3>
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid1 ">
+        <div class="row  narrow">
+				<div class="col col1 first last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofcastlehills.com/" target="_self">Home</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofcastlehills.com/Calendar.aspx" target="_self">Calendar </a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofcastlehills.com/Directory.aspx" target="_self">Contact Us-Telephone Directory</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofcastlehills.com/sitemap" target="_self">Site Map</a>
+        <div class="widgetMeta"></div>
+    </li>
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="https://cityofcastlehills.com/site/copyright" target="_self">Copyright</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</footer><!-- Powered By --><div data-cprole="structuralContainer" id="poweredByContainerTS">
+<div class="siteWrap4"><div data-cprole="contentContainer" id="poweredByTS">	<div id="cce51814fc-c086-4d08-b3fa-bfa97faa55c4" data-containerid="e51814fc-c086-4d08-b3fa-bfa97faa55c4" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="height: auto;" data-widgetcontainerid="dc6c7506-afb0-4c5a-89d9-b4f9b17f021d">
+				
+	<div class="row nest first last wide">
+
+	
+	<div class="inner col col24 first last ida70522a0-95ea-47ec-99c0-820578eb5240" style="height: 35px;" data-widgetcontainerid="a70522a0-95ea-47ec-99c0-820578eb5240">
+	
+ 
+	<div data-widget-id="82126ca2-701d-4f54-a6fb-b9e98b913d0c" data-modulename="customHtml" id="widgetCustomHtml82126ca2-701d-4f54-a6fb-b9e98b913d0c" class="widget widgetCustomHtml skin43 narrow">
+	<div class="widgetBody pageStyles" id="widgetBody82126ca2-701d-4f54-a6fb-b9e98b913d0c">
+		<div id="customHtml82126ca2-701d-4f54-a6fb-b9e98b913d0c"><div><style>
+  /* CP icon */
+  .cpBylineIconTS {
+    color: #fff;
+  }
+  /* CP Text */
+  .cpBylineTextTS,
+  .cpBylineTextTS a:link {
+    color: #fff;
+  }
+
+  .cpBylineTS {
+    text-align: center;
+  }
+  
+  .cpBylineIconTS {
+    fill: currentColor;
+    width: 39px;
+    height: 26px;
+    display: inline;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="widgetItem cpBylineTS">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="cpBylineIconTS">
+    <path class="c" d="M73.4,23.2h-19v16.7h19c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5h-19v28.4h5.5l11.3-11.7h2.2c11.9,0,21.6-9.7,21.6-21.6C95,33,85.3,23.2,73.4,23.2"></path>
+    <path class="p" d="M45.8,66.5H26.6C14.7,66.5,5,56.8,5,44.9C5,33,14.7,23.2,26.6,23.2h19.1v16.7H26.6c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h19.1V66.5z"></path>
+  </svg>
+  <span class="cpBylineTextTS">Government Websites by <a href="https://connect.civicplus.com/referral">CivicPlus®</a></span>
+</div>
+</div></div>
+	</div>
+	</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></div>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css">
+
+<div tabindex="0"></div>
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<span class="cp-Splash-title" id="cp-Splash-title">Loading</span>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor" points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+<div tabindex="0"></div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '1',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	
+
+
+
+
+
+
+    <script src="/1729008743.js" type="text/javascript"></script>
+    <!-- Fixed Nav Adjustment -->
+<script>
+  function getValueTS(elem, attr) {
+    const val = elem.css(attr);
+    if (val === undefined) return undefined;
+    const num = parseInt(val, 10);
+    if (num === NaN) return undefined;
+    return num;
+  }
+
+  function clampTS(number, min, max) {
+    return Math.min(Math.max(number, min), max);
+  }
+
+  function isPageEditingTS() {
+    return (
+      $("#doneEditing").length > 0 || // In live edit
+      typeof DesignCenter !== "undefined" // In theme manager
+    );
+  }
+
+  const bgColorRegexTS = /rgba((d+), (d+), (d+), (d*.?d*))/;
+  function isTransparentTS(elem) {
+    const bg = elem.css('background-color');
+    if (typeof bg !== "string" || !bg.startsWith('rgba(')) return false;
+    const matchState = bg.match(bgColorRegexTS);
+    if (!matchState || matchState.length !== 5) return false;
+    const alpha = parseFloat(matchState[4], 10);
+    if (!(alpha >= 0 && alpha < 1)) return false;
+    return true;
+  }
+
+  function iterateLeftpads(cb) {
+    const containersTS = $("[class^='siteWrap'],[class*=' siteWrap']");
+    for (let i = 0; i < containersTS.length; i++) {
+      const containerTS = containersTS[i];
+      // Skip the body container and anything with data-skip-leftpad
+      if (
+        containerTS.id !== "bodyContainerTS" &&
+        containerTS.getAttribute('data-skip-leftpad') === null
+      ) {
+        cb(containerTS);
+      }
+    }
+  }
+
+  const anchor = $("#divToolbars");
+  const anchor2 = $("#headerContainerTS")
+
+  // Outer banner padding (push banner down)
+  const outerSizingTS = $("#bannerContainerTS");
+  // Inner banner padding (push banner content down) - Transparent header OR on attaching headers
+  const innerSizingTS = $("#bannerSizingTS");
+  const bodyContainerTS = $("#bodyContainerTS");
+
+  const forceUnfixClassTS = "forceUnfixTS";
+
+  const fixedTopTS = $(".fixedTopTS");
+  const fixedBottomTS = $(".fixedBottomTS");
+  const fixedLeftTS = $(".fixedLeftTS");
+
+  var initialTopTS;
+  var topAttachTS;
+  if (fixedTopTS && fixedTopTS.length === 1) {
+    initialTopTS = getValueTS(fixedTopTS, 'top');
+    const attachment = fixedTopTS.attr('data-attach');
+    if (attachment) topAttachTS = $("#" + attachment);
+    if (!topAttachTS || topAttachTS.length !== 1) topAttachTS = undefined;
+  }
+
+  function resizeAdjustmentTS() {
+    const editing = isPageEditingTS();
+
+    // Fixed top script
+    (function () {
+      if (!fixedTopTS || fixedTopTS.length !== 1 || initialTopTS === undefined) return;
+
+      if (editing) {
+        fixedTopTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedTopTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      const topPosition = fixedTopTS.css('position');
+      if (topPosition === 'fixed') {
+        if (topAttachTS) {
+          scrollAdjustmentTS();
+        } else {
+          const anchorHeight = anchor.outerHeight() - 1;
+          fixedTopTS.css('top', anchorHeight + initialTopTS);
+        }
+      } else {
+        fixedTopTS.css('top', initialTopTS);
+      }
+
+      if (topPosition === 'fixed' || topPosition === 'absolute') {
+        // Bump the banner content down
+        if (isTransparentTS(fixedTopTS)) {
+          innerSizingTS.css('padding-top', initialTopTS + fixedTopTS.outerHeight() - 1);
+          outerSizingTS.css('padding-top', '');
+
+          try {
+            window.Pages.onResizeHandlersExecute();
+          } catch (e) { }
+        } else {
+          outerSizingTS.css('padding-top', fixedTopTS.outerHeight() - 1);
+          innerSizingTS.css('padding-top', '');
+        }
+      } else {
+        innerSizingTS.css('padding-top', '');
+        outerSizingTS.css('padding-top', '');
+      }
+    })();
+
+    // Fixed bottom script
+    (function () {
+      if (!fixedBottomTS || fixedBottomTS.length === 0) return;
+
+      // If the widget has gone narrow, force unfix
+      if (editing || fixedBottomTS.outerHeight() > 200) {
+        fixedBottomTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedBottomTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedBottomTS.css('position') === 'fixed') {
+        bodyContainerTS.css('padding-bottom', fixedBottomTS.outerHeight());
+      } else {
+        bodyContainerTS.css('padding-bottom', '');
+      }
+    })();
+
+    // Fixed left script
+    (function () {
+      if (!fixedLeftTS || fixedLeftTS.length === 0) return;
+
+      if (editing) {
+        fixedLeftTS[0].classList.add(forceUnfixClassTS);
+      } else {
+        fixedLeftTS[0].classList.remove(forceUnfixClassTS);
+      }
+
+      if (fixedLeftTS.css('position') === 'fixed') {
+        const anchorHeight = anchor.outerHeight() - 1;
+        fixedLeftTS.css('top', anchorHeight);
+        const leftBoundingTS = fixedLeftTS[0].getBoundingClientRect();
+        iterateLeftpads(function (containerTS) {
+          const containerBoundingTS = containerTS.getBoundingClientRect();
+          if (containerBoundingTS.left <= leftBoundingTS.right) {
+            $(containerTS).css('padding-left', leftBoundingTS.width + 16);
+          }
+        });
+      } else {
+        fixedLeftTS.css('top', '');
+        iterateLeftpads(function (containerTS) {
+          $(containerTS).css('padding-left', '');
+        });
+      }
+    })();
+  }
+
+  function scrollAdjustmentTS() {
+    if (!fixedTopTS || fixedTopTS.length !== 1 || !topAttachTS || topAttachTS.length !== 1) return;
+    const topPosition = fixedTopTS.css('position');
+    if (topPosition === 'fixed' || topPosition === 'absolute') {
+      const anchorBounding = anchor[0].getBoundingClientRect();
+      const attachBounding = topAttachTS[0].getBoundingClientRect();
+      const scrollTop = $(window).scrollTop();
+
+      fixedTopTS.css('top', Math.max(anchorBounding.bottom - 1, attachBounding.bottom));
+    } else {
+      fixedTopTS.css('top', initialTopTS);
+    }
+  }
+
+  $(window).load(function () {
+    setTimeout(function () {
+      resizeAdjustmentTS();
+    }, 350);
+
+    $(window).scroll(function () {
+      scrollAdjustmentTS();
+    });
+
+    var adjustTimeoutTS;
+    $(window).resize(function () {
+      clearTimeout(adjustTimeoutTS);
+      adjustTimeoutTS = setTimeout(function () {
+        resizeAdjustmentTS();
+      }, 350);
+    });
+
+    $.when(window.Pages.angularToolbarComplete).done(function () {
+      resizeAdjustmentTS();
+    });
+  });
+</script>
+<!-- End Fixed Nav Adjustment -->
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewBox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewBox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Abril+Fatface:regular|Alex+Brush:regular|Fira+Sans:500,500italic,600,600italic,700,700italic,italic,regular|Lato:700,700italic,900,900italic,italic,regular|Merriweather+Sans:300,300italic,700,700italic,800,800italic,italic,regular|Open+Sans:300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,italic,regular|Satisfy:regular|Source+Sans+Pro:200,200italic,300,300italic,600,600italic,700,700italic,900,900italic,italic,regular|');</script>
+    
+
+    
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu2143" class="contentTop mainNavMegaMenu megaMenuContainer pageID_2143 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 89.9062px;">	<div id="ccf248b008-757f-4ae4-89cd-b7162e73b5bb" data-containerid="f248b008-757f-4ae4-89cd-b7162e73b5bb" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu2146" class="contentTop mainNavMegaMenu megaMenuContainer pageID_2146 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 89.9062px;">	<div id="cc67c5e954-4724-4836-a2b0-f35f526b323f" data-containerid="67c5e954-4724-4836-a2b0-f35f526b323f" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu2144" class="contentTop mainNavMegaMenu megaMenuContainer pageID_2144 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 89.9062px;">	<div id="ccb09a0174-eeb2-4821-aee1-6ef90d74d8b6" data-containerid="b09a0174-eeb2-4821-aee1-6ef90d74d8b6" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu2145" class="contentTop mainNavMegaMenu megaMenuContainer pageID_2145 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 89.9062px;">	<div id="cca426b61c-7148-4a7d-9ba2-4d54f61f7830" data-containerid="a426b61c-7148-4a7d-9ba2-4d54f61f7830" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cprole="contentContainer" id="mainNavMegaMenu2147" class="contentTop mainNavMegaMenu megaMenuContainer pageID_2147 moved megaMenu" data-orientation="horizontal" style="display: none; position: absolute; z-index: 100; top: 89.9062px;">	<div id="cc76ae062c-ca90-4cf1-897c-5e7c7af3441b" data-containerid="76ae062c-ca90-4cf1-897c-5e7c7af3441b" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><div id="bannerSlideshowControls_banner1" class="bannerSlideshowControlsNew none " style="display:none">
+			<a id="arrowPrev_banner1" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner1" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div><div id="bannerSlideshowControls_banner2" class="bannerSlideshowControlsNew none " style="display:none">
+			<a id="arrowPrev_banner2" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner2" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div><div id="docbox-overlay" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2147483647; display: none; justify-content: center; align-items: end;"><div id="docbox-container" style="width: 100%; height: calc(100% - 40px); background-color: transparent; position: relative; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;"><button id="docbox-close" aria-label="Close document" style="position: fixed; top: 5px; right: 5px; cursor: pointer; z-index: 10001; border-radius: 5px; height: 30px; width: auto; line-height: 30px; padding: 0px 15px; font-size: 16px; background: rgb(0, 0, 0) !important; border: none !important; color: white !important;"><span aria-hidden="true">Close <b>&nbsp;×</b></span></button><iframe id="docbox-iframe" aria-label="Document viewer" allowfullscreen="" style="width: 100%; height: 100%; border: none; border-radius: 5px;"></iframe></div></div></body></html>
