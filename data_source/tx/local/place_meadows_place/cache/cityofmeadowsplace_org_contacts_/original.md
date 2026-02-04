@@ -1,0 +1,662 @@
+City Contacts | City of Meadows Place
+
+
+
+![](https://cityofmeadowsplace.org/wp-content/themes/city-of-meadows/featured-icon.webp)
+
+Featured
+
+Cold Weather Resources |  [More Info Here](https://cityofmeadowsplace.org/contacts/cold-weather-resources/%22)
+
+[Skip to content](https://cityofmeadowsplace.org/contacts/#content "Skip to content")
+
+[![City of Meadows Place logo](https://cityofmeadowsplace.org/wp-content/uploads/logo.webp)](https://cityofmeadowsplace.org)
+
+* About Meadows Place
+  + [Learn About Meadows Place](https://cityofmeadowsplace.org/about-meadows-place/)
+  + [City Maps & Boundaries](https://cityofmeadowsplace.org/about-meadows-place/city-territory/)
+  + [Nearby Attractions](https://cityofmeadowsplace.org/about-meadows-place/nearby-attractions/)
+  + [Superior Schools](https://cityofmeadowsplace.org/about-meadows-place/schools/)
+  + [History](https://cityofmeadowsplace.org/about-meadows-place/history/)
+  + [Printable Information](https://cityofmeadowsplace.org/about-meadows-place/printable-information/)
+* Your Government
+
+  Government
+
+  + [Municipal Election Information](https://cityofmeadowsplace.org/government/municipalelectioninformation/)
+  + [Agendas and Minutes](https://cityofmeadowsplace.org/agenda-minutes/2026-agendas-and-minutes/)
+  + [Watch Council Meetings](https://cityofmeadowsplace.org/government/city-council-live-stream/)
+  + [Boards and Commissions](https://cityofmeadowsplace.org/government/boards-and-commissions/)
+  + [City Council & Mayor](https://cityofmeadowsplace.org/government/city-council-mayor/)
+  + [Code of Ordinances and Fee Schedule](https://cityofmeadowsplace.org/city-secretary/ordinances/)
+  + [Economic Development Corporation](https://cityofmeadowsplace.org/edc/about/)
+  + [Employment Opportunities](https://cityofmeadowsplace.org/government/job-opportunities/)
+
+  + [Municipal Election Information](https://cityofmeadowsplace.org/government/municipalelectioninformation/)
+  + [Agendas and Minutes](https://cityofmeadowsplace.org/agenda-minutes/2026-agendas-and-minutes/)
+  + [Watch Council Meetings](https://cityofmeadowsplace.org/government/city-council-live-stream/)
+  + [Boards and Commissions](https://cityofmeadowsplace.org/government/boards-and-commissions/)
+  + [City Council & Mayor](https://cityofmeadowsplace.org/government/city-council-mayor/)
+  + [Code of Ordinances and Fee Schedule](https://cityofmeadowsplace.org/city-secretary/ordinances/)
+  + [Economic Development Corporation](https://cityofmeadowsplace.org/edc/about/)
+  + [Employment Opportunities](https://cityofmeadowsplace.org/government/job-opportunities/)
+
+  Public Information
+
+  + [Budget & Tax Rate](https://cityofmeadowsplace.org/government/public-information/city-budget/)
+  + [Debt Transparency](https://cityofmeadowsplace.org/government/public-information/debt-transparency/)
+  + [Property Tax Information](https://cityofmeadowsplace.org/government/public-information/tax-information/)
+  + [Unclaimed Property](https://cityofmeadowsplace.org/government/public-information/unclaimed-property/)
+  + [Residential Utility Rates](https://cityofmeadowsplace.org/government/public-information/revised-10-1-16-res-utility-rate-schedule/)
+  + [Zoning Map](https://cityofmeadowsplace.org/wp-content/uploads/20190319-Meadows-Place-Zoning-Map.jpg)
+  + [Process for Requesting Public Information](https://cityofmeadowsplace.org/government/public-information/process-for-requesting-public-information/)
+
+  + [Budget & Tax Rate](https://cityofmeadowsplace.org/government/public-information/city-budget/)
+  + [Debt Transparency](https://cityofmeadowsplace.org/government/public-information/debt-transparency/)
+  + [Property Tax Information](https://cityofmeadowsplace.org/government/public-information/tax-information/)
+  + [Unclaimed Property](https://cityofmeadowsplace.org/government/public-information/unclaimed-property/)
+  + [Residential Utility Rates](https://cityofmeadowsplace.org/government/public-information/revised-10-1-16-res-utility-rate-schedule/)
+  + [Zoning Map](https://cityofmeadowsplace.org/wp-content/uploads/20190319-Meadows-Place-Zoning-Map.jpg)
+  + [Process for Requesting Public Information](https://cityofmeadowsplace.org/government/public-information/process-for-requesting-public-information/)
+
+  Court Information
+
+  + [Municipal Court of Record](https://cityofmeadowsplace.org/government/municipal-court/)
+  + [Municipal Court Online Payments](https://cityofmeadowsplace.org/government/municipal-court/municipal-court-online-payments/)
+
+  + [Municipal Court of Record](https://cityofmeadowsplace.org/government/municipal-court/)
+  + [Municipal Court Online Payments](https://cityofmeadowsplace.org/government/municipal-court/municipal-court-online-payments/)
+
+  Administration
+
+  + [City Secretary](https://cityofmeadowsplace.org/city-secretary/)
+  + [Administrative Staff](https://cityofmeadowsplace.org/government/city-staff/)
+  + [Code Enforcement](https://cityofmeadowsplace.org/departments/code-enforcement/)
+  + [Permits](https://cityofmeadowsplace.org/government/public-information/permits/)
+  + [Fire Department](https://cityofmeadowsplace.org/departments/fire-department/)
+  + [Utilities](https://cityofmeadowsplace.org/departments/utilities/)
+
+  + [City Secretary](https://cityofmeadowsplace.org/city-secretary/)
+  + [Administrative Staff](https://cityofmeadowsplace.org/government/city-staff/)
+  + [Code Enforcement](https://cityofmeadowsplace.org/departments/code-enforcement/)
+  + [Permits](https://cityofmeadowsplace.org/government/public-information/permits/)
+  + [Fire Department](https://cityofmeadowsplace.org/departments/fire-department/)
+  + [Utilities](https://cityofmeadowsplace.org/departments/utilities/)
+
+  Public Works
+
+  + [Public Works](https://cityofmeadowsplace.org/departments/public-works/)
+  + [EyeOnWater](https://www.eyeonwater.com/signin)
+  + [Water & Sewer Services](https://cityofmeadowsplace.org/departments/public-works/water-sewer-services/)
+  + [Annual Drinking Water Reports](https://cityofmeadowsplace.org/departments/public-works/annual-drinking-water-reports/)
+  + [Storm Water Hotline](https://cityofmeadowsplace.org/departments/public-works/storm-water-hotline/)
+  + [Call 811 Before Digging](https://cityofmeadowsplace.org/departments/public-works/call-811-before-digging/)
+  + [Street Light Outage](https://cityofmeadowsplace.org/departments/public-works/street-light-outage/)
+  + [Flood Plain Management](https://cityofmeadowsplace.org/departments/public-works/flood-plain-management/)
+  + [Mosquito Management](https://cityofmeadowsplace.org/departments/public-works/mosquito-management/)
+  + [GIS Map](https://cityofmeadowsplace.org/departments/public-works/gis-map/)
+
+  + [Public Works](https://cityofmeadowsplace.org/departments/public-works/)
+  + [EyeOnWater](https://www.eyeonwater.com/signin)
+  + [Water & Sewer Services](https://cityofmeadowsplace.org/departments/public-works/water-sewer-services/)
+  + [Annual Drinking Water Reports](https://cityofmeadowsplace.org/departments/public-works/annual-drinking-water-reports/)
+  + [Storm Water Hotline](https://cityofmeadowsplace.org/departments/public-works/storm-water-hotline/)
+  + [Call 811 Before Digging](https://cityofmeadowsplace.org/departments/public-works/call-811-before-digging/)
+  + [Street Light Outage](https://cityofmeadowsplace.org/departments/public-works/street-light-outage/)
+  + [Flood Plain Management](https://cityofmeadowsplace.org/departments/public-works/flood-plain-management/)
+  + [Mosquito Management](https://cityofmeadowsplace.org/departments/public-works/mosquito-management/)
+  + [GIS Map](https://cityofmeadowsplace.org/departments/public-works/gis-map/)
+
+  Police
+
+  + [Police Department](https://cityofmeadowsplace.org/departments/police/)
+  + [Meadows Place Police Facebook](https://www.facebook.com/MeadowsPlacePolice)
+  + [Activity Reports](https://cityofmeadowsplace.org/departments/police/meadows-place-police-department-activity-reports/)
+  + [CodeRED](https://cityofmeadowsplace.org/departments/police/codered/)
+  + [Cop Talk Article](https://cityofmeadowsplace.org/departments/police/cop-talk-articles/)
+  + [Crime Prevention](https://cityofmeadowsplace.org/departments/police/crime-prevention/)
+  + [T-L-C Program](https://cityofmeadowsplace.org/departments/police/t-l-c-program/)
+  + [Suspicious Activity](https://cityofmeadowsplace.org/departments/police/suspicuous-activity/)
+  + [Report It](https://cityofmeadowsplace.org/departments/police/reportit/)
+  + [Free Gun Locks](https://cityofmeadowsplace.org/departments/police/free-gun-locks/)
+  + [Drug & Weapon Zones](https://cityofmeadowsplace.org/departments/police/drug-weapon-zones/)
+  + [Email Disclaimer](https://cityofmeadowsplace.org/departments/police/email-disclaimer/)
+  + [House Watch](https://cityofmeadowsplace.org/departments/police/house-watch/)
+  + [Mission Statement](https://cityofmeadowsplace.org/departments/police/mission-statement/)
+  + [Neighborhood Watch](https://cityofmeadowsplace.org/departments/police/neighborhood-watch/)
+  + [PD Contacts](https://cityofmeadowsplace.org/departments/police/pd-contacts/)
+  + [PD Links](https://cityofmeadowsplace.org/departments/police/pd-links/)
+  + [PD News](http://cityofmeadowsplace.org/category/police-department/)
+  + [Racial Profiling](https://cityofmeadowsplace.org/departments/police/racial-profiling/)
+  + [Recruiting](https://cityofmeadowsplace.org/departments/police/recruiting/)
+  + [Sex Offender Restriction](https://cityofmeadowsplace.org/departments/police/sex-offender-restriction/)
+  + [Victim Assistance](https://cityofmeadowsplace.org/departments/police/victim-assistance/)
+  + [Emergency Response](https://cityofmeadowsplace.org/emergency-response/)
+
+  + [Police Department](https://cityofmeadowsplace.org/departments/police/)
+  + [Meadows Place Police Facebook](https://www.facebook.com/MeadowsPlacePolice)
+  + [Activity Reports](https://cityofmeadowsplace.org/departments/police/meadows-place-police-department-activity-reports/)
+  + [CodeRED](https://cityofmeadowsplace.org/departments/police/codered/)
+  + [Cop Talk Article](https://cityofmeadowsplace.org/departments/police/cop-talk-articles/)
+  + [Crime Prevention](https://cityofmeadowsplace.org/departments/police/crime-prevention/)
+  + [T-L-C Program](https://cityofmeadowsplace.org/departments/police/t-l-c-program/)
+  + [Suspicious Activity](https://cityofmeadowsplace.org/departments/police/suspicuous-activity/)
+  + [Report It](https://cityofmeadowsplace.org/departments/police/reportit/)
+  + [Free Gun Locks](https://cityofmeadowsplace.org/departments/police/free-gun-locks/)
+  + [Drug & Weapon Zones](https://cityofmeadowsplace.org/departments/police/drug-weapon-zones/)
+  + [Email Disclaimer](https://cityofmeadowsplace.org/departments/police/email-disclaimer/)
+  + [House Watch](https://cityofmeadowsplace.org/departments/police/house-watch/)
+  + [Mission Statement](https://cityofmeadowsplace.org/departments/police/mission-statement/)
+  + [Neighborhood Watch](https://cityofmeadowsplace.org/departments/police/neighborhood-watch/)
+  + [PD Contacts](https://cityofmeadowsplace.org/departments/police/pd-contacts/)
+  + [PD Links](https://cityofmeadowsplace.org/departments/police/pd-links/)
+  + [PD News](http://cityofmeadowsplace.org/category/police-department/)
+  + [Racial Profiling](https://cityofmeadowsplace.org/departments/police/racial-profiling/)
+  + [Recruiting](https://cityofmeadowsplace.org/departments/police/recruiting/)
+  + [Sex Offender Restriction](https://cityofmeadowsplace.org/departments/police/sex-offender-restriction/)
+  + [Victim Assistance](https://cityofmeadowsplace.org/departments/police/victim-assistance/)
+  + [Emergency Response](https://cityofmeadowsplace.org/emergency-response/)
+
+  Parks & Recreation
+
+  + [Parks & Recreation](https://cityofmeadowsplace.org/departments/parks-recreation/)
+  + [City Parks and Amenities](https://cityofmeadowsplace.org/departments/parks-recreation/parks/)
+  + [Online Payments](https://cityofmeadowsplace.org/departments/parks-recreation/park-programs-online-payments/)
+  + [Discovery & Nature Center](https://cityofmeadowsplace.org/departments/parks-recreation/discoveryandnaturecenter/)
+  + [Meadows Place Pool](https://cityofmeadowsplace.org/departments/parks-recreation/pool-information/)
+  + [Newsletter, Classes, Other Programs](https://cityofmeadowsplace.org/departments/parks-recreation/clubs-programs/)
+  + [Active Adult 55+ Program](https://cityofmeadowsplace.org/departments/parks-recreation/active-adult-55-program/)
+  + [Adventure Summer Camp](https://cityofmeadowsplace.org/departments/parks-recreation/discovery-camp/)
+  + [Youth Action Council](https://cityofmeadowsplace.org/departments/parks-recreation/youth-action-council/)
+  + [Rentals](https://cityofmeadowsplace.org/departments/parks-recreation/community-center/)
+  + [Special Events](https://cityofmeadowsplace.org/departments/parks-recreation/special-events/)
+
+  + [Parks & Recreation](https://cityofmeadowsplace.org/departments/parks-recreation/)
+  + [City Parks and Amenities](https://cityofmeadowsplace.org/departments/parks-recreation/parks/)
+  + [Online Payments](https://cityofmeadowsplace.org/departments/parks-recreation/park-programs-online-payments/)
+  + [Discovery & Nature Center](https://cityofmeadowsplace.org/departments/parks-recreation/discoveryandnaturecenter/)
+  + [Meadows Place Pool](https://cityofmeadowsplace.org/departments/parks-recreation/pool-information/)
+  + [Newsletter, Classes, Other Programs](https://cityofmeadowsplace.org/departments/parks-recreation/clubs-programs/)
+  + [Active Adult 55+ Program](https://cityofmeadowsplace.org/departments/parks-recreation/active-adult-55-program/)
+  + [Adventure Summer Camp](https://cityofmeadowsplace.org/departments/parks-recreation/discovery-camp/)
+  + [Youth Action Council](https://cityofmeadowsplace.org/departments/parks-recreation/youth-action-council/)
+  + [Rentals](https://cityofmeadowsplace.org/departments/parks-recreation/community-center/)
+  + [Special Events](https://cityofmeadowsplace.org/departments/parks-recreation/special-events/)
+
+  Finance
+
+  + [Budget & Tax Rate](https://cityofmeadowsplace.org/government/public-information/city-budget/)
+  + [Debt Transparency](https://cityofmeadowsplace.org/government/public-information/debt-transparency/)
+  + [Finance Department](https://cityofmeadowsplace.org/departments/finance/)
+  + [Financial Reports](https://cityofmeadowsplace.org/departments/finance/financial-reports/)
+  + [Financial Transparency](https://cityofmeadowsplace.org/departments/finance/financial-transparency/)
+  + [Municipal Energy Usage](https://cityofmeadowsplace.org/municipal-energy-usage/)
+  + [Property Tax Information](https://cityofmeadowsplace.org/government/public-information/tax-information/)
+
+  + [Budget & Tax Rate](https://cityofmeadowsplace.org/government/public-information/city-budget/)
+  + [Debt Transparency](https://cityofmeadowsplace.org/government/public-information/debt-transparency/)
+  + [Finance Department](https://cityofmeadowsplace.org/departments/finance/)
+  + [Financial Reports](https://cityofmeadowsplace.org/departments/finance/financial-reports/)
+  + [Financial Transparency](https://cityofmeadowsplace.org/departments/finance/financial-transparency/)
+  + [Municipal Energy Usage](https://cityofmeadowsplace.org/municipal-energy-usage/)
+  + [Property Tax Information](https://cityofmeadowsplace.org/government/public-information/tax-information/)
+* Community
+  + [News](https://cityofmeadowsplace.org/news/)
+  + [Newsletters](https://cityofmeadowsplace.org/newsletter/2025-newsletters/)
+  + [City Parks and Amenities](https://cityofmeadowsplace.org/departments/parks-recreation/parks/)
+  + [Social Media](https://cityofmeadowsplace.org/social-media/)
+  + [Emergency Information Center](https://cityofmeadowsplace.org/departments/police/eic/)
+  + [Calendar](https://cityofmeadowsplace.org/events/)
+  + [City Contacts](https://cityofmeadowsplace.org/contacts/)
+  + [City Projects Status](https://cityofmeadowsplace.org/government/public-information/city-projects-status/)
+  + [Youth Action Council](https://cityofmeadowsplace.org/departments/parks-recreation/youth-action-council/)
+  + [Links](https://cityofmeadowsplace.org/links/)
+  + [Garage Sales](https://cityofmeadowsplace.org/garage-sales/)
+  + [Garbage and Recycling Pickup](https://cityofmeadowsplace.org/government/public-information/garbage-and-recycling-pickup/)
+  + [Animal Control Services](https://cityofmeadowsplace.org/government/public-information/animal-control-services/)
+  + [Wall of Heroes](https://cityofmeadowsplace.org/departments/parks-recreation/wall-of-heroes/)
+  + [Online Utility Account Access and Bill Pay](https://cityofmeadowsplace.org/departments/utilities/online-utility-account-access/)
+  + [Videos](https://cityofmeadowsplace.org/all-videos/)
+* Business
+  + [Economic Development Corporation](https://cityofmeadowsplace.org/edc/about/)
+  + [Why Meadows Place](https://cityofmeadowsplace.org/edc/why-meadows-place/)
+  + [Available Properties & Pad Sites](https://cityofmeadowsplace.org/edc/available-properties-pad-sites/)
+  + [Business Partners](https://cityofmeadowsplace.org/edc/business-partners/)
+  + [Corporate Directors](https://cityofmeadowsplace.org/edc/corporate-directors/)
+  + [Permits & Licenses](https://cityofmeadowsplace.org/government/public-information/permits/)
+  + [EDC Budgets](https://cityofmeadowsplace.org/edc-budgets/)
+  + [Contact EDC](https://cityofmeadowsplace.org/edc/contact-edc/)
+
+X
+
+[Facebook](https://www.facebook.com/cityofmeadowsplace/) 
+
+[Instagram](https://www.instagram.com/meadowsplacetexas/) 
+
+[Youtube](https://www.youtube.com/channel/UC-6PJ5bXLJ5R9QXdOYETO3Q)
+
+What would you like to search for?
+
+Search
+
+[![City of Meadows Place logo](https://cityofmeadowsplace.org/wp-content/uploads/logo.webp)](https://cityofmeadowsplace.org)
+
+What would you like to search for?
+
+Search
+
+* About Meadows Place
+  + [Learn About Meadows Place](https://cityofmeadowsplace.org/about-meadows-place/)
+  + [City Maps & Boundaries](https://cityofmeadowsplace.org/about-meadows-place/city-territory/)
+  + [Nearby Attractions](https://cityofmeadowsplace.org/about-meadows-place/nearby-attractions/)
+  + [Superior Schools](https://cityofmeadowsplace.org/about-meadows-place/schools/)
+  + [History](https://cityofmeadowsplace.org/about-meadows-place/history/)
+  + [Printable Information](https://cityofmeadowsplace.org/about-meadows-place/printable-information/)
+* Your Government
+
+  Government
+
+  + [Municipal Election Information](https://cityofmeadowsplace.org/government/municipalelectioninformation/)
+  + [Agendas and Minutes](https://cityofmeadowsplace.org/agenda-minutes/2026-agendas-and-minutes/)
+  + [Watch Council Meetings](https://cityofmeadowsplace.org/government/city-council-live-stream/)
+  + [Boards and Commissions](https://cityofmeadowsplace.org/government/boards-and-commissions/)
+  + [City Council & Mayor](https://cityofmeadowsplace.org/government/city-council-mayor/)
+  + [Code of Ordinances and Fee Schedule](https://cityofmeadowsplace.org/city-secretary/ordinances/)
+  + [Economic Development Corporation](https://cityofmeadowsplace.org/edc/about/)
+  + [Employment Opportunities](https://cityofmeadowsplace.org/government/job-opportunities/)
+
+  + [Municipal Election Information](https://cityofmeadowsplace.org/government/municipalelectioninformation/)
+  + [Agendas and Minutes](https://cityofmeadowsplace.org/agenda-minutes/2026-agendas-and-minutes/)
+  + [Watch Council Meetings](https://cityofmeadowsplace.org/government/city-council-live-stream/)
+  + [Boards and Commissions](https://cityofmeadowsplace.org/government/boards-and-commissions/)
+  + [City Council & Mayor](https://cityofmeadowsplace.org/government/city-council-mayor/)
+  + [Code of Ordinances and Fee Schedule](https://cityofmeadowsplace.org/city-secretary/ordinances/)
+  + [Economic Development Corporation](https://cityofmeadowsplace.org/edc/about/)
+  + [Employment Opportunities](https://cityofmeadowsplace.org/government/job-opportunities/)
+
+  Public Information
+
+  + [Budget & Tax Rate](https://cityofmeadowsplace.org/government/public-information/city-budget/)
+  + [Debt Transparency](https://cityofmeadowsplace.org/government/public-information/debt-transparency/)
+  + [Property Tax Information](https://cityofmeadowsplace.org/government/public-information/tax-information/)
+  + [Unclaimed Property](https://cityofmeadowsplace.org/government/public-information/unclaimed-property/)
+  + [Residential Utility Rates](https://cityofmeadowsplace.org/government/public-information/revised-10-1-16-res-utility-rate-schedule/)
+  + [Zoning Map](https://cityofmeadowsplace.org/wp-content/uploads/20190319-Meadows-Place-Zoning-Map.jpg)
+  + [Process for Requesting Public Information](https://cityofmeadowsplace.org/government/public-information/process-for-requesting-public-information/)
+
+  + [Budget & Tax Rate](https://cityofmeadowsplace.org/government/public-information/city-budget/)
+  + [Debt Transparency](https://cityofmeadowsplace.org/government/public-information/debt-transparency/)
+  + [Property Tax Information](https://cityofmeadowsplace.org/government/public-information/tax-information/)
+  + [Unclaimed Property](https://cityofmeadowsplace.org/government/public-information/unclaimed-property/)
+  + [Residential Utility Rates](https://cityofmeadowsplace.org/government/public-information/revised-10-1-16-res-utility-rate-schedule/)
+  + [Zoning Map](https://cityofmeadowsplace.org/wp-content/uploads/20190319-Meadows-Place-Zoning-Map.jpg)
+  + [Process for Requesting Public Information](https://cityofmeadowsplace.org/government/public-information/process-for-requesting-public-information/)
+
+  Court Information
+
+  + [Municipal Court of Record](https://cityofmeadowsplace.org/government/municipal-court/)
+  + [Municipal Court Online Payments](https://cityofmeadowsplace.org/government/municipal-court/municipal-court-online-payments/)
+
+  + [Municipal Court of Record](https://cityofmeadowsplace.org/government/municipal-court/)
+  + [Municipal Court Online Payments](https://cityofmeadowsplace.org/government/municipal-court/municipal-court-online-payments/)
+
+  Administration
+
+  + [City Secretary](https://cityofmeadowsplace.org/city-secretary/)
+  + [Administrative Staff](https://cityofmeadowsplace.org/government/city-staff/)
+  + [Code Enforcement](https://cityofmeadowsplace.org/departments/code-enforcement/)
+  + [Permits](https://cityofmeadowsplace.org/government/public-information/permits/)
+  + [Fire Department](https://cityofmeadowsplace.org/departments/fire-department/)
+  + [Utilities](https://cityofmeadowsplace.org/departments/utilities/)
+
+  + [City Secretary](https://cityofmeadowsplace.org/city-secretary/)
+  + [Administrative Staff](https://cityofmeadowsplace.org/government/city-staff/)
+  + [Code Enforcement](https://cityofmeadowsplace.org/departments/code-enforcement/)
+  + [Permits](https://cityofmeadowsplace.org/government/public-information/permits/)
+  + [Fire Department](https://cityofmeadowsplace.org/departments/fire-department/)
+  + [Utilities](https://cityofmeadowsplace.org/departments/utilities/)
+
+  Public Works
+
+  + [Public Works](https://cityofmeadowsplace.org/departments/public-works/)
+  + [EyeOnWater](https://www.eyeonwater.com/signin)
+  + [Water & Sewer Services](https://cityofmeadowsplace.org/departments/public-works/water-sewer-services/)
+  + [Annual Drinking Water Reports](https://cityofmeadowsplace.org/departments/public-works/annual-drinking-water-reports/)
+  + [Storm Water Hotline](https://cityofmeadowsplace.org/departments/public-works/storm-water-hotline/)
+  + [Call 811 Before Digging](https://cityofmeadowsplace.org/departments/public-works/call-811-before-digging/)
+  + [Street Light Outage](https://cityofmeadowsplace.org/departments/public-works/street-light-outage/)
+  + [Flood Plain Management](https://cityofmeadowsplace.org/departments/public-works/flood-plain-management/)
+  + [Mosquito Management](https://cityofmeadowsplace.org/departments/public-works/mosquito-management/)
+  + [GIS Map](https://cityofmeadowsplace.org/departments/public-works/gis-map/)
+
+  + [Public Works](https://cityofmeadowsplace.org/departments/public-works/)
+  + [EyeOnWater](https://www.eyeonwater.com/signin)
+  + [Water & Sewer Services](https://cityofmeadowsplace.org/departments/public-works/water-sewer-services/)
+  + [Annual Drinking Water Reports](https://cityofmeadowsplace.org/departments/public-works/annual-drinking-water-reports/)
+  + [Storm Water Hotline](https://cityofmeadowsplace.org/departments/public-works/storm-water-hotline/)
+  + [Call 811 Before Digging](https://cityofmeadowsplace.org/departments/public-works/call-811-before-digging/)
+  + [Street Light Outage](https://cityofmeadowsplace.org/departments/public-works/street-light-outage/)
+  + [Flood Plain Management](https://cityofmeadowsplace.org/departments/public-works/flood-plain-management/)
+  + [Mosquito Management](https://cityofmeadowsplace.org/departments/public-works/mosquito-management/)
+  + [GIS Map](https://cityofmeadowsplace.org/departments/public-works/gis-map/)
+
+  Police
+
+  + [Police Department](https://cityofmeadowsplace.org/departments/police/)
+  + [Meadows Place Police Facebook](https://www.facebook.com/MeadowsPlacePolice)
+  + [Activity Reports](https://cityofmeadowsplace.org/departments/police/meadows-place-police-department-activity-reports/)
+  + [CodeRED](https://cityofmeadowsplace.org/departments/police/codered/)
+  + [Cop Talk Article](https://cityofmeadowsplace.org/departments/police/cop-talk-articles/)
+  + [Crime Prevention](https://cityofmeadowsplace.org/departments/police/crime-prevention/)
+  + [T-L-C Program](https://cityofmeadowsplace.org/departments/police/t-l-c-program/)
+  + [Suspicious Activity](https://cityofmeadowsplace.org/departments/police/suspicuous-activity/)
+  + [Report It](https://cityofmeadowsplace.org/departments/police/reportit/)
+  + [Free Gun Locks](https://cityofmeadowsplace.org/departments/police/free-gun-locks/)
+  + [Drug & Weapon Zones](https://cityofmeadowsplace.org/departments/police/drug-weapon-zones/)
+  + [Email Disclaimer](https://cityofmeadowsplace.org/departments/police/email-disclaimer/)
+  + [House Watch](https://cityofmeadowsplace.org/departments/police/house-watch/)
+  + [Mission Statement](https://cityofmeadowsplace.org/departments/police/mission-statement/)
+  + [Neighborhood Watch](https://cityofmeadowsplace.org/departments/police/neighborhood-watch/)
+  + [PD Contacts](https://cityofmeadowsplace.org/departments/police/pd-contacts/)
+  + [PD Links](https://cityofmeadowsplace.org/departments/police/pd-links/)
+  + [PD News](http://cityofmeadowsplace.org/category/police-department/)
+  + [Racial Profiling](https://cityofmeadowsplace.org/departments/police/racial-profiling/)
+  + [Recruiting](https://cityofmeadowsplace.org/departments/police/recruiting/)
+  + [Sex Offender Restriction](https://cityofmeadowsplace.org/departments/police/sex-offender-restriction/)
+  + [Victim Assistance](https://cityofmeadowsplace.org/departments/police/victim-assistance/)
+  + [Emergency Response](https://cityofmeadowsplace.org/emergency-response/)
+
+  + [Police Department](https://cityofmeadowsplace.org/departments/police/)
+  + [Meadows Place Police Facebook](https://www.facebook.com/MeadowsPlacePolice)
+  + [Activity Reports](https://cityofmeadowsplace.org/departments/police/meadows-place-police-department-activity-reports/)
+  + [CodeRED](https://cityofmeadowsplace.org/departments/police/codered/)
+  + [Cop Talk Article](https://cityofmeadowsplace.org/departments/police/cop-talk-articles/)
+  + [Crime Prevention](https://cityofmeadowsplace.org/departments/police/crime-prevention/)
+  + [T-L-C Program](https://cityofmeadowsplace.org/departments/police/t-l-c-program/)
+  + [Suspicious Activity](https://cityofmeadowsplace.org/departments/police/suspicuous-activity/)
+  + [Report It](https://cityofmeadowsplace.org/departments/police/reportit/)
+  + [Free Gun Locks](https://cityofmeadowsplace.org/departments/police/free-gun-locks/)
+  + [Drug & Weapon Zones](https://cityofmeadowsplace.org/departments/police/drug-weapon-zones/)
+  + [Email Disclaimer](https://cityofmeadowsplace.org/departments/police/email-disclaimer/)
+  + [House Watch](https://cityofmeadowsplace.org/departments/police/house-watch/)
+  + [Mission Statement](https://cityofmeadowsplace.org/departments/police/mission-statement/)
+  + [Neighborhood Watch](https://cityofmeadowsplace.org/departments/police/neighborhood-watch/)
+  + [PD Contacts](https://cityofmeadowsplace.org/departments/police/pd-contacts/)
+  + [PD Links](https://cityofmeadowsplace.org/departments/police/pd-links/)
+  + [PD News](http://cityofmeadowsplace.org/category/police-department/)
+  + [Racial Profiling](https://cityofmeadowsplace.org/departments/police/racial-profiling/)
+  + [Recruiting](https://cityofmeadowsplace.org/departments/police/recruiting/)
+  + [Sex Offender Restriction](https://cityofmeadowsplace.org/departments/police/sex-offender-restriction/)
+  + [Victim Assistance](https://cityofmeadowsplace.org/departments/police/victim-assistance/)
+  + [Emergency Response](https://cityofmeadowsplace.org/emergency-response/)
+
+  Parks & Recreation
+
+  + [Parks & Recreation](https://cityofmeadowsplace.org/departments/parks-recreation/)
+  + [City Parks and Amenities](https://cityofmeadowsplace.org/departments/parks-recreation/parks/)
+  + [Online Payments](https://cityofmeadowsplace.org/departments/parks-recreation/park-programs-online-payments/)
+  + [Discovery & Nature Center](https://cityofmeadowsplace.org/departments/parks-recreation/discoveryandnaturecenter/)
+  + [Meadows Place Pool](https://cityofmeadowsplace.org/departments/parks-recreation/pool-information/)
+  + [Newsletter, Classes, Other Programs](https://cityofmeadowsplace.org/departments/parks-recreation/clubs-programs/)
+  + [Active Adult 55+ Program](https://cityofmeadowsplace.org/departments/parks-recreation/active-adult-55-program/)
+  + [Adventure Summer Camp](https://cityofmeadowsplace.org/departments/parks-recreation/discovery-camp/)
+  + [Youth Action Council](https://cityofmeadowsplace.org/departments/parks-recreation/youth-action-council/)
+  + [Rentals](https://cityofmeadowsplace.org/departments/parks-recreation/community-center/)
+  + [Special Events](https://cityofmeadowsplace.org/departments/parks-recreation/special-events/)
+
+  + [Parks & Recreation](https://cityofmeadowsplace.org/departments/parks-recreation/)
+  + [City Parks and Amenities](https://cityofmeadowsplace.org/departments/parks-recreation/parks/)
+  + [Online Payments](https://cityofmeadowsplace.org/departments/parks-recreation/park-programs-online-payments/)
+  + [Discovery & Nature Center](https://cityofmeadowsplace.org/departments/parks-recreation/discoveryandnaturecenter/)
+  + [Meadows Place Pool](https://cityofmeadowsplace.org/departments/parks-recreation/pool-information/)
+  + [Newsletter, Classes, Other Programs](https://cityofmeadowsplace.org/departments/parks-recreation/clubs-programs/)
+  + [Active Adult 55+ Program](https://cityofmeadowsplace.org/departments/parks-recreation/active-adult-55-program/)
+  + [Adventure Summer Camp](https://cityofmeadowsplace.org/departments/parks-recreation/discovery-camp/)
+  + [Youth Action Council](https://cityofmeadowsplace.org/departments/parks-recreation/youth-action-council/)
+  + [Rentals](https://cityofmeadowsplace.org/departments/parks-recreation/community-center/)
+  + [Special Events](https://cityofmeadowsplace.org/departments/parks-recreation/special-events/)
+
+  Finance
+
+  + [Budget & Tax Rate](https://cityofmeadowsplace.org/government/public-information/city-budget/)
+  + [Debt Transparency](https://cityofmeadowsplace.org/government/public-information/debt-transparency/)
+  + [Finance Department](https://cityofmeadowsplace.org/departments/finance/)
+  + [Financial Reports](https://cityofmeadowsplace.org/departments/finance/financial-reports/)
+  + [Financial Transparency](https://cityofmeadowsplace.org/departments/finance/financial-transparency/)
+  + [Municipal Energy Usage](https://cityofmeadowsplace.org/municipal-energy-usage/)
+  + [Property Tax Information](https://cityofmeadowsplace.org/government/public-information/tax-information/)
+
+  + [Budget & Tax Rate](https://cityofmeadowsplace.org/government/public-information/city-budget/)
+  + [Debt Transparency](https://cityofmeadowsplace.org/government/public-information/debt-transparency/)
+  + [Finance Department](https://cityofmeadowsplace.org/departments/finance/)
+  + [Financial Reports](https://cityofmeadowsplace.org/departments/finance/financial-reports/)
+  + [Financial Transparency](https://cityofmeadowsplace.org/departments/finance/financial-transparency/)
+  + [Municipal Energy Usage](https://cityofmeadowsplace.org/municipal-energy-usage/)
+  + [Property Tax Information](https://cityofmeadowsplace.org/government/public-information/tax-information/)
+* Community
+  + [News](https://cityofmeadowsplace.org/news/)
+  + [Newsletters](https://cityofmeadowsplace.org/newsletter/2025-newsletters/)
+  + [City Parks and Amenities](https://cityofmeadowsplace.org/departments/parks-recreation/parks/)
+  + [Social Media](https://cityofmeadowsplace.org/social-media/)
+  + [Emergency Information Center](https://cityofmeadowsplace.org/departments/police/eic/)
+  + [Calendar](https://cityofmeadowsplace.org/events/)
+  + [City Contacts](https://cityofmeadowsplace.org/contacts/)
+  + [City Projects Status](https://cityofmeadowsplace.org/government/public-information/city-projects-status/)
+  + [Youth Action Council](https://cityofmeadowsplace.org/departments/parks-recreation/youth-action-council/)
+  + [Links](https://cityofmeadowsplace.org/links/)
+  + [Garage Sales](https://cityofmeadowsplace.org/garage-sales/)
+  + [Garbage and Recycling Pickup](https://cityofmeadowsplace.org/government/public-information/garbage-and-recycling-pickup/)
+  + [Animal Control Services](https://cityofmeadowsplace.org/government/public-information/animal-control-services/)
+  + [Wall of Heroes](https://cityofmeadowsplace.org/departments/parks-recreation/wall-of-heroes/)
+  + [Online Utility Account Access and Bill Pay](https://cityofmeadowsplace.org/departments/utilities/online-utility-account-access/)
+  + [Videos](https://cityofmeadowsplace.org/all-videos/)
+* Business
+  + [Economic Development Corporation](https://cityofmeadowsplace.org/edc/about/)
+  + [Why Meadows Place](https://cityofmeadowsplace.org/edc/why-meadows-place/)
+  + [Available Properties & Pad Sites](https://cityofmeadowsplace.org/edc/available-properties-pad-sites/)
+  + [Business Partners](https://cityofmeadowsplace.org/edc/business-partners/)
+  + [Corporate Directors](https://cityofmeadowsplace.org/edc/corporate-directors/)
+  + [Permits & Licenses](https://cityofmeadowsplace.org/government/public-information/permits/)
+  + [EDC Budgets](https://cityofmeadowsplace.org/edc-budgets/)
+  + [Contact EDC](https://cityofmeadowsplace.org/edc/contact-edc/)
+
+X
+
+[![payments](https://cityofmeadowsplace.org/wp-content/uploads/payments-768x768.webp)](https://cityofmeadowsplace.org/city-online-payments/)
+
+[Online Payments](https://cityofmeadowsplace.org/city-online-payments/)
+
+[![elections](https://cityofmeadowsplace.org/wp-content/uploads/elections-768x768.webp)](https://cityofmeadowsplace.org/government/municipalelectioninformation/)
+
+[Election Information](https://cityofmeadowsplace.org/government/municipalelectioninformation/)
+
+[![permits](https://cityofmeadowsplace.org/wp-content/uploads/permits-768x768.webp)](https://cityofmeadowsplace.org/government/public-information/permits/)
+
+[Permits & Licenses](https://cityofmeadowsplace.org/government/public-information/permits/)
+
+[![](https://cityofmeadowsplace.org/wp-content/uploads/city-code-768x768.webp)](https://cityofmeadowsplace.org/departments/code-enforcement/)
+
+[Code Enforcement](https://cityofmeadowsplace.org/departments/code-enforcement/)
+
+[![employment](https://cityofmeadowsplace.org/wp-content/uploads/employment-768x768.webp)](https://cityofmeadowsplace.org/government/job-opportunities/)
+
+[Employment](https://cityofmeadowsplace.org/government/job-opportunities/)
+
+[![ask-a-question](https://cityofmeadowsplace.org/wp-content/uploads/ask-a-question-768x768.webp)](https://cityofmeadowsplace.org/ask-a-question/)
+
+[Ask A Question](https://cityofmeadowsplace.org/ask-a-question/)
+
+[![](https://cityofmeadowsplace.org/wp-content/uploads/city-directory-768x768.webp)](https://cityofmeadowsplace.org/contacts/)
+
+[City Directory](https://cityofmeadowsplace.org/contacts/)
+
+City Contacts
+=============
+
+* [Online Payments](https://cityofmeadowsplace.org/city-online-payments/)
+* [City Parks and Amenities](https://cityofmeadowsplace.org/departments/parks-recreation/parks/)
+* [Business Partners](https://cityofmeadowsplace.org/business-partners/)
+* [Social Media](https://cityofmeadowsplace.org/social-media/)
+* [Calendar](https://cityofmeadowsplace.org/events/)
+* [Community Surveys](https://cityofmeadowsplace.org/community-surveys/)
+* [City Contacts](https://cityofmeadowsplace.org/contacts/)
+* [Links](https://cityofmeadowsplace.org/links/)
+* [News](https://cityofmeadowsplace.org/news/)
+* [Newsletters](https://cityofmeadowsplace.org/newsletter/2026-newsletters/)
+* [Garage Sales](https://cityofmeadowsplace.org/garage-sales/)
+* [Garbage and Recycling Pickup](https://cityofmeadowsplace.org/government/public-information/garbage-and-recycling-pickup/)
+* [Animal Control Services](https://cityofmeadowsplace.org/government/public-information/animal-control-services/)
+* [Wall of Heroes](https://cityofmeadowsplace.org/departments/parks-recreation/wall-of-heroes/)
+* [Videos](https://cityofmeadowsplace.org/all-videos/)
+
+
+* [Online Payments](https://cityofmeadowsplace.org/city-online-payments/)
+* [City Parks and Amenities](https://cityofmeadowsplace.org/departments/parks-recreation/parks/)
+* [Business Partners](https://cityofmeadowsplace.org/business-partners/)
+* [Social Media](https://cityofmeadowsplace.org/social-media/)
+* [Calendar](https://cityofmeadowsplace.org/events/)
+* [Community Surveys](https://cityofmeadowsplace.org/community-surveys/)
+* [City Contacts](https://cityofmeadowsplace.org/contacts/)
+* [Links](https://cityofmeadowsplace.org/links/)
+* [News](https://cityofmeadowsplace.org/news/)
+* [Newsletters](https://cityofmeadowsplace.org/newsletter/2026-newsletters/)
+* [Garage Sales](https://cityofmeadowsplace.org/garage-sales/)
+* [Garbage and Recycling Pickup](https://cityofmeadowsplace.org/government/public-information/garbage-and-recycling-pickup/)
+* [Animal Control Services](https://cityofmeadowsplace.org/government/public-information/animal-control-services/)
+* [Wall of Heroes](https://cityofmeadowsplace.org/departments/parks-recreation/wall-of-heroes/)
+* [Videos](https://cityofmeadowsplace.org/all-videos/)
+
+**For Emergencies Dial 911**
+============================
+
+**Non-Emergencies (281) 983-2900**
+==================================
+
+**City of Meadows Place Contacts**
+----------------------------------
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| **City Hall** | | | |
+| (281) 983-2950 | | | |
+| **Administration** | | | |
+| Mayor | Mayor Audrey St. Germain | (281) 983-2945 | [audrey.stgermain@cityofmeadowsplace.org](mailto:audrey.stgermain@cityofmeadowsplace.org) |
+| City Administrator | Nick Haby | (281) 983-2939 | [cityadministrator@cityofmeadowsplace.org](mailto:cityadministrator@cityofmeadowsplace.org) |
+| City Secretary | Shandra Philips | (281) 983-2931 | [sphillips@cityofmeadowsplace.org](mailto:sphillips@cityofmeadowsplace.org) |
+| Communications Director | Cameron Miller | (281) 983-2950 | [communications@cityofmeadowsplace.org](mailto:communications@cityofmeadowsplace.org) |
+| Code Enforcement | Chelsea Thomas | (281) 983-2938 | [code-enforcement@cityofmeadowsplace.org](mailto:code-enforcement@cityofmeadowsplace.org) |
+| Parks & Rec Director | Colene Cabezas | (281) 983-2934 | [parksdirector@cityofmeadowsplace.org](mailto:parksdirector@cityofmeadowsplace.org) |
+| Finance Director | Anna-Maria Weston | (281) 983-2930 | [meadowsaccountant@cityofmeadowsplace.org](mailto:meadowsaccountant@cityofmeadowsplace.org) |
+| Finance | Liliana Veruny | (281) 983-2937 | [accounts@cityofmeadowsplace.org](mailto:accounts@cityofmeadowsplace.org) |
+| Court Clerk | Y’Mica Davis | (281) 983-2942 | [court@cityofmeadowsplace.org](mailto:court@cityofmeadowsplace.org) |
+| Court Administrator | Tiffany Poke | (281) 983-2942 | [courtclerk@cityofmeadowsplace.org](mailto:courtclerk@cityofmeadowsplace.org) |
+| Permits Clerk | Isela Hernandez | (281) 983-2932 | [permits@cityofmeadowsplace.org](mailto:permits@cityofmeadowsplace.org) |
+| Utilities/Customer Service Clerk | Jackie McCordic | (281) 983-2950 | [utilities@cityofmeadowsplace.org](mailto:utilities@cityofmeadowsplace.org) |
+| Meadows Place Police Department | [police@cityofmeadowsplace.org](mailto:police@cityofmeadowsplace.org) |
+| Gary Stewart Chief of Police | [stewart@cityofmeadowsplace.org](mailto:stewart@cityofmeadowsplace.org) |
+| Jack Ashton Assistant Chief | [ashton@cityofmeadowsplace.org](mailto:ashton@cityofmeadowsplace.org) |
+| Criminal Investigations Lt. S. Denton | [denton@cityofmeadowsplace.org](mailto:cid@cityofmeadowsplace.org) |
+| Lt. Adames | [adames@cityofmeadowsplace.org](mailto:adames@cityofmeadowsplace.org) |
+| Sgt. Kenig | [kenig@cityofmeadowsplace.org](mailto:kenig@cityofmeadowsplace.org) |
+| **Public Works** | | | |
+| Public Works Director | Rod Hainey | (281) 983-2961 | [publicworks@cityofmeadowsplace.org](mailto:publicworks@cityofmeadowsplace.org) |
+| **City Services** | | | |
+| Animal Control |  | (281) 342-1512 |  |
+| Street Light Repair |  | (800) 332-7143 |  |
+| Water or Sewer Issues |  | (281) 983-2950 |  |
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| Water or Sewer Issues | AFTER HOURS | (281) 940-2955 | Power Scoop |
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| **City Council Members** | | | |
+| Alderman 1 | David Mertins, Sr |  | [alderman1@cityofmeadowsplace.org](mailto:alderman1@cityofmeadowsplace.org) |
+| Alderman 2 | Tia Baker |  | [alderman2@cityofmeadowsplace.org](mailto:alderman2@cityofmeadowsplace.org) |
+| Alderman 3 | Rick Staigle |  | [alderman3@cityofmeadowsplace.org](mailto:alderman3@cityofmeadowsplace.org) |
+| Alderman 4 | Kurt Kopczynski |  | [alderman4@cityofmeadowsplace.org](mailto:alderman4@cityofmeadowsplace.org) |
+| Alderman 5 | Emily Merkley |  | [emily.merkley@cityofmeadowsplace.org](mailto:emily.merkley@cityofmeadowsplace.org) |
+
+**Postal Address**  
+One Troyan Drive  
+Meadows Place, Texas 77477
+
+### **For Emergencies Dial 911**
+
+### **Non-Emergencies (281) 983-2900**
+
+
+
+![logo-white](https://cityofmeadowsplace.org/wp-content/uploads/logo-white.webp)
+
+Contact Us
+
+City Hall:
+
+One Troyan Drive,  
+Meadows Place, Texas 77477
+
+Office Hours:
+
+8:30am – 4:30pm Monday – Friday
+
+Phone:
+
+[(281) 983-2950](tel:281-983-2950)
+
+Police Department:
+
+**Phone:** [(281) 983-2900](tel:281-983-2900)  
+**Email:** [police@cityofmeadowsplace.org](mailto:police@cityofmeadowsplace.org)
+
+Quick Links
+
+* [Administrative Staff](https://cityofmeadowsplace.org/government/city-staff/)
+* [Code of Ordinances and Fee Schedule](https://cityofmeadowsplace.org/city-secretary/ordinances/)
+* [Municipal Court of Record](https://cityofmeadowsplace.org/government/municipal-court/)
+* [Public Information](https://cityofmeadowsplace.org/government/public-information/)
+* [Permits](https://cityofmeadowsplace.org/government/public-information/permits/)
+* [Employment Opportunities](https://cityofmeadowsplace.org/government/job-opportunities/)
+* [Rentals](https://cityofmeadowsplace.org/departments/parks-recreation/community-center/)
+
+
+* [Administrative Staff](https://cityofmeadowsplace.org/government/city-staff/)
+* [Code of Ordinances and Fee Schedule](https://cityofmeadowsplace.org/city-secretary/ordinances/)
+* [Municipal Court of Record](https://cityofmeadowsplace.org/government/municipal-court/)
+* [Public Information](https://cityofmeadowsplace.org/government/public-information/)
+* [Permits](https://cityofmeadowsplace.org/government/public-information/permits/)
+* [Employment Opportunities](https://cityofmeadowsplace.org/government/job-opportunities/)
+* [Rentals](https://cityofmeadowsplace.org/departments/parks-recreation/community-center/)
+
+Departments
+
+* [City Secretary](https://cityofmeadowsplace.org/city-secretary/)
+* [Code Enforcement](https://cityofmeadowsplace.org/departments/code-enforcement/)
+* [Finance](https://cityofmeadowsplace.org/departments/finance/)
+* [Parks & Recreation](https://cityofmeadowsplace.org/departments/parks-recreation/)
+* [Police](https://cityofmeadowsplace.org/departments/police/)
+* [Public Works](https://cityofmeadowsplace.org/departments/public-works/)
+* [Permits](https://cityofmeadowsplace.org/government/public-information/permits/)
+* [Utilities](https://cityofmeadowsplace.org/departments/utilities/)
+* [Fire Department](https://cityofmeadowsplace.org/departments/fire-department/)
+* [Emergency Response](https://cityofmeadowsplace.org/emergency-response/)
+
+
+* [City Secretary](https://cityofmeadowsplace.org/city-secretary/)
+* [Code Enforcement](https://cityofmeadowsplace.org/departments/code-enforcement/)
+* [Finance](https://cityofmeadowsplace.org/departments/finance/)
+* [Parks & Recreation](https://cityofmeadowsplace.org/departments/parks-recreation/)
+* [Police](https://cityofmeadowsplace.org/departments/police/)
+* [Public Works](https://cityofmeadowsplace.org/departments/public-works/)
+* [Permits](https://cityofmeadowsplace.org/government/public-information/permits/)
+* [Utilities](https://cityofmeadowsplace.org/departments/utilities/)
+* [Fire Department](https://cityofmeadowsplace.org/departments/fire-department/)
+* [Emergency Response](https://cityofmeadowsplace.org/emergency-response/)
+
+Copyright © 2026 City of Meadows Place, All Rights Reserved. [Sitemap](https://cityofmeadowsplace.org/sitemap/). Houston SEO Web Design by Bizopia
+
+
+
+
+ 
