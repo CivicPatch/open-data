@@ -6,18 +6,6 @@ City Council - Addison, Texas
 
 opens in new tab or window
 
-### Winter Weather Closure Updates
-
-Municipal buildings, including the Athletic Club and The Addison Performing Arts Centre, will open at noon on Tues,1/27. Staff will work remotely in the morning.  
-  
-Municipal Court will also open at noon; however, morning Zoom hearings will proceed as scheduled for their specific times.  
-  
-Public comment by phone will be allowed at 1/27 Council Meeting. Signup is required by 3pm on 1/27.
-
-[Winter Weather Closures](https://www.addisontx.gov/News-articles/2026-News/Winter-Weather-Closures)
-
-[Close this announcement](https://www.addisontx.gov/Government/City-Council?OC_EA_EmergencyAnnouncementList_Dismiss=6b21e41a-953d-4b89-91b7-db41f38bd3ea)
-
 Quick Links:
 
 Quick Links
