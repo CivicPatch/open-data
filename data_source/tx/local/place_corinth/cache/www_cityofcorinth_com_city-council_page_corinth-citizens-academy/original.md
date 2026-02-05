@@ -1,0 +1,3939 @@
+Corinth Citizen's Academy | City of Corinth Texas
+
+
+
+[Skip to main content](https://www.corinthtx.gov/city-council/page/corinth-citizens-academy#main-content)
+
+Navigation
+
+
+[![Home](https://www.corinthtx.gov/sites/all/themes/aha_compass/logo.png)
+
+Starter Site
+State](https://www.corinthtx.gov/ "Home")
+
+* My
+  Community
+
+  Column 1
+
+  + [**About Corinth**](https://www.corinthtx.gov/community)
+  + [History of Corinth](https://www.corinthtx.gov/community/page/history-corinth)
+  + [New Resident Guide](https://www.corinthtx.gov/community/page/new-resident-guide)
+  + [Community Calendar](https://www.corinthtx.gov/calendar)
+  + **[City Hall On-Demand](https://www.cityofcorinth.com/communications/page/city-hall-demand)**
+  + [**Job Opportunities**](https://cityofcorinth.applytojob.com/apply/)
+  + [Apply for a Job](https://cityofcorinth.applytojob.com/apply/)
+  + [Police Recruit](https://www.corinthtx.gov/police/page/career-opportunities)
+
+  Column 2
+
+  + **[Fire Services](https://www.corinthtx.gov/fire-services)**
+  + [ISO Rating](https://www.corinthtx.gov/fire-services/page/insurance-service-office-iso-rating)
+  + [Fire Houses](https://www.corinthtx.gov/fire-services/page/fire-houses)
+  + [Outdoor Burning](https://www.corinthtx.gov/fire-services/page/outdoor-burning-overview)
+  + [**Police Services**](https://www.corinthtx.gov/police)
+  + [Ride Along Program](https://www.corinthtx.gov/police/page/ride-along-program)
+  + [Vacation Watch](https://www.corinthtx.gov/police/page/vacation-watch)
+  + [Submit an Anonymous Tip](https://www.corinthtx.gov/police/webform/submit-anonymous-tip)
+
+  Column 3
+
+  + **[Special Events](https://www.cityofcorinth.com/special-events)**
+  + [Event Sponsorship Opportunities](https://www.cityofcorinth.com/special-events/page/event-sponsorship-opportunities)
+  + [Event Vendor Opportunities](https://www.cityofcorinth.com/special-events/page/event-vendor-opportunities)
+  + [Citizen Public Safety Academy](https://www.corinthtx.gov/special-events/page/citizens-public-safety-academy)
+  + [Upcoming City Events](https://www.cityofcorinth.com/special-events)
+  + **[Keep Corinth Beautiful](https://www.corinthtx.gov/kcb)**
+
+  Column 4
+
+  + [**Volunteer**](https://www.corinthtx.gov/community/page/volunteer-opportunities)
+  + [Boards, Commissions, and Committees](https://www.cityofcorinth.com/bc)
+  + [Youth Advisory Council](http://www.cityofcorinth.com/yac)
+  + [**Things to Do**](https://www.corinthtx.gov/parksrec)
+  + [Commons at Agora](https://www.cityofcorinth.com/parksrec/page/commons-agora)
+  + [Parks](https://www.corinthtx.gov/parksites)
+  + [Facility Rentals](https://www.corinthtx.gov/parksrec/webform/city-facility-rental-request)
+  + [Register for Classes and Camps](https://www.corinthtx.gov/parksrec/page/registration-classes)
+  + [Library Services](https://www.corinthtx.gov/community/page/library-services)
+  + [Yard Sale Map](https://corinth.maps.arcgis.com/apps/dashboards/1ef0bee6eeff4dd2a95d8cb6465e3955)
+* My
+  Government
+
+  Column 1
+
+  + [**Vision & Mission**](https://www.corinthtx.gov/city-council/page/vision-mission-core-values)
+  + [**City Council**](https://www.corinthtx.gov/city-council)
+  + [Agendas and Minutes](https://www.cityofcorinth.com/meetings?field_microsite_tid=All&field_microsite_tid_1=711&keys=)
+  + [**City Management**](https://www.corinthtx.gov/city-manager/page/executive-management-staff)
+  + [City Manager](https://www.corinthtx.gov/city-manager)
+  + [City Secretary](https://www.corinthtx.gov/city-secretary)
+  + [Executive Management Staff](https://www.corinthtx.gov/city-manager/page/executive-management-staff)
+  + **[Elections and Voting](https://www.corinthtx.gov/city-secretary/page/may-2-2026-election)**
+
+  Column 2
+
+  + [**Boards & Commissions**](https://www.cityofcorinth.com/bc)
+  + [Board of Adjustments](https://www.corinthtx.gov/bc-boa)
+  + [Board of Construction Appeals](https://www.corinthtx.gov/bc-boca)
+  + [Economic Development Corporation](https://www.corinthtx.gov/bc-cedc)
+  + [Planning & Zoning Commission](https://www.cityofcorinth.com/bc-pzc)
+  + [TIRZ No. 2](https://www.cityofcorinth.com/bc-rz2)
+  + [TIRZ No. 3](https://www.cityofcorinth.com/bc-rz3)
+  + [**District Boards**](https://www.cityofcorinth.com/bc)
+  + [Crime Control & Prevention](https://www.cityofcorinth.com/bc-cc)
+  + [Fire Control, Prevention & Emergency Medical Services](https://www.cityofcorinth.com/bc-fcpes)
+
+  Column 3
+
+  + [**Committees**](https://www.cityofcorinth.com/bc)
+  + [Community Engagement Committee](https://www.cityofcorinth.com/bc/page/community-engagement-committee)
+  + [Ethics Committee](https://www.cityofcorinth.com/bc-ec)
+  + [Finance Audit Committee](https://www.cityofcorinth.com/bc-fac)
+  + [Keep Corinth Beautiful](https://www.cityofcorinth.com/bc-kcb)
+  + [**Open Government**](https://www.corinthtx.gov/community/page/open-government)
+  + [Code of Ordinances](https://library.municode.com/tx/corinth/codes/code_of_ordinances)
+  + [Public Records Request](https://www.cityofcorinth.com/city-secretary/page/public-records-requests)
+  + [Red Flag Reporting](https://www.corinthtx.gov/city-secretary/page/red-flag-reporting)
+  + [Home Rule Charter](https://www.corinthtx.gov/city-council/page/home-rule-charter)
+
+  Column 4
+
+  + [**Transparency Center**](https://www.corinthtx.gov/financial-transparency)
+  + [Open Government Portal](https://www.corinthtx.gov/financial-transparency/page/open-government-portal)
+  + [Capital Projects](https://www.corinthtx.gov/projects)
+  + [Current Utility Rates](https://www.corinthtx.gov/financial-transparency/page/current-utility-rates)
+  + [Strategic Plan](https://www.cityofcorinth.com/financial-transparency/page/corinth-strategic-plans)
+  + [Hotel Occupancy Tax Program](https://www.cityofcorinth.com/financial-transparency/page/hotel-occupancy-tax-grant-program)
+  + [Short Term Vehicle Rental Tax](https://www.cityofcorinth.com/financial-transparency/page/short-term-motor-vehicle-rental-tax)
+* Doing
+  Business
+
+  Column 1
+
+  + **[Utility Billing](https://www.corinthtx.gov/utility-billing)**
+  + [Pay Online](https://www.municipalonlinepayments.com/corinthtx)
+  + [Sign up for Ebills](https://www.corinthtx.gov/utility-billing/webform/go-green-e-bills)
+  + [New Account](https://www.corinthtx.gov/utility-billing/webform/new-account-application)
+  + [Business Account Application](https://www.cityofcorinth.com/utility-billing/webform/business-account-application)
+  + [Utility Bank Draft](https://www.corinthtx.gov/utility-billing/webform/bank-drafting-form)
+  + [Move Out Request](https://www.corinthtx.gov/utility-billing/webform/move-out-request-form)
+  + [Name Change](https://www.corinthtx.gov/utility-billing/webform/name-change-request-form)
+  + [Fire Hydrant Meter](https://www.corinthtx.gov/utility-billing/webform/fire-hydrant-meter-application)
+  + [Letter of Credit](https://www.corinthtx.gov/utility-billing/webform/letter-credit-request)
+  + [**Property Residential Enhancement Program**](https://www.cityofcorinth.com/neighborhood-services/page/property-residential-enhancement-program)
+
+  Column 2
+
+  + **[Planning & Development](https://www.cityofcorinth.com/planning-development)**
+  + [Planning Permits](https://www.corinthtx.gov/building-services)
+  + [Upcoming Public Hearings](https://www.cityofcorinth.com/planning-development/page/upcoming-public-hearings)
+  + [**Municipal Court**](https://www.corinthtx.gov/municipal-court)
+  + [Pay Online](https://www.municipalonlinepayments.com/corinthtx)
+  + [Driver Safety Request](https://www.corinthtx.gov/municipal-court/page/drivers-safety-request-form)
+  + [Deferred Disposition Request](https://www.corinthtx.gov/municipal-court/page/deferred-disposition-request-form)
+  + [**Short Term Motor Vehicle Rental Tax**](https://www.corinthtx.gov/financial-transparency/page/short-term-motor-vehicle-rental-tax)
+
+  Column 3
+
+  + **[Police Services](https://www.corinthtx.gov/police)**
+  + [Alarm Permit](https://www.corinthtx.gov/police/page/alarm-permits)
+  + **[Fire Services](https://www.corinthtx.gov/fire-services)**
+  + [Burn Permit](https://www.corinthtx.gov/fire-services/webform/online-burn-permit-request)
+  + [Pyrotechnic and Sparkler Permit](https://www.cityofcorinth.com/fire-services/page/pyrotechnic-and-sparkler-permit)
+  + [Construction Permits and Plan Review](https://www.corinthtx.gov/fire-services/page/permit-review-essentials)
+  + **[Purchasing Services](https://www.corinthtx.gov/purchasing)**
+  + [Bids & Proposals](https://www.corinthtx.gov/rfps)
+  + [Information for Vendors](https://www.corinthtx.gov/purchasing/page/information-vendors)
+
+  Column 4
+
+  + [**Building Services**](https://www.cityofcorinth.com/permits-inspections)
+  + [Permit Applications](https://cityofcorinthtx-energovweb.tylerhost.net/apps/selfservice#/home)
+  + [Application Guide](https://www.cityofcorinth.com/sites/default/files/fileattachments/building_services/page/3581/permits_submittal_process_1.pdf)
+  + [Guia de Solicitud de Permisos](https://www.cityofcorinth.com/sites/default/files/fileattachments/building_services/page/3581/proceso_de_permisos_1.pdf)
+  + [Yard Sale Permit](https://survey123.arcgis.com/share/41157163dd4c45a7a17492c3b8969bd4)
+  + [**Economic Development**](https://www.corinthtx.gov/economic-development)
+  + [Demographics](https://www.corinthtx.gov/economic-development/page/demographics)
+  + [Incentives](https://www.corinthtx.gov/economic-development/page/incentives)
+  + [Site Selection](https://www.corinthtx.gov/properties)
+* Departments
+  & Services
+
+  Column 1
+
+  + **Departments**
+  + [Animal Control](https://www.cityofcorinth.com/animal-control)
+  + [Building Services](https://www.cityofcorinth.com/permits-inspections)
+  + [City Manager](https://www.corinthtx.gov/city-manager)
+  + [City Marshal](https://www.corinthtx.gov/city-marshal)
+  + [City Secretary](https://www.corinthtx.gov/city-secretary)
+  + [Communications](https://www.corinthtx.gov/communications)
+  + [Economic Development](https://www.corinthedc.com/economic-development)
+
+  Column 2
+
+  + [Engineering](https://www.cityofcorinth.com/engineering)
+  + [Finance](https://www.cityofcorinth.com/finance)
+  + [Fire Services](https://www.cityofcorinth.com/fire-services)
+  + [GIS Maps](https://www.cityofcorinth.com/gis)
+  + [Human Resources](https://www.cityofcorinth.com/hr)
+  + [Municipal Court](https://www.cityofcorinth.com/municipal-court)
+  + [Neighborhood Services](https://www.cityofcorinth.com/neighborhood-services)
+  + [Parks and Recreation](https://www.cityofcorinth.com/parksrec)
+
+  Column 3
+
+  + [Planning and Development](https://www.cityofcorinth.com/planning-development/)
+  + [Police Services](https://www.cityofcorinth.com/police)
+  + [Public Works](https://www.cityofcorinth.com/publicworks)
+  + [Purchasing](https://www.corinthtx.gov/purchasing)
+  + [Stormwater](https://www.corinthtx.gov/stormwater)
+  + [Streets](https://www.corinthtx.gov/streets)
+  + [Technology Services](https://www.corinthtx.gov/technology-services)
+  + [Utility Billing](https://www.corinthtx.gov/utility-billing)
+  + [Water & Wastewater](https://www.corinthtx.gov/water-wastewater)
+
+  Column 4
+
+  + [**City Services**](https://www.cityofcorinth.com/community/page/city-services)
+  + [Trash and Recycling](https://www.corinthtx.gov/utility-billing/page/trash-recycling-services)
+  + [Report a Concern Center](http://www.cityofcorinth.com/communications/page/report-concern-center)
+  + [Household Hazardous Waste Disposal](https://www.corinthtx.gov/utility-billing/page/household-hazardous-waste-program)
+  + [Free Irrigation Check-Up](https://www.cityofcorinth.com/utility-billing/page/free-irrigation-check)
+  + [Water My Yard](https://www.corinthtx.gov/publicworks/page/water-my-yard)
+  + [SPAN Denton County Transit](https://www.corinthtx.gov/community/page/span-denton-county-transit)
+  + [Battery Recycling Program](https://www.cityofcorinth.com/utility-billing/page/battery-recycling-program)
+  + [Corinth Power Switch](https://www.corinthtx.gov/utility-billing/page/corinth-power-switch)
+  + [Recycled Paint Program](https://www.corinthtx.gov/utility-billing/page/recycled-paint-program)
+  + [Property Residential Enhancement Program](https://www.cityofcorinth.com/neighborhood-services/page/property-residential-enhancement-program)
+* Connect
+  With Us
+
+  Column 1
+
+  + ****[City Hall On-Demand](https://www.corinthtx.gov/communications/page/city-hall-demand)****
+  + ******Alerts and Notifications******
+  + [Email Subscriptions](https://lp.constantcontactpages.com/su/3uyIxBy)
+  + [Community Alerts](https://www.cityofcorinth.com/communications/page/community-alerts)
+  + ********Events and Meetings********
+  + [Agendas and Minutes](https://www.corinthtx.gov/meetings)
+  + [Calendar](https://www.corinthtx.gov/calendar)
+  + **Documents and Forms**
+  + [Documents and Reports](https://www.cityofcorinth.com/documents)
+  + [Forms and Applications](https://www.cityofcorinth.com/forms)
+
+  **Column 2**
+
+  + **Contact the City**
+  + [Submit a Request or Concern](https://www.corinthtx.gov/communications/page/report-concern-center)
+  + [Staff Directory](https://www.corinthtx.gov/directory)
+  + **[Business Directory](https://business-directory.mycivicapps.com/160bcd48f1a03fb97a6201ce69f82cd1)**
+  + [Register Your Business](https://www.cityofcorinth.com/communications/page/business-directory-registration-form)
+  + **[City News](https://www.cityofcorinth.com/news)**
+
+  **Column 3**
+
+  + [****Social Media****](https://www.cityofcorinth.com/communications/page/social-media-outlets)
+  + [Facebook](https://www.facebook.com/CityofCorinth)
+  + [Instagram](https://www.instagram.com/cityofcorinth/?hl=en)
+  + [LinkedIn](https://www.linkedin.com/company/city-of-corinth/mycompany/)
+  + [YouTube](https://www.youtube.com/channel/UCwPmWTjE70mfvOBzW0W97Ow)
+  + **Podcasts**
+  + [Let's Talk Corinth](https://www.corinthtx.gov/communications/page/lets-talk-corinth-podcast)
+  + [**Hours of Operation**](https://www.cityofcorinth.com/city-council/page/hours-operation)
+
+Search form
+
+Search Website
+
+
+
+Corinth Citizen's Academy
+=========================
+
+[![CCA Logo](https://www.corinthtx.gov/sites/default/files/styles/full_node_primary/public/imageattachments/city-council/page/25234/cca_transparent.png?itok=aX4A4itV)](https://www.corinthtx.gov/sites/default/files/styles/gallery500/public/imageattachments/city-council/page/25234/cca_transparent.png?itok=Vwazf5cx)
+
+The Corinth Citizen's Academy is a free 8-week program designed to provide participants with an overview of the City's services and how they shape the day-to-day lives of our residents. Graduates will gain valuable insight into municipal operations through engaging sessions with the City's executive leadership staff, featuring hands-on activities and behind-the-scenes tours in a small group setting.
+
+Participants must be at least 18 years of age and reside in Corinth.  Priority will be given to those who have not previously served or currently serve in an elected or appointed role.
+
+**Applications for the 2025 Corinth Citizen's Academy are now closed. To learn more about the program and future classes, please contact the City Manager's office at (940) 498-3246 or [citizensacademy@cityofcorinth.com](mailto:citizensacademy@cityofcorinth.com).**
+
+[City Manager](https://www.corinthtx.gov/city-manager)
+
+[Boards, Commissions, and Committees](https://www.corinthtx.gov/bc)
+
+[Stormwater](https://www.corinthtx.gov/stormwater)
+
+[Finance](https://www.corinthtx.gov/finance)
+
+[Keep Corinth Beautiful Commission](https://www.corinthtx.gov/bc-kcb)
+
+[New Resident Guide](https://www.corinthtx.gov/community)
+
+[Human Resources](https://www.corinthtx.gov/hr)
+
+[Parks and Recreation](https://www.corinthtx.gov/parksrec)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc)
+
+[Planning and Development](https://www.corinthtx.gov/planning-development)
+
+[Police](https://www.corinthtx.gov/police)
+
+[Public Works](https://www.corinthtx.gov/publicworks)
+
+[Home Page](https://www.corinthtx.gov/home)
+
+[Mega My Government](https://www.corinthtx.gov/ru/page/mega-my-government)
+
+[Mega Business & Development](https://www.corinthtx.gov/ru/page/mega-business-development)
+
+[Mega Departments & Services](https://www.corinthtx.gov/ru/page/mega-departments-services)
+
+[Mega Online Services](https://www.corinthtx.gov/ru/page/mega-online-services)
+
+[Mega Menu](https://www.corinthtx.gov/ru/page/mega-menu)
+
+[Home Page Community News](https://www.corinthtx.gov/ru/page/home-page-community-news)
+
+[Streets](https://www.corinthtx.gov/streets)
+
+[Animal Services](https://www.corinthtx.gov/animal-control)
+
+[Economic Development](https://www.corinthtx.gov/economic-development)
+
+[Purchasing](https://www.corinthtx.gov/purchasing)
+
+[Technology Services](https://www.corinthtx.gov/technology-services)
+
+[Utility Billing](https://www.corinthtx.gov/utility-billing)
+
+[Municipal Court](https://www.corinthtx.gov/municipal-court)
+
+[Fire Services](https://www.corinthtx.gov/fire-services)
+
+[Engineering](https://www.corinthtx.gov/engineering)
+
+[Board of Adjustments](https://www.corinthtx.gov/bc-boa)
+
+[Board of Construction Appeals](https://www.corinthtx.gov/bc-boca)
+
+[Finance Audit Committee](https://www.corinthtx.gov/bc-fac)
+
+[Corinth Economic Development Corporation](https://www.corinthtx.gov/bc-cedc)
+
+[Ethics Committee](https://www.corinthtx.gov/bc-ec)
+
+[Citizen Audit Committee Ordinance No. 18-10-04-33](https://www.corinthtx.gov/finance/page/citizen-audit-committee-ordinance-no-18-10-04-33)
+
+[Ordinance No. 18-08-02-22](https://www.corinthtx.gov/administration/page/ordinance-no-18-08-02-22)
+
+[Keep Corinth Beautiful](https://www.corinthtx.gov/kcb)
+
+[Mayor and City Council](https://www.corinthtx.gov/city-council)
+
+[Vision / Mission / Core Values](https://www.corinthtx.gov/city-council/page/vision-mission-core-values)
+
+[Home Rule Charter](https://www.corinthtx.gov/city-council/page/home-rule-charter)
+
+[Executive Management Staff](https://www.corinthtx.gov/city-manager/page/executive-management-staff)
+
+[City Secretary](https://www.corinthtx.gov/city-secretary)
+
+[Elections and Voting](https://www.corinthtx.gov/city-secretary/page/elections-and-voting)
+
+[GIS Division](https://www.corinthtx.gov/gis)
+
+[Printable Maps](https://www.corinthtx.gov/gis/page/printable-maps)
+
+[Additional GIS Resources](https://www.corinthtx.gov/gis/page/additional-gis-resources)
+
+[Avoid Being Bitten](https://www.corinthtx.gov/animal-control/page/avoid-being-bitten)
+
+[Incentives](https://www.corinthtx.gov/economic-development/page/incentives)
+
+[2018 Demographic Summary](https://www.corinthtx.gov/economic-development/page/2018-demographic-summary)
+
+[Demographics](https://www.corinthtx.gov/economic-development/page/demographics)
+
+[Chapter 380 Economic Development Application](https://www.corinthtx.gov/economic-development/page/chapter-380-economic-development-application)
+
+[Chapter 380 Economic Development Program Policies and Procedures](https://www.corinthtx.gov/economic-development/page/chapter-380-economic-development-program-policies-and-procedures)
+
+[Policy Statement for Tax Abatement Application](https://www.corinthtx.gov/economic-development/page/policy-statement-tax-abatement-application)
+
+[Policy Statement for Tax Abatement](https://www.corinthtx.gov/economic-development/page/policy-statement-tax-abatement)
+
+[Service Sign Grant Program](https://www.corinthtx.gov/economic-development/page/service-sign-grant-program)
+
+[Business Improvement Grant Program](https://www.corinthtx.gov/economic-development/page/business-improvement-grant-program)
+
+[Available Properties](https://www.corinthtx.gov/economic-development/page/available-properties)
+
+[Office](https://www.corinthtx.gov/economic-development/page/office)
+
+[Retail](https://www.corinthtx.gov/economic-development/page/retail)
+
+[Pinnell Square Business Park](https://www.corinthtx.gov/economic-development/page/pinnell-square-business-park)
+
+[Mission Medical Office Building](https://www.corinthtx.gov/economic-development/page/mission-medical-office-building)
+
+[Medical Office Building](https://www.corinthtx.gov/economic-development/page/medical-office-building)
+
+[Land](https://www.corinthtx.gov/economic-development/page/land)
+
+[Garrison Street and Riverview Drive Acreage](https://www.corinthtx.gov/economic-development/page/garrison-street-and-riverview-drive-acreage)
+
+[5400 South Interstate 35E](https://www.corinthtx.gov/economic-development/page/5400-south-interstate-35e)
+
+[Corner Site at Interstate Highway 35E and Dobbs Road](https://www.corinthtx.gov/economic-development/page/corner-site-interstate-highway-35e-and-dobbs-road)
+
+[Freeway Site(s) Near the Interstate Highway 35E and Corinth Parkway Interchange](https://www.corinthtx.gov/economic-development/page/freeway-sites-near-interstate-highway-35e-and-corinth-parkway-interchange)
+
+[Southeast Corner on Interstate Highway 35E and Corinth Parkway](https://www.corinthtx.gov/economic-development/page/southeast-corner-interstate-highway-35e-and-corinth-parkway)
+
+[Near Southeast Corner on the Interstate Highway 35E and Corinth Parkway Interchange](https://www.corinthtx.gov/economic-development/page/near-southeast-corner-interstate-highway-35e-and-corinth-parkway)
+
+[Annual Budgets](https://www.corinthtx.gov/finance/page/annual-budgets)
+
+[Annual Audits](https://www.corinthtx.gov/finance/page/annual-audits)
+
+[Monthly Financial Reports: 2016-2017](https://www.corinthtx.gov/finance/page/monthly-financial-reports-2016-2017)
+
+[Monthly Financial Reports: 2017-2018](https://www.corinthtx.gov/finance/page/monthly-financial-reports-2017-2018)
+
+[Official Statements](https://www.corinthtx.gov/financial-transparency/page/official-statements)
+
+[About Us](https://www.corinthtx.gov/fire-services/page/about-us)
+
+[Insurance Service Office (ISO) Rating](https://www.corinthtx.gov/fire-services/page/insurance-service-office-iso-rating)
+
+[Lake Cities Fire Department ISO-2 Recognition Letter](https://www.corinthtx.gov/fire-services/page/lake-cities-fire-department-iso-2-recognition-letter)
+
+[EMS Billing, Records, & Medical Information Privacy Practices](https://www.corinthtx.gov/fire-services/page/ems-billing-records-medical-information-privacy-practices)
+
+[Fire Houses](https://www.corinthtx.gov/fire-services/page/fire-houses)
+
+[Employee Benefits](https://www.corinthtx.gov/hr/page/employee-benefits)
+
+[Fire Pay Schedule](https://www.corinthtx.gov/fire-services/page/fire-pay-schedule)
+
+[Police Pay Schedule](https://www.corinthtx.gov/police/page/police-pay-schedule)
+
+[General Government Pay Schedule](https://www.corinthtx.gov/hr/page/general-government-pay-schedule)
+
+[Compensation](https://www.corinthtx.gov/hr/page/compensation)
+
+[Citation Payment Information](https://www.corinthtx.gov/municipal-court/page/citation-payment-information)
+
+[Deferred Disposition Request Form](https://www.corinthtx.gov/municipal-court/page/deferred-disposition-request-form)
+
+[Drivers Safety Request Form](https://www.corinthtx.gov/municipal-court/page/drivers-safety-request-form)
+
+[Attorney Surety Bond](https://www.corinthtx.gov/municipal-court/page/attorney-surety-bond)
+
+[Courtroom Etiquette](https://www.corinthtx.gov/municipal-court/page/courtroom-etiquette)
+
+[Texas Uniform Jury Handbook](https://www.corinthtx.gov/municipal-court/page/texas-uniform-jury-handbook)
+
+[Jury Duty](https://www.corinthtx.gov/municipal-court/page/jury-duty)
+
+[Appearance Instructions](https://www.corinthtx.gov/municipal-court/page/appearance-instructions)
+
+[Compliance Dismissals](https://www.corinthtx.gov/municipal-court/page/compliance-dismissals)
+
+[Information Center](https://www.corinthtx.gov/municipal-court/page/information-center)
+
+[Deferred Disposition](https://www.corinthtx.gov/municipal-court/page/deferred-disposition)
+
+[Driver Safety Course](https://www.corinthtx.gov/municipal-court/page/driver-safety-course)
+
+[Violation Listing](https://www.corinthtx.gov/municipal-court/page/violation-listing)
+
+[Corinth Community Park - Baseball/Softball](https://www.corinthtx.gov/parksrec/page/corinth-community-park-baseballsoftball)
+
+[Corinth Farms Park](https://www.corinthtx.gov/parksrec/page/corinth-farms-park)
+
+[Eagle Pass Park](https://www.corinthtx.gov/parksrec/page/eagle-pass-park)
+
+[Fairview Park](https://www.corinthtx.gov/parksrec/page/fairview-park)
+
+[Kensington Park](https://www.corinthtx.gov/parksrec/page/kensington-park)
+
+[Knoll Park](https://www.corinthtx.gov/parksrec/page/knoll-park)
+
+[Meadow Oaks Park](https://www.corinthtx.gov/parksrec/page/meadow-oaks-park)
+
+[Meadowview Park](https://www.corinthtx.gov/parksrec/page/meadowview-park)
+
+[Mulholland Park](https://www.corinthtx.gov/parksrec/page/mulholland-park)
+
+[Naughton Park](https://www.corinthtx.gov/parksrec/page/naughton-park)
+
+[Windsor Ridge Park](https://www.corinthtx.gov/parksrec/page/windsor-ridge-park)
+
+[Woods Park](https://www.corinthtx.gov/parksrec/page/woods-park)
+
+[Trail Guides and Maps](https://www.corinthtx.gov/parksrec/page/trail-guides-and-maps)
+
+[Corinth Community Park and Trails Map](https://www.corinthtx.gov/parksrec/page/corinth-community-park-and-trails-map)
+
+[Elm Fork Trail and Pilot Knoll Horse and Hiking Trails](https://www.corinthtx.gov/parksrec/page/elm-fork-trail-and-pilot-knoll-horse-and-hiking-trails)
+
+[Recreation](https://www.corinthtx.gov/parksrec/page/recreation)
+
+[Neighborhood Services](https://www.corinthtx.gov/neighborhood-services)
+
+[Household Chicken Permit Application](https://www.corinthtx.gov/building-services/page/household-chicken-permit-application)
+
+[Long-Range Planning](https://www.corinthtx.gov/planning-development/page/long-range-planning)
+
+[Envision Corinth: 2040 Comprehensive Plan](https://www.corinthtx.gov/planning-development/page/envision-corinth-2040-comprehensive-plan-0)
+
+[Building Services](https://www.corinthtx.gov/building-services)
+
+[Solar Permit Application Documents](https://www.corinthtx.gov/building-services/page/solar-permit-application-documents)
+
+[Outdoor Burning Overview](https://www.corinthtx.gov/fire-services/page/outdoor-burning-overview)
+
+[Swimming Pool Packet](https://www.corinthtx.gov/building-services/page/swimming-pool-packet)
+
+[Retaining Wall Requirements](https://www.corinthtx.gov/building-services/page/retaining-wall-requirements)
+
+[Corinth Floodplain Information](https://www.corinthtx.gov/engineering/page/corinth-floodplain-information)
+
+[Athletics](https://www.corinthtx.gov/parksrec/page/athletics)
+
+[Registration for Classes](https://www.corinthtx.gov/parksrec/page/registration-classes)
+
+[Policies and Procedures](https://www.corinthtx.gov/parksrec/page/policies-and-procedures)
+
+[GIS Floodplain Instructions](https://www.corinthtx.gov/gis/page/gis-floodplain-instructions)
+
+[Chief's Message](https://www.corinthtx.gov/police/page/chiefs-message)
+
+[Police Citizen Corner](https://www.corinthtx.gov/police/page/police-citizen-corner)
+
+[Career Opportunities](https://www.corinthtx.gov/police/page/career-opportunities)
+
+[Divisions](https://www.corinthtx.gov/police/page/divisions)
+
+[Professional Standards](https://www.corinthtx.gov/police/page/professional-standards)
+
+[Best Practices](https://www.corinthtx.gov/police/page/best-practices)
+
+[Administration](https://www.corinthtx.gov/police/page/administration)
+
+[About Us](https://www.corinthtx.gov/police/page/about-us)
+
+[Alarm Permits](https://www.corinthtx.gov/police/page/alarm-permits)
+
+[Apply Online](https://www.corinthtx.gov/police/page/apply-online)
+
+[Citizens Public Safety Academy](https://www.corinthtx.gov/police/page/citizens-public-safety-academy)
+
+[Fireworks](https://www.corinthtx.gov/police/page/fireworks)
+
+[Ride-Along Program](https://www.corinthtx.gov/police/page/ride-along-program)
+
+[False Complaints](https://www.corinthtx.gov/police/page/false-complaints)
+
+[How to Commend an Officer](https://www.corinthtx.gov/police/page/how-commend-officer)
+
+[How to File a Complaint](https://www.corinthtx.gov/police/page/how-file-complaint)
+
+[Ineligibility & Disqualifiers List](https://www.corinthtx.gov/police/page/ineligibility-disqualifiers-list)
+
+[Stormwater Management](https://www.corinthtx.gov/stormwater/page/stormwater-management)
+
+[Protecting Our Water](https://www.corinthtx.gov/stormwater/page/protecting-our-water)
+
+[City of Corinth Storm Water Awareness Brochure](https://www.corinthtx.gov/stormwater/page/city-corinth-storm-water-awareness-brochure)
+
+[Storm Water Pollution Solutions](https://www.corinthtx.gov/stormwater/page/storm-water-pollution-solutions)
+
+[Watershed Awareness](https://www.corinthtx.gov/stormwater/page/watershed-awareness)
+
+[Water, A Resource for Life](https://www.corinthtx.gov/stormwater/page/water-resource-life)
+
+[Public Information](https://www.corinthtx.gov/stormwater/page/public-information)
+
+[Frequently Construction Asked Storm Water Permit Questions](https://www.corinthtx.gov/stormwater/page/frequently-construction-asked-storm-water-permit-questions)
+
+[Storm Water Management Plan](https://www.corinthtx.gov/stormwater/page/storm-water-management-plan)
+
+[Water & Wastewater](https://www.corinthtx.gov/water-wastewater)
+
+[Backflow Testing](https://www.corinthtx.gov/water-wastewater/page/backflow-testing)
+
+[Water Quality](https://www.corinthtx.gov/water-wastewater/page/water-quality)
+
+[Water Conservation and Drought Contingency Plan](https://www.corinthtx.gov/water-wastewater/page/water-conservation-and-drought-contingency-plan)
+
+[Protecting Our Water Resources](https://www.corinthtx.gov/water-wastewater/page/protecting-our-water-resources)
+
+[2024 CCR Water Quality Report](https://www.corinthtx.gov/water-wastewater/page/2024-ccr-water-quality-report)
+
+[West Nile Virus](https://www.corinthtx.gov/publicworks/page/west-nile-virus)
+
+[West Nile Resources](https://www.corinthtx.gov/publicworks/page/west-nile-resources)
+
+[West Nile Test Results](https://www.corinthtx.gov/publicworks/page/west-nile-test-results)
+
+[West Nile Testing Sites](https://www.corinthtx.gov/publicworks/page/west-nile-testing-sites)
+
+[Corinth Mosquito Policy](https://www.corinthtx.gov/publicworks/page/corinth-mosquito-policy)
+
+[Bids and Requests for Proposals](https://www.corinthtx.gov/purchasing/page/bids-and-requests-proposals)
+
+[Information for Vendors](https://www.corinthtx.gov/purchasing/page/information-vendors)
+
+[Conflict of Interest Questionnaire](https://www.corinthtx.gov/purchasing/page/conflict-interest-questionnaire)
+
+[Payment Methods](https://www.corinthtx.gov/utility-billing/page/payment-methods)
+
+[Resident Resource Center](https://www.corinthtx.gov/ru/page/resident-resource-center)
+
+[Read about the History of Corinth](https://www.corinthtx.gov/community/page/read-about-history-corinth)
+
+[Shiloh Cemetery](https://www.corinthtx.gov/community/page/shiloh-cemetery)
+
+[History of Corinth](https://www.corinthtx.gov/community/page/history-corinth)
+
+[Permit & Review Essentials](https://www.corinthtx.gov/fire-services/page/permit-review-essentials)
+
+[Permit Application & Submittal Requirements](https://www.corinthtx.gov/fire-services/page/permit-application-submittal-requirements)
+
+[Education & Outreach](https://www.corinthtx.gov/fire-services/page/education-outreach)
+
+[Event Sponsorship Opportunities](https://www.corinthtx.gov/special-events/page/event-sponsorship-opportunities)
+
+[Final Acceptance Checklist](https://www.corinthtx.gov/engineering/page/final-acceptance-checklist)
+
+[Public Works Inspection Fees](https://www.corinthtx.gov/engineering/page/public-works-inspection-fees)
+
+[Maintenance Bond Form](https://www.corinthtx.gov/engineering/page/maintenance-bond-form)
+
+[Municipal Storm Water Utility System Fee](https://www.corinthtx.gov/engineering/page/municipal-storm-water-utility-system-fee)
+
+[Job Opportunities](https://www.corinthtx.gov/hr/page/job-opportunities)
+
+[Community Engagement Committee](https://www.corinthtx.gov/bc/page/community-engagement-committee)
+
+[Connect + Engage](https://www.corinthtx.gov/communications/page/connect-engage)
+
+[Water Customer Guide](https://www.corinthtx.gov/water-wastewater/page/water-customer-guide)
+
+[How to Hire a Roofing Contractor](https://www.corinthtx.gov/planning-development/page/how-hire-roofing-contractor)
+
+[CEDC Local Business Grants Program](https://www.corinthtx.gov/economic-development/page/cedc-local-business-grants-program)
+
+[138 South Shady Shores Road](https://www.corinthtx.gov/economic-development/page/138-south-shady-shores-road)
+
+[3001 FM2181 Pic Front view](https://www.corinthtx.gov/economic-development/page/3001-fm2181-pic-front-view)
+
+[Farm-to-Market Road 2181](https://www.corinthtx.gov/economic-development/page/farm-market-road-2181)
+
+[Northeastern Corner of FM Road 2181 and FM Road 2499](https://www.corinthtx.gov/economic-development/page/northeastern-corner-fm-road-2181-and-fm-road-2499)
+
+[Northwestern Corner of FM Road 2181](https://www.corinthtx.gov/economic-development/page/northwestern-corner-fm-road-2181)
+
+[Northwestern Corner of the Interstate Highway 35E and Lake Sharon Drive Intersection](https://www.corinthtx.gov/economic-development/page/northwestern-corner-interstate-highway-35e-and-lake-sharon-drive)
+
+[Site Near the Interstate Highway 35E and Corinth Parkway Interchange](https://www.corinthtx.gov/economic-development/page/site-near-interstate-highway-35e-and-corinth-parkway-interchange)
+
+[Southeastern Corner of the Interstate Highway 35E Service Road and Dobbs Road Intersection](https://www.corinthtx.gov/economic-development/page/southeastern-corner-interstate-highway-35e-service-road-and-dobbs-road)
+
+[Southwestern Corner of the Interstate Highway 35E Service Road and Lake Sharon Drive Intersection](https://www.corinthtx.gov/economic-development/page/southwestern-corner-interstate-highway-35e-service-road-and-lake-sharon)
+
+[Embracing the Future](https://www.corinthtx.gov/community/page/embracing-future)
+
+[Library Services](https://www.corinthtx.gov/community/page/library-services)
+
+[Postal Service](https://www.corinthtx.gov/community/page/postal-service)
+
+[Economic Development News](https://www.corinthtx.gov/economic-development/page/economic-development-news)
+
+[Mega Site Selection](https://www.corinthtx.gov/economic-development/page/mega-resources)
+
+[Mega Why Corinth](https://www.corinthtx.gov/economic-development/page/mega-why-corinth)
+
+[Mega Business & Development](https://www.corinthtx.gov/economic-development/page/mega-doing-business)
+
+[Mega Government](https://www.corinthtx.gov/economic-development/page/mega-cedc)
+
+[Mega Stay Connected](https://www.corinthtx.gov/economic-development/page/mega-stay-connected)
+
+[Mega Menu Econ Dev](https://www.corinthtx.gov/ru/page/mega-menu-econ-dev)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1127-health-welfare-employee-benefits-insurance-plans-rfp)
+
+[Public Records Requests](https://www.corinthtx.gov/city-secretary/page/public-records-requests)
+
+[Transparency Center](https://www.corinthtx.gov/financial-transparency)
+
+[Education](https://www.corinthtx.gov/community/page/education)
+
+[New Resident Guide](https://www.corinthtx.gov/community/page/new-resident-guide)
+
+[Health Care Services](https://www.corinthtx.gov/community/page/health-care-services)
+
+[Everbridge Emergency Alerts](https://www.corinthtx.gov/fire-services/page/everbridge-emergency-alerts)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-0)
+
+[Trash & Recycling Services](https://www.corinthtx.gov/utility-billing/page/trash-recycling-services)
+
+[Utility Billing Online Center](https://www.corinthtx.gov/utility-billing/page/utility-billing-online-center)
+
+[Communications](https://www.corinthtx.gov/communications)
+
+[Mega My Community](https://www.corinthtx.gov/ru/page/mega-my-community)
+
+[Fire Headquarters](https://www.corinthtx.gov/fire-services/page/fire-headquarters)
+
+[Fire House One](https://www.corinthtx.gov/fire-services/page/fire-house-one)
+
+[Fire House Two](https://www.corinthtx.gov/fire-services/page/fire-house-two)
+
+[Fire House Three](https://www.corinthtx.gov/fire-services/page/fire-house-three)
+
+[Car Seat Safety Information](https://www.corinthtx.gov/fire-services/page/car-seat-safety-information)
+
+[Fire House Tours](https://www.corinthtx.gov/fire-services/page/fire-house-tours)
+
+[Online Surplus Auctions](https://www.corinthtx.gov/purchasing/page/online-surplus-auctions)
+
+[Free Irrigation Check-Up](https://www.corinthtx.gov/publicworks/page/free-irrigation-check)
+
+[Special Events](https://www.corinthtx.gov/special-events)
+
+[Fire Prevention Division](https://www.corinthtx.gov/fire-services/page/fire-prevention-division)
+
+[Household Hazardous Waste Program](https://www.corinthtx.gov/utility-billing/page/household-hazardous-waste-program)
+
+[Water My Yard](https://www.corinthtx.gov/publicworks/page/water-my-yard)
+
+[Find My Trash Day](https://www.corinthtx.gov/utility-billing/page/find-my-trash-day)
+
+[Recycled Paint Program](https://www.corinthtx.gov/utility-billing/page/recycled-paint-program)
+
+[Water Conservation Services](https://www.corinthtx.gov/publicworks/page/water-conservation-services)
+
+[Vacation Watch](https://www.corinthtx.gov/police/page/vacation-watch)
+
+[Denton Public Library](https://www.corinthtx.gov/community/page/denton-public-library)
+
+[Library Services](https://www.corinthtx.gov/community/page/lake-cities-library)
+
+[Lake Dallas Public Library](https://www.corinthtx.gov/community/page/lake-dallas-public-library)
+
+[Monthly Financial Reports](https://www.corinthtx.gov/finance/page/monthly-financial-reports)
+
+[Externally Provided Utilities](https://www.corinthtx.gov/community/page/externally-provided-utilities)
+
+[Current Utility Rates and Fees](https://www.corinthtx.gov/financial-transparency/page/current-utility-rates-and-fees)
+
+[Wastewater Rates](https://www.corinthtx.gov/financial-transparency/page/wastewater-rates)
+
+[Water Rates](https://www.corinthtx.gov/financial-transparency/page/water-rates)
+
+[Trash & Recycling Rates](https://www.corinthtx.gov/financial-transparency/page/trash-recycling-rates)
+
+[Master Fee Schedule - Utility Fees](https://www.corinthtx.gov/financial-transparency/page/master-fee-schedule-utility-fees)
+
+[How to Detect a Leaky Toilet](https://www.corinthtx.gov/publicworks/page/how-detect-leaky-toilet)
+
+[SPAN Denton County Transit](https://www.corinthtx.gov/community/page/span-denton-county-transit)
+
+[Trash Day Map](https://www.corinthtx.gov/utility-billing/page/trash-day-map)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1116-corinth-public-works-facility-renovation)
+
+[city council workshop and regular session](https://www.corinthtx.gov/city-council/page/city-council-special-workshop-session)
+
+[Stormwater Fee](https://www.corinthtx.gov/financial-transparency/page/stormwater-fee)
+
+[Sharps Disposal](https://www.corinthtx.gov/utility-billing/page/sharps-disposal)
+
+[Water Conservation Plan](https://www.corinthtx.gov/water-wastewater/page/water-conservation-plan)
+
+[Volunteer Opportunities](https://www.corinthtx.gov/community/page/volunteer-opportunities)
+
+[Development Related Documents](https://www.corinthtx.gov/planning-development/page/development-related-documents)
+
+[Denton County Election Website](https://www.corinthtx.gov/city-secretary/page/denton-county-election-website)
+
+[TEXAS FLOOD AWARENESS WEEK](https://www.corinthtx.gov/engineering/page/texas-flood-awareness-week)
+
+[Business Directory](https://www.corinthtx.gov/economic-development/page/business-directory)
+
+[Planning and Zoning Commission Regular Session - Cancelled](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-cancelled-3)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1119-epoxy-flooring-public-safety-complexfire-house-3)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1121-annual-contract-mowingmaintenance-services-corinth-parks-facilities-and-right)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1122-annual-contract-mowinglandscape-maintenance-services-corinth-city-hall-public)
+
+[CORINTH POLICE DEPARTMENT PARTNERS WITH RING, JOINS NEIGHBORS APP](https://www.corinthtx.gov/police/page/corinth-police-department-partners-ring-joins-neighbors-app)
+
+[CORINTH POLICE OFFER RIDE ALONG PROGRAM](https://www.corinthtx.gov/police/page/corinth-police-offer-ride-along-program)
+
+[PET REGISTRATION](https://www.corinthtx.gov/communications/page/pet-registration)
+
+[Communication Strategic Plan](https://www.corinthtx.gov/communications/page/communication-strategic-plan)
+
+[City Services](https://www.corinthtx.gov/community/page/city-services)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-1)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-3)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-4)
+
+[Service Line Warranty Program](https://www.corinthtx.gov/community/page/service-line-warranty-program)
+
+[Corinth Strategic Plans](https://www.corinthtx.gov/financial-transparency/page/corinth-strategic-plans)
+
+[Neighbors App by Ring](https://www.corinthtx.gov/police/page/neighbors-app-ring)
+
+[Finance Audit Committee regular session](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-session)
+
+[Finance Audit Committee regular session](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-session-0)
+
+[Finance Audit Committee regular session](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-session-1)
+
+[Finance Audit Committee regular session](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-session-2)
+
+[Finance Audit Committee regular session](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-session-3)
+
+[Finance Audit Committee regular session](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-session-4)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session)
+
+[Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-cancelled)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-special-session-1)
+
+[Corinth Economic Development Corporation Regular Session Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-cancelled-0)
+
+[Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-cancelled-1)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-cancelled-2)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-cancelled-3)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-0)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-1)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-cancelled-4)
+
+[Corinth Economic Development Corporation Regular Session-Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-cancelled-7)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-2)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-cancelled-5)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-cancelled-6)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-3)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-special-session-7)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-cancelled-9)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-cancelled-10)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-8)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session)
+
+[Keep Corinth Beautiful Special Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-special-session)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-0)
+
+[Keep Corinth Beautiful Regular Session - Cancelled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-cancelled-7)
+
+[Keep Corinth Beautiful Regular Session - Cancelled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-cancelled-6)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-1)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-5)
+
+[Planning and Zoning Commission Regular Session - Cancelled](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-cancelled-2)
+
+[Planning and Zoning Commission Regular Session - Cancelled](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-cancelled-1)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-3)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1123-comprehensive-plan-update-master-parkstrails-plan)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1124-corinth-public-works-and-lake-cities-fire-department-site-improvements)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1125-bank-depository-services-request-application)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1126-concrete-street-repairs)
+
+[Red Flag Reporting](https://www.corinthtx.gov/city-secretary/page/red-flag-reporting)
+
+[Report a Concern Center](https://www.corinthtx.gov/communications/page/report-concern-center)
+
+[Administration](https://www.corinthtx.gov/fire-services/page/administration)
+
+[Financial Documents](https://www.corinthtx.gov/finance/page/financial-documents)
+
+[Contact Engineering Staff](https://www.corinthtx.gov/engineering/page/contact-engineering-staff)
+
+[Capital Projects](https://www.corinthtx.gov/engineering/page/capital-projects)
+
+[City Council Workshop and Special Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-special-session)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-5)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-6)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-7)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-8)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-9)
+
+[City Council Workshop and Regular Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled)
+
+[City Council Workshop and Regular Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-0)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-12)
+
+[City Council Workshop and Regular Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-2)
+
+[Contact Engineering Staff](https://www.corinthtx.gov/technology-services/page/contact-technology-services-staff)
+
+[Contact Engineering Staff](https://www.corinthtx.gov/publicworks/page/contact-public-works-staff)
+
+[Contact Engineering Staff](https://www.corinthtx.gov/building-services/page/contact-building-services-staff)
+
+[Contact Engineering Staff](https://www.corinthtx.gov/communications/page/contact-communications-staff)
+
+[Contact Engineering Staff](https://www.corinthtx.gov/city-manager/page/contact-administration-staff)
+
+[Contact Engineering Staff](https://www.corinthtx.gov/purchasing/page/contact-purchasing-staff)
+
+[Contact Municipal Court Staff](https://www.corinthtx.gov/municipal-court/page/contact-municipal-court-staff)
+
+[Contact Engineering Staff](https://www.corinthtx.gov/hr/page/contact-human-resources-staff)
+
+[Contact Engineering Staff](https://www.corinthtx.gov/fire-services/page/contact-fire-services-staff)
+
+[Contact Police Services Staff](https://www.corinthtx.gov/police/page/contact-police-services-staff)
+
+[Contact Engineering Staff](https://www.corinthtx.gov/finance/page/contact-finance-staff)
+
+[Contact Engineering Staff](https://www.corinthtx.gov/planning-development/page/contact-planning-and-development-staff)
+
+[Contact Engineering Staff](https://www.corinthtx.gov/neighborhood-services/page/contact-neighborhood-services-staff)
+
+[Contact Engineering Staff](https://www.corinthtx.gov/animal-control/page/contact-animal-services-staff)
+
+[Chapter 380 Economic Development Program Policies and Procedures](https://www.corinthtx.gov/economic-development/page/chapter-380-economic-development-program-policies-and-procedures-0)
+
+[Business Improvement Grant Program](https://www.corinthtx.gov/economic-development/page/business-improvement-grant-program-0)
+
+[Income Demographics](https://www.corinthtx.gov/economic-development/page/income-demographics)
+
+[Population By Age, Sex, and Ethnicity Demographics](https://www.corinthtx.gov/economic-development/page/population-age-sex-and-ethnicity-demographics)
+
+[Population By Education, Occupation, Labor Force Demographics](https://www.corinthtx.gov/economic-development/page/population-education-occupation-labor-force-demographics)
+
+[About Us](https://www.corinthtx.gov/economic-development/page/about-us)
+
+[CEDC Vision & Mission](https://www.corinthtx.gov/economic-development/page/cedc-vision-mission)
+
+[CEDC Board Members](https://www.corinthtx.gov/economic-development/page/cedc-board-members)
+
+[Corinth Economic Development Corporation](https://www.corinthtx.gov/economic-development/page/corinth-economic-development-corporation)
+
+[Contact Economic Development Staff](https://www.corinthtx.gov/economic-development/page/contact-economic-development-staff)
+
+[Hotel Occupancy Tax](https://www.corinthtx.gov/financial-transparency/page/hotel-occupancy-tax)
+
+[Hotel Occupancy Tax](https://www.corinthtx.gov/financial-transparency/page/sales-tax)
+
+[Hotel Occupancy Tax](https://www.corinthtx.gov/financial-transparency/page/property-tax)
+
+[Energy Usage - HB3693](https://www.corinthtx.gov/financial-transparency/page/energy-usage-hb3693)
+
+[CITY OF CORINTH RELEASES NEW LOGO](https://www.corinthtx.gov/communications/page/city-corinth-releases-new-logo)
+
+[Landfill Information](https://www.corinthtx.gov/utility-billing/page/landfill-information)
+
+[Crime Control & Prevention District](https://www.corinthtx.gov/bc-cc)
+
+[Why Corinth](https://www.corinthtx.gov/economic-development/page/why-corinth)
+
+[CEDC Business](https://www.corinthtx.gov/economic-development/page/cedc-business)
+
+[Doing Business](https://www.corinthtx.gov/economic-development/page/doing-business)
+
+[ALEXANDER RECEIVES CERTIFIED ECONOMIC DEVELOPER DESIGNATION](https://www.corinthtx.gov/economic-development/page/alexander-receives-certified-economic-developer-designation)
+
+[Open Government](https://www.corinthtx.gov/community/page/open-government)
+
+[IT'S TIME TO RECYCLE](https://www.corinthtx.gov/utility-billing/page/its-time-recycle)
+
+[CORINTH WELCOMES HUFFINES KIA & SUBARU](https://www.corinthtx.gov/economic-development/page/corinth-welcomes-huffines-kia-subaru)
+
+[City Council](https://www.corinthtx.gov/financial-transparency/page/city-council)
+
+[Keep Corinth Beautiful](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful)
+
+[Keep Corinth Beautiful](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-0)
+
+[Keep Corinth Beautiful](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-1)
+
+[Keep Corinth Beautiful](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-2)
+
+[Keep Corinth Beautiful](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-3)
+
+[Keep Corinth Beautiful](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-4)
+
+[Keep Corinth Beautiful](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-5)
+
+[Keep Corinth Beautiful](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-6)
+
+[Monthly Financial Reports: 2018-2019](https://www.corinthtx.gov/finance/page/monthly-financial-reports-2018-2019)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-14)
+
+[Corinth Crime Control & Prevention District Regular Meeting](https://www.corinthtx.gov/bc-ccc/page/corinth-crime-control-prevention-district-regular-meeting-0)
+
+[City Council Special Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-2)
+
+[City Council Workshop and Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-meeting-0)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-0)
+
+[Finance Audit Committee Regular Meeting](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-meeting-0)
+
+[City Council Workshop and Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-4)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-special-session)
+
+[City Council Workshop and Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-5)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-0)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-1)
+
+[City Council Workshop and Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-6)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-1)
+
+[City Council Workshop and Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-7)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-2)
+
+[City Council Joint Workshop with NCTC](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-8)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-2)
+
+[Finance Audit Committee Regular Meeting](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-meeting-1)
+
+[City Council Workshop and Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-9)
+
+[City Council Joint Workshop with the City of Lake Dallas, Town of Shady Shores, and Town of Hickory Creek](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-10)
+
+[Corinth Crime Control & Prevention District Regular Meeting](https://www.corinthtx.gov/bc-ccc/page/corinth-crime-control-prevention-district-regular-meeting-1)
+
+[City Council Workshop and Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-11)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-3)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-3)
+
+[City Council Workshop and Special Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-12)
+
+[Corinth Crime Control & Prevention District Regular Meeting](https://www.corinthtx.gov/bc-ccc/page/corinth-crime-control-prevention-district-regular-meeting-2)
+
+[City Council Workhsop and Special Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-13)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-4)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-4)
+
+[Finance Audit Committee Regular Meeting](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-meeting)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-5)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-5)
+
+[City Council Workshop and Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-14)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-6)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-15)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-16)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-6)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-7)
+
+[City Council Regular Meeting - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-17)
+
+[City Council Joint Session](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-18)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-19)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-7)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-20)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-8)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-8)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-21)
+
+[City Council Special Session - Board & Commission Interviews](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-22)
+
+[City Council Special Session - Board & Commission Interviews](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-23)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-24)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-9)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-9)
+
+[Corinth Crime Control & Prevention District Regular Meeting](https://www.corinthtx.gov/bc-ccc/page/corinth-crime-control-prevention-district-regular-meeting-3)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-25)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-26)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-27)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-10)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-28)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-10)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-29)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-11)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-11)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-30)
+
+[City Council Workshop Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-31)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-12)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-32)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-13)
+
+[City Council Workshop Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-33)
+
+[Ethics Commission Regular Meeting](https://www.corinthtx.gov/bc-ec/page/ethics-commission-regular-meeting)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-34)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-35)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-12)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-14)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-36)
+
+[Ethics Commission Regular Meeting](https://www.corinthtx.gov/bc-ec/page/ethics-commission-regular-meeting-0)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-13)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-37)
+
+[Finance Audit Committee Regular Meeting](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-meeting-6)
+
+[Ethics Commission Regular Meeting](https://www.corinthtx.gov/bc-ec/page/ethics-commission-regular-meeting-1)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-14)
+
+[Ethics Commission Regular Meeting](https://www.corinthtx.gov/bc-ec/page/ethics-commission-regular-meeting-2)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-15)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-15)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-38)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-39)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-16)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-16)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-40)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-17)
+
+[Finance Audit Committee Regular Meeting](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-meeting-7)
+
+[Corinth Crime Control & Prevention District Regular Meeting](https://www.corinthtx.gov/bc-ccc/page/corinth-crime-control-prevention-district-regular-meeting-4)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-41)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-17)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-42)
+
+[Ethics Commission Regular Meeting](https://www.corinthtx.gov/bc-ec/page/ethics-commission-regular-meeting-3)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-18)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-43)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-44)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-18)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-45)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-19)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-46)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-19)
+
+[City Council Joint Workshop Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-47)
+
+[Finance Audit Committee Regular Meeting](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-meeting-3)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-20)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-48)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-21)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-49)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-20)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-22)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-50)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-21)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-51)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-52)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-23)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-24)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-53)
+
+[City Council Special Session - Board & Commission Interviews](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-54)
+
+[City Council Special Session - Board & Commission Interviews](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-55)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-22)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-56)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-25)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-23)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-57)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-26)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-58)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-24)
+
+[Corinth Crime Control & Prevention District Regular Meeting](https://www.corinthtx.gov/bc-ccc/page/corinth-crime-control-prevention-district-regular-meeting-5)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-59)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-60)
+
+[Finance Audit Committee Regular Meeting](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-meeting-4)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-61)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-27)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-62)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-25)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-63)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-28)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-64)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-29)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-65)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-26)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-30)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-66)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-31)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-32)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-67)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-27)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-68)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-33)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-28)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-69)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-70)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-34)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-71)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-29)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-72)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-73)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-30)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-35)
+
+[Finance Audit Committee Regular Meeting](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-meeting-2)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-36)
+
+[Corinth Crime Control & Prevention District Regular Meeting](https://www.corinthtx.gov/bc-ccc/page/corinth-crime-control-prevention-district-regular-meeting-6)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-74)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-31)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-37)
+
+[City Council Regular Meeting](https://www.corinthtx.gov/city-council/page/city-council-regular-meeting-75)
+
+[Finance Audit Committee Regular Meeting](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-meeting-11)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-32)
+
+[Finance Audit Committee Regular Meeting](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-meeting-8)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-33)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-38)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-39)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-34)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-40)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-35)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-41)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-36)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-42)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-37)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-43)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-38)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-44)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-39)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-40)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-41)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-45)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-42)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-46)
+
+[Planning & Zoning Commission Regular Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-meeting-43)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-47)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-48)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-49)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-50)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-meeting-51)
+
+[Finance Audit Committee Regular Meeting](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-meeting-10)
+
+[Finance Audit Committee Regular Meeting](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-meeting-9)
+
+[Finance Audit Committee Regular Meeting](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-meeting-12)
+
+[Finance Audit Committee Regular Meeting](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-meeting-5)
+
+[Debt Obligation](https://www.corinthtx.gov/financial-transparency/page/debt-obligation)
+
+[Contracts and Procurement](https://www.corinthtx.gov/purchasing/page/contracts-and-procurement)
+
+[Traditional Finances](https://www.corinthtx.gov/financial-transparency/page/traditional-finances)
+
+[Public Pension](https://www.corinthtx.gov/financial-transparency/page/public-pension)
+
+[STREET REPAIR NOTICE](https://www.corinthtx.gov/streets/page/street-repair-notice-0)
+
+[Resources and Documents](https://www.corinthtx.gov/engineering/page/resources-and-documents)
+
+[Roadway Impact Fee Ordinance 2016](https://www.corinthtx.gov/engineering/page/roadway-impact-fee-ordinance-2016)
+
+[Open Government Portal](https://www.corinthtx.gov/financial-transparency/page/open-government-portal)
+
+[Economic Development](https://www.corinthtx.gov/financial-transparency/page/economic-development)
+
+[CITY EMPLOYEES EARN CERTIFIED PUBLIC MANAGER CERTIFICATION](https://www.corinthtx.gov/administration/page/city-employees-earn-certified-public-manager-certification)
+
+[CORINTH COMMUNICATIONS WINS TAMIO AWARD](https://www.corinthtx.gov/communications/page/corinth-communications-wins-tamio-award)
+
+[Public Pension Transparency Documents](https://www.corinthtx.gov/financial-transparency/page/public-pension-transparency-documents)
+
+[CORINTH MAYOR BILL HEIDEMANN APPOINTED TO NCTCOG EXECUTIVE BOARD](https://www.corinthtx.gov/city-council/page/corinth-mayor-bill-heidemann-appointed-nctcog-executive-board)
+
+[Green Infrastructure Pics for Story Map](https://www.corinthtx.gov/gis-maps/page/green-infrastructure-pics-story-map)
+
+[CORINTH LAUNCHES NEW WEBSITE](https://www.corinthtx.gov/communications/page/corinth-launches-new-website)
+
+[2018 CORINTH WATER QUALITY REPORT](https://www.corinthtx.gov/water-wastewater/page/2018-corinth-water-quality-report)
+
+[Corinth Power Switch](https://www.corinthtx.gov/community/page/corinth-power-switch)
+
+[Right of Way Permitting](https://www.corinthtx.gov/engineering/page/right-way-permitting)
+
+[CORINTH WELCOMES DELEGATION FROM CAMBODIA](https://www.corinthtx.gov/administration/page/corinth-welcomes-delegation-cambodia)
+
+[LAKE CITIES FIRE DEPARTMENT WELCOMES NEW FIRE PREVENTION SPECIALIST](https://www.corinthtx.gov/fire-services/page/lake-cities-fire-department-welcomes-new-fire-prevention-specialist)
+
+[Oakmont Country Club Estates POA Board Meeting](https://www.corinthtx.gov/special-events/page/oakmont-country-club-estates-poa-board-meeting-2)
+
+[BOARDS AND COMMISSIONS SEEK VOLUNTEERS](https://www.corinthtx.gov/bc/page/boards-and-commissions-seek-volunteers)
+
+[PAINT RECYCLE PROGRAM](https://www.corinthtx.gov/utility-billing/page/paint-recycle-program)
+
+[Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-special-session-0)
+
+[MAYOR PRO TEM SAM BURKE APPOINTED TO DCTA BOARD OF DIRECTORS](https://www.corinthtx.gov/city-council/page/mayor-pro-tem-sam-burke-appointed-dcta-board-directors)
+
+[Utility Billing Online Payment](https://www.corinthtx.gov/utility-billing/page/utility-billing-online-payment)
+
+[MyCorinth App](https://www.corinthtx.gov/communications/page/mycorinth-app)
+
+[CORINTH RECEIVES DISTINGUISHED BUDGET PRESENTATION AWARD](https://www.corinthtx.gov/finance/page/corinth-receives-distinguished-budget-presentation-award)
+
+[Planning and Zoning Commission Special Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-special-session)
+
+[Community Alerts](https://www.corinthtx.gov/communications/page/community-alerts)
+
+[Joint City Council, P&Z Commission, and Comprehensive Plan Advisory Committee Meeting](https://www.corinthtx.gov/development-services/page/joint-city-council-pz-commission-and-comprehensive-plan-advisory-committee)
+
+[Comprehensive Plan Advisory Committee Meeting](https://www.corinthtx.gov/development-services/page/comprehensive-plan-advisory-committee-meeting)
+
+[Comprehensive Plan Advisory Committee Meeting](https://www.corinthtx.gov/development-services/page/comprehensive-plan-advisory-committee-meeting-0)
+
+[Comprehensive Plan Advisory Committee Meeting](https://www.corinthtx.gov/development-services/page/comprehensive-plan-advisory-committee-meeting-1)
+
+[Comprehensive Plan Advisory Committee Meeting](https://www.corinthtx.gov/development-services/page/comprehensive-plan-advisory-committee-meeting-2)
+
+[Guidelines for Community Calendar Requests](https://www.corinthtx.gov/communications/page/guidelines-community-calendar-requests)
+
+[Joint City Council, P&Z Commission, and Comprehensive Plan Advisory Committee Meeting](https://www.corinthtx.gov/development-services/page/joint-city-council-pz-commission-and-comprehensive-plan-advisory-0)
+
+[Comprehensive Plan Advisory Committee Meeting](https://www.corinthtx.gov/development-services/page/comprehensive-plan-advisory-committee-meeting-3)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-15)
+
+[Corinth Crime Control & Prevention District Regular Meeting](https://www.corinthtx.gov/bc-cc/page/corinth-crime-control-prevention-district-special-meeting)
+
+[CORINTH RECEIVES OUTSTANDING WATER RECOGNITION](https://www.corinthtx.gov/water-wastewater/page/corinth-receives-outstanding-water-recognition)
+
+[PARKS AND REC BOARD SEEKING VOLUNTEERS](https://www.corinthtx.gov/bc/page/parks-and-rec-board-seeking-volunteers)
+
+[Joint Workshop Session of the Corinth City Council, Planning and Zoning Commission, and the Comprehensive Plan Advisory Committee](https://www.corinthtx.gov/city-council/page/joint-workshop-session-corinth-city-council-planning-and-zoning-commission-and)
+
+[CORINTH LAUNCHES MYCORINTH MOBILE APP](https://www.corinthtx.gov/communications/page/corinth-launches-mycorinth-mobile-app)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-board-commission-interviews-5)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-board-commission-interviews-6)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-board-commission-interviews-7)
+
+[CORINTH OFFERS SERVICE LINE WARRANTY PROGRAM](https://www.corinthtx.gov/utility-billing/page/corinth-offers-service-line-warranty-program)
+
+[Keep Corinth Beautiful Board](https://www.corinthtx.gov/bc-pr)
+
+[UTILITY BILLING CLOSED SEPTEMBER 9-12](https://www.corinthtx.gov/utility-billing/page/utility-billing-closed-september-9-12)
+
+[MUNICIPAL COURT CLOSED OCTOBER 31, NOVEMBER 1, 4 & 5](https://www.corinthtx.gov/municipal-court/page/municipal-court-closed-october-31-november-1-4-5)
+
+[Notice of Public Hearing on Budget](https://www.corinthtx.gov/financial-transparency/page/notice-public-hearing-budget)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-special-session-2)
+
+[ORIGINAL CITY HALL DEMOLISHED ON CITY'S 59TH ANNIVERSARY](https://www.corinthtx.gov/city-manager/page/original-city-hall-demolished-citys-59th-anniversary)
+
+[Planning and Zoning Commission Regular Session - Cancelled](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-cancelled-0)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-1)
+
+[Capital Projects](https://www.corinthtx.gov/engineering/page/capital-projects-0)
+
+[Economic Development Projects](https://www.corinthtx.gov/engineering/page/economic-development-projects)
+
+[Construction Projects](https://www.corinthtx.gov/engineering/page/construction-projects)
+
+[OUTDOOR BURN BAN IN DENTON COUNTY, EFFECTIVE SEPTEMBER 24](https://www.corinthtx.gov/fire-services/page/outdoor-burn-ban-denton-county-effective-september-24)
+
+[UTILITY BILLING NOTICE](https://www.corinthtx.gov/utility-billing/page/utility-billing-notice)
+
+[FIRE HOUSE NO.3 AWARDED GOLDEN TROWEL AWARD](https://www.corinthtx.gov/fire-services/page/fire-house-no3-awarded-golden-trowel-award)
+
+[LAKE CITIES FIRE DEPARTMENT PROMOTES FIRE PREVENTION WEEK](https://www.corinthtx.gov/fire-services/page/lake-cities-fire-department-promotes-fire-prevention-week)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-2)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-10)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-11)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-13)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-16)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-5)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-18)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-2)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-17)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-19)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-20)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-21)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-22)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-23)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-24)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-26)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-27)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-28)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-29)
+
+[City Council Workshop and Regular Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-1)
+
+[City Council Workshop and Regular Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-3)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-34)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-35)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-36)
+
+[Planning and Zoning Commission Special Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-special-session-0)
+
+[Planning and Zoning Commission Training Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-training-session)
+
+[Comprehensive Plan Advisory Committee - Charrette](https://www.corinthtx.gov/development-services/page/comprehensive-plan-advisory-committee-charrette)
+
+[Comprehensive Plan Advisory Committee - Charrette](https://www.corinthtx.gov/development-services/page/comprehensive-plan-advisory-committee-charrette-0)
+
+[Comprehensive Plan Advisory Committee - Charrette](https://www.corinthtx.gov/development-services/page/comprehensive-plan-advisory-committee-charrette-1)
+
+[Comprehensive Plan Advisory Committee - Public Open House](https://www.corinthtx.gov/development-services/page/comprehensive-plan-advisory-committee-public-open-house)
+
+[Comprehensive Plan Advisory Committee - Public Open House](https://www.corinthtx.gov/development-services/page/comprehensive-plan-advisory-committee-public-open-house-0)
+
+[Comprehensive Plan Advisory Committee - Public Open House](https://www.corinthtx.gov/development-services/page/comprehensive-plan-advisory-committee-public-open-house-1)
+
+[Keep Corinth Beautiful Special Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-special-session-0)
+
+[Erosion Control Ordinance](https://www.corinthtx.gov/drainage/page/erosion-control-ordinance)
+
+[Illicit Discharge Ordinance](https://www.corinthtx.gov/drainage/page/illicit-discharge-ordinance)
+
+[DENTON COUNTY ELECTION NOTICE](https://www.corinthtx.gov/city-secretary/page/denton-county-election-notice)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-regular-session)
+
+[Keep Corinth Beautiful Special Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-special-session-1)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-special-session-3)
+
+[2019 Engineering Design Standards](https://www.corinthtx.gov/engineering/page/2019-engineering-design-standards)
+
+[CORINTH LAUNCHES ONLINE RESIDENT ENGAGEMENT PLATFORM](https://www.corinthtx.gov/communications/page/corinth-launches-online-resident-engagement-platform)
+
+[Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-special-session-4)
+
+[Upcoming Public Hearings](https://www.corinthtx.gov/planning-development/page/upcoming-public-hearings)
+
+[Hours of Operation](https://www.corinthtx.gov/city-council/page/hours-operation)
+
+[Corinth Community Park Pavilion](https://www.corinthtx.gov/parksrec/page/corinth-community-park-pavilion)
+
+[Baseball/Softball/Football/Soccer Fields & Corinth Community Park Pavilion](https://www.corinthtx.gov/parksrec/page/baseballsoftballfootballsoccer-fields-corinth-community-park-pavilion)
+
+[City Hall Council Chambers](https://www.corinthtx.gov/parksrec/page/city-hall-council-chambers)
+
+[CORINTH RECEIVES AWARD FOR FINANCIAL REPORTING](https://www.corinthtx.gov/finance/page/corinth-receives-award-financial-reporting)
+
+[CORINTH POWER SWITCH- WINTER SESSION](https://www.corinthtx.gov/utility-billing/page/corinth-power-switch-winter-session)
+
+[REALTY CAPITAL SETS SIGHT ON HIGH PROFILE CORNER](https://www.corinthtx.gov/economic-development/page/realty-capital-sets-sight-high-profile-corner)
+
+[CITY SEEKS INPUT ON MASTER PARKS AND TRAILS PLAN](https://www.corinthtx.gov/development-services/page/city-seeks-input-master-parks-and-trails-plan)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/bc-cc/page/corinth-crime-control-prevention-district-special-session)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-4)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-5)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-0)
+
+[Planning and Zoning Commission Special Called Session - Cancelled](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-special-called-session-cancelled-0)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-2)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-6)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-7)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-8)
+
+[Planning and Zoning Commission Regular Session - CANCELLED](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-cancelled)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-special-called-session-0)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-special-called-session)
+
+[MAYOR HEIDEMANN APPOINTED TO NLC TRANSPORTATION COMMITTEE](https://www.corinthtx.gov/city-council/page/mayor-heidemann-appointed-nlc-transportation-committee)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-2)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-3)
+
+[Keep Corinth Beautiful Regular Session - Cancelled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-cancelled-5)
+
+[Keep Corinth Beautiful Regular Session - Cancelled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-cancelled-8)
+
+[Keep Corinth Beautiful Regular Session - Cancelled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-cancelled-4)
+
+[Keep Corinth Beautiful Special Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-special-session-3)
+
+[Keep Corinth Beautiful Regular Session - Cancelled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-cancelled-2)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-4)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-6)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-12)
+
+[Keep Corinth Beautiful Regular Session - Cancelled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-cancelled-1)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-13)
+
+[Effective Floodplain Maps](https://www.corinthtx.gov/engineering/page/effective-floodplain-maps)
+
+[2019 Corinth Connection Newsletters](https://www.corinthtx.gov/communications/page/2019-corinth-connection-newsletters)
+
+[2020 Corinth Connection Newsletters](https://www.corinthtx.gov/communications/page/2020-corinth-connection-newsletters)
+
+[NEW FLOODPLAIN MAPS TO BECOME EFFECTIVE JUNE 2020](https://www.corinthtx.gov/engineering/page/new-floodplain-maps-become-effective-june-2020)
+
+[CORINTH RECEIVES 2019 COCA-COLA PUBLIC SPACE RECYCLING GRANT](https://www.corinthtx.gov/bc-kcb/page/corinth-receives-2019-coca-cola-public-space-recycling-grant)
+
+[Fire Operational & Administrative Analysis](https://www.corinthtx.gov/fire-services/page/fire-operational-administrative-analysis)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-regular-session-0)
+
+[CORINTH CONTINUES SPAN TRANSPORTATION PARTNERSHIP](https://www.corinthtx.gov/communications/page/corinth-continues-span-transportation-partnership)
+
+[Awards and Accolades](https://www.corinthtx.gov/communications/page/awards-and-accolades)
+
+[CORINTH DESIGNATED "SOLSMART SILVER" FOR ADVANCING SOLAR ENERGY GROWTH](https://www.corinthtx.gov/planning-development/page/corinth-designated-solsmart-silver-advancing-solar-energy-growth)
+
+[CORINTH EARNS SILVER SCENIC CITY CERTIFICATION](https://www.corinthtx.gov/publicworks/page/corinth-earns-silver-scenic-city-certification)
+
+[CORINTH ACHIEVES APWA ACCREDITATION STATUS](https://www.corinthtx.gov/publicworks/page/corinth-achieves-apwa-accreditation-status)
+
+[CORINTH ACHIEVES A 3-STAR COMMUNITY RATING](https://www.corinthtx.gov/planning-development/page/corinth-achieves-3-star-community-rating)
+
+[CORINTH ANNOUNCES LEED CITY CERTIFICATION](https://www.corinthtx.gov/planning-development/page/corinth-announces-leed-city-certification)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/joint-workshop-session-corinth-city-council-lake-dallas-city-council-hickory-creek)
+
+[CORINTH POLICE DEPARTMENT RECEIVES RE-RECOGNITION FROM TEXAS POLICE CHIEFS ASSOCIATION](https://www.corinthtx.gov/police/page/corinth-police-department-receives-re-recognition-texas-police-chiefs-association)
+
+[LCFD ANNOUNCES RESULTS OF OPERATIONAL ANALYSIS](https://www.corinthtx.gov/fire-services/page/lcfd-announces-results-operational-analysis)
+
+[CENSUS 2020: SHAPE YOUR FUTURE](https://www.corinthtx.gov/administration/page/census-2020-shape-your-future)
+
+[City of Corinth Facebook](https://www.corinthtx.gov/communications/page/city-corinth-facebook)
+
+[City of Corinth Twitter](https://www.corinthtx.gov/communications/page/city-corinth-twitter)
+
+[City of Corinth Nextdoor](https://www.corinthtx.gov/communications/page/city-corinth-nextdoor)
+
+[City of Corinth Instagram](https://www.corinthtx.gov/communications/page/city-corinth-instagram)
+
+[Corinth E-Newsletter](https://www.corinthtx.gov/communications/page/corinth-e-newsletter)
+
+[Clearing a Warrant](https://www.corinthtx.gov/city-marshal/page/clearing-warrant)
+
+[Outstanding Warrants](https://www.corinthtx.gov/city-marshal/page/outstanding-warrants)
+
+[Types of Municipal Court Warrants](https://www.corinthtx.gov/city-marshal/page/types-municipal-court-warrants)
+
+[Community Calendar](https://www.corinthtx.gov/administration/page/community-calendar)
+
+[News Releases](https://www.corinthtx.gov/communications/page/news-releases)
+
+[Corinth Parks and Recreation Board Regular Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-regular-session-1)
+
+[CORINTH LAUNCHES ONLINE STRATEGIC PLAN](https://www.corinthtx.gov/administration/page/corinth-launches-online-strategic-plan)
+
+[Social Media Outlets](https://www.corinthtx.gov/communications/page/social-media-outlets)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-3)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/bc-fcpes/page/temporary-board-directors-city-corinth-fire-control-prevention-emergency-medical)
+
+[CORINTH WARRANT ROUND-UP SCHEDULED FOR MARCH 7](https://www.corinthtx.gov/municipal-court/page/corinth-warrant-round-scheduled-march-7)
+
+[CITY SEEKS INPUT ON THE ENVISION CORINTH COMPREHENSIVE PLAN](https://www.corinthtx.gov/planning-development/page/city-seeks-input-envision-corinth-comprehensive-plan)
+
+[PRIMARY ELECTION NOTICE](https://www.corinthtx.gov/city-secretary/page/primary-election-notice)
+
+[CORINTH BOARDS AND COMMISSIONS SEEK VOLUNTEERS](https://www.corinthtx.gov/bc/page/corinth-boards-and-commissions-seek-volunteers)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-special-workshop-session-0)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-special-workshop-and-regular-session)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1143-annual-contract-mowingchemical-treatment-services-corinth-community-park)
+
+[Monthly Financial Reports: 2019-2020](https://www.corinthtx.gov/finance/page/monthly-financial-reports-2019-2020)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1131-riverview-drive-reconstruction)
+
+[Water Conservation Incentive Program](https://www.corinthtx.gov/publicworks/page/water-conservation-incentive-program)
+
+[CORINTH UPDATE ON CORONAVIRUS 2019](https://www.corinthtx.gov/communications/page/corinth-update-coronavirus-2019)
+
+[City Hall On-Demand](https://www.corinthtx.gov/communications/page/city-hall-demand)
+
+[Staff Directory](https://www.corinthtx.gov/administration/page/staff-directory)
+
+[Staff Directory](https://www.corinthtx.gov/administration/page/staff-directory-0)
+
+[Agendas and Minutes](https://www.corinthtx.gov/bc/page/agendas-and-minutes)
+
+[Agendas and Minutes](https://www.corinthtx.gov/bc/page/agendas-and-minutes-0)
+
+[Job Opportunities](https://www.corinthtx.gov/hr/page/job-opportunities-0)
+
+[CORINTH COVID-19 READINESS RESPONSE PLAN](https://www.corinthtx.gov/communications/page/corinth-covid-19-readiness-response-plan)
+
+[COVID-19 Business Support Resources](https://www.corinthtx.gov/economic-development/page/covid-19-business-support-resources)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-special-session-5)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/bc-fcpes/page/city-corinth-fire-control-prevention-and-emergency-medical-services-district-temporary)
+
+[Corinth Coronavirus Information](https://www.corinthtx.gov/communications/page/corinth-coronavirus-information)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1132-shady-shores-road-asphalt-street-repairs)
+
+[LAKE CITIES FIRE DEPARTMENT AWARDED GOLD LEVEL FOR PEDIATRIC CARE](https://www.corinthtx.gov/fire-services/page/lake-cities-fire-department-awarded-gold-level-pediatric-care)
+
+[CORINTH HONORED AS SILVER STAR AFFILIATE BY KEEP TEXAS BEAUTIFUL](https://www.corinthtx.gov/kcb/page/corinth-honored-silver-star-affiliate-keep-texas-beautiful)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1130-work-order-and-asset-management-system)
+
+[justify test](https://www.corinthtx.gov/ru/page/justify-test)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1133-health-and-welfare-employee-benefits-insurance-plans)
+
+[Planning & Zoning Commission Special Called Session](https://www.corinthtx.gov/development-services/page/planning-zoning-commission-special-called-session)
+
+[CORINTH RECEIVES TREE CITY USA DESIGNATION](https://www.corinthtx.gov/parksrec/page/corinth-receives-tree-city-usa-designation)
+
+[Keep Corinth Beautiful Special Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-special-session-2)
+
+[POLICE SEEK ASSISTANCE IN AMANDA CLAIRMONT HOMICIDE](https://www.corinthtx.gov/police/page/police-seek-assistance-amanda-clairmont-homicide)
+
+[DENTON COUNTY OPEN OFFERS $2.2 MILLION IN GRANTS FOR BUSINESSES](https://www.corinthtx.gov/economic-development/page/denton-county-open-offers-22-million-grants-businesses)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-special-called-session-cancelled)
+
+[CORINTH 2019 WATER QUALITY REPORT](https://www.corinthtx.gov/publicworks/page/corinth-2019-water-quality-report)
+
+[Debt Excerpts from Approved Budgets](https://www.corinthtx.gov/financial-transparency/page/debt-excerpts-approved-budgets)
+
+[HB 1378 Disclosure - Compliance Report](https://www.corinthtx.gov/financial-transparency/page/hb-1378-disclosure-compliance-report)
+
+[Issue-by-Issue List of Outstanding Debt](https://www.corinthtx.gov/financial-transparency/page/issue-issue-list-outstanding-debt)
+
+[Crime Control & Prevention District](https://www.corinthtx.gov/bc-fcpes)
+
+[Time Trend for Outstanding Tax-Supported and Revenue-Supported Debt](https://www.corinthtx.gov/financial-transparency/page/time-trend-outstanding-tax-supported-and-revenue-supported-debt)
+
+[CORINTH CITY HALL REOPENS](https://www.corinthtx.gov/administration/page/corinth-city-hall-reopens)
+
+[Contact Utility Billing Staff](https://www.corinthtx.gov/utility-billing/page/contact-utility-billing-staff)
+
+[Youth Advisory Council](https://www.corinthtx.gov/yac)
+
+[Public Safety Training Room](https://www.corinthtx.gov/parksrec/page/public-safety-training-room)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-special-session-6)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1134-annual-contract-mowinglandscape-maintenance-services-city-hall-public-safety)
+
+[Keep Corinth Beautiful Regular Session - Cancelled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-cancelled-3)
+
+[Kid's Corner with Sparky](https://www.corinthtx.gov/fire-services/page/kids-corner-sparky)
+
+[CORINTH COVID-19 UPDATE](https://www.corinthtx.gov/administration/page/corinth-covid-19-update)
+
+[CORINTH ESTABLISHES YOUTH ADVISORY COUNCIL](https://www.corinthtx.gov/yac/page/corinth-establishes-youth-advisory-council)
+
+[Operations Division](https://www.corinthtx.gov/fire-services/page/operations-division)
+
+[Training Division](https://www.corinthtx.gov/fire-services/page/training-division)
+
+[Fire Inspections & Plan Review](https://www.corinthtx.gov/fire-services/page/fire-inspections-plan-review)
+
+[Fire Investigations](https://www.corinthtx.gov/fire-services/page/fire-investigations)
+
+[Sparkler & Fireworks Permits](https://www.corinthtx.gov/fire-services/page/sparkler-fireworks-permits)
+
+[Pyrotechnic, Fireworks, and Flame Effect/Performance Permits](https://www.corinthtx.gov/fire-services/page/pyrotechnic-fireworks-and-flame-effectperformance-permits)
+
+[Handheld Sparkler Permit Application](https://www.corinthtx.gov/fire-services/page/handheld-sparkler-permit-application)
+
+[Knox Box Rapid Entry Systems](https://www.corinthtx.gov/fire-services/page/knox-box-rapid-entry-systems)
+
+[DENTON COUNTY OPEN PHASE TWO OFFERS ADDITIONAL BUSINESS GRANTS](https://www.corinthtx.gov/economic-development/page/denton-county-open-phase-two-offers-additional-business-grants)
+
+[CORINTH MOVES TO LEVEL ORANGE ON COVID RESPONSE PLAN](https://www.corinthtx.gov/administration/page/corinth-moves-level-orange-covid-response-plan)
+
+[CORINTH BOARDS AND COMMISSIONS ACCEPTING VOLUNTEER APPLICATIONS](https://www.corinthtx.gov/bc/page/corinth-boards-and-commissions-accepting-volunteer-applications)
+
+[Youth Advisory Council Interest Meeting](https://www.corinthtx.gov/bc-yac/page/youth-advisory-council-interest-meeting)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1135-restroom-fixture-upgrade-corinth-community-park)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1136-concrete-street-repairs)
+
+[Notice of Possible Quorum of Corinth Economic Development Corporation Board of Directors](https://www.corinthtx.gov/bc-cedc/page/notice-possible-quorum-corinth-economic-development-corporation-board-directors)
+
+[Fire Prevention and Safety Education](https://www.corinthtx.gov/fire-services/page/fire-prevention-and-safety-education)
+
+[Emergency Management Division](https://www.corinthtx.gov/fire-services/page/emergency-management-division)
+
+[Emergency Management Division](https://www.corinthtx.gov/fire-services/page/outdoor-warning-system)
+
+[Mixed Use](https://www.corinthtx.gov/economic-development/page/mixed-use)
+
+[Parkway at the District](https://www.corinthtx.gov/economic-development/page/parkway-district)
+
+[Tax Rate Information](https://www.corinthtx.gov/financial-transparency/page/tax-rate-information)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/bc-fcpes/page/city-corinth-fire-control-prevention-and-emergency-medical-services-district-0)
+
+[UTILITY DEPARTMENT RECEIVES AWARDS FOR EXCELLENCE](https://www.corinthtx.gov/publicworks/page/utility-department-receives-awards-excellence)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-25)
+
+[Battery Recycling Program](https://www.corinthtx.gov/utility-billing/page/battery-recycling-program)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/bc-ccc/page/corinth-crime-control-prevention-district-special-session-0)
+
+[Notice of Possible Quorum of Corinth Economic Development Corporation Board of Directors](https://www.corinthtx.gov/bc-cedc/page/notice-possible-quorum-corinth-economic-development-corporation-board-directors-0)
+
+[CORINTH RECEIVES 14TH DISTINGUISHED BUDGET PRESENTATION AWARD](https://www.corinthtx.gov/finance/page/corinth-receives-14th-distinguished-budget-presentation-award)
+
+[DENTON COUNTY OPEN PHASE II GRANTS $32 MILLION FOR BUSINESSES](https://www.corinthtx.gov/economic-development/page/denton-county-open-phase-ii-grants-32-million-businesses)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-4)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-5)
+
+[Youth Advisory Council Meeting](https://www.corinthtx.gov/yac/page/youth-advisory-council-meeting)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/bc-ccc/page/corinth-crime-control-prevention-district-special-session-1)
+
+[Corinth Economic Development Corporation Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-cancelled-8)
+
+[NOTICE OF INTENTION TO ISSUE COMBINATION TAX AND REVENUE CERTIFICATES OF OBLIGATION](https://www.corinthtx.gov/finance/page/notice-intention-issue-combination-tax-and-revenue-certificates-obligation)
+
+[PUBLIC HEARING NOTICE ON BUDGET](https://www.corinthtx.gov/finance/page/public-hearing-notice-budget)
+
+[Lake Cities Broadband Initiative](https://www.corinthtx.gov/administration/page/lake-cities-broadband-initiative)
+
+[NEW PARTNERSHIP TO BRING BETTER BROADBAND TO LAKE CITIES](https://www.corinthtx.gov/administration/page/new-partnership-bring-better-broadband-lake-cities)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-board-commission-interviews-8)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-board-commission-interviews-9)
+
+[CORINTH 2020 ELECTION GUIDE](https://www.corinthtx.gov/city-secretary/page/corinth-2020-election-guide)
+
+[Corinth Parks and Recreation Board Regular Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-regular-session-2)
+
+[RODGERS AWARDED CERTIFIED GOVERNMENT CHIEF INFORMATION OFFICER DESIGNATION](https://www.corinthtx.gov/technology-services/page/rodgers-awarded-certified-government-chief-information-officer-designation)
+
+[Finance Audit Committee regular session](https://www.corinthtx.gov/bc-fac/page/cancelled-finance-audit-committee-regular-session)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-special-session-10)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-3)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-cancelled-12)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-7)
+
+[Keep Corinth Beautiful Regular Session - Cancelled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-cancelled-0)
+
+[Keep Corinth Beautiful Regular Session - Cancelled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-cancelled)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-special-session-0)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-special-session-1)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-30)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-31)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-4)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-32)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-special-session-8)
+
+[Keep Corinth Beautiful Special Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-special-session-4)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1137-awia-risk-resiliency-assessment-and-emergency-response-plan)
+
+[Corinth Parks and Recreation Board Regular Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-regular-session-3)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1138-design-signature-park-and-amphitheater)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/bc-fcpes/page/corinth-fire-control-prevention-and-emergency-medical-services-district-temporary)
+
+[Corinth Economic Development Corporation Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-special-session-9)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-special-called-session-1)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-8)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/bc-fcpes/page/corinth-fire-control-prevention-and-emergency-medical-services-district-temporary-0)
+
+[LOCAL GIRL SCOUT RAISING FUNDS FOR CORINTH DOG PARK](https://www.corinthtx.gov/parksrec/page/local-girl-scout-raising-funds-corinth-dog-park)
+
+[LAKE SHARON DRIVE EXTENSION GRAND OPENING](https://www.corinthtx.gov/engineering/page/lake-sharon-drive-extension-grand-opening)
+
+[Notice of Possible Quorum of Corinth Economic Development Corporation Board of Directors](https://www.corinthtx.gov/city-council/page/notice-possible-quorum-corinth-city-council)
+
+[Monthly Financial Reports: 2020-2021](https://www.corinthtx.gov/finance/page/monthly-financial-reports-2020-2021)
+
+[City of Corinth News Releases](https://www.corinthtx.gov/communications/page/city-corinth-news-releases)
+
+[Denton County News Releases](https://www.corinthtx.gov/communications/page/denton-county-news-releases)
+
+[State of Texas News Releases](https://www.corinthtx.gov/communications/page/state-texas-news-releases)
+
+[Denton ISD News Releases](https://www.corinthtx.gov/communications/page/denton-isd-news-releases)
+
+[Lake Dallas ISD News Releases](https://www.corinthtx.gov/communications/page/lake-dallas-isd-news-releases)
+
+[White House News](https://www.corinthtx.gov/communications/page/white-house-news)
+
+[CDC What's New Page](https://www.corinthtx.gov/communications/page/cdc-whats-new-page)
+
+[Corinth Economic Development Corporation Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-regular-session-cancelled-11)
+
+[Parks Master Plan](https://www.corinthtx.gov/parksrec/page/parks-master-plan)
+
+[Public Works Home Page](https://www.corinthtx.gov/stormwater/page/public-works-home-page)
+
+[Public Works Home Page](https://www.corinthtx.gov/parksrec/page/public-works-home-page)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-9)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-10)
+
+[Planning and Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission-regular-session-11)
+
+[CORINTH RECEIVES 11TH CONSECUTIVE AWARD FOR FINANCIAL REPORTING](https://www.corinthtx.gov/finance/page/corinth-receives-11th-consecutive-award-financial-reporting)
+
+[Eligibility Requirements](https://www.corinthtx.gov/police/page/eligibility-requirements)
+
+[Fireworks Ordinance](https://www.corinthtx.gov/police/page/fireworks-ordinance)
+
+[Corinth Police Department Strategic Plan 2024](https://www.corinthtx.gov/police/page/corinth-police-department-strategic-plan-2024)
+
+[Rider Information Form](https://www.corinthtx.gov/police/page/rider-information-form)
+
+[Planning](https://www.corinthtx.gov/planning-development/page/planning)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/bc-ccc/page/corinth-crime-control-prevention-district-special-session-2)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/bc-fcpes/page/corinth-fire-control-prevention-and-emergency-medical-services-district-special)
+
+[Virtual Attorney Docket](https://www.corinthtx.gov/municipal-court/page/virtual-attorney-docket-0)
+
+[Medication Disposal Information](https://www.corinthtx.gov/fire-services/page/medication-disposal-information)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-9)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/joint-session-city-council-corinth-economic-development-corporation-planning)
+
+[Corinth Parks and Recreation Board Regular Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session)
+
+[Envision Corinth: Park, Recreation + Open Space Master Plan](https://www.corinthtx.gov/planning-development/page/envision-corinth-park-recreation-open-space-master-plan)
+
+[2021 Corinth Connection Newsletters](https://www.corinthtx.gov/communications/page/2021-corinth-connection-newsletters)
+
+[Current Planning](https://www.corinthtx.gov/planning-development/page/current-planning)
+
+[Public Works Home Page](https://www.corinthtx.gov/streets/page/public-works-home-page)
+
+[Public Works Home Page](https://www.corinthtx.gov/water-wastewater/page/public-works-home-page)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-special-session-rescheduled-02222021)
+
+[Virtual Attorney Docket](https://www.corinthtx.gov/municipal-court/page/virtual-attorney-docket)
+
+[Online Citation Pay](https://www.corinthtx.gov/municipal-court/page/online-citation-pay)
+
+[Mountain Bike Trail](https://www.corinthtx.gov/parksrec/page/mountain-bike-trail)
+
+[CORINTH POLICE DEPARTMENT AND TEXAS RANGERS](https://www.corinthtx.gov/police/page/corinth-police-department-and-texas-rangers)
+
+[Budget Billing](https://www.corinthtx.gov/utility-billing/page/budget-billing)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-10)
+
+[CORINTH LAUNCHES ENGAGEMENT PROCESS TO CREATE A COMMUNITY GATHERING SPACE](https://www.corinthtx.gov/economic-development/page/corinth-launches-engagement-process-create-community-gathering-space)
+
+[CWD UPDATE FOR CITY OF CORINTH](https://www.corinthtx.gov/utility-billing/page/cwd-update-city-corinth)
+
+[CITY STAFF ENCOURAGES REPORT A CONCERN SYSTEM DUE TO HIGH DEMAND OF CALLS](https://www.corinthtx.gov/publicworks/page/city-staff-encourages-report-concern-system-due-high-demand-calls)
+
+[ONCOR – EMERGENCY OPERATIONS FEB. 15 AFTERNOON UPDATE](https://www.corinthtx.gov/utility-billing/page/oncor-%E2%80%93-emergency-operations-feb-15-afternoon-update)
+
+[CORINTH WATER SERVICES UPDATE](https://www.corinthtx.gov/water-wastewater/page/corinth-water-services-update)
+
+[ONCOR – EMERGENCY OPERATIONS FEB. 16 MORNING UPDATE](https://www.corinthtx.gov/utility-billing/page/oncor-%E2%80%93-emergency-operations-feb-16-morning-update)
+
+[Corinth Area Registered Contractor List](https://www.corinthtx.gov/building-services/page/corinth-area-registered-contractor-list)
+
+[ONCOR – EMERGENCY OPERATIONS FEB. 16 MORNING UPDATE](https://www.corinthtx.gov/utility-billing/page/oncor-%E2%80%93-emergency-operations-feb-17-morning-update)
+
+[ONCOR – EMERGENCY OPERATIONS FEB. 16 MORNING UPDATE](https://www.corinthtx.gov/utility-billing/page/oncor-%E2%80%93-emergency-operations-feb-18-morning-update)
+
+[EMERGENCY PLUMBING PERMIT PROCEDURES](https://www.corinthtx.gov/permits-inspections/page/emergency-plumbing-permit-procedures)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-11)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-special-session-5)
+
+[Finance Audit Committee regular session](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-session-5)
+
+[CORINTH WATER SERVICES UPDATE](https://www.corinthtx.gov/administration/page/corinth-water-services-update-0)
+
+[TEXAS SURVIVORS AFFECTED BY WINTER WEATHER CAN APPLY FOR FEDERAL DISASTER ASSISTANCE](https://www.corinthtx.gov/administration/page/texas-survivors-affected-winter-weather-can-apply-federal-disaster-assistance)
+
+[WINTER STORM RESIDENT RESOURCES](https://www.corinthtx.gov/administration/page/winter-storm-resident-resources)
+
+[Claims Handling & Repairs](https://www.corinthtx.gov/community/page/claims-handling-repairs)
+
+[External & Internal Coverage](https://www.corinthtx.gov/community/page/external-internal-coverage)
+
+[FLAGS TO FLY AT HALF STAFF HONORING THE 500,000 AMERICANS LOST TO COVID-19](https://www.corinthtx.gov/communications/page/flags-fly-half-staff-honoring-500000-americans-lost-covid-19)
+
+[Live Meeting](https://www.corinthtx.gov/city-council/page/live-meeting)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/bc-cedc/page/joint-session-city-council-corinth-economic-development-corporation-planning-zoning)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/bc-pzc/page/joint-session-city-council-corinth-economic-development-corporation-planning-zoning)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/bc-pr/page/joint-session-city-council-corinth-economic-development-corporation-planning-zoning)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-special-session-6)
+
+[CORINTH WELCOMES NEW PUBLIC WORKS DIRECTOR](https://www.corinthtx.gov/publicworks/page/corinth-welcomes-new-public-works-director)
+
+[Corinth Parks and Recreation Board Regular Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-0)
+
+[Notice of Possible Quorum of Corinth Economic Development Corporation Board of Directors](https://www.corinthtx.gov/city-council/page/notice-possible-quorum-corinth-city-council-1)
+
+[Notice of Possible Quorum of Corinth Economic Development Corporation Board of Directors](https://www.corinthtx.gov/city-council/page/notice-possible-quorum-corinth-city-council-2)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-33)
+
+[MAY 2021 GENERAL AND SPECIAL ELECTION NOTICE](https://www.corinthtx.gov/city-secretary/page/may-2021-general-and-special-election-notice)
+
+[CORINTH EARNS 2020 TREE CITY DESIGNATION](https://www.corinthtx.gov/parksrec/page/corinth-earns-2020-tree-city-designation)
+
+[Economic Development Foundation](https://www.corinthtx.gov/bc-edf)
+
+[Tax Increment Reinvestment Zone No. 2](https://www.corinthtx.gov/bc-rz2)
+
+[Tax Increment Reinvestment Zone No. 3](https://www.corinthtx.gov/bc-rz3)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-0)
+
+[JOINT STATEMENT FROM DENTON PD AND CORINTH PD](https://www.corinthtx.gov/police/page/joint-statement-denton-pd-and-corinth-pd)
+
+[NOTICE OF PUBLIC HEARING: JUVENILE CURFEW ORDINANCE](https://www.corinthtx.gov/police/page/notice-public-hearing-juvenile-curfew-ordinance)
+
+[Finance Audit Committee](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-47)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-48)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-12)
+
+[City Council Special Workshop Session](https://www.corinthtx.gov/city-council/page/city-council-special-workshop-session-1)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-46)
+
+[City Council Workshop & Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-regular-session-3)
+
+[City Council Workshop & Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-regular-session-4)
+
+[City Council Workshop and Regular Session, Crime Control & Prevention District, Fire Control, Prevention and Emergency Medical Services District](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-crime-control-prevention-district-fire)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-8)
+
+[Standard Terms & Conditions and Insurance Requirements](https://www.corinthtx.gov/purchasing/page/standard-terms-conditions-and-insurance-requirements)
+
+[Standard Terms & Conditions for Procurements](https://www.corinthtx.gov/purchasing/page/standard-terms-conditions-procurements)
+
+[Insurance Requirements for General Services](https://www.corinthtx.gov/purchasing/page/insurance-requirements-general-services)
+
+[Insurance Requirements for Professional Services](https://www.corinthtx.gov/purchasing/page/insurance-requirements-professional-services)
+
+[Insurance Requirements for Construction Services](https://www.corinthtx.gov/purchasing/page/insurance-requirements-construction-services)
+
+[Standard Terms & Conditions for Purchase Orders](https://www.corinthtx.gov/purchasing/page/standard-terms-conditions-purchase-orders)
+
+[Parks and Recreation](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-0)
+
+[Corinth Parks and Recreation Board Regular Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-1)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission)
+
+[Landowner's Bill of Rights](https://www.corinthtx.gov/engineering/page/landowners-bill-rights)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1139-health-and-welfare-employee-benefits-insurance-plans)
+
+[Corinth Economic Development Corporation (CEDC) - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-cancelled)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-4)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-10)
+
+[Public Works By The Numbers](https://www.corinthtx.gov/publicworks/page/public-works-numbers)
+
+[Agora Master Plan](https://www.corinthtx.gov/economic-development/page/agora-master-plan)
+
+[Corinth Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-2)
+
+[Certificate of Occupancy Application](https://www.corinthtx.gov/building-services/page/certificate-occupancy-application)
+
+[Joint Workshop Session with Corinth City Council, Hickory Creek Town Council, Lake Dallas City Council, and Shady Shores Town Council](https://www.corinthtx.gov/city-council/page/joint-workshop-session-corinth-city-council-hickory-creek-town-council-lake-dallas)
+
+[Planning & Zoning Commission - Notice of Cancellation](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-notice-cancellation)
+
+[Planning & Zoning Commission Workshop and Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-workshop-and-regular-session)
+
+[Planning & Zoning Commission - Cancelled](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-cancelled-0)
+
+[Planning & Zoning Commission - CANCELLED](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-cancelled)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-1)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-0)
+
+[VOLUNTEER NOW FOR CORINTH BOARDS AND COMMISSIONS](https://www.corinthtx.gov/bc/page/volunteer-now-corinth-boards-and-commissions)
+
+[TAKE PART IN CORINTH'S WATER CONSERVATION INCENTIVE PROGRAM](https://www.corinthtx.gov/utility-billing/page/take-part-corinths-water-conservation-incentive-program)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session)
+
+[CORINTH 2020 WATER QUALITY REPORT](https://www.corinthtx.gov/water-wastewater/page/corinth-2020-water-quality-report)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-9)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1140-construction-manager-risk-commons-agora)
+
+[Finance Audit Committee](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-0)
+
+[ERCOT ISSUES CONSERVATION NOTICE ASKING ALL TEXANS TO CONSERVE ELECTRICITY THIS WEEK](https://www.corinthtx.gov/administration/page/ercot-issues-conservation-notice-asking-all-texans-conserve-electricity-week)
+
+[ISO Mitigation Website](https://www.corinthtx.gov/fire-services/page/iso-mitigation-website)
+
+[Notice of Medical Information Privacy Practices](https://www.corinthtx.gov/fire-services/page/notice-medical-information-privacy-practices)
+
+[MAYOR BILL HEIDEMANN APPOINTED TO NCTCOG EXECUTIVE BOARD](https://www.corinthtx.gov/city-council/page/mayor-bill-heidemann-appointed-nctcog-executive-board)
+
+[Fire Operational and Administrative Analysis 2019](https://www.corinthtx.gov/fire-services/page/fire-operational-and-administrative-analysis-2019)
+
+[Judicial Order Regarding Virtual Court](https://www.corinthtx.gov/municipal-court/page/judicial-order-regarding-virtual-court)
+
+[Is Today a Burn Day?](https://www.corinthtx.gov/fire-services/page/today-burn-day-0)
+
+[Corinth Economic Development Corporation (CEDC) - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-notice-cancellation-0)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-5)
+
+[CORINTH LAUNCHES DIGITAL EVALUATION SURVEY](https://www.corinthtx.gov/communications/page/corinth-launches-digital-evaluation-survey)
+
+[Corinth Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-3)
+
+[Planning & Zoning Commission Special Session and Regular Session Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-special-session-and-regular-session-meeting)
+
+[Roundabouts](https://www.corinthtx.gov/engineering/page/roundabouts)
+
+[Lake Cities Broadband Strategic Plan](https://www.corinthtx.gov/administration/page/lake-cities-broadband-strategic-plan)
+
+[Corinth Economic Development Corporation (CEDC) Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-3)
+
+[LAKE DALLAS AND CORINTH TO CONSIDER MERGING POLICE DEPARTMENTS](https://www.corinthtx.gov/police/page/lake-dallas-and-corinth-consider-merging-police-departments)
+
+[Dashboard](https://www.corinthtx.gov/streets/page/dashboard)
+
+[Boil Water Notice](https://www.corinthtx.gov/water-wastewater/page/boil-water-notice)
+
+[Stormwater Documents](https://www.corinthtx.gov/stormwater/page/stormwater-documents)
+
+[Keep Corinth Beautiful (KCB) Regular Session - Cancelled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-kcb-regular-session-cancelled-0)
+
+[Keep Corinth Beautiful (KCB) - Special Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-kcb-special-session)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-45)
+
+[Code of Ordinances](https://www.corinthtx.gov/community/page/code-ordinances)
+
+[Lake Dallas Public Library Website](https://www.corinthtx.gov/community/page/lake-dallas-public-library-website)
+
+[Denton Public Library Website](https://www.corinthtx.gov/community/page/denton-public-library-website)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-cancelled)
+
+[Corinth Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-4)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-13)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-44)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-37)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-42)
+
+[CORINTH EARNS 2021 ACHIEVEMENT OF EXCELLENCE IN PROCUREMENT AWARD](https://www.corinthtx.gov/purchasing/page/corinth-earns-2021-achievement-excellence-procurement-award)
+
+[Report a Concern Center](https://www.corinthtx.gov/communications/page/clone-report-concern-center-embed-connect-engage)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1144-concrete-street-repairs)
+
+[NOTICE OF TAX RATE AND PROPOSED BUDGET](https://www.corinthtx.gov/financial-transparency/page/short-term-motor-vehicle-rental-tax)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-43)
+
+[Let's Talk Corinth Podcast](https://www.corinthtx.gov/communications/page/lets-talk-corinth-podcast)
+
+[Keep Corinth Beautiful (KCB) Regular Session - Cancelled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-kcb-regular-session-cancelled)
+
+[Keep Corinth Beautiful (KCB) Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-kcb-regular-session-0)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-1)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-2)
+
+[COUNCILMEMBER TINA HENDERSON APPOINTED TO EMERGENCY PREPAREDNESS COUNCIL](https://www.corinthtx.gov/city-council/page/councilmember-tina-henderson-appointed-emergency-preparedness-council)
+
+[NOTICE OF INTENTION TO ISSUE COMBINATION TAX AND REVENUE CERTIFICATES OF OBLIGATION](https://www.corinthtx.gov/finance/page/notice-intention-issue-combination-tax-and-revenue-certificates-obligation-1)
+
+[REALTY CAPITAL TO BUILD $45 MILLION MIXED-USE DEVELOPMENT IN CORINTH](https://www.corinthtx.gov/economic-development/page/realty-capital-build-45-million-mixed-use-development-corinth)
+
+[Keep Corinth Beautiful Events](https://www.corinthtx.gov/kcb/page/keep-corinth-beautiful-events)
+
+[NOTICE OF PUBLIC HEARING ON BUDGET](https://www.corinthtx.gov/finance/page/notice-public-hearing-budget)
+
+[NOTICE OF PUBLIC HEARING ON TAX INCREASE](https://www.corinthtx.gov/finance/page/notice-public-hearing-tax-increase-0)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-canceled-0)
+
+[NOTICE OF TAX RATE AND PROPOSED BUDGET](https://www.corinthtx.gov/financial-transparency/page/hotel-occupancy-tax-grant-program)
+
+[CORINTH PARTNERS WITH CITIBOT TO LAUNCH ENGAGEMENT PLATFORM](https://www.corinthtx.gov/communications/page/corinth-partners-citibot-launch-engagement-platform)
+
+[City Council Special Session - Board & Commission Interviews](https://www.corinthtx.gov/city-council/page/city-council-special-session-board-commission-interviews-4)
+
+[City Council Special Session - Board & Commission Interviews](https://www.corinthtx.gov/city-council/page/city-council-special-session-board-commission-interviews-3)
+
+[City Council Special Session - Board & Commission Interviews](https://www.corinthtx.gov/city-council/page/city-council-special-session-board-commission-interviews-2)
+
+[Keep Corinth Beautiful (KCB) Special Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-kcb-special-session-0)
+
+[Keep Corinth Beautiful Regular Session - Cancelled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-cancelled-9)
+
+[Corinth Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-5)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-38)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-39)
+
+[CORINTH POLICE DEPARTMENT MERGER UPDATE](https://www.corinthtx.gov/police/page/corinth-police-department-merger-update)
+
+[Keep Corinth Beautiful Special Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-special-session-7)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-6)
+
+[Training](https://www.corinthtx.gov/police/page/training)
+
+[City Council Workshop Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-session)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-41)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-40)
+
+[City Marshal](https://www.corinthtx.gov/city-marshal)
+
+[Contact City Marshal Staff](https://www.corinthtx.gov/city-marshal/page/contact-city-marshal-staff)
+
+[2021 SEWER AVERAGING](https://www.corinthtx.gov/utility-billing/page/2021-sewer-averaging)
+
+[Keep Corinth Beautiful Regular Session - Cancelled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-cancelled-10)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1148-ground-storage-reservoir-no-1-15-mg-no-2-05-mg-repaint)
+
+[Corinth Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-6)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-49)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-50)
+
+[Crime Control & Prevention District Special Session](https://www.corinthtx.gov/bc-cc/page/crime-control-prevention-district-special-session)
+
+[Fire Control, Prevention, and Emergency Medical Services District Special Session](https://www.corinthtx.gov/bc-fcpes/page/fire-control-prevention-and-emergency-medical-services-district-special-session)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1147-lynchburg-creek-flood-mitigation)
+
+[Notice of Possible Quorum of Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/notice-possible-quorum-corinth-economic-development-corporation-cedc)
+
+[Notice of Possible Quorum of Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/notice-possible-quorum-planning-zoning-commission)
+
+[Joint Session with Corinth City Council, Hickory Creek Town Council, Lake Dallas City Council, and Shady Shores Town Council](https://www.corinthtx.gov/city-council/page/joint-session-corinth-city-council-hickory-creek-town-council-lake-dallas-city)
+
+[Corinth Economic Development Corporation (CEDC) - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-cancelled-0)
+
+[Corinth Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-7)
+
+[Finance Audit Committee](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-1)
+
+[Corinth Economic Development Corporation (CEDC) Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-special-session)
+
+[Monthly Financial Reports: 2021-2022](https://www.corinthtx.gov/finance/page/monthly-financial-reports-2021-2022)
+
+[Keep Corinth Beautiful Special Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-special-session-8)
+
+[Keep Corinth Beautiful Regular Session - Cancelled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-cancelled-11)
+
+[Planning & Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-session)
+
+[Interactive Map](https://www.corinthtx.gov/gis/page/interactive-map)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-11)
+
+[Ethics Committee Cancelled](https://www.corinthtx.gov/bc-ec/page/ethics-committee-cancelled)
+
+[2023 Health Inspections](https://www.corinthtx.gov/building-services/page/2023-health-inspections)
+
+[Corinth Economic Development Corporation (CEDC) - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-cancelled-1)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-cancelled-0)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-7)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-8)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-cancelled-1)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-9)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-10)
+
+[Corinth Economic Development Corporation (CEDC) Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-special-session-0)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-cancelled-3)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-cancelled-4)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-12)
+
+[Homeowners Association Directory Map](https://www.corinthtx.gov/communications/page/homeowners-association-directory-map)
+
+[Corinth Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-8)
+
+[City Council Workshop and Regular Session - CANCELLED](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-6)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-52)
+
+[Notice of Possible Quorum of Corinth City Council](https://www.corinthtx.gov/city-council/page/notice-possible-quorum-corinth-city-council-0)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-2)
+
+[Planning & Zoning Commission Regular Session and Workshop](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-session-and-workshop-1)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-3)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-4)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-5)
+
+[Planning & Zoning Commission Regular Session and Workshop](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-session-and-workshop)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-8)
+
+[Planning & Zoning Commission Regular Session and Workshop](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-session-and-workshop-0)
+
+[Planning & Zoning Commission Regular Session and Workshop Session](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-session-and-workshop-session)
+
+[Planning & Zoning Commission - Cancelled](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-cancelled-1)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-6)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-7)
+
+[Ethics Committee](https://www.corinthtx.gov/bc-ec/page/ethics-committee)
+
+[Ethics Committee Regular Session](https://www.corinthtx.gov/bc-ec/page/ethics-committee-regular-session)
+
+[Finance Audit Committee](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-2)
+
+[LAKE CITIES TOWN COUNCILS AGREE TO PURSUE AGREEMENT FOR FIBER RING CONSTRUCTION](https://www.corinthtx.gov/administration/page/lake-cities-town-councils-agree-pursue-agreement-fiber-ring-construction)
+
+[CWD COLLECTION SERVICE UPDATE](https://www.corinthtx.gov/administration/page/cwd-collection-service-update)
+
+[Corinth Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-9)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-51)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-53)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-54)
+
+[City Council Workshop and Regular Session, Crime Control & Prevention District, Fire Control, Prevention and Emergency Medical Services District](https://www.corinthtx.gov/bc-cc/page/city-council-workshop-and-regular-session-crime-control-prevention-district-fire-control)
+
+[City Council Workshop and Regular Session, Crime Control & Prevention District, Fire Control, Prevention and Emergency Medical Services District](https://www.corinthtx.gov/bc-fcpes/page/city-council-workshop-and-regular-session-crime-control-prevention-district-fire)
+
+[MAYOR BILL HEIDEMANN APPOINTED TO NLC TRANSPORTATION COMMITTEE](https://www.corinthtx.gov/city-council/page/mayor-bill-heidemann-appointed-nlc-transportation-committee)
+
+[COUNCILMEMBER PICKENS APPOINTED TO NCTCOG COMMITTEE](https://www.corinthtx.gov/city-council/page/councilmember-pickens-appointed-nctcog-committee)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-14)
+
+[LAKE CITIES FIRE CHIEF MICHAEL ROSS ANNOUNCES RETIREMENT](https://www.corinthtx.gov/fire-services/page/lake-cities-fire-chief-michael-ross-announces-retirement)
+
+[Planning & Zoning Commission Workshop Session](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-workshop-session)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-15)
+
+[THIESSEN NAMED LAKE CITIES FIRE CHIEF](https://www.corinthtx.gov/fire-services/page/thiessen-named-lake-cities-fire-chief)
+
+[CORINTH POLICE PROMOTES LT. JESSE HUNTER TO CAPTAIN](https://www.corinthtx.gov/police/page/corinth-police-promotes-lt-jesse-hunter-captain)
+
+[Corinth Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-10)
+
+[LAKE CITIES NAMED AS FINALIST IN NATIONAL SMART CITIES COMPETITION](https://www.corinthtx.gov/administration/page/lake-cities-named-finalist-national-smart-cities-competition)
+
+[CORINTH WARRANT RESOLUTION WEEK SET FOR MARCH 20](https://www.corinthtx.gov/municipal-court/page/corinth-warrant-resolution-week-set-march-20)
+
+[Logo Use Policy](https://www.corinthtx.gov/communications/page/logo-use-policy)
+
+[Corinth Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-11)
+
+[Single Family Rental Registration Information](https://www.corinthtx.gov/neighborhood-services/page/single-family-rental-registration-information)
+
+[Planning & Zoning Commission Special Session - CANCELLED](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-special-session-cancelled)
+
+[Finance Audit Committee](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-3)
+
+[Tax Increment Reinvestment Zone No. 2](https://www.corinthtx.gov/bc-cedc/page/tax-increment-reinvestment-zone-no-2)
+
+[Tax Increment Reinvestment Zone No. 3](https://www.corinthtx.gov/bc-cedc/page/tax-increment-reinvestment-zone-no-3)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-55)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-56)
+
+[Corinth Solar Switch](https://www.corinthtx.gov/community/page/corinth-solar-switch)
+
+[2022 Corinth Connection Newsletters](https://www.corinthtx.gov/communications/page/2022-corinth-connection-newsletters)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1149-transit-oriented-tod-agora-district-street-utility-improvements)
+
+[2022 CORINTH SPECIAL ELECTION GUIDE](https://www.corinthtx.gov/city-secretary/page/2022-corinth-special-election-guide)
+
+[JOIN THE 2022 WYLAND NATIONAL MAYORS CHALLENGE FOR WATER CONSERVATION](https://www.corinthtx.gov/water-wastewater/page/join-2022-wyland-national-mayors-challenge-water-conservation)
+
+[City Council Workshop and Regular Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-7)
+
+[Planning & Zoning Commission Special Session](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-special-session)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1150-mosquito-surveillance-abatement)
+
+[Keep Corinth Beautiful Special Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-special-session-9)
+
+[Board of Adjustment](https://www.corinthtx.gov/bc-boa/page/board-adjustment)
+
+[GREG WARD PROMOTED TO ASSISTANT FIRE CHIEF](https://www.corinthtx.gov/fire-services/page/greg-ward-promoted-assistant-fire-chief)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1151-health-and-welfare-employee-benefits-insurance-plans)
+
+[2021 WATER QUALITY REPORT](https://www.corinthtx.gov/water-wastewater/page/2021-water-quality-report)
+
+[Corinth Parks and Recreation Board Special Session - Cancelled](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-cancelled)
+
+[CORINTH CITY MANAGER BOB HART PASSES AWAY](https://www.corinthtx.gov/administration/page/corinth-city-manager-bob-hart-passes-away)
+
+[CORINTH CITY HALL CLOSED TUESDAY MAY 10](https://www.corinthtx.gov/communications/page/corinth-city-hall-closed-tuesday-may-10)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-14)
+
+[Joint Session with Corinth City Council, Hickory Creek Town Council, Lake Dallas City Council, and Shady Shores Town Council - CANCELLED](https://www.corinthtx.gov/city-council/page/joint-session-corinth-city-council-hickory-creek-town-council-lake-dallas-city-0)
+
+[FORT WORTH CHAMBER LAUNCHES ECONOMIC DEVELOPMENT PARTNERSHIP, PROMOTES GROWTH, REGIONALISM](https://www.corinthtx.gov/economic-development/page/fort-worth-chamber-launches-economic-development-partnership-promotes)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-16)
+
+[ARBOR DAY FOUNDATION RECOGNIZES CITY OF CORINTH AS 2021 TREE CITY USA](https://www.corinthtx.gov/parksrec/page/arbor-day-foundation-recognizes-city-corinth-2021-tree-city-usa)
+
+[Stop Resource-Intensive Processes](https://www.corinthtx.gov/technology-services/page/stop-resource-intensive-processes)
+
+[1127 Health & Welfare Employee Benefits Insurance Plans RFP](https://www.corinthtx.gov/purchasing/page/1152-transit-oriented-tod-agora-district-street-utility-improvements-rebid)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-59)
+
+[City Council Special Workshop Session](https://www.corinthtx.gov/city-council/page/city-council-special-workshop-session-2)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-57)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-58)
+
+[Crime Control & Prevention District Special Session](https://www.corinthtx.gov/bc-cc/page/crime-control-prevention-district-special-session-0)
+
+[Fire Control, Prevention, and Emergency Medical Services District](https://www.corinthtx.gov/bc-fcpes/page/fire-control-prevention-and-emergency-medical-services-district)
+
+[Corinth Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-12)
+
+[Water Assistance Program](https://www.corinthtx.gov/utility-billing/page/water-assistance-program)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-60)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-61)
+
+[Corinth Parks and Recreation Board Special Session - Cancelled](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-cancelled-0)
+
+[TCOG Utility Assistance Application](https://www.corinthtx.gov/utility-billing/page/tcog-utility-assistance-application)
+
+[CORINTH PARTNERS WITH TEXAS SOLAR SWITCH](https://www.corinthtx.gov/communications/page/corinth-partners-texas-solar-switch)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-17)
+
+[Corinth Parks and Recreation Board Special Session - Cancelled](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-cancelled-1)
+
+[HAZARD MITIGATION PLAN PUBLIC MEETING ON JUNE 21, 2022](https://www.corinthtx.gov/administration/page/hazard-mitigation-plan-public-meeting-june-21-2022)
+
+[Corinth Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-13)
+
+[Planning & Zoning Commission Special Session](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-special-session-0)
+
+[Fall Prevention](https://www.corinthtx.gov/fire-services/page/fall-prevention)
+
+[UPPER TRINITY ENACTS STAGE ONE DROUGHT WATERING RESTRICTIONS](https://www.corinthtx.gov/water-wastewater/page/upper-trinity-enacts-stage-one-drought-watering-restrictions)
+
+[Handheld Sparkler Permit Application](https://www.corinthtx.gov/fire-services/page/handheld-sparkler-permit-application-0)
+
+[Pyrotechnic, Fireworks, Flame Effects/Performance, & Displays Permit Online Application](https://www.corinthtx.gov/fire-services/page/pyrotechnic-fireworks-flame-effectsperformance-displays-permit-online-application)
+
+[Pyrotechnic, Fireworks, Flame Effects/Performance, & Displays Submittal](https://www.corinthtx.gov/fire-services/page/pyrotechnic-fireworks-flame-effectsperformance-displays-submittal)
+
+[State Fire Marshal's Office Notice on Cold Spark, Fountains, and Flame Effects](https://www.corinthtx.gov/fire-services/page/state-fire-marshals-office-notice-cold-spark-fountains-and-flame-effects)
+
+[Burn Permit Requirements for Corinth, Lake Dallas, Hickory Creek, & Shady Shores](https://www.corinthtx.gov/fire-services/page/burn-permit-requirements-corinth-lake-dallas-hickory-creek-shady-shores)
+
+[Outdoor Burning in Texas Regulations](https://www.corinthtx.gov/fire-services/page/outdoor-burning-texas-regulations)
+
+[Permit Fee Schedules](https://www.corinthtx.gov/fire-services/page/permit-fee-schedules)
+
+[2021 IFC Amendments](https://www.corinthtx.gov/fire-services/page/2021-ifc-amendments)
+
+[Knox Box System Requirements](https://www.corinthtx.gov/fire-services/page/knox-box-system-requirements)
+
+[Lake Cities Online Permit Application](https://www.corinthtx.gov/fire-services/page/lake-cities-online-permit-application)
+
+[Fire Sprinkler and Standpipe System Submittal](https://www.corinthtx.gov/fire-services/page/fire-sprinkler-and-standpipe-system-submittal)
+
+[Fire Service Water Line System Submittal](https://www.corinthtx.gov/fire-services/page/fire-service-water-line-system-submittal)
+
+[Fire Alarm System Submittal](https://www.corinthtx.gov/fire-services/page/fire-alarm-system-submittal)
+
+[Kitchen Hood Suppression System Submittal](https://www.corinthtx.gov/fire-services/page/kitchen-hood-suppression-system-submittal)
+
+[Access Controlled Gate System Submittal](https://www.corinthtx.gov/fire-services/page/access-controlled-gate-system-submittal)
+
+[Access Controlled Door System Submittal](https://www.corinthtx.gov/fire-services/page/access-controlled-door-system-submittal)
+
+[Tank Storage, Dispensing, & Temporary - Fuels & Gas System Submittal](https://www.corinthtx.gov/fire-services/page/tank-storage-dispensing-temporary-fuels-gas-system-submittal)
+
+[Emergency & Standby Generator Submittal](https://www.corinthtx.gov/fire-services/page/emergency-standby-generator-submittal)
+
+[Spray Finishing & Spray Booth Submittal](https://www.corinthtx.gov/fire-services/page/spray-finishing-spray-booth-submittal)
+
+[Hot Work & Welding Operations Submittal](https://www.corinthtx.gov/fire-services/page/hot-work-welding-operations-submittal)
+
+[Tents & Membrane Submittal](https://www.corinthtx.gov/fire-services/page/tents-membrane-submittal)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-cancelled-2)
+
+[Adoption and Foster Care Home Inspection](https://www.corinthtx.gov/fire-services/page/adoption-and-foster-care-home-inspection)
+
+[Adoption and Foster Care Home Inspection Guidelines](https://www.corinthtx.gov/fire-services/page/adoption-and-foster-care-home-inspection-guidelines)
+
+[TDFPS Adoption and Foster Care Family Checklist](https://www.corinthtx.gov/fire-services/page/tdfps-adoption-and-foster-care-family-checklist)
+
+[Speeding Fine Listing](https://www.corinthtx.gov/municipal-court/page/speeding-fine-listing)
+
+[Common Violation Fine Listing](https://www.corinthtx.gov/municipal-court/page/common-violation-fine-listing)
+
+[DENTON COUNTY ISSUES OUTDOOR BURN BAN](https://www.corinthtx.gov/communications/page/denton-county-issues-outdoor-burn-ban)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-18)
+
+[LAKE CITIES FIRE DEPARTMENT RECOGNIZED AS A BEST PRACTICES FIRE DEPARTMENT](https://www.corinthtx.gov/fire-services/page/lake-cities-fire-department-recognized-best-practices-fire-department)
+
+[Ethics Committee Regular Meeting - Cancelled](https://www.corinthtx.gov/bc-ec/page/ethics-committee-regular-meeting-cancelled)
+
+[CITY OF CORINTH BREAKS GROUND ON COMMONS AT AGORA PARK](https://www.corinthtx.gov/economic-development/page/city-corinth-breaks-ground-commons-agora-park)
+
+[Corinth Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-14)
+
+[HAZARD MITIGATION PLAN PUBLIC MEETING ON AUGUST 23, 2022](https://www.corinthtx.gov/administration/page/hazard-mitigation-plan-public-meeting-august-23-2022)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-62)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-63)
+
+[Corinth Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-15)
+
+[Open Data Hub](https://www.corinthtx.gov/gis/page/open-data-hub)
+
+[Contact Stormwater Staff](https://www.corinthtx.gov/stormwater/page/contact-stormwater-staff)
+
+[Contact Parks and Recreation Staff](https://www.corinthtx.gov/parksrec/page/contact-parks-and-recreation-staff)
+
+[Contact Streets Staff](https://www.corinthtx.gov/streets/page/contact-streets-staff)
+
+[Contact Water & Wastewater Staff](https://www.corinthtx.gov/water-wastewater/page/contact-water-wastewater-staff)
+
+[Community News Administration](https://www.corinthtx.gov/ru/page/community-news-administration)
+
+[Finance Audit Committee](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-4)
+
+[Ethics Commission - Cancelled](https://www.corinthtx.gov/bc-ec/page/ethics-commission-cancelled)
+
+[City Council Special Session - Board & Commission Interviews](https://www.corinthtx.gov/city-council/page/city-council-special-session-board-commission-interviews-0)
+
+[City Council Special Session - Board & Commission Interviews](https://www.corinthtx.gov/city-council/page/city-council-special-session-board-commission-interviews-1)
+
+[City Council Special Session - Board & Commission Interviews](https://www.corinthtx.gov/city-council/page/city-council-special-session-board-commission-interviews)
+
+[CORINTH, HICKORY CREEK, & SHADY SHORES APPROVE BROADBAND CONTRACT](https://www.corinthtx.gov/administration/page/corinth-hickory-creek-shady-shores-approve-broadband-contract)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-19)
+
+[NOTICE OF PUBLIC HEARING ON BUDGET AND TAX RATE](https://www.corinthtx.gov/city-council/page/notice-public-hearing-budget-and-tax-rate)
+
+[Corinth Parks and Recreation Board Special Session - Cancelled](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-cancelled-2)
+
+[COPELAND RECEIVES CHIEF INFORMATION OFFICER CERTIFICATION](https://www.corinthtx.gov/technology-services/page/copeland-receives-chief-information-officer-certification)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-0)
+
+[Crime Control & Prevention District Special Session](https://www.corinthtx.gov/bc-cc/page/crime-control-prevention-district-special-session-1)
+
+[Fire Control, Prevention, and Emergency Medical Services District Special Session](https://www.corinthtx.gov/bc-fcpes/page/fire-control-prevention-and-emergency-medical-services-district-special-session-0)
+
+[Broadband Hub](https://www.corinthtx.gov/gis/page/broadband-hub)
+
+[Corinth Economic Development Corporation (CEDC) - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-cancelled-2)
+
+[Commons at Agora](https://www.corinthtx.gov/parksrec/page/commons-agora)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session)
+
+[CORINTH APPOINTS NEW CITY MANAGER](https://www.corinthtx.gov/administration/page/corinth-appoints-new-city-manager)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-20)
+
+[City Council Workshop and Regular Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-8)
+
+[City Council Workshop and Regular Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-10)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-11)
+
+[Corinth Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-16)
+
+[CORINTH, SHADY SHORES AND HICKORY CREEK PARTNER FOR ANIMAL SHELTER SERVICES](https://www.corinthtx.gov/administration/page/corinth-shady-shores-and-hickory-creek-partner-animal-shelter-services)
+
+[Pre-Application](https://www.corinthtx.gov/planning-development/page/pre-application)
+
+[Keep Corinth Beautiful Special Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-special-session-10)
+
+[Applications](https://www.corinthtx.gov/planning-development/page/applications)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-64)
+
+[Corinth Economic Development Corporation (CEDC) Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-special-session-1)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-23)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-21)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-22)
+
+[Finance Audit Committee Regular Session](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-session-6)
+
+[Finance Audit Committee Regular Session](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-regular-session-7)
+
+[Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-board-special-session)
+
+[City Council Workshop and Regular Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-9)
+
+[Children's Product Recalls](https://www.corinthtx.gov/fire-services/page/childrens-product-recalls)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-66)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-65)
+
+[KEEP CORINTH BEAUTIFUL TO HOST FOURTH ANNUAL LAKE CITIES RECYCLES EVENT](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-host-fourth-annual-lake-cities-recycles-event)
+
+[Corinth Parks and Recreation Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-special-session)
+
+[2022 NOVEMBER ELECTION DAY GUIDE](https://www.corinthtx.gov/city-secretary/page/2022-november-election-day-guide)
+
+[VOLUNTEER NOW FOR CORINTH DOG PARK COMMUNITY BUILD](https://www.corinthtx.gov/parksrec/page/volunteer-now-corinth-dog-park-community-build)
+
+[Planning & Zoning Commission - Special Session](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-special-session-1)
+
+[ONLINE PAYMENT SYSTEM OFFLINE UNTIL MONDAY NOVEMBER 14](https://www.corinthtx.gov/utility-billing/page/online-payment-system-offline-until-monday-november-14)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-67)
+
+[DO YOUR PART AND WATER LESS Y'ALL!](https://www.corinthtx.gov/water-wastewater/page/do-your-part-and-water-less-yall)
+
+[City Council Workshop and Regular Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-12)
+
+[Monthly Financial Reports: 2022-2023](https://www.corinthtx.gov/finance/page/monthly-financial-reports-2022-2023)
+
+[Corinth Parks and Recreation Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-special-session-0)
+
+[May 2, 2026 Election](https://www.corinthtx.gov/city-secretary/page/may-2-2026-election)
+
+[CHIEF TECHNOLOGY OFFICER EARNS CERTIFIED PUBLIC MANAGER DESIGNATION](https://www.corinthtx.gov/technology-services/page/chief-technology-officer-earns-certified-public-manager-designation)
+
+[TEXAS SOLAR SWITCH PROGRAM](https://www.corinthtx.gov/community/page/texas-solar-switch-program)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-13)
+
+[Corinth Economic Development Corporation (CEDC) Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-special-session-2)
+
+[City Council Workshop and Regular Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-11)
+
+[Planning & Zoning Commission - Special Session](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-special-session-2)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-9)
+
+[Add-ons](https://www.corinthtx.gov/technology-services/page/add-ons)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-24)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-68)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-70)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-71)
+
+[REALTY CAPITAL CLOSES ON 20-ACRE PROPERTY IN THE CITY OF CORINTH](https://www.corinthtx.gov/economic-development/page/realty-capital-closes-20-acre-property-city-corinth)
+
+[NOTICE OF INTENTION TO ISSUE COMBINATION TAX AND REVENUE CERTIFICATES OF OBLIGATION](https://www.corinthtx.gov/finance/page/notice-intention-issue-combination-tax-and-revenue-certificates-obligation-2)
+
+[LIBERATION COFFEE COMPANY OPENS IN CORINTH](https://www.corinthtx.gov/economic-development/page/liberation-coffee-company-opens-corinth)
+
+[Planning & Zoning Commission Special Workshop Session](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-special-workshop-session)
+
+[FEB 2 CITY COUNCIL MEETING CANCELLED](https://www.corinthtx.gov/city-council/page/feb-2-city-council-meeting-cancelled)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-25)
+
+[CORINTH POLICE DEPARTMENT RECEIVES "ACCREDITED LAW ENFORCEMENT AGENCY" AWARD](https://www.corinthtx.gov/police/page/corinth-police-department-receives-accredited-law-enforcement-agency-award)
+
+[Finance Audit Committee](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-5)
+
+[CITY SEEKS FEEDBACK ON TRASH AND RECYCLING SERVICES](https://www.corinthtx.gov/utility-billing/page/city-seeks-feedback-trash-and-recycling-services)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-69)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-72)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-73)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-74)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-75)
+
+[City Council Workshop Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-session-0)
+
+[Corinth Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/corinth-parks-and-recreation-board-special-session-17)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-10)
+
+[Public Pension](https://www.corinthtx.gov/financial-transparency/page/original-public-pension-do-not-publish)
+
+[Traditional Finances](https://www.corinthtx.gov/financial-transparency/page/original-traditional-finances-do-not-publish)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-14)
+
+[LAKE CITIES FIRE DEPARTMENT BATTALION CHIEF PROMOTIONS](https://www.corinthtx.gov/fire-services/page/lake-cities-fire-department-battalion-chief-promotions)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-77)
+
+[City Council Regular Session](https://www.corinthtx.gov/city-council/page/city-council-regular-session)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-78)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-81)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-82)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-15)
+
+[Greenbelt Plan](https://www.corinthtx.gov/streets/page/greenbelt-plan)
+
+[Greenbelt Plan](https://www.corinthtx.gov/streets/page/greenbelt-plan-0)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-26)
+
+[Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-board-special-session-0)
+
+[2023 WYLAND NATIONAL MAYOR'S CHALLENGE FOR WATER CONSERVATION](https://www.corinthtx.gov/water-wastewater/page/2023-wyland-national-mayors-challenge-water-conservation)
+
+[Let's Talk Corinth YouTube Playlist](https://www.corinthtx.gov/communications/page/lets-talk-corinth-youtube-playlist)
+
+[CITY HALL SERVER OUTAGE](https://www.corinthtx.gov/administration/page/city-hall-server-outage)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-15)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-11)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-13)
+
+[Planning & Zoning Commission - NOTICE OF CANCELLATION](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-notice-cancellation-0)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-12)
+
+[Planning & Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-session-0)
+
+[Business Directory Registration Form](https://www.corinthtx.gov/communications/page/business-directory-registration-form)
+
+[Community Engagement Committee Application](https://www.corinthtx.gov/communications/page/community-engagement-committee-application)
+
+[Business Directory Registration Form](https://www.corinthtx.gov/communications/page/business-directory-registration-form-0)
+
+[ECONOMIC DEVELOPMENT WEEK SOCIAL MEDIA MARKETING WEBINAR](https://www.corinthtx.gov/economic-development/page/economic-development-week-social-media-marketing-webinar)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-27)
+
+[Corinth Economic Development Corporation (CEDC) Regular Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-regular-session-16)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-1)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-28)
+
+[Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-board-special-session-1)
+
+[Crime Control & Prevention District](https://www.corinthtx.gov/bc-cc/page/crime-control-prevention-district)
+
+[Fire Control, Prevention & EMS District](https://www.corinthtx.gov/bc-fcpes/page/fire-control-prevention-ems-district)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-6)
+
+["LIGHT UP YOUR LIFE" FIBER INTERNET IS BEING DRILLED IN THE LAKE CITIES](https://www.corinthtx.gov/administration/page/light-your-life-fiber-internet-being-drilled-lake-cities)
+
+[2022 WATER QUALITY REPORT](https://www.corinthtx.gov/water-wastewater/page/2022-water-quality-report)
+
+[Corinth Unleashed - The Bark Park](https://www.corinthtx.gov/parksrec/page/corinth-unleashed-bark-park)
+
+[Aerial Map](https://www.corinthtx.gov/economic-development/page/aerial-map)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-76)
+
+[FEMA - Texas Historical Flood Information](https://www.corinthtx.gov/engineering/page/fema-texas-historical-flood-information)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-0)
+
+[LAKE CITIES FIRE DEPARTMENT PROMOTIONS](https://www.corinthtx.gov/fire-services/page/lake-cities-fire-department-promotions)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc)
+
+[Senior Tax Advisory Committee](https://www.corinthtx.gov/city-council/page/senior-tax-advisory-committee)
+
+[UPPER TRINITY ENACTS STAGE ONE DROUGHT WATERING RESTRICTIONS](https://www.corinthtx.gov/water-wastewater/page/upper-trinity-enacts-stage-one-drought-watering-restrictions-0)
+
+[Agora Artist Application](https://www.corinthtx.gov/communications/page/agora-artist-application-1)
+
+[Emergency Responder Radio Coverage System Submittal](https://www.corinthtx.gov/fire-services/page/emergency-responder-radio-coverage-system-submittal)
+
+[City Council Workshop and Regular Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-13)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-80)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-83)
+
+[City Council Workshop and Regular Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-14)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-84)
+
+[City Council Workshop and Regular Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-15)
+
+[Finance Audit Committee](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-6)
+
+[Finance Audit Committee](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-7)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-29)
+
+[Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-board-special-session-2)
+
+[Corinth Economic Development Corporation (CEDC) - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-cancelled-3)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-1)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-5)
+
+[City Council Special Session - Board & Commission Interviews](https://www.corinthtx.gov/city-council/page/city-council-special-session-board-commission-interviews-10)
+
+[City Council Special Session - Board & Commission Interviews](https://www.corinthtx.gov/city-council/page/city-council-special-session-board-commission-interviews-11)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-79)
+
+[Corinth Economic Development Corporation (CEDC) Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-special-session-3)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-30)
+
+[Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-board-special-session-3)
+
+[NOTICE OF PUBLIC HEARING ON BUDGET AND TAX RATE](https://www.corinthtx.gov/city-council/page/notice-public-hearing-budget-and-tax-rate-0)
+
+[Planning & Zoning Commission Regular Session](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-regular-session-1)
+
+[Capital Improvements Advisory Committee](https://www.corinthtx.gov/bc-pzc/page/capital-improvements-advisory-committee)
+
+[Planning & Zoning Commission Workshop Session](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-workshop-session-0)
+
+[LAKE CITIES FIRE DEPARTMENT SILVER AWARD FOR TRAINING](https://www.corinthtx.gov/fire-services/page/lake-cities-fire-department-silver-award-training)
+
+[Vacation Watch Registration Form](https://www.corinthtx.gov/police/page/vacation-watch-registration-form)
+
+[Specialty Retail & Restaurant Incentive Program](https://www.corinthtx.gov/economic-development/page/specialty-retail-restaurant-incentive-program)
+
+[Business Retention & Expansion](https://www.corinthtx.gov/economic-development/page/business-retention-expansion)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-31)
+
+[Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-board-special-session-4)
+
+[Find My Home](https://www.corinthtx.gov/police/page/find-my-home)
+
+[Public Works and Facilities Pay Schedule](https://www.corinthtx.gov/hr/page/public-works-and-facilities-pay-schedule)
+
+[Fire Extinguisher Disposal](https://www.corinthtx.gov/fire-services/page/fire-extinguisher-disposal)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-2)
+
+[Notice of Possible Quorum of Corinth City Council](https://www.corinthtx.gov/city-council/page/notice-possible-quorum-corinth-city-council-4)
+
+[CORINTH POLICE LAUNCH FIND MY HOME PROGRAM](https://www.corinthtx.gov/police/page/corinth-police-launch-find-my-home-program)
+
+[2023 SEWER AVERAGING](https://www.corinthtx.gov/utility-billing/page/2023-sewer-averaging)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-32)
+
+[Fire Extinguisher Annual Inspections](https://www.corinthtx.gov/fire-services/page/fire-extinguisher-annual-inspections)
+
+[Mobile Food Vehicle Permits](https://www.corinthtx.gov/fire-services/page/mobile-food-vehicle-permits)
+
+[Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-board-special-session-5)
+
+[CORINTH ANNOUNCES EVENTS FOR 2024](https://www.corinthtx.gov/special-events/page/corinth-announces-events-2024)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-14)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-16)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-4)
+
+[Finance Audit Committee](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-8)
+
+[Finance Audit Committee - CANCELED (LACK OF QUORUM)](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-canceled-lack-quorum)
+
+[City Council & Economic Development Workshop Session](https://www.corinthtx.gov/city-council/page/city-council-economic-development-workshop-session)
+
+[Event Vendor Opportunities](https://www.corinthtx.gov/special-events/page/event-vendor-opportunities)
+
+[CITY OF CORINTH RECOGNIZED BY IEDC FOR 2022 AERIAL MAP](https://www.corinthtx.gov/economic-development/page/city-corinth-recognized-iedc-2022-aerial-map)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-17)
+
+[City Council Workshop and Regular Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-16)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-85)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-92)
+
+[City Council Workshop and Regular Session - Cancelled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-cancelled-17)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-89)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-90)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-86)
+
+[City Council Regular Session](https://www.corinthtx.gov/city-council/page/city-council-regular-session-0)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-88)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-93)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-87)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-91)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-33)
+
+[Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-board-special-session-6)
+
+[Monthly Financial Reports 2023-2024](https://www.corinthtx.gov/finance/page/monthly-financial-reports-2023-2024)
+
+[Campaign Finance Reports](https://www.corinthtx.gov/city-secretary/page/campaign-finance-reports)
+
+[Campaign Finance Reports 2024](https://www.corinthtx.gov/city-secretary/page/campaign-finance-reports-2024)
+
+[Election Notices](https://www.corinthtx.gov/city-secretary/page/election-notices)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-6)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-34)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-18)
+
+[Property Residential Enhancement Program](https://www.corinthtx.gov/neighborhood-services/page/property-residential-enhancement-program)
+
+[2024-2025 PREP Guidelines](https://www.corinthtx.gov/neighborhood-services/page/2024-2025-prep-guidelines)
+
+[Corinth Economic Development Corporation (CEDC) - Notice of Possible Quorum](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-notice-possible-quorum)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-7)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-19)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-35)
+
+[Parks and Recreation Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-special-session)
+
+[City Council Workshop Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-session-2)
+
+[CORINTH POLICE DEPARTMENT PRESS RELEASE](https://www.corinthtx.gov/police/page/corinth-police-department-press-release)
+
+[Corinth Economic Development Corporation (CEDC) - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-cancelled-4)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-20)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-8)
+
+[March 2024 Strategic Plan Update](https://www.corinthtx.gov/financial-transparency/page/march-2024-strategic-plan-update)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-36)
+
+[Parks and Recreation Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-special-session-0)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-21)
+
+[Agora Music Fest 2026 Sponsorship Application](https://www.corinthtx.gov/special-events/page/agora-music-fest-2026-sponsorship-application)
+
+[Friday Night Flicks 2026 Sponsorship Application](https://www.corinthtx.gov/special-events/page/friday-night-flicks-2026-sponsorship-application)
+
+[Summer Splash Sponsorship Form](https://www.corinthtx.gov/special-events/page/summer-splash-sponsorship-form)
+
+[Pawtoberfest Sponsorship Form](https://www.corinthtx.gov/special-events/page/pawtoberfest-sponsorship-form)
+
+[Howl-O-Ween Bash 2026 Sponsorship Application](https://www.corinthtx.gov/special-events/page/howl-o-ween-bash-2026-sponsorship-application)
+
+[Cattleman Festival 2026 Sponsorship Application](https://www.corinthtx.gov/special-events/page/cattleman-festival-2026-sponsorship-application)
+
+[Christmas at the Commons 2026 Sponsorship Application](https://www.corinthtx.gov/special-events/page/christmas-commons-2026-sponsorship-application)
+
+[Shamrock and Roll 2026 Sponsorship Application](https://www.corinthtx.gov/special-events/page/shamrock-and-roll-2026-sponsorship-application)
+
+[Egg-streme Easter Hunt 2026 Sponsorship Application](https://www.corinthtx.gov/special-events/page/egg-streme-easter-hunt-2026-sponsorship-application)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-7)
+
+[Corinth Economic Development Corporation (CEDC) - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-cancelled-5)
+
+[Corinth Economic Development Corporation (CEDC) - Cancelled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-cancelled-6)
+
+[CORINTH BECOMES 59TH MUSIC FRIENDLY TEXAS CERTIFIED COMMUNITY](https://www.corinthtx.gov/economic-development/page/corinth-becomes-59th-music-friendly-texas-certified-community)
+
+[FIBER INTERNET NOW AVAILABLE IN CORINTH](https://www.corinthtx.gov/administration/page/fiber-internet-now-available-corinth)
+
+[Agora at Corinth Mobile App](https://www.corinthtx.gov/special-events/page/agora-corinth-mobile-app)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-37)
+
+[Parks and Recreation Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-special-session-1)
+
+[Know Your H2O](https://www.corinthtx.gov/utility-billing/page/know-your-h2o)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-9)
+
+[Planning & Zoning Commission - NOTICE OF CANCELLATION](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-notice-cancellation-1)
+
+[CORINTH LAUNCHES PROPERTY RESIDENTIAL ENHANCEMENT PROGRAM](https://www.corinthtx.gov/neighborhood-services/page/corinth-launches-property-residential-enhancement-program)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-15)
+
+[CORINTH LAUNCHES EVENTS MOBILE APP](https://www.corinthtx.gov/special-events/page/corinth-launches-events-mobile-app)
+
+[CITY OF CORINTH UNOFFICIAL ELECTION RESULTS](https://www.corinthtx.gov/administration/page/city-corinth-unofficial-election-results)
+
+[Crime Control & Prevention District](https://www.corinthtx.gov/bc-cc/page/crime-control-prevention-district-0)
+
+[Fire Control, Prevention & EMS District](https://www.corinthtx.gov/bc-fcpes/page/fire-control-prevention-ems-district-0)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-17)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-16)
+
+[City Council Workshop and Regular Session Canceled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-canceled)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-94)
+
+[City Council Workshop and Regular Session - Canceled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-canceled-0)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-20)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-96)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-95)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-97)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-98)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-102)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-103)
+
+[Joint Special Session with City Council and Corinth Economic Development Corporation](https://www.corinthtx.gov/city-council/page/joint-special-session-city-council-and-corinth-economic-development-corporation)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-104)
+
+[City Council Workshop and Regular Session - Canceled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-canceled-2)
+
+[CORINTH UNVEILS KNOW YOUR H2O PORTAL](https://www.corinthtx.gov/utility-billing/page/corinth-unveils-know-your-h2o-portal)
+
+[General Election Results](https://www.corinthtx.gov/city-secretary/page/general-election-results)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-38)
+
+[Parks and Recreation Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-special-session-2)
+
+[Planning & Zoning Commission - NOTICE OF CANCELLATION](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-notice-cancellation-2)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-10)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-11)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-12)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-22)
+
+[SERVICE UPDATE FROM COMMUNITY WASTE DISPOSAL](https://www.corinthtx.gov/administration/page/service-update-community-waste-disposal)
+
+[City Council Workshop and Regular Session - Canceled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-canceled-1)
+
+[UTRWD IMPLEMENTS TWO DAY PER WEEK WATERING REQUIREMENTS](https://www.corinthtx.gov/water-wastewater/page/utrwd-implements-two-day-week-watering-requirements)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-23)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-39)
+
+[Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-board-special-session-7)
+
+[Music Friendly Corinth Task Force Meeting](https://www.corinthtx.gov/administration/page/music-friendly-corinth-task-force-meeting-0)
+
+[COMMUNITY WASTE DISPOSAL STORM DEBRIS UPDATE](https://www.corinthtx.gov/administration/page/community-waste-disposal-storm-debris-update-0)
+
+[Joint Workshop Session with City Council, Planning & Zoning Commission, and Corinth Economic Development Corporation](https://www.corinthtx.gov/city-council/page/joint-workshop-session-city-council-planning-zoning-commission-and-corinth)
+
+[City Council Special Session - Board & Commission Interviews](https://www.corinthtx.gov/city-council/page/city-council-special-session-board-commission-interviews-12)
+
+[Current Developments Dashboard](https://www.corinthtx.gov/planning-development/page/current-developments-dashboard)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-24)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-40)
+
+[Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-board-special-session-8)
+
+[2023 WATER QUALITY REPORT](https://www.corinthtx.gov/water-wastewater/page/2023-water-quality-report)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-25)
+
+[2024 Bike Routes Survey](https://www.corinthtx.gov/publicworks/page/2024-bike-routes-survey)
+
+[Planning and Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-and-zoning-commission)
+
+[Planned Development Ordinances](https://www.corinthtx.gov/planning-development/page/planned-development-ordinances)
+
+[ECONOMIC DEVELOPMENT BUSINESS IMPROVEMENT GRANT PROGRAM](https://www.corinthtx.gov/economic-development/page/economic-development-business-improvement-grant-program)
+
+[NOTICE OF PUBLIC HEARING ON BUDGET AND TAX RATE](https://www.corinthtx.gov/city-council/page/notice-public-hearing-budget-and-tax-rate-1)
+
+[Find My Home Registration Form](https://www.corinthtx.gov/police/page/find-my-home-registration-form)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-41)
+
+[Parks and Recreation Special Session - Canceled due to lack of quorum](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-special-session-canceled-due-lack-quorum)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-26)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-27)
+
+[Corinth Economic Development Corporation (CEDC) Special Session](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-special-session-4)
+
+[Keep Corinth Beautiful Regular Session - Canceled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-canceled)
+
+[CORINTH POLICE CHIEF JERRY GARNER ANNOUNCES RETIREMENT](https://www.corinthtx.gov/police/page/corinth-police-chief-jerry-garner-announces-retirement)
+
+[Notice of Possible City Council Quorum](https://www.corinthtx.gov/city-council/page/notice-possible-city-council-quorum)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-28)
+
+[POSITIVE WEST NILE CASE IN CORINTH](https://www.corinthtx.gov/publicworks/page/positive-west-nile-case-corinth)
+
+[WEST NILE VIRUS UPDATE](https://www.corinthtx.gov/publicworks/page/west-nile-virus-update)
+
+[CORINTH ANNOUNCES APPOINTMENT OF NEW POLICE CHIEF WENDELL MITCHELL](https://www.corinthtx.gov/police/page/corinth-announces-appointment-new-police-chief-wendell-mitchell)
+
+[Keep Corinth Beautiful Special Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-special-session-11)
+
+[Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-board-special-session-9)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-13)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-14)
+
+[Corinth Economic Development Corporation (CEDC) - Canceled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-canceled)
+
+[Approved Materials List](https://www.corinthtx.gov/engineering/page/approved-materials-list)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-42)
+
+[Parks and Recreation Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-special-session-3)
+
+[Howl-O-Ween Bash](https://www.corinthtx.gov/special-events/page/howl-o-ween-bash-0)
+
+[City Council Special Workshop Session](https://www.corinthtx.gov/city-council/page/city-council-special-workshop-session-3)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-29)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-99)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-100)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-101)
+
+[City Council Workshop and Regular Session - Canceled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-canceled-3)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-105)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-106)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-108)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-107)
+
+[City Council Regular Session](https://www.corinthtx.gov/city-council/page/city-council-regular-session-2)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-109)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-110)
+
+[City Council Workshop and Regular Session - Canceled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-canceled-4)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-111)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-112)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-113)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-114)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-115)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-116)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-117)
+
+[City Council Workshop and Regular Session - Canceled (Lack of quorum)](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-canceled-lack-quorum)
+
+[NATIONAL COMMUNITY PLANNING MONTH PROCLAMATION](https://www.corinthtx.gov/planning-development/page/national-community-planning-month-proclamation)
+
+[CORINTH ANNOUNCES EVENTS FOR 2025](https://www.corinthtx.gov/special-events/page/corinth-announces-events-2025)
+
+[2024 SEWER AVERAGING](https://www.corinthtx.gov/utility-billing/page/2024-sewer-averaging)
+
+[Planning & Zoning Commission - NOTICE OF CANCELLATION](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-notice-cancellation-3)
+
+[Keep Corinth Beautiful Board Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-board-regular-session)
+
+[Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-board-special-session-10)
+
+[CITY OF CORINTH WINS FOUR STATE AND NATIONAL COMMUNICATION AWARDS](https://www.corinthtx.gov/communications/page/city-corinth-wins-four-state-and-national-communication-awards)
+
+[2026 Vendor Information](https://www.corinthtx.gov/special-events/page/2026-vendor-information)
+
+[Lake Cities Chamber of Commerce Daddy Daughter Dance](https://www.corinthtx.gov/administration/page/lake-cities-chamber-commerce-daddy-daughter-dance)
+
+[City Council Regular Session](https://www.corinthtx.gov/city-council/page/city-council-regular-session-1)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-30)
+
+[Corinth Area Plumbers](https://www.corinthtx.gov/building-services/page/corinth-area-plumbers)
+
+[Corinth Area Electricians](https://www.corinthtx.gov/building-services/page/corinth-area-electricians)
+
+[CORINTH ANNOUNCES APPOINTMENT OF NEW ASSISTANT FIRE CHIEF](https://www.corinthtx.gov/fire-services/page/corinth-announces-appointment-new-assistant-fire-chief)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-15)
+
+[Agorasaurus 2025 Sponsorship Application](https://www.corinthtx.gov/special-events/page/agorasaurus-2025-sponsorship-application-0)
+
+[Touch-A-Truck 2026 Sponsorship Application](https://www.corinthtx.gov/special-events/page/touch-truck-2026-sponsorship-application-0)
+
+[Platinum Level 2026 Sponsorship Application](https://www.corinthtx.gov/special-events/page/platinum-level-2026-sponsorship-application)
+
+[Corporate Level 2026 Sponsorship Application](https://www.corinthtx.gov/special-events/page/corporate-level-2026-sponsorship-application)
+
+[Motors on Main 2026 Sponsorship Application](https://www.corinthtx.gov/special-events/page/motors-main-2026-sponsorship-application)
+
+[2026 Sponsorship Booklet](https://www.corinthtx.gov/special-events/page/2026-sponsorship-booklet)
+
+[Finance Audit Committee](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-9)
+
+[Finance Audit Committee](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-10)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-43)
+
+[Parks and Recreation Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-special-session-4)
+
+[Planning & Zoning Commission - NOTICE OF CANCELLATION](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-notice-cancellation-4)
+
+[Joint Special Session with City Council and Corinth Economic Development Corporation - Canceled](https://www.corinthtx.gov/city-council/page/joint-special-session-city-council-and-corinth-economic-development-corporation-0)
+
+[Corinth Economic Development Corporation (CEDC) - Canceled](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-canceled-0)
+
+[Denton County Sex Offender Information](https://www.corinthtx.gov/police/page/denton-county-sex-offender-information)
+
+[Monthly Financial Reports 2024-2025](https://www.corinthtx.gov/finance/page/monthly-financial-reports-2024-2025)
+
+[Community Engagement Committee Meeting](https://www.corinthtx.gov/administration/page/community-engagement-committee-meeting)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-31)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-16)
+
+[Joint Special Session with City Council and Corinth Economic Development Corporation](https://www.corinthtx.gov/city-council/page/joint-special-session-city-council-and-corinth-economic-development-corporation-1)
+
+[Keep Corinth Beautiful Regular Session- Canceled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-canceled-1)
+
+[Finance Audit Commitee](https://www.corinthtx.gov/bc-fac/page/finance-audit-commitee)
+
+[Finance Audit Commitee](https://www.corinthtx.gov/bc-fac/page/finance-audit-commitee-1)
+
+[Crime Control & Prevention District](https://www.corinthtx.gov/bc-cc/page/crime-control-prevention-district-1)
+
+[Fire Control, Prevention & EMS District](https://www.corinthtx.gov/bc-fcpes/page/fire-control-prevention-ems-district-1)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-44)
+
+[Parks and Recreation Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-special-session-5)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-32)
+
+[Finance Audit Committee](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-11)
+
+[Parks and Recreation Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-special-session-6)
+
+[CORINTH JOINS NATIONAL WATER CONSERVATION CHALLENGE](https://www.corinthtx.gov/water-wastewater/page/corinth-joins-national-water-conservation-challenge)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-17)
+
+[City Council Special Workshop & Executive Session](https://www.corinthtx.gov/city-council/page/city-council-special-workshop-executive-session)
+
+[CORINTH RECOGNIZED AS A GOLD STAR AFFILIATE BY KEEP TEXAS BEAUTIFUL](https://www.corinthtx.gov/kcb/page/corinth-recognized-gold-star-affiliate-keep-texas-beautiful)
+
+[Planning & Zoning Commission Special Meeting](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-special-meeting)
+
+[Keep Corinth Beautiful Regular Session - CANCELED](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-canceled-0)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-47)
+
+[Keep Corinth Beautiful Regular Session- Cancelled due to lack of quorum](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-cancelled-due-lack-quorum)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-46)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-48)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-49)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-50)
+
+[Keep Corinth Beautiful Regular Session](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-regular-session-45)
+
+[Service Responsibilities](https://www.corinthtx.gov/water-wastewater/page/service-responsibilities)
+
+[Corinth Community Park - Soccer/Football](https://www.corinthtx.gov/parksrec/page/corinth-community-park-soccerfootball)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-33)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-18)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-18)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-34)
+
+[Enhancing Public Safety](https://www.corinthtx.gov/police/page/enhancing-public-safety)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-35)
+
+[Community Event Survey](https://www.corinthtx.gov/special-events/page/community-event-survey)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-36)
+
+[Parks and Recreation Board Special Session](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-board-special-session-11)
+
+[Downtown Corinth](https://www.corinthtx.gov/economic-development/page/downtown-corinth)
+
+[Downtown Corinth Plan 2025](https://www.corinthtx.gov/planning-development/page/downtown-corinth-plan-2025)
+
+[City Council Special Workshop Session](https://www.corinthtx.gov/city-council/page/city-council-special-workshop-session-4)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-21)
+
+[Permits & FAQs](https://www.corinthtx.gov/building-services/page/permits-faqs)
+
+[Garage Sale Permits](https://www.corinthtx.gov/building-services/page/garage-sale-permits)
+
+[Active Transportation Plan](https://www.corinthtx.gov/planning-development/page/active-transportation-plan)
+
+[Planning & Zoning Commission - Cancelled due to lack of quorum](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-cancelled-due-lack-quorum)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-37)
+
+[Prep & Popcorn](https://www.corinthtx.gov/special-events/page/prep-popcorn)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-22)
+
+[Parks and Recreation Board Special Session- Cancelled due to lack of quorum](https://www.corinthtx.gov/bc-pr/page/parks-and-recreation-board-special-session-cancelled-due-lack-quorum)
+
+[Crime Control & Prevention District](https://www.corinthtx.gov/bc-cc/page/crime-control-prevention-district-2)
+
+[Fire Control, Prevention & EMS District](https://www.corinthtx.gov/bc-fcpes/page/fire-control-prevention-ems-district-2)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-38)
+
+[Corinth Citizen's Academy](https://www.corinthtx.gov/city-council/page/corinth-citizens-academy)
+
+[LAKE CITIES FLOOD RELIEF FUNDRAISER](https://www.corinthtx.gov/administration/page/lake-cities-flood-relief-fundraiser)
+
+[2024 WATER QUALITY REPORT](https://www.corinthtx.gov/water-wastewater/page/2024-water-quality-report)
+
+[Prep & Popcorn 2026 Sponsorship Application](https://www.corinthtx.gov/special-events/page/prep-popcorn-2026-sponsorship-application)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-39)
+
+[Fire Control, Prevention & EMS District](https://www.corinthtx.gov/bc-fcpes/page/fire-control-prevention-ems-district-3)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-19)
+
+[About Keep Corinth Beautiful](https://www.corinthtx.gov/kcb/page/about-keep-corinth-beautiful)
+
+[Adopt-a-Spot](https://www.corinthtx.gov/kcb/page/adopt-spot-0)
+
+[Awards & Honors](https://www.corinthtx.gov/kcb/page/awards-honors)
+
+[Butterfly Garden Workdays](https://www.corinthtx.gov/kcb/page/butterfly-garden-workdays)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-23)
+
+[Get Involved](https://www.corinthtx.gov/kcb/page/get-involved)
+
+[Greatest American Cleanup](https://www.corinthtx.gov/kcb/page/greatest-american-cleanup)
+
+[GOVERNOR'S SMALL BUSINESS INITIATIVES](https://www.corinthtx.gov/economic-development/page/governors-small-business-initiatives)
+
+[Post Oak Dr. (South)](https://www.corinthtx.gov/kcb/page/post-oak-dr-south)
+
+[Corinth Pkwy. (South)- Available for Adoption](https://www.corinthtx.gov/kcb/page/corinth-pkwy-south-available-adoption)
+
+[Lake Sharon Dr. (West)](https://www.corinthtx.gov/kcb/page/lake-sharon-dr-west)
+
+[Robinson Rd. (West)- Available for Adoption](https://www.corinthtx.gov/kcb/page/robinson-rd-west-available-adoption)
+
+[Post Oak Dr. (North) - Available for Adoption](https://www.corinthtx.gov/kcb/page/post-oak-dr-north-available-adoption)
+
+[Oakmont Dr. (South)](https://www.corinthtx.gov/kcb/page/oakmont-dr-south)
+
+[Summit Ridge Dr.- Available for Adoption](https://www.corinthtx.gov/kcb/page/summit-ridge-dr-available-adoption)
+
+[Church Dr.](https://www.corinthtx.gov/kcb/page/church-dr)
+
+[Oakmont Dr. (North)](https://www.corinthtx.gov/kcb/page/oakmont-dr-north)
+
+[Robinson Rd. (East)](https://www.corinthtx.gov/kcb/page/robinson-rd-east)
+
+[North Corinth St.](https://www.corinthtx.gov/kcb/page/north-corinth-st)
+
+[Corinth Pkwy. (East)](https://www.corinthtx.gov/kcb/page/corinth-pkwy-east)
+
+[South Corinth St.](https://www.corinthtx.gov/kcb/page/south-corinth-st)
+
+[Lake Sharon Dr. (East)](https://www.corinthtx.gov/kcb/page/lake-sharon-dr-east)
+
+[Quail Run Dr.](https://www.corinthtx.gov/kcb/page/quail-run-dr)
+
+[Parkridge Dr. (South)](https://www.corinthtx.gov/kcb/page/parkridge-dr-south)
+
+[Dobbs Rd.](https://www.corinthtx.gov/kcb/page/dobbs-rd)
+
+[Lake Sharon Dr. Central l](https://www.corinthtx.gov/kcb/page/lake-sharon-dr-central-l)
+
+[Parkridge Dr. (North)](https://www.corinthtx.gov/kcb/page/parkridge-dr-north)
+
+[Current Developments](https://www.corinthtx.gov/economic-development/page/current-developments)
+
+[Lead Service Line Inventory](https://www.corinthtx.gov/water-wastewater/page/lead-service-line-inventory)
+
+[Corinth Economic Development Corporation (CEDC) Special Meeting](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-special-meeting)
+
+[Volunteer Registration](https://www.corinthtx.gov/kcb/page/volunteer-registration)
+
+[Parkridge Dr. (Central)](https://www.corinthtx.gov/kcb/page/parkridge-dr-central)
+
+[Lake Sharon Dr. (Central) || - Available for Adoption](https://www.corinthtx.gov/kcb/page/lake-sharon-dr-central-available-adoption)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-40)
+
+[NOTICE OF PUBLIC HEARING ON BUDGET AND TAX RATE](https://www.corinthtx.gov/city-council/page/notice-public-hearing-budget-and-tax-rate-2)
+
+[Bags to Benches](https://www.corinthtx.gov/kcb/page/bags-benches)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-24)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-42)
+
+[Planning & Zoning Commission - NOTICE OF CANCELLATION](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-notice-cancellation-5)
+
+[Safe Kids Program](https://www.corinthtx.gov/special-events/page/safe-kids-program)
+
+[Business Booth Program](https://www.corinthtx.gov/economic-development/page/business-booth-program)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-41)
+
+[Clean-up Report Form](https://www.corinthtx.gov/kcb/page/clean-report-form)
+
+[Clean-Up Report](https://www.corinthtx.gov/kcb/page/clean-report)
+
+[Adopt-A-Spot Request Form](https://www.corinthtx.gov/kcb/page/adopt-spot-request-form)
+
+[City Council Special Session - Board & Commission Interviews](https://www.corinthtx.gov/city-council/page/city-council-special-session-board-commission-interviews-14)
+
+[City Council Special Session - Board & Commission Interviews](https://www.corinthtx.gov/city-council/page/city-council-special-session-board-commission-interviews-13)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-25)
+
+[NOVEMBER 2025 ELECTION GUIDE](https://www.corinthtx.gov/city-secretary/page/november-2025-election-guide)
+
+[Breakfast with a Badge](https://www.corinthtx.gov/police/page/breakfast-badge)
+
+[Alarm Permit Application Guide](https://www.corinthtx.gov/police/page/alarm-permit-application-guide)
+
+[City Council Special Executive Session](https://www.corinthtx.gov/city-council/page/city-council-special-executive-session)
+
+[Corinth Community Park Master Plan Community Meeting](https://www.corinthtx.gov/parksrec/page/corinth-community-park-master-plan-community-meeting)
+
+[2025 SEWER AVERAGING](https://www.corinthtx.gov/utility-billing/page/2025-sewer-averaging)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-118)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-119)
+
+[City Council Workshop and Regular Session - Canceled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-canceled-5)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-120)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-122)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-124)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-121)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-126)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-127)
+
+[City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-128)
+
+[Lake Cities Chamber of Commerce Luncheon](https://www.corinthtx.gov/administration/page/lake-cities-chamber-commerce-luncheon-11)
+
+[Shamrock & Roll](https://www.corinthtx.gov/special-events/page/shamrock-roll)
+
+[Egg-Streme Easter Hunt](https://www.corinthtx.gov/special-events/page/egg-streme-easter-hunt-1)
+
+[Touch-a-Truck](https://www.corinthtx.gov/special-events/page/touch-truck-1)
+
+[Agora Music Fest](https://www.corinthtx.gov/special-events/page/agora-music-fest-0)
+
+[Friday Night Flicks](https://www.corinthtx.gov/special-events/page/friday-night-flicks-2)
+
+[Agora Community Market](https://www.corinthtx.gov/special-events/page/agora-community-market)
+
+[CORINTH ANNOUNCES 2026 COMMUNITY EVENT SCHEDULE](https://www.corinthtx.gov/special-events/page/corinth-announces-2026-community-event-schedule)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-26)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-27)
+
+[Monarch Market](https://www.corinthtx.gov/kcb/page/monarch-market)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-43)
+
+[City Council Special Session](https://www.corinthtx.gov/city-council/page/city-council-special-session-21)
+
+[LDHS Drive to Support DECA](https://www.corinthtx.gov/administration/page/ldhs-drive-support-deca)
+
+[Keep Corinth Beautiful- Canceled](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-canceled)
+
+[Agora Community Market 2026 Sponsorship Application](https://www.corinthtx.gov/special-events/page/agora-community-market-2026-sponsorship-application)
+
+[In-Kind Donation 2026 Sponsorship Application](https://www.corinthtx.gov/special-events/page/kind-donation-2026-sponsorship-application)
+
+[Monthly Financial Reports 2025-2026](https://www.corinthtx.gov/finance/page/monthly-financial-reports-2025-2026)
+
+[Monthly Financial Reports 2024-2025](https://www.corinthtx.gov/finance/page/monthly-financial-reports-2025-2026-0)
+
+[City Council Workshop and Regular Meeting - Canceled](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-meeting-canceled)
+
+[Awards and Honors](https://www.corinthtx.gov/special-events/page/awards-and-honors)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-29)
+
+[Board of Adjustment](https://www.corinthtx.gov/bc-boa/page/board-adjustment-0)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-30)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-45)
+
+[Planning & Zoning Commission](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-46)
+
+[CORINTH EARNS FIVE STATE COMMUNICATION AWARDS](https://www.corinthtx.gov/communications/page/corinth-earns-five-state-communication-awards)
+
+[Corinth Economic Development Corporation (CEDC)](https://www.corinthtx.gov/bc-cedc/page/corinth-economic-development-corporation-cedc-28)
+
+[CORINTH POLICE DEPARTMENT ANNOUNCES PROMOTION OF CAPTAINS JIMMIE GREGG AND JESSE HUNTER TO DEPUTY CHIEF](https://www.corinthtx.gov/police/page/corinth-police-department-announces-promotion-captains-jimmie-gregg-and-jesse-hunter)
+
+[Lake Cities Chamber of Commerce Luncheon](https://www.corinthtx.gov/administration/page/lake-cities-chamber-commerce-luncheon-12)
+
+[Sponsorship Opportunities](https://www.corinthtx.gov/kcb/page/sponsorship-opportunities)
+
+[Advocate Sponsorship Application](https://www.corinthtx.gov/kcb/page/advocate-sponsorship-application)
+
+[Steward Sponsorship Application](https://www.corinthtx.gov/kcb/page/steward-sponsorship-application)
+
+[Supporter Sponsorship Application](https://www.corinthtx.gov/kcb/page/supporter-sponsorship-application)
+
+[KCB Friend Sponsorship Application](https://www.corinthtx.gov/kcb/page/kcb-friend-sponsorship-application)
+
+[KCB Supply Sponsorship Application](https://www.corinthtx.gov/kcb/page/kcb-supply-sponsorship-application)
+
+[KCB Workday Sponsorship Application](https://www.corinthtx.gov/kcb/page/kcb-workday-sponsorship-application)
+
+[KCB In-Kind Donation Sponsorship Application](https://www.corinthtx.gov/kcb/page/kcb-kind-donation-sponsorship-application)
+
+[Additional Sponsorship Opportunities Application](https://www.corinthtx.gov/kcb/page/additional-sponsorship-opportunities-application)
+
+[CORINTH TRANSITIONS TO .GOV DOMAIN](https://www.corinthtx.gov/administration/page/corinth-transitions-gov-domain)
+
+[8th Annual Corinth Recycles & Trash-Off](https://www.corinthtx.gov/kcb/page/8th-annual-corinth-recycles-trash)
+
+[Finance Audit Committee](https://www.corinthtx.gov/bc-fac/page/finance-audit-committee-12)
+
+[Keep Corinth Beautiful](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-7)
+
+[Keep Corinth Beautiful](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-7)
+
+[Keep Corinth Beautiful](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-8)
+
+[Keep Corinth Beautiful](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-9)
+
+[Keep Corinth Beautiful](https://www.corinthtx.gov/bc-kcb/page/keep-corinth-beautiful-10)
+
+[Winter Ready Corinth](https://www.corinthtx.gov/water-wastewater/page/winter-ready-corinth)
+
+[Planning & Zoning Commission - NOTICE OF CANCELLATION](https://www.corinthtx.gov/bc-pzc/page/planning-zoning-commission-notice-cancellation-6)
+
+[COMMUNITY WASTE DISPOSAL SERVICE UPDATE](https://www.corinthtx.gov/administration/page/community-waste-disposal-service-update)
+
+[City Council](https://www.corinthtx.gov/city-council/page/city-council)
+
+[Lynchburg Creek Phase II - Flood Mitigation - FEMA Grant](https://www.corinthtx.gov/engineering/project/lynchburg-creek-phase-ii-flood-mitigation-fema-grant)
+
+[1.0 MG Elevated Storage Tank](https://www.corinthtx.gov/engineering/project/10-mg-elevated-storage-tank)
+
+[Quail Run Realignment](https://www.corinthtx.gov/engineering/project/quail-run-realignment)
+
+[Lake Sharon/Dobbs Realignment](https://www.corinthtx.gov/engineering/project/lake-sharondobbs-realignment)
+
+[TxDot Overpass at I-35/Lake Sharon, Phase 1](https://www.corinthtx.gov/engineering/project/txdot-overpass-i-35lake-sharon-phase-1)
+
+[NCTC Way](https://www.corinthtx.gov/engineering/project/nctc-way)
+
+[Lake Sharon at FM 2499 Traffic Signal](https://www.corinthtx.gov/engineering/project/lake-sharon-fm-2499-traffic-signal)
+
+[Shady Shores Road and Drainage County Project](https://www.corinthtx.gov/engineering/project/shady-shores-road-and-drainage-county-project)
+
+[Lake Cities Broadband](https://www.corinthtx.gov/engineering/project/lake-cities-broadband)
+
+[Walton Drive](https://www.corinthtx.gov/engineering/project/walton-drive)
+
+[Boards, Commissions, and Committees Applications](https://www.corinthtx.gov/bc/webform/boards-commissions-and-committees-applications)
+
+[Jury Summons Questionnaire](https://www.corinthtx.gov/municipal-court/webform/jury-summons-questionnaire)
+
+[Online Burn Permit Request](https://www.corinthtx.gov/fire-services/webform/online-burn-permit-request)
+
+[Submit an Anonymous Tip](https://www.corinthtx.gov/police/webform/submit-anonymous-tip)
+
+[New Account Application](https://www.corinthtx.gov/utility-billing/webform/new-account-application)
+
+[Bank Drafting Form](https://www.corinthtx.gov/utility-billing/webform/bank-drafting-form)
+
+[Fire Hydrant Meter Application](https://www.corinthtx.gov/utility-billing/webform/fire-hydrant-meter-application)
+
+[Letter of Credit Request](https://www.corinthtx.gov/utility-billing/webform/letter-credit-request)
+
+[Go Green Sign Up for E-Bills](https://www.corinthtx.gov/utility-billing/webform/go-green-sign-e-bills)
+
+[Move Out Request Form](https://www.corinthtx.gov/utility-billing/webform/move-out-request-form)
+
+[Business Account Application](https://www.corinthtx.gov/utility-billing/webform/business-account-application)
+
+[Name Change Request Form](https://www.corinthtx.gov/utility-billing/webform/name-change-request-form)
+
+[Recycled Latex Paint Order Form](https://www.corinthtx.gov/utility-billing/webform/recycled-latex-paint-order-form)
+
+[Field Rental Request](https://www.corinthtx.gov/parksrec/webform/field-rental-request)
+
+[Citizens Public Safety Academy Application](https://www.corinthtx.gov/police/webform/citizens-public-safety-academy-application)
+
+[Community Calendar Event Request](https://www.corinthtx.gov/communications/webform/community-calendar-event-request)
+
+[City Facility Rental Request](https://www.corinthtx.gov/parksrec/webform/city-facility-rental-request)
+
+[Residential Watering Timer Sensor Rebate Form](https://www.corinthtx.gov/water-wastewater/webform/residential-watering-timer-sensor-rebate-form)
+
+[Residential Rain and Freeze Sensor Rebate Form](https://www.corinthtx.gov/water-wastewater/webform/residential-rain-and-freeze-sensor-rebate-form)
+
+[Irrigation System Check-up Rebate Form](https://www.corinthtx.gov/water-wastewater/webform/irrigation-system-check-rebate-form)
+
+[SMART Irrigation Technology Rebate Application](https://www.corinthtx.gov/water-wastewater/webform/smart-irrigation-technology-rebate-application)
+
+[WaterWise Landscape and Irrigation Design Rebate Form](https://www.corinthtx.gov/water-wastewater/webform/waterwise-landscape-and-irrigation-design-rebate-form)
+
+[Adopt-A-Spot Application](https://www.corinthtx.gov/kcb/webform/adopt-spot-application)
+
+[Clean-up Report Form](https://www.corinthtx.gov/kcb/webform/clean-report-form)
+
+[Budget Billing Registration Form](https://www.corinthtx.gov/utility-billing/webform/budget-billing-registration-form)
+
+[Record Drawing Request](https://www.corinthtx.gov/engineering/webform/record-drawing-request)
+
+[Sponsorship Opportunities](https://www.corinthtx.gov/parksrec/webform/sponsorship-opportunities)
+
+[Request for Disclosure of Information](https://www.corinthtx.gov/utility-billing/webform/request-disclosure-information)
+
+[Request for Use of City Logos](https://www.corinthtx.gov/communications/webform/request-use-city-logos)
+
+[Zoning Verification Letter Request](https://www.corinthtx.gov/planning-development/webform/zoning-verification-letter-request)
+
+[Multimedia Request Form](https://www.corinthtx.gov/communications/webform/multimedia-request-form)
+
+[Construction Inspector Overtime Request](https://www.corinthtx.gov/engineering/webform/construction-inspector-overtime-request)
+
+[Property Residential Enhancement Program Application](https://www.corinthtx.gov/neighborhood-services/webform/property-residential-enhancement-program-application)
+
+[Low-Flow Toilet Upgrade Rebate Form](https://www.corinthtx.gov/water-wastewater/webform/low-flow-toilet-upgrade-rebate-form)
+
+[Inspections](https://www.corinthtx.gov/building-services/webform/inspections)
+
+[Business Booth Program Application](https://www.corinthtx.gov/economic-development/webform/business-booth-program-application)
+
+Supporting Documents
+--------------------
+
+![PDF icon](https://www.corinthtx.gov/modules/file/icons/application-pdf.png "application/pdf") [Corinth Citizen's Academy 2025 Schedule](https://www.corinthtx.gov/sites/default/files/fileattachments/city_council/page/25234/cca_schedule.pdf "cca_schedule.pdf") (1 MB)
+
+* ### Share/Save through Social Media
+
+  [Facebook](https://www.corinthtx.gov/#facebook)
+
+
+  [LinkedIn](https://www.corinthtx.gov/#linkedin)
+  [Email](https://www.corinthtx.gov/#email)
+* [![Printer-friendly version](https://www.corinthtx.gov/sites/all/modules/print/icons/print_icon.png "Printer-friendly version")](https://www.corinthtx.gov/print/25234 "Display a printer-friendly version of this page.")
+
+[City Council](https://www.corinthtx.gov/city-council)
+
+* [Mayor and City Council](https://www.corinthtx.gov/city-council)
+* [Agendas & Minutes](https://www.corinthtx.gov/meetings?field_microsite_tid=711&field_microsite_tid_1=All&keys=)
+* [Vision / Mission / Core Values](https://www.corinthtx.gov/city-council/page/vision-mission-core-values)
+* [Home Rule Charter](https://www.corinthtx.gov/city-council/page/home-rule-charter)
+* [Corinth Citizen's Academy](https://www.corinthtx.gov/city-council/page/corinth-citizens-academy)
+
+Upcoming Events
+---------------
+
+* [City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-122 "02/05/2026 - 5:45pm")
+
+  02/05/2026 - 5:45pm
+* [City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-124 "02/19/2026 - 5:45pm")
+
+  02/19/2026 - 5:45pm
+* [City Council Workshop and Regular Session](https://www.corinthtx.gov/city-council/page/city-council-workshop-and-regular-session-121 "03/05/2026 - 5:45pm")
+
+  03/05/2026 - 5:45pm
+
+[View the City Council Calendar](https://www.corinthtx.gov/calendar?field_microsite_tid=711)
+
+
+
+* [City Home](https://www.corinthtx.gov/)
+* [Staff Login](https://www.corinthtx.gov/user/login?current=node/25234)
+* [Employee Email](http://outlook.office365.com/owa/?realm=cityofcorinth.com)
+
+3300 Corinth Parkway, Corinth, TX 76208 | [(940) 498-3200](tel:940498-3200)
+
+[a municode design](http://www.municodeweb.com)
+
+![](https://www.google.com/images/cleardot.gif)[Select Language![](https://www.google.com/images/cleardot.gif)​![](https://www.google.com/images/cleardot.gif)▼](https://www.corinthtx.gov/city-council/page/corinth-citizens-academy#)
+
+
+
+
+
+![placeholder](https://www.corinthtx.gov/sites/all/themes/aha_compass/logo.png)
+
+![](https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg)
+
+Original text
+
+Rate this translation
+
+Your feedback will be used to help improve Google Translate
+
+Copy link
+
+✓
+
+Thanks for sharing!
+
+Find any service
+
+[AddToAny](https://www.addtoany.com "Share Buttons")
+
+[More…](https://www.corinthtx.gov/city-council/page/corinth-citizens-academy#addtoany "Show all")
