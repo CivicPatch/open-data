@@ -55,7 +55,7 @@ Note: some configs, like source_urls and identities, are generated after the scr
 """
 
 def markdown_list_br(items):
-    return "<br>".join(f"- {item}" for item in items) if items else "N/A"
+    return "<br>".join(str(item) for item in items) if items else "N/A"
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
