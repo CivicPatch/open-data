@@ -20,7 +20,7 @@ on:
       zip_file_url:
         description: "Presigned URL of the ZIP file containing YAML data"
         required: true
-      workflow_context_url:
+      log_url:
         description: "Debug URL of the workflow context for logging purposes (optional)"
         required: false
 
@@ -118,7 +118,7 @@ jobs:
           git push -u origin ${{ steps.extract_branch.outputs.branch_name }}
 
           echo ${{ github.actor }}
-          PR_BODY=$(poetry run python scripts/github_actions/pull_request_body_markdown.py "${{ github.event.inputs.jurisdiction_ocdid }}" "${{ github.event.inputs.request_id }}" "${{ github.event.inputs.workflow_context_url }}")
+          PR_BODY=$(poetry run python scripts/github_actions/pull_request_body_markdown.py "${{ github.event.inputs.jurisdiction_ocdid }}" "${{ github.event.inputs.request_id }}" "${{ github.event.inputs.log_url }}")
 
           github_pull_request_url=$(gh pr create \
             --title "Data intake for ${{ github.event.inputs.jurisdiction_ocdid }} by ${{ github.event.inputs.user_email }}" \
