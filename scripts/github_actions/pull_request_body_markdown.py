@@ -3,13 +3,14 @@ from scripts.utils import jurisdiction_ocdid_to_folder
 import os
 import yaml
 
-def pull_request_body_markdown(jurisdiction_ocdid: str, request_id: str) -> str:
+def pull_request_body_markdown(jurisdiction_ocdid: str, request_id: str, zip_file_debug_url: str) -> str:
     """
     Generate a markdown-formatted pull request body for updating a jurisdiction's OCDID.
 
     Args:
         jurisdiction_ocdid (str): The OCDID of the jurisdiction being updated.
         request_id (str): The ID of the request being processed.
+        zip_file_debug_url (str): The debug URL of the ZIP file.
 
     Returns:
         str: The markdown-formatted pull request body.
@@ -45,6 +46,7 @@ Note: some configs, like source_urls and identities, are generated after the scr
 
 ## Request Information
 - **Request ID**: {request_id}
+- **ZIP File Debug URL**: {zip_file_debug_url}
 
 """
 
@@ -53,11 +55,12 @@ def markdown_list_br(items):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: python pull_request_body_markdown.py <jurisdiction_ocdid> <request_id>")
+    if len(sys.argv) != 4:
+        print("Usage: python pull_request_body_markdown.py <jurisdiction_ocdid> <request_id> <zip_file_debug_url>")
         sys.exit(1)
 
     jurisdiction_ocdid = sys.argv[1]
     request_id = sys.argv[2]
-    pr_body = pull_request_body_markdown(jurisdiction_ocdid, request_id)
+    zip_file_debug_url = sys.argv[3]
+    pr_body = pull_request_body_markdown(jurisdiction_ocdid, request_id, zip_file_debug_url)
     print(pr_body)
