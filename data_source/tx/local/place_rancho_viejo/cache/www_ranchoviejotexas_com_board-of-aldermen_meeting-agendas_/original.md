@@ -1,0 +1,473 @@
+Meeting Agendas - Town of Rancho Viejo
+
+
+
+[Skip to content](https://www.ranchoviejotexas.com/board-of-aldermen/meeting-agendas/#primary)
+
+
+3301 Carmen Avenue, Rancho Viejo, TX 78575     •     Tel: [(956) 350-4093](tel:956-350-4093) [![](https://www.ranchoviejotexas.com/wp-content/uploads/2021/10/facebook.svg)](https://www.facebook.com/torvtexas)
+
+[![Town of Rancho Viejo](https://www.ranchoviejotexas.com/wp-content/uploads/2015/06/ranchoviejologo_retina.png)](https://www.ranchoviejotexas.com/)
+
+
+Primary Menu
+
+* [Live Here](https://www.ranchoviejotexas.com/live-here/)
+* [Build Here](https://www.ranchoviejotexas.com/build-here/)
+* [Board of Aldermen](https://www.ranchoviejotexas.com/board-of-aldermen/)
+* [Town Departments](https://www.ranchoviejotexas.com/municipal-departments/)
+  + [Town Municipal Office](https://www.ranchoviejotexas.com/municipal-departments/office/)
+  + [Police Department](https://www.ranchoviejotexas.com/municipal-departments/police-department/)
+  + [Emergency Preparedness](https://www.ranchoviejotexas.com/municipal-departments/emergency-preparedness/)
+  + [Municipal Court](https://www.ranchoviejotexas.com/municipal-departments/municipal-court/)
+  + [Building Committee](https://www.ranchoviejotexas.com/municipal-departments/building-committee/)
+  + [Planning and Zoning Commission](https://www.ranchoviejotexas.com/municipal-departments/planning-zoning-commission/)
+  + [Board of Adjustments and Appeals](https://www.ranchoviejotexas.com/municipal-departments/board-adjustments-appeals/)
+  + [Strategic Planning Committee](https://www.ranchoviejotexas.com/municipal-departments/strategic-planning-committee/)
+  + [Beautification Committee](https://www.ranchoviejotexas.com/municipal-departments/beautification-committee/)
+  + [Street Committee](https://www.ranchoviejotexas.com/municipal-departments/street-committee/)
+* [Elections](https://www.ranchoviejotexas.com/elections/)
+* [Forms & Resources](https://www.ranchoviejotexas.com/forms-permits/)
+  + [Forms](https://www.ranchoviejotexas.com/forms-permits/)
+  + [Services & Utilities](https://www.ranchoviejotexas.com/services-utilities/)
+  + [Ordinances](http://www.municode.com/Resources/gateway.asp?pid=14147&sid=43)
+  + [Useful Links](https://www.ranchoviejotexas.com/useful-links/)
+  + [Crisis Hotlines](https://www.ranchoviejotexas.com/about-rancho-viejo/crisis-hotlines/)
+* [About](https://www.ranchoviejotexas.com/about-rancho-viejo/)
+* [Contact](https://www.ranchoviejotexas.com/contact-us/)
+
+
+
+Meeting Agendas
+===============
+
+### 2026
+
+* [Board of Aldermen Audit Workshop 2-10-2026 5:30 PM](http://www.ranchoviejotexas.com/wp-content/uploads/2026/02/Audit-Workshop-2-10-2026-530PM.pdf)
+* [Board of Aldermen Special Meeting 1-22-2026 5:30 PM](http://www.ranchoviejotexas.com/wp-content/uploads/2026/01/Board-of-Aldermen-Special-Meeting-1-22-2026-530-PM.pdf)
+* [Board of Aldermen Regular Meeting 1-13-2026 6:00 PM agenda packet](http://www.ranchoviejotexas.com/wp-content/uploads/2026/01/Board-of-Aldermen-Regular-Meeting-1-13-2026-agenda-packet.pdf)
+
+### 2025
+
+* [Board of Aldermen Special Meeting Agenda 12-23-2025 10:15AM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/12/Special-Meeting-agenda-12-23-2025-1015AM-1.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 12-9-2025 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/12/Board-of-Aldermen-Regular-Meeting-12-9-2025-agenda-packet.2.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 11-19-2025 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/11/Board-of-Aldermen-Regular-Meeting-11-19-2025-agenda-packet-updated.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 10-14-2025 6 PM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/10/Board-of-Aldermen-Regular-Meeting-10-14-2025-agenda-packet.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 9-18-2025 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/09/Board-of-Aldermen-Regular-Meeting-9-18-2025-agenda-packet.pdf)
+* [Budget Workshop 9-9-2025 5:30PM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/09/BUDGET-WORKSHOP-9-9-2025.pdf)
+* [Budget Workshop 9-3-2025 5:30 PM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/08/BUDGET-WORKSHOP-9-3-2025.pdf)
+* [Budget Workshop 8-26-2025 5:30 PM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/08/BUDGET-WORKSHOP-8.26.2025.pdf)
+* [Board of Aldermen Regular Meeting 8-12-2025 agenda packet](http://www.ranchoviejotexas.com/wp-content/uploads/2025/08/Board-of-Aldermen-Regular-Meeting-8-12-2025-agenda-packet-1.pdf)
+* [Board of Aldermen Special Meeting 8-5-2025 6 PM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/07/Special-Meeting-8-5-2025-6-PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 7-8-2025 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/07/Board-of-Aldermen-Regular-Meeting-7-8-2025-agenda-packet.pdf)
+* [Board of Aldermen Special Meeting PH rezone packet 7-8-2025 530 PM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/07/Special-Meeting-PH-rezone-packet-7-8-2025-530-PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 6-10-2025 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/06/Board-of-Aldermen-Regular-Meeting-6-10-2025-agenda-packet-2.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 5-13-2025 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/05/Board-of-Aldermen-Regular-Meeting-5-13-2025-agenda-packet.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 4-8-2025 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/04/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-4-8-2025-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 3-11-2025 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/03/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-3-11-2025-6PM.pdf)
+* [Board of Alderman Special Meeting Agenda Packet 2-18-2025 6 PM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/02/Board-of-Alderman-Special-Meeting-Agenda-Packet-2-18-2025-6-PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 2-11-2025 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2024/12/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-2-11-2025-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 1-14-2025 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2025/01/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-1-14-2025-6PM.pdf)
+
+### 2024
+
+* [Board of Aldermen Regular Meeting Agenda Packet 11-26-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2024/09/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-11-26-2024-6PM.pdf)
+* [Board of Aldermen Regular Meeting 10-8-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2024/08/Board-of-Aldermen-Regular-Meeting-10-8-2024-6PM.pdf)
+* [Board of Aldermen Regular Meeting 9-10-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2024/06/Board-of-Aldermen-Regular-Meeting-9-10-2024-6PM.pdf)
+* [Board of Aldermen Special Meeting Agenda Packet 9-3-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2024/08/Board-of-Aldermen-Special-Meeting-Agenda-Packet-9-3-2024-6PM.pdf)
+* [Budget Workshop 8-26-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2024/08/Budget-Workshop-8-26-2024-6PM.pdf)
+* [Board of Aldermen Regular Meeting 8-13-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2024/05/Board-of-Aldermen-Regular-Meeting-8-13-2024-6PM.pdf)
+* [Budget Workshop 8-7-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2024/08/Budget-Workshop-8-7-2024-6PM.pdf)
+* [Board of Aldermen Regular Meeting 7-9-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2024/07/Board-of-Aldermen-Regular-Meeting-7-9-2024-6PM.pdf)
+* [Board of Aldermen Workshop 6-26-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2024/06/Board-of-Aldermen-Workshop-6-26-2024-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 6-11-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2024/03/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-6-11-2024-6PM.pdf)
+* [Board of Aldermen Audit Workshop 5-29-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2024/05/Board-of-Aldermen-Audit-Workshop-5-29-2024-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 5-14-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2024/02/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-5-14-2024-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 4-9-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2024/02/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-4-9-2024-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 3-12-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/12/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-3-12-2024-6PM.pdf)
+* [Board of Aldermen Special Meeting Agenda 3-6-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2024/03/Board-of-Aldermen-Special-Meeting-Agenda-3-6-2024-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 2-13-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/12/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-2-13-2024-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 1-16-2024 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/10/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-1-16-2024-6PM.pdf)
+
+### 2023
+
+* [Board of Aldermen Regular Meeting Agenda Packet 12-12-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/12/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-12-12-2023-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 11-14-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/08/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-11-14-2023-6PM.pdf)
+* [Board of Aldermen Special Meeting Agenda Workshop 11-8-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/11/Board-of-Aldermen-Special-Meeting-Agenda-Workshop-11-8-2023-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 10-10-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/08/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-10-10-2023-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 9-12-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/06/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-9-12-2023-6PM.pdf)
+* [Board of Aldermen Special Meeting Agenda Packet 9-5-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/09/Board-of-Aldermen-Special-Meeting-Agenda-Packet-9-5-2023-6PM.pdf)
+* [Budget Workshop 8-22-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/08/Budget-Workshop-8-22-2023-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 8-8-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/08/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-8-8-2023-6PM.pdf)
+* [Budget Workshop 8-2-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/07/Budget-Workshop-8-2-2023-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 7-18-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/07/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-7-18-2023-6PM.pdf)
+* [Board Workshop 6.29.2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/06/Board-Workshop-6.29.2023-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 6-13-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/04/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-6-13-2023-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 5-23-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/03/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-5-23-2023-6PM.pdf)
+* [Audit Workshop 5-22-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/05/Audit-Workshop-5-22-2023-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 4-11-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/01/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-4-11-2023-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 3-14-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2023/01/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-3-14-2023-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 2-21-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2022/11/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-2-21-2023-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 1-10-2023 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2022/10/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-1-10-2023-6PM.pdf)
+
+### 2022
+
+* [Board of Aldermen Regular Meeting December 2022 - CANCELED](http://www.ranchoviejotexas.com/wp-content/uploads/2021/11/Board-of-Aldermen-Regular-Meeting-December-2022-CANCELED.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 11-8-2022 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2021/11/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-11-8-2022-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 10-11-2022 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2021/11/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-10-11-2022-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 9-13-2022 at 6 PM](http://www.ranchoviejotexas.com/wp-content/uploads/2021/11/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-9-13-2022-at-6-PM.pdf)
+* [Public Hearing Tax Rate 9-6-2022](http://www.ranchoviejotexas.com/wp-content/uploads/2022/09/Public-Hearing-Tax-Rate-9-6-2022.pdf)
+* [Board of Aldermen Budget Workshop 8-16-2022 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2022/08/Budget-Workshop-8-16-2022-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 8-9-2022 6pm](http://www.ranchoviejotexas.com/wp-content/uploads/2021/11/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-8-9-2022-6pm.pdf)
+* [Board of Aldermen Budget Workshop 8-3-2022 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2022/07/Budget-Workshop-8-3-2022-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 7-12-2022 6pm](http://www.ranchoviejotexas.com/wp-content/uploads/2021/11/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-7-12-2022-6pm.pdf)
+* [Board of Aldermen Special Meeting 6-22-2022 6pm](http://www.ranchoviejotexas.com/wp-content/uploads/2022/06/Board-of-Aldermen-Special-Meeting-6-22-2022-6pm-1.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 6-14-2022 6pm](http://www.ranchoviejotexas.com/wp-content/uploads/2022/06/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-6-14-2022-6pm.pdf)
+* [Board of Aldermen Special Meeting 6-9-2022 6pm - CANCELED](http://www.ranchoviejotexas.com/wp-content/uploads/2022/06/Board-of-Aldermen-Special-Meeting-6-9-2022-6pm-CANCELED.pdf)
+* [Board of Aldermen Special Meeting 6-9-2022 6pm](http://www.ranchoviejotexas.com/wp-content/uploads/2022/06/Special-Meeting-6-9-2022-6pm.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 5-17-2022 6pm](http://www.ranchoviejotexas.com/wp-content/uploads/2021/11/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-5-17-2022-6pm.pdf)
+* [Board of Aldermen Special Meeting 5-16-2022 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2022/05/Board-of-Aldermen-Special-Meeting-5-16-2022-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 4-12-2022 6pm](http://www.ranchoviejotexas.com/wp-content/uploads/2022/04/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-4-12-2022-6pm.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 3-8-2022 6pm](http://www.ranchoviejotexas.com/wp-content/uploads/2022/03/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-3-8-2022-6pm.pdf)
+* [Board of Aldermen Special Meeting 2.17.22 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2022/02/Board-of-Aldermen-Special-Meeting-2.17.22-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 2-8-2022 6pm](http://www.ranchoviejotexas.com/wp-content/uploads/2021/11/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-2-8-2022-6pm.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 1-11-2022 6pm](http://www.ranchoviejotexas.com/wp-content/uploads/2022/01/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-1-11-2022-6pm.pdf)
+
+### 2021
+
+* [Board of Aldermen Regular Meeting Agenda Packet 12-14-2021 6pm](http://www.ranchoviejotexas.com/wp-content/uploads/2020/12/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-12-14-2021-6pm.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 11-9-2021 6pm](http://www.ranchoviejotexas.com/wp-content/uploads/2021/12/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-11-9-2021-6pm-2.pdf)
+* [Board of Aldermen Special Meeting 11-2-2021 6PM](http://www.ranchoviejotexas.com/wp-content/uploads/2022/03/Special-Meeting-11-2-2021-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 10-12-2021 6pm](http://www.ranchoviejotexas.com/wp-content/uploads/2022/01/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-10-12-2021-6pm.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 9-14-2021 6pm...](https://www.ranchoviejotexas.com/wp-content/uploads/2020/12/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-9-14-2021-6pm....pdf)
+* [Board of Aldermen Special Meeting 9-7-2021 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2021/09/Board-of-Aldermen-Special-Meeting-9-7-2021-6pm.pdf)
+* [Budget Workshop 8-25-2021 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2021/08/Budget-Workshop-8-25-2021-6PM.pdf)
+* [Board of Aldermen Regular Meeting Agenda Packet 8-10-2021 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2020/12/Board-of-Aldermen-Regular-Meeting-Agenda-Packet-8-10-2021-6pm.pdf)
+* [Board of Aldermen Special Meeting 8-4-2021 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2021/07/Board-of-Aldermen-Special-Meeting-8-4-2021-6pm.pdf)
+* [Board of Aldermen Agenda Packet 7-13-2021 6 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2021/07/Board-of-Aldermen-Agenda-Packet-7-13-2021-6-PM.pdf)
+* [Board of Aldermen Special Meeting 6-23-2021 530pm](https://www.ranchoviejotexas.com/wp-content/uploads/2021/06/Board-of-Aldermen-Special-Meeting-6-23-2021-530pm.pdf)
+* [Board of Aldermen Agenda Packet 6-8-2021 6 PM.](https://www.ranchoviejotexas.com/wp-content/uploads/2021/06/Board-of-Aldermen-Agenda-Packet-6-8-2021-6-PM..pdf)
+* [Board of Aldermen Special Meeting agenda 6-4-2021 530pm](https://www.ranchoviejotexas.com/wp-content/uploads/2021/06/Board-of-Aldermen-Special-Meeting-agenda-6-4-2021-530pm.pdf)
+* [Board of Aldermen Special Meeting 5-26-2021 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2021/05/Board-of-Aldermen-Special-Meeting-5-26-2021-6pm.pdf)
+* [Board of Aldermen Agenda Packet 5-11-2021 6 PM.](https://www.ranchoviejotexas.com/wp-content/uploads/2020/12/Board-of-Aldermen-Agenda-Packet-5-11-2021-6-PM..pdf)
+* [Board of Aldermen Special Meeting 4-17-2021 945 am](https://www.ranchoviejotexas.com/wp-content/uploads/2021/04/Board-of-Aldermen-Special-Meeting-4-17-2021-945-am.pdf)
+* [Board of Aldermen Agenda Packet 4-13-2021 6 PM..](https://www.ranchoviejotexas.com/wp-content/uploads/2020/12/Board-of-Aldermen-Agenda-Packet-4-13-2021-6-PM...pdf)
+* [Board of Aldermen Special Meeting 4-12-2021 6 pm](https://www.ranchoviejotexas.com/wp-content/uploads/2021/04/Board-of-Aldermen-Special-Meeting-4-12-2021-6-pm.pdf)
+* [Board of Aldermen Special Meeting 4-5-2021 530 pm](https://www.ranchoviejotexas.com/wp-content/uploads/2021/04/Board-of-Aldermen-Special-Meeting-4-5-2021-530-pm.pdf)
+* [Board of Aldermen Agenda Packet 3-9-2021 6 PM..](https://www.ranchoviejotexas.com/wp-content/uploads/2020/12/Board-of-Aldermen-Agenda-Packet-3-9-2021-6-PM...pdf)
+* [Board of Aldermen Special Meeting agenda 2-25-2021 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2021/02/Board-of-Aldermen-Special-Meeting-agenda-2-25-2021-6pm.pdf)
+* [Board of Aldermen Regular Meeting agenda packet 2-9-21 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2020/12/Board-of-Aldermen-Regular-Meeting-agenda-packet-2-9-21-6pm.pdf)
+* [Special Meeting 1-28-2021 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2021/01/Special-Meeting-1-28-2021-6pm.pdf)
+* [Board of Aldermen Special Meeting agenda 1-25-2021 5pm](https://www.ranchoviejotexas.com/wp-content/uploads/2021/01/Board-of-Aldermen-Special-Meeting-agenda-1-25-2021-5pm.pdf)
+* [Board of Aldermen Agenda Packet 1-12-2021 6 PM..](https://www.ranchoviejotexas.com/wp-content/uploads/2020/12/Board-of-Aldermen-Agenda-Packet-1-12-2021-6-PM...pdf)
+
+### 2020
+
+* [Board of Aldermen Special Meeting agenda 12-21-2020 5pm](https://www.ranchoviejotexas.com/wp-content/uploads/2020/12/Board-of-Aldermen-Special-Meeting-agenda-12-21-2020-5pm.pdf)
+* [Board of Aldermen Special Meeting 12-17-2020 430 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2020/12/Board-of-Aldermen-Special-Meeting-12-17-2020-430-PM.pdf)
+* [Board of Aldermen Regular Meeting agenda 12-8-2020 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2019/11/Board-of-Aldermen-Regular-Meeting-agenda-12-8-2020-6pm.pdf)
+* [Board of Aldermen Special Meeting 12-01-2020 6 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2020/11/Board-of-Aldermen-Special-Meeting-12-01-2020-6-PM.pdf)
+* [Board of Aldermen Special Meeting 11-19-2020](https://www.ranchoviejotexas.com/wp-content/uploads/2020/11/Board-of-Aldermen-Special-Meeting-11-19-2020.pdf)
+* [Board of Aldermen Agenda Packet 11-17-2020 6 PM..](https://www.ranchoviejotexas.com/wp-content/uploads/2019/11/Board-of-Aldermen-Agenda-Packet-11-17-2020-6-PM...pdf)
+* [Board of Aldermen Agenda Packet 10-12-2020 6 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/11/Board-of-Aldermen-Agenda-Packet-10-12-2020-6-PM.pdf)
+* [Board of Aldermen Special Meeting agenda 09-14-2020 6 p.m.](https://www.ranchoviejotexas.com/wp-content/uploads/2020/09/Board-of-Aldermen-Special-Meeting-agenda-09-14-2020-6-p.m.-1.pdf)
+* [Board of Aldermen Agenda Packet 09-08-2020 6 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/11/Board-of-Aldermen-Agenda-Packet-09-08-2020-6-PM.pdf)
+* [Board of Aldermen Special Meeting agenda packet 8-25-2020 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2020/08/Board-of-Aldermen-Special-Meeting-agenda-packet-8-25-2020-6pm.pdf)
+* [Board of Aldermen Special Meeting agenda packet 8-20-2020 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2020/08/Board-of-Aldermen-Special-Meeting-agenda-packet-8-20-2020-6pm.pdf)
+* [Budget Workshop 8-13-2020 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2020/08/Budget-Workshop-8-13-2020-6PM.pdf)
+* [Board of Aldermen Agenda Packet 08-11-2020 6 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/11/Board-of-Aldermen-Agenda-Packet-08-11-2020-6-PM.pdf)
+* [Budget Workshop 8-10-2020 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2020/08/Budget-Workshop-8-10-2020-6PM.pdf)
+* [Budget Workshop 8-05-2020 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2020/07/Budget-Workshop-8-05-2020-6PM.pdf)
+* [Board of Aldermen July 14, 2020 6 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/11/Board-of-Aldermen-July-14-2020-6-PM.pdf)
+* [Board of Aldermen Agenda Packet 06-09-2020 6 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/11/Board-of-Aldermen-Agenda-Packet-06-09-2020-6-PM.pdf)
+* [Board of Aldermen Special 5-29-2020](https://www.ranchoviejotexas.com/wp-content/uploads/2020/05/Board-of-Aldermen-Special-5-29-2020.pdf)
+* [Special Meeting 5-20-2020 Agenda](https://www.ranchoviejotexas.com/wp-content/uploads/2020/05/Special-Meeting-5-20-2020-Agenda.pdf)
+* [Special Meeting 5-16-2020 Agenda](https://www.ranchoviejotexas.com/wp-content/uploads/2020/05/Special-Meeting-5-16-2020-Agenda.pdf)
+* [Board of Aldermen Agenda Packet 05-12-2020 6 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/11/Board-of-Aldermen-Agenda-Packet-05-12-2020-6-PM.pdf)
+* [Board of Aldermen Special Meeting agenda 5-5-2020 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2020/05/Board-of-Aldermen-Special-Meeting-agenda-5-5-2020-6pm.pdf)
+* [Board of Aldermen Agenda Packet 04-14-2020 6 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/11/Board-of-Aldermen-Agenda-Packet-04-14-2020-6-PM.pdf)
+* [Audit Workshop 4-13-2020 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2020/04/Audit-Workshop-4-13-2020-6pm.pdf)
+* [Board of Alderman Special Meeting Agenda Packet 3-20-2020 6 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2020/03/Board-of-Alderman-Special-Meeting-Agenda-Packet-3-20-2020-6-PM.pdf)
+* [Board of Aldermen Agenda Packet 03-10-2020 6 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/11/Board-of-Aldermen-Agenda-Packet-03-10-2020-6-PM.pdf)
+* [Board of Aldermen Agenda Packet 02-11-2020 6 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/11/Board-of-Aldermen-Agenda-Packet-02-11-2020-6-PM.pdf)
+* [Board of Aldermen Agenda Packet 01-14-2020 6 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2020/01/Board-of-Aldermen-Agenda-Packet-01-14-2020-6-PM....pdf)
+
+### 2019
+
+* [Board of Aldermen Agenda Packet 12-10-2019 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/11/Board-of-Aldermen-Agenda-Packet-12-10-2019-6PM-bookmarked-2.pdf)
+* [Board of Aldermen Agenda Packet 11-12-2019 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/11/Board-of-Aldermen-Agenda-Packet-11-12-2019-6PM.pdf)
+* [Board of Aldermen Agenda Packet 10-15-2019 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/10/Board-of-Aldermen-Agenda-Packet-10-15-2019-6PM.pdf)
+* [October 2019 Postponed](https://www.ranchoviejotexas.com/wp-content/uploads/2019/10/October-2019-Postponed.pdf)
+* [Board of Aldermen Agenda Packet 9-10-2019 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/09/Board-of-Aldermen-Agenda-Packet-9-10-2019-6PM.pdf)
+* [Public Hearing on Tax Rate Agenda 9-3-2019 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/09/Public-Hearing-on-Tax-Rate-Agenda-9-3-2019-6PM.pdf)
+* [Public Hearing on Tax Rate Agenda 8-27-2019 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/08/Public-Hearing-on-Tax-Rate-Agenda-8-27-2019-6PM.pdf)
+* [Board of Aldermen Agenda Packet 8-13-2019 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/05/Board-of-Aldermen-Agenda-Packet-8-13-2019-6PM.pdf)
+* [Budget Workshop 8-12-2019 6PM (1)](https://www.ranchoviejotexas.com/wp-content/uploads/2019/08/Budget-Workshop-8-12-2019-6PM-1.pdf)
+* [Budget Workshop 8-7-2019 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/08/Budget-Workshop-8-7-2019-6PM.pdf)
+* [HR Workshop 7-24-2019 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/07/HR-Workshop-7-24-2019-6PM.pdf)
+* [July 9, 2019 Agenda Packet](https://www.ranchoviejotexas.com/wp-content/uploads/2019/07/July-9-2019-Agenda-Packet.pdf)
+* [July 9, 2019 Special-Orientation](https://www.ranchoviejotexas.com/wp-content/uploads/2019/07/July-9-2019-Special-Orientation.pdf)
+* [Board of Aldermen Agenda Packet 6-11-2019 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/05/Board-of-Aldermen-Agenda-Packet-6-11-2019-6PM.pdf)
+* [Board of Aldermen Special Meeting agenda packet 5-29-2019 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2019/05/Board-of-Aldermen-Special-Meeting-agenda-packet-5-29-2019-6pm.pdf)
+* [Board of Aldermen Agenda Packet 5-14-2019 6PM (1)](https://www.ranchoviejotexas.com/wp-content/uploads/2019/05/Board-of-Aldermen-Agenda-Packet-5-14-2019-6PM-1.pdf)
+* [Board of Aldermen Agenda Packet 4-9-2019 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/04/Board-of-Aldermen-Agenda-Packet-4-9-2019-6PM.pdf)
+* [Audit Workshop 4-5-2019 530 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/04/Audit-Workshop-4-5-2019-530-PM.pdf)
+* [Board of Aldermen Agenda Packet 3-12-2019 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2019/03/Board-of-Aldermen-Agenda-Packet-3-12-2019-6PM.pdf)
+* [Board of Aldermen Special Meeting agenda packet 3-5-2019 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2019/03/Board-of-Aldermen-Special-Meeting-agenda-packet-3-5-2019-6pm.pdf)
+* [Board of Alderman agenda packet 2-12-2019](https://www.ranchoviejotexas.com/wp-content/uploads/2019/02/Board-of-Alderman-agenda-packet-2-12-2019.pdf)
+* [Board of Aldermen Special Meeting 1-29-2019 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2019/01/Board-of-Aldermen-Special-Meeting-1-29-2019-6pm.pdf)
+* [Board of Aldermen agenda packet 1-8-2019 - CORRECTION](https://www.ranchoviejotexas.com/wp-content/uploads/2019/01/Board-of-Aldermen-agenda-packet-1-8-2019-CORRECTION.pdf)
+
+### 2018
+
+* [Board of Aldermen agenda packet 12-11-2018](https://www.ranchoviejotexas.com/wp-content/uploads/2017/12/Board-of-Aldermen-agenda-packet-12-11-2018.pdf)
+* [Board of Aldermen agenda packet 11-13-2018](https://www.ranchoviejotexas.com/wp-content/uploads/2017/12/Board-of-Aldermen-agenda-packet-11-13-2018.pdf)
+* [Board of Aldermen Agenda Packet 10-16-2018](https://www.ranchoviejotexas.com/wp-content/uploads/2017/12/Board-of-Aldermen-Agenda-Packet-10-16-2018.pdf)
+* [Special Meeting 10-2-2018](https://www.ranchoviejotexas.com/wp-content/uploads/2018/10/Special-Meeting-10-2-2018.pdf)
+* [Special Meeting 9-25-2018 6PM - postponed](https://www.ranchoviejotexas.com/wp-content/uploads/2018/09/Special-Meeting-9-25-2018-6PM-postponed.pdf)
+* [Special Meeting 9-25-2018 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2018/09/Special-Meeting-9-25-2018-6PM.pdf)
+* [Board of Aldermen Agenda Packet 9-11-2018](https://www.ranchoviejotexas.com/wp-content/uploads/2017/12/Board-of-Aldermen-Agenda-Packet-9-11-2018.pdf)
+* [Public Hearing Tax Rate 9-4-2018](https://www.ranchoviejotexas.com/wp-content/uploads/2018/08/Public-Hearing-Tax-Rate-9-4-2018.pdf)
+* [Board of Aldermen Public Hearing 8.28.18](https://www.ranchoviejotexas.com/wp-content/uploads/2018/08/Board-of-Aldermen-Public-Hearing-8.28.18.pdf)
+* [Board of Aldermen Special Meeting 8.28.18](https://www.ranchoviejotexas.com/wp-content/uploads/2018/08/Board-of-Aldermen-Special-Meeting-8.28.18-1.pdf)
+* [Budget Workshop 8-22-2018 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2018/08/Budget-Workshop-8-22-2018-6PM.pdf)
+* [Board of Aldermen Agenda Packet 8-14-2018](https://www.ranchoviejotexas.com/wp-content/uploads/2018/08/Board-of-Aldermen-Agenda-Packet-8-14-2018.pdf)
+* [Budget Workshop 8-13-2018 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2018/08/Budget-Workshop-8-13-2018-6PM.pdf)
+* [Budget Workshop 8-8-2018 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2018/08/Budget-Workshop-8-8-2018-6PM.pdf)
+* [Board of Alderman Special Meeting 8-7-2018 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2018/08/Special-Meeting-8-7-2018-6PM.pdf)
+* [Board of Aldermen Agenda Packet 7-10-2018](https://www.ranchoviejotexas.com/wp-content/uploads/2017/12/Board-of-Aldermen-Agenda-Packet-7-10-2018.pdf)
+* [Board of Aldermen Special Meeting 7-3-2018](https://www.ranchoviejotexas.com/wp-content/uploads/2018/06/Board-of-Aldermen-Special-Meeting-7-3-2018.pdf)
+* [Board of Aldermen Agenda Packet 6-12-2018](https://www.ranchoviejotexas.com/wp-content/uploads/2017/12/Board-of-Aldermen-Agenda-Packet-6-12-2018.pdf)
+* [Board of Aldermen Agenda Packet 5-15-2018](https://www.ranchoviejotexas.com/wp-content/uploads/2017/12/Board-of-Aldermen-Agenda-Packet-5-15-2018.pdf)
+* [Board of Aldermen agenda packet 4-10-2018](https://www.ranchoviejotexas.com/wp-content/uploads/2017/12/Board-of-Aldermen-agenda-packet-4-10-2018.pdf)
+* [Audit Workshop 4-4-2018 530 pm](https://www.ranchoviejotexas.com/wp-content/uploads/2018/03/Audit-Workshop-4-4-2018-530-pm.pdf)
+* [Board of Aldermen agenda packet 3-6-2018](https://www.ranchoviejotexas.com/wp-content/uploads/2017/12/Board-of-Aldermen-agenda-packet-3-6-2018.pdf)
+* [Board of Aldermen Special Meeting Agenda Packet 2-20-2018](https://www.ranchoviejotexas.com/wp-content/uploads/2018/02/Board-of-Aldermen-agenda-packet-2-20-2018-6PM.pdf)
+* [Board of Aldermen agenda packet 2-13-2018](https://www.ranchoviejotexas.com/wp-content/uploads/2018/02/Board-of-Aldermen-agenda-packet-2-13-2018.pdf)
+* [Board of Aldermen agenda packet 1-9-2018](https://www.ranchoviejotexas.com/wp-content/uploads/2017/12/Board-of-Aldermen-agenda-packet-1-9-2018.pdf)
+
+### 2017
+
+* [December Meeting Canceled](https://www.ranchoviejotexas.com/wp-content/uploads/2017/12/BoardofAlderman_NoDecemberMeeting.pdf)
+* [Board of Aldermen Agenda Packet 11-14-2017](https://www.ranchoviejotexas.com/wp-content/uploads/2017/01/Board-of-Aldermen-agenda-packet-11-14-2017.pdf)
+* [Board of Aldermen Agenda Packet 10-10-2017](https://www.ranchoviejotexas.com/wp-content/uploads/2017/01/Board-of-Aldermen-agenda-packet-10-10-2017.pdf)
+* [Board of Aldermen Agenda Packet 9-12-2017](https://www.ranchoviejotexas.com/wp-content/uploads/2017/01/Board-of-Aldermen-agenda-packet-9-12-2017.pdf)
+* [Budget Workshop 9-11-2017 530 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2017/09/Budget-Workshop-9-11-2017-530-PM.pdf)
+* [Public Hearing 9-5-2017 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2017/09/Public-Hearing-9-5-2017-6PM.pdf)
+* [CORRECTION - Public Hearing 8-29-2017 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2017/08/CORRECTION-Public-Hearing-8-29-2017-6PM.pdf)
+* [Budget Workshop 8-15-2017 600 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2017/08/Budget-Workshop-8-15-2017-600-PM.pdf)
+* [Agenda Packet Regular Meeting 8-8-2017](https://www.ranchoviejotexas.com/wp-content/uploads/2017/01/Agenda-Packet-Regular-Meeting-8-8-2017.pdf)
+* [Budget Workshop 8-3-2017 530 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2017/08/Budget-Workshop-8-3-2017-530-PM.pdf)
+* [Budget Workshop 7-24-2017 530 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2017/07/Budget-Workshop-7-24-2017-530-PM.pdf)
+* [Board of Aldermen agenda packet 7-11-2017](https://www.ranchoviejotexas.com/wp-content/uploads/2017/01/Board-of-Aldermen-agenda-packet-7-11-2017.pdf)
+* [Board of Aldermen Agenda Packet 6-13-2017](https://www.ranchoviejotexas.com/wp-content/uploads/2017/01/Board-of-Aldermen-agenda-packet-6-13-2017.pdf)
+* [Board of Aldermen Agenda Packet 5-16-2017](https://www.ranchoviejotexas.com/wp-content/uploads/2017/01/5-16-2017-Agenda-packet.pdf)
+* [Board of Aldermen Agenda Packet 4-11-2017](https://www.ranchoviejotexas.com/wp-content/uploads/2017/01/Board-of-Aldermen-agenda-packet-4-11-2017.pdf)
+* [Board of Aldermen Special Meeting Agenda 4-6-2017](https://www.ranchoviejotexas.com/wp-content/uploads/2017/04/Special-Meeting-4-6-2017-at-530-PM.pdf)
+* [Board of Aldermen Agenda Packet 3-14-2017](https://www.ranchoviejotexas.com/wp-content/uploads/2017/01/Board-of-Aldermen-agenda-packet-3-14-2017.pdf)
+* [Board of Aldermen Agenda Packet 2-14-2017](https://www.ranchoviejotexas.com/wp-content/uploads/2017/01/Board-of-Aldermen-agenda-packet-2-14-2017.pdf)
+* [Board of Aldermen Agenda Packet 1-10-2017](https://www.ranchoviejotexas.com/wp-content/uploads/2017/01/Board-of-Aldermen-agenda-packet-1-10-2017.pdf)
+
+### 2016
+
+* [December Meeting Canceled](https://www.ranchoviejotexas.com/wp-content/uploads/2016/12/December-2016-Canceled.pdf)
+* [Board of Alderman Agenda Packet 11-15-2016](https://www.ranchoviejotexas.com/wp-content/uploads/2016/07/Board-of-Alderman-Agenda-Packet-11-15-2016.pdf)
+* [November 2016 meeting postponed](https://www.ranchoviejotexas.com/wp-content/uploads/2014/04/November-2016-Postponed.pdf)
+* [Board of Aldermen Agenda Packet October 11-2016](https://www.ranchoviejotexas.com/wp-content/uploads/2016/10/Board-of-Aldermen-Agenda-packet-October-11-2016-2.pdf)
+* [board-of-aldermen-agenda-packet-september-13-2016](https://www.ranchoviejotexas.com/wp-content/uploads/2016/07/Board-of-Aldermen-Agenda-packet-September-13-2016.pdf)
+* [Public Hearing for the Board of Aldermen 9-6-2016 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2016/09/CORRECTION-Public-Hearing-9-6-2016-6PM.pdf)
+* [Board of Aldermen Workshop 9-1-2016 530 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2016/08/Workshop-9-1-2016-530-PM.pdf)
+* [Special Meeting Board of Aldermen 8-30-2016](https://www.ranchoviejotexas.com/wp-content/uploads/2016/08/Special-Meeting-Board-of-Aldermen-8-30-2016.pdf)
+* [Workshop 8-25-2016 530PM](https://www.ranchoviejotexas.com/wp-content/uploads/2016/08/Workshop-8-25-2016-530PM.pdf)
+* [Board of Aldermen agenda packet August 9, 2016](https://www.ranchoviejotexas.com/wp-content/uploads/2016/07/Board-of-Aldermen-agenda-packet-August-9-2016.pdf)
+* [Board of Aldermen Special Meeting Agenda July 26, 2016 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2016/07/Board-of-Aldermen-Special-Meeting-agenda-packet-July-26-2016-6PM.pdf)
+* [Special Meeting Board of Aldermen scheduled 7-14 at 5:30 P.M. has been canceled](https://www.ranchoviejotexas.com/wp-content/uploads/2016/07/20160714161557822.pdf)
+* [Board of Aldermen Special Meeting 7-14-16 530 pm](https://www.ranchoviejotexas.com/wp-content/uploads/2016/07/Board-of-Aldermen-Special-Meeting-7-14-16-530-pm.pdf)
+* [Board of Aldermen agenda packet July 12, 2016 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2014/04/Board-of-Aldermen-agenda-packet-July-12-2016-6PM.pdf)
+* [Board of Aldermen Workshop 7-7-2016 530 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2016/07/Workshop-7-7-2016-530-PM.pdf)
+* [Board of Aldermen Packet June 14, 2016 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2014/04/Board-of-Alderman-Packet-June-14-2016-6PM.pdf)
+* [Board of Aldermen agenda packet May 17 , 2016](https://www.ranchoviejotexas.com/wp-content/uploads/2014/04/Board-of-Aldermen-agenda-packet-May-17-2016.pdf)
+* [Board of Aldermen agenda packet April 12, 2016](https://www.ranchoviejotexas.com/wp-content/uploads/2014/04/Board-of-Aldermen-agenda-packet-April-12-2016.pdf)
+* [Board of Aldermen agenda packet March 8, 2016](https://www.ranchoviejotexas.com/wp-content/uploads/2016/03/Board-of-Aldermen-agenda-packet-March-8-2016.pdf)
+* [Agenda Board of Aldermen Meeting 1-12-2016](https://www.ranchoviejotexas.com/wp-content/uploads/2014/04/Agenda-Board-of-Aldermen-1-12-2016.pdf)
+
+### 2015
+
+* [Board of Alderman Regular Meeting 12-8-15 6PM](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/04/Regular-Meeting-12-8-15-6PM.pdf)
+* [Board of Aldermen agenda packet November 10, 2015](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/04/Board-of-Aldermen-agenda-packet-November-10-2015.pdf)
+* [Board of Aldermen agenda packet October 13, 2015](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/04/Board-of-Aldermen-agenda-packet-October-13-2015-1.pdf)
+* [Board of Aldermen agenda packet September 8, 2015](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/04/Board-of-Aldermen-agenda-packet-September-8-2015.pdf)
+* [Special Meeting Board of Aldermen 9-1-2015](http://ranchoviejo.wpengine.com/wp-content/uploads/2015/08/Special-Meeting-Board-of-Aldermen-9-1-2015.pdf)
+* [Special Meeting Board of Aldermen 8-25-2015](http://ranchoviejo.wpengine.com/wp-content/uploads/2015/08/Special-Meeting-Board-of-Aldermen-8-25-2015.pdf)
+* **The Special Meeting (Workshop) of the Board of Aldermen scheduled for August 20 at 6:00 P.M. has been canceled.**
+* [Special Meeting WORKSHOP 8-19-15 530 PM](http://ranchoviejo.wpengine.com/wp-content/uploads/2015/08/Special-Meeting-WORKSHOP-8-19-15-530-PM.pdf)
+* [Board of Aldermen Special Meeting 8-12-2015 530 PM](http://ranchoviejo.wpengine.com/wp-content/uploads/2015/08/Special-Meeting-8-12-2015-530-PM.pdf)
+* [Board of Aldermen agenda packet August 11, 2015](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/04/Board-of-Aldermen-agenda-packet-August-11-2015.pdf)
+* [Board of Aldermen Special Meeting 8-6-2015 CORRECTION 5PM](http://ranchoviejo.wpengine.com/wp-content/uploads/2015/08/Special-Meeting-8-6-2015-CORRECTION-5PM.pdf)
+* [Board of Aldermen Special Meeting 7-1-15 5PM](http://ranchoviejo.wpengine.com/wp-content/uploads/2015/06/Special-Meeting-7-1-15-5PM.pdf)
+* **Regular Board of Aldermen meeting for July 2015 Postponed, to be announced at a later date**
+* [Board of Aldermen Meeting Agenda 6-9-2015](http://ranchoviejo.wpengine.com/wp-content/uploads/2015/06/Board-of-Aldermen-Regular-6-9-2015.pdf)
+* [Board of Aldermen Meeting Agenda May 19, 2015](http://ranchoviejo.wpengine.com/wp-content/uploads/2015/05/Board-of-Aldermen-May-19-2015.pdf)
+* [Board of Aldermen Special Meeting Agenda 5-5-2015](http://ranchoviejo.wpengine.com/wp-content/uploads/2015/05/Agenda-Special-Meeting-5-5-2015.pdf)
+* [Board of Aldermen Agenda Packet 04-14-15 6pm](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/04/Agenda-Packet-04-14-15-6pm.pdf)
+* [Board of Aldermen Special Meeting Agenda Packet 03-24-15 6pm](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/04/Agenda-Packet-03-24-15-6pm.pdf)
+* [Board of Aldermen Agenda Packet 03-17-15 6pm](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/04/Agenda-Packet-03-17-15-6pm.pdf)
+* [Board of Aldermen Regular Meeting Agenda  February 2015](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/04/Agenda-Board-of-Aldermen-Regular-Meeting-February-2015.pdf)
+* [Special Meeting Board of Aldermen 2-9-15 9AM](http://ranchoviejo.wpengine.com/wp-content/uploads/2015/02/Special-Meeting-Board-of-Aldermen-2-9-15-9AM.pdf)
+* [January 13, 2015 - Agenda Packet  Board of Aldermen](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/04/Agenda-Packet-Aldermen-1-13-2015.pdf)
+
+### 2014
+
+* [Agenda December 9 2014](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/04/Agenda-December-2014.pdf)
+* [Agenda Packet 11-11-14 6pm](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/04/Agenda-Packet-11-11-14-6pm.pdf)
+* [No Board of Aldermen Meeting October 2014](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/10/October-2014.pdf)
+* [Agenda Special Meeting 9-23-14](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/09/Agenda-Special-Meeting-9-23-14.pdf)
+* [Agenda Regular Meeting 9-9-2014](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/04/Agenda-Regular-Meeting-Packet-9-9-2014-6PM.pdf)
+* [Agenda Special Meeting 9-2-2014](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/08/Agenda-Special-Meeting-9-2-2014.pdf)
+* [Agenda Special Meeting 8-26-2014](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/08/Agenda-Special-Meeting-8-26-2014.pdf)
+* [August 12, Regular Meeting](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/04/20140808160130497.pdf)
+* [August 5, 2014 Workshop Agenda](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/08/Agenda-Workshop-8-5-14-6pm.pdf)
+* [July 31, 2014 Special Meeting](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/07/AgendaSpecialMeetingWorkshop7-31-20146pm.pdf)
+* [July 22, 2014 Special Meeting](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/07/Agenda-Special-Meeting-Workshop-7-22-2014-6pm.pdf)
+* [July 16, 2014 Special Meeting](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/07/Corrected-Special-Agenda_7-16.pdf)
+* [July 15, 2014](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/07/Corrected-Agenda_7-15.pdf)
+* [June 24, 2014 Special Meeting](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/06/20140617094752765.pdf)
+* [June 10, 2014](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/04/20140606141623008.pdf)
+* [June 3, 2014 Special Meeting](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/05/Special-Meeting-Board-of-Aldermen-6-3-14-6pm.pdf)
+* [May 27, 2014 - Special Meeting](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/05/Board-of-Aldermen-Special-5-27-14.pdf)
+* [May 20, 2014 - Regular Meeting](http://ranchoviejo.wpengine.com/wp-content/uploads/2014/04/Agenda-Board-of-Aldermen-Meeting-5-20-2014.pdf)
+* [May 20, 2014 - Special Meeting](https://www.ranchoviejotexas.com/wp-content/uploads/2014/05/Agenda_Special_Board_Meeting_5-20-14_830_AM.pdf)
+* [April 8, 2014](https://www.ranchoviejotexas.com/wp-content/uploads/2014/04/Agenda-Board-of-Aldermen-4-8-2014.pdf)
+* [March 18, 2014](https://www.ranchoviejotexas.com/wp-content/uploads/2014/03/agenda-March-18-14-web.pdf)
+* [March 11, 2014](https://www.ranchoviejotexas.com/wp-content/uploads/2014/03/Agenda-3-11-14-web.pdf)
+* [February 11, 2014](https://www.ranchoviejotexas.com/wp-content/uploads/2014/02/agenda-packet-2-11-14-web.pdf)
+* [January 14, 2014](https://www.ranchoviejotexas.com/wp-content/uploads/2014/01/agenda-packet-1-14-14-web.pdf)
+
+### 2013
+
+* [November 12, 2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/11/agenda-packet-Nov-2013-web.pdf)
+* [10-8-2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/10/Agenda_Packet_10-08-2013.pdf)
+* [MPO Meeting October 8, 2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/09/MPO_Brochure__9_13_13_web.pdf)
+* [September 10, 2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/09/agenda_packet_9_10_13_web.pdf)
+* [September 3, 2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/08/Agenda__9_3_13__web.pdf)
+* [August 27, 2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/08/AGENDA_PACKET_8_27_13_web.pdf)
+* [August 22, 2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/08/agenda-packet-8-22-13-web.pdf)
+* [Board of Alderman Meeting August 13, 2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/08/Agenda-packet-8-13-13-web.pdf)
+* [August 8, 2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/08/agenda-packet-8-8-13-web.pdf)
+* [July 25, 2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/07/agenda-7-25-13-website.pdf)
+* [7-9-2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/07/Agenda-Packet-Board-of-Aldermen-7-9-2013.pdf)
+* [June 11, 2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/06/Agenda-packet-6-11-13-website.pdf)
+* [June 4, 2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/05/agenda-packet-6-4-13-web.pdf)
+* [May 28, 2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/05/agenda-5-28-13-website.pdf)
+* [May 17, 2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/05/Agenda-packet-5-17-13-website.pdf)
+* [May 14, 2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/05/Agenda-packet-5-14-13-website.pdf)
+* [April 9, 2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/04/AGENDA-Pack-4-9-13-website.pdf)
+* [3/12/2013](https://www.ranchoviejotexas.com/wp-content/uploads/2013/03/AGENDA-PACKET-Board-of-Aldermen-03-12-2013.pdf)
+* [01 08 2013](https://www.ranchoviejotexas.com/wp-content/uploads/2010/06/Agenda-packet-Jan-8-2013.pdf)
+
+### 2012
+
+* [12 11 2012](https://www.ranchoviejotexas.com/wp-content/uploads/2012/12/Agenda-12-11-12.pdf)
+* [11 13 2012](https://www.ranchoviejotexas.com/wp-content/uploads/2012/11/agenda-packet-11-13-12-website.pdf)
+* [10 09 2012](https://www.ranchoviejotexas.com/wp-content/uploads/2012/10/Agenda_Packet_10-09-2012.pdf)
+* [9-11-2012](https://www.ranchoviejotexas.com/wp-content/uploads/2012/09/agendapacket91112web.pdf)
+* [Mayor's Notes](https://www.ranchoviejotexas.com/wp-content/uploads/2012/08/scanned-May-notes-9-12.pdf)
+* [Questions and Comments from Public Hearing - August 23, 2012](https://www.ranchoviejotexas.com/wp-content/uploads/2012/08/scanned-QA-8-23.pdf)
+* [Questions and Comments Public Hearing - August 30, 2012](https://www.ranchoviejotexas.com/wp-content/uploads/2012/08/scanned-QA-8-30.pdf)
+* [RGV Crime Stats](https://www.ranchoviejotexas.com/wp-content/uploads/2012/08/scanned-RVCrimeStats.pdf)
+* [August 30, 2012](https://www.ranchoviejotexas.com/wp-content/uploads/2012/08/AGENDA-PACKET-.pdf)
+* [August 2012](https://www.ranchoviejotexas.com/wp-content/uploads/2012/08/agenda-packet-August-2012.pdf)
+* [Advertisement for Bid - Common Area Maintenance](https://www.ranchoviejotexas.com/wp-content/uploads/2012/07/adv-for-bid-common-area-2012.pdf)
+* [July 10, 2012](https://www.ranchoviejotexas.com/wp-content/uploads/2012/07/Agenda-packet-7-10-12.pdf)
+* [May 2012](https://www.ranchoviejotexas.com/wp-content/uploads/2012/04/Agenda-packet-5-22-12.pdf)
+* [March 2012](https://www.ranchoviejotexas.com/wp-content/uploads/2012/04/agenda-packet-april-2012.pdf)
+* [March 13, 2012](https://www.ranchoviejotexas.com/wp-content/uploads/2010/06/Aldermen-Agenda-packet-3-12.pdf)
+* [Town of Rancho Viejo Public Safety Night - March 27th](https://www.ranchoviejotexas.com/wp-content/uploads/2010/06/Police-night-2012.pdf)
+* [NOTICE OF GENERAL ELECTION - May 12, 2012](https://www.ranchoviejotexas.com/wp-content/uploads/2010/06/NOTICEOFELECTION2012.pdf)
+* [Regular Meeting 2-14-2012](https://www.ranchoviejotexas.com/wp-content/uploads/2012/02/Agenda-packet-2-14-12.pdf)
+* [Regular Meeting 1-10-2012](https://www.ranchoviejotexas.com/wp-content/uploads/2012/01/Agenda-packet-1-10-2012.pdf)
+
+### 2011
+
+* [Regular Meeting 11-08-2011](https://www.ranchoviejotexas.com/wp-content/uploads/2011/11/Agenda-packet-11-8-11.pdf)
+* [Regular Meeting 10-11-2011](https://www.ranchoviejotexas.com/wp-content/uploads/2011/10/AGENDA-PACKET-10-11-2011.pdf)
+* [Aldermen Meeting Regular 09-13-2011](https://www.ranchoviejotexas.com/wp-content/uploads/2011/09/AGENDAPACKETREGULAR09-13-20111.pdf)
+* [Special Meeting September 1 at 6 PM](https://www.ranchoviejotexas.com/wp-content/uploads/2011/08/Agenda-packet-9-1-2011.pdf)
+* [Special Meeting 8/25/11 - Packet](https://www.ranchoviejotexas.com/wp-content/uploads/2011/08/AGENDA-PACKET-SPECIAL-08-25-2011.pdf)
+* [Regular Meeting for August 9, 2011](https://www.ranchoviejotexas.com/wp-content/pdf/agendapacket_%208-9-2011.pdf)
+* [Effective Tax Rate Calculation](https://www.ranchoviejotexas.com/wp-content/uploads/2011/08/Tax-Rate-Cal-2011.pdf)
+* [Regular Meeting for July 12, 2011 at 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2011/07/Agenda-packet-July-12-2011.pdf)
+* [Request for Applications for Depository Services.](https://www.ranchoviejotexas.com/wp-content/uploads/2011/06/Depository-Webpage-6-24-11.pdf)
+* [Notice of Public Meeting Town Of Rancho Viejo Strategic Planning Committee - June 20, 2011 at 5:30 P.M.](https://www.ranchoviejotexas.com/wp-content/uploads/2011/06/NOTICE-OF-A-PUBLIC-MEETING.pdf)
+* [Regular Meeting for June 14, 2011 at 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2011/06/6%2014%202011.pdf)
+* [Regular Meeting for May 31, 2011 at 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2011/05/agenda-packet_5-31-11.pdf)
+* [Regular Meeting for May 17, 2011](https://www.ranchoviejotexas.com/wp-content/uploads/2011/05/%205%2017%2011.pdf)
+* [Regular Meeting for April 12, 2011](https://www.ranchoviejotexas.com/wp-content/uploads/2011/04/AGENDA-PACKET-4-12-2011.pdf)
+* [Notice of Public Meeting - April 13, 2011 at 5:30pm](https://www.ranchoviejotexas.com/wp-content/pdf/AGENDAPACKET4-13-11&4-14-11.pdf)
+* [Board of Alderman Special Meeting – March 22, 2011 at 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2011/03/AGENDA_-PACKET_SPECIAL_03-22-2011.pdf)
+* [March 8, 2011 at 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2011/03/Agenda-packet-3-8-11.pdf)
+* [Notice of General Election - May 14, 2011 at 7am to7pm](https://www.ranchoviejotexas.com/wp-content/uploads/2011/02/Notice_of_General_Election.pdf)
+* [February 8, 2011 at 6pm](https://www.ranchoviejotexas.com/wp-content/uploads/2011/02/agenda-packet-2-8-2011.pdf)
+* [January 11, 2011 at 6pm](https://www.ranchoviejotexas.com/pdf/20110107174601937.pdf)
+
+### 2010
+
+* [Job Opening: Building Expector Closing Date 12/30/2010 - 5pm](https://www.ranchoviejotexas.com/wp-content/uploads/2010/12/20101215154759346.pdf)
+* [Regular Meeting - December 14, 2010 at 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2010/12/Agenda-Packet-12-14-2010.pdf)
+* [Regular Meeting - November 9, 2010 at 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2010/11/AGENDA-PACKET-11-9-10.pdf)
+* [Regular Meeting - October 12, 2010 at 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2010/10/AGENDA-PACKETS-10-12-2010.pdf)
+* [Special Meeting - September 27, 2010 at 9AM](https://www.ranchoviejotexas.com/wp-content/uploads/2010/06/AGENDA-PACKET-09-27-2010-Special-Meeting.pdf)
+* [Regular Meeting - September 11, 2010 at 10AM](https://www.ranchoviejotexas.com/wp-content/uploads/2010/06/AGENDA_PACKETS_9_14_2010.pdf)
+* [Special Meeting - August 31, 2010 at 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2010/06/Agenda_packet83110.pdf)
+* [Special Meeting - August 24, 2010 at 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2010/06/AGENDA_PACKET_SPECIAL_8-24-10.pdf)
+* [August 10, 2010 at 6PM](https://www.ranchoviejotexas.com/wp-content/uploads/2010/06/AGENDA-PACKET-08-10-2010.pdf)
+* [July 13, 2010](https://www.ranchoviejotexas.com/wp-content/uploads/2010/06/AGENDA-PACKET-07-13-2010.pdf)
+* [NOTICE OF PUBLIC MEETING TOWN OF RANCHO VIEJO - June 8, 2010 at 6PM](https://www.ranchoviejotexas.com/wp-content/pdf/06-08-2010.pdf)
+* [NOTICE OF PUBLIC MEETING TOWN OF RANCHO VIEJO - April 13, 2010 at 6PM](https://www.ranchoviejotexas.com/wp-content/pdf/AGENDAPACKET4-13-10.pdf)
+* [NOTICE OF PUBLIC MEETING TOWN OF RANCHO VIEJO - March 30, 2010 at 6PM](https://www.ranchoviejotexas.com/board-of-aldermen/meeting-agendas/wp-content/pdf/ALDERMAN%20ANIMAL%20ORD.%203-30-10.pdf)
+* [March 9, 2010 at 6PM](https://www.ranchoviejotexas.com/wp-content/pdf/AGENDAPACKET3-9-10.pdf)
+* [February 9, 2010 at 6PM](https://www.ranchoviejotexas.com/wp-content/pdf/AGENDAPACKET02910.pdf)
+* [Notice of PUBLIC MEETING- RETENTION PONDS- FEBRUARY 4, 2010 at 6PM](https://www.ranchoviejotexas.com/board-of-aldermen/meeting-agendas/wp-content/pdf/RETENTION_PONDS.pdf)
+* [Notice of PUBLIC MEETING- Board of Alderman - January 12, 2010](https://www.ranchoviejotexas.com/wp-content/pdf/AGENDAPACKET_1_12_2010.pdf)
+* [Notice of PUBLIC MEETING 01-14-10- 6:00PM](https://www.ranchoviejotexas.com/wp-content/pdf/PUBLIC_MEETING_01_14_10.pdf)
+
+### 2009
+
+* [Notice of PUBLIC MEETING - 12-08-09 6:00 PM](https://www.ranchoviejotexas.com/wp-content/pdf/alderman_12-8-09.pdf)
+
+[Sign Up For Alerts](https://www.citizenobserver.com/registration.jsp)
+
+Receive alerts from the Town Hall and local law enforcement about town meetings, crimes, emergencies and other important information.
+
+All Alerts are delivered via e-mail and are also available via text message on your cell phone.
+
+
+
+![](https://www.ranchoviejotexas.com/wp-content/uploads/2015/06/ranchoviejologo_retina.png)
+
+**Town Municipal Office**  
+3301 Carmen Avenue  
+Rancho Viejo, TX 78575  
+Phone: [(956) 350-4093](tel:956-350-4093)  
+Fax: (956) 350-4156
+
+Office Hours: Monday to Friday  
+8:00 a.m. - 5:00 p.m.
+
+**Police Department**  
+3301 Carmen Avenue  
+Rancho Viejo, Texas 78575  
+Emergency Phone: 911  
+Non- Emergency, After Hours  
+Phone: [(956) 350-9000](tel:956-350-9000)  
+Office Phone: [(956) 350-4093](tel:956-350-4093)
+
+* [Live Here](https://www.ranchoviejotexas.com/live-here/)
+* [Build Here](https://www.ranchoviejotexas.com/build-here/)
+* [Board of Aldermen](https://www.ranchoviejotexas.com/board-of-aldermen/)
+* [City Departments](https://www.ranchoviejotexas.com/municipal-departments/)
+* [Forms & Permits](https://www.ranchoviejotexas.com/forms-permits/)
+* [About](https://www.ranchoviejotexas.com/about-rancho-viejo/)
+* [Contact](https://www.ranchoviejotexas.com/contact-us/)
+
+© 2026 [Website Design & Development by MPC Studios, Inc.](http://mpcstudios.com)
