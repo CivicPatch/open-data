@@ -1,0 +1,202 @@
+Angela Oglesbee | Fairfield, TX
+
+
+
+[Skip to main content](https://www.fairfieldtexas.com/people/angela-oglesbee#main)
+
+[![Fairfield, TX](https://www.fairfieldtexas.com/sites/all/themes/custom/sites/fairfieldtx/vts_fairfieldtx/logo.png)](https://www.fairfieldtexas.com/)
+
+[Home](https://www.fairfieldtexas.com/)
+
+Keywords
+
+
+
+* [Home](https://www.fairfieldtexas.com/)
+* [Government »](https://www.fairfieldtexas.com/contacts-directory)
+  + Council & Committees
+    --------------------
+
+    - [City Council](https://www.fairfieldtexas.com/city-council)
+    - [News](https://www.fairfieldtexas.com/news)
+    - [Public Notices](https://www.fairfieldtexas.com/public-notices/pages/public-notices)
+
+    *[All Offices](https://www.fairfieldtexas.com/boards)*
+
+    *[Code of Ordinances](https://ecode360.com/FA6306)*
+
+    Departments
+    -----------
+
+    - [City Staff](https://www.fairfieldtexas.com/administration)
+    - [Emergency Management](https://www.fairfieldtexas.com/emergency-management)
+    - [Municipal Court](https://www.fairfieldtexas.com/municipal-court)
+    - [Police Department](https://www.fairfieldtexas.com/police-department)
+
+    *[All Departments](https://www.fairfieldtexas.com/departments)*
+* [Businesses »](https://www.fairfieldtexas.com/for-businesses)
+  + Businesses
+    ----------
+
+    - [Chamber of Commerce](https://www.fairfieldtexas.com/businesses/pages/fairfield-chamber-commerce-and-visitors-center)
+    - [Community Profile](https://fairfieldtx.com/community-profile/)
+    - [Community Life](https://www.fairfieldtexas.com/residents/pages/our-community)
+
+    - [Economic Development Corp.](https://www.fairfieldtx.com/)
+    - [Incentives](https://www.fairfieldtexas.com/businesses/pages/incentives)
+
+    - [Pay Water Bill](https://www.fairfieldtexas.com/home/pages/ways-pay-your-water-bill)
+    - [Utility Services](https://www.fairfieldtexas.com/businesses/pages/commercial-utility-services)
+    - [Commercial Building Permit](https://www.fairfieldtexas.com/businesses/pages/commercial-building-permit)
+
+    *[Additional Details](https://www.fairfieldtexas.com/for-businesses)*
+* [Residents »](https://www.fairfieldtexas.com/for-residents)
+  + Residents
+    ---------
+
+    - [Our History](https://www.fairfieldtexas.com/residents/pages/about-fairfield)
+    - [Our Community](https://www.fairfieldtexas.com/residents/pages/our-community)
+    - [Parks & Recreation](https://www.fairfieldtexas.com/public-works/parks-recreation)
+    - [Burn Permit](https://www.fairfieldtexas.com/residents/webforms/burn-permit)
+    - [City Dump](https://www.fairfieldtexas.com/residents/pages/city-dump)
+
+    - [Events](https://www.fairfieldtexas.com/for-residents)
+    - [Facility Rentals](https://www.fairfieldtexas.com/residents/pages/facility-rentals)
+    - [Garbage Pickup](https://www.fairfieldtexas.com/residents/pages/garbage-pickup)
+    - [Pay Water Bill](https://www.fairfieldtexas.com/home/pages/ways-pay-your-water-bill)
+    - [Code Enforcement Info](https://www.fairfieldtexas.com/code-enforcement)
+
+    - [Public Works](https://www.fairfieldtexas.com/public-works)
+    - [Utility Services](https://www.fairfieldtexas.com/residents/pages/utility-services)
+    - [Residential Building Permit](https://www.fairfieldtexas.com/home/residents/pages/residential-building-permit)
+    - [2023 Water & Wastewater Rate Study](https://www.fairfieldtexas.com/residents/files/2023-water-and-wastwater-rate-study)
+
+    *[Learn More](https://www.fairfieldtexas.com/for-residents)*
+* [Visitors](https://www.fairfieldtexas.com/visitors-0)
+* [How Do I... »](https://www.fairfieldtexas.com/where)
+  + How Do I Find...
+    ----------------
+
+    - [Elections](https://www.fairfieldtexas.com/administration/pages/elections)
+
+    - [Budgets](https://www.fairfieldtexas.com/city-council/pages/budgets)
+    - [Meetings & Events](https://www.fairfieldtexas.com/node/1/events)
+    - [Minutes & Agendas](https://www.fairfieldtexas.com/minutes-and-agendas)
+    - [News / Announcements](https://www.fairfieldtexas.com/node/1/news)
+
+    - [Pay My Water Bill Online](https://www.fairfieldtexas.com/city-administrator/pages/payments)
+    - [Phone Directory](https://www.fairfieldtexas.com/contacts-directory)
+    - [Public Notices](https://www.fairfieldtexas.com/public-notices/pages/public-notices)
+
+    *[See More](https://www.fairfieldtexas.com/where)*
+
+[![Print](https://www.fairfieldtexas.com/sites/all/modules/contrib/print/icons/print_icon.png "Print")](https://www.fairfieldtexas.com/print/3146 "Display a printer-friendly version of this page.")
+
+![Share page with AddThis](https://s7.addthis.com/static/btn/sm-share-en.gif)
+
+You are here
+------------
+
+1. [Home](https://www.fairfieldtexas.com/) ››
+2. [City Council](https://www.fairfieldtexas.com/city-council)
+
+Angela Oglesbee
+===============
+
+Phone:
+
+9033892633
+
+Angela first served on the City Council as an appointee for a six-month term.  In 2021 she was elected to continue her service on the Council. Angela's priority city projects include finishing the water loop, repairing streets, and addressing drainage issues throughout the city.
+
+She believes Fairfield City Park to be one of the city’s greatest assets.
+
+*"Our Parks Department does a fantastic job of making it a wonderful outdoor space. The park employees take pride in their work and it shows."*
+
+Angela is an outspoken advocate for local non-profit organizations that benefit our citizens with the limited aid of City funding:  Fairfield Volunteer Fire Department, Fairfield EMS, the Fairfield Library, the Moody-Bradley House, and the Freestone County Museum. Some operate to serve our citizens and some offer enrichment to both locals and visitors alike. She faithfully encourages citizens to get involved and find creative ways to support these organizations that provide invaluable services and resources.
+
+*"My role on City council is a responsibility I don't take lightly. I consider it an honor to represent and serve the citizens of Fairfield. It is crucial for me to review matters both from my perspective as a citizen and from the viewpoint of those who serve our City.  I strive to make decisions that provide the best resolutions for everyone involved in any given issue.  It is important that we as Council Members do not micro-manage day-to-day operations, but rather that we seek only to impart guidance and accountability."*
+
+Education Background
+
+Bachelor's Degree in Home Economics
+
+Master's Degree in Secondary Education
+
+Career Background
+
+Home Economics Teacher at Fairfield High School
+
+In 2002 she and her husband purchased the Awalt/Stephenson Drug Store and several years later renamed it Hometown Pharmacy.
+
+### Board Memberships
+
+| Board/Committee | Job title | Membership Status | This contact is |
+| --- | --- | --- | --- |
+
+| Board/Committee | Job title | Membership Status | This contact is |
+| --- | --- | --- | --- |
+| [City Council](https://www.fairfieldtexas.com/city-council) | Councilmember, Place 5 | Active Membership | Elected |
+
+* [Audits](https://www.fairfieldtexas.com/city-council/pages/audits)
+* [Budgets & Tax Rates](https://www.fairfieldtexas.com/city-council/pages/budgets-tax-rates)
+* [Code of Ordinances](https://www.fairfieldtexas.com/city-council/links/code-ordinances)
+* [Minutes & Agendas](https://www.fairfieldtexas.com/minutes-and-agendas)
+* [Tax Rate for the 2023 - 2024 Fiscal Year](https://www.fairfieldtexas.com/city-council/files/tax-rate-2023-2024-fiscal-year)
+* [Historical Archives](https://www.fairfieldtexas.com/historical-archives "City Council Meetings Minutes")
+
+Contact Info
+------------
+
+Phone: 
+
+(903) 389-2633
+
+Address: 
+
+City Hall
+
+527 E. Commerce St.
+
+Fairfield, TX
+75840
+
+United States
+
+See map: [Google Maps](http://maps.google.com?q=527+E.+Commerce+St.%2C+Fairfield%2C+TX%2C+75840%2C+us)
+
+Key Contacts
+------------
+
+[Mayor Bobby Nichols](https://www.fairfieldtexas.com/people/mayor-bobby-nichols)
+
+903-389-2633
+
+[Misty Richardson](https://www.fairfieldtexas.com/people/misty-richardson)
+
+903-389-2633
+
+Quick Links
+-----------
+
+* [Payments](https://www.fairfieldtexas.com/administration/pages/payments)
+* [Eye on Water](https://www.fairfieldtexas.com/water-wastewater/pages/water-quality-reports)
+* [Forms](https://www.fairfieldtexas.com/files)
+* [Agendas](https://www.fairfieldtexas.com/minutes-and-agendas)
+* [Elections](https://www.fairfieldtexas.com/administration/pages/elections)
+* [Job Openings](https://www.fairfieldtexas.com/administration/pages/employment)
+
+![Fairfield, TX logo](https://www.fairfieldtexas.com/sites/g/files/vyhlif5371/f/footerlogo.png)
+
+527 E. Commerce St.  
+Fairfield, Texas 75840  
+(903) 389-2633  
+[contact@fairfieldtexas.gov](https://www.fairfieldtexas.com/home/webforms/contact-us)  
+[Staff Directory](https://www.fairfieldtexas.com/contacts-directory)
+
+FOLLOW US: [Facebook](https://www.facebook.com/CityOfFairfieldTexas/)
+
+[Disclaimer](https://www.fairfieldtexas.com/home/pages/website-disclaimer)  
+[Government Websites by CivicPlus®](https://www.civicplus.com/)
+
+* [Login](https://www.fairfieldtexas.com/user/login?current=node/3146)
