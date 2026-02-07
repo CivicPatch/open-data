@@ -9,7 +9,7 @@ FRIENDLY_STORAGE_HOST = os.getenv("FRIENDLY_STORAGE_HOST")
 STORAGE_ENDPOINT = os.getenv("STORAGE_ENDPOINT")
 STORAGE_ACCESS_KEY_ID = os.getenv("STORAGE_ACCESS_KEY_ID")
 STORAGE_SECRET_ACCESS_KEY = os.getenv("STORAGE_SECRET_ACCESS_KEY")
-import utils as utils
+import scripts.utils as utils
 
 def process_jurisdiction(jurisdiction_ocdid):
     # Grab the data_source folder from the jurisdiction_ocdid
