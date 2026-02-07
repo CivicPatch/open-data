@@ -1,9 +1,8 @@
 import sys
 from scripts.utils import jurisdiction_ocdid_to_folder
 import os
-import yaml
 import json
-import requests
+import urllib.parse
 
 def pull_request_body_markdown(jurisdiction_ocdid: str, request_id: str, log_url: str) -> str:
     """
@@ -35,6 +34,9 @@ def pull_request_body_markdown(jurisdiction_ocdid: str, request_id: str, log_url
     source_urls_str = markdown_list_br(jurisdiction_source_urls)
     identities_str = markdown_list_br(jurisdiction_identities)
 
+    jurisdiction_page_url = get_jurisdiction_page_url(jurisdiction_ocdid)
+
+
     return f"""# Data intake for {jurisdiction_ocdid}
 
 ## Jurisdiction Configs
@@ -51,8 +53,13 @@ Note: some configs, like source_urls and identities, are generated after the scr
 ## Request Information
 - **Request ID**: {request_id}
 - **Log URL**: [Link]({log_url})
+- **Jurisdiction Page**: [Link]({jurisdiction_page_url})
 
 """
+
+def get_jurisdiction_page_url(jurisdiction_ocdid: str) -> str:
+    encoded_jurisdiction_ocdid = urllib.parse.quote(jurisdiction_ocdid, safe="")
+    return f"http://localhost:8000/jurisdictions?jurisdiction_ocdid={encoded_jurisdiction_ocdid}"
 
 def markdown_list_br(items):
     return "<br>".join(str(item) for item in items) if items else "N/A"
