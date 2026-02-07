@@ -152,7 +152,7 @@ jobs:
           API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
         run: |
           JURISDICTION_OCDIDS_ARRAY=$(echo "${{ needs.extract-files.outputs.jurisdiction-ocdids }}" | jq -r '.[]' | awk '{printf "\"%s\",", $0}' | sed 's/,$//')
-          curl -X POST "$API_CIVICPATCH_ORG_URL/api/admin/od_sync" \
+          curl -X POST "$API_CIVICPATCH_ORG_URL/api/admin/od_sync_jurisdictions" \
             -H "Content-Type: application/json" \
             -H "Authorization: $API_CIVICPATCH_ORG_TOKEN" \
             --fail-with-body \
