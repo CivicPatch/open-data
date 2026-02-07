@@ -194,9 +194,9 @@ jobs:
             API_CIVICPATCH_ORG_TOKEN: ${{ secrets.API_CIVICPATCH_ORG_TOKEN }}
             API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
           run: |
-            STATES_ARRAY=$(echo "${{ needs.extract-files.outputs.states }}" | awk -F',' '{for(i=1;i<=NF;i++) printf "\"%s\",", $i}' | sed 's/,$//')
+            JURISDICTION_OCDIDS_ARRAY=$(echo "${{ needs.extract-files.outputs.jurisdiction-ocdids }}" | jq -r '.[]' | awk '{printf "\"%s\",", $0}' | sed 's/,$//')
             curl -X POST "$API_CIVICPATCH_ORG_URL/api/admin/od_sync" \
               -H "Content-Type: application/json" \
               -H "Authorization: $API_CIVICPATCH_ORG_TOKEN" \
               --fail-with-body \
-              -d "{\"states\": [${STATES_ARRAY}]}"
+              -d "{\"jurisdiction_ocdids\": [${JURISDICTION_OCDIDS_ARRAY}]}"
