@@ -185,18 +185,19 @@ jobs:
             echo "No changes to commit"
           fi
   sync-with-api:
-      needs: [commit-file-updates]
-      runs-on: ubuntu-latest
-      if: ${{ needs.extract-files.outputs.jurisdiction-ocdids != '[]' }}
-      steps:  
-        - name: Call od_sync
-          env:
-            API_CIVICPATCH_ORG_TOKEN: ${{ secrets.API_CIVICPATCH_ORG_TOKEN }}
-            API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
-          run: |
-            JURISDICTION_OCDIDS_ARRAY=$(echo "${{ needs.extract-files.outputs.jurisdiction-ocdids }}" | jq -r '.[]' | awk '{printf "\"%s\",", $0}' | sed 's/,$//')
-            curl -X POST "$API_CIVICPATCH_ORG_URL/api/admin/od_sync" \
-              -H "Content-Type: application/json" \
-              -H "Authorization: $API_CIVICPATCH_ORG_TOKEN" \
-              --fail-with-body \
-              -d "{\"jurisdiction_ocdids\": [${JURISDICTION_OCDIDS_ARRAY}]}"
+    environment: env-${{ github.actor }}
+    needs: [commit-file-updates]
+    runs-on: ubuntu-latest
+    if: ${{ needs.extract-files.outputs.jurisdiction-ocdids != '[]' }}
+    steps:  
+      - name: Call od_sync
+        env:
+          API_CIVICPATCH_ORG_TOKEN: ${{ secrets.API_CIVICPATCH_ORG_TOKEN }}
+          API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
+        run: |
+          JURISDICTION_OCDIDS_ARRAY=$(echo "${{ needs.extract-files.outputs.jurisdiction-ocdids }}" | jq -r '.[]' | awk '{printf "\"%s\",", $0}' | sed 's/,$//')
+          curl -X POST "$API_CIVICPATCH_ORG_URL/api/admin/od_sync_people" \
+            -H "Content-Type: application/json" \
+            -H "Authorization: $API_CIVICPATCH_ORG_TOKEN" \
+            --fail-with-body \
+            -d "{\"jurisdiction_ocdids\": [${JURISDICTION_OCDIDS_ARRAY}]}"
