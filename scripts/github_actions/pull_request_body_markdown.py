@@ -4,7 +4,7 @@ import os
 import json
 import urllib.parse
 
-def pull_request_body_markdown(jurisdiction_ocdid: str, request_id: str, log_url: str) -> str:
+def pull_request_body_markdown(jurisdiction_ocdid: str, request_id: str) -> str:
     """
     Generate a markdown-formatted pull request body for updating a jurisdiction's OCDID.
 
@@ -52,25 +52,23 @@ Note: some configs, like source_urls and identities, are generated after the scr
 
 ## Request Information
 - **Request ID**: {request_id}
-- **Log URL**: [Link]({log_url})
 - **Jurisdiction Page**: [Link]({jurisdiction_page_url})
 
 """
 
 def get_jurisdiction_page_url(jurisdiction_ocdid: str) -> str:
     encoded_jurisdiction_ocdid = urllib.parse.quote(jurisdiction_ocdid, safe="")
-    return f"http://localhost:8000/jurisdictions?jurisdiction_ocdid={encoded_jurisdiction_ocdid}"
+    return f"https://app.civicpatch.local/jurisdictions?jurisdiction_ocdid={encoded_jurisdiction_ocdid}"
 
 def markdown_list_br(items):
     return "<br>".join(str(item) for item in items) if items else "N/A"
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Usage: python pull_request_body_markdown.py <jurisdiction_ocdid> <request_id> <log_url>")
+        print("Usage: python pull_request_body_markdown.py <jurisdiction_ocdid> <request_id>")
         sys.exit(1)
 
     jurisdiction_ocdid = sys.argv[1]
     request_id = sys.argv[2]
-    log_url = sys.argv[3]
-    pr_body = pull_request_body_markdown(jurisdiction_ocdid, request_id, log_url)
+    pr_body = pull_request_body_markdown(jurisdiction_ocdid, request_id)
     print(pr_body)

@@ -20,9 +20,6 @@ on:
       zip_file_url:
         description: "Presigned URL of the ZIP file containing YAML data"
         required: true
-      log_url:
-        description: "Debug URL of the workflow context for logging purposes (optional)"
-        required: false
 
 jobs:
   data-intake:
@@ -37,7 +34,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      #- name: Login to GitHub Container Registry
+      #- name: gin to GitHub Container Registry
       #  uses: docker/login-action@v3
       #  with:
       #    registry: ghcr.io
@@ -118,7 +115,7 @@ jobs:
           git push -u origin ${{ steps.extract_branch.outputs.branch_name }}
 
           echo ${{ github.actor }}
-          PR_BODY=$(poetry run python scripts/github_actions/pull_request_body_markdown.py "${{ github.event.inputs.jurisdiction_ocdid }}" "${{ github.event.inputs.request_id }}" "${{ github.event.inputs.log_url }}")
+          PR_BODY=$(poetry run python scripts/github_actions/pull_request_body_markdown.py "${{ github.event.inputs.jurisdiction_ocdid }}" "${{ github.event.inputs.request_id }}")
 
           github_pull_request_url=$(gh pr create \
             --title "Data intake for ${{ github.event.inputs.jurisdiction_ocdid }} by ${{ github.event.inputs.user_email }}" \
@@ -145,6 +142,3 @@ jobs:
       STORAGE_ENDPOINT: ${{ secrets.STORAGE_ENDPOINT }}
       STORAGE_ACCESS_KEY_ID: ${{ secrets.STORAGE_ACCESS_KEY_ID }}
       STORAGE_SECRET_ACCESS_KEY: ${{ secrets.STORAGE_SECRET_ACCESS_KEY }}
-      GOOGLE_SHEETS_PRIVATE_KEY: ${{ secrets.GOOGLE_SHEETS_PRIVATE_KEY }}
-      GOOGLE_SHEETS_CLIENT_EMAIL: ${{ secrets.GOOGLE_SHEETS_CLIENT_EMAIL }}
-      GOOGLE_SHEETS_TOKEN_URI: ${{ secrets.GOOGLE_SHEETS_TOKEN_URI }}
