@@ -35,12 +35,6 @@ on:
         required: false
       STORAGE_SECRET_ACCESS_KEY:
         required: false
-      GOOGLE_SHEETS_PRIVATE_KEY:
-        required: false
-      GOOGLE_SHEETS_CLIENT_EMAIL:
-        required: false
-      GOOGLE_SHEETS_TOKEN_URI:
-        required: false
       API_CIVICPATCH_ORG_TOKEN:
         required: false 
 
@@ -101,15 +95,6 @@ jobs:
 
       - name: Print the branch name
         run: echo "The branch name is ${{ inputs.head_ref }}"
-
-      - name: Upload costs.json to Google Sheets
-        env:
-          GOOGLE_SHEETS_SPREADSHEET_ID: ${{ vars.GOOGLE_SHEETS_SPREADSHEET_ID }}
-          GOOGLE_SHEETS_PRIVATE_KEY: ${{ secrets.GOOGLE_SHEETS_PRIVATE_KEY }}
-          GOOGLE_SHEETS_CLIENT_EMAIL: ${{ secrets.GOOGLE_SHEETS_CLIENT_EMAIL }}
-          GOOGLE_SHEETS_TOKEN_URI: ${{ secrets.GOOGLE_SHEETS_TOKEN_URI }}
-        run: |
-          mise send-costs-to-google-sheets --jurisdiction-ocdid "${{ inputs.jurisdiction_ocdid }}"
 
       - name: Create/Update Data Comment
         env:
