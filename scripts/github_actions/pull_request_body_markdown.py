@@ -64,7 +64,7 @@ def markdown_list_br(items):
     return "<br>".join(str(item) for item in items) if items else "N/A"
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 3:
         print("Usage: python pull_request_body_markdown.py <jurisdiction_ocdid> <request_id>")
         sys.exit(1)
 
