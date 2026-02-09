@@ -2,7 +2,7 @@ import glob
 import re
 import sys
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List
 
 import yaml
 from pydantic import BaseModel
@@ -12,7 +12,6 @@ PROJECT_ROOT = Path(__file__).parent.parent.parent
 def extract_child_divisions(government_list, jurisdiction_ocdid):
     child_divisions = []
     base_id = "/".join(jurisdiction_ocdid.split("/")[:-1])
-    print("extracting child divisions for:", jurisdiction_ocdid)
     for member in government_list:
         office = member.get("office", {})
         division = office.get("division_ocdid", "")
@@ -33,8 +32,8 @@ def extract_child_divisions(government_list, jurisdiction_ocdid):
     return child_divisions
 
 
-def create_update_progress_file(state: str):
-    print("Create/updating progress file...")
+def create_update_progress_file(state: str) -> List[str]:
+    # print("Create/updating progress file...")
     jurisdictions_file_path = PROJECT_ROOT / "data_source" / state / "jurisdictions.yml"
     progress_file_path = (
         PROJECT_ROOT / "data_source" / state / "jurisdictions_metadata.yml"
@@ -45,6 +44,13 @@ def create_update_progress_file(state: str):
     jurisdictions = jurisdictions_data["jurisdictions"]
     files_found = 0
     warnings = []
+    updated_ocdids = []
+
+    # Load existing progress data if it exists
+    if progress_file_path.exists():
+        existing_progress_data = yaml.safe_load(progress_file_path.read_text(encoding="utf-8"))
+    else:
+        existing_progress_data = {"jurisdictions_by_id": {}}
 
     progress_data = {"jurisdictions_by_id": {}, "warnings": []}
     for jurisdiction in jurisdictions:
@@ -52,8 +58,12 @@ def create_update_progress_file(state: str):
         jurisdiction_object = {
             "jurisdiction_ocdid": jurisdiction_ocdid,
             "jurisdiction": {**jurisdiction},
-            "child_divisions": [],  # Add empty child_divisions list
+            "child_divisions": existing_progress_data["jurisdictions_by_id"].get(jurisdiction_ocdid, {}).get("child_divisions", []),
+            "updated_at": existing_progress_data["jurisdictions_by_id"].get(jurisdiction_ocdid, {}).get("updated_at", None)
         }
+        if jurisdiction != existing_progress_data["jurisdictions_by_id"].get(jurisdiction_ocdid, {}).get("jurisdiction", {}):
+            print(f"Jurisdiction data has changed for {jurisdiction_ocdid}, marking for update.")
+            updated_ocdids.append(jurisdiction_ocdid)
         progress_data["jurisdictions_by_id"][jurisdiction_ocdid] = jurisdiction_object
 
     for place_file_path in list(glob.glob(f"data/{state}/**/*.yml")):
@@ -75,6 +85,15 @@ def create_update_progress_file(state: str):
             )
             continue
 
+        # Check if updated_at has changed
+        existing_updated_at = (
+            existing_progress_data["jurisdictions_by_id"]
+            .get(place_jurisdiction_ocdid, {})
+            .get("updated_at")
+        )
+        if existing_updated_at == place_data_updated_at:
+            continue
+
         # Extract child divisions from government members
         child_divisions = extract_child_divisions(
             government_list, place_jurisdiction_ocdid
@@ -88,6 +107,9 @@ def create_update_progress_file(state: str):
         progress_data["jurisdictions_by_id"][place_jurisdiction_ocdid] = (
             jurisdiction_object
         )
+
+        # Add the updated jurisdiction_ocdid to the list
+        updated_ocdids.append(place_jurisdiction_ocdid)
 
     progress_data["warnings"] = warnings
     num_jurisdictions = len(progress_data["jurisdictions_by_id"].values())
@@ -111,14 +133,17 @@ def create_update_progress_file(state: str):
     with open(progress_file_path, "w") as f:
         yaml.dump(progress_data, f, sort_keys=False)
 
-    print(f"Number of jurisdictions in {state}: {num_jurisdictions}")
-    print(f"Number of jurisdictions with urls: {num_jurisdictions_with_urls}")
-    print(f"Number of jurisdictions scraped: {files_found}")
-    print(f"Percentage scrapeable: {progress_data['percentage_scrapeable']:.2f}%")
-    print(f"Percentage scraped (total): {progress_data['percentage_scraped']:.2f}%")
-    print(
-        f"Percentage scraped (from scrapeable): {progress_data['percentage_scraped_from_scrapeable']:.2f}%"
-    )
+    #print(f"Number of jurisdictions in {state}: {num_jurisdictions}")
+    #print(f"Number of jurisdictions with urls: {num_jurisdictions_with_urls}")
+    #print(f"Number of jurisdictions scraped: {files_found}")
+    #print(f"Percentage scrapeable: {progress_data['percentage_scrapeable']:.2f}%")
+    #print(f"Percentage scraped (total): {progress_data['percentage_scraped']:.2f}%")
+    #print(
+    #    f"Percentage scraped (from scrapeable): {progress_data['percentage_scraped_from_scrapeable']:.2f}%"
+    #)
+
+    # Return the list of updated jurisdiction_ocdids
+    return updated_ocdids
 
 
 if __name__ == "__main__":
@@ -126,4 +151,6 @@ if __name__ == "__main__":
         print("Usage: python scripts/create_update_progress_file.py <state>")
         sys.exit(1)
     state = sys.argv[1]
-    create_update_progress_file(state)
+    updated_ocdids = create_update_progress_file(state)
+    # Print the updated OCDIDs as a comma-separated string
+    print(",".join(updated_ocdids))
