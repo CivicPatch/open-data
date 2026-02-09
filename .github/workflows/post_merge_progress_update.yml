@@ -57,28 +57,6 @@ jobs:
           STATES_CSV=$(echo "$STATES" | paste -sd "," -)
           echo "states=$STATES_CSV" >> $GITHUB_OUTPUT
       
-      - name: Extract updated jurisdiction ocdids
-        id: extract-from-files
-        run: |
-          # Get the list of updated YAML files under data/**/**.yml
-          UPDATED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
-          echo "Updated files:"
-          echo "$UPDATED_FILES"
-
-          LOCAL_DATA_FILES=$(echo "$UPDATED_FILES" | grep -E '^data/.*\.yml$' || true)
-          echo "Local data files:"
-          echo "$LOCAL_DATA_FILES"
-          # Join the file paths with commas
-          LOCAL_DATA_FILES_CSV=$(echo "$LOCAL_DATA_FILES" | paste -sd "," -)
-          echo $LOCAL_DATA_FILES_CSV
-          # Extract jurisdiction ocdids from the updated files
-          JURISDICTION_OCDIDS=$(poetry run python scripts/github_actions/extract_jurisdiction_ocdids.py $LOCAL_DATA_FILES_CSV)
-          echo "jurisdiction ocdids: $JURISDICTION_OCDIDS"
-          # Convert to JSON array for matrix
-          JURISDICTION_OCDIDS_JSON=$(echo $JURISDICTION_OCDIDS | jq -R -c 'split(",")')
-          echo "jurisdiction JSON array: $JURISDICTION_OCDIDS_JSON"
-          echo "jurisdiction-ocdids=$JURISDICTION_OCDIDS_JSON" >> $GITHUB_OUTPUT
-
   post-merge:
     environment: env-${{ github.actor }}
     needs: [extract-files]
@@ -119,11 +97,21 @@ jobs:
           poetry install
 
       - name: Update progress files for each state
+        id: update-metadata
         run: |
+          UPDATED_OCDIDS=""
           for state in $(echo "${{ needs.extract-files.outputs.states }}" | tr ',' ' '); do
             echo "Processing state: $state"
-            poetry run python scripts/github_actions/update_jurisdiction_metadata.py "$state"
+            # Run the update_jurisdiction_metadata.py script and capture the output
+            UPDATED=$(poetry run python scripts/github_actions/update_jurisdiction_metadata.py "$state")
+            echo "Updated OCDIDs for $state: $UPDATED"
+            UPDATED_OCDIDS="$UPDATED_OCDIDS,$UPDATED"
           done
+          # Remove leading comma and output the combined OCDIDs
+          UPDATED_OCDIDS=$(echo "$UPDATED_OCDIDS" | sed 's/^,//')
+          echo "updated-ocdids=$UPDATED_OCDIDS" >> $GITHUB_OUTPUT
+
+          # Run additional scripts
           poetry run python scripts/track_progress/main.py
           poetry run python scripts/track_progress/generate_readme.py
 
@@ -151,9 +139,15 @@ jobs:
           API_CIVICPATCH_ORG_TOKEN: ${{ secrets.API_CIVICPATCH_ORG_TOKEN }}
           API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
         run: |
-          JURISDICTION_OCDIDS_ARRAY=$(echo "${{ needs.extract-files.outputs.jurisdiction-ocdids }}" | jq -r '.[]' | awk '{printf "\"%s\",", $0}' | sed 's/,$//')
+          # Use the updated OCDIDs from the update-metadata step
+          UPDATED_OCDIDS=$(echo "${{ steps.update-metadata.outputs.updated-ocdids }}" | awk '{printf "\"%s\",", $0}' | sed 's/,$//')
+
+
+          echo "All OCDIDs: [$UPDATED_OCDIDS]"
+
+          # Call the od_sync API with the updated OCDIDs
           curl -X POST "$API_CIVICPATCH_ORG_URL/api/admin/od_sync_jurisdictions" \
             -H "Content-Type: application/json" \
             -H "Authorization: $API_CIVICPATCH_ORG_TOKEN" \
             --fail-with-body \
-            -d "{\"jurisdiction_ocdids\": [${JURISDICTION_OCDIDS_ARRAY}]}"
+            -d "{\"jurisdiction_ocdids\": [$UPDATED_OCDIDS]}"
