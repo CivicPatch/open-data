@@ -6,10 +6,6 @@ on:
       - "data/**/*.yml" # newly scraped jurisdiction
       - "data_source/**/jurisdictions.yml" # manual update to jurisdictions
 
-concurrency:
-  group: post-merge-main-progress-update
-  cancel-in-progress: false
-
   #workflow_dispatch:
   #  inputs:
   #    state:
@@ -25,10 +21,13 @@ permissions:
 
 jobs:
   extract-files:
+    timeout-minutes: 30
     runs-on: ubuntu-latest
     outputs:
       states: ${{ steps.extract-states.outputs.states }}
     steps:
+      - name: Turnstyle
+        uses: softprops/turnstyle@v3
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
