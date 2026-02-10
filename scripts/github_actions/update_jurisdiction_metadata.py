@@ -62,7 +62,7 @@ def create_update_progress_file(state: str) -> List[str]:
             "updated_at": existing_progress_data["jurisdictions_by_id"].get(jurisdiction_ocdid, {}).get("updated_at", None)
         }
         if jurisdiction != existing_progress_data["jurisdictions_by_id"].get(jurisdiction_ocdid, {}).get("jurisdiction", {}):
-            print(f"Jurisdiction data has changed for {jurisdiction_ocdid}, marking for update.")
+            #print(f"Jurisdiction data has changed for {jurisdiction_ocdid}, marking for update.")
             updated_ocdids.append(jurisdiction_ocdid)
         progress_data["jurisdictions_by_id"][jurisdiction_ocdid] = jurisdiction_object
 
