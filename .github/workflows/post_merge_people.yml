@@ -1,4 +1,4 @@
-name: "[auto] Post Merge - Process Data"
+name: "[auto] Post Merge - Process People"
 on:
   push:
     branches: [main]
@@ -8,6 +8,10 @@ on:
   
 permissions:
   contents: write
+
+concurrency:
+  group: "post-merge-people"
+  cancel-in-progress: false
 
 jobs:
   process-updated-jurisdictions:
@@ -33,7 +37,7 @@ jobs:
 
       - name: Show updated OCDIDs
         run: |
-          cat updated_ocdids.txt
+          cat updated_jurisdiction_ocdids.txt
 
       - name: Update README / progress
         run: |
@@ -60,9 +64,10 @@ jobs:
           API_CIVICPATCH_ORG_TOKEN: ${{ secrets.API_CIVICPATCH_ORG_TOKEN }}
           API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
         run: |
-          JURISDICTION_OCDIDS_ARRAY=$(cat updated_ocdids.txt | jq -R -s -c 'split("\n")[:-1]')
-          curl -X POST "$API_CIVICPATCH_ORG_URL/api/admin/od_sync_people" \
+          JURISDICTION_OCDIDS_ARRAY=$(cat updated_jurisdiction_ocdids.txt | jq -R -s -c 'split("\n")[:-1]')
+          echo "Updated jurisdiction OCDIDs: $JURISDICTION_OCDIDS_ARRAY"
+          curl -X POST "$API_CIVICPATCH_ORG_URL/api/admin/od_sync" \
             -H "Content-Type: application/json" \
             -H "Authorization: $API_CIVICPATCH_ORG_TOKEN" \
             --fail-with-body \
-            -d "{\"jurisdiction_ocdids\": [${JURISDICTION_OCDIDS_ARRAY}]}"
+            -d "{\"jurisdiction_ocdids\": $JURISDICTION_OCDIDS_ARRAY}"

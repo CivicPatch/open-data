@@ -1,27 +1,28 @@
 import os
-import argparse
-import shutil
 import yaml
 import boto3
-from urllib.parse import urlparse
 import re
 
 FRIENDLY_STORAGE_HOST = os.getenv("FRIENDLY_STORAGE_HOST")
 STORAGE_ENDPOINT = os.getenv("STORAGE_ENDPOINT")
 STORAGE_ACCESS_KEY_ID = os.getenv("STORAGE_ACCESS_KEY_ID")
 STORAGE_SECRET_ACCESS_KEY = os.getenv("STORAGE_SECRET_ACCESS_KEY")
-import scripts.utils as utils
 
 def process_jurisdiction(jurisdiction_ocdid, data_file_path):
-    print(f"Processing {jurisdiction_ocdid}..., with file {data_file_path}")
+    print("Processing jurisdiction:", jurisdiction_ocdid)
     # Get the data_source_folder from the data_file hierarchy, everything
     # is the same except for data_source vs data and the .yml file at the end
+    # Load YAML data
+    if not os.path.exists(data_file_path):
+        print(f"YAML file {data_file_path} not found.")
+        return
 
-    data_source_folder = data_file_path.replace("data", "data_source").replace(".yml", "")
+    with open(data_file_path, "r") as f:
+        people = yaml.safe_load(f)
 
-    update_images(data_file_path)
+    update_images(people, data_file_path)
 
-    create_update_config_file(data_file_path, data_source_folder)
+    return people
 
 def extract_s3_key_with_regex(cdn_image, source_bucket):
     """
@@ -33,15 +34,7 @@ def extract_s3_key_with_regex(cdn_image, source_bucket):
         return match.group(1)  # Return the captured group (the key)
     return None
 
-def update_images(yaml_file):
-    # Load YAML data
-    if not os.path.exists(yaml_file):
-        print(f"YAML file {yaml_file} not found.")
-        return
-
-    with open(yaml_file, "r") as f:
-        people = yaml.safe_load(f)
-
+def update_images(people, data_file_path):
     updated = False
 
     # Setup boto3 client for S3-compatible storage
@@ -99,62 +92,3 @@ def update_images(yaml_file):
         with open(yaml_file, "w") as f:
             yaml.dump(people, f, sort_keys=False)
 
-def create_update_config_file(data_file_path, data_source_folder):
-    config_path = os.path.join(data_source_folder, "config.yml")
-
-    # Load people data from YAML
-    if not os.path.exists(data_file_path):
-        print(f"Data file {data_file_path} not found.")
-        return
-
-    with open(data_file_path, "r") as f:
-        data = yaml.safe_load(f)
-
-    people = data.get("persons", []) if isinstance(data, dict) else []
-
-    # Gather all source URLs and identities
-    source_urls = []
-    identities = []
-    seen_names = set()
-    offices = []
-
-    for person in people:
-        # Collect source URLs
-        sources = person.get("sources", [])
-        for src in sources:
-            url = src.get("url")
-            if url:
-                source_urls.append(url)
-
-        # Collect identities
-        other_names = person.get("other_names", [])
-        person_name = person.get("name")
-        # Only add if other_names is non-empty and not already added
-        filtered_other_names = [n.get("name") for n in other_names if n.get("name")]
-        if filtered_other_names and person_name and person_name not in seen_names:
-            seen_names.add(person_name)
-            identities.append({
-                "name": person_name,
-                "other_names": filtered_other_names
-            })
-        offices.extend(person.get("office", {}))
-
-    # Load or create config
-    config = {}
-    if os.path.exists(config_path):
-        with open(config_path, "r") as f:
-            config = yaml.safe_load(f) or {}
-
-    config["source_urls"] = source_urls
-    config["identities"] = identities
-    config["offices"] = offices
-
-    # Write back to config file
-    with open(config_path, "w") as f:
-        yaml.dump(config, f, sort_keys=False)
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Process a jurisdiction's files after a merge.")
-    parser.add_argument("jurisdiction_ocdid", help="The OCDID of the jurisdiction to process.")
-    args = parser.parse_args()
-    process_jurisdiction(args.jurisdiction_ocdid)
