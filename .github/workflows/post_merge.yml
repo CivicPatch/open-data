@@ -1,0 +1,68 @@
+name: "[auto] Post Merge - Process Data"
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**/*.yml" # newly scraped jurisdiction
+      - "data_source/**/jurisdictions.yml" # domain change
+  
+permissions:
+  contents: write
+
+jobs:
+  process-updated-jurisdictions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Setup mise
+        uses: jdx/mise-action@v3.2.0
+        with:
+          version: "2025.9.6"
+          cache: true
+          log_level: debug
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Process all updated jurisdictions
+        run: |
+          poetry run python scripts/github_actions/post_merge/process_updated_jurisdictions.py
+
+      - name: Show updated OCDIDs
+        run: |
+          cat updated_ocdids.txt
+
+      - name: Update README / progress
+        run: |
+          poetry run python scripts/update_readme.py
+
+      - name: Commit updates
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          if [ -n "$(git status --porcelain)" ]; then
+            git add data/
+            git add data_source/
+            git add progress.json README.md
+            git commit -m "Upload images to CDN [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Call od_sync
+        env:
+          API_CIVICPATCH_ORG_TOKEN: ${{ secrets.API_CIVICPATCH_ORG_TOKEN }}
+          API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
+        run: |
+          JURISDICTION_OCDIDS_ARRAY=$(cat updated_ocdids.txt | jq -R -s -c 'split("\n")[:-1]')
+          curl -X POST "$API_CIVICPATCH_ORG_URL/api/admin/od_sync_people" \
+            -H "Content-Type: application/json" \
+            -H "Authorization: $API_CIVICPATCH_ORG_TOKEN" \
+            --fail-with-body \
+            -d "{\"jurisdiction_ocdids\": [${JURISDICTION_OCDIDS_ARRAY}]}"
