@@ -1,0 +1,32 @@
+name: Pull Request updated
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - "data/**/*.yml" # newly scraped jurisdiction
+    
+permissions:
+  contents: write
+
+jobs:
+  create-update-config:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 1
+      
+      - name: Setup mise
+        uses: jdx/mise-action@v3.2.0
+        with:
+          version: "2025.9.6"
+          cache: true
+          log_level: debug
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Create or update config.yml for new or updated jurisdiction
+        run: |
+          updated_data_file_path=$(echo "${{ github.event.pull_request.changed_files }}" | grep -E "data/.+\.yml" | head -n 1)
+          poetry run python scripts/github_actions/local/pull_request/create_update_config.py "$updated_data_file_path"
