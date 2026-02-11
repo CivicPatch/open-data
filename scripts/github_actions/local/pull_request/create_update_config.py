@@ -1,7 +1,7 @@
 import os
 import yaml
-import argparse
 import re
+import sys
 
 def create_update_config_file(data_file_path):
     print("Creating/updating config file based off of data file:", data_file_path)
@@ -59,7 +59,9 @@ def create_update_config_file(data_file_path):
         yaml.dump(config, f, sort_keys=False, allow_unicode=True)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Process a jurisdiction's files after a merge.")
-    parser.add_argument("data_file_path", help="Path to the jurisdiction's data file (e.g. data/tx/houston/local/people.yml)")
-    args = parser.parse_args()
-    create_update_config_file(args.data_file_path)
+    if len(sys.argv) != 2:
+        print("Usage: python create_update_config.py <data_file_path>")
+        sys.exit(1)
+
+    data_file_path = sys.argv[1]
+    create_update_config_file(data_file_path)
