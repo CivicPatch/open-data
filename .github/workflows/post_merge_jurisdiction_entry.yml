@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v5
         with:
           ref: main
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: Setup mise
         uses: jdx/mise-action@v3.2.0
@@ -23,16 +23,45 @@ jobs:
           log_level: debug
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Get updated jurisdictions entry
+      - name: Get changed jurisdictions.yml files
+        id: changed-jurisdictions
         run: |
-          poetry run python scripts/github_actions/local/post_merge/process_updated_jurisdiction_entry.py
+          set -euo pipefail
+          git fetch origin main
+          CHANGED_FILES=$(git diff --name-only origin/main ${{ github.sha }} | grep 'data_source/.*/jurisdictions.yml' || true)
+          echo "CHANGED_FILES<<EOF" >> $GITHUB_ENV
+          echo "$CHANGED_FILES" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
-      - name: Call od_sync
+      - name: Extract changed OCDIDs (robust)
+        id: extract-ocdids
         run: |
-          JURISDICTION_OCDIDS_ARRAY=$(cat updated_jurisdiction_ocdids.txt | jq -R -s -c 'split("\n")[:-1]')
-          echo "Updated jurisdiction OCDIDs: $JURISDICTION_OCDIDS_ARRAY"
+          set -euo pipefail
+          > changed_ocdids.txt
+          for FILE in $CHANGED_FILES; do
+            # Get the line numbers of changed blocks
+            for LINE in $(git diff origin/main ${{ github.sha }} -- "$FILE" | grep '^@@' | grep -o '+[0-9]*' | tr -d '+'); do
+              # Use yq to get the id at that line
+              ID=$(yq ".jurisdictions.[] | select(.id != null) | select(. == load(\"$FILE\") | .jurisdictions.[] | .id)" "$FILE" | head -n 1)
+              if [ -n "$ID" ]; then
+                echo "$ID" >> changed_ocdids.txt
+              fi
+            done
+          done
+          sort -u changed_ocdids.txt -o changed_ocdids.txt
+          echo "Changed OCDIDs:"
+          cat changed_ocdids.txt
+
+      - name: Call od_sync API
+        if: steps.extract-ocdids.outcome == 'success'
+        run: |
+          set -euo pipefail
+          OCDID_ARRAY=$(cat changed_ocdids.txt | jq -R -s -c 'split("\n")[:-1]')
           curl -X POST "$API_CIVICPATCH_ORG_URL/api/admin/od_sync" \
             -H "Content-Type: application/json" \
             -H "Authorization: $API_CIVICPATCH_ORG_TOKEN" \
             --fail-with-body \
-            -d "{\"jurisdiction_ocdids\": $JURISDICTION_OCDIDS_ARRAY}"
+            -d "{\"jurisdiction_ocdids\": $OCDID_ARRAY}"
+        env:
+          API_CIVICPATCH_ORG_URL: ${{ secrets.API_CIVICPATCH_ORG_URL }}
+          API_CIVICPATCH_ORG_TOKEN: ${{ secrets.API_CIVICPATCH_ORG_TOKEN }}

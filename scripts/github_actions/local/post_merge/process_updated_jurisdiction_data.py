@@ -5,7 +5,7 @@ import sys
 
 # Import the function from process_jurisdiction.py
 sys.path.append(os.path.dirname(__file__))
-from process_jurisdiction import process_jurisdiction
+from scripts.github_actions.local.post_merge.process_jurisdiction_data import process_jurisdiction
 
 ROOT_PROJECT = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..'))
 DATA_SOURCE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../../data_source'))
