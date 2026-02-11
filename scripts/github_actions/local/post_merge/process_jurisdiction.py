@@ -8,7 +8,7 @@ STORAGE_ENDPOINT = os.getenv("STORAGE_ENDPOINT")
 STORAGE_ACCESS_KEY_ID = os.getenv("STORAGE_ACCESS_KEY_ID")
 STORAGE_SECRET_ACCESS_KEY = os.getenv("STORAGE_SECRET_ACCESS_KEY")
 
-def process_jurisdiction(jurisdiction_ocdid, data_file_path):
+def process_jurisdiction(jurisdiction_ocdid, data_file_path, people):
     print("Processing jurisdiction:", jurisdiction_ocdid)
     # Get the data_source_folder from the data_file hierarchy, everything
     # is the same except for data_source vs data and the .yml file at the end
@@ -16,9 +16,6 @@ def process_jurisdiction(jurisdiction_ocdid, data_file_path):
     if not os.path.exists(data_file_path):
         print(f"YAML file {data_file_path} not found.")
         return
-
-    with open(data_file_path, "r") as f:
-        people = yaml.safe_load(f)
 
     update_images(people, data_file_path)
 

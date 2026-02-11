@@ -60,6 +60,6 @@ def create_update_config_file(data_file_path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process a jurisdiction's files after a merge.")
-    parser.add_argument("jurisdiction_ocdid", help="The OCDID of the jurisdiction to process.")
+    parser.add_argument("data_file_path", help="Path to the jurisdiction's data file (e.g. data/tx/houston/local/people.yml)")
     args = parser.parse_args()
-    create_update_config_file(args.jurisdiction_ocdid)
+    create_update_config_file(args.data_file_path)
