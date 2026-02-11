@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  process-updated-jurisdictions:
+  process-updated-jurisdictions-data:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -36,7 +36,7 @@ jobs:
 
       - name: Process all updated jurisdictions
         run: |
-          poetry run python scripts/github_actions/post_merge/process_updated_jurisdiction_data.py
+          poetry run python scripts/github_actions/local/post_merge/process_updated_jurisdiction_data.py 
           poetry run python scripts/track_progress/generate_progress.py
           poetry run python scripts/track_progress/generate_readme.py
 
