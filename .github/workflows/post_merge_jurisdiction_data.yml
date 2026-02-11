@@ -31,6 +31,10 @@ jobs:
           log_level: debug
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Install poetry dependencies
+        run: |
+          poetry install
+
       - name: Process all updated jurisdictions
         run: |
           poetry run python scripts/github_actions/post_merge/process_updated_jurisdiction_data.py
