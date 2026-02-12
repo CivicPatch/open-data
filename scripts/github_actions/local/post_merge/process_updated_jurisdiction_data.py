@@ -44,6 +44,7 @@ def main():
 
     for state, jurisdiction_files in state_to_jurisdiction_files.items():
         metadata_path = os.path.join(DATA_SOURCE_DIR, state, 'jurisdictions_metadata.yml')
+        jurisdictions_path = os.path.join(DATA_SOURCE_DIR, state, 'jurisdictions.yml')
         if os.path.exists(metadata_path):
             metadata = load_yaml(metadata_path)
         else:
@@ -76,6 +77,26 @@ def main():
                         metadata["jurisdictions_by_id"][jurisdiction_ocdid] = {}
                 except Exception as e:
                     print(f"Error processing {jurisdiction_ocdid}: {e}")
+
+        # Load jurisdictions.yml for URL lookup
+        jurisdictions_data = load_yaml(jurisdictions_path) if os.path.exists(jurisdictions_path) else {}
+        jurisdiction_list = jurisdictions_data.get("jurisdictions", []) if jurisdictions_data else []
+
+        # Calculate metrics for this state
+        num_jurisdictions = len(jurisdiction_list)
+        num_jurisdictions_with_urls = sum(
+            1 for entry in jurisdiction_list
+            if entry.get("url")
+        )
+        num_scraped = sum(
+            1 for entry in  metadata.get("jurisdictions_by_id", {}).values()
+            if entry.get("updated_at") is not None
+        )
+
+        # Update metrics in metadata file (raw counts only)
+        metadata["num_jurisdictions"] = num_jurisdictions
+        metadata["num_jurisdictions_with_urls"] = num_jurisdictions_with_urls
+        metadata["num_scraped"] = num_scraped
 
         save_yaml(metadata, metadata_path)
 
