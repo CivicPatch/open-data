@@ -6,59 +6,12 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 
 | State | CivicPatch Count | Scrapeable | Scraped | Scraped % | Google Count | Missing Places in CivicPatch | Missing Places in Google |
 |-------|------------------|------------|---------|-----------|--------------|-----------------------|-------------------|
-| nj | 563 | 559 | 8 | 1.43% | 565 | 3 | 1 |
 | co | 271 | 250 | 117 | 46.80% | 269 | 3 | 5 |
+| nj | 563 | 559 | 8 | 1.43% | 565 | 3 | 1 |
 | wa | 281 | 244 | 196 | 80.33% | 281 | 1 | 1 |
-| tx | 1222 | 993 | 702 | 70.69% | 1218 | 26 | 30 |
+| tx | 1222 | 993 | 704 | 70.90% | 1218 | 26 | 30 |
 
 ## Missing OCD IDs by State
-
-### nj
-
-<details>
-<summary>missing entries</summary>
-
-#### Missing in CivicPatch:
-
-**Places:**
-- country:us/state:nj/place:princeton
-- country:us/state:nj/place:pine_valley
-- country:us/state:nj/county:sussex/place:walpack
-
-**Divisions:**
-- country:us/state:nj/county:ocean/place:toms_river/ward:1
-- country:us/state:nj/county:ocean/place:toms_river/ward:2
-- country:us/state:nj/county:ocean/place:toms_river/ward:3
-- country:us/state:nj/county:ocean/place:toms_river/ward:4
-- country:us/state:nj/place:atlantic_city/ward:1
-- country:us/state:nj/place:atlantic_city/ward:2
-- country:us/state:nj/place:atlantic_city/ward:3
-- country:us/state:nj/place:atlantic_city/ward:4
-- country:us/state:nj/place:atlantic_city/ward:5
-- country:us/state:nj/place:atlantic_city/ward:6
-- country:us/state:nj/place:camden/ward:1
-- country:us/state:nj/place:camden/ward:2
-- country:us/state:nj/place:camden/ward:3
-- country:us/state:nj/place:camden/ward:4
-- country:us/state:nj/place:paterson/ward:1
-- country:us/state:nj/place:paterson/ward:2
-- country:us/state:nj/place:paterson/ward:3
-- country:us/state:nj/place:paterson/ward:4
-- country:us/state:nj/place:paterson/ward:5
-- country:us/state:nj/place:paterson/ward:6
-#### Missing in Google:
-
-**Places:**
-- country:us/state:nj/place:
-
-**Divisions:**
-- country:us/state:nj/county:middlesex/place:woodbridge/ward:1
-- country:us/state:nj/county:middlesex/place:woodbridge/ward:2
-- country:us/state:nj/county:middlesex/place:woodbridge/ward:3
-- country:us/state:nj/county:middlesex/place:woodbridge/ward:4
-- country:us/state:nj/county:middlesex/place:woodbridge/ward:5
-
-</details>
 
 ### co
 
@@ -68,9 +21,9 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in CivicPatch:
 
 **Places:**
+- country:us/state:co/place:central_city
 - country:us/state:co/place:bonanza
 - country:us/state:co/place:raymer_~new_raymer~
-- country:us/state:co/place:central_city
 
 **Divisions:**
 - country:us/state:co/place:centennial/council_district:1
@@ -80,11 +33,11 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in Google:
 
 **Places:**
-- country:us/state:co/place:central
 - country:us/state:co/place:keystone
-- country:us/state:co/place:denver
 - country:us/state:co/place:raymer_(new_raymer)
+- country:us/state:co/place:central
 - country:us/state:co/place:broomfield
+- country:us/state:co/place:denver
 
 **Divisions:**
 - country:us/state:co/place:alamosa/ward:1
@@ -221,6 +174,53 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 - country:us/state:co/place:windsor/council_district:4
 - country:us/state:co/place:windsor/council_district:5
 - country:us/state:co/place:windsor/council_district:6
+
+</details>
+
+### nj
+
+<details>
+<summary>missing entries</summary>
+
+#### Missing in CivicPatch:
+
+**Places:**
+- country:us/state:nj/place:princeton
+- country:us/state:nj/place:pine_valley
+- country:us/state:nj/county:sussex/place:walpack
+
+**Divisions:**
+- country:us/state:nj/county:ocean/place:toms_river/ward:1
+- country:us/state:nj/county:ocean/place:toms_river/ward:2
+- country:us/state:nj/county:ocean/place:toms_river/ward:3
+- country:us/state:nj/county:ocean/place:toms_river/ward:4
+- country:us/state:nj/place:atlantic_city/ward:1
+- country:us/state:nj/place:atlantic_city/ward:2
+- country:us/state:nj/place:atlantic_city/ward:3
+- country:us/state:nj/place:atlantic_city/ward:4
+- country:us/state:nj/place:atlantic_city/ward:5
+- country:us/state:nj/place:atlantic_city/ward:6
+- country:us/state:nj/place:camden/ward:1
+- country:us/state:nj/place:camden/ward:2
+- country:us/state:nj/place:camden/ward:3
+- country:us/state:nj/place:camden/ward:4
+- country:us/state:nj/place:paterson/ward:1
+- country:us/state:nj/place:paterson/ward:2
+- country:us/state:nj/place:paterson/ward:3
+- country:us/state:nj/place:paterson/ward:4
+- country:us/state:nj/place:paterson/ward:5
+- country:us/state:nj/place:paterson/ward:6
+#### Missing in Google:
+
+**Places:**
+- country:us/state:nj/place:
+
+**Divisions:**
+- country:us/state:nj/county:middlesex/place:woodbridge/ward:1
+- country:us/state:nj/county:middlesex/place:woodbridge/ward:2
+- country:us/state:nj/county:middlesex/place:woodbridge/ward:3
+- country:us/state:nj/county:middlesex/place:woodbridge/ward:4
+- country:us/state:nj/county:middlesex/place:woodbridge/ward:5
 
 </details>
 
@@ -433,32 +433,32 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in CivicPatch:
 
 **Places:**
-- country:us/state:tx/place:o~donnell
 - country:us/state:tx/place:oak_ridge_~cooke_county~
-- country:us/state:tx/place:lincoln_park
-- country:us/state:tx/place:mustang
+- country:us/state:tx/place:lakeside_~san_patricio_county~
 - country:us/state:tx/place:st_jo
-- country:us/state:tx/place:reno_~lamar_county~
-- country:us/state:tx/place:lakeside_~tarrant_county~
+- country:us/state:tx/place:los_ybanez
 - country:us/state:tx/place:pecos
-- country:us/state:tx/place:o~brien
-- country:us/state:tx/place:brazos_bend
-- country:us/state:tx/place:oak_ridge_~kaufman_county~
+- country:us/state:tx/place:lakeside
 - country:us/state:tx/place:oak_ridge
-- country:us/state:tx/place:st_paul
-- country:us/state:tx/place:corral_city
+- country:us/state:tx/place:brazos_bend
+- country:us/state:tx/place:rangerville
+- country:us/state:tx/place:carl~s_corner
+- country:us/state:tx/place:nesbitt
+- country:us/state:tx/place:mustang
+- country:us/state:tx/place:o~donnell
+- country:us/state:tx/place:hillcrest
+- country:us/state:tx/place:lincoln_park
+- country:us/state:tx/place:reno_~parker_county~
 - country:us/state:tx/place:millican
 - country:us/state:tx/place:post_oak_bend_city
-- country:us/state:tx/place:st_hedwig
+- country:us/state:tx/place:lakeside_~tarrant_county~
+- country:us/state:tx/place:o~brien
 - country:us/state:tx/place:miller~s_cove
-- country:us/state:tx/place:los_ybanez
-- country:us/state:tx/place:rangerville
-- country:us/state:tx/place:lakeside
-- country:us/state:tx/place:nesbitt
-- country:us/state:tx/place:reno_~parker_county~
-- country:us/state:tx/place:lakeside_~san_patricio_county~
-- country:us/state:tx/place:hillcrest
-- country:us/state:tx/place:carl~s_corner
+- country:us/state:tx/place:st_hedwig
+- country:us/state:tx/place:st_paul
+- country:us/state:tx/place:corral_city
+- country:us/state:tx/place:oak_ridge_~kaufman_county~
+- country:us/state:tx/place:reno_~lamar_county~
 
 **Divisions:**
 - country:us/state:tx/place:abilene/council_district:1
@@ -498,36 +498,36 @@ All Google OCDIDs are gathered from these [set of files](https://drive.google.co
 #### Missing in Google:
 
 **Places:**
-- country:us/state:tx/place:ellinger
 - country:us/state:tx/place:reno_city_parker_county
-- country:us/state:tx/place:reno_city_lamar_county
-- country:us/state:tx/place:lakeside_town_tarrant_county
-- country:us/state:tx/place:oak_ridge_cooke_county
-- country:us/state:tx/place:san_elizario
-- country:us/state:tx/place:st._paul
-- country:us/state:tx/place:road_runner
-- country:us/state:tx/place:oak_ridge_town_kaufman_county
-- country:us/state:tx/place:coupland
-- country:us/state:tx/place:lakeside_san_patricio_county
-- country:us/state:tx/place:post_oak_bend
-- country:us/state:tx/place:carl's_corner
-- country:us/state:tx/place:o'brien
-- country:us/state:tx/place:sandy_oaks
-- country:us/state:tx/place:hillcrest_village
-- country:us/state:tx/place:double_horn
-- country:us/state:tx/place:miller's_cove
-- country:us/state:tx/place:plantersville
-- country:us/state:tx/place:st._jo
 - country:us/state:tx/place:south_frydek
-- country:us/state:tx/place:peaster
-- country:us/state:tx/place:stockton_bend
-- country:us/state:tx/place:o'donnell
-- country:us/state:tx/place:kingsbury
-- country:us/state:tx/place:poetry
+- country:us/state:tx/place:st._jo
+- country:us/state:tx/place:coupland
+- country:us/state:tx/place:road_runner
 - country:us/state:tx/place:town_of_pecos
+- country:us/state:tx/place:st._paul
+- country:us/state:tx/place:reno_city_lamar_county
+- country:us/state:tx/place:kingsbury
+- country:us/state:tx/place:hillcrest_village
+- country:us/state:tx/place:o'brien
 - country:us/state:tx/place:spring_branch
+- country:us/state:tx/place:lakeside_san_patricio_county
+- country:us/state:tx/place:san_elizario
+- country:us/state:tx/place:miller's_cove
+- country:us/state:tx/place:oak_ridge_town_kaufman_county
+- country:us/state:tx/place:ellinger
+- country:us/state:tx/place:lakeside_town_tarrant_county
 - country:us/state:tx/place:st._hedwig
+- country:us/state:tx/place:stockton_bend
 - country:us/state:tx/place:dennis
+- country:us/state:tx/place:plantersville
+- country:us/state:tx/place:post_oak_bend
+- country:us/state:tx/place:double_horn
+- country:us/state:tx/place:carl's_corner
+- country:us/state:tx/place:sandy_oaks
+- country:us/state:tx/place:peaster
+- country:us/state:tx/place:oak_ridge_cooke_county
+- country:us/state:tx/place:poetry
+- country:us/state:tx/place:o'donnell
 
 **Divisions:**
 - country:us/state:tx/place:alpine/ward:1
