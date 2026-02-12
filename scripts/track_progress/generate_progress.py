@@ -68,7 +68,9 @@ def count_municipalities():
                 divisions = data.get("divisions", {})
                 print(f"Processing {len(divisions)} divisions for state: {state}")
                 google_ocdids = set()
-                for ocdid in divisions.keys():
+                all_divisions = divisions.keys()
+                filtered_divisions = [d for d in all_divisions if is_place_division(d)]
+                for ocdid in filtered_divisions:
                     # Get base place ocdid for comparison
                     parts = ocdid.split("/")
                     place_idx = [
@@ -174,6 +176,24 @@ def normalize_ocdid(ocdid):
     elif ocdid.startswith("ocd-jurisdiction/"):
         return ocdid[len("ocd-jurisdiction/") :]
     return ocdid
+
+
+def is_place_division(ocdid):
+    # Only include if it contains '/place:' or '/ward:' or '/council_district:' after a place
+    # Exclude if it's a county-level council_district
+    # Examples:
+    #   country:us/state:tx/county:anderson/council_district:1  --> EXCLUDE
+    #   country:us/state:tx/county:anderson/place:palestine/ward:1  --> INCLUDE
+    #   country:us/state:tx/place:abilene/council_district:1  --> INCLUDE
+    return (
+        "/place:" in ocdid
+        or (
+            "/council_district:" in ocdid and "/county:" not in ocdid and "/place:" in ocdid
+        )
+        or (
+            "/ward:" in ocdid and "/place:" in ocdid
+        )
+    )
 
 
 if __name__ == "__main__":
