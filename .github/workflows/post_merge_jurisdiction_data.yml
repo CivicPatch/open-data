@@ -48,7 +48,9 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git stash
           git pull --rebase origin main
+          git stash pop || true
           if [ -n "$(git status --porcelain)" ]; then
             git add data/
             git add data_source/
