@@ -47,18 +47,8 @@ def count_municipalities():
             progress_data = yaml.safe_load(file)
             jurisdictions_by_id = progress_data.get("jurisdictions_by_id", {})
             civicpatch_count = progress_data.get("num_jurisdictions", 0)
-            civicpatch_scrapeable_count = progress_data.get(
-                "num_jurisdictions_with_urls", 0
-            )
-            civicpatch_scraped_count = (
-                int(
-                    progress_data.get("percentage_scraped_from_scrapeable", 0)
-                    * civicpatch_scrapeable_count
-                    / 100
-                )
-                if civicpatch_scrapeable_count
-                else 0
-            )
+            civicpatch_scrapeable_count = progress_data.get("num_jurisdictions_with_urls", 0)
+            civicpatch_scraped_count = progress_data.get("num_scraped", 0)
 
             for jurisdiction_ocdid, jurisdiction_obj in jurisdictions_by_id.items():
                 # Chop off /government for comparison
