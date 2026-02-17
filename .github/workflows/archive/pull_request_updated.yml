@@ -41,42 +41,42 @@ jobs:
             echo "changed_file=" >> $GITHUB_OUTPUT
           fi
 
-  create-update-config:
-    runs-on: ubuntu-latest
-    needs: should-run
-    if: needs.should-run.outputs.should_run == 'true'
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v5
-        with:
-          ref: ${{ github.head_ref }}
-          fetch-depth: 1
-
-      - name: Setup mise
-        uses: jdx/mise-action@v3.2.0
-        with:
-          version: "2025.9.6"
-          cache: true
-          log_level: debug
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Install poetry dependencies
-        run: poetry install
-
-      - name: Create or update config.yml for new or updated jurisdiction
-        run: |
-          updated_data_file_path="${{ needs.should-run.outputs.changed_file }}"
-          echo "Updated data file path: $updated_data_file_path"
-          poetry run python scripts/github_actions/local/pull_request/create_update_config.py "$updated_data_file_path"
-
-      - name: Commit config.yml updates
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          if [ -n "$(git status --porcelain)" ]; then
-            git add .
-            git commit -m "Update config.yml for new/updated jurisdiction"
-            git push origin HEAD:${{ github.head_ref }}
-          else
-            echo "No changes to commit"
-          fi
+#  create-update-config:
+#    runs-on: ubuntu-latest
+#    needs: should-run
+#    if: needs.should-run.outputs.should_run == 'true'
+#    steps:
+#      - name: Checkout repository
+#        uses: actions/checkout@v5
+#        with:
+#          ref: ${{ github.head_ref }}
+#          fetch-depth: 1
+#
+#      - name: Setup mise
+#        uses: jdx/mise-action@v3.2.0
+#        with:
+#          version: "2025.9.6"
+#          cache: true
+#          log_level: debug
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#
+#      - name: Install poetry dependencies
+#        run: poetry install
+#
+#      - name: Create or update config.yml for new or updated jurisdiction
+#        run: |
+#          updated_data_file_path="${{ needs.should-run.outputs.changed_file }}"
+#          echo "Updated data file path: $updated_data_file_path"
+#          poetry run python scripts/github_actions/local/pull_request/create_update_config.py "$updated_data_file_path"
+#
+#      - name: Commit config.yml updates
+#        run: |
+#          git config --global user.name 'github-actions[bot]'
+#          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+#          if [ -n "$(git status --porcelain)" ]; then
+#            git add .
+#            git commit -m "Update config.yml for new/updated jurisdiction"
+#            git push origin HEAD:${{ github.head_ref }}
+#          else
+#            echo "No changes to commit"
+#          fi
