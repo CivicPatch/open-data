@@ -94,3 +94,27 @@ run = """
 docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
   python src/scripts/generate_review_comment.py {{ option(name="jurisdiction-ocdid") }}
 """
+
+[tasks.validate_texas_google]
+run = """
+poetry run python scripts/one_off/validate_local.py \
+  --yaml-dir data/tx/local \
+  --json-file scripts/track_progress/google_data/tx_all_processed.json \
+  --out-dir data_source/tx/local/validation/google
+"""
+
+[tasks.scrape_texas_tml]
+run = """
+poetry run python data_source/tx/local/validation/tml/scrape_tml_search.py \
+  --search-url "https://directory.tml.org/results?search%5Btitle%5D%5B%5D=ABAC&search%5Btitle%5D%5B%5D=ABAD&search%5Btitle%5D%5B%5D=AB02&search%5Btitle%5D%5B%5D=AAAA&search%5Btitle%5D%5B%5D=AB01&search%5Bsubmit%5D=&search%5Btype%5D=title" \
+  --out data_source/tx/local/validation/tml/tml_raw.json \
+  --delay 1.0 --individual-delay 0.5 --resume
+"""
+
+[tasks.validate_texas_tml]
+run = """
+poetry run python data_source/tx/local/validation/tml/validate_tml.py \
+  --tml-file data_source/tx/local/validation/tml/tml_raw.json \
+  --yaml-dir data/tx/local \
+  --out-dir data_source/tx/local/validation/tml
+"""
