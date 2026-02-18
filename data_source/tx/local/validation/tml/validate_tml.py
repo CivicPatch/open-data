@@ -214,12 +214,12 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
     print(f"  Loaded {len(tml_records)} TML records")
 
     # Filter YAML to place: jurisdictions only
-    yaml_place = [p for p in all_yaml if get_yaml_place_ocdid(p)]
-    print(f"  YAML after place: filter: {len(yaml_place)}")
+    civicpatch_places = [p for p in all_yaml if get_yaml_place_ocdid(p)]
+    print(f"  YAML after place: filter: {len(civicpatch_places)}")
 
     # Group YAML by jurisdiction for reporting
     yaml_by_jur: dict[str, list[dict]] = defaultdict(list)
-    for p in yaml_place:
+    for p in civicpatch_places:
         yaml_by_jur[place_key_from_ocdid(get_yaml_place_ocdid(p))].append(p)
 
     tml_index = build_tml_name_index(tml_records)
@@ -230,7 +230,7 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
     unmatched_yaml  = []
     matched_tml_names = set()
 
-    for yp in yaml_place:
+    for yp in civicpatch_places:
         key = normalize_name(yp.get("name", ""))
         if key in tml_index:
             tr = best_tml_match(yp, tml_index[key])
@@ -260,7 +260,7 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
 
     mismatch_rows = []
 
-    for yp in yaml_place:
+    for yp in civicpatch_places:
         jur_key = place_key_from_ocdid(get_yaml_place_ocdid(yp))
         jur_stats[jur_key]["yaml_count"] += 1
 
@@ -403,23 +403,43 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
     total_matched     = len(matched_pairs)
     total_unmatched_y = len(unmatched_yaml)
     total_unmatched_t = len(unmatched_tml_names)
-    match_pct_names   = total_matched / max(len(yaml_place), 1) * 100
+    # Calculate TML-side match rate for people in shared jurisdictions
+    matched_tml_count = 0
+    total_tml_people_in_shared = 0
+    # Build set of matched last names per jurisdiction from CivicPatch
+    matched_names_by_jur = defaultdict(set)
+    for yp, tr in matched_pairs:
+        jur_key = place_key_from_ocdid(get_yaml_place_ocdid(yp))
+        matched_names_by_jur[jur_key].add(normalize_name(yp.get("name", "")))
+
+    shared_jurs = set(yaml_by_jur.keys()) & {city_name_to_place_key(tr.get("city_name", "")) for tr in tml_records}
+    for jur in shared_jurs:
+        # Get all TML people in this jurisdiction
+        tml_people = [tr for tr in tml_records if city_name_to_place_key(tr.get("city_name", "")) == jur]
+        total_tml_people_in_shared += len(tml_people)
+        for tr in tml_people:
+            if normalize_name(tr.get("name", "")) in matched_names_by_jur[jur]:
+                matched_tml_count += 1
+
+    match_rate_tml = (matched_tml_count / total_tml_people_in_shared * 100) if total_tml_people_in_shared else 0
+    shared_match_rate = (total_matched / sum(jur_stats[jur]["yaml_count"] for jur in shared_jurs) * 100) if shared_jurs else 0
 
     w("=" * 70)
     w("DATA VALIDATION REPORT  (civicpatch vs TML)")
     w("Scope: place: jurisdictions only | Field compared: phone")
     w("=" * 70)
     w()
-    w(f"Source A (civicpatch YAML):  {len(yaml_place):>5} people across {len(all_jurs):>3} place: jurisdictions")
+    w(f"Source A (civicpatch YAML):  {len(civicpatch_places):>5} people across {len(all_jurs):>3} place: jurisdictions")
     w(f"Source B (TML scraped):      {len(tml_records):>5} people ({len(tml_index)} unique normalized names)")
     w()
     w("-" * 70)
     w("NAME MATCHING")
     w("-" * 70)
     w(f"Matched pairs:                        {total_matched:>5}")
-    w(f"Match rate (vs civicpatch place:):    {match_pct_names:>6.1f}%")
     w(f"civicpatch people with no TML match:  {total_unmatched_y:>5}")
     w(f"TML people with no civicpatch match:  {total_unmatched_t:>5}")
+    w(f"Match rate for people in jurisdictions present in both sources (vs civicpatch): {shared_match_rate:.1f}%")
+    w(f"Match rate for people in jurisdictions present in both sources (vs TML): {match_rate_tml:.1f}%")
     w()
     w("-" * 70)
     w("PHONE MATCH SUMMARY  (matched pairs only)")
@@ -452,7 +472,6 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
 
     only_civicpatch = sorted(civicpatch_jurs - tml_jurs)
     only_tml = sorted(tml_jurs - civicpatch_jurs)
-
 
     w(f"Jurisdictions present in CivicPatch but not TML (count: {len(only_civicpatch)}):")
     for jur in only_civicpatch:
