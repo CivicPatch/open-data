@@ -192,6 +192,18 @@ def city_name_to_place_key(city_name: str) -> str:
     name = name.lower().replace(" ", "_")
     return f"place:{name}"
 
+def city_name_to_jurisdiction_ocdid(city_name: str) -> str:
+    """
+    Converts a city name to a jurisdiction OCD-ID if possible.
+    This is a best-effort heuristic and may not be accurate for all cities.
+    For example, 'City of Austin' would ideally map to 'ocd-division/country:us/state:tx/place:austin'.
+    However, without state information, we can only return 'ocd-division/country:us/place:austin'.
+    """
+    place_key = city_name_to_place_key(city_name)
+    if place_key:
+        return f"ocd-jurisdiction/country:us/state:tx/{place_key}/government"
+    return ""
+
 
 def best_tml_match(yaml_person: dict, candidates: list[dict]) -> dict:
     """
@@ -271,9 +283,6 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
     yaml_by_jur: dict[str, list[dict]] = defaultdict(list)
     for p in civicpatch_places:
         yaml_by_jur[place_key_from_ocdid(get_yaml_place_ocdid(p))].append(p)
-
-    tml_index = build_tml_name_index(tml_records)
-    print(f"  TML unique normalized names: {len(tml_index)}")
 
     # Build TML index by jurisdiction and name
     tml_index_by_jur = build_tml_name_index_by_jur(tml_records)
@@ -355,7 +364,6 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
         # --- Division mismatch check ---
         yaml_div = (yp.get("office") or {}).get("division_ocdid", "")
         tml_div = tml_division_ocdid(tr)
-        print("comparing", yp.get("name"), "yaml_div:", yaml_div, "tml_div:", tml_div)
         if yaml_div and tml_div and yaml_div != tml_div:
             mismatch_rows.append({
                 "jurisdiction":    jur_key,
@@ -381,18 +389,19 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
         })
 
     # Unmatched TML people
-    for tml_name in unmatched_tml_names_by_jur:
-        for tr in tml_index[tml_name]:
-            jur_key = city_name_to_place_key(tr.get("city_name", ""))
-            combined_unmatched.append({
-                "jurisdiction": jur_key,
-                "name": tr.get("name", ""),
-                "office": tr.get("office", ""),
-                "city_name": tr.get("city_name", ""),
-                "source_file": "",
-                "tml_city_profile": tr.get("city_url", ""),
-                "source": "tml",
-            })
+    for jur_key, name_set in unmatched_tml_names_by_jur.items():
+        for name in name_set:
+            for tr in tml_index_by_jur[jur_key][name]:
+                combined_unmatched.append({
+                    "jurisdiction": jur_key,
+                    "name": tr.get("name", ""),
+                    "office": tr.get("office", ""),
+                    "city_name": tr.get("city_name", ""),
+                    "source_file": "",
+                    "tml_city_profile": tr.get("city_url", ""),
+                    "division_ocdid": tml_division_ocdid(tr),
+                    "source": "tml",
+                })
 
     # Sort combined_unmatched by jurisdiction, then by name
     combined_unmatched.sort(key=lambda row: (row["jurisdiction"], row["name"]))
@@ -400,7 +409,7 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
     unmatched_combined_csv = os.path.join(out_dir, "unmatched_people_by_jurisdiction.csv")
     with open(unmatched_combined_csv, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=[
-            "jurisdiction", "name", "office", "city_name", "source_file", "tml_city_profile", "source"
+            "jurisdiction", "name", "office", "city_name", "source_file", "tml_city_profile", "division_ocdid", "source"
         ])
         writer.writeheader()
         for row in combined_unmatched:
@@ -502,8 +511,8 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
     w("Scope: place: jurisdictions only | Field compared: phone")
     w("=" * 70)
     w()
-    w(f"Source A (civicpatch YAML):  {len(civicpatch_places):>5} people across {len(all_jurs):>3} place: jurisdictions")
-    w(f"Source B (TML scraped):      {len(tml_records):>5} people ({len(tml_index)} unique normalized names)")
+    w(f"Source A (civicpatch YAML):  {len(civicpatch_places):>5} people")
+    w(f"Source B (TML scraped):      {len(tml_records):>5} people")
     w()
     w("-" * 70)
     w("NAME MATCHING")
@@ -546,11 +555,11 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
     only_civicpatch = sorted(civicpatch_jurs - tml_jurs)
     only_tml = sorted(tml_jurs - civicpatch_jurs)
 
-    w(f"Jurisdictions present in CivicPatch but not TML (count: {len(only_civicpatch)}):")
+    w(f"Jurisdictions data present in CivicPatch but not TML (count: {len(only_civicpatch)}); civicpatch total count: {len(civicpatch_jurs)}:")
     for jur in only_civicpatch:
         w(f"  {jur}")
     w()
-    w(f"Jurisdictions present in TML but not CivicPatch (count: {len(only_tml)}):")
+    w(f"Jurisdictions data present in TML but not CivicPatch (count: {len(only_tml)}); tml total count: {len(tml_jurs)}:")
     for jur in only_tml:
         w(f"  {jur}")
     w()
@@ -562,6 +571,23 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
     w(f"  {jur_csv}")
     w(f"  {mismatch_csv}")
     w(f"  {unmatched_combined_csv}")
+
+    jurisdictions_file = os.path.join("data_source", "tx", "jurisdictions.yml")
+    with open(jurisdictions_file, "r", encoding="utf-8") as f:
+        jurisdictions_data = yaml.safe_load(f)
+    jurisdiction_data = jurisdictions_data.get("jurisdictions", [])
+    civicpatch_jurisdiction_ocdids = [j.get("id") for j in jurisdiction_data]
+    tml_jurisdiction_ocdids = set()
+    for tr in tml_records:
+        jur_key = city_name_to_jurisdiction_ocdid(tr.get("city_name", ""))
+        if jur_key:
+            tml_jurisdiction_ocdids.add(jur_key)
+    civicpatch_diff = set(civicpatch_jurisdiction_ocdids) - tml_jurisdiction_ocdids
+    tml_diff = tml_jurisdiction_ocdids - set(civicpatch_jurisdiction_ocdids)
+    w(f"\nJurisdiction OCD-IDs present in CivicPatch index but not TML index (count: {len(civicpatch_diff)}):")
+    w(f"  " + "\n  ".join(sorted(civicpatch_diff)))
+    w(f"\nJurisdiction OCD-IDs present in TML index but not CivicPatch index (count: {len(tml_diff)}):")
+    w(f"  " + "\n  ".join(sorted(tml_diff)))
 
     with open(report_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
