@@ -166,6 +166,19 @@ def build_tml_name_index(tml_records: list[dict]) -> dict[str, list[dict]]:
     return index
 
 
+def build_tml_name_index_by_jur(tml_records: list[dict]) -> dict[str, dict[str, list[dict]]]:
+    """
+    Build index: jurisdiction -> normalized name -> list of TML records.
+    """
+    index = defaultdict(lambda: defaultdict(list))
+    for r in tml_records:
+        name = r.get("name", "")
+        jur = city_name_to_place_key(r.get("city_name", ""))
+        if name and name.lower() != "position vacant" and jur:
+            index[jur][normalize_name(name)].append(r)
+    return index
+
+
 def city_name_to_place_key(city_name: str) -> str:
     """
     Converts a city name like 'City of Austin' or 'Austin' to 'place:austin'.
@@ -198,6 +211,43 @@ def best_tml_match(yaml_person: dict, candidates: list[dict]) -> dict:
     return candidates[0]
 
 
+def tml_division_ocdid(tr: dict) -> str:
+    """
+    Attempt to extract a division_ocdid from TML office role.
+    Ex: 
+        Council Member District 2 -> ocd-division/country:us/state:tx/place:austin/council_district:2
+    Handles numbers, letters, directionals, and abbreviations like 'dist.'.
+    If roman numerals are present, they are converted to integers (e.g. Ward III -> ward:3).
+    """
+    ROMAN_NUMERAL_MAP = {
+        "i": 1, "ii": 2, "iii": 3, "iv": 4, "v": 5, "vi": 6, "vii": 7, "viii": 8, "ix": 9, "x": 10,
+        "xi": 11, "xii": 12, "xiii": 13, "xiv": 14, "xv": 15, "xvi": 16, "xvii": 17, "xviii": 18, "xix": 19, "xx": 20
+    }
+    NUMBER_MAP = {
+        "one": "1", "two": "2", "three": "3", "four": "4", "five": "5",
+        "six": "6", "seven": "7", "eight": "8", "nine": "9", "ten": "10",
+        "eleven": "11", "twelve": "12", "thirteen": "13", "fourteen": "14", "fifteen": "15",
+        "sixteen": "16", "seventeen": "17", "eighteen": "18", "nineteen": "19", "twenty": "20"
+    }
+    city_key = city_name_to_place_key(tr.get("city_name", ""))
+    office = tr.get("role", "") or tr.get("office", "") or ""
+    # Try to find a ward or district/council district, including 'dist.' abbreviation
+    m = re.search(r"\b(ward|district|dist\.?)\s*[-:]?\s*([A-Za-z0-9\-]+)\b", office, re.IGNORECASE)
+    if m and city_key:
+        kind = m.group(1).lower().replace('.', '')
+        value = m.group(2).lower().replace(" ", "_")
+        value = ROMAN_NUMERAL_MAP.get(value, value)  # Convert roman numeral to int if applicable
+        value = NUMBER_MAP.get(value, value)  # Convert number word to digit if applicable
+
+        if kind == "ward":
+            divtype = "ward"
+        else:
+            divtype = "council_district"
+        # Example: ocd-division/country:us/state:tx/place:austin/ward:1
+        return f"ocd-division/country:us/state:tx/{city_key}/{divtype}:{value}"
+    return f"ocd-division/country:us/state:tx/{city_key}" if city_key else ""
+
+
 # ---------------------------------------------------------------------------
 # Validation
 # ---------------------------------------------------------------------------
@@ -225,21 +275,31 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
     tml_index = build_tml_name_index(tml_records)
     print(f"  TML unique normalized names: {len(tml_index)}")
 
+    # Build TML index by jurisdiction and name
+    tml_index_by_jur = build_tml_name_index_by_jur(tml_records)
+
     # --- Match ---
     matched_pairs   = []   # (yaml_person, tml_record)
     unmatched_yaml  = []
-    matched_tml_names = set()
+    matched_tml_names_by_jur = defaultdict(set)
 
     for yp in civicpatch_places:
+        jur_key = place_key_from_ocdid(get_yaml_place_ocdid(yp))
         key = normalize_name(yp.get("name", ""))
-        if key in tml_index:
-            tr = best_tml_match(yp, tml_index[key])
+        candidates = tml_index_by_jur.get(jur_key, {}).get(key, [])
+        if candidates:
+            tr = best_tml_match(yp, candidates)
             matched_pairs.append((yp, tr))
-            matched_tml_names.add(key)
+            matched_tml_names_by_jur[jur_key].add(key)
         else:
             unmatched_yaml.append(yp)
 
-    unmatched_tml_names = set(tml_index.keys()) - matched_tml_names
+    # Find unmatched TML names by jurisdiction
+    unmatched_tml_names_by_jur = defaultdict(set)
+    for jur_key, name_dict in tml_index_by_jur.items():
+        for name in name_dict:
+            if name not in matched_tml_names_by_jur[jur_key]:
+                unmatched_tml_names_by_jur[jur_key].add(name)
 
     # --- Compare phones for each matched pair ---
     global_stats = {
@@ -292,6 +352,19 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
                 "value_tml":       t_phone or "",
             })
 
+        # --- Division mismatch check ---
+        yaml_div = (yp.get("office") or {}).get("division_ocdid", "")
+        tml_div = tml_division_ocdid(tr)
+        print("comparing", yp.get("name"), "yaml_div:", yaml_div, "tml_div:", tml_div)
+        if yaml_div and tml_div and yaml_div != tml_div:
+            mismatch_rows.append({
+                "jurisdiction":    jur_key,
+                "name":            yp.get("name"),
+                "field":           "division_ocdid",
+                "value_civicpatch": yaml_div,
+                "value_tml":       tml_div,
+            })
+
     # Combine unmatched CivicPatch and TML people into one CSV
     combined_unmatched = []
 
@@ -308,7 +381,7 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
         })
 
     # Unmatched TML people
-    for tml_name in unmatched_tml_names:
+    for tml_name in unmatched_tml_names_by_jur:
         for tr in tml_index[tml_name]:
             jur_key = city_name_to_place_key(tr.get("city_name", ""))
             combined_unmatched.append({
@@ -402,7 +475,7 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
 
     total_matched     = len(matched_pairs)
     total_unmatched_y = len(unmatched_yaml)
-    total_unmatched_t = len(unmatched_tml_names)
+    total_unmatched_t = len(unmatched_tml_names_by_jur)
     # Calculate TML-side match rate for people in shared jurisdictions
     matched_tml_count = 0
     total_tml_people_in_shared = 0
