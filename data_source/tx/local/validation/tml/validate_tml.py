@@ -419,27 +419,21 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
     # Write CSVs
     # -----------------------------------------------------------------------
 
-    # per_jurisdiction.csv
+    # per_jurisdiction.csv (now only name matching)
     all_jurs = sorted(yaml_by_jur.keys())
     jur_csv_rows = []
     for jur in all_jurs:
         s = jur_stats[jur]
-        pct = f"{s['match']/s['both']*100:.1f}%" if s["both"] else "N/A"
         jur_csv_rows.append({
-            "jurisdiction":        jur,
-            "yaml_count":          s["yaml_count"],
-            "tml_matched":         s["tml_matched"],
-            "unmatched_yaml":      s["yaml_count"] - s["tml_matched"],
-            "phones_present_yaml": s["present_yaml"],
-            "phones_present_tml":  s["present_tml"],
-            "phones_both":         s["both"],
-            "phones_match":        s["match"],
-            "phones_pct":          pct,
+            "jurisdiction":   jur,
+            "yaml_count":     s["yaml_count"],      # total civicpatch people in this jurisdiction
+            "tml_matched":    s["tml_matched"],     # number of those with a name match in TML
+            "unmatched_yaml": s["yaml_count"] - s["tml_matched"],
         })
 
     jur_csv = os.path.join(out_dir, "per_jurisdiction.csv")
     with open(jur_csv, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=list(jur_csv_rows[0].keys()) if jur_csv_rows else [])
+        writer = csv.DictWriter(f, fieldnames=["jurisdiction", "yaml_count", "tml_matched", "unmatched_yaml"])
         writer.writeheader()
         writer.writerows(jur_csv_rows)
 
@@ -593,13 +587,13 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
     w(f"Total phone mismatches: {len(mismatch_rows)}")
     w()
     w("-" * 70)
-    w("PER-JURISDICTION SUMMARY")
+    w("PER-JURISDICTION SUMMARY (name matching only)")
     w("-" * 70)
-    w(f"{'Jurisdiction':<35} {'YAML':>5} {'TML':>5} {'!Match':>7} {'Phone%':>8}")
+    w(f"{'Jurisdiction':<35} {'YAML':>5} {'TML':>5} {'!Match':>7} {'Diff':>5}")
     w("-" * 70)
     for row in jur_csv_rows:
-        w(f"{row['jurisdiction']:<35} {row['yaml_count']:>5} {row['tml_matched']:>5} "
-          f"{row['unmatched_yaml']:>7} {row['phones_pct']:>8}")
+        diff_mark = "*" if row['yaml_count'] != row['tml_matched'] else ""
+        w(f"{row['jurisdiction']:<35} {row['yaml_count']:>5} {row['tml_matched']:>5} {row['unmatched_yaml']:>7} {diff_mark:>5}")
     w()
     w("-" * 70)
     w("JURISDICTION COMPARISON")
