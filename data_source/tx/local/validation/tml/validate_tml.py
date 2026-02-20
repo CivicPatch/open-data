@@ -506,6 +506,67 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
     match_rate_tml = (matched_tml_count / total_tml_people_in_shared * 100) if total_tml_people_in_shared else 0
     shared_match_rate = (total_matched / sum(jur_stats[jur]["yaml_count"] for jur in shared_jurs) * 100) if shared_jurs else 0
 
+    # Calculate shared match rate (all people in shared jurisdictions)
+    shared_civicpatch_count = sum(jur_stats[jur]["yaml_count"] for jur in shared_jurs)
+    shared_tml_count = sum(len([tr for tr in tml_records if city_name_to_place_key(tr.get("city_name", "")) == jur]) for jur in shared_jurs)
+    shared_total_people = shared_civicpatch_count + shared_tml_count - total_matched  # subtract matched pairs (counted in both)
+    shared_match_rate_overall = (total_matched / shared_total_people * 100) if shared_total_people else 0
+
+    # 1. CivicPatch match rate (all jurisdictions)
+    total_civicpatch_people = len(civicpatch_places)
+    civicpatch_side_match_rate = (len(matched_pairs) / total_civicpatch_people * 100) if total_civicpatch_people else 0
+
+    # 2. TML match rate (all jurisdictions)
+    total_tml_people = len(tml_records)
+    matched_tml_people = 0
+    for jur_key, name_dict in tml_index_by_jur.items():
+        for name in name_dict:
+            if name in matched_tml_names_by_jur[jur_key]:
+                matched_tml_people += len(name_dict[name])
+    tml_side_match_rate = (matched_tml_people / total_tml_people * 100) if total_tml_people else 0
+
+    # 3. CivicPatch match rate (shared jurisdictions)
+    shared_jurs = set(yaml_by_jur.keys()) & {city_name_to_place_key(tr.get("city_name", "")) for tr in tml_records}
+    shared_civicpatch_count = sum(jur_stats[jur]["yaml_count"] for jur in shared_jurs)
+    shared_match_rate_civicpatch = (total_matched / shared_civicpatch_count * 100) if shared_civicpatch_count else 0
+
+    # 4. TML match rate (shared jurisdictions)
+    matched_tml_count = 0
+    total_tml_people_in_shared = 0
+    matched_names_by_jur = defaultdict(set)
+    for yp, tr in matched_pairs:
+        jur_key = place_key_from_ocdid(get_yaml_place_ocdid(yp))
+        matched_names_by_jur[jur_key].add(normalize_name(yp.get("name", "")))
+    for jur in shared_jurs:
+        tml_people = [tr for tr in tml_records if city_name_to_place_key(tr.get("city_name", "")) == jur]
+        total_tml_people_in_shared += len(tml_people)
+        for tr in tml_people:
+            if normalize_name(tr.get("name", "")) in matched_names_by_jur[jur]:
+                matched_tml_count += 1
+    shared_match_rate_tml = (matched_tml_count / total_tml_people_in_shared * 100) if total_tml_people_in_shared else 0
+
+    # 5. Overall shared match rate (all people in shared jurisdictions)
+    shared_tml_count = sum(len([tr for tr in tml_records if city_name_to_place_key(tr.get("city_name", "")) == jur]) for jur in shared_jurs)
+    shared_total_people = shared_civicpatch_count + shared_tml_count - total_matched  # subtract matched pairs (counted in both)
+    shared_match_rate_overall = (total_matched / shared_total_people * 100) if shared_total_people else 0
+
+    # Write summary section with clear labels and explanation
+    w("=" * 70)
+    w("MATCH RATES SUMMARY")
+    w("=" * 70)
+    w()
+    w(f"CivicPatch match rate (all jurisdictions):         {civicpatch_side_match_rate:.1f}%")
+    w(f"TML match rate (all jurisdictions):                {tml_side_match_rate:.1f}%")
+    w(f"CivicPatch match rate (shared jurisdictions):      {shared_match_rate_civicpatch:.1f}%")
+    w(f"TML match rate (shared jurisdictions):             {shared_match_rate_tml:.1f}%")
+    w(f"Overall match rate (shared jurisdictions):         {shared_match_rate_overall:.1f}%")
+    w()
+    w("Explanation:")
+    w('- "CivicPatch match rate" is the percent of CivicPatch people matched to TML.')
+    w('- "TML match rate" is the percent of TML people matched to CivicPatch.')
+    w('- "Shared jurisdictions" means cities/towns present in both datasets.')
+    w('- "Overall match rate (shared jurisdictions)" is the percent of all people in shared jurisdictions who are matched (matched pairs divided by total unique people in those jurisdictions).')
+
     w("=" * 70)
     w("DATA VALIDATION REPORT  (civicpatch vs TML)")
     w("Scope: place: jurisdictions only | Field compared: phone")
@@ -520,8 +581,6 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
     w(f"Matched pairs:                        {total_matched:>5}")
     w(f"civicpatch people with no TML match:  {total_unmatched_y:>5}")
     w(f"TML people with no civicpatch match:  {total_unmatched_t:>5}")
-    w(f"Match rate for people in jurisdictions present in both sources (vs civicpatch): {shared_match_rate:.1f}%")
-    w(f"Match rate for people in jurisdictions present in both sources (vs TML): {match_rate_tml:.1f}%")
     w()
     w("-" * 70)
     w("PHONE MATCH SUMMARY  (matched pairs only)")
