@@ -85,11 +85,13 @@ jobs:
         run: |
           poetry run python scripts/github_actions/validate_jurisdiction.py ${{ github.event.inputs.jurisdiction_ocdid }}
 
+      # TODO: move this to a shared utils package
       - name: Get branch name from zip_file_url
         id: extract_branch
         run: |
           ZIP_FILE=$(basename "${{ github.event.inputs.zip_file_url }}")
           BRANCH_NAME="${ZIP_FILE%%.zip*}"  # Remove everything starting from .zip
+          BRANCH_NAME="${BRANCH_NAME#artifact_}"  # Remove artifact_ prefix if present
           # Replace any characters that are not alphanumeric, hyphens, or underscores with hyphens
           BRANCH_NAME=$(echo -n "$BRANCH_NAME" | tr -c '[:alnum:]-_' '-')
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
