@@ -91,7 +91,7 @@ jobs:
           ZIP_FILE=$(basename "${{ github.event.inputs.zip_file_url }}")
           BRANCH_NAME="${ZIP_FILE%%.zip*}"  # Remove everything starting from .zip
           # Replace any characters that are not alphanumeric, hyphens, or underscores with hyphens
-          BRANCH_NAME=$(echo "$BRANCH_NAME" | tr -c '[:alnum:]-_' '-')
+          BRANCH_NAME=$(echo -n "$BRANCH_NAME" | tr -c '[:alnum:]-_' '-')
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
       - name: Get jurisdiction_folder
@@ -116,7 +116,6 @@ jobs:
           git commit -m "Add municipal officials for ${{ github.event.inputs.jurisdiction_ocdid }} by ${{ github.event.inputs.user_email }}"
           git push -u origin ${{ steps.extract_branch.outputs.branch_name }}
 
-          echo ${{ github.actor }}
           PR_BODY=$(poetry run python scripts/github_actions/pull_request_body_markdown.py "${{ github.event.inputs.jurisdiction_ocdid }}" "${{ github.event.inputs.request_id }}")
 
           github_pull_request_url=$(gh pr create \
