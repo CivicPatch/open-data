@@ -31,6 +31,7 @@ class Official(BaseModel):
     cdn_image: Optional[str] = None
     source_urls: List[str]
     updated_at: str
+    id: str
 
     @field_validator("start_date")
     @classmethod
