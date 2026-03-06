@@ -16,7 +16,7 @@ from scripts.scrapers import nj as nj_scraper
 from scripts.scrapers import wa as wa_scraper
 from scripts.scrapers import tx as tx_scraper
 from scripts.track_progress.main import count_municipalities
-from scripts.track_progress.generate_readme import generate_readme
+from scripts.track_progress._generate_readme import generate_readme
 
 from scripts.github_actions.update_jurisdiction_metadata import create_update_progress_file
 

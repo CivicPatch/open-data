@@ -34,11 +34,11 @@ jobs:
         run: |
           poetry install
 
-      - name: Process all updated jurisdictions
+      - name: Process all jurisdictions
         run: |
           poetry run python scripts/github_actions/local/post_merge/process_updated_jurisdiction_data.py 
+          poetry run python scripts/track_progress/compare.py tx
           poetry run python scripts/track_progress/generate_progress.py
-          poetry run python scripts/track_progress/generate_readme.py
 
       - name: Show updated OCDIDs
         run: |

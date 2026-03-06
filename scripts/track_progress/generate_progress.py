@@ -1,200 +1,155 @@
+"""
+generate_readme.py  —  generate README.md from per-state output JSON files
+
+Automatically discovers all state output files via glob.
+
+Usage:
+    python generate_readme.py
+
+Example:
+    python generate_readme.py
+"""
+
 import json
-import os
+import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
-import yaml
 
 PROJECT_ROOT = Path(__file__).parent.parent.parent
+DATA_DIR     = PROJECT_ROOT / "scripts/track_progress/data"
+OUTPUT_FILE  = PROJECT_ROOT / "README.md"
 
 
-def count_municipalities():
-    # Resolve the absolute path to the data_source and google_data directories
-    data_source_path = os.path.join(PROJECT_ROOT, "data_source")
-    google_data_path = os.path.join(
-        PROJECT_ROOT, "scripts", "track_progress", "google_data"
-    )
+def discover_states() -> list[str]:
+    """Glob for all *_output.json files and return sorted list of state codes."""
+    files = sorted(DATA_DIR.glob("*_output.json"))
+    return [f.name.replace("_output.json", "").upper() for f in files]
 
-    print(f"Resolved data source path: {data_source_path}")
-    print(f"Resolved Google data path: {google_data_path}")
 
-    if not os.path.exists(data_source_path):
-        print("Data source directory does not exist.")
-        return
+def load_state(state: str) -> dict:
+    path = DATA_DIR / f"{state.lower()}_output.json"
+    with open(path) as f:
+        return json.load(f)
 
-    if not os.path.exists(google_data_path):
-        print("Google data directory does not exist.")
-        return
 
-    results = []
+def fmt_pct(value) -> str:
+    if value is None:
+        return "—"
+    return f"{value:.0%}"
 
-    for state in os.listdir(data_source_path):
-        state_path = os.path.join(data_source_path, state)
-        progress_file = os.path.join(state_path, "jurisdictions_metadata.yml")
 
-        # Skip states without government_progress.yml
-        if not os.path.isfile(progress_file):
-            print(f"Skipping {state}: jurisdictions_metadata.yml not found.")
-            continue
+def generate_readme():
+    states = discover_states()
+    if not states:
+        print(f"ERROR: no *_output.json files found in {DATA_DIR}")
+        sys.exit(1)
 
-        civicpatch_ocdids = set()
-        civicpatch_hyperlocal_divisions = set()
-        civicpatch_count = 0
-        civicpatch_scrapeable_count = 0
-        civicpatch_scraped_count = 0
+    state_data = {}
+    for state in states:
+        try:
+            state_data[state] = load_state(state)
+        except FileNotFoundError:
+            print(f"  WARN: could not load {state}, skipping")
 
-        # Load jurisdictions_metadata.yml
-        with open(progress_file, "r") as file:
-            progress_data = yaml.safe_load(file)
-            jurisdictions_by_id = progress_data.get("jurisdictions_by_id", {})
-            civicpatch_count = progress_data.get("num_jurisdictions", 0)
-            civicpatch_scrapeable_count = progress_data.get("num_jurisdictions_with_urls", 0)
-            civicpatch_scraped_count = progress_data.get("num_scraped", 0)
+    if not state_data:
+        print("ERROR: no state data loaded")
+        sys.exit(1)
 
-            for jurisdiction_ocdid, jurisdiction_obj in jurisdictions_by_id.items():
-                # Chop off /government for comparison
-                base_ocdid = jurisdiction_ocdid.replace("/government", "")
-                civicpatch_ocdids.add(base_ocdid)
-                # Add child divisions
-                for division in jurisdiction_obj.get("child_divisions", []):
-                    civicpatch_hyperlocal_divisions.add(division)
+    generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
-        google_file = os.path.join(google_data_path, f"{state}_all_raw.json")
-        google_civics_hyperlocal_divisions = set()
-        missing_in_civicpatch = []  # OCD IDs in Google but not in CivicPatch
-        missing_in_google = []  # OCD IDs in CivicPatch but not in Google
-        if os.path.isfile(google_file):
-            with open(google_file, "r") as file:
-                data = json.load(file)
-                divisions = data.get("divisions", {})
-                print(f"Processing {len(divisions)} divisions for state: {state}")
-                google_ocdids = set()
-                all_divisions = divisions.keys()
-                filtered_divisions = [d for d in all_divisions if is_place_division(d)]
-                for ocdid in filtered_divisions:
-                    # Get base place ocdid for comparison
-                    parts = ocdid.split("/")
-                    place_idx = [
-                        i for i, p in enumerate(parts) if p.startswith("place:")
-                    ]
-                    if place_idx:
-                        base_ocdid = "/".join(parts[: place_idx[0] + 1])
-                        google_ocdids.add(base_ocdid)
-                        # Only count if it's a place:* division (not hyperlocal)
-                    # Hyperlocal division
-                    if any(
-                        p.startswith("council_district:") or p.startswith("ward:")
-                        for p in parts
-                    ):
-                        google_civics_hyperlocal_divisions.add(ocdid)
-
-                # Normalize for comparison
-                norm_civicpatch_ocdids = set(
-                    normalize_ocdid(o) for o in civicpatch_ocdids
-                )
-                norm_google_ocdids = set(normalize_ocdid(o) for o in google_ocdids)
-
-                # Identify OCD IDs in Google but not in CivicPatch
-                missing_in_civicpatch = []
-                for ocdid in norm_google_ocdids:
-                    if ocdid not in norm_civicpatch_ocdids:
-                        missing_in_civicpatch.append({"ocdid": ocdid})
-
-                # Identify OCD IDs in CivicPatch but not in Google
-                missing_in_google = []
-                for ocdid in norm_civicpatch_ocdids:
-                    if ocdid not in norm_google_ocdids:
-                        missing_in_google.append({"ocdid": ocdid})
-
-                # For hyperlocal divisions
-                norm_civicpatch_hyperlocal_divisions = set(
-                    normalize_ocdid(d) for d in civicpatch_hyperlocal_divisions
-                )
-                norm_google_civics_hyperlocal_divisions = set(
-                    normalize_ocdid(d) for d in google_civics_hyperlocal_divisions
-                )
-
-                missing_in_civicpatch_divisions = (
-                    norm_google_civics_hyperlocal_divisions
-                    - norm_civicpatch_hyperlocal_divisions
-                )
-                missing_in_google_divisions = (
-                    norm_civicpatch_hyperlocal_divisions
-                    - norm_google_civics_hyperlocal_divisions
-                )
-
-                results.append(
-                    {
-                        "state": state,
-                        "civicpatch_municipality_count": civicpatch_count,
-                        "civicpatch_scrapeable": civicpatch_scrapeable_count,
-                        "civicpatch_scraped": civicpatch_scraped_count,
-                        "civicpatch_scraped_percentage": round(
-                            (
-                                civicpatch_scraped_count
-                                / civicpatch_scrapeable_count
-                                * 100
-                            ),
-                            2,
-                        )
-                        if civicpatch_scrapeable_count > 0
-                        else 0,
-                        "civicpatch_hyperlocal_divisions_count": len(
-                            civicpatch_hyperlocal_divisions
-                        ),
-                        "google_civics_hyperlocal_divisions_count": len(
-                            google_civics_hyperlocal_divisions
-                        ),
-                        "google_civics_municipality_count": len(norm_google_ocdids),
-                        "missing_in_civicpatch": {
-                            "places": missing_in_civicpatch,
-                            "divisions": sorted(list(missing_in_civicpatch_divisions)),
-                        },
-                        "missing_in_google": {
-                            "places": missing_in_google,
-                            "divisions": sorted(list(missing_in_google_divisions)),
-                        },
-                    }
-                )
-
-    # Write results to a JSON file
-    output_file = os.path.join(PROJECT_ROOT, "progress.json")
-    with open(output_file, "w") as outfile:
-        json.dump(results, outfile, indent=4)
-
-    print(f"Results written to {output_file}")
-    print("Municipality comparison results:")
-    for result in results:
-        print(
-            f"State: {result['state']}, CivicPatch: {result['civicpatch_municipality_count']}, Google Civics: {result['google_civics_municipality_count']}"
+    # ── Coverage table ────────────────────────────────────────────────────────
+    header  = "| State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known | Name Match |"
+    divider = "|-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|------------|"
+    rows = []
+    for state, data in sorted(state_data.items()):
+        s   = data["summary"]
+        cp  = s["civicpatch"]
+        ext = s["external"]
+        mq  = s["match_quality"]
+        rows.append(
+            f"| {state} "
+            f"| {cp['officials']:,} "
+            f"| {cp['localities']['coverage']:,} "
+            f"| {cp['localities']['scrapeable']:,} "
+            f"| {cp['localities']['known']:,} "
+            f"| {ext['officials']:,} "
+            f"| {ext.get('coverage', '—'):,} "
+            f"| {ext['localities']:,} "
+            f"| {fmt_pct(mq['name_match_pct'])} |"
         )
+    coverage_table = "\n".join([header, divider] + rows)
 
+    # ── Locality gaps ─────────────────────────────────────────────────────────
+    gaps_sections = []
+    for state, data in sorted(state_data.items()):
+        gaps        = data["summary"]["locality_gaps"]
+        not_scraped = gaps.get("not_yet_scraped", [])
+        not_known   = gaps.get("in_external_not_known", [])
 
-def normalize_ocdid(ocdid):
-    # Remove ocd-division/ or ocd-jurisdiction/ prefix
-    if ocdid.startswith("ocd-division/"):
-        return ocdid[len("ocd-division/") :]
-    elif ocdid.startswith("ocd-jurisdiction/"):
-        return ocdid[len("ocd-jurisdiction/") :]
-    return ocdid
+        section  = f"### {state}\n\n"
+        section += "<details>\n"
+        cp_not_ext_count = len(gaps.get("in_civicpatch_not_external", []))
+        section += f"<summary>{len(not_scraped)} not yet scraped &nbsp;·&nbsp; {len(not_known)} in external, not in CP &nbsp;·&nbsp; {cp_not_ext_count} in CP, not in external</summary>\n\n"
 
+        section += "#### Not yet scraped\n\n"
+        section += ("\n".join(f"- {j}" for j in not_scraped) if not_scraped else "None")
+        section += "\n\n"
 
-def is_place_division(ocdid):
-    # Only include if it contains '/place:' or '/ward:' or '/council_district:' after a place
-    # Exclude if it's a county-level council_district
-    # Examples:
-    #   country:us/state:tx/county:anderson/council_district:1  --> EXCLUDE
-    #   country:us/state:tx/county:anderson/place:palestine/ward:1  --> INCLUDE
-    #   country:us/state:tx/place:abilene/council_district:1  --> INCLUDE
-    return (
-        "/place:" in ocdid
-        or (
-            "/council_district:" in ocdid and "/county:" not in ocdid and "/place:" in ocdid
-        )
-        or (
-            "/ward:" in ocdid and "/place:" in ocdid
-        )
-    )
+        cp_not_ext = gaps.get("in_civicpatch_not_external", [])
+        max_rows   = max(len(not_known), len(cp_not_ext), 1)
+
+        section += "#### Locality Gaps\n\n"
+        section += "| In External, Not in Known | In CivicPatch, Not in External |\n"
+        section += "|---------------------------|--------------------------------|\n"
+        for i in range(max_rows):
+            ext_val = not_known[i]  if i < len(not_known)  else ""
+            cp_val  = cp_not_ext[i] if i < len(cp_not_ext) else ""
+            section += f"| {ext_val} | {cp_val} |\n"
+        section += "\n</details>\n"
+
+        gaps_sections.append(section)
+
+    gaps_content = "\n".join(gaps_sections)
+
+    # ── Assemble README ───────────────────────────────────────────────────────
+    readme = f"""# CivicPatch Data Quality
+
+Generated: {generated_at}
+
+## Coverage Summary
+
+{coverage_table}
+
+**Columns:** CP Officials = officials scraped · CP Coverage = localities with CP data · CP Scrapeable = localities with a URL · CP Known = all tracked localities · Ext Officials = external officials · Ext Coverage = external localities with officials data · Ext Known = all localities external source knows · Name Match = % of external names found in CP (localities with data in both)
+
+## Locality Gaps
+
+{gaps_content}
+"""
+
+    with open(OUTPUT_FILE, "w") as f:
+        f.write(readme)
+
+    # ── Dashboard JSON ────────────────────────────────────────────────────────
+    dashboard = {
+        "generated_at": generated_at,
+        "states": {
+            state: data["summary"]
+            for state, data in sorted(state_data.items())
+        },
+    }
+    dashboard_file = PROJECT_ROOT / "scripts/track_progress/data/dashboard.json"
+    with open(dashboard_file, "w") as f:
+        json.dump(dashboard, f, indent=2)
+
+    print(f"✓ README.md written to {OUTPUT_FILE}")
+    print(f"✓ dashboard.json written to {dashboard_file}")
+    for state, data in sorted(state_data.items()):
+        s  = data["summary"]
+        cp = s["civicpatch"]["localities"]
+        print(f"  {state}: {cp['coverage']} coverage / {cp['known']} known / {fmt_pct(s['match_quality']['name_match_pct'])} name match")
 
 
 if __name__ == "__main__":
-    count_municipalities()
+    generate_readme()
