@@ -1,14 +1,12 @@
 # CivicPatch Data Quality
 
-Generated: 2026-03-06 20:43 UTC
+Generated: 2026-03-06 20:48 UTC
 
 ## Coverage Summary
 
-| State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known | Name Match |
-|-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|------------|
+| State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
+|-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | TX | 5,843 | 961 | 965 | 1,222 | 231 | 175 | 1,218 | 78% |
-
-**Columns:** CP Officials = officials scraped · CP Coverage = localities with CP data · CP Scrapeable = localities with a URL · CP Known = all tracked localities · Ext Officials = external officials · Ext Coverage = external localities with officials data · Ext Known = all localities external source knows · Name Match = % of external names found in CP (localities with data in both)
 
 ## Locality Gaps
 

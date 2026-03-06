@@ -59,8 +59,8 @@ def generate_readme():
     generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     # ── Coverage table ────────────────────────────────────────────────────────
-    header  = "| State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known | Name Match |"
-    divider = "|-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|------------|"
+    header  = "| State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |"
+    divider = "|-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|"
     rows = []
     for state, data in sorted(state_data.items()):
         s   = data["summary"]
@@ -120,8 +120,6 @@ Generated: {generated_at}
 ## Coverage Summary
 
 {coverage_table}
-
-**Columns:** CP Officials = officials scraped · CP Coverage = localities with CP data · CP Scrapeable = localities with a URL · CP Known = all tracked localities · Ext Officials = external officials · Ext Coverage = external localities with officials data · Ext Known = all localities external source knows · Name Match = % of external names found in CP (localities with data in both)
 
 ## Locality Gaps
 
