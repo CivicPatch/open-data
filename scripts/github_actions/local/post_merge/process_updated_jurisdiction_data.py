@@ -1,11 +1,14 @@
 import os
 import glob
-import yaml
 import sys
+from ruamel.yaml import YAML
 
 # Import the function from process_jurisdiction.py
 sys.path.append(os.path.dirname(__file__))
 from scripts.github_actions.local.post_merge.process_jurisdiction_data import process_jurisdiction
+
+yaml_ruamel = YAML()
+yaml_ruamel.preserve_quotes = True
 
 ROOT_PROJECT = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..'))
 DATA_SOURCE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../../data_source'))
@@ -15,11 +18,11 @@ def load_yaml(path):
     if not os.path.exists(path):
         return None
     with open(path, 'r') as f:
-        return yaml.safe_load(f)
+        return yaml_ruamel.load(f)
 
 def save_yaml(data, path):
     with open(path, 'w') as f:
-        yaml.safe_dump(data, f, sort_keys=False, allow_unicode=True)
+        yaml_ruamel.dump(data, f)
 
 def find_state_from_jurisdiction_file(jurisdiction_file):
     # Example: data/tx/houston/local/people.yml -> tx
@@ -92,11 +95,6 @@ def main():
             1 for entry in  metadata.get("jurisdictions_by_id", {}).values()
             if entry.get("updated_at") is not None
         )
-
-        # Update metrics in metadata file (raw counts only)
-        metadata["num_jurisdictions"] = num_jurisdictions
-        metadata["num_jurisdictions_with_urls"] = num_jurisdictions_with_urls
-        metadata["num_scraped"] = num_scraped
 
         save_yaml(metadata, metadata_path)
 
