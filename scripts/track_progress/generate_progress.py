@@ -24,7 +24,7 @@ OUTPUT_FILE  = PROJECT_ROOT / "README.md"
 def discover_states() -> list[str]:
     """Glob for all *_output.json files and return sorted list of state codes."""
     files = sorted(DATA_DIR.glob("*_output.json"))
-    return [f.name.replace("_output.json", "").upper() for f in files]
+    return [f.name.replace("_output.json", "").lower() for f in files]
 
 
 def load_state(state: str) -> dict:
