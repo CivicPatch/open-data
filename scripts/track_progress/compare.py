@@ -230,6 +230,30 @@ def build_locality_entry(cp_records: list, ext_records: list, jurisdiction: str)
 
 # ── Run ───────────────────────────────────────────────────────────────────────
 
+def load_coverage_since_reference(state: str) -> int:
+    meta_path = f"data_source/{state}/jurisdictions_metadata.yml"
+    try:
+        with open(meta_path) as f:
+            meta = yaml.safe_load(f)
+    except FileNotFoundError:
+        print(f"WARNING: {meta_path} not found, skipping coverage_since_coverage_reference_date")
+        return 0
+
+    config = meta.get("config", {})
+    ref_date_str = config.get("coverage_reference_date")
+    if not ref_date_str:
+        print(f"WARNING: coverage_reference_date not found in {meta_path}")
+        return 0
+
+    ref_date = datetime.fromisoformat(ref_date_str)
+    jurisdictions = meta.get("jurisdictions_by_id", {})
+    count = 0
+    for j in jurisdictions.values():
+        updated_at = j.get("updated_at")
+        if updated_at and datetime.fromisoformat(updated_at) > ref_date:
+            count += 1
+    return count
+
 def run(
     local_dir:          str,
     jurisdictions_path: str,
@@ -299,6 +323,9 @@ def run(
     total_ext_in_both      = sum(l["ext_count"]    for l in localities_with_both)
     overall_name_match_pct = round(total_name_matched / total_ext_in_both, 2) if total_ext_in_both else None
 
+    # ── Add coverage_since_coverage_reference_date ─────────────────────────────
+    coverage_since_ref = load_coverage_since_reference(state.lower())
+
     summary = {
         "state":        state.lower(),
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S+00:00"),
@@ -307,6 +334,7 @@ def run(
             "officials":  sum(l["civicpatch_count"] for l in localities),
             "localities": {
                 "coverage":   len(cp_jurisdiction_ids),
+                "coverage_since_coverage_reference_date": coverage_since_ref,
                 "scrapeable": scrapeable_count,
                 "known":      known_count,
             },
