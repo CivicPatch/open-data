@@ -35,7 +35,7 @@ on:
         required: false
       STORAGE_SECRET_ACCESS_KEY:
         required: false
-      API_CIVICPATCH_ORG_TOKEN:
+      SERVICE_API_KEY:
         required: false 
 
 jobs:
@@ -124,20 +124,20 @@ jobs:
 
       - name: Associate pull request url with job request id
         env: 
-          API_CIVICPATCH_ORG_TOKEN: ${{ secrets.API_CIVICPATCH_ORG_TOKEN }}
+          SERVICE_API_KEY: ${{ secrets.SERVICE_API_KEY}}
           API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
           REQUEST_ID: ${{ github.event.inputs.request_id }}
         run: |
-          if [ -n "$API_CIVICPATCH_ORG_TOKEN" ] && [ -n "$API_CIVICPATCH_ORG_URL" ]; then
+          if [ -n "$SERVICE_API_KEY" ] && [ -n "$API_CIVICPATCH_ORG_URL" ]; then
             echo "Associating pull request with job request id"
             PULL_REQUEST_URL=$(gh pr view "${{ inputs.pr_number }}" --json url -q .url)
             echo "Pull Request URL: $PULL_REQUEST_URL"
             curl -X POST "$API_CIVICPATCH_ORG_URL/api/v1/jobs/people/$REQUEST_ID/result" \
               -H "Content-Type: application/json" \
-              -H "Authorization: $API_CIVICPATCH_ORG_TOKEN" \
+              -H "Authorization: $SERVICE_API_KEY" \
               -d "{\"pull_request_url\": \"$PULL_REQUEST_URL\"}"
           else
-            echo "API_CIVICPATCH_ORG_TOKEN or API_CIVICPATCH_ORG_URL is not set. Skipping association."
+            echo "SERVICE_API_KEY or API_CIVICPATCH_ORG_URL is not set. Skipping association."
           fi
 
 
