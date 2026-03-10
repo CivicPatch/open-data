@@ -1,12 +1,10 @@
 [tools]
-poetry = { version="latest", pyproject="{{ config_root }}/pyproject.toml" }
+uv = "latest"
 python = "3.12.11" # must be after poetry so the poetry bin is first in PATH
 
 [env]
 _.file = ".env"
-POETRY_VIRTUALENVS_IN_PROJECT = "true"
 PYTHONPATH = "."
-VIRTUAL_ENV= "./.venv"
 
 [tasks.comp]
 run = """
@@ -20,37 +18,37 @@ python3 ocdid_progress_tracker/generate_readme.py
 
 [tasks.convert-test]
 run = """
-poetry run python scripts/one_off/test_convert_small.py
+uv run python scripts/one_off/test_convert_small.py
 """
 
 [tasks.convert-test-delete]
 run = """
-poetry run python scripts/one_off/test_convert_small.py --delete-original
+uv run python scripts/one_off/test_convert_small.py --delete-original
 """
 
 [tasks.convert-all]
 run = """
-poetry run python scripts/one_off/convert_to_people_schema.py
+uv run python scripts/one_off/convert_to_people_schema.py
 """
 
 [tasks.convert-all-delete]
 run = """
-poetry run python scripts/one_off/convert_to_people_schema.py --delete-original
+uv run python scripts/one_off/convert_to_people_schema.py --delete-original
 """
 
 [tasks.validate-jurisdiction]
 run = """
-poetry run python scripts/github_actions/validate_jurisdiction.py $@
+uv run python scripts/github_actions/validate_jurisdiction.py $@
 """
 
 [tasks.test-env]
 run = """
-poetry run python scripts/one_off/test_env.py
+uv run python scripts/one_off/test_env.py
 """
 
 [tasks.setup-state]
 run = """
-poetry run python scripts/setup_state.py $@
+uv run python scripts/setup_state.py $@
 """
 
 [tasks.add-shared]
@@ -68,7 +66,7 @@ curl -s -X GET "${API_CIVICPATCH_ORG_URL}/api/v1/jurisdictions/available?num_jur
   -H "Authorization: ${API_CIVICPATCH_ORG_TOKEN}"
 """
 #run = """
-#docker compose -f ../civicpatch-tools/civicpatch/docker-compose.development.yml run --rm civicpatch poetry run \
+#docker compose -f ../civicpatch-tools/civicpatch/docker-compose.development.yml run --rm civicpatch uv run \
 #  python src/cli/cli.py \
 #    get_juds \
 #    --num-jurisdictions "3" \
@@ -77,32 +75,32 @@ curl -s -X GET "${API_CIVICPATCH_ORG_URL}/api/v1/jurisdictions/available?num_jur
 
 [tasks.upload-images-to-cdn]
 run = """
-docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
+docker compose -f docker-compose.slim.yml run --rm civicpatch-slim uv run \
   python src/scripts/upload_images_to_cdn.py {{ option(name="jurisdiction-ocdid") }}
 """
 
 [tasks.generate-data-comment]
 run = """
-docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
+docker compose -f docker-compose.slim.yml run --rm civicpatch-slim uv run \
   python src/scripts/generate_data_comment.py {{ option(name="jurisdiction-ocdid") }}
 """
 
 [tasks.test-generate-review-comment]
 run = """
-docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
+docker compose -f docker-compose.slim.yml run --rm civicpatch-slim uv run \
   python src/scripts/generate_review_comment.py ocd-jurisdiction/country:us/state:wa/place:seattle
 """
 
 [tasks.generate-review-comment]
 # Ex: /app/data/wa/place__spokane.yml
 run = """
-docker compose -f docker-compose.slim.yml run --rm civicpatch-slim poetry run \
+docker compose -f docker-compose.slim.yml run --rm civicpatch-slim uv run \
   python src/scripts/generate_review_comment.py {{ option(name="jurisdiction-ocdid") }}
 """
 
 [tasks.validate_texas_google]
 run = """
-poetry run python scripts/one_off/validate_local.py \
+uv run python scripts/one_off/validate_local.py \
   --yaml-dir data/tx/local \
   --json-file scripts/track_progress/google_data/tx_all_processed.json \
   --out-dir data_source/tx/local/validation/google
@@ -110,7 +108,7 @@ poetry run python scripts/one_off/validate_local.py \
 
 [tasks.scrape_texas_tml]
 run = """
-poetry run python data_source/tx/local/validation/tml/scrape_tml_search.py \
+uv run python data_source/tx/local/validation/tml/scrape_tml_search.py \
   --search-url "https://directory.tml.org/results?search%5Btitle%5D%5B%5D=ABAC&search%5Btitle%5D%5B%5D=ABAD&search%5Btitle%5D%5B%5D=AB02&search%5Btitle%5D%5B%5D=AAAA&search%5Btitle%5D%5B%5D=AB01&search%5Bsubmit%5D=&search%5Btype%5D=title" \
   --out data_source/tx/local/validation/tml/tml_raw.json \
   --delay 1.0 --individual-delay 0.5 --resume
@@ -118,7 +116,7 @@ poetry run python data_source/tx/local/validation/tml/scrape_tml_search.py \
 
 [tasks.validate_texas_tml]
 run = """
-poetry run python data_source/tx/local/validation/tml/validate_tml.py \
+uv run python data_source/tx/local/validation/tml/validate_tml.py \
   --tml-file data_source/tx/local/validation/tml/tml_raw.json \
   --yaml-dir data/tx/local \
   --out-dir data_source/tx/local/validation/tml

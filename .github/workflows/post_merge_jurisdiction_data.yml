@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: main
           fetch-depth: 1
@@ -30,15 +30,14 @@ jobs:
           log_level: debug
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install poetry dependencies
-        run: |
-          poetry install
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
 
       - name: Process all jurisdictions
         run: |
-          poetry run python scripts/github_actions/local/post_merge/process_updated_jurisdiction_data.py 
-          poetry run python scripts/track_progress/compare.py tx
-          poetry run python scripts/track_progress/generate_progress.py
+          uv run python scripts/github_actions/local/post_merge/process_updated_jurisdiction_data.py 
+          uv run python scripts/track_progress/compare.py tx
+          uv run python scripts/track_progress/generate_progress.py
 
       - name: Show updated OCDIDs
         run: |
@@ -54,7 +53,7 @@ jobs:
           if [ -n "$(git status --porcelain)" ]; then
             git add data/
             git add data_source/
-            git add progress.json README.md
+            git add track_progress/ README.md
             git commit -m "Process updated jurisdictions [skip ci]"
             git push
           else

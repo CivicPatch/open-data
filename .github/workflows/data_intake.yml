@@ -32,7 +32,7 @@ jobs:
       head_ref: ${{ steps.extract_branch.outputs.branch_name }}
       municipality_path: ${{ steps.create-pr.outputs.municipality-path }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       #- name: gin to GitHub Container Registry
       #  uses: docker/login-action@v3
@@ -40,15 +40,6 @@ jobs:
       #    registry: ghcr.io
       #    username: ${{ github.actor }}
       #    password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Setup mise
-        uses: jdx/mise-action@v3.2.0
-        with:
-          version: "2025.9.6"
-          cache: false
-          install: true
-          log_level: debug
-          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Download ZIP file
         run: |
@@ -76,14 +67,12 @@ jobs:
           ls -l data_source
           git status
 
-      - name: Install poetry dependencies
-        run: |
-          mise ls
-          poetry install
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
 
       - name: Validate data
         run: |
-          poetry run python scripts/github_actions/validate_jurisdiction.py ${{ github.event.inputs.jurisdiction_ocdid }}
+          uv run python scripts/github_actions/validate_jurisdiction.py ${{ github.event.inputs.jurisdiction_ocdid }}
 
       # TODO: move this to a shared utils package
       - name: Get branch name from zip_file_url
@@ -99,7 +88,7 @@ jobs:
       - name: Get jurisdiction_folder
         id: get-jurisdiction-folder
         run: |
-          JURISDICTION_FOLDER=$(poetry run python scripts/github_actions/get_jurisdiction_folder.py "${{ github.event.inputs.jurisdiction_ocdid }}")
+          JURISDICTION_FOLDER=$(uv run python scripts/github_actions/get_jurisdiction_folder.py "${{ github.event.inputs.jurisdiction_ocdid }}")
           echo "jurisdiction-folder=$JURISDICTION_FOLDER" >> "$GITHUB_OUTPUT"
 
       - name: Create a PR
@@ -118,7 +107,7 @@ jobs:
           git commit -m "Add municipal officials for ${{ github.event.inputs.jurisdiction_ocdid }} by ${{ github.event.inputs.user_email }}"
           git push -u origin ${{ steps.extract_branch.outputs.branch_name }}
 
-          PR_BODY=$(poetry run python scripts/github_actions/pull_request_body_markdown.py "${{ github.event.inputs.jurisdiction_ocdid }}" "${{ github.event.inputs.request_id }}")
+          PR_BODY=$(uv run python scripts/github_actions/pull_request_body_markdown.py "${{ github.event.inputs.jurisdiction_ocdid }}" "${{ github.event.inputs.request_id }}")
 
           github_pull_request_url=$(gh pr create \
             --title "Data intake for ${{ github.event.inputs.jurisdiction_ocdid }} by ${{ github.event.inputs.user_email }}" \
