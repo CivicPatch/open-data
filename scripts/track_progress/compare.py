@@ -293,7 +293,9 @@ def run(
     for r in ext_all:
         j = r.get("jurisdiction_ocdid", "")
         if j.startswith(state_prefix):
-            ext_by_jurisdiction.setdefault(j, []).append(r)
+            normalized = to_place_jurisdiction(j)
+            if normalized:
+                ext_by_jurisdiction.setdefault(normalized, []).append(r)
 
     ext_count    = len(ext_known_jurisdiction_ids)
     ext_coverage = len(ext_by_jurisdiction)
