@@ -15,10 +15,10 @@ from scripts.scrapers import co as co_scraper
 from scripts.scrapers import nj as nj_scraper
 from scripts.scrapers import wa as wa_scraper
 from scripts.scrapers import tx as tx_scraper
-from scripts.track_progress.main import count_municipalities
-from scripts.track_progress._generate_readme import generate_readme
+import scripts.track_progress.generate_progress as generate_progress
+from scripts.maps.local import build_maps_for_state
 
-from scripts.github_actions.update_jurisdiction_metadata import create_update_progress_file
+# from scripts.github_actions.update_jurisdiction_metadata import create_update_progress_file
 
 PROJECT_ROOT = Path(__file__).parent.parent
 
@@ -111,50 +111,32 @@ def pull_jurisdiction_data(state: str):
 
 
 # https://www.census.gov/library/reference/code-lists/class-codes.html
-def get_census_data_for_state(state: str) -> Tuple[Dict[str, Jurisdiction], List[str]]:
+def get_census_data_for_state(state: str):
     census_data = {}
-    census_geo_data = {} # TODO
     warnings = []
 
     state_config = state_configs.get(state.lower())
     if not state_config:
         print(f"State '{state}' not found in state configs.")
-        return census_data, warnings
-    state_fips = state_config.get("fips") if state_config else None
+        return census_data, {}, warnings
+
+    state_fips = state_config.get("fips")
     if not state_fips:
         print(f"State '{state}' not found in FIPS mapping.")
-        return census_data, warnings
+        return census_data, {}, warnings
 
     pull_from_census = state_config.get("pull_from_census", [])
-    geojson_data_local_file_path = str(PROJECT_ROOT / "data" / state / ".maps" / "local.geojson")
-    geojson_data_source_dir = str(PROJECT_ROOT / "data_source" / state / ".maps")
-
-    # Create directory if it doesn't exist
-    os.makedirs(geojson_data_source_dir, exist_ok=True)
-    os.makedirs(os.path.dirname(geojson_data_local_file_path), exist_ok=True)
 
     if "places" in pull_from_census:
-        # Index by name
-        # https://www.census.gov/data/developers/data-sets/popest-popproj/popest.html
-        # Don't open the following link directly
-        # https://api.census.gov/data/2023/acs/acs5/variables.json
         place_jurisdictions, p_warnings = pull_place_data(state, state_fips)
         warnings.extend(p_warnings)
-
-        place_map_url = census_place_geozip(state)
-        geojson_file_path = os.path.join(geojson_data_source_dir, "places.geojson")
-        zip_to_geojson(place_map_url, geojson_file_path, geojson_data_source_dir)
-
         for jurisdiction_object in place_jurisdictions:
             jurisdiction_ocdid = jurisdiction_object.id
             if census_data.get(jurisdiction_ocdid):
-                print(f"Duplicate jurisdiction found: {jurisdiction_ocdid}")
-                existing_jurisdiction = census_data[jurisdiction_ocdid]
-                existing_jurisdiction_name = existing_jurisdiction.name
-                jurisdiction_object_name = jurisdiction_object.name
+                existing = census_data[jurisdiction_ocdid]
                 warnings.append(
-                    f"Duplicate jurisdiction found:"
-                    f"{jurisdiction_ocdid} between {existing_jurisdiction_name} and {jurisdiction_object_name}"
+                    f"Duplicate jurisdiction found: {jurisdiction_ocdid} between "
+                    f"{existing.name} and {jurisdiction_object.name}"
                 )
             else:
                 census_data[jurisdiction_ocdid] = jurisdiction_object
@@ -162,31 +144,27 @@ def get_census_data_for_state(state: str) -> Tuple[Dict[str, Jurisdiction], List
     if "county_subdivisions" in pull_from_census:
         cousub_jurisdictions, c_warnings = pull_cousub_data(state, state_fips)
         warnings.extend(c_warnings)
-
-        cousub_map_url = census_cousub_geozip(state)
-        geojson_file_path = os.path.join(geojson_data_source_dir, "cousubs.geojson")
-        zip_to_geojson(cousub_map_url, geojson_file_path, geojson_data_source_dir)
-
         for jurisdiction_object in cousub_jurisdictions:
             jurisdiction_ocdid = jurisdiction_object.id
             if census_data.get(jurisdiction_ocdid):
-                print(f"Duplicate jurisdiction found: {jurisdiction_ocdid}")
-                existing_jurisdiction = census_data[jurisdiction_ocdid]
-                existing_jurisdiction_name = existing_jurisdiction.name
-                jurisdiction_object_name = jurisdiction_object.name
+                existing = census_data[jurisdiction_ocdid]
                 warnings.append(
-                    f"Duplicate jurisdiction found: "
-                    f"{jurisdiction_ocdid} between "
-                    f"{existing_jurisdiction_name}"
-                    f"and {jurisdiction_object_name}"
+                    f"Duplicate jurisdiction found: {jurisdiction_ocdid} between "
+                    f"{existing.name} and {jurisdiction_object.name}"
                 )
             else:
                 census_data[jurisdiction_ocdid] = jurisdiction_object
 
-    print(f"Combining localities into final local.geojson file: {geojson_data_local_file_path}")
-    combine_geojsons_with_type(geojson_data_source_dir, geojson_data_local_file_path)
-    return census_data, census_geo_data, warnings
+    # Build maps separately — stamps updated_at into local.geojson
+    build_maps_for_state(
+        state=state,
+        pull_from_census=pull_from_census,
+        state_fips=state_fips,
+        place_map_url=census_place_geozip(state),
+        cousub_map_url=census_cousub_geozip(state) if "county_subdivisions" in pull_from_census else None,
+    )
 
+    return census_data, {}, warnings
 
 def pull_place_data(
     state: str, state_fips: str
@@ -394,6 +372,7 @@ if __name__ == "__main__":
 
     # Call other scripts
     create_update_progress_file(state_arg)
-    count_municipalities()
-    generate_readme()
+    # TODO
+    # count_municipalities()
+    generate_progress()
 
