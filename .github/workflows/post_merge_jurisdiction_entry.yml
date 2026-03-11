@@ -59,9 +59,9 @@ jobs:
           OCDID_ARRAY=$(cat changed_ocdids.txt | jq -R -s -c 'split("\n")[:-1]')
           curl -X POST "$API_CIVICPATCH_ORG_URL/api/admin/od_sync" \
             -H "Content-Type: application/json" \
-            -H "Authorization: $API_CIVICPATCH_ORG_TOKEN" \
+            -H "Authorization: $SERVICE_API_KEY" \
             --fail-with-body \
             -d "{\"jurisdiction_ocdids\": $OCDID_ARRAY}"
         env:
           API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
-          API_CIVICPATCH_ORG_TOKEN: ${{ secrets.API_CIVICPATCH_ORG_TOKEN }}
+          SERVICE_API_KEY: ${{ secrets.SERVICE_API_KEY }}
