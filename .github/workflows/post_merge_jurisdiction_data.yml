@@ -1,0 +1,78 @@
+name: "[auto] Post Merge - Process Data"
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**/*.yml" # newly scraped jurisdiction
+env:
+  PYTHONPATH: ${{ github.workspace }}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "post-merge-people"
+  cancel-in-progress: false
+
+jobs:
+  process-updated-jurisdictions-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.12
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install dependencies
+        run: uv sync --no-dev
+
+      - name: Process all jurisdictions
+        run: |
+          uv run python scripts/github_actions/local/post_merge/process_updated_jurisdiction_data.py 
+          uv run python scripts/track_progress/compare.py tx
+          uv run python scripts/track_progress/generate_progress.py
+
+      - name: Show updated OCDIDs
+        run: |
+          cat updated_jurisdiction_ocdids.txt
+
+      - name: Commit updates
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git stash
+          git pull --rebase origin main
+          git stash pop || true
+          if [ -n "$(git status --porcelain)" ]; then
+            git add data/
+            git add data_source/
+            git add track_progress/ README.md
+            git commit -m "Process updated jurisdictions [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Call od_sync
+        env:
+          SERVICE_API_KEY: ${{ secrets.SERVICE_API_KEY }}
+          API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
+        run: |
+          JURISDICTION_OCDIDS_ARRAY=$(cat updated_jurisdiction_ocdids.txt | jq -R -s -c 'split("\n")[:-1]')
+          echo "Updated jurisdiction OCDIDs: $JURISDICTION_OCDIDS_ARRAY"
+          curl -X POST "$API_CIVICPATCH_ORG_URL/api/admin/od_sync" \
+            -H "Content-Type: application/json" \
+            -H "Authorization: $SERVICE_API_KEY" \
+            --fail-with-body \
+            -d "{\"jurisdiction_ocdids\": $JURISDICTION_OCDIDS_ARRAY}"

@@ -1,0 +1,144 @@
+name: "[partial] Process Pull Request"
+
+on:
+  workflow_call:
+    inputs:
+      request_id:
+        description: "Unique request ID for this data intake"
+        required: true
+        type: string
+      pr_number:
+        description: "The number of the PR to comment on"
+        required: true
+        type: number
+      head_ref:
+        description: "The head ref (branch name) of the PR"
+        required: true
+        type: string
+      jurisdiction_ocdid:
+        description: "The ocdid jurisdiction identifier for the municipality"
+        required: true
+        type: string
+
+    secrets:
+      GH_APP_BOT_PIPELINE_APP_ID:
+        required: true
+      GH_APP_BOT_PIPELINE_PRIVATE_KEY:
+        required: true
+      GH_APP_BOT_APPROVE_APP_ID:
+        required: true
+      GH_APP_BOT_APPROVE_PRIVATE_KEY:
+        required: true
+      STORAGE_ENDPOINT:
+        required: false
+      STORAGE_ACCESS_KEY_ID:
+        required: false
+      STORAGE_SECRET_ACCESS_KEY:
+        required: false
+      SERVICE_API_KEY:
+        required: false 
+
+jobs:
+  update-comments:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate GitHub App Pipeline Token
+        id: generate-pipeline-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.GH_APP_BOT_PIPELINE_APP_ID }}
+          private-key: ${{ secrets.GH_APP_BOT_PIPELINE_PRIVATE_KEY }}
+
+      # Use this next step for git commits
+      - name: Get GitHub App User ID
+        id: get-user-id
+        run: echo "user-id=$(gh api "/users/${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ steps.generate-pipeline-token.outputs.token }}
+
+      - name: Generate GitHub App Approve Token
+        id: generate-approve-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.GH_APP_BOT_APPROVE_APP_ID }}
+          private-key: ${{ secrets.GH_APP_BOT_APPROVE_PRIVATE_KEY }}
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.head_ref }} # Checkout the branch
+          token: ${{ steps.generate-pipeline-token.outputs.token }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      #- name: Login to GitHub Container Registry
+      #  uses: docker/login-action@v3
+      #  with:
+      #    registry: ghcr.io
+      #    username: ${{ github.actor }}
+      #    password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up mise
+        uses: jdx/mise-action@v3.2.0
+        with:
+          version: "2025.9.6"
+          cache: true
+          log_level: debug
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull Prebuilt Docker Image
+        run: docker pull ghcr.io/civicpatch/civicpatch-slim:latest
+
+      - name: Print the branch name
+        run: echo "The branch name is ${{ inputs.head_ref }}"
+
+      - name: Create/Update Data Comment
+        env:
+          GITHUB_USERNAME: civic-patch-pipeline-bot
+          GITHUB_TOKEN: ${{ steps.generate-pipeline-token.outputs.token }}
+        run: |
+          PR_NUMBER=${{ inputs.pr_number }}
+
+          COMMENT=$(mise generate-data-comment --jurisdiction-ocdid ${{ inputs.jurisdiction_ocdid }} )
+          gh pr comment $PR_NUMBER --edit-last --create-if-none --body "$COMMENT"
+
+      - name: Create Approval/Disapproval Comment
+        env:
+          GITHUB_USERNAME: civic-patch-approve-bot
+          GITHUB_TOKEN: ${{ steps.generate-approve-token.outputs.token }}
+        run: |
+          PR_NUMBER=${{ inputs.pr_number }}
+          OUTPUT=$(mise generate-review-comment --jurisdiction-ocdid ${{ inputs.jurisdiction_ocdid }})
+          COMMENT=$(echo "$OUTPUT" | jq -r .comment)
+          APPROVED=$(echo "$OUTPUT" | jq -r .approved)
+
+          if [ "$APPROVED" = "false" ]; then
+            gh pr review $PR_NUMBER --request-changes -b "$COMMENT"
+          else
+            gh pr review $PR_NUMBER --approve -b "$COMMENT"
+          fi
+
+      - name: Associate pull request url with job request id
+        env: 
+          SERVICE_API_KEY: ${{ secrets.SERVICE_API_KEY}}
+          API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
+          REQUEST_ID: ${{ github.event.inputs.request_id }}
+        run: |
+          if [ -n "$SERVICE_API_KEY" ] && [ -n "$API_CIVICPATCH_ORG_URL" ]; then
+            echo "Associating pull request with job request id"
+            PULL_REQUEST_URL=$(gh pr view "${{ inputs.pr_number }}" --json url -q .url)
+            echo "Pull Request URL: $PULL_REQUEST_URL"
+            curl -X POST "$API_CIVICPATCH_ORG_URL/api/v1/jobs/people/$REQUEST_ID/result" \
+              -H "Content-Type: application/json" \
+              -H "Authorization: $SERVICE_API_KEY" \
+              -d "{\"pull_request_url\": \"$PULL_REQUEST_URL\"}"
+          else
+            echo "SERVICE_API_KEY or API_CIVICPATCH_ORG_URL is not set. Skipping association."
+          fi
+
+
+

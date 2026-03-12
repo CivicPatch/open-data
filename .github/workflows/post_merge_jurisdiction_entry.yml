@@ -1,0 +1,67 @@
+name: "[misc] Post Merge - Process Jurisdiction Entry"
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data_source/**/jurisdictions.yml" # domain change
+  
+jobs:
+  process-updated-jurisdiction-entry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup mise
+        uses: jdx/mise-action@v3.2.0
+        with:
+          version: "2025.9.6"
+          cache: true
+          log_level: debug
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get changed jurisdictions.yml files
+        id: changed-jurisdictions
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          CHANGED_FILES=$(git diff --name-only origin/main ${{ github.sha }} | grep 'data_source/.*/jurisdictions.yml' || true)
+          echo "CHANGED_FILES<<EOF" >> $GITHUB_ENV
+          echo "$CHANGED_FILES" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Extract changed OCDIDs (robust)
+        id: extract-ocdids
+        run: |
+          set -euo pipefail
+          > changed_ocdids.txt
+          for FILE in $CHANGED_FILES; do
+            # Get the line numbers of changed blocks
+            for LINE in $(git diff origin/main ${{ github.sha }} -- "$FILE" | grep '^@@' | grep -o '+[0-9]*' | tr -d '+'); do
+              # Use yq to get the id at that line
+              ID=$(yq ".jurisdictions.[] | select(.id != null) | select(. == load(\"$FILE\") | .jurisdictions.[] | .id)" "$FILE" | head -n 1)
+              if [ -n "$ID" ]; then
+                echo "$ID" >> changed_ocdids.txt
+              fi
+            done
+          done
+          sort -u changed_ocdids.txt -o changed_ocdids.txt
+          echo "Changed OCDIDs:"
+          cat changed_ocdids.txt
+
+      - name: Call od_sync API
+        if: steps.extract-ocdids.outcome == 'success'
+        run: |
+          set -euo pipefail
+          OCDID_ARRAY=$(cat changed_ocdids.txt | jq -R -s -c 'split("\n")[:-1]')
+          curl -X POST "$API_CIVICPATCH_ORG_URL/api/admin/od_sync" \
+            -H "Content-Type: application/json" \
+            -H "Authorization: $SERVICE_API_KEY" \
+            --fail-with-body \
+            -d "{\"jurisdiction_ocdids\": $OCDID_ARRAY}"
+        env:
+          API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
+          SERVICE_API_KEY: ${{ secrets.SERVICE_API_KEY }}

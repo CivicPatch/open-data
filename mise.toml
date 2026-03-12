@@ -1,0 +1,123 @@
+[tools]
+uv = "latest"
+python = "3.12.11" # must be after poetry so the poetry bin is first in PATH
+
+[env]
+_.file = ".env"
+PYTHONPATH = "."
+
+[tasks.comp]
+run = """
+python3 ocdid_progress_tracker/main.py
+"""
+
+[tasks.readme]
+run = """
+python3 ocdid_progress_tracker/generate_readme.py
+"""
+
+[tasks.convert-test]
+run = """
+uv run python scripts/one_off/test_convert_small.py
+"""
+
+[tasks.convert-test-delete]
+run = """
+uv run python scripts/one_off/test_convert_small.py --delete-original
+"""
+
+[tasks.convert-all]
+run = """
+uv run python scripts/one_off/convert_to_people_schema.py
+"""
+
+[tasks.convert-all-delete]
+run = """
+uv run python scripts/one_off/convert_to_people_schema.py --delete-original
+"""
+
+[tasks.validate-jurisdiction]
+run = """
+uv run python scripts/github_actions/validate_jurisdiction.py $@
+"""
+
+[tasks.test-env]
+run = """
+uv run python scripts/one_off/test_env.py
+"""
+
+[tasks.setup-state]
+run = """
+uv run python scripts/setup_state.py $@
+"""
+
+[tasks.add-shared]
+run = """
+.venv/bin/pip install "git+https://github.com/CivicPatch/civicpatch-tools.git#subdirectory=shared"
+"""
+
+#############################################
+## GITHUB ACTIONS
+#############################################
+
+[tasks.get-juds]
+run = """
+curl -s -X GET "${API_CIVICPATCH_ORG_URL}/api/v1/jurisdictions/available?num_jurisdictions={{ option(name='num-jurisdictions') }}&state={{ option(name='state') }}" \
+  -H "Authorization: ${API_CIVICPATCH_ORG_TOKEN}"
+"""
+#run = """
+#docker compose -f ../civicpatch-tools/civicpatch/docker-compose.development.yml run --rm civicpatch uv run \
+#  python src/cli/cli.py \
+#    get_juds \
+#    --num-jurisdictions "3" \
+#    --state "wa"
+#"""
+
+[tasks.upload-images-to-cdn]
+run = """
+docker compose -f docker-compose.slim.yml run --rm civicpatch-slim uv run \
+  python src/scripts/upload_images_to_cdn.py {{ option(name="jurisdiction-ocdid") }}
+"""
+
+[tasks.generate-data-comment]
+run = """
+docker compose -f docker-compose.slim.yml run --rm civicpatch-slim uv run \
+  python src/scripts/generate_data_comment.py {{ option(name="jurisdiction-ocdid") }}
+"""
+
+[tasks.test-generate-review-comment]
+run = """
+docker compose -f docker-compose.slim.yml run --rm civicpatch-slim uv run \
+  python src/scripts/generate_review_comment.py ocd-jurisdiction/country:us/state:wa/place:seattle
+"""
+
+[tasks.generate-review-comment]
+# Ex: /app/data/wa/place__spokane.yml
+run = """
+docker compose -f docker-compose.slim.yml run --rm civicpatch-slim uv run \
+  python src/scripts/generate_review_comment.py {{ option(name="jurisdiction-ocdid") }}
+"""
+
+[tasks.validate_texas_google]
+run = """
+uv run python scripts/one_off/validate_local.py \
+  --yaml-dir data/tx/local \
+  --json-file scripts/track_progress/google_data/tx_all_processed.json \
+  --out-dir data_source/tx/local/validation/google
+"""
+
+[tasks.scrape_texas_tml]
+run = """
+uv run python data_source/tx/local/validation/tml/scrape_tml_search.py \
+  --search-url "https://directory.tml.org/results?search%5Btitle%5D%5B%5D=ABAC&search%5Btitle%5D%5B%5D=ABAD&search%5Btitle%5D%5B%5D=AB02&search%5Btitle%5D%5B%5D=AAAA&search%5Btitle%5D%5B%5D=AB01&search%5Bsubmit%5D=&search%5Btype%5D=title" \
+  --out data_source/tx/local/validation/tml/tml_raw.json \
+  --delay 1.0 --individual-delay 0.5 --resume
+"""
+
+[tasks.validate_texas_tml]
+run = """
+uv run python data_source/tx/local/validation/tml/validate_tml.py \
+  --tml-file data_source/tx/local/validation/tml/tml_raw.json \
+  --yaml-dir data/tx/local \
+  --out-dir data_source/tx/local/validation/tml
+"""
