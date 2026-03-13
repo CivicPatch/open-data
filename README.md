@@ -1,25 +1,24 @@
 # CivicPatch Data Quality
 
-Generated: 2026-03-10 17:02 UTC
+Generated: 2026-03-13 17:23 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
-| tx | 5,848 | 962 | 965 | 1,222 | 231 | 27 | 1,218 | 80% |
+| tx | 5,852 | 963 | 965 | 1,222 | 231 | 27 | 1,218 | 80% |
 
 ## Locality Gaps
 
 ### tx
 
 <details>
-<summary>3 not yet scraped &nbsp;·&nbsp; 26 in external, not in CP &nbsp;·&nbsp; 17 in CP, not in external</summary>
+<summary>2 not yet scraped &nbsp;·&nbsp; 26 in external, not in CP &nbsp;·&nbsp; 17 in CP, not in external</summary>
 
 #### Not yet scraped
 
 - ocd-jurisdiction/country:us/state:tx/place:lakewood_village/government
 - ocd-jurisdiction/country:us/state:tx/place:morgan~s_point_resort/government
-- ocd-jurisdiction/country:us/state:tx/place:new_deal/government
 
 #### Locality Gaps
 
