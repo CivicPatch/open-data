@@ -4,6 +4,7 @@ python = "3.12.11" # must be after poetry so the poetry bin is first in PATH
 
 [env]
 _.file = ".env"
+VIRTUAL_ENV = "./.venv"
 PYTHONPATH = "."
 
 [tasks.comp]
@@ -93,7 +94,7 @@ uv run python scripts/generate_review_comment.py ocd-jurisdiction/country:us/sta
 [tasks.generate-review-comment]
 # Ex: mise generate-review-comment --jurisdiction-ocdid ocd-jurisdiction/country:us/state:wa/place:spokane
 run = """
-uv run python scripts/generate_review_comment.py {{ option(name="jurisdiction-ocdid") }}
+uv run --quiet python scripts/generate_review_comment.py {{ option(name="jurisdiction-ocdid") }}
 """
 
 [tasks.validate_texas_google]
