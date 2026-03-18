@@ -87,15 +87,13 @@ docker compose -f docker-compose.slim.yml run --rm civicpatch-slim uv run \
 
 [tasks.test-generate-review-comment]
 run = """
-docker compose -f docker-compose.slim.yml run --rm civicpatch-slim uv run \
-  python src/scripts/generate_review_comment.py ocd-jurisdiction/country:us/state:wa/place:seattle
+uv run python scripts/generate_review_comment.py ocd-jurisdiction/country:us/state:wa/place:seattle
 """
 
 [tasks.generate-review-comment]
-# Ex: /app/data/wa/place__spokane.yml
+# Ex: mise generate-review-comment --jurisdiction-ocdid ocd-jurisdiction/country:us/state:wa/place:spokane
 run = """
-docker compose -f docker-compose.slim.yml run --rm civicpatch-slim uv run \
-  python src/scripts/generate_review_comment.py {{ option(name="jurisdiction-ocdid") }}
+uv run python scripts/generate_review_comment.py {{ option(name="jurisdiction-ocdid") }}
 """
 
 [tasks.validate_texas_google]
