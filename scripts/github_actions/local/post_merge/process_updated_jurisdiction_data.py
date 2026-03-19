@@ -1,5 +1,6 @@
 import os
 import glob
+import re
 import sys
 from ruamel.yaml import YAML
 
@@ -116,7 +117,7 @@ def extract_child_divisions(people):
         division = office.get("division_ocdid", "")
         if division != base_division_ocdid:
             child_divisions.add(division)
-    return list(child_divisions)
+    return sorted(child_divisions, key=lambda s: [int(c) if c.isdigit() else c for c in re.split(r'(\d+)', s)])
 
 if __name__ == "__main__":
     main()
