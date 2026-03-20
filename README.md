@@ -1,23 +1,23 @@
 # CivicPatch Data Quality
 
-Generated: 2026-03-20 16:36 UTC
+Generated: 2026-03-20 16:39 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
-| tx | 5,850 | 963 | 964 | 1,221 | 231 | 27 | 1,218 | 79% |
+| tx | 5,856 | 964 | 964 | 1,221 | 231 | 27 | 1,218 | 79% |
 
 ## Locality Gaps
 
 ### tx
 
 <details>
-<summary>1 not yet scraped &nbsp;·&nbsp; 27 in external, not in CP &nbsp;·&nbsp; 17 in CP, not in external</summary>
+<summary>0 not yet scraped &nbsp;·&nbsp; 27 in external, not in CP &nbsp;·&nbsp; 17 in CP, not in external</summary>
 
 #### Not yet scraped
 
-- ocd-jurisdiction/country:us/state:tx/place:morgan~s_point_resort/government
+None
 
 #### Locality Gaps
 
