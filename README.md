@@ -1,12 +1,12 @@
 # CivicPatch Data Quality
 
-Generated: 2026-03-20 19:21 UTC
+Generated: 2026-03-28 02:17 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
-| tx | 5,856 | 964 | 964 | 1,221 | 231 | 27 | 1,218 | 79% |
+| tx | 5,857 | 964 | 964 | 1,221 | 231 | 27 | 1,218 | 78% |
 
 ## Locality Gaps
 
