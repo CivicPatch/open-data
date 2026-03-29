@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-03-29 01:52 UTC
+Generated: 2026-03-29 02:14 UTC
 
 ## Coverage Summary
 
