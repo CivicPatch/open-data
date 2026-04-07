@@ -58,7 +58,7 @@ Note: some configs, like source_urls and identities, are generated after the scr
 
 def get_jurisdiction_page_url(jurisdiction_ocdid: str) -> str:
     encoded_jurisdiction_ocdid = urllib.parse.quote(jurisdiction_ocdid, safe="")
-    return f"https://app.civicpatch.local/jurisdictions?jurisdiction_ocdid={encoded_jurisdiction_ocdid}"
+    return f"https://civicpatch.org/jurisdictions?jurisdiction_ocdid={encoded_jurisdiction_ocdid}"
 
 def markdown_list_br(items):
     return "<br>".join(str(item) for item in items) if items else "N/A"
