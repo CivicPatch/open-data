@@ -1,24 +1,23 @@
 # CivicPatch Data Quality
 
-Generated: 2026-03-15 22:41 UTC
+Generated: 2026-04-07 00:04 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
-| tx | 5,851 | 963 | 965 | 1,222 | 231 | 27 | 1,218 | 79% |
+| tx | 5,847 | 964 | 963 | 1,221 | 231 | 27 | 1,218 | 77% |
 
 ## Locality Gaps
 
 ### tx
 
 <details>
-<summary>2 not yet scraped &nbsp;·&nbsp; 26 in external, not in CP &nbsp;·&nbsp; 17 in CP, not in external</summary>
+<summary>0 not yet scraped &nbsp;·&nbsp; 27 in external, not in CP &nbsp;·&nbsp; 17 in CP, not in external</summary>
 
 #### Not yet scraped
 
-- ocd-jurisdiction/country:us/state:tx/place:lakewood_village/government
-- ocd-jurisdiction/country:us/state:tx/place:morgan~s_point_resort/government
+None
 
 #### Locality Gaps
 
@@ -35,12 +34,13 @@ Generated: 2026-03-15 22:41 UTC
 | ocd-jurisdiction/country:us/state:tx/place:los_ybanez/government | ocd-jurisdiction/country:us/state:tx/place:post_oak_bend/government |
 | ocd-jurisdiction/country:us/state:tx/place:miller~s_cove/government | ocd-jurisdiction/country:us/state:tx/place:reno_city_lamar_county/government |
 | ocd-jurisdiction/country:us/state:tx/place:millican/government | ocd-jurisdiction/country:us/state:tx/place:reno_city_parker_county/government |
-| ocd-jurisdiction/country:us/state:tx/place:mustang/government | ocd-jurisdiction/country:us/state:tx/place:san_elizario/government |
-| ocd-jurisdiction/country:us/state:tx/place:nesbitt/government | ocd-jurisdiction/country:us/state:tx/place:sandy_oaks/government |
-| ocd-jurisdiction/country:us/state:tx/place:oak_ridge/government | ocd-jurisdiction/country:us/state:tx/place:spring_branch/government |
-| ocd-jurisdiction/country:us/state:tx/place:oak_ridge_~cooke_county~/government | ocd-jurisdiction/country:us/state:tx/place:st._hedwig/government |
-| ocd-jurisdiction/country:us/state:tx/place:oak_ridge_~kaufman_county~/government | ocd-jurisdiction/country:us/state:tx/place:st._paul/government |
-| ocd-jurisdiction/country:us/state:tx/place:o~brien/government | ocd-jurisdiction/country:us/state:tx/place:town_of_pecos/government |
+| ocd-jurisdiction/country:us/state:tx/place:morgan~s_point/government | ocd-jurisdiction/country:us/state:tx/place:san_elizario/government |
+| ocd-jurisdiction/country:us/state:tx/place:mustang/government | ocd-jurisdiction/country:us/state:tx/place:sandy_oaks/government |
+| ocd-jurisdiction/country:us/state:tx/place:nesbitt/government | ocd-jurisdiction/country:us/state:tx/place:spring_branch/government |
+| ocd-jurisdiction/country:us/state:tx/place:oak_ridge/government | ocd-jurisdiction/country:us/state:tx/place:st._hedwig/government |
+| ocd-jurisdiction/country:us/state:tx/place:oak_ridge_~cooke_county~/government | ocd-jurisdiction/country:us/state:tx/place:st._paul/government |
+| ocd-jurisdiction/country:us/state:tx/place:oak_ridge_~kaufman_county~/government | ocd-jurisdiction/country:us/state:tx/place:town_of_pecos/government |
+| ocd-jurisdiction/country:us/state:tx/place:o~brien/government |  |
 | ocd-jurisdiction/country:us/state:tx/place:o~donnell/government |  |
 | ocd-jurisdiction/country:us/state:tx/place:pecos/government |  |
 | ocd-jurisdiction/country:us/state:tx/place:post_oak_bend_city/government |  |
