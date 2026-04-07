@@ -25,8 +25,8 @@ def extract_s3_key_with_regex(cdn_image, source_bucket):
     """
     Extract the S3 object key from the cdn_image URL using regex.
     """
-    # Match the pattern: https://{host}/{bucket}/{key}
-    match = re.match(rf"https?://[^/]+/{source_bucket}/(.+)", cdn_image)
+    # Match the pattern: https://{bucket-as-subdomain}.host/{key}
+    match = re.match(rf"https?://{re.escape(source_bucket)}[^/]*/(.+)", cdn_image)
     if match:
         return match.group(1)  # Return the captured group (the key)
     return None
@@ -86,6 +86,6 @@ def update_images(people, data_file_path):
 
     # Write back only if changes were made
     if updated:
-        with open(yaml_file, "w") as f:
+        with open(data_file_path, "w") as f:
             yaml.dump(people, f, sort_keys=False)
 
