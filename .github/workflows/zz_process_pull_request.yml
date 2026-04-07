@@ -75,13 +75,6 @@ jobs:
         with:
           python-version: "3.11"
 
-      #- name: Login to GitHub Container Registry
-      #  uses: docker/login-action@v3
-      #  with:
-      #    registry: ghcr.io
-      #    username: ${{ github.actor }}
-      #    password: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Set up mise
         uses: jdx/mise-action@v3.2.0
         with:
@@ -89,9 +82,6 @@ jobs:
           cache: true
           log_level: debug
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Pull Prebuilt Docker Image
-        run: docker pull ghcr.io/civicpatch/civicpatch-slim:latest
 
       - name: Print the branch name
         run: echo "The branch name is ${{ inputs.head_ref }}"
@@ -132,7 +122,7 @@ jobs:
             echo "Associating pull request with job request id"
             PULL_REQUEST_URL=$(gh pr view "${{ inputs.pr_number }}" --json url -q .url)
             echo "Pull Request URL: $PULL_REQUEST_URL"
-            curl -X POST "$API_CIVICPATCH_ORG_URL/api/v1/jobs/people/$REQUEST_ID/result" \
+            curl -X PATCH "$API_CIVICPATCH_ORG_URL/api/v1/requests/$REQUEST_ID/result" \
               -H "Content-Type: application/json" \
               -H "Authorization: $SERVICE_API_KEY" \
               -d "{\"pull_request_url\": \"$PULL_REQUEST_URL\"}"

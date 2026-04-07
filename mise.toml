@@ -74,27 +74,20 @@ curl -s -X GET "${API_CIVICPATCH_ORG_URL}/api/v1/jurisdictions/available?num_jur
 #    --state "wa"
 #"""
 
-[tasks.upload-images-to-cdn]
-run = """
-docker compose -f docker-compose.slim.yml run --rm civicpatch-slim uv run \
-  python src/scripts/upload_images_to_cdn.py {{ option(name="jurisdiction-ocdid") }}
-"""
-
 [tasks.generate-data-comment]
 run = """
-docker compose -f docker-compose.slim.yml run --rm civicpatch-slim uv run \
-  python src/scripts/generate_data_comment.py {{ option(name="jurisdiction-ocdid") }}
+uv run --quiet python scripts/github_actions/local/pull_request/generate_data_comment.py {{ option(name="jurisdiction-ocdid") }}
 """
 
 [tasks.test-generate-review-comment]
 run = """
-uv run python scripts/generate_review_comment.py ocd-jurisdiction/country:us/state:wa/place:seattle
+uv run python scripts/github_actions/local/pull_request/generate_review_comment.py ocd-jurisdiction/country:us/state:wa/place:seattle/government
 """
 
 [tasks.generate-review-comment]
 # Ex: mise generate-review-comment --jurisdiction-ocdid ocd-jurisdiction/country:us/state:wa/place:spokane
 run = """
-uv run --quiet python scripts/generate_review_comment.py {{ option(name="jurisdiction-ocdid") }}
+uv run --quiet python scripts/github_actions/local/pull_request/generate_review_comment.py {{ option(name="jurisdiction-ocdid") }}
 """
 
 [tasks.validate_texas_google]
