@@ -1,7 +1,7 @@
 import sys
-from scripts.utils import jurisdiction_ocdid_to_folder
 import os
 import json
+from shared.utils.id_utils import jurisdiction_ocdid_to_folder
 
 def pull_request_body_markdown(jurisdiction_ocdid: str, request_id: str) -> str:
     """
