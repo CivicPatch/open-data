@@ -2,7 +2,6 @@ import sys
 from scripts.utils import jurisdiction_ocdid_to_folder
 import os
 import json
-import urllib.parse
 
 def pull_request_body_markdown(jurisdiction_ocdid: str, request_id: str) -> str:
     """
@@ -57,8 +56,8 @@ Note: some configs, like source_urls and identities, are generated after the scr
 """
 
 def get_jurisdiction_page_url(jurisdiction_ocdid: str) -> str:
-    encoded_jurisdiction_ocdid = urllib.parse.quote(jurisdiction_ocdid, safe="")
-    return f"https://civicpatch.org/jurisdictions?jurisdiction_ocdid={encoded_jurisdiction_ocdid}"
+    folder = jurisdiction_ocdid_to_folder(jurisdiction_ocdid)
+    return f"https://civicpatch.org/{folder}"
 
 def markdown_list_br(items):
     return "<br>".join(str(item) for item in items) if items else "N/A"
