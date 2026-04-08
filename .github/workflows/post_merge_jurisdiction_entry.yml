@@ -57,11 +57,11 @@ jobs:
         run: |
           set -euo pipefail
           OCDID_ARRAY=$(cat changed_ocdids.txt | jq -R -s -c 'split("\n")[:-1]')
-          curl -X POST "$API_CIVICPATCH_ORG_URL/api/admin/od_sync" \
+          curl -X POST "$CIVICPATCH_ORG_URL/api/admin/od_sync" \
             -H "Content-Type: application/json" \
             -H "Authorization: $SERVICE_API_KEY" \
             --fail-with-body \
             -d "{\"jurisdiction_ocdids\": $OCDID_ARRAY}"
         env:
-          API_CIVICPATCH_ORG_URL: ${{ vars.API_CIVICPATCH_ORG_URL }}
+          CIVICPATCH_ORG_URL: ${{ vars.CIVICPATCH_ORG_URL }}
           SERVICE_API_KEY: ${{ secrets.SERVICE_API_KEY }}
