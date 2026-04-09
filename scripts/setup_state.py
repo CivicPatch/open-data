@@ -1,6 +1,8 @@
+import importlib.util
 import os
 import csv
 import io
+import sys
 import zipfile
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
@@ -8,7 +10,17 @@ from typing import Any, Dict, List, Tuple
 import geopandas
 import pandas
 import requests
-import yaml
+from ruamel.yaml import YAML
+
+ryaml = YAML()
+ryaml.preserve_quotes = True
+ryaml.default_flow_style = False
+ryaml.width = 4096
+
+def _represent_none(representer, _):
+    return representer.represent_scalar("tag:yaml.org,2002:null", "null")
+
+ryaml.representer.add_representer(type(None), _represent_none)
 
 from schemas import Jurisdiction
 from scripts.scrapers import co as co_scraper
@@ -16,9 +28,9 @@ from scripts.scrapers import nj as nj_scraper
 from scripts.scrapers import wa as wa_scraper
 from scripts.scrapers import tx as tx_scraper
 import scripts.track_progress.generate_progress as generate_progress
+import scripts.track_progress.generate_google_data as generate_google_data
 from scripts.maps.local import build_maps_for_state
 
-# from scripts.github_actions.update_jurisdiction_metadata import create_update_progress_file
 
 PROJECT_ROOT = Path(__file__).parent.parent
 
@@ -27,10 +39,26 @@ state_configs = {
         "fips": "08",
         "pull_from_census": ["places"],
         "scraper": co_scraper,
+        "validation_sources": ["google"],
     },
-    "nj": {"fips": "34", "pull_from_census": ["places", "county_subdivisions"], "scraper": nj_scraper},
-    "tx": {"fips": "48", "pull_from_census": ["places"], "scraper": tx_scraper},
-    "wa": {"fips": "53", "pull_from_census": ["places"], "scraper": wa_scraper},
+    "nj": {
+        "fips": "34",
+        "pull_from_census": ["places", "county_subdivisions"],
+        "scraper": nj_scraper,
+        "validation_sources": ["google"],
+    },
+    "tx": {
+        "fips": "48",
+        "pull_from_census": ["places"],
+        "scraper": tx_scraper,
+        "validation_sources": ["google", "tml"],
+    },
+    "wa": {
+        "fips": "53",
+        "pull_from_census": ["places"],
+        "scraper": wa_scraper,
+        "validation_sources": ["google"],
+    },
 }
 
 
@@ -76,38 +104,78 @@ def combine_geojsons_with_type(folder_path: str, output_path: str):
     combined_gdf = geopandas.GeoDataFrame(pandas.concat(gdfs, ignore_index=True), crs=gdfs[0].crs)
     combined_gdf.to_file(output_path, driver="GeoJSON")
 
+def _load_existing_jurisdictions(path: Path):
+    """Load existing jurisdictions.yml with ruamel.yaml (preserving comments).
+
+    Returns (doc, existing_by_id) where:
+      - doc is the full CommentedMap (top-level document), or {} if file absent
+      - existing_by_id is a dict keyed by jurisdiction id pointing to CommentedMap entries
+    """
+    if not path.exists():
+        return {}, {}
+    with open(path) as f:
+        doc = ryaml.load(f)
+    if not doc or "jurisdictions" not in doc:
+        return doc or {}, {}
+    return doc, {j["id"]: j for j in doc["jurisdictions"]}
+
+
 def pull_jurisdiction_data(state: str):
     # TODO: this will be replaced by jurisdictions repo work
     # Should do a daily (???) pull or when data updates
-    census_data, census_geo_data, census_warnings = get_census_data_for_state(state)
-    jurisdictions_with_supplemented_data, supplement_warnings = supplement_data(
-        state, census_data
-    )
-    jurisdictions = jurisdictions_with_supplemented_data.values()
-    jurisdictions_by_population = sorted(
-        jurisdictions,
-        key=lambda j: j.population if j.population is not None else 0,
-        reverse=True,
-    )
-    data = {
-        "jurisdictions": [
-            jurisdiction.model_dump() for jurisdiction in jurisdictions_by_population
-        ],
-        "warnings": census_warnings + supplement_warnings,
-    }
 
-    # Find project root (where pyproject.toml is located)
     output_path = PROJECT_ROOT / "data_source" / state / "jurisdictions.yml"
-
-    # Create directory if it doesn't exist
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
+    # Single load — preserves comments in CommentedMap objects
+    doc, existing_by_id = _load_existing_jurisdictions(output_path)
+
+    census_data, census_geo_data, census_warnings = get_census_data_for_state(state)
+
+    # Partition into new vs. existing vs. inactive
+    census_ids = set(census_data.keys())
+    existing_ids = set(existing_by_id.keys())
+
+    new_ids = census_ids - existing_ids
+    present_ids = census_ids & existing_ids
+    inactive_ids = existing_ids - census_ids
+
+    # Only fetch Wikipedia data for genuinely new jurisdictions
+    new_census_subset = {id_: census_data[id_] for id_ in new_ids}
+    if new_census_subset:
+        new_supplemented, supplement_warnings = supplement_data(state, new_census_subset)
+    else:
+        new_supplemented, supplement_warnings = {}, []
+
+    # Update existing entries in-place (population/name from census; clear inactive status)
+    for ocdid in present_ids:
+        census_j = census_data[ocdid]
+        existing_entry = existing_by_id[ocdid]
+        existing_entry["population"] = census_j.population
+        existing_entry["name"] = census_j.name
+        if "status" in existing_entry:
+            del existing_entry["status"]
+
+    # Mark entries absent from census as inactive
+    for ocdid in inactive_ids:
+        existing_by_id[ocdid]["status"] = "inactive"
+
+    # Convert new supplemented Jurisdiction objects to plain dicts and add to map
+    for ocdid, jurisdiction in new_supplemented.items():
+        existing_by_id[ocdid] = jurisdiction.model_dump(exclude_none=True)
+
+    # Sort all entries by population descending
+    all_jurisdictions = sorted(
+        existing_by_id.values(),
+        key=lambda j: j.get("population") if j.get("population") is not None else 0,
+        reverse=True,
+    )
+
+    doc["jurisdictions"] = all_jurisdictions
+    doc["warnings"] = census_warnings + supplement_warnings
+
     with open(output_path, "w") as f:
-        yaml.dump(
-            data,
-            f,
-            sort_keys=False,
-        )
+        ryaml.dump(doc, f)
 
 
 # https://www.census.gov/library/reference/code-lists/class-codes.html
@@ -156,13 +224,7 @@ def get_census_data_for_state(state: str):
                 census_data[jurisdiction_ocdid] = jurisdiction_object
 
     # Build maps separately — stamps updated_at into local.geojson
-    build_maps_for_state(
-        state=state,
-        pull_from_census=pull_from_census,
-        state_fips=state_fips,
-        place_map_url=census_place_geozip(state),
-        cousub_map_url=census_cousub_geozip(state) if "county_subdivisions" in pull_from_census else None,
-    )
+    build_maps_for_state(state, pull_from_census)
 
     return census_data, {}, warnings
 
@@ -360,19 +422,65 @@ def supplement_data(
     return census_data, scrape_warnings
 
 
-if __name__ == "__main__":
-    import sys
+def _run_google_transform(state: str):
+    raw_rel, output_rel = generate_google_data.paths_for_state(state)
+    raw_path = PROJECT_ROOT / raw_rel
+    output_path = PROJECT_ROOT / output_rel
 
+    if not raw_path.exists():
+        if output_path.exists():
+            print(f"[google] Raw data not found for '{state}', skipping (existing output preserved).")
+            return
+        print(f"[google] Missing required raw data for new state '{state}': {raw_path}")
+        print("  Fetch Google Civic API data for this state before running setup.")
+        sys.exit(1)
+
+    generate_google_data.transform_file(str(raw_path), str(output_path), state)
+
+
+def _run_tml_transform(state: str):
+    tml_dir = PROJECT_ROOT / "data_source" / state / "local" / "validation" / "tml"
+    raw_path = tml_dir / "tml_raw.json"
+    output_path = tml_dir / "output.yml"
+    transform_path = tml_dir / "transform_tml_raw.py"
+
+    if not raw_path.exists():
+        if output_path.exists():
+            print(f"[tml] Raw data not found for '{state}', skipping (existing output preserved).")
+            return
+        print(f"[tml] Missing TML raw data for '{state}': {raw_path}")
+        print("  Run scrape_tml_search.py to fetch TML data first.")
+        sys.exit(1)
+
+    if not transform_path.exists():
+        print(f"[tml] Missing transform script: {transform_path}")
+        sys.exit(1)
+
+    spec = importlib.util.spec_from_file_location("transform_tml_raw", transform_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    module.transform_file(str(raw_path), str(output_path), state)
+
+
+def run_validation_transforms(state: str):
+    sources = state_configs[state].get("validation_sources", ["google"])
+    for source in sources:
+        if source == "google":
+            _run_google_transform(state)
+        elif source == "tml":
+            _run_tml_transform(state)
+        else:
+            print(f"Unknown validation source '{source}' configured for state '{state}'.")
+            sys.exit(1)
+
+
+if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python scripts/setup_state.py <state>")
         sys.exit(1)
 
     state_arg = sys.argv[1]
     pull_jurisdiction_data(state_arg)
-
-    # Call other scripts
-    create_update_progress_file(state_arg)
-    # TODO
-    # count_municipalities()
-    generate_progress()
+    run_validation_transforms(state_arg)
+    generate_progress.generate_readme()
 
