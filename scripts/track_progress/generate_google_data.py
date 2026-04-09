@@ -76,15 +76,29 @@ def load_meta_from_raw(raw_path: str, state: str) -> dict:
     return {"divisions": divisions, "jurisdictions": jurisdictions}
 
 
-def transform_file(raw_path: str, processed_path: str, output_path: str, state: str):
+def flatten_raw(raw: dict) -> list:
+    """Flatten raw Google Civic API response into a list of per-official records."""
+    officials = raw.get("officials", [])
+    flattened = []
+    for office in raw.get("offices", []):
+        for idx in office.get("officialIndices", []):
+            if idx < len(officials):
+                record = dict(officials[idx])
+                record["office_name"] = office.get("name")
+                record["office_divisionId"] = office.get("divisionId")
+                flattened.append(record)
+    return flattened
+
+
+def transform_file(raw_path: str, output_path: str, state: str):
+    with open(raw_path) as f:
+        raw = json.load(f)
+
     # ── Meta from raw ─────────────────────────────────────────────────────────
     meta = load_meta_from_raw(raw_path, state)
 
-    # ── Records from processed ────────────────────────────────────────────────
-    with open(processed_path) as f:
-        records = json.load(f)
-    if not isinstance(records, list):
-        records = [records]
+    # ── Records flattened from raw ────────────────────────────────────────────
+    records = flatten_raw(raw)
 
     local_records = [r for r in records if is_local(r.get("office_divisionId", ""))]
     skipped       = len(records) - len(local_records)
@@ -112,7 +126,6 @@ def paths_for_state(state: str):
     s = state.lower()
     return (
         f"scripts/track_progress/google_data/{s}_all_raw.json",
-        f"scripts/track_progress/google_data/{s}_all_processed.json",
         f"data_source/{s}/local/validation/google/output.yml",
     )
 
@@ -120,16 +133,16 @@ def paths_for_state(state: str):
 def main():
     if len(sys.argv) == 2:
         state = sys.argv[1]
-        raw_path, processed_path, output_path = paths_for_state(state)
-    elif len(sys.argv) == 5:
-        _, state, raw_path, processed_path, output_path = sys.argv
+        raw_path, output_path = paths_for_state(state)
+    elif len(sys.argv) == 4:
+        _, state, raw_path, output_path = sys.argv
     else:
         print("Usage:")
         print("  python transform_civic.py <state>")
-        print("  python transform_civic.py <state> <raw_json> <processed_json> <output_yaml>")
+        print("  python transform_civic.py <state> <raw_json> <output_yaml>")
         sys.exit(1)
 
-    transform_file(raw_path, processed_path, output_path, state)
+    transform_file(raw_path, output_path, state)
 
 
 if __name__ == "__main__":

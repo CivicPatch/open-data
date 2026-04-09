@@ -12,6 +12,7 @@ class Jurisdiction(BaseModel):
         None  # This might be under divisions -> meta; consult repo
     )
     geoid: Optional[str] = None  # This is definitely under divisions somewhere
+    status: Optional[str] = None  # e.g. "inactive" for jurisdictions dropped from census
 
 class Office(BaseModel):
     name: str

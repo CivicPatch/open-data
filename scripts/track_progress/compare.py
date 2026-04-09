@@ -391,20 +391,24 @@ def paths_for_state(state: str):
     )
 
 
-def main():
-    if len(sys.argv) == 2:
-        state = sys.argv[1]
-        local_dir, jurisdictions_path, ext_path, out_path = paths_for_state(state)
-    elif len(sys.argv) == 6:
-        _, local_dir, jurisdictions_path, ext_path, out_path, state = sys.argv
-    else:
-        print("Usage:")
-        print("  python compare.py <state>")
-        print("  python compare.py <local_dir> <jurisdictions.yml> <external.yaml> <output.json> <state>")
-        sys.exit(1)
+def discover_states() -> list[str]:
+    """Return states that have both local YMLs and a google validation output."""
+    project_root = Path(__file__).parent.parent.parent
+    states = []
+    for state_dir in sorted((project_root / "data").iterdir()):
+        if not state_dir.is_dir():
+            continue
+        state = state_dir.name
+        has_locals = any((state_dir / "local").glob("*.yml"))
+        has_google = (project_root / f"data_source/{state}/local/validation/google/output.yml").exists()
+        if has_locals and has_google:
+            states.append(state)
+    return states
 
+
+def run_state(state: str):
+    local_dir, jurisdictions_path, ext_path, out_path = paths_for_state(state)
     Path(out_path).parent.mkdir(parents=True, exist_ok=True)
-
     run(
         local_dir          = local_dir,
         jurisdictions_path = jurisdictions_path,
@@ -412,6 +416,34 @@ def main():
         out_path           = out_path,
         state              = state,
     )
+
+
+def main():
+    if len(sys.argv) == 1 or (len(sys.argv) == 2 and not sys.argv[1]):
+        states = discover_states()
+        if not states:
+            print("No states with local data and google validation output found.")
+            sys.exit(1)
+        for state in states:
+            run_state(state)
+    elif len(sys.argv) == 2:
+        run_state(sys.argv[1])
+    elif len(sys.argv) == 6:
+        _, local_dir, jurisdictions_path, ext_path, out_path, state = sys.argv
+        Path(out_path).parent.mkdir(parents=True, exist_ok=True)
+        run(
+            local_dir          = local_dir,
+            jurisdictions_path = jurisdictions_path,
+            ext_path           = ext_path,
+            out_path           = out_path,
+            state              = state,
+        )
+    else:
+        print("Usage:")
+        print("  python compare.py                   # all states with data")
+        print("  python compare.py <state>")
+        print("  python compare.py <local_dir> <jurisdictions.yml> <external.yaml> <output.json> <state>")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
