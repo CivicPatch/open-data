@@ -1,15 +1,168 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-11 01:48 UTC
+Generated: 2026-04-11 02:14 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
+| co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 77% |
+| wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
 ## Locality Gaps
+
+### co
+
+<details>
+<summary>133 not yet scraped &nbsp;·&nbsp; 3 in external, not in CP &nbsp;·&nbsp; 2 in CP, not in external</summary>
+
+#### Not yet scraped
+
+- ocd-jurisdiction/country:us/state:co/place:aguilar/government
+- ocd-jurisdiction/country:us/state:co/place:alma/government
+- ocd-jurisdiction/country:us/state:co/place:arriba/government
+- ocd-jurisdiction/country:us/state:co/place:ault/government
+- ocd-jurisdiction/country:us/state:co/place:black_hawk/government
+- ocd-jurisdiction/country:us/state:co/place:blanca/government
+- ocd-jurisdiction/country:us/state:co/place:blue_river/government
+- ocd-jurisdiction/country:us/state:co/place:bow_mar/government
+- ocd-jurisdiction/country:us/state:co/place:branson/government
+- ocd-jurisdiction/country:us/state:co/place:brookside/government
+- ocd-jurisdiction/country:us/state:co/place:calhan/government
+- ocd-jurisdiction/country:us/state:co/place:campo/government
+- ocd-jurisdiction/country:us/state:co/place:cañon_city/government
+- ocd-jurisdiction/country:us/state:co/place:cedaredge/government
+- ocd-jurisdiction/country:us/state:co/place:central/government
+- ocd-jurisdiction/country:us/state:co/place:cheraw/government
+- ocd-jurisdiction/country:us/state:co/place:cheyenne_wells/government
+- ocd-jurisdiction/country:us/state:co/place:city_of_creede/government
+- ocd-jurisdiction/country:us/state:co/place:coal_creek/government
+- ocd-jurisdiction/country:us/state:co/place:cokedale/government
+- ocd-jurisdiction/country:us/state:co/place:collbran/government
+- ocd-jurisdiction/country:us/state:co/place:crested_butte/government
+- ocd-jurisdiction/country:us/state:co/place:crestone/government
+- ocd-jurisdiction/country:us/state:co/place:crook/government
+- ocd-jurisdiction/country:us/state:co/place:crowley/government
+- ocd-jurisdiction/country:us/state:co/place:deer_trail/government
+- ocd-jurisdiction/country:us/state:co/place:dillon/government
+- ocd-jurisdiction/country:us/state:co/place:dinosaur/government
+- ocd-jurisdiction/country:us/state:co/place:dolores/government
+- ocd-jurisdiction/country:us/state:co/place:dove_creek/government
+- ocd-jurisdiction/country:us/state:co/place:eads/government
+- ocd-jurisdiction/country:us/state:co/place:eckley/government
+- ocd-jurisdiction/country:us/state:co/place:empire/government
+- ocd-jurisdiction/country:us/state:co/place:fairplay/government
+- ocd-jurisdiction/country:us/state:co/place:federal_heights/government
+- ocd-jurisdiction/country:us/state:co/place:flagler/government
+- ocd-jurisdiction/country:us/state:co/place:fleming/government
+- ocd-jurisdiction/country:us/state:co/place:foxfield/government
+- ocd-jurisdiction/country:us/state:co/place:garden_city/government
+- ocd-jurisdiction/country:us/state:co/place:genoa/government
+- ocd-jurisdiction/country:us/state:co/place:georgetown/government
+- ocd-jurisdiction/country:us/state:co/place:gilcrest/government
+- ocd-jurisdiction/country:us/state:co/place:glenwood_springs/government
+- ocd-jurisdiction/country:us/state:co/place:granada/government
+- ocd-jurisdiction/country:us/state:co/place:granby/government
+- ocd-jurisdiction/country:us/state:co/place:grand_junction/government
+- ocd-jurisdiction/country:us/state:co/place:grand_lake/government
+- ocd-jurisdiction/country:us/state:co/place:green_mountain_falls/government
+- ocd-jurisdiction/country:us/state:co/place:grover/government
+- ocd-jurisdiction/country:us/state:co/place:haswell/government
+- ocd-jurisdiction/country:us/state:co/place:haxtun/government
+- ocd-jurisdiction/country:us/state:co/place:hillrose/government
+- ocd-jurisdiction/country:us/state:co/place:holly/government
+- ocd-jurisdiction/country:us/state:co/place:hot_sulphur_springs/government
+- ocd-jurisdiction/country:us/state:co/place:hotchkiss/government
+- ocd-jurisdiction/country:us/state:co/place:hudson/government
+- ocd-jurisdiction/country:us/state:co/place:hugo/government
+- ocd-jurisdiction/country:us/state:co/place:ignacio/government
+- ocd-jurisdiction/country:us/state:co/place:iliff/government
+- ocd-jurisdiction/country:us/state:co/place:jamestown/government
+- ocd-jurisdiction/country:us/state:co/place:johnstown/government
+- ocd-jurisdiction/country:us/state:co/place:keenesburg/government
+- ocd-jurisdiction/country:us/state:co/place:kersey/government
+- ocd-jurisdiction/country:us/state:co/place:kiowa/government
+- ocd-jurisdiction/country:us/state:co/place:kit_carson/government
+- ocd-jurisdiction/country:us/state:co/place:kremmling/government
+- ocd-jurisdiction/country:us/state:co/place:la_jara/government
+- ocd-jurisdiction/country:us/state:co/place:la_veta/government
+- ocd-jurisdiction/country:us/state:co/place:lake_city/government
+- ocd-jurisdiction/country:us/state:co/place:larkspur/government
+- ocd-jurisdiction/country:us/state:co/place:limon/government
+- ocd-jurisdiction/country:us/state:co/place:log_lane_village/government
+- ocd-jurisdiction/country:us/state:co/place:manassa/government
+- ocd-jurisdiction/country:us/state:co/place:manzanola/government
+- ocd-jurisdiction/country:us/state:co/place:marble/government
+- ocd-jurisdiction/country:us/state:co/place:merino/government
+- ocd-jurisdiction/country:us/state:co/place:minturn/government
+- ocd-jurisdiction/country:us/state:co/place:moffat/government
+- ocd-jurisdiction/country:us/state:co/place:monte_vista/government
+- ocd-jurisdiction/country:us/state:co/place:montezuma/government
+- ocd-jurisdiction/country:us/state:co/place:morrison/government
+- ocd-jurisdiction/country:us/state:co/place:mount_crested_butte/government
+- ocd-jurisdiction/country:us/state:co/place:mountain_view/government
+- ocd-jurisdiction/country:us/state:co/place:mountain_village/government
+- ocd-jurisdiction/country:us/state:co/place:naturita/government
+- ocd-jurisdiction/country:us/state:co/place:norwood/government
+- ocd-jurisdiction/country:us/state:co/place:nucla/government
+- ocd-jurisdiction/country:us/state:co/place:nunn/government
+- ocd-jurisdiction/country:us/state:co/place:oak_creek/government
+- ocd-jurisdiction/country:us/state:co/place:olney_springs/government
+- ocd-jurisdiction/country:us/state:co/place:ophir/government
+- ocd-jurisdiction/country:us/state:co/place:ordway/government
+- ocd-jurisdiction/country:us/state:co/place:otis/government
+- ocd-jurisdiction/country:us/state:co/place:ouray/government
+- ocd-jurisdiction/country:us/state:co/place:ovid/government
+- ocd-jurisdiction/country:us/state:co/place:paonia/government
+- ocd-jurisdiction/country:us/state:co/place:parachute/government
+- ocd-jurisdiction/country:us/state:co/place:peetz/government
+- ocd-jurisdiction/country:us/state:co/place:pierce/government
+- ocd-jurisdiction/country:us/state:co/place:pitkin/government
+- ocd-jurisdiction/country:us/state:co/place:poncha_springs/government
+- ocd-jurisdiction/country:us/state:co/place:pritchett/government
+- ocd-jurisdiction/country:us/state:co/place:ramah/government
+- ocd-jurisdiction/country:us/state:co/place:red_cliff/government
+- ocd-jurisdiction/country:us/state:co/place:rico/government
+- ocd-jurisdiction/country:us/state:co/place:ridgway/government
+- ocd-jurisdiction/country:us/state:co/place:rockvale/government
+- ocd-jurisdiction/country:us/state:co/place:rye/government
+- ocd-jurisdiction/country:us/state:co/place:saguache/government
+- ocd-jurisdiction/country:us/state:co/place:san_luis/government
+- ocd-jurisdiction/country:us/state:co/place:sanford/government
+- ocd-jurisdiction/country:us/state:co/place:sedgwick/government
+- ocd-jurisdiction/country:us/state:co/place:sheridan_lake/government
+- ocd-jurisdiction/country:us/state:co/place:silver_cliff/government
+- ocd-jurisdiction/country:us/state:co/place:silver_plume/government
+- ocd-jurisdiction/country:us/state:co/place:silverton/government
+- ocd-jurisdiction/country:us/state:co/place:simla/government
+- ocd-jurisdiction/country:us/state:co/place:south_fork/government
+- ocd-jurisdiction/country:us/state:co/place:springfield/government
+- ocd-jurisdiction/country:us/state:co/place:stratton/government
+- ocd-jurisdiction/country:us/state:co/place:sugar_city/government
+- ocd-jurisdiction/country:us/state:co/place:swink/government
+- ocd-jurisdiction/country:us/state:co/place:two_buttes/government
+- ocd-jurisdiction/country:us/state:co/place:victor/government
+- ocd-jurisdiction/country:us/state:co/place:vilas/government
+- ocd-jurisdiction/country:us/state:co/place:walden/government
+- ocd-jurisdiction/country:us/state:co/place:walsenburg/government
+- ocd-jurisdiction/country:us/state:co/place:walsh/government
+- ocd-jurisdiction/country:us/state:co/place:ward/government
+- ocd-jurisdiction/country:us/state:co/place:westcliffe/government
+- ocd-jurisdiction/country:us/state:co/place:williamsburg/government
+- ocd-jurisdiction/country:us/state:co/place:winter_park/government
+- ocd-jurisdiction/country:us/state:co/place:yampa/government
+
+#### Locality Gaps
+
+| In External, Not in Known | In CivicPatch, Not in External |
+|---------------------------|--------------------------------|
+| ocd-jurisdiction/country:us/state:co/place:bonanza/government | ocd-jurisdiction/country:us/state:co/place:broomfield/government |
+| ocd-jurisdiction/country:us/state:co/place:central_city/government | ocd-jurisdiction/country:us/state:co/place:denver/government |
+| ocd-jurisdiction/country:us/state:co/place:raymer_~new_raymer~/government |  |
+
+</details>
 
 ### nj
 
@@ -620,6 +773,75 @@ None
 | ocd-jurisdiction/country:us/state:tx/place:st_hedwig/government |  |
 | ocd-jurisdiction/country:us/state:tx/place:st_jo/government |  |
 | ocd-jurisdiction/country:us/state:tx/place:st_paul/government |  |
+
+</details>
+
+### wa
+
+<details>
+<summary>53 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
+
+#### Not yet scraped
+
+- ocd-jurisdiction/country:us/state:wa/place:albion/government
+- ocd-jurisdiction/country:us/state:wa/place:beaux_arts_village/government
+- ocd-jurisdiction/country:us/state:wa/place:bingen/government
+- ocd-jurisdiction/country:us/state:wa/place:brewster/government
+- ocd-jurisdiction/country:us/state:wa/place:brier/government
+- ocd-jurisdiction/country:us/state:wa/place:bucoda/government
+- ocd-jurisdiction/country:us/state:wa/place:cathlamet/government
+- ocd-jurisdiction/country:us/state:wa/place:conconully/government
+- ocd-jurisdiction/country:us/state:wa/place:concrete/government
+- ocd-jurisdiction/country:us/state:wa/place:davenport/government
+- ocd-jurisdiction/country:us/state:wa/place:farmington/government
+- ocd-jurisdiction/country:us/state:wa/place:garfield/government
+- ocd-jurisdiction/country:us/state:wa/place:george/government
+- ocd-jurisdiction/country:us/state:wa/place:gold_bar/government
+- ocd-jurisdiction/country:us/state:wa/place:granite_falls/government
+- ocd-jurisdiction/country:us/state:wa/place:harrington/government
+- ocd-jurisdiction/country:us/state:wa/place:hunts_point/government
+- ocd-jurisdiction/country:us/state:wa/place:kittitas/government
+- ocd-jurisdiction/country:us/state:wa/place:lacrosse/government
+- ocd-jurisdiction/country:us/state:wa/place:langley/government
+- ocd-jurisdiction/country:us/state:wa/place:lind/government
+- ocd-jurisdiction/country:us/state:wa/place:lyman/government
+- ocd-jurisdiction/country:us/state:wa/place:mansfield/government
+- ocd-jurisdiction/country:us/state:wa/place:marcus/government
+- ocd-jurisdiction/country:us/state:wa/place:northport/government
+- ocd-jurisdiction/country:us/state:wa/place:oakesdale/government
+- ocd-jurisdiction/country:us/state:wa/place:oakville/government
+- ocd-jurisdiction/country:us/state:wa/place:odessa/government
+- ocd-jurisdiction/country:us/state:wa/place:pateros/government
+- ocd-jurisdiction/country:us/state:wa/place:pe_ell/government
+- ocd-jurisdiction/country:us/state:wa/place:pomeroy/government
+- ocd-jurisdiction/country:us/state:wa/place:prescott/government
+- ocd-jurisdiction/country:us/state:wa/place:republic/government
+- ocd-jurisdiction/country:us/state:wa/place:rockford/government
+- ocd-jurisdiction/country:us/state:wa/place:rosalia/government
+- ocd-jurisdiction/country:us/state:wa/place:roy/government
+- ocd-jurisdiction/country:us/state:wa/place:skykomish/government
+- ocd-jurisdiction/country:us/state:wa/place:south_cle_elum/government
+- ocd-jurisdiction/country:us/state:wa/place:south_prairie/government
+- ocd-jurisdiction/country:us/state:wa/place:sprague/government
+- ocd-jurisdiction/country:us/state:wa/place:st._john/government
+- ocd-jurisdiction/country:us/state:wa/place:stanwood/government
+- ocd-jurisdiction/country:us/state:wa/place:starbuck/government
+- ocd-jurisdiction/country:us/state:wa/place:tekoa/government
+- ocd-jurisdiction/country:us/state:wa/place:toledo/government
+- ocd-jurisdiction/country:us/state:wa/place:uniontown/government
+- ocd-jurisdiction/country:us/state:wa/place:vader/government
+- ocd-jurisdiction/country:us/state:wa/place:warden/government
+- ocd-jurisdiction/country:us/state:wa/place:washtucna/government
+- ocd-jurisdiction/country:us/state:wa/place:waterville/government
+- ocd-jurisdiction/country:us/state:wa/place:wilson_creek/government
+- ocd-jurisdiction/country:us/state:wa/place:winthrop/government
+- ocd-jurisdiction/country:us/state:wa/place:woodway/government
+
+#### Locality Gaps
+
+| In External, Not in Known | In CivicPatch, Not in External |
+|---------------------------|--------------------------------|
+| ocd-jurisdiction/country:us/state:wa/place:st_john/government |  |
 
 </details>
 
