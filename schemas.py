@@ -12,7 +12,11 @@ class Jurisdiction(BaseModel):
         None  # This might be under divisions -> meta; consult repo
     )
     geoid: Optional[str] = None  # This is definitely under divisions somewhere
-    status: Optional[str] = None  # e.g. "inactive" for jurisdictions dropped from census
+    status: Optional[str] = None  # lifecycle: null = active, "inactive" = dropped from census
+    wiki_url: Optional[str] = None  # Wikipedia page URL
+    generated_comments: Optional[str] = None  # script-generated notes (e.g. wiki URL candidates); replaced each run
+    issues: Optional[List[str]] = None  # detected problems e.g. ["ocdid_collision", "no_wiki_match"]; replaced each run
+    comments: Optional[str] = None  # free-form human notes; NEVER overwritten by scripts
 
 class Office(BaseModel):
     name: str
