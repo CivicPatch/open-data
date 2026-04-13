@@ -2,7 +2,7 @@ import json
 import sys
 import yaml
 from shared.utils import id_utils
-from shared.utils.review_utils import ReviewDecision, generate_review, generate_review_table_markdown
+from shared.utils.review_utils import ReviewDecision, ReviewInputs, generate_review, generate_review_table_markdown
 
 
 def generate_review_comment(pipeline_context: dict, people: list) -> ReviewDecision:
@@ -15,13 +15,16 @@ def generate_review_comment(pipeline_context: dict, people: list) -> ReviewDecis
     )
     filtered_researched_people = [p for p in researched_people if p.get("name") != "Vacant Vacant"]
 
-    identities = (
+    config = (
         pipeline_context.get("data", {})
         .get("format_output_step", {})
         .get("config", {})
-        .get("identities", {})
     )
-    review = generate_review(filtered_researched_people, people, identities)
+    inputs = ReviewInputs(
+        identities=config.get("identities", {}),
+        unique_roles=config.get("unique_roles", []),
+    )
+    review = generate_review(filtered_researched_people, people, inputs)
     issues = review["issues"]
     identity_table = generate_review_table_markdown(review["people_by_source"])
 
