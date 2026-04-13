@@ -84,17 +84,17 @@ jobs:
         run: |
           uv run python scripts/github_actions/validate_jurisdiction.py ${{ github.event.inputs.jurisdiction_ocdid }}
 
-      - name: Get branch name
-        id: extract_branch
-        run: |
-          BRANCH_NAME=$(uv run python -c "from shared.utils.id_utils import make_job_branch; print(make_job_branch('${{ github.event.inputs.jurisdiction_ocdid }}', '${{ github.event.inputs.request_id }}'))")
-          echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
-
       - name: Get jurisdiction folder
         id: get-jurisdiction-folder
         run: |
           JURISDICTION_FOLDER=$(uv run python scripts/github_actions/get_jurisdiction_folder.py "${{ github.event.inputs.jurisdiction_ocdid }}")
           echo "jurisdiction-folder=$JURISDICTION_FOLDER" >> "$GITHUB_OUTPUT"
+
+      - name: Get branch name
+        id: extract_branch
+        run: |
+          BRANCH_NAME="job/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}/${{ github.event.inputs.request_id }}"
+          echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
       - name: Create a PR
         id: create-pr
