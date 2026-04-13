@@ -1,6 +1,7 @@
 import sys
-import os
-from scripts.utils import jurisdiction_ocdid_to_folder
+
+from shared.utils.id_utils import jurisdiction_ocdid_to_folder
+
 
 def get_jurisdiction_folder(jurisdiction_ocdid: str) -> str:
     """
