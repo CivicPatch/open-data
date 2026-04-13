@@ -84,16 +84,13 @@ jobs:
         run: |
           uv run python scripts/github_actions/validate_jurisdiction.py ${{ github.event.inputs.jurisdiction_ocdid }}
 
-      # TODO: move this to a shared utils package
-      - name: Get branch name from zip_file_url
+      - name: Get branch name
         id: extract_branch
         run: |
-          ZIP_FILE=$(basename "${{ github.event.inputs.zip_file_url }}")
-          BRANCH_NAME="${ZIP_FILE%%.zip*}"  # Remove everything starting from .zip
-          BRANCH_NAME="${BRANCH_NAME#artifact_}"  # Remove artifact_ prefix if present
+          BRANCH_NAME=$(uv run python -c "from shared.utils.id_utils import make_job_branch; print(make_job_branch('${{ github.event.inputs.jurisdiction_ocdid }}', '${{ github.event.inputs.request_id }}'))")
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
-      - name: Get jurisdiction_folder
+      - name: Get jurisdiction folder
         id: get-jurisdiction-folder
         run: |
           JURISDICTION_FOLDER=$(uv run python scripts/github_actions/get_jurisdiction_folder.py "${{ github.event.inputs.jurisdiction_ocdid }}")
