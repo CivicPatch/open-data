@@ -268,7 +268,10 @@ def run(
     known_jurisdiction_ids = set(jurisdictions.keys())
 
     # ── Load + validate CP YMLs ───────────────────────────────────────────────
-    local_files = sorted(Path(local_dir).glob("*.yml")) + sorted(Path(local_dir).glob("*.yaml"))
+    local_files = [
+        p for p in sorted(Path(local_dir).glob("*.yml")) + sorted(Path(local_dir).glob("*.yaml"))
+        if p.name != "config.yml"
+    ]
     if not local_files:
         print(f"ERROR: no .yml files found in {local_dir}")
         sys.exit(1)
