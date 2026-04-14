@@ -1,6 +1,7 @@
 import sys
 import yaml
 from shared.utils import id_utils
+from shared.utils.review_utils import markdown_url_list
 
 
 def generate_data_comment(people: list) -> str:
@@ -25,17 +26,12 @@ def generate_data_comment(people: list) -> str:
         term_dates = f"{person.get('start_date') or 'N/A'} - {person.get('end_date') or 'N/A'}"
         image_url = person.get("image")
         image = f"![image of {name}]({image_url})" if image_url else "N/A"
-        source_urls = to_markdown_list(person.get("source_urls") or [])
+        source_urls = markdown_url_list(person.get("source_urls") or [])
 
         table_rows += f"| **{name}** | {office_name} | {divisions} | {emails} | {phones} | {urls} | {term_dates} | {image} | {source_urls} |\n"
 
     return table_header + table_rows
 
-
-def to_markdown_list(items: list) -> str:
-    if not items:
-        return "N/A"
-    return "<br>".join(f"[Link]({item})" for item in items)
 
 
 def main():
