@@ -79,7 +79,9 @@ def main():
                 meta_entry["updated_at"] = jurisdiction_updated_at
                 updated_jurisdiction_ocdids.add(jurisdiction_ocdid)
                 try:
-                    people = process_jurisdiction(jurisdiction_ocdid, jurisdiction_file, people)
+                    people, images_updated = process_jurisdiction(jurisdiction_ocdid, jurisdiction_file, people)
+                    if images_updated:
+                        save_yaml(people, jurisdiction_file)
                     if jurisdiction_ocdid not in metadata["jurisdictions_by_id"]:
                         metadata["jurisdictions_by_id"][jurisdiction_ocdid] = {}
                 except Exception as e:

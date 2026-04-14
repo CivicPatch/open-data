@@ -1,5 +1,4 @@
 import os
-import yaml
 import boto3
 import re
 
@@ -10,16 +9,12 @@ STORAGE_SECRET_ACCESS_KEY = os.getenv("STORAGE_SECRET_ACCESS_KEY")
 
 def process_jurisdiction(jurisdiction_ocdid, data_file_path, people):
     print("Processing jurisdiction:", jurisdiction_ocdid)
-    # Get the data_source_folder from the data_file hierarchy, everything
-    # is the same except for data_source vs data and the .yml file at the end
-    # Load YAML data
     if not os.path.exists(data_file_path):
         print(f"YAML file {data_file_path} not found.")
-        return
+        return people, False
 
-    update_images(people, data_file_path)
-
-    return people
+    updated = update_images(people)
+    return people, updated
 
 def extract_s3_key_with_regex(cdn_image, source_bucket):
     """
@@ -31,7 +26,7 @@ def extract_s3_key_with_regex(cdn_image, source_bucket):
         return match.group(1)  # Return the captured group (the key)
     return None
 
-def update_images(people, data_file_path):
+def update_images(people) -> bool:
     updated = False
 
     # Setup boto3 client for S3-compatible storage
@@ -84,8 +79,4 @@ def update_images(people, data_file_path):
         person["cdn_image"] = friendly_url
         updated = True
 
-    # Write back only if changes were made
-    if updated:
-        with open(data_file_path, "w") as f:
-            yaml.dump(people, f, sort_keys=False)
-
+    return updated
