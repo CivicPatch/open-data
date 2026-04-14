@@ -2,6 +2,7 @@ import sys
 import os
 import json
 from shared.utils.id_utils import jurisdiction_ocdid_to_folder
+from shared.utils.review_utils import markdown_url_list, markdown_identities
 
 def pull_request_body_markdown(jurisdiction_ocdid: str, request_id: str) -> str:
     """
@@ -28,10 +29,10 @@ def pull_request_body_markdown(jurisdiction_ocdid: str, request_id: str) -> str:
     jurisdiction_url = config.get("url", "N/A")
     jurisdiction_name = config.get("name", "Unknown Jurisdiction")
     jurisdiction_source_urls = config.get("source_urls", [])
-    jurisdiction_identities = config.get("identities", [])
+    jurisdiction_identities = config.get("identities", {})
 
-    source_urls_str = markdown_list_br(jurisdiction_source_urls)
-    identities_str = markdown_list_br(jurisdiction_identities)
+    source_urls_str = markdown_url_list(jurisdiction_source_urls)
+    identities_str = markdown_identities(jurisdiction_identities)
 
     jurisdiction_page_url = get_jurisdiction_page_url(jurisdiction_ocdid)
 
@@ -59,8 +60,6 @@ def get_jurisdiction_page_url(jurisdiction_ocdid: str) -> str:
     folder = jurisdiction_ocdid_to_folder(jurisdiction_ocdid)
     return f"https://civicpatch.org/{folder}"
 
-def markdown_list_br(items):
-    return "<br>".join(str(item) for item in items) if items else "N/A"
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
