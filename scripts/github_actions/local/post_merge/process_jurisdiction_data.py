@@ -1,6 +1,7 @@
 import os
 import boto3
 import re
+from botocore.exceptions import ClientError
 
 FRIENDLY_STORAGE_HOST = os.getenv("FRIENDLY_STORAGE_HOST")
 STORAGE_ENDPOINT = os.getenv("STORAGE_ENDPOINT")
@@ -42,6 +43,8 @@ def update_images(people) -> bool:
     dest_bucket = "civicpatch"
 
     for person in people:
+        if not isinstance(person, dict):
+            continue
         cdn_image = person.get("cdn_image")
         if not cdn_image or source_bucket not in cdn_image:
             continue
@@ -67,11 +70,12 @@ def update_images(people) -> bool:
                 Key=output_key,
             )
             print(f"Copied {input_key} from {source_bucket} to {dest_bucket} as {output_key}")
-            # Delete the original object after successful copy
-            #s3.delete_object(Bucket=source_bucket, Key=input_key)
-            #print(f"Deleted {input_key} from {source_bucket}")
-        except Exception as e:
-            print(f"Failed to copy/delete {input_key}: {e}")
+        except ClientError as e:
+            code = e.response["Error"]["Code"]
+            if code in ("NoSuchKey", "404"):
+                print(f"WARNING: image not found in {source_bucket}, skipping: {input_key}")
+            else:
+                print(f"WARNING: failed to copy {input_key} ({code}): {e}")
             continue
 
         # Update the cdn_image URL to the new bucket
