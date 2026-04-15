@@ -64,7 +64,7 @@ def main():
     jurisdiction_ocdid = sys.argv[1]
     folder = id_utils.jurisdiction_ocdid_to_folder(jurisdiction_ocdid)
 
-    context_path = f"data_source/{folder}/workflow_context.json"
+    context_path = f"data_source/{folder}/pipeline_run_context.json"
     data_path = f"data/{folder}.yml"
 
     with open(context_path, "r") as f:
