@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-15 23:24 UTC
+Generated: 2026-04-15 23:25 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 89 | 13 | 1,211 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 108 | 15 | 1,211 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-15 23:24 UTC
 ### mi
 
 <details>
-<summary>1198 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 6 in CP, not in external</summary>
+<summary>1196 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 6 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1028,7 +1028,6 @@ Generated: 2026-04-15 23:24 UTC
 - ocd-jurisdiction/country:us/state:mi/place:decatur/government
 - ocd-jurisdiction/country:us/state:mi/place:deckerville/government
 - ocd-jurisdiction/country:us/state:mi/place:deerfield/government
-- ocd-jurisdiction/country:us/state:mi/place:detroit/government
 - ocd-jurisdiction/country:us/state:mi/place:dewitt/government
 - ocd-jurisdiction/country:us/state:mi/place:dexter/government
 - ocd-jurisdiction/country:us/state:mi/place:dimondale/government
@@ -1148,7 +1147,6 @@ Generated: 2026-04-15 23:24 UTC
 - ocd-jurisdiction/country:us/state:mi/place:lake_orion/government
 - ocd-jurisdiction/country:us/state:mi/place:lakeview/government
 - ocd-jurisdiction/country:us/state:mi/place:lakewood_club/government
-- ocd-jurisdiction/country:us/state:mi/place:lansing/government
 - ocd-jurisdiction/country:us/state:mi/place:lapeer/government
 - ocd-jurisdiction/country:us/state:mi/place:lathrup_village/government
 - ocd-jurisdiction/country:us/state:mi/place:laurium/government
