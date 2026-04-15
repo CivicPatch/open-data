@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-15 23:13 UTC
+Generated: 2026-04-15 23:14 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 75 | 11 | 1,211 | 1,773 | 46 | 5 | 535 | 67% |
+| mi | 82 | 12 | 1,211 | 1,773 | 46 | 5 | 535 | 67% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-15 23:13 UTC
 ### mi
 
 <details>
-<summary>1200 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 5 in CP, not in external</summary>
+<summary>1199 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 6 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -601,7 +601,6 @@ Generated: 2026-04-15 23:13 UTC
 - ocd-jurisdiction/country:us/state:mi/county:macomb/place:chesterfield/government
 - ocd-jurisdiction/country:us/state:mi/county:macomb/place:harrison_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:macomb/place:lenox/government
-- ocd-jurisdiction/country:us/state:mi/county:macomb/place:macomb/government
 - ocd-jurisdiction/country:us/state:mi/county:macomb/place:ray/government
 - ocd-jurisdiction/country:us/state:mi/county:macomb/place:richmond/government
 - ocd-jurisdiction/country:us/state:mi/county:macomb/place:shelby_charter/government
@@ -1382,7 +1381,7 @@ Generated: 2026-04-15 23:13 UTC
 | ocd-jurisdiction/country:us/state:mi/place:sault_ste_marie/government | ocd-jurisdiction/country:us/state:mi/county:alcona/place:harrisville/government |
 | ocd-jurisdiction/country:us/state:mi/place:st_charles/government | ocd-jurisdiction/country:us/state:mi/county:alcona/place:haynes/government |
 | ocd-jurisdiction/country:us/state:mi/place:st_clair/government | ocd-jurisdiction/country:us/state:mi/county:macomb/place:clinton_charter/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_clair_shores/government |  |
+| ocd-jurisdiction/country:us/state:mi/place:st_clair_shores/government | ocd-jurisdiction/country:us/state:mi/county:macomb/place:macomb/government |
 | ocd-jurisdiction/country:us/state:mi/place:st_ignace/government |  |
 | ocd-jurisdiction/country:us/state:mi/place:st_johns/government |  |
 | ocd-jurisdiction/country:us/state:mi/place:st_joseph/government |  |
