@@ -76,7 +76,6 @@ def main():
 
             meta_updated_at = meta_entry.get('updated_at')
             if meta_updated_at != jurisdiction_updated_at:
-                meta_entry["updated_at"] = jurisdiction_updated_at
                 updated_jurisdiction_ocdids.add(jurisdiction_ocdid)
                 try:
                     people, images_updated = process_jurisdiction(jurisdiction_ocdid, jurisdiction_file, people)
@@ -84,8 +83,10 @@ def main():
                         save_yaml(people, jurisdiction_file)
                     if jurisdiction_ocdid not in metadata["jurisdictions_by_id"]:
                         metadata["jurisdictions_by_id"][jurisdiction_ocdid] = {}
+                    meta_entry["updated_at"] = jurisdiction_updated_at
                 except Exception as e:
                     print(f"Error processing {jurisdiction_ocdid}: {e}")
+                    raise
 
         # Load jurisdictions.yml for URL lookup
         jurisdictions_data = load_yaml(jurisdictions_path) if os.path.exists(jurisdictions_path) else {}
