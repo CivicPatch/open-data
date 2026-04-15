@@ -19,17 +19,18 @@ def pull_request_body_markdown(jurisdiction_ocdid: str, request_id: str) -> str:
 
     jurisdiction_folder = jurisdiction_ocdid_to_folder(jurisdiction_ocdid)
     jurisdiction_data_source_folder = os.path.join("data_source", jurisdiction_folder)
-    workflow_context_path = os.path.join(jurisdiction_data_source_folder, "workflow_context.json")
+    workflow_context_path = os.path.join(jurisdiction_data_source_folder, "pipeline_run_context.json")
     with open(workflow_context_path, "r") as f:
         workflow_context = json.load(f)
 
-    config = workflow_context.get("data", {}).get("format_output_step", {}).get("config", {})
+    data = workflow_context.get("data", {})
+    config = data.get("config", {})
+    research = data.get("research_municipality_step", {})
 
-    # Extract relevant information from the config
     jurisdiction_url = config.get("url", "N/A")
     jurisdiction_name = config.get("name", "Unknown Jurisdiction")
-    jurisdiction_source_urls = config.get("source_urls", [])
-    jurisdiction_identities = config.get("identities", {})
+    jurisdiction_source_urls = research.get("source_urls") or config.get("source_urls") or []
+    jurisdiction_identities = research.get("identities", {})
 
     source_urls_str = markdown_url_list(jurisdiction_source_urls)
     identities_str = markdown_identities(jurisdiction_identities)
