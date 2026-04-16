@@ -22,6 +22,7 @@ def load_yaml(path):
         return yaml_ruamel.load(f)
 
 def save_yaml(data, path):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w') as f:
         yaml_ruamel.dump(data, f)
 
