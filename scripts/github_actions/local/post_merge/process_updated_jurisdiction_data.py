@@ -55,7 +55,7 @@ def main():
         if os.path.exists(metadata_path):
             metadata = load_yaml(metadata_path)
         else:
-            continue
+            metadata = yaml_ruamel.load("jurisdictions_by_id: {}\n")
 
         print(f"Processing {len(jurisdiction_files)} jurisdiction files for state {state}...")
 
