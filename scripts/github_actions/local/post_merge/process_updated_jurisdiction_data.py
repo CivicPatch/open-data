@@ -83,7 +83,7 @@ def main():
                     if images_updated:
                         save_yaml(people, jurisdiction_file)
                     if jurisdiction_ocdid not in metadata["jurisdictions_by_id"]:
-                        metadata["jurisdictions_by_id"][jurisdiction_ocdid] = {}
+                        metadata["jurisdictions_by_id"][jurisdiction_ocdid] = meta_entry
                     meta_entry["updated_at"] = jurisdiction_updated_at
                 except Exception as e:
                     print(f"Error processing {jurisdiction_ocdid}: {e}")

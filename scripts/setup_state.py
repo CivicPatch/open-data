@@ -467,6 +467,40 @@ def _run_tml_transform(state: str):
     module.transform_file(str(raw_path), str(output_path), state)
 
 
+def create_or_update_jurisdiction_metadata(state: str):
+    jurisdictions_path = PROJECT_ROOT / "data_source" / state / "jurisdictions.yml"
+    metadata_path = PROJECT_ROOT / "data_source" / state / "jurisdictions_metadata.yml"
+
+    if not jurisdictions_path.exists():
+        print(f"No jurisdictions.yml found for {state}, skipping metadata creation.")
+        return
+
+    with open(jurisdictions_path) as f:
+        jurisdictions_doc = ryaml.load(f)
+
+    jurisdictions = jurisdictions_doc.get("jurisdictions", []) if jurisdictions_doc else []
+
+    if metadata_path.exists():
+        with open(metadata_path) as f:
+            metadata = ryaml.load(f)
+        if not metadata:
+            metadata = ryaml.load("jurisdictions_by_id: {}\n")
+    else:
+        metadata = ryaml.load("jurisdictions_by_id: {}\n")
+
+    for jurisdiction in jurisdictions:
+        ocdid = jurisdiction.get("id")
+        if not ocdid or ocdid in metadata["jurisdictions_by_id"]:
+            continue
+        metadata["jurisdictions_by_id"][ocdid] = {
+            "jurisdiction_ocdid": ocdid,
+            "child_divisions": [],
+        }
+
+    with open(metadata_path, "w") as f:
+        ryaml.dump(metadata, f)
+
+
 def run_validation_transforms(state: str):
     sources = state_configs[state].get("validation_sources", ["google"])
     for source in sources:
@@ -526,6 +560,7 @@ if __name__ == "__main__":
 
     preflight_check(args.state)
     pull_jurisdiction_data(args.state, limit=args.limit)
+    create_or_update_jurisdiction_metadata(args.state)
     run_validation_transforms(args.state)
     for state in discover_states():
         compare_run_state(state)
