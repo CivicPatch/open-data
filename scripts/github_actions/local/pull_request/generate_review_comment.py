@@ -1,30 +1,23 @@
 import json
 import sys
 import yaml
-from shared.utils import id_utils
+from shared.utils import config_utils, id_utils
 from shared.utils.review_utils import ReviewDecision, ReviewInputs, generate_review, generate_review_table_markdown
 
 
 def generate_review_comment(pipeline_context: dict, people: list) -> ReviewDecision:
     all_sources = {url for person in people for url in (person.get("source_urls") or [])}
 
-    researched_people = (
-        pipeline_context.get("data", {})
-        .get("research_municipality_step", {})
-        .get("elected_officials", [])
-    )
-    filtered_researched_people = [p for p in researched_people if p.get("name") != "Vacant Vacant"]
+    research_step = pipeline_context.get("data", {}).get("research_municipality_step", {})
+    identities = research_step.get("identities", {})
+    reference_people = [{"name": n} for n in identities]
+    origin_source = research_step.get("origin_source", "google_gemini")
 
-    config = (
-        pipeline_context.get("data", {})
-        .get("format_output_step", {})
-        .get("config", {})
-    )
     inputs = ReviewInputs(
-        identities=config.get("identities", {}),
-        unique_roles=config.get("unique_roles", []),
+        identities=identities,
+        unique_roles=config_utils.get_unique_roles(),
     )
-    review = generate_review(filtered_researched_people, people, inputs)
+    review = generate_review(reference_people, people, inputs, origin_source)
     issues = review["issues"]
     identity_table = generate_review_table_markdown(review["people_by_source"])
 
@@ -46,7 +39,8 @@ def generate_review_comment(pipeline_context: dict, people: list) -> ReviewDecis
         markdown.append(f"- {source}")
     markdown.append("\n---\n")
 
-    markdown.append("### Identity Comparison\n")
+    origin_label = "existing data" if review["origin_source"] == "existing" else "Google Gemini"
+    markdown.append(f"### Identity Comparison\n_Compared against: {origin_label}_\n")
     markdown.append(identity_table)
     markdown.append("\n---\n")
 
