@@ -38,10 +38,7 @@ def find_state_from_jurisdiction_file(jurisdiction_file):
 def main():
     # Find all jurisdiction files
     updated_jurisdiction_ocdids = set()
-    jurisdiction_files = [
-        f for f in glob.glob(LOCAL_PATTERN, recursive=True)
-        if os.path.basename(f) != "config.yml"
-    ]
+    jurisdiction_files = list(glob.glob(LOCAL_PATTERN, recursive=True))
     # Group jurisdiction files by state
     state_to_jurisdiction_files = {}
     for jurisdiction_file in jurisdiction_files:
