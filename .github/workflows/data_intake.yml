@@ -22,6 +22,10 @@ on:
       zip_file_url:
         description: "Presigned URL of the ZIP file containing YAML data"
         required: true
+      env:
+        description: "Source environment (production or development)"
+        required: false
+        default: "production"
 
 jobs:
   data-intake:
@@ -114,10 +118,12 @@ jobs:
 
           PR_BODY=$(uv run python scripts/github_actions/pull_request_body_markdown.py "${{ github.event.inputs.jurisdiction_ocdid }}" "${{ github.event.inputs.request_id }}")
 
+          gh label create "env:${{ github.event.inputs.env }}" --color "FBCA04" || true
           github_pull_request_url=$(gh pr create \
             --title "Data intake for ${{ github.event.inputs.jurisdiction_ocdid }} by ${{ github.event.inputs.user_email }}" \
             --body "$PR_BODY" \
-            --base main
+            --base main \
+            --label "env:${{ github.event.inputs.env }}"
           )
           github_pr_number=$(basename "$github_pull_request_url")
           echo "pr_number=$github_pr_number" >> $GITHUB_OUTPUT
