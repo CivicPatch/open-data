@@ -46,7 +46,7 @@ def main():
         folder = jurisdiction_ocdid_to_folder(FILTER_OCDID)
         all_files = [str(ROOT / "data" / f"{folder}.yml")]
     else:
-        all_files = sorted(f for f in glob.glob(DATA_PATTERN, recursive=True) if not f.endswith("config.yml"))
+        all_files = sorted(glob.glob(DATA_PATTERN, recursive=True))
 
     candidates = []
     for path in all_files:
