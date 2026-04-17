@@ -7,9 +7,6 @@ env:
 on:
   workflow_dispatch:
     inputs:
-      server_url:
-        description: "CivicPatch Server URL (e.g. https://civicpatch.example.com)"
-        required: true
       user_email:
         description: "Email associated with your CivicPatch account"
         required: true
@@ -103,7 +100,6 @@ jobs:
       - name: Create a PR
         id: create-pr
         env:
-          SERVER_URL: ${{ github.event.inputs.server_url }}
           USER_EMAIL: ${{ github.event.inputs.user_email }}
           GH_TOKEN: ${{ steps.generate-pipeline-token.outputs.token }}
         run: |
