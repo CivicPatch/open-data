@@ -41,6 +41,7 @@ def update_jurisdiction_url(jurisdiction_ocdid: str, context_json_path: str) -> 
 
     yaml = YAML()
     yaml.preserve_quotes = True
+    yaml.width = 4096
     with open(jurisdictions_path) as f:
         data = yaml.load(f)
 
