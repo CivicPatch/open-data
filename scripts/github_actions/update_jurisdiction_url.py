@@ -8,6 +8,7 @@ Usage:
 
 import json
 import sys
+from io import StringIO
 from pathlib import Path
 
 from ruamel.yaml import YAML
@@ -51,10 +52,21 @@ def update_jurisdiction_url(jurisdiction_ocdid: str, context_json_path: str) -> 
         if entry.get("url") == resolved_url:
             print(f"URL unchanged for {jurisdiction_ocdid}: {resolved_url}")
         else:
-            print(f"Updating URL for {jurisdiction_ocdid}: {entry['url']} -> {resolved_url}")
+            old_url = entry["url"]
             entry["url"] = resolved_url
-            with open(jurisdictions_path, "w") as f:
-                yaml.dump(data, f)
+            stream = StringIO()
+            yaml.dump(data, stream)
+            new_text = stream.getvalue()
+            old_text = jurisdictions_path.read_text(encoding="utf-8")
+            changed_lines = [
+                i + 1 for i, (a, b) in enumerate(zip(old_text.splitlines(), new_text.splitlines()))
+                if a != b
+            ] + ([] if len(old_text.splitlines()) == len(new_text.splitlines()) else ["line count differs"])
+            if len(changed_lines) != 1:
+                print(f"ERROR: expected exactly 1 changed line, got {len(changed_lines)}: {changed_lines}")
+                sys.exit(1)
+            print(f"Updating URL for {jurisdiction_ocdid}: {old_url} -> {resolved_url}")
+            jurisdictions_path.write_text(new_text, encoding="utf-8")
             print(f"Updated {jurisdictions_path}")
         return
 

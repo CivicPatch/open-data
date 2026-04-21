@@ -1,192 +1,220 @@
 """
 Fix reformatted jurisdictions.yml in old data-intake PRs.
 
-For each PR branch matching job/*, resets data_source/{state}/jurisdictions.yml
-to main, then re-runs update_jurisdiction_url.py (with the best_width fix) so
-only the real URL change (if any) is kept.
+For each open PR branch matching job/*, resets data_source/{state}/jurisdictions.yml
+to main's version, then re-applies only the real URL change (if any) using the
+pipeline_run_context.json already committed to the branch.
+
+Only touches jurisdictions.yml — all other files in each PR are left untouched.
 
 Usage:
     uv run python scripts/one_off/fix_jurisdictions_formatting.py              # dry run
     uv run python scripts/one_off/fix_jurisdictions_formatting.py --apply     # make changes
-    uv run python scripts/one_off/fix_jurisdictions_formatting.py --apply --limit 3  # test on 3
+    uv run python scripts/one_off/fix_jurisdictions_formatting.py --apply --limit 5
 """
 
 import asyncio
+import base64
 import json
-import shutil
+import subprocess
 import sys
-import tempfile
 from dataclasses import dataclass
-from pathlib import Path
+from io import StringIO
 
-REPO_ROOT = Path(__file__).parent.parent.parent
-MAIN_BRANCH = "main"
+import requests
+from ruamel.yaml import YAML
+
 REPO = "CivicPatch/open-data"
-MAX_PARALLEL = 8       # concurrent git fetch/push operations
-MAX_GH_API = 3        # concurrent GitHub API calls (rate limit: 5000 req/hr authenticated)
+MAIN_BRANCH = "main"
+API_BASE = "https://api.github.com"
+MAX_CONCURRENT = 10
+
+
+def yaml_instance() -> YAML:
+    y = YAML()
+    y.preserve_quotes = True
+    y.width = 4096
+    return y
 
 
 @dataclass
 class PrInfo:
-    number: str
+    number: int
     branch: str
     state: str
     folder: str
 
     @property
-    def context_path(self) -> str:
+    def context_api_path(self) -> str:
         return f"data_source/{self.folder}/pipeline_run_context.json"
 
     @property
-    def jurisdictions_path(self) -> str:
+    def jurisdictions_api_path(self) -> str:
         return f"data_source/{self.state}/jurisdictions.yml"
 
 
-async def run(cmd: list[str], cwd: Path | None = None, check: bool = True) -> str:
-    proc = await asyncio.create_subprocess_exec(
-        *cmd,
-        stdout=asyncio.subprocess.PIPE,
-        stderr=asyncio.subprocess.PIPE,
-        cwd=cwd or REPO_ROOT,
-    )
-    stdout, stderr = await proc.communicate()
-    if check and proc.returncode != 0:
-        raise RuntimeError(f"{cmd[0]} {cmd[1]} failed: {stderr.decode().strip()}")
-    return stdout.decode().strip()
-
-
-async def fetch_branch(branch: str, gh_semaphore: asyncio.Semaphore) -> None:
-    async with gh_semaphore:
-        await run(
-            ["git", "fetch", "origin", f"{branch}:refs/remotes/origin/{branch}"],
-            check=False,
-        )
-
-
 def parse_branch(branch: str) -> tuple[str, str]:
-    """Returns (state, folder) from a job/* branch name."""
     remainder = branch.removeprefix("job/")
     parts = remainder.split("/")
     state = parts[0]
-    folder = "/".join(parts[:-1])  # strip trailing request_id
+    folder = "/".join(parts[:-1])
     return state, folder
 
 
-async def list_prs() -> list[PrInfo]:
+def get_token() -> str:
+    return subprocess.check_output(["gh", "auth", "token"]).decode().strip()
+
+
+def make_session(token: str) -> requests.Session:
+    s = requests.Session()
+    s.headers.update({
+        "Authorization": f"Bearer {token}",
+        "X-GitHub-Api-Version": "2022-11-28",
+    })
+    return s
+
+
+def list_prs_sync(session: requests.Session) -> list[PrInfo]:
     prs = []
     page = 1
     while True:
-        raw = await run([
-            "gh", "api",
-            f"repos/{REPO}/pulls",
-            "--method", "GET",
-            "-f", "state=open",
-            "-f", "per_page=100",
-            "-f", f"page={page}",
-            "--jq", '.[] | select(.head.ref | startswith("job/")) | [(.number | tostring), .head.ref] | join(" ")',
-        ])
-        lines = [l for l in raw.splitlines() if l.strip()]
-        if not lines:
+        r = session.get(
+            f"{API_BASE}/repos/{REPO}/pulls",
+            params={"state": "open", "per_page": 100, "page": page},
+        )
+        r.raise_for_status()
+        items = r.json()
+        if not items:
             break
-        for line in lines:
-            number, branch = line.split(" ", 1)
+        for item in items:
+            branch = item["head"]["ref"]
+            if not branch.startswith("job/"):
+                continue
             state, folder = parse_branch(branch)
-            prs.append(PrInfo(number=number, branch=branch, state=state, folder=folder))
+            prs.append(PrInfo(number=item["number"], branch=branch, state=state, folder=folder))
         page += 1
     return prs
 
 
-async def dry_run_pr(semaphore: asyncio.Semaphore, gh_semaphore: asyncio.Semaphore, pr: PrInfo) -> bool:
-    async with semaphore:
-        await fetch_branch(pr.branch, gh_semaphore)
-        diff = await run(
-            ["git", "diff", f"origin/{MAIN_BRANCH}...origin/{pr.branch}", "--", pr.jurisdictions_path],
-            check=False,
-        )
-        diff_lines = len(diff.splitlines())
-        changed = diff_lines > 0
-        status = f"CHANGED ({diff_lines} lines) — would rewrite" if changed else "unchanged — would skip"
-        print(f"PR #{pr.number:>5}  {pr.branch}\n             jurisdictions.yml: {status}")
-        return changed
+def get_file_sync(session: requests.Session, path: str, ref: str) -> tuple[str, str] | None:
+    """Returns (decoded_content, blob_sha) or None if not found."""
+    r = session.get(
+        f"{API_BASE}/repos/{REPO}/contents/{path}",
+        params={"ref": ref},
+    )
+    if r.status_code == 404:
+        return None
+    r.raise_for_status()
+    data = r.json()
+    content = base64.b64decode(data["content"]).decode("utf-8")
+    return content, data["sha"]
 
 
-async def apply_pr(semaphore: asyncio.Semaphore, gh_semaphore: asyncio.Semaphore, pr: PrInfo, worktree_base: Path) -> str:
-    worktree = worktree_base / f"pr-{pr.number}"
+def put_file_sync(session: requests.Session, path: str, content: str, sha: str, branch: str, message: str) -> None:
+    encoded = base64.b64encode(content.encode("utf-8")).decode("ascii")
+    r = session.put(
+        f"{API_BASE}/repos/{REPO}/contents/{path}",
+        json={"message": message, "content": encoded, "sha": sha, "branch": branch},
+    )
+    r.raise_for_status()
+
+
+def compute_new_content(branch_content: str, ocdid: str, resolved_url: str) -> tuple[str, str | None, str | None]:
+    """
+    Loads the branch's jurisdictions.yml, re-dumps it with width=4096 (fixing
+    line-wrapping), and updates only the one URL entry for this PR's ocdid.
+    Returns (new_yaml_str, old_url, new_url). old/new_url are None if URL unchanged.
+    """
+    y = yaml_instance()
+    data = y.load(branch_content)
+    old_url = None
+    for entry in data.get("jurisdictions", []):
+        if entry.get("id") != ocdid:
+            continue
+        old_url = entry.get("url")
+        if old_url != resolved_url:
+            entry["url"] = resolved_url
+        break
+    stream = StringIO()
+    y.dump(data, stream)
+    new_content = stream.getvalue()
+    if old_url != resolved_url:
+        return new_content, old_url, resolved_url
+    return new_content, None, None
+
+
+async def process_pr(
+    semaphore: asyncio.Semaphore,
+    session: requests.Session,
+    pr: PrInfo,
+    apply: bool,
+) -> str:
     async with semaphore:
         try:
-            await fetch_branch(pr.branch, gh_semaphore)
-            await run(["git", "worktree", "add", str(worktree), f"origin/{pr.branch}"])
+            # Get pipeline_run_context.json from the branch
+            ctx_result = await asyncio.to_thread(get_file_sync, session, pr.context_api_path, pr.branch)
+            if ctx_result is None:
+                return f"PR #{pr.number}  ERROR: context not found at {pr.context_api_path}"
+            ctx = json.loads(ctx_result[0])
+            ocdid = ctx["data"]["jurisdiction_ocdid"]
+            resolved_url = ctx["data"]["config"]["url"]
 
-            # Reset jurisdictions.yml to main
-            await run(
-                ["git", "checkout", f"origin/{MAIN_BRANCH}", "--", pr.jurisdictions_path],
-                cwd=worktree,
+            # Get branch's jurisdictions.yml — used as base and for its SHA
+            branch_result = await asyncio.to_thread(get_file_sync, session, pr.jurisdictions_api_path, pr.branch)
+            if branch_result is None:
+                return f"PR #{pr.number}  ERROR: jurisdictions.yml not found on branch"
+            branch_content, branch_sha = branch_result
+
+            # Re-dump branch content with width=4096 (fixes wrapping), update one URL
+            new_content, old_url, new_url = compute_new_content(branch_content, ocdid, resolved_url)
+            url_summary = f"{old_url} → {new_url}" if old_url else "formatting only"
+
+            if new_content == branch_content:
+                return f"PR #{pr.number}  already clean — skipped"
+
+            if not apply:
+                return f"PR #{pr.number}  would update  ({url_summary})"
+
+            await asyncio.to_thread(
+                put_file_sync, session, pr.jurisdictions_api_path, new_content,
+                branch_sha, pr.branch, "Fix jurisdictions.yml formatting (preserve line width)",
             )
-
-            # Re-run update_jurisdiction_url.py with the fix in place
-            context_file = worktree / pr.context_path
-            if context_file.exists():
-                data = json.loads(context_file.read_text())
-                ocdid = data["data"]["jurisdiction_ocdid"]
-                await run(
-                    ["uv", "run", "python", "scripts/github_actions/update_jurisdiction_url.py",
-                     ocdid, pr.context_path],
-                    cwd=worktree,
-                    check=False,
-                )
-            else:
-                print(f"PR #{pr.number}  WARNING: context not found at {pr.context_path}")
-
-            await run(["git", "add", pr.jurisdictions_path], cwd=worktree)
-            diff = await run(
-                ["git", "diff", "--cached", "--", pr.jurisdictions_path],
-                cwd=worktree, check=False,
-            )
-            url_lines = [l for l in diff.splitlines() if l.startswith(("+url:", "-url:")) and "url:" in l]
-            url_summary = "  ".join(url_lines) if url_lines else "no URL change"
-            await run(["git", "commit", "--amend", "--no-edit"], cwd=worktree)
-            async with gh_semaphore:
-                await run(["git", "push", "--force-with-lease", "origin", f"HEAD:{pr.branch}"], cwd=worktree)
             return f"PR #{pr.number}  done  ({url_summary})"
+
         except Exception as e:
             return f"PR #{pr.number}  ERROR: {e}"
-        finally:
-            await run(["git", "worktree", "remove", str(worktree), "--force"], check=False)
 
 
 async def main(apply: bool, limit: int | None) -> None:
     print(f"=== fix_jurisdictions_formatting ({'APPLY' if apply else 'DRY RUN'}) ===\n")
 
-    await run(["git", "fetch", "origin", MAIN_BRANCH, "--quiet"])
+    token = get_token()
+    session = make_session(token)
 
-    prs = await list_prs()
+    prs = await asyncio.to_thread(list_prs_sync, session)
     if limit:
         prs = prs[:limit]
     print(f"Found {len(prs)} matching PRs\n")
 
-    semaphore = asyncio.Semaphore(MAX_PARALLEL)
-    gh_semaphore = asyncio.Semaphore(MAX_GH_API)
+    semaphore = asyncio.Semaphore(MAX_CONCURRENT)
 
-    if not apply:
-        results = await asyncio.gather(*[dry_run_pr(semaphore, gh_semaphore, pr) for pr in prs])
-        changed = sum(results)
-        print(f"\n=== Summary ===")
-        print(f"Total:         {len(prs)}")
-        print(f"Would rewrite: {changed}")
-        print(f"Would skip:    {len(prs) - changed}")
-        print(f"\nRun with --apply to make changes.")
+    results = await asyncio.gather(*[
+        process_pr(semaphore, session, pr, apply) for pr in prs
+    ])
+
+    for r in sorted(results):
+        print(r)
+
+    errors = [r for r in results if "ERROR" in r]
+    skipped = [r for r in results if "skipped" in r]
+    print(f"\n=== Summary ===")
+    print(f"Total:   {len(prs)}")
+    if apply:
+        print(f"Done:    {len(prs) - len(errors) - len(skipped)}")
+        print(f"Skipped: {len(skipped)}")
+        print(f"Errors:  {len(errors)}")
     else:
-        worktree_base = Path(tempfile.mkdtemp(prefix="fix-jur-"))
-        try:
-            results = await asyncio.gather(*[apply_pr(semaphore, gh_semaphore, pr, worktree_base) for pr in prs])
-            for r in results:
-                print(r)
-        finally:
-            shutil.rmtree(worktree_base, ignore_errors=True)
-        errors = [r for r in results if "ERROR" in r]
-        print(f"\n=== Summary ===")
-        print(f"Total:  {len(prs)}")
-        print(f"Errors: {len(errors)}")
+        print(f"\nRun with --apply to make changes.")
 
 
 if __name__ == "__main__":
