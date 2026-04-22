@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-22 23:10 UTC
+Generated: 2026-04-22 23:12 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 499 | 73 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 504 | 74 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-22 23:10 UTC
 ### mi
 
 <details>
-<summary>1137 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 34 in CP, not in external</summary>
+<summary>1136 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 35 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -632,7 +632,6 @@ Generated: 2026-04-22 23:10 UTC
 - ocd-jurisdiction/country:us/state:mi/county:mecosta/place:fork/government
 - ocd-jurisdiction/country:us/state:mi/county:mecosta/place:green_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:mecosta/place:martiny/government
-- ocd-jurisdiction/country:us/state:mi/county:mecosta/place:mecosta/government
 - ocd-jurisdiction/country:us/state:mi/county:mecosta/place:morton/government
 - ocd-jurisdiction/country:us/state:mi/county:mecosta/place:sheridan/government
 - ocd-jurisdiction/country:us/state:mi/county:menominee/place:gourley/government
@@ -1339,6 +1338,7 @@ Generated: 2026-04-22 23:10 UTC
 |  | ocd-jurisdiction/country:us/state:mi/county:lenawee/place:hudson/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:clinton_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:macomb/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:mecosta/place:mecosta/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:osceola/place:hartwick/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:osceola/place:osceola/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:ottawa/place:park/government |
