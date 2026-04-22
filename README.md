@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-22 22:36 UTC
+Generated: 2026-04-22 22:37 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 353 | 51 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 358 | 52 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-22 22:36 UTC
 ### mi
 
 <details>
-<summary>1159 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 25 in CP, not in external</summary>
+<summary>1158 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 26 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -526,7 +526,6 @@ Generated: 2026-04-22 22:36 UTC
 - ocd-jurisdiction/country:us/state:mi/county:kent/place:vergennes/government
 - ocd-jurisdiction/country:us/state:mi/county:keweenaw/place:allouez/government
 - ocd-jurisdiction/country:us/state:mi/county:keweenaw/place:eagle_harbor/government
-- ocd-jurisdiction/country:us/state:mi/county:keweenaw/place:grant/government
 - ocd-jurisdiction/country:us/state:mi/county:keweenaw/place:houghton/government
 - ocd-jurisdiction/country:us/state:mi/county:lake/place:elk/government
 - ocd-jurisdiction/country:us/state:mi/county:lapeer/place:almont/government
@@ -1352,6 +1351,7 @@ Generated: 2026-04-22 22:36 UTC
 |  | ocd-jurisdiction/country:us/state:mi/county:kent/place:gaines_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:kent/place:sparta/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:kent/place:tyrone/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:keweenaw/place:grant/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:lenawee/place:hudson/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:clinton_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:macomb/government |
