@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-22 23:30 UTC
+Generated: 2026-04-22 23:31 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 609 | 92 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 623 | 94 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-22 23:30 UTC
 ### mi
 
 <details>
-<summary>1118 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 43 in CP, not in external</summary>
+<summary>1116 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 44 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -481,7 +481,6 @@ Generated: 2026-04-22 23:30 UTC
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:napoleon/government
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:parma/government
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:pulaski/government
-- ocd-jurisdiction/country:us/state:mi/county:jackson/place:rives/government
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:sandstone/government
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:spring_arbor/government
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:summit/government
@@ -1164,7 +1163,6 @@ Generated: 2026-04-22 23:30 UTC
 - ocd-jurisdiction/country:us/state:mi/place:north_branch/government
 - ocd-jurisdiction/country:us/state:mi/place:northport/government
 - ocd-jurisdiction/country:us/state:mi/place:northville/government
-- ocd-jurisdiction/country:us/state:mi/place:norton_shores/government
 - ocd-jurisdiction/country:us/state:mi/place:norway/government
 - ocd-jurisdiction/country:us/state:mi/place:novi/government
 - ocd-jurisdiction/country:us/state:mi/place:oak_park/government
@@ -1312,6 +1310,7 @@ Generated: 2026-04-22 23:30 UTC
 |  | ocd-jurisdiction/country:us/state:mi/county:houghton/place:schoolcraft/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:ionia/place:campbell/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:jackson/place:norvell/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:jackson/place:rives/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:jackson/place:springport/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:blue_lake/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:clearwater/government |
