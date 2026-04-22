@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-22 21:57 UTC
+Generated: 2026-04-22 22:01 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 261 | 38 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 266 | 39 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-22 21:57 UTC
 ### mi
 
 <details>
-<summary>1172 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 18 in CP, not in external</summary>
+<summary>1171 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 19 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -510,7 +510,6 @@ Generated: 2026-04-22 21:57 UTC
 - ocd-jurisdiction/country:us/state:mi/county:kalamazoo/place:texas_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:kalamazoo/place:wakeshma/government
 - ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:bear_lake/government
-- ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:blue_lake/government
 - ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:boardman/government
 - ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:coldsprings/government
 - ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:excelsior/government
@@ -1356,10 +1355,11 @@ Generated: 2026-04-22 21:57 UTC
 | ocd-jurisdiction/country:us/state:mi/place:st_clair/government | ocd-jurisdiction/country:us/state:mi/county:antrim/place:custer/government |
 | ocd-jurisdiction/country:us/state:mi/place:st_clair_shores/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:williams_charter/government |
 | ocd-jurisdiction/country:us/state:mi/place:st_ignace/government | ocd-jurisdiction/country:us/state:mi/county:grand_traverse/place:garfield_charter/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_johns/government | ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:clearwater/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_joseph/government | ocd-jurisdiction/country:us/state:mi/county:kent/place:caledonia/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_louis/government | ocd-jurisdiction/country:us/state:mi/county:kent/place:tyrone/government |
-| ocd-jurisdiction/country:us/state:mi/place:village_of_douglas/government | ocd-jurisdiction/country:us/state:mi/county:macomb/place:clinton_charter/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_johns/government | ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:blue_lake/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_joseph/government | ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:clearwater/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_louis/government | ocd-jurisdiction/country:us/state:mi/county:kent/place:caledonia/government |
+| ocd-jurisdiction/country:us/state:mi/place:village_of_douglas/government | ocd-jurisdiction/country:us/state:mi/county:kent/place:tyrone/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:clinton_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:macomb/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:osceola/place:osceola/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:ottawa/place:park/government |
