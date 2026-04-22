@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-22 23:16 UTC
+Generated: 2026-04-22 23:18 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 522 | 77 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 529 | 78 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-22 23:16 UTC
 ### mi
 
 <details>
-<summary>1133 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 36 in CP, not in external</summary>
+<summary>1132 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 36 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1290,7 +1290,6 @@ Generated: 2026-04-22 23:16 UTC
 - ocd-jurisdiction/country:us/state:mi/place:webberville/government
 - ocd-jurisdiction/country:us/state:mi/place:west_branch/government
 - ocd-jurisdiction/country:us/state:mi/place:westland/government
-- ocd-jurisdiction/country:us/state:mi/place:westphalia/government
 - ocd-jurisdiction/country:us/state:mi/place:white_cloud/government
 - ocd-jurisdiction/country:us/state:mi/place:white_pigeon/government
 - ocd-jurisdiction/country:us/state:mi/place:whitehall/government
