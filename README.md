@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-22 23:23 UTC
+Generated: 2026-04-22 23:24 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 568 | 84 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 573 | 85 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-22 23:23 UTC
 ### mi
 
 <details>
-<summary>1126 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 38 in CP, not in external</summary>
+<summary>1125 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 38 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1012,7 +1012,6 @@ Generated: 2026-04-22 23:23 UTC
 - ocd-jurisdiction/country:us/state:mi/place:empire/government
 - ocd-jurisdiction/country:us/state:mi/place:escanaba/government
 - ocd-jurisdiction/country:us/state:mi/place:essexville/government
-- ocd-jurisdiction/country:us/state:mi/place:evart/government
 - ocd-jurisdiction/country:us/state:mi/place:fairgrove/government
 - ocd-jurisdiction/country:us/state:mi/place:farmington/government
 - ocd-jurisdiction/country:us/state:mi/place:farmington_hills/government
