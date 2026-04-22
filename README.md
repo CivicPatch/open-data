@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-22 23:41 UTC
+Generated: 2026-04-22 23:42 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 672 | 103 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 685 | 105 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-22 23:41 UTC
 ### mi
 
 <details>
-<summary>1107 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 49 in CP, not in external</summary>
+<summary>1105 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 50 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -781,7 +781,6 @@ Generated: 2026-04-22 23:41 UTC
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:birch_run/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:blumfield/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:brady/government
-- ocd-jurisdiction/country:us/state:mi/county:saginaw/place:bridgeport_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:buena_vista_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:carrollton/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:chesaning/government
@@ -914,7 +913,6 @@ Generated: 2026-04-22 23:41 UTC
 - ocd-jurisdiction/country:us/state:mi/place:bellaire/government
 - ocd-jurisdiction/country:us/state:mi/place:belleville/government
 - ocd-jurisdiction/country:us/state:mi/place:bellevue/government
-- ocd-jurisdiction/country:us/state:mi/place:benton_harbor/government
 - ocd-jurisdiction/country:us/state:mi/place:benzonia/government
 - ocd-jurisdiction/country:us/state:mi/place:berkley/government
 - ocd-jurisdiction/country:us/state:mi/place:berrien_springs/government
@@ -1327,6 +1325,7 @@ Generated: 2026-04-22 23:41 UTC
 |  | ocd-jurisdiction/country:us/state:mi/county:osceola/place:hartwick/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:osceola/place:osceola/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:ottawa/place:park/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:saginaw/place:bridgeport_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:saginaw/place:fremont/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:st._clair/place:st._clair/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:van_buren/place:decatur/government |
