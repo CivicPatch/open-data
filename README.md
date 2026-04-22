@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-22 23:27 UTC
+Generated: 2026-04-22 23:28 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 589 | 88 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 604 | 91 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-22 23:27 UTC
 ### mi
 
 <details>
-<summary>1122 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 40 in CP, not in external</summary>
+<summary>1119 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 42 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -363,7 +363,6 @@ Generated: 2026-04-22 23:27 UTC
 - ocd-jurisdiction/country:us/state:mi/county:clare/place:winterfield/government
 - ocd-jurisdiction/country:us/state:mi/county:clinton/place:bath_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:clinton/place:bengal/government
-- ocd-jurisdiction/country:us/state:mi/county:clinton/place:bingham/government
 - ocd-jurisdiction/country:us/state:mi/county:clinton/place:dallas/government
 - ocd-jurisdiction/country:us/state:mi/county:clinton/place:dewitt_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:clinton/place:duplain/government
@@ -462,7 +461,6 @@ Generated: 2026-04-22 23:27 UTC
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:vevay/government
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:white_oak/government
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:williamstown/government
-- ocd-jurisdiction/country:us/state:mi/county:ionia/place:campbell/government
 - ocd-jurisdiction/country:us/state:mi/county:ionia/place:odessa/government
 - ocd-jurisdiction/country:us/state:mi/county:ionia/place:orange/government
 - ocd-jurisdiction/country:us/state:mi/county:ionia/place:otisco/government
@@ -969,7 +967,6 @@ Generated: 2026-04-22 23:27 UTC
 - ocd-jurisdiction/country:us/state:mi/place:clayton/government
 - ocd-jurisdiction/country:us/state:mi/place:clifford/government
 - ocd-jurisdiction/country:us/state:mi/place:clinton/government
-- ocd-jurisdiction/country:us/state:mi/place:clio/government
 - ocd-jurisdiction/country:us/state:mi/place:coldwater/government
 - ocd-jurisdiction/country:us/state:mi/place:coloma/government
 - ocd-jurisdiction/country:us/state:mi/place:colon/government
@@ -1309,10 +1306,12 @@ Generated: 2026-04-22 23:27 UTC
 | ocd-jurisdiction/country:us/state:mi/place:st_johns/government | ocd-jurisdiction/country:us/state:mi/county:calhoun/place:marshall/government |
 | ocd-jurisdiction/country:us/state:mi/place:st_joseph/government | ocd-jurisdiction/country:us/state:mi/county:calhoun/place:newton/government |
 | ocd-jurisdiction/country:us/state:mi/place:st_louis/government | ocd-jurisdiction/country:us/state:mi/county:chippewa/place:detour/government |
-| ocd-jurisdiction/country:us/state:mi/place:village_of_douglas/government | ocd-jurisdiction/country:us/state:mi/county:genesee/place:richfield/government |
+| ocd-jurisdiction/country:us/state:mi/place:village_of_douglas/government | ocd-jurisdiction/country:us/state:mi/county:clinton/place:bingham/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:genesee/place:richfield/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:grand_traverse/place:garfield_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:houghton/place:portage_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:houghton/place:schoolcraft/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:ionia/place:campbell/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:jackson/place:norvell/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:jackson/place:springport/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:blue_lake/government |
