@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-22 23:22 UTC
+Generated: 2026-04-22 23:23 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 556 | 82 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 568 | 84 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-22 23:22 UTC
 ### mi
 
 <details>
-<summary>1128 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 37 in CP, not in external</summary>
+<summary>1126 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 38 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -591,7 +591,6 @@ Generated: 2026-04-22 23:22 UTC
 - ocd-jurisdiction/country:us/state:mi/county:manistee/place:cleon/government
 - ocd-jurisdiction/country:us/state:mi/county:manistee/place:filer_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:manistee/place:manistee/government
-- ocd-jurisdiction/country:us/state:mi/county:manistee/place:maple_grove/government
 - ocd-jurisdiction/country:us/state:mi/county:manistee/place:marilla/government
 - ocd-jurisdiction/country:us/state:mi/county:manistee/place:norman/government
 - ocd-jurisdiction/country:us/state:mi/county:manistee/place:onekama/government
@@ -1212,7 +1211,6 @@ Generated: 2026-04-22 23:22 UTC
 - ocd-jurisdiction/country:us/state:mi/place:posen/government
 - ocd-jurisdiction/country:us/state:mi/place:potterville/government
 - ocd-jurisdiction/country:us/state:mi/place:powers/government
-- ocd-jurisdiction/country:us/state:mi/place:quincy/government
 - ocd-jurisdiction/country:us/state:mi/place:ravenna/government
 - ocd-jurisdiction/country:us/state:mi/place:reading/government
 - ocd-jurisdiction/country:us/state:mi/place:reed_city/government
@@ -1331,6 +1329,7 @@ Generated: 2026-04-22 23:22 UTC
 |  | ocd-jurisdiction/country:us/state:mi/county:lenawee/place:hudson/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:clinton_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:macomb/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:manistee/place:maple_grove/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:mason/place:grant/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:mecosta/place:mecosta/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:osceola/place:hartwick/government |
