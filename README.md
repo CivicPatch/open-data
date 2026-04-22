@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-22 23:32 UTC
+Generated: 2026-04-22 23:34 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 631 | 96 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 643 | 98 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-22 23:32 UTC
 ### mi
 
 <details>
-<summary>1114 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 46 in CP, not in external</summary>
+<summary>1112 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 46 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -989,7 +989,6 @@ Generated: 2026-04-22 23:32 UTC
 - ocd-jurisdiction/country:us/state:mi/place:durand/government
 - ocd-jurisdiction/country:us/state:mi/place:east_grand_rapids/government
 - ocd-jurisdiction/country:us/state:mi/place:east_jordan/government
-- ocd-jurisdiction/country:us/state:mi/place:east_tawas/government
 - ocd-jurisdiction/country:us/state:mi/place:eastpointe/government
 - ocd-jurisdiction/country:us/state:mi/place:eaton_rapids/government
 - ocd-jurisdiction/country:us/state:mi/place:eau_claire/government
@@ -1188,7 +1187,6 @@ Generated: 2026-04-22 23:32 UTC
 - ocd-jurisdiction/country:us/state:mi/place:pinckney/government
 - ocd-jurisdiction/country:us/state:mi/place:pinconning/government
 - ocd-jurisdiction/country:us/state:mi/place:plainwell/government
-- ocd-jurisdiction/country:us/state:mi/place:pleasant_ridge/government
 - ocd-jurisdiction/country:us/state:mi/place:plymouth/government
 - ocd-jurisdiction/country:us/state:mi/place:pontiac/government
 - ocd-jurisdiction/country:us/state:mi/place:port_austin/government
