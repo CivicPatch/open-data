@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-22 23:34 UTC
+Generated: 2026-04-22 23:35 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 643 | 98 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 660 | 101 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-22 23:34 UTC
 ### mi
 
 <details>
-<summary>1112 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 46 in CP, not in external</summary>
+<summary>1109 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 48 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -256,7 +256,6 @@ Generated: 2026-04-22 23:34 UTC
 - ocd-jurisdiction/country:us/state:mi/county:benzie/place:lake/government
 - ocd-jurisdiction/country:us/state:mi/county:benzie/place:platte/government
 - ocd-jurisdiction/country:us/state:mi/county:benzie/place:weldon/government
-- ocd-jurisdiction/country:us/state:mi/county:berrien/place:bainbridge/government
 - ocd-jurisdiction/country:us/state:mi/county:berrien/place:baroda/government
 - ocd-jurisdiction/country:us/state:mi/county:berrien/place:benton_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:berrien/place:berrien/government
@@ -341,7 +340,6 @@ Generated: 2026-04-22 23:34 UTC
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:pickford/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:raber/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:rudyard/government
-- ocd-jurisdiction/country:us/state:mi/county:chippewa/place:soo/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:sugar_island/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:trout_lake/government
 - ocd-jurisdiction/country:us/state:mi/county:clare/place:arthur/government
@@ -948,7 +946,6 @@ Generated: 2026-04-22 23:34 UTC
 - ocd-jurisdiction/country:us/state:mi/place:casnovia/government
 - ocd-jurisdiction/country:us/state:mi/place:cass_city/government
 - ocd-jurisdiction/country:us/state:mi/place:cassopolis/government
-- ocd-jurisdiction/country:us/state:mi/place:cedar_springs/government
 - ocd-jurisdiction/country:us/state:mi/place:cement_city/government
 - ocd-jurisdiction/country:us/state:mi/place:center_line/government
 - ocd-jurisdiction/country:us/state:mi/place:central_lake/government
@@ -1297,10 +1294,12 @@ Generated: 2026-04-22 23:34 UTC
 | ocd-jurisdiction/country:us/state:mi/place:st_clair_shores/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:garfield/government |
 | ocd-jurisdiction/country:us/state:mi/place:st_ignace/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:hampton_charter/government |
 | ocd-jurisdiction/country:us/state:mi/place:st_johns/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:williams_charter/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_joseph/government | ocd-jurisdiction/country:us/state:mi/county:branch/place:algansee/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_louis/government | ocd-jurisdiction/country:us/state:mi/county:calhoun/place:marshall/government |
-| ocd-jurisdiction/country:us/state:mi/place:village_of_douglas/government | ocd-jurisdiction/country:us/state:mi/county:calhoun/place:newton/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_joseph/government | ocd-jurisdiction/country:us/state:mi/county:berrien/place:bainbridge/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_louis/government | ocd-jurisdiction/country:us/state:mi/county:branch/place:algansee/government |
+| ocd-jurisdiction/country:us/state:mi/place:village_of_douglas/government | ocd-jurisdiction/country:us/state:mi/county:calhoun/place:marshall/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:calhoun/place:newton/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:chippewa/place:detour/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:chippewa/place:soo/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:clinton/place:bingham/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:genesee/place:richfield/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:grand_traverse/place:garfield_charter/government |
