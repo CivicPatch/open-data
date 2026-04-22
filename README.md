@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-22 22:31 UTC
+Generated: 2026-04-22 22:36 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 340 | 50 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 353 | 51 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-22 22:31 UTC
 ### mi
 
 <details>
-<summary>1160 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 24 in CP, not in external</summary>
+<summary>1159 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 25 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -341,7 +341,6 @@ Generated: 2026-04-22 22:31 UTC
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:bay_mills/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:bruce/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:dafter/government
-- ocd-jurisdiction/country:us/state:mi/county:chippewa/place:detour/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:drummond/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:kinross_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:pickford/government
@@ -1343,11 +1342,12 @@ Generated: 2026-04-22 22:31 UTC
 | ocd-jurisdiction/country:us/state:mi/place:st_charles/government | ocd-jurisdiction/country:us/state:mi/county:alcona/place:haynes/government |
 | ocd-jurisdiction/country:us/state:mi/place:st_clair/government | ocd-jurisdiction/country:us/state:mi/county:antrim/place:custer/government |
 | ocd-jurisdiction/country:us/state:mi/place:st_clair_shores/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:williams_charter/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_ignace/government | ocd-jurisdiction/country:us/state:mi/county:genesee/place:richfield/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_johns/government | ocd-jurisdiction/country:us/state:mi/county:grand_traverse/place:garfield_charter/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_joseph/government | ocd-jurisdiction/country:us/state:mi/county:jackson/place:norvell/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_louis/government | ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:blue_lake/government |
-| ocd-jurisdiction/country:us/state:mi/place:village_of_douglas/government | ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:clearwater/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_ignace/government | ocd-jurisdiction/country:us/state:mi/county:chippewa/place:detour/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_johns/government | ocd-jurisdiction/country:us/state:mi/county:genesee/place:richfield/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_joseph/government | ocd-jurisdiction/country:us/state:mi/county:grand_traverse/place:garfield_charter/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_louis/government | ocd-jurisdiction/country:us/state:mi/county:jackson/place:norvell/government |
+| ocd-jurisdiction/country:us/state:mi/place:village_of_douglas/government | ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:blue_lake/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:clearwater/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:kent/place:caledonia/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:kent/place:gaines_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:kent/place:sparta/government |
