@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-23 00:14 UTC
+Generated: 2026-04-23 00:15 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 823 | 126 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 830 | 127 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-23 00:14 UTC
 ### mi
 
 <details>
-<summary>1084 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 56 in CP, not in external</summary>
+<summary>1083 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 57 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -544,7 +544,6 @@ Generated: 2026-04-23 00:14 UTC
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:conway/government
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:deerfield/government
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:genoa/government
-- ocd-jurisdiction/country:us/state:mi/county:livingston/place:green_oak/government
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:hamburg/government
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:handy/government
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:hartland/government
@@ -1296,6 +1295,7 @@ Generated: 2026-04-23 00:14 UTC
 |  | ocd-jurisdiction/country:us/state:mi/county:lapeer/place:almont/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:lapeer/place:mayfield/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:lenawee/place:hudson/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:livingston/place:green_oak/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:clinton_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:macomb/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:richmond/government |
