@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-23 19:20 UTC
+Generated: 2026-04-23 19:24 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 862 | 134 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 874 | 136 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-23 19:20 UTC
 ### mi
 
 <details>
-<summary>1076 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 63 in CP, not in external</summary>
+<summary>1074 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 64 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -341,7 +341,6 @@ Generated: 2026-04-23 19:20 UTC
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:sugar_island/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:trout_lake/government
 - ocd-jurisdiction/country:us/state:mi/county:clare/place:arthur/government
-- ocd-jurisdiction/country:us/state:mi/county:clare/place:franklin/government
 - ocd-jurisdiction/country:us/state:mi/county:clare/place:freeman/government
 - ocd-jurisdiction/country:us/state:mi/county:clare/place:frost/government
 - ocd-jurisdiction/country:us/state:mi/county:clare/place:garfield/government
@@ -1092,7 +1091,6 @@ Generated: 2026-04-23 19:20 UTC
 - ocd-jurisdiction/country:us/state:mi/place:marlette/government
 - ocd-jurisdiction/country:us/state:mi/place:marquette/government
 - ocd-jurisdiction/country:us/state:mi/place:marshall/government
-- ocd-jurisdiction/country:us/state:mi/place:martin/government
 - ocd-jurisdiction/country:us/state:mi/place:marysville/government
 - ocd-jurisdiction/country:us/state:mi/place:mattawan/government
 - ocd-jurisdiction/country:us/state:mi/place:maybee/government
@@ -1269,6 +1267,7 @@ Generated: 2026-04-23 19:20 UTC
 |  | ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:hudson/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:chippewa/place:detour/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:chippewa/place:soo/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:clare/place:franklin/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:clinton/place:bingham/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:genesee/place:richfield/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:gogebic/place:ironwood_charter/government |
