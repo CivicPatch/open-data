@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-22 23:58 UTC
+Generated: 2026-04-23 00:00 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 755 | 115 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 764 | 116 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-22 23:58 UTC
 ### mi
 
 <details>
-<summary>1095 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 53 in CP, not in external</summary>
+<summary>1094 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 53 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -958,7 +958,6 @@ Generated: 2026-04-22 23:58 UTC
 - ocd-jurisdiction/country:us/state:mi/place:colon/government
 - ocd-jurisdiction/country:us/state:mi/place:columbiaville/government
 - ocd-jurisdiction/country:us/state:mi/place:concord/government
-- ocd-jurisdiction/country:us/state:mi/place:constantine/government
 - ocd-jurisdiction/country:us/state:mi/place:coopersville/government
 - ocd-jurisdiction/country:us/state:mi/place:copemish/government
 - ocd-jurisdiction/country:us/state:mi/place:corunna/government
