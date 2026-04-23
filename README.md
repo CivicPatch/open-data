@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-23 00:01 UTC
+Generated: 2026-04-23 00:02 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 778 | 118 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 791 | 121 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-23 00:01 UTC
 ### mi
 
 <details>
-<summary>1092 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 53 in CP, not in external</summary>
+<summary>1089 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 55 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -572,7 +572,6 @@ Generated: 2026-04-23 00:01 UTC
 - ocd-jurisdiction/country:us/state:mi/county:macomb/place:harrison_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:macomb/place:lenox/government
 - ocd-jurisdiction/country:us/state:mi/county:macomb/place:ray/government
-- ocd-jurisdiction/country:us/state:mi/county:macomb/place:richmond/government
 - ocd-jurisdiction/country:us/state:mi/county:macomb/place:washington_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:manistee/place:arcadia/government
 - ocd-jurisdiction/country:us/state:mi/county:manistee/place:bear_lake/government
@@ -679,7 +678,6 @@ Generated: 2026-04-23 00:01 UTC
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:home/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:maple_valley/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:montcalm/government
-- ocd-jurisdiction/country:us/state:mi/county:montcalm/place:pierson/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:pine/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:reynolds/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:richland/government
@@ -1009,7 +1007,6 @@ Generated: 2026-04-23 00:01 UTC
 - ocd-jurisdiction/country:us/state:mi/place:galesburg/government
 - ocd-jurisdiction/country:us/state:mi/place:garden/government
 - ocd-jurisdiction/country:us/state:mi/place:garden_city/government
-- ocd-jurisdiction/country:us/state:mi/place:gaylord/government
 - ocd-jurisdiction/country:us/state:mi/place:gibraltar/government
 - ocd-jurisdiction/country:us/state:mi/place:gladstone/government
 - ocd-jurisdiction/country:us/state:mi/place:gladwin/government
@@ -1305,11 +1302,13 @@ Generated: 2026-04-23 00:01 UTC
 |  | ocd-jurisdiction/country:us/state:mi/county:lenawee/place:hudson/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:clinton_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:macomb/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:richmond/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:shelby_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:manistee/place:maple_grove/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:mason/place:grant/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:mecosta/place:mecosta/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:midland/place:mount_haley/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:montcalm/place:pierson/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:oceana/place:grant/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:osceola/place:evart/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:osceola/place:hartwick/government |
