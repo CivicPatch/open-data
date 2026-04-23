@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-23 19:03 UTC
+Generated: 2026-04-23 19:05 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 838 | 130 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 853 | 133 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-23 19:03 UTC
 ### mi
 
 <details>
-<summary>1080 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 60 in CP, not in external</summary>
+<summary>1077 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 63 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -313,7 +313,6 @@ Generated: 2026-04-23 19:03 UTC
 - ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:evangeline/government
 - ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:eveline/government
 - ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:hayes/government
-- ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:hudson/government
 - ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:melrose/government
 - ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:norwood/government
 - ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:peaine/government
@@ -758,7 +757,6 @@ Generated: 2026-04-23 19:03 UTC
 - ocd-jurisdiction/country:us/state:mi/county:presque_isle/place:krakow/government
 - ocd-jurisdiction/country:us/state:mi/county:presque_isle/place:presque_isle/government
 - ocd-jurisdiction/country:us/state:mi/county:roscommon/place:au_sable/government
-- ocd-jurisdiction/country:us/state:mi/county:roscommon/place:backus/government
 - ocd-jurisdiction/country:us/state:mi/county:roscommon/place:denton/government
 - ocd-jurisdiction/country:us/state:mi/county:roscommon/place:gerrish/government
 - ocd-jurisdiction/country:us/state:mi/county:roscommon/place:higgins/government
@@ -780,7 +778,6 @@ Generated: 2026-04-23 19:03 UTC
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:kochville/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:lakefield/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:maple_grove/government
-- ocd-jurisdiction/country:us/state:mi/county:saginaw/place:marion/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:richland/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:saginaw_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:spaulding/government
@@ -1270,6 +1267,7 @@ Generated: 2026-04-23 19:03 UTC
 | ocd-jurisdiction/country:us/state:mi/place:village_of_douglas/government | ocd-jurisdiction/country:us/state:mi/county:branch/place:algansee/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:calhoun/place:marshall/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:calhoun/place:newton/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:hudson/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:chippewa/place:detour/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:chippewa/place:soo/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:clinton/place:bingham/government |
@@ -1310,8 +1308,10 @@ Generated: 2026-04-23 19:03 UTC
 |  | ocd-jurisdiction/country:us/state:mi/county:osceola/place:hartwick/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:osceola/place:osceola/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:ottawa/place:park/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:roscommon/place:backus/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:saginaw/place:bridgeport_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:saginaw/place:fremont/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:saginaw/place:marion/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:st._clair/place:st._clair/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:van_buren/place:decatur/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:wayne/place:huron_charter/government |
