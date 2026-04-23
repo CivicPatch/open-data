@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-23 19:01 UTC
+Generated: 2026-04-23 19:03 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 836 | 129 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 838 | 130 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-23 19:01 UTC
 ### mi
 
 <details>
-<summary>1081 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 59 in CP, not in external</summary>
+<summary>1080 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 60 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -181,7 +181,6 @@ Generated: 2026-04-23 19:01 UTC
 - ocd-jurisdiction/country:us/state:mi/county:alcona/place:mitchell/government
 - ocd-jurisdiction/country:us/state:mi/county:alger/place:au_train/government
 - ocd-jurisdiction/country:us/state:mi/county:alger/place:burt/government
-- ocd-jurisdiction/country:us/state:mi/county:alger/place:mathias/government
 - ocd-jurisdiction/country:us/state:mi/county:alger/place:munising/government
 - ocd-jurisdiction/country:us/state:mi/county:alger/place:onota/government
 - ocd-jurisdiction/country:us/state:mi/county:allegan/place:allegan/government
@@ -1262,13 +1261,14 @@ Generated: 2026-04-23 19:01 UTC
 | ocd-jurisdiction/country:us/state:mi/place:l~anse/government | ocd-jurisdiction/country:us/state:mi/county:alcona/place:curtis/government |
 | ocd-jurisdiction/country:us/state:mi/place:sault_ste_marie/government | ocd-jurisdiction/country:us/state:mi/county:alcona/place:harrisville/government |
 | ocd-jurisdiction/country:us/state:mi/place:st_charles/government | ocd-jurisdiction/country:us/state:mi/county:alcona/place:haynes/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_clair/government | ocd-jurisdiction/country:us/state:mi/county:antrim/place:custer/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_clair_shores/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:garfield/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_ignace/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:hampton_charter/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_johns/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:williams_charter/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_joseph/government | ocd-jurisdiction/country:us/state:mi/county:berrien/place:bainbridge/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_louis/government | ocd-jurisdiction/country:us/state:mi/county:branch/place:algansee/government |
-| ocd-jurisdiction/country:us/state:mi/place:village_of_douglas/government | ocd-jurisdiction/country:us/state:mi/county:calhoun/place:marshall/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_clair/government | ocd-jurisdiction/country:us/state:mi/county:alger/place:mathias/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_clair_shores/government | ocd-jurisdiction/country:us/state:mi/county:antrim/place:custer/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_ignace/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:garfield/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_johns/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:hampton_charter/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_joseph/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:williams_charter/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_louis/government | ocd-jurisdiction/country:us/state:mi/county:berrien/place:bainbridge/government |
+| ocd-jurisdiction/country:us/state:mi/place:village_of_douglas/government | ocd-jurisdiction/country:us/state:mi/county:branch/place:algansee/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:calhoun/place:marshall/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:calhoun/place:newton/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:chippewa/place:detour/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:chippewa/place:soo/government |
