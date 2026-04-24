@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-24 02:16 UTC
+Generated: 2026-04-24 02:21 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 927 | 147 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 943 | 150 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-24 02:16 UTC
 ### mi
 
 <details>
-<summary>1063 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 75 in CP, not in external</summary>
+<summary>1060 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 77 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -398,7 +398,6 @@ Generated: 2026-04-24 02:16 UTC
 - ocd-jurisdiction/country:us/state:mi/county:genesee/place:vienna_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:gladwin/place:billings/government
 - ocd-jurisdiction/country:us/state:mi/county:gladwin/place:bourret/government
-- ocd-jurisdiction/country:us/state:mi/county:gladwin/place:butman/government
 - ocd-jurisdiction/country:us/state:mi/county:gladwin/place:clement/government
 - ocd-jurisdiction/country:us/state:mi/county:gladwin/place:hay/government
 - ocd-jurisdiction/country:us/state:mi/county:gladwin/place:secord/government
@@ -440,7 +439,6 @@ Generated: 2026-04-24 02:16 UTC
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:aurelius/government
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:bunker_hill/government
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:delhi_charter/government
-- ocd-jurisdiction/country:us/state:mi/county:ingham/place:ingham/government
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:lansing_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:leroy/government
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:leslie/government
@@ -1231,7 +1229,6 @@ Generated: 2026-04-24 02:16 UTC
 - ocd-jurisdiction/country:us/state:mi/place:woodhaven/government
 - ocd-jurisdiction/country:us/state:mi/place:wyandotte/government
 - ocd-jurisdiction/country:us/state:mi/place:wyoming/government
-- ocd-jurisdiction/country:us/state:mi/place:yale/government
 - ocd-jurisdiction/country:us/state:mi/place:ypsilanti/government
 - ocd-jurisdiction/country:us/state:mi/place:zeeland/government
 - ocd-jurisdiction/country:us/state:mi/place:zilwaukee/government
@@ -1262,10 +1259,12 @@ Generated: 2026-04-24 02:16 UTC
 |  | ocd-jurisdiction/country:us/state:mi/county:clare/place:franklin/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:clinton/place:bingham/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:genesee/place:richfield/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:gladwin/place:butman/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:gogebic/place:ironwood_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:grand_traverse/place:garfield_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:houghton/place:portage_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:houghton/place:schoolcraft/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:ingham/place:ingham/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:ionia/place:campbell/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:ionia/place:otisco/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:jackson/place:leoni/government |
