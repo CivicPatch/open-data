@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-24 17:49 UTC
+Generated: 2026-04-24 17:50 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 996 | 160 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 1,008 | 162 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-24 17:49 UTC
 ### mi
 
 <details>
-<summary>1050 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 84 in CP, not in external</summary>
+<summary>1048 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 86 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -749,7 +749,6 @@ Generated: 2026-04-24 17:49 UTC
 - ocd-jurisdiction/country:us/state:mi/county:roscommon/place:nester/government
 - ocd-jurisdiction/country:us/state:mi/county:roscommon/place:richfield/government
 - ocd-jurisdiction/country:us/state:mi/county:roscommon/place:roscommon/government
-- ocd-jurisdiction/country:us/state:mi/county:saginaw/place:birch_run/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:blumfield/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:brady/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:buena_vista_charter/government
@@ -757,7 +756,6 @@ Generated: 2026-04-24 17:49 UTC
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:chesaning/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:frankenmuth/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:james/government
-- ocd-jurisdiction/country:us/state:mi/county:saginaw/place:kochville/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:lakefield/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:maple_grove/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:richland/government
@@ -1299,9 +1297,11 @@ Generated: 2026-04-24 17:49 UTC
 |  | ocd-jurisdiction/country:us/state:mi/county:osceola/place:osceola/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:ottawa/place:park/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:roscommon/place:backus/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:saginaw/place:birch_run/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:saginaw/place:bridgeport_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:saginaw/place:fremont/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:saginaw/place:jonesfield/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:saginaw/place:kochville/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:saginaw/place:marion/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:st._clair/place:st._clair/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:st._joseph/place:white_pigeon/government |
