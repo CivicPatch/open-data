@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-24 17:47 UTC
+Generated: 2026-04-24 17:49 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 991 | 159 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 996 | 160 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-24 17:47 UTC
 ### mi
 
 <details>
-<summary>1051 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 83 in CP, not in external</summary>
+<summary>1050 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 84 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -644,7 +644,6 @@ Generated: 2026-04-24 17:47 UTC
 - ocd-jurisdiction/country:us/state:mi/county:monroe/place:monroe_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:monroe/place:raisinville/government
 - ocd-jurisdiction/country:us/state:mi/county:monroe/place:summerfield/government
-- ocd-jurisdiction/country:us/state:mi/county:monroe/place:whiteford/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:belvidere/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:bloomer/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:bushnell/government
@@ -1291,6 +1290,7 @@ Generated: 2026-04-24 17:47 UTC
 |  | ocd-jurisdiction/country:us/state:mi/county:mecosta/place:mecosta/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:midland/place:geneva/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:midland/place:mount_haley/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:monroe/place:whiteford/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:montcalm/place:pierson/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:oceana/place:grant/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:osceola/place:cedar/government |
