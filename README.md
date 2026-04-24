@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-24 17:50 UTC
+Generated: 2026-04-24 17:52 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 1,008 | 162 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 1,015 | 163 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-24 17:50 UTC
 ### mi
 
 <details>
-<summary>1048 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 86 in CP, not in external</summary>
+<summary>1047 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 87 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -517,7 +517,6 @@ Generated: 2026-04-24 17:50 UTC
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:medina/government
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:ogden/government
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:palmyra/government
-- ocd-jurisdiction/country:us/state:mi/county:lenawee/place:raisin/government
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:riga/government
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:rollin/government
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:rome/government
@@ -1275,6 +1274,7 @@ Generated: 2026-04-24 17:50 UTC
 |  | ocd-jurisdiction/country:us/state:mi/county:lapeer/place:arcadia/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:lapeer/place:mayfield/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:lenawee/place:hudson/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:lenawee/place:raisin/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:lenawee/place:woodstock/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:livingston/place:green_oak/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:mackinac/place:garfield/government |
