@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-24 03:14 UTC
+Generated: 2026-04-24 03:16 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 955 | 152 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 965 | 154 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-24 03:14 UTC
 ### mi
 
 <details>
-<summary>1058 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 79 in CP, not in external</summary>
+<summary>1056 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 81 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -500,7 +500,6 @@ Generated: 2026-04-24 03:14 UTC
 - ocd-jurisdiction/country:us/state:mi/county:keweenaw/place:eagle_harbor/government
 - ocd-jurisdiction/country:us/state:mi/county:keweenaw/place:houghton/government
 - ocd-jurisdiction/country:us/state:mi/county:lake/place:elk/government
-- ocd-jurisdiction/country:us/state:mi/county:lapeer/place:arcadia/government
 - ocd-jurisdiction/country:us/state:mi/county:lapeer/place:attica/government
 - ocd-jurisdiction/country:us/state:mi/county:lapeer/place:deerfield/government
 - ocd-jurisdiction/country:us/state:mi/county:lapeer/place:goodland/government
@@ -525,7 +524,6 @@ Generated: 2026-04-24 03:14 UTC
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:rome/government
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:seneca/government
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:tecumseh/government
-- ocd-jurisdiction/country:us/state:mi/county:lenawee/place:woodstock/government
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:brighton/government
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:cohoctah/government
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:conway/government
@@ -1281,8 +1279,10 @@ Generated: 2026-04-24 03:14 UTC
 |  | ocd-jurisdiction/country:us/state:mi/county:kent/place:tyrone/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:keweenaw/place:grant/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:lapeer/place:almont/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:lapeer/place:arcadia/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:lapeer/place:mayfield/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:lenawee/place:hudson/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:lenawee/place:woodstock/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:livingston/place:green_oak/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:mackinac/place:garfield/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:clinton_charter/government |
