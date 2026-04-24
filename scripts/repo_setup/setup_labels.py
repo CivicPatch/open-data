@@ -17,7 +17,7 @@ STATE_CODES = [
 
 LABELS = (
     [f"state:{code}" for code in STATE_CODES]
-    + ["env:production", "env:development"]
+    + ["env:development"]
 )
 
 
