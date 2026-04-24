@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-16 00:53 UTC
+Generated: 2026-04-24 17:47 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 124 | 17 | 1,211 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 991 | 159 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,20 +168,18 @@ Generated: 2026-04-16 00:53 UTC
 ### mi
 
 <details>
-<summary>1194 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 6 in CP, not in external</summary>
+<summary>1051 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 83 in CP, not in external</summary>
 
 #### Not yet scraped
 
 - ocd-jurisdiction/country:us/state:mi/county:alcona/place:alcona/government
 - ocd-jurisdiction/country:us/state:mi/county:alcona/place:greenbush/government
-- ocd-jurisdiction/country:us/state:mi/county:alcona/place:gustin/government
 - ocd-jurisdiction/country:us/state:mi/county:alcona/place:hawes/government
 - ocd-jurisdiction/country:us/state:mi/county:alcona/place:mikado/government
 - ocd-jurisdiction/country:us/state:mi/county:alcona/place:millen/government
 - ocd-jurisdiction/country:us/state:mi/county:alcona/place:mitchell/government
 - ocd-jurisdiction/country:us/state:mi/county:alger/place:au_train/government
 - ocd-jurisdiction/country:us/state:mi/county:alger/place:burt/government
-- ocd-jurisdiction/country:us/state:mi/county:alger/place:mathias/government
 - ocd-jurisdiction/country:us/state:mi/county:alger/place:munising/government
 - ocd-jurisdiction/country:us/state:mi/county:alger/place:onota/government
 - ocd-jurisdiction/country:us/state:mi/county:allegan/place:allegan/government
@@ -213,13 +211,10 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:alpena/place:ossineke/government
 - ocd-jurisdiction/country:us/state:mi/county:antrim/place:banks/government
 - ocd-jurisdiction/country:us/state:mi/county:antrim/place:central_lake/government
-- ocd-jurisdiction/country:us/state:mi/county:antrim/place:custer/government
 - ocd-jurisdiction/country:us/state:mi/county:antrim/place:elk_rapids/government
 - ocd-jurisdiction/country:us/state:mi/county:antrim/place:forest_home/government
-- ocd-jurisdiction/country:us/state:mi/county:antrim/place:helena/government
 - ocd-jurisdiction/country:us/state:mi/county:antrim/place:jordan/government
 - ocd-jurisdiction/country:us/state:mi/county:antrim/place:kearney/government
-- ocd-jurisdiction/country:us/state:mi/county:antrim/place:mancelona/government
 - ocd-jurisdiction/country:us/state:mi/county:antrim/place:milton/government
 - ocd-jurisdiction/country:us/state:mi/county:antrim/place:star/government
 - ocd-jurisdiction/country:us/state:mi/county:antrim/place:torch_lake/government
@@ -245,12 +240,9 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:bay/place:beaver/government
 - ocd-jurisdiction/country:us/state:mi/county:bay/place:frankenlust/government
 - ocd-jurisdiction/country:us/state:mi/county:bay/place:fraser/government
-- ocd-jurisdiction/country:us/state:mi/county:bay/place:garfield/government
-- ocd-jurisdiction/country:us/state:mi/county:bay/place:hampton_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:bay/place:kawkawlin/government
 - ocd-jurisdiction/country:us/state:mi/county:bay/place:pinconning/government
 - ocd-jurisdiction/country:us/state:mi/county:bay/place:portsmouth_charter/government
-- ocd-jurisdiction/country:us/state:mi/county:bay/place:williams_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:benzie/place:almira/government
 - ocd-jurisdiction/country:us/state:mi/county:benzie/place:benzonia/government
 - ocd-jurisdiction/country:us/state:mi/county:benzie/place:colfax/government
@@ -260,7 +252,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:benzie/place:lake/government
 - ocd-jurisdiction/country:us/state:mi/county:benzie/place:platte/government
 - ocd-jurisdiction/country:us/state:mi/county:benzie/place:weldon/government
-- ocd-jurisdiction/country:us/state:mi/county:berrien/place:bainbridge/government
 - ocd-jurisdiction/country:us/state:mi/county:berrien/place:baroda/government
 - ocd-jurisdiction/country:us/state:mi/county:berrien/place:benton_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:berrien/place:berrien/government
@@ -270,7 +261,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:berrien/place:coloma_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:berrien/place:galien/government
 - ocd-jurisdiction/country:us/state:mi/county:berrien/place:hagar/government
-- ocd-jurisdiction/country:us/state:mi/county:berrien/place:lake_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:berrien/place:lincoln_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:berrien/place:new_buffalo/government
 - ocd-jurisdiction/country:us/state:mi/county:berrien/place:oronoko_charter/government
@@ -281,7 +271,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:berrien/place:three_oaks/government
 - ocd-jurisdiction/country:us/state:mi/county:berrien/place:watervliet/government
 - ocd-jurisdiction/country:us/state:mi/county:berrien/place:weesaw/government
-- ocd-jurisdiction/country:us/state:mi/county:branch/place:algansee/government
 - ocd-jurisdiction/country:us/state:mi/county:branch/place:butler/government
 - ocd-jurisdiction/country:us/state:mi/county:branch/place:coldwater/government
 - ocd-jurisdiction/country:us/state:mi/county:branch/place:girard/government
@@ -296,8 +285,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:calhoun/place:fredonia/government
 - ocd-jurisdiction/country:us/state:mi/county:calhoun/place:homer/government
 - ocd-jurisdiction/country:us/state:mi/county:calhoun/place:leroy/government
-- ocd-jurisdiction/country:us/state:mi/county:calhoun/place:marshall/government
-- ocd-jurisdiction/country:us/state:mi/county:calhoun/place:newton/government
 - ocd-jurisdiction/country:us/state:mi/county:calhoun/place:pennfield_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:calhoun/place:sheridan/government
 - ocd-jurisdiction/country:us/state:mi/county:calhoun/place:tekonsha/government
@@ -316,13 +303,11 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:cass/place:silver_creek/government
 - ocd-jurisdiction/country:us/state:mi/county:cass/place:wayne/government
 - ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:bay/government
-- ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:boyne_valley/government
 - ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:chandler/government
 - ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:charlevoix/government
 - ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:evangeline/government
 - ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:eveline/government
 - ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:hayes/government
-- ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:hudson/government
 - ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:melrose/government
 - ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:norwood/government
 - ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:peaine/government
@@ -343,17 +328,14 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:bay_mills/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:bruce/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:dafter/government
-- ocd-jurisdiction/country:us/state:mi/county:chippewa/place:detour/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:drummond/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:kinross_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:pickford/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:raber/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:rudyard/government
-- ocd-jurisdiction/country:us/state:mi/county:chippewa/place:soo/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:sugar_island/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:trout_lake/government
 - ocd-jurisdiction/country:us/state:mi/county:clare/place:arthur/government
-- ocd-jurisdiction/country:us/state:mi/county:clare/place:franklin/government
 - ocd-jurisdiction/country:us/state:mi/county:clare/place:freeman/government
 - ocd-jurisdiction/country:us/state:mi/county:clare/place:frost/government
 - ocd-jurisdiction/country:us/state:mi/county:clare/place:garfield/government
@@ -369,7 +351,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:clare/place:winterfield/government
 - ocd-jurisdiction/country:us/state:mi/county:clinton/place:bath_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:clinton/place:bengal/government
-- ocd-jurisdiction/country:us/state:mi/county:clinton/place:bingham/government
 - ocd-jurisdiction/country:us/state:mi/county:clinton/place:dallas/government
 - ocd-jurisdiction/country:us/state:mi/county:clinton/place:dewitt_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:clinton/place:duplain/government
@@ -412,11 +393,9 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:genesee/place:genesee_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:genesee/place:mount_morris/government
 - ocd-jurisdiction/country:us/state:mi/county:genesee/place:mundy/government
-- ocd-jurisdiction/country:us/state:mi/county:genesee/place:richfield/government
 - ocd-jurisdiction/country:us/state:mi/county:genesee/place:vienna_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:gladwin/place:billings/government
 - ocd-jurisdiction/country:us/state:mi/county:gladwin/place:bourret/government
-- ocd-jurisdiction/country:us/state:mi/county:gladwin/place:butman/government
 - ocd-jurisdiction/country:us/state:mi/county:gladwin/place:clement/government
 - ocd-jurisdiction/country:us/state:mi/county:gladwin/place:hay/government
 - ocd-jurisdiction/country:us/state:mi/county:gladwin/place:secord/government
@@ -424,13 +403,11 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:gladwin/place:tobacco/government
 - ocd-jurisdiction/country:us/state:mi/county:gogebic/place:bessemer/government
 - ocd-jurisdiction/country:us/state:mi/county:gogebic/place:erwin/government
-- ocd-jurisdiction/country:us/state:mi/county:gogebic/place:ironwood_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:gogebic/place:marenisco/government
 - ocd-jurisdiction/country:us/state:mi/county:gogebic/place:wakefield/government
 - ocd-jurisdiction/country:us/state:mi/county:gogebic/place:watersmeet/government
 - ocd-jurisdiction/country:us/state:mi/county:grand_traverse/place:east_bay/government
 - ocd-jurisdiction/country:us/state:mi/county:grand_traverse/place:fife_lake/government
-- ocd-jurisdiction/country:us/state:mi/county:grand_traverse/place:garfield_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:grand_traverse/place:peninsula/government
 - ocd-jurisdiction/country:us/state:mi/county:gratiot/place:lafayette/government
 - ocd-jurisdiction/country:us/state:mi/county:gratiot/place:north_star/government
@@ -445,8 +422,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:houghton/place:chassell/government
 - ocd-jurisdiction/country:us/state:mi/county:houghton/place:elm_river/government
 - ocd-jurisdiction/country:us/state:mi/county:houghton/place:osceola/government
-- ocd-jurisdiction/country:us/state:mi/county:houghton/place:portage_charter/government
-- ocd-jurisdiction/country:us/state:mi/county:houghton/place:schoolcraft/government
 - ocd-jurisdiction/country:us/state:mi/county:houghton/place:stanton/government
 - ocd-jurisdiction/country:us/state:mi/county:houghton/place:torch_lake/government
 - ocd-jurisdiction/country:us/state:mi/county:huron/place:caseville/government
@@ -462,7 +437,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:aurelius/government
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:bunker_hill/government
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:delhi_charter/government
-- ocd-jurisdiction/country:us/state:mi/county:ingham/place:ingham/government
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:lansing_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:leroy/government
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:leslie/government
@@ -472,10 +446,8 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:vevay/government
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:white_oak/government
 - ocd-jurisdiction/country:us/state:mi/county:ingham/place:williamstown/government
-- ocd-jurisdiction/country:us/state:mi/county:ionia/place:campbell/government
 - ocd-jurisdiction/country:us/state:mi/county:ionia/place:odessa/government
 - ocd-jurisdiction/country:us/state:mi/county:ionia/place:orange/government
-- ocd-jurisdiction/country:us/state:mi/county:ionia/place:otisco/government
 - ocd-jurisdiction/country:us/state:mi/county:iosco/place:au_sable_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:iosco/place:baldwin/government
 - ocd-jurisdiction/country:us/state:mi/county:isabella/place:isabella/government
@@ -488,16 +460,12 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:grass_lake_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:hanover/government
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:henrietta/government
-- ocd-jurisdiction/country:us/state:mi/county:jackson/place:leoni/government
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:liberty/government
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:napoleon/government
-- ocd-jurisdiction/country:us/state:mi/county:jackson/place:norvell/government
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:parma/government
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:pulaski/government
-- ocd-jurisdiction/country:us/state:mi/county:jackson/place:rives/government
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:sandstone/government
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:spring_arbor/government
-- ocd-jurisdiction/country:us/state:mi/county:jackson/place:springport/government
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:summit/government
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:tompkins/government
 - ocd-jurisdiction/country:us/state:mi/county:jackson/place:waterloo/government
@@ -511,43 +479,30 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:kalamazoo/place:ross/government
 - ocd-jurisdiction/country:us/state:mi/county:kalamazoo/place:schoolcraft/government
 - ocd-jurisdiction/country:us/state:mi/county:kalamazoo/place:texas_charter/government
-- ocd-jurisdiction/country:us/state:mi/county:kalamazoo/place:wakeshma/government
 - ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:bear_lake/government
-- ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:blue_lake/government
 - ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:boardman/government
-- ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:clearwater/government
-- ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:coldsprings/government
 - ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:excelsior/government
 - ocd-jurisdiction/country:us/state:mi/county:kent/place:ada/government
 - ocd-jurisdiction/country:us/state:mi/county:kent/place:algoma/government
 - ocd-jurisdiction/country:us/state:mi/county:kent/place:alpine/government
 - ocd-jurisdiction/country:us/state:mi/county:kent/place:bowne/government
 - ocd-jurisdiction/country:us/state:mi/county:kent/place:byron/government
-- ocd-jurisdiction/country:us/state:mi/county:kent/place:caledonia/government
 - ocd-jurisdiction/country:us/state:mi/county:kent/place:cannon/government
-- ocd-jurisdiction/country:us/state:mi/county:kent/place:courtland/government
-- ocd-jurisdiction/country:us/state:mi/county:kent/place:gaines_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:kent/place:grand_rapids_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:kent/place:grattan/government
 - ocd-jurisdiction/country:us/state:mi/county:kent/place:nelson/government
 - ocd-jurisdiction/country:us/state:mi/county:kent/place:oakfield/government
 - ocd-jurisdiction/country:us/state:mi/county:kent/place:solon/government
-- ocd-jurisdiction/country:us/state:mi/county:kent/place:sparta/government
 - ocd-jurisdiction/country:us/state:mi/county:kent/place:spencer/government
-- ocd-jurisdiction/country:us/state:mi/county:kent/place:tyrone/government
 - ocd-jurisdiction/country:us/state:mi/county:kent/place:vergennes/government
 - ocd-jurisdiction/country:us/state:mi/county:keweenaw/place:allouez/government
 - ocd-jurisdiction/country:us/state:mi/county:keweenaw/place:eagle_harbor/government
-- ocd-jurisdiction/country:us/state:mi/county:keweenaw/place:grant/government
 - ocd-jurisdiction/country:us/state:mi/county:keweenaw/place:houghton/government
 - ocd-jurisdiction/country:us/state:mi/county:lake/place:elk/government
-- ocd-jurisdiction/country:us/state:mi/county:lapeer/place:almont/government
-- ocd-jurisdiction/country:us/state:mi/county:lapeer/place:arcadia/government
 - ocd-jurisdiction/country:us/state:mi/county:lapeer/place:attica/government
 - ocd-jurisdiction/country:us/state:mi/county:lapeer/place:deerfield/government
 - ocd-jurisdiction/country:us/state:mi/county:lapeer/place:goodland/government
 - ocd-jurisdiction/country:us/state:mi/county:lapeer/place:imlay/government
-- ocd-jurisdiction/country:us/state:mi/county:lapeer/place:mayfield/government
 - ocd-jurisdiction/country:us/state:mi/county:lapeer/place:metamora/government
 - ocd-jurisdiction/country:us/state:mi/county:lapeer/place:rich/government
 - ocd-jurisdiction/country:us/state:mi/county:leelanau/place:empire/government
@@ -557,7 +512,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:cambridge/government
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:fairfield/government
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:franklin/government
-- ocd-jurisdiction/country:us/state:mi/county:lenawee/place:hudson/government
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:macon/government
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:madison_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:medina/government
@@ -569,13 +523,11 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:rome/government
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:seneca/government
 - ocd-jurisdiction/country:us/state:mi/county:lenawee/place:tecumseh/government
-- ocd-jurisdiction/country:us/state:mi/county:lenawee/place:woodstock/government
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:brighton/government
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:cohoctah/government
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:conway/government
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:deerfield/government
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:genoa/government
-- ocd-jurisdiction/country:us/state:mi/county:livingston/place:green_oak/government
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:hamburg/government
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:handy/government
 - ocd-jurisdiction/country:us/state:mi/county:livingston/place:hartland/government
@@ -591,7 +543,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:mackinac/place:bois_blanc/government
 - ocd-jurisdiction/country:us/state:mi/county:mackinac/place:brevort/government
 - ocd-jurisdiction/country:us/state:mi/county:mackinac/place:clark/government
-- ocd-jurisdiction/country:us/state:mi/county:mackinac/place:garfield/government
 - ocd-jurisdiction/country:us/state:mi/county:mackinac/place:marquette/government
 - ocd-jurisdiction/country:us/state:mi/county:mackinac/place:moran/government
 - ocd-jurisdiction/country:us/state:mi/county:mackinac/place:newton/government
@@ -602,8 +553,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:macomb/place:harrison_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:macomb/place:lenox/government
 - ocd-jurisdiction/country:us/state:mi/county:macomb/place:ray/government
-- ocd-jurisdiction/country:us/state:mi/county:macomb/place:richmond/government
-- ocd-jurisdiction/country:us/state:mi/county:macomb/place:shelby_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:macomb/place:washington_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:manistee/place:arcadia/government
 - ocd-jurisdiction/country:us/state:mi/county:manistee/place:bear_lake/government
@@ -611,7 +560,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:manistee/place:cleon/government
 - ocd-jurisdiction/country:us/state:mi/county:manistee/place:filer_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:manistee/place:manistee/government
-- ocd-jurisdiction/country:us/state:mi/county:manistee/place:maple_grove/government
 - ocd-jurisdiction/country:us/state:mi/county:manistee/place:marilla/government
 - ocd-jurisdiction/country:us/state:mi/county:manistee/place:norman/government
 - ocd-jurisdiction/country:us/state:mi/county:manistee/place:onekama/government
@@ -634,10 +582,8 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:marquette/place:wells/government
 - ocd-jurisdiction/country:us/state:mi/county:marquette/place:west_branch/government
 - ocd-jurisdiction/country:us/state:mi/county:mason/place:amber/government
-- ocd-jurisdiction/country:us/state:mi/county:mason/place:custer/government
 - ocd-jurisdiction/country:us/state:mi/county:mason/place:eden/government
 - ocd-jurisdiction/country:us/state:mi/county:mason/place:free_soil/government
-- ocd-jurisdiction/country:us/state:mi/county:mason/place:grant/government
 - ocd-jurisdiction/country:us/state:mi/county:mason/place:hamlin/government
 - ocd-jurisdiction/country:us/state:mi/county:mason/place:pere_marquette_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:mason/place:sheridan/government
@@ -651,7 +597,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:mecosta/place:fork/government
 - ocd-jurisdiction/country:us/state:mi/county:mecosta/place:green_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:mecosta/place:martiny/government
-- ocd-jurisdiction/country:us/state:mi/county:mecosta/place:mecosta/government
 - ocd-jurisdiction/country:us/state:mi/county:mecosta/place:morton/government
 - ocd-jurisdiction/country:us/state:mi/county:mecosta/place:sheridan/government
 - ocd-jurisdiction/country:us/state:mi/county:menominee/place:gourley/government
@@ -661,7 +606,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:menominee/place:nadeau/government
 - ocd-jurisdiction/country:us/state:mi/county:menominee/place:spalding/government
 - ocd-jurisdiction/country:us/state:mi/county:midland/place:edenville/government
-- ocd-jurisdiction/country:us/state:mi/county:midland/place:geneva/government
 - ocd-jurisdiction/country:us/state:mi/county:midland/place:greendale/government
 - ocd-jurisdiction/country:us/state:mi/county:midland/place:homer/government
 - ocd-jurisdiction/country:us/state:mi/county:midland/place:hope/government
@@ -671,7 +615,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:midland/place:lee/government
 - ocd-jurisdiction/country:us/state:mi/county:midland/place:lincoln/government
 - ocd-jurisdiction/country:us/state:mi/county:midland/place:mills/government
-- ocd-jurisdiction/country:us/state:mi/county:midland/place:mount_haley/government
 - ocd-jurisdiction/country:us/state:mi/county:midland/place:warren/government
 - ocd-jurisdiction/country:us/state:mi/county:missaukee/place:aetna/government
 - ocd-jurisdiction/country:us/state:mi/county:missaukee/place:bloomfield/government
@@ -706,7 +649,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:bloomer/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:bushnell/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:crystal/government
-- ocd-jurisdiction/country:us/state:mi/county:montcalm/place:day/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:douglass/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:eureka/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:evergreen/government
@@ -715,7 +657,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:home/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:maple_valley/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:montcalm/government
-- ocd-jurisdiction/country:us/state:mi/county:montcalm/place:pierson/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:pine/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:reynolds/government
 - ocd-jurisdiction/country:us/state:mi/county:montcalm/place:richland/government
@@ -757,7 +698,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:oakland/place:royal_oak_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:oakland/place:southfield/government
 - ocd-jurisdiction/country:us/state:mi/county:oakland/place:springfield_charter/government
-- ocd-jurisdiction/country:us/state:mi/county:oceana/place:grant/government
 - ocd-jurisdiction/country:us/state:mi/county:oceana/place:shelby/government
 - ocd-jurisdiction/country:us/state:mi/county:ogemaw/place:goodar/government
 - ocd-jurisdiction/country:us/state:mi/county:ogemaw/place:rose/government
@@ -766,9 +706,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:ontonagon/place:interior/government
 - ocd-jurisdiction/country:us/state:mi/county:ontonagon/place:stannard/government
 - ocd-jurisdiction/country:us/state:mi/county:osceola/place:burdell/government
-- ocd-jurisdiction/country:us/state:mi/county:osceola/place:cedar/government
-- ocd-jurisdiction/country:us/state:mi/county:osceola/place:evart/government
-- ocd-jurisdiction/country:us/state:mi/county:osceola/place:hartwick/government
 - ocd-jurisdiction/country:us/state:mi/county:osceola/place:hersey/government
 - ocd-jurisdiction/country:us/state:mi/county:osceola/place:highland/government
 - ocd-jurisdiction/country:us/state:mi/county:osceola/place:le_roy/government
@@ -776,7 +713,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:osceola/place:marion/government
 - ocd-jurisdiction/country:us/state:mi/county:osceola/place:middle_branch/government
 - ocd-jurisdiction/country:us/state:mi/county:osceola/place:orient/government
-- ocd-jurisdiction/country:us/state:mi/county:osceola/place:osceola/government
 - ocd-jurisdiction/country:us/state:mi/county:osceola/place:richmond/government
 - ocd-jurisdiction/country:us/state:mi/county:osceola/place:rose_lake/government
 - ocd-jurisdiction/country:us/state:mi/county:osceola/place:sherman/government
@@ -796,7 +732,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:ottawa/place:grand_haven_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:ottawa/place:jamestown_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:ottawa/place:olive/government
-- ocd-jurisdiction/country:us/state:mi/county:ottawa/place:park/government
 - ocd-jurisdiction/country:us/state:mi/county:ottawa/place:port_sheldon/government
 - ocd-jurisdiction/country:us/state:mi/county:ottawa/place:robinson/government
 - ocd-jurisdiction/country:us/state:mi/county:ottawa/place:spring_lake/government
@@ -806,7 +741,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:presque_isle/place:krakow/government
 - ocd-jurisdiction/country:us/state:mi/county:presque_isle/place:presque_isle/government
 - ocd-jurisdiction/country:us/state:mi/county:roscommon/place:au_sable/government
-- ocd-jurisdiction/country:us/state:mi/county:roscommon/place:backus/government
 - ocd-jurisdiction/country:us/state:mi/county:roscommon/place:denton/government
 - ocd-jurisdiction/country:us/state:mi/county:roscommon/place:gerrish/government
 - ocd-jurisdiction/country:us/state:mi/county:roscommon/place:higgins/government
@@ -819,18 +753,14 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:birch_run/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:blumfield/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:brady/government
-- ocd-jurisdiction/country:us/state:mi/county:saginaw/place:bridgeport_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:buena_vista_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:carrollton/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:chesaning/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:frankenmuth/government
-- ocd-jurisdiction/country:us/state:mi/county:saginaw/place:fremont/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:james/government
-- ocd-jurisdiction/country:us/state:mi/county:saginaw/place:jonesfield/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:kochville/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:lakefield/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:maple_grove/government
-- ocd-jurisdiction/country:us/state:mi/county:saginaw/place:marion/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:richland/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:saginaw_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:saginaw/place:spaulding/government
@@ -875,7 +805,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:st._clair/place:lynn/government
 - ocd-jurisdiction/country:us/state:mi/county:st._clair/place:mussey/government
 - ocd-jurisdiction/country:us/state:mi/county:st._clair/place:riley/government
-- ocd-jurisdiction/country:us/state:mi/county:st._clair/place:st._clair/government
 - ocd-jurisdiction/country:us/state:mi/county:st._clair/place:wales/government
 - ocd-jurisdiction/country:us/state:mi/county:st._joseph/place:burr_oak/government
 - ocd-jurisdiction/country:us/state:mi/county:st._joseph/place:constantine/government
@@ -883,7 +812,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:st._joseph/place:nottawa/government
 - ocd-jurisdiction/country:us/state:mi/county:st._joseph/place:park/government
 - ocd-jurisdiction/country:us/state:mi/county:st._joseph/place:sturgis/government
-- ocd-jurisdiction/country:us/state:mi/county:st._joseph/place:white_pigeon/government
 - ocd-jurisdiction/country:us/state:mi/county:tuscola/place:almer/government
 - ocd-jurisdiction/country:us/state:mi/county:tuscola/place:fairgrove/government
 - ocd-jurisdiction/country:us/state:mi/county:tuscola/place:fremont/government
@@ -893,13 +821,11 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:van_buren/place:arlington/government
 - ocd-jurisdiction/country:us/state:mi/county:van_buren/place:columbia/government
 - ocd-jurisdiction/country:us/state:mi/county:van_buren/place:covert/government
-- ocd-jurisdiction/country:us/state:mi/county:van_buren/place:decatur/government
 - ocd-jurisdiction/country:us/state:mi/county:van_buren/place:lawrence/government
 - ocd-jurisdiction/country:us/state:mi/county:van_buren/place:paw_paw/government
 - ocd-jurisdiction/country:us/state:mi/county:van_buren/place:pine_grove/government
 - ocd-jurisdiction/country:us/state:mi/county:washtenaw/place:ann_arbor_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:washtenaw/place:augusta_charter/government
-- ocd-jurisdiction/country:us/state:mi/county:washtenaw/place:bridgewater/government
 - ocd-jurisdiction/country:us/state:mi/county:washtenaw/place:dexter/government
 - ocd-jurisdiction/country:us/state:mi/county:washtenaw/place:freedom/government
 - ocd-jurisdiction/country:us/state:mi/county:washtenaw/place:lima/government
@@ -913,12 +839,10 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/county:washtenaw/place:scio/government
 - ocd-jurisdiction/country:us/state:mi/county:washtenaw/place:sharon/government
 - ocd-jurisdiction/country:us/state:mi/county:washtenaw/place:superior_charter/government
-- ocd-jurisdiction/country:us/state:mi/county:washtenaw/place:sylvan/government
 - ocd-jurisdiction/country:us/state:mi/county:washtenaw/place:webster/government
 - ocd-jurisdiction/country:us/state:mi/county:washtenaw/place:ypsilanti_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:wayne/place:brownstown_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:wayne/place:grosse_ile/government
-- ocd-jurisdiction/country:us/state:mi/county:wayne/place:huron_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:wayne/place:plymouth_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:wayne/place:sumpter/government
 - ocd-jurisdiction/country:us/state:mi/county:wexford/place:cherry_grove/government
@@ -936,10 +860,8 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:allegan/government
 - ocd-jurisdiction/country:us/state:mi/place:allen_park/government
 - ocd-jurisdiction/country:us/state:mi/place:alma/government
-- ocd-jurisdiction/country:us/state:mi/place:almont/government
 - ocd-jurisdiction/country:us/state:mi/place:alpena/government
 - ocd-jurisdiction/country:us/state:mi/place:armada/government
-- ocd-jurisdiction/country:us/state:mi/place:ashley/government
 - ocd-jurisdiction/country:us/state:mi/place:au_gres/government
 - ocd-jurisdiction/country:us/state:mi/place:auburn/government
 - ocd-jurisdiction/country:us/state:mi/place:auburn_hills/government
@@ -958,9 +880,7 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:bellaire/government
 - ocd-jurisdiction/country:us/state:mi/place:belleville/government
 - ocd-jurisdiction/country:us/state:mi/place:bellevue/government
-- ocd-jurisdiction/country:us/state:mi/place:benton_harbor/government
 - ocd-jurisdiction/country:us/state:mi/place:benzonia/government
-- ocd-jurisdiction/country:us/state:mi/place:berkley/government
 - ocd-jurisdiction/country:us/state:mi/place:berrien_springs/government
 - ocd-jurisdiction/country:us/state:mi/place:bessemer/government
 - ocd-jurisdiction/country:us/state:mi/place:beverly_hills/government
@@ -969,30 +889,22 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:birch_run/government
 - ocd-jurisdiction/country:us/state:mi/place:birmingham/government
 - ocd-jurisdiction/country:us/state:mi/place:blissfield/government
-- ocd-jurisdiction/country:us/state:mi/place:bloomfield_hills/government
 - ocd-jurisdiction/country:us/state:mi/place:boyne_city/government
-- ocd-jurisdiction/country:us/state:mi/place:breckenridge/government
 - ocd-jurisdiction/country:us/state:mi/place:breedsville/government
 - ocd-jurisdiction/country:us/state:mi/place:bridgman/government
 - ocd-jurisdiction/country:us/state:mi/place:brighton/government
 - ocd-jurisdiction/country:us/state:mi/place:britton/government
 - ocd-jurisdiction/country:us/state:mi/place:bronson/government
 - ocd-jurisdiction/country:us/state:mi/place:brooklyn/government
-- ocd-jurisdiction/country:us/state:mi/place:brown_city/government
 - ocd-jurisdiction/country:us/state:mi/place:buchanan/government
-- ocd-jurisdiction/country:us/state:mi/place:burton/government
 - ocd-jurisdiction/country:us/state:mi/place:byron/government
 - ocd-jurisdiction/country:us/state:mi/place:cadillac/government
 - ocd-jurisdiction/country:us/state:mi/place:caledonia/government
 - ocd-jurisdiction/country:us/state:mi/place:capac/government
-- ocd-jurisdiction/country:us/state:mi/place:carleton/government
-- ocd-jurisdiction/country:us/state:mi/place:caro/government
 - ocd-jurisdiction/country:us/state:mi/place:carson_city/government
-- ocd-jurisdiction/country:us/state:mi/place:caseville/government
 - ocd-jurisdiction/country:us/state:mi/place:casnovia/government
 - ocd-jurisdiction/country:us/state:mi/place:cass_city/government
 - ocd-jurisdiction/country:us/state:mi/place:cassopolis/government
-- ocd-jurisdiction/country:us/state:mi/place:cedar_springs/government
 - ocd-jurisdiction/country:us/state:mi/place:cement_city/government
 - ocd-jurisdiction/country:us/state:mi/place:center_line/government
 - ocd-jurisdiction/country:us/state:mi/place:central_lake/government
@@ -1001,21 +913,17 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:charlotte/government
 - ocd-jurisdiction/country:us/state:mi/place:cheboygan/government
 - ocd-jurisdiction/country:us/state:mi/place:chelsea/government
-- ocd-jurisdiction/country:us/state:mi/place:chesaning/government
 - ocd-jurisdiction/country:us/state:mi/place:clare/government
 - ocd-jurisdiction/country:us/state:mi/place:clarksville/government
 - ocd-jurisdiction/country:us/state:mi/place:clawson/government
 - ocd-jurisdiction/country:us/state:mi/place:clayton/government
 - ocd-jurisdiction/country:us/state:mi/place:clifford/government
 - ocd-jurisdiction/country:us/state:mi/place:clinton/government
-- ocd-jurisdiction/country:us/state:mi/place:clio/government
 - ocd-jurisdiction/country:us/state:mi/place:coldwater/government
-- ocd-jurisdiction/country:us/state:mi/place:coleman/government
 - ocd-jurisdiction/country:us/state:mi/place:coloma/government
 - ocd-jurisdiction/country:us/state:mi/place:colon/government
 - ocd-jurisdiction/country:us/state:mi/place:columbiaville/government
 - ocd-jurisdiction/country:us/state:mi/place:concord/government
-- ocd-jurisdiction/country:us/state:mi/place:constantine/government
 - ocd-jurisdiction/country:us/state:mi/place:coopersville/government
 - ocd-jurisdiction/country:us/state:mi/place:copemish/government
 - ocd-jurisdiction/country:us/state:mi/place:corunna/government
@@ -1024,7 +932,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:davison/government
 - ocd-jurisdiction/country:us/state:mi/place:de_tour_village/government
 - ocd-jurisdiction/country:us/state:mi/place:dearborn_heights/government
-- ocd-jurisdiction/country:us/state:mi/place:decatur/government
 - ocd-jurisdiction/country:us/state:mi/place:deckerville/government
 - ocd-jurisdiction/country:us/state:mi/place:deerfield/government
 - ocd-jurisdiction/country:us/state:mi/place:dewitt/government
@@ -1034,10 +941,8 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:dowagiac/government
 - ocd-jurisdiction/country:us/state:mi/place:dryden/government
 - ocd-jurisdiction/country:us/state:mi/place:dundee/government
-- ocd-jurisdiction/country:us/state:mi/place:durand/government
 - ocd-jurisdiction/country:us/state:mi/place:east_grand_rapids/government
 - ocd-jurisdiction/country:us/state:mi/place:east_jordan/government
-- ocd-jurisdiction/country:us/state:mi/place:east_tawas/government
 - ocd-jurisdiction/country:us/state:mi/place:eastpointe/government
 - ocd-jurisdiction/country:us/state:mi/place:eaton_rapids/government
 - ocd-jurisdiction/country:us/state:mi/place:eau_claire/government
@@ -1047,11 +952,8 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:elkton/government
 - ocd-jurisdiction/country:us/state:mi/place:ellsworth/government
 - ocd-jurisdiction/country:us/state:mi/place:elsie/government
-- ocd-jurisdiction/country:us/state:mi/place:empire/government
 - ocd-jurisdiction/country:us/state:mi/place:escanaba/government
 - ocd-jurisdiction/country:us/state:mi/place:essexville/government
-- ocd-jurisdiction/country:us/state:mi/place:estral_beach/government
-- ocd-jurisdiction/country:us/state:mi/place:evart/government
 - ocd-jurisdiction/country:us/state:mi/place:fairgrove/government
 - ocd-jurisdiction/country:us/state:mi/place:farmington/government
 - ocd-jurisdiction/country:us/state:mi/place:farmington_hills/government
@@ -1065,7 +967,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:flushing/government
 - ocd-jurisdiction/country:us/state:mi/place:fowler/government
 - ocd-jurisdiction/country:us/state:mi/place:fowlerville/government
-- ocd-jurisdiction/country:us/state:mi/place:frankenmuth/government
 - ocd-jurisdiction/country:us/state:mi/place:frankfort/government
 - ocd-jurisdiction/country:us/state:mi/place:franklin/government
 - ocd-jurisdiction/country:us/state:mi/place:fraser/government
@@ -1075,7 +976,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:galesburg/government
 - ocd-jurisdiction/country:us/state:mi/place:garden/government
 - ocd-jurisdiction/country:us/state:mi/place:garden_city/government
-- ocd-jurisdiction/country:us/state:mi/place:gaylord/government
 - ocd-jurisdiction/country:us/state:mi/place:gibraltar/government
 - ocd-jurisdiction/country:us/state:mi/place:gladstone/government
 - ocd-jurisdiction/country:us/state:mi/place:gladwin/government
@@ -1102,11 +1002,9 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:harrisville/government
 - ocd-jurisdiction/country:us/state:mi/place:hart/government
 - ocd-jurisdiction/country:us/state:mi/place:hartford/government
-- ocd-jurisdiction/country:us/state:mi/place:hastings/government
 - ocd-jurisdiction/country:us/state:mi/place:hazel_park/government
 - ocd-jurisdiction/country:us/state:mi/place:hesperia/government
 - ocd-jurisdiction/country:us/state:mi/place:highland_park/government
-- ocd-jurisdiction/country:us/state:mi/place:hillman/government
 - ocd-jurisdiction/country:us/state:mi/place:hillsdale/government
 - ocd-jurisdiction/country:us/state:mi/place:holland/government
 - ocd-jurisdiction/country:us/state:mi/place:holly/government
@@ -1128,10 +1026,7 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:ithaca/government
 - ocd-jurisdiction/country:us/state:mi/place:jackson/government
 - ocd-jurisdiction/country:us/state:mi/place:jonesville/government
-- ocd-jurisdiction/country:us/state:mi/place:kalamazoo/government
 - ocd-jurisdiction/country:us/state:mi/place:kaleva/government
-- ocd-jurisdiction/country:us/state:mi/place:kalkaska/government
-- ocd-jurisdiction/country:us/state:mi/place:keego_harbor/government
 - ocd-jurisdiction/country:us/state:mi/place:kent_city/government
 - ocd-jurisdiction/country:us/state:mi/place:kentwood/government
 - ocd-jurisdiction/country:us/state:mi/place:kingsford/government
@@ -1154,8 +1049,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:le_roy/government
 - ocd-jurisdiction/country:us/state:mi/place:lennon/government
 - ocd-jurisdiction/country:us/state:mi/place:leonard/government
-- ocd-jurisdiction/country:us/state:mi/place:leslie/government
-- ocd-jurisdiction/country:us/state:mi/place:lexington/government
 - ocd-jurisdiction/country:us/state:mi/place:lincoln/government
 - ocd-jurisdiction/country:us/state:mi/place:lincoln_park/government
 - ocd-jurisdiction/country:us/state:mi/place:linden/government
@@ -1164,11 +1057,9 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:ludington/government
 - ocd-jurisdiction/country:us/state:mi/place:luna_pier/government
 - ocd-jurisdiction/country:us/state:mi/place:luther/government
-- ocd-jurisdiction/country:us/state:mi/place:mackinac_island/government
 - ocd-jurisdiction/country:us/state:mi/place:mackinaw_city/government
 - ocd-jurisdiction/country:us/state:mi/place:madison_heights/government
 - ocd-jurisdiction/country:us/state:mi/place:mancelona/government
-- ocd-jurisdiction/country:us/state:mi/place:manchester/government
 - ocd-jurisdiction/country:us/state:mi/place:manistee/government
 - ocd-jurisdiction/country:us/state:mi/place:manistique/government
 - ocd-jurisdiction/country:us/state:mi/place:manton/government
@@ -1179,30 +1070,23 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:marlette/government
 - ocd-jurisdiction/country:us/state:mi/place:marquette/government
 - ocd-jurisdiction/country:us/state:mi/place:marshall/government
-- ocd-jurisdiction/country:us/state:mi/place:martin/government
 - ocd-jurisdiction/country:us/state:mi/place:marysville/government
-- ocd-jurisdiction/country:us/state:mi/place:mason/government
 - ocd-jurisdiction/country:us/state:mi/place:mattawan/government
 - ocd-jurisdiction/country:us/state:mi/place:maybee/government
 - ocd-jurisdiction/country:us/state:mi/place:mayville/government
 - ocd-jurisdiction/country:us/state:mi/place:mcbain/government
 - ocd-jurisdiction/country:us/state:mi/place:mecosta/government
 - ocd-jurisdiction/country:us/state:mi/place:melvindale/government
-- ocd-jurisdiction/country:us/state:mi/place:memphis/government
 - ocd-jurisdiction/country:us/state:mi/place:mendon/government
 - ocd-jurisdiction/country:us/state:mi/place:menominee/government
 - ocd-jurisdiction/country:us/state:mi/place:merrill/government
 - ocd-jurisdiction/country:us/state:mi/place:mesick/government
-- ocd-jurisdiction/country:us/state:mi/place:metamora/government
 - ocd-jurisdiction/country:us/state:mi/place:michiana/government
-- ocd-jurisdiction/country:us/state:mi/place:middleville/government
 - ocd-jurisdiction/country:us/state:mi/place:midland/government
 - ocd-jurisdiction/country:us/state:mi/place:milan/government
 - ocd-jurisdiction/country:us/state:mi/place:milford/government
-- ocd-jurisdiction/country:us/state:mi/place:millington/government
 - ocd-jurisdiction/country:us/state:mi/place:monroe/government
 - ocd-jurisdiction/country:us/state:mi/place:montague/government
-- ocd-jurisdiction/country:us/state:mi/place:montrose/government
 - ocd-jurisdiction/country:us/state:mi/place:morenci/government
 - ocd-jurisdiction/country:us/state:mi/place:morrice/government
 - ocd-jurisdiction/country:us/state:mi/place:mount_clemens/government
@@ -1216,16 +1100,13 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:new_baltimore/government
 - ocd-jurisdiction/country:us/state:mi/place:new_buffalo/government
 - ocd-jurisdiction/country:us/state:mi/place:new_era/government
-- ocd-jurisdiction/country:us/state:mi/place:new_haven/government
 - ocd-jurisdiction/country:us/state:mi/place:new_lothrop/government
 - ocd-jurisdiction/country:us/state:mi/place:newaygo/government
 - ocd-jurisdiction/country:us/state:mi/place:newberry/government
 - ocd-jurisdiction/country:us/state:mi/place:niles/government
 - ocd-jurisdiction/country:us/state:mi/place:north_branch/government
-- ocd-jurisdiction/country:us/state:mi/place:north_muskegon/government
 - ocd-jurisdiction/country:us/state:mi/place:northport/government
 - ocd-jurisdiction/country:us/state:mi/place:northville/government
-- ocd-jurisdiction/country:us/state:mi/place:norton_shores/government
 - ocd-jurisdiction/country:us/state:mi/place:norway/government
 - ocd-jurisdiction/country:us/state:mi/place:novi/government
 - ocd-jurisdiction/country:us/state:mi/place:oak_park/government
@@ -1241,36 +1122,28 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:ovid/government
 - ocd-jurisdiction/country:us/state:mi/place:owosso/government
 - ocd-jurisdiction/country:us/state:mi/place:oxford/government
-- ocd-jurisdiction/country:us/state:mi/place:parchment/government
 - ocd-jurisdiction/country:us/state:mi/place:parma/government
 - ocd-jurisdiction/country:us/state:mi/place:paw_paw/government
 - ocd-jurisdiction/country:us/state:mi/place:pellston/government
-- ocd-jurisdiction/country:us/state:mi/place:perrinton/government
 - ocd-jurisdiction/country:us/state:mi/place:perry/government
 - ocd-jurisdiction/country:us/state:mi/place:petersburg/government
 - ocd-jurisdiction/country:us/state:mi/place:petoskey/government
 - ocd-jurisdiction/country:us/state:mi/place:pewamo/government
 - ocd-jurisdiction/country:us/state:mi/place:pigeon/government
 - ocd-jurisdiction/country:us/state:mi/place:pinckney/government
-- ocd-jurisdiction/country:us/state:mi/place:pinconning/government
 - ocd-jurisdiction/country:us/state:mi/place:plainwell/government
-- ocd-jurisdiction/country:us/state:mi/place:pleasant_ridge/government
 - ocd-jurisdiction/country:us/state:mi/place:plymouth/government
 - ocd-jurisdiction/country:us/state:mi/place:pontiac/government
 - ocd-jurisdiction/country:us/state:mi/place:port_austin/government
-- ocd-jurisdiction/country:us/state:mi/place:port_hope/government
 - ocd-jurisdiction/country:us/state:mi/place:port_huron/government
-- ocd-jurisdiction/country:us/state:mi/place:port_sanilac/government
 - ocd-jurisdiction/country:us/state:mi/place:portage/government
 - ocd-jurisdiction/country:us/state:mi/place:portland/government
 - ocd-jurisdiction/country:us/state:mi/place:posen/government
 - ocd-jurisdiction/country:us/state:mi/place:potterville/government
 - ocd-jurisdiction/country:us/state:mi/place:powers/government
-- ocd-jurisdiction/country:us/state:mi/place:quincy/government
 - ocd-jurisdiction/country:us/state:mi/place:ravenna/government
 - ocd-jurisdiction/country:us/state:mi/place:reading/government
 - ocd-jurisdiction/country:us/state:mi/place:reed_city/government
-- ocd-jurisdiction/country:us/state:mi/place:richland/government
 - ocd-jurisdiction/country:us/state:mi/place:richmond/government
 - ocd-jurisdiction/country:us/state:mi/place:river_rouge/government
 - ocd-jurisdiction/country:us/state:mi/place:riverview/government
@@ -1282,14 +1155,10 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:romeo/government
 - ocd-jurisdiction/country:us/state:mi/place:romulus/government
 - ocd-jurisdiction/country:us/state:mi/place:roosevelt_park/government
-- ocd-jurisdiction/country:us/state:mi/place:roscommon/government
-- ocd-jurisdiction/country:us/state:mi/place:rose_city/government
 - ocd-jurisdiction/country:us/state:mi/place:roseville/government
 - ocd-jurisdiction/country:us/state:mi/place:saginaw/government
 - ocd-jurisdiction/country:us/state:mi/place:saline/government
-- ocd-jurisdiction/country:us/state:mi/place:sand_lake/government
 - ocd-jurisdiction/country:us/state:mi/place:sanford/government
-- ocd-jurisdiction/country:us/state:mi/place:saranac/government
 - ocd-jurisdiction/country:us/state:mi/place:saugatuck/government
 - ocd-jurisdiction/country:us/state:mi/place:sault_ste._marie/government
 - ocd-jurisdiction/country:us/state:mi/place:scottville/government
@@ -1297,28 +1166,21 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:shelby/government
 - ocd-jurisdiction/country:us/state:mi/place:shepherd/government
 - ocd-jurisdiction/country:us/state:mi/place:sheridan/government
-- ocd-jurisdiction/country:us/state:mi/place:shoreham/government
 - ocd-jurisdiction/country:us/state:mi/place:south_haven/government
-- ocd-jurisdiction/country:us/state:mi/place:south_lyon/government
 - ocd-jurisdiction/country:us/state:mi/place:south_range/government
-- ocd-jurisdiction/country:us/state:mi/place:south_rockwood/government
 - ocd-jurisdiction/country:us/state:mi/place:southfield/government
-- ocd-jurisdiction/country:us/state:mi/place:southgate/government
 - ocd-jurisdiction/country:us/state:mi/place:sparta/government
 - ocd-jurisdiction/country:us/state:mi/place:spring_lake/government
 - ocd-jurisdiction/country:us/state:mi/place:springfield/government
 - ocd-jurisdiction/country:us/state:mi/place:springport/government
 - ocd-jurisdiction/country:us/state:mi/place:st._charles/government
-- ocd-jurisdiction/country:us/state:mi/place:st._clair/government
 - ocd-jurisdiction/country:us/state:mi/place:st._clair_shores/government
-- ocd-jurisdiction/country:us/state:mi/place:st._ignace/government
 - ocd-jurisdiction/country:us/state:mi/place:st._johns/government
 - ocd-jurisdiction/country:us/state:mi/place:st._joseph/government
 - ocd-jurisdiction/country:us/state:mi/place:st._louis/government
 - ocd-jurisdiction/country:us/state:mi/place:standish/government
 - ocd-jurisdiction/country:us/state:mi/place:stanton/government
 - ocd-jurisdiction/country:us/state:mi/place:stephenson/government
-- ocd-jurisdiction/country:us/state:mi/place:stevensville/government
 - ocd-jurisdiction/country:us/state:mi/place:stockbridge/government
 - ocd-jurisdiction/country:us/state:mi/place:sturgis/government
 - ocd-jurisdiction/country:us/state:mi/place:suttons_bay/government
@@ -1327,19 +1189,16 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:tawas_city/government
 - ocd-jurisdiction/country:us/state:mi/place:taylor/government
 - ocd-jurisdiction/country:us/state:mi/place:tecumseh/government
-- ocd-jurisdiction/country:us/state:mi/place:tekonsha/government
 - ocd-jurisdiction/country:us/state:mi/place:three_oaks/government
 - ocd-jurisdiction/country:us/state:mi/place:three_rivers/government
 - ocd-jurisdiction/country:us/state:mi/place:traverse_city/government
 - ocd-jurisdiction/country:us/state:mi/place:trenton/government
-- ocd-jurisdiction/country:us/state:mi/place:troy/government
 - ocd-jurisdiction/country:us/state:mi/place:ubly/government
 - ocd-jurisdiction/country:us/state:mi/place:union_city/government
 - ocd-jurisdiction/country:us/state:mi/place:unionville/government
 - ocd-jurisdiction/country:us/state:mi/place:utica/government
 - ocd-jurisdiction/country:us/state:mi/place:vandalia/government
 - ocd-jurisdiction/country:us/state:mi/place:vassar/government
-- ocd-jurisdiction/country:us/state:mi/place:vermontville/government
 - ocd-jurisdiction/country:us/state:mi/place:vernon/government
 - ocd-jurisdiction/country:us/state:mi/place:vicksburg/government
 - ocd-jurisdiction/country:us/state:mi/place:wakefield/government
@@ -1351,7 +1210,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:webberville/government
 - ocd-jurisdiction/country:us/state:mi/place:west_branch/government
 - ocd-jurisdiction/country:us/state:mi/place:westland/government
-- ocd-jurisdiction/country:us/state:mi/place:westphalia/government
 - ocd-jurisdiction/country:us/state:mi/place:white_cloud/government
 - ocd-jurisdiction/country:us/state:mi/place:white_pigeon/government
 - ocd-jurisdiction/country:us/state:mi/place:whitehall/government
@@ -1362,7 +1220,6 @@ Generated: 2026-04-16 00:53 UTC
 - ocd-jurisdiction/country:us/state:mi/place:woodhaven/government
 - ocd-jurisdiction/country:us/state:mi/place:wyandotte/government
 - ocd-jurisdiction/country:us/state:mi/place:wyoming/government
-- ocd-jurisdiction/country:us/state:mi/place:yale/government
 - ocd-jurisdiction/country:us/state:mi/place:ypsilanti/government
 - ocd-jurisdiction/country:us/state:mi/place:zeeland/government
 - ocd-jurisdiction/country:us/state:mi/place:zilwaukee/government
@@ -1373,15 +1230,87 @@ Generated: 2026-04-16 00:53 UTC
 |---------------------------|--------------------------------|
 | ocd-jurisdiction/country:us/state:mi/place:grosse_pointe_shores/government | ocd-jurisdiction/country:us/state:mi/county:alcona/place:caledonia/government |
 | ocd-jurisdiction/country:us/state:mi/place:l~anse/government | ocd-jurisdiction/country:us/state:mi/county:alcona/place:curtis/government |
-| ocd-jurisdiction/country:us/state:mi/place:sault_ste_marie/government | ocd-jurisdiction/country:us/state:mi/county:alcona/place:harrisville/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_charles/government | ocd-jurisdiction/country:us/state:mi/county:alcona/place:haynes/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_clair/government | ocd-jurisdiction/country:us/state:mi/county:macomb/place:clinton_charter/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_clair_shores/government | ocd-jurisdiction/country:us/state:mi/county:macomb/place:macomb/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_ignace/government |  |
-| ocd-jurisdiction/country:us/state:mi/place:st_johns/government |  |
-| ocd-jurisdiction/country:us/state:mi/place:st_joseph/government |  |
-| ocd-jurisdiction/country:us/state:mi/place:st_louis/government |  |
-| ocd-jurisdiction/country:us/state:mi/place:village_of_douglas/government |  |
+| ocd-jurisdiction/country:us/state:mi/place:sault_ste_marie/government | ocd-jurisdiction/country:us/state:mi/county:alcona/place:gustin/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_charles/government | ocd-jurisdiction/country:us/state:mi/county:alcona/place:harrisville/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_clair/government | ocd-jurisdiction/country:us/state:mi/county:alcona/place:haynes/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_clair_shores/government | ocd-jurisdiction/country:us/state:mi/county:alger/place:mathias/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_ignace/government | ocd-jurisdiction/country:us/state:mi/county:antrim/place:custer/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_johns/government | ocd-jurisdiction/country:us/state:mi/county:antrim/place:helena/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_joseph/government | ocd-jurisdiction/country:us/state:mi/county:antrim/place:mancelona/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_louis/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:garfield/government |
+| ocd-jurisdiction/country:us/state:mi/place:village_of_douglas/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:hampton_charter/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:bay/place:williams_charter/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:berrien/place:bainbridge/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:berrien/place:lake_charter/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:branch/place:algansee/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:calhoun/place:marshall/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:calhoun/place:newton/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:boyne_valley/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:charlevoix/place:hudson/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:chippewa/place:detour/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:chippewa/place:soo/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:clare/place:franklin/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:clinton/place:bingham/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:genesee/place:richfield/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:gladwin/place:butman/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:gogebic/place:ironwood_charter/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:grand_traverse/place:garfield_charter/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:houghton/place:portage_charter/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:houghton/place:schoolcraft/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:ingham/place:ingham/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:ionia/place:campbell/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:ionia/place:otisco/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:jackson/place:leoni/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:jackson/place:norvell/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:jackson/place:rives/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:jackson/place:springport/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:kalamazoo/place:wakeshma/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:blue_lake/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:clearwater/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:kalkaska/place:coldsprings/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:kent/place:caledonia/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:kent/place:courtland/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:kent/place:gaines_charter/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:kent/place:sparta/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:kent/place:tyrone/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:keweenaw/place:grant/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:lapeer/place:almont/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:lapeer/place:arcadia/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:lapeer/place:mayfield/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:lenawee/place:hudson/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:lenawee/place:woodstock/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:livingston/place:green_oak/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:mackinac/place:garfield/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:clinton_charter/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:macomb/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:richmond/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:macomb/place:shelby_charter/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:manistee/place:maple_grove/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:mason/place:custer/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:mason/place:grant/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:mecosta/place:mecosta/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:midland/place:geneva/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:midland/place:mount_haley/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:montcalm/place:pierson/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:oceana/place:grant/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:osceola/place:cedar/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:osceola/place:evart/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:osceola/place:hartwick/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:osceola/place:osceola/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:ottawa/place:park/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:roscommon/place:backus/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:saginaw/place:bridgeport_charter/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:saginaw/place:fremont/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:saginaw/place:jonesfield/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:saginaw/place:marion/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:st._clair/place:st._clair/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:st._joseph/place:white_pigeon/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:van_buren/place:decatur/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:washtenaw/place:bridgewater/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:washtenaw/place:sylvan/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:wayne/place:huron_charter/government |
+|  | ocd-jurisdiction/country:us/state:mi/place:st._clair/government |
+|  | ocd-jurisdiction/country:us/state:mi/place:st._ignace/government |
 
 </details>
 
