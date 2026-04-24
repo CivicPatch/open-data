@@ -33,7 +33,6 @@ jobs:
     outputs:
       pr_number: ${{ steps.create-pr.outputs.pr_number }}
       head_ref: ${{ steps.extract_branch.outputs.branch_name }}
-      municipality_path: ${{ steps.create-pr.outputs.municipality-path }}
     steps:
       - uses: actions/checkout@v6
 
@@ -125,17 +124,14 @@ jobs:
           git commit -m "Add municipal officials for ${{ github.event.inputs.jurisdiction_ocdid }} by ${{ github.event.inputs.user_email }}"
           git push -u origin ${{ steps.extract_branch.outputs.branch_name }}
 
-          PR_BODY=$(uv run python scripts/github_actions/pull_request_body_markdown.py "${{ github.event.inputs.jurisdiction_ocdid }}" "${{ github.event.inputs.request_id }}")
-
-          github_pull_request_url=$(gh pr create \
-            --title "Data intake for ${{ github.event.inputs.jurisdiction_ocdid }} by ${{ github.event.inputs.user_email }}" \
-            --body "$PR_BODY" \
-            --base main \
-            --label "env:${{ github.event.inputs.env }}" \
-            --label "state:${{ steps.get-jurisdiction-state.outputs.state }}"
-          )
-          github_pr_number=$(basename "$github_pull_request_url")
-          echo "pr_number=$github_pr_number" >> $GITHUB_OUTPUT
+          PR_NUMBER=$(uv run python scripts/github_actions/create_pr.py \
+            --jurisdiction-ocdid "${{ github.event.inputs.jurisdiction_ocdid }}" \
+            --request-id "${{ github.event.inputs.request_id }}" \
+            --state "${{ steps.get-jurisdiction-state.outputs.state }}" \
+            --branch "${{ steps.extract_branch.outputs.branch_name }}" \
+            --user-email "${{ github.event.inputs.user_email }}" \
+            --env "${{ github.event.inputs.env }}")
+          echo "pr_number=$PR_NUMBER" >> $GITHUB_OUTPUT
 
   process-pull-request:
     needs: data-intake
