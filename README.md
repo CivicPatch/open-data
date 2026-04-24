@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-24 00:10 UTC
+Generated: 2026-04-24 00:12 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 879 | 137 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 882 | 138 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-24 00:10 UTC
 ### mi
 
 <details>
-<summary>1073 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 65 in CP, not in external</summary>
+<summary>1072 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 66 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -619,7 +619,6 @@ Generated: 2026-04-24 00:10 UTC
 - ocd-jurisdiction/country:us/state:mi/county:menominee/place:nadeau/government
 - ocd-jurisdiction/country:us/state:mi/county:menominee/place:spalding/government
 - ocd-jurisdiction/country:us/state:mi/county:midland/place:edenville/government
-- ocd-jurisdiction/country:us/state:mi/county:midland/place:geneva/government
 - ocd-jurisdiction/country:us/state:mi/county:midland/place:greendale/government
 - ocd-jurisdiction/country:us/state:mi/county:midland/place:homer/government
 - ocd-jurisdiction/country:us/state:mi/county:midland/place:hope/government
@@ -1298,6 +1297,7 @@ Generated: 2026-04-24 00:10 UTC
 |  | ocd-jurisdiction/country:us/state:mi/county:manistee/place:maple_grove/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:mason/place:grant/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:mecosta/place:mecosta/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:midland/place:geneva/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:midland/place:mount_haley/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:montcalm/place:pierson/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:oceana/place:grant/government |
