@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-24 22:33 UTC
+Generated: 2026-04-24 22:57 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-24 22:33 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 63 | 8 | 560 | 563 | 43 | 5 | 324 | 76% |
+| nj | 71 | 9 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-24 22:33 UTC
 ### nj
 
 <details>
-<summary>552 not yet scraped &nbsp;·&nbsp; 2 in external, not in CP &nbsp;·&nbsp; 3 in CP, not in external</summary>
+<summary>551 not yet scraped &nbsp;·&nbsp; 2 in external, not in CP &nbsp;·&nbsp; 3 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1840,7 +1840,6 @@ Generated: 2026-04-24 22:33 UTC
 - ocd-jurisdiction/country:us/state:nj/place:teterboro/government
 - ocd-jurisdiction/country:us/state:nj/place:tinton_falls/government
 - ocd-jurisdiction/country:us/state:nj/place:totowa/government
-- ocd-jurisdiction/country:us/state:nj/place:trenton/government
 - ocd-jurisdiction/country:us/state:nj/place:tuckerton/government
 - ocd-jurisdiction/country:us/state:nj/place:union_beach/government
 - ocd-jurisdiction/country:us/state:nj/place:union_city/government
