@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-24 17:46 UTC
+Generated: 2026-04-24 17:47 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 977 | 157 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 991 | 159 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-24 17:46 UTC
 ### mi
 
 <details>
-<summary>1053 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 83 in CP, not in external</summary>
+<summary>1051 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 83 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1060,7 +1060,6 @@ Generated: 2026-04-24 17:46 UTC
 - ocd-jurisdiction/country:us/state:mi/place:mackinaw_city/government
 - ocd-jurisdiction/country:us/state:mi/place:madison_heights/government
 - ocd-jurisdiction/country:us/state:mi/place:mancelona/government
-- ocd-jurisdiction/country:us/state:mi/place:manchester/government
 - ocd-jurisdiction/country:us/state:mi/place:manistee/government
 - ocd-jurisdiction/country:us/state:mi/place:manistique/government
 - ocd-jurisdiction/country:us/state:mi/place:manton/government
@@ -1132,7 +1131,6 @@ Generated: 2026-04-24 17:46 UTC
 - ocd-jurisdiction/country:us/state:mi/place:pewamo/government
 - ocd-jurisdiction/country:us/state:mi/place:pigeon/government
 - ocd-jurisdiction/country:us/state:mi/place:pinckney/government
-- ocd-jurisdiction/country:us/state:mi/place:pinconning/government
 - ocd-jurisdiction/country:us/state:mi/place:plainwell/government
 - ocd-jurisdiction/country:us/state:mi/place:plymouth/government
 - ocd-jurisdiction/country:us/state:mi/place:pontiac/government
