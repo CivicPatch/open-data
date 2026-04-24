@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-24 03:19 UTC
+Generated: 2026-04-24 17:46 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 975 | 156 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
+| mi | 977 | 157 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
 | nj | 63 | 8 | 559 | 563 | 43 | 5 | 324 | 76% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -168,7 +168,7 @@ Generated: 2026-04-24 03:19 UTC
 ### mi
 
 <details>
-<summary>1054 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 82 in CP, not in external</summary>
+<summary>1053 not yet scraped &nbsp;·&nbsp; 11 in external, not in CP &nbsp;·&nbsp; 83 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -215,7 +215,6 @@ Generated: 2026-04-24 03:19 UTC
 - ocd-jurisdiction/country:us/state:mi/county:antrim/place:forest_home/government
 - ocd-jurisdiction/country:us/state:mi/county:antrim/place:jordan/government
 - ocd-jurisdiction/country:us/state:mi/county:antrim/place:kearney/government
-- ocd-jurisdiction/country:us/state:mi/county:antrim/place:mancelona/government
 - ocd-jurisdiction/country:us/state:mi/county:antrim/place:milton/government
 - ocd-jurisdiction/country:us/state:mi/county:antrim/place:star/government
 - ocd-jurisdiction/country:us/state:mi/county:antrim/place:torch_lake/government
@@ -1239,9 +1238,10 @@ Generated: 2026-04-24 03:19 UTC
 | ocd-jurisdiction/country:us/state:mi/place:st_clair_shores/government | ocd-jurisdiction/country:us/state:mi/county:alger/place:mathias/government |
 | ocd-jurisdiction/country:us/state:mi/place:st_ignace/government | ocd-jurisdiction/country:us/state:mi/county:antrim/place:custer/government |
 | ocd-jurisdiction/country:us/state:mi/place:st_johns/government | ocd-jurisdiction/country:us/state:mi/county:antrim/place:helena/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_joseph/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:garfield/government |
-| ocd-jurisdiction/country:us/state:mi/place:st_louis/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:hampton_charter/government |
-| ocd-jurisdiction/country:us/state:mi/place:village_of_douglas/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:williams_charter/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_joseph/government | ocd-jurisdiction/country:us/state:mi/county:antrim/place:mancelona/government |
+| ocd-jurisdiction/country:us/state:mi/place:st_louis/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:garfield/government |
+| ocd-jurisdiction/country:us/state:mi/place:village_of_douglas/government | ocd-jurisdiction/country:us/state:mi/county:bay/place:hampton_charter/government |
+|  | ocd-jurisdiction/country:us/state:mi/county:bay/place:williams_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:berrien/place:bainbridge/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:berrien/place:lake_charter/government |
 |  | ocd-jurisdiction/country:us/state:mi/county:branch/place:algansee/government |
