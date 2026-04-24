@@ -11,6 +11,7 @@ import geopandas
 import pandas
 import requests
 from ruamel.yaml import YAML
+from ruamel.yaml.comments import CommentedMap
 
 ryaml = YAML()
 ryaml.preserve_quotes = True
@@ -75,7 +76,7 @@ def _load_existing_jurisdictions(path: Path):
       - existing_by_id is a dict keyed by jurisdiction id pointing to CommentedMap entries
     """
     if not path.exists():
-        return {}, {}
+        return CommentedMap(), {}
     with open(path) as f:
         doc = ryaml.load(f)
     if not doc or "jurisdictions" not in doc:
