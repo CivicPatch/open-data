@@ -16,8 +16,8 @@ STATE_CODES = [
 ]
 
 LABELS = (
+    ["env:development", "data-quality"] +
     [f"state:{code}" for code in STATE_CODES]
-    + ["env:development"]
 )
 
 
