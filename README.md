@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-24 22:57 UTC
+Generated: 2026-04-28 17:22 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-24 22:57 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 71 | 9 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 79 | 10 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-24 22:57 UTC
 ### nj
 
 <details>
-<summary>551 not yet scraped &nbsp;·&nbsp; 2 in external, not in CP &nbsp;·&nbsp; 3 in CP, not in external</summary>
+<summary>550 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 4 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1338,7 +1338,6 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:wyckoff/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:bass_river/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:bordentown/government
-- ocd-jurisdiction/country:us/state:nj/county:burlington/place:burlington/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:chesterfield/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:cinnaminson/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:delanco/government
@@ -1557,7 +1556,6 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:pohatcong/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:washington/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:white/government
-- ocd-jurisdiction/country:us/state:nj/place:/government
 - ocd-jurisdiction/country:us/state:nj/place:absecon/government
 - ocd-jurisdiction/country:us/state:nj/place:allendale/government
 - ocd-jurisdiction/country:us/state:nj/place:allenhurst/government
@@ -1784,6 +1782,7 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/place:point_pleasant_beach/government
 - ocd-jurisdiction/country:us/state:nj/place:pompton_lakes/government
 - ocd-jurisdiction/country:us/state:nj/place:port_republic/government
+- ocd-jurisdiction/country:us/state:nj/place:princeton/government
 - ocd-jurisdiction/country:us/state:nj/place:prospect_park/government
 - ocd-jurisdiction/country:us/state:nj/place:rahway/government
 - ocd-jurisdiction/country:us/state:nj/place:ramsey/government
@@ -1877,8 +1876,9 @@ Generated: 2026-04-24 22:57 UTC
 
 | In External, Not in Known | In CivicPatch, Not in External |
 |---------------------------|--------------------------------|
-| ocd-jurisdiction/country:us/state:nj/place:pine_valley/government | ocd-jurisdiction/country:us/state:nj/county:mercer/place:hamilton/government |
-| ocd-jurisdiction/country:us/state:nj/place:princeton/government | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:woodbridge/government |
+| ocd-jurisdiction/country:us/state:nj/place:pine_valley/government | ocd-jurisdiction/country:us/state:nj/county:burlington/place:burlington/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:hamilton/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:woodbridge/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lakewood/government |
 
 </details>
