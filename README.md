@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-29 17:41 UTC
+Generated: 2026-04-29 17:43 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-29 17:41 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 286 | 43 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 307 | 46 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-29 17:41 UTC
 ### nj
 
 <details>
-<summary>517 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 17 in CP, not in external</summary>
+<summary>514 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 19 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1325,7 +1325,6 @@ Generated: 2026-04-29 17:41 UTC
 - ocd-jurisdiction/country:us/state:nj/county:atlantic/place:egg_harbor/government
 - ocd-jurisdiction/country:us/state:nj/county:atlantic/place:galloway/government
 - ocd-jurisdiction/country:us/state:nj/county:atlantic/place:hamilton/government
-- ocd-jurisdiction/country:us/state:nj/county:atlantic/place:mullica/government
 - ocd-jurisdiction/country:us/state:nj/county:atlantic/place:weymouth/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:lyndhurst/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:mahwah/government
@@ -1503,7 +1502,6 @@ Generated: 2026-04-29 17:41 UTC
 - ocd-jurisdiction/country:us/state:nj/county:somerset/place:bernards/government
 - ocd-jurisdiction/country:us/state:nj/county:somerset/place:branchburg/government
 - ocd-jurisdiction/country:us/state:nj/county:somerset/place:bridgewater/government
-- ocd-jurisdiction/country:us/state:nj/county:somerset/place:franklin/government
 - ocd-jurisdiction/country:us/state:nj/county:somerset/place:green_brook/government
 - ocd-jurisdiction/country:us/state:nj/county:somerset/place:hillsborough/government
 - ocd-jurisdiction/country:us/state:nj/county:somerset/place:montgomery/government
@@ -1627,7 +1625,6 @@ Generated: 2026-04-29 17:41 UTC
 - ocd-jurisdiction/country:us/state:nj/place:florham_park/government
 - ocd-jurisdiction/country:us/state:nj/place:folsom/government
 - ocd-jurisdiction/country:us/state:nj/place:fort_lee/government
-- ocd-jurisdiction/country:us/state:nj/place:franklin/government
 - ocd-jurisdiction/country:us/state:nj/place:franklin_lakes/government
 - ocd-jurisdiction/country:us/state:nj/place:freehold/government
 - ocd-jurisdiction/country:us/state:nj/place:frenchtown/government
@@ -1843,7 +1840,8 @@ Generated: 2026-04-29 17:41 UTC
 
 | In External, Not in Known | In CivicPatch, Not in External |
 |---------------------------|--------------------------------|
-| ocd-jurisdiction/country:us/state:nj/place:pine_valley/government | ocd-jurisdiction/country:us/state:nj/county:bergen/place:river_vale/government |
+| ocd-jurisdiction/country:us/state:nj/place:pine_valley/government | ocd-jurisdiction/country:us/state:nj/county:atlantic/place:mullica/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:bergen/place:river_vale/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:burlington/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:lumberton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:cape_may/place:middle/government |
@@ -1856,6 +1854,7 @@ Generated: 2026-04-29 17:41 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:denville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:montville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lakewood/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:somerset/place:franklin/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:union/place:springfield/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:warren/place:allamuchy/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:warren/place:blairstown/government |
