@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-29 17:45 UTC
+Generated: 2026-04-29 17:47 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-29 17:45 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 321 | 48 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 354 | 53 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-29 17:45 UTC
 ### nj
 
 <details>
-<summary>512 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 19 in CP, not in external</summary>
+<summary>507 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 19 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1553,11 +1553,9 @@ Generated: 2026-04-29 17:45 UTC
 - ocd-jurisdiction/country:us/state:nj/place:audubon/government
 - ocd-jurisdiction/country:us/state:nj/place:audubon_park/government
 - ocd-jurisdiction/country:us/state:nj/place:avon-by-the-sea/government
-- ocd-jurisdiction/country:us/state:nj/place:barnegat_light/government
 - ocd-jurisdiction/country:us/state:nj/place:barrington/government
 - ocd-jurisdiction/country:us/state:nj/place:bay_head/government
 - ocd-jurisdiction/country:us/state:nj/place:bayonne/government
-- ocd-jurisdiction/country:us/state:nj/place:beach_haven/government
 - ocd-jurisdiction/country:us/state:nj/place:beachwood/government
 - ocd-jurisdiction/country:us/state:nj/place:bellmawr/government
 - ocd-jurisdiction/country:us/state:nj/place:belmar/government
@@ -1584,7 +1582,6 @@ Generated: 2026-04-29 17:45 UTC
 - ocd-jurisdiction/country:us/state:nj/place:califon/government
 - ocd-jurisdiction/country:us/state:nj/place:cape_may/government
 - ocd-jurisdiction/country:us/state:nj/place:cape_may_point/government
-- ocd-jurisdiction/country:us/state:nj/place:carlstadt/government
 - ocd-jurisdiction/country:us/state:nj/place:carteret/government
 - ocd-jurisdiction/country:us/state:nj/place:chatham/government
 - ocd-jurisdiction/country:us/state:nj/place:chesilhurst/government
@@ -1657,7 +1654,6 @@ Generated: 2026-04-29 17:45 UTC
 - ocd-jurisdiction/country:us/state:nj/place:hopatcong/government
 - ocd-jurisdiction/country:us/state:nj/place:hopewell/government
 - ocd-jurisdiction/country:us/state:nj/place:interlaken/government
-- ocd-jurisdiction/country:us/state:nj/place:island_heights/government
 - ocd-jurisdiction/country:us/state:nj/place:jamesburg/government
 - ocd-jurisdiction/country:us/state:nj/place:keansburg/government
 - ocd-jurisdiction/country:us/state:nj/place:kearny/government
@@ -1699,7 +1695,6 @@ Generated: 2026-04-29 17:45 UTC
 - ocd-jurisdiction/country:us/state:nj/place:milltown/government
 - ocd-jurisdiction/country:us/state:nj/place:millville/government
 - ocd-jurisdiction/country:us/state:nj/place:monmouth_beach/government
-- ocd-jurisdiction/country:us/state:nj/place:montvale/government
 - ocd-jurisdiction/country:us/state:nj/place:moonachie/government
 - ocd-jurisdiction/country:us/state:nj/place:morris_plains/government
 - ocd-jurisdiction/country:us/state:nj/place:morristown/government
