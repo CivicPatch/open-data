@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-29 17:05 UTC
+Generated: 2026-04-29 17:06 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-29 17:05 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 84 | 11 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 94 | 13 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-29 17:05 UTC
 ### nj
 
 <details>
-<summary>549 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 4 in CP, not in external</summary>
+<summary>547 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 6 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1429,7 +1429,6 @@ Generated: 2026-04-29 17:05 UTC
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:raritan/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:readington/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:tewksbury/government
-- ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:union/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:west_amwell/government
 - ocd-jurisdiction/country:us/state:nj/county:mercer/place:east_windsor/government
 - ocd-jurisdiction/country:us/state:nj/county:mercer/place:ewing/government
@@ -1551,7 +1550,6 @@ Generated: 2026-04-29 17:05 UTC
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:knowlton/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:liberty/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:lopatcong/government
-- ocd-jurisdiction/country:us/state:nj/county:warren/place:mansfield/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:oxford/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:pohatcong/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:washington/government
@@ -1876,9 +1874,11 @@ Generated: 2026-04-29 17:05 UTC
 | In External, Not in Known | In CivicPatch, Not in External |
 |---------------------------|--------------------------------|
 | ocd-jurisdiction/country:us/state:nj/place:pine_valley/government | ocd-jurisdiction/country:us/state:nj/county:burlington/place:burlington/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:union/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:hamilton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:woodbridge/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lakewood/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:warren/place:mansfield/government |
 
 </details>
 
