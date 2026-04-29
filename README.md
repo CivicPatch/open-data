@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-29 17:30 UTC
+Generated: 2026-04-29 17:32 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-29 17:30 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 213 | 31 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 225 | 33 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-29 17:30 UTC
 ### nj
 
 <details>
-<summary>529 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 10 in CP, not in external</summary>
+<summary>527 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 11 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1535,7 +1535,6 @@ Generated: 2026-04-29 17:30 UTC
 - ocd-jurisdiction/country:us/state:nj/county:union/place:union/government
 - ocd-jurisdiction/country:us/state:nj/county:union/place:winfield/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:allamuchy/government
-- ocd-jurisdiction/country:us/state:nj/county:warren/place:blairstown/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:franklin/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:frelinghuysen/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:greenwich/government
@@ -1643,7 +1642,6 @@ Generated: 2026-04-29 17:30 UTC
 - ocd-jurisdiction/country:us/state:nj/place:gibbsboro/government
 - ocd-jurisdiction/country:us/state:nj/place:glassboro/government
 - ocd-jurisdiction/country:us/state:nj/place:glen_gardner/government
-- ocd-jurisdiction/country:us/state:nj/place:glen_ridge/government
 - ocd-jurisdiction/country:us/state:nj/place:glen_rock/government
 - ocd-jurisdiction/country:us/state:nj/place:guttenberg/government
 - ocd-jurisdiction/country:us/state:nj/place:hackettstown/government
@@ -1864,6 +1862,7 @@ Generated: 2026-04-29 17:30 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:woodbridge/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lakewood/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:union/place:springfield/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:warren/place:blairstown/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:warren/place:mansfield/government |
 
 </details>
