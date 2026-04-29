@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-29 18:00 UTC
+Generated: 2026-04-29 18:02 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-29 18:00 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 501 | 74 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 518 | 76 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-29 18:00 UTC
 ### nj
 
 <details>
-<summary>486 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 23 in CP, not in external</summary>
+<summary>484 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 24 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1481,7 +1481,6 @@ Generated: 2026-04-29 18:00 UTC
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:stafford/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:toms_river/government
 - ocd-jurisdiction/country:us/state:nj/county:passaic/place:little_falls/government
-- ocd-jurisdiction/country:us/state:nj/county:passaic/place:wayne/government
 - ocd-jurisdiction/country:us/state:nj/county:passaic/place:west_milford/government
 - ocd-jurisdiction/country:us/state:nj/county:salem/place:alloway/government
 - ocd-jurisdiction/country:us/state:nj/county:salem/place:carneys_point/government
@@ -1747,7 +1746,6 @@ Generated: 2026-04-29 18:00 UTC
 - ocd-jurisdiction/country:us/state:nj/place:roosevelt/government
 - ocd-jurisdiction/country:us/state:nj/place:roseland/government
 - ocd-jurisdiction/country:us/state:nj/place:roselle/government
-- ocd-jurisdiction/country:us/state:nj/place:roselle_park/government
 - ocd-jurisdiction/country:us/state:nj/place:rumson/government
 - ocd-jurisdiction/country:us/state:nj/place:runnemede/government
 - ocd-jurisdiction/country:us/state:nj/place:rutherford/government
@@ -1830,6 +1828,7 @@ Generated: 2026-04-29 18:00 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:denville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:montville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lakewood/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:passaic/place:wayne/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:somerset/place:franklin/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:union/place:springfield/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:warren/place:allamuchy/government |
