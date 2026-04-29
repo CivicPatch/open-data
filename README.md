@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-29 17:18 UTC
+Generated: 2026-04-29 17:20 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-29 17:18 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 143 | 20 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 165 | 23 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-29 17:18 UTC
 ### nj
 
 <details>
-<summary>540 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 6 in CP, not in external</summary>
+<summary>537 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 6 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1558,7 +1558,6 @@ Generated: 2026-04-29 17:18 UTC
 - ocd-jurisdiction/country:us/state:nj/place:allendale/government
 - ocd-jurisdiction/country:us/state:nj/place:allenhurst/government
 - ocd-jurisdiction/country:us/state:nj/place:allentown/government
-- ocd-jurisdiction/country:us/state:nj/place:alpha/government
 - ocd-jurisdiction/country:us/state:nj/place:alpine/government
 - ocd-jurisdiction/country:us/state:nj/place:andover/government
 - ocd-jurisdiction/country:us/state:nj/place:asbury_park/government
@@ -1672,7 +1671,6 @@ Generated: 2026-04-29 17:18 UTC
 - ocd-jurisdiction/country:us/state:nj/place:high_bridge/government
 - ocd-jurisdiction/country:us/state:nj/place:highland_park/government
 - ocd-jurisdiction/country:us/state:nj/place:hightstown/government
-- ocd-jurisdiction/country:us/state:nj/place:hillsdale/government
 - ocd-jurisdiction/country:us/state:nj/place:ho-ho-kus/government
 - ocd-jurisdiction/country:us/state:nj/place:hoboken/government
 - ocd-jurisdiction/country:us/state:nj/place:hopatcong/government
@@ -1733,7 +1731,6 @@ Generated: 2026-04-29 17:18 UTC
 - ocd-jurisdiction/country:us/state:nj/place:national_park/government
 - ocd-jurisdiction/country:us/state:nj/place:neptune_city/government
 - ocd-jurisdiction/country:us/state:nj/place:netcong/government
-- ocd-jurisdiction/country:us/state:nj/place:new_brunswick/government
 - ocd-jurisdiction/country:us/state:nj/place:new_milford/government
 - ocd-jurisdiction/country:us/state:nj/place:new_providence/government
 - ocd-jurisdiction/country:us/state:nj/place:newfield/government
