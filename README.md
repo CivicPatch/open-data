@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-29 17:28 UTC
+Generated: 2026-04-29 17:30 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-29 17:28 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 191 | 28 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 213 | 31 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-29 17:28 UTC
 ### nj
 
 <details>
-<summary>532 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 9 in CP, not in external</summary>
+<summary>529 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 10 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1329,7 +1329,6 @@ Generated: 2026-04-29 17:28 UTC
 - ocd-jurisdiction/country:us/state:nj/county:atlantic/place:weymouth/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:lyndhurst/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:mahwah/government
-- ocd-jurisdiction/country:us/state:nj/county:bergen/place:river_vale/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:rochelle_park/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:saddle_brook/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:south_hackensack/government
@@ -1573,7 +1572,6 @@ Generated: 2026-04-29 17:28 UTC
 - ocd-jurisdiction/country:us/state:nj/place:belmar/government
 - ocd-jurisdiction/country:us/state:nj/place:belvidere/government
 - ocd-jurisdiction/country:us/state:nj/place:bergenfield/government
-- ocd-jurisdiction/country:us/state:nj/place:berlin/government
 - ocd-jurisdiction/country:us/state:nj/place:bernardsville/government
 - ocd-jurisdiction/country:us/state:nj/place:beverly/government
 - ocd-jurisdiction/country:us/state:nj/place:bloomingdale/government
@@ -1611,7 +1609,6 @@ Generated: 2026-04-29 17:28 UTC
 - ocd-jurisdiction/country:us/state:nj/place:cresskill/government
 - ocd-jurisdiction/country:us/state:nj/place:deal/government
 - ocd-jurisdiction/country:us/state:nj/place:demarest/government
-- ocd-jurisdiction/country:us/state:nj/place:dover/government
 - ocd-jurisdiction/country:us/state:nj/place:dumont/government
 - ocd-jurisdiction/country:us/state:nj/place:east_newark/government
 - ocd-jurisdiction/country:us/state:nj/place:east_orange/government
@@ -1858,7 +1855,8 @@ Generated: 2026-04-29 17:28 UTC
 
 | In External, Not in Known | In CivicPatch, Not in External |
 |---------------------------|--------------------------------|
-| ocd-jurisdiction/country:us/state:nj/place:pine_valley/government | ocd-jurisdiction/country:us/state:nj/county:burlington/place:burlington/government |
+| ocd-jurisdiction/country:us/state:nj/place:pine_valley/government | ocd-jurisdiction/country:us/state:nj/county:bergen/place:river_vale/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:burlington/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:lumberton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:deptford/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:union/government |
