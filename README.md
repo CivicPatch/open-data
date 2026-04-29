@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-29 17:54 UTC
+Generated: 2026-04-29 17:56 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-29 17:54 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 453 | 67 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 481 | 71 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-29 17:54 UTC
 ### nj
 
 <details>
-<summary>493 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 20 in CP, not in external</summary>
+<summary>489 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 22 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1394,7 +1394,6 @@ Generated: 2026-04-29 17:54 UTC
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:millburn/government
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:montclair/government
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:nutley/government
-- ocd-jurisdiction/country:us/state:nj/county:essex/place:south_orange_village/government
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:verona/government
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:west_caldwell/government
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:west_orange/government
@@ -1438,7 +1437,6 @@ Generated: 2026-04-29 17:54 UTC
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:piscataway/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:plainsboro/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:south_brunswick/government
-- ocd-jurisdiction/country:us/state:nj/county:monmouth/place:aberdeen/government
 - ocd-jurisdiction/country:us/state:nj/county:monmouth/place:colts_neck/government
 - ocd-jurisdiction/country:us/state:nj/county:monmouth/place:freehold/government
 - ocd-jurisdiction/country:us/state:nj/county:monmouth/place:hazlet/government
@@ -1554,7 +1552,6 @@ Generated: 2026-04-29 17:54 UTC
 - ocd-jurisdiction/country:us/state:nj/place:barrington/government
 - ocd-jurisdiction/country:us/state:nj/place:bay_head/government
 - ocd-jurisdiction/country:us/state:nj/place:bayonne/government
-- ocd-jurisdiction/country:us/state:nj/place:beachwood/government
 - ocd-jurisdiction/country:us/state:nj/place:belmar/government
 - ocd-jurisdiction/country:us/state:nj/place:belvidere/government
 - ocd-jurisdiction/country:us/state:nj/place:bergenfield/government
@@ -1741,7 +1738,6 @@ Generated: 2026-04-29 17:54 UTC
 - ocd-jurisdiction/country:us/state:nj/place:ramsey/government
 - ocd-jurisdiction/country:us/state:nj/place:raritan/government
 - ocd-jurisdiction/country:us/state:nj/place:red_bank/government
-- ocd-jurisdiction/country:us/state:nj/place:ridgefield/government
 - ocd-jurisdiction/country:us/state:nj/place:ridgefield_park/government
 - ocd-jurisdiction/country:us/state:nj/place:ridgewood/government
 - ocd-jurisdiction/country:us/state:nj/place:ringwood/government
@@ -1824,12 +1820,14 @@ Generated: 2026-04-29 17:54 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:burlington/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:lumberton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:cape_may/place:middle/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:essex/place:south_orange_village/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:deptford/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:holland/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:union/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:hamilton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:north_brunswick/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:woodbridge/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:monmouth/place:aberdeen/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:chester/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:denville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:montville/government |
