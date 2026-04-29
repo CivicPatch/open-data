@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-29 17:12 UTC
+Generated: 2026-04-29 17:14 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-29 17:12 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 108 | 15 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 128 | 18 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-29 17:12 UTC
 ### nj
 
 <details>
-<summary>545 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 6 in CP, not in external</summary>
+<summary>542 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 6 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1566,7 +1566,6 @@ Generated: 2026-04-29 17:12 UTC
 - ocd-jurisdiction/country:us/state:nj/place:atlantic_highlands/government
 - ocd-jurisdiction/country:us/state:nj/place:audubon/government
 - ocd-jurisdiction/country:us/state:nj/place:audubon_park/government
-- ocd-jurisdiction/country:us/state:nj/place:avalon/government
 - ocd-jurisdiction/country:us/state:nj/place:avon-by-the-sea/government
 - ocd-jurisdiction/country:us/state:nj/place:barnegat_light/government
 - ocd-jurisdiction/country:us/state:nj/place:barrington/government
@@ -1755,7 +1754,6 @@ Generated: 2026-04-29 17:12 UTC
 - ocd-jurisdiction/country:us/state:nj/place:oceanport/government
 - ocd-jurisdiction/country:us/state:nj/place:ogdensburg/government
 - ocd-jurisdiction/country:us/state:nj/place:old_tappan/government
-- ocd-jurisdiction/country:us/state:nj/place:oradell/government
 - ocd-jurisdiction/country:us/state:nj/place:palisades_park/government
 - ocd-jurisdiction/country:us/state:nj/place:palmyra/government
 - ocd-jurisdiction/country:us/state:nj/place:paramus/government
@@ -1824,7 +1822,6 @@ Generated: 2026-04-29 17:12 UTC
 - ocd-jurisdiction/country:us/state:nj/place:spring_lake_heights/government
 - ocd-jurisdiction/country:us/state:nj/place:stanhope/government
 - ocd-jurisdiction/country:us/state:nj/place:stockton/government
-- ocd-jurisdiction/country:us/state:nj/place:stone_harbor/government
 - ocd-jurisdiction/country:us/state:nj/place:stratford/government
 - ocd-jurisdiction/country:us/state:nj/place:summit/government
 - ocd-jurisdiction/country:us/state:nj/place:surf_city/government
