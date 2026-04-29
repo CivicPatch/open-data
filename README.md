@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-29 17:26 UTC
+Generated: 2026-04-29 17:28 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-29 17:26 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 179 | 26 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 191 | 28 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-29 17:26 UTC
 ### nj
 
 <details>
-<summary>534 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 7 in CP, not in external</summary>
+<summary>532 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 9 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1401,7 +1401,6 @@ Generated: 2026-04-29 17:26 UTC
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:verona/government
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:west_caldwell/government
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:west_orange/government
-- ocd-jurisdiction/country:us/state:nj/county:gloucester/place:deptford/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:east_greenwich/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:elk/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:franklin/government
@@ -1534,7 +1533,6 @@ Generated: 2026-04-29 17:26 UTC
 - ocd-jurisdiction/country:us/state:nj/county:union/place:cranford/government
 - ocd-jurisdiction/country:us/state:nj/county:union/place:hillside/government
 - ocd-jurisdiction/country:us/state:nj/county:union/place:scotch_plains/government
-- ocd-jurisdiction/country:us/state:nj/county:union/place:springfield/government
 - ocd-jurisdiction/country:us/state:nj/county:union/place:union/government
 - ocd-jurisdiction/country:us/state:nj/county:union/place:winfield/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:allamuchy/government
@@ -1862,10 +1860,12 @@ Generated: 2026-04-29 17:26 UTC
 |---------------------------|--------------------------------|
 | ocd-jurisdiction/country:us/state:nj/place:pine_valley/government | ocd-jurisdiction/country:us/state:nj/county:burlington/place:burlington/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:lumberton/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:deptford/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:union/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:hamilton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:woodbridge/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lakewood/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:union/place:springfield/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:warren/place:mansfield/government |
 
 </details>
