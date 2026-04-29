@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-29 17:34 UTC
+Generated: 2026-04-29 17:36 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-29 17:34 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 236 | 35 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 258 | 38 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-29 17:34 UTC
 ### nj
 
 <details>
-<summary>525 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 12 in CP, not in external</summary>
+<summary>522 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 13 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1459,7 +1459,6 @@ Generated: 2026-04-29 17:34 UTC
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:boonton/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:chatham/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:chester/government
-- ocd-jurisdiction/country:us/state:nj/county:morris/place:denville/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:east_hanover/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:hanover/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:harding/government
@@ -1698,7 +1697,6 @@ Generated: 2026-04-29 17:34 UTC
 - ocd-jurisdiction/country:us/state:nj/place:manville/government
 - ocd-jurisdiction/country:us/state:nj/place:margate_city/government
 - ocd-jurisdiction/country:us/state:nj/place:matawan/government
-- ocd-jurisdiction/country:us/state:nj/place:maywood/government
 - ocd-jurisdiction/country:us/state:nj/place:medford_lakes/government
 - ocd-jurisdiction/country:us/state:nj/place:mendham/government
 - ocd-jurisdiction/country:us/state:nj/place:merchantville/government
@@ -1824,7 +1822,6 @@ Generated: 2026-04-29 17:34 UTC
 - ocd-jurisdiction/country:us/state:nj/place:vineland/government
 - ocd-jurisdiction/country:us/state:nj/place:waldwick/government
 - ocd-jurisdiction/country:us/state:nj/place:wallington/government
-- ocd-jurisdiction/country:us/state:nj/place:wanaque/government
 - ocd-jurisdiction/country:us/state:nj/place:washington/government
 - ocd-jurisdiction/country:us/state:nj/place:watchung/government
 - ocd-jurisdiction/country:us/state:nj/place:wenonah/government
@@ -1859,6 +1856,7 @@ Generated: 2026-04-29 17:34 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:union/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:hamilton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:woodbridge/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:morris/place:denville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lakewood/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:union/place:springfield/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:warren/place:blairstown/government |
