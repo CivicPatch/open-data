@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-29 17:47 UTC
+Generated: 2026-04-29 17:49 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-29 17:47 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 354 | 53 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 396 | 59 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-29 17:47 UTC
 ### nj
 
 <details>
-<summary>507 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 19 in CP, not in external</summary>
+<summary>501 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 19 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1628,7 +1628,6 @@ Generated: 2026-04-29 17:47 UTC
 - ocd-jurisdiction/country:us/state:nj/place:garfield/government
 - ocd-jurisdiction/country:us/state:nj/place:garwood/government
 - ocd-jurisdiction/country:us/state:nj/place:glassboro/government
-- ocd-jurisdiction/country:us/state:nj/place:glen_gardner/government
 - ocd-jurisdiction/country:us/state:nj/place:glen_rock/government
 - ocd-jurisdiction/country:us/state:nj/place:guttenberg/government
 - ocd-jurisdiction/country:us/state:nj/place:hackettstown/government
@@ -1642,7 +1641,6 @@ Generated: 2026-04-29 17:47 UTC
 - ocd-jurisdiction/country:us/state:nj/place:harrison/government
 - ocd-jurisdiction/country:us/state:nj/place:harvey_cedars/government
 - ocd-jurisdiction/country:us/state:nj/place:hasbrouck_heights/government
-- ocd-jurisdiction/country:us/state:nj/place:haworth/government
 - ocd-jurisdiction/country:us/state:nj/place:hawthorne/government
 - ocd-jurisdiction/country:us/state:nj/place:helmetta/government
 - ocd-jurisdiction/country:us/state:nj/place:hi-nella/government
@@ -1691,7 +1689,6 @@ Generated: 2026-04-29 17:47 UTC
 - ocd-jurisdiction/country:us/state:nj/place:middlesex/government
 - ocd-jurisdiction/country:us/state:nj/place:midland_park/government
 - ocd-jurisdiction/country:us/state:nj/place:milford/government
-- ocd-jurisdiction/country:us/state:nj/place:millstone/government
 - ocd-jurisdiction/country:us/state:nj/place:milltown/government
 - ocd-jurisdiction/country:us/state:nj/place:millville/government
 - ocd-jurisdiction/country:us/state:nj/place:monmouth_beach/government
@@ -1756,7 +1753,6 @@ Generated: 2026-04-29 17:47 UTC
 - ocd-jurisdiction/country:us/state:nj/place:ringwood/government
 - ocd-jurisdiction/country:us/state:nj/place:river_edge/government
 - ocd-jurisdiction/country:us/state:nj/place:riverdale/government
-- ocd-jurisdiction/country:us/state:nj/place:riverton/government
 - ocd-jurisdiction/country:us/state:nj/place:rockaway/government
 - ocd-jurisdiction/country:us/state:nj/place:rockleigh/government
 - ocd-jurisdiction/country:us/state:nj/place:rocky_hill/government
@@ -1799,7 +1795,6 @@ Generated: 2026-04-29 17:47 UTC
 - ocd-jurisdiction/country:us/state:nj/place:teterboro/government
 - ocd-jurisdiction/country:us/state:nj/place:tinton_falls/government
 - ocd-jurisdiction/country:us/state:nj/place:totowa/government
-- ocd-jurisdiction/country:us/state:nj/place:tuckerton/government
 - ocd-jurisdiction/country:us/state:nj/place:union_beach/government
 - ocd-jurisdiction/country:us/state:nj/place:union_city/government
 - ocd-jurisdiction/country:us/state:nj/place:upper_saddle_river/government
@@ -1826,7 +1821,6 @@ Generated: 2026-04-29 17:47 UTC
 - ocd-jurisdiction/country:us/state:nj/place:woodcliff_lake/government
 - ocd-jurisdiction/country:us/state:nj/place:woodland_park/government
 - ocd-jurisdiction/country:us/state:nj/place:woodlynne/government
-- ocd-jurisdiction/country:us/state:nj/place:woodstown/government
 - ocd-jurisdiction/country:us/state:nj/place:wrightstown/government
 
 #### Locality Gaps
