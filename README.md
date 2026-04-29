@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-29 17:22 UTC
+Generated: 2026-04-29 17:24 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-29 17:22 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 166 | 24 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 171 | 25 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-29 17:22 UTC
 ### nj
 
 <details>
-<summary>536 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 6 in CP, not in external</summary>
+<summary>535 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 7 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1347,7 +1347,6 @@ Generated: 2026-04-29 17:22 UTC
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:evesham/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:florence/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:hainesport/government
-- ocd-jurisdiction/country:us/state:nj/county:burlington/place:lumberton/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:maple_shade/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:medford/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:moorestown/government
@@ -1863,6 +1862,7 @@ Generated: 2026-04-29 17:22 UTC
 | In External, Not in Known | In CivicPatch, Not in External |
 |---------------------------|--------------------------------|
 | ocd-jurisdiction/country:us/state:nj/place:pine_valley/government | ocd-jurisdiction/country:us/state:nj/county:burlington/place:burlington/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:lumberton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:union/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:hamilton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:woodbridge/government |
