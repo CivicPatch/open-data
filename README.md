@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-29 17:58 UTC
+Generated: 2026-04-29 18:00 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-29 17:58 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 481 | 71 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 501 | 74 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-29 17:58 UTC
 ### nj
 
 <details>
-<summary>489 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 22 in CP, not in external</summary>
+<summary>486 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 23 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1427,7 +1427,6 @@ Generated: 2026-04-29 17:58 UTC
 - ocd-jurisdiction/country:us/state:nj/county:mercer/place:ewing/government
 - ocd-jurisdiction/country:us/state:nj/county:mercer/place:hopewell/government
 - ocd-jurisdiction/country:us/state:nj/county:mercer/place:lawrence/government
-- ocd-jurisdiction/country:us/state:nj/county:mercer/place:robbinsville/government
 - ocd-jurisdiction/country:us/state:nj/county:mercer/place:west_windsor/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:cranbury/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:east_brunswick/government
@@ -1724,7 +1723,6 @@ Generated: 2026-04-29 17:58 UTC
 - ocd-jurisdiction/country:us/state:nj/place:perth_amboy/government
 - ocd-jurisdiction/country:us/state:nj/place:phillipsburg/government
 - ocd-jurisdiction/country:us/state:nj/place:pine_beach/government
-- ocd-jurisdiction/country:us/state:nj/place:pine_hill/government
 - ocd-jurisdiction/country:us/state:nj/place:pitman/government
 - ocd-jurisdiction/country:us/state:nj/place:plainfield/government
 - ocd-jurisdiction/country:us/state:nj/place:pleasantville/government
@@ -1807,7 +1805,6 @@ Generated: 2026-04-29 17:58 UTC
 - ocd-jurisdiction/country:us/state:nj/place:woodbury/government
 - ocd-jurisdiction/country:us/state:nj/place:woodbury_heights/government
 - ocd-jurisdiction/country:us/state:nj/place:woodcliff_lake/government
-- ocd-jurisdiction/country:us/state:nj/place:woodland_park/government
 - ocd-jurisdiction/country:us/state:nj/place:woodlynne/government
 - ocd-jurisdiction/country:us/state:nj/place:wrightstown/government
 
@@ -1825,6 +1822,7 @@ Generated: 2026-04-29 17:58 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:holland/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:union/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:hamilton/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:robbinsville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:north_brunswick/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:woodbridge/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:monmouth/place:aberdeen/government |
