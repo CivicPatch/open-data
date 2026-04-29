@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-24 22:57 UTC
+Generated: 2026-04-29 17:43 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-24 22:57 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 71 | 9 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 307 | 46 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-24 22:57 UTC
 ### nj
 
 <details>
-<summary>551 not yet scraped &nbsp;·&nbsp; 2 in external, not in CP &nbsp;·&nbsp; 3 in CP, not in external</summary>
+<summary>514 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 19 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1325,11 +1325,9 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/county:atlantic/place:egg_harbor/government
 - ocd-jurisdiction/country:us/state:nj/county:atlantic/place:galloway/government
 - ocd-jurisdiction/country:us/state:nj/county:atlantic/place:hamilton/government
-- ocd-jurisdiction/country:us/state:nj/county:atlantic/place:mullica/government
 - ocd-jurisdiction/country:us/state:nj/county:atlantic/place:weymouth/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:lyndhurst/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:mahwah/government
-- ocd-jurisdiction/country:us/state:nj/county:bergen/place:river_vale/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:rochelle_park/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:saddle_brook/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:south_hackensack/government
@@ -1338,7 +1336,6 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:wyckoff/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:bass_river/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:bordentown/government
-- ocd-jurisdiction/country:us/state:nj/county:burlington/place:burlington/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:chesterfield/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:cinnaminson/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:delanco/government
@@ -1348,7 +1345,6 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:evesham/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:florence/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:hainesport/government
-- ocd-jurisdiction/country:us/state:nj/county:burlington/place:lumberton/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:maple_shade/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:medford/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:moorestown/government
@@ -1376,7 +1372,6 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/county:camden/place:winslow/government
 - ocd-jurisdiction/country:us/state:nj/county:cape_may/place:dennis/government
 - ocd-jurisdiction/country:us/state:nj/county:cape_may/place:lower/government
-- ocd-jurisdiction/country:us/state:nj/county:cape_may/place:middle/government
 - ocd-jurisdiction/country:us/state:nj/county:cape_may/place:upper/government
 - ocd-jurisdiction/country:us/state:nj/county:cumberland/place:commercial/government
 - ocd-jurisdiction/country:us/state:nj/county:cumberland/place:deerfield/government
@@ -1403,7 +1398,6 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:verona/government
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:west_caldwell/government
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:west_orange/government
-- ocd-jurisdiction/country:us/state:nj/county:gloucester/place:deptford/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:east_greenwich/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:elk/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:franklin/government
@@ -1424,13 +1418,11 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:delaware/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:east_amwell/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:franklin/government
-- ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:holland/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:kingwood/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:lebanon/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:raritan/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:readington/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:tewksbury/government
-- ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:union/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:west_amwell/government
 - ocd-jurisdiction/country:us/state:nj/county:mercer/place:east_windsor/government
 - ocd-jurisdiction/country:us/state:nj/county:mercer/place:ewing/government
@@ -1442,7 +1434,6 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:east_brunswick/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:edison/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:monroe/government
-- ocd-jurisdiction/country:us/state:nj/county:middlesex/place:north_brunswick/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:old_bridge/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:piscataway/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:plainsboro/government
@@ -1465,7 +1456,6 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:boonton/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:chatham/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:chester/government
-- ocd-jurisdiction/country:us/state:nj/county:morris/place:denville/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:east_hanover/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:hanover/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:harding/government
@@ -1473,7 +1463,6 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:long_hill/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:mendham/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:mine_hill/government
-- ocd-jurisdiction/country:us/state:nj/county:morris/place:montville/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:morris/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:mount_olive/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:parsippany-troy_hills/government
@@ -1513,7 +1502,6 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/county:somerset/place:bernards/government
 - ocd-jurisdiction/country:us/state:nj/county:somerset/place:branchburg/government
 - ocd-jurisdiction/country:us/state:nj/county:somerset/place:bridgewater/government
-- ocd-jurisdiction/country:us/state:nj/county:somerset/place:franklin/government
 - ocd-jurisdiction/country:us/state:nj/county:somerset/place:green_brook/government
 - ocd-jurisdiction/country:us/state:nj/county:somerset/place:hillsborough/government
 - ocd-jurisdiction/country:us/state:nj/county:somerset/place:montgomery/government
@@ -1537,11 +1525,8 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/county:union/place:cranford/government
 - ocd-jurisdiction/country:us/state:nj/county:union/place:hillside/government
 - ocd-jurisdiction/country:us/state:nj/county:union/place:scotch_plains/government
-- ocd-jurisdiction/country:us/state:nj/county:union/place:springfield/government
 - ocd-jurisdiction/country:us/state:nj/county:union/place:union/government
 - ocd-jurisdiction/country:us/state:nj/county:union/place:winfield/government
-- ocd-jurisdiction/country:us/state:nj/county:warren/place:allamuchy/government
-- ocd-jurisdiction/country:us/state:nj/county:warren/place:blairstown/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:franklin/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:frelinghuysen/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:greenwich/government
@@ -1552,17 +1537,14 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:knowlton/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:liberty/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:lopatcong/government
-- ocd-jurisdiction/country:us/state:nj/county:warren/place:mansfield/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:oxford/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:pohatcong/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:washington/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:white/government
-- ocd-jurisdiction/country:us/state:nj/place:/government
 - ocd-jurisdiction/country:us/state:nj/place:absecon/government
 - ocd-jurisdiction/country:us/state:nj/place:allendale/government
 - ocd-jurisdiction/country:us/state:nj/place:allenhurst/government
 - ocd-jurisdiction/country:us/state:nj/place:allentown/government
-- ocd-jurisdiction/country:us/state:nj/place:alpha/government
 - ocd-jurisdiction/country:us/state:nj/place:alpine/government
 - ocd-jurisdiction/country:us/state:nj/place:andover/government
 - ocd-jurisdiction/country:us/state:nj/place:asbury_park/government
@@ -1570,7 +1552,6 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/place:atlantic_highlands/government
 - ocd-jurisdiction/country:us/state:nj/place:audubon/government
 - ocd-jurisdiction/country:us/state:nj/place:audubon_park/government
-- ocd-jurisdiction/country:us/state:nj/place:avalon/government
 - ocd-jurisdiction/country:us/state:nj/place:avon-by-the-sea/government
 - ocd-jurisdiction/country:us/state:nj/place:barnegat_light/government
 - ocd-jurisdiction/country:us/state:nj/place:barrington/government
@@ -1582,7 +1563,6 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/place:belmar/government
 - ocd-jurisdiction/country:us/state:nj/place:belvidere/government
 - ocd-jurisdiction/country:us/state:nj/place:bergenfield/government
-- ocd-jurisdiction/country:us/state:nj/place:berlin/government
 - ocd-jurisdiction/country:us/state:nj/place:bernardsville/government
 - ocd-jurisdiction/country:us/state:nj/place:beverly/government
 - ocd-jurisdiction/country:us/state:nj/place:bloomingdale/government
@@ -1602,7 +1582,6 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/place:butler/government
 - ocd-jurisdiction/country:us/state:nj/place:caldwell/government
 - ocd-jurisdiction/country:us/state:nj/place:califon/government
-- ocd-jurisdiction/country:us/state:nj/place:camden/government
 - ocd-jurisdiction/country:us/state:nj/place:cape_may/government
 - ocd-jurisdiction/country:us/state:nj/place:cape_may_point/government
 - ocd-jurisdiction/country:us/state:nj/place:carlstadt/government
@@ -1621,9 +1600,7 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/place:cresskill/government
 - ocd-jurisdiction/country:us/state:nj/place:deal/government
 - ocd-jurisdiction/country:us/state:nj/place:demarest/government
-- ocd-jurisdiction/country:us/state:nj/place:dover/government
 - ocd-jurisdiction/country:us/state:nj/place:dumont/government
-- ocd-jurisdiction/country:us/state:nj/place:dunellen/government
 - ocd-jurisdiction/country:us/state:nj/place:east_newark/government
 - ocd-jurisdiction/country:us/state:nj/place:east_orange/government
 - ocd-jurisdiction/country:us/state:nj/place:east_rutherford/government
@@ -1635,7 +1612,6 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/place:emerson/government
 - ocd-jurisdiction/country:us/state:nj/place:englewood/government
 - ocd-jurisdiction/country:us/state:nj/place:englewood_cliffs/government
-- ocd-jurisdiction/country:us/state:nj/place:englishtown/government
 - ocd-jurisdiction/country:us/state:nj/place:essex_fells/government
 - ocd-jurisdiction/country:us/state:nj/place:estell_manor/government
 - ocd-jurisdiction/country:us/state:nj/place:fair_haven/government
@@ -1649,16 +1625,13 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/place:florham_park/government
 - ocd-jurisdiction/country:us/state:nj/place:folsom/government
 - ocd-jurisdiction/country:us/state:nj/place:fort_lee/government
-- ocd-jurisdiction/country:us/state:nj/place:franklin/government
 - ocd-jurisdiction/country:us/state:nj/place:franklin_lakes/government
 - ocd-jurisdiction/country:us/state:nj/place:freehold/government
 - ocd-jurisdiction/country:us/state:nj/place:frenchtown/government
 - ocd-jurisdiction/country:us/state:nj/place:garfield/government
 - ocd-jurisdiction/country:us/state:nj/place:garwood/government
-- ocd-jurisdiction/country:us/state:nj/place:gibbsboro/government
 - ocd-jurisdiction/country:us/state:nj/place:glassboro/government
 - ocd-jurisdiction/country:us/state:nj/place:glen_gardner/government
-- ocd-jurisdiction/country:us/state:nj/place:glen_ridge/government
 - ocd-jurisdiction/country:us/state:nj/place:glen_rock/government
 - ocd-jurisdiction/country:us/state:nj/place:guttenberg/government
 - ocd-jurisdiction/country:us/state:nj/place:hackettstown/government
@@ -1678,9 +1651,7 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/place:hi-nella/government
 - ocd-jurisdiction/country:us/state:nj/place:high_bridge/government
 - ocd-jurisdiction/country:us/state:nj/place:highland_park/government
-- ocd-jurisdiction/country:us/state:nj/place:highlands/government
 - ocd-jurisdiction/country:us/state:nj/place:hightstown/government
-- ocd-jurisdiction/country:us/state:nj/place:hillsdale/government
 - ocd-jurisdiction/country:us/state:nj/place:ho-ho-kus/government
 - ocd-jurisdiction/country:us/state:nj/place:hoboken/government
 - ocd-jurisdiction/country:us/state:nj/place:hopatcong/government
@@ -1718,7 +1689,6 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/place:manville/government
 - ocd-jurisdiction/country:us/state:nj/place:margate_city/government
 - ocd-jurisdiction/country:us/state:nj/place:matawan/government
-- ocd-jurisdiction/country:us/state:nj/place:maywood/government
 - ocd-jurisdiction/country:us/state:nj/place:medford_lakes/government
 - ocd-jurisdiction/country:us/state:nj/place:mendham/government
 - ocd-jurisdiction/country:us/state:nj/place:merchantville/government
@@ -1741,7 +1711,6 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/place:national_park/government
 - ocd-jurisdiction/country:us/state:nj/place:neptune_city/government
 - ocd-jurisdiction/country:us/state:nj/place:netcong/government
-- ocd-jurisdiction/country:us/state:nj/place:new_brunswick/government
 - ocd-jurisdiction/country:us/state:nj/place:new_milford/government
 - ocd-jurisdiction/country:us/state:nj/place:new_providence/government
 - ocd-jurisdiction/country:us/state:nj/place:newfield/government
@@ -1750,18 +1719,15 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/place:north_caldwell/government
 - ocd-jurisdiction/country:us/state:nj/place:north_haledon/government
 - ocd-jurisdiction/country:us/state:nj/place:north_plainfield/government
-- ocd-jurisdiction/country:us/state:nj/place:north_wildwood/government
 - ocd-jurisdiction/country:us/state:nj/place:northfield/government
 - ocd-jurisdiction/country:us/state:nj/place:northvale/government
 - ocd-jurisdiction/country:us/state:nj/place:norwood/government
 - ocd-jurisdiction/country:us/state:nj/place:oakland/government
 - ocd-jurisdiction/country:us/state:nj/place:oaklyn/government
-- ocd-jurisdiction/country:us/state:nj/place:ocean_city/government
 - ocd-jurisdiction/country:us/state:nj/place:ocean_gate/government
 - ocd-jurisdiction/country:us/state:nj/place:oceanport/government
 - ocd-jurisdiction/country:us/state:nj/place:ogdensburg/government
 - ocd-jurisdiction/country:us/state:nj/place:old_tappan/government
-- ocd-jurisdiction/country:us/state:nj/place:oradell/government
 - ocd-jurisdiction/country:us/state:nj/place:palisades_park/government
 - ocd-jurisdiction/country:us/state:nj/place:palmyra/government
 - ocd-jurisdiction/country:us/state:nj/place:paramus/government
@@ -1784,6 +1750,7 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/place:point_pleasant_beach/government
 - ocd-jurisdiction/country:us/state:nj/place:pompton_lakes/government
 - ocd-jurisdiction/country:us/state:nj/place:port_republic/government
+- ocd-jurisdiction/country:us/state:nj/place:princeton/government
 - ocd-jurisdiction/country:us/state:nj/place:prospect_park/government
 - ocd-jurisdiction/country:us/state:nj/place:rahway/government
 - ocd-jurisdiction/country:us/state:nj/place:ramsey/government
@@ -1824,12 +1791,10 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/place:south_plainfield/government
 - ocd-jurisdiction/country:us/state:nj/place:south_river/government
 - ocd-jurisdiction/country:us/state:nj/place:south_toms_river/government
-- ocd-jurisdiction/country:us/state:nj/place:spotswood/government
 - ocd-jurisdiction/country:us/state:nj/place:spring_lake/government
 - ocd-jurisdiction/country:us/state:nj/place:spring_lake_heights/government
 - ocd-jurisdiction/country:us/state:nj/place:stanhope/government
 - ocd-jurisdiction/country:us/state:nj/place:stockton/government
-- ocd-jurisdiction/country:us/state:nj/place:stone_harbor/government
 - ocd-jurisdiction/country:us/state:nj/place:stratford/government
 - ocd-jurisdiction/country:us/state:nj/place:summit/government
 - ocd-jurisdiction/country:us/state:nj/place:surf_city/government
@@ -1849,12 +1814,10 @@ Generated: 2026-04-24 22:57 UTC
 - ocd-jurisdiction/country:us/state:nj/place:vineland/government
 - ocd-jurisdiction/country:us/state:nj/place:waldwick/government
 - ocd-jurisdiction/country:us/state:nj/place:wallington/government
-- ocd-jurisdiction/country:us/state:nj/place:wanaque/government
 - ocd-jurisdiction/country:us/state:nj/place:washington/government
 - ocd-jurisdiction/country:us/state:nj/place:watchung/government
 - ocd-jurisdiction/country:us/state:nj/place:wenonah/government
 - ocd-jurisdiction/country:us/state:nj/place:west_cape_may/government
-- ocd-jurisdiction/country:us/state:nj/place:west_long_branch/government
 - ocd-jurisdiction/country:us/state:nj/place:west_new_york/government
 - ocd-jurisdiction/country:us/state:nj/place:west_wildwood/government
 - ocd-jurisdiction/country:us/state:nj/place:westfield/government
@@ -1877,9 +1840,25 @@ Generated: 2026-04-24 22:57 UTC
 
 | In External, Not in Known | In CivicPatch, Not in External |
 |---------------------------|--------------------------------|
-| ocd-jurisdiction/country:us/state:nj/place:pine_valley/government | ocd-jurisdiction/country:us/state:nj/county:mercer/place:hamilton/government |
-| ocd-jurisdiction/country:us/state:nj/place:princeton/government | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:woodbridge/government |
+| ocd-jurisdiction/country:us/state:nj/place:pine_valley/government | ocd-jurisdiction/country:us/state:nj/county:atlantic/place:mullica/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:bergen/place:river_vale/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:burlington/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:lumberton/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:cape_may/place:middle/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:deptford/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:holland/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:union/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:hamilton/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:north_brunswick/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:woodbridge/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:morris/place:denville/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:morris/place:montville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lakewood/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:somerset/place:franklin/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:union/place:springfield/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:warren/place:allamuchy/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:warren/place:blairstown/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:warren/place:mansfield/government |
 
 </details>
 
