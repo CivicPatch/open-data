@@ -88,7 +88,7 @@ def pull_jurisdiction_data(state: str, limit: int = None):
     # TODO: this will be replaced by jurisdictions repo work
     # Should do a daily (???) pull or when data updates
 
-    output_path = PROJECT_ROOT / "data_source" / state / "jurisdictions.yml"
+    output_path = PROJECT_ROOT / "data_source" / state / "local" / "jurisdictions.yml"
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     # Single load — preserves comments in CommentedMap objects
@@ -469,8 +469,8 @@ def _run_tml_transform(state: str):
 
 
 def create_or_update_jurisdiction_metadata(state: str):
-    jurisdictions_path = PROJECT_ROOT / "data_source" / state / "jurisdictions.yml"
-    metadata_path = PROJECT_ROOT / "data_source" / state / "jurisdictions_metadata.yml"
+    jurisdictions_path = PROJECT_ROOT / "data_source" / state / "local" / "jurisdictions.yml"
+    metadata_path = PROJECT_ROOT / "data_source" / state / "local" / "jurisdictions_metadata.yml"
 
     if not jurisdictions_path.exists():
         print(f"No jurisdictions.yml found for {state}, skipping metadata creation.")

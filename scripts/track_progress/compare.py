@@ -231,7 +231,7 @@ def build_locality_entry(cp_records: list, ext_records: list, jurisdiction: str)
 # ── Run ───────────────────────────────────────────────────────────────────────
 
 def load_coverage_since_reference(state: str) -> int:
-    meta_path = f"data_source/{state}/jurisdictions_metadata.yml"
+    meta_path = f"data_source/{state}/local/jurisdictions_metadata.yml"
     try:
         with open(meta_path) as f:
             meta = yaml.safe_load(f)
@@ -385,7 +385,7 @@ def paths_for_state(state: str):
     s = state.lower()
     return (
         f"data/{s}/local",
-        f"data_source/{s}/jurisdictions.yml",
+        f"data_source/{s}/local/jurisdictions.yml",
         f"data_source/{s}/local/validation/google/output.yml",
         f"scripts/track_progress/data/{s}_output.json",
     )
