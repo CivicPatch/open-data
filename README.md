@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-29 17:32 UTC
+Generated: 2026-04-29 17:34 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-29 17:32 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 225 | 33 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 236 | 35 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-29 17:32 UTC
 ### nj
 
 <details>
-<summary>527 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 11 in CP, not in external</summary>
+<summary>525 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 12 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1420,7 +1420,6 @@ Generated: 2026-04-29 17:32 UTC
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:delaware/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:east_amwell/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:franklin/government
-- ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:holland/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:kingwood/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:lebanon/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:raritan/government
@@ -1802,7 +1801,6 @@ Generated: 2026-04-29 17:32 UTC
 - ocd-jurisdiction/country:us/state:nj/place:south_plainfield/government
 - ocd-jurisdiction/country:us/state:nj/place:south_river/government
 - ocd-jurisdiction/country:us/state:nj/place:south_toms_river/government
-- ocd-jurisdiction/country:us/state:nj/place:spotswood/government
 - ocd-jurisdiction/country:us/state:nj/place:spring_lake/government
 - ocd-jurisdiction/country:us/state:nj/place:spring_lake_heights/government
 - ocd-jurisdiction/country:us/state:nj/place:stanhope/government
@@ -1857,6 +1855,7 @@ Generated: 2026-04-29 17:32 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:burlington/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:lumberton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:deptford/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:holland/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:union/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:hamilton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:woodbridge/government |
