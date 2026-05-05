@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 17:04 UTC
+Generated: 2026-05-05 17:06 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 17:04 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 652 | 97 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 666 | 99 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 17:04 UTC
 ### nj
 
 <details>
-<summary>463 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 34 in CP, not in external</summary>
+<summary>461 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 34 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1643,7 +1643,6 @@ Generated: 2026-05-05 17:04 UTC
 - ocd-jurisdiction/country:us/state:nj/place:lavallette/government
 - ocd-jurisdiction/country:us/state:nj/place:lawnside/government
 - ocd-jurisdiction/country:us/state:nj/place:lebanon/government
-- ocd-jurisdiction/country:us/state:nj/place:leonia/government
 - ocd-jurisdiction/country:us/state:nj/place:lincoln_park/government
 - ocd-jurisdiction/country:us/state:nj/place:linden/government
 - ocd-jurisdiction/country:us/state:nj/place:lindenwold/government
@@ -1711,7 +1710,6 @@ Generated: 2026-05-05 17:04 UTC
 - ocd-jurisdiction/country:us/state:nj/place:pleasantville/government
 - ocd-jurisdiction/country:us/state:nj/place:point_pleasant/government
 - ocd-jurisdiction/country:us/state:nj/place:point_pleasant_beach/government
-- ocd-jurisdiction/country:us/state:nj/place:pompton_lakes/government
 - ocd-jurisdiction/country:us/state:nj/place:port_republic/government
 - ocd-jurisdiction/country:us/state:nj/place:princeton/government
 - ocd-jurisdiction/country:us/state:nj/place:prospect_park/government
