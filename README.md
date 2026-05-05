@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 17:37 UTC
+Generated: 2026-05-05 17:39 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 17:37 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 991 | 151 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 1,025 | 156 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 17:37 UTC
 ### nj
 
 <details>
-<summary>409 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 50 in CP, not in external</summary>
+<summary>404 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 51 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1436,7 +1436,6 @@ Generated: 2026-05-05 17:37 UTC
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:hanover/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:harding/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:jefferson/government
-- ocd-jurisdiction/country:us/state:nj/county:morris/place:long_hill/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:mendham/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:mine_hill/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:morris/government
@@ -1564,7 +1563,6 @@ Generated: 2026-05-05 17:37 UTC
 - ocd-jurisdiction/country:us/state:nj/place:englewood/government
 - ocd-jurisdiction/country:us/state:nj/place:essex_fells/government
 - ocd-jurisdiction/country:us/state:nj/place:estell_manor/government
-- ocd-jurisdiction/country:us/state:nj/place:fair_haven/government
 - ocd-jurisdiction/country:us/state:nj/place:far_hills/government
 - ocd-jurisdiction/country:us/state:nj/place:farmingdale/government
 - ocd-jurisdiction/country:us/state:nj/place:fieldsboro/government
@@ -1583,7 +1581,6 @@ Generated: 2026-05-05 17:37 UTC
 - ocd-jurisdiction/country:us/state:nj/place:hackettstown/government
 - ocd-jurisdiction/country:us/state:nj/place:haddon_heights/government
 - ocd-jurisdiction/country:us/state:nj/place:haddonfield/government
-- ocd-jurisdiction/country:us/state:nj/place:haledon/government
 - ocd-jurisdiction/country:us/state:nj/place:hamburg/government
 - ocd-jurisdiction/country:us/state:nj/place:hampton/government
 - ocd-jurisdiction/country:us/state:nj/place:harrington_park/government
@@ -1628,11 +1625,9 @@ Generated: 2026-05-05 17:37 UTC
 - ocd-jurisdiction/country:us/state:nj/place:mendham/government
 - ocd-jurisdiction/country:us/state:nj/place:metuchen/government
 - ocd-jurisdiction/country:us/state:nj/place:middlesex/government
-- ocd-jurisdiction/country:us/state:nj/place:midland_park/government
 - ocd-jurisdiction/country:us/state:nj/place:millville/government
 - ocd-jurisdiction/country:us/state:nj/place:monmouth_beach/government
 - ocd-jurisdiction/country:us/state:nj/place:moonachie/government
-- ocd-jurisdiction/country:us/state:nj/place:morristown/government
 - ocd-jurisdiction/country:us/state:nj/place:mount_arlington/government
 - ocd-jurisdiction/country:us/state:nj/place:mount_ephraim/government
 - ocd-jurisdiction/country:us/state:nj/place:mountain_lakes/government
@@ -1771,6 +1766,7 @@ Generated: 2026-05-05 17:37 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:monmouth/place:hazlet/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:chester/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:denville/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:morris/place:long_hill/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:montville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:brick/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lakewood/government |
