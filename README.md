@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 17:21 UTC
+Generated: 2026-05-05 17:23 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 17:21 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 782 | 117 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 809 | 122 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 17:21 UTC
 ### nj
 
 <details>
-<summary>443 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 41 in CP, not in external</summary>
+<summary>438 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 41 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1521,7 +1521,6 @@ Generated: 2026-05-05 17:21 UTC
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:white/government
 - ocd-jurisdiction/country:us/state:nj/place:allendale/government
 - ocd-jurisdiction/country:us/state:nj/place:allenhurst/government
-- ocd-jurisdiction/country:us/state:nj/place:allentown/government
 - ocd-jurisdiction/country:us/state:nj/place:alpine/government
 - ocd-jurisdiction/country:us/state:nj/place:andover/government
 - ocd-jurisdiction/country:us/state:nj/place:asbury_park/government
@@ -1529,7 +1528,6 @@ Generated: 2026-05-05 17:21 UTC
 - ocd-jurisdiction/country:us/state:nj/place:atlantic_highlands/government
 - ocd-jurisdiction/country:us/state:nj/place:audubon/government
 - ocd-jurisdiction/country:us/state:nj/place:audubon_park/government
-- ocd-jurisdiction/country:us/state:nj/place:avon-by-the-sea/government
 - ocd-jurisdiction/country:us/state:nj/place:barrington/government
 - ocd-jurisdiction/country:us/state:nj/place:bay_head/government
 - ocd-jurisdiction/country:us/state:nj/place:bayonne/government
@@ -1618,7 +1616,6 @@ Generated: 2026-05-05 17:21 UTC
 - ocd-jurisdiction/country:us/state:nj/place:ho-ho-kus/government
 - ocd-jurisdiction/country:us/state:nj/place:hopatcong/government
 - ocd-jurisdiction/country:us/state:nj/place:hopewell/government
-- ocd-jurisdiction/country:us/state:nj/place:interlaken/government
 - ocd-jurisdiction/country:us/state:nj/place:jamesburg/government
 - ocd-jurisdiction/country:us/state:nj/place:keansburg/government
 - ocd-jurisdiction/country:us/state:nj/place:kearny/government
@@ -1640,7 +1637,6 @@ Generated: 2026-05-05 17:21 UTC
 - ocd-jurisdiction/country:us/state:nj/place:loch_arbour/government
 - ocd-jurisdiction/country:us/state:nj/place:lodi/government
 - ocd-jurisdiction/country:us/state:nj/place:long_branch/government
-- ocd-jurisdiction/country:us/state:nj/place:longport/government
 - ocd-jurisdiction/country:us/state:nj/place:magnolia/government
 - ocd-jurisdiction/country:us/state:nj/place:manasquan/government
 - ocd-jurisdiction/country:us/state:nj/place:mantoloking/government
@@ -1651,7 +1647,6 @@ Generated: 2026-05-05 17:21 UTC
 - ocd-jurisdiction/country:us/state:nj/place:metuchen/government
 - ocd-jurisdiction/country:us/state:nj/place:middlesex/government
 - ocd-jurisdiction/country:us/state:nj/place:midland_park/government
-- ocd-jurisdiction/country:us/state:nj/place:milford/government
 - ocd-jurisdiction/country:us/state:nj/place:milltown/government
 - ocd-jurisdiction/country:us/state:nj/place:millville/government
 - ocd-jurisdiction/country:us/state:nj/place:monmouth_beach/government
