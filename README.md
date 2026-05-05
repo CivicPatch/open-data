@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 16:42 UTC
+Generated: 2026-05-05 16:44 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 16:42 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 525 | 77 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 540 | 79 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 16:42 UTC
 ### nj
 
 <details>
-<summary>483 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 25 in CP, not in external</summary>
+<summary>481 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 26 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1480,7 +1480,6 @@ Generated: 2026-05-05 16:42 UTC
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:stafford/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:toms_river/government
 - ocd-jurisdiction/country:us/state:nj/county:passaic/place:little_falls/government
-- ocd-jurisdiction/country:us/state:nj/county:passaic/place:west_milford/government
 - ocd-jurisdiction/country:us/state:nj/county:salem/place:alloway/government
 - ocd-jurisdiction/country:us/state:nj/county:salem/place:carneys_point/government
 - ocd-jurisdiction/country:us/state:nj/county:salem/place:elsinboro/government
@@ -1722,7 +1721,6 @@ Generated: 2026-05-05 16:42 UTC
 - ocd-jurisdiction/country:us/state:nj/place:phillipsburg/government
 - ocd-jurisdiction/country:us/state:nj/place:pine_beach/government
 - ocd-jurisdiction/country:us/state:nj/place:pitman/government
-- ocd-jurisdiction/country:us/state:nj/place:plainfield/government
 - ocd-jurisdiction/country:us/state:nj/place:pleasantville/government
 - ocd-jurisdiction/country:us/state:nj/place:point_pleasant/government
 - ocd-jurisdiction/country:us/state:nj/place:point_pleasant_beach/government
@@ -1829,6 +1827,7 @@ Generated: 2026-05-05 16:42 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:montville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lakewood/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:passaic/place:wayne/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:passaic/place:west_milford/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:somerset/place:franklin/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:union/place:springfield/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:warren/place:allamuchy/government |
