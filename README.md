@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 17:25 UTC
+Generated: 2026-05-05 17:27 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 17:25 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 843 | 127 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 886 | 134 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 17:25 UTC
 ### nj
 
 <details>
-<summary>433 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 43 in CP, not in external</summary>
+<summary>426 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 46 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1395,13 +1395,11 @@ Generated: 2026-05-05 17:25 UTC
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:harrison/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:mantua/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:monroe/government
-- ocd-jurisdiction/country:us/state:nj/county:gloucester/place:south_harrison/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:washington/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:woolwich/government
 - ocd-jurisdiction/country:us/state:nj/county:hudson/place:north_bergen/government
 - ocd-jurisdiction/country:us/state:nj/county:hudson/place:weehawken/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:alexandria/government
-- ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:bethlehem/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:clinton/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:delaware/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:east_amwell/government
@@ -1417,7 +1415,6 @@ Generated: 2026-05-05 17:25 UTC
 - ocd-jurisdiction/country:us/state:nj/county:mercer/place:hopewell/government
 - ocd-jurisdiction/country:us/state:nj/county:mercer/place:lawrence/government
 - ocd-jurisdiction/country:us/state:nj/county:mercer/place:west_windsor/government
-- ocd-jurisdiction/country:us/state:nj/county:middlesex/place:cranbury/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:east_brunswick/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:edison/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:monroe/government
@@ -1558,7 +1555,6 @@ Generated: 2026-05-05 17:25 UTC
 - ocd-jurisdiction/country:us/state:nj/place:clementon/government
 - ocd-jurisdiction/country:us/state:nj/place:cliffside_park/government
 - ocd-jurisdiction/country:us/state:nj/place:clifton/government
-- ocd-jurisdiction/country:us/state:nj/place:clinton/government
 - ocd-jurisdiction/country:us/state:nj/place:closter/government
 - ocd-jurisdiction/country:us/state:nj/place:collingswood/government
 - ocd-jurisdiction/country:us/state:nj/place:corbin_city/government
@@ -1654,7 +1650,6 @@ Generated: 2026-05-05 17:25 UTC
 - ocd-jurisdiction/country:us/state:nj/place:mountainside/government
 - ocd-jurisdiction/country:us/state:nj/place:national_park/government
 - ocd-jurisdiction/country:us/state:nj/place:neptune_city/government
-- ocd-jurisdiction/country:us/state:nj/place:netcong/government
 - ocd-jurisdiction/country:us/state:nj/place:new_milford/government
 - ocd-jurisdiction/country:us/state:nj/place:new_providence/government
 - ocd-jurisdiction/country:us/state:nj/place:newfield/government
@@ -1697,7 +1692,6 @@ Generated: 2026-05-05 17:25 UTC
 - ocd-jurisdiction/country:us/state:nj/place:ridgefield_park/government
 - ocd-jurisdiction/country:us/state:nj/place:ridgewood/government
 - ocd-jurisdiction/country:us/state:nj/place:ringwood/government
-- ocd-jurisdiction/country:us/state:nj/place:riverdale/government
 - ocd-jurisdiction/country:us/state:nj/place:rockaway/government
 - ocd-jurisdiction/country:us/state:nj/place:rockleigh/government
 - ocd-jurisdiction/country:us/state:nj/place:roosevelt/government
@@ -1724,7 +1718,6 @@ Generated: 2026-05-05 17:25 UTC
 - ocd-jurisdiction/country:us/state:nj/place:summit/government
 - ocd-jurisdiction/country:us/state:nj/place:surf_city/government
 - ocd-jurisdiction/country:us/state:nj/place:sussex/government
-- ocd-jurisdiction/country:us/state:nj/place:swedesboro/government
 - ocd-jurisdiction/country:us/state:nj/place:tavistock/government
 - ocd-jurisdiction/country:us/state:nj/place:tenafly/government
 - ocd-jurisdiction/country:us/state:nj/place:teterboro/government
@@ -1776,11 +1769,14 @@ Generated: 2026-05-05 17:25 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:essex/place:south_orange_village/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:deptford/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:logan/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:south_harrison/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:west_deptford/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:bethlehem/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:holland/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:union/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:hamilton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:robbinsville/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:cranbury/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:north_brunswick/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:plainsboro/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:woodbridge/government |
