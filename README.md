@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 17:08 UTC
+Generated: 2026-05-05 17:10 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 17:08 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 681 | 101 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 686 | 102 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 17:08 UTC
 ### nj
 
 <details>
-<summary>459 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 35 in CP, not in external</summary>
+<summary>458 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 36 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1427,7 +1427,6 @@ Generated: 2026-05-05 17:08 UTC
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:monroe/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:old_bridge/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:piscataway/government
-- ocd-jurisdiction/country:us/state:nj/county:middlesex/place:plainsboro/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:south_brunswick/government
 - ocd-jurisdiction/country:us/state:nj/county:monmouth/place:colts_neck/government
 - ocd-jurisdiction/country:us/state:nj/county:monmouth/place:freehold/government
@@ -1804,6 +1803,7 @@ Generated: 2026-05-05 17:08 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:hamilton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:robbinsville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:north_brunswick/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:plainsboro/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:woodbridge/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:monmouth/place:aberdeen/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:monmouth/place:hazlet/government |
