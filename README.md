@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 17:27 UTC
+Generated: 2026-05-05 17:29 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 17:27 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 886 | 134 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 901 | 137 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 17:27 UTC
 ### nj
 
 <details>
-<summary>426 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 46 in CP, not in external</summary>
+<summary>423 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 47 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1374,7 +1374,6 @@ Generated: 2026-05-05 17:27 UTC
 - ocd-jurisdiction/country:us/state:nj/county:cumberland/place:hopewell/government
 - ocd-jurisdiction/country:us/state:nj/county:cumberland/place:lawrence/government
 - ocd-jurisdiction/country:us/state:nj/county:cumberland/place:maurice_river/government
-- ocd-jurisdiction/country:us/state:nj/county:cumberland/place:stow_creek/government
 - ocd-jurisdiction/country:us/state:nj/county:cumberland/place:upper_deerfield/government
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:belleville/government
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:cedar_grove/government
@@ -1536,7 +1535,6 @@ Generated: 2026-05-05 17:27 UTC
 - ocd-jurisdiction/country:us/state:nj/place:bogota/government
 - ocd-jurisdiction/country:us/state:nj/place:bordentown/government
 - ocd-jurisdiction/country:us/state:nj/place:bound_brook/government
-- ocd-jurisdiction/country:us/state:nj/place:bradley_beach/government
 - ocd-jurisdiction/country:us/state:nj/place:bridgeton/government
 - ocd-jurisdiction/country:us/state:nj/place:brielle/government
 - ocd-jurisdiction/country:us/state:nj/place:brigantine/government
@@ -1688,7 +1686,6 @@ Generated: 2026-05-05 17:27 UTC
 - ocd-jurisdiction/country:us/state:nj/place:rahway/government
 - ocd-jurisdiction/country:us/state:nj/place:ramsey/government
 - ocd-jurisdiction/country:us/state:nj/place:raritan/government
-- ocd-jurisdiction/country:us/state:nj/place:red_bank/government
 - ocd-jurisdiction/country:us/state:nj/place:ridgefield_park/government
 - ocd-jurisdiction/country:us/state:nj/place:ridgewood/government
 - ocd-jurisdiction/country:us/state:nj/place:ringwood/government
@@ -1764,6 +1761,7 @@ Generated: 2026-05-05 17:27 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:woodland/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:cape_may/place:dennis/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:cape_may/place:middle/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:cumberland/place:stow_creek/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:essex/place:bloomfield/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:essex/place:irvington/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:essex/place:south_orange_village/government |
