@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 16:44 UTC
+Generated: 2026-05-05 16:52 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 16:44 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 540 | 79 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 547 | 80 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 16:44 UTC
 ### nj
 
 <details>
-<summary>481 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 26 in CP, not in external</summary>
+<summary>480 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 26 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1760,7 +1760,6 @@ Generated: 2026-05-05 16:44 UTC
 - ocd-jurisdiction/country:us/state:nj/place:somerville/government
 - ocd-jurisdiction/country:us/state:nj/place:south_amboy/government
 - ocd-jurisdiction/country:us/state:nj/place:south_bound_brook/government
-- ocd-jurisdiction/country:us/state:nj/place:south_plainfield/government
 - ocd-jurisdiction/country:us/state:nj/place:south_river/government
 - ocd-jurisdiction/country:us/state:nj/place:south_toms_river/government
 - ocd-jurisdiction/country:us/state:nj/place:spring_lake/government
