@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 17:39 UTC
+Generated: 2026-05-05 17:41 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 17:39 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 1,025 | 156 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 1,056 | 162 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 17:39 UTC
 ### nj
 
 <details>
-<summary>404 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 51 in CP, not in external</summary>
+<summary>398 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 53 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1340,7 +1340,6 @@ Generated: 2026-05-05 17:39 UTC
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:delanco/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:delran/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:eastampton/government
-- ocd-jurisdiction/country:us/state:nj/county:burlington/place:edgewater_park/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:evesham/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:florence/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:hainesport/government
@@ -1450,7 +1449,6 @@ Generated: 2026-05-05 17:39 UTC
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:berkeley/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:eagleswood/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:jackson/government
-- ocd-jurisdiction/country:us/state:nj/county:ocean/place:lacey/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:little_egg_harbor/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:long_beach/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:manchester/government
@@ -1516,7 +1514,6 @@ Generated: 2026-05-05 17:39 UTC
 - ocd-jurisdiction/country:us/state:nj/place:asbury_park/government
 - ocd-jurisdiction/country:us/state:nj/place:atlantic_city/government
 - ocd-jurisdiction/country:us/state:nj/place:atlantic_highlands/government
-- ocd-jurisdiction/country:us/state:nj/place:audubon/government
 - ocd-jurisdiction/country:us/state:nj/place:audubon_park/government
 - ocd-jurisdiction/country:us/state:nj/place:barrington/government
 - ocd-jurisdiction/country:us/state:nj/place:bay_head/government
@@ -1590,7 +1587,6 @@ Generated: 2026-05-05 17:39 UTC
 - ocd-jurisdiction/country:us/state:nj/place:helmetta/government
 - ocd-jurisdiction/country:us/state:nj/place:hi-nella/government
 - ocd-jurisdiction/country:us/state:nj/place:high_bridge/government
-- ocd-jurisdiction/country:us/state:nj/place:highland_park/government
 - ocd-jurisdiction/country:us/state:nj/place:hightstown/government
 - ocd-jurisdiction/country:us/state:nj/place:ho-ho-kus/government
 - ocd-jurisdiction/country:us/state:nj/place:hopatcong/government
@@ -1614,7 +1610,6 @@ Generated: 2026-05-05 17:39 UTC
 - ocd-jurisdiction/country:us/state:nj/place:linwood/government
 - ocd-jurisdiction/country:us/state:nj/place:little_ferry/government
 - ocd-jurisdiction/country:us/state:nj/place:loch_arbour/government
-- ocd-jurisdiction/country:us/state:nj/place:lodi/government
 - ocd-jurisdiction/country:us/state:nj/place:long_branch/government
 - ocd-jurisdiction/country:us/state:nj/place:magnolia/government
 - ocd-jurisdiction/country:us/state:nj/place:manasquan/government
@@ -1688,7 +1683,6 @@ Generated: 2026-05-05 17:39 UTC
 - ocd-jurisdiction/country:us/state:nj/place:shrewsbury/government
 - ocd-jurisdiction/country:us/state:nj/place:somerdale/government
 - ocd-jurisdiction/country:us/state:nj/place:somerville/government
-- ocd-jurisdiction/country:us/state:nj/place:south_amboy/government
 - ocd-jurisdiction/country:us/state:nj/place:south_river/government
 - ocd-jurisdiction/country:us/state:nj/place:spring_lake/government
 - ocd-jurisdiction/country:us/state:nj/place:spring_lake_heights/government
@@ -1734,6 +1728,7 @@ Generated: 2026-05-05 17:39 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:bergen/place:mahwah/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:bergen/place:river_vale/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:burlington/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:edgewater_park/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:lumberton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:maple_shade/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:mount_laurel/government |
@@ -1769,6 +1764,7 @@ Generated: 2026-05-05 17:39 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:long_hill/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:montville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:brick/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lacey/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lakewood/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:plumsted/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:passaic/place:wayne/government |
