@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 16:54 UTC
+Generated: 2026-05-05 16:56 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 16:54 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 565 | 83 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 592 | 86 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 16:54 UTC
 ### nj
 
 <details>
-<summary>477 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 28 in CP, not in external</summary>
+<summary>474 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 29 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1466,7 +1466,6 @@ Generated: 2026-05-05 16:54 UTC
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:washington/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:barnegat/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:berkeley/government
-- ocd-jurisdiction/country:us/state:nj/county:ocean/place:brick/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:eagleswood/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:jackson/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:lacey/government
@@ -1586,7 +1585,6 @@ Generated: 2026-05-05 16:54 UTC
 - ocd-jurisdiction/country:us/state:nj/place:demarest/government
 - ocd-jurisdiction/country:us/state:nj/place:dumont/government
 - ocd-jurisdiction/country:us/state:nj/place:east_newark/government
-- ocd-jurisdiction/country:us/state:nj/place:east_orange/government
 - ocd-jurisdiction/country:us/state:nj/place:east_rutherford/government
 - ocd-jurisdiction/country:us/state:nj/place:eatontown/government
 - ocd-jurisdiction/country:us/state:nj/place:edgewater/government
@@ -1707,7 +1705,6 @@ Generated: 2026-05-05 16:54 UTC
 - ocd-jurisdiction/country:us/state:nj/place:palmyra/government
 - ocd-jurisdiction/country:us/state:nj/place:paramus/government
 - ocd-jurisdiction/country:us/state:nj/place:park_ridge/government
-- ocd-jurisdiction/country:us/state:nj/place:passaic/government
 - ocd-jurisdiction/country:us/state:nj/place:paterson/government
 - ocd-jurisdiction/country:us/state:nj/place:paulsboro/government
 - ocd-jurisdiction/country:us/state:nj/place:peapack_and_gladstone/government
@@ -1823,6 +1820,7 @@ Generated: 2026-05-05 16:54 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:chester/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:denville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:montville/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:brick/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lakewood/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:passaic/place:wayne/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:passaic/place:west_milford/government |
