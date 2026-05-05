@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 17:45 UTC
+Generated: 2026-05-05 17:47 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 17:45 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 1,093 | 167 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 1,109 | 169 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 17:45 UTC
 ### nj
 
 <details>
-<summary>393 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 55 in CP, not in external</summary>
+<summary>391 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 56 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1486,7 +1486,6 @@ Generated: 2026-05-05 17:45 UTC
 - ocd-jurisdiction/country:us/state:nj/county:sussex/place:vernon/government
 - ocd-jurisdiction/country:us/state:nj/county:sussex/place:wantage/government
 - ocd-jurisdiction/country:us/state:nj/county:union/place:berkeley_heights/government
-- ocd-jurisdiction/country:us/state:nj/county:union/place:clark/government
 - ocd-jurisdiction/country:us/state:nj/county:union/place:cranford/government
 - ocd-jurisdiction/country:us/state:nj/county:union/place:hillside/government
 - ocd-jurisdiction/country:us/state:nj/county:union/place:scotch_plains/government
@@ -1578,7 +1577,6 @@ Generated: 2026-05-05 17:45 UTC
 - ocd-jurisdiction/country:us/state:nj/place:harrington_park/government
 - ocd-jurisdiction/country:us/state:nj/place:harrison/government
 - ocd-jurisdiction/country:us/state:nj/place:harvey_cedars/government
-- ocd-jurisdiction/country:us/state:nj/place:hawthorne/government
 - ocd-jurisdiction/country:us/state:nj/place:helmetta/government
 - ocd-jurisdiction/country:us/state:nj/place:hi-nella/government
 - ocd-jurisdiction/country:us/state:nj/place:high_bridge/government
@@ -1769,6 +1767,7 @@ Generated: 2026-05-05 17:45 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:somerset/place:franklin/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:somerset/place:green_brook/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:sussex/place:fredon/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:union/place:clark/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:union/place:springfield/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:warren/place:allamuchy/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:warren/place:blairstown/government |
