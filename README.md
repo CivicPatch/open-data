@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 17:31 UTC
+Generated: 2026-05-05 17:33 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 17:31 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 934 | 142 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 958 | 146 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 17:31 UTC
 ### nj
 
 <details>
-<summary>418 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 48 in CP, not in external</summary>
+<summary>414 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 49 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1369,7 +1369,6 @@ Generated: 2026-05-05 17:31 UTC
 - ocd-jurisdiction/country:us/state:nj/county:cumberland/place:commercial/government
 - ocd-jurisdiction/country:us/state:nj/county:cumberland/place:deerfield/government
 - ocd-jurisdiction/country:us/state:nj/county:cumberland/place:downe/government
-- ocd-jurisdiction/country:us/state:nj/county:cumberland/place:fairfield/government
 - ocd-jurisdiction/country:us/state:nj/county:cumberland/place:greenwich/government
 - ocd-jurisdiction/country:us/state:nj/county:cumberland/place:hopewell/government
 - ocd-jurisdiction/country:us/state:nj/county:cumberland/place:lawrence/government
@@ -1547,7 +1546,6 @@ Generated: 2026-05-05 17:31 UTC
 - ocd-jurisdiction/country:us/state:nj/place:chesilhurst/government
 - ocd-jurisdiction/country:us/state:nj/place:chester/government
 - ocd-jurisdiction/country:us/state:nj/place:clayton/government
-- ocd-jurisdiction/country:us/state:nj/place:clementon/government
 - ocd-jurisdiction/country:us/state:nj/place:cliffside_park/government
 - ocd-jurisdiction/country:us/state:nj/place:clifton/government
 - ocd-jurisdiction/country:us/state:nj/place:closter/government
@@ -1648,7 +1646,6 @@ Generated: 2026-05-05 17:31 UTC
 - ocd-jurisdiction/country:us/state:nj/place:new_milford/government
 - ocd-jurisdiction/country:us/state:nj/place:new_providence/government
 - ocd-jurisdiction/country:us/state:nj/place:newfield/government
-- ocd-jurisdiction/country:us/state:nj/place:newton/government
 - ocd-jurisdiction/country:us/state:nj/place:north_arlington/government
 - ocd-jurisdiction/country:us/state:nj/place:north_caldwell/government
 - ocd-jurisdiction/country:us/state:nj/place:north_plainfield/government
@@ -1657,7 +1654,6 @@ Generated: 2026-05-05 17:31 UTC
 - ocd-jurisdiction/country:us/state:nj/place:norwood/government
 - ocd-jurisdiction/country:us/state:nj/place:oaklyn/government
 - ocd-jurisdiction/country:us/state:nj/place:ocean_gate/government
-- ocd-jurisdiction/country:us/state:nj/place:oceanport/government
 - ocd-jurisdiction/country:us/state:nj/place:ogdensburg/government
 - ocd-jurisdiction/country:us/state:nj/place:old_tappan/government
 - ocd-jurisdiction/country:us/state:nj/place:palisades_park/government
@@ -1756,6 +1752,7 @@ Generated: 2026-05-05 17:31 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:woodland/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:cape_may/place:dennis/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:cape_may/place:middle/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:cumberland/place:fairfield/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:cumberland/place:stow_creek/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:essex/place:bloomfield/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:essex/place:irvington/government |
