@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 16:52 UTC
+Generated: 2026-05-05 16:54 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 16:52 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 547 | 80 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 565 | 83 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 16:52 UTC
 ### nj
 
 <details>
-<summary>480 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 26 in CP, not in external</summary>
+<summary>477 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 28 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1327,7 +1327,6 @@ Generated: 2026-05-05 16:52 UTC
 - ocd-jurisdiction/country:us/state:nj/county:atlantic/place:hamilton/government
 - ocd-jurisdiction/country:us/state:nj/county:atlantic/place:weymouth/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:lyndhurst/government
-- ocd-jurisdiction/country:us/state:nj/county:bergen/place:mahwah/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:rochelle_park/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:saddle_brook/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:south_hackensack/government
@@ -1349,7 +1348,6 @@ Generated: 2026-05-05 16:52 UTC
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:medford/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:moorestown/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:mount_holly/government
-- ocd-jurisdiction/country:us/state:nj/county:burlington/place:mount_laurel/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:new_hanover/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:north_hanover/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:pemberton/government
@@ -1601,7 +1599,6 @@ Generated: 2026-05-05 16:52 UTC
 - ocd-jurisdiction/country:us/state:nj/place:essex_fells/government
 - ocd-jurisdiction/country:us/state:nj/place:estell_manor/government
 - ocd-jurisdiction/country:us/state:nj/place:fair_haven/government
-- ocd-jurisdiction/country:us/state:nj/place:fair_lawn/government
 - ocd-jurisdiction/country:us/state:nj/place:fairview/government
 - ocd-jurisdiction/country:us/state:nj/place:fanwood/government
 - ocd-jurisdiction/country:us/state:nj/place:far_hills/government
@@ -1807,9 +1804,11 @@ Generated: 2026-05-05 16:52 UTC
 | In External, Not in Known | In CivicPatch, Not in External |
 |---------------------------|--------------------------------|
 | ocd-jurisdiction/country:us/state:nj/place:pine_valley/government | ocd-jurisdiction/country:us/state:nj/county:atlantic/place:mullica/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:bergen/place:mahwah/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:bergen/place:river_vale/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:burlington/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:lumberton/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:mount_laurel/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:cape_may/place:middle/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:essex/place:bloomfield/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:essex/place:south_orange_village/government |
