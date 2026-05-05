@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 17:17 UTC
+Generated: 2026-05-05 17:19 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 17:17 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 748 | 111 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 758 | 113 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 17:17 UTC
 ### nj
 
 <details>
-<summary>449 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 38 in CP, not in external</summary>
+<summary>447 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 40 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1344,7 +1344,6 @@ Generated: 2026-05-05 17:17 UTC
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:evesham/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:florence/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:hainesport/government
-- ocd-jurisdiction/country:us/state:nj/county:burlington/place:maple_shade/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:medford/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:moorestown/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:mount_holly/government
@@ -1400,7 +1399,6 @@ Generated: 2026-05-05 17:17 UTC
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:monroe/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:south_harrison/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:washington/government
-- ocd-jurisdiction/country:us/state:nj/county:gloucester/place:west_deptford/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:woolwich/government
 - ocd-jurisdiction/country:us/state:nj/county:hudson/place:north_bergen/government
 - ocd-jurisdiction/country:us/state:nj/county:hudson/place:weehawken/government
@@ -1780,6 +1778,7 @@ Generated: 2026-05-05 17:17 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:bergen/place:river_vale/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:burlington/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:lumberton/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:maple_shade/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:mount_laurel/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:washington/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:cape_may/place:dennis/government |
@@ -1789,6 +1788,7 @@ Generated: 2026-05-05 17:17 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:essex/place:south_orange_village/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:deptford/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:logan/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:west_deptford/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:holland/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:union/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:hamilton/government |
