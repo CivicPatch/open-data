@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 17:15 UTC
+Generated: 2026-05-05 17:17 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 17:15 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 741 | 110 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 748 | 111 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 17:15 UTC
 ### nj
 
 <details>
-<summary>450 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 38 in CP, not in external</summary>
+<summary>449 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 38 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1678,7 +1678,6 @@ Generated: 2026-05-05 17:15 UTC
 - ocd-jurisdiction/country:us/state:nj/place:northfield/government
 - ocd-jurisdiction/country:us/state:nj/place:northvale/government
 - ocd-jurisdiction/country:us/state:nj/place:norwood/government
-- ocd-jurisdiction/country:us/state:nj/place:oakland/government
 - ocd-jurisdiction/country:us/state:nj/place:oaklyn/government
 - ocd-jurisdiction/country:us/state:nj/place:ocean_gate/government
 - ocd-jurisdiction/country:us/state:nj/place:oceanport/government
