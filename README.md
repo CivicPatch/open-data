@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 17:29 UTC
+Generated: 2026-05-05 17:31 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 17:29 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 901 | 137 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 934 | 142 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 17:29 UTC
 ### nj
 
 <details>
-<summary>423 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 47 in CP, not in external</summary>
+<summary>418 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 48 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1458,7 +1458,6 @@ Generated: 2026-05-05 17:29 UTC
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:long_beach/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:manchester/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:ocean/government
-- ocd-jurisdiction/country:us/state:nj/county:ocean/place:plumsted/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:stafford/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:toms_river/government
 - ocd-jurisdiction/country:us/state:nj/county:passaic/place:little_falls/government
@@ -1537,11 +1536,9 @@ Generated: 2026-05-05 17:29 UTC
 - ocd-jurisdiction/country:us/state:nj/place:bound_brook/government
 - ocd-jurisdiction/country:us/state:nj/place:bridgeton/government
 - ocd-jurisdiction/country:us/state:nj/place:brielle/government
-- ocd-jurisdiction/country:us/state:nj/place:brigantine/government
 - ocd-jurisdiction/country:us/state:nj/place:buena/government
 - ocd-jurisdiction/country:us/state:nj/place:burlington/government
 - ocd-jurisdiction/country:us/state:nj/place:butler/government
-- ocd-jurisdiction/country:us/state:nj/place:caldwell/government
 - ocd-jurisdiction/country:us/state:nj/place:califon/government
 - ocd-jurisdiction/country:us/state:nj/place:cape_may/government
 - ocd-jurisdiction/country:us/state:nj/place:cape_may_point/government
@@ -1706,7 +1703,6 @@ Generated: 2026-05-05 17:29 UTC
 - ocd-jurisdiction/country:us/state:nj/place:somerdale/government
 - ocd-jurisdiction/country:us/state:nj/place:somerville/government
 - ocd-jurisdiction/country:us/state:nj/place:south_amboy/government
-- ocd-jurisdiction/country:us/state:nj/place:south_bound_brook/government
 - ocd-jurisdiction/country:us/state:nj/place:south_river/government
 - ocd-jurisdiction/country:us/state:nj/place:spring_lake/government
 - ocd-jurisdiction/country:us/state:nj/place:spring_lake_heights/government
@@ -1736,7 +1732,6 @@ Generated: 2026-05-05 17:29 UTC
 - ocd-jurisdiction/country:us/state:nj/place:westfield/government
 - ocd-jurisdiction/country:us/state:nj/place:westville/government
 - ocd-jurisdiction/country:us/state:nj/place:westwood/government
-- ocd-jurisdiction/country:us/state:nj/place:wharton/government
 - ocd-jurisdiction/country:us/state:nj/place:wildwood/government
 - ocd-jurisdiction/country:us/state:nj/place:wildwood_crest/government
 - ocd-jurisdiction/country:us/state:nj/place:woodbine/government
@@ -1786,6 +1781,7 @@ Generated: 2026-05-05 17:29 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:montville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:brick/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lakewood/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:plumsted/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:passaic/place:wayne/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:passaic/place:west_milford/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:somerset/place:franklin/government |
