@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-04-29 18:02 UTC
+Generated: 2026-05-05 16:42 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-04-29 18:02 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 518 | 76 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 525 | 77 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-04-29 18:02 UTC
 ### nj
 
 <details>
-<summary>484 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 24 in CP, not in external</summary>
+<summary>483 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 25 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1384,7 +1384,6 @@ Generated: 2026-04-29 18:02 UTC
 - ocd-jurisdiction/country:us/state:nj/county:cumberland/place:stow_creek/government
 - ocd-jurisdiction/country:us/state:nj/county:cumberland/place:upper_deerfield/government
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:belleville/government
-- ocd-jurisdiction/country:us/state:nj/county:essex/place:bloomfield/government
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:cedar_grove/government
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:city_of_orange/government
 - ocd-jurisdiction/country:us/state:nj/county:essex/place:fairfield/government
@@ -1815,6 +1814,7 @@ Generated: 2026-04-29 18:02 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:burlington/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:lumberton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:cape_may/place:middle/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:essex/place:bloomfield/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:essex/place:south_orange_village/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:deptford/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:holland/government |
