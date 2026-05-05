@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-05 17:23 UTC
+Generated: 2026-05-05 17:25 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-05 17:23 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 809 | 122 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 843 | 127 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-05 17:23 UTC
 ### nj
 
 <details>
-<summary>438 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 41 in CP, not in external</summary>
+<summary>433 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 43 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1353,7 +1353,6 @@ Generated: 2026-05-05 17:23 UTC
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:riverside/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:shamong/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:southampton/government
-- ocd-jurisdiction/country:us/state:nj/county:burlington/place:springfield/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:tabernacle/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:westampton/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:willingboro/government
@@ -1488,7 +1487,6 @@ Generated: 2026-05-05 17:23 UTC
 - ocd-jurisdiction/country:us/state:nj/county:sussex/place:andover/government
 - ocd-jurisdiction/country:us/state:nj/county:sussex/place:byram/government
 - ocd-jurisdiction/country:us/state:nj/county:sussex/place:frankford/government
-- ocd-jurisdiction/country:us/state:nj/county:sussex/place:fredon/government
 - ocd-jurisdiction/country:us/state:nj/county:sussex/place:green/government
 - ocd-jurisdiction/country:us/state:nj/county:sussex/place:hampton/government
 - ocd-jurisdiction/country:us/state:nj/county:sussex/place:hardyston/government
@@ -1545,7 +1543,6 @@ Generated: 2026-05-05 17:23 UTC
 - ocd-jurisdiction/country:us/state:nj/place:bridgeton/government
 - ocd-jurisdiction/country:us/state:nj/place:brielle/government
 - ocd-jurisdiction/country:us/state:nj/place:brigantine/government
-- ocd-jurisdiction/country:us/state:nj/place:brooklawn/government
 - ocd-jurisdiction/country:us/state:nj/place:buena/government
 - ocd-jurisdiction/country:us/state:nj/place:burlington/government
 - ocd-jurisdiction/country:us/state:nj/place:butler/government
@@ -1573,7 +1570,6 @@ Generated: 2026-05-05 17:23 UTC
 - ocd-jurisdiction/country:us/state:nj/place:east_rutherford/government
 - ocd-jurisdiction/country:us/state:nj/place:eatontown/government
 - ocd-jurisdiction/country:us/state:nj/place:edgewater/government
-- ocd-jurisdiction/country:us/state:nj/place:egg_harbor_city/government
 - ocd-jurisdiction/country:us/state:nj/place:elmer/government
 - ocd-jurisdiction/country:us/state:nj/place:elmwood_park/government
 - ocd-jurisdiction/country:us/state:nj/place:emerson/government
@@ -1711,7 +1707,6 @@ Generated: 2026-05-05 17:23 UTC
 - ocd-jurisdiction/country:us/state:nj/place:runnemede/government
 - ocd-jurisdiction/country:us/state:nj/place:rutherford/government
 - ocd-jurisdiction/country:us/state:nj/place:salem/government
-- ocd-jurisdiction/country:us/state:nj/place:sea_bright/government
 - ocd-jurisdiction/country:us/state:nj/place:sea_isle_city/government
 - ocd-jurisdiction/country:us/state:nj/place:seaside_heights/government
 - ocd-jurisdiction/country:us/state:nj/place:secaucus/government
@@ -1771,6 +1766,7 @@ Generated: 2026-05-05 17:23 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:lumberton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:maple_shade/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:mount_laurel/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:springfield/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:washington/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:woodland/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:cape_may/place:dennis/government |
@@ -1800,6 +1796,7 @@ Generated: 2026-05-05 17:23 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:passaic/place:west_milford/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:somerset/place:franklin/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:somerset/place:green_brook/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:sussex/place:fredon/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:union/place:springfield/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:warren/place:allamuchy/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:warren/place:blairstown/government |
