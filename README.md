@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-06 18:15 UTC
+Generated: 2026-05-06 18:19 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-06 18:15 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 1,246 | 190 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 1,251 | 191 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-06 18:15 UTC
 ### nj
 
 <details>
-<summary>370 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 68 in CP, not in external</summary>
+<summary>369 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 69 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1415,7 +1415,6 @@ Generated: 2026-05-06 18:15 UTC
 - ocd-jurisdiction/country:us/state:nj/county:monmouth/place:marlboro/government
 - ocd-jurisdiction/country:us/state:nj/county:monmouth/place:middletown/government
 - ocd-jurisdiction/country:us/state:nj/county:monmouth/place:neptune/government
-- ocd-jurisdiction/country:us/state:nj/county:monmouth/place:ocean/government
 - ocd-jurisdiction/country:us/state:nj/county:monmouth/place:shrewsbury/government
 - ocd-jurisdiction/country:us/state:nj/county:monmouth/place:upper_freehold/government
 - ocd-jurisdiction/country:us/state:nj/county:monmouth/place:wall/government
@@ -1741,6 +1740,7 @@ Generated: 2026-05-06 18:15 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:monmouth/place:hazlet/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:monmouth/place:howell/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:monmouth/place:millstone/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:monmouth/place:ocean/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:chester/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:denville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:long_hill/government |
