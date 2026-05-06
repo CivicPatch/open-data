@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-06 18:13 UTC
+Generated: 2026-05-06 18:15 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-06 18:13 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 1,213 | 185 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 1,246 | 190 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-06 18:13 UTC
 ### nj
 
 <details>
-<summary>375 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 67 in CP, not in external</summary>
+<summary>370 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 68 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1398,7 +1398,6 @@ Generated: 2026-05-06 18:13 UTC
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:east_amwell/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:franklin/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:kingwood/government
-- ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:lebanon/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:readington/government
 - ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:west_amwell/government
 - ocd-jurisdiction/country:us/state:nj/county:mercer/place:east_windsor/government
@@ -1554,7 +1553,6 @@ Generated: 2026-05-06 18:13 UTC
 - ocd-jurisdiction/country:us/state:nj/place:garfield/government
 - ocd-jurisdiction/country:us/state:nj/place:garwood/government
 - ocd-jurisdiction/country:us/state:nj/place:glassboro/government
-- ocd-jurisdiction/country:us/state:nj/place:glen_rock/government
 - ocd-jurisdiction/country:us/state:nj/place:guttenberg/government
 - ocd-jurisdiction/country:us/state:nj/place:hackettstown/government
 - ocd-jurisdiction/country:us/state:nj/place:haddon_heights/government
@@ -1588,7 +1586,6 @@ Generated: 2026-05-06 18:13 UTC
 - ocd-jurisdiction/country:us/state:nj/place:linden/government
 - ocd-jurisdiction/country:us/state:nj/place:lindenwold/government
 - ocd-jurisdiction/country:us/state:nj/place:linwood/government
-- ocd-jurisdiction/country:us/state:nj/place:little_ferry/government
 - ocd-jurisdiction/country:us/state:nj/place:loch_arbour/government
 - ocd-jurisdiction/country:us/state:nj/place:long_branch/government
 - ocd-jurisdiction/country:us/state:nj/place:magnolia/government
@@ -1602,7 +1599,6 @@ Generated: 2026-05-06 18:13 UTC
 - ocd-jurisdiction/country:us/state:nj/place:millville/government
 - ocd-jurisdiction/country:us/state:nj/place:monmouth_beach/government
 - ocd-jurisdiction/country:us/state:nj/place:moonachie/government
-- ocd-jurisdiction/country:us/state:nj/place:mount_arlington/government
 - ocd-jurisdiction/country:us/state:nj/place:mount_ephraim/government
 - ocd-jurisdiction/country:us/state:nj/place:mountain_lakes/government
 - ocd-jurisdiction/country:us/state:nj/place:mountainside/government
@@ -1617,7 +1613,6 @@ Generated: 2026-05-06 18:13 UTC
 - ocd-jurisdiction/country:us/state:nj/place:northfield/government
 - ocd-jurisdiction/country:us/state:nj/place:northvale/government
 - ocd-jurisdiction/country:us/state:nj/place:norwood/government
-- ocd-jurisdiction/country:us/state:nj/place:oaklyn/government
 - ocd-jurisdiction/country:us/state:nj/place:ocean_gate/government
 - ocd-jurisdiction/country:us/state:nj/place:ogdensburg/government
 - ocd-jurisdiction/country:us/state:nj/place:old_tappan/government
@@ -1729,6 +1724,7 @@ Generated: 2026-05-06 18:13 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:west_deptford/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:bethlehem/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:holland/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:lebanon/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:raritan/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:tewksbury/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:union/government |
