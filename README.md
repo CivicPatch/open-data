@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-06 18:02 UTC
+Generated: 2026-05-06 18:04 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-06 18:02 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 1,170 | 178 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 1,178 | 179 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-06 18:02 UTC
 ### nj
 
 <details>
-<summary>382 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 61 in CP, not in external</summary>
+<summary>381 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 62 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1389,7 +1389,6 @@ Generated: 2026-05-06 18:02 UTC
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:greenwich/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:harrison/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:mantua/government
-- ocd-jurisdiction/country:us/state:nj/county:gloucester/place:monroe/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:washington/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:woolwich/government
 - ocd-jurisdiction/country:us/state:nj/county:hudson/place:north_bergen/government
@@ -1730,6 +1729,7 @@ Generated: 2026-05-06 18:02 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:essex/place:south_orange_village/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:deptford/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:logan/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:monroe/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:south_harrison/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:west_deptford/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:bethlehem/government |
