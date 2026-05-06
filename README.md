@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-06 17:35 UTC
+Generated: 2026-05-06 17:45 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-06 17:35 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 1,160 | 176 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 1,165 | 177 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-06 17:35 UTC
 ### nj
 
 <details>
-<summary>384 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 59 in CP, not in external</summary>
+<summary>383 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 60 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1408,7 +1408,6 @@ Generated: 2026-05-06 17:35 UTC
 - ocd-jurisdiction/country:us/state:nj/county:mercer/place:east_windsor/government
 - ocd-jurisdiction/country:us/state:nj/county:mercer/place:ewing/government
 - ocd-jurisdiction/country:us/state:nj/county:mercer/place:hopewell/government
-- ocd-jurisdiction/country:us/state:nj/county:mercer/place:lawrence/government
 - ocd-jurisdiction/country:us/state:nj/county:mercer/place:west_windsor/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:east_brunswick/government
 - ocd-jurisdiction/country:us/state:nj/county:middlesex/place:edison/government
@@ -1738,6 +1737,7 @@ Generated: 2026-05-06 17:35 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:holland/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:hunterdon/place:union/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:hamilton/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:lawrence/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:mercer/place:robbinsville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:cranbury/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:middlesex/place:north_brunswick/government |
