@@ -1,14 +1,12 @@
-import importlib.util
-import os
 import csv
+import importlib.util
 import io
+import os
 import sys
-import zipfile
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
-import geopandas
-import pandas
 import requests
 from ruamel.yaml import YAML
 from ruamel.yaml.comments import CommentedMap
@@ -33,40 +31,35 @@ from scripts.maps.local import build_maps_for_state
 
 PROJECT_ROOT = Path(__file__).parent.parent
 
+_ACS_URL = "https://api.census.gov/data/2023/acs/acs5"
+_GAZ_URL = "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer"
 
 
-def zip_to_geojson(url: str, output_geojson: str, data_source_map_dir: str):
-    zip_path = os.path.join(data_source_map_dir, "data.zip")
-    # Download the ZIP file
-    response = requests.get(url)
-    with open(zip_path, "wb") as f:
-        f.write(response.content)
-    # Extract the ZIP file
-    with zipfile.ZipFile(zip_path, "r") as zip_ref:
-        zip_ref.extractall(data_source_map_dir)
-    # Find the .shp file
-    shp_files = [f for f in os.listdir(data_source_map_dir) if f.endswith(".shp")]
-    if not shp_files:
-        raise ValueError("No shapefile found in ZIP")
-    shp_path = os.path.join(data_source_map_dir, shp_files[0])
-    # Read and convert to GeoJSON
-    gdf = geopandas.read_file(shp_path)
-    gdf.to_file(output_geojson, driver="GeoJSON")
+@dataclass(frozen=True)
+class _CensusSource:
+    census_type: str
+    api_for: str       # value for the Census ACS `for=` parameter
+    gaz_filename: str  # gazetteer filename template; receives `fips` via .format()
+    funcstat_col: int  # funcstat column index in the gazetteer TSV
 
-def combine_geojsons_with_type(folder_path: str, output_path: str):
-    geojson_files = [f for f in os.listdir(folder_path) if f.endswith('.geojson')]
-    gdfs = []
-    for file in geojson_files:
-        file_path = os.path.join(folder_path, file)
-        gdf = geopandas.read_file(file_path)
-        # Add 'type' column with file name (without extension)
-        file_type = os.path.splitext(file)[0]
-        gdf['type'] = file_type
-        gdfs.append(gdf)
-    if not gdfs:
-        raise ValueError("No .geojson files found in the folder.")
-    combined_gdf = geopandas.GeoDataFrame(pandas.concat(gdfs, ignore_index=True), crs=gdfs[0].crs)
-    combined_gdf.to_file(output_path, driver="GeoJSON")
+
+_PLACE = _CensusSource(
+    census_type="place",
+    api_for="place:*",
+    gaz_filename="2025_gaz_place_{fips}.txt",
+    funcstat_col=6,
+)
+_COUSUB = _CensusSource(
+    census_type="county_subdivision",
+    api_for="county%20subdivision:*",
+    gaz_filename="2025_gaz_cousubs_{fips}.txt",
+    funcstat_col=5,
+)
+_CENSUS_SOURCES: Dict[str, _CensusSource] = {
+    "places": _PLACE,
+    "county_subdivisions": _COUSUB,
+}
+
 
 def _load_existing_jurisdictions(path: Path):
     """Load existing jurisdictions.yml with ruamel.yaml (preserving comments).
@@ -88,13 +81,13 @@ def pull_jurisdiction_data(state: str, limit: int = None):
     # TODO: this will be replaced by jurisdictions repo work
     # Should do a daily (???) pull or when data updates
 
-    output_path = PROJECT_ROOT / "data_source" / state / "jurisdictions.yml"
+    output_path = PROJECT_ROOT / "data_source" / state / "local" / "jurisdictions.yml"
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     # Single load — preserves comments in CommentedMap objects
     doc, existing_by_id = _load_existing_jurisdictions(output_path)
 
-    census_data, census_geo_data, census_warnings = get_census_data_for_state(state)
+    census_data, census_warnings = get_census_data_for_state(state)
 
     # Partition into new vs. existing vs. inactive
     census_ids = set(census_data.keys())
@@ -172,167 +165,85 @@ def pull_jurisdiction_data(state: str, limit: int = None):
 
 
 # https://www.census.gov/library/reference/code-lists/class-codes.html
-def get_census_data_for_state(state: str):
-    census_data = {}
-    warnings = []
+def get_census_data_for_state(state: str) -> Tuple[Dict, List[str]]:
+    census_data: Dict[str, Jurisdiction] = {}
+    warnings: List[str] = []
 
     state_config = state_configs.get(state.lower())
     if not state_config:
         print(f"State '{state}' not found in state configs.")
-        return census_data, {}, warnings
+        return census_data, warnings
 
     state_fips = state_config.get("fips")
     if not state_fips:
         print(f"State '{state}' not found in FIPS mapping.")
-        return census_data, {}, warnings
+        return census_data, warnings
 
     pull_from_census = state_config.get("pull_from_census", [])
 
-    if "places" in pull_from_census:
-        place_jurisdictions, p_warnings = pull_place_data(state, state_fips)
-        warnings.extend(p_warnings)
-        for jurisdiction_object in place_jurisdictions:
-            jurisdiction_ocdid = jurisdiction_object.id
-            if census_data.get(jurisdiction_ocdid):
-                existing = census_data[jurisdiction_ocdid]
+    for source_key, source in _CENSUS_SOURCES.items():
+        if source_key not in pull_from_census:
+            continue
+        jurisdictions, src_warnings = _fetch_census_jurisdictions(state, state_fips, source)
+        warnings.extend(src_warnings)
+        for j in jurisdictions:
+            if j.id in census_data:
                 warnings.append(
-                    f"Duplicate jurisdiction found: {jurisdiction_ocdid} between "
-                    f"{existing.name} and {jurisdiction_object.name}"
+                    f"Duplicate jurisdiction found: {j.id} between "
+                    f"{census_data[j.id].name} and {j.name}"
                 )
             else:
-                census_data[jurisdiction_ocdid] = jurisdiction_object
+                census_data[j.id] = j
 
-    if "county_subdivisions" in pull_from_census:
-        cousub_jurisdictions, c_warnings = pull_cousub_data(state, state_fips)
-        warnings.extend(c_warnings)
-        for jurisdiction_object in cousub_jurisdictions:
-            jurisdiction_ocdid = jurisdiction_object.id
-            if census_data.get(jurisdiction_ocdid):
-                existing = census_data[jurisdiction_ocdid]
-                warnings.append(
-                    f"Duplicate jurisdiction found: {jurisdiction_ocdid} between "
-                    f"{existing.name} and {jurisdiction_object.name}"
-                )
-            else:
-                census_data[jurisdiction_ocdid] = jurisdiction_object
-
-    # Build maps separately — stamps updated_at into local.geojson
     build_maps_for_state(state, state_fips, pull_from_census)
+    return census_data, warnings
 
-    return census_data, {}, warnings
 
-def pull_place_data(
-    state: str, state_fips: str
+def _fetch_census_jurisdictions(
+    state: str, fips: str, source: _CensusSource
 ) -> Tuple[List[Jurisdiction], List[str]]:
-    warnings = []
-    state_config = state_configs.get(state.lower())
-    if state_config is None:
-        print(f"No configuration found for state: {state}")
-        return [], warnings
+    warnings: List[str] = []
+    api_url = f"{_ACS_URL}?get=NAME,B01003_001E&for={source.api_for}&in=state:{fips}"
+    gaz_url = f"{_GAZ_URL}/{source.gaz_filename.format(fips=fips)}"
 
-    api_url = f"https://api.census.gov/data/2023/acs/acs5?get=NAME,B01003_001E&for=place:*&in=state:{state_fips}"
-    # Ex: https://api.census.gov/data/2023/acs/acs5?get=NAME,B01003_001E&for=place:*&in=state:08
-    codes_url = f"https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_gaz_place_{state_fips}.txt"
-    # Ex: https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_gaz_place_08.txt
     api_response = requests.get(api_url)
-    codes_response = requests.get(codes_url)
+    codes_response = requests.get(gaz_url)
 
-    jurisdictions = []
-    if api_response.status_code == 200 and codes_response.status_code == 200:
-        codes_data = codes_response.text  # Skip header
-        codes_reader = csv.reader(io.StringIO(codes_data), delimiter="|")
+    jurisdictions: List[Jurisdiction] = []
+    if api_response.status_code != 200 or codes_response.status_code != 200:
+        return jurisdictions, warnings
 
-        # Skip header row
-        _header = next(codes_reader)
-        codes_data = list(codes_reader)
+    codes_reader = csv.reader(io.StringIO(codes_response.text), delimiter="|")
+    _header = next(codes_reader)
+    codes_data = list(codes_reader)
 
-        api_data_json = api_response.json()
-        api_data_by_geoid = get_api_data_by_geoid(
-            state, state_fips, api_data_json[1:], 1, "place"
-        )
-        for item in codes_data:
-            name = item[4]
-            funcstat = item[6]
-            if funcstat not in ["A", "B", "C", "G"]:
-                warnings.append(
-                    f"Place: Skipping place with unsupported functional status ({funcstat}): {name})"
-                )
-                continue
-            geoid = item[1]
-            api_data = api_data_by_geoid.get(geoid, None)
-            if api_data is None:
-                warnings.append(f"Missing population for place: ({geoid})")
-                continue
-            population = int(api_data["population"])
-            if population == 0:
-                continue
-            jurisdiction_object = Jurisdiction(
-                id=api_data["jurisdiction_ocdid"],
-                name=api_data["friendly_name"],
-                url=None,
-                population=population,
-                geoid=geoid,
-                issues=["ocdid_collision"] if api_data.get("ocdid_collision") else None,
+    api_data_by_geoid = get_api_data_by_geoid(
+        state, fips, api_response.json()[1:], 1, source.census_type
+    )
+    for item in codes_data:
+        name = item[4]
+        funcstat = item[source.funcstat_col]
+        if funcstat not in {"A", "B", "C", "G"}:
+            warnings.append(
+                f"{source.census_type}: skipping {name!r} (funcstat {funcstat!r})"
             )
-            jurisdictions.append(jurisdiction_object)
-    return jurisdictions, warnings
-
-
-def pull_cousub_data(
-    state: str, state_fips: str
-) -> Tuple[List[Jurisdiction], List[str]]:
-    warnings = []
-    state_config = state_configs.get(state.lower())
-    if state_config is None:
-        print(f"No configuration found for state: {state}")
-        return [], warnings
-
-    api_url = f"https://api.census.gov/data/2023/acs/acs5?get=NAME,B01003_001E&for=county%20subdivision:*&in=state:{state_fips}"
-    # Ex: https://api.census.gov/data/2023/acs/acs5?get=NAME,B01003_001E&for=county%20subdivision:*&in=state:08
-    codes_url = f"https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_gaz_cousubs_{state_fips}.txt"
-    # Ex: https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_gaz_cousubs_08.txt
-    api_response = requests.get(api_url)
-    codes_response = requests.get(codes_url)
-
-    jurisdictions = []
-    if codes_response.status_code == 200 and api_response.status_code == 200:
-        codes_data = codes_response.text  # Skip header
-        codes_reader = csv.reader(io.StringIO(codes_data), delimiter="|")
-
-        # Skip header row
-        _header = next(codes_reader)
-        codes_data = list(codes_reader)
-
-        api_data_json = api_response.json()
-        api_data_by_geoid = get_api_data_by_geoid(
-            state, state_fips, api_data_json[1:], 1, "county_subdivision"
-        )
-        for item in codes_data:
-            name = item[4]
-            funcstat = item[5]
-            if funcstat not in ["A", "B", "C", "G"]:
-                warnings.append(
-                    f"Cousub: Skipping cousub with unsupported functional status ({funcstat}): {name})"
-                )
-                continue
-            geoid = item[1]
-            api_data = api_data_by_geoid.get(geoid, None)
-            if api_data is None:
-                warnings.append(f"Missing population for county subdivision: ({geoid})")
-                continue
-            population = int(api_data["population"])
-            if population == 0:
-                continue
-
-            jurisdiction_object = Jurisdiction(
-                id=api_data["jurisdiction_ocdid"],
-                name=api_data["friendly_name"],
-                url=None,
-                population=population,
-                geoid=geoid,
-                issues=["ocdid_collision"] if api_data.get("ocdid_collision") else None,
-            )
-            jurisdictions.append(jurisdiction_object)
+            continue
+        geoid = item[1]
+        api_data = api_data_by_geoid.get(geoid)
+        if api_data is None:
+            warnings.append(f"Missing population for {source.census_type}: ({geoid})")
+            continue
+        population = int(api_data["population"])
+        if population == 0:
+            continue
+        jurisdictions.append(Jurisdiction(
+            id=api_data["jurisdiction_ocdid"],
+            name=api_data["friendly_name"],
+            url=None,
+            population=population,
+            geoid=geoid,
+            issues=["ocdid_collision"] if api_data.get("ocdid_collision") else None,
+        ))
     return jurisdictions, warnings
 
 
@@ -469,8 +380,8 @@ def _run_tml_transform(state: str):
 
 
 def create_or_update_jurisdiction_metadata(state: str):
-    jurisdictions_path = PROJECT_ROOT / "data_source" / state / "jurisdictions.yml"
-    metadata_path = PROJECT_ROOT / "data_source" / state / "jurisdictions_metadata.yml"
+    jurisdictions_path = PROJECT_ROOT / "data_source" / state / "local" / "jurisdictions.yml"
+    metadata_path = PROJECT_ROOT / "data_source" / state / "local" / "jurisdictions_metadata.yml"
 
     if not jurisdictions_path.exists():
         print(f"No jurisdictions.yml found for {state}, skipping metadata creation.")
