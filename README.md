@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-06 17:18 UTC
+Generated: 2026-05-06 17:20 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-06 17:18 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 1,116 | 170 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 1,138 | 173 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-06 17:18 UTC
 ### nj
 
 <details>
-<summary>390 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 56 in CP, not in external</summary>
+<summary>387 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 57 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1447,7 +1447,6 @@ Generated: 2026-05-06 17:18 UTC
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:berkeley/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:eagleswood/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:jackson/government
-- ocd-jurisdiction/country:us/state:nj/county:ocean/place:little_egg_harbor/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:long_beach/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:manchester/government
 - ocd-jurisdiction/country:us/state:nj/county:ocean/place:ocean/government
@@ -1509,7 +1508,6 @@ Generated: 2026-05-06 17:18 UTC
 - ocd-jurisdiction/country:us/state:nj/place:alpine/government
 - ocd-jurisdiction/country:us/state:nj/place:andover/government
 - ocd-jurisdiction/country:us/state:nj/place:asbury_park/government
-- ocd-jurisdiction/country:us/state:nj/place:atlantic_city/government
 - ocd-jurisdiction/country:us/state:nj/place:atlantic_highlands/government
 - ocd-jurisdiction/country:us/state:nj/place:barrington/government
 - ocd-jurisdiction/country:us/state:nj/place:bay_head/government
@@ -1612,7 +1610,6 @@ Generated: 2026-05-06 17:18 UTC
 - ocd-jurisdiction/country:us/state:nj/place:medford_lakes/government
 - ocd-jurisdiction/country:us/state:nj/place:mendham/government
 - ocd-jurisdiction/country:us/state:nj/place:metuchen/government
-- ocd-jurisdiction/country:us/state:nj/place:middlesex/government
 - ocd-jurisdiction/country:us/state:nj/place:millville/government
 - ocd-jurisdiction/country:us/state:nj/place:monmouth_beach/government
 - ocd-jurisdiction/country:us/state:nj/place:moonachie/government
@@ -1760,6 +1757,7 @@ Generated: 2026-05-06 17:18 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:brick/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lacey/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lakewood/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:little_egg_harbor/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:plumsted/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:passaic/place:wayne/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:passaic/place:west_milford/government |
