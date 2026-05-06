@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-06 18:19 UTC
+Generated: 2026-05-06 18:21 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-06 18:19 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 1,251 | 191 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 1,261 | 193 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-06 18:19 UTC
 ### nj
 
 <details>
-<summary>369 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 69 in CP, not in external</summary>
+<summary>367 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 69 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1508,7 +1508,6 @@ Generated: 2026-05-06 18:19 UTC
 - ocd-jurisdiction/country:us/state:nj/place:bloomingdale/government
 - ocd-jurisdiction/country:us/state:nj/place:bloomsbury/government
 - ocd-jurisdiction/country:us/state:nj/place:bogota/government
-- ocd-jurisdiction/country:us/state:nj/place:bordentown/government
 - ocd-jurisdiction/country:us/state:nj/place:bound_brook/government
 - ocd-jurisdiction/country:us/state:nj/place:bridgeton/government
 - ocd-jurisdiction/country:us/state:nj/place:buena/government
@@ -1654,7 +1653,6 @@ Generated: 2026-05-06 18:19 UTC
 - ocd-jurisdiction/country:us/state:nj/place:ship_bottom/government
 - ocd-jurisdiction/country:us/state:nj/place:shrewsbury/government
 - ocd-jurisdiction/country:us/state:nj/place:somerdale/government
-- ocd-jurisdiction/country:us/state:nj/place:somerville/government
 - ocd-jurisdiction/country:us/state:nj/place:south_river/government
 - ocd-jurisdiction/country:us/state:nj/place:spring_lake/government
 - ocd-jurisdiction/country:us/state:nj/place:spring_lake_heights/government
