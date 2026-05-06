@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-06 18:06 UTC
+Generated: 2026-05-06 18:11 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-06 18:06 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 1,200 | 183 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 1,208 | 184 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-06 18:06 UTC
 ### nj
 
 <details>
-<summary>377 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 65 in CP, not in external</summary>
+<summary>376 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 66 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1429,7 +1429,6 @@ Generated: 2026-05-06 18:06 UTC
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:jefferson/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:mendham/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:mine_hill/government
-- ocd-jurisdiction/country:us/state:nj/county:morris/place:mount_olive/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:parsippany-troy_hills/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:pequannock/government
 - ocd-jurisdiction/country:us/state:nj/county:morris/place:randolph/government
@@ -1751,6 +1750,7 @@ Generated: 2026-05-06 18:06 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:long_hill/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:montville/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:morris/place:morris/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:morris/place:mount_olive/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:brick/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lacey/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:ocean/place:lakewood/government |
