@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-07 01:39 UTC
+Generated: 2026-05-07 01:41 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-07 01:39 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 535 | 72% |
-| nj | 1,296 | 198 | 560 | 563 | 43 | 5 | 324 | 79% |
+| nj | 1,306 | 200 | 560 | 563 | 43 | 5 | 324 | 79% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1317,7 +1317,7 @@ Generated: 2026-05-07 01:39 UTC
 ### nj
 
 <details>
-<summary>362 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 72 in CP, not in external</summary>
+<summary>360 not yet scraped &nbsp;·&nbsp; 1 in external, not in CP &nbsp;·&nbsp; 74 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1351,7 +1351,6 @@ Generated: 2026-05-07 01:39 UTC
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:riverside/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:shamong/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:southampton/government
-- ocd-jurisdiction/country:us/state:nj/county:burlington/place:westampton/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:willingboro/government
 - ocd-jurisdiction/country:us/state:nj/county:camden/place:berlin/government
 - ocd-jurisdiction/country:us/state:nj/county:camden/place:cherry_hill/government
@@ -1384,7 +1383,6 @@ Generated: 2026-05-07 01:39 UTC
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:east_greenwich/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:elk/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:franklin/government
-- ocd-jurisdiction/country:us/state:nj/county:gloucester/place:greenwich/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:harrison/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:mantua/government
 - ocd-jurisdiction/country:us/state:nj/county:gloucester/place:washington/government
@@ -1700,6 +1698,7 @@ Generated: 2026-05-07 01:39 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:springfield/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:tabernacle/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:washington/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:westampton/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:burlington/place:woodland/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:cape_may/place:dennis/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:cape_may/place:middle/government |
@@ -1711,6 +1710,7 @@ Generated: 2026-05-07 01:39 UTC
 |  | ocd-jurisdiction/country:us/state:nj/county:essex/place:south_orange_village/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:essex/place:west_orange/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:deptford/government |
+|  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:greenwich/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:logan/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:monroe/government |
 |  | ocd-jurisdiction/country:us/state:nj/county:gloucester/place:south_harrison/government |
