@@ -268,10 +268,8 @@ def run(
     known_jurisdiction_ids = set(jurisdictions.keys())
 
     # ── Load + validate CP YMLs ───────────────────────────────────────────────
-    local_files = sorted(Path(local_dir).glob("*.yml")) + sorted(Path(local_dir).glob("*.yaml"))
-    if not local_files:
-        print(f"ERROR: no .yml files found in {local_dir}")
-        sys.exit(1)
+    local_path = Path(local_dir)
+    local_files = sorted(local_path.glob("*.yml")) + sorted(local_path.glob("*.yaml")) if local_path.exists() else []
 
     cp_by_jurisdiction = {}
     for path in local_files:
@@ -392,16 +390,16 @@ def paths_for_state(state: str):
 
 
 def discover_states() -> list[str]:
-    """Return states that have both local YMLs and a google validation output."""
+    """Return states that have a jurisdictions.yml and a google validation output."""
     project_root = Path(__file__).parent.parent.parent
     states = []
-    for state_dir in sorted((project_root / "data").iterdir()):
+    for state_dir in sorted((project_root / "data_source").iterdir()):
         if not state_dir.is_dir():
             continue
         state = state_dir.name
-        has_locals = any((state_dir / "local").glob("*.yml"))
-        has_google = (project_root / f"data_source/{state}/local/validation/google/output.yml").exists()
-        if has_locals and has_google:
+        has_jurisdictions = (state_dir / "local" / "jurisdictions.yml").exists()
+        has_google = (state_dir / "local" / "validation" / "google" / "output.yml").exists()
+        if has_jurisdictions and has_google:
             states.append(state)
     return states
 
