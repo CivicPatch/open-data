@@ -94,7 +94,7 @@ def to_place_jurisdiction(jid: str) -> str | None:
     -> ocd-jurisdiction/country:us/state:tx/place:austin/government
     Returns None if no /place: segment found.
     """
-    m = re.search(r"(ocd-jurisdiction/[^/]+/[^/]+/place:[^/]+)", jid)
+    m = re.search(r"(ocd-jurisdiction/.+/place:[^/]+)", jid)
     return m.group(1) + "/government" if m else None
 
 

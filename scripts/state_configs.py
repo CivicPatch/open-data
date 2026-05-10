@@ -5,7 +5,7 @@ from scripts.scrapers import sc as sc_scraper
 from scripts.scrapers import tx as tx_scraper
 from scripts.scrapers import wa as wa_scraper
 
-# Add a new state here to enable setup_state.py, maps, and validation for it.
+# Add a new state here to enable setup_local.py / setup_counties.py, maps, and validation for it.
 # Keys:
 #   fips               — US Census FIPS code for the state
 #   pull_from_census   — "places" and/or "county_subdivisions"
