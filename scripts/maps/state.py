@@ -1,4 +1,4 @@
-"""Download Census TIGER state boundaries and write per-state state.geojson."""
+"""Download Census TIGER state boundaries and write per-state states.geojson."""
 import json
 import zipfile
 from datetime import datetime, timezone
@@ -36,8 +36,8 @@ def _ensure_shapefile() -> Path:
 
 
 def build_state_map_for_state(state: str, fips: str) -> str:
-    """Filter the national state shapefile to this state and write state.geojson."""
-    output_path = PROJECT_ROOT / "data" / state / ".maps" / "state.geojson"
+    """Filter the national state shapefile to this state and write states.geojson."""
+    output_path = PROJECT_ROOT / "data" / state / ".maps" / "states.geojson"
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     shp_path = _ensure_shapefile()
