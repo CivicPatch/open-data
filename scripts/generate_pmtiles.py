@@ -1,4 +1,12 @@
+import json
+import os
 import re
+import subprocess
+import tempfile
+from pathlib import Path
+
+import boto3
+import yaml
 
 from scripts.state_configs import state_configs
 
@@ -85,3 +93,35 @@ def _enrich_local_feature(feature: dict, lookup: dict[str, dict]) -> dict | None
             "name": match["name"],
         },
     }
+
+
+def _run_tippecanoe(geojson_path: Path, output_path: Path, layer_name: str) -> None:
+    subprocess.run(
+        [
+            "tippecanoe",
+            "-o", str(output_path),
+            "--layer", layer_name,
+            "--maximum-zoom", "14",
+            "--drop-densest-as-needed",
+            "--force",
+            str(geojson_path),
+        ],
+        check=True,
+        capture_output=True,
+    )
+
+
+def _upload_to_r2(local_path: Path, s3_key: str) -> str:
+    s3 = boto3.client(
+        "s3",
+        endpoint_url=os.environ["STORAGE_ENDPOINT"],
+        aws_access_key_id=os.environ["STORAGE_ACCESS_KEY_ID"],
+        aws_secret_access_key=os.environ["STORAGE_SECRET_ACCESS_KEY"],
+    )
+    s3.upload_file(
+        str(local_path),
+        "civicpatch",
+        s3_key,
+        ExtraArgs={"ContentType": "application/octet-stream"},
+    )
+    return f"{os.environ['FRIENDLY_STORAGE_HOST']}/{s3_key}"
