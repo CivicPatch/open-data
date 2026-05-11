@@ -1,7 +1,6 @@
-import pytest
 from scripts.generate_pmtiles import (
     _normalize_county_name,
-    _fips_to_state_code,
+    _FIPS_TO_STATE_CODE,
     _enrich_state_feature,
     _enrich_county_feature,
     _build_local_lookup,
@@ -28,13 +27,12 @@ class TestNormalizeCountyName:
 
 class TestFipsToStateCode:
     def test_returns_correct_mapping(self):
-        mapping = _fips_to_state_code()
-        assert mapping["08"] == "co"
-        assert mapping["26"] == "mi"
-        assert mapping["34"] == "nj"
-        assert mapping["45"] == "sc"
-        assert mapping["48"] == "tx"
-        assert mapping["53"] == "wa"
+        assert _FIPS_TO_STATE_CODE["08"] == "co"
+        assert _FIPS_TO_STATE_CODE["26"] == "mi"
+        assert _FIPS_TO_STATE_CODE["34"] == "nj"
+        assert _FIPS_TO_STATE_CODE["45"] == "sc"
+        assert _FIPS_TO_STATE_CODE["48"] == "tx"
+        assert _FIPS_TO_STATE_CODE["53"] == "wa"
 
 
 class TestEnrichStateFeature:
@@ -127,6 +125,16 @@ class TestBuildLocalLookup:
         jurisdictions = [{"id": "ocd-jurisdiction/country:us/state:co/place:x/government", "name": "X"}]
         lookup = _build_local_lookup(jurisdictions)
         assert lookup == {}
+
+    def test_integer_geoid_is_not_matched(self):
+        # YAML may store geoids as integers if unquoted; str(820000) != "0820000"
+        jurisdictions = [
+            {"id": "ocd-jurisdiction/country:us/state:co/place:denver/government",
+             "name": "Denver city", "geoid": 820000},  # integer, missing leading zero
+        ]
+        lookup = _build_local_lookup(jurisdictions)
+        assert "0820000" not in lookup  # int geoid loses leading zero — not matched
+        assert "820000" in lookup       # it gets stored as "820000" instead
 
 
 class TestEnrichLocalFeature:
