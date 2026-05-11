@@ -38,7 +38,7 @@ def _ensure_shapefile() -> Path:
 
 def build_county_map_for_state(state: str, fips: str) -> str:
     """Filter the national county shapefile to this state and write counties.geojson."""
-    output_path = PROJECT_ROOT / "data" / state / ".maps" / "counties.geojson"
+    output_path = PROJECT_ROOT / "data" / ".maps" / state / "counties.geojson"
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     shp_path = _ensure_shapefile()
