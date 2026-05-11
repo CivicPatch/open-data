@@ -61,7 +61,7 @@ def combine_geojsons_with_type(folder_path: str, output_path: str):
 def build_maps_for_state(state: str, fips: str, pull_from_census: list[str]):
     """Download census geo data, convert to GeoJSON, and combine into local.geojson."""
     geojson_data_local_file_path = str(
-        PROJECT_ROOT / "data" / state / ".maps" / "local.geojson"
+        PROJECT_ROOT / "data" / ".maps" / state / "local.geojson"
     )
     geojson_data_source_dir = str(PROJECT_ROOT / "data_source" / state / ".maps")
 

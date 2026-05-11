@@ -96,20 +96,19 @@ def _enrich_local_feature(feature: dict, lookup: dict[str, dict]) -> dict | None
     }
 
 
-def _run_tippecanoe(geojson_path: Path, output_path: Path, layer_name: str) -> None:
-    subprocess.run(
-        [
-            "tippecanoe",
-            "-o", str(output_path),
-            "--layer", layer_name,
-            "--maximum-zoom", "14",
-            "--drop-densest-as-needed",
-            "--force",
-            str(geojson_path),
-        ],
-        check=True,
-        capture_output=True,
-    )
+def _run_tippecanoe(layers: list[tuple[str, Path, int]], output_path: Path) -> None:
+    """layers: list of (layer_name, geojson_path, min_zoom) tuples"""
+    cmd = [
+        "tippecanoe",
+        "-o", str(output_path),
+        "--maximum-zoom", "14",
+        "--no-feature-limit",
+        "--force",
+    ]
+    for layer_name, geojson_path, min_zoom in layers:
+        layer_spec = json.dumps({"file": str(geojson_path), "layer": layer_name, "minzoom": min_zoom})
+        cmd.extend(["-L", layer_spec])
+    subprocess.run(cmd, check=True, capture_output=True)
 
 
 def _upload_to_r2(local_path: Path, s3_key: str) -> str:
@@ -131,73 +130,72 @@ def _upload_to_r2(local_path: Path, s3_key: str) -> str:
 PROJECT_ROOT = Path(__file__).parent.parent
 
 
-def generate_state_pmtiles() -> str:
+def generate_national_states() -> str:
+    print("Generating national states overview...")
     features = []
-    for geojson_path in sorted((PROJECT_ROOT / "data").glob("*/.maps/states.geojson")):
+    for geojson_path in sorted((PROJECT_ROOT / "data" / ".maps").glob("*/states.geojson")):
         with open(geojson_path) as f:
             data = json.load(f)
         features.extend(_enrich_state_feature(feat) for feat in data["features"])
 
-    enriched = {"type": "FeatureCollection", "features": features}
+    print(f"  {len(features)} state features enriched")
 
     with tempfile.TemporaryDirectory() as tmp:
-        tmp_geojson = Path(tmp) / "us-states.geojson"
-        tmp_pmtiles = Path(tmp) / "us-states.pmtiles"
-        tmp_geojson.write_text(json.dumps(enriched))
-        _run_tippecanoe(tmp_geojson, tmp_pmtiles, "states")
-        url = _upload_to_r2(tmp_pmtiles, "maps/us-states.pmtiles")
+        tmp = Path(tmp)
+        states_path = tmp / "states.geojson"
+        output_path = tmp / "states.pmtiles"
+        states_path.write_text(json.dumps({"type": "FeatureCollection", "features": features}))
+        print("  Running tippecanoe...")
+        _run_tippecanoe([("states", states_path, 0)], output_path)
+        print("  Uploading to R2...")
+        url = _upload_to_r2(output_path, "maps/states.pmtiles")
 
-    print(f"Uploaded: {url}")
+    print(f"  Done: {url}")
     return url
 
 
-def generate_county_pmtiles(state: str) -> str:
-    fips_to_state = _FIPS_TO_STATE_CODE
-    geojson_path = PROJECT_ROOT / "data" / state / ".maps" / "counties.geojson"
+def generate_state_bundle(state: str) -> str:
+    print(f"Generating {state} bundle (states + counties + local)...")
+    maps_dir = PROJECT_ROOT / "data" / ".maps" / state
 
-    with open(geojson_path) as f:
-        data = json.load(f)
+    with open(maps_dir / "states.geojson") as f:
+        states_features = [_enrich_state_feature(feat) for feat in json.load(f)["features"]]
+    print(f"  states: {len(states_features)} features")
 
-    features = [_enrich_county_feature(feat, fips_to_state) for feat in data["features"]]
-    enriched = {"type": "FeatureCollection", "features": features}
+    with open(maps_dir / "counties.geojson") as f:
+        counties_features = [_enrich_county_feature(feat, _FIPS_TO_STATE_CODE) for feat in json.load(f)["features"]]
+    print(f"  counties: {len(counties_features)} features")
 
-    with tempfile.TemporaryDirectory() as tmp:
-        tmp_geojson = Path(tmp) / f"{state}-counties.geojson"
-        tmp_pmtiles = Path(tmp) / f"{state}-counties.pmtiles"
-        tmp_geojson.write_text(json.dumps(enriched))
-        _run_tippecanoe(tmp_geojson, tmp_pmtiles, "counties")
-        url = _upload_to_r2(tmp_pmtiles, f"maps/{state}-counties.pmtiles")
-
-    print(f"Uploaded: {url}")
-    return url
-
-
-def generate_local_pmtiles(state: str) -> str:
     yml_path = PROJECT_ROOT / "data_source" / state / "local" / "jurisdictions.yml"
     with open(yml_path) as f:
-        yml_data = yaml.safe_load(f)
-    lookup = _build_local_lookup(yml_data.get("jurisdictions", []))
+        lookup = _build_local_lookup(yaml.safe_load(f).get("jurisdictions", []))
 
-    geojson_path = PROJECT_ROOT / "data" / state / ".maps" / "local.geojson"
-    with open(geojson_path) as f:
-        data = json.load(f)
-
-    features = []
-    for feat in data["features"]:
-        enriched_feat = _enrich_local_feature(feat, lookup)
-        if enriched_feat is not None:
-            features.append(enriched_feat)
-
-    enriched = {"type": "FeatureCollection", "features": features}
+    with open(maps_dir / "local.geojson") as f:
+        raw_local = json.load(f)["features"]
+    local_features = [e for feat in raw_local if (e := _enrich_local_feature(feat, lookup)) is not None]
+    print(f"  local: {len(local_features)}/{len(raw_local)} features matched")
 
     with tempfile.TemporaryDirectory() as tmp:
-        tmp_geojson = Path(tmp) / f"{state}.geojson"
-        tmp_pmtiles = Path(tmp) / f"{state}.pmtiles"
-        tmp_geojson.write_text(json.dumps(enriched))
-        _run_tippecanoe(tmp_geojson, tmp_pmtiles, "jurisdictions")
-        url = _upload_to_r2(tmp_pmtiles, f"maps/{state}.pmtiles")
+        tmp = Path(tmp)
+        states_path = tmp / "states.geojson"
+        counties_path = tmp / "counties.geojson"
+        local_path = tmp / "local.geojson"
+        output_path = tmp / f"{state}.pmtiles"
 
-    print(f"Uploaded: {url}")
+        states_path.write_text(json.dumps({"type": "FeatureCollection", "features": states_features}))
+        counties_path.write_text(json.dumps({"type": "FeatureCollection", "features": counties_features}))
+        local_path.write_text(json.dumps({"type": "FeatureCollection", "features": local_features}))
+
+        print("  Running tippecanoe...")
+        _run_tippecanoe([
+            ("states", states_path, 0),
+            ("counties", counties_path, 5),
+            ("local", local_path, 8),
+        ], output_path)
+        print("  Uploading to R2...")
+        url = _upload_to_r2(output_path, f"maps/{state}.pmtiles")
+
+    print(f"  Done: {url}")
     return url
 
 
@@ -206,23 +204,20 @@ def main() -> None:
     parser.add_argument("--state", help="State code (e.g. co). Omit to run all active states.")
     parser.add_argument(
         "--level",
-        choices=["local", "county", "state", "all"],
+        choices=["bundle", "national", "all"],
         default="all",
+        help="bundle: per-state multi-layer PMTile; national: states overview; all: both",
     )
     args = parser.parse_args()
 
     states = [args.state] if args.state else list(state_configs.keys())
 
-    if args.level in ("state", "all"):
-        generate_state_pmtiles()
+    if args.level in ("national", "all"):
+        generate_national_states()
 
-    if args.level in ("county", "all"):
+    if args.level in ("bundle", "all"):
         for s in states:
-            generate_county_pmtiles(s)
-
-    if args.level in ("local", "all"):
-        for s in states:
-            generate_local_pmtiles(s)
+            generate_state_bundle(s)
 
 
 if __name__ == "__main__":

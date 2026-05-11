@@ -183,23 +183,32 @@ class TestEnrichLocalFeature:
 
 
 class TestRunTippecanoe:
-    def test_calls_tippecanoe_with_correct_args(self, tmp_path):
+    def test_calls_tippecanoe_with_named_layers(self, tmp_path):
         from scripts.generate_pmtiles import _run_tippecanoe
-        geojson = tmp_path / "input.geojson"
-        output = tmp_path / "output.pmtiles"
-        geojson.write_text("{}")
+        states = tmp_path / "states.geojson"
+        counties = tmp_path / "counties.geojson"
+        output = tmp_path / "co.pmtiles"
+        states.write_text("{}")
+        counties.write_text("{}")
 
         with patch("scripts.generate_pmtiles.subprocess.run") as mock_run:
             mock_run.return_value = MagicMock(returncode=0)
-            _run_tippecanoe(geojson, output, "jurisdictions")
+            _run_tippecanoe(
+                [("states", states, 0), ("counties", counties, 5)],
+                output,
+            )
 
         args = mock_run.call_args[0][0]
         assert args[0] == "tippecanoe"
         assert "-o" in args
         assert str(output) in args
-        assert "--layer" in args
-        assert "jurisdictions" in args
-        assert str(geojson) in args
+        assert "--no-feature-limit" in args
+        assert "--drop-densest-as-needed" not in args
+        full_cmd = " ".join(args)
+        assert '"layer": "states"' in full_cmd
+        assert '"layer": "counties"' in full_cmd
+        assert '"minzoom": 0' in full_cmd
+        assert '"minzoom": 5' in full_cmd
 
 
 class TestUploadToR2:
