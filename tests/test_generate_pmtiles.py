@@ -1,3 +1,6 @@
+from pathlib import Path
+from unittest.mock import MagicMock, patch
+
 from scripts.generate_pmtiles import (
     _normalize_county_name,
     _FIPS_TO_STATE_CODE,
@@ -177,3 +180,51 @@ class TestEnrichLocalFeature:
         }
         result = _enrich_local_feature(feature, self._lookup())
         assert result is not None
+
+
+class TestRunTippecanoe:
+    def test_calls_tippecanoe_with_correct_args(self, tmp_path):
+        from scripts.generate_pmtiles import _run_tippecanoe
+        geojson = tmp_path / "input.geojson"
+        output = tmp_path / "output.pmtiles"
+        geojson.write_text("{}")
+
+        with patch("scripts.generate_pmtiles.subprocess.run") as mock_run:
+            mock_run.return_value = MagicMock(returncode=0)
+            _run_tippecanoe(geojson, output, "jurisdictions")
+
+        args = mock_run.call_args[0][0]
+        assert args[0] == "tippecanoe"
+        assert "-o" in args
+        assert str(output) in args
+        assert "--layer" in args
+        assert "jurisdictions" in args
+        assert str(geojson) in args
+
+
+class TestUploadToR2:
+    def test_uploads_and_returns_cdn_url(self, tmp_path):
+        from scripts.generate_pmtiles import _upload_to_r2
+        pmtiles = tmp_path / "co.pmtiles"
+        pmtiles.write_bytes(b"fake")
+
+        env = {
+            "STORAGE_ENDPOINT": "https://endpoint.example.com",
+            "STORAGE_ACCESS_KEY_ID": "key",
+            "STORAGE_SECRET_ACCESS_KEY": "secret",
+            "FRIENDLY_STORAGE_HOST": "https://cdn.civicpatch.org",
+        }
+        with patch.dict("os.environ", env), \
+             patch("scripts.generate_pmtiles.boto3.client") as mock_boto:
+            mock_s3 = MagicMock()
+            mock_boto.return_value = mock_s3
+
+            url = _upload_to_r2(pmtiles, "maps/co.pmtiles")
+
+        assert url == "https://cdn.civicpatch.org/maps/co.pmtiles"
+        mock_s3.upload_file.assert_called_once_with(
+            str(pmtiles),
+            "civicpatch",
+            "maps/co.pmtiles",
+            ExtraArgs={"ContentType": "application/octet-stream"},
+        )
