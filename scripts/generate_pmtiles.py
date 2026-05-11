@@ -3,6 +3,7 @@ import json
 import os
 import re
 import subprocess
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import tempfile
 from pathlib import Path
 
@@ -70,12 +71,7 @@ def _build_local_lookup(jurisdictions: list[dict]) -> dict[str, dict]:
         geoid = j.get("geoid")
         if not geoid:
             continue
-        ocdid = (
-            j["id"]
-            .replace("ocd-jurisdiction/", "ocd-division/")
-            .replace("/government", "")
-        )
-        lookup[str(geoid)] = {"ocdid": ocdid, "name": j["name"]}
+        lookup[str(geoid)] = {"ocdid": j["id"], "name": j["name"]}
     return lookup
 
 
@@ -96,19 +92,26 @@ def _enrich_local_feature(feature: dict, lookup: dict[str, dict]) -> dict | None
     }
 
 
-def _run_tippecanoe(layers: list[tuple[str, Path, int]], output_path: Path) -> None:
+def _run_tippecanoe(layers: list[tuple[str, Path, int]], output_path: Path, label: str = "") -> None:
     """layers: list of (layer_name, geojson_path, min_zoom) tuples"""
     cmd = [
         "tippecanoe",
         "-o", str(output_path),
         "--maximum-zoom", "14",
         "--no-feature-limit",
+        "--simplification", "10",
         "--force",
     ]
     for layer_name, geojson_path, min_zoom in layers:
         layer_spec = json.dumps({"file": str(geojson_path), "layer": layer_name, "minzoom": min_zoom})
         cmd.extend(["-L", layer_spec])
-    subprocess.run(cmd, check=True, capture_output=True)
+    prefix = f"[{label}] " if label else ""
+    process = subprocess.Popen(cmd, stderr=subprocess.PIPE, text=True)
+    for line in process.stderr:
+        print(f"{prefix}{line}", end="", flush=True)
+    process.wait()
+    if process.returncode != 0:
+        raise subprocess.CalledProcessError(process.returncode, cmd)
 
 
 def _upload_to_r2(local_path: Path, s3_key: str) -> str:
@@ -146,7 +149,7 @@ def generate_national_states() -> str:
         output_path = tmp / "states.pmtiles"
         states_path.write_text(json.dumps({"type": "FeatureCollection", "features": features}))
         print("  Running tippecanoe...")
-        _run_tippecanoe([("states", states_path, 0)], output_path)
+        _run_tippecanoe([("states", states_path, 0)], output_path, label="national")
         print("  Uploading to R2...")
         url = _upload_to_r2(output_path, "maps/states.pmtiles")
 
@@ -191,7 +194,7 @@ def generate_state_bundle(state: str) -> str:
             ("states", states_path, 0),
             ("counties", counties_path, 5),
             ("local", local_path, 8),
-        ], output_path)
+        ], output_path, label=state)
         print("  Uploading to R2...")
         url = _upload_to_r2(output_path, f"maps/{state}.pmtiles")
 
@@ -216,8 +219,11 @@ def main() -> None:
         generate_national_states()
 
     if args.level in ("bundle", "all"):
-        for s in states:
-            generate_state_bundle(s)
+        workers = min(len(states), os.cpu_count() or 1)
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            futures = {pool.submit(generate_state_bundle, s): s for s in states}
+            for future in as_completed(futures):
+                future.result()  # re-raise any exception from the worker
 
 
 if __name__ == "__main__":

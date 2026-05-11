@@ -121,7 +121,7 @@ class TestBuildLocalLookup:
              "name": "Denver city", "geoid": "0820000"},
         ]
         lookup = _build_local_lookup(jurisdictions)
-        assert lookup["0820000"]["ocdid"] == "ocd-division/country:us/state:co/place:denver"
+        assert lookup["0820000"]["ocdid"] == "ocd-jurisdiction/country:us/state:co/place:denver/government"
         assert lookup["0820000"]["name"] == "Denver city"
 
     def test_skips_entries_without_geoid(self):
@@ -144,7 +144,7 @@ class TestEnrichLocalFeature:
     def _lookup(self):
         return {
             "0820000": {
-                "ocdid": "ocd-division/country:us/state:co/place:denver",
+                "ocdid": "ocd-jurisdiction/country:us/state:co/place:denver/government",
                 "name": "Denver city",
             }
         }
@@ -159,7 +159,7 @@ class TestEnrichLocalFeature:
     def test_matched_feature_has_correct_properties(self):
         result = _enrich_local_feature(self._feature(), self._lookup())
         assert result is not None
-        assert result["properties"]["jurisdiction_ocdid"] == "ocd-division/country:us/state:co/place:denver"
+        assert result["properties"]["jurisdiction_ocdid"] == "ocd-jurisdiction/country:us/state:co/place:denver/government"
         assert result["properties"]["geoid"] == "0820000"
         assert result["properties"]["name"] == "Denver city"
 
@@ -191,14 +191,20 @@ class TestRunTippecanoe:
         states.write_text("{}")
         counties.write_text("{}")
 
-        with patch("scripts.generate_pmtiles.subprocess.run") as mock_run:
-            mock_run.return_value = MagicMock(returncode=0)
+        mock_proc = MagicMock()
+        mock_proc.stderr = iter(["94.1%  14/3702/6902\n"])
+        mock_proc.returncode = 0
+        mock_proc.wait.return_value = 0
+
+        with patch("scripts.generate_pmtiles.subprocess.Popen") as mock_popen:
+            mock_popen.return_value = mock_proc
             _run_tippecanoe(
                 [("states", states, 0), ("counties", counties, 5)],
                 output,
+                label="co",
             )
 
-        args = mock_run.call_args[0][0]
+        args = mock_popen.call_args[0][0]
         assert args[0] == "tippecanoe"
         assert "-o" in args
         assert str(output) in args
