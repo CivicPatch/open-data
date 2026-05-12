@@ -1,7 +1,6 @@
 import argparse
 import json
 import os
-import re
 import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import tempfile
@@ -12,60 +11,27 @@ import yaml
 
 from scripts.state_configs import state_configs
 
-_COUNTY_SUFFIXES = (
-    " and borough",
-    " census area",
-    " municipality",
-    " borough",
-    " parish",
-    " county",
-)
+PROJECT_ROOT = Path(__file__).parent.parent
 
 
-def _normalize_county_name(name: str) -> str:
-    lower = name.lower()
-    for suffix in _COUNTY_SUFFIXES:
-        if lower.endswith(suffix):
-            lower = lower[: -len(suffix)]
-            break
-    return re.sub(r"[^a-z0-9_]", "", lower.replace(" ", "_").replace("-", "_"))
+def _build_state_lookup(state: str) -> dict[str, str]:
+    """geoid → ocd-jurisdiction ID from data_source/{state}/state/jurisdictions.yml"""
+    yml_path = PROJECT_ROOT / "data_source" / state / "state" / "jurisdictions.yml"
+    with open(yml_path) as f:
+        data = yaml.safe_load(f)
+    return {str(j["geoid"]): j["id"] for j in data.get("jurisdictions", []) if j.get("geoid")}
 
 
-_FIPS_TO_STATE_CODE: dict[str, str] = {v["fips"]: k for k, v in state_configs.items()}
-
-
-def _enrich_state_feature(feature: dict) -> dict:
-    props = feature["properties"]
-    code = props["STUSPS"].lower()
-    return {
-        "type": "Feature",
-        "geometry": feature["geometry"],
-        "properties": {
-            "jurisdiction_ocdid": f"ocd-division/country:us/state:{code}",
-            "geoid": props["GEOID"],
-            "name": props["NAME"],
-            "code": code,
-        },
-    }
-
-
-def _enrich_county_feature(feature: dict, fips_to_state: dict[str, str]) -> dict:
-    props = feature["properties"]
-    # caller must ensure STATEFP is in fips_to_state (i.e. state is in state_configs)
-    state_code = fips_to_state[props["STATEFP"]]
-    normalized = _normalize_county_name(props["NAME"])
-    return {
-        "type": "Feature",
-        "geometry": feature["geometry"],
-        "properties": {
-            "jurisdiction_ocdid": f"ocd-division/country:us/state:{state_code}/county:{normalized}",
-            "geoid": props["GEOID"],
-            "name": props["NAMELSAD"],
-        },
-    }
+def _build_county_lookup(state: str) -> dict[str, str]:
+    """geoid → ocd-jurisdiction ID from data_source/{state}/counties/jurisdictions.yml"""
+    yml_path = PROJECT_ROOT / "data_source" / state / "counties" / "jurisdictions.yml"
+    with open(yml_path) as f:
+        data = yaml.safe_load(f)
+    return {str(j["geoid"]): j["id"] for j in data.get("jurisdictions", []) if j.get("geoid")}
 
 
 def _build_local_lookup(jurisdictions: list[dict]) -> dict[str, dict]:
+    """geoid → {ocdid, name} from jurisdictions.yml entries"""
     lookup = {}
     for j in jurisdictions:
         geoid = j.get("geoid")
@@ -73,6 +39,33 @@ def _build_local_lookup(jurisdictions: list[dict]) -> dict[str, dict]:
             continue
         lookup[str(geoid)] = {"ocdid": j["id"], "name": j["name"]}
     return lookup
+
+
+def _enrich_state_feature(feature: dict, state_lookup: dict[str, str]) -> dict:
+    props = feature["properties"]
+    return {
+        "type": "Feature",
+        "geometry": feature["geometry"],
+        "properties": {
+            "jurisdiction_ocdid": state_lookup.get(str(props["GEOID"]), ""),
+            "geoid": props["GEOID"],
+            "name": props["NAME"],
+            "code": props["STUSPS"].lower(),
+        },
+    }
+
+
+def _enrich_county_feature(feature: dict, county_lookup: dict[str, str]) -> dict:
+    props = feature["properties"]
+    return {
+        "type": "Feature",
+        "geometry": feature["geometry"],
+        "properties": {
+            "jurisdiction_ocdid": county_lookup.get(str(props["GEOID"]), ""),
+            "geoid": props["GEOID"],
+            "name": props["NAMELSAD"],
+        },
+    }
 
 
 def _enrich_local_feature(feature: dict, lookup: dict[str, dict]) -> dict | None:
@@ -88,6 +81,7 @@ def _enrich_local_feature(feature: dict, lookup: dict[str, dict]) -> dict | None
             "jurisdiction_ocdid": match["ocdid"],
             "geoid": geoid,
             "name": match["name"],
+            "parent_ocdids": props.get("parent_ocdids", []),
         },
     }
 
@@ -130,16 +124,15 @@ def _upload_to_r2(local_path: Path, s3_key: str) -> str:
     return f"{os.environ['FRIENDLY_STORAGE_HOST']}/{s3_key}"
 
 
-PROJECT_ROOT = Path(__file__).parent.parent
-
-
 def generate_national_states() -> str:
     print("Generating national states overview...")
     features = []
     for geojson_path in sorted((PROJECT_ROOT / "data" / ".maps").glob("*/states.geojson")):
+        state = geojson_path.parent.name
+        state_lookup = _build_state_lookup(state)
         with open(geojson_path) as f:
             data = json.load(f)
-        features.extend(_enrich_state_feature(feat) for feat in data["features"])
+        features.extend(_enrich_state_feature(feat, state_lookup) for feat in data["features"])
 
     print(f"  {len(features)} state features enriched")
 
@@ -161,21 +154,23 @@ def generate_state_bundle(state: str) -> str:
     print(f"Generating {state} bundle (states + counties + local)...")
     maps_dir = PROJECT_ROOT / "data" / ".maps" / state
 
+    state_lookup = _build_state_lookup(state)
     with open(maps_dir / "states.geojson") as f:
-        states_features = [_enrich_state_feature(feat) for feat in json.load(f)["features"]]
+        states_features = [_enrich_state_feature(feat, state_lookup) for feat in json.load(f)["features"]]
     print(f"  states: {len(states_features)} features")
 
+    county_lookup = _build_county_lookup(state)
     with open(maps_dir / "counties.geojson") as f:
-        counties_features = [_enrich_county_feature(feat, _FIPS_TO_STATE_CODE) for feat in json.load(f)["features"]]
+        counties_features = [_enrich_county_feature(feat, county_lookup) for feat in json.load(f)["features"]]
     print(f"  counties: {len(counties_features)} features")
 
     yml_path = PROJECT_ROOT / "data_source" / state / "local" / "jurisdictions.yml"
     with open(yml_path) as f:
-        lookup = _build_local_lookup(yaml.safe_load(f).get("jurisdictions", []))
+        local_lookup = _build_local_lookup(yaml.safe_load(f).get("jurisdictions", []))
 
     with open(maps_dir / "local.geojson") as f:
         raw_local = json.load(f)["features"]
-    local_features = [e for feat in raw_local if (e := _enrich_local_feature(feat, lookup)) is not None]
+    local_features = [e for feat in raw_local if (e := _enrich_local_feature(feat, local_lookup)) is not None]
     print(f"  local: {len(local_features)}/{len(raw_local)} features matched")
 
     with tempfile.TemporaryDirectory() as tmp:
@@ -223,7 +218,7 @@ def main() -> None:
         with ThreadPoolExecutor(max_workers=workers) as pool:
             futures = {pool.submit(generate_state_bundle, s): s for s in states}
             for future in as_completed(futures):
-                future.result()  # re-raise any exception from the worker
+                future.result()
 
 
 if __name__ == "__main__":
