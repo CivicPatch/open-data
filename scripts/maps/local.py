@@ -92,6 +92,11 @@ def _add_parent_ocdids(local_path: str, counties_path: str, state: str) -> None:
     """Spatial join each local feature's centroid to its county, then write
     parent_ocdids = [county_ocdid, state_ocdid] into every feature's properties.
     OCD IDs come from canonical YAML files, not constructed by code."""
+    if not Path(counties_path).exists():
+        raise FileNotFoundError(
+            f"counties.geojson not found for {state}: {counties_path}\n"
+            f"Run 'mise run setup-state -- --state {state}' to generate county boundaries first."
+        )
     counties_yml = PROJECT_ROOT / "data_source" / state / "counties" / "jurisdictions.yml"
     state_yml = PROJECT_ROOT / "data_source" / state / "state" / "jurisdictions.yml"
 
@@ -140,6 +145,23 @@ def _add_parent_ocdids(local_path: str, counties_path: str, state: str) -> None:
 
     matched = sum(1 for i in range(len(geojson["features"])) if county_geoid_map.get(i) and not pandas.isna(county_geoid_map.get(i)))
     print(f"  parent_ocdids: {matched}/{len(geojson['features'])} features matched to a county")
+
+    # Also write parent_ocdids into jurisdictions.yml so it flows into the DB via OD sync
+    geoid_to_parents = {
+        str(feat["properties"].get("GEOID") or feat["properties"].get("geoid") or ""): feat["properties"]["parent_ocdids"]
+        for feat in geojson["features"]
+        if feat["properties"].get("parent_ocdids")
+    }
+    local_yml = PROJECT_ROOT / "data_source" / state / "local" / "jurisdictions.yml"
+    with open(local_yml) as f:
+        yml_data = yaml.safe_load(f)
+    for j in yml_data.get("jurisdictions", []):
+        geoid = str(j.get("geoid", ""))
+        if geoid in geoid_to_parents:
+            j["parent_ocdids"] = geoid_to_parents[geoid]
+    with open(local_yml, "w") as f:
+        yaml.dump(yml_data, f, allow_unicode=True, sort_keys=False)
+    print(f"  parent_ocdids written to jurisdictions.yml")
 
 if __name__ == "__main__":
     state = "tx"
