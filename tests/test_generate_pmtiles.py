@@ -2,40 +2,46 @@ from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 from scripts.generate_pmtiles import (
-    _normalize_county_name,
-    _FIPS_TO_STATE_CODE,
+    _build_county_lookup,
+    _build_state_lookup,
+    _build_local_lookup,
     _enrich_state_feature,
     _enrich_county_feature,
-    _build_local_lookup,
     _enrich_local_feature,
 )
 
 
-class TestNormalizeCountyName:
-    def test_strips_county_suffix(self):
-        assert _normalize_county_name("Adams County") == "adams"
+class TestBuildStateLookup:
+    def test_returns_geoid_to_ocdid_mapping(self):
+        lookup = _build_state_lookup("co")
+        assert lookup["08"] == "ocd-jurisdiction/country:us/state:co/government"
 
-    def test_strips_parish_suffix(self):
-        assert _normalize_county_name("Orleans Parish") == "orleans"
+    def test_all_active_states(self):
+        expected = {
+            "co": "08",
+            "mi": "26",
+            "nj": "34",
+            "sc": "45",
+            "tx": "48",
+            "wa": "53",
+        }
+        for state, geoid in expected.items():
+            lookup = _build_state_lookup(state)
+            assert geoid in lookup, f"{state} missing geoid {geoid}"
 
-    def test_strips_borough_suffix(self):
-        assert _normalize_county_name("Juneau City and Borough") == "juneau_city"
 
-    def test_multi_word(self):
-        assert _normalize_county_name("Rio Grande County") == "rio_grande"
+class TestBuildCountyLookup:
+    def test_returns_geoid_to_ocdid_mapping(self):
+        lookup = _build_county_lookup("co")
+        # Adams County CO GEOID is 08001
+        assert "08001" in lookup
+        assert lookup["08001"].startswith("ocd-jurisdiction/country:us/state:co/county:")
 
-    def test_removes_special_chars(self):
-        assert _normalize_county_name("St. Louis County") == "st_louis"
-
-
-class TestFipsToStateCode:
-    def test_returns_correct_mapping(self):
-        assert _FIPS_TO_STATE_CODE["08"] == "co"
-        assert _FIPS_TO_STATE_CODE["26"] == "mi"
-        assert _FIPS_TO_STATE_CODE["34"] == "nj"
-        assert _FIPS_TO_STATE_CODE["45"] == "sc"
-        assert _FIPS_TO_STATE_CODE["48"] == "tx"
-        assert _FIPS_TO_STATE_CODE["53"] == "wa"
+    def test_ocdid_format_is_jurisdiction(self):
+        lookup = _build_county_lookup("co")
+        for ocdid in lookup.values():
+            assert ocdid.startswith("ocd-jurisdiction/"), f"expected ocd-jurisdiction, got: {ocdid}"
+            assert ocdid.endswith("/government"), f"expected /government suffix, got: {ocdid}"
 
 
 class TestEnrichStateFeature:
@@ -53,27 +59,34 @@ class TestEnrichStateFeature:
             },
         }
 
-    def test_sets_jurisdiction_ocdid(self):
-        result = _enrich_state_feature(self._feature())
-        assert result["properties"]["jurisdiction_ocdid"] == "ocd-division/country:us/state:co"
+    def _lookup(self):
+        return {"08": "ocd-jurisdiction/country:us/state:co/government"}
+
+    def test_sets_jurisdiction_ocdid_from_lookup(self):
+        result = _enrich_state_feature(self._feature(), self._lookup())
+        assert result["properties"]["jurisdiction_ocdid"] == "ocd-jurisdiction/country:us/state:co/government"
 
     def test_sets_geoid(self):
-        result = _enrich_state_feature(self._feature())
+        result = _enrich_state_feature(self._feature(), self._lookup())
         assert result["properties"]["geoid"] == "08"
 
     def test_sets_name(self):
-        result = _enrich_state_feature(self._feature())
+        result = _enrich_state_feature(self._feature(), self._lookup())
         assert result["properties"]["name"] == "Colorado"
 
     def test_sets_code(self):
-        result = _enrich_state_feature(self._feature())
+        result = _enrich_state_feature(self._feature(), self._lookup())
         assert result["properties"]["code"] == "co"
 
     def test_strips_census_properties(self):
-        result = _enrich_state_feature(self._feature())
+        result = _enrich_state_feature(self._feature(), self._lookup())
         assert "STATEFP" not in result["properties"]
         assert "ALAND" not in result["properties"]
         assert set(result["properties"].keys()) == {"jurisdiction_ocdid", "geoid", "name", "code"}
+
+    def test_empty_string_when_geoid_not_in_lookup(self):
+        result = _enrich_state_feature(self._feature(), {})
+        assert result["properties"]["jurisdiction_ocdid"] == ""
 
 
 class TestEnrichCountyFeature:
@@ -92,26 +105,29 @@ class TestEnrichCountyFeature:
             },
         }
 
-    def test_sets_jurisdiction_ocdid(self):
-        fips_to_state = {"08": "co"}
-        result = _enrich_county_feature(self._feature(), fips_to_state)
-        assert result["properties"]["jurisdiction_ocdid"] == "ocd-division/country:us/state:co/county:adams"
+    def _lookup(self):
+        return {"08001": "ocd-jurisdiction/country:us/state:co/county:adams/government"}
+
+    def test_sets_jurisdiction_ocdid_from_lookup(self):
+        result = _enrich_county_feature(self._feature(), self._lookup())
+        assert result["properties"]["jurisdiction_ocdid"] == "ocd-jurisdiction/country:us/state:co/county:adams/government"
 
     def test_sets_geoid(self):
-        fips_to_state = {"08": "co"}
-        result = _enrich_county_feature(self._feature(), fips_to_state)
+        result = _enrich_county_feature(self._feature(), self._lookup())
         assert result["properties"]["geoid"] == "08001"
 
     def test_sets_name_from_namelsad(self):
-        fips_to_state = {"08": "co"}
-        result = _enrich_county_feature(self._feature(), fips_to_state)
+        result = _enrich_county_feature(self._feature(), self._lookup())
         assert result["properties"]["name"] == "Adams County"
 
     def test_strips_census_properties(self):
-        fips_to_state = {"08": "co"}
-        result = _enrich_county_feature(self._feature(), fips_to_state)
+        result = _enrich_county_feature(self._feature(), self._lookup())
         assert "STATEFP" not in result["properties"]
         assert set(result["properties"].keys()) == {"jurisdiction_ocdid", "geoid", "name"}
+
+    def test_empty_string_when_geoid_not_in_lookup(self):
+        result = _enrich_county_feature(self._feature(), {})
+        assert result["properties"]["jurisdiction_ocdid"] == ""
 
 
 class TestBuildLocalLookup:
@@ -149,12 +165,11 @@ class TestEnrichLocalFeature:
             }
         }
 
-    def _feature(self, geoid="0820000"):
-        return {
-            "type": "Feature",
-            "geometry": {"type": "Polygon", "coordinates": [[]]},
-            "properties": {"GEOID": geoid, "NAME": "Denver", "ALAND": 12345},
-        }
+    def _feature(self, geoid="0820000", parent_ocdids=None):
+        props = {"GEOID": geoid, "NAME": "Denver", "ALAND": 12345}
+        if parent_ocdids is not None:
+            props["parent_ocdids"] = parent_ocdids
+        return {"type": "Feature", "geometry": {"type": "Polygon", "coordinates": [[]]}, "properties": props}
 
     def test_matched_feature_has_correct_properties(self):
         result = _enrich_local_feature(self._feature(), self._lookup())
@@ -162,22 +177,25 @@ class TestEnrichLocalFeature:
         assert result["properties"]["jurisdiction_ocdid"] == "ocd-jurisdiction/country:us/state:co/place:denver/government"
         assert result["properties"]["geoid"] == "0820000"
         assert result["properties"]["name"] == "Denver city"
+        assert result["properties"]["parent_ocdids"] == []
+
+    def test_passes_through_parent_ocdids(self):
+        parents = ["ocd-jurisdiction/country:us/state:co/county:denver/government"]
+        result = _enrich_local_feature(self._feature(parent_ocdids=parents), self._lookup())
+        assert result is not None
+        assert result["properties"]["parent_ocdids"] == parents
 
     def test_matched_feature_strips_census_properties(self):
         result = _enrich_local_feature(self._feature(), self._lookup())
         assert "ALAND" not in result["properties"]
-        assert set(result["properties"].keys()) == {"jurisdiction_ocdid", "geoid", "name"}
+        assert set(result["properties"].keys()) == {"jurisdiction_ocdid", "geoid", "name", "parent_ocdids"}
 
     def test_unmatched_feature_returns_none(self):
         result = _enrich_local_feature(self._feature("9999999"), self._lookup())
         assert result is None
 
     def test_handles_lowercase_geoid_key(self):
-        feature = {
-            "type": "Feature",
-            "geometry": {},
-            "properties": {"geoid": "0820000"},
-        }
+        feature = {"type": "Feature", "geometry": {}, "properties": {"geoid": "0820000"}}
         result = _enrich_local_feature(feature, self._lookup())
         assert result is not None
 
