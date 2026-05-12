@@ -127,15 +127,20 @@ def _upload_to_r2(local_path: Path, s3_key: str) -> str:
 
 def generate_national_states() -> str:
     print("Generating national states overview...")
+    s3 = boto3.client(
+        "s3",
+        endpoint_url=os.environ["STORAGE_ENDPOINT"],
+        aws_access_key_id=os.environ["STORAGE_ACCESS_KEY_ID"],
+        aws_secret_access_key=os.environ["STORAGE_SECRET_ACCESS_KEY"],
+    )
     features = []
-    for geojson_path in sorted((PROJECT_ROOT / "data" / ".maps").glob("*/states.geojson")):
-        state = geojson_path.parent.name
-        state_lookup = _build_state_lookup(state)
-        with open(geojson_path) as f:
-            data = json.load(f)
-        features.extend(_enrich_state_feature(feat, state_lookup) for feat in data["features"])
+    for state in sorted(state_configs.keys()):
+        response = s3.get_object(Bucket="civicpatch", Key=f"maps/{state}/states.geojson")
+        data = json.loads(response["Body"].read())
+        features.extend(data.get("features", []))
+        print(f"  {state}: {len(data.get('features', []))} features")
 
-    print(f"  {len(features)} state features enriched")
+    print(f"  {len(features)} total state features")
 
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
@@ -192,9 +197,9 @@ def generate_state_bundle(state: str) -> str:
             ("local", local_path, 8),
         ], output_path, label=state)
         print("  Uploading to R2...")
-        _upload_to_r2(states_path, f"maps-source/{state}/states.geojson")
-        _upload_to_r2(counties_path, f"maps-source/{state}/counties.geojson")
-        _upload_to_r2(local_path, f"maps-source/{state}/local.geojson")
+        _upload_to_r2(states_path, f"maps/{state}/states.geojson")
+        _upload_to_r2(counties_path, f"maps/{state}/counties.geojson")
+        _upload_to_r2(local_path, f"maps/{state}/local.geojson")
         url = _upload_to_r2(output_path, f"maps/{state}.pmtiles")
 
     print(f"  Done: {url}")
