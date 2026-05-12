@@ -7,7 +7,13 @@ from pathlib import Path
 import geopandas
 import pandas
 import requests
-import yaml
+from ruamel.yaml import YAML
+
+# Matches the ryaml config in setup_local.py — preserves comments and manual edits
+ryaml = YAML()
+ryaml.preserve_quotes = True
+ryaml.default_flow_style = False
+ryaml.width = 4096
 
 PROJECT_ROOT = Path(__file__).parent.parent.parent
 
@@ -103,11 +109,11 @@ def _add_parent_ocdids(local_path: str, counties_path: str, state: str) -> None:
     with open(counties_yml) as f:
         county_lookup = {
             str(j["geoid"]): j["id"]
-            for j in yaml.safe_load(f).get("jurisdictions", [])
+            for j in ryaml.load(f).get("jurisdictions", [])
             if j.get("geoid")
         }
     with open(state_yml) as f:
-        state_juds = yaml.safe_load(f).get("jurisdictions", [])
+        state_juds = ryaml.load(f).get("jurisdictions", [])
     state_ocdid = state_juds[0]["id"] if state_juds else ""
 
     local_gdf = geopandas.read_file(local_path).reset_index(drop=True)
@@ -154,13 +160,13 @@ def _add_parent_ocdids(local_path: str, counties_path: str, state: str) -> None:
     }
     local_yml = PROJECT_ROOT / "data_source" / state / "local" / "jurisdictions.yml"
     with open(local_yml) as f:
-        yml_data = yaml.safe_load(f)
+        yml_data = ryaml.load(f)
     for j in yml_data.get("jurisdictions", []):
         geoid = str(j.get("geoid", ""))
         if geoid in geoid_to_parents:
             j["parent_ocdids"] = geoid_to_parents[geoid]
     with open(local_yml, "w") as f:
-        yaml.dump(yml_data, f, allow_unicode=True, sort_keys=False)
+        ryaml.dump(yml_data, f)
     print(f"  parent_ocdids written to jurisdictions.yml")
 
 if __name__ == "__main__":

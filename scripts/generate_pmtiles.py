@@ -115,11 +115,12 @@ def _upload_to_r2(local_path: Path, s3_key: str) -> str:
         aws_access_key_id=os.environ["STORAGE_ACCESS_KEY_ID"],
         aws_secret_access_key=os.environ["STORAGE_SECRET_ACCESS_KEY"],
     )
+    content_type = "application/geo+json" if s3_key.endswith(".geojson") else "application/octet-stream"
     s3.upload_file(
         str(local_path),
         "civicpatch",
         s3_key,
-        ExtraArgs={"ContentType": "application/octet-stream"},
+        ExtraArgs={"ContentType": content_type},
     )
     return f"{os.environ['FRIENDLY_STORAGE_HOST']}/{s3_key}"
 
@@ -191,6 +192,9 @@ def generate_state_bundle(state: str) -> str:
             ("local", local_path, 8),
         ], output_path, label=state)
         print("  Uploading to R2...")
+        _upload_to_r2(states_path, f"maps-source/{state}/states.geojson")
+        _upload_to_r2(counties_path, f"maps-source/{state}/counties.geojson")
+        _upload_to_r2(local_path, f"maps-source/{state}/local.geojson")
         url = _upload_to_r2(output_path, f"maps/{state}.pmtiles")
 
     print(f"  Done: {url}")
