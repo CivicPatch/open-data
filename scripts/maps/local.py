@@ -7,13 +7,6 @@ from pathlib import Path
 import geopandas
 import pandas
 import requests
-from ruamel.yaml import YAML
-
-# Matches the ryaml config in setup_local.py — preserves comments and manual edits
-ryaml = YAML()
-ryaml.preserve_quotes = True
-ryaml.default_flow_style = False
-ryaml.width = 4096
 
 PROJECT_ROOT = Path(__file__).parent.parent.parent
 
@@ -151,23 +144,6 @@ def _add_parent_ocdids(local_path: str, counties_path: str, state: str) -> None:
 
     matched = sum(1 for i in range(len(geojson["features"])) if county_geoid_map.get(i) and not pandas.isna(county_geoid_map.get(i)))
     print(f"  parent_ocdids: {matched}/{len(geojson['features'])} features matched to a county")
-
-    # Also write parent_ocdids into jurisdictions.yml so it flows into the DB via OD sync
-    geoid_to_parents = {
-        str(feat["properties"].get("GEOID") or feat["properties"].get("geoid") or ""): feat["properties"]["parent_ocdids"]
-        for feat in geojson["features"]
-        if feat["properties"].get("parent_ocdids")
-    }
-    local_yml = PROJECT_ROOT / "data_source" / state / "local" / "jurisdictions.yml"
-    with open(local_yml) as f:
-        yml_data = ryaml.load(f)
-    for j in yml_data.get("jurisdictions", []):
-        geoid = str(j.get("geoid", ""))
-        if geoid in geoid_to_parents:
-            j["parent_ocdids"] = geoid_to_parents[geoid]
-    with open(local_yml, "w") as f:
-        ryaml.dump(yml_data, f)
-    print(f"  parent_ocdids written to jurisdictions.yml")
 
 if __name__ == "__main__":
     state = "tx"
