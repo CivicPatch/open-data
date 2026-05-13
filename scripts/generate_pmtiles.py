@@ -81,7 +81,7 @@ def _enrich_local_feature(feature: dict, lookup: dict[str, dict]) -> dict | None
             "jurisdiction_ocdid": match["ocdid"],
             "geoid": geoid,
             "name": match["name"],
-            "parent_ocdids": props.get("parent_ocdids", []),
+            "county_ocdids": props.get("county_ocdids", []),
         },
     }
 
