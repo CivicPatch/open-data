@@ -4,6 +4,7 @@ import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 
+import yaml
 import geopandas
 import pandas
 import requests
@@ -82,14 +83,14 @@ def build_maps_for_state(state: str, fips: str, pull_from_census: list[str]):
     combine_geojsons_with_type(geojson_data_source_dir, geojson_data_local_file_path)
 
     counties_path = str(PROJECT_ROOT / "data" / ".maps" / state / "counties.geojson")
-    _add_parent_ocdids(geojson_data_local_file_path, counties_path, state)
+    _add_county_ocdids(geojson_data_local_file_path, counties_path, state)
 
     return geojson_data_local_file_path
 
 
-def _add_parent_ocdids(local_path: str, counties_path: str, state: str) -> None:
-    """Spatial join each local feature's centroid to its county, then write
-    parent_ocdids = [county_ocdid, state_ocdid] into every feature's properties.
+def _add_county_ocdids(local_path: str, counties_path: str, state: str) -> None:
+    """Spatial join each local feature's centroid to its county and write
+    county_ocdids into every feature's properties.
     OCD IDs come from canonical YAML files, not constructed by code."""
     if not Path(counties_path).exists():
         raise FileNotFoundError(
@@ -97,22 +98,17 @@ def _add_parent_ocdids(local_path: str, counties_path: str, state: str) -> None:
             f"Run 'mise run setup-state -- --state {state}' to generate county boundaries first."
         )
     counties_yml = PROJECT_ROOT / "data_source" / state / "counties" / "jurisdictions.yml"
-    state_yml = PROJECT_ROOT / "data_source" / state / "state" / "jurisdictions.yml"
 
     with open(counties_yml) as f:
         county_lookup = {
             str(j["geoid"]): j["id"]
-            for j in ryaml.load(f).get("jurisdictions", [])
+            for j in yaml.safe_load(f).get("jurisdictions", [])
             if j.get("geoid")
         }
-    with open(state_yml) as f:
-        state_juds = ryaml.load(f).get("jurisdictions", [])
-    state_ocdid = state_juds[0]["id"] if state_juds else ""
 
     local_gdf = geopandas.read_file(local_path).reset_index(drop=True)
     counties_gdf = geopandas.read_file(counties_path)
 
-    # Project to planar CRS for accurate centroids, then reproject counties to match
     local_projected = local_gdf.to_crs("EPSG:5070")
     counties_projected = counties_gdf.to_crs("EPSG:5070")
     centroids = local_projected.copy()
@@ -130,20 +126,18 @@ def _add_parent_ocdids(local_path: str, counties_path: str, state: str) -> None:
 
     for i, feature in enumerate(geojson["features"]):
         county_geoid = county_geoid_map.get(i)
-        parents = []
+        county_ocdids = []
         if county_geoid and not pandas.isna(county_geoid):
             county_ocdid = county_lookup.get(str(county_geoid))
             if county_ocdid:
-                parents.append(county_ocdid)
-        if state_ocdid:
-            parents.append(state_ocdid)
-        feature["properties"]["parent_ocdids"] = parents
+                county_ocdids.append(county_ocdid)
+        feature["properties"]["county_ocdids"] = county_ocdids
 
     with open(local_path, "w") as f:
         json.dump(geojson, f, indent=2)
 
     matched = sum(1 for i in range(len(geojson["features"])) if county_geoid_map.get(i) and not pandas.isna(county_geoid_map.get(i)))
-    print(f"  parent_ocdids: {matched}/{len(geojson['features'])} features matched to a county")
+    print(f"  county_ocdids: {matched}/{len(geojson['features'])} features matched to a county")
 
 if __name__ == "__main__":
     state = "tx"

@@ -53,7 +53,7 @@ def setup_maps_for_state(state: str) -> None:
     _upload_geojson(maps_dir / "counties.geojson", f"maps/{state}/counties.geojson")
     print(f"[{state}] counties.geojson → R2")
 
-    print(f"[{state}] Generating local boundaries + parent_ocdids...")
+    print(f"[{state}] Generating local boundaries + county_ocdids...")
     build_maps_for_state(state, fips, config["pull_from_census"])
     _upload_geojson(maps_dir / "local.geojson", f"maps/{state}/local.geojson")
     print(f"[{state}] local.geojson → R2")
