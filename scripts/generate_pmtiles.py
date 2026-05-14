@@ -108,6 +108,9 @@ def _run_tippecanoe(layers: list[tuple[str, Path, int]], output_path: Path, labe
         raise subprocess.CalledProcessError(process.returncode, cmd)
 
 
+PMTILES_CACHE_CONTROL = "public, max-age=3600, s-maxage=86400"
+
+
 def _upload_to_r2(local_path: Path, s3_key: str) -> str:
     s3 = boto3.client(
         "s3",
@@ -116,11 +119,14 @@ def _upload_to_r2(local_path: Path, s3_key: str) -> str:
         aws_secret_access_key=os.environ["STORAGE_SECRET_ACCESS_KEY"],
     )
     content_type = "application/geo+json" if s3_key.endswith(".geojson") else "application/octet-stream"
+    extra_args: dict = {"ContentType": content_type}
+    if s3_key.endswith(".pmtiles"):
+        extra_args["CacheControl"] = PMTILES_CACHE_CONTROL
     s3.upload_file(
         str(local_path),
         "civicpatch",
         s3_key,
-        ExtraArgs={"ContentType": content_type},
+        ExtraArgs=extra_args,
     )
     return f"{os.environ['FRIENDLY_STORAGE_HOST']}/{s3_key}"
 

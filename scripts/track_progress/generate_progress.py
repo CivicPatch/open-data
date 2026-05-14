@@ -133,20 +133,7 @@ See [DEVELOPMENT.md](DEVELOPMENT.md) for setup instructions, task reference, and
     with open(OUTPUT_FILE, "w") as f:
         f.write(readme)
 
-    # ── Dashboard JSON ────────────────────────────────────────────────────────
-    dashboard = {
-        "generated_at": generated_at,
-        "states": {
-            state: data["summary"]
-            for state, data in sorted(state_data.items())
-        },
-    }
-    dashboard_file = PROJECT_ROOT / "scripts/track_progress/data/dashboard.json"
-    with open(dashboard_file, "w") as f:
-        json.dump(dashboard, f, indent=2)
-
     print(f"✓ README.md written to {OUTPUT_FILE}")
-    print(f"✓ dashboard.json written to {dashboard_file}")
     for state, data in sorted(state_data.items()):
         s  = data["summary"]
         cp = s["civicpatch"]["localities"]
