@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-14 05:18 UTC
+Generated: 2026-05-14 05:20 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-14 05:18 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,024 | 166 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
-| nj | 1,379 | 212 | 560 | 563 | 43 | 5 | 565 | 79% |
+| nj | 1,386 | 213 | 560 | 563 | 43 | 5 | 565 | 79% |
 | sc | 0 | 0 | 212 | 271 | 20 | 2 | 270 | — |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -1284,7 +1284,7 @@ Generated: 2026-05-14 05:18 UTC
 ### nj
 
 <details>
-<summary>348 not yet scraped &nbsp;·&nbsp; 2 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
+<summary>347 not yet scraped &nbsp;·&nbsp; 2 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1495,7 +1495,6 @@ Generated: 2026-05-14 05:18 UTC
 - ocd-jurisdiction/country:us/state:nj/place:farmingdale/government
 - ocd-jurisdiction/country:us/state:nj/place:fieldsboro/government
 - ocd-jurisdiction/country:us/state:nj/place:flemington/government
-- ocd-jurisdiction/country:us/state:nj/place:folsom/government
 - ocd-jurisdiction/country:us/state:nj/place:fort_lee/government
 - ocd-jurisdiction/country:us/state:nj/place:franklin_lakes/government
 - ocd-jurisdiction/country:us/state:nj/place:freehold/government
