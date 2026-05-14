@@ -7,6 +7,13 @@ from pathlib import Path
 import geopandas
 import pandas
 import requests
+from ruamel.yaml import YAML
+
+# Matches the ryaml config in setup_local.py — preserves comments and manual edits
+ryaml = YAML()
+ryaml.preserve_quotes = True
+ryaml.default_flow_style = False
+ryaml.width = 4096
 
 PROJECT_ROOT = Path(__file__).parent.parent.parent
 
@@ -61,7 +68,7 @@ def combine_geojsons_with_type(folder_path: str, output_path: str):
 def build_maps_for_state(state: str, fips: str, pull_from_census: list[str]):
     """Download census geo data, convert to GeoJSON, and combine into local.geojson."""
     geojson_data_local_file_path = str(
-        PROJECT_ROOT / "data" / state / ".maps" / "local.geojson"
+        PROJECT_ROOT / "data" / ".maps" / state / "local.geojson"
     )
     geojson_data_source_dir = str(PROJECT_ROOT / "data_source" / state / ".maps")
 
@@ -81,7 +88,86 @@ def build_maps_for_state(state: str, fips: str, pull_from_census: list[str]):
     print(f"Combining localities into final local.geojson: {geojson_data_local_file_path}")
     combine_geojsons_with_type(geojson_data_source_dir, geojson_data_local_file_path)
 
+    counties_path = str(PROJECT_ROOT / "data" / ".maps" / state / "counties.geojson")
+    _add_parent_ocdids(geojson_data_local_file_path, counties_path, state)
+
     return geojson_data_local_file_path
+
+
+def _add_parent_ocdids(local_path: str, counties_path: str, state: str) -> None:
+    """Spatial join each local feature's centroid to its county, then write
+    parent_ocdids = [county_ocdid, state_ocdid] into every feature's properties.
+    OCD IDs come from canonical YAML files, not constructed by code."""
+    if not Path(counties_path).exists():
+        raise FileNotFoundError(
+            f"counties.geojson not found for {state}: {counties_path}\n"
+            f"Run 'mise run setup-state -- --state {state}' to generate county boundaries first."
+        )
+    counties_yml = PROJECT_ROOT / "data_source" / state / "counties" / "jurisdictions.yml"
+    state_yml = PROJECT_ROOT / "data_source" / state / "state" / "jurisdictions.yml"
+
+    with open(counties_yml) as f:
+        county_lookup = {
+            str(j["geoid"]): j["id"]
+            for j in ryaml.load(f).get("jurisdictions", [])
+            if j.get("geoid")
+        }
+    with open(state_yml) as f:
+        state_juds = ryaml.load(f).get("jurisdictions", [])
+    state_ocdid = state_juds[0]["id"] if state_juds else ""
+
+    local_gdf = geopandas.read_file(local_path).reset_index(drop=True)
+    counties_gdf = geopandas.read_file(counties_path)
+
+    # Project to planar CRS for accurate centroids, then reproject counties to match
+    local_projected = local_gdf.to_crs("EPSG:5070")
+    counties_projected = counties_gdf.to_crs("EPSG:5070")
+    centroids = local_projected.copy()
+    centroids["geometry"] = local_projected.geometry.centroid
+
+    joined = centroids.sjoin(
+        counties_projected[["GEOID", "geometry"]],
+        how="left",
+        predicate="within",
+    )
+    county_geoid_map = joined["GEOID_right"].to_dict()
+
+    with open(local_path) as f:
+        geojson = json.load(f)
+
+    for i, feature in enumerate(geojson["features"]):
+        county_geoid = county_geoid_map.get(i)
+        parents = []
+        if county_geoid and not pandas.isna(county_geoid):
+            county_ocdid = county_lookup.get(str(county_geoid))
+            if county_ocdid:
+                parents.append(county_ocdid)
+        if state_ocdid:
+            parents.append(state_ocdid)
+        feature["properties"]["parent_ocdids"] = parents
+
+    with open(local_path, "w") as f:
+        json.dump(geojson, f, indent=2)
+
+    matched = sum(1 for i in range(len(geojson["features"])) if county_geoid_map.get(i) and not pandas.isna(county_geoid_map.get(i)))
+    print(f"  parent_ocdids: {matched}/{len(geojson['features'])} features matched to a county")
+
+    # Also write parent_ocdids into jurisdictions.yml so it flows into the DB via OD sync
+    geoid_to_parents = {
+        str(feat["properties"].get("GEOID") or feat["properties"].get("geoid") or ""): feat["properties"]["parent_ocdids"]
+        for feat in geojson["features"]
+        if feat["properties"].get("parent_ocdids")
+    }
+    local_yml = PROJECT_ROOT / "data_source" / state / "local" / "jurisdictions.yml"
+    with open(local_yml) as f:
+        yml_data = ryaml.load(f)
+    for j in yml_data.get("jurisdictions", []):
+        geoid = str(j.get("geoid", ""))
+        if geoid in geoid_to_parents:
+            j["parent_ocdids"] = geoid_to_parents[geoid]
+    with open(local_yml, "w") as f:
+        ryaml.dump(yml_data, f)
+    print(f"  parent_ocdids written to jurisdictions.yml")
 
 if __name__ == "__main__":
     state = "tx"
