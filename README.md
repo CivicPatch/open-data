@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-14 06:10 UTC
+Generated: 2026-05-14 06:12 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 1,072 | 174 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
+| mi | 1,077 | 175 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
 | nj | 1,393 | 214 | 560 | 563 | 43 | 5 | 565 | 79% |
 | sc | 0 | 0 | 212 | 271 | 20 | 2 | 270 | — |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
@@ -169,7 +169,7 @@ Generated: 2026-05-14 06:10 UTC
 ### mi
 
 <details>
-<summary>1036 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 5 in CP, not in external</summary>
+<summary>1035 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 5 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -890,7 +890,6 @@ Generated: 2026-05-14 06:10 UTC
 - ocd-jurisdiction/country:us/state:mi/place:caledonia/government
 - ocd-jurisdiction/country:us/state:mi/place:capac/government
 - ocd-jurisdiction/country:us/state:mi/place:carson_city/government
-- ocd-jurisdiction/country:us/state:mi/place:casnovia/government
 - ocd-jurisdiction/country:us/state:mi/place:cass_city/government
 - ocd-jurisdiction/country:us/state:mi/place:cassopolis/government
 - ocd-jurisdiction/country:us/state:mi/place:cement_city/government
