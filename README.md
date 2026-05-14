@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-14 06:27 UTC
+Generated: 2026-05-14 07:05 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-14 06:27 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,429 | 237 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
-| nj | 1,393 | 214 | 560 | 563 | 43 | 5 | 565 | 79% |
+| nj | 1,400 | 215 | 560 | 563 | 43 | 5 | 565 | 79% |
 | sc | 0 | 0 | 212 | 271 | 20 | 2 | 270 | — |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -1213,7 +1213,7 @@ Generated: 2026-05-14 06:27 UTC
 ### nj
 
 <details>
-<summary>346 not yet scraped &nbsp;·&nbsp; 2 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
+<summary>345 not yet scraped &nbsp;·&nbsp; 2 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1492,7 +1492,6 @@ Generated: 2026-05-14 06:27 UTC
 - ocd-jurisdiction/country:us/state:nj/place:ocean_gate/government
 - ocd-jurisdiction/country:us/state:nj/place:ogdensburg/government
 - ocd-jurisdiction/country:us/state:nj/place:old_tappan/government
-- ocd-jurisdiction/country:us/state:nj/place:palisades_park/government
 - ocd-jurisdiction/country:us/state:nj/place:palmyra/government
 - ocd-jurisdiction/country:us/state:nj/place:paramus/government
 - ocd-jurisdiction/country:us/state:nj/place:park_ridge/government
