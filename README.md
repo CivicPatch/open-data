@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-14 07:05 UTC
+Generated: 2026-05-14 17:42 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-14 07:05 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 1,429 | 237 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
-| nj | 1,400 | 215 | 560 | 563 | 43 | 5 | 565 | 79% |
+| nj | 1,410 | 216 | 560 | 563 | 43 | 5 | 565 | 79% |
 | sc | 0 | 0 | 212 | 271 | 20 | 2 | 270 | — |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -1213,7 +1213,7 @@ Generated: 2026-05-14 07:05 UTC
 ### nj
 
 <details>
-<summary>345 not yet scraped &nbsp;·&nbsp; 2 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
+<summary>344 not yet scraped &nbsp;·&nbsp; 2 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1510,7 +1510,6 @@ Generated: 2026-05-14 07:05 UTC
 - ocd-jurisdiction/country:us/state:nj/place:port_republic/government
 - ocd-jurisdiction/country:us/state:nj/place:princeton/government
 - ocd-jurisdiction/country:us/state:nj/place:prospect_park/government
-- ocd-jurisdiction/country:us/state:nj/place:rahway/government
 - ocd-jurisdiction/country:us/state:nj/place:ramsey/government
 - ocd-jurisdiction/country:us/state:nj/place:raritan/government
 - ocd-jurisdiction/country:us/state:nj/place:ridgefield_park/government
