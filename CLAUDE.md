@@ -15,11 +15,15 @@ data/
       <place_name>.yml    ← one file per jurisdiction; list of Official records
 data_source/
   <state>/
-    jurisdictions.yml           ← list of known jurisdictions for the state
-    jurisdictions_metadata.yml  ← metadata (population, geoid, etc.)
     local/
+      jurisdictions.yml         ← municipalities: list of known jurisdictions for the state
+      jurisdictions_metadata.yml
       <place_name>/
         pipeline_run_context.json   ← pipeline config/state for the jurisdiction
+    state/
+      jurisdictions.yml         ← state government (one entry)
+    counties/
+      jurisdictions.yml         ← county governments for the state
 schemas.py                      ← Pydantic models: Jurisdiction, Office, Official
 scripts/
   github_actions/               ← run in CI on PRs and post-merge
@@ -32,8 +36,10 @@ scripts/
       post_merge/               ← scripts run locally after a PR is merged
   scrapers/                     ← one-off scrapers for specific states/sources
   track_progress/               ← data quality dashboards and gap analysis
-  maps/                         ← geo utilities
-  setup_state.py
+  maps/                         ← geo utilities (local.py, county.py)
+  setup_local.py                ← fetch + enrich municipality jurisdictions for a state
+  setup_counties.py             ← fetch county jurisdictions + map for a state
+  setup_states.py               ← fetch state government jurisdiction + map for a state
   utils.py
 ```
 
