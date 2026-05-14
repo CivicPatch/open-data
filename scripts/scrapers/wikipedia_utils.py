@@ -157,19 +157,13 @@ def get_entry_infobox(wiki_url) -> Tuple[Dict[str, Any], List[str]]:
 
 
 def get_parse_url(wiki_url: str):
-    title = wiki_url.split("/")[-1]
-    if title.endswith("/"):
-        title = title[:-1]
-    parse_url = f"https://en.wikipedia.org/w/api.php?action=parse&page={title}&format=json"
-    return parse_url
+    title = wiki_url.rstrip("/").split("/")[-1]
+    return f"https://en.wikipedia.org/w/api.php?action=parse&page={title}&format=json"
 
 
 def get_wiki_url(wiki_url: str):
-    title = wiki_url.split("/")[-1]
-    if title.endswith("/"):
-        title = title[:-1]
-    full_url = f"https://en.wikipedia.org/wiki/{title}"
-    return full_url
+    title = wiki_url.rstrip("/").split("/")[-1]
+    return f"https://en.wikipedia.org/wiki/{title}"
 
 
 def normalize_td(td_element):
