@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-14 06:12 UTC
+Generated: 2026-05-14 06:14 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 1,077 | 175 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
+| mi | 1,104 | 180 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
 | nj | 1,393 | 214 | 560 | 563 | 43 | 5 | 565 | 79% |
 | sc | 0 | 0 | 212 | 271 | 20 | 2 | 270 | — |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
@@ -169,7 +169,7 @@ Generated: 2026-05-14 06:12 UTC
 ### mi
 
 <details>
-<summary>1035 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 5 in CP, not in external</summary>
+<summary>1030 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 5 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -223,9 +223,7 @@ Generated: 2026-05-14 06:12 UTC
 - ocd-jurisdiction/country:us/state:mi/county:arenac/place:sims/government
 - ocd-jurisdiction/country:us/state:mi/county:arenac/place:whitney/government
 - ocd-jurisdiction/country:us/state:mi/county:baraga/place:baraga/government
-- ocd-jurisdiction/country:us/state:mi/county:baraga/place:covington/government
 - ocd-jurisdiction/country:us/state:mi/county:baraga/place:l'anse/government
-- ocd-jurisdiction/country:us/state:mi/county:baraga/place:spurr/government
 - ocd-jurisdiction/country:us/state:mi/county:barry/place:assyria/government
 - ocd-jurisdiction/country:us/state:mi/county:barry/place:baltimore/government
 - ocd-jurisdiction/country:us/state:mi/county:barry/place:barry/government
@@ -425,7 +423,6 @@ Generated: 2026-05-14 06:12 UTC
 - ocd-jurisdiction/country:us/state:mi/county:huron/place:colfax/government
 - ocd-jurisdiction/country:us/state:mi/county:huron/place:hume/government
 - ocd-jurisdiction/country:us/state:mi/county:huron/place:huron/government
-- ocd-jurisdiction/country:us/state:mi/county:huron/place:lake/government
 - ocd-jurisdiction/country:us/state:mi/county:huron/place:oliver/government
 - ocd-jurisdiction/country:us/state:mi/county:huron/place:pointe_aux_barques/government
 - ocd-jurisdiction/country:us/state:mi/county:huron/place:port_austin/government
@@ -1035,7 +1032,6 @@ Generated: 2026-05-14 06:12 UTC
 - ocd-jurisdiction/country:us/state:mi/place:lawton/government
 - ocd-jurisdiction/country:us/state:mi/place:le_roy/government
 - ocd-jurisdiction/country:us/state:mi/place:lennon/government
-- ocd-jurisdiction/country:us/state:mi/place:leonard/government
 - ocd-jurisdiction/country:us/state:mi/place:lincoln/government
 - ocd-jurisdiction/country:us/state:mi/place:lincoln_park/government
 - ocd-jurisdiction/country:us/state:mi/place:linden/government
@@ -1091,7 +1087,6 @@ Generated: 2026-05-14 06:12 UTC
 - ocd-jurisdiction/country:us/state:mi/place:newberry/government
 - ocd-jurisdiction/country:us/state:mi/place:niles/government
 - ocd-jurisdiction/country:us/state:mi/place:north_branch/government
-- ocd-jurisdiction/country:us/state:mi/place:northport/government
 - ocd-jurisdiction/country:us/state:mi/place:northville/government
 - ocd-jurisdiction/country:us/state:mi/place:norway/government
 - ocd-jurisdiction/country:us/state:mi/place:novi/government
