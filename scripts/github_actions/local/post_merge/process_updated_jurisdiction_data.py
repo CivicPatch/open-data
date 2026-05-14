@@ -48,8 +48,8 @@ def main():
         state_to_jurisdiction_files.setdefault(state, []).append(jurisdiction_file)
 
     for state, jurisdiction_files in state_to_jurisdiction_files.items():
-        metadata_path = os.path.join(DATA_SOURCE_DIR, state, 'jurisdictions_metadata.yml')
-        jurisdictions_path = os.path.join(DATA_SOURCE_DIR, state, 'jurisdictions.yml')
+        metadata_path = os.path.join(DATA_SOURCE_DIR, state, 'local', 'jurisdictions_metadata.yml')
+        jurisdictions_path = os.path.join(DATA_SOURCE_DIR, state, 'local', 'jurisdictions.yml')
         if os.path.exists(metadata_path):
             metadata = load_yaml(metadata_path)
         else:
