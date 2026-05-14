@@ -1,13 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-14 06:23 UTC
+Generated: 2026-05-14 06:24 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
-| mi | 1,417 | 235 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
+| mi | 1,422 | 236 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
 | nj | 1,393 | 214 | 560 | 563 | 43 | 5 | 565 | 79% |
 | sc | 0 | 0 | 212 | 271 | 20 | 2 | 270 | — |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
@@ -169,7 +169,7 @@ Generated: 2026-05-14 06:23 UTC
 ### mi
 
 <details>
-<summary>975 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 6 in CP, not in external</summary>
+<summary>974 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 6 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -661,7 +661,6 @@ Generated: 2026-05-14 06:23 UTC
 - ocd-jurisdiction/country:us/state:mi/county:ogemaw/place:west_branch/government
 - ocd-jurisdiction/country:us/state:mi/county:ontonagon/place:bergland/government
 - ocd-jurisdiction/country:us/state:mi/county:ontonagon/place:interior/government
-- ocd-jurisdiction/country:us/state:mi/county:osceola/place:burdell/government
 - ocd-jurisdiction/country:us/state:mi/county:osceola/place:hersey/government
 - ocd-jurisdiction/country:us/state:mi/county:osceola/place:highland/government
 - ocd-jurisdiction/country:us/state:mi/county:osceola/place:le_roy/government
