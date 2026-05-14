@@ -1,7 +1,8 @@
 import os
 from pathlib import Path
 import yaml
-from schemas import Person, Official, Office
+from schemas import Person
+from shared.schemas import Official, Office
 
 def person_to_official(person: Person) -> Official:
     return Official(
