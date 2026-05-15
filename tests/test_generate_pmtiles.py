@@ -165,10 +165,10 @@ class TestEnrichLocalFeature:
             }
         }
 
-    def _feature(self, geoid="0820000", parent_ocdids=None):
+    def _feature(self, geoid="0820000", county_ocdids=None):
         props = {"GEOID": geoid, "NAME": "Denver", "ALAND": 12345}
-        if parent_ocdids is not None:
-            props["parent_ocdids"] = parent_ocdids
+        if county_ocdids is not None:
+            props["county_ocdids"] = county_ocdids
         return {"type": "Feature", "geometry": {"type": "Polygon", "coordinates": [[]]}, "properties": props}
 
     def test_matched_feature_has_correct_properties(self):
@@ -177,18 +177,18 @@ class TestEnrichLocalFeature:
         assert result["properties"]["jurisdiction_ocdid"] == "ocd-jurisdiction/country:us/state:co/place:denver/government"
         assert result["properties"]["geoid"] == "0820000"
         assert result["properties"]["name"] == "Denver city"
-        assert result["properties"]["parent_ocdids"] == []
+        assert result["properties"]["county_ocdids"] == []
 
-    def test_passes_through_parent_ocdids(self):
+    def test_passes_through_county_ocdids(self):
         parents = ["ocd-jurisdiction/country:us/state:co/county:denver/government"]
-        result = _enrich_local_feature(self._feature(parent_ocdids=parents), self._lookup())
+        result = _enrich_local_feature(self._feature(county_ocdids=parents), self._lookup())
         assert result is not None
-        assert result["properties"]["parent_ocdids"] == parents
+        assert result["properties"]["county_ocdids"] == parents
 
     def test_matched_feature_strips_census_properties(self):
         result = _enrich_local_feature(self._feature(), self._lookup())
         assert "ALAND" not in result["properties"]
-        assert set(result["properties"].keys()) == {"jurisdiction_ocdid", "geoid", "name", "parent_ocdids"}
+        assert set(result["properties"].keys()) == {"jurisdiction_ocdid", "geoid", "name", "county_ocdids"}
 
     def test_unmatched_feature_returns_none(self):
         result = _enrich_local_feature(self._feature("9999999"), self._lookup())
