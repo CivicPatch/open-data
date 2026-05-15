@@ -2,6 +2,7 @@
 uv = "latest"
 python = "3.12.11" # must be after poetry so the poetry bin is first in PATH
 gh = "latest"
+aws = "2.34"
 
 [env]
 _.file = ".env"
@@ -56,6 +57,18 @@ uv run python scripts/one_off/test_env.py
 [tasks.setup-state]
 run = """
 uv run python scripts/setup_state.py $@
+"""
+
+[tasks.setup-maps]
+description = "Download map GeoJSONs from Census TIGER and upload to R2. Run before generate-pmtiles. Args: --state co"
+run = """
+uv run python scripts/setup_maps.py $@
+"""
+
+[tasks.generate-pmtiles]
+description = "Generate PMTiles from R2 GeoJSONs and upload to R2. Args: --state co"
+run = """
+uv run python scripts/generate_pmtiles.py $@
 """
 
 [tasks.add-shared]
