@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-15 02:29 UTC
+Generated: 2026-05-15 05:14 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-15 02:29 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 4,678 | 783 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
-| nj | 1,410 | 216 | 560 | 563 | 43 | 5 | 565 | 79% |
+| nj | 1,436 | 221 | 560 | 563 | 43 | 5 | 565 | 79% |
 | sc | 0 | 0 | 212 | 271 | 20 | 2 | 270 | — |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -667,7 +667,7 @@ Generated: 2026-05-15 02:29 UTC
 ### nj
 
 <details>
-<summary>344 not yet scraped &nbsp;·&nbsp; 2 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
+<summary>339 not yet scraped &nbsp;·&nbsp; 2 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -675,7 +675,6 @@ Generated: 2026-05-15 02:29 UTC
 - ocd-jurisdiction/country:us/state:nj/county:atlantic/place:egg_harbor/government
 - ocd-jurisdiction/country:us/state:nj/county:atlantic/place:galloway/government
 - ocd-jurisdiction/country:us/state:nj/county:atlantic/place:hamilton/government
-- ocd-jurisdiction/country:us/state:nj/county:atlantic/place:weymouth/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:lyndhurst/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:rochelle_park/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:saddle_brook/government
@@ -805,7 +804,6 @@ Generated: 2026-05-15 02:29 UTC
 - ocd-jurisdiction/country:us/state:nj/county:sussex/place:andover/government
 - ocd-jurisdiction/country:us/state:nj/county:sussex/place:byram/government
 - ocd-jurisdiction/country:us/state:nj/county:sussex/place:frankford/government
-- ocd-jurisdiction/country:us/state:nj/county:sussex/place:green/government
 - ocd-jurisdiction/country:us/state:nj/county:sussex/place:hampton/government
 - ocd-jurisdiction/country:us/state:nj/county:sussex/place:hardyston/government
 - ocd-jurisdiction/country:us/state:nj/county:sussex/place:lafayette/government
@@ -831,7 +829,6 @@ Generated: 2026-05-15 02:29 UTC
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:oxford/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:pohatcong/government
 - ocd-jurisdiction/country:us/state:nj/county:warren/place:washington/government
-- ocd-jurisdiction/country:us/state:nj/county:warren/place:white/government
 - ocd-jurisdiction/country:us/state:nj/place:allendale/government
 - ocd-jurisdiction/country:us/state:nj/place:allenhurst/government
 - ocd-jurisdiction/country:us/state:nj/place:alpine/government
@@ -855,7 +852,6 @@ Generated: 2026-05-15 02:29 UTC
 - ocd-jurisdiction/country:us/state:nj/place:cape_may_point/government
 - ocd-jurisdiction/country:us/state:nj/place:carteret/government
 - ocd-jurisdiction/country:us/state:nj/place:chatham/government
-- ocd-jurisdiction/country:us/state:nj/place:chesilhurst/government
 - ocd-jurisdiction/country:us/state:nj/place:chester/government
 - ocd-jurisdiction/country:us/state:nj/place:clayton/government
 - ocd-jurisdiction/country:us/state:nj/place:cliffside_park/government
@@ -987,7 +983,6 @@ Generated: 2026-05-15 02:29 UTC
 - ocd-jurisdiction/country:us/state:nj/place:spring_lake_heights/government
 - ocd-jurisdiction/country:us/state:nj/place:stanhope/government
 - ocd-jurisdiction/country:us/state:nj/place:stockton/government
-- ocd-jurisdiction/country:us/state:nj/place:summit/government
 - ocd-jurisdiction/country:us/state:nj/place:surf_city/government
 - ocd-jurisdiction/country:us/state:nj/place:sussex/government
 - ocd-jurisdiction/country:us/state:nj/place:tavistock/government
