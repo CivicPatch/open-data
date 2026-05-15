@@ -22,6 +22,7 @@ def load_yaml(path):
         return yaml_ruamel.load(f)
 
 def save_yaml(data, path):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w') as f:
         yaml_ruamel.dump(data, f)
 
@@ -37,10 +38,7 @@ def find_state_from_jurisdiction_file(jurisdiction_file):
 def main():
     # Find all jurisdiction files
     updated_jurisdiction_ocdids = set()
-    jurisdiction_files = [
-        f for f in glob.glob(LOCAL_PATTERN, recursive=True)
-        if os.path.basename(f) != "config.yml"
-    ]
+    jurisdiction_files = list(glob.glob(LOCAL_PATTERN, recursive=True))
     # Group jurisdiction files by state
     state_to_jurisdiction_files = {}
     for jurisdiction_file in jurisdiction_files:
@@ -50,12 +48,12 @@ def main():
         state_to_jurisdiction_files.setdefault(state, []).append(jurisdiction_file)
 
     for state, jurisdiction_files in state_to_jurisdiction_files.items():
-        metadata_path = os.path.join(DATA_SOURCE_DIR, state, 'jurisdictions_metadata.yml')
-        jurisdictions_path = os.path.join(DATA_SOURCE_DIR, state, 'jurisdictions.yml')
+        metadata_path = os.path.join(DATA_SOURCE_DIR, state, 'local', 'jurisdictions_metadata.yml')
+        jurisdictions_path = os.path.join(DATA_SOURCE_DIR, state, 'local', 'jurisdictions.yml')
         if os.path.exists(metadata_path):
             metadata = load_yaml(metadata_path)
         else:
-            continue
+            metadata = yaml_ruamel.load("jurisdictions_by_id: {}\n")
 
         print(f"Processing {len(jurisdiction_files)} jurisdiction files for state {state}...")
 
@@ -82,7 +80,7 @@ def main():
                     if images_updated:
                         save_yaml(people, jurisdiction_file)
                     if jurisdiction_ocdid not in metadata["jurisdictions_by_id"]:
-                        metadata["jurisdictions_by_id"][jurisdiction_ocdid] = {}
+                        metadata["jurisdictions_by_id"][jurisdiction_ocdid] = meta_entry
                     meta_entry["updated_at"] = jurisdiction_updated_at
                 except Exception as e:
                     print(f"Error processing {jurisdiction_ocdid}: {e}")
