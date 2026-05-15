@@ -81,7 +81,7 @@ def _enrich_local_feature(feature: dict, lookup: dict[str, dict]) -> dict | None
             "jurisdiction_ocdid": match["ocdid"],
             "geoid": geoid,
             "name": match["name"],
-            "parent_ocdids": props.get("parent_ocdids", []),
+            "county_ocdids": props.get("county_ocdids", []),
         },
     }
 
@@ -125,59 +125,52 @@ def _upload_to_r2(local_path: Path, s3_key: str) -> str:
     return f"{os.environ['FRIENDLY_STORAGE_HOST']}/{s3_key}"
 
 
-def generate_national_states() -> str:
-    print("Generating national states overview...")
+def generate_national_states(all_state_features: list) -> str:
+    print(f"Generating national states overview ({len(all_state_features)} features)...")
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        states_path = tmp / "states.geojson"
+        output_path = tmp / "states.pmtiles"
+        states_path.write_text(json.dumps({"type": "FeatureCollection", "features": all_state_features}))
+        print("  Running tippecanoe...")
+        _run_tippecanoe([("states", states_path, 0)], output_path, label="national")
+        print("  Uploading to R2...")
+        url = _upload_to_r2(output_path, "maps/states.pmtiles")
+    print(f"  Done: {url}")
+    return url
+
+
+def _download_geojson(s3, state: str, layer: str) -> dict:
+    response = s3.get_object(Bucket="civicpatch", Key=f"maps/{state}/{layer}.geojson")
+    return json.loads(response["Body"].read())
+
+
+def generate_state_bundle(state: str) -> tuple[str, list]:
+    print(f"[{state}] Downloading GeoJSONs from R2...")
     s3 = boto3.client(
         "s3",
         endpoint_url=os.environ["STORAGE_ENDPOINT"],
         aws_access_key_id=os.environ["STORAGE_ACCESS_KEY_ID"],
         aws_secret_access_key=os.environ["STORAGE_SECRET_ACCESS_KEY"],
     )
-    features = []
-    for state in sorted(state_configs.keys()):
-        response = s3.get_object(Bucket="civicpatch", Key=f"maps/{state}/states.geojson")
-        data = json.loads(response["Body"].read())
-        features.extend(data.get("features", []))
-        print(f"  {state}: {len(data.get('features', []))} features")
-
-    print(f"  {len(features)} total state features")
-
-    with tempfile.TemporaryDirectory() as tmp:
-        tmp = Path(tmp)
-        states_path = tmp / "states.geojson"
-        output_path = tmp / "states.pmtiles"
-        states_path.write_text(json.dumps({"type": "FeatureCollection", "features": features}))
-        print("  Running tippecanoe...")
-        _run_tippecanoe([("states", states_path, 0)], output_path, label="national")
-        print("  Uploading to R2...")
-        url = _upload_to_r2(output_path, "maps/states.pmtiles")
-
-    print(f"  Done: {url}")
-    return url
-
-
-def generate_state_bundle(state: str) -> str:
-    print(f"Generating {state} bundle (states + counties + local)...")
-    maps_dir = PROJECT_ROOT / "data" / ".maps" / state
 
     state_lookup = _build_state_lookup(state)
-    with open(maps_dir / "states.geojson") as f:
-        states_features = [_enrich_state_feature(feat, state_lookup) for feat in json.load(f)["features"]]
-    print(f"  states: {len(states_features)} features")
+    states_data = _download_geojson(s3, state, "states")
+    states_features = [_enrich_state_feature(feat, state_lookup) for feat in states_data["features"]]
+    print(f"[{state}] states: {len(states_features)} features")
 
     county_lookup = _build_county_lookup(state)
-    with open(maps_dir / "counties.geojson") as f:
-        counties_features = [_enrich_county_feature(feat, county_lookup) for feat in json.load(f)["features"]]
-    print(f"  counties: {len(counties_features)} features")
+    counties_data = _download_geojson(s3, state, "counties")
+    counties_features = [_enrich_county_feature(feat, county_lookup) for feat in counties_data["features"]]
+    print(f"[{state}] counties: {len(counties_features)} features")
 
     yml_path = PROJECT_ROOT / "data_source" / state / "local" / "jurisdictions.yml"
     with open(yml_path) as f:
         local_lookup = _build_local_lookup(yaml.safe_load(f).get("jurisdictions", []))
 
-    with open(maps_dir / "local.geojson") as f:
-        raw_local = json.load(f)["features"]
+    raw_local = _download_geojson(s3, state, "local")["features"]
     local_features = [e for feat in raw_local if (e := _enrich_local_feature(feat, local_lookup)) is not None]
-    print(f"  local: {len(local_features)}/{len(raw_local)} features matched")
+    print(f"[{state}] local: {len(local_features)}/{len(raw_local)} features matched")
 
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
@@ -197,37 +190,29 @@ def generate_state_bundle(state: str) -> str:
             ("local", local_path, 8),
         ], output_path, label=state)
         print("  Uploading to R2...")
-        _upload_to_r2(states_path, f"maps/{state}/states.geojson")
-        _upload_to_r2(counties_path, f"maps/{state}/counties.geojson")
-        _upload_to_r2(local_path, f"maps/{state}/local.geojson")
         url = _upload_to_r2(output_path, f"maps/{state}.pmtiles")
 
     print(f"  Done: {url}")
-    return url
+    return url, states_features
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate and upload PMTiles to R2")
     parser.add_argument("--state", help="State code (e.g. co). Omit to run all active states.")
-    parser.add_argument(
-        "--level",
-        choices=["bundle", "national", "all"],
-        default="all",
-        help="bundle: per-state multi-layer PMTile; national: states overview; all: both",
-    )
     args = parser.parse_args()
 
     states = [args.state] if args.state else list(state_configs.keys())
 
-    if args.level in ("national", "all"):
-        generate_national_states()
+    all_state_features = []
+    workers = min(len(states), os.cpu_count() or 1)
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {pool.submit(generate_state_bundle, s): s for s in states}
+        for future in as_completed(futures):
+            _, state_feats = future.result()
+            all_state_features.extend(state_feats)
 
-    if args.level in ("bundle", "all"):
-        workers = min(len(states), os.cpu_count() or 1)
-        with ThreadPoolExecutor(max_workers=workers) as pool:
-            futures = {pool.submit(generate_state_bundle, s): s for s in states}
-            for future in as_completed(futures):
-                future.result()
+    if not args.state:
+        generate_national_states(all_state_features)
 
 
 if __name__ == "__main__":
