@@ -7,9 +7,6 @@ env:
 on:
   workflow_dispatch:
     inputs:
-      server_url:
-        description: "CivicPatch Server URL (e.g. https://civicpatch.example.com)"
-        required: true
       user_email:
         description: "Email associated with your CivicPatch account"
         required: true
@@ -22,6 +19,10 @@ on:
       zip_file_url:
         description: "Presigned URL of the ZIP file containing YAML data"
         required: true
+      env:
+        description: "Source environment (production or development)"
+        required: false
+        default: "production"
 
 jobs:
   data-intake:
@@ -32,7 +33,6 @@ jobs:
     outputs:
       pr_number: ${{ steps.create-pr.outputs.pr_number }}
       head_ref: ${{ steps.extract_branch.outputs.branch_name }}
-      municipality_path: ${{ steps.create-pr.outputs.municipality-path }}
     steps:
       - uses: actions/checkout@v6
 
@@ -87,8 +87,14 @@ jobs:
       - name: Get jurisdiction folder
         id: get-jurisdiction-folder
         run: |
-          JURISDICTION_FOLDER=$(uv run python scripts/github_actions/get_jurisdiction_folder.py "${{ github.event.inputs.jurisdiction_ocdid }}")
+          JURISDICTION_FOLDER=$(uv run python scripts/github_actions/jurisdiction/get_jurisdiction_folder.py "${{ github.event.inputs.jurisdiction_ocdid }}")
           echo "jurisdiction-folder=$JURISDICTION_FOLDER" >> "$GITHUB_OUTPUT"
+
+      - name: Get jurisdiction state
+        id: get-jurisdiction-state
+        run: |
+          STATE=$(uv run python scripts/github_actions/jurisdiction/get_jurisdiction_state.py "${{ github.event.inputs.jurisdiction_ocdid }}")
+          echo "state=$STATE" >> "$GITHUB_OUTPUT"
 
       - name: Get branch name
         id: extract_branch
@@ -96,10 +102,15 @@ jobs:
           BRANCH_NAME="job/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}/${{ github.event.inputs.request_id }}"
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
+      - name: Update jurisdiction URL if redirected
+        run: |
+          uv run python scripts/github_actions/update_jurisdiction_url.py \
+            "${{ github.event.inputs.jurisdiction_ocdid }}" \
+            "data_source/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}/pipeline_run_context.json"
+
       - name: Create a PR
         id: create-pr
         env:
-          SERVER_URL: ${{ github.event.inputs.server_url }}
           USER_EMAIL: ${{ github.event.inputs.user_email }}
           GH_TOKEN: ${{ steps.generate-pipeline-token.outputs.token }}
         run: |
@@ -109,18 +120,18 @@ jobs:
           git checkout -B ${{ steps.extract_branch.outputs.branch_name }}
           git add "data/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}.yml"
           git add "data_source/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}"
+          git add "data_source/${{ steps.get-jurisdiction-state.outputs.state }}/local/jurisdictions.yml"
           git commit -m "Add municipal officials for ${{ github.event.inputs.jurisdiction_ocdid }} by ${{ github.event.inputs.user_email }}"
           git push -u origin ${{ steps.extract_branch.outputs.branch_name }}
 
-          PR_BODY=$(uv run python scripts/github_actions/pull_request_body_markdown.py "${{ github.event.inputs.jurisdiction_ocdid }}" "${{ github.event.inputs.request_id }}")
-
-          github_pull_request_url=$(gh pr create \
-            --title "Data intake for ${{ github.event.inputs.jurisdiction_ocdid }} by ${{ github.event.inputs.user_email }}" \
-            --body "$PR_BODY" \
-            --base main
-          )
-          github_pr_number=$(basename "$github_pull_request_url")
-          echo "pr_number=$github_pr_number" >> $GITHUB_OUTPUT
+          PR_NUMBER=$(uv run python scripts/github_actions/create_pr.py \
+            --jurisdiction-ocdid "${{ github.event.inputs.jurisdiction_ocdid }}" \
+            --request-id "${{ github.event.inputs.request_id }}" \
+            --state "${{ steps.get-jurisdiction-state.outputs.state }}" \
+            --branch "${{ steps.extract_branch.outputs.branch_name }}" \
+            --user-email "${{ github.event.inputs.user_email }}" \
+            --env "${{ github.event.inputs.env }}")
+          echo "pr_number=$PR_NUMBER" >> $GITHUB_OUTPUT
 
   process-pull-request:
     needs: data-intake
