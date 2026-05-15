@@ -10,7 +10,7 @@ Usage:
 import sys
 import yaml
 
-from schemas import Official
+from shared.schemas import Official
 from scripts.utils import jurisdiction_to_file
 
 
