@@ -625,7 +625,7 @@ def run_validation(yaml_dir: str, tml_file: str, out_dir: str):
     w(f"  {mismatch_csv}")
     w(f"  {unmatched_combined_csv}")
 
-    jurisdictions_file = os.path.join("data_source", "tx", "jurisdictions.yml")
+    jurisdictions_file = os.path.join("data_source", "tx", "local", "jurisdictions.yml")
     with open(jurisdictions_file, "r", encoding="utf-8") as f:
         jurisdictions_data = yaml.safe_load(f)
     jurisdiction_data = jurisdictions_data.get("jurisdictions", [])
