@@ -35,7 +35,7 @@ def update_jurisdiction_url(jurisdiction_ocdid: str, context_json_path: str) -> 
     resolved_url = config.url
 
     parsed = parse_jurisdiction_ocdid(jurisdiction_ocdid)
-    jurisdictions_path = Path(f"data_source/{parsed.state}/jurisdictions.yml")
+    jurisdictions_path = Path(f"data_source/{parsed.state}/local/jurisdictions.yml")
     if not jurisdictions_path.exists():
         print(f"Jurisdictions file not found: {jurisdictions_path}")
         return
