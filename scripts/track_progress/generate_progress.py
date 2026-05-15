@@ -127,32 +127,7 @@ Generated: {generated_at}
 
 ---
 
-## Setting Up a New State
-
-1. **Add a scraper** — create `scripts/scrapers/<state>.py` with a `scrape(census_data)` function.
-   Follow an existing scraper (e.g. `nj.py`) as a template. The scraper fetches official website
-   URLs from Wikipedia and merges them into the census data by GEOID.
-
-2. **Register the state** — add an entry to `scripts/state_configs.py`:
-   ```python
-   "<state>": {{
-       "fips": "<2-digit FIPS>",
-       "pull_from_census": ["places"],          # add "county_subdivisions" if needed (e.g. NJ, MI)
-       "scraper": <state>_scraper,
-       "validation_sources": ["google"],        # add "tml" for Texas Municipal League, etc.
-   }}
-   ```
-
-3. **Get Google Civic API raw data** — download `<STATE>_all_raw.json` from the shared drive and
-   place it at `scripts/track_progress/google_data/<state>_all_raw.json`:
-   https://drive.google.com/drive/u/0/folders/1A3qFX-UELHoNp27QyBt2edWQOkHPDbjY
-
-4. **Run setup**:
-   ```bash
-   mise run setup-state <state>
-   ```
-   This will: pull Census jurisdiction data → fetch Wikipedia URLs for new jurisdictions →
-   transform Google validation data → regenerate this README.
+See [DEVELOPMENT.md](DEVELOPMENT.md) for setup instructions, task reference, and R2 structure.
 """
 
     with open(OUTPUT_FILE, "w") as f:
