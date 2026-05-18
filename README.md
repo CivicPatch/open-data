@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-18 02:36 UTC
+Generated: 2026-05-18 02:48 UTC
 
 ## Coverage Summary
 
@@ -9,7 +9,7 @@ Generated: 2026-05-18 02:36 UTC
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 4,678 | 783 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
 | nj | 2,970 | 486 | 560 | 563 | 43 | 5 | 565 | 81% |
-| sc | 17 | 3 | 205 | 271 | 20 | 2 | 270 | — |
+| sc | 565 | 89 | 205 | 271 | 20 | 2 | 270 | 62% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -758,27 +758,21 @@ Generated: 2026-05-18 02:36 UTC
 ### sc
 
 <details>
-<summary>202 not yet scraped &nbsp;·&nbsp; 4 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
+<summary>116 not yet scraped &nbsp;·&nbsp; 4 in external, not in CP &nbsp;·&nbsp; 1 in CP, not in external</summary>
 
 #### Not yet scraped
 
 - ocd-jurisdiction/country:us/state:sc/place:abbeville/government
-- ocd-jurisdiction/country:us/state:sc/place:aiken/government
 - ocd-jurisdiction/country:us/state:sc/place:allendale/government
 - ocd-jurisdiction/country:us/state:sc/place:anderson/government
 - ocd-jurisdiction/country:us/state:sc/place:andrews/government
 - ocd-jurisdiction/country:us/state:sc/place:arcadia_lakes/government
 - ocd-jurisdiction/country:us/state:sc/place:atlantic_beach/government
-- ocd-jurisdiction/country:us/state:sc/place:awendaw/government
 - ocd-jurisdiction/country:us/state:sc/place:aynor/government
 - ocd-jurisdiction/country:us/state:sc/place:bamberg/government
-- ocd-jurisdiction/country:us/state:sc/place:barnwell/government
-- ocd-jurisdiction/country:us/state:sc/place:batesburg-leesville/government
-- ocd-jurisdiction/country:us/state:sc/place:beaufort/government
 - ocd-jurisdiction/country:us/state:sc/place:belton/government
 - ocd-jurisdiction/country:us/state:sc/place:bennettsville/government
 - ocd-jurisdiction/country:us/state:sc/place:bethune/government
-- ocd-jurisdiction/country:us/state:sc/place:bishopville/government
 - ocd-jurisdiction/country:us/state:sc/place:blacksburg/government
 - ocd-jurisdiction/country:us/state:sc/place:blackville/government
 - ocd-jurisdiction/country:us/state:sc/place:bluffton/government
@@ -789,61 +783,36 @@ Generated: 2026-05-18 02:36 UTC
 - ocd-jurisdiction/country:us/state:sc/place:brunson/government
 - ocd-jurisdiction/country:us/state:sc/place:burnettown/government
 - ocd-jurisdiction/country:us/state:sc/place:camden/government
-- ocd-jurisdiction/country:us/state:sc/place:campobello/government
 - ocd-jurisdiction/country:us/state:sc/place:carlisle/government
-- ocd-jurisdiction/country:us/state:sc/place:cayce/government
 - ocd-jurisdiction/country:us/state:sc/place:central/government
 - ocd-jurisdiction/country:us/state:sc/place:chapin/government
-- ocd-jurisdiction/country:us/state:sc/place:charleston/government
 - ocd-jurisdiction/country:us/state:sc/place:cheraw/government
-- ocd-jurisdiction/country:us/state:sc/place:chesnee/government
 - ocd-jurisdiction/country:us/state:sc/place:chester/government
-- ocd-jurisdiction/country:us/state:sc/place:chesterfield/government
 - ocd-jurisdiction/country:us/state:sc/place:clemson/government
-- ocd-jurisdiction/country:us/state:sc/place:clinton/government
 - ocd-jurisdiction/country:us/state:sc/place:clio/government
 - ocd-jurisdiction/country:us/state:sc/place:clover/government
 - ocd-jurisdiction/country:us/state:sc/place:columbia/government
 - ocd-jurisdiction/country:us/state:sc/place:conway/government
 - ocd-jurisdiction/country:us/state:sc/place:cottageville/government
-- ocd-jurisdiction/country:us/state:sc/place:coward/government
 - ocd-jurisdiction/country:us/state:sc/place:cowpens/government
 - ocd-jurisdiction/country:us/state:sc/place:cross_hill/government
-- ocd-jurisdiction/country:us/state:sc/place:darlington/government
 - ocd-jurisdiction/country:us/state:sc/place:dillon/government
 - ocd-jurisdiction/country:us/state:sc/place:donalds/government
-- ocd-jurisdiction/country:us/state:sc/place:due_west/government
-- ocd-jurisdiction/country:us/state:sc/place:duncan/government
-- ocd-jurisdiction/country:us/state:sc/place:easley/government
 - ocd-jurisdiction/country:us/state:sc/place:eastover/government
-- ocd-jurisdiction/country:us/state:sc/place:edgefield/government
 - ocd-jurisdiction/country:us/state:sc/place:ehrhardt/government
-- ocd-jurisdiction/country:us/state:sc/place:elgin/government
 - ocd-jurisdiction/country:us/state:sc/place:elloree/government
 - ocd-jurisdiction/country:us/state:sc/place:estill/government
 - ocd-jurisdiction/country:us/state:sc/place:eutawville/government
-- ocd-jurisdiction/country:us/state:sc/place:florence/government
 - ocd-jurisdiction/country:us/state:sc/place:folly_beach/government
-- ocd-jurisdiction/country:us/state:sc/place:forest_acres/government
-- ocd-jurisdiction/country:us/state:sc/place:fort_mill/government
 - ocd-jurisdiction/country:us/state:sc/place:fountain_inn/government
-- ocd-jurisdiction/country:us/state:sc/place:gaffney/government
-- ocd-jurisdiction/country:us/state:sc/place:gaston/government
 - ocd-jurisdiction/country:us/state:sc/place:georgetown/government
 - ocd-jurisdiction/country:us/state:sc/place:gilbert/government
-- ocd-jurisdiction/country:us/state:sc/place:goose_creek/government
-- ocd-jurisdiction/country:us/state:sc/place:gray_court/government
 - ocd-jurisdiction/country:us/state:sc/place:great_falls/government
 - ocd-jurisdiction/country:us/state:sc/place:greeleyville/government
 - ocd-jurisdiction/country:us/state:sc/place:greenville/government
-- ocd-jurisdiction/country:us/state:sc/place:greenwood/government
-- ocd-jurisdiction/country:us/state:sc/place:greer/government
 - ocd-jurisdiction/country:us/state:sc/place:hampton/government
-- ocd-jurisdiction/country:us/state:sc/place:hanahan/government
 - ocd-jurisdiction/country:us/state:sc/place:hardeeville/government
 - ocd-jurisdiction/country:us/state:sc/place:harleyville/government
-- ocd-jurisdiction/country:us/state:sc/place:hartsville/government
-- ocd-jurisdiction/country:us/state:sc/place:heath_springs/government
 - ocd-jurisdiction/country:us/state:sc/place:hemingway/government
 - ocd-jurisdiction/country:us/state:sc/place:hickory_grove/government
 - ocd-jurisdiction/country:us/state:sc/place:hilton_head_island/government
@@ -851,115 +820,60 @@ Generated: 2026-05-18 02:36 UTC
 - ocd-jurisdiction/country:us/state:sc/place:hollywood/government
 - ocd-jurisdiction/country:us/state:sc/place:honea_path/government
 - ocd-jurisdiction/country:us/state:sc/place:inman/government
-- ocd-jurisdiction/country:us/state:sc/place:isle_of_palms/government
-- ocd-jurisdiction/country:us/state:sc/place:iva/government
-- ocd-jurisdiction/country:us/state:sc/place:jackson/government
-- ocd-jurisdiction/country:us/state:sc/place:james_island/government
 - ocd-jurisdiction/country:us/state:sc/place:johnsonville/government
 - ocd-jurisdiction/country:us/state:sc/place:johnston/government
 - ocd-jurisdiction/country:us/state:sc/place:jonesville/government
-- ocd-jurisdiction/country:us/state:sc/place:kershaw/government
 - ocd-jurisdiction/country:us/state:sc/place:kiawah_island/government
 - ocd-jurisdiction/country:us/state:sc/place:kingstree/government
-- ocd-jurisdiction/country:us/state:sc/place:lake_city/government
 - ocd-jurisdiction/country:us/state:sc/place:lamar/government
-- ocd-jurisdiction/country:us/state:sc/place:lancaster/government
 - ocd-jurisdiction/country:us/state:sc/place:landrum/government
 - ocd-jurisdiction/country:us/state:sc/place:latta/government
-- ocd-jurisdiction/country:us/state:sc/place:laurens/government
-- ocd-jurisdiction/country:us/state:sc/place:lexington/government
 - ocd-jurisdiction/country:us/state:sc/place:liberty/government
 - ocd-jurisdiction/country:us/state:sc/place:lincolnville/government
 - ocd-jurisdiction/country:us/state:sc/place:little_mountain/government
 - ocd-jurisdiction/country:us/state:sc/place:loris/government
-- ocd-jurisdiction/country:us/state:sc/place:lowrys/government
-- ocd-jurisdiction/country:us/state:sc/place:lyman/government
-- ocd-jurisdiction/country:us/state:sc/place:manning/government
-- ocd-jurisdiction/country:us/state:sc/place:marion/government
-- ocd-jurisdiction/country:us/state:sc/place:mauldin/government
-- ocd-jurisdiction/country:us/state:sc/place:mcbee/government
-- ocd-jurisdiction/country:us/state:sc/place:mcclellanville/government
 - ocd-jurisdiction/country:us/state:sc/place:mccoll/government
 - ocd-jurisdiction/country:us/state:sc/place:mcconnells/government
-- ocd-jurisdiction/country:us/state:sc/place:mccormick/government
 - ocd-jurisdiction/country:us/state:sc/place:meggett/government
-- ocd-jurisdiction/country:us/state:sc/place:moncks_corner/government
 - ocd-jurisdiction/country:us/state:sc/place:monetta/government
 - ocd-jurisdiction/country:us/state:sc/place:mount_croghan/government
 - ocd-jurisdiction/country:us/state:sc/place:mount_pleasant/government
 - ocd-jurisdiction/country:us/state:sc/place:myrtle_beach/government
-- ocd-jurisdiction/country:us/state:sc/place:new_ellenton/government
-- ocd-jurisdiction/country:us/state:sc/place:newberry/government
-- ocd-jurisdiction/country:us/state:sc/place:ninety_six/government
 - ocd-jurisdiction/country:us/state:sc/place:norris/government
-- ocd-jurisdiction/country:us/state:sc/place:north/government
 - ocd-jurisdiction/country:us/state:sc/place:north_augusta/government
 - ocd-jurisdiction/country:us/state:sc/place:north_charleston/government
-- ocd-jurisdiction/country:us/state:sc/place:north_myrtle_beach/government
 - ocd-jurisdiction/country:us/state:sc/place:norway/government
-- ocd-jurisdiction/country:us/state:sc/place:orangeburg/government
 - ocd-jurisdiction/country:us/state:sc/place:pacolet/government
 - ocd-jurisdiction/country:us/state:sc/place:pageland/government
 - ocd-jurisdiction/country:us/state:sc/place:pamplico/government
 - ocd-jurisdiction/country:us/state:sc/place:patrick/government
 - ocd-jurisdiction/country:us/state:sc/place:pawleys_island/government
 - ocd-jurisdiction/country:us/state:sc/place:pelzer/government
-- ocd-jurisdiction/country:us/state:sc/place:pendleton/government
 - ocd-jurisdiction/country:us/state:sc/place:perry/government
-- ocd-jurisdiction/country:us/state:sc/place:pickens/government
-- ocd-jurisdiction/country:us/state:sc/place:pine_ridge/government
 - ocd-jurisdiction/country:us/state:sc/place:pomaria/government
-- ocd-jurisdiction/country:us/state:sc/place:port_royal/government
-- ocd-jurisdiction/country:us/state:sc/place:prosperity/government
-- ocd-jurisdiction/country:us/state:sc/place:quinby/government
 - ocd-jurisdiction/country:us/state:sc/place:ravenel/government
-- ocd-jurisdiction/country:us/state:sc/place:reidville/government
 - ocd-jurisdiction/country:us/state:sc/place:ridge_spring/government
 - ocd-jurisdiction/country:us/state:sc/place:ridgeland/government
 - ocd-jurisdiction/country:us/state:sc/place:ridgeville/government
 - ocd-jurisdiction/country:us/state:sc/place:ridgeway/government
 - ocd-jurisdiction/country:us/state:sc/place:rock_hill/government
-- ocd-jurisdiction/country:us/state:sc/place:rockville/government
 - ocd-jurisdiction/country:us/state:sc/place:salem/government
-- ocd-jurisdiction/country:us/state:sc/place:salley/government
-- ocd-jurisdiction/country:us/state:sc/place:saluda/government
-- ocd-jurisdiction/country:us/state:sc/place:santee/government
 - ocd-jurisdiction/country:us/state:sc/place:seabrook_island/government
-- ocd-jurisdiction/country:us/state:sc/place:seneca/government
-- ocd-jurisdiction/country:us/state:sc/place:sharon/government
-- ocd-jurisdiction/country:us/state:sc/place:simpsonville/government
-- ocd-jurisdiction/country:us/state:sc/place:six_mile/government
-- ocd-jurisdiction/country:us/state:sc/place:south_congaree/government
-- ocd-jurisdiction/country:us/state:sc/place:spartanburg/government
-- ocd-jurisdiction/country:us/state:sc/place:springdale/government
 - ocd-jurisdiction/country:us/state:sc/place:springfield/government
 - ocd-jurisdiction/country:us/state:sc/place:st._george/government
 - ocd-jurisdiction/country:us/state:sc/place:st._matthews/government
 - ocd-jurisdiction/country:us/state:sc/place:sullivan's_island/government
 - ocd-jurisdiction/country:us/state:sc/place:summerville/government
-- ocd-jurisdiction/country:us/state:sc/place:sumter/government
-- ocd-jurisdiction/country:us/state:sc/place:surfside_beach/government
 - ocd-jurisdiction/country:us/state:sc/place:swansea/government
 - ocd-jurisdiction/country:us/state:sc/place:tega_cay/government
 - ocd-jurisdiction/country:us/state:sc/place:timmonsville/government
-- ocd-jurisdiction/country:us/state:sc/place:travelers_rest/government
-- ocd-jurisdiction/country:us/state:sc/place:turbeville/government
 - ocd-jurisdiction/country:us/state:sc/place:union/government
-- ocd-jurisdiction/country:us/state:sc/place:van_wyck/government
 - ocd-jurisdiction/country:us/state:sc/place:vance/government
 - ocd-jurisdiction/country:us/state:sc/place:varnville/government
 - ocd-jurisdiction/country:us/state:sc/place:wagener/government
-- ocd-jurisdiction/country:us/state:sc/place:walhalla/government
-- ocd-jurisdiction/country:us/state:sc/place:walterboro/government
-- ocd-jurisdiction/country:us/state:sc/place:ware_shoals/government
 - ocd-jurisdiction/country:us/state:sc/place:wellford/government
 - ocd-jurisdiction/country:us/state:sc/place:west_columbia/government
 - ocd-jurisdiction/country:us/state:sc/place:west_pelzer/government
-- ocd-jurisdiction/country:us/state:sc/place:west_union/government
-- ocd-jurisdiction/country:us/state:sc/place:westminster/government
-- ocd-jurisdiction/country:us/state:sc/place:whitmire/government
-- ocd-jurisdiction/country:us/state:sc/place:williamston/government
-- ocd-jurisdiction/country:us/state:sc/place:williston/government
 - ocd-jurisdiction/country:us/state:sc/place:winnsboro/government
 - ocd-jurisdiction/country:us/state:sc/place:woodruff/government
 - ocd-jurisdiction/country:us/state:sc/place:yemassee/government
@@ -969,7 +883,7 @@ Generated: 2026-05-18 02:36 UTC
 
 | In External, Not in Known | In CivicPatch, Not in External |
 |---------------------------|--------------------------------|
-| ocd-jurisdiction/country:us/state:sc/place:st_george/government |  |
+| ocd-jurisdiction/country:us/state:sc/place:st_george/government | ocd-jurisdiction/country:us/state:sc/place:van_wyck/government |
 | ocd-jurisdiction/country:us/state:sc/place:st_matthews/government |  |
 | ocd-jurisdiction/country:us/state:sc/place:st_stephen/government |  |
 | ocd-jurisdiction/country:us/state:sc/place:sullivan~s_island/government |  |
