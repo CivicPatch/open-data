@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-15 05:45 UTC
+Generated: 2026-05-18 02:36 UTC
 
 ## Coverage Summary
 
@@ -9,7 +9,7 @@ Generated: 2026-05-15 05:45 UTC
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 4,678 | 783 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
 | nj | 2,970 | 486 | 560 | 563 | 43 | 5 | 565 | 81% |
-| sc | 0 | 0 | 212 | 271 | 20 | 2 | 270 | — |
+| sc | 17 | 3 | 205 | 271 | 20 | 2 | 270 | — |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -758,7 +758,7 @@ Generated: 2026-05-15 05:45 UTC
 ### sc
 
 <details>
-<summary>212 not yet scraped &nbsp;·&nbsp; 4 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
+<summary>202 not yet scraped &nbsp;·&nbsp; 4 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -817,7 +817,6 @@ Generated: 2026-05-15 05:45 UTC
 - ocd-jurisdiction/country:us/state:sc/place:easley/government
 - ocd-jurisdiction/country:us/state:sc/place:eastover/government
 - ocd-jurisdiction/country:us/state:sc/place:edgefield/government
-- ocd-jurisdiction/country:us/state:sc/place:edisto_beach/government
 - ocd-jurisdiction/country:us/state:sc/place:ehrhardt/government
 - ocd-jurisdiction/country:us/state:sc/place:elgin/government
 - ocd-jurisdiction/country:us/state:sc/place:elloree/government
@@ -831,7 +830,6 @@ Generated: 2026-05-15 05:45 UTC
 - ocd-jurisdiction/country:us/state:sc/place:gaffney/government
 - ocd-jurisdiction/country:us/state:sc/place:gaston/government
 - ocd-jurisdiction/country:us/state:sc/place:georgetown/government
-- ocd-jurisdiction/country:us/state:sc/place:gifford/government
 - ocd-jurisdiction/country:us/state:sc/place:gilbert/government
 - ocd-jurisdiction/country:us/state:sc/place:goose_creek/government
 - ocd-jurisdiction/country:us/state:sc/place:gray_court/government
@@ -849,7 +847,6 @@ Generated: 2026-05-15 05:45 UTC
 - ocd-jurisdiction/country:us/state:sc/place:hemingway/government
 - ocd-jurisdiction/country:us/state:sc/place:hickory_grove/government
 - ocd-jurisdiction/country:us/state:sc/place:hilton_head_island/government
-- ocd-jurisdiction/country:us/state:sc/place:hodges/government
 - ocd-jurisdiction/country:us/state:sc/place:holly_hill/government
 - ocd-jurisdiction/country:us/state:sc/place:hollywood/government
 - ocd-jurisdiction/country:us/state:sc/place:honea_path/government
@@ -875,7 +872,6 @@ Generated: 2026-05-15 05:45 UTC
 - ocd-jurisdiction/country:us/state:sc/place:lincolnville/government
 - ocd-jurisdiction/country:us/state:sc/place:little_mountain/government
 - ocd-jurisdiction/country:us/state:sc/place:loris/government
-- ocd-jurisdiction/country:us/state:sc/place:lowndesville/government
 - ocd-jurisdiction/country:us/state:sc/place:lowrys/government
 - ocd-jurisdiction/country:us/state:sc/place:lyman/government
 - ocd-jurisdiction/country:us/state:sc/place:manning/government
@@ -891,7 +887,6 @@ Generated: 2026-05-15 05:45 UTC
 - ocd-jurisdiction/country:us/state:sc/place:monetta/government
 - ocd-jurisdiction/country:us/state:sc/place:mount_croghan/government
 - ocd-jurisdiction/country:us/state:sc/place:mount_pleasant/government
-- ocd-jurisdiction/country:us/state:sc/place:mullins/government
 - ocd-jurisdiction/country:us/state:sc/place:myrtle_beach/government
 - ocd-jurisdiction/country:us/state:sc/place:new_ellenton/government
 - ocd-jurisdiction/country:us/state:sc/place:newberry/government
@@ -902,12 +897,10 @@ Generated: 2026-05-15 05:45 UTC
 - ocd-jurisdiction/country:us/state:sc/place:north_charleston/government
 - ocd-jurisdiction/country:us/state:sc/place:north_myrtle_beach/government
 - ocd-jurisdiction/country:us/state:sc/place:norway/government
-- ocd-jurisdiction/country:us/state:sc/place:olanta/government
 - ocd-jurisdiction/country:us/state:sc/place:orangeburg/government
 - ocd-jurisdiction/country:us/state:sc/place:pacolet/government
 - ocd-jurisdiction/country:us/state:sc/place:pageland/government
 - ocd-jurisdiction/country:us/state:sc/place:pamplico/government
-- ocd-jurisdiction/country:us/state:sc/place:parksville/government
 - ocd-jurisdiction/country:us/state:sc/place:patrick/government
 - ocd-jurisdiction/country:us/state:sc/place:pawleys_island/government
 - ocd-jurisdiction/country:us/state:sc/place:pelzer/government
@@ -915,7 +908,6 @@ Generated: 2026-05-15 05:45 UTC
 - ocd-jurisdiction/country:us/state:sc/place:perry/government
 - ocd-jurisdiction/country:us/state:sc/place:pickens/government
 - ocd-jurisdiction/country:us/state:sc/place:pine_ridge/government
-- ocd-jurisdiction/country:us/state:sc/place:plum_branch/government
 - ocd-jurisdiction/country:us/state:sc/place:pomaria/government
 - ocd-jurisdiction/country:us/state:sc/place:port_royal/government
 - ocd-jurisdiction/country:us/state:sc/place:prosperity/government
@@ -943,7 +935,6 @@ Generated: 2026-05-15 05:45 UTC
 - ocd-jurisdiction/country:us/state:sc/place:springfield/government
 - ocd-jurisdiction/country:us/state:sc/place:st._george/government
 - ocd-jurisdiction/country:us/state:sc/place:st._matthews/government
-- ocd-jurisdiction/country:us/state:sc/place:starr/government
 - ocd-jurisdiction/country:us/state:sc/place:sullivan's_island/government
 - ocd-jurisdiction/country:us/state:sc/place:summerville/government
 - ocd-jurisdiction/country:us/state:sc/place:sumter/government
@@ -969,7 +960,6 @@ Generated: 2026-05-15 05:45 UTC
 - ocd-jurisdiction/country:us/state:sc/place:whitmire/government
 - ocd-jurisdiction/country:us/state:sc/place:williamston/government
 - ocd-jurisdiction/country:us/state:sc/place:williston/government
-- ocd-jurisdiction/country:us/state:sc/place:windsor/government
 - ocd-jurisdiction/country:us/state:sc/place:winnsboro/government
 - ocd-jurisdiction/country:us/state:sc/place:woodruff/government
 - ocd-jurisdiction/country:us/state:sc/place:yemassee/government
