@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-18 02:48 UTC
+Generated: 2026-05-18 02:50 UTC
 
 ## Coverage Summary
 
@@ -9,7 +9,7 @@ Generated: 2026-05-18 02:48 UTC
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 4,678 | 783 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
 | nj | 2,970 | 486 | 560 | 563 | 43 | 5 | 565 | 81% |
-| sc | 565 | 89 | 205 | 271 | 20 | 2 | 270 | 62% |
+| sc | 569 | 90 | 205 | 271 | 20 | 2 | 270 | 62% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -758,7 +758,7 @@ Generated: 2026-05-18 02:48 UTC
 ### sc
 
 <details>
-<summary>116 not yet scraped &nbsp;·&nbsp; 4 in external, not in CP &nbsp;·&nbsp; 1 in CP, not in external</summary>
+<summary>115 not yet scraped &nbsp;·&nbsp; 4 in external, not in CP &nbsp;·&nbsp; 1 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -842,7 +842,6 @@ Generated: 2026-05-18 02:48 UTC
 - ocd-jurisdiction/country:us/state:sc/place:norris/government
 - ocd-jurisdiction/country:us/state:sc/place:north_augusta/government
 - ocd-jurisdiction/country:us/state:sc/place:north_charleston/government
-- ocd-jurisdiction/country:us/state:sc/place:norway/government
 - ocd-jurisdiction/country:us/state:sc/place:pacolet/government
 - ocd-jurisdiction/country:us/state:sc/place:pageland/government
 - ocd-jurisdiction/country:us/state:sc/place:pamplico/government
