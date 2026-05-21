@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-21 18:28 UTC
+Generated: 2026-05-21 19:48 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-21 18:28 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 4,678 | 783 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
-| nj | 2,992 | 490 | 560 | 563 | 43 | 5 | 565 | 81% |
+| nj | 2,999 | 491 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -667,7 +667,7 @@ Generated: 2026-05-21 18:28 UTC
 ### nj
 
 <details>
-<summary>70 not yet scraped &nbsp;·&nbsp; 2 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
+<summary>69 not yet scraped &nbsp;·&nbsp; 2 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -732,7 +732,6 @@ Generated: 2026-05-21 18:28 UTC
 - ocd-jurisdiction/country:us/state:nj/place:perth_amboy/government
 - ocd-jurisdiction/country:us/state:nj/place:pleasantville/government
 - ocd-jurisdiction/country:us/state:nj/place:ringwood/government
-- ocd-jurisdiction/country:us/state:nj/place:shrewsbury/government
 - ocd-jurisdiction/country:us/state:nj/place:spring_lake_heights/government
 - ocd-jurisdiction/country:us/state:nj/place:stanhope/government
 - ocd-jurisdiction/country:us/state:nj/place:sussex/government
