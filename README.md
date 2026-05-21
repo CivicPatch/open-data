@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-21 19:48 UTC
+Generated: 2026-05-21 19:50 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-05-21 19:48 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 4,678 | 783 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
-| nj | 2,999 | 491 | 560 | 563 | 43 | 5 | 565 | 81% |
+| nj | 3,018 | 494 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
@@ -667,7 +667,7 @@ Generated: 2026-05-21 19:48 UTC
 ### nj
 
 <details>
-<summary>69 not yet scraped &nbsp;·&nbsp; 2 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
+<summary>66 not yet scraped &nbsp;·&nbsp; 2 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -677,7 +677,6 @@ Generated: 2026-05-21 19:48 UTC
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:teaneck/government
 - ocd-jurisdiction/country:us/state:nj/county:bergen/place:wyckoff/government
 - ocd-jurisdiction/country:us/state:nj/county:burlington/place:bass_river/government
-- ocd-jurisdiction/country:us/state:nj/county:burlington/place:north_hanover/government
 - ocd-jurisdiction/country:us/state:nj/county:camden/place:cherry_hill/government
 - ocd-jurisdiction/country:us/state:nj/county:camden/place:voorhees/government
 - ocd-jurisdiction/country:us/state:nj/county:camden/place:waterford/government
@@ -714,7 +713,6 @@ Generated: 2026-05-21 19:48 UTC
 - ocd-jurisdiction/country:us/state:nj/place:hi-nella/government
 - ocd-jurisdiction/country:us/state:nj/place:ho-ho-kus/government
 - ocd-jurisdiction/country:us/state:nj/place:kinnelon/government
-- ocd-jurisdiction/country:us/state:nj/place:laurel_springs/government
 - ocd-jurisdiction/country:us/state:nj/place:lawnside/government
 - ocd-jurisdiction/country:us/state:nj/place:lincoln_park/government
 - ocd-jurisdiction/country:us/state:nj/place:long_branch/government
@@ -724,7 +722,6 @@ Generated: 2026-05-21 19:48 UTC
 - ocd-jurisdiction/country:us/state:nj/place:national_park/government
 - ocd-jurisdiction/country:us/state:nj/place:new_milford/government
 - ocd-jurisdiction/country:us/state:nj/place:new_providence/government
-- ocd-jurisdiction/country:us/state:nj/place:north_caldwell/government
 - ocd-jurisdiction/country:us/state:nj/place:norwood/government
 - ocd-jurisdiction/country:us/state:nj/place:ocean_gate/government
 - ocd-jurisdiction/country:us/state:nj/place:palmyra/government
