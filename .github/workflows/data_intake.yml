@@ -1,6 +1,7 @@
 name: "[auto] Data Intake"
 permissions:
   contents: read
+  pull-requests: write
 env:
   PYTHONPATH: ${{ github.workspace }}
 
@@ -46,20 +47,6 @@ jobs:
       - name: Download ZIP file
         run: |
           curl -L "${{ github.event.inputs.zip_file_url }}" -o /tmp/payload.zip
-
-      - name: Generate GitHub Pipeline Token
-        id: generate-pipeline-token
-        uses: actions/create-github-app-token@v2
-        with:
-          app-id: ${{ secrets.GH_APP_BOT_PIPELINE_APP_ID }}
-          private-key: ${{ secrets.GH_APP_BOT_PIPELINE_PRIVATE_KEY }}
-
-      # Use this next step for git commits
-      - name: Get GitHub App User ID
-        id: get-user-id
-        run: echo "user-id=$(gh api "/users/${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
-        env:
-          GH_TOKEN: ${{ steps.generate-pipeline-token.outputs.token }}
 
       - name: Unzip data into root project directory
         run: |
@@ -112,10 +99,10 @@ jobs:
         id: create-pr
         env:
           USER_EMAIL: ${{ github.event.inputs.user_email }}
-          GH_TOKEN: ${{ steps.generate-pipeline-token.outputs.token }}
+          GH_TOKEN: ${{ github.token }}
         run: |
-          git config --global user.name '${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]'
-          git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]@users.noreply.github.com'
+          git config --global user.name 'civic-patch-pipeline'
+          git config --global user.email 'pipeline@civicpatch.org'
 
           git checkout -B ${{ steps.extract_branch.outputs.branch_name }}
           git add "data/${{ steps.get-jurisdiction-folder.outputs.jurisdiction-folder }}.yml"
@@ -142,8 +129,6 @@ jobs:
       head_ref: ${{ needs.data-intake.outputs.head_ref }}
       jurisdiction_ocdid: ${{ github.event.inputs.jurisdiction_ocdid }}
     secrets:
-      GH_APP_BOT_PIPELINE_APP_ID: ${{ secrets.GH_APP_BOT_PIPELINE_APP_ID }}
-      GH_APP_BOT_PIPELINE_PRIVATE_KEY: ${{ secrets.GH_APP_BOT_PIPELINE_PRIVATE_KEY }}
       GH_APP_BOT_APPROVE_APP_ID: ${{ secrets.GH_APP_BOT_APPROVE_APP_ID }}
       GH_APP_BOT_APPROVE_PRIVATE_KEY: ${{ secrets.GH_APP_BOT_APPROVE_PRIVATE_KEY }}
       SERVICE_API_KEY: ${{ secrets.SERVICE_API_KEY }}

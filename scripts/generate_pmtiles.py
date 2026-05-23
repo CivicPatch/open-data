@@ -7,6 +7,7 @@ import tempfile
 from pathlib import Path
 
 import boto3
+import requests
 import yaml
 
 from scripts.state_configs import state_configs
@@ -106,6 +107,23 @@ def _run_tippecanoe(layers: list[tuple[str, Path, int]], output_path: Path, labe
     process.wait()
     if process.returncode != 0:
         raise subprocess.CalledProcessError(process.returncode, cmd)
+
+
+def _purge_cloudflare_cache() -> None:
+    """Purge all pmtiles cache variants. No-op if env vars not set (e.g. local dev)."""
+    token = os.environ.get("CLOUDFLARE_PMTILES_BUST")
+    zone_id = os.environ.get("CLOUDFLARE_ZONE_ID")
+    if not token or not zone_id:
+        print("Skipping CF cache purge (CLOUDFLARE_PMTILES_BUST / CLOUDFLARE_ZONE_ID not set)")
+        return
+    response = requests.post(
+        f"https://api.cloudflare.com/client/v4/zones/{zone_id}/purge_cache",
+        headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"},
+        json={"hosts": ["cdn.civicpatch.org"]},
+        timeout=10,
+    )
+    response.raise_for_status()
+    print(f"CF cache purged: {response.json().get('result', {}).get('id', '?')}")
 
 
 def _upload_to_r2(local_path: Path, s3_key: str) -> str:
@@ -213,6 +231,8 @@ def main() -> None:
 
     if not args.state:
         generate_national_states(all_state_features)
+
+    _purge_cloudflare_cache()
 
 
 if __name__ == "__main__":
