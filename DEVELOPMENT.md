@@ -96,6 +96,17 @@ mise run setup-maps
 mise run generate-pmtiles
 ```
 
+### Cloudflare cache purge
+
+`generate-pmtiles` automatically purges the Cloudflare edge cache for `cdn.civicpatch.org` after upload, so the new PMTiles are visible immediately. This requires two env vars:
+
+- `CLOUDFLARE_PMTILES_BUST` — Cloudflare API token with `Zone.Cache Purge` permission, scoped to `civicpatch.org`
+- `CLOUDFLARE_ZONE_ID` — the `civicpatch.org` zone ID (Cloudflare dashboard → zone Overview → API sidebar)
+
+If either is unset (local dev), the script skips the purge with a log message and exits successfully.
+
+The purge uses `{"hosts":["cdn.civicpatch.org"]}` rather than per-file URLs because Cloudflare keys cache entries by the `Origin` request header (R2 emits `Vary: Origin`), so per-URL purges leak stale variants. Hostname purge clears all variants in one call.
+
 ---
 
 ## Task Reference

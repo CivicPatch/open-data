@@ -21,10 +21,6 @@ on:
         type: string
 
     secrets:
-      GH_APP_BOT_PIPELINE_APP_ID:
-        required: true
-      GH_APP_BOT_PIPELINE_PRIVATE_KEY:
-        required: true
       GH_APP_BOT_APPROVE_APP_ID:
         required: true
       GH_APP_BOT_APPROVE_PRIVATE_KEY:
@@ -36,27 +32,16 @@ on:
       STORAGE_SECRET_ACCESS_KEY:
         required: false
       SERVICE_API_KEY:
-        required: false 
+        required: false
 
 jobs:
   update-comments:
+    permissions:
+      contents: read
+      pull-requests: write
     runs-on: ubuntu-latest
 
     steps:
-      - name: Generate GitHub App Pipeline Token
-        id: generate-pipeline-token
-        uses: actions/create-github-app-token@v2
-        with:
-          app-id: ${{ secrets.GH_APP_BOT_PIPELINE_APP_ID }}
-          private-key: ${{ secrets.GH_APP_BOT_PIPELINE_PRIVATE_KEY }}
-
-      # Use this next step for git commits
-      - name: Get GitHub App User ID
-        id: get-user-id
-        run: echo "user-id=$(gh api "/users/${{ steps.generate-pipeline-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
-        env:
-          GH_TOKEN: ${{ steps.generate-pipeline-token.outputs.token }}
-
       - name: Generate GitHub App Approve Token
         id: generate-approve-token
         uses: actions/create-github-app-token@v2
@@ -68,7 +53,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ inputs.head_ref }} # Checkout the branch
-          token: ${{ steps.generate-pipeline-token.outputs.token }}
+          token: ${{ github.token }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -89,7 +74,7 @@ jobs:
       - name: Create/Update Data Comment
         env:
           GITHUB_USERNAME: civic-patch-pipeline-bot
-          GITHUB_TOKEN: ${{ steps.generate-pipeline-token.outputs.token }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           PR_NUMBER=${{ inputs.pr_number }}
 
