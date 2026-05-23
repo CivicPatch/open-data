@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-22 18:15 UTC
+Generated: 2026-05-23 17:21 UTC
 
 ## Coverage Summary
 
@@ -10,6 +10,7 @@ Generated: 2026-05-22 18:15 UTC
 | mi | 4,678 | 783 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
+| tn | 8 | 1 | 234 | 344 | 54 | 5 | 344 | — |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -875,6 +876,260 @@ Generated: 2026-05-22 18:15 UTC
 | ocd-jurisdiction/country:us/state:sc/place:st_matthews/government |  |
 | ocd-jurisdiction/country:us/state:sc/place:st_stephen/government |  |
 | ocd-jurisdiction/country:us/state:sc/place:sullivan~s_island/government |  |
+
+</details>
+
+### tn
+
+<details>
+<summary>233 not yet scraped &nbsp;·&nbsp; 6 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
+
+#### Not yet scraped
+
+- ocd-jurisdiction/country:us/state:tn/place:adams/government
+- ocd-jurisdiction/country:us/state:tn/place:adamsville/government
+- ocd-jurisdiction/country:us/state:tn/place:alamo/government
+- ocd-jurisdiction/country:us/state:tn/place:alcoa/government
+- ocd-jurisdiction/country:us/state:tn/place:alexandria/government
+- ocd-jurisdiction/country:us/state:tn/place:algood/government
+- ocd-jurisdiction/country:us/state:tn/place:ardmore/government
+- ocd-jurisdiction/country:us/state:tn/place:arlington/government
+- ocd-jurisdiction/country:us/state:tn/place:ashland_city/government
+- ocd-jurisdiction/country:us/state:tn/place:athens/government
+- ocd-jurisdiction/country:us/state:tn/place:atoka/government
+- ocd-jurisdiction/country:us/state:tn/place:baneberry/government
+- ocd-jurisdiction/country:us/state:tn/place:bartlett/government
+- ocd-jurisdiction/country:us/state:tn/place:baxter/government
+- ocd-jurisdiction/country:us/state:tn/place:bell_buckle/government
+- ocd-jurisdiction/country:us/state:tn/place:belle_meade/government
+- ocd-jurisdiction/country:us/state:tn/place:bells/government
+- ocd-jurisdiction/country:us/state:tn/place:berry_hill/government
+- ocd-jurisdiction/country:us/state:tn/place:big_sandy/government
+- ocd-jurisdiction/country:us/state:tn/place:blaine/government
+- ocd-jurisdiction/country:us/state:tn/place:bluff_city/government
+- ocd-jurisdiction/country:us/state:tn/place:bolivar/government
+- ocd-jurisdiction/country:us/state:tn/place:brentwood/government
+- ocd-jurisdiction/country:us/state:tn/place:brighton/government
+- ocd-jurisdiction/country:us/state:tn/place:bristol/government
+- ocd-jurisdiction/country:us/state:tn/place:brownsville/government
+- ocd-jurisdiction/country:us/state:tn/place:burns/government
+- ocd-jurisdiction/country:us/state:tn/place:byrdstown/government
+- ocd-jurisdiction/country:us/state:tn/place:camden/government
+- ocd-jurisdiction/country:us/state:tn/place:carthage/government
+- ocd-jurisdiction/country:us/state:tn/place:caryville/government
+- ocd-jurisdiction/country:us/state:tn/place:celina/government
+- ocd-jurisdiction/country:us/state:tn/place:centerville/government
+- ocd-jurisdiction/country:us/state:tn/place:chapel_hill/government
+- ocd-jurisdiction/country:us/state:tn/place:chattanooga/government
+- ocd-jurisdiction/country:us/state:tn/place:church_hill/government
+- ocd-jurisdiction/country:us/state:tn/place:clarksburg/government
+- ocd-jurisdiction/country:us/state:tn/place:clarksville/government
+- ocd-jurisdiction/country:us/state:tn/place:clifton/government
+- ocd-jurisdiction/country:us/state:tn/place:clinton/government
+- ocd-jurisdiction/country:us/state:tn/place:collegedale/government
+- ocd-jurisdiction/country:us/state:tn/place:collierville/government
+- ocd-jurisdiction/country:us/state:tn/place:collinwood/government
+- ocd-jurisdiction/country:us/state:tn/place:columbia/government
+- ocd-jurisdiction/country:us/state:tn/place:cookeville/government
+- ocd-jurisdiction/country:us/state:tn/place:coopertown/government
+- ocd-jurisdiction/country:us/state:tn/place:cornersville/government
+- ocd-jurisdiction/country:us/state:tn/place:covington/government
+- ocd-jurisdiction/country:us/state:tn/place:cowan/government
+- ocd-jurisdiction/country:us/state:tn/place:crossville/government
+- ocd-jurisdiction/country:us/state:tn/place:cumberland_gap/government
+- ocd-jurisdiction/country:us/state:tn/place:dandridge/government
+- ocd-jurisdiction/country:us/state:tn/place:dayton/government
+- ocd-jurisdiction/country:us/state:tn/place:decatur/government
+- ocd-jurisdiction/country:us/state:tn/place:decherd/government
+- ocd-jurisdiction/country:us/state:tn/place:dickson/government
+- ocd-jurisdiction/country:us/state:tn/place:dover/government
+- ocd-jurisdiction/country:us/state:tn/place:dresden/government
+- ocd-jurisdiction/country:us/state:tn/place:ducktown/government
+- ocd-jurisdiction/country:us/state:tn/place:dunlap/government
+- ocd-jurisdiction/country:us/state:tn/place:dyer/government
+- ocd-jurisdiction/country:us/state:tn/place:dyersburg/government
+- ocd-jurisdiction/country:us/state:tn/place:eagleville/government
+- ocd-jurisdiction/country:us/state:tn/place:east_ridge/government
+- ocd-jurisdiction/country:us/state:tn/place:elizabethton/government
+- ocd-jurisdiction/country:us/state:tn/place:elkton/government
+- ocd-jurisdiction/country:us/state:tn/place:englewood/government
+- ocd-jurisdiction/country:us/state:tn/place:erin/government
+- ocd-jurisdiction/country:us/state:tn/place:erwin/government
+- ocd-jurisdiction/country:us/state:tn/place:estill_springs/government
+- ocd-jurisdiction/country:us/state:tn/place:etowah/government
+- ocd-jurisdiction/country:us/state:tn/place:fairview/government
+- ocd-jurisdiction/country:us/state:tn/place:farragut/government
+- ocd-jurisdiction/country:us/state:tn/place:fayetteville/government
+- ocd-jurisdiction/country:us/state:tn/place:forest_hills/government
+- ocd-jurisdiction/country:us/state:tn/place:franklin/government
+- ocd-jurisdiction/country:us/state:tn/place:gallatin/government
+- ocd-jurisdiction/country:us/state:tn/place:gallaway/government
+- ocd-jurisdiction/country:us/state:tn/place:gatlinburg/government
+- ocd-jurisdiction/country:us/state:tn/place:germantown/government
+- ocd-jurisdiction/country:us/state:tn/place:gleason/government
+- ocd-jurisdiction/country:us/state:tn/place:goodlettsville/government
+- ocd-jurisdiction/country:us/state:tn/place:gordonsville/government
+- ocd-jurisdiction/country:us/state:tn/place:grand_junction/government
+- ocd-jurisdiction/country:us/state:tn/place:graysville/government
+- ocd-jurisdiction/country:us/state:tn/place:greenback/government
+- ocd-jurisdiction/country:us/state:tn/place:greenbrier/government
+- ocd-jurisdiction/country:us/state:tn/place:greeneville/government
+- ocd-jurisdiction/country:us/state:tn/place:greenfield/government
+- ocd-jurisdiction/country:us/state:tn/place:halls/government
+- ocd-jurisdiction/country:us/state:tn/place:harriman/government
+- ocd-jurisdiction/country:us/state:tn/place:henderson/government
+- ocd-jurisdiction/country:us/state:tn/place:hendersonville/government
+- ocd-jurisdiction/country:us/state:tn/place:hohenwald/government
+- ocd-jurisdiction/country:us/state:tn/place:hollow_rock/government
+- ocd-jurisdiction/country:us/state:tn/place:humboldt/government
+- ocd-jurisdiction/country:us/state:tn/place:huntingdon/government
+- ocd-jurisdiction/country:us/state:tn/place:huntland/government
+- ocd-jurisdiction/country:us/state:tn/place:huntsville/government
+- ocd-jurisdiction/country:us/state:tn/place:jacksboro/government
+- ocd-jurisdiction/country:us/state:tn/place:jackson/government
+- ocd-jurisdiction/country:us/state:tn/place:jamestown/government
+- ocd-jurisdiction/country:us/state:tn/place:jasper/government
+- ocd-jurisdiction/country:us/state:tn/place:jefferson_city/government
+- ocd-jurisdiction/country:us/state:tn/place:jellico/government
+- ocd-jurisdiction/country:us/state:tn/place:johnson_city/government
+- ocd-jurisdiction/country:us/state:tn/place:jonesborough/government
+- ocd-jurisdiction/country:us/state:tn/place:kimball/government
+- ocd-jurisdiction/country:us/state:tn/place:kingsport/government
+- ocd-jurisdiction/country:us/state:tn/place:kingston/government
+- ocd-jurisdiction/country:us/state:tn/place:kingston_springs/government
+- ocd-jurisdiction/country:us/state:tn/place:knoxville/government
+- ocd-jurisdiction/country:us/state:tn/place:la_follette/government
+- ocd-jurisdiction/country:us/state:tn/place:la_grange/government
+- ocd-jurisdiction/country:us/state:tn/place:la_vergne/government
+- ocd-jurisdiction/country:us/state:tn/place:lafayette/government
+- ocd-jurisdiction/country:us/state:tn/place:lakeland/government
+- ocd-jurisdiction/country:us/state:tn/place:lakesite/government
+- ocd-jurisdiction/country:us/state:tn/place:lawrenceburg/government
+- ocd-jurisdiction/country:us/state:tn/place:lebanon/government
+- ocd-jurisdiction/country:us/state:tn/place:lenoir_city/government
+- ocd-jurisdiction/country:us/state:tn/place:lewisburg/government
+- ocd-jurisdiction/country:us/state:tn/place:lexington/government
+- ocd-jurisdiction/country:us/state:tn/place:linden/government
+- ocd-jurisdiction/country:us/state:tn/place:livingston/government
+- ocd-jurisdiction/country:us/state:tn/place:lobelville/government
+- ocd-jurisdiction/country:us/state:tn/place:lookout_mountain/government
+- ocd-jurisdiction/country:us/state:tn/place:loretto/government
+- ocd-jurisdiction/country:us/state:tn/place:loudon/government
+- ocd-jurisdiction/country:us/state:tn/place:louisville/government
+- ocd-jurisdiction/country:us/state:tn/place:madisonville/government
+- ocd-jurisdiction/country:us/state:tn/place:manchester/government
+- ocd-jurisdiction/country:us/state:tn/place:martin/government
+- ocd-jurisdiction/country:us/state:tn/place:maryville/government
+- ocd-jurisdiction/country:us/state:tn/place:maynardville/government
+- ocd-jurisdiction/country:us/state:tn/place:mckenzie/government
+- ocd-jurisdiction/country:us/state:tn/place:mclemoresville/government
+- ocd-jurisdiction/country:us/state:tn/place:mcminnville/government
+- ocd-jurisdiction/country:us/state:tn/place:medina/government
+- ocd-jurisdiction/country:us/state:tn/place:memphis/government
+- ocd-jurisdiction/country:us/state:tn/place:middleton/government
+- ocd-jurisdiction/country:us/state:tn/place:milan/government
+- ocd-jurisdiction/country:us/state:tn/place:millersville/government
+- ocd-jurisdiction/country:us/state:tn/place:millington/government
+- ocd-jurisdiction/country:us/state:tn/place:monteagle/government
+- ocd-jurisdiction/country:us/state:tn/place:monterey/government
+- ocd-jurisdiction/country:us/state:tn/place:morristown/government
+- ocd-jurisdiction/country:us/state:tn/place:moscow/government
+- ocd-jurisdiction/country:us/state:tn/place:mosheim/government
+- ocd-jurisdiction/country:us/state:tn/place:mount_carmel/government
+- ocd-jurisdiction/country:us/state:tn/place:mount_juliet/government
+- ocd-jurisdiction/country:us/state:tn/place:mount_pleasant/government
+- ocd-jurisdiction/country:us/state:tn/place:mountain_city/government
+- ocd-jurisdiction/country:us/state:tn/place:munford/government
+- ocd-jurisdiction/country:us/state:tn/place:murfreesboro/government
+- ocd-jurisdiction/country:us/state:tn/place:new_johnsonville/government
+- ocd-jurisdiction/country:us/state:tn/place:new_tazewell/government
+- ocd-jurisdiction/country:us/state:tn/place:newbern/government
+- ocd-jurisdiction/country:us/state:tn/place:newport/government
+- ocd-jurisdiction/country:us/state:tn/place:niota/government
+- ocd-jurisdiction/country:us/state:tn/place:nolensville/government
+- ocd-jurisdiction/country:us/state:tn/place:norris/government
+- ocd-jurisdiction/country:us/state:tn/place:oak_hill/government
+- ocd-jurisdiction/country:us/state:tn/place:oak_ridge/government
+- ocd-jurisdiction/country:us/state:tn/place:oakland/government
+- ocd-jurisdiction/country:us/state:tn/place:oliver_springs/government
+- ocd-jurisdiction/country:us/state:tn/place:oneida/government
+- ocd-jurisdiction/country:us/state:tn/place:paris/government
+- ocd-jurisdiction/country:us/state:tn/place:parker's_crossroads/government
+- ocd-jurisdiction/country:us/state:tn/place:parrottsville/government
+- ocd-jurisdiction/country:us/state:tn/place:parsons/government
+- ocd-jurisdiction/country:us/state:tn/place:pegram/government
+- ocd-jurisdiction/country:us/state:tn/place:pigeon_forge/government
+- ocd-jurisdiction/country:us/state:tn/place:pikeville/government
+- ocd-jurisdiction/country:us/state:tn/place:piperton/government
+- ocd-jurisdiction/country:us/state:tn/place:pittman_center/government
+- ocd-jurisdiction/country:us/state:tn/place:pleasant_view/government
+- ocd-jurisdiction/country:us/state:tn/place:portland/government
+- ocd-jurisdiction/country:us/state:tn/place:pulaski/government
+- ocd-jurisdiction/country:us/state:tn/place:red_bank/government
+- ocd-jurisdiction/country:us/state:tn/place:red_boiling_springs/government
+- ocd-jurisdiction/country:us/state:tn/place:ridgeside/government
+- ocd-jurisdiction/country:us/state:tn/place:ridgetop/government
+- ocd-jurisdiction/country:us/state:tn/place:ripley/government
+- ocd-jurisdiction/country:us/state:tn/place:rockford/government
+- ocd-jurisdiction/country:us/state:tn/place:rockwood/government
+- ocd-jurisdiction/country:us/state:tn/place:rogersville/government
+- ocd-jurisdiction/country:us/state:tn/place:rossville/government
+- ocd-jurisdiction/country:us/state:tn/place:savannah/government
+- ocd-jurisdiction/country:us/state:tn/place:scotts_hill/government
+- ocd-jurisdiction/country:us/state:tn/place:selmer/government
+- ocd-jurisdiction/country:us/state:tn/place:sevierville/government
+- ocd-jurisdiction/country:us/state:tn/place:shelbyville/government
+- ocd-jurisdiction/country:us/state:tn/place:signal_mountain/government
+- ocd-jurisdiction/country:us/state:tn/place:smithville/government
+- ocd-jurisdiction/country:us/state:tn/place:smyrna/government
+- ocd-jurisdiction/country:us/state:tn/place:sneedville/government
+- ocd-jurisdiction/country:us/state:tn/place:soddy-daisy/government
+- ocd-jurisdiction/country:us/state:tn/place:somerville/government
+- ocd-jurisdiction/country:us/state:tn/place:south_pittsburg/government
+- ocd-jurisdiction/country:us/state:tn/place:sparta/government
+- ocd-jurisdiction/country:us/state:tn/place:spring_city/government
+- ocd-jurisdiction/country:us/state:tn/place:spring_hill/government
+- ocd-jurisdiction/country:us/state:tn/place:springfield/government
+- ocd-jurisdiction/country:us/state:tn/place:stanton/government
+- ocd-jurisdiction/country:us/state:tn/place:sweetwater/government
+- ocd-jurisdiction/country:us/state:tn/place:tellico_plains/government
+- ocd-jurisdiction/country:us/state:tn/place:tennessee_ridge/government
+- ocd-jurisdiction/country:us/state:tn/place:thompson's_station/government
+- ocd-jurisdiction/country:us/state:tn/place:three_way/government
+- ocd-jurisdiction/country:us/state:tn/place:tiptonville/government
+- ocd-jurisdiction/country:us/state:tn/place:townsend/government
+- ocd-jurisdiction/country:us/state:tn/place:trenton/government
+- ocd-jurisdiction/country:us/state:tn/place:trezevant/government
+- ocd-jurisdiction/country:us/state:tn/place:trimble/government
+- ocd-jurisdiction/country:us/state:tn/place:troy/government
+- ocd-jurisdiction/country:us/state:tn/place:tullahoma/government
+- ocd-jurisdiction/country:us/state:tn/place:tusculum/government
+- ocd-jurisdiction/country:us/state:tn/place:unicoi/government
+- ocd-jurisdiction/country:us/state:tn/place:union_city/government
+- ocd-jurisdiction/country:us/state:tn/place:vonore/government
+- ocd-jurisdiction/country:us/state:tn/place:walden/government
+- ocd-jurisdiction/country:us/state:tn/place:watertown/government
+- ocd-jurisdiction/country:us/state:tn/place:waverly/government
+- ocd-jurisdiction/country:us/state:tn/place:waynesboro/government
+- ocd-jurisdiction/country:us/state:tn/place:westmoreland/government
+- ocd-jurisdiction/country:us/state:tn/place:white_bluff/government
+- ocd-jurisdiction/country:us/state:tn/place:white_house/government
+- ocd-jurisdiction/country:us/state:tn/place:white_pine/government
+- ocd-jurisdiction/country:us/state:tn/place:whiteville/government
+- ocd-jurisdiction/country:us/state:tn/place:whitwell/government
+- ocd-jurisdiction/country:us/state:tn/place:winchester/government
+- ocd-jurisdiction/country:us/state:tn/place:woodbury/government
+
+#### Locality Gaps
+
+| In External, Not in Known | In CivicPatch, Not in External |
+|---------------------------|--------------------------------|
+| ocd-jurisdiction/country:us/state:tn/place:hartsville/government |  |
+| ocd-jurisdiction/country:us/state:tn/place:lake_city/government |  |
+| ocd-jurisdiction/country:us/state:tn/place:nashville/government |  |
+| ocd-jurisdiction/country:us/state:tn/place:parker~s_crossroads/government |  |
+| ocd-jurisdiction/country:us/state:tn/place:st_joseph/government |  |
+| ocd-jurisdiction/country:us/state:tn/place:thompson~s_station/government |  |
 
 </details>
 
