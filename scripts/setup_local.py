@@ -35,6 +35,16 @@ _ACS_URL = "https://api.census.gov/data/2024/acs/acs5"
 _GAZ_URL = "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer"
 
 
+def _acs_url(query: str) -> str:
+    key = os.environ.get("CENSUS_API_KEY")
+    if not key:
+        sys.exit(
+            "CENSUS_API_KEY env var is required. "
+            "Sign up: https://api.census.gov/data/key_signup.html — add to .env"
+        )
+    return f"{_ACS_URL}?{query}&key={key}"
+
+
 @dataclass(frozen=True)
 class _CensusSource:
     census_type: str
@@ -229,7 +239,7 @@ def _fetch_census_jurisdictions(
     state: str, fips: str, source: _CensusSource
 ) -> Tuple[List[Jurisdiction], List[str]]:
     warnings: List[str] = []
-    api_url = f"{_ACS_URL}?get=NAME,B01003_001E&for={source.api_for}&in=state:{fips}"
+    api_url = _acs_url(f"get=NAME,B01003_001E&for={source.api_for}&in=state:{fips}")
     gaz_url = f"{_GAZ_URL}/{source.gaz_filename.format(fips=fips)}"
 
     api_response = requests.get(api_url)

@@ -12,6 +12,8 @@ Usage:
 import sys
 
 from scripts.generate_pmtiles import generate_state_bundle
+from scripts.maps.county import build_county_map_for_state
+from scripts.maps.state import build_state_map_for_state
 from scripts.setup_counties import pull_county_jurisdiction_data
 from scripts.setup_local import (
     create_or_update_jurisdiction_metadata,
@@ -30,12 +32,15 @@ def setup_state(state: str) -> None:
         sys.exit(1)
 
     print(f"\n=== Setting up {state} ===\n")
+    fips = state_configs[state]["fips"]
 
     print("[1/5] State boundary + jurisdiction data...")
     pull_state_jurisdiction_data(state)
+    build_state_map_for_state(state, fips)
 
     print("[2/5] County boundaries + jurisdiction data...")
     pull_county_jurisdiction_data(state)
+    build_county_map_for_state(state, fips)
 
     print("[3/5] Local jurisdiction data (Census + scraper + validation)...")
     preflight_check(state)
