@@ -1,3 +1,4 @@
+import os
 import sys
 from pathlib import Path
 
@@ -12,6 +13,16 @@ PROJECT_ROOT = Path(__file__).parent.parent
 _ACS_URL = "https://api.census.gov/data/2024/acs/acs5"
 
 
+def _acs_url(query: str) -> str:
+    key = os.environ.get("CENSUS_API_KEY")
+    if not key:
+        sys.exit(
+            "CENSUS_API_KEY env var is required. "
+            "Sign up: https://api.census.gov/data/key_signup.html — add to .env"
+        )
+    return f"{_ACS_URL}?{query}&key={key}"
+
+
 def pull_state_jurisdiction_data(state: str):
     """Fetch state jurisdiction from Census ACS and write to data_source/{state}/state/jurisdictions.yml."""
     state_config = state_configs.get(state.lower())
@@ -22,7 +33,7 @@ def pull_state_jurisdiction_data(state: str):
 
     doc, existing_by_id = _load_existing_jurisdictions(output_path)
 
-    api_url = f"{_ACS_URL}?get=NAME,B01003_001E&for=state:{fips}"
+    api_url = _acs_url(f"get=NAME,B01003_001E&for=state:{fips}")
     response = requests.get(api_url)
     if response.status_code != 200:
         print(f"Census state API request failed for {state}: {response.status_code}")
