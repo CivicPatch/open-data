@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-23 17:42 UTC
+Generated: 2026-05-26 16:36 UTC
 
 ## Coverage Summary
 
@@ -10,7 +10,7 @@ Generated: 2026-05-23 17:42 UTC
 | mi | 4,678 | 783 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
-| tn | 140 | 18 | 234 | 344 | 54 | 5 | 344 | 81% |
+| tn | 146 | 19 | 234 | 344 | 54 | 5 | 344 | 81% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -882,7 +882,7 @@ Generated: 2026-05-23 17:42 UTC
 ### tn
 
 <details>
-<summary>216 not yet scraped &nbsp;·&nbsp; 6 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
+<summary>215 not yet scraped &nbsp;·&nbsp; 6 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1074,7 +1074,6 @@ Generated: 2026-05-23 17:42 UTC
 - ocd-jurisdiction/country:us/state:tn/place:spring_city/government
 - ocd-jurisdiction/country:us/state:tn/place:springfield/government
 - ocd-jurisdiction/country:us/state:tn/place:stanton/government
-- ocd-jurisdiction/country:us/state:tn/place:sweetwater/government
 - ocd-jurisdiction/country:us/state:tn/place:tellico_plains/government
 - ocd-jurisdiction/country:us/state:tn/place:tennessee_ridge/government
 - ocd-jurisdiction/country:us/state:tn/place:thompson's_station/government
