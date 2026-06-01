@@ -35,7 +35,7 @@ def get_entries(
     entry_column: int,
     state: Optional[str] = None,
     limit: Optional[int] = None,
-) -> Tuple[Dict[str, Any], List[str]]:
+) -> Tuple[Dict[str, Any], Dict[str, str], List[str]]:
     cache = _load_cache(state) if state else {}
 
     parse_url = get_parse_url(title)
@@ -201,6 +201,79 @@ def find_candidates(name: str, table_name_to_wiki_url: Dict[str, str]) -> List[s
         wiki_url for table_name, wiki_url in table_name_to_wiki_url.items()
         if base_name in table_name.lower()
     ]
+
+
+def match_jurisdictions(
+    census_data, entries: Dict[str, Any], table_names: Dict[str, str]
+) -> Tuple[Dict[str, Any], List[str]]:
+    """Attach Wikipedia data (url, wiki_url) to each census jurisdiction by GEOID.
+
+    Matching is tried in two steps:
+      1. Direct GEOID match against the wiki entries.
+      2. Fallback: same state prefix (first 2 digits) and same place suffix (last 5
+         digits). This bridges GEOID representation mismatches — e.g. a place GEOID
+         vs. a county-subdivision GEOID for the same municipality in MCD/town states.
+         For places-only states the fallback reduces to an exact match, so it is a
+         safe no-op there.
+
+    Unmatched jurisdictions get a `no_wiki_match` issue (plus any name-based wiki URL
+    candidates); suffix-fallback matches get a `geoid_mismatch` issue. Mutates and
+    returns `census_data` along with root-level warnings.
+    """
+    root_warnings: List[str] = []
+    matched_geoids = set()
+
+    for jurisdiction_ocdid, jurisdiction in census_data.items():
+        geoid = jurisdiction.geoid
+        existing_issues = list(jurisdiction.issues or [])
+
+        if geoid in entries:
+            match_key = geoid
+        else:
+            state_prefix = geoid[:2]
+            place_suffix = geoid[-5:]
+            match_key = next(
+                (
+                    k for k in entries
+                    # Full GEOID with state prefix (place or county-subdivision form).
+                    if (k.startswith(state_prefix) and k.endswith(place_suffix))
+                    # …or a bare 5-digit place FIPS written without the state prefix
+                    # (some infoboxes do this, e.g. Keene NH lists "39300" for 3339300).
+                    # Restricted to a 7-digit census *place* geoid (2 state + 5 place) so a
+                    # county-subdivision's last-5 can't grab an unrelated bare place code.
+                    or (len(geoid) == 7 and k == place_suffix)
+                ),
+                None,
+            )
+
+        if match_key is None:
+            candidates = find_candidates(jurisdiction.name, table_names)
+            if candidates:
+                jurisdiction.generated_comments = "Wiki URL candidates: " + ", ".join(candidates)
+            if "no_wiki_match" not in existing_issues:
+                existing_issues.append("no_wiki_match")
+            jurisdiction.issues = existing_issues or None
+            census_data[jurisdiction_ocdid] = jurisdiction
+            continue
+
+        municipality = entries[match_key]
+        matched_geoids.add(match_key)
+        existing_issues = [i for i in existing_issues if i != "no_wiki_match"]
+        if match_key != geoid:
+            if "geoid_mismatch" not in existing_issues:
+                existing_issues.append("geoid_mismatch")
+            jurisdiction.generated_comments = (
+                f"Matched via GEOID suffix fallback: census GEOID {geoid} → "
+                f"wiki GEOID {match_key} ({municipality.get('wiki_url', '?')})"
+            )
+
+        jurisdiction.url = municipality.get("url", None)
+        jurisdiction.wiki_url = municipality.get("wiki_url", None)
+        jurisdiction.issues = existing_issues or None
+        census_data[jurisdiction_ocdid] = jurisdiction
+
+    root_warnings += warn_unmatched_wiki_entries(entries, matched_geoids)
+    return census_data, root_warnings
 
 
 def warn_unmatched_wiki_entries(entries: Dict[str, Any], matched_geoids: set) -> List[str]:

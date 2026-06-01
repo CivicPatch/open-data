@@ -12,7 +12,7 @@ Example:
 import json
 import sys
 import re
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 
 import yaml
@@ -154,7 +154,7 @@ def load_jurisdictions(path: str) -> dict:
 
 # ── Core ──────────────────────────────────────────────────────────────────────
 
-def build_locality_entry(cp_records: list, ext_records: list, jurisdiction: str) -> dict:
+def build_locality_entry(cp_records: list, ext_records: list, jurisdiction: str, updated_at: str = None) -> dict:
     ext_by_name = {
         normalize_name(r["name"]): r
         for r in ext_records
@@ -223,7 +223,9 @@ def build_locality_entry(cp_records: list, ext_records: list, jurisdiction: str)
             "email":    sum(1 for r in records if "email"    in r["field_diffs"]),
         },
         "status":     status,
-        "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S+00:00"),
+        # Stable, data-derived timestamp from jurisdictions_metadata.yml — None until the
+        # jurisdiction has been scraped. Not wall-clock, so re-runs don't churn the output.
+        "updated_at": updated_at,
         "records":    records,
     }
 
@@ -253,6 +255,26 @@ def load_coverage_since_reference(state: str) -> int:
         if updated_at and datetime.fromisoformat(updated_at) > ref_date:
             count += 1
     return count
+
+
+def load_updated_at_by_id(state: str) -> dict:
+    """Map {jurisdiction_ocdid: updated_at} from jurisdictions_metadata.yml.
+
+    These are the stable, pipeline-set per-jurisdiction timestamps. Using them
+    (rather than wall-clock now()) keeps the output deterministic, so re-running
+    compare for an unchanged state doesn't churn the file.
+    """
+    meta_path = f"data_source/{state}/local/jurisdictions_metadata.yml"
+    try:
+        with open(meta_path) as f:
+            meta = yaml.safe_load(f)
+    except FileNotFoundError:
+        return {}
+    return {
+        jid: j.get("updated_at")
+        for jid, j in meta.get("jurisdictions_by_id", {}).items()
+    }
+
 
 def run(
     local_dir:          str,
@@ -308,12 +330,16 @@ def run(
     in_civicpatch_not_external = sorted(cp_jurisdiction_ids - ext_known_jurisdiction_ids)
 
     # ── Build per-locality entries ────────────────────────────────────────────
+    updated_at_by_id  = load_updated_at_by_id(state.lower())
     all_jurisdictions = cp_jurisdiction_ids | set(ext_by_jurisdiction.keys())
     localities = []
     for jurisdiction in sorted(all_jurisdictions):
         cp_records        = cp_by_jurisdiction.get(jurisdiction, [])
         ext_records_local = ext_by_jurisdiction.get(jurisdiction, [])
-        entry             = build_locality_entry(cp_records, ext_records_local, jurisdiction)
+        entry             = build_locality_entry(
+            cp_records, ext_records_local, jurisdiction,
+            updated_at=updated_at_by_id.get(jurisdiction),
+        )
         localities.append(entry)
         print(f"  {entry['place']:<30} {entry['status']:<10} names={entry['name_match_pct']:.0%}")
 
@@ -326,9 +352,13 @@ def run(
     # ── Add coverage_since_coverage_reference_date ─────────────────────────────
     coverage_since_ref = load_coverage_since_reference(state.lower())
 
+    # Most recent per-jurisdiction timestamp from the metadata; deterministic across
+    # re-runs (None if no jurisdiction has been scraped yet).
+    generated_at = max((l["updated_at"] for l in localities if l["updated_at"]), default=None)
+
     summary = {
         "state":        state.lower(),
-        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S+00:00"),
+        "generated_at": generated_at,
 
         "civicpatch": {
             "officials":  sum(l["civicpatch_count"] for l in localities),
@@ -364,8 +394,16 @@ def run(
         },
     }
 
-    with open(out_path, "w") as f:
-        json.dump({"summary": summary, "localities": localities}, f, indent=2)
+    new_doc = {"summary": summary, "localities": localities}
+
+    # Only rewrite when something other than `generated_at` changed. The full sweep
+    # re-runs run_state for every state (e.g. during another state's setup), so a
+    # fresh timestamp alone would churn unrelated states' output files in git.
+    if _changed_ignoring_timestamp(out_path, new_doc):
+        with open(out_path, "w") as f:
+            json.dump(new_doc, f, indent=2)
+    else:
+        print(f"  (unchanged — preserving existing generated_at in {out_path})")
 
     coverage  = summary["civicpatch"]["localities"]["coverage"]
     known     = summary["civicpatch"]["localities"]["known"]
@@ -378,6 +416,21 @@ def run(
 
 
 # ── Paths + entry points ──────────────────────────────────────────────────────
+
+def _changed_ignoring_timestamp(out_path: str, new_doc: dict) -> bool:
+    """True if out_path is missing or differs from new_doc in anything but summary.generated_at."""
+    try:
+        with open(out_path) as f:
+            old_doc = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return True
+
+    def _without_ts(doc):
+        summary = {k: v for k, v in doc.get("summary", {}).items() if k != "generated_at"}
+        return {"summary": summary, "localities": doc.get("localities")}
+
+    return _without_ts(old_doc) != _without_ts(new_doc)
+
 
 def paths_for_state(state: str):
     s = state.lower()

@@ -16,9 +16,9 @@ echo 'CENSUS_API_KEY=your-40-char-key-here' >> .env
 
 ## Adding a New State
 
-### Prerequisites (manual, per-state)
+Run these steps in order. Steps 1–3 are manual, per-state prep; 4 is an optional smoke test; 5 is the full run; 6–7 finish up. The example uses `va` (Virginia, FIPS 51).
 
-1. Add to `scripts/state_configs.py`:
+1. **Register the state** in `scripts/state_configs.py`:
    ```python
    "va": {
        "fips": "51",
@@ -27,48 +27,45 @@ echo 'CENSUS_API_KEY=your-40-char-key-here' >> .env
        "validation_sources": ["google"],
    }
    ```
-2. Write a scraper in `scripts/scrapers/va.py`
-3. Fetch Google Civic data for the state (the preflight check will tell you exactly what's missing)
 
-### Dry run (recommended before full setup)
+2. **Write a scraper** in `scripts/scrapers/va.py`.
 
-Smoke-test the scraper against a handful of jurisdictions first. Catches wrong `rows_to_skip`, broken infobox parsing, and other scraper bugs without waiting for hundreds of Wikipedia fetches.
+3. **Fetch Google Civic data** for the state from the team Drive folder:
+   **https://drive.google.com/drive/u/0/folders/1A3qFX-UELHoNp27QyBt2edWQOkHPDbjY**
+   Save it as `scripts/track_progress/google_data/{state}_all_raw.json` (e.g. `va_all_raw.json`).
+   The preflight check in step 5 prints this same link and the exact path it expects if the file is missing.
 
-`setup_local.py` needs `counties.geojson` to exist (it computes `county_ocdids` against county boundaries), so generate state + county data first:
+4. **Dry-run the scraper** (recommended). Smoke-tests against a handful of jurisdictions to catch a wrong `rows_to_skip`, broken infobox parsing, or other scraper bugs — without waiting for hundreds of Wikipedia fetches. `setup_local.py` needs `counties.geojson` to exist (it computes `county_ocdids` against county boundaries), so generate state + county data first:
+   ```bash
+   # a. State + county boundaries (no scraper involved; safe to run as-is)
+   uv run python scripts/setup_states.py va
+   uv run python scripts/setup_counties.py va
 
-```bash
-# 1. State + county boundaries (no scraper involved; safe to run as-is)
-uv run python scripts/setup_states.py va
-uv run python scripts/setup_counties.py va
+   # b. Dry-run the scraper against just a few jurisdictions
+   uv run python scripts/setup_local.py va --limit 10
+   ```
+   `--limit` caps the number of Wikipedia infobox fetches (Census ACS still pulls every jurisdiction). After the run, inspect `data_source/va/local/jurisdictions.yml` and skim the warnings — if more than a few entries log `no_wiki_match`, the scraper's `table_index` / `rows_to_skip` / `entry_column` are probably off. Cached infobox results live in `scripts/scrapers/cache/va_wikipedia.json` so reruns are cheap.
 
-# 2. Dry-run the scraper against just a few jurisdictions
-uv run python scripts/setup_local.py va --limit 10
-```
+5. **Run the full setup:**
+   ```bash
+   mise run setup-state -- --state va
+   ```
+   This runs, in order:
+   - State boundary + jurisdiction data (Census TIGER + state YAML)
+   - County boundaries + jurisdiction data (Census TIGER + county YAML)
+   - Local jurisdiction data (Census ACS + scraper + validation sources)
+   - Uploads GeoJSONs to R2 (also computes `county_ocdids` per locality)
+   - Generates the per-state PMTile and uploads it to R2
 
-`--limit` caps the number of Wikipedia infobox fetches (Census ACS still pulls every jurisdiction). After the run, inspect `data/va/local/` and skim the warnings — if more than a few entries log `no_wiki_match`, the scraper's `table_index` / `rows_to_skip` / `entry_column` are probably off. Cached infobox results live in `scripts/scrapers/cache/va_wikipedia.json` so reruns are cheap.
+6. **Rebuild the national states overview** (required — step 5 only builds the new state's own PMTile, not the national `states.pmtiles`; this no-arg run also purges the Cloudflare CDN cache):
+   ```bash
+   mise run generate-pmtiles
+   ```
 
-### Run setup
-
-```bash
-mise run setup-state -- --state va
-```
-
-This runs all steps in order:
-1. State boundary + jurisdiction data (Census TIGER + state YAML)
-2. County boundaries + jurisdiction data (Census TIGER + county YAML)
-3. Local jurisdiction data (Census ACS + scraper + validation sources)
-4. Uploads GeoJSONs to R2 (also computes `county_ocdids` per locality)
-5. Generates PMTile and uploads to R2
-
-### Finish up
-
-```bash
-# Rebuild national states overview (includes the new state)
-mise run generate-pmtiles
-
-# Push open-data changes, then trigger OD sync on civicpatch.org
-POST /admin/od_sync
-```
+7. **Push** the open-data changes, then trigger OD sync on civicpatch.org:
+   ```
+   POST /admin/od_sync
+   ```
 
 ---
 

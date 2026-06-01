@@ -1,10 +1,12 @@
 import pytest
 from bs4 import BeautifulSoup
 
+from schemas import Jurisdiction
 from scripts.scrapers.wikipedia_utils import (
     find_candidates,
     get_parse_url,
     get_wiki_url,
+    match_jurisdictions,
     normalize_geoid,
     normalize_td,
     warn_unmatched_wiki_entries,
@@ -141,3 +143,85 @@ class TestWarnUnmatchedWikiEntries:
         entries = {"": {"wiki_url": "https://en.wikipedia.org/wiki/Foo"}}
         warnings = warn_unmatched_wiki_entries(entries, matched_geoids=set())
         assert warnings == []
+
+
+# ── match_jurisdictions ───────────────────────────────────────────────────────
+
+def make_jurisdiction(geoid: str, name: str = "Somewhere city", **kw) -> Jurisdiction:
+    return Jurisdiction(id=f"ocd/{geoid}", name=name, geoid=geoid, **kw)
+
+
+def entry(geoid: str, slug: str) -> dict:
+    return {
+        "geoid": geoid,
+        "wiki_url": f"https://en.wikipedia.org/wiki/{slug}",
+        "url": f"https://{slug.split(',')[0].lower()}.gov",
+    }
+
+
+class TestMatchJurisdictions:
+    def test_direct_geoid_match(self):
+        # Census place geoid exactly equals the wiki entry key.
+        census = {"ocd/a": make_jurisdiction("3345140", "Manchester city")}
+        entries = {"3345140": entry("3345140", "Manchester,_New_Hampshire")}
+        result, warnings = match_jurisdictions(census, entries, table_names={})
+        j = result["ocd/a"]
+        assert j.wiki_url == "https://en.wikipedia.org/wiki/Manchester,_New_Hampshire"
+        assert j.url == "https://manchester.gov"
+        assert j.issues is None
+        assert warnings == []
+
+    def test_suffix_fallback_cousub_vs_place(self):
+        # Census county-subdivision geoid (10-digit) vs a place geoid (7-digit) for the
+        # same town: same state prefix + same last-5 → matched, flagged geoid_mismatch.
+        census = {"ocd/a": make_jurisdiction("3300512340", "Anytown town")}
+        entries = {"3312340": entry("3312340", "Anytown,_New_Hampshire")}
+        result, _ = match_jurisdictions(census, entries, table_names={})
+        j = result["ocd/a"]
+        assert j.wiki_url.endswith("Anytown,_New_Hampshire")
+        assert j.issues == ["geoid_mismatch"]
+        assert "GEOID suffix fallback" in (j.generated_comments or "")
+
+    def test_bare_place_fips_matches_place_geoid(self):
+        # The Keene case: infobox lists the bare 5-digit place FIPS "39300" (no state
+        # prefix); census place geoid is "3339300". Should match via the bare-code clause.
+        census = {"ocd/keene": make_jurisdiction("3339300", "Keene city")}
+        entries = {"39300": entry("39300", "Keene,_New_Hampshire")}
+        result, _ = match_jurisdictions(census, entries, table_names={})
+        j = result["ocd/keene"]
+        assert j.wiki_url.endswith("Keene,_New_Hampshire")
+        assert j.issues == ["geoid_mismatch"]
+
+    def test_bare_place_fips_does_not_match_cousub(self):
+        # DANGER GUARD: a bare 5-digit place code must NOT match a county-subdivision
+        # census geoid (10-digit) that merely happens to end in the same 5 digits.
+        census = {"ocd/cousub": make_jurisdiction("3300939300", "Elsewhere town")}
+        entries = {"39300": entry("39300", "Keene,_New_Hampshire")}
+        result, _ = match_jurisdictions(census, entries, table_names={})
+        j = result["ocd/cousub"]
+        assert j.wiki_url is None
+        assert j.issues == ["no_wiki_match"]
+
+    def test_no_match_flags_no_wiki_match(self):
+        census = {"ocd/a": make_jurisdiction("3399999", "Nowhere city")}
+        entries = {"3345140": entry("3345140", "Manchester,_New_Hampshire")}
+        result, _ = match_jurisdictions(census, entries, table_names={})
+        j = result["ocd/a"]
+        assert j.wiki_url is None
+        assert j.issues == ["no_wiki_match"]
+
+    def test_places_only_state_is_exact_match(self):
+        # For a places-only state every census geoid is 7-digit; the fallback reduces to
+        # an exact match (state prefix + full place suffix), so it stays a safe no-op.
+        census = {"ocd/a": make_jurisdiction("5300100", "Aberdeen city")}
+        # A different place sharing neither prefix-region nor suffix must not match.
+        entries = {"5312345": entry("5312345", "Bellevue,_Washington")}
+        result, _ = match_jurisdictions(census, entries, table_names={})
+        assert result["ocd/a"].issues == ["no_wiki_match"]
+
+    def test_existing_no_wiki_match_cleared_on_match(self):
+        # Re-run idempotency: a stale no_wiki_match issue is removed once a match is found.
+        census = {"ocd/a": make_jurisdiction("3345140", "Manchester city", issues=["no_wiki_match"])}
+        entries = {"3345140": entry("3345140", "Manchester,_New_Hampshire")}
+        result, _ = match_jurisdictions(census, entries, table_names={})
+        assert result["ocd/a"].issues is None
