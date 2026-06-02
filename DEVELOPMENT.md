@@ -57,15 +57,39 @@ Run these steps in order. Steps 1–3 are manual, per-state prep; 4 is an option
    - Uploads GeoJSONs to R2 (also computes `county_ocdids` per locality)
    - Generates the per-state PMTile and uploads it to R2
 
-6. **Rebuild the national states overview** (required — step 5 only builds the new state's own PMTile, not the national `states.pmtiles`; this no-arg run also purges the Cloudflare CDN cache):
+6. **Validate jurisdiction OCD-IDs** (see [Validating jurisdiction OCD-IDs](#validating-jurisdiction-ocd-ids) below). `setup_local.py` builds OCD-IDs from Census names by lowercasing and swapping spaces for underscores; names with apostrophes, diacritics, slashes, or no LSAD suffix leak through as invalid IDs. Run the checker against the freshly generated file and fix anything it flags before pushing:
+   ```bash
+   uv run python scripts/fix_jurisdiction_ocdids.py --state va
+   ```
+
+7. **Rebuild the national states overview** (required — step 5 only builds the new state's own PMTile, not the national `states.pmtiles`; this no-arg run also purges the Cloudflare CDN cache):
    ```bash
    mise run generate-pmtiles
    ```
 
-7. **Push** the open-data changes, then trigger OD sync on civicpatch.org:
+8. **Push** the open-data changes, then trigger OD sync on civicpatch.org:
    ```
    POST /admin/od_sync
    ```
+
+---
+
+## Validating jurisdiction OCD-IDs
+
+Run this any time a state's `data_source/<state>/local/jurisdictions.yml` has been (re)generated — it catches OCD-IDs that the generator produced with illegal characters (apostrophes, diacritics, `/`) or an empty `place:` segment.
+
+```bash
+# Report problems for every state, change nothing:
+uv run python scripts/fix_jurisdiction_ocdids.py --dry-run
+
+# Interactively fix one state ([a]ccept / [e]dit / [s]kip per problem):
+uv run python scripts/fix_jurisdiction_ocdids.py --state va
+
+# Auto-accept every suggestion (skips any that would collide with an existing ID):
+uv run python scripts/fix_jurisdiction_ocdids.py --state va --yes
+```
+
+For each invalid ID it prints the state, `file:line`, the specific problem(s), and a suggested canonical ID, and warns if a suggestion would collide with an existing or another suggested ID. Accepting a fix rewrites `jurisdictions.yml`, repoints the matching key in `jurisdictions_metadata.yml`, and migrates any `data/<state>/local/*.yml` officials file that referenced the old ID. Structural validation is delegated to `shared`'s `parse_jurisdiction_ocdid`; the charset/empty checks layer on top.
 
 ---
 
@@ -111,6 +135,7 @@ The purge uses `{"hosts":["cdn.civicpatch.org"]}` rather than per-file URLs beca
 | Task | When to run |
 |------|-------------|
 | `mise run setup-state -- --state {code}` | Adding a new state |
+| `uv run python scripts/fix_jurisdiction_ocdids.py [--state {code}]` | After (re)generating `jurisdictions.yml` — validate/fix OCD-IDs |
 | `mise run setup-maps [-- --state {code}]` | Census boundaries changed |
 | `mise run generate-pmtiles [-- --state {code}]` | Jurisdiction names/data changed |
 | `mise run readme` | Refresh coverage report in README.md |
