@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-06-02 19:24 UTC
+Generated: 2026-06-02 19:28 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-06-02 19:24 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 4,678 | 783 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
-| nh | 25 | 2 | 231 | 234 | 30 | 2 | 242 | — |
+| nh | 40 | 3 | 231 | 234 | 30 | 2 | 242 | 53% |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
 | tn | 149 | 20 | 234 | 344 | 54 | 5 | 344 | 81% |
@@ -670,7 +670,7 @@ Generated: 2026-06-02 19:24 UTC
 ### nh
 
 <details>
-<summary>229 not yet scraped &nbsp;·&nbsp; 229 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
+<summary>228 not yet scraped &nbsp;·&nbsp; 229 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -899,7 +899,6 @@ Generated: 2026-06-02 19:24 UTC
 - ocd-jurisdiction/country:us/state:nh/place:keene/government
 - ocd-jurisdiction/country:us/state:nh/place:laconia/government
 - ocd-jurisdiction/country:us/state:nh/place:lebanon/government
-- ocd-jurisdiction/country:us/state:nh/place:manchester/government
 - ocd-jurisdiction/country:us/state:nh/place:portsmouth/government
 - ocd-jurisdiction/country:us/state:nh/place:rochester/government
 - ocd-jurisdiction/country:us/state:nh/place:somersworth/government
