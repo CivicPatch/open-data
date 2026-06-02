@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-05-26 16:38 UTC
+Generated: 2026-06-01 23:59 UTC
 
 ## Coverage Summary
 
@@ -8,6 +8,7 @@ Generated: 2026-05-26 16:38 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 4,678 | 783 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
+| nh | 0 | 0 | 231 | 234 | 30 | 2 | 242 | — |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
 | tn | 149 | 20 | 234 | 344 | 54 | 5 | 344 | 81% |
@@ -662,6 +663,481 @@ Generated: 2026-05-26 16:38 UTC
 | ocd-jurisdiction/country:us/state:mi/place:st_joseph/government |  |
 | ocd-jurisdiction/country:us/state:mi/place:st_louis/government |  |
 | ocd-jurisdiction/country:us/state:mi/place:village_of_douglas/government |  |
+
+</details>
+
+### nh
+
+<details>
+<summary>231 not yet scraped &nbsp;·&nbsp; 229 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
+
+#### Not yet scraped
+
+- ocd-jurisdiction/country:us/state:nh/county:belknap/place:alton/government
+- ocd-jurisdiction/country:us/state:nh/county:belknap/place:barnstead/government
+- ocd-jurisdiction/country:us/state:nh/county:belknap/place:belmont/government
+- ocd-jurisdiction/country:us/state:nh/county:belknap/place:center_harbor/government
+- ocd-jurisdiction/country:us/state:nh/county:belknap/place:gilford/government
+- ocd-jurisdiction/country:us/state:nh/county:belknap/place:gilmanton/government
+- ocd-jurisdiction/country:us/state:nh/county:belknap/place:meredith/government
+- ocd-jurisdiction/country:us/state:nh/county:belknap/place:new_hampton/government
+- ocd-jurisdiction/country:us/state:nh/county:belknap/place:sanbornton/government
+- ocd-jurisdiction/country:us/state:nh/county:belknap/place:tilton/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:albany/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:bartlett/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:brookfield/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:chatham/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:conway/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:eaton/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:effingham/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:freedom/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:hart's_location/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:jackson/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:madison/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:moultonborough/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:ossipee/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:sandwich/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:tamworth/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:tuftonboro/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:wakefield/government
+- ocd-jurisdiction/country:us/state:nh/county:carroll/place:wolfeboro/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:alstead/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:chesterfield/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:dublin/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:fitzwilliam/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:gilsum/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:harrisville/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:hinsdale/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:jaffrey/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:marlborough/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:marlow/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:nelson/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:richmond/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:rindge/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:roxbury/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:stoddard/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:sullivan/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:surry/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:swanzey/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:troy/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:walpole/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:westmoreland/government
+- ocd-jurisdiction/country:us/state:nh/county:cheshire/place:winchester/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:carroll/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:colebrook/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:columbia/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:dalton/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:dummer/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:errol/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:gorham/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:jefferson/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:lancaster/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:milan/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:northumberland/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:pittsburg/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:randolph/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:shelburne/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:stark/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:stratford/government
+- ocd-jurisdiction/country:us/state:nh/county:coos/place:whitefield/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:alexandria/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:ashland/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:bath/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:benton/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:bethlehem/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:bridgewater/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:bristol/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:campton/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:canaan/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:dorchester/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:easton/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:enfield/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:franconia/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:grafton/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:groton/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:hanover/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:haverhill/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:hebron/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:holderness/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:landaff/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:lincoln/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:lisbon/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:littleton/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:lyman/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:lyme/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:monroe/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:orange/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:orford/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:piermont/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:plymouth/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:rumney/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:sugar_hill/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:thornton/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:warren/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:waterville_valley/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:wentworth/government
+- ocd-jurisdiction/country:us/state:nh/county:grafton/place:woodstock/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:amherst/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:antrim/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:bedford/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:bennington/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:brookline/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:deering/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:francestown/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:goffstown/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:greenfield/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:greenville/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:hancock/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:hillsborough/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:hollis/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:hudson/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:litchfield/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:lyndeborough/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:mason/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:merrimack/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:milford/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:mont_vernon/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:new_boston/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:new_ipswich/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:pelham/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:peterborough/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:sharon/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:temple/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:weare/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:wilton/government
+- ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:windsor/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:allenstown/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:andover/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:boscawen/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:bow/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:bradford/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:canterbury/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:chichester/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:danbury/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:dunbarton/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:epsom/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:henniker/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:hill/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:hooksett/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:hopkinton/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:loudon/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:new_london/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:newbury/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:northfield/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:pembroke/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:pittsfield/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:salisbury/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:sutton/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:warner/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:webster/government
+- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:wilmot/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:atkinson/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:auburn/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:brentwood/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:candia/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:chester/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:danville/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:deerfield/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:derry/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:east_kingston/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:epping/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:exeter/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:fremont/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:greenland/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:hampstead/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:hampton/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:hampton_falls/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:kensington/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:kingston/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:londonderry/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:new_castle/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:newfields/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:newington/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:newmarket/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:newton/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:north_hampton/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:northwood/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:nottingham/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:plaistow/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:raymond/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:rye/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:salem/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:sandown/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:seabrook/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:south_hampton/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:stratham/government
+- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:windham/government
+- ocd-jurisdiction/country:us/state:nh/county:strafford/place:barrington/government
+- ocd-jurisdiction/country:us/state:nh/county:strafford/place:durham/government
+- ocd-jurisdiction/country:us/state:nh/county:strafford/place:farmington/government
+- ocd-jurisdiction/country:us/state:nh/county:strafford/place:lee/government
+- ocd-jurisdiction/country:us/state:nh/county:strafford/place:madbury/government
+- ocd-jurisdiction/country:us/state:nh/county:strafford/place:middleton/government
+- ocd-jurisdiction/country:us/state:nh/county:strafford/place:milton/government
+- ocd-jurisdiction/country:us/state:nh/county:strafford/place:new_durham/government
+- ocd-jurisdiction/country:us/state:nh/county:strafford/place:rollinsford/government
+- ocd-jurisdiction/country:us/state:nh/county:strafford/place:strafford/government
+- ocd-jurisdiction/country:us/state:nh/county:sullivan/place:acworth/government
+- ocd-jurisdiction/country:us/state:nh/county:sullivan/place:charlestown/government
+- ocd-jurisdiction/country:us/state:nh/county:sullivan/place:cornish/government
+- ocd-jurisdiction/country:us/state:nh/county:sullivan/place:croydon/government
+- ocd-jurisdiction/country:us/state:nh/county:sullivan/place:goshen/government
+- ocd-jurisdiction/country:us/state:nh/county:sullivan/place:grantham/government
+- ocd-jurisdiction/country:us/state:nh/county:sullivan/place:langdon/government
+- ocd-jurisdiction/country:us/state:nh/county:sullivan/place:lempster/government
+- ocd-jurisdiction/country:us/state:nh/county:sullivan/place:newport/government
+- ocd-jurisdiction/country:us/state:nh/county:sullivan/place:plainfield/government
+- ocd-jurisdiction/country:us/state:nh/county:sullivan/place:springfield/government
+- ocd-jurisdiction/country:us/state:nh/county:sullivan/place:sunapee/government
+- ocd-jurisdiction/country:us/state:nh/county:sullivan/place:unity/government
+- ocd-jurisdiction/country:us/state:nh/county:sullivan/place:washington/government
+- ocd-jurisdiction/country:us/state:nh/place:berlin/government
+- ocd-jurisdiction/country:us/state:nh/place:claremont/government
+- ocd-jurisdiction/country:us/state:nh/place:concord/government
+- ocd-jurisdiction/country:us/state:nh/place:dover/government
+- ocd-jurisdiction/country:us/state:nh/place:franklin/government
+- ocd-jurisdiction/country:us/state:nh/place:keene/government
+- ocd-jurisdiction/country:us/state:nh/place:laconia/government
+- ocd-jurisdiction/country:us/state:nh/place:lebanon/government
+- ocd-jurisdiction/country:us/state:nh/place:manchester/government
+- ocd-jurisdiction/country:us/state:nh/place:nashua/government
+- ocd-jurisdiction/country:us/state:nh/place:portsmouth/government
+- ocd-jurisdiction/country:us/state:nh/place:rochester/government
+- ocd-jurisdiction/country:us/state:nh/place:somersworth/government
+
+#### Locality Gaps
+
+| In External, Not in Known | In CivicPatch, Not in External |
+|---------------------------|--------------------------------|
+| ocd-jurisdiction/country:us/state:nh/place:acworth/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:albany/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:alexandria/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:allenstown/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:alstead/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:alton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:amherst/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:andover/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:antrim/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:ashland/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:atkinson/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:auburn/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:barnstead/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:barrington/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:bartlett/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:bath/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:bedford/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:belmont/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:bennington/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:benton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:bethlehem/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:boscawen/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:bow/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:bradford/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:brentwood/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:bridgewater/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:bristol/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:brookfield/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:brookline/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:cambridge/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:campton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:canaan/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:candia/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:canterbury/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:carroll/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:center_harbor/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:charlestown/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:chatham/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:chester/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:chesterfield/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:chichester/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:clarksville/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:colebrook/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:columbia/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:conway/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:cornish/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:croydon/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:dalton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:danbury/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:danville/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:deerfield/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:deering/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:derry/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:dixville/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:dorchester/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:dublin/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:dummer/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:dunbarton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:durham/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:east_kingston/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:easton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:eaton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:effingham/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:ellsworth/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:enfield/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:epping/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:epsom/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:errol/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:exeter/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:farmington/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:fitzwilliam/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:francestown/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:franconia/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:freedom/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:fremont/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:gilford/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:gilmanton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:gilsum/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:goffstown/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:gorham/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:goshen/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:grafton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:grantham/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:greenfield/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:greenland/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:greens_grant/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:greenville/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:groton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:hale~s_location/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:hampstead/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:hampton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:hampton_falls/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:hancock/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:hanover/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:harrisville/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:hart~s_location/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:haverhill/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:hebron/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:henniker/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:hill/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:hillsborough/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:hinsdale/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:holderness/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:hollis/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:hooksett/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:hopkinton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:hudson/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:jackson/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:jaffrey/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:jefferson/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:kensington/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:kingston/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:lancaster/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:landaff/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:langdon/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:lee/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:lempster/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:lincoln/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:lisbon/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:litchfield/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:littleton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:livermore/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:londonderry/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:loudon/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:lyman/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:lyme/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:lyndeborough/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:madbury/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:madison/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:marlborough/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:marlow/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:mason/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:meredith/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:merrimack/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:middleton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:milan/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:milford/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:millsfield/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:milton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:monroe/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:mont_vernon/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:moultonborough/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:nelson/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:new_boston/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:new_castle/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:new_durham/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:new_hampton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:new_ipswich/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:new_london/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:newbury/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:newfields/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:newington/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:newmarket/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:newport/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:newton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:north_hampton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:northfield/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:northumberland/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:northwood/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:nottingham/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:orange/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:orford/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:ossipee/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:pelham/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:pembroke/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:peterborough/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:piermont/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:pinkhams_grant/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:pittsburg/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:pittsfield/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:plainfield/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:plaistow/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:plymouth/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:randolph/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:raymond/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:richmond/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:rindge/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:rollinsford/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:roxbury/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:rumney/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:rye/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:salem/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:salisbury/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:sanbornton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:sandown/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:sandwich/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:seabrook/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:sharon/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:shelburne/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:south_hampton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:springfield/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:stark/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:stewartstown/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:stoddard/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:strafford/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:stratford/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:stratham/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:sugar_hill/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:sullivan/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:sunapee/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:surry/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:sutton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:swanzey/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:tamworth/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:temple/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:thornton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:tilton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:troy/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:tuftonboro/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:unity/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:wakefield/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:walpole/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:warner/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:warren/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:washington/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:waterville_valley/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:weare/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:webster/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:wentworth/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:wentworth~s_location/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:westmoreland/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:whitefield/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:wilmot/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:wilton/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:winchester/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:windham/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:windsor/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:wolfeboro/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:woodstock/government |  |
 
 </details>
 
