@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-06-03 23:54 UTC
+Generated: 2026-06-03 23:56 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-06-03 23:54 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 4,678 | 783 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
-| nh | 51 | 5 | 231 | 234 | 30 | 2 | 242 | 53% |
+| nh | 67 | 8 | 231 | 234 | 30 | 2 | 242 | 53% |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
 | tn | 149 | 20 | 234 | 344 | 54 | 5 | 344 | 81% |
@@ -670,7 +670,7 @@ Generated: 2026-06-03 23:54 UTC
 ### nh
 
 <details>
-<summary>226 not yet scraped &nbsp;·&nbsp; 229 in external, not in CP &nbsp;·&nbsp; 2 in CP, not in external</summary>
+<summary>223 not yet scraped &nbsp;·&nbsp; 229 in external, not in CP &nbsp;·&nbsp; 5 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -808,14 +808,12 @@ Generated: 2026-06-03 23:54 UTC
 - ocd-jurisdiction/country:us/state:nh/county:merrimack/place:allenstown/government
 - ocd-jurisdiction/country:us/state:nh/county:merrimack/place:andover/government
 - ocd-jurisdiction/country:us/state:nh/county:merrimack/place:boscawen/government
-- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:bow/government
 - ocd-jurisdiction/country:us/state:nh/county:merrimack/place:bradford/government
 - ocd-jurisdiction/country:us/state:nh/county:merrimack/place:canterbury/government
 - ocd-jurisdiction/country:us/state:nh/county:merrimack/place:chichester/government
 - ocd-jurisdiction/country:us/state:nh/county:merrimack/place:danbury/government
 - ocd-jurisdiction/country:us/state:nh/county:merrimack/place:dunbarton/government
 - ocd-jurisdiction/country:us/state:nh/county:merrimack/place:epsom/government
-- ocd-jurisdiction/country:us/state:nh/county:merrimack/place:henniker/government
 - ocd-jurisdiction/country:us/state:nh/county:merrimack/place:hill/government
 - ocd-jurisdiction/country:us/state:nh/county:merrimack/place:hooksett/government
 - ocd-jurisdiction/country:us/state:nh/county:merrimack/place:hopkinton/government
@@ -848,7 +846,6 @@ Generated: 2026-06-03 23:54 UTC
 - ocd-jurisdiction/country:us/state:nh/county:rockingham/place:hampton_falls/government
 - ocd-jurisdiction/country:us/state:nh/county:rockingham/place:kensington/government
 - ocd-jurisdiction/country:us/state:nh/county:rockingham/place:kingston/government
-- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:londonderry/government
 - ocd-jurisdiction/country:us/state:nh/county:rockingham/place:new_castle/government
 - ocd-jurisdiction/country:us/state:nh/county:rockingham/place:newfields/government
 - ocd-jurisdiction/country:us/state:nh/county:rockingham/place:newington/government
@@ -907,9 +904,9 @@ Generated: 2026-06-03 23:54 UTC
 |---------------------------|--------------------------------|
 | ocd-jurisdiction/country:us/state:nh/place:acworth/government | ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:hollis/government |
 | ocd-jurisdiction/country:us/state:nh/place:albany/government | ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:hudson/government |
-| ocd-jurisdiction/country:us/state:nh/place:alexandria/government |  |
-| ocd-jurisdiction/country:us/state:nh/place:allenstown/government |  |
-| ocd-jurisdiction/country:us/state:nh/place:alstead/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:alexandria/government | ocd-jurisdiction/country:us/state:nh/county:merrimack/place:bow/government |
+| ocd-jurisdiction/country:us/state:nh/place:allenstown/government | ocd-jurisdiction/country:us/state:nh/county:merrimack/place:henniker/government |
+| ocd-jurisdiction/country:us/state:nh/place:alstead/government | ocd-jurisdiction/country:us/state:nh/county:rockingham/place:londonderry/government |
 | ocd-jurisdiction/country:us/state:nh/place:alton/government |  |
 | ocd-jurisdiction/country:us/state:nh/place:amherst/government |  |
 | ocd-jurisdiction/country:us/state:nh/place:andover/government |  |
