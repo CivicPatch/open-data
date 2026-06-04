@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-06-03 23:58 UTC
+Generated: 2026-06-04 00:00 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-06-03 23:58 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 4,678 | 783 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
-| nh | 77 | 10 | 231 | 234 | 30 | 2 | 242 | 53% |
+| nh | 93 | 13 | 231 | 234 | 30 | 2 | 242 | 53% |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
 | tn | 149 | 20 | 234 | 344 | 54 | 5 | 344 | 81% |
@@ -670,13 +670,12 @@ Generated: 2026-06-03 23:58 UTC
 ### nh
 
 <details>
-<summary>221 not yet scraped &nbsp;·&nbsp; 229 in external, not in CP &nbsp;·&nbsp; 7 in CP, not in external</summary>
+<summary>218 not yet scraped &nbsp;·&nbsp; 229 in external, not in CP &nbsp;·&nbsp; 10 in CP, not in external</summary>
 
 #### Not yet scraped
 
 - ocd-jurisdiction/country:us/state:nh/county:belknap/place:alton/government
 - ocd-jurisdiction/country:us/state:nh/county:belknap/place:barnstead/government
-- ocd-jurisdiction/country:us/state:nh/county:belknap/place:belmont/government
 - ocd-jurisdiction/country:us/state:nh/county:belknap/place:center_harbor/government
 - ocd-jurisdiction/country:us/state:nh/county:belknap/place:gilford/government
 - ocd-jurisdiction/country:us/state:nh/county:belknap/place:gilmanton/government
@@ -836,12 +835,10 @@ Generated: 2026-06-03 23:58 UTC
 - ocd-jurisdiction/country:us/state:nh/county:rockingham/place:deerfield/government
 - ocd-jurisdiction/country:us/state:nh/county:rockingham/place:derry/government
 - ocd-jurisdiction/country:us/state:nh/county:rockingham/place:east_kingston/government
-- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:epping/government
 - ocd-jurisdiction/country:us/state:nh/county:rockingham/place:exeter/government
 - ocd-jurisdiction/country:us/state:nh/county:rockingham/place:fremont/government
 - ocd-jurisdiction/country:us/state:nh/county:rockingham/place:greenland/government
 - ocd-jurisdiction/country:us/state:nh/county:rockingham/place:hampstead/government
-- ocd-jurisdiction/country:us/state:nh/county:rockingham/place:hampton/government
 - ocd-jurisdiction/country:us/state:nh/county:rockingham/place:hampton_falls/government
 - ocd-jurisdiction/country:us/state:nh/county:rockingham/place:kensington/government
 - ocd-jurisdiction/country:us/state:nh/county:rockingham/place:kingston/government
@@ -900,16 +897,16 @@ Generated: 2026-06-03 23:58 UTC
 
 | In External, Not in Known | In CivicPatch, Not in External |
 |---------------------------|--------------------------------|
-| ocd-jurisdiction/country:us/state:nh/place:acworth/government | ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:amherst/government |
-| ocd-jurisdiction/country:us/state:nh/place:albany/government | ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:hollis/government |
-| ocd-jurisdiction/country:us/state:nh/place:alexandria/government | ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:hudson/government |
-| ocd-jurisdiction/country:us/state:nh/place:allenstown/government | ocd-jurisdiction/country:us/state:nh/county:merrimack/place:bow/government |
-| ocd-jurisdiction/country:us/state:nh/place:alstead/government | ocd-jurisdiction/country:us/state:nh/county:merrimack/place:henniker/government |
-| ocd-jurisdiction/country:us/state:nh/place:alton/government | ocd-jurisdiction/country:us/state:nh/county:rockingham/place:londonderry/government |
-| ocd-jurisdiction/country:us/state:nh/place:amherst/government | ocd-jurisdiction/country:us/state:nh/county:rockingham/place:raymond/government |
-| ocd-jurisdiction/country:us/state:nh/place:andover/government |  |
-| ocd-jurisdiction/country:us/state:nh/place:antrim/government |  |
-| ocd-jurisdiction/country:us/state:nh/place:ashland/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:acworth/government | ocd-jurisdiction/country:us/state:nh/county:belknap/place:belmont/government |
+| ocd-jurisdiction/country:us/state:nh/place:albany/government | ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:amherst/government |
+| ocd-jurisdiction/country:us/state:nh/place:alexandria/government | ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:hollis/government |
+| ocd-jurisdiction/country:us/state:nh/place:allenstown/government | ocd-jurisdiction/country:us/state:nh/county:hillsborough/place:hudson/government |
+| ocd-jurisdiction/country:us/state:nh/place:alstead/government | ocd-jurisdiction/country:us/state:nh/county:merrimack/place:bow/government |
+| ocd-jurisdiction/country:us/state:nh/place:alton/government | ocd-jurisdiction/country:us/state:nh/county:merrimack/place:henniker/government |
+| ocd-jurisdiction/country:us/state:nh/place:amherst/government | ocd-jurisdiction/country:us/state:nh/county:rockingham/place:epping/government |
+| ocd-jurisdiction/country:us/state:nh/place:andover/government | ocd-jurisdiction/country:us/state:nh/county:rockingham/place:hampton/government |
+| ocd-jurisdiction/country:us/state:nh/place:antrim/government | ocd-jurisdiction/country:us/state:nh/county:rockingham/place:londonderry/government |
+| ocd-jurisdiction/country:us/state:nh/place:ashland/government | ocd-jurisdiction/country:us/state:nh/county:rockingham/place:raymond/government |
 | ocd-jurisdiction/country:us/state:nh/place:atkinson/government |  |
 | ocd-jurisdiction/country:us/state:nh/place:auburn/government |  |
 | ocd-jurisdiction/country:us/state:nh/place:barnstead/government |  |
