@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-06-05 03:18 UTC
+Generated: 2026-06-05 14:31 UTC
 
 ## Coverage Summary
 
@@ -11,7 +11,7 @@ Generated: 2026-06-05 03:18 UTC
 | nh | 816 | 187 | 231 | 234 | 30 | 2 | 242 | 60% |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
-| tn | 149 | 20 | 234 | 344 | 54 | 5 | 344 | 81% |
+| tn | 161 | 22 | 234 | 344 | 54 | 5 | 344 | 81% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1172,7 +1172,7 @@ Generated: 2026-06-05 03:18 UTC
 ### tn
 
 <details>
-<summary>214 not yet scraped &nbsp;·&nbsp; 6 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
+<summary>212 not yet scraped &nbsp;·&nbsp; 6 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1185,7 +1185,6 @@ Generated: 2026-06-05 03:18 UTC
 - ocd-jurisdiction/country:us/state:tn/place:ardmore/government
 - ocd-jurisdiction/country:us/state:tn/place:arlington/government
 - ocd-jurisdiction/country:us/state:tn/place:ashland_city/government
-- ocd-jurisdiction/country:us/state:tn/place:athens/government
 - ocd-jurisdiction/country:us/state:tn/place:atoka/government
 - ocd-jurisdiction/country:us/state:tn/place:baneberry/government
 - ocd-jurisdiction/country:us/state:tn/place:baxter/government
@@ -1300,7 +1299,6 @@ Generated: 2026-06-05 03:18 UTC
 - ocd-jurisdiction/country:us/state:tn/place:maynardville/government
 - ocd-jurisdiction/country:us/state:tn/place:mckenzie/government
 - ocd-jurisdiction/country:us/state:tn/place:mclemoresville/government
-- ocd-jurisdiction/country:us/state:tn/place:mcminnville/government
 - ocd-jurisdiction/country:us/state:tn/place:medina/government
 - ocd-jurisdiction/country:us/state:tn/place:middleton/government
 - ocd-jurisdiction/country:us/state:tn/place:milan/government
