@@ -18,6 +18,12 @@ echo 'CENSUS_API_KEY=your-40-char-key-here' >> .env
 
 Run these steps in order. Steps 1–3 are manual, per-state prep; 4 is an optional smoke test; 5 is the full run; 6–7 finish up. The example uses `va` (Virginia, FIPS 51).
 
+> **Two similarly-named scripts — don't confuse them:**
+> - **`scripts/setup_state.py`** (singular) is the **orchestrator** — the `mise run setup-state` task runs it, and it chains the state, county, and local steps for one state.
+> - **`scripts/setup_states.py`** (plural) is just the **state-government sub-step** (state boundary + the single state-gov jurisdiction). The orchestrator imports it; you only call it directly in the step-4 dry run.
+>
+> **Scope:** `setup-state -- --state va` only ever touches **`va`**. It builds Virginia's own boundaries and per-state PMTile and never reads, recomputes, or alters any other state's data. Updating the shared national overview (`states.pmtiles`) is a deliberately separate step (7) — and even that is non-destructive to other states (it re-bundles their existing GeoJSON, it does not regenerate it).
+
 1. **Register the state** in `scripts/state_configs.py`:
    ```python
    "va": {
@@ -35,7 +41,7 @@ Run these steps in order. Steps 1–3 are manual, per-state prep; 4 is an option
    Save it as `scripts/track_progress/google_data/{state}_all_raw.json` (e.g. `va_all_raw.json`).
    The preflight check in step 5 prints this same link and the exact path it expects if the file is missing.
 
-4. **Dry-run the scraper** (recommended). Smoke-tests against a handful of jurisdictions to catch a wrong `rows_to_skip`, broken infobox parsing, or other scraper bugs — without waiting for hundreds of Wikipedia fetches. `setup_local.py` needs `counties.geojson` to exist (it computes `county_ocdids` against county boundaries), so generate state + county data first:
+4. **Dry-run the scraper** (recommended). Smoke-tests against a handful of jurisdictions to catch a wrong `rows_to_skip`, broken infobox parsing, or other scraper bugs — without waiting for hundreds of Wikipedia fetches. `setup_local.py` builds the local boundary map and, for every locality, **spatially joins the locality's centroid into the county polygons** (`maps/local.py:_add_county_ocdids`, an `sjoin … predicate="within"` in EPSG:5070) to tag it with `county_ocdids`. That join needs two artifacts from the earlier steps — `counties.geojson` (county geometry) and `data_source/<state>/counties/jurisdictions.yml` (county GEOID → OCD-ID) — and raises `FileNotFoundError` if they're missing. So generate state + county data first:
    ```bash
    # a. State + county boundaries (no scraper involved; safe to run as-is)
    uv run python scripts/setup_states.py va
@@ -53,9 +59,9 @@ Run these steps in order. Steps 1–3 are manual, per-state prep; 4 is an option
    This runs, in order:
    - State boundary + jurisdiction data (Census TIGER + state YAML)
    - County boundaries + jurisdiction data (Census TIGER + county YAML)
-   - Local jurisdiction data (Census ACS + scraper + validation sources)
-   - Uploads GeoJSONs to R2 (also computes `county_ocdids` per locality)
-   - Generates the per-state PMTile and uploads it to R2
+   - Local jurisdiction data (Census ACS + scraper + validation sources) — this step also computes `county_ocdids` per locality, via the centroid/county spatial join described in step 4
+   - Uploads GeoJSONs to R2
+   - Generates **this state's** per-state PMTile (`va.pmtiles`) and uploads it to R2 — it does **not** rebuild the national `states.pmtiles` (that's step 7)
 
 6. **Validate jurisdiction OCD-IDs** (see [Validating jurisdiction OCD-IDs](#validating-jurisdiction-ocd-ids) below). `setup_local.py` builds OCD-IDs from Census names by lowercasing and swapping spaces for underscores; names with apostrophes, diacritics, slashes, or no LSAD suffix leak through as invalid IDs. Run the checker against the freshly generated file and fix anything it flags before pushing:
    ```bash
