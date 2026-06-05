@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-06-05 14:40 UTC
+Generated: 2026-06-05 14:43 UTC
 
 ## Coverage Summary
 
@@ -11,7 +11,7 @@ Generated: 2026-06-05 14:40 UTC
 | nh | 816 | 187 | 231 | 234 | 30 | 2 | 242 | 60% |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
-| tn | 585 | 94 | 234 | 344 | 54 | 5 | 344 | 85% |
+| tn | 630 | 101 | 234 | 344 | 54 | 5 | 344 | 85% |
 | tx | 5,839 | 964 | 962 | 1,221 | 231 | 27 | 1,218 | 78% |
 | wa | 1,402 | 196 | 244 | 281 | 57 | 7 | 281 | 79% |
 
@@ -1172,7 +1172,7 @@ Generated: 2026-06-05 14:40 UTC
 ### tn
 
 <details>
-<summary>140 not yet scraped &nbsp;·&nbsp; 6 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
+<summary>133 not yet scraped &nbsp;·&nbsp; 6 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1182,10 +1182,8 @@ Generated: 2026-06-05 14:40 UTC
 - ocd-jurisdiction/country:us/state:tn/place:atoka/government
 - ocd-jurisdiction/country:us/state:tn/place:baneberry/government
 - ocd-jurisdiction/country:us/state:tn/place:baxter/government
-- ocd-jurisdiction/country:us/state:tn/place:bell_buckle/government
 - ocd-jurisdiction/country:us/state:tn/place:bells/government
 - ocd-jurisdiction/country:us/state:tn/place:berry_hill/government
-- ocd-jurisdiction/country:us/state:tn/place:big_sandy/government
 - ocd-jurisdiction/country:us/state:tn/place:blaine/government
 - ocd-jurisdiction/country:us/state:tn/place:bolivar/government
 - ocd-jurisdiction/country:us/state:tn/place:byrdstown/government
@@ -1216,9 +1214,7 @@ Generated: 2026-06-05 14:40 UTC
 - ocd-jurisdiction/country:us/state:tn/place:dyersburg/government
 - ocd-jurisdiction/country:us/state:tn/place:eagleville/government
 - ocd-jurisdiction/country:us/state:tn/place:elizabethton/government
-- ocd-jurisdiction/country:us/state:tn/place:elkton/government
 - ocd-jurisdiction/country:us/state:tn/place:englewood/government
-- ocd-jurisdiction/country:us/state:tn/place:erin/government
 - ocd-jurisdiction/country:us/state:tn/place:erwin/government
 - ocd-jurisdiction/country:us/state:tn/place:estill_springs/government
 - ocd-jurisdiction/country:us/state:tn/place:forest_hills/government
@@ -1229,7 +1225,6 @@ Generated: 2026-06-05 14:40 UTC
 - ocd-jurisdiction/country:us/state:tn/place:greenback/government
 - ocd-jurisdiction/country:us/state:tn/place:greeneville/government
 - ocd-jurisdiction/country:us/state:tn/place:greenfield/government
-- ocd-jurisdiction/country:us/state:tn/place:halls/government
 - ocd-jurisdiction/country:us/state:tn/place:harriman/government
 - ocd-jurisdiction/country:us/state:tn/place:hollow_rock/government
 - ocd-jurisdiction/country:us/state:tn/place:huntland/government
@@ -1261,7 +1256,6 @@ Generated: 2026-06-05 14:40 UTC
 - ocd-jurisdiction/country:us/state:tn/place:middleton/government
 - ocd-jurisdiction/country:us/state:tn/place:milan/government
 - ocd-jurisdiction/country:us/state:tn/place:millington/government
-- ocd-jurisdiction/country:us/state:tn/place:monteagle/government
 - ocd-jurisdiction/country:us/state:tn/place:monterey/government
 - ocd-jurisdiction/country:us/state:tn/place:moscow/government
 - ocd-jurisdiction/country:us/state:tn/place:mountain_city/government
@@ -1284,7 +1278,6 @@ Generated: 2026-06-05 14:40 UTC
 - ocd-jurisdiction/country:us/state:tn/place:rockford/government
 - ocd-jurisdiction/country:us/state:tn/place:rockwood/government
 - ocd-jurisdiction/country:us/state:tn/place:rogersville/government
-- ocd-jurisdiction/country:us/state:tn/place:rossville/government
 - ocd-jurisdiction/country:us/state:tn/place:savannah/government
 - ocd-jurisdiction/country:us/state:tn/place:scotts_hill/government
 - ocd-jurisdiction/country:us/state:tn/place:signal_mountain/government
