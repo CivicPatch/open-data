@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-06-05 02:42 UTC
+Generated: 2026-06-05 02:46 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-06-05 02:42 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | mi | 4,678 | 783 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
-| nh | 691 | 155 | 231 | 234 | 30 | 2 | 242 | 60% |
+| nh | 694 | 156 | 231 | 234 | 30 | 2 | 242 | 60% |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
 | tn | 149 | 20 | 234 | 344 | 54 | 5 | 344 | 81% |
@@ -670,7 +670,7 @@ Generated: 2026-06-05 02:42 UTC
 ### nh
 
 <details>
-<summary>76 not yet scraped &nbsp;·&nbsp; 229 in external, not in CP &nbsp;·&nbsp; 143 in CP, not in external</summary>
+<summary>75 not yet scraped &nbsp;·&nbsp; 229 in external, not in CP &nbsp;·&nbsp; 144 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -745,7 +745,6 @@ Generated: 2026-06-05 02:42 UTC
 - ocd-jurisdiction/country:us/state:nh/county:strafford/place:milton/government
 - ocd-jurisdiction/country:us/state:nh/county:sullivan/place:acworth/government
 - ocd-jurisdiction/country:us/state:nh/county:sullivan/place:charlestown/government
-- ocd-jurisdiction/country:us/state:nh/county:sullivan/place:langdon/government
 - ocd-jurisdiction/country:us/state:nh/county:sullivan/place:newport/government
 - ocd-jurisdiction/country:us/state:nh/county:sullivan/place:springfield/government
 - ocd-jurisdiction/country:us/state:nh/county:sullivan/place:unity/government
@@ -894,11 +893,11 @@ Generated: 2026-06-05 02:42 UTC
 | ocd-jurisdiction/country:us/state:nh/place:milford/government | ocd-jurisdiction/country:us/state:nh/county:sullivan/place:croydon/government |
 | ocd-jurisdiction/country:us/state:nh/place:millsfield/government | ocd-jurisdiction/country:us/state:nh/county:sullivan/place:goshen/government |
 | ocd-jurisdiction/country:us/state:nh/place:milton/government | ocd-jurisdiction/country:us/state:nh/county:sullivan/place:grantham/government |
-| ocd-jurisdiction/country:us/state:nh/place:monroe/government | ocd-jurisdiction/country:us/state:nh/county:sullivan/place:lempster/government |
-| ocd-jurisdiction/country:us/state:nh/place:mont_vernon/government | ocd-jurisdiction/country:us/state:nh/county:sullivan/place:plainfield/government |
-| ocd-jurisdiction/country:us/state:nh/place:moultonborough/government | ocd-jurisdiction/country:us/state:nh/county:sullivan/place:sunapee/government |
-| ocd-jurisdiction/country:us/state:nh/place:nelson/government | ocd-jurisdiction/country:us/state:nh/county:sullivan/place:washington/government |
-| ocd-jurisdiction/country:us/state:nh/place:new_boston/government |  |
+| ocd-jurisdiction/country:us/state:nh/place:monroe/government | ocd-jurisdiction/country:us/state:nh/county:sullivan/place:langdon/government |
+| ocd-jurisdiction/country:us/state:nh/place:mont_vernon/government | ocd-jurisdiction/country:us/state:nh/county:sullivan/place:lempster/government |
+| ocd-jurisdiction/country:us/state:nh/place:moultonborough/government | ocd-jurisdiction/country:us/state:nh/county:sullivan/place:plainfield/government |
+| ocd-jurisdiction/country:us/state:nh/place:nelson/government | ocd-jurisdiction/country:us/state:nh/county:sullivan/place:sunapee/government |
+| ocd-jurisdiction/country:us/state:nh/place:new_boston/government | ocd-jurisdiction/country:us/state:nh/county:sullivan/place:washington/government |
 | ocd-jurisdiction/country:us/state:nh/place:new_castle/government |  |
 | ocd-jurisdiction/country:us/state:nh/place:new_durham/government |  |
 | ocd-jurisdiction/country:us/state:nh/place:new_hampton/government |  |
