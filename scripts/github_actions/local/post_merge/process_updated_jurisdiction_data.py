@@ -7,6 +7,7 @@ from ruamel.yaml import YAML
 # Import the function from process_jurisdiction.py
 sys.path.append(os.path.dirname(__file__))
 from scripts.github_actions.local.post_merge.process_jurisdiction_data import process_jurisdiction
+from shared.utils.yaml_utils import yaml_load, yaml_dump
 
 yaml_ruamel = YAML()
 yaml_ruamel.preserve_quotes = True
@@ -25,6 +26,18 @@ def save_yaml(data, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w') as f:
         yaml_ruamel.dump(data, f)
+
+# People files under data/ go through the shared manager so post-merge cdn_image rewrites
+# keep them in the canonical style (no re-wrapping, explicit `null`).
+def load_people(path):
+    if not os.path.exists(path):
+        return None
+    with open(path) as f:
+        return yaml_load(f.read())
+
+def save_people(people, path):
+    with open(path, 'w') as f:
+        f.write(yaml_dump(people))
 
 def find_state_from_jurisdiction_file(jurisdiction_file):
     # Example: data/tx/houston/local/people.yml -> tx
@@ -58,7 +71,7 @@ def main():
         print(f"Processing {len(jurisdiction_files)} jurisdiction files for state {state}...")
 
         for jurisdiction_file in jurisdiction_files:
-            people = load_yaml(jurisdiction_file)
+            people = load_people(jurisdiction_file)
             jurisdiction_person = people[0] if people else None
             jurisdiction_ocdid = jurisdiction_person.get("jurisdiction_ocdid")
             
@@ -78,7 +91,7 @@ def main():
                 try:
                     people, images_updated = process_jurisdiction(jurisdiction_ocdid, jurisdiction_file, people)
                     if images_updated:
-                        save_yaml(people, jurisdiction_file)
+                        save_people(people, jurisdiction_file)
                     if jurisdiction_ocdid not in metadata["jurisdictions_by_id"]:
                         metadata["jurisdictions_by_id"][jurisdiction_ocdid] = meta_entry
                     meta_entry["updated_at"] = jurisdiction_updated_at
