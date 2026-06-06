@@ -1,12 +1,13 @@
 # CivicPatch Data Quality
 
-Generated: 2026-06-05 14:45 UTC
+Generated: 2026-06-06 00:01 UTC
 
 ## Coverage Summary
 
 | State | CP Officials | CP Coverage | CP Scrapeable | CP Known | Ext Officials | Ext Coverage | Ext Known |
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
+| me | 0 | 0 | 367 | 481 | 14 | 2 | 505 | — |
 | mi | 4,678 | 783 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
 | nh | 816 | 187 | 231 | 234 | 30 | 2 | 242 | 60% |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
@@ -166,6 +167,870 @@ Generated: 2026-06-05 14:45 UTC
 | ocd-jurisdiction/country:us/state:co/place:cañon_city/government | ocd-jurisdiction/country:us/state:co/place:denver/government |
 | ocd-jurisdiction/country:us/state:co/place:central_city/government |  |
 | ocd-jurisdiction/country:us/state:co/place:raymer_~new_raymer~/government |  |
+
+</details>
+
+### me
+
+<details>
+<summary>367 not yet scraped &nbsp;·&nbsp; 482 in external, not in CP &nbsp;·&nbsp; 0 in CP, not in external</summary>
+
+#### Not yet scraped
+
+- ocd-jurisdiction/country:us/state:me/county:androscoggin/place:durham/government
+- ocd-jurisdiction/country:us/state:me/county:androscoggin/place:greene/government
+- ocd-jurisdiction/country:us/state:me/county:androscoggin/place:leeds/government
+- ocd-jurisdiction/country:us/state:me/county:androscoggin/place:lisbon/government
+- ocd-jurisdiction/country:us/state:me/county:androscoggin/place:livermore/government
+- ocd-jurisdiction/country:us/state:me/county:androscoggin/place:minot/government
+- ocd-jurisdiction/country:us/state:me/county:androscoggin/place:poland/government
+- ocd-jurisdiction/country:us/state:me/county:androscoggin/place:sabattus/government
+- ocd-jurisdiction/country:us/state:me/county:androscoggin/place:turner/government
+- ocd-jurisdiction/country:us/state:me/county:androscoggin/place:wales/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:amity/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:castle_hill/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:chapman/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:cyr/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:eagle_lake/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:easton/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:fort_kent/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:frenchville/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:grand_isle/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:haynesville/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:hersey/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:houlton/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:island_falls/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:madawaska/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:mapleton/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:mars_hill/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:merrill/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:moro/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:oakfield/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:orient/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:portage_lake/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:smyrna/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:st._agatha/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:st._francis/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:washburn/government
+- ocd-jurisdiction/country:us/state:me/county:aroostook/place:weston/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:baldwin/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:cape_elizabeth/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:casco/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:cumberland/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:falmouth/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:freeport/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:frye_island/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:gorham/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:gray/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:harpswell/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:harrison/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:long_island/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:naples/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:new_gloucester/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:north_yarmouth/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:pownal/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:raymond/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:scarborough/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:sebago/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:standish/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:windham/government
+- ocd-jurisdiction/country:us/state:me/county:cumberland/place:yarmouth/government
+- ocd-jurisdiction/country:us/state:me/county:franklin/place:carrabassett_valley/government
+- ocd-jurisdiction/country:us/state:me/county:franklin/place:chesterville/government
+- ocd-jurisdiction/country:us/state:me/county:franklin/place:coplin/government
+- ocd-jurisdiction/country:us/state:me/county:franklin/place:dallas/government
+- ocd-jurisdiction/country:us/state:me/county:franklin/place:eustis/government
+- ocd-jurisdiction/country:us/state:me/county:franklin/place:industry/government
+- ocd-jurisdiction/country:us/state:me/county:franklin/place:jay/government
+- ocd-jurisdiction/country:us/state:me/county:franklin/place:kingfield/government
+- ocd-jurisdiction/country:us/state:me/county:franklin/place:new_sharon/government
+- ocd-jurisdiction/country:us/state:me/county:franklin/place:new_vineyard/government
+- ocd-jurisdiction/country:us/state:me/county:franklin/place:phillips/government
+- ocd-jurisdiction/country:us/state:me/county:franklin/place:rangeley/government
+- ocd-jurisdiction/country:us/state:me/county:franklin/place:sandy_river/government
+- ocd-jurisdiction/country:us/state:me/county:franklin/place:strong/government
+- ocd-jurisdiction/country:us/state:me/county:franklin/place:temple/government
+- ocd-jurisdiction/country:us/state:me/county:franklin/place:weld/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:amherst/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:aurora/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:blue_hill/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:brooklin/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:brooksville/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:castine/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:cranberry_isles/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:dedham/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:deer_isle/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:eastbrook/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:franklin/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:frenchboro/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:gouldsboro/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:great_pond/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:hancock/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:lamoine/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:mariaville/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:mount_desert/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:orland/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:osborn/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:otis/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:penobscot/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:sedgwick/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:sorrento/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:southwest_harbor/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:stonington/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:sullivan/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:surry/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:swans_island/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:tremont/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:trenton/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:waltham/government
+- ocd-jurisdiction/country:us/state:me/county:hancock/place:winter_harbor/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:albion/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:belgrade/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:benton/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:chelsea/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:china/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:fayette/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:litchfield/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:manchester/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:monmouth/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:mount_vernon/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:oakland/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:pittston/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:randolph/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:readfield/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:rome/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:sidney/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:vassalboro/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:vienna/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:wayne/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:west_gardiner/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:windsor/government
+- ocd-jurisdiction/country:us/state:me/county:kennebec/place:winslow/government
+- ocd-jurisdiction/country:us/state:me/county:knox/place:appleton/government
+- ocd-jurisdiction/country:us/state:me/county:knox/place:camden/government
+- ocd-jurisdiction/country:us/state:me/county:knox/place:cushing/government
+- ocd-jurisdiction/country:us/state:me/county:knox/place:friendship/government
+- ocd-jurisdiction/country:us/state:me/county:knox/place:hope/government
+- ocd-jurisdiction/country:us/state:me/county:knox/place:matinicus_isle/government
+- ocd-jurisdiction/country:us/state:me/county:knox/place:north_haven/government
+- ocd-jurisdiction/country:us/state:me/county:knox/place:owls_head/government
+- ocd-jurisdiction/country:us/state:me/county:knox/place:rockport/government
+- ocd-jurisdiction/country:us/state:me/county:knox/place:south_thomaston/government
+- ocd-jurisdiction/country:us/state:me/county:knox/place:union/government
+- ocd-jurisdiction/country:us/state:me/county:knox/place:vinalhaven/government
+- ocd-jurisdiction/country:us/state:me/county:knox/place:warren/government
+- ocd-jurisdiction/country:us/state:me/county:knox/place:washington/government
+- ocd-jurisdiction/country:us/state:me/county:lincoln/place:alna/government
+- ocd-jurisdiction/country:us/state:me/county:lincoln/place:boothbay/government
+- ocd-jurisdiction/country:us/state:me/county:lincoln/place:boothbay_harbor/government
+- ocd-jurisdiction/country:us/state:me/county:lincoln/place:bremen/government
+- ocd-jurisdiction/country:us/state:me/county:lincoln/place:bristol/government
+- ocd-jurisdiction/country:us/state:me/county:lincoln/place:damariscotta/government
+- ocd-jurisdiction/country:us/state:me/county:lincoln/place:dresden/government
+- ocd-jurisdiction/country:us/state:me/county:lincoln/place:edgecomb/government
+- ocd-jurisdiction/country:us/state:me/county:lincoln/place:jefferson/government
+- ocd-jurisdiction/country:us/state:me/county:lincoln/place:monhegan/government
+- ocd-jurisdiction/country:us/state:me/county:lincoln/place:newcastle/government
+- ocd-jurisdiction/country:us/state:me/county:lincoln/place:nobleboro/government
+- ocd-jurisdiction/country:us/state:me/county:lincoln/place:somerville/government
+- ocd-jurisdiction/country:us/state:me/county:lincoln/place:south_bristol/government
+- ocd-jurisdiction/country:us/state:me/county:lincoln/place:southport/government
+- ocd-jurisdiction/country:us/state:me/county:lincoln/place:whitefield/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:andover/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:bethel/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:brownfield/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:buckfield/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:canton/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:denmark/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:greenwood/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:hanover/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:hartford/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:hebron/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:hiram/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:lovell/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:newry/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:otisfield/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:paris/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:peru/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:porter/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:roxbury/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:stoneham/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:stow/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:sumner/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:sweden/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:waterford/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:west_paris/government
+- ocd-jurisdiction/country:us/state:me/county:oxford/place:woodstock/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:alton/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:bradford/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:bradley/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:carmel/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:charleston/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:chester/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:clifton/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:corinna/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:corinth/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:dexter/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:dixmont/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:eddington/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:edinburg/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:enfield/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:etna/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:exeter/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:garland/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:glenburn/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:greenbush/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:hampden/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:hermon/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:holden/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:howland/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:hudson/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:kenduskeag/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:lagrange/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:lee/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:levant/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:lincoln/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:lowell/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:medway/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:millinocket/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:newburgh/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:newport/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:orrington/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:passadumkeag/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:patten/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:plymouth/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:springfield/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:stetson/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:veazie/government
+- ocd-jurisdiction/country:us/state:me/county:penobscot/place:winn/government
+- ocd-jurisdiction/country:us/state:me/county:piscataquis/place:beaver_cove/government
+- ocd-jurisdiction/country:us/state:me/county:piscataquis/place:bowerbank/government
+- ocd-jurisdiction/country:us/state:me/county:piscataquis/place:brownville/government
+- ocd-jurisdiction/country:us/state:me/county:piscataquis/place:dover-foxcroft/government
+- ocd-jurisdiction/country:us/state:me/county:piscataquis/place:greenville/government
+- ocd-jurisdiction/country:us/state:me/county:piscataquis/place:lake_view/government
+- ocd-jurisdiction/country:us/state:me/county:piscataquis/place:medford/government
+- ocd-jurisdiction/country:us/state:me/county:piscataquis/place:milo/government
+- ocd-jurisdiction/country:us/state:me/county:piscataquis/place:monson/government
+- ocd-jurisdiction/country:us/state:me/county:piscataquis/place:parkman/government
+- ocd-jurisdiction/country:us/state:me/county:piscataquis/place:sangerville/government
+- ocd-jurisdiction/country:us/state:me/county:piscataquis/place:sebec/government
+- ocd-jurisdiction/country:us/state:me/county:piscataquis/place:shirley/government
+- ocd-jurisdiction/country:us/state:me/county:piscataquis/place:wellington/government
+- ocd-jurisdiction/country:us/state:me/county:piscataquis/place:willimantic/government
+- ocd-jurisdiction/country:us/state:me/county:sagadahoc/place:arrowsic/government
+- ocd-jurisdiction/country:us/state:me/county:sagadahoc/place:bowdoin/government
+- ocd-jurisdiction/country:us/state:me/county:sagadahoc/place:bowdoinham/government
+- ocd-jurisdiction/country:us/state:me/county:sagadahoc/place:georgetown/government
+- ocd-jurisdiction/country:us/state:me/county:sagadahoc/place:phippsburg/government
+- ocd-jurisdiction/country:us/state:me/county:sagadahoc/place:richmond/government
+- ocd-jurisdiction/country:us/state:me/county:sagadahoc/place:west_bath/government
+- ocd-jurisdiction/country:us/state:me/county:sagadahoc/place:woolwich/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:athens/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:bingham/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:brighton/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:cambridge/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:canaan/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:caratunk/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:cornville/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:detroit/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:embden/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:fairfield/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:highland/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:jackman/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:mercer/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:moscow/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:new_portland/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:palmyra/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:skowhegan/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:smithfield/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:solon/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:st._albans/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:starks/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:the_forks/government
+- ocd-jurisdiction/country:us/state:me/county:somerset/place:west_forks/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:belmont/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:brooks/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:burnham/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:frankfort/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:freedom/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:islesboro/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:jackson/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:knox/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:liberty/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:lincolnville/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:monroe/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:montville/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:morrill/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:northport/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:palermo/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:prospect/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:searsmont/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:searsport/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:stockton_springs/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:swanville/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:thorndike/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:troy/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:waldo/government
+- ocd-jurisdiction/country:us/state:me/county:waldo/place:winterport/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:addison/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:alexander/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:baileyville/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:baring/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:beddington/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:charlotte/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:cherryfield/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:columbia_falls/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:cooper/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:cutler/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:danforth/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:harrington/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:jonesport/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:lubec/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:machias/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:machiasport/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:marshfield/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:northfield/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:pembroke/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:perry/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:robbinston/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:steuben/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:talmadge/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:whiting/government
+- ocd-jurisdiction/country:us/state:me/county:washington/place:whitneyville/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:acton/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:alfred/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:arundel/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:buxton/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:cornish/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:dayton/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:eliot/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:hollis/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:kennebunk/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:kennebunkport/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:kittery/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:lebanon/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:limerick/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:limington/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:lyman/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:newfield/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:north_berwick/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:ogunquit/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:old_orchard_beach/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:parsonsfield/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:shapleigh/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:south_berwick/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:waterboro/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:wells/government
+- ocd-jurisdiction/country:us/state:me/county:york/place:york/government
+- ocd-jurisdiction/country:us/state:me/place:auburn/government
+- ocd-jurisdiction/country:us/state:me/place:augusta/government
+- ocd-jurisdiction/country:us/state:me/place:bangor/government
+- ocd-jurisdiction/country:us/state:me/place:bath/government
+- ocd-jurisdiction/country:us/state:me/place:belfast/government
+- ocd-jurisdiction/country:us/state:me/place:biddeford/government
+- ocd-jurisdiction/country:us/state:me/place:brewer/government
+- ocd-jurisdiction/country:us/state:me/place:calais/government
+- ocd-jurisdiction/country:us/state:me/place:caribou/government
+- ocd-jurisdiction/country:us/state:me/place:eastport/government
+- ocd-jurisdiction/country:us/state:me/place:ellsworth/government
+- ocd-jurisdiction/country:us/state:me/place:gardiner/government
+- ocd-jurisdiction/country:us/state:me/place:hallowell/government
+- ocd-jurisdiction/country:us/state:me/place:lewiston/government
+- ocd-jurisdiction/country:us/state:me/place:old_town/government
+- ocd-jurisdiction/country:us/state:me/place:portland/government
+- ocd-jurisdiction/country:us/state:me/place:presque_isle/government
+- ocd-jurisdiction/country:us/state:me/place:rockland/government
+- ocd-jurisdiction/country:us/state:me/place:saco/government
+- ocd-jurisdiction/country:us/state:me/place:waterville/government
+- ocd-jurisdiction/country:us/state:me/place:westbrook/government
+
+#### Locality Gaps
+
+| In External, Not in Known | In CivicPatch, Not in External |
+|---------------------------|--------------------------------|
+| ocd-jurisdiction/country:us/state:me/place:abbot/government |  |
+| ocd-jurisdiction/country:us/state:me/place:acton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:addison/government |  |
+| ocd-jurisdiction/country:us/state:me/place:albany/government |  |
+| ocd-jurisdiction/country:us/state:me/place:albion/government |  |
+| ocd-jurisdiction/country:us/state:me/place:alexander/government |  |
+| ocd-jurisdiction/country:us/state:me/place:alfred/government |  |
+| ocd-jurisdiction/country:us/state:me/place:allagash/government |  |
+| ocd-jurisdiction/country:us/state:me/place:alna/government |  |
+| ocd-jurisdiction/country:us/state:me/place:alton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:amherst/government |  |
+| ocd-jurisdiction/country:us/state:me/place:amity/government |  |
+| ocd-jurisdiction/country:us/state:me/place:andover/government |  |
+| ocd-jurisdiction/country:us/state:me/place:anson/government |  |
+| ocd-jurisdiction/country:us/state:me/place:appleton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:arrowsic/government |  |
+| ocd-jurisdiction/country:us/state:me/place:arundel/government |  |
+| ocd-jurisdiction/country:us/state:me/place:ashland/government |  |
+| ocd-jurisdiction/country:us/state:me/place:athens/government |  |
+| ocd-jurisdiction/country:us/state:me/place:atkinson/government |  |
+| ocd-jurisdiction/country:us/state:me/place:aurora/government |  |
+| ocd-jurisdiction/country:us/state:me/place:avon/government |  |
+| ocd-jurisdiction/country:us/state:me/place:baileyville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:baldwin/government |  |
+| ocd-jurisdiction/country:us/state:me/place:bancroft/government |  |
+| ocd-jurisdiction/country:us/state:me/place:bar_harbor/government |  |
+| ocd-jurisdiction/country:us/state:me/place:baring/government |  |
+| ocd-jurisdiction/country:us/state:me/place:beals/government |  |
+| ocd-jurisdiction/country:us/state:me/place:beaver_cove/government |  |
+| ocd-jurisdiction/country:us/state:me/place:beddington/government |  |
+| ocd-jurisdiction/country:us/state:me/place:belgrade/government |  |
+| ocd-jurisdiction/country:us/state:me/place:belmont/government |  |
+| ocd-jurisdiction/country:us/state:me/place:benedicta/government |  |
+| ocd-jurisdiction/country:us/state:me/place:benton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:berwick/government |  |
+| ocd-jurisdiction/country:us/state:me/place:bethel/government |  |
+| ocd-jurisdiction/country:us/state:me/place:big_lake/government |  |
+| ocd-jurisdiction/country:us/state:me/place:bingham/government |  |
+| ocd-jurisdiction/country:us/state:me/place:blaine/government |  |
+| ocd-jurisdiction/country:us/state:me/place:blue_hill/government |  |
+| ocd-jurisdiction/country:us/state:me/place:boothbay/government |  |
+| ocd-jurisdiction/country:us/state:me/place:boothbay_harbor/government |  |
+| ocd-jurisdiction/country:us/state:me/place:bowdoin/government |  |
+| ocd-jurisdiction/country:us/state:me/place:bowdoinham/government |  |
+| ocd-jurisdiction/country:us/state:me/place:bowerbank/government |  |
+| ocd-jurisdiction/country:us/state:me/place:bradford/government |  |
+| ocd-jurisdiction/country:us/state:me/place:bradley/government |  |
+| ocd-jurisdiction/country:us/state:me/place:bremen/government |  |
+| ocd-jurisdiction/country:us/state:me/place:bridgewater/government |  |
+| ocd-jurisdiction/country:us/state:me/place:bridgton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:brighton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:bristol/government |  |
+| ocd-jurisdiction/country:us/state:me/place:brooklin/government |  |
+| ocd-jurisdiction/country:us/state:me/place:brooks/government |  |
+| ocd-jurisdiction/country:us/state:me/place:brooksville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:brookton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:brownfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:brownville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:brunswick/government |  |
+| ocd-jurisdiction/country:us/state:me/place:buckfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:bucksport/government |  |
+| ocd-jurisdiction/country:us/state:me/place:burlington/government |  |
+| ocd-jurisdiction/country:us/state:me/place:burnham/government |  |
+| ocd-jurisdiction/country:us/state:me/place:buxton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:byron/government |  |
+| ocd-jurisdiction/country:us/state:me/place:cambridge/government |  |
+| ocd-jurisdiction/country:us/state:me/place:camden/government |  |
+| ocd-jurisdiction/country:us/state:me/place:canaan/government |  |
+| ocd-jurisdiction/country:us/state:me/place:canton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:cape_elizabeth/government |  |
+| ocd-jurisdiction/country:us/state:me/place:caratunk/government |  |
+| ocd-jurisdiction/country:us/state:me/place:carmel/government |  |
+| ocd-jurisdiction/country:us/state:me/place:carrabassett_valley/government |  |
+| ocd-jurisdiction/country:us/state:me/place:carroll/government |  |
+| ocd-jurisdiction/country:us/state:me/place:carthage/government |  |
+| ocd-jurisdiction/country:us/state:me/place:cary/government |  |
+| ocd-jurisdiction/country:us/state:me/place:casco/government |  |
+| ocd-jurisdiction/country:us/state:me/place:castine/government |  |
+| ocd-jurisdiction/country:us/state:me/place:castle_hill/government |  |
+| ocd-jurisdiction/country:us/state:me/place:caswell/government |  |
+| ocd-jurisdiction/country:us/state:me/place:chapman/government |  |
+| ocd-jurisdiction/country:us/state:me/place:charleston/government |  |
+| ocd-jurisdiction/country:us/state:me/place:charlotte/government |  |
+| ocd-jurisdiction/country:us/state:me/place:chebeague_island/government |  |
+| ocd-jurisdiction/country:us/state:me/place:chelsea/government |  |
+| ocd-jurisdiction/country:us/state:me/place:cherryfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:chester/government |  |
+| ocd-jurisdiction/country:us/state:me/place:chesterville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:china/government |  |
+| ocd-jurisdiction/country:us/state:me/place:clifton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:clinton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:codyville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:columbia/government |  |
+| ocd-jurisdiction/country:us/state:me/place:columbia_falls/government |  |
+| ocd-jurisdiction/country:us/state:me/place:connor/government |  |
+| ocd-jurisdiction/country:us/state:me/place:cooper/government |  |
+| ocd-jurisdiction/country:us/state:me/place:coplin/government |  |
+| ocd-jurisdiction/country:us/state:me/place:corinna/government |  |
+| ocd-jurisdiction/country:us/state:me/place:corinth/government |  |
+| ocd-jurisdiction/country:us/state:me/place:cornish/government |  |
+| ocd-jurisdiction/country:us/state:me/place:cornville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:cranberry_isles/government |  |
+| ocd-jurisdiction/country:us/state:me/place:crawford/government |  |
+| ocd-jurisdiction/country:us/state:me/place:cross_lake/government |  |
+| ocd-jurisdiction/country:us/state:me/place:crystal/government |  |
+| ocd-jurisdiction/country:us/state:me/place:cumberland/government |  |
+| ocd-jurisdiction/country:us/state:me/place:cushing/government |  |
+| ocd-jurisdiction/country:us/state:me/place:cutler/government |  |
+| ocd-jurisdiction/country:us/state:me/place:cyr/government |  |
+| ocd-jurisdiction/country:us/state:me/place:dallas/government |  |
+| ocd-jurisdiction/country:us/state:me/place:damariscotta/government |  |
+| ocd-jurisdiction/country:us/state:me/place:danforth/government |  |
+| ocd-jurisdiction/country:us/state:me/place:dayton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:deblois/government |  |
+| ocd-jurisdiction/country:us/state:me/place:dedham/government |  |
+| ocd-jurisdiction/country:us/state:me/place:deer_isle/government |  |
+| ocd-jurisdiction/country:us/state:me/place:denmark/government |  |
+| ocd-jurisdiction/country:us/state:me/place:dennistown/government |  |
+| ocd-jurisdiction/country:us/state:me/place:dennysville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:detroit/government |  |
+| ocd-jurisdiction/country:us/state:me/place:dexter/government |  |
+| ocd-jurisdiction/country:us/state:me/place:dixfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:dixmont/government |  |
+| ocd-jurisdiction/country:us/state:me/place:dover-foxcroft/government |  |
+| ocd-jurisdiction/country:us/state:me/place:dresden/government |  |
+| ocd-jurisdiction/country:us/state:me/place:drew/government |  |
+| ocd-jurisdiction/country:us/state:me/place:durham/government |  |
+| ocd-jurisdiction/country:us/state:me/place:dyer_brook/government |  |
+| ocd-jurisdiction/country:us/state:me/place:eagle_lake/government |  |
+| ocd-jurisdiction/country:us/state:me/place:east_machias/government |  |
+| ocd-jurisdiction/country:us/state:me/place:east_millinocket/government |  |
+| ocd-jurisdiction/country:us/state:me/place:eastbrook/government |  |
+| ocd-jurisdiction/country:us/state:me/place:easton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:eddington/government |  |
+| ocd-jurisdiction/country:us/state:me/place:edgecomb/government |  |
+| ocd-jurisdiction/country:us/state:me/place:edinburg/government |  |
+| ocd-jurisdiction/country:us/state:me/place:edmunds/government |  |
+| ocd-jurisdiction/country:us/state:me/place:eliot/government |  |
+| ocd-jurisdiction/country:us/state:me/place:embden/government |  |
+| ocd-jurisdiction/country:us/state:me/place:enfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:etna/government |  |
+| ocd-jurisdiction/country:us/state:me/place:eustis/government |  |
+| ocd-jurisdiction/country:us/state:me/place:exeter/government |  |
+| ocd-jurisdiction/country:us/state:me/place:fairfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:falmouth/government |  |
+| ocd-jurisdiction/country:us/state:me/place:farmingdale/government |  |
+| ocd-jurisdiction/country:us/state:me/place:farmington/government |  |
+| ocd-jurisdiction/country:us/state:me/place:fayette/government |  |
+| ocd-jurisdiction/country:us/state:me/place:fort_fairfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:fort_kent/government |  |
+| ocd-jurisdiction/country:us/state:me/place:frankfort/government |  |
+| ocd-jurisdiction/country:us/state:me/place:franklin/government |  |
+| ocd-jurisdiction/country:us/state:me/place:freedom/government |  |
+| ocd-jurisdiction/country:us/state:me/place:freeport/government |  |
+| ocd-jurisdiction/country:us/state:me/place:frenchboro/government |  |
+| ocd-jurisdiction/country:us/state:me/place:frenchville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:friendship/government |  |
+| ocd-jurisdiction/country:us/state:me/place:frye_island/government |  |
+| ocd-jurisdiction/country:us/state:me/place:fryeburg/government |  |
+| ocd-jurisdiction/country:us/state:me/place:garfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:garland/government |  |
+| ocd-jurisdiction/country:us/state:me/place:georgetown/government |  |
+| ocd-jurisdiction/country:us/state:me/place:gilead/government |  |
+| ocd-jurisdiction/country:us/state:me/place:glenburn/government |  |
+| ocd-jurisdiction/country:us/state:me/place:glenwood/government |  |
+| ocd-jurisdiction/country:us/state:me/place:gorham/government |  |
+| ocd-jurisdiction/country:us/state:me/place:gouldsboro/government |  |
+| ocd-jurisdiction/country:us/state:me/place:grand_isle/government |  |
+| ocd-jurisdiction/country:us/state:me/place:grand_lake_stream/government |  |
+| ocd-jurisdiction/country:us/state:me/place:gray/government |  |
+| ocd-jurisdiction/country:us/state:me/place:great_pond/government |  |
+| ocd-jurisdiction/country:us/state:me/place:greenbush/government |  |
+| ocd-jurisdiction/country:us/state:me/place:greene/government |  |
+| ocd-jurisdiction/country:us/state:me/place:greenville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:greenwood/government |  |
+| ocd-jurisdiction/country:us/state:me/place:guilford/government |  |
+| ocd-jurisdiction/country:us/state:me/place:hamlin/government |  |
+| ocd-jurisdiction/country:us/state:me/place:hammond/government |  |
+| ocd-jurisdiction/country:us/state:me/place:hampden/government |  |
+| ocd-jurisdiction/country:us/state:me/place:hancock/government |  |
+| ocd-jurisdiction/country:us/state:me/place:hanover/government |  |
+| ocd-jurisdiction/country:us/state:me/place:harmony/government |  |
+| ocd-jurisdiction/country:us/state:me/place:harpswell/government |  |
+| ocd-jurisdiction/country:us/state:me/place:harrington/government |  |
+| ocd-jurisdiction/country:us/state:me/place:harrison/government |  |
+| ocd-jurisdiction/country:us/state:me/place:hartford/government |  |
+| ocd-jurisdiction/country:us/state:me/place:hartland/government |  |
+| ocd-jurisdiction/country:us/state:me/place:haynesville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:hebron/government |  |
+| ocd-jurisdiction/country:us/state:me/place:hermon/government |  |
+| ocd-jurisdiction/country:us/state:me/place:hersey/government |  |
+| ocd-jurisdiction/country:us/state:me/place:highland/government |  |
+| ocd-jurisdiction/country:us/state:me/place:hiram/government |  |
+| ocd-jurisdiction/country:us/state:me/place:hodgdon/government |  |
+| ocd-jurisdiction/country:us/state:me/place:holden/government |  |
+| ocd-jurisdiction/country:us/state:me/place:hollis/government |  |
+| ocd-jurisdiction/country:us/state:me/place:hope/government |  |
+| ocd-jurisdiction/country:us/state:me/place:houlton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:howland/government |  |
+| ocd-jurisdiction/country:us/state:me/place:hudson/government |  |
+| ocd-jurisdiction/country:us/state:me/place:indian_township/government |  |
+| ocd-jurisdiction/country:us/state:me/place:industry/government |  |
+| ocd-jurisdiction/country:us/state:me/place:island_falls/government |  |
+| ocd-jurisdiction/country:us/state:me/place:isle_au_haut/government |  |
+| ocd-jurisdiction/country:us/state:me/place:islesboro/government |  |
+| ocd-jurisdiction/country:us/state:me/place:jackman/government |  |
+| ocd-jurisdiction/country:us/state:me/place:jackson/government |  |
+| ocd-jurisdiction/country:us/state:me/place:jay/government |  |
+| ocd-jurisdiction/country:us/state:me/place:jefferson/government |  |
+| ocd-jurisdiction/country:us/state:me/place:jonesboro/government |  |
+| ocd-jurisdiction/country:us/state:me/place:jonesport/government |  |
+| ocd-jurisdiction/country:us/state:me/place:kenduskeag/government |  |
+| ocd-jurisdiction/country:us/state:me/place:kennebunk/government |  |
+| ocd-jurisdiction/country:us/state:me/place:kennebunkport/government |  |
+| ocd-jurisdiction/country:us/state:me/place:kingfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:kingman/government |  |
+| ocd-jurisdiction/country:us/state:me/place:kingsbury/government |  |
+| ocd-jurisdiction/country:us/state:me/place:kittery/government |  |
+| ocd-jurisdiction/country:us/state:me/place:knox/government |  |
+| ocd-jurisdiction/country:us/state:me/place:lagrange/government |  |
+| ocd-jurisdiction/country:us/state:me/place:lake_view/government |  |
+| ocd-jurisdiction/country:us/state:me/place:lakeville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:lamoine/government |  |
+| ocd-jurisdiction/country:us/state:me/place:lebanon/government |  |
+| ocd-jurisdiction/country:us/state:me/place:lee/government |  |
+| ocd-jurisdiction/country:us/state:me/place:leeds/government |  |
+| ocd-jurisdiction/country:us/state:me/place:levant/government |  |
+| ocd-jurisdiction/country:us/state:me/place:liberty/government |  |
+| ocd-jurisdiction/country:us/state:me/place:limerick/government |  |
+| ocd-jurisdiction/country:us/state:me/place:limestone/government |  |
+| ocd-jurisdiction/country:us/state:me/place:limington/government |  |
+| ocd-jurisdiction/country:us/state:me/place:lincoln_plantation/government |  |
+| ocd-jurisdiction/country:us/state:me/place:lincoln_town/government |  |
+| ocd-jurisdiction/country:us/state:me/place:lincolnville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:linneus/government |  |
+| ocd-jurisdiction/country:us/state:me/place:lisbon/government |  |
+| ocd-jurisdiction/country:us/state:me/place:litchfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:littleton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:livermore/government |  |
+| ocd-jurisdiction/country:us/state:me/place:livermore_falls/government |  |
+| ocd-jurisdiction/country:us/state:me/place:long_island/government |  |
+| ocd-jurisdiction/country:us/state:me/place:lovell/government |  |
+| ocd-jurisdiction/country:us/state:me/place:lowell/government |  |
+| ocd-jurisdiction/country:us/state:me/place:lubec/government |  |
+| ocd-jurisdiction/country:us/state:me/place:ludlow/government |  |
+| ocd-jurisdiction/country:us/state:me/place:lyman/government |  |
+| ocd-jurisdiction/country:us/state:me/place:machias/government |  |
+| ocd-jurisdiction/country:us/state:me/place:machiasport/government |  |
+| ocd-jurisdiction/country:us/state:me/place:macwahoc/government |  |
+| ocd-jurisdiction/country:us/state:me/place:madawaska/government |  |
+| ocd-jurisdiction/country:us/state:me/place:madawaska_lake/government |  |
+| ocd-jurisdiction/country:us/state:me/place:madison/government |  |
+| ocd-jurisdiction/country:us/state:me/place:magalloway/government |  |
+| ocd-jurisdiction/country:us/state:me/place:manchester/government |  |
+| ocd-jurisdiction/country:us/state:me/place:mapleton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:mariaville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:mars_hill/government |  |
+| ocd-jurisdiction/country:us/state:me/place:marshfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:masardis/government |  |
+| ocd-jurisdiction/country:us/state:me/place:matinicus_isle/government |  |
+| ocd-jurisdiction/country:us/state:me/place:mattawamkeag/government |  |
+| ocd-jurisdiction/country:us/state:me/place:maxfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:mechanic_falls/government |  |
+| ocd-jurisdiction/country:us/state:me/place:meddybemps/government |  |
+| ocd-jurisdiction/country:us/state:me/place:medford/government |  |
+| ocd-jurisdiction/country:us/state:me/place:medway/government |  |
+| ocd-jurisdiction/country:us/state:me/place:mercer/government |  |
+| ocd-jurisdiction/country:us/state:me/place:merrill/government |  |
+| ocd-jurisdiction/country:us/state:me/place:mexico/government |  |
+| ocd-jurisdiction/country:us/state:me/place:milbridge/government |  |
+| ocd-jurisdiction/country:us/state:me/place:milford/government |  |
+| ocd-jurisdiction/country:us/state:me/place:millinocket/government |  |
+| ocd-jurisdiction/country:us/state:me/place:milo/government |  |
+| ocd-jurisdiction/country:us/state:me/place:minot/government |  |
+| ocd-jurisdiction/country:us/state:me/place:monhegan/government |  |
+| ocd-jurisdiction/country:us/state:me/place:monmouth/government |  |
+| ocd-jurisdiction/country:us/state:me/place:monroe/government |  |
+| ocd-jurisdiction/country:us/state:me/place:monson/government |  |
+| ocd-jurisdiction/country:us/state:me/place:monticello/government |  |
+| ocd-jurisdiction/country:us/state:me/place:montville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:moose_river/government |  |
+| ocd-jurisdiction/country:us/state:me/place:moro/government |  |
+| ocd-jurisdiction/country:us/state:me/place:morrill/government |  |
+| ocd-jurisdiction/country:us/state:me/place:moscow/government |  |
+| ocd-jurisdiction/country:us/state:me/place:mount_chase/government |  |
+| ocd-jurisdiction/country:us/state:me/place:mount_desert/government |  |
+| ocd-jurisdiction/country:us/state:me/place:mount_vernon/government |  |
+| ocd-jurisdiction/country:us/state:me/place:naples/government |  |
+| ocd-jurisdiction/country:us/state:me/place:nashville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:new_canada/government |  |
+| ocd-jurisdiction/country:us/state:me/place:new_gloucester/government |  |
+| ocd-jurisdiction/country:us/state:me/place:new_limerick/government |  |
+| ocd-jurisdiction/country:us/state:me/place:new_portland/government |  |
+| ocd-jurisdiction/country:us/state:me/place:new_sharon/government |  |
+| ocd-jurisdiction/country:us/state:me/place:new_sweden/government |  |
+| ocd-jurisdiction/country:us/state:me/place:new_vineyard/government |  |
+| ocd-jurisdiction/country:us/state:me/place:newburgh/government |  |
+| ocd-jurisdiction/country:us/state:me/place:newcastle/government |  |
+| ocd-jurisdiction/country:us/state:me/place:newfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:newport/government |  |
+| ocd-jurisdiction/country:us/state:me/place:newry/government |  |
+| ocd-jurisdiction/country:us/state:me/place:nobleboro/government |  |
+| ocd-jurisdiction/country:us/state:me/place:norridgewock/government |  |
+| ocd-jurisdiction/country:us/state:me/place:north_berwick/government |  |
+| ocd-jurisdiction/country:us/state:me/place:north_haven/government |  |
+| ocd-jurisdiction/country:us/state:me/place:north_yarmouth/government |  |
+| ocd-jurisdiction/country:us/state:me/place:northfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:northport/government |  |
+| ocd-jurisdiction/country:us/state:me/place:norway/government |  |
+| ocd-jurisdiction/country:us/state:me/place:oakfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:oakland/government |  |
+| ocd-jurisdiction/country:us/state:me/place:ogunquit/government |  |
+| ocd-jurisdiction/country:us/state:me/place:old_orchard_beach/government |  |
+| ocd-jurisdiction/country:us/state:me/place:orient/government |  |
+| ocd-jurisdiction/country:us/state:me/place:orland/government |  |
+| ocd-jurisdiction/country:us/state:me/place:orono/government |  |
+| ocd-jurisdiction/country:us/state:me/place:orrington/government |  |
+| ocd-jurisdiction/country:us/state:me/place:osborn/government |  |
+| ocd-jurisdiction/country:us/state:me/place:otis/government |  |
+| ocd-jurisdiction/country:us/state:me/place:otisfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:owls_head/government |  |
+| ocd-jurisdiction/country:us/state:me/place:oxbow/government |  |
+| ocd-jurisdiction/country:us/state:me/place:oxford/government |  |
+| ocd-jurisdiction/country:us/state:me/place:palermo/government |  |
+| ocd-jurisdiction/country:us/state:me/place:palmyra/government |  |
+| ocd-jurisdiction/country:us/state:me/place:paris/government |  |
+| ocd-jurisdiction/country:us/state:me/place:parkman/government |  |
+| ocd-jurisdiction/country:us/state:me/place:parsonsfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:passadumkeag/government |  |
+| ocd-jurisdiction/country:us/state:me/place:patten/government |  |
+| ocd-jurisdiction/country:us/state:me/place:pembroke/government |  |
+| ocd-jurisdiction/country:us/state:me/place:penobscot/government |  |
+| ocd-jurisdiction/country:us/state:me/place:penobscot_nation/government |  |
+| ocd-jurisdiction/country:us/state:me/place:perham/government |  |
+| ocd-jurisdiction/country:us/state:me/place:perry/government |  |
+| ocd-jurisdiction/country:us/state:me/place:peru/government |  |
+| ocd-jurisdiction/country:us/state:me/place:phillips/government |  |
+| ocd-jurisdiction/country:us/state:me/place:phippsburg/government |  |
+| ocd-jurisdiction/country:us/state:me/place:pittsfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:pittston/government |  |
+| ocd-jurisdiction/country:us/state:me/place:pleasant_point/government |  |
+| ocd-jurisdiction/country:us/state:me/place:pleasant_ridge/government |  |
+| ocd-jurisdiction/country:us/state:me/place:plymouth/government |  |
+| ocd-jurisdiction/country:us/state:me/place:poland/government |  |
+| ocd-jurisdiction/country:us/state:me/place:portage_lake/government |  |
+| ocd-jurisdiction/country:us/state:me/place:porter/government |  |
+| ocd-jurisdiction/country:us/state:me/place:pownal/government |  |
+| ocd-jurisdiction/country:us/state:me/place:prentiss/government |  |
+| ocd-jurisdiction/country:us/state:me/place:princeton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:prospect/government |  |
+| ocd-jurisdiction/country:us/state:me/place:randolph/government |  |
+| ocd-jurisdiction/country:us/state:me/place:rangeley_plantation/government |  |
+| ocd-jurisdiction/country:us/state:me/place:rangeley_town/government |  |
+| ocd-jurisdiction/country:us/state:me/place:raymond/government |  |
+| ocd-jurisdiction/country:us/state:me/place:readfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:reed/government |  |
+| ocd-jurisdiction/country:us/state:me/place:richmond/government |  |
+| ocd-jurisdiction/country:us/state:me/place:ripley/government |  |
+| ocd-jurisdiction/country:us/state:me/place:robbinston/government |  |
+| ocd-jurisdiction/country:us/state:me/place:rockport/government |  |
+| ocd-jurisdiction/country:us/state:me/place:rockwood_strip/government |  |
+| ocd-jurisdiction/country:us/state:me/place:rome/government |  |
+| ocd-jurisdiction/country:us/state:me/place:roque_bluffs/government |  |
+| ocd-jurisdiction/country:us/state:me/place:roxbury/government |  |
+| ocd-jurisdiction/country:us/state:me/place:rumford/government |  |
+| ocd-jurisdiction/country:us/state:me/place:sabattus/government |  |
+| ocd-jurisdiction/country:us/state:me/place:sandy_river/government |  |
+| ocd-jurisdiction/country:us/state:me/place:sangerville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:scarborough/government |  |
+| ocd-jurisdiction/country:us/state:me/place:searsmont/government |  |
+| ocd-jurisdiction/country:us/state:me/place:searsport/government |  |
+| ocd-jurisdiction/country:us/state:me/place:sebago/government |  |
+| ocd-jurisdiction/country:us/state:me/place:sebec/government |  |
+| ocd-jurisdiction/country:us/state:me/place:seboeis/government |  |
+| ocd-jurisdiction/country:us/state:me/place:sedgwick/government |  |
+| ocd-jurisdiction/country:us/state:me/place:shapleigh/government |  |
+| ocd-jurisdiction/country:us/state:me/place:sherman/government |  |
+| ocd-jurisdiction/country:us/state:me/place:shirley/government |  |
+| ocd-jurisdiction/country:us/state:me/place:sidney/government |  |
+| ocd-jurisdiction/country:us/state:me/place:silver_ridge/government |  |
+| ocd-jurisdiction/country:us/state:me/place:sinclair/government |  |
+| ocd-jurisdiction/country:us/state:me/place:skowhegan/government |  |
+| ocd-jurisdiction/country:us/state:me/place:smithfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:smyrna/government |  |
+| ocd-jurisdiction/country:us/state:me/place:solon/government |  |
+| ocd-jurisdiction/country:us/state:me/place:somerville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:sorrento/government |  |
+| ocd-jurisdiction/country:us/state:me/place:south_berwick/government |  |
+| ocd-jurisdiction/country:us/state:me/place:south_bristol/government |  |
+| ocd-jurisdiction/country:us/state:me/place:south_thomaston/government |  |
+| ocd-jurisdiction/country:us/state:me/place:southport/government |  |
+| ocd-jurisdiction/country:us/state:me/place:southwest_harbor/government |  |
+| ocd-jurisdiction/country:us/state:me/place:springfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:st_agatha/government |  |
+| ocd-jurisdiction/country:us/state:me/place:st_albans/government |  |
+| ocd-jurisdiction/country:us/state:me/place:st_francis/government |  |
+| ocd-jurisdiction/country:us/state:me/place:st_george/government |  |
+| ocd-jurisdiction/country:us/state:me/place:st_john/government |  |
+| ocd-jurisdiction/country:us/state:me/place:stacyville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:standish/government |  |
+| ocd-jurisdiction/country:us/state:me/place:starks/government |  |
+| ocd-jurisdiction/country:us/state:me/place:stetson/government |  |
+| ocd-jurisdiction/country:us/state:me/place:steuben/government |  |
+| ocd-jurisdiction/country:us/state:me/place:stockholm/government |  |
+| ocd-jurisdiction/country:us/state:me/place:stockton_springs/government |  |
+| ocd-jurisdiction/country:us/state:me/place:stoneham/government |  |
+| ocd-jurisdiction/country:us/state:me/place:stonington/government |  |
+| ocd-jurisdiction/country:us/state:me/place:stow/government |  |
+| ocd-jurisdiction/country:us/state:me/place:strong/government |  |
+| ocd-jurisdiction/country:us/state:me/place:sullivan/government |  |
+| ocd-jurisdiction/country:us/state:me/place:sumner/government |  |
+| ocd-jurisdiction/country:us/state:me/place:surry/government |  |
+| ocd-jurisdiction/country:us/state:me/place:swans_island/government |  |
+| ocd-jurisdiction/country:us/state:me/place:swanville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:sweden/government |  |
+| ocd-jurisdiction/country:us/state:me/place:talmadge/government |  |
+| ocd-jurisdiction/country:us/state:me/place:temple/government |  |
+| ocd-jurisdiction/country:us/state:me/place:the_forks/government |  |
+| ocd-jurisdiction/country:us/state:me/place:thomaston/government |  |
+| ocd-jurisdiction/country:us/state:me/place:thorndike/government |  |
+| ocd-jurisdiction/country:us/state:me/place:topsfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:topsham/government |  |
+| ocd-jurisdiction/country:us/state:me/place:tremont/government |  |
+| ocd-jurisdiction/country:us/state:me/place:trenton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:troy/government |  |
+| ocd-jurisdiction/country:us/state:me/place:turner/government |  |
+| ocd-jurisdiction/country:us/state:me/place:union/government |  |
+| ocd-jurisdiction/country:us/state:me/place:unity/government |  |
+| ocd-jurisdiction/country:us/state:me/place:upton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:van_buren/government |  |
+| ocd-jurisdiction/country:us/state:me/place:vanceboro/government |  |
+| ocd-jurisdiction/country:us/state:me/place:vassalboro/government |  |
+| ocd-jurisdiction/country:us/state:me/place:veazie/government |  |
+| ocd-jurisdiction/country:us/state:me/place:verona_island/government |  |
+| ocd-jurisdiction/country:us/state:me/place:vienna/government |  |
+| ocd-jurisdiction/country:us/state:me/place:vinalhaven/government |  |
+| ocd-jurisdiction/country:us/state:me/place:wade/government |  |
+| ocd-jurisdiction/country:us/state:me/place:waite/government |  |
+| ocd-jurisdiction/country:us/state:me/place:waldo/government |  |
+| ocd-jurisdiction/country:us/state:me/place:waldoboro/government |  |
+| ocd-jurisdiction/country:us/state:me/place:wales/government |  |
+| ocd-jurisdiction/country:us/state:me/place:wallagrass/government |  |
+| ocd-jurisdiction/country:us/state:me/place:waltham/government |  |
+| ocd-jurisdiction/country:us/state:me/place:warren/government |  |
+| ocd-jurisdiction/country:us/state:me/place:washburn/government |  |
+| ocd-jurisdiction/country:us/state:me/place:washington/government |  |
+| ocd-jurisdiction/country:us/state:me/place:waterboro/government |  |
+| ocd-jurisdiction/country:us/state:me/place:waterford/government |  |
+| ocd-jurisdiction/country:us/state:me/place:wayne/government |  |
+| ocd-jurisdiction/country:us/state:me/place:webster/government |  |
+| ocd-jurisdiction/country:us/state:me/place:weld/government |  |
+| ocd-jurisdiction/country:us/state:me/place:wellington/government |  |
+| ocd-jurisdiction/country:us/state:me/place:wells/government |  |
+| ocd-jurisdiction/country:us/state:me/place:wesley/government |  |
+| ocd-jurisdiction/country:us/state:me/place:west_bath/government |  |
+| ocd-jurisdiction/country:us/state:me/place:west_forks/government |  |
+| ocd-jurisdiction/country:us/state:me/place:west_gardiner/government |  |
+| ocd-jurisdiction/country:us/state:me/place:west_paris/government |  |
+| ocd-jurisdiction/country:us/state:me/place:westfield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:westmanland/government |  |
+| ocd-jurisdiction/country:us/state:me/place:weston/government |  |
+| ocd-jurisdiction/country:us/state:me/place:westport_island/government |  |
+| ocd-jurisdiction/country:us/state:me/place:whitefield/government |  |
+| ocd-jurisdiction/country:us/state:me/place:whiting/government |  |
+| ocd-jurisdiction/country:us/state:me/place:whitneyville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:willimantic/government |  |
+| ocd-jurisdiction/country:us/state:me/place:wilton/government |  |
+| ocd-jurisdiction/country:us/state:me/place:windham/government |  |
+| ocd-jurisdiction/country:us/state:me/place:windsor/government |  |
+| ocd-jurisdiction/country:us/state:me/place:winn/government |  |
+| ocd-jurisdiction/country:us/state:me/place:winslow/government |  |
+| ocd-jurisdiction/country:us/state:me/place:winter_harbor/government |  |
+| ocd-jurisdiction/country:us/state:me/place:winterport/government |  |
+| ocd-jurisdiction/country:us/state:me/place:winterville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:winthrop/government |  |
+| ocd-jurisdiction/country:us/state:me/place:wiscasset/government |  |
+| ocd-jurisdiction/country:us/state:me/place:woodland/government |  |
+| ocd-jurisdiction/country:us/state:me/place:woodstock/government |  |
+| ocd-jurisdiction/country:us/state:me/place:woodville/government |  |
+| ocd-jurisdiction/country:us/state:me/place:woolwich/government |  |
+| ocd-jurisdiction/country:us/state:me/place:yarmouth/government |  |
+| ocd-jurisdiction/country:us/state:me/place:york/government |  |
 
 </details>
 
