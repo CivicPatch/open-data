@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-06-10 20:56 UTC
+Generated: 2026-06-10 20:59 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-06-10 20:56 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | me | 0 | 0 | 367 | 481 | 14 | 2 | 505 | — |
-| mi | 4,687 | 784 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
+| mi | 4,703 | 786 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
 | nh | 816 | 187 | 231 | 234 | 30 | 2 | 242 | 60% |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
@@ -1037,7 +1037,7 @@ Generated: 2026-06-10 20:56 UTC
 ### mi
 
 <details>
-<summary>426 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 30 in CP, not in external</summary>
+<summary>424 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 30 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1413,7 +1413,6 @@ Generated: 2026-06-10 20:56 UTC
 - ocd-jurisdiction/country:us/state:mi/place:mayville/government
 - ocd-jurisdiction/country:us/state:mi/place:mcbain/government
 - ocd-jurisdiction/country:us/state:mi/place:melvindale/government
-- ocd-jurisdiction/country:us/state:mi/place:menominee/government
 - ocd-jurisdiction/country:us/state:mi/place:merrill/government
 - ocd-jurisdiction/country:us/state:mi/place:michiana/government
 - ocd-jurisdiction/country:us/state:mi/place:milford/government
@@ -1445,7 +1444,6 @@ Generated: 2026-06-10 20:56 UTC
 - ocd-jurisdiction/country:us/state:mi/place:rogers_city/government
 - ocd-jurisdiction/country:us/state:mi/place:romeo/government
 - ocd-jurisdiction/country:us/state:mi/place:saginaw/government
-- ocd-jurisdiction/country:us/state:mi/place:saline/government
 - ocd-jurisdiction/country:us/state:mi/place:saugatuck/government
 - ocd-jurisdiction/country:us/state:mi/place:shepherd/government
 - ocd-jurisdiction/country:us/state:mi/place:sheridan/government
