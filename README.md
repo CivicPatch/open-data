@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-06-17 19:33 UTC
+Generated: 2026-06-17 19:35 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-06-17 19:33 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | me | 0 | 0 | 367 | 481 | 14 | 2 | 505 | — |
-| mi | 4,781 | 800 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
+| mi | 4,806 | 804 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
 | nh | 816 | 187 | 231 | 234 | 30 | 2 | 242 | 60% |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
@@ -1037,7 +1037,7 @@ Generated: 2026-06-17 19:33 UTC
 ### mi
 
 <details>
-<summary>410 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 32 in CP, not in external</summary>
+<summary>406 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 32 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1091,7 +1091,6 @@ Generated: 2026-06-17 19:33 UTC
 - ocd-jurisdiction/country:us/state:mi/county:cheboygan/place:beaugrand/government
 - ocd-jurisdiction/country:us/state:mi/county:cheboygan/place:benton/government
 - ocd-jurisdiction/country:us/state:mi/county:cheboygan/place:grant/government
-- ocd-jurisdiction/country:us/state:mi/county:cheboygan/place:mullett/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:bay_mills/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:dafter/government
 - ocd-jurisdiction/country:us/state:mi/county:chippewa/place:pickford/government
@@ -1208,11 +1207,9 @@ Generated: 2026-06-17 19:33 UTC
 - ocd-jurisdiction/country:us/state:mi/county:mason/place:hamlin/government
 - ocd-jurisdiction/country:us/state:mi/county:mason/place:pere_marquette_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:mason/place:sheridan/government
-- ocd-jurisdiction/country:us/state:mi/county:mason/place:summit/government
 - ocd-jurisdiction/country:us/state:mi/county:mason/place:victory/government
 - ocd-jurisdiction/country:us/state:mi/county:mecosta/place:aetna/government
 - ocd-jurisdiction/country:us/state:mi/county:mecosta/place:austin/government
-- ocd-jurisdiction/country:us/state:mi/county:mecosta/place:chippewa/government
 - ocd-jurisdiction/country:us/state:mi/county:mecosta/place:deerfield/government
 - ocd-jurisdiction/country:us/state:mi/county:mecosta/place:green_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:mecosta/place:martiny/government
@@ -1413,7 +1410,6 @@ Generated: 2026-06-17 19:33 UTC
 - ocd-jurisdiction/country:us/state:mi/place:new_lothrop/government
 - ocd-jurisdiction/country:us/state:mi/place:norway/government
 - ocd-jurisdiction/country:us/state:mi/place:onaway/government
-- ocd-jurisdiction/country:us/state:mi/place:onsted/government
 - ocd-jurisdiction/country:us/state:mi/place:ortonville/government
 - ocd-jurisdiction/country:us/state:mi/place:otisville/government
 - ocd-jurisdiction/country:us/state:mi/place:otter_lake/government
