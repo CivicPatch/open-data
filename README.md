@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-06-17 21:51 UTC
+Generated: 2026-06-17 21:53 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-06-17 21:51 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | me | 0 | 0 | 367 | 481 | 14 | 2 | 505 | — |
-| mi | 4,897 | 818 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
+| mi | 4,912 | 820 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
 | nh | 816 | 187 | 231 | 234 | 30 | 2 | 242 | 60% |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
@@ -1037,7 +1037,7 @@ Generated: 2026-06-17 21:51 UTC
 ### mi
 
 <details>
-<summary>392 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 33 in CP, not in external</summary>
+<summary>390 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 33 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1348,7 +1348,6 @@ Generated: 2026-06-17 21:51 UTC
 - ocd-jurisdiction/country:us/state:mi/place:fennville/government
 - ocd-jurisdiction/country:us/state:mi/place:ferndale/government
 - ocd-jurisdiction/country:us/state:mi/place:ferrysburg/government
-- ocd-jurisdiction/country:us/state:mi/place:flushing/government
 - ocd-jurisdiction/country:us/state:mi/place:fowler/government
 - ocd-jurisdiction/country:us/state:mi/place:frankfort/government
 - ocd-jurisdiction/country:us/state:mi/place:franklin/government
@@ -1387,7 +1386,6 @@ Generated: 2026-06-17 21:51 UTC
 - ocd-jurisdiction/country:us/state:mi/place:melvindale/government
 - ocd-jurisdiction/country:us/state:mi/place:merrill/government
 - ocd-jurisdiction/country:us/state:mi/place:michiana/government
-- ocd-jurisdiction/country:us/state:mi/place:milford/government
 - ocd-jurisdiction/country:us/state:mi/place:monroe/government
 - ocd-jurisdiction/country:us/state:mi/place:morenci/government
 - ocd-jurisdiction/country:us/state:mi/place:mount_pleasant/government
