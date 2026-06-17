@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-06-17 20:58 UTC
+Generated: 2026-06-17 21:01 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-06-17 20:58 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | me | 0 | 0 | 367 | 481 | 14 | 2 | 505 | — |
-| mi | 4,844 | 810 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
+| mi | 4,849 | 811 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
 | nh | 816 | 187 | 231 | 234 | 30 | 2 | 242 | 60% |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
@@ -1037,7 +1037,7 @@ Generated: 2026-06-17 20:58 UTC
 ### mi
 
 <details>
-<summary>400 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 33 in CP, not in external</summary>
+<summary>399 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 33 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1204,7 +1204,6 @@ Generated: 2026-06-17 20:58 UTC
 - ocd-jurisdiction/country:us/state:mi/county:marquette/place:wells/government
 - ocd-jurisdiction/country:us/state:mi/county:marquette/place:west_branch/government
 - ocd-jurisdiction/country:us/state:mi/county:mason/place:free_soil/government
-- ocd-jurisdiction/country:us/state:mi/county:mason/place:hamlin/government
 - ocd-jurisdiction/country:us/state:mi/county:mason/place:pere_marquette_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:mason/place:sheridan/government
 - ocd-jurisdiction/country:us/state:mi/county:mason/place:victory/government
