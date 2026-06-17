@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-06-17 19:17 UTC
+Generated: 2026-06-17 19:19 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-06-17 19:17 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | me | 0 | 0 | 367 | 481 | 14 | 2 | 505 | — |
-| mi | 4,722 | 789 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
+| mi | 4,729 | 790 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
 | nh | 816 | 187 | 231 | 234 | 30 | 2 | 242 | 60% |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
@@ -1037,7 +1037,7 @@ Generated: 2026-06-17 19:17 UTC
 ### mi
 
 <details>
-<summary>421 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 31 in CP, not in external</summary>
+<summary>420 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 31 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1388,7 +1388,6 @@ Generated: 2026-06-17 19:17 UTC
 - ocd-jurisdiction/country:us/state:mi/place:ionia/government
 - ocd-jurisdiction/country:us/state:mi/place:iron_river/government
 - ocd-jurisdiction/country:us/state:mi/place:jackson/government
-- ocd-jurisdiction/country:us/state:mi/place:kentwood/government
 - ocd-jurisdiction/country:us/state:mi/place:laingsburg/government
 - ocd-jurisdiction/country:us/state:mi/place:lake_angelus/government
 - ocd-jurisdiction/country:us/state:mi/place:lake_ann/government
