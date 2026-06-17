@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-06-17 19:35 UTC
+Generated: 2026-06-17 19:37 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-06-17 19:35 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | me | 0 | 0 | 367 | 481 | 14 | 2 | 505 | — |
-| mi | 4,806 | 804 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
+| mi | 4,823 | 806 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
 | nh | 816 | 187 | 231 | 234 | 30 | 2 | 242 | 60% |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
@@ -1037,7 +1037,7 @@ Generated: 2026-06-17 19:35 UTC
 ### mi
 
 <details>
-<summary>406 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 32 in CP, not in external</summary>
+<summary>404 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 32 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1220,7 +1220,6 @@ Generated: 2026-06-17 19:35 UTC
 - ocd-jurisdiction/country:us/state:mi/county:menominee/place:meyer/government
 - ocd-jurisdiction/country:us/state:mi/county:menominee/place:nadeau/government
 - ocd-jurisdiction/country:us/state:mi/county:menominee/place:spalding/government
-- ocd-jurisdiction/country:us/state:mi/county:midland/place:greendale/government
 - ocd-jurisdiction/country:us/state:mi/county:midland/place:hope/government
 - ocd-jurisdiction/country:us/state:mi/county:midland/place:lincoln/government
 - ocd-jurisdiction/country:us/state:mi/county:midland/place:mills/government
@@ -1362,7 +1361,6 @@ Generated: 2026-06-17 19:35 UTC
 - ocd-jurisdiction/country:us/state:mi/place:frankfort/government
 - ocd-jurisdiction/country:us/state:mi/place:franklin/government
 - ocd-jurisdiction/country:us/state:mi/place:garden/government
-- ocd-jurisdiction/country:us/state:mi/place:gladwin/government
 - ocd-jurisdiction/country:us/state:mi/place:grand_beach/government
 - ocd-jurisdiction/country:us/state:mi/place:grayling/government
 - ocd-jurisdiction/country:us/state:mi/place:greenville/government
