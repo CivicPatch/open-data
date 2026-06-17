@@ -1,6 +1,6 @@
 # CivicPatch Data Quality
 
-Generated: 2026-06-17 21:49 UTC
+Generated: 2026-06-17 21:51 UTC
 
 ## Coverage Summary
 
@@ -8,7 +8,7 @@ Generated: 2026-06-17 21:49 UTC
 |-------|-------------|-------------|---------------|----------|---------------|--------------|-----------|
 | co | 850 | 120 | 250 | 271 | 48 | 5 | 269 | 94% |
 | me | 0 | 0 | 367 | 481 | 14 | 2 | 505 | — |
-| mi | 4,872 | 815 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
+| mi | 4,897 | 818 | 1,210 | 1,773 | 46 | 5 | 1,775 | 72% |
 | nh | 816 | 187 | 231 | 234 | 30 | 2 | 242 | 60% |
 | nj | 3,032 | 496 | 560 | 563 | 43 | 5 | 565 | 81% |
 | sc | 578 | 91 | 205 | 271 | 20 | 2 | 270 | 62% |
@@ -1037,7 +1037,7 @@ Generated: 2026-06-17 21:49 UTC
 ### mi
 
 <details>
-<summary>395 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 33 in CP, not in external</summary>
+<summary>392 not yet scraped &nbsp;·&nbsp; 56 in external, not in CP &nbsp;·&nbsp; 33 in CP, not in external</summary>
 
 #### Not yet scraped
 
@@ -1045,7 +1045,6 @@ Generated: 2026-06-17 21:49 UTC
 - ocd-jurisdiction/country:us/state:mi/county:alger/place:au_train/government
 - ocd-jurisdiction/country:us/state:mi/county:alger/place:munising/government
 - ocd-jurisdiction/country:us/state:mi/county:allegan/place:fillmore/government
-- ocd-jurisdiction/country:us/state:mi/county:allegan/place:gun_plain/government
 - ocd-jurisdiction/country:us/state:mi/county:allegan/place:manlius/government
 - ocd-jurisdiction/country:us/state:mi/county:allegan/place:martin/government
 - ocd-jurisdiction/country:us/state:mi/county:allegan/place:overisel/government
@@ -1250,7 +1249,6 @@ Generated: 2026-06-17 21:49 UTC
 - ocd-jurisdiction/country:us/state:mi/county:muskegon/place:montague/government
 - ocd-jurisdiction/country:us/state:mi/county:muskegon/place:ravenna/government
 - ocd-jurisdiction/country:us/state:mi/county:newaygo/place:bridgeton/government
-- ocd-jurisdiction/country:us/state:mi/county:oakland/place:addison/government
 - ocd-jurisdiction/country:us/state:mi/county:oakland/place:bloomfield_charter/government
 - ocd-jurisdiction/country:us/state:mi/county:oakland/place:groveland/government
 - ocd-jurisdiction/country:us/state:mi/county:oakland/place:highland_charter/government
@@ -1395,7 +1393,6 @@ Generated: 2026-06-17 21:49 UTC
 - ocd-jurisdiction/country:us/state:mi/place:mount_pleasant/government
 - ocd-jurisdiction/country:us/state:mi/place:muskegon/government
 - ocd-jurisdiction/country:us/state:mi/place:muskegon_heights/government
-- ocd-jurisdiction/country:us/state:mi/place:negaunee/government
 - ocd-jurisdiction/country:us/state:mi/place:new_era/government
 - ocd-jurisdiction/country:us/state:mi/place:new_lothrop/government
 - ocd-jurisdiction/country:us/state:mi/place:onaway/government
