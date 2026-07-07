@@ -1,4 +1,5 @@
 from scripts.scrapers import co as co_scraper
+from scripts.scrapers import ma as ma_scraper
 from scripts.scrapers import me as me_scraper
 from scripts.scrapers import mi as mi_scraper
 from scripts.scrapers import nc as nc_scraper
@@ -22,6 +23,12 @@ state_configs = {
         "fips": "08",
         "pull_from_census": ["places"],
         "scraper": co_scraper,
+        "validation_sources": ["google"],
+    },
+    "ma": {
+        "fips": "25",
+        "pull_from_census": ["places", "county_subdivisions"],
+        "scraper": ma_scraper,
         "validation_sources": ["google"],
     },
     "me": {
