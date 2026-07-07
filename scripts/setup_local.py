@@ -24,7 +24,7 @@ ryaml.representer.add_representer(type(None), _represent_none)
 from schemas import Jurisdiction
 from scripts.state_configs import state_configs
 import scripts.track_progress.generate_google_data as generate_google_data
-from scripts.track_progress.compare import discover_states, run_state as compare_run_state
+from scripts.track_progress.compare import run_state as compare_run_state
 from scripts.maps.local import build_maps_for_state
 
 
@@ -474,5 +474,4 @@ if __name__ == "__main__":
     preflight_check(args.state)
     pull_jurisdiction_data(args.state, limit=args.limit)
     run_validation_transforms(args.state)
-    for state in discover_states():
-        compare_run_state(state)
+    compare_run_state(args.state)
