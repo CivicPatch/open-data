@@ -17,7 +17,6 @@ data_source/
   <state>/
     local/
       jurisdictions.yml         ← municipalities: list of known jurisdictions for the state
-      jurisdictions_metadata.yml
       <place_name>/
         pipeline_run_context.json   ← pipeline config/state for the jurisdiction
     state/
@@ -28,7 +27,6 @@ schemas.py                      ← Pydantic models: Jurisdiction, Office, Offic
 scripts/
   github_actions/               ← run in CI on PRs and post-merge
     validate_jurisdiction.py    ← validates YAML against schemas.py
-    update_jurisdiction_metadata.py
     get_jurisdiction_folder.py
     pull_request_body_markdown.py
     local/

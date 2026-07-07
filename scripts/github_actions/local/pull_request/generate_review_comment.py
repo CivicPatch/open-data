@@ -2,7 +2,7 @@ import json
 import sys
 import yaml
 from shared.utils import config_utils, id_utils
-from shared.utils.review_utils import ReviewDecision, ReviewInputs, generate_review, generate_review_table_markdown
+from shared.utils.review_utils import ReviewDecision, ReviewInputs, build_review_summary, generate_review_table_markdown
 
 
 def generate_review_comment(pipeline_context: dict, people: list) -> ReviewDecision:
@@ -17,7 +17,7 @@ def generate_review_comment(pipeline_context: dict, people: list) -> ReviewDecis
         identities=identities,
         unique_roles=config_utils.get_unique_roles(),
     )
-    review = generate_review(reference_people, people, inputs, origin_source)
+    review = build_review_summary(reference_people, people, inputs, origin_source)
     issues = review["issues"]
     identity_table = generate_review_table_markdown(review["people_by_source"])
 
@@ -28,7 +28,7 @@ def generate_review_comment(pipeline_context: dict, people: list) -> ReviewDecis
         markdown.append("Rejected by Bot - please manually review.")
         markdown.append("### Issues\n")
         for issue in issues:
-            markdown.append(f"- {issue}")
+            markdown.append(f"- {issue.message}")
         markdown.append("---\n")
     else:
         markdown.append("# Approved ✅")

@@ -22,9 +22,8 @@ Usage:
     uv run python scripts/fix_jurisdiction_ocdids.py --yes        # auto-accept every proposal
 
 For each invalid ID you get: [a]ccept proposal / [e]dit by hand / [s]kip / [q]uit.
-Accepting rewrites the ID in jurisdictions.yml, renames/repoints the matching key in
-jurisdictions_metadata.yml, and migrates any data/<state>/local/*.yml officials file
-that references the old ID (file rename + jurisdiction_ocdid field).
+Accepting rewrites the ID in jurisdictions.yml and migrates any data/<state>/local/*.yml
+officials file that references the old ID (file rename + jurisdiction_ocdid field).
 """
 
 import argparse
@@ -148,22 +147,6 @@ def _apply_to_jurisdictions(path: Path, old: str, new: str) -> bool:
     return changed
 
 
-def _apply_to_metadata(state: str, old: str, new: str) -> bool:
-    path = PROJECT_ROOT / "data_source" / state / "local" / "jurisdictions_metadata.yml"
-    if not path.exists():
-        return False
-    doc = _read_yaml(path)
-    by_id = (doc or {}).get("jurisdictions_by_id")
-    if not by_id or old not in by_id:
-        return False
-    entry = by_id.pop(old)
-    if isinstance(entry, dict) and entry.get("jurisdiction_ocdid") == old:
-        entry["jurisdiction_ocdid"] = new
-    by_id[new] = entry
-    _write_yaml(path, doc)
-    return True
-
-
 def _apply_to_data_file(state: str, old: str, new: str) -> bool:
     """Migrate the officials file if one references the old ID (rename + repoint)."""
     from scripts.utils import jurisdiction_to_file
@@ -195,8 +178,6 @@ def apply_fix(state: str, jurisdictions_path: Path, old: str, new: str) -> None:
     touched = []
     if _apply_to_jurisdictions(jurisdictions_path, old, new):
         touched.append(jurisdictions_path.relative_to(PROJECT_ROOT).as_posix())
-    if _apply_to_metadata(state, old, new):
-        touched.append(f"data_source/{state}/local/jurisdictions_metadata.yml")
     if _apply_to_data_file(state, old, new):
         touched.append(f"data/{state}/local/* (officials file migrated)")
     print(f"    ✓ updated: {', '.join(touched) if touched else '(no files matched)'}")

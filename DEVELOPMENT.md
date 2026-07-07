@@ -95,7 +95,7 @@ uv run python scripts/fix_jurisdiction_ocdids.py --state va
 uv run python scripts/fix_jurisdiction_ocdids.py --state va --yes
 ```
 
-For each invalid ID it prints the state, `file:line`, the specific problem(s), and a suggested canonical ID, and warns if a suggestion would collide with an existing or another suggested ID. Accepting a fix rewrites `jurisdictions.yml`, repoints the matching key in `jurisdictions_metadata.yml`, and migrates any `data/<state>/local/*.yml` officials file that referenced the old ID. Structural validation is delegated to `shared`'s `parse_jurisdiction_ocdid`; the charset/empty checks layer on top.
+For each invalid ID it prints the state, `file:line`, the specific problem(s), and a suggested canonical ID, and warns if a suggestion would collide with an existing or another suggested ID. Accepting a fix rewrites `jurisdictions.yml` and migrates any `data/<state>/local/*.yml` officials file that referenced the old ID. Structural validation is delegated to `shared`'s `parse_jurisdiction_ocdid`; the charset/empty checks layer on top.
 
 ---
 
@@ -144,7 +144,6 @@ The purge uses `{"hosts":["cdn.civicpatch.org"]}` rather than per-file URLs beca
 | `uv run python scripts/fix_jurisdiction_ocdids.py [--state {code}]` | After (re)generating `jurisdictions.yml` — validate/fix OCD-IDs |
 | `mise run setup-maps [-- --state {code}]` | Census boundaries changed |
 | `mise run generate-pmtiles [-- --state {code}]` | Jurisdiction names/data changed |
-| `mise run readme` | Refresh coverage report in README.md |
 
 ---
 
