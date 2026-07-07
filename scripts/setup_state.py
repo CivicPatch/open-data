@@ -16,7 +16,6 @@ from scripts.maps.county import build_county_map_for_state
 from scripts.maps.state import build_state_map_for_state
 from scripts.setup_counties import pull_county_jurisdiction_data
 from scripts.setup_local import (
-    create_or_update_jurisdiction_metadata,
     preflight_check,
     pull_jurisdiction_data,
     run_validation_transforms,
@@ -45,7 +44,6 @@ def setup_state(state: str) -> None:
     print("[3/5] Local jurisdiction data (Census + scraper + validation)...")
     preflight_check(state)
     pull_jurisdiction_data(state)
-    create_or_update_jurisdiction_metadata(state)
     run_validation_transforms(state)
 
     print("[4/5] Uploading GeoJSONs to R2...")
