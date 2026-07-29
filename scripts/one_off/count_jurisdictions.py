@@ -3,7 +3,9 @@ from pathlib import Path
 
 import yaml
 
-from scripts.paths import PROJECT_ROOT
+PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
+
+
 def count_jurisdictions(state: str):
     print("Counting jurisdictions...")
     jurisdictions_file_path = PROJECT_ROOT / "data_source" / state / "jurisdictions.yml"
