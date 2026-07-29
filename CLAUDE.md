@@ -34,6 +34,7 @@ scripts/
       post_merge/               ← scripts run locally after a PR is merged
   jurisdictions/                ← the pipeline that builds data_source/**/jurisdictions.yml
     config.py                   ← state registry: fips, name, census sources, scraper
+    headers.py                  ← generates each jurisdictions.yml header (fields + provenance)
     yaml_io.py                  ← shared comment-preserving YAML load/dump
     states.py                   ← fetch state government jurisdiction for a state
     counties.py                 ← fetch + enrich county jurisdictions for a state
