@@ -9,7 +9,12 @@ from typing import Any, Dict, List, Tuple
 
 import requests
 
-from scripts.jurisdictions.yaml_io import get_names, load_existing_jurisdictions, ryaml
+from scripts.jurisdictions.yaml_io import (
+    apply_scraped_fields,
+    get_names,
+    load_existing_jurisdictions,
+    ryaml,
+)
 from schemas import Jurisdiction
 from scripts.jurisdictions import headers
 from scripts.jurisdictions.config import state_configs
@@ -116,20 +121,7 @@ def pull_jurisdiction_data(state: str, limit: int = None):
         if "status" in existing_entry:
             del existing_entry["status"]
         if supplemented_j:
-            if supplemented_j.url and not existing_entry.get("url"):
-                existing_entry["url"] = supplemented_j.url
-            if supplemented_j.wiki_url:
-                existing_entry["wiki_url"] = supplemented_j.wiki_url
-            # issues and generated_comments replaced each run
-            if supplemented_j.issues:
-                existing_entry["issues"] = supplemented_j.issues
-            elif "issues" in existing_entry:
-                del existing_entry["issues"]
-            if supplemented_j.generated_comments:
-                existing_entry["generated_comments"] = supplemented_j.generated_comments
-            elif "generated_comments" in existing_entry:
-                del existing_entry["generated_comments"]
-        # comments: never overwritten by scripts
+            apply_scraped_fields(existing_entry, supplemented_j)
 
     # Mark entries absent from census as inactive
     for ocdid in inactive_ids:
