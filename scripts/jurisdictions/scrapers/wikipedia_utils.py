@@ -28,6 +28,23 @@ def _save_cache(state: str, cache: Dict[str, Any]):
         json.dump(cache, f, indent=2)
 
 
+def _cell_text(td) -> str:
+    """Text of a table cell, ignoring reference superscripts.
+
+    Prefers the text of a contained link — some tables wrap the value in a link (e.g.
+    Texas links each county's FIPS code to census.gov), where the raw cell text would
+    otherwise pick up surrounding markup.
+    """
+    if not td:
+        return ""
+    for sup in td.find_all("sup"):
+        sup.extract()
+    link = td.find("a")
+    if link:
+        return link.get_text(strip=True)
+    return td.get_text(strip=True)
+
+
 def get_entries(
     title: str,
     table_index: int,
@@ -35,8 +52,33 @@ def get_entries(
     entry_column: int,
     state: Optional[str] = None,
     limit: Optional[int] = None,
+    geoid_column: Optional[int] = None,
+    geoid_prefix: str = "",
+    cache_key: Optional[str] = None,
 ) -> Tuple[Dict[str, Any], Dict[str, str], List[str]]:
-    cache = _load_cache(state) if state else {}
+    """Scrape a Wikipedia list page into `{geoid: {wiki_url, geoid, url}}`.
+
+    The GEOID can come from either of two places:
+
+      * **The infobox** (default, `geoid_column=None`) — the municipality layout. The
+        GEOID is only known *after* fetching each linked page, so an entry whose
+        infobox has no FIPS/GEOID row is unusable and is dropped with a warning.
+
+      * **A table column** (`geoid_column` set) — the county layout. County infoboxes
+        carry no FIPS row at all, but the list table has one, so the GEOID is known
+        up front and is authoritative. The infobox is still fetched because it is the
+        only source of `url`, but its GEOID is ignored and a failed or website-less
+        fetch no longer discards the entry.
+
+    `geoid_prefix` is prepended to the table GEOID — county tables list the bare
+    3-digit county code, which needs the state FIPS to form the 5-digit GEOID.
+
+    `cache_key` names the on-disk cache file, defaulting to `state`. Pass it when one
+    state has more than one list page (e.g. "nc" municipalities vs "nc_counties") so
+    the caches don't collide.
+    """
+    cache_name = cache_key or state
+    cache = _load_cache(cache_name) if cache_name else {}
 
     parse_url = get_parse_url(title)
     data = requests.get(parse_url, headers=HEADERS)
@@ -53,6 +95,9 @@ def get_entries(
     for row in rows:
         cols = row.find_all(["td", "th"])
 
+        if entry_column >= len(cols):
+            continue
+
         normalized_td = normalize_td(cols[entry_column])
         entry_text = normalized_td["text"]
         wiki_url = normalized_td["url"]
@@ -64,20 +109,59 @@ def get_entries(
         # Always record table name → wiki_url regardless of limit or cache
         table_name_to_wiki_url[entry_text] = get_wiki_url(wiki_url)
 
+        table_geoid = None
+        if geoid_column is not None:
+            if geoid_column >= len(cols):
+                warnings.append(f"No GEOID column found in table row for: {entry_text}")
+                continue
+            table_geoid = normalize_geoid(_cell_text(cols[geoid_column]))
+            if not table_geoid:
+                warnings.append(f"Empty GEOID in table for: {entry_text}")
+                continue
+            table_geoid = f"{geoid_prefix}{table_geoid}"
+
+        skipped_for_limit = False
         if wiki_url in cache:
             entry = cache[wiki_url]
-        else:
-            if limit is not None and fetched >= limit:
+        elif limit is not None and fetched >= limit:
+            # Past the fetch budget. With a table GEOID we already know enough to emit a
+            # matchable entry (only `url` needs the infobox), so fall through rather than
+            # dropping it — otherwise a smoke-test run would write bogus `no_wiki_match`
+            # flags for every unfetched row.
+            if table_geoid is None:
                 continue
+            entry = None
+            skipped_for_limit = True
+        else:
             entry, infobox_warnings = get_entry_infobox(wiki_url)
             fetched += 1
             if infobox_warnings:
                 warnings.extend(infobox_warnings)
-            if entry and state:
+            if entry and cache_name:
                 cache[wiki_url] = entry
-                _save_cache(state, cache)  # write after each fetch so crashes don't lose progress
+                # write after each fetch so crashes don't lose progress
+                _save_cache(cache_name, cache)
 
-        if entry:
+        if table_geoid:
+            # The table GEOID is authoritative; the infobox only contributes `url`, so a
+            # failed or website-less fetch still yields a usable entry.
+            record = {
+                "wiki_url": get_wiki_url(wiki_url),
+                "geoid": table_geoid,
+                "url": (entry or {}).get("url", ""),
+            }
+            if not entry:
+                # We never saw the infobox, so an empty `url` here means "unknown", not
+                # "has no website". Flagged so callers don't report it as missing.
+                record["url_unknown"] = True
+                if not skipped_for_limit:
+                    warnings.append(
+                        f"Infobox fetch failed for {entry_text} "
+                        f"({get_wiki_url(wiki_url)}) — official website unknown, "
+                        f"matched on table GEOID {table_geoid}"
+                    )
+            entries_by_geoid[table_geoid] = record
+        elif entry:
             if entry["geoid"]:
                 entries_by_geoid[entry["geoid"]] = entry
             else:

@@ -1,9 +1,13 @@
+from unittest.mock import MagicMock, patch
+
 import pytest
 from bs4 import BeautifulSoup
 
 from schemas import Jurisdiction
 from scripts.jurisdictions.scrapers.wikipedia_utils import (
+    _cell_text,
     find_candidates,
+    get_entries,
     get_parse_url,
     get_wiki_url,
     match_jurisdictions,
@@ -225,3 +229,146 @@ class TestMatchJurisdictions:
         entries = {"3345140": entry("3345140", "Manchester,_New_Hampshire")}
         result, _ = match_jurisdictions(census, entries, table_names={})
         assert result["ocd/a"].issues is None
+
+
+# ── _cell_text ────────────────────────────────────────────────────────────────
+
+class TestCellText:
+    def test_plain_text(self):
+        assert _cell_text(make_td("<td>001</td>")) == "001"
+
+    def test_prefers_link_text(self):
+        # Texas links each county's FIPS code out to census.gov
+        td = make_td('<td><a href="https://www.census.gov/x">001</a></td>')
+        assert _cell_text(td) == "001"
+
+    def test_strips_reference_superscripts(self):
+        td = make_td('<td>001<sup class="reference">[1]</sup></td>')
+        assert _cell_text(td) == "001"
+
+    def test_none_returns_empty(self):
+        assert _cell_text(None) == ""
+
+
+# ── get_entries: table-sourced GEOIDs ─────────────────────────────────────────
+
+COUNTY_LIST_HTML = """
+<table class="wikitable">
+  <tr><th>County</th><th>FIPS code</th></tr>
+  <tr><td><a href="/wiki/Alpha_County">Alpha County</a></td><td>001</td></tr>
+  <tr><td><a href="/wiki/Beta_County">Beta County</a></td><td>003</td></tr>
+</table>
+"""
+
+INFOBOX_HTML = """
+<table class="infobox">
+  <tr><th>Website</th><td><a href="https://alpha.example">alpha.example</a></td></tr>
+</table>
+"""
+
+
+def _fake_parse(html: str):
+    mock = MagicMock()
+    mock.json.return_value = {"parse": {"text": {"*": html}}}
+    return mock
+
+
+class TestGetEntriesTableGeoid:
+    def _get(self, **kwargs):
+        # First call fetches the list page, every later call an infobox
+        responses = [_fake_parse(COUNTY_LIST_HTML)] + [_fake_parse(INFOBOX_HTML)] * 5
+        with patch("scripts.jurisdictions.scrapers.wikipedia_utils.requests.get", side_effect=responses), \
+             patch("scripts.jurisdictions.scrapers.wikipedia_utils.time.sleep"):
+            return get_entries(
+                title="List_of_counties_in_Example",
+                table_index=0, rows_to_skip=1, entry_column=0,
+                geoid_column=1, **kwargs,
+            )
+
+    def test_geoid_comes_from_table_and_is_prefixed(self):
+        entries, _, warnings = self._get(geoid_prefix="45")
+        assert set(entries) == {"45001", "45003"}
+        assert warnings == []
+
+    def test_url_still_comes_from_infobox(self):
+        entries, _, _ = self._get(geoid_prefix="45")
+        assert entries["45001"]["url"] == "https://alpha.example"
+        assert entries["45001"]["wiki_url"] == "https://en.wikipedia.org/wiki/Alpha_County"
+
+    def test_entries_survive_the_fetch_budget(self):
+        # Only one infobox is fetched, but both counties are matchable because the
+        # GEOID and wiki_url come from the table.
+        entries, _, _ = self._get(geoid_prefix="45", limit=1)
+        assert set(entries) == {"45001", "45003"}
+        assert entries["45003"]["url"] == ""
+
+    def test_no_prefix_uses_table_value_verbatim(self):
+        entries, _, _ = self._get()
+        assert set(entries) == {"001", "003"}
+
+    def test_row_shorter_than_the_geoid_column_is_skipped_with_a_warning(self):
+        html = """
+        <table class="wikitable">
+          <tr><th>County</th><th>FIPS code</th></tr>
+          <tr><td><a href="/wiki/Short_County">Short County</a></td></tr>
+        </table>
+        """
+        with patch("scripts.jurisdictions.scrapers.wikipedia_utils.requests.get",
+                   side_effect=[_fake_parse(html)]), \
+             patch("scripts.jurisdictions.scrapers.wikipedia_utils.time.sleep"):
+            entries, _, warnings = get_entries(
+                title="T", table_index=0, rows_to_skip=1, entry_column=0,
+                geoid_column=1, geoid_prefix="45")
+        assert entries == {}
+        assert any("No GEOID column" in w for w in warnings)
+
+    def test_empty_geoid_cell_is_skipped_with_a_warning(self):
+        html = """
+        <table class="wikitable">
+          <tr><th>County</th><th>FIPS code</th></tr>
+          <tr><td><a href="/wiki/Blank_County">Blank County</a></td><td></td></tr>
+        </table>
+        """
+        with patch("scripts.jurisdictions.scrapers.wikipedia_utils.requests.get",
+                   side_effect=[_fake_parse(html)]), \
+             patch("scripts.jurisdictions.scrapers.wikipedia_utils.time.sleep"):
+            entries, _, warnings = get_entries(
+                title="T", table_index=0, rows_to_skip=1, entry_column=0,
+                geoid_column=1, geoid_prefix="45")
+        assert entries == {}
+        assert any("Empty GEOID" in w for w in warnings)
+
+    def test_row_shorter_than_the_entry_column_is_skipped(self):
+        html = """
+        <table class="wikitable">
+          <tr><th>County</th><th>FIPS code</th></tr>
+          <tr></tr>
+          <tr><td><a href="/wiki/Alpha_County">Alpha County</a></td><td>001</td></tr>
+        </table>
+        """
+        with patch("scripts.jurisdictions.scrapers.wikipedia_utils.requests.get",
+                   side_effect=[_fake_parse(html), _fake_parse(INFOBOX_HTML)]), \
+             patch("scripts.jurisdictions.scrapers.wikipedia_utils.time.sleep"):
+            entries, _, _ = get_entries(
+                title="T", table_index=0, rows_to_skip=1, entry_column=0,
+                geoid_column=1, geoid_prefix="45")
+        assert set(entries) == {"45001"}
+
+    def test_failed_infobox_marks_url_unknown_and_warns(self):
+        broken = MagicMock()
+        broken.json.side_effect = ValueError("bad json")
+        with patch("scripts.jurisdictions.scrapers.wikipedia_utils.requests.get",
+                   side_effect=[_fake_parse(COUNTY_LIST_HTML), broken, broken]), \
+             patch("scripts.jurisdictions.scrapers.wikipedia_utils.time.sleep"):
+            entries, _, warnings = get_entries(
+                title="T", table_index=0, rows_to_skip=1, entry_column=0,
+                geoid_column=1, geoid_prefix="45")
+        assert entries["45001"]["url_unknown"] is True
+        assert entries["45001"]["url"] == ""
+        assert any("official website unknown" in w for w in warnings)
+
+    def test_budget_skipped_entry_is_url_unknown_but_not_warned(self):
+        entries, _, warnings = self._get(geoid_prefix="45", limit=1)
+        assert "url_unknown" not in entries["45001"]      # fetched
+        assert entries["45003"]["url_unknown"] is True    # past the budget
+        assert not any("official website unknown" in w for w in warnings)
