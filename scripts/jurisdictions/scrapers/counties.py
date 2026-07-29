@@ -2,14 +2,17 @@ from typing import AbstractSet, Any, Dict, Tuple, List
 
 from scripts.jurisdictions.scrapers import wikipedia_utils
 
-# County list pages are uniform across states — one wikitable, one header row, the
-# linked county name in column 0 and the bare 3-digit county FIPS in column 1 — so a
-# single scraper serves every state. Unlike municipalities, county infoboxes carry no
+# County list tables have the same shape in every state — one header row, the linked
+# county name in column 0 and the bare 3-digit county FIPS in column 1 — so a single
+# scraper serves every state. Unlike municipalities, county infoboxes carry no
 # FIPS/GEOID row at all, which is why the GEOID comes from the table.
-TABLE_INDEX = 0
+#
+# Their *position* on the page is not uniform, though, so the table is located by that
+# shape rather than by a fixed index. See _select_county_table.
 ROWS_TO_SKIP = 1
 ENTRY_COLUMN = 0
 GEOID_COLUMN = 1
+FALLBACK_TABLE_INDEX = 0
 
 
 def scrape(
@@ -17,7 +20,8 @@ def scrape(
 ) -> Tuple[Dict[str, Any], List[str]]:
     entries, table_names, warnings = wikipedia_utils.get_entries(
         title=f"List_of_counties_in_{state_name.replace(' ', '_')}",
-        table_index=TABLE_INDEX,
+        table_index=FALLBACK_TABLE_INDEX,
+        select_table=_select_county_table,
         rows_to_skip=ROWS_TO_SKIP,
         entry_column=ENTRY_COLUMN,
         geoid_column=GEOID_COLUMN,
@@ -35,6 +39,33 @@ def scrape(
     }
     _flag_missing_urls(census_data, unknown_url_pages)
     return census_data, warnings + match_warnings
+
+
+def _select_county_table(tables) -> int:
+    """Locate the county list table by its shape rather than its position.
+
+    South Carolina is why: its page puts a county-name/abbreviation table (plain text,
+    no links) at index 0 and the real counties table at index 1. Indexing blindly read
+    the abbreviation table, found no links, and matched nothing.
+
+    The county table is identified by its first data row having a linked name in
+    ENTRY_COLUMN and a short numeric FIPS in GEOID_COLUMN. Falls back to
+    FALLBACK_TABLE_INDEX so behaviour is unchanged on pages with a single table.
+    """
+    for index, table in enumerate(tables):
+        rows = table.find_all("tr")
+        if len(rows) <= ROWS_TO_SKIP:
+            continue
+        cells = rows[ROWS_TO_SKIP].find_all(["td", "th"])
+        if len(cells) <= GEOID_COLUMN:
+            continue
+        if cells[ENTRY_COLUMN].find("a") is None:
+            continue
+        # Read without mutating the soup: tolerate a trailing reference like "001[13]"
+        fips = cells[GEOID_COLUMN].get_text(strip=True).split("[")[0].strip()
+        if fips.isdigit() and len(fips) <= 3:
+            return index
+    return FALLBACK_TABLE_INDEX
 
 
 def _flag_missing_urls(census_data, unknown_url_pages: AbstractSet[str] = frozenset()) -> None:

@@ -95,3 +95,63 @@ class TestScrape:
     def test_propagates_scrape_warnings(self):
         _, warns, _ = self._scrape({}, {}, warnings=["infobox boom"])
         assert "infobox boom" in warns
+
+
+# ── _select_county_table ──────────────────────────────────────────────────────
+
+from bs4 import BeautifulSoup
+
+from scripts.jurisdictions.scrapers.counties import _select_county_table
+
+COUNTY_TABLE = """
+<table class="wikitable">
+  <tr><th>County</th><th>FIPS code</th></tr>
+  <tr><td><a href="/wiki/Abbeville_County">Abbeville County</a></td><td>001</td></tr>
+</table>
+"""
+
+# South Carolina's real page: an abbreviation table (plain text) precedes the real one
+ABBREV_TABLE = """
+<table class="wikitable">
+  <tr><th>County Name</th><th>Abbreviation</th></tr>
+  <tr><td>Abbeville</td><td>AB</td></tr>
+</table>
+"""
+
+LINKED_FIPS_TABLE = """
+<table class="wikitable">
+  <tr><th>County</th><th>FIPS code</th></tr>
+  <tr><td><a href="/wiki/Anderson_County">Anderson County</a></td>
+      <td><a href="https://www.census.gov/x">001</a><sup>[13]</sup></td></tr>
+</table>
+"""
+
+
+def _tables(*html):
+    soup = BeautifulSoup("".join(html), "html.parser")
+    return soup.find_all("table", {"class": "wikitable"})
+
+
+class TestSelectCountyTable:
+    def test_single_county_table_is_index_zero(self):
+        assert _select_county_table(_tables(COUNTY_TABLE)) == 0
+
+    def test_skips_a_preceding_abbreviation_table(self):
+        """The South Carolina case: real table sits at index 1."""
+        assert _select_county_table(_tables(ABBREV_TABLE, COUNTY_TABLE)) == 1
+
+    def test_tolerates_a_linked_fips_with_a_reference_marker(self):
+        assert _select_county_table(_tables(ABBREV_TABLE, LINKED_FIPS_TABLE)) == 1
+
+    def test_falls_back_to_zero_when_nothing_matches(self):
+        assert _select_county_table(_tables(ABBREV_TABLE)) == 0
+
+    def test_ignores_a_header_only_table(self):
+        header_only = '<table class="wikitable"><tr><th>County</th><th>FIPS</th></tr></table>'
+        assert _select_county_table(_tables(header_only, COUNTY_TABLE)) == 1
+
+    def test_does_not_mutate_the_soup(self):
+        """Detection must not strip <sup> refs the real parse still needs to see."""
+        tables = _tables(LINKED_FIPS_TABLE)
+        _select_county_table(tables)
+        assert tables[0].find("sup") is not None
