@@ -1,166 +1,119 @@
 # Development Guide
 
-## One-time environment setup
+## Setup
 
-The Census Data API requires an API key as of early 2026. Get one (free, instant) and add it to `.env`:
+The Census Data API requires a key. Free and instant — [sign up](https://api.census.gov/data/key_signup.html), click the activation link in the email, then:
 
 ```bash
-# Sign up: https://api.census.gov/data/key_signup.html
-# (Census emails an activation link — click it before using the key)
 echo 'CENSUS_API_KEY=your-40-char-key-here' >> .env
 ```
 
-`mise` auto-loads `.env`, so any script run via `mise exec` or `mise run` will pick it up. Scripts will exit with a clear message if the key is missing.
+`mise` auto-loads `.env`. Scripts exit with a clear message if the key is missing.
 
 ---
 
-## Adding a New State
+## Adding a new state
 
-Run these steps in order. Steps 1–3 are manual, per-state prep; 4 is an optional smoke test; 5 is the full run; 6–7 finish up. The example uses `va` (Virginia, FIPS 51).
+Steps 1–4 are open to anyone; 5–8 are maintainers only. Examples use `va` (FIPS 51).
 
+**1. Register it** in [scripts/jurisdictions/config.py](scripts/jurisdictions/config.py):
 
-1. **Register the state** in `scripts/jurisdictions/config.py`:
-   ```python
-   "va": {
-       "fips": "51",
-       "pull_from_census": ["places"],
-       "scraper": va_scraper,
-       "validation_sources": ["google"],
-   }
-   ```
+```python
+"va": {
+    "fips": "51",
+    "name": "Virginia",                  # builds Wikipedia page titles
+    "pull_from_census": ["places"],      # add "county_subdivisions" for MCD/town states
+    "scraper": va_scraper,
+    "validation_sources": ["google"],
+}
+```
 
-2. **Write a scraper** in `scripts/jurisdictions/scrapers/<state>.py`.
+**2. Write a municipality scraper** at `scripts/jurisdictions/scrapers/va.py`. Copy the closest existing one — most are ~15 lines of table coordinates. Counties need no scraper; [scrapers/counties.py](scripts/jurisdictions/scrapers/counties.py) is generic and locates the county table by shape.
 
-3. **Fetch Google Civic data** for the state from the team Drive folder:
-   **https://drive.google.com/drive/u/0/folders/1A3qFX-UELHoNp27QyBt2edWQOkHPDbjY**
-   Save it as `scripts/track_progress/google_data/{state}_all_raw.json` (e.g. `va_all_raw.json`).
-   The preflight check in step 5 prints this same link and the exact path it expects if the file is missing.
-   Note: you may not be able to access this file. Check with maintainers to get access.
+**3. Fetch Google Civic data** from the [team Drive folder](https://drive.google.com/drive/u/0/folders/1A3qFX-UELHoNp27QyBt2edWQOkHPDbjY) to `scripts/track_progress/google_data/va_all_raw.json`. Ask a maintainer if you lack access; step 5's preflight prints the expected path if it's missing.
 
-4. **Dry-run the scraper** (recommended). Smoke-tests against a handful of jurisdictions to catch a wrong `rows_to_skip`, broken infobox parsing, or other scraper bugs — without waiting for hundreds of Wikipedia fetches. `setup_local.py` builds the local boundary map and, for every locality, **spatially joins the locality's centroid into the county polygons** (`maps/local.py:_add_county_ocdids`, an `sjoin … predicate="within"` in EPSG:5070) to tag it with `county_ocdids`. That join needs two artifacts from the earlier steps — `counties.geojson` (county geometry) and `data_source/<state>/counties/jurisdictions.yml` (county GEOID → OCD-ID) — and raises `FileNotFoundError` if they're missing. So generate state + county data first:
-   ```bash
-   # a. State + county boundaries (no scraper involved; safe to run as-is)
-   uv run python scripts/jurisdictions/states.py <state ex: va>
-   uv run python scripts/jurisdictions/counties.py <state ex: va>
-
-   # b. Dry-run the scraper against just a few jurisdictions
-   uv run python scripts/jurisdictions/local.py <state ex: nc> --limit 10
-   ```
-   `--limit` caps the number of Wikipedia infobox fetches (Census ACS still pulls every jurisdiction). After the run, inspect `data_source/va/local/jurisdictions.yml` and skim the warnings. Check that the properties look OK, and that we have at least a few url: <>
-   fields that are populated (maximum of 10 will ever be filled out, because of the fetch limit)
-
-   At this point, if everything looks good, go ahead and create a new pull request and contact a maintainer to get it looked at.
-
-### Continued: Maintainers only
-
-5. **Run the full setup:**
-   ```bash
-   mise run setup-state -- --state <state ex: va>
-   ```
-   This runs, in order:
-   - State boundary + jurisdiction data (Census TIGER + state YAML)
-   - County boundaries + jurisdiction data (Census TIGER + county YAML)
-   - Local jurisdiction data (Census ACS + scraper + validation sources) — this step also computes `county_ocdids` per locality, via the centroid/county spatial join described in step 4
-   - Uploads GeoJSONs to R2
-   - Generates **this state's** per-state PMTile (`va.pmtiles`) and uploads it to R2 — it does **not** rebuild the national `states.pmtiles` (that's step 7)
-
-6. **Validate jurisdiction OCD-IDs** (see [Validating jurisdiction OCD-IDs](#validating-jurisdiction-ocd-ids) below). `setup_local.py` builds OCD-IDs from Census names by lowercasing and swapping spaces for underscores; names with apostrophes, diacritics, slashes, or no LSAD suffix leak through as invalid IDs. Run the checker against the freshly generated file and fix anything it flags before pushing:
-   ```bash
-   uv run python scripts/ocdids/fix.py --state <state ex: va>
-   ```
-
-7. **Rebuild the national states overview** (required — step 5 only builds the new state's own PMTile, not the national `states.pmtiles`; this no-arg run also purges the Cloudflare CDN cache):
-   ```bash
-   mise run generate-pmtiles
-   ```
-
-8. **Push** the open-data changes, then trigger OD sync on civicpatch.org:
-   ```
-   POST /admin/od_sync
-   ```
-
----
-
-## Validating jurisdiction OCD-IDs
-
-Run this any time a state's `data_source/<state>/local/jurisdictions.yml` has been (re)generated — it catches OCD-IDs that the generator produced with illegal characters (apostrophes, diacritics, `/`) or an empty `place:` segment.
+**4. Smoke-test.** State and county data must exist first — the local run spatially joins each locality's centroid into the county polygons, and raises `FileNotFoundError` without `counties.geojson` and the county `jurisdictions.yml`.
 
 ```bash
-# Report problems for every state, change nothing:
-uv run python scripts/ocdids/fix.py --dry-run
+uv run python scripts/jurisdictions/states.py va
+uv run python scripts/jurisdictions/counties.py va
+uv run python scripts/jurisdictions/local.py va --limit 10
+```
 
-# Interactively fix one state ([a]ccept / [e]dit / [s]kip per problem):
+Then check `data_source/va/local/jurisdictions.yml`: a handful of populated `url:` fields and few `no_wiki_match` entries. Many `no_wiki_match` means the scraper's table coordinates are wrong — fix step 2 before continuing.
+
+`--limit` caps Wikipedia **infobox fetches**, not records; Census ACS still pulls every jurisdiction. Fetches are cached per state, so re-runs after a fix are cheap.
+
+Open a PR here and ask a maintainer to review.
+
+### Maintainers only
+
+**5. Full run:**
+
+```bash
+mise run setup-state -- --state va
+```
+
+State → counties → local (ACS + scraper + validation, plus `county_ocdids`) → upload GeoJSONs to R2 → build and upload `va.pmtiles`. It does **not** rebuild the national `states.pmtiles` — that's step 7.
+
+**6. Validate OCD-IDs** — generated from Census names, so apostrophes, diacritics, slashes and missing LSAD suffixes leak through:
+
+```bash
 uv run python scripts/ocdids/fix.py --state va
-
-# Auto-accept every suggestion (skips any that would collide with an existing ID):
-uv run python scripts/ocdids/fix.py --state va --yes
 ```
 
-For each invalid ID it prints the state, `file:line`, the specific problem(s), and a suggested canonical ID, and warns if a suggestion would collide with an existing or another suggested ID. Accepting a fix rewrites `jurisdictions.yml` and migrates any `data/<state>/local/*.yml` officials file that referenced the old ID. Structural validation is delegated to `shared`'s `parse_jurisdiction_ocdid`; the charset/empty checks layer on top.
-
----
-
-## Regenerating PMTiles
-
-When a jurisdiction name changes or a new jurisdiction is added:
+**7. Rebuild the national overview** (also purges the CDN cache):
 
 ```bash
-# Regenerate one state (fast)
-mise run generate-pmtiles -- --state co
-
-# Regenerate all states + national overview
 mise run generate-pmtiles
 ```
 
-When Census TIGER boundaries change (annually) or you need to refresh geographic data:
-
-```bash
-# Refresh maps for one state, then regenerate tiles
-mise run setup-maps -- --state co
-mise run generate-pmtiles -- --state co
-
-# Refresh all states
-mise run setup-maps
-mise run generate-pmtiles
-```
-
-### Cloudflare cache purge
-
-`generate-pmtiles` automatically purges the Cloudflare edge cache for `cdn.civicpatch.org` after upload, so the new PMTiles are visible immediately. This requires two env vars:
-
-- `CLOUDFLARE_PMTILES_BUST` — Cloudflare API token with `Zone.Cache Purge` permission, scoped to `civicpatch.org`
-- `CLOUDFLARE_ZONE_ID` — the `civicpatch.org` zone ID (Cloudflare dashboard → zone Overview → API sidebar)
-
-If either is unset (local dev), the script skips the purge with a log message and exits successfully.
-
-The purge uses `{"hosts":["cdn.civicpatch.org"]}` rather than per-file URLs because Cloudflare keys cache entries by the `Origin` request header (R2 emits `Vary: Origin`), so per-URL purges leak stale variants. Hostname purge clears all variants in one call.
+**8. Push**, then trigger OD sync on civicpatch.org: `POST /admin/od_sync`.
 
 ---
 
-## Task Reference
+## Reference
 
-| Task | When to run |
-|------|-------------|
-| `mise run setup-state -- --state {code}` | Adding a new state |
-| `uv run python scripts/ocdids/fix.py [--state {code}]` | After (re)generating `jurisdictions.yml` — validate/fix OCD-IDs |
+### OCD-ID validation
+
+Run after any `jurisdictions.yml` is regenerated.
+
+```bash
+uv run python scripts/ocdids/fix.py --dry-run          # report every state, change nothing
+uv run python scripts/ocdids/fix.py --state va         # fix one state, [a]ccept/[e]dit/[s]kip
+uv run python scripts/ocdids/fix.py --state va --yes   # auto-accept, skipping collisions
+```
+
+Prints state, `file:line`, the problem, and a suggested canonical ID, warning on collisions. Accepting rewrites `jurisdictions.yml` and migrates any `data/<state>/local/*.yml` that referenced the old ID. Structural validation comes from `shared`'s `parse_jurisdiction_ocdid`; charset and empty-segment checks layer on top.
+
+### PMTiles
+
+```bash
+mise run generate-pmtiles -- --state co     # one state
+mise run generate-pmtiles                   # all states + national overview
+
+mise run setup-maps -- --state co            # first, if Census TIGER boundaries changed
+```
+
+`generate-pmtiles` purges the Cloudflare cache for `cdn.civicpatch.org` after upload, needing `CLOUDFLARE_PMTILES_BUST` (a token with `Zone.Cache Purge` on `civicpatch.org`) and `CLOUDFLARE_ZONE_ID`. Unset locally, it skips the purge and exits 0.
+
+It purges by hostname rather than per-file URL because R2 emits `Vary: Origin` and Cloudflare keys entries by that header, so per-URL purges leave stale variants behind.
+
+### Tasks
+
+| Task | When |
+|---|---|
+| `mise run setup-state -- --state {code}` | adding a state |
+| `uv run python scripts/ocdids/fix.py [--state {code}]` | after regenerating `jurisdictions.yml` |
 | `mise run setup-maps [-- --state {code}]` | Census boundaries changed |
-| `mise run generate-pmtiles [-- --state {code}]` | Jurisdiction names/data changed |
+| `mise run generate-pmtiles [-- --state {code}]` | jurisdiction names or data changed |
 
----
-
-## R2 Structure
+### R2 layout
 
 ```
 maps/
-  states.pmtiles          ← national state boundaries (all active states)
-  co.pmtiles              ← per-state PMTile (layers: states, counties, local)
-  mi.pmtiles
-  ...
-
-  co/                     ← source GeoJSONs (enriched, uploaded by setup-maps)
-    states.geojson
-    counties.geojson
-    local.geojson
-  mi/
-    ...
+  states.pmtiles     ← national state boundaries
+  co.pmtiles         ← per-state (layers: states, counties, local)
+  co/                ← source GeoJSONs uploaded by setup-maps
+    states.geojson  counties.geojson  local.geojson
 ```
