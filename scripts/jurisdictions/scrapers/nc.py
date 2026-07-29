@@ -1,7 +1,7 @@
 from typing import Any, Dict, Tuple, List
 import requests
 from bs4 import BeautifulSoup
-from scripts.scrapers import wikipedia_utils
+from scripts.jurisdictions.scrapers import wikipedia_utils
 
 TITLE = "List_of_municipalities_in_North_Carolina"
 

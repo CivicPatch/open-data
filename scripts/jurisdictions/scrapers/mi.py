@@ -1,5 +1,5 @@
 from typing import Any, Dict, Tuple, List
-from scripts.scrapers import wikipedia_utils
+from scripts.jurisdictions.scrapers import wikipedia_utils
 
 
 def scrape(census_data, limit=None) -> Tuple[Dict[str, Any], List[str]]:

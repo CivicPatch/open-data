@@ -32,13 +32,19 @@ scripts/
     local/
       pull_request/             ← scripts run locally to generate PR content
       post_merge/               ← scripts run locally after a PR is merged
-  scrapers/                     ← one-off scrapers for specific states/sources
+  jurisdictions/                ← the pipeline that builds data_source/**/jurisdictions.yml
+    config.py                   ← state registry: fips, name, census sources, scraper
+    yaml_io.py                  ← shared comment-preserving YAML load/dump
+    states.py                   ← fetch state government jurisdiction for a state
+    counties.py                 ← fetch + enrich county jurisdictions for a state
+    local.py                    ← fetch + enrich municipality jurisdictions for a state
+    run.py                      ← orchestrator: state → counties → local → maps → tiles
+    scrapers/                   ← per-state Wikipedia scrapers + wikipedia_utils
+    maps/                       ← geo utilities (local.py, county.py, state.py) + tiles
+  ocdids/                       ← OCD-ID parsing (parse.py) and repair (fix.py)
   track_progress/               ← data quality dashboards and gap analysis
-  maps/                         ← geo utilities (local.py, county.py)
-  setup_local.py                ← fetch + enrich municipality jurisdictions for a state
-  setup_counties.py             ← fetch county jurisdictions + map for a state
-  setup_states.py               ← fetch state government jurisdiction + map for a state
-  utils.py
+  one_off/                      ← completed migrations, kept for reference
+  paths.py                      ← PROJECT_ROOT anchor; never recompute it from __file__
 ```
 
 ## Data format

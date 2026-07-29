@@ -1,11 +1,11 @@
 import pytest
-from scripts.setup_local import (
+from scripts.jurisdictions.local import (
     create_geoid,
     create_jurisdiction_ocdid,
     get_api_data_by_geoid,
     get_county_name,
-    get_names,
 )
+from scripts.jurisdictions.yaml_io import get_names
 
 
 # ── get_names ─────────────────────────────────────────────────────────────────

@@ -2,7 +2,7 @@ import pytest
 from bs4 import BeautifulSoup
 
 from schemas import Jurisdiction
-from scripts.scrapers.wikipedia_utils import (
+from scripts.jurisdictions.scrapers.wikipedia_utils import (
     find_candidates,
     get_parse_url,
     get_wiki_url,

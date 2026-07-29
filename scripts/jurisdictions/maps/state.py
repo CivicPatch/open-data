@@ -7,8 +7,7 @@ from pathlib import Path
 import geopandas
 import requests
 
-PROJECT_ROOT = Path(__file__).parent.parent.parent
-
+from scripts.paths import PROJECT_ROOT
 _TIGER_URL = "https://www2.census.gov/geo/tiger/TIGER2025/STATE/tl_2025_us_state.zip"
 _CACHE_DIR = PROJECT_ROOT / "data_source" / ".maps_cache"
 _CACHE_ZIP = _CACHE_DIR / "tl_2025_us_state.zip"

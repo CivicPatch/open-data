@@ -11,18 +11,18 @@ Usage:
 """
 import sys
 
-from scripts.generate_pmtiles import generate_state_bundle
-from scripts.maps.county import build_county_map_for_state
-from scripts.maps.state import build_state_map_for_state
-from scripts.setup_counties import pull_county_jurisdiction_data
-from scripts.setup_local import (
+from scripts.jurisdictions.maps.pmtiles import generate_state_bundle
+from scripts.jurisdictions.maps.county import build_county_map_for_state
+from scripts.jurisdictions.maps.state import build_state_map_for_state
+from scripts.jurisdictions.counties import pull_county_jurisdiction_data
+from scripts.jurisdictions.local import (
     preflight_check,
     pull_jurisdiction_data,
     run_validation_transforms,
 )
-from scripts.setup_maps import setup_maps_for_state
-from scripts.setup_states import pull_state_jurisdiction_data
-from scripts.state_configs import state_configs
+from scripts.jurisdictions.maps.setup import setup_maps_for_state
+from scripts.jurisdictions.states import pull_state_jurisdiction_data
+from scripts.jurisdictions.config import state_configs
 
 
 def setup_state(state: str) -> None:

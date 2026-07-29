@@ -5,11 +5,11 @@ from pathlib import Path
 import requests
 
 from schemas import Jurisdiction
-from scripts.state_configs import state_configs
-from scripts.maps.state import build_state_map_for_state
-from scripts.setup_local import _load_existing_jurisdictions, ryaml
+from scripts.jurisdictions.config import state_configs
+from scripts.jurisdictions.maps.state import build_state_map_for_state
+from scripts.jurisdictions.yaml_io import load_existing_jurisdictions, ryaml
 
-PROJECT_ROOT = Path(__file__).parent.parent
+from scripts.paths import PROJECT_ROOT
 _ACS_URL = "https://api.census.gov/data/2024/acs/acs5"
 
 
@@ -31,7 +31,7 @@ def pull_state_jurisdiction_data(state: str):
     output_path = PROJECT_ROOT / "data_source" / state / "state" / "jurisdictions.yml"
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    doc, existing_by_id = _load_existing_jurisdictions(output_path)
+    doc, existing_by_id = load_existing_jurisdictions(output_path)
 
     api_url = _acs_url(f"get=NAME,B01003_001E&for=state:{fips}")
     response = requests.get(api_url)

@@ -15,14 +15,12 @@ from pathlib import Path
 
 import boto3
 
-from scripts.maps.county import build_county_map_for_state
-from scripts.maps.local import build_maps_for_state
-from scripts.maps.state import build_state_map_for_state
-from scripts.state_configs import state_configs
+from scripts.jurisdictions.maps.county import build_county_map_for_state
+from scripts.jurisdictions.maps.local import build_maps_for_state
+from scripts.jurisdictions.maps.state import build_state_map_for_state
+from scripts.jurisdictions.config import state_configs
 
-PROJECT_ROOT = Path(__file__).parent.parent
-
-
+from scripts.paths import PROJECT_ROOT
 def _upload_geojson(local_path: Path, s3_key: str) -> None:
     s3 = boto3.client(
         "s3",

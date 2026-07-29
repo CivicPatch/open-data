@@ -2,17 +2,18 @@ import requests
 from bs4 import BeautifulSoup
 from typing import Any, Dict, Tuple, List
 import time
-from scripts.scrapers import wikipedia_utils
+from scripts.jurisdictions.scrapers import wikipedia_utils
 
 MUNICIPALITIES_URL = "https://en.wikipedia.org/w/api.php?action=parse&page=List_of_municipalities_in_Colorado&format=json"
+CCDS_URL = "https://en.wikipedia.org/wiki/List_of_census-designated_places_in_Colorado"
 
 def scrape(census_data, limit=None) -> Tuple[Dict[str, Any], List[str]]:
     mun_entries, table_names, mun_warnings = wikipedia_utils.get_entries(
-        title="List_of_municipalities_in_Washington",
+        title="List_of_municipalities_in_Colorado",
         table_index=1,
         rows_to_skip=2,
         entry_column=0,
-        state="wa",
+        state="co",
         limit=limit,
     )
 
