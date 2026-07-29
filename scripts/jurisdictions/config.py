@@ -1,14 +1,14 @@
-from scripts.scrapers import co as co_scraper
-from scripts.scrapers import ma as ma_scraper
-from scripts.scrapers import me as me_scraper
-from scripts.scrapers import mi as mi_scraper
-from scripts.scrapers import nc as nc_scraper
-from scripts.scrapers import nh as nh_scraper
-from scripts.scrapers import nj as nj_scraper
-from scripts.scrapers import sc as sc_scraper
-from scripts.scrapers import tn as tn_scraper
-from scripts.scrapers import tx as tx_scraper
-from scripts.scrapers import wa as wa_scraper
+from scripts.jurisdictions.scrapers import co as co_scraper
+from scripts.jurisdictions.scrapers import ma as ma_scraper
+from scripts.jurisdictions.scrapers import me as me_scraper
+from scripts.jurisdictions.scrapers import mi as mi_scraper
+from scripts.jurisdictions.scrapers import nc as nc_scraper
+from scripts.jurisdictions.scrapers import nh as nh_scraper
+from scripts.jurisdictions.scrapers import nj as nj_scraper
+from scripts.jurisdictions.scrapers import sc as sc_scraper
+from scripts.jurisdictions.scrapers import tn as tn_scraper
+from scripts.jurisdictions.scrapers import tx as tx_scraper
+from scripts.jurisdictions.scrapers import wa as wa_scraper
 
 # Add a new state here to enable setup_local.py / setup_counties.py, maps, and validation for it.
 # Keys:

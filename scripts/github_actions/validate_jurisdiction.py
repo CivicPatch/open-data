@@ -11,7 +11,7 @@ import sys
 import yaml
 
 from shared.schemas import Official
-from scripts.utils import jurisdiction_to_file
+from scripts.ocdids.parse import jurisdiction_to_file
 
 
 def validate_file(file_path, jurisdiction_ocdid):

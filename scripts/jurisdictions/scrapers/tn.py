@@ -1,14 +1,14 @@
 from typing import Any, Dict, Tuple, List
-from scripts.scrapers import wikipedia_utils
+from scripts.jurisdictions.scrapers import wikipedia_utils
 
 
 def scrape(census_data, limit=None) -> Tuple[Dict[str, Any], List[str]]:
     entries, table_names, warnings = wikipedia_utils.get_entries(
-        title="List_of_municipalities_in_Maine",
+        title="List_of_municipalities_in_Tennessee",
         table_index=0,
-        rows_to_skip=2,  # two-row header: "Land area" splits into sq mi / km² sub-headers
+        rows_to_skip=1,
         entry_column=0,
-        state="me",
+        state="tn",
         limit=limit,
     )
 

@@ -10,11 +10,9 @@ import boto3
 import requests
 import yaml
 
-from scripts.state_configs import state_configs
+from scripts.jurisdictions.config import state_configs
 
-PROJECT_ROOT = Path(__file__).parent.parent
-
-
+from scripts.paths import PROJECT_ROOT
 def _build_state_lookup(state: str) -> dict[str, str]:
     """geoid → ocd-jurisdiction ID from data_source/{state}/state/jurisdictions.yml"""
     yml_path = PROJECT_ROOT / "data_source" / state / "state" / "jurisdictions.yml"

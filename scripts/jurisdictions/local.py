@@ -8,28 +8,16 @@ from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
 import requests
-from ruamel.yaml import YAML
-from ruamel.yaml.comments import CommentedMap
 
-ryaml = YAML()
-ryaml.preserve_quotes = True
-ryaml.default_flow_style = False
-ryaml.width = 4096
-
-def _represent_none(representer, _):
-    return representer.represent_scalar("tag:yaml.org,2002:null", "null")
-
-ryaml.representer.add_representer(type(None), _represent_none)
-
+from scripts.jurisdictions.yaml_io import get_names, load_existing_jurisdictions, ryaml
 from schemas import Jurisdiction
-from scripts.state_configs import state_configs
+from scripts.jurisdictions.config import state_configs
 import scripts.track_progress.generate_google_data as generate_google_data
 from scripts.track_progress.compare import run_state as compare_run_state
-from scripts.maps.local import build_maps_for_state
+from scripts.jurisdictions.maps.local import build_maps_for_state
 
 
-PROJECT_ROOT = Path(__file__).parent.parent
-
+from scripts.paths import PROJECT_ROOT
 _ACS_URL = "https://api.census.gov/data/2024/acs/acs5"
 _GAZ_URL = "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer"
 
@@ -70,20 +58,6 @@ _CENSUS_SOURCES: Dict[str, _CensusSource] = {
 }
 
 
-def _load_existing_jurisdictions(path: Path):
-    """Load existing jurisdictions.yml with ruamel.yaml (preserving comments).
-
-    Returns (doc, existing_by_id) where:
-      - doc is the full CommentedMap (top-level document), or {} if file absent
-      - existing_by_id is a dict keyed by jurisdiction id pointing to CommentedMap entries
-    """
-    if not path.exists():
-        return CommentedMap(), {}
-    with open(path) as f:
-        doc = ryaml.load(f)
-    if not doc or "jurisdictions" not in doc:
-        return doc or {}, {}
-    return doc, {j["id"]: j for j in doc["jurisdictions"]}
 
 
 def pull_jurisdiction_data(state: str, limit: int = None):
@@ -94,7 +68,7 @@ def pull_jurisdiction_data(state: str, limit: int = None):
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     # Single load — preserves comments in CommentedMap objects
-    doc, existing_by_id = _load_existing_jurisdictions(output_path)
+    doc, existing_by_id = load_existing_jurisdictions(output_path)
 
     census_data, census_warnings = get_census_data_for_state(state)
 
@@ -336,18 +310,6 @@ def get_api_data_by_geoid(
     return data
 
 
-def get_names(name: str) -> Tuple[str, str]:
-    """Extract place name and jurisdiction name from full name."""
-    # Example: "Gervais city, Oregon" -> ("gervais", "Gervais city")
-    # jurisdiction_name, friendly_name
-    parts = name.split(",")
-    friendly_name = parts[0].strip()
-    # Extract place name (without type)
-    place_name_parts = friendly_name.split(" ")
-    place_name = " ".join(place_name_parts[:-1]).lower()  # Remove last
-    # Replace spaces with underscores
-    jurisdiction_name = place_name.replace(" ", "_")
-    return jurisdiction_name, friendly_name
 
 
 def get_county_name(name: str) -> str:

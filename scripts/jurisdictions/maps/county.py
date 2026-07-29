@@ -7,8 +7,7 @@ from pathlib import Path
 import geopandas
 import requests
 
-PROJECT_ROOT = Path(__file__).parent.parent.parent
-
+from scripts.paths import PROJECT_ROOT
 # National county file — one download, filtered per state by STATEFP column.
 _TIGER_URL = "https://www2.census.gov/geo/tiger/TIGER2025/COUNTY/tl_2025_us_county.zip"
 _CACHE_DIR = PROJECT_ROOT / "data_source" / ".maps_cache"

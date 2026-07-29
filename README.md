@@ -22,9 +22,14 @@ data_source/
 schemas.py                      ← Pydantic models: Jurisdiction, Office, Official
 scripts/
   github_actions/               ← run in CI on PRs and post-merge
-  scrapers/                     ← one-off scrapers for specific states/sources
+  jurisdictions/                ← the pipeline that builds data_source/**/jurisdictions.yml
+    config.py                   ← state registry (fips, name, census sources, scraper)
+    states.py counties.py local.py   ← one writer per government level
+    run.py                      ← orchestrator for a whole state
+    scrapers/                   ← per-state Wikipedia scrapers
+    maps/                       ← geo utilities and tile generation
+  ocdids/                       ← OCD-ID parsing and repair
   track_progress/               ← data quality comparison against external sources
-  maps/                         ← geo utilities (local.py, county.py)
 ```
 
 ## Data format

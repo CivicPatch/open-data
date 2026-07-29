@@ -14,7 +14,7 @@ from pathlib import Path
 from ruamel.yaml import YAML
 
 from shared.schemas import PipelineRunConfig
-from scripts.utils import parse_jurisdiction_ocdid
+from scripts.ocdids.parse import parse_jurisdiction_ocdid
 
 
 def update_jurisdiction_url(jurisdiction_ocdid: str, context_json_path: str) -> None:

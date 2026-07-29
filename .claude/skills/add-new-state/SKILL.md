@@ -12,7 +12,7 @@ Ask the user for the two-letter state code and full name if not given (e.g. `va`
 
 ## Step 1 — Register the state
 
-Read `scripts/state_configs.py` fully first. Determine `pull_from_census`:
+Read `scripts/jurisdictions/config.py` fully first. Determine `pull_from_census`:
 - `["places"]` only — states where county subdivisions have no functioning government (statistical/MCD-less states). Most states default here.
 - `["places", "county_subdivisions"]` — states with legally functioning MCDs (New England, NY, NJ, PA, MI, WI, MN, etc. — towns/townships that are themselves the unit of government, sometimes without a coextensive incorporated place).
 
@@ -61,7 +61,7 @@ print('div-col sections (bullet-list format):', len(soup.find_all('div', {'class
 "
 ```
 
-Then read 2-3 existing scrapers in `scripts/scrapers/` that match the discovered pattern (`sc.py`/`tn.py` for simple single-table, `co.py`/`mi.py`/`wa.py` for multi-table with GEOID fallback) and follow the same shape. Reuse `wikipedia_utils.get_entries` + `wikipedia_utils.match_jurisdictions` whenever the page has a real wikitable. Only write a custom entry-extraction loop (like the bullet-list case) when the page genuinely has no table — reuse `wikipedia_utils.get_entry_infobox`, `get_wiki_url`, `get_parse_url`, `_load_cache`/`_save_cache` rather than reimplementing caching or infobox parsing.
+Then read 2-3 existing scrapers in `scripts/jurisdictions/scrapers/` that match the discovered pattern (`sc.py`/`tn.py` for simple single-table, `co.py`/`mi.py`/`wa.py` for multi-table with GEOID fallback) and follow the same shape. Reuse `wikipedia_utils.get_entries` + `wikipedia_utils.match_jurisdictions` whenever the page has a real wikitable. Only write a custom entry-extraction loop (like the bullet-list case) when the page genuinely has no table — reuse `wikipedia_utils.get_entry_infobox`, `get_wiki_url`, `get_parse_url`, `_load_cache`/`_save_cache` rather than reimplementing caching or infobox parsing.
 
 Smoke-test the new scraper directly against a couple of entries before wiring it into the full pipeline:
 
@@ -72,7 +72,7 @@ entries, table_names, warnings = <state>.scrape.__module__  # sanity import chec
 "
 ```
 
-(or call the module's internal entry-fetch function with `limit=3` if it has one) — confirm GEOIDs and URLs come back populated, then delete any throwaway cache file it created under `scripts/scrapers/cache/`.
+(or call the module's internal entry-fetch function with `limit=3` if it has one) — confirm GEOIDs and URLs come back populated, then delete any throwaway cache file it created under `scripts/jurisdictions/scrapers/cache/`.
 
 ## Step 3 — Google Civic data
 
@@ -90,12 +90,12 @@ ls scripts/track_progress/google_data/<state>_all_raw.json
 Needs county + state boundaries first (the local step's county-OCDID spatial join depends on `counties.geojson` and `data_source/<state>/counties/jurisdictions.yml`):
 
 ```bash
-uv run python scripts/setup_states.py <state>
-uv run python scripts/setup_counties.py <state>
-uv run python scripts/setup_local.py <state> --limit 10
+uv run python scripts/jurisdictions/states.py <state>
+uv run python scripts/jurisdictions/counties.py <state>
+uv run python scripts/jurisdictions/local.py <state> --limit 10
 ```
 
-Inspect `data_source/<state>/local/jurisdictions.yml` and the printed warnings. More than a handful of `no_wiki_match` entries means the scraper's table/column selection (or bullet-list parsing) is off — go back to step 2, not forward to step 5. `scripts/scrapers/cache/<state>_wikipedia.json` caches infobox fetches, so reruns after a fix are cheap.
+Inspect `data_source/<state>/local/jurisdictions.yml` and the printed warnings. More than a handful of `no_wiki_match` entries means the scraper's table/column selection (or bullet-list parsing) is off — go back to step 2, not forward to step 5. `scripts/jurisdictions/scrapers/cache/<state>_wikipedia.json` caches infobox fetches, so reruns after a fix are cheap.
 
 ## Handoff
 

@@ -2,7 +2,7 @@ from unittest.mock import patch, MagicMock
 from pathlib import Path
 import yaml
 
-from scripts.setup_states import pull_state_jurisdiction_data
+from scripts.jurisdictions.states import pull_state_jurisdiction_data
 
 
 def _fake_acs_response(name: str, population: int, fips: str):
@@ -18,8 +18,8 @@ def _fake_acs_response(name: str, population: int, fips: str):
 class TestPullStateJurisdictionData:
     def _run(self, tmp_path: Path, name="South Carolina", pop=5282634):
         fake_response = _fake_acs_response(name, pop, "45")
-        with patch("scripts.setup_states.requests.get", return_value=fake_response), \
-             patch("scripts.setup_states.PROJECT_ROOT", tmp_path):
+        with patch("scripts.jurisdictions.states.requests.get", return_value=fake_response), \
+             patch("scripts.jurisdictions.states.PROJECT_ROOT", tmp_path):
             pull_state_jurisdiction_data("sc")
         return tmp_path / "data_source" / "sc" / "state" / "jurisdictions.yml"
 
@@ -45,8 +45,8 @@ class TestPullStateJurisdictionData:
     def test_population_updated_on_rerun(self, tmp_path):
         self._run(tmp_path, pop=5282634)
         fake_response = _fake_acs_response("South Carolina", 5400000, "45")
-        with patch("scripts.setup_states.requests.get", return_value=fake_response), \
-             patch("scripts.setup_states.PROJECT_ROOT", tmp_path):
+        with patch("scripts.jurisdictions.states.requests.get", return_value=fake_response), \
+             patch("scripts.jurisdictions.states.PROJECT_ROOT", tmp_path):
             pull_state_jurisdiction_data("sc")
         path = tmp_path / "data_source" / "sc" / "state" / "jurisdictions.yml"
         doc = yaml.safe_load(path.read_text())
@@ -61,7 +61,7 @@ class TestPullStateJurisdictionData:
     def test_api_failure_does_not_write(self, tmp_path):
         bad_response = MagicMock()
         bad_response.status_code = 500
-        with patch("scripts.setup_states.requests.get", return_value=bad_response), \
-             patch("scripts.setup_states.PROJECT_ROOT", tmp_path):
+        with patch("scripts.jurisdictions.states.requests.get", return_value=bad_response), \
+             patch("scripts.jurisdictions.states.PROJECT_ROOT", tmp_path):
             pull_state_jurisdiction_data("sc")
         assert not (tmp_path / "data_source" / "sc" / "state" / "jurisdictions.yml").exists()

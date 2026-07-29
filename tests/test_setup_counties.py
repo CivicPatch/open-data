@@ -3,7 +3,7 @@ from pathlib import Path
 import tempfile
 import yaml
 
-from scripts.setup_counties import pull_county_jurisdiction_data
+from scripts.jurisdictions.counties import pull_county_jurisdiction_data
 
 
 def _fake_acs_response(fips: str, counties: list[tuple[str, int, str]]):
@@ -26,8 +26,8 @@ SC_COUNTIES = [
 class TestPullCountyJurisdictionData:
     def _run(self, tmp_path: Path, counties=SC_COUNTIES):
         fake_response = _fake_acs_response("45", counties)
-        with patch("scripts.setup_counties.requests.get", return_value=fake_response), \
-             patch("scripts.setup_counties.PROJECT_ROOT", tmp_path):
+        with patch("scripts.jurisdictions.counties.requests.get", return_value=fake_response), \
+             patch("scripts.jurisdictions.counties.PROJECT_ROOT", tmp_path):
             pull_county_jurisdiction_data("sc")
 
         return tmp_path / "data_source" / "sc" / "counties" / "jurisdictions.yml"
@@ -84,8 +84,8 @@ class TestPullCountyJurisdictionData:
     def test_api_failure_does_not_write(self, tmp_path):
         bad_response = MagicMock()
         bad_response.status_code = 500
-        with patch("scripts.setup_counties.requests.get", return_value=bad_response), \
-             patch("scripts.setup_counties.PROJECT_ROOT", tmp_path):
+        with patch("scripts.jurisdictions.counties.requests.get", return_value=bad_response), \
+             patch("scripts.jurisdictions.counties.PROJECT_ROOT", tmp_path):
             pull_county_jurisdiction_data("sc")
         path = tmp_path / "data_source" / "sc" / "counties" / "jurisdictions.yml"
         assert not path.exists()

@@ -1,7 +1,7 @@
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
-from scripts.generate_pmtiles import (
+from scripts.jurisdictions.maps.pmtiles import (
     _build_county_lookup,
     _build_state_lookup,
     _build_local_lookup,
@@ -202,7 +202,7 @@ class TestEnrichLocalFeature:
 
 class TestRunTippecanoe:
     def test_calls_tippecanoe_with_named_layers(self, tmp_path):
-        from scripts.generate_pmtiles import _run_tippecanoe
+        from scripts.jurisdictions.maps.pmtiles import _run_tippecanoe
         states = tmp_path / "states.geojson"
         counties = tmp_path / "counties.geojson"
         output = tmp_path / "co.pmtiles"
@@ -214,7 +214,7 @@ class TestRunTippecanoe:
         mock_proc.returncode = 0
         mock_proc.wait.return_value = 0
 
-        with patch("scripts.generate_pmtiles.subprocess.Popen") as mock_popen:
+        with patch("scripts.jurisdictions.maps.pmtiles.subprocess.Popen") as mock_popen:
             mock_popen.return_value = mock_proc
             _run_tippecanoe(
                 [("states", states, 0), ("counties", counties, 5)],
@@ -237,7 +237,7 @@ class TestRunTippecanoe:
 
 class TestUploadToR2:
     def test_uploads_and_returns_cdn_url(self, tmp_path):
-        from scripts.generate_pmtiles import _upload_to_r2
+        from scripts.jurisdictions.maps.pmtiles import _upload_to_r2
         pmtiles = tmp_path / "co.pmtiles"
         pmtiles.write_bytes(b"fake")
 
@@ -248,7 +248,7 @@ class TestUploadToR2:
             "FRIENDLY_STORAGE_HOST": "https://cdn.civicpatch.org",
         }
         with patch.dict("os.environ", env), \
-             patch("scripts.generate_pmtiles.boto3.client") as mock_boto:
+             patch("scripts.jurisdictions.maps.pmtiles.boto3.client") as mock_boto:
             mock_s3 = MagicMock()
             mock_boto.return_value = mock_s3
 

@@ -41,9 +41,7 @@ from shared.utils.id_utils import parse_jurisdiction_ocdid
 # the pipeline produces (don't hand-roll a ruamel config here).
 from shared.utils.yaml_utils import yaml_load, yaml_dump
 
-PROJECT_ROOT = Path(__file__).parent.parent
-
-
+from scripts.paths import PROJECT_ROOT
 def _read_yaml(path: Path):
     with open(path) as f:
         return yaml_load(f.read())
@@ -149,7 +147,7 @@ def _apply_to_jurisdictions(path: Path, old: str, new: str) -> bool:
 
 def _apply_to_data_file(state: str, old: str, new: str) -> bool:
     """Migrate the officials file if one references the old ID (rename + repoint)."""
-    from scripts.utils import jurisdiction_to_file
+    from scripts.ocdids.parse import jurisdiction_to_file
 
     try:
         old_path = PROJECT_ROOT / jurisdiction_to_file(old)

@@ -9,8 +9,7 @@ import geopandas
 import pandas
 import requests
 
-PROJECT_ROOT = Path(__file__).parent.parent.parent
-
+from scripts.paths import PROJECT_ROOT
 def census_place_geozip(fips: str) -> str:
     return f"https://www2.census.gov/geo/tiger/TIGER2025/PLACE/tl_2025_{fips}_place.zip"
 

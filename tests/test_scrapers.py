@@ -56,11 +56,11 @@ def _census(ocdid, geoid, name="Test city"):
 
 
 SCRAPERS = [
-    ("scripts.scrapers.co",  "co"),
-    ("scripts.scrapers.mi",  "mi"),
-    ("scripts.scrapers.nj",  "nj"),
-    ("scripts.scrapers.sc",  "sc"),
-    ("scripts.scrapers.wa",  "wa"),
+    ("scripts.jurisdictions.scrapers.co",  "co"),
+    ("scripts.jurisdictions.scrapers.mi",  "mi"),
+    ("scripts.jurisdictions.scrapers.nj",  "nj"),
+    ("scripts.jurisdictions.scrapers.sc",  "sc"),
+    ("scripts.jurisdictions.scrapers.wa",  "wa"),
 ]
 
 @pytest.mark.parametrize("module_path,state", SCRAPERS)
@@ -72,9 +72,9 @@ def test_scraper_return_type(module_path, state):
     empty_cache = {}
     empty_entries = ({}, {}, [])  # (entries_by_geoid, table_names, warnings)
 
-    with patch("scripts.scrapers.wikipedia_utils.get_entries", return_value=empty_entries), \
-         patch("scripts.scrapers.wikipedia_utils._load_cache", return_value=empty_cache), \
-         patch("scripts.scrapers.wikipedia_utils._save_cache"):
+    with patch("scripts.jurisdictions.scrapers.wikipedia_utils.get_entries", return_value=empty_entries), \
+         patch("scripts.jurisdictions.scrapers.wikipedia_utils._load_cache", return_value=empty_cache), \
+         patch("scripts.jurisdictions.scrapers.wikipedia_utils._save_cache"):
         result, warnings = mod.scrape({}, limit=0)
 
     assert isinstance(result, dict)
@@ -92,9 +92,9 @@ def test_scraper_no_data_loss(module_path, state):
 
     empty_entries = ({}, {}, [])
 
-    with patch("scripts.scrapers.wikipedia_utils.get_entries", return_value=empty_entries), \
-         patch("scripts.scrapers.wikipedia_utils._load_cache", return_value={}), \
-         patch("scripts.scrapers.wikipedia_utils._save_cache"):
+    with patch("scripts.jurisdictions.scrapers.wikipedia_utils.get_entries", return_value=empty_entries), \
+         patch("scripts.jurisdictions.scrapers.wikipedia_utils._load_cache", return_value={}), \
+         patch("scripts.jurisdictions.scrapers.wikipedia_utils._save_cache"):
         result, _ = mod.scrape(census, limit=0)
 
     assert ocdid in result, f"{state}: census entry was dropped by scraper"
