@@ -10,7 +10,12 @@ from scripts.jurisdictions import headers
 from scripts.jurisdictions.scrapers import counties as counties_scraper
 from scripts.jurisdictions.config import state_configs
 from scripts.jurisdictions.maps.county import build_county_map_for_state
-from scripts.jurisdictions.yaml_io import get_names, load_existing_jurisdictions, ryaml
+from scripts.jurisdictions.yaml_io import (
+    apply_scraped_fields,
+    get_names,
+    load_existing_jurisdictions,
+    ryaml,
+)
 
 from scripts.paths import PROJECT_ROOT
 _ACS_URL = "https://api.census.gov/data/2024/acs/acs5"
@@ -102,6 +107,18 @@ def pull_county_jurisdiction_data(state: str, limit=None, skip_wiki: bool = Fals
     if not skip_wiki:
         census_data, supplement_warnings = supplement_county_data(state, census_data, limit=limit)
 
+        # Zero matches means the list page was misread (wrong table, changed columns),
+        # not that the state genuinely has no county pages. Refuse to write rather than
+        # persist a file where every county is flagged no_wiki_match — South Carolina
+        # shipped in exactly that state because nothing checked.
+        matched = sum(1 for j in census_data.values() if j.wiki_url)
+        if census_data and not matched:
+            sys.exit(
+                f"{state}: 0/{len(census_data)} counties matched a Wikipedia page — "
+                f"the county list table was probably misread. Refusing to write "
+                f"{output_path}. Re-run with --skip-wiki to update census data only."
+            )
+
     # Merge into existing entries, preserving human edits (see field semantics below)
     for ocdid, supplemented_j in census_data.items():
         existing_entry = existing_by_id.get(ocdid)
@@ -111,20 +128,7 @@ def pull_county_jurisdiction_data(state: str, limit=None, skip_wiki: bool = Fals
 
         existing_entry["population"] = supplemented_j.population
         existing_entry["name"] = supplemented_j.name
-        if supplemented_j.url and not existing_entry.get("url"):
-            existing_entry["url"] = supplemented_j.url
-        if supplemented_j.wiki_url:
-            existing_entry["wiki_url"] = supplemented_j.wiki_url
-        # issues and generated_comments replaced each run
-        if supplemented_j.issues:
-            existing_entry["issues"] = supplemented_j.issues
-        elif "issues" in existing_entry:
-            del existing_entry["issues"]
-        if supplemented_j.generated_comments:
-            existing_entry["generated_comments"] = supplemented_j.generated_comments
-        elif "generated_comments" in existing_entry:
-            del existing_entry["generated_comments"]
-        # comments: never overwritten by scripts
+        apply_scraped_fields(existing_entry, supplemented_j)
 
     sorted_jurisdictions = sorted(
         existing_by_id.values(),

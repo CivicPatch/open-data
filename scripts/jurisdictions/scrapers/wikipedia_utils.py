@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from pathlib import Path
 import time
 import requests
-from typing import Any, Dict, Optional, Tuple, List
+from typing import Any, Callable, Dict, List, Optional, Tuple
 
 HEADERS = {'User-Agent': 'CivicPatch/0.0 (https://civicpatch.org/; wiki@civicpatch.org)'}
 
@@ -55,6 +55,7 @@ def get_entries(
     geoid_column: Optional[int] = None,
     geoid_prefix: str = "",
     cache_key: Optional[str] = None,
+    select_table: Optional[Callable[[List[Any]], int]] = None,
 ) -> Tuple[Dict[str, Any], Dict[str, str], List[str]]:
     """Scrape a Wikipedia list page into `{geoid: {wiki_url, geoid, url}}`.
 
@@ -76,6 +77,9 @@ def get_entries(
     `cache_key` names the on-disk cache file, defaulting to `state`. Pass it when one
     state has more than one list page (e.g. "nc" municipalities vs "nc_counties") so
     the caches don't collide.
+
+    `select_table` picks the table from all wikitables on the page, for list pages whose
+    table position varies between states; `table_index` is used when it is not given.
     """
     cache_name = cache_key or state
     cache = _load_cache(cache_name) if cache_name else {}
@@ -89,7 +93,9 @@ def get_entries(
     table_name_to_wiki_url: Dict[str, str] = {}
     warnings = []
 
-    table = soup.find_all("table", {"class": "wikitable"})[table_index]
+    tables = soup.find_all("table", {"class": "wikitable"})
+    chosen_index = select_table(tables) if select_table else table_index
+    table = tables[chosen_index]
     rows = table.find_all("tr")[rows_to_skip:]
     fetched = 0
     for row in rows:
