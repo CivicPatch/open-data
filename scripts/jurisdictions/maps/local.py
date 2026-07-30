@@ -139,7 +139,13 @@ def _add_county_ocdids(local_path: str, counties_path: str, state: str) -> None:
     print(f"  county_ocdids: {matched}/{len(geojson['features'])} features matched to a county")
 
 if __name__ == "__main__":
-    state = "tx"
-    pull_from_census = ["places"]
+    import argparse
 
-    build_maps_for_state(state, pull_from_census)
+    from scripts.jurisdictions.config import state_configs
+
+    parser = argparse.ArgumentParser(description=build_maps_for_state.__doc__)
+    parser.add_argument("state", help=f"State code, one of: {', '.join(state_configs)}")
+    args = parser.parse_args()
+
+    config = state_configs[args.state]
+    build_maps_for_state(args.state, config["fips"], config["pull_from_census"])
