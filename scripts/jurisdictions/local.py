@@ -18,6 +18,7 @@ from scripts.jurisdictions.yaml_io import (
 from schemas import Jurisdiction
 from scripts.jurisdictions import headers
 from scripts.jurisdictions.config import state_configs
+from scripts.jurisdictions.scrapers import municipalities
 import scripts.track_progress.generate_google_data as generate_google_data
 from scripts.track_progress.compare import run_state as compare_run_state
 from scripts.jurisdictions.maps.local import build_maps_for_state
@@ -307,15 +308,14 @@ def get_county_name(name: str) -> str:
 def supplement_data(
     state: str, census_data, limit=None
 ) -> Tuple[Dict[str, Jurisdiction], List[str]]:
-    state_config = state_configs.get(state.lower())
-    scraper = state_config.get("scraper") if state_config else None
-    if not scraper:
-        print(f"No scraper found for state: {state}")
-        exit(1)
-
-    census_data, scrape_warnings = scraper.scrape(census_data, limit=limit)
-
-    return census_data, scrape_warnings
+    state_config = state_configs[state.lower()]
+    return municipalities.scrape(
+        census_data,
+        state,
+        state_config["name"],
+        state_config.get("local_wiki"),
+        limit=limit,
+    )
 
 
 def _run_google_transform(state: str):

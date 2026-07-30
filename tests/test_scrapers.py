@@ -1,100 +1,110 @@
-"""Tests for scraper-level logic that can be exercised without network calls."""
-import pytest
+"""Generic municipality scraper: config handling and the shared matching path.
 
-
-# ── NJ GEOID suffix fallback ──────────────────────────────────────────────────
-# Extracted from nj.py: when a census GEOID doesn't directly match a wiki entry,
-# NJ falls back to matching by state prefix (first 2 chars) + place suffix (last 5 chars).
-
-def geoid_suffix_match(geoid: str, entries: dict) -> list[str]:
-    """Mirror of the fallback logic in nj.py scrape()."""
-    state_prefix = geoid[:2]
-    place_suffix = geoid[-5:]
-    return [k for k in entries if k.startswith(state_prefix) and k.endswith(place_suffix)]
-
-
-class TestNjGeoidSuffixFallback:
-    def test_matches_when_prefix_and_suffix_align(self):
-        # Census GEOID 3436000, wiki has 3401736000 (extra county digits in middle)
-        entries = {"3401736000": {}}
-        assert geoid_suffix_match("3436000", entries) == ["3401736000"]
-
-    def test_no_match_when_suffix_differs(self):
-        entries = {"3401799999": {}}
-        assert geoid_suffix_match("3436000", entries) == []
-
-    def test_no_match_when_state_prefix_differs(self):
-        entries = {"4501736000": {}}  # SC prefix, not NJ
-        assert geoid_suffix_match("3436000", entries) == []
-
-    def test_multiple_matches_returns_all(self):
-        # Two wiki entries share the same state prefix and place suffix
-        entries = {
-            "3401736000": {},
-            "3402236000": {},
-        }
-        matches = geoid_suffix_match("3436000", entries)
-        assert len(matches) == 2
-
-    def test_short_geoid_uses_available_chars(self):
-        # Should not crash on short GEOIDs; slice behaviour is defined
-        entries = {"3400100": {}}
-        result = geoid_suffix_match("3400100", entries)
-        assert isinstance(result, list)
-
-
-# ── Scraper return contract ───────────────────────────────────────────────────
-# Every state scraper must return (dict, list). Test this contract with minimal
-# mock census_data so we don't make real network calls.
+Replaces per-state scraper tests. Those asserted a `(dict, list)` return contract against
+five of eleven modules with `get_entries` mocked to return nothing, so no matching was
+ever exercised — and a hand-copied reimplementation of the GEOID fallback that would have
+passed even if the production code were deleted. Matching itself is covered against the
+real `match_jurisdictions` in test_wikipedia_utils.py.
+"""
 
 from unittest.mock import patch
+
+import pytest
+
 from schemas import Jurisdiction
+from scripts.jurisdictions.config import state_configs
+from scripts.jurisdictions.scrapers import municipalities, wikipedia_utils
+
+EMPTY_PAGE = ({}, {}, [])   # (entries_by_geoid, table_names, warnings)
 
 
-def _census(ocdid, geoid, name="Test city"):
-    return {ocdid: Jurisdiction(id=ocdid, name=name, geoid=geoid, population=1000)}
-
-
-SCRAPERS = [
-    ("scripts.jurisdictions.scrapers.co",  "co"),
-    ("scripts.jurisdictions.scrapers.mi",  "mi"),
-    ("scripts.jurisdictions.scrapers.nj",  "nj"),
-    ("scripts.jurisdictions.scrapers.sc",  "sc"),
-    ("scripts.jurisdictions.scrapers.wa",  "wa"),
-]
-
-@pytest.mark.parametrize("module_path,state", SCRAPERS)
-def test_scraper_return_type(module_path, state):
-    """Each scraper must return (dict, list) and not crash on empty census_data."""
-    import importlib
-    mod = importlib.import_module(module_path)
-
-    empty_cache = {}
-    empty_entries = ({}, {}, [])  # (entries_by_geoid, table_names, warnings)
-
-    with patch("scripts.jurisdictions.scrapers.wikipedia_utils.get_entries", return_value=empty_entries), \
-         patch("scripts.jurisdictions.scrapers.wikipedia_utils._load_cache", return_value=empty_cache), \
-         patch("scripts.jurisdictions.scrapers.wikipedia_utils._save_cache"):
-        result, warnings = mod.scrape({}, limit=0)
-
-    assert isinstance(result, dict)
-    assert isinstance(warnings, list)
-
-
-@pytest.mark.parametrize("module_path,state", SCRAPERS)
-def test_scraper_no_data_loss(module_path, state):
-    """Scraper must return all census entries even when none match wiki."""
-    import importlib
-    mod = importlib.import_module(module_path)
-
+def _census(state="nh", geoid="3345140", name="Testville city"):
     ocdid = f"ocd-jurisdiction/country:us/state:{state}/place:testville/government"
-    census = _census(ocdid, "9900001")
+    return ocdid, {ocdid: Jurisdiction(id=ocdid, name=name, geoid=geoid, population=1000)}
 
-    empty_entries = ({}, {}, [])
 
-    with patch("scripts.jurisdictions.scrapers.wikipedia_utils.get_entries", return_value=empty_entries), \
-         patch("scripts.jurisdictions.scrapers.wikipedia_utils._load_cache", return_value={}), \
-         patch("scripts.jurisdictions.scrapers.wikipedia_utils._save_cache"):
-        result, _ = mod.scrape(census, limit=0)
+def _scrape(census=None, state="nh", state_name="New Hampshire", wiki=None, page=EMPTY_PAGE):
+    """Run the scraper with the page fetch stubbed; return (result, warnings, get_entries kwargs)."""
+    stub = patch.object(wikipedia_utils, "get_entries", return_value=page)
+    with stub as mock:
+        result, warnings = municipalities.scrape(census or {}, state, state_name, wiki)
+    return result, warnings, mock.call_args.kwargs
 
-    assert ocdid in result, f"{state}: census entry was dropped by scraper"
+
+class TestPageTitle:
+    def test_derived_from_the_state_name(self):
+        _, _, kwargs = _scrape(state_name="New Hampshire")
+        assert kwargs["title"] == "List_of_municipalities_in_New_Hampshire"
+
+    def test_title_override_wins(self):
+        """Georgia's conventional title is a disambiguation page (country vs U.S. state)."""
+        _, _, kwargs = _scrape(
+            state="ga", state_name="Georgia",
+            wiki={"title": "List_of_municipalities_in_Georgia_(U.S._state)"},
+        )
+        assert kwargs["title"] == "List_of_municipalities_in_Georgia_(U.S._state)"
+
+
+class TestTableCoordinates:
+    def test_defaults_when_no_overrides(self):
+        _, _, kwargs = _scrape(wiki={})
+        assert (kwargs["table_index"], kwargs["rows_to_skip"], kwargs["entry_column"]) == (0, 1, 0)
+
+    def test_overrides_are_applied(self):
+        _, _, kwargs = _scrape(wiki={"table_index": 1, "rows_to_skip": 2, "entry_column": 1})
+        assert (kwargs["table_index"], kwargs["rows_to_skip"], kwargs["entry_column"]) == (1, 2, 1)
+
+    def test_partial_override_keeps_other_defaults(self):
+        _, _, kwargs = _scrape(wiki={"rows_to_skip": 2})
+        assert kwargs["rows_to_skip"] == 2
+        assert kwargs["table_index"] == 0
+        assert kwargs["entry_column"] == 0
+
+
+class TestParserSelection:
+    def test_table_is_the_default(self):
+        _, _, kwargs = _scrape(wiki={})
+        assert kwargs["extract_refs"] is None      # get_entries builds a table reader
+
+    def test_bullet_list_parser_is_passed_through(self):
+        _, _, kwargs = _scrape(wiki={"parser": "bullet_list"})
+        assert kwargs["extract_refs"] is wikipedia_utils.bullet_list_refs
+
+
+class TestConfigValidation:
+    """Typos should fail loudly at scrape time, not silently do the wrong thing."""
+
+    def test_unknown_parser_raises(self):
+        with pytest.raises(ValueError, match="unknown local_wiki parser"):
+            _scrape(wiki={"parser": "bullet-list"})    # hyphen, not underscore
+
+    def test_unknown_key_raises(self):
+        with pytest.raises(ValueError, match="unknown local_wiki keys"):
+            _scrape(wiki={"rows_to_skips": 2})         # trailing s
+
+
+class TestNoDataLoss:
+    def test_census_entries_survive_when_nothing_matches(self):
+        ocdid, census = _census()
+        result, _, _ = _scrape(census=census)
+        assert ocdid in result, "census entry was dropped by the scraper"
+
+    def test_unmatched_entry_is_flagged_not_dropped(self):
+        ocdid, census = _census()
+        result, _, _ = _scrape(census=census)
+        assert result[ocdid].issues == ["no_wiki_match"]
+
+
+@pytest.mark.parametrize("state", sorted(state_configs))
+def test_every_configured_state_scrapes(state):
+    """Guards each state's local_wiki against typos and unsupported keys.
+
+    Replaces the old per-module contract tests, and covers all states rather than five.
+    """
+    config = state_configs[state]
+    ocdid, census = _census(state=state)
+    result, warnings, _ = _scrape(
+        census=census, state=state, state_name=config["name"], wiki=config.get("local_wiki"),
+    )
+    assert ocdid in result
+    assert isinstance(warnings, list)

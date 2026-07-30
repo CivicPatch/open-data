@@ -28,6 +28,65 @@ def _save_cache(state: str, cache: Dict[str, Any]):
         json.dump(cache, f, indent=2)
 
 
+def table_refs(
+    table_index: int = 0,
+    rows_to_skip: int = 1,
+    entry_column: int = 0,
+    geoid_column: Optional[int] = None,
+    geoid_prefix: str = "",
+    select_table: Optional[Callable[[List[Any]], int]] = None,
+):
+    """Build an entry extractor that reads rows out of a wikitable.
+
+    `select_table` locates the table by shape when its position varies between states
+    (see scrapers/counties.py); otherwise `table_index` is used. `geoid_column` opts into
+    the county layout, where the GEOID comes from the table rather than the infobox.
+    """
+    def extract(soup, warnings: List[str]):
+        tables = soup.find_all("table", {"class": "wikitable"})
+        index = select_table(tables) if select_table else table_index
+        for row in tables[index].find_all("tr")[rows_to_skip:]:
+            cols = row.find_all(["td", "th"])
+            if entry_column >= len(cols):
+                continue
+
+            cell = normalize_td(cols[entry_column])
+            if not cell["url"]:
+                warnings.append(f"No Wikipedia URL found for: {cell['text']}")
+                continue
+
+            geoid = None
+            if geoid_column is not None:
+                if geoid_column >= len(cols):
+                    warnings.append(f"No GEOID column found in table row for: {cell['text']}")
+                    continue
+                geoid = normalize_geoid(_cell_text(cols[geoid_column]))
+                if not geoid:
+                    warnings.append(f"Empty GEOID in table for: {cell['text']}")
+                    continue
+                geoid = f"{geoid_prefix}{geoid}"
+
+            yield cell["text"], cell["url"], geoid
+
+    return extract
+
+
+def bullet_list_refs(soup, warnings: List[str]):
+    """Yield (text, href, geoid) for pages that list entries as bullets, not a table.
+
+    North Carolina's municipality page has no full wikitable — entries are per-letter
+    bullet lists in `div.div-col > ul > li`. Its one wikitable is a "most populous"
+    top-50 highlight, a subset of the A-Z list, so it must not be used.
+    """
+    for div in soup.find_all("div", {"class": "div-col"}):
+        for li in div.find_all("li"):
+            link = li.find("a")
+            if not link or not link.get("href"):
+                warnings.append(f"No Wikipedia URL found for: {li.get_text(strip=True)}")
+                continue
+            yield link.get_text(strip=True), link["href"], None
+
+
 def _cell_text(td) -> str:
     """Text of a table cell, ignoring reference superscripts.
 
@@ -56,6 +115,7 @@ def get_entries(
     geoid_prefix: str = "",
     cache_key: Optional[str] = None,
     select_table: Optional[Callable[[List[Any]], int]] = None,
+    extract_refs: Optional[Callable[[Any, List[str]], Any]] = None,
 ) -> Tuple[Dict[str, Any], Dict[str, str], List[str]]:
     """Scrape a Wikipedia list page into `{geoid: {wiki_url, geoid, url}}`.
 
@@ -80,6 +140,10 @@ def get_entries(
 
     `select_table` picks the table from all wikitables on the page, for list pages whose
     table position varies between states; `table_index` is used when it is not given.
+
+    `extract_refs` replaces the wikitable reader entirely, for pages that don't use one —
+    see `bullet_list_refs`. When omitted, a `table_refs` extractor is built from the
+    table arguments above.
     """
     cache_name = cache_key or state
     cache = _load_cache(cache_name) if cache_name else {}
@@ -89,42 +153,24 @@ def get_entries(
     html = data.json()["parse"]["text"]["*"]
     soup = BeautifulSoup(html, "html.parser")
     entries_by_geoid = {}
-    # Built from table HTML alone — no infobox fetch needed, available for all rows
+    # Built from list-page HTML alone — no infobox fetch needed, available for all rows
     table_name_to_wiki_url: Dict[str, str] = {}
     warnings = []
 
-    tables = soup.find_all("table", {"class": "wikitable"})
-    chosen_index = select_table(tables) if select_table else table_index
-    table = tables[chosen_index]
-    rows = table.find_all("tr")[rows_to_skip:]
+    if extract_refs is None:
+        extract_refs = table_refs(
+            table_index=table_index,
+            rows_to_skip=rows_to_skip,
+            entry_column=entry_column,
+            geoid_column=geoid_column,
+            geoid_prefix=geoid_prefix,
+            select_table=select_table,
+        )
+
     fetched = 0
-    for row in rows:
-        cols = row.find_all(["td", "th"])
-
-        if entry_column >= len(cols):
-            continue
-
-        normalized_td = normalize_td(cols[entry_column])
-        entry_text = normalized_td["text"]
-        wiki_url = normalized_td["url"]
-
-        if not wiki_url:
-            warnings.append(f"No Wikipedia URL found for: {entry_text}")
-            continue
-
-        # Always record table name → wiki_url regardless of limit or cache
+    for entry_text, wiki_url, table_geoid in extract_refs(soup, warnings):
+        # Always record name → wiki_url regardless of limit or cache
         table_name_to_wiki_url[entry_text] = get_wiki_url(wiki_url)
-
-        table_geoid = None
-        if geoid_column is not None:
-            if geoid_column >= len(cols):
-                warnings.append(f"No GEOID column found in table row for: {entry_text}")
-                continue
-            table_geoid = normalize_geoid(_cell_text(cols[geoid_column]))
-            if not table_geoid:
-                warnings.append(f"Empty GEOID in table for: {entry_text}")
-                continue
-            table_geoid = f"{geoid_prefix}{table_geoid}"
 
         skipped_for_limit = False
         if wiki_url in cache:
