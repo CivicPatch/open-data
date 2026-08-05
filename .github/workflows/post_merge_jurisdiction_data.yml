@@ -36,25 +36,28 @@ jobs:
         run: uv sync --no-dev
 
       - name: Process all jurisdictions
+        id: process
         env:
           STORAGE_ENDPOINT: ${{ secrets.STORAGE_ENDPOINT }}
           STORAGE_ACCESS_KEY_ID: ${{ secrets.STORAGE_ACCESS_KEY_ID }}
           STORAGE_SECRET_ACCESS_KEY: ${{ secrets.STORAGE_SECRET_ACCESS_KEY }}
           FRIENDLY_STORAGE_HOST: ${{ vars.FRIENDLY_STORAGE_HOST }}
+          # Passed as env rather than interpolated into the script below, per GitHub's
+          # script-injection guidance for ${{ }} expressions in run: blocks.
+          BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
-          BEFORE_SHA="${{ github.event.before }}"
           if [[ -z "$BEFORE_SHA" || "$BEFORE_SHA" =~ ^0+$ ]]; then
             echo "No previous commit to diff against (branch creation or force-push) — treating as no changes."
             CHANGED_FILES=""
           else
-            CHANGED_FILES=$(git diff --name-only --diff-filter=d "$BEFORE_SHA" "${{ github.sha }}" -- 'data/**/local/*.yml')
+            CHANGED_FILES=$(git diff --name-only --diff-filter=d "$BEFORE_SHA" "$CURRENT_SHA" -- 'data/**/local/*.yml')
           fi
-          echo "$CHANGED_FILES" | uv run python scripts/github_actions/local/post_merge/process_updated_jurisdiction_data.py
-
-      - name: Show updated OCDIDs
-        run: |
-          cat updated_jurisdiction_ocdids.txt
+          # The script logs to stderr and prints a JSON array of processed OCDIDs to stdout.
+          OCDIDS=$(echo "$CHANGED_FILES" | uv run python scripts/github_actions/local/post_merge/process_updated_jurisdiction_data.py)
+          echo "Updated jurisdiction OCDIDs: $OCDIDS"
+          echo "jurisdiction_ocdids=$OCDIDS" >> "$GITHUB_OUTPUT"
 
       - name: Commit updates
         run: |
@@ -77,11 +80,12 @@ jobs:
         env:
           SERVICE_API_KEY: ${{ secrets.SERVICE_API_KEY }}
           CIVICPATCH_ORG_URL: ${{ vars.CIVICPATCH_ORG_URL }}
+          JURISDICTION_OCDIDS: ${{ steps.process.outputs.jurisdiction_ocdids }}
         run: |
-          JURISDICTION_OCDIDS_ARRAY=$(cat updated_jurisdiction_ocdids.txt | jq -R -s -c 'split("\n")[:-1]')
-          echo "Updated jurisdiction OCDIDs: $JURISDICTION_OCDIDS_ARRAY"
+          set -euo pipefail
+          echo "Updated jurisdiction OCDIDs: $JURISDICTION_OCDIDS"
           curl -X POST "$CIVICPATCH_ORG_URL/api/admin/od_sync" \
             -H "Content-Type: application/json" \
             -H "Authorization: $SERVICE_API_KEY" \
             --fail-with-body \
-            -d "{\"jurisdiction_ocdids\": $JURISDICTION_OCDIDS_ARRAY}"
+            -d "$(jq -n --argjson ocdids "$JURISDICTION_OCDIDS" '{jurisdiction_ocdids: $ocdids}')"
