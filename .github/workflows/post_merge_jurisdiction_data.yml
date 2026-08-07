@@ -57,6 +57,8 @@ jobs:
           # The script logs to stderr and prints a JSON array of processed OCDIDs to stdout.
           OCDIDS=$(echo "$CHANGED_FILES" | uv run python scripts/github_actions/local/post_merge/process_updated_jurisdiction_data.py)
           echo "Updated jurisdiction OCDIDs: $OCDIDS"
+          # $GITHUB_OUTPUT takes a single line, so reject anything that leaked onto stdout.
+          echo "$OCDIDS" | jq -e 'type == "array"' > /dev/null
           echo "jurisdiction_ocdids=$OCDIDS" >> "$GITHUB_OUTPUT"
 
       - name: Commit updates
