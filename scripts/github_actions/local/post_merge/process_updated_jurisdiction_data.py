@@ -1,3 +1,4 @@
+import contextlib
 import json
 import os
 import sys
@@ -29,15 +30,8 @@ def save_people(people, path):
 def read_changed_files():
     return [line.strip() for line in sys.stdin if line.strip()]
 
-def emit_updated_ocdids(ocdids):
-    log(f"Processed {len(ocdids)} updated jurisdictions.")
-    print(json.dumps(sorted(ocdids)))
-
-def main():
-    changed_files = read_changed_files()
+def process_changed_files(changed_files):
     updated_jurisdiction_ocdids = set()
-
-    log(f"Processing {len(changed_files)} changed jurisdiction files...")
 
     for relative_path in changed_files:
         jurisdiction_file = os.path.join(ROOT_PROJECT, relative_path)
@@ -58,7 +52,20 @@ def main():
             log(f"Error processing {jurisdiction_ocdid}: {e}")
             raise
 
-    emit_updated_ocdids(updated_jurisdiction_ocdids)
+    return updated_jurisdiction_ocdids
+
+def main():
+    changed_files = read_changed_files()
+    log(f"Processing {len(changed_files)} changed jurisdiction files...")
+
+    # process_jurisdiction() and shared/ report progress with bare print(), which would
+    # otherwise land in the middle of the result. Redirect stdout for the duration so the
+    # only thing left on it is the JSON array below.
+    with contextlib.redirect_stdout(sys.stderr):
+        updated_jurisdiction_ocdids = process_changed_files(changed_files)
+
+    log(f"Processed {len(updated_jurisdiction_ocdids)} updated jurisdictions.")
+    print(json.dumps(sorted(updated_jurisdiction_ocdids)))
 
 if __name__ == "__main__":
     main()
