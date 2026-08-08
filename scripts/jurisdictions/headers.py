@@ -169,12 +169,16 @@ def local_header(state: str, fips: str, state_name: str, pull_from_census: list[
         "Fields per jurisdiction:\n"
         + _fields(
             "id", "name", "url", "wiki_url", "population", "geoid", "status",
-            "issues", "generated_comments", "comments", "warnings",
+            "parent_ocdids", "issues", "generated_comments", "comments", "warnings",
             id="OCD-ID for the jurisdiction; stable once assigned — preserved across runs via "
                "GEOID matching even if the Census name changes.",
             name="Common name including LSAD suffix (e.g. 'Newark city'); updated each run.",
             geoid="Census FIPS GEOID; stable identifier used to match jurisdictions across "
                   "runs — never changes for an incorporated place.",
+            parent_ocdids="Containing jurisdictions, from a boundary overlay against the "
+                          "county map: every county the place materially overlaps (largest "
+                          "share first — a place may straddle a county line), then the "
+                          "state. Replaced on every run.",
             issues="Per-jurisdiction problems: ocdid_collision, no_wiki_match, geoid_mismatch. "
                    "Replaced on every run.",
             warnings="Root-level: warnings not tied to a specific jurisdiction.",
