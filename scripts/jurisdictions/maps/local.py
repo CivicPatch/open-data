@@ -10,6 +10,7 @@ import pandas
 import requests
 
 from scripts.paths import PROJECT_ROOT
+from scripts.jurisdictions.yaml_io import load_existing_jurisdictions, ryaml
 def census_place_geozip(fips: str) -> str:
     return f"https://www2.census.gov/geo/tiger/TIGER2025/PLACE/tl_2025_{fips}_place.zip"
 
@@ -25,9 +26,13 @@ def zip_to_geojson(url: str, output_geojson: str, data_source_map_dir: str):
         f.write(response.content)
     with zipfile.ZipFile(zip_path, "r") as zip_ref:
         zip_ref.extractall(data_source_map_dir)
-    shp_files = [f for f in os.listdir(data_source_map_dir) if f.endswith(".shp")]
+        # Take the .shp named in *this* zip. Listing the directory instead would pick up
+        # shapefiles left behind by an earlier layer (places/cousubs share this dir), and
+        # os.listdir order is arbitrary — that is how a state could end up with both
+        # places.geojson and cousubs.geojson built from the same shapefile.
+        shp_files = [n for n in zip_ref.namelist() if n.endswith(".shp")]
     if not shp_files:
-        raise ValueError("No shapefile found in ZIP")
+        raise ValueError(f"No shapefile found in ZIP: {url}")
     shp_path = os.path.join(data_source_map_dir, shp_files[0])
     gdf = geopandas.read_file(shp_path)
     gdf.to_file(output_geojson, driver="GeoJSON")
@@ -87,9 +92,18 @@ def build_maps_for_state(state: str, fips: str, pull_from_census: list[str]):
     return geojson_data_local_file_path
 
 
+# Floating-point guard only, NOT a policy cutoff. TIGER's place and county layers are
+# topologically integrated, so an overlap is either a real shared area or exact zero —
+# there are no digitisation slivers to filter out. Every county a place genuinely reaches
+# is recorded, however small (Enumclaw WA pokes ~5 hectares into Pierce, 0.4% of its
+# area); ordering by descending share is what identifies the primary county.
+_MIN_COUNTY_AREA_SHARE = 1e-9
+
+
 def _add_county_ocdids(local_path: str, counties_path: str, state: str) -> None:
-    """Spatial join each local feature's centroid to its county and write
-    county_ocdids into every feature's properties.
+    """Spatial join each local feature to every county it materially overlaps, write
+    county_ocdids into the feature's properties, and mirror
+    parent_ocdids = [*county_ocdids, state_ocdid] back into jurisdictions.yml.
     OCD IDs come from canonical YAML files, not constructed by code."""
     if not Path(counties_path).exists():
         raise FileNotFoundError(
@@ -97,6 +111,7 @@ def _add_county_ocdids(local_path: str, counties_path: str, state: str) -> None:
             f"Run 'mise run setup-state -- --state {state}' to generate county boundaries first."
         )
     counties_yml = PROJECT_ROOT / "data_source" / state / "counties" / "jurisdictions.yml"
+    state_yml = PROJECT_ROOT / "data_source" / state / "state" / "jurisdictions.yml"
 
     with open(counties_yml) as f:
         county_lookup = {
@@ -104,39 +119,92 @@ def _add_county_ocdids(local_path: str, counties_path: str, state: str) -> None:
             for j in yaml.safe_load(f).get("jurisdictions", [])
             if j.get("geoid")
         }
+    with open(state_yml) as f:
+        state_ocdid = yaml.safe_load(f)["jurisdictions"][0]["id"]
 
     local_gdf = geopandas.read_file(local_path).reset_index(drop=True)
     counties_gdf = geopandas.read_file(counties_path)
 
     local_projected = local_gdf.to_crs("EPSG:5070")
     counties_projected = counties_gdf.to_crs("EPSG:5070")
-    centroids = local_projected.copy()
-    centroids["geometry"] = local_projected.geometry.centroid
 
-    joined = centroids.sjoin(
+    # Overlay the full polygons rather than joining centroids: a centroid lies in exactly
+    # one county by construction, so centroid joins can never see a place that straddles a
+    # county line (Bothell WA spans King and Snohomish).
+    pieces = local_projected[["geometry"]].reset_index(names="local_index").overlay(
         counties_projected[["GEOID", "geometry"]],
-        how="left",
-        predicate="within",
+        how="intersection",
+        keep_geom_type=True,
     )
-    county_geoid_map = joined["GEOID_right"].to_dict()
+    pieces["share"] = (
+        pieces.geometry.area
+        / local_projected.geometry.area.reindex(pieces["local_index"]).to_numpy()
+    )
+    pieces = pieces[pieces["share"] >= _MIN_COUNTY_AREA_SHARE]
+
+    # Largest overlap first, so the county a place mostly sits in leads the list.
+    pieces = pieces.sort_values(["local_index", "share"], ascending=[True, False])
+    county_geoid_map: dict[int, list[str]] = (
+        pieces.groupby("local_index")["GEOID"].apply(list).to_dict()
+    )
 
     with open(local_path) as f:
         geojson = json.load(f)
 
+    geoid_to_parents: dict[str, list[str]] = {}
     for i, feature in enumerate(geojson["features"]):
-        county_geoid = county_geoid_map.get(i)
-        county_ocdids = []
-        if county_geoid and not pandas.isna(county_geoid):
-            county_ocdid = county_lookup.get(str(county_geoid))
-            if county_ocdid:
-                county_ocdids.append(county_ocdid)
+        county_ocdids = [
+            ocdid
+            for geoid in county_geoid_map.get(i, [])
+            if (ocdid := county_lookup.get(str(geoid)))
+        ]
         feature["properties"]["county_ocdids"] = county_ocdids
+        if county_ocdids:
+            geoid = str(
+                feature["properties"].get("GEOID")
+                or feature["properties"].get("geoid")
+                or ""
+            )
+            if geoid:
+                geoid_to_parents[geoid] = [*county_ocdids, state_ocdid]
 
     with open(local_path, "w") as f:
         json.dump(geojson, f, indent=2)
 
-    matched = sum(1 for i in range(len(geojson["features"])) if county_geoid_map.get(i) and not pandas.isna(county_geoid_map.get(i)))
-    print(f"  county_ocdids: {matched}/{len(geojson['features'])} features matched to a county")
+    matched = sum(1 for f in geojson["features"] if f["properties"]["county_ocdids"])
+    straddling = sum(
+        1 for f in geojson["features"] if len(f["properties"]["county_ocdids"]) > 1
+    )
+    print(
+        f"  county_ocdids: {matched}/{len(geojson['features'])} features matched to a "
+        f"county ({straddling} spanning more than one)"
+    )
+
+    _write_parent_ocdids(state, geoid_to_parents)
+
+
+def _write_parent_ocdids(state: str, geoid_to_parents: dict[str, list[str]]) -> None:
+    """Mirror the spatial-join result into jurisdictions.yml so it reaches the DB.
+
+    The geojson alone is not enough: open-data syncs from the YAML. This write-back was
+    dropped when the pipeline was split into packages, which is why states onboarded
+    after that point carry no parent_ocdids at all."""
+    local_yml = PROJECT_ROOT / "data_source" / state / "local" / "jurisdictions.yml"
+    doc, _ = load_existing_jurisdictions(local_yml)
+    if not doc.get("jurisdictions"):
+        print(f"  parent_ocdids: {local_yml} has no jurisdictions; skipping write-back")
+        return
+
+    written = 0
+    for j in doc["jurisdictions"]:
+        parents = geoid_to_parents.get(str(j.get("geoid", "")))
+        if parents:
+            j["parent_ocdids"] = parents
+            written += 1
+
+    with open(local_yml, "w") as f:
+        ryaml.dump(doc, f)
+    print(f"  parent_ocdids: written to {written} jurisdictions in {local_yml.name}")
 
 if __name__ == "__main__":
     import argparse
