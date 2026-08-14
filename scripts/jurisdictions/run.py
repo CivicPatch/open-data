@@ -2,12 +2,12 @@
 Full setup for a single state: jurisdiction data, maps, and PMTiles.
 
 Prerequisites (done once manually before running this):
-  1. Add state to scripts/state_configs.py
-  2. Write scraper in scripts/scrapers/{state}.py
+  1. Add state to scripts/jurisdictions/config.py
+  2. Fit its `local_wiki` entry to the state's municipality list page
   3. Fetch Google Civic data for the state (see preflight output for details)
 
 Usage:
-  mise run setup-state --state va
+  mise run setup-state -- --state va
 """
 import sys
 
