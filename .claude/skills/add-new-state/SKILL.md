@@ -1,12 +1,12 @@
 ---
 name: add-new-state
-description: Register a new state and write its Wikipedia scraper (steps 1-4 of "Adding a New State" in DEVELOPMENT.md) — config entry, scraper implementation, Google Civic data fetch, and dry-run smoke test. Use when the user asks to set up, onboard, or add a new state to the pipeline.
+description: Register a new state and fit its Wikipedia list-page config (steps 1-4 of "Adding a new state" in DEVELOPMENT.md) — config entry, local_wiki coordinates, Google Civic data fetch, and dry-run smoke test. Use when the user asks to set up, onboard, or add a new state to the pipeline.
 tools: Read, Edit, Write, Bash, Glob, Grep
 ---
 
 # Add a New State (steps 1-4)
 
-Covers the manual prep before the full `mise run setup-state` run. Full reference: `DEVELOPMENT.md` → "Adding a New State". This skill only does steps 1-4; stop after the dry-run and hand back to the user for step 5 onward (they'll want to review results before the full run, county-conversion decisions, PMTile regen, etc.).
+Covers the manual prep before the full `mise run setup-state` run. Full reference: `DEVELOPMENT.md` → "Adding a new state". This skill only does steps 1-4; stop after the dry-run and hand back to the user for step 5 onward (they'll want to review results before the full run, county-conversion decisions, PMTile regen, etc.).
 
 Ask the user for the two-letter state code and full name if not given (e.g. `va` / Virginia).
 
@@ -18,31 +18,35 @@ Read `scripts/jurisdictions/config.py` fully first. Determine `pull_from_census`
 
 If unsure which applies, say so and ask, or reason from Census Bureau MCD classification — don't guess silently.
 
-Add the import (alphabetized) and the config block (match existing indentation/style exactly, including any quirks like extra leading spaces already present in neighboring entries):
+Add the config block (match existing indentation/style exactly, including any quirks like extra leading spaces already present in neighboring entries). There is no import to add — states are pure data now:
 
-```python
-from scripts.scrapers import <state> as <state>_scraper
-```
 ```python
 "<state>": {
     "fips": "<fips>",
+    "name": "<State Name>",
     "pull_from_census": [...],
-    "scraper": <state>_scraper,
+    "local_wiki": {},          # filled in by step 2
     "validation_sources": ["google"],
 },
 ```
 
 FIPS codes: look up the standard 2-digit state FIPS if not already known — don't guess.
 
-## Step 2 — Write the scraper
+## Step 2 — Fit `local_wiki` to the list page
 
-**Before writing any code**, inspect the actual Wikipedia page structure — do not assume it matches another state's scraper. Page layouts vary:
+**There is no per-state scraper.** `scripts/jurisdictions/scrapers/municipalities.py` handles every state; `local_wiki` supplies only that state's deviations from the defaults. Read `municipalities.py` before doing anything here — it is ~60 lines and is the whole contract.
 
-- Single `wikitable` with one row per municipality (SC, TN, NH, NJ, ME pattern) — `table_index`/`rows_to_skip`/`entry_column` feed `wikipedia_utils.get_entries` directly.
-- Multiple wikitables (e.g. incorporated + CDPs), needing GEOID-suffix fallback matching (CO, MI, WA pattern).
-- **No wikitable at all** — per-letter A-Z bullet lists (`div.div-col > ul > li`) instead of a table (NC pattern). A "most populous" table may exist but is usually just a redundant top-N subset of the full A-Z list — verify by checking whether a large city from the table also appears in the letter sections before deciding to ignore it.
+| key | default | set it when |
+|---|---|---|
+| `table_index` | `0` | the municipality table isn't the page's first wikitable |
+| `rows_to_skip` | `1` | the header spans two rows (usually land area splitting into sq mi / km²) |
+| `entry_column` | `0` | the place name isn't the first column |
+| `title` | `List_of_municipalities_in_<State_Name>` | that title is a disambiguation page (Georgia: the country vs the U.S. state) |
+| `parser` | `"table"` | `"bullet_list"` — the page has no wikitable, just per-letter `div.div-col > ul > li` bullets (North Carolina) |
 
-Inspect with a quick throwaway script, e.g.:
+`{}` means all defaults. Unknown keys raise a `ValueError` at run time rather than being silently ignored, so a typo surfaces immediately.
+
+**Inspect the actual page before writing values** — do not assume it matches another state:
 
 ```bash
 uv run python -c "
@@ -57,22 +61,18 @@ print('wikitables:', len(tables))
 for i, t in enumerate(tables):
     rows = t.find_all('tr')
     print(i, len(rows), [c.get_text(strip=True) for c in rows[0].find_all(['td','th'])])
+    print('   row1:', [c.get_text(strip=True) for c in rows[1].find_all(['td','th'])][:4])
 print('div-col sections (bullet-list format):', len(soup.find_all('div', {'class': 'div-col'})))
 "
 ```
 
-Then read 2-3 existing scrapers in `scripts/jurisdictions/scrapers/` that match the discovered pattern (`sc.py`/`tn.py` for simple single-table, `co.py`/`mi.py`/`wa.py` for multi-table with GEOID fallback) and follow the same shape. Reuse `wikipedia_utils.get_entries` + `wikipedia_utils.match_jurisdictions` whenever the page has a real wikitable. Only write a custom entry-extraction loop (like the bullet-list case) when the page genuinely has no table — reuse `wikipedia_utils.get_entry_infobox`, `get_wiki_url`, `get_parse_url`, `_load_cache`/`_save_cache` rather than reimplementing caching or infobox parsing.
+Reading the output:
+- The table whose row count ≈ the state's municipality count is the one — `table_index`. A short table (~50 rows) next to a long one is a "most populous" highlight subset; ignore it. Verify by checking that a large city in the short table also appears in the long one.
+- If row 1 still looks like header text (`sq mi`, `km²`) rather than a place name, that's `rows_to_skip: 2`.
+- If the first column is a rank or county name rather than the place, count over to set `entry_column`.
+- `wikitables: 0` (or only a highlight table) with several `div-col` sections → `parser: "bullet_list"`.
 
-Smoke-test the new scraper directly against a couple of entries before wiring it into the full pipeline:
-
-```bash
-uv run python -c "
-from scripts.scrapers import <state>
-entries, table_names, warnings = <state>.scrape.__module__  # sanity import check
-"
-```
-
-(or call the module's internal entry-fetch function with `limit=3` if it has one) — confirm GEOIDs and URLs come back populated, then delete any throwaway cache file it created under `scripts/jurisdictions/scrapers/cache/`.
+If the page's shape fits none of these, stop and report it — a genuinely new layout means a new entry in `PARSERS`, which is a code change to hand back, not something to bolt on per-state.
 
 ## Step 3 — Google Civic data
 
@@ -87,7 +87,7 @@ ls scripts/track_progress/google_data/<state>_all_raw.json
 
 ## Step 4 — Dry-run
 
-Needs county + state boundaries first (the local step's county-OCDID spatial join depends on `counties.geojson` and `data_source/<state>/counties/jurisdictions.yml`):
+Needs state + county data first: the local run also builds `local.geojson` and overlays it on the county polygons to derive `county_ocdids`, and raises `FileNotFoundError` without `counties.geojson` and `data_source/<state>/counties/jurisdictions.yml`.
 
 ```bash
 uv run python scripts/jurisdictions/states.py <state>
@@ -95,8 +95,21 @@ uv run python scripts/jurisdictions/counties.py <state>
 uv run python scripts/jurisdictions/local.py <state> --limit 10
 ```
 
-Inspect `data_source/<state>/local/jurisdictions.yml` and the printed warnings. More than a handful of `no_wiki_match` entries means the scraper's table/column selection (or bullet-list parsing) is off — go back to step 2, not forward to step 5. `scripts/jurisdictions/scrapers/cache/<state>_wikipedia.json` caches infobox fetches, so reruns after a fix are cheap.
+Inspect `data_source/<state>/local/jurisdictions.yml` and the printed warnings.
+
+**Do not read a high `no_wiki_match` count on a `--limit` run as a failure.** Municipality GEOIDs come from the infobox, so `get_entries` drops every row past the fetch budget before matching and each one lands as `no_wiki_match`. Roughly `total − limit` flagged entries is the expected result of `--limit 10`, and says nothing about whether `local_wiki` is right.
+
+What to check instead:
+- the first N entries (the ones actually fetched) have `url:` and `wiki_url:` populated — if even those are unmatched, `local_wiki` is wrong, go back to step 2;
+- no `No Wikipedia URL found for:` warnings, which mean `entry_column` points at a cell with no link;
+- the counties file, where a high `no_wiki_match` count *is* a real failure — county GEOIDs come from the table, so they are not subject to the limit artifact.
+
+Only a run without `--limit` tells you the fit across the whole state.
+
+`scripts/jurisdictions/scrapers/cache/<state>_wikipedia.json` caches infobox fetches, so reruns after a fix are cheap; delete it if a fix changes which entries get fetched.
+
+The overlay assigns every county a place materially overlaps, ordered by descending area share, so multi-county `county_ocdids` lists are expected and not a bug.
 
 ## Handoff
 
-Once the dry-run looks clean, summarize what was done (config entry, scraper file, dry-run warning count) and point the user at DEVELOPMENT.md step 5 (`mise run setup-state -- --state <state>`) for the full run — don't run it yourself as part of this skill.
+Once the dry-run looks clean, summarize what was done (config entry, `local_wiki` values and why, dry-run warning count) and point the user at DEVELOPMENT.md step 5 (`mise run setup-state -- --state <state>`) for the full run — don't run it yourself as part of this skill.

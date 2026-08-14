@@ -1,5 +1,5 @@
 
-# Add a new state here to enable setup_local.py / setup_counties.py, maps, and validation for it.
+# Add a new state here to enable local.py / counties.py, maps, and validation for it.
 # Keys:
 #   fips               — US Census FIPS code for the state
 #   name               — full state name; builds Wikipedia page titles
@@ -11,6 +11,14 @@
 #                        additional sources (e.g. "tml") are state-specific opt-ins
 
 state_configs = {
+    "ca": {
+        "fips": "06",
+        "name": "California",
+        "pull_from_census": ["places"],
+        # table 0 is the two-row †/‡ legend key, not the municipality list
+        "local_wiki": {"table_index": 1},
+        "validation_sources": ["google"],
+    },
     "co": {
         "fips": "08",
         "name": "Colorado",
@@ -29,6 +37,15 @@ state_configs = {
             "title": "List_of_municipalities_in_Georgia_(U.S._state)",
             "rows_to_skip": 2,
         },
+        "validation_sources": ["google"],
+    },
+    "id": {
+        "fips": "16",
+        "name": "Idaho",
+        "pull_from_census": ["places"],
+        # "List_of_municipalities_in_Idaho" redirects, and get_entries does not follow
+        # redirects on the list page. entry_column 1: column 0 is the population rank.
+        "local_wiki": {"title": "List_of_cities_in_Idaho", "entry_column": 1},
         "validation_sources": ["google"],
     },
     "ma": {
@@ -60,6 +77,16 @@ state_configs = {
        # no full wikitable; municipalities are per-letter bullet lists
        "local_wiki": {"parser": "bullet_list"},
        "validation_sources": ["google"],
+    },
+    "nd": {
+        "fips": "38",
+        "name": "North Dakota",
+        # organized civil townships are functioning governments here, not CCDs
+        "pull_from_census": ["places", "county_subdivisions"],
+        # "List_of_municipalities_in_North_Dakota" redirects, and get_entries does not
+        # follow redirects on the list page. entry_column 1: column 0 is the rank.
+        "local_wiki": {"title": "List_of_cities_in_North_Dakota", "entry_column": 1},
+        "validation_sources": ["google"],
     },
     "nh": {
         "fips": "33",

@@ -3,7 +3,7 @@
 One-off: validate every jurisdiction OCD-ID and interactively fix the broken ones.
 
 Run it AFTER (re)generating a state's jurisdictions.yml (see DEVELOPMENT.md). The
-generator (`get_names` in setup_local.py) builds OCD-IDs by lowercasing the Census
+generator (`get_names` in jurisdictions/yaml_io.py) builds OCD-IDs by lowercasing the Census
 name and swapping spaces for underscores — it does NOT restrict the result to the
 legal OCD-ID character set, so names with apostrophes ("O'Brien"), diacritics
 ("Cañon City"), slashes ("Hartsville/Trousdale") or no LSAD suffix ("Lynchburg" ->
@@ -16,10 +16,10 @@ where every `label:value` segment's value matches [a-z0-9_.~-]+ and the trailing
 segment is the jurisdiction type (no colon).
 
 Usage:
-    uv run python scripts/fix_jurisdiction_ocdids.py              # all states
-    uv run python scripts/fix_jurisdiction_ocdids.py --state tn   # one state
-    uv run python scripts/fix_jurisdiction_ocdids.py --dry-run    # report only, no prompts
-    uv run python scripts/fix_jurisdiction_ocdids.py --yes        # auto-accept every proposal
+    uv run python scripts/ocdids/fix.py              # all states
+    uv run python scripts/ocdids/fix.py --state tn   # one state
+    uv run python scripts/ocdids/fix.py --dry-run    # report only, no prompts
+    uv run python scripts/ocdids/fix.py --yes        # auto-accept every proposal
 
 For each invalid ID you get: [a]ccept proposal / [e]dit by hand / [s]kip / [q]uit.
 Accepting rewrites the ID in jurisdictions.yml and migrates any data/<state>/local/*.yml
