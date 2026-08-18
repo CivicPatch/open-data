@@ -1,0 +1,56 @@
+name: "[auto] Validate - Data"
+on:
+  push:
+    branches: [main]
+    # Both the reviewed and unreviewed levels. Unreviewed data is committed without a human
+    # ever looking at it, so it is the copy that most needs an automated check.
+    paths:
+      - "data/**/*.yml"
+env:
+  PYTHONPATH: ${{ github.workspace }}
+
+permissions:
+  contents: read
+
+# Report-only: this validates what already landed rather than gating it, so runs need not
+# queue behind each other.
+concurrency:
+  group: "validate-data-${{ github.sha }}"
+  cancel-in-progress: true
+
+jobs:
+  validate-changed-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 100
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.12
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install dependencies
+        run: uv sync --no-dev
+
+      - name: Validate changed data files
+        env:
+          # Passed as env rather than interpolated into the script, per GitHub's
+          # script-injection guidance for ${{ }} expressions in run: blocks.
+          BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$BEFORE_SHA" || "$BEFORE_SHA" =~ ^0+$ ]]; then
+            echo "No previous commit to diff against (branch creation or force-push) — nothing to validate."
+            exit 0
+          fi
+          # --diff-filter=d: a deleted file has nothing left to validate.
+          git diff --name-only --diff-filter=d "$BEFORE_SHA" "$CURRENT_SHA" -- 'data/**/*.yml' \
+            | uv run python scripts/github_actions/validate_data_files.py

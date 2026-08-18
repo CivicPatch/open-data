@@ -3,7 +3,10 @@ on:
   push:
     branches: [main]
     paths:
-      - "data/**/*.yml" # newly scraped jurisdiction
+      # Reviewed jurisdiction data only, matching the diff pathspec the job below uses.
+      # `local-unreviewed/` holds scrapes nobody has read yet: civicpatch commits them here
+      # for visibility, and they must not be processed or synced until review promotes them.
+      - "data/*/local/*.yml"
 env:
   PYTHONPATH: ${{ github.workspace }}
 
