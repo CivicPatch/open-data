@@ -52,7 +52,14 @@ def table_refs(
 
             cell = normalize_td(cols[entry_column])
             if not cell["url"]:
-                warnings.append(f"No Wikipedia URL found for: {cell['text']}")
+                # These tables end with totals rows — "Total municipalities", then the
+                # state itself — which are page furniture, not municipalities we failed
+                # to find. They carry no article link in any column (at most a citation
+                # footnote), whereas a genuinely misconfigured entry_column lands on a
+                # text cell in a row that still links articles elsewhere. Warn only for
+                # the latter; skipping is correct either way.
+                if _links_an_article(cols):
+                    warnings.append(f"No Wikipedia URL found for: {cell['text']}")
                 continue
 
             geoid = None
@@ -300,6 +307,20 @@ def get_parse_url(wiki_url: str):
 def get_wiki_url(wiki_url: str):
     title = wiki_url.rstrip("/").split("/")[-1]
     return f"https://en.wikipedia.org/wiki/{title}"
+
+
+def _links_an_article(cols) -> bool:
+    """True if any cell in the row links a Wikipedia article.
+
+    Citation footnotes (`#cite_note-...`) and external links don't count — a totals
+    row cites its source but links no article, which is what separates it from a real
+    data row.
+    """
+    return any(
+        a.get("href", "").startswith("/wiki/")
+        for col in cols
+        for a in col.find_all("a")
+    )
 
 
 def normalize_td(td_element):
