@@ -26,6 +26,16 @@ state_configs = {
         "local_wiki": {"table_index": 1, "rows_to_skip": 2},
         "validation_sources": ["google"],
     },
+    "de": {
+        "fips": "10",
+        "name": "Delaware",
+        # hundreds are legal but non-functioning entities, so no county subdivisions
+        "pull_from_census": ["places"],
+        # table 0 is the two-row †/‡ legend key, not the municipality list
+        # rows_to_skip 2: two-row header, land area splits into sq mi / km²
+        "local_wiki": {"table_index": 1, "rows_to_skip": 2},
+        "validation_sources": ["google"],
+    },
     "ga": {
         "fips": "13",
         "name": "Georgia",
