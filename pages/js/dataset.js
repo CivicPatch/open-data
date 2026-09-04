@@ -4,10 +4,22 @@
 import * as duckdb from "https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.30.0/+esm";
 
 // The dataset is NOT served beside this page. civicpatch.org's daily job writes it to R2, so
-// the repo stays YAML a human can read and diff — a parquet corpus rewritten nightly would
-// bloat this history permanently. The cost of that choice is CORS: the bucket has to allow this
-// origin (cp-infrastructure/resources/r2.tf), or every fetch below fails the preflight.
-const DATA_BASE = "https://civicpatch-nonprod.civicpatch.org/parquet/";
+// this repo stays YAML a human can read and diff — a parquet corpus rewritten nightly would
+// bloat its history permanently. The cost of that choice is CORS: the bucket must allow this
+// origin (cp-infrastructure/resources/r2.tf) or every fetch below fails its preflight.
+//
+// Only localhost is special. Anywhere the page is actually deployed should show real data, and
+// a checkout should not — so the environment is chosen from where the page is served rather
+// than configured, which means no build step and nothing to keep in step.
+//
+// No allowlist of deployed hosts, because there is nothing to protect: this data is public to
+// anyone with curl, and CORS decides which origins may read it. A host nobody granted gets a
+// 403 whichever URL this picks.
+const LOCAL_HOSTS = ["localhost", "127.0.0.1", "[::1]"];
+
+const DATA_BASE = LOCAL_HOSTS.includes(location.hostname)
+  ? "https://civicpatch-nonprod.civicpatch.org/parquet/"
+  : "https://cdn.civicpatch.org/parquet/";
 
 // DuckDB-Wasm's internal HTTP filesystem (used by read_parquet) does not
 // resolve relative paths against the page URL the way fetch()/<img src>

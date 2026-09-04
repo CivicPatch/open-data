@@ -39,7 +39,7 @@ document.getElementById("history-toggle").addEventListener("click", () => {
     const conn = await db.connect();
     QueryRunner.init(conn);
 
-    statusEl.textContent = "Loading dataset manifest…";
+    statusEl.innerHTML = '<span class="spinner"></span>Loading dataset manifest…';
     const { tableNames, rowCounts, manifestTables } = await Dataset.registerViews(conn, manifestPromise);
 
     const onSelectTable = (table) => {
@@ -60,13 +60,21 @@ document.getElementById("history-toggle").addEventListener("click", () => {
       ? `${tableNames.length} table${tableNames.length === 1 ? "" : "s"} available — click a table name above to preview it`
       : "No tables found in manifest.";
 
-    QueryRunner.setQuery(
-      tableNames.includes("memberships")
-        ? "SELECT * FROM memberships WHERE is_open;"
-        : tableNames.length
-          ? `SELECT * FROM ${tableNames[0]};`
-          : "-- No tables available"
-    );
+    // A URL carrying ?sql= wins: the reader followed a link to a specific result, and
+    // overwriting it with the default query would discard what they came for.
+    const requested = QueryRunner.fromUrl();
+    if (requested) {
+      QueryRunner.setQuery(requested.sql);
+      QueryRunner.pendingPage = requested.page;
+    } else {
+      QueryRunner.setQuery(
+        tableNames.includes("memberships")
+          ? "SELECT * FROM memberships WHERE is_open;"
+          : tableNames.length
+            ? `SELECT * FROM ${tableNames[0]};`
+            : "-- No tables available"
+      );
+    }
 
     QueryRunner.runBtn.disabled = false;
     if (tableNames.length) QueryRunner.run();

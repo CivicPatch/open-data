@@ -3,6 +3,11 @@ import { History } from "./history.js";
 
 export const PAGE_SIZE = 100;
 
+// Where a paginated query's rows are held between page turns. `row_number()` gives them a total
+// order the user's SQL may not have, which is what makes a page a fixed slice rather than
+// whichever rows a fresh execution happened to return.
+const PAGE_TABLE = "_page_src";
+
 // Owns the SQL box, results table, pagination, and CSV export. Every query
 // submitted through run() is paginated by wrapping it as a subquery with
 // LIMIT/OFFSET pushed down into DuckDB — this keeps huge result sets (e.g.
@@ -31,6 +36,32 @@ export const QueryRunner = {
   baseSql: null,
   offset: 0,
   totalRows: 0,
+  // True while a page turn is in flight. See goToPage.
+  paging: false,
+  // The page a URL asked for, applied on the next run once the row count is known.
+  pendingPage: 1,
+
+  // The query and page live in the URL so a result can be linked, bookmarked, and survive a
+  // reload. `replaceState`, not `pushState`: paging is not navigation, and filling the back
+  // stack with page turns would make Back mean "one row further up" instead of "leave".
+  syncUrl() {
+    const params = new URLSearchParams();
+    params.set("sql", this.queryEl.value.trim());
+    const page = Math.floor(this.offset / PAGE_SIZE) + 1;
+    if (page > 1) params.set("page", String(page));
+    history.replaceState(null, "", `?${params}`);
+  },
+
+  // What the URL asks for, or nothing. The page number is clamped when the query runs, since
+  // only then is the row count known — a link to page 900 of a 3-page result should land on
+  // the last page rather than an empty one.
+  fromUrl() {
+    const params = new URLSearchParams(location.search);
+    const sql = params.get("sql");
+    if (!sql) return null;
+    const page = Number(params.get("page") ?? 1);
+    return { sql, page: Number.isFinite(page) && page > 0 ? Math.floor(page) : 1 };
+  },
 
   init(conn) {
     this.conn = conn;
@@ -66,6 +97,10 @@ export const QueryRunner = {
       this.resultsWrap.innerHTML = "<p class='hint'>Query returned no rows.</p>";
       this.metaEl.textContent = "";
       this.exportBtn.disabled = true;
+      // Not an early return. Leaving before this froze both buttons in whatever state the
+      // previous page left them, so landing on an empty page stranded the reader with no way
+      // forward or back.
+      this.updatePaginationUI();
       return;
     }
 
@@ -150,7 +185,12 @@ export const QueryRunner = {
     this.clearError();
 
     try {
-      const reader = await this.conn.send(this.baseSql);
+      // The materialised table, not the user's SQL: the export is then exactly the rows that
+      // were paged through, in the same order. Re-running the query could return a different
+      // ordering — the same reason paging over it was broken.
+      const reader = await this.conn.send(
+        `SELECT * EXCLUDE (_row) FROM ${PAGE_TABLE} ORDER BY _row`
+      );
       const chunks = [];
       let cols = null;
 
@@ -175,45 +215,81 @@ export const QueryRunner = {
     }
   },
 
-  // Fetches the page at the current offset for the already-counted baseSql.
+  // Fetches the page at the current offset from the materialised result.
+  //
+  // Reads the temp table, never the user's SQL. Re-running the query per page was the paging
+  // bug: a subquery's ORDER BY is not guaranteed to survive being wrapped, and DuckDB scans in
+  // parallel, so each execution could order rows differently — page 18 would show rows from
+  // page 3, and the buttons looked dead because the content shuffled instead of moving. It was
+  // also a full re-scan over HTTP for every page turn.
   async fetchPage() {
+    const from = this.offset;
     const result = await this.conn.query(
-      `SELECT * FROM (${this.baseSql}) AS _q LIMIT ${PAGE_SIZE} OFFSET ${this.offset}`
+      `SELECT * EXCLUDE (_row) FROM ${PAGE_TABLE}
+       WHERE _row > ${from} AND _row <= ${from + PAGE_SIZE} ORDER BY _row`
     );
     this.renderResults(result);
   },
 
   async goToPage(delta) {
-    if (!this.baseSql) return;
+    if (!this.baseSql || this.paging) return;
     const nextOffset = this.offset + delta * PAGE_SIZE;
     if (nextOffset < 0 || nextOffset >= this.totalRows) return;
 
+    // `offset` is mutated before an await, so two quick clicks would both advance it and then
+    // race their fetches — the slower one wins the render and the table stops matching the
+    // page number. One page turn at a time instead.
+    this.paging = true;
+    this.prevBtn.disabled = true;
+    this.nextBtn.disabled = true;
+
+    const previousOffset = this.offset;
     this.offset = nextOffset;
     this.clearError();
     try {
       await this.fetchPage();
+      this.syncUrl();
     } catch (err) {
+      // Put the offset back: the page on screen is still the old one, and leaving `offset`
+      // ahead of it makes every later calculation describe a page nobody is looking at.
+      this.offset = previousOffset;
       this.showError(err);
+    } finally {
+      this.paging = false;
+      this.updatePaginationUI();
     }
   },
 
   async run() {
     this.clearError();
     this.runBtn.disabled = true;
+    // Same shape as the export button below. A query runs two round trips — a wrapping COUNT,
+    // then the first page — so on a cold cache there is a real pause with nothing else to see.
+    const originalLabel = this.runBtn.textContent;
+    this.runBtn.innerHTML = '<span class="spinner"></span>Running…';
     History.add(this.queryEl.value);
     const sql = this.queryEl.value.trim().replace(/;\s*$/, "");
 
     try {
-      // Push LIMIT/OFFSET down into DuckDB by wrapping the query as a
-      // subquery, so huge result sets (e.g. the ~195k-row master_ocdids
-      // table with no LIMIT) never get materialized into the DOM at once.
-      // Only works for SELECT-shaped queries — DESCRIBE/PRAGMA/etc. can't
-      // be wrapped this way and fall through to the unpaginated path below.
-      const countResult = await this.conn.query(`SELECT COUNT(*) AS cnt FROM (${sql}) AS _q`);
+      // Execute once, into a temp table, and page over that. Only the DOM ever holds a page,
+      // so a large result (the whole 21k-row memberships table, say) still renders lazily —
+      // but the scan, and any ORDER BY in it, happens a single time.
+      //
+      // Only works for SELECT-shaped queries; DESCRIBE/PRAGMA and friends cannot be wrapped
+      // and fall through to the unpaginated path below.
+      await this.conn.query(
+        `CREATE OR REPLACE TEMP TABLE ${PAGE_TABLE} AS
+         SELECT row_number() OVER () AS _row, * FROM (${sql}) AS _q`
+      );
+      const countResult = await this.conn.query(`SELECT COUNT(*) AS cnt FROM ${PAGE_TABLE}`);
       this.totalRows = Number(countResult.toArray()[0].cnt);
       this.baseSql = sql;
-      this.offset = 0;
+      // Clamp: the requested page only becomes meaningful once the row count exists.
+      const lastOffset = Math.max(0, (Math.ceil(this.totalRows / PAGE_SIZE) - 1) * PAGE_SIZE);
+      this.offset = Math.min((this.pendingPage - 1) * PAGE_SIZE, lastOffset);
+      this.pendingPage = 1;
       await this.fetchPage();
+      this.syncUrl();
     } catch {
       this.baseSql = null;
       this.paginationEl.hidden = true;
@@ -228,6 +304,7 @@ export const QueryRunner = {
       }
     } finally {
       this.runBtn.disabled = false;
+      this.runBtn.textContent = originalLabel;
     }
   },
 };
