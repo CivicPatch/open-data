@@ -1,0 +1,38 @@
+# Publish the data explorer.
+#
+# Static only: the page ships HTML, CSS and JS, and the dataset it queries is fetched at runtime
+# from R2 (see pages/js/dataset.js). Nothing here builds or copies parquet — civicpatch.org's
+# daily job owns that, which is why this workflow does not run on a schedule. The page changes
+# when someone edits it; the data changes without touching this repo at all.
+name: pages
+
+on:
+  push:
+    branches: [main]
+    paths: ["pages/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time, and let a newer commit win rather than queueing behind an older one.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: pages
+      - id: deployment
+        uses: actions/deploy-pages@v4

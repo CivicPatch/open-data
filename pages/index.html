@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CivicPatch Data Explorer</title>
+<script>
+  // Applied synchronously (before first paint) to avoid a flash of the
+  // wrong theme; js/theme.js wires up the toggle button.
+  const storedTheme = localStorage.getItem("theme");
+  if (storedTheme === "light" || storedTheme === "dark") {
+    document.documentElement.dataset.theme = storedTheme;
+  }
+</script>
+<link rel="stylesheet" href="style.css" />
+<!-- The browser doesn't discover the DuckDB-Wasm CDN dependency until
+     js/main.js executes and dynamically imports it — this hint starts the
+     DNS/TLS handshake to jsDelivr earlier, in parallel with page parsing. -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>CivicPatch Data Explorer</h1>
+      <p>
+        Run SQL in your browser against the published roster — who holds which seat, in every jurisdiction we cover
+      </p>
+    </div>
+    <button id="theme-toggle" class="btn-ghost" type="button" aria-label="Toggle light/dark theme">Light / Dark</button>
+  </header>
+
+  <div id="status">Loading DuckDB-Wasm…</div>
+  <div id="error"></div>
+
+  <div id="table-names-wrap"></div>
+
+  <label class="field-label" for="query">SQL query</label>
+  <textarea id="query" spellcheck="false"></textarea>
+  <div class="controls">
+    <button id="run" disabled>Run query</button>
+    <button id="export-csv" class="btn-ghost" type="button" disabled>Export CSV</button>
+    <span class="hint" id="tables-hint"></span>
+  </div>
+
+  <div id="results-wrap"></div>
+  <div class="pagination" id="pagination" hidden>
+    <button id="page-prev" class="btn-ghost" type="button">Previous</button>
+    <span id="page-info" class="hint"></span>
+    <button id="page-next" class="btn-ghost" type="button">Next</button>
+  </div>
+  <div id="meta"></div>
+</main>
+
+<div class="fab-stack">
+  <button id="history-toggle" class="fab" type="button">Query History</button>
+  <button id="examples-toggle" class="fab" type="button">Query Examples</button>
+  <button id="definitions-toggle" class="fab" type="button">Table Definitions</button>
+</div>
+
+<dialog id="history-modal">
+  <div class="modal-header">
+    <h2>Query History</h2>
+    <button id="history-close" class="btn-ghost" type="button" aria-label="Close">Close</button>
+  </div>
+  <div id="history-list"></div>
+</dialog>
+
+<dialog id="examples-modal">
+  <div class="modal-header">
+    <h2>Query Examples</h2>
+    <button id="examples-close" class="btn-ghost" type="button" aria-label="Close">Close</button>
+  </div>
+  <div id="examples-list"></div>
+</dialog>
+
+<dialog id="definitions-modal">
+  <div class="modal-header">
+    <h2>Table Definitions</h2>
+    <button id="definitions-close" class="btn-ghost" type="button" aria-label="Close">Close</button>
+  </div>
+  <div id="table-definitions-wrap"></div>
+</dialog>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
