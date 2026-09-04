@@ -17,10 +17,12 @@ permissions:
   pages: write
   id-token: write
 
-# One deploy at a time, and let a newer commit win rather than queueing behind an older one.
+# One deploy at a time. Queued runs between the in-flight one and the newest are skipped, but the
+# in-flight one is never cancelled: this publishes a live site, and killing it partway can leave
+# the deployment half-applied. `true` would be right for a build, where only the latest matters.
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
