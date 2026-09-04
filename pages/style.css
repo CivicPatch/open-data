@@ -121,6 +121,30 @@ header p { margin: 0; color: var(--muted); font-size: 1rem; max-width: 42em; }
 
 #status { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
 
+/* Spinner */
+
+/* Inline-block so it sits on the text baseline beside a label rather than on its own line.
+   `currentColor` on three of four borders is what makes the gap read as motion. */
+.spinner {
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  margin-right: 0.5em;
+  vertical-align: -0.1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Respect a reader who has asked for less motion: hold the ring still. It still reads as a
+   distinct "busy" mark next to the label, which is the part that carries the meaning. */
+@media (prefers-reduced-motion: reduce) {
+  .spinner { animation: none; }
+}
+
 label.field-label {
   display: block;
   font-weight: 600;
