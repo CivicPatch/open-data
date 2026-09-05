@@ -28,7 +28,6 @@ scripts/
   github_actions/               ← run in CI on PRs and post-merge
     validate_jurisdiction.py    ← validates YAML against schemas.py
     get_jurisdiction_folder.py
-    pull_request_body_markdown.py
     local/
       pull_request/             ← scripts run locally to generate PR content
       post_merge/               ← scripts run locally after a PR is merged
