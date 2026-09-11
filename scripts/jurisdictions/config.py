@@ -140,4 +140,11 @@ state_configs = {
         "local_wiki": {"table_index": 1, "rows_to_skip": 2},
         "validation_sources": ["google"],
     },
+    "hi": {
+        "fips": "15",
+        "name": "Hawaii",
+        "pull_from_census": ["places"],
+        "local_wiki": {"title": "List_of_places_in_Hawaii", "entry_column": 1},
+        "validation_sources": ["google"],
+    },
 }
