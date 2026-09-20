@@ -6,7 +6,7 @@ tools: Read, Edit, Write, Bash, Glob, Grep
 
 # Add a New State (steps 1-4)
 
-Covers the manual prep before the full `mise run setup-state` run. Full reference: `DEVELOPMENT.md` → "Adding a new state". This skill only does steps 1-4; stop after the dry-run and hand back to the user for step 5 onward (they'll want to review results before the full run, county-conversion decisions, PMTile regen, etc.).
+Covers the manual prep before the full `mise run setup-state` run. Full reference: `DEVELOPMENT.md` → "Adding a new state". This skill only does steps 1-4; stop after the dry-run and hand back to the user for step 5 onward (they'll want to review results before the full run, OCD-ID validation, the civicpatch.org map generation trigger, etc.).
 
 Ask the user for the two-letter state code and full name if not given (e.g. `va` / Virginia).
 
@@ -87,7 +87,7 @@ ls scripts/track_progress/google_data/<state>_all_raw.json
 
 ## Step 4 — Dry-run
 
-Needs state + county data first: the local run also builds `local.geojson` and overlays it on the county polygons to derive `county_ocdids`, and raises `FileNotFoundError` without `counties.geojson` and `data_source/<state>/counties/jurisdictions.yml`.
+This repo no longer touches geometry at all — which counties contain a place is worked out by civicpatch.org's boundary overlay and stored there — so nothing here needs shapefiles or a prior county run. Still run the three levels in order; each writes its own `jurisdictions.yml`.
 
 ```bash
 uv run python scripts/jurisdictions/states.py <state>
@@ -96,6 +96,28 @@ uv run python scripts/jurisdictions/local.py <state> --limit 10
 ```
 
 Inspect `data_source/<state>/local/jurisdictions.yml` and the printed warnings.
+
+`local.py` calls `preflight_check` first and **exits** if step 3's file is missing, so the local run is blocked until the user provides it. `states.py` and `counties.py` are unaffected — run them anyway. To check the `local_wiki` fit while blocked, call the scraper directly:
+
+```bash
+uv run python -c "
+from scripts.jurisdictions.scrapers import wikipedia_utils
+from scripts.jurisdictions.scrapers.municipalities import DEFAULTS, default_title
+from scripts.jurisdictions.config import state_configs
+cfg = dict(state_configs['<state>']['local_wiki'])
+title = cfg.pop('title', None) or default_title('<State Name>')
+entries, table_names, warnings = wikipedia_utils.get_entries(
+    title=title, state='<state>', limit=10, extract_refs=None, **{**DEFAULTS, **cfg})
+print('names parsed:', len(table_names), list(table_names)[:12])
+for k, v in list(entries.items())[:6]:
+    print(' ', k, v.get('url'), v.get('wiki_url'))
+print('warnings:', warnings or '(none)')
+"
+```
+
+`table_names` is a dict keyed by name — `len()` it against the state's known municipality count, and confirm the fetched entries have both `url` and `wiki_url`. That settles step 2 on its own.
+
+These commands assume mise's env (`PYTHONPATH=.` plus `.env`, which holds `CENSUS_API_KEY`). Outside a mise shell, prefix with `set -a && . ./.env && set +a && PYTHONPATH=.` — a bare `uv run` fails with `ModuleNotFoundError: No module named 'schemas'`.
 
 **Do not read a high `no_wiki_match` count on a `--limit` run as a failure.** Municipality GEOIDs come from the infobox, so `get_entries` drops every row past the fetch budget before matching and each one lands as `no_wiki_match`. Roughly `total − limit` flagged entries is the expected result of `--limit 10`, and says nothing about whether `local_wiki` is right.
 
@@ -106,10 +128,8 @@ What to check instead:
 
 Only a run without `--limit` tells you the fit across the whole state.
 
-`scripts/jurisdictions/scrapers/cache/<state>_wikipedia.json` caches infobox fetches, so reruns after a fix are cheap; delete it if a fix changes which entries get fetched.
-
-The overlay assigns every county a place materially overlaps, ordered by descending area share, so multi-county `county_ocdids` lists are expected and not a bug.
+`--limit` caps Wikipedia **infobox fetches**, not records — Census ACS still pulls every jurisdiction. `scripts/jurisdictions/scrapers/cache/<state>_wikipedia.json` caches those fetches, so reruns after a fix are cheap; delete it if a fix changes which entries get fetched. `counties.py` takes the same `--limit`, plus `--skip-wiki` to pull Census data only.
 
 ## Handoff
 
-Once the dry-run looks clean, summarize what was done (config entry, `local_wiki` values and why, dry-run warning count) and point the user at DEVELOPMENT.md step 5 (`mise run setup-state -- --state <state>`) for the full run — don't run it yourself as part of this skill.
+Once the dry-run looks clean, summarize what was done (config entry, `local_wiki` values and why, dry-run warning count) and point the user at DEVELOPMENT.md step 5 (`mise run setup-state -- --state <state>`) for the full run — don't run it yourself as part of this skill. Boundaries and pmtiles come later and elsewhere: after the full run syncs, a maintainer triggers `GenerateMapsWorkflow` on civicpatch.org.
