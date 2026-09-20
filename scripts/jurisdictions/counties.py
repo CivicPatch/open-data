@@ -9,7 +9,6 @@ from schemas import Jurisdiction
 from scripts.jurisdictions import headers
 from scripts.jurisdictions.scrapers import counties as counties_scraper
 from scripts.jurisdictions.config import state_configs
-from scripts.jurisdictions.maps.county import build_county_map_for_state
 from scripts.jurisdictions.yaml_io import (
     apply_scraped_fields,
     get_names,
@@ -166,4 +165,3 @@ if __name__ == "__main__":
 
     for state in states:
         pull_county_jurisdiction_data(state, limit=args.limit, skip_wiki=args.skip_wiki)
-        build_county_map_for_state(state, state_configs[state]["fips"])

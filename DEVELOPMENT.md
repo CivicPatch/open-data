@@ -44,7 +44,7 @@ Counties need nothing here — [scrapers/counties.py](scripts/jurisdictions/scra
 
 **3. Fetch Google Civic data** from the [team Drive folder](https://drive.google.com/drive/u/0/folders/1A3qFX-UELHoNp27QyBt2edWQOkHPDbjY) to `scripts/track_progress/google_data/va_all_raw.json`. Ask a maintainer if you lack access; step 5's preflight prints the expected path if it's missing.
 
-**4. Smoke-test.** State and county data must exist first — the local run also builds `local.geojson` and overlays it on the county polygons to derive `county_ocdids`, raising `FileNotFoundError` without `counties.geojson` and the county `jurisdictions.yml`. It is a full-polygon overlay, not a centroid join, so a place straddling a county line gets every county it materially overlaps, ordered by descending share of its area.
+**4. Smoke-test.** Run the three levels in order. This repo no longer touches geometry at all: which counties contain a place is worked out by civicpatch.org's boundary overlay and stored there, so nothing here needs shapefiles or a prior county run.
 
 ```bash
 uv run python scripts/jurisdictions/states.py va
@@ -68,7 +68,7 @@ Open a PR here and ask a maintainer to review.
 mise run setup-state -- --state va
 ```
 
-State → counties → local (ACS + scraper + validation, plus `county_ocdids`) → upload GeoJSONs to R2 → build and upload `va.pmtiles`. It does **not** rebuild the national `states.pmtiles` — that's step 7.
+State → counties → local (ACS + scraper + validation).
 
 **6. Validate OCD-IDs** — generated from Census names, so apostrophes, diacritics, slashes and missing LSAD suffixes leak through:
 
@@ -76,13 +76,14 @@ State → counties → local (ACS + scraper + validation, plus `county_ocdids`) 
 uv run python scripts/ocdids/fix.py --state va
 ```
 
-**7. Rebuild the national overview** (also purges the CDN cache):
+**7. Push**, then trigger OD sync on civicpatch.org: `POST /admin/od_sync`.
 
-```bash
-mise run generate-pmtiles
-```
-
-**8. Push**, then trigger OD sync on civicpatch.org: `POST /admin/od_sync`.
+**8. Generate the state's maps.** Everything geo moved to civicpatch.org — trigger
+`GenerateMapsWorkflow` for `va` there (Temporal UI / a manual script; there is no admin-page
+control). It is not optional: besides the pmtiles it is what fills `meta_parent_ocdids`, so
+until it runs the state's municipalities have no containing county and the coverage map cannot
+count them. Chains straight into rebuilding the national `states.pmtiles` overview, so there is
+no separate "rebuild the overview" step.
 
 ---
 
@@ -100,18 +101,13 @@ uv run python scripts/ocdids/fix.py --state va --yes   # auto-accept, skipping c
 
 Prints state, `file:line`, the problem, and a suggested canonical ID, warning on collisions. Accepting rewrites `jurisdictions.yml` and migrates any `data/<state>/local/*.yml` that referenced the old ID. Structural validation comes from `shared`'s `parse_jurisdiction_ocdid`; charset and empty-segment checks layer on top.
 
-### PMTiles
+### Maps and boundaries
 
-```bash
-mise run generate-pmtiles -- --state co     # one state
-mise run generate-pmtiles                   # all states + national overview
-
-mise run setup-maps -- --state co            # first, if Census TIGER boundaries changed
-```
-
-`generate-pmtiles` purges the Cloudflare cache for `cdn.civicpatch.org` after upload, needing `CLOUDFLARE_PMTILES_BUST` (a token with `Zone.Cache Purge` on `civicpatch.org`) and `CLOUDFLARE_ZONE_ID`. Unset locally, it skips the purge and exits 0.
-
-It purges by hostname rather than per-file URL because R2 emits `Vary: Origin` and Cloudflare keys entries by that header, so per-URL purges leave stale variants behind.
+All of it lives in civicpatch.org as a manually-triggered Temporal workflow
+(`GenerateMapsWorkflow`). It fetches Census TIGER geometry itself, builds and uploads
+`{state}.pmtiles` in one pass, and runs the containing-county overlay into the
+`meta_parent_ocdids` column. Nothing in this repo downloads shapefiles, writes GeoJSON or
+records ancestry any more.
 
 ### Tasks
 
@@ -119,15 +115,11 @@ It purges by hostname rather than per-file URL because R2 emits `Vary: Origin` a
 |---|---|
 | `mise run setup-state -- --state {code}` | adding a state |
 | `uv run python scripts/ocdids/fix.py [--state {code}]` | after regenerating `jurisdictions.yml` |
-| `mise run setup-maps [-- --state {code}]` | Census boundaries changed |
-| `mise run generate-pmtiles [-- --state {code}]` | jurisdiction names or data changed |
 
 ### R2 layout
 
 ```
 maps/
-  states.pmtiles     ← national state boundaries
-  co.pmtiles         ← per-state (layers: states, counties, local)
-  co/                ← source GeoJSONs uploaded by setup-maps
-    states.geojson  counties.geojson  local.geojson
+  states.pmtiles     ← national state boundaries, written by civicpatch.org
+  co.pmtiles         ← per-state (layers: states, counties, local), written by civicpatch.org
 ```

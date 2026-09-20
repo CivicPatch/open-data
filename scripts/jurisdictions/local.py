@@ -21,7 +21,6 @@ from scripts.jurisdictions.config import state_configs
 from scripts.jurisdictions.scrapers import municipalities
 import scripts.track_progress.generate_google_data as generate_google_data
 from scripts.track_progress.compare import run_state as compare_run_state
-from scripts.jurisdictions.maps.local import build_maps_for_state
 
 
 from scripts.paths import PROJECT_ROOT
@@ -187,7 +186,6 @@ def get_census_data_for_state(state: str) -> Tuple[Dict, List[str]]:
             else:
                 census_data[j.id] = j
 
-    build_maps_for_state(state, state_fips, pull_from_census)
     return census_data, warnings
 
 

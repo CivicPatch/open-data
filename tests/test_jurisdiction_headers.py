@@ -7,7 +7,7 @@ ALL_HEADERS = "all"
 def _every_header():
     """One header of each kind, for invariants that must hold across all of them."""
     return [
-        h.state_header("nc", "37"),
+        h.state_header("37"),
         h.county_header("nc", "37", "North Carolina"),
         h.local_header("nh", "33", "New Hampshire", ["places", "county_subdivisions"]),
     ]
@@ -28,7 +28,7 @@ class TestProvenance:
         import pathlib
 
         cases = [
-            ("scripts/jurisdictions/states.py", h.state_header("nc", "37")),
+            ("scripts/jurisdictions/states.py", h.state_header("37")),
             ("scripts/jurisdictions/counties.py", h.county_header("nc", "37", "North Carolina")),
             ("scripts/jurisdictions/local.py", h.local_header("nc", "37", "North Carolina", ["places"])),
         ]
@@ -45,7 +45,6 @@ class TestProvenance:
         header = h.county_header("nc", "37", "North Carolina")
         assert 'curl "https://api.census.gov/data/2024/acs/acs5?get=NAME,B01003_001E&for=county:*&in=state:37&key=$CENSUS_API_KEY"' in header
         assert "https://en.wikipedia.org/wiki/List_of_counties_in_North_Carolina" in header
-        assert "tl_2025_us_county.zip" in header
         assert "scripts/jurisdictions/scrapers/cache/nc_counties_wikipedia.json" in header
 
     def test_multiword_state_names_become_wiki_titles(self):
@@ -54,9 +53,8 @@ class TestProvenance:
             "nh", "33", "New Hampshire", ["places"])
 
     def test_state_header_cites_the_state_scoped_acs_call(self):
-        header = h.state_header("wa", "53")
+        header = h.state_header("53")
         assert "for=state:53" in header
-        assert "tl_2025_us_state.zip" in header
 
 
 class TestLocalHeaderFollowsCensusSources:
@@ -75,18 +73,17 @@ class TestLocalHeaderFollowsCensusSources:
         assert "for=county%20subdivision:*" in header
         assert "2025_gaz_place_33.txt" in header
         assert "2025_gaz_cousubs_33.txt" in header
-        assert "tl_2025_33_place.zip" in header
-        assert "tl_2025_33_cousub.zip" in header
 
-    def test_notes_the_county_file_the_spatial_join_depends_on(self):
-        header = h.local_header("nc", "37", "North Carolina", ["places"])
-        assert "data_source/nc/counties/jurisdictions.yml" in header
+    def test_cites_no_geometry_source(self):
+        header = h.local_header("nh", "33", "New Hampshire", ["places", "county_subdivisions"])
+        assert "tiger" not in header.lower()
+        assert "data_source/nh/counties/jurisdictions.yml" not in header
 
 
 class TestEveryConfiguredStateRenders:
     def test_all_three_headers_render_for_every_registered_state(self):
         """Guards against a state config missing `name` or an unknown census source."""
         for state, config in state_configs.items():
-            h.state_header(state, config["fips"])
+            h.state_header(config["fips"])
             h.county_header(state, config["fips"], config["name"])
             h.local_header(state, config["fips"], config["name"], config["pull_from_census"])

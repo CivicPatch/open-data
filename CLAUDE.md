@@ -38,9 +38,8 @@ scripts/
     states.py                   ← fetch state government jurisdiction for a state
     counties.py                 ← fetch + enrich county jurisdictions for a state
     local.py                    ← fetch + enrich municipality jurisdictions for a state
-    run.py                      ← orchestrator: state → counties → local → maps → tiles
+    run.py                      ← orchestrator: state → counties → local
     scrapers/                   ← per-state Wikipedia scrapers + wikipedia_utils
-    maps/                       ← geo utilities (local.py, county.py, state.py) + tiles
   ocdids/                       ← OCD-ID parsing (parse.py) and repair (fix.py)
   track_progress/               ← data quality dashboards and gap analysis
   one_off/                      ← completed migrations, kept for reference

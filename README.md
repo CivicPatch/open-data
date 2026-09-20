@@ -27,7 +27,6 @@ scripts/
     states.py counties.py local.py   ← one writer per government level
     run.py                      ← orchestrator for a whole state
     scrapers/                   ← per-state Wikipedia scrapers
-    maps/                       ← geo utilities and tile generation
   ocdids/                       ← OCD-ID parsing and repair
   track_progress/               ← data quality comparison against external sources
 ```
