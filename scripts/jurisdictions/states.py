@@ -7,7 +7,6 @@ import requests
 from schemas import Jurisdiction
 from scripts.jurisdictions import headers
 from scripts.jurisdictions.config import state_configs
-from scripts.jurisdictions.maps.state import build_state_map_for_state
 from scripts.jurisdictions.yaml_io import load_existing_jurisdictions, ryaml
 
 from scripts.paths import PROJECT_ROOT
@@ -60,7 +59,7 @@ def pull_state_jurisdiction_data(state: str):
 
     doc["jurisdictions"] = all_jurisdictions
 
-    doc.yaml_set_start_comment(headers.state_header(state, fips))
+    doc.yaml_set_start_comment(headers.state_header(fips))
 
     with open(output_path, "w") as f:
         ryaml.dump(doc, f)
@@ -84,4 +83,3 @@ if __name__ == "__main__":
 
     for state in states:
         pull_state_jurisdiction_data(state)
-        build_state_map_for_state(state, state_configs[state]["fips"])
