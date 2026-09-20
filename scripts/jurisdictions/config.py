@@ -112,6 +112,15 @@ state_configs = {
         "local_wiki": {"rows_to_skip": 2},
         "validation_sources": ["google"],
     },
+    "nm": {
+        "fips": "35",
+        "name": "New Mexico",
+        # county subdivisions are CCDs — statistical only, no functioning government
+        "pull_from_census": ["places"],
+        # two-row header: land area splits into sq mi / km²
+        "local_wiki": {"rows_to_skip": 2},
+        "validation_sources": ["google"],
+    },
     "sc": {
         "fips": "45",
         "name": "South Carolina",
