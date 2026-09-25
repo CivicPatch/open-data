@@ -9,6 +9,9 @@ from schemas import Jurisdiction
 from scripts.jurisdictions import headers
 from scripts.jurisdictions.scrapers import counties as counties_scraper
 from scripts.jurisdictions.config import state_configs
+from scripts.ocdids.ids import to_jurisdiction_ocdid
+from scripts.ocdids.mint import mint_county
+from scripts.ocdids.registry import load_registry
 from scripts.jurisdictions.yaml_io import (
     apply_scraped_fields,
     get_names,
@@ -30,8 +33,12 @@ def _acs_url(query: str) -> str:
     return f"{_ACS_URL}?{query}&key={key}"
 
 
-def get_county_census_data(state: str, fips: str) -> Dict[str, Jurisdiction]:
-    """Fetch county jurisdictions for a state from the Census ACS, keyed by OCD-ID."""
+def get_county_census_data(
+    state: str, fips: str, registry_by_geoid: Dict[str, str] | None = None
+) -> Dict[str, Jurisdiction]:
+    """Fetch county jurisdictions for a state from the Census ACS, keyed by OCD-ID.
+
+    registry_by_geoid: GEOID → registry division OCD-ID (scripts/ocdids/registry.py)."""
     census_data: Dict[str, Jurisdiction] = {}
 
     api_url = _acs_url(f"get=NAME,B01003_001E&for=county:*&in=state:{fips}")
@@ -49,8 +56,9 @@ def get_county_census_data(state: str, fips: str) -> Dict[str, Jurisdiction]:
         if population == 0:
             continue
 
-        county_name, friendly_name = get_names(name)
-        ocdid = f"ocd-jurisdiction/country:us/state:{state}/county:{county_name}/government"
+        _county_name, friendly_name = get_names(name)
+        division_ocdid = (registry_by_geoid or {}).get(geoid) or mint_county(state, friendly_name)
+        ocdid = to_jurisdiction_ocdid(division_ocdid)
         census_data[ocdid] = Jurisdiction(
             id=ocdid, name=friendly_name, population=population, geoid=geoid
         )
@@ -82,7 +90,9 @@ def pull_county_jurisdiction_data(state: str, limit=None, skip_wiki: bool = Fals
 
     doc, existing_by_id = load_existing_jurisdictions(output_path)
 
-    census_data = get_county_census_data(state, fips)
+    census_data = get_county_census_data(
+        state, fips, registry_by_geoid=load_registry().division_ocdid_by_geoid
+    )
     if not census_data:
         return
 

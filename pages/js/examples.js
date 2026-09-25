@@ -2,8 +2,8 @@ const QUERY_EXAMPLES = [
   {
     label: "The roster on a given date",
     description:
-      "A membership is a row that is open over an interval, so an as-of question keeps the rows whose interval covers the date. Mind what the interval means: first_seen_at is when we first observed the seat, not when the term began — start_date carries the claimed term, as free text. So a date before we collected a place returns nothing for it. The date is written twice; change both.",
-    sql: "SELECT p.name, r.label AS seat,\n       strftime(m.first_seen_at AT TIME ZONE 'UTC', '%Y-%m-%d') AS first_seen,\n       strftime(m.closed_at     AT TIME ZONE 'UTC', '%Y-%m-%d') AS closed\nFROM memberships m\nJOIN people p ON p.id = m.person_id\nJOIN posts po ON po.id = m.post_id\nJOIN roles r ON r.id = po.role_id\nJOIN jurisdictions j ON j.jurisdiction_ocdid = m.jurisdiction_ocdid\nWHERE j.state = 'wa' AND j.name = 'Tacoma city'\n  AND m.first_seen_at <= DATE '2026-01-15'\n  AND (m.closed_at IS NULL OR m.closed_at > DATE '2026-01-15')\nORDER BY r.priority NULLS LAST, p.name;",
+      "A membership is a row that is open over an interval, so an as-of question keeps the rows whose interval covers the date. Mind what the interval means: opened_at is when we first observed the seat, not when the term began — start_date carries the claimed term, as free text. So a date before we collected a place returns nothing for it. The date is written twice; change both.",
+    sql: "SELECT p.name, r.label AS seat,\n       strftime(m.opened_at AT TIME ZONE 'UTC', '%Y-%m-%d') AS opened,\n       strftime(m.closed_at AT TIME ZONE 'UTC', '%Y-%m-%d') AS closed\nFROM memberships m\nJOIN people p ON p.id = m.person_id\nJOIN posts po ON po.id = m.post_id\nJOIN roles r ON r.id = po.role_id\nJOIN jurisdictions j ON j.jurisdiction_ocdid = m.jurisdiction_ocdid\nWHERE j.state = 'wa' AND j.name = 'Tacoma city'\n  AND m.opened_at <= DATE '2026-01-15'\n  AND (m.closed_at IS NULL OR m.closed_at > DATE '2026-01-15')\nORDER BY r.priority NULLS LAST, p.name;",
   },
   {
     label: "Who holds a seat in one place",
@@ -15,7 +15,7 @@ const QUERY_EXAMPLES = [
     label: "Former officeholders",
     description:
       "What the published YAML cannot answer: it renders the live roster only, so a seat that ended leaves no trace there. Here it is a row with is_open false.",
-    sql: "SELECT p.name, r.label AS seat, j.name AS jurisdiction,\n       m.first_seen_at, m.closed_at\nFROM memberships m\nJOIN people p ON p.id = m.person_id\nJOIN posts po ON po.id = m.post_id\nJOIN roles r ON r.id = po.role_id\nJOIN jurisdictions j ON j.jurisdiction_ocdid = m.jurisdiction_ocdid\nWHERE NOT m.is_open\nORDER BY m.closed_at DESC;",
+    sql: "SELECT p.name, r.label AS seat, j.name AS jurisdiction,\n       m.opened_at, m.closed_at\nFROM memberships m\nJOIN people p ON p.id = m.person_id\nJOIN posts po ON po.id = m.post_id\nJOIN roles r ON r.id = po.role_id\nJOIN jurisdictions j ON j.jurisdiction_ocdid = m.jurisdiction_ocdid\nWHERE NOT m.is_open\nORDER BY m.closed_at DESC;",
   },
   {
     label: "Seats nobody holds",

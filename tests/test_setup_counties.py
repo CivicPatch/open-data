@@ -6,6 +6,7 @@ import pytest
 import yaml
 
 from scripts.jurisdictions.counties import pull_county_jurisdiction_data
+from scripts.ocdids.models import Registry
 
 MODULE = "scripts.jurisdictions.counties"
 STATE = "sc"
@@ -53,6 +54,8 @@ def patched(tmp_path: Path, response, scrape=None):
     patches = [
         patch(f"{MODULE}.requests.get", return_value=response),
         patch(f"{MODULE}.PROJECT_ROOT", tmp_path),
+        # the patched requests.get would otherwise be served as the registry download
+        patch(f"{MODULE}.load_registry", return_value=Registry(division_ocdids=frozenset(), division_ocdid_by_geoid={})),
     ]
     if scrape is not None:
         patches.append(patch(f"{MODULE}.counties_scraper.scrape", side_effect=scrape))
