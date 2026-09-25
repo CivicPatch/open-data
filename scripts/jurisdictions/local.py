@@ -18,6 +18,10 @@ from scripts.jurisdictions.yaml_io import (
 from schemas import Jurisdiction
 from scripts.jurisdictions import headers
 from scripts.jurisdictions.config import state_configs
+from scripts.ocdids.assign import assign
+from scripts.ocdids.ids import to_jurisdiction_ocdid
+from scripts.ocdids.models import CensusRow, CensusType
+from scripts.ocdids.registry import load_registry
 from scripts.jurisdictions.scrapers import municipalities
 import scripts.track_progress.generate_google_data as generate_google_data
 from scripts.track_progress.compare import run_state as compare_run_state
@@ -208,7 +212,8 @@ def _fetch_census_jurisdictions(
     codes_data = list(codes_reader)
 
     api_data_by_geoid = get_api_data_by_geoid(
-        state, fips, api_response.json()[1:], 1, source.census_type
+        state, fips, api_response.json()[1:], 1, source.census_type,
+        registry_by_geoid=load_registry().division_ocdid_by_geoid,
     )
     for item in codes_data:
         name = item[4]
@@ -237,14 +242,11 @@ def _fetch_census_jurisdictions(
     return jurisdictions, warnings
 
 
-def create_jurisdiction_ocdid(state, api_name, type):
-    if type == "county_subdivision":
-        jurisdiction_name, _friendly_name = get_names(api_name)
-        county_name = get_county_name(api_name)
-        return f"ocd-jurisdiction/country:us/state:{state}/county:{county_name}/place:{jurisdiction_name}/government"
-    else:  # place
-        jurisdiction_name, _friendly_name = get_names(api_name)
-        return f"ocd-jurisdiction/country:us/state:{state}/place:{jurisdiction_name}/government"
+def census_row(state: str, geoid: str, api_name: str, census_type: str) -> CensusRow:
+    # "Concord town, Middlesex County, Massachusetts" / "Seattle city, Washington"
+    parts = [part.strip() for part in api_name.split(",")]
+    county_name = parts[1] if census_type == CensusType.COUNTY_SUBDIVISION else None
+    return CensusRow(state=state, geoid=geoid, census_type=census_type, name=parts[0], county_name=county_name)
 
 
 def create_geoid(state_fips: str, type: str, row: List[str]) -> str:
@@ -260,47 +262,27 @@ def get_api_data_by_geoid(
     population_data: List[Any],
     population_index: int,
     type: str,
+    registry_by_geoid: Dict[str, str] | None = None,
 ) -> Dict[str, Dict[str, Any]]:
-    data = {}
-    ocdid_to_geoids: Dict[str, List[str]] = {}
+    """registry_by_geoid: GEOID → registry division OCD-ID (scripts/ocdids/registry.py)."""
+    items_by_geoid = {create_geoid(state_fips, type, item): item for item in population_data}
+    rows = [census_row(state, geoid, item[0], type) for geoid, item in items_by_geoid.items()]
+    assignments = assign(rows, registry_by_geoid or {})
 
-    for item in population_data:
-        name = item[0]
-        geoid = create_geoid(state_fips, type, item)
-        population = int(item[population_index])
-        jurisdiction_name, friendly_name = get_names(name)
-        jurisdiction_ocdid = create_jurisdiction_ocdid(state, name, type)
+    data = {}
+    for geoid, item in items_by_geoid.items():
+        jurisdiction_name, friendly_name = get_names(item[0])
+        assignment = assignments[geoid]
         data[geoid] = {
-            "jurisdiction_ocdid": jurisdiction_ocdid,
+            "jurisdiction_ocdid": to_jurisdiction_ocdid(assignment.division_ocdid),
             "jurisdiction_name": jurisdiction_name,
             "friendly_name": friendly_name,
-            "population": population,
+            "population": int(item[population_index]),
         }
-        ocdid_to_geoids.setdefault(jurisdiction_ocdid, []).append(geoid)
-
-    # Detect and mark OCDID collisions
-    for ocdid, geoids in ocdid_to_geoids.items():
-        if len(geoids) > 1:
-            names = [data[g]["friendly_name"] for g in geoids]
-            print(f"  ⚠  OCDID collision: {ocdid}")
-            for g, n in zip(geoids, names):
-                print(f"       {n} (GEOID {g})")
-            for geoid in geoids:
-                data[geoid]["ocdid_collision"] = True
-
+        if assignment.collision:
+            print(f"  ⚠  OCDID collision: {assignment.division_ocdid} — {friendly_name} (GEOID {geoid})")
+            data[geoid]["ocdid_collision"] = True
     return data
-
-
-
-
-def get_county_name(name: str) -> str:
-    # "Buena Vista CCD, Orange County, Oregon" -> "orange"
-    # "Redwood city, Red Wood County, Oregon" -> "red_wood"
-    parts = name.split(",")
-    county_part = parts[1].strip()  # e.g., "Orange County"
-    county_name = county_part.replace(" County", "")
-    county_name = county_name.replace(" ", "_").lower()
-    return county_name
 
 
 def supplement_data(

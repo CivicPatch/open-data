@@ -1,9 +1,8 @@
 import pytest
 from scripts.jurisdictions.local import (
     create_geoid,
-    create_jurisdiction_ocdid,
+    census_row,
     get_api_data_by_geoid,
-    get_county_name,
 )
 from scripts.jurisdictions.yaml_io import get_names
 
@@ -44,22 +43,6 @@ class TestGetNames:
         assert jurisdiction == "mount_pleasant"
 
 
-# ── get_county_name ───────────────────────────────────────────────────────────
-
-class TestGetCountyName:
-    def test_simple_county(self):
-        assert get_county_name("Buena Vista CCD, Orange County, Oregon") == "orange"
-
-    def test_multi_word_county(self):
-        assert get_county_name("Redwood city, Red Wood County, Oregon") == "red_wood"
-
-    def test_county_is_lowercase(self):
-        assert get_county_name("Foo township, Morris County, New Jersey") == "morris"
-
-    def test_spaces_replaced_with_underscores(self):
-        assert get_county_name("Bar township, Prince George's County, Maryland") == "prince_george's"
-
-
 # ── create_geoid ──────────────────────────────────────────────────────────────
 
 class TestCreateGeoid:
@@ -78,33 +61,16 @@ class TestCreateGeoid:
         assert create_geoid("34", "county_subdivision", row) == "3402770450"
 
 
-# ── create_jurisdiction_ocdid ─────────────────────────────────────────────────
+# ── census_row ────────────────────────────────────────────────────────────────
 
-class TestCreateJurisdictionOcdid:
+class TestCensusRow:
     def test_place(self):
-        assert create_jurisdiction_ocdid("wa", "Seattle city, Washington", "place") == (
-            "ocd-jurisdiction/country:us/state:wa/place:seattle/government"
-        )
+        row = census_row("wa", "5363000", "Seattle city, Washington", "place")
+        assert (row.name, row.county_name) == ("Seattle city", None)
 
-    def test_place_multi_word(self):
-        assert create_jurisdiction_ocdid("sc", "Mount Pleasant city, South Carolina", "place") == (
-            "ocd-jurisdiction/country:us/state:sc/place:mount_pleasant/government"
-        )
-
-    def test_county_subdivision(self):
-        assert create_jurisdiction_ocdid(
-            "nj", "Springfield township, Morris County, New Jersey", "county_subdivision"
-        ) == (
-            "ocd-jurisdiction/country:us/state:nj/county:morris/place:springfield/government"
-        )
-
-    def test_county_subdivision_multi_word_county(self):
-        result = create_jurisdiction_ocdid(
-            "nj", "Buena Vista township, Atlantic County, New Jersey", "county_subdivision"
-        )
-        assert result == (
-            "ocd-jurisdiction/country:us/state:nj/county:atlantic/place:buena_vista/government"
-        )
+    def test_county_subdivision_keeps_county(self):
+        row = census_row("nj", "3402770450", "Springfield township, Morris County, New Jersey", "county_subdivision")
+        assert (row.name, row.county_name) == ("Springfield township", "Morris County")
 
 
 # ── get_api_data_by_geoid ─────────────────────────────────────────────────────
@@ -131,6 +97,22 @@ class TestGetApiDataByGeoid:
         result = get_api_data_by_geoid("wa", "53", rows, 1, "place")
         assert result["5311111"]["ocdid_collision"] is True
         assert result["5322222"]["ocdid_collision"] is True
+
+    def test_registry_id_wins_over_generated_slug(self):
+        # Registry drops the county segment for New England towns
+        rows = [["Concord town, Middlesex County, Massachusetts", "18223", "25", "017", "15060"]]
+        registry = {"2501715060": "ocd-division/country:us/state:ma/place:concord"}
+        result = get_api_data_by_geoid("ma", "25", rows, 1, "county_subdivision", registry_by_geoid=registry)
+        assert result["2501715060"]["jurisdiction_ocdid"] == (
+            "ocd-jurisdiction/country:us/state:ma/place:concord/government"
+        )
+
+    def test_generated_slug_when_geoid_not_in_registry(self):
+        rows = [self._make_row("Seattle city, Washington", 741440, "53", "63000")]
+        result = get_api_data_by_geoid("wa", "53", rows, 1, "place", registry_by_geoid={})
+        assert result["5363000"]["jurisdiction_ocdid"] == (
+            "ocd-jurisdiction/country:us/state:wa/place:seattle/government"
+        )
 
     def test_no_collision_when_names_differ(self):
         rows = [
