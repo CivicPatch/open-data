@@ -10,7 +10,9 @@ import pytest
 from scripts.jurisdictions.yaml_io import load_existing_jurisdictions, ryaml
 from scripts.ocdids import registry_report
 from scripts.ocdids.ids import to_division_ocdid
+from scripts.ocdids.migrate_plan import find_moves
 from scripts.ocdids.registry import load_registry
+from scripts.ocdids.stored import stored_states
 from scripts.paths import PROJECT_ROOT
 
 JURISDICTION_FILES = sorted(PROJECT_ROOT.glob("data_source/*/*/jurisdictions.yml"))
@@ -39,6 +41,18 @@ def test_jurisdiction_ocdids_in_registry(path: Path, known_unregistered):
         f"{len(missing)}/{len(existing_by_id)} OCD-IDs in {path.relative_to(PROJECT_ROOT)} are "
         f"neither in the OCD registry nor listed in data_source/ocdid_mismatches.yml — run "
         f"`uv run python -m scripts.ocdids.migrate_to_registry <state>`:\n  " + "\n  ".join(sorted(missing))
+    )
+
+
+@pytest.mark.parametrize("state", stored_states())
+def test_stored_ocdids_match_assigned(state: str):
+    """Stronger than being in the registry: each ID is the one assigned for its own GEOID."""
+    stored, assignments = registry_report.assign_state(state, load_registry())
+    moves = find_moves(stored, assignments)
+    assert not moves, (
+        f"{len(moves)} OCD-IDs in {state} differ from the ID assigned for their GEOID — run "
+        f"`uv run python -m scripts.ocdids.migrate_to_registry {state}`:\n  "
+        + "\n  ".join(f"{move.old_id} → {move.new_id}" for move in moves)
     )
 
 

@@ -1,0 +1,49 @@
+name: "[auto] Validate - OCD-IDs"
+on:
+  pull_request:
+    paths:
+      - "data_source/*/*/jurisdictions.yml"
+      - "data_source/ocd_division_ids/**"
+      - "data_source/ocdid_mismatches.yml"
+      - "scripts/ocdids/**"
+      - "scripts/jurisdictions/**"
+      - "tests/test_ocdid_*.py"
+  push:
+    branches: [main]
+    paths:
+      - "data_source/*/*/jurisdictions.yml"
+      - "data_source/ocd_division_ids/**"
+      - "data_source/ocdid_mismatches.yml"
+      - "scripts/ocdids/**"
+      - "scripts/jurisdictions/**"
+      - "tests/test_ocdid_*.py"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "validate-ocdids-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  ocdid-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.12
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install dependencies
+        run: uv sync
+
+      # Every jurisdiction OCD-ID is in the pinned registry (or a listed exception), is the
+      # ID assigned for its GEOID, and data_source/ocdid_mismatches.yml is current.
+      - name: Run OCD-ID tests
+        run: uv run pytest -q tests/test_ocdid_*.py
