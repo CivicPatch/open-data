@@ -9,25 +9,25 @@ const QUERY_EXAMPLES = [
     label: "Who holds a seat in one place",
     description:
       "The core join: a membership links a person to a post, the post carries the role. Note the name is \"Seattle city\" — OCD names keep their type suffix, so match with ILIKE rather than =.",
-    sql: "SELECT p.name, r.label AS seat, j.name AS jurisdiction\nFROM memberships m\nJOIN people p ON p.id = m.person_id\nJOIN posts po ON po.id = m.post_id\nJOIN roles r ON r.id = po.role_id\nJOIN jurisdictions j ON j.jurisdiction_ocdid = m.jurisdiction_ocdid\nWHERE m.is_open AND j.state = 'wa' AND j.name ILIKE 'Seattle%'\nORDER BY r.priority NULLS LAST, p.name;",
+    sql: "SELECT p.name, r.label AS seat, j.name AS jurisdiction\nFROM memberships m\nJOIN people p ON p.id = m.person_id\nJOIN posts po ON po.id = m.post_id\nJOIN roles r ON r.id = po.role_id\nJOIN jurisdictions j ON j.jurisdiction_ocdid = m.jurisdiction_ocdid\nWHERE m.closed_at IS NULL AND j.state = 'wa' AND j.name ILIKE 'Seattle%'\nORDER BY r.priority NULLS LAST, p.name;",
   },
   {
     label: "Former officeholders",
     description:
-      "What the published YAML cannot answer: it renders the live roster only, so a seat that ended leaves no trace there. Here it is a row with is_open false.",
-    sql: "SELECT p.name, r.label AS seat, j.name AS jurisdiction,\n       m.opened_at, m.closed_at\nFROM memberships m\nJOIN people p ON p.id = m.person_id\nJOIN posts po ON po.id = m.post_id\nJOIN roles r ON r.id = po.role_id\nJOIN jurisdictions j ON j.jurisdiction_ocdid = m.jurisdiction_ocdid\nWHERE NOT m.is_open\nORDER BY m.closed_at DESC;",
+      "What the published YAML cannot answer: it renders the live roster only, so a seat that ended leaves no trace there. Here it is a row with a closed_at.",
+    sql: "SELECT p.name, r.label AS seat, j.name AS jurisdiction,\n       m.opened_at, m.closed_at\nFROM memberships m\nJOIN people p ON p.id = m.person_id\nJOIN posts po ON po.id = m.post_id\nJOIN roles r ON r.id = po.role_id\nJOIN jurisdictions j ON j.jurisdiction_ocdid = m.jurisdiction_ocdid\nWHERE m.closed_at IS NOT NULL\nORDER BY m.closed_at DESC;",
   },
   {
     label: "Seats nobody holds",
     description:
       "Anti-join: a post with no open membership. Either a vacancy, or a seat we have not matched anyone to yet.",
-    sql: "SELECT j.name AS jurisdiction, r.label AS seat, po.division_ocdid\nFROM posts po\nJOIN roles r ON r.id = po.role_id\nJOIN jurisdictions j ON j.jurisdiction_ocdid = po.jurisdiction_ocdid\nLEFT JOIN memberships m ON m.post_id = po.id AND m.is_open\nWHERE m.id IS NULL\nORDER BY j.state, j.name;",
+    sql: "SELECT j.name AS jurisdiction, r.label AS seat, po.division_ocdid\nFROM posts po\nJOIN roles r ON r.id = po.role_id\nJOIN jurisdictions j ON j.jurisdiction_ocdid = po.jurisdiction_ocdid\nLEFT JOIN memberships m ON m.post_id = po.id AND m.closed_at IS NULL\nWHERE m.id IS NULL\nORDER BY j.state, j.name;",
   },
   {
     label: "Coverage by state",
     description:
       "How much of each state we hold. Rows are written ordered by state, so a filter on it skips whole row groups rather than reading the file.",
-    sql: "SELECT state,\n       COUNT(DISTINCT jurisdiction_ocdid) AS jurisdictions,\n       COUNT(*) FILTER (WHERE is_open)    AS open_seats\nFROM memberships\nGROUP BY state\nORDER BY open_seats DESC;",
+    sql: "SELECT state,\n       COUNT(DISTINCT jurisdiction_ocdid) AS jurisdictions,\n       COUNT(*) FILTER (WHERE closed_at IS NULL) AS open_seats\nFROM memberships\nGROUP BY state\nORDER BY open_seats DESC;",
   },
   {
     label: "The same name in different places",
