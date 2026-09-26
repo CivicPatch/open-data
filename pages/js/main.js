@@ -69,7 +69,7 @@ document.getElementById("history-toggle").addEventListener("click", () => {
     } else {
       QueryRunner.setQuery(
         tableNames.includes("memberships")
-          ? "SELECT * FROM memberships WHERE is_open;"
+          ? "SELECT * FROM memberships WHERE closed_at IS NULL;"
           : tableNames.length
             ? `SELECT * FROM ${tableNames[0]};`
             : "-- No tables available"
