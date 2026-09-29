@@ -1,0 +1,54 @@
+name: "[auto] Merge - Config"
+# civicpatch.org opens a PR for each config edit and labels it; open-data decides whether it
+# merges. The label and the validation can finish in either order, so both start this job.
+on:
+  pull_request_target:
+    types: [labeled]
+  workflow_run:
+    workflows: ["[auto] Validate - Config"]
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+
+concurrency:
+  group: "merge-config-${{ github.event.pull_request.number || github.event.workflow_run.pull_requests[0].number }}"
+  cancel-in-progress: false
+
+jobs:
+  merge-config-pr:
+    if: >-
+      github.event_name == 'pull_request_target'
+      || (github.event.workflow_run.event == 'pull_request'
+          && github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    steps:
+      # The default branch, never the PR's: this job holds a write token.
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.12
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install dependencies
+        run: uv sync --no-dev
+
+      # A merge made with GITHUB_TOKEN starts no other workflow, so the sync call to
+      # civicpatch.org happens here rather than on push.
+      - name: Merge if the gate passes, then sync civicpatch.org
+        run: uv run python scripts/github_actions/merge_config_pr.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY: ${{ github.repository }}
+          PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number || github.event.workflow_run.pull_requests[0].number }}
+          CIVICPATCH_ORG_URL: ${{ vars.CIVICPATCH_ORG_URL }}
+          SERVICE_API_KEY: ${{ secrets.SERVICE_API_KEY }}

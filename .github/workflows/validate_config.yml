@@ -1,0 +1,48 @@
+name: "[auto] Validate - Config"
+on:
+  pull_request:
+    paths:
+      - "data_source/config.yml"
+      - "data_source/*/config.yml"
+      - "data_source/*/*/config.yml"
+      - "data_source/*/*/jurisdictions.yml"
+      - "tests/test_config.py"
+  push:
+    branches: [main]
+    paths:
+      - "data_source/config.yml"
+      - "data_source/*/config.yml"
+      - "data_source/*/*/config.yml"
+      - "data_source/*/*/jurisdictions.yml"
+      - "tests/test_config.py"
+
+# Runs the PR's own code with no write token; the label-gated merge reads this job's result.
+permissions:
+  contents: read
+
+concurrency:
+  group: "validate-config-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  config-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.12
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install dependencies
+        run: uv sync
+
+      # Roles, aliases and government forms in every country and state config file merge
+      # without a clash; see shared/utils/layered_config.py.
+      - name: Run config tests
+        run: uv run pytest -q tests/test_config.py

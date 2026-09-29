@@ -43,6 +43,9 @@ FIELD_DOCS = {
     "url": "Official government website (from the Wikipedia infobox); only written "
            "if absent — existing values are never overwritten by scripts.",
     "wiki_url": "Wikipedia page URL for this jurisdiction.",
+    "extras": "Non-standard fields, as in the OCD jurisdiction schema. "
+              "extras.government_form: form of government (e.g. mayor_council); overrides the "
+              "config files, needed only where they allow more than one form. Never written by scripts.",
     "population": "ACS 5-year population estimate; updated on every run.",
     "status": "Lifecycle: absent = active, 'inactive' = dropped from census.",
     "generated_comments": "Script-generated notes (e.g. wiki URL candidates). "
@@ -107,7 +110,7 @@ def county_header(state: str, fips: str, state_name: str) -> str:
         "\n"
         "Fields per county:\n"
         + _fields(
-            "id", "name", "url", "wiki_url", "population", "geoid", "status",
+            "id", "name", "url", "extras", "wiki_url", "population", "geoid", "status",
             "issues", "generated_comments", "comments", "warnings",
             id="OCD-ID: ocd-jurisdiction/country:us/state:{state}/county:{name}/government; "
                "stable once assigned — preserved via GEOID matching if Census name changes.",
@@ -152,7 +155,7 @@ def local_header(state: str, fips: str, state_name: str, pull_from_census: list[
         "\n"
         "Fields per jurisdiction:\n"
         + _fields(
-            "id", "name", "url", "wiki_url", "population", "geoid", "status",
+            "id", "name", "url", "extras", "wiki_url", "population", "geoid", "status",
             "issues", "generated_comments", "comments", "warnings",
             id="OCD-ID for the jurisdiction; stable once assigned — preserved across runs via "
                "GEOID matching even if the Census name changes.",
