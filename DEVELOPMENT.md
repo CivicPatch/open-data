@@ -10,6 +10,16 @@ echo 'CENSUS_API_KEY=your-40-char-key-here' >> .env
 
 `mise` auto-loads `.env`. Scripts exit with a clear message if the key is missing.
 
+Then install the tools and the commit hook:
+
+```bash
+mise run setup
+```
+
+The hook runs `tests/test_config.py` whenever a commit touches a `data_source/**/config.yml` or
+`jurisdictions.yml`. It is the same validation CI runs and cp.org's config sync runs, all from
+civicpatch-tools' `shared` package, so a file that commits cleanly is one cp.org can load.
+
 ---
 
 ## Adding a new state
@@ -113,6 +123,7 @@ records ancestry any more.
 
 | Task | When |
 |---|---|
+| `mise run setup` | once per clone: tools, commit hook, dependencies |
 | `mise run setup-state -- --state {code}` | adding a state |
 | `uv run python scripts/ocdids/fix.py [--state {code}]` | after regenerating `jurisdictions.yml` |
 
