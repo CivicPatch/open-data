@@ -1,0 +1,10 @@
+repos:
+  - repo: local
+    hooks:
+      # The same check CI runs (validate_config.yml) and cp.org's sync runs, from `shared`.
+      - id: validate-config
+        name: Validate config and jurisdictions files
+        language: system
+        entry: uv run pytest -q tests/test_config.py
+        pass_filenames: false
+        files: '^data_source/.*(config|jurisdictions)\.yml$'
