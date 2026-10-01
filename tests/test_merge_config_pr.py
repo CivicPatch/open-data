@@ -1,5 +1,4 @@
 from scripts.github_actions.merge_config_pr import (
-    APP_BOT,
     VALIDATION_CHECK,
     labelled_by_app,
     only_config_files,
@@ -8,10 +7,12 @@ from scripts.github_actions.merge_config_pr import (
 )
 
 LABEL = "civicpatch:maintainer"
+APP_OWNER = "CivicPatch"
 
 
-def _labeled(name: str, actor: str) -> dict:
-    return {"event": "labeled", "label": {"name": name}, "actor": {"login": actor}}
+def _labeled(name: str, app_owner: str | None) -> dict:
+    app = {"slug": "civicpatch", "owner": {"login": app_owner}} if app_owner else None
+    return {"event": "labeled", "label": {"name": name}, "performed_via_github_app": app}
 
 
 def _check(conclusion: str, started_at: str = "2026-09-28T10:00:00Z") -> dict:
@@ -29,22 +30,22 @@ def _pull_request(**overrides) -> dict:
 
 
 def test_a_label_from_the_app_counts():
-    assert labelled_by_app([_labeled(LABEL, APP_BOT)], {LABEL})
+    assert labelled_by_app([_labeled(LABEL, APP_OWNER)], {LABEL})
 
 
 def test_a_label_a_person_added_does_not():
-    assert not labelled_by_app([_labeled(LABEL, "someone")], {LABEL})
+    assert not labelled_by_app([_labeled(LABEL, None)], {LABEL})
 
 
 def test_the_most_recent_labelling_decides():
     """The app labelled it, then someone removed it and added it back."""
-    events = [_labeled(LABEL, APP_BOT), _labeled(LABEL, "someone")]
+    events = [_labeled(LABEL, APP_OWNER), _labeled(LABEL, None)]
 
     assert not labelled_by_app(events, {LABEL})
 
 
 def test_a_removed_label_does_not_count():
-    assert not labelled_by_app([_labeled(LABEL, APP_BOT)], set())
+    assert not labelled_by_app([_labeled(LABEL, APP_OWNER)], set())
 
 
 def test_config_paths_at_both_layers_and_levels():
@@ -79,10 +80,20 @@ def test_no_validation_run_is_not_a_pass():
 def test_a_pr_passing_every_check_merges():
     paths = ["data_source/tn/counties/config.yml"]
 
-    assert refusal(_pull_request(), [_labeled(LABEL, APP_BOT)], paths, [_check("success")]) is None
+    assert refusal(_pull_request(), [_labeled(LABEL, APP_OWNER)], paths, [_check("success")]) is None
 
 
 def test_a_draft_stays_open():
     paths = ["data_source/tn/counties/config.yml"]
 
-    assert refusal(_pull_request(draft=True), [_labeled(LABEL, APP_BOT)], paths, [_check("success")])
+    assert refusal(_pull_request(draft=True), [_labeled(LABEL, APP_OWNER)], paths, [_check("success")])
+
+
+def test_a_system_label_from_the_app_counts():
+    assert labelled_by_app([_labeled("civicpatch:system", APP_OWNER)], {"civicpatch:system"})
+
+
+def test_an_app_another_account_owns_does_not_count():
+    assert not labelled_by_app([_labeled(LABEL, "someone-else")], {LABEL})
+
+

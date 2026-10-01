@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
-"""Merge a config PR from civicpatch.org once it passes open-data's gate, then tell
-civicpatch.org which files changed. Runs from the base branch: nothing here reads the PR's code.
+"""Merge a jurisdiction-edit PR from civicpatch.org once it passes the gate. Runs from the base
+branch: nothing here reads the PR's code. civicpatch.org's hourly sync reads the merge itself.
+
+Self-contained on purpose: it moves to the jurisdictions repo with its workflow.
 
 The gate, all required:
 1. the PR is open, into main, and not a draft
 2. its most recent edit-source label was added by an app the CivicPatch org owns, dev's or
    prod's (anyone with triage can add a label, so the label alone proves nothing)
-3. every changed file is a config file
+3. every changed file is a jurisdictions.yml
 4. the validation check passed on the PR's current head
 
-A PR that fails any of them stays open for a person. Merging with the head sha means a push after
-the checks ran makes the merge fail instead of merging unchecked content.
+The PRs come from a fork, and a workflow_run for a fork's PR does not name it, so the PR is
+found from the fork's owner and branch when no number is given.
 """
 
 import os
@@ -22,8 +24,8 @@ import requests
 API = "https://api.github.com"
 APP_OWNER = "CivicPatch"
 MERGE_LABELS = {"civicpatch:maintainer", "civicpatch:admin", "civicpatch:system"}
-CONFIG_PATH = re.compile(r"^data_source/(([a-z]{2}/)?(local|counties)/)?config\.yml$")
-VALIDATION_CHECK = "config-tests"
+JURISDICTIONS_PATH = re.compile(r"^data_source/[a-z]{2}/(state|counties|local)/jurisdictions\.yml$")
+VALIDATION_CHECK = "ocdid-tests"
 MAX_FILES = 100
 
 
@@ -39,8 +41,8 @@ def labelled_by_app(events: list[dict], labels_on_pr: set[str]) -> bool:
     )
 
 
-def only_config_files(paths: list[str]) -> bool:
-    return bool(paths) and all(CONFIG_PATH.match(path) for path in paths)
+def only_jurisdiction_files(paths: list[str]) -> bool:
+    return bool(paths) and all(JURISDICTIONS_PATH.match(path) for path in paths)
 
 
 def validation_passed(check_runs: list[dict]) -> bool:
@@ -58,15 +60,15 @@ def refusal(pull_request: dict, events: list[dict], paths: list[str], check_runs
     labels = {label["name"] for label in pull_request["labels"]}
     if not labelled_by_app(events, labels):
         return f"no edit-source label added by an app {APP_OWNER} owns"
-    if len(paths) >= MAX_FILES or not only_config_files(paths):
-        return "changes files other than config files"
+    if len(paths) >= MAX_FILES or not only_jurisdiction_files(paths):
+        return "changes files other than jurisdictions.yml"
     if not validation_passed(check_runs):
         return f"{VALIDATION_CHECK} has not passed on the head commit"
     return None
 
 
-def _get(session: requests.Session, url: str):
-    response = session.get(url, params={"per_page": MAX_FILES})
+def _get(session: requests.Session, url: str, params: dict | None = None):
+    response = session.get(url, params={"per_page": MAX_FILES, **(params or {})})
     response.raise_for_status()
     return response.json()
 
@@ -79,30 +81,29 @@ def _github_session() -> requests.Session:
     return session
 
 
+def _find_number(session: requests.Session, base: str, head_owner: str, head_branch: str) -> str:
+    if not head_owner or not head_branch:
+        return ""
+    open_pull_requests = _get(session, f"{base}/pulls", {"head": f"{head_owner}:{head_branch}", "state": "open"})
+    return str(open_pull_requests[0]["number"]) if open_pull_requests else ""
+
+
 def _merge(session: requests.Session, base: str, number: str, head_sha: str) -> str:
     response = session.put(f"{base}/pulls/{number}/merge", json={"sha": head_sha, "merge_method": "squash"})
     response.raise_for_status()
     return response.json()["sha"]
 
 
-def _sync_civicpatch(commit_sha: str, number: str, paths: list[str]) -> None:
-    response = requests.post(
-        f"{os.environ['CIVICPATCH_ORG_URL']}/api/admin/jurisdiction_configs/sync",
-        headers={"Authorization": os.environ["SERVICE_API_KEY"]},
-        json={"commit_sha": commit_sha, "pull_request_number": int(number), "paths": paths},
-        timeout=60,
-    )
-    response.raise_for_status()
-
-
 def main() -> int:
-    number = os.environ.get("PULL_REQUEST_NUMBER", "")
-    if not number:
-        print("No pull request for this run; nothing to merge.")
-        return 0
-
     session = _github_session()
     base = f"{API}/repos/{os.environ['REPOSITORY']}"
+    number = os.environ.get("PULL_REQUEST_NUMBER") or _find_number(
+        session, base, os.environ.get("HEAD_OWNER", ""), os.environ.get("HEAD_BRANCH", "")
+    )
+    if not number:
+        print("No open pull request for this run; nothing to merge.")
+        return 0
+
     pull_request: dict = _get(session, f"{base}/pulls/{number}")
     head_sha: str = pull_request["head"]["sha"]
     events: list[dict] = _get(session, f"{base}/issues/{number}/events")
@@ -116,8 +117,6 @@ def main() -> int:
 
     commit_sha = _merge(session, base, number, head_sha)
     print(f"Merged PR #{number} as {commit_sha}.")
-    _sync_civicpatch(commit_sha, number, paths)
-    print(f"civicpatch.org synced {len(paths)} config file(s).")
     return 0
 
 
