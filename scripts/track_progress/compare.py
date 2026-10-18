@@ -16,7 +16,7 @@ from pathlib import Path
 
 import yaml
 
-from shared.utils.name_utils import normalize_name
+from shared.utils.name_utils import name_grouping_key
 from shared.utils.phone_utils import normalize_phone_number
 from shared.utils.email_utils import normalize_email
 
@@ -27,7 +27,7 @@ VACANCY_NAMES = {"position vacant", "vacant", "vacancy"}
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 def is_vacant(name: str) -> bool:
-    return normalize_name(name) in VACANCY_NAMES
+    return name_grouping_key(name) in VACANCY_NAMES
 
 
 def record_summary(r):
@@ -155,12 +155,12 @@ def load_jurisdictions(path: str) -> dict:
 
 def build_locality_entry(cp_records: list, ext_records: list, jurisdiction: str) -> dict:
     ext_by_name = {
-        normalize_name(r["name"]): r
+        name_grouping_key(r["name"]): r
         for r in ext_records
         if not is_vacant(r.get("name", ""))
     }
     cp_by_name = {
-        normalize_name(r["name"]): r
+        name_grouping_key(r["name"]): r
         for r in cp_records
         if not is_vacant(r.get("name", ""))
     }

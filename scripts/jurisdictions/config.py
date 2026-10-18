@@ -142,6 +142,15 @@ state_configs = {
         "local_wiki": {"rows_to_skip": 2, "entry_column": 1},
         "validation_sources": ["google", "tml"],  # tml = Texas Municipal League
     },
+    "vt": {
+        "fips": "50",
+        "name": "Vermont",
+        # towns are county subdivisions; cities and incorporated villages are places
+        "pull_from_census": ["places", "county_subdivisions"],
+        "local_wiki": {},
+        # no Google Civic export for Vermont yet; add "google" once vt_all_raw.json exists
+        "validation_sources": [],
+    },
     "wa": {
         "fips": "53",
         "name": "Washington",
