@@ -17,9 +17,7 @@ CONFIG_FILE = "config.yml"
 JURISDICTIONS_FILE = "jurisdictions.yml"
 INACTIVE = "inactive"
 # Suffixes a state's collectors run for without a form of the state's own, each with why.
-UNCOVERED_SUFFIXES = {
-    "vt/counties": {"county": "no governing board, so no country form fits; Vermont's county form is not written yet"},
-}
+UNCOVERED_SUFFIXES: dict[str, dict[str, str]] = {}
 
 
 def _load(path: Path) -> ConfigFile:
