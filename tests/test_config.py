@@ -8,11 +8,18 @@ import pytest
 import yaml
 
 from shared.schemas import JurisdictionLevel
-from shared.utils.layered_config import ConfigFile, check_roles_distinct_across, merged_config
+from shared.utils.government_forms import name_suffix
+from shared.utils.layered_config import ConfigFile, allowed_classifications, check_roles_distinct_across, merged_config
 
 DATA_SOURCE = Path(__file__).parent.parent / "data_source"
 LEVELS = [JurisdictionLevel.LOCAL, JurisdictionLevel.COUNTIES]
 CONFIG_FILE = "config.yml"
+JURISDICTIONS_FILE = "jurisdictions.yml"
+INACTIVE = "inactive"
+# Suffixes a state's collectors run for without a form of the state's own, each with why.
+UNCOVERED_SUFFIXES = {
+    "vt/counties": {"county": "no governing board, so no country form fits; Vermont's county form is not written yet"},
+}
 
 
 def _load(path: Path) -> ConfigFile:
@@ -48,7 +55,41 @@ def test_no_two_files_share_a_role_id_label_or_alias():
 
 
 def _jurisdiction_files() -> list[Path]:
-    return sorted(path for level in LEVELS for path in DATA_SOURCE.glob(f"*/{level}/jurisdictions.yml"))
+    return sorted(path for level in LEVELS for path in DATA_SOURCE.glob(f"*/{level}/{JURISDICTIONS_FILE}"))
+
+
+def _governed_state_files() -> list[Path]:
+    """The state files the collectors read law for: those with a governing_law block."""
+    return [path for path in _state_files() if _load(path).governing_law is not None]
+
+
+def _active_suffixes(state_file: Path) -> set[str]:
+    jurisdictions_file = state_file.parent / JURISDICTIONS_FILE
+    entries = (yaml.safe_load(jurisdictions_file.read_text()) or {}).get("jurisdictions") or []
+    return {name_suffix(entry["name"]) for entry in entries if entry.get("status") != INACTIVE}
+
+
+def _state_level(state_file: Path) -> str:
+    return str(state_file.parent.relative_to(DATA_SOURCE))
+
+
+@pytest.mark.parametrize("state_file", _governed_state_files(), ids=_state_level)
+def test_every_suffix_has_one_classification(state_file: Path):
+    """Each suffix reads one class's law; none or two leaves the collectors without a general law."""
+    governing_law = _load(state_file).governing_law
+    assert governing_law is not None
+    wrong = sorted(suffix for suffix in _active_suffixes(state_file) if len(allowed_classifications(governing_law, suffix)) != 1)
+    assert wrong == [], f"suffixes without exactly one classification: {wrong}"
+
+
+@pytest.mark.parametrize("state_file", _governed_state_files(), ids=_state_level)
+def test_every_suffix_has_a_form_of_the_states_own(state_file: Path):
+    """A suffix no state form carries falls back to every country form: Vermont's cities were
+    asked about township boards."""
+    with_forms = {suffix for government_form in _load(state_file).government_forms.values() for suffix in government_form.suffixes}
+    uncovered = UNCOVERED_SUFFIXES.get(_state_level(state_file), {})
+    assert sorted(_active_suffixes(state_file) - with_forms - uncovered.keys()) == []
+    assert sorted(with_forms & uncovered.keys()) == [], "listed as uncovered but now has a form"
 
 
 @pytest.mark.parametrize("jurisdictions_file", _jurisdiction_files(), ids=lambda path: str(path.relative_to(DATA_SOURCE)))
