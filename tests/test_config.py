@@ -10,6 +10,8 @@ import yaml
 from shared.schemas import JurisdictionLevel
 from shared.utils.government_forms import name_suffix
 from shared.utils.layered_config import ConfigFile, allowed_classifications, check_roles_distinct_across, merged_config
+from shared.utils.label_parser import parse_label
+from shared.utils.taxonomy import build_taxonomy, resolve_role
 
 DATA_SOURCE = Path(__file__).parent.parent / "data_source"
 LEVELS = [JurisdictionLevel.LOCAL, JurisdictionLevel.COUNTIES]
@@ -103,3 +105,54 @@ def test_every_government_form_is_a_form_of_its_level(jurisdictions_file: Path):
         if form is not None and form not in level_values:
             wrong.append((entry["id"], form))
     assert wrong == [], f"not a {jurisdictions_file.parent.name} form: {wrong}"
+
+
+def _merged(state_file: Path):
+    return merged_config(_country_roles(), _country_forms(state_file.parent.name), _load(state_file))
+
+
+@pytest.mark.parametrize("state_file", _state_files(), ids=_state_level)
+def test_every_role_label_a_state_form_names_is_a_role(state_file: Path):
+    """`role_asks` and the organization derivation skip a label naming no role, silently."""
+    merged = _merged(state_file)
+    taxonomy = build_taxonomy(merged.roles)
+    labels = [
+        (government_form.value, organization.name, label)
+        for government_form, organization in [
+            (form, organization)
+            for form, config in _load(state_file).government_forms.items()
+            for organization in config.organizations
+        ]
+        for label in organization.role_labels
+    ]
+    unknown = [entry for entry in labels if resolve_role(entry[2], taxonomy) is None]
+    assert unknown == []
+
+
+# Vermont's town officers (17 V.S.A. § 2646): each office, as a site writes it, parses to its own
+# role. "Commissioner" and "Trustee" are aliases of `member`, so without these roles a cemetery
+# commissioner was a board member.
+VT_OFFICE_LABELS = {
+    "Lister": "Lister", "Listers": "Lister", "Board of Listers": "Lister",
+    "Auditor": "Auditor", "Town Auditors": "Auditor",
+    "First Constable": "First Constable", "Second Constable": "Second Constable", "Constable": "First Constable",
+    "Delinquent Tax Collector": "Collector of Delinquent Taxes",
+    "Collector of Delinquent Taxes": "Collector of Delinquent Taxes",
+    "Tax Collector": "Collector of Taxes",
+    "Trustee of Public Funds": "Trustee of Public Funds",
+    "Trustees of Public Funds": "Trustee of Public Funds",
+    "Trustee of Public Money": "Trustee of Public Money",
+    "Cemetery Commissioner": "Cemetery Commissioner", "Cemetery Commissioners": "Cemetery Commissioner",
+    "Road Commissioner": "Road Commissioner",
+    "Water Commissioner": "Water Commissioner", "Water Commissioners": "Water Commissioner",
+    "Advisory Budget Committee": "Advisory Budget Committee Member",
+    "Library Trustee": "Library Trustee", "Library Trustees": "Library Trustee",
+    "Town Clerk": "Clerk", "Town Treasurer": "Treasurer", "Town Manager": "City Manager",
+    "Village Trustee": "Member", "Selectboard Member": "Member", "Select Board Member": "Member",
+}
+
+
+@pytest.mark.parametrize("label,expected", VT_OFFICE_LABELS.items())
+def test_vermont_office_labels_parse_to_their_own_role(label: str, expected: str):
+    taxonomy = build_taxonomy(_merged(DATA_SOURCE / "vt" / "local" / CONFIG_FILE).roles)
+    assert parse_label(label, taxonomy).role == expected
