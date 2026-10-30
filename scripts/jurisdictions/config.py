@@ -165,4 +165,13 @@ state_configs = {
         "local_wiki": {"title": "List_of_places_in_Hawaii", "entry_column": 1},
         "validation_sources": ["google"],
     },
+    "or": {
+        "fips": "41",
+        "name": "Oregon",
+        # every incorporated place is a city; table 0 is the key
+        "pull_from_census": ["places"],
+        "local_wiki": {"title": "List_of_cities_in_Oregon", "table_index": 1, "rows_to_skip": 2},
+        # no Google Civic export for Oregon yet
+        "validation_sources": [],
+    },
 }
