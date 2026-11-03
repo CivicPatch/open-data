@@ -10,6 +10,34 @@ Covers the manual prep before the full `mise run setup-state` run. Full referenc
 
 Ask the user for the two-letter state code and full name if not given (e.g. `va` / Virginia).
 
+## What to collect
+
+Only legislative and executive bodies (agreed 2026-10-30):
+1. **Research lists the legislative and executive organizations the state's law establishes**
+   (general law, then charter, then bylaws and ordinances) and only the roles the law names in
+   them, each organization labelled `legislature` or `executive`. Courts and special-purpose or
+   advisory boards (library, cemetery, parks, planning, budget) are not listed. Pipeline 2 asks
+   about each listed role per place and records `established` and `filled_by`.
+2. **Presiding offices the members choose** (council president, chair) are member roles on a
+   member's post, not posts of their own.
+3. **Every other role is a post that carries its selection method**, as the law read set it for
+   the place: elected officials are the posts `elected_by_voters`; an appointed manager is a
+   post `appointed`, kept in the data and filtered out of the elected view.
+4. **The law names it but not how it is filled (`not_stated`): dropped.**
+5. **Being named in the law, or even elected, is not enough: read what the office does** (added
+   2026-11-03). An office that only carries out tasks is not listed, however old its title. Ask of
+   its duties statute: does it decide policy, ordinances, budgets or taxes, or run the government
+   day to day? Can a town simply vote to abolish it? Vermont's constable is named and usually
+   elected, but its duties are serving papers and destroying animals (24 V.S.A. § 1936a(b)), a town
+   may bar its law enforcement (§ 1936a(a)) and may eliminate it (17 V.S.A. § 2651a(d)): not listed.
+   Keep its role in the config so its title still parses; just leave it out of every form.
+
+State offices elected locally (district attorney) are not the jurisdiction's and are not listed.
+Where an office is elected in some places and appointed in others, list it; the law read decides
+per place.
+
+Cite the statute or charter section for each organization and role in the config.
+
 ## Step 1 — Register the state
 
 Read `scripts/jurisdictions/config.py` fully first. Determine `pull_from_census`:
