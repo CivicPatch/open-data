@@ -5,7 +5,8 @@
 # The town officers of 17 V.S.A. § 2646, and the boards it and Titles 18, 22 and 24 set up. An
 # office with one holder is a Town Officers post; one the law gives joint authority (three or
 # more, 1 V.S.A. § 172) is its own organization. Here rather than the country file until another
-# state shares them.
+# state shares them. Special-purpose boards (funds, cemetery, water, library, budget) keep their
+# roles, so their titles parse to their own role, but no form lists them: not collected.
 roles:
 - id: lister
   label: Lister
@@ -19,15 +20,13 @@ roles:
   - Town Auditor
   - Auditors
   - Town Auditors
-- id: first-constable
-  label: First Constable
-  is_unique: true
+- id: constable
+  label: Constable
   aliases:
-  - Constable
+  - Constables
+  - First Constable
+  - Second Constable
   - Town Constable
-- id: second-constable
-  label: Second Constable
-  is_unique: true
 - id: delinquent-tax-collector
   label: Collector of Delinquent Taxes
   is_unique: true
@@ -57,6 +56,8 @@ roles:
   - Patrol Officers
 - id: road-commissioner
   label: Road Commissioner
+  # 17 V.S.A. § 2646(16): elected only if the town so votes, else the selectboard appoints.
+  selection_method: appointed
   aliases:
   - Road Commissioners
 - id: water-commissioner
@@ -88,27 +89,17 @@ government_forms:
     organizations:
       - {name: Selectboard, role_labels: [Select Board Member, Chair, Vice Chair]}
       - {name: Town Meeting, role_labels: [Moderator]}
-      - {name: Town Officers, role_labels: [Town Clerk, Town Treasurer, First Constable, Second Constable, Collector of Delinquent Taxes, Trustee of Public Money, Road Commissioner, Patrol Officer, Town Manager]}
+      - {name: Town Officers, role_labels: [Town Clerk, Town Treasurer, Constable, Collector of Delinquent Taxes, Trustee of Public Money, Road Commissioner, Patrol Officer, Town Manager]}
       - {name: Board of Listers, role_labels: [Lister]}
       - {name: Town Auditors, role_labels: [Auditor]}
-      - {name: Trustees of Public Funds, role_labels: [Trustee of Public Funds]}
-      - {name: Board of Cemetery Commissioners, role_labels: [Cemetery Commissioner]}
-      - {name: Water Commissioners, role_labels: [Water Commissioner]}
-      - {name: Advisory Budget Committee, role_labels: [Advisory Budget Committee Member]}
-      - {name: Board of Library Trustees, role_labels: [Library Trustee]}
   representative_town_meeting:
     suffixes: [town]
     organizations:
       - {name: Selectboard, role_labels: [Select Board Member, Chair, Vice Chair]}
       - {name: Town Meeting, role_labels: [Moderator, Town Meeting Member]}
-      - {name: Town Officers, role_labels: [Town Clerk, Town Treasurer, First Constable, Second Constable, Collector of Delinquent Taxes, Trustee of Public Money, Road Commissioner, Patrol Officer, Town Manager]}
+      - {name: Town Officers, role_labels: [Town Clerk, Town Treasurer, Constable, Collector of Delinquent Taxes, Trustee of Public Money, Road Commissioner, Patrol Officer, Town Manager]}
       - {name: Board of Listers, role_labels: [Lister]}
       - {name: Town Auditors, role_labels: [Auditor]}
-      - {name: Trustees of Public Funds, role_labels: [Trustee of Public Funds]}
-      - {name: Board of Cemetery Commissioners, role_labels: [Cemetery Commissioner]}
-      - {name: Water Commissioners, role_labels: [Water Commissioner]}
-      - {name: Advisory Budget Committee, role_labels: [Advisory Budget Committee Member]}
-      - {name: Board of Library Trustees, role_labels: [Library Trustee]}
 # Title 24 Appendix publishes every charter; a place without one runs on general law.
 governing_law:
   charter_terms: [Charter]

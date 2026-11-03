@@ -1,6 +1,5 @@
-"""Every config file merges: the country's roles (data_source/config.yml), the country's forms
-for a level (data_source/{level}/config.yml), then a state's (data_source/{state}/{level}/config.yml).
-The check a config edit must pass before it merges."""
+"""Every config file merges: a level's roles and forms (data_source/{level}/config.yml), then a
+state's (data_source/{state}/{level}/config.yml). The check a config edit must pass before it merges."""
 
 from pathlib import Path
 
@@ -28,30 +27,31 @@ def _load(path: Path) -> ConfigFile:
     return ConfigFile.model_validate(yaml.safe_load(path.read_text()) or {})
 
 
-def _country_roles() -> ConfigFile:
-    return _load(DATA_SOURCE / CONFIG_FILE)
-
-
-def _country_forms(level: str) -> ConfigFile:
+def _level_file(level: str) -> ConfigFile:
     return _load(DATA_SOURCE / level / CONFIG_FILE)
 
 
+def _state_files_of(level: str) -> list[Path]:
+    return sorted(DATA_SOURCE.glob(f"*/{level}/{CONFIG_FILE}"))
+
+
 def _state_files() -> list[Path]:
-    return sorted(path for level in LEVELS for path in DATA_SOURCE.glob(f"*/{level}/{CONFIG_FILE}"))
+    return [path for level in LEVELS for path in _state_files_of(level)]
 
 
 @pytest.mark.parametrize("level", LEVELS)
-def test_country_files_are_valid(level: JurisdictionLevel):
-    merged_config(_country_roles(), _country_forms(level), None)
+def test_level_files_are_valid(level: JurisdictionLevel):
+    merged_config(_level_file(level), None)
 
 
 @pytest.mark.parametrize("state_file", _state_files(), ids=lambda path: str(path.relative_to(DATA_SOURCE)))
-def test_state_file_merges_with_the_country_files(state_file: Path):
-    merged_config(_country_roles(), _country_forms(state_file.parent.name), _load(state_file))
+def test_state_file_merges_with_its_levels_file(state_file: Path):
+    merged_config(_level_file(state_file.parent.name), _load(state_file))
 
 
-def test_no_two_files_share_a_role_id_label_or_alias():
-    check_roles_distinct_across([_country_roles(), *(_load(path) for path in _state_files())])
+@pytest.mark.parametrize("level", LEVELS)
+def test_no_two_files_of_a_level_share_a_role_id_label_or_alias(level: JurisdictionLevel):
+    check_roles_distinct_across([_level_file(level), *(_load(path) for path in _state_files_of(level))])
 
 
 def _jurisdiction_files() -> list[Path]:
@@ -96,7 +96,7 @@ def test_every_suffix_has_a_form_of_the_states_own(state_file: Path):
 def test_every_government_form_is_a_form_of_its_level(jurisdictions_file: Path):
     """Any form of the level, not only those the state's file allows: a charter county can
     differ from the rest of its state."""
-    level_forms = _country_forms(jurisdictions_file.parent.name).government_forms
+    level_forms = _level_file(jurisdictions_file.parent.name).government_forms
     entries = (yaml.safe_load(jurisdictions_file.read_text()) or {}).get("jurisdictions") or []
     level_values = {form.value for form in level_forms}
     wrong = []
@@ -108,7 +108,7 @@ def test_every_government_form_is_a_form_of_its_level(jurisdictions_file: Path):
 
 
 def _merged(state_file: Path):
-    return merged_config(_country_roles(), _country_forms(state_file.parent.name), _load(state_file))
+    return merged_config(_level_file(state_file.parent.name), _load(state_file))
 
 
 @pytest.mark.parametrize("state_file", _state_files(), ids=_state_level)
@@ -135,7 +135,7 @@ def test_every_role_label_a_state_form_names_is_a_role(state_file: Path):
 VT_OFFICE_LABELS = {
     "Lister": "Lister", "Listers": "Lister", "Board of Listers": "Lister",
     "Auditor": "Auditor", "Town Auditors": "Auditor",
-    "First Constable": "First Constable", "Second Constable": "Second Constable", "Constable": "First Constable",
+    "First Constable": "Constable", "Second Constable": "Constable", "Constable": "Constable", "Constables": "Constable",
     "Delinquent Tax Collector": "Collector of Delinquent Taxes",
     "Collector of Delinquent Taxes": "Collector of Delinquent Taxes",
     "Tax Collector": "Collector of Taxes",
@@ -156,3 +156,14 @@ VT_OFFICE_LABELS = {
 def test_vermont_office_labels_parse_to_their_own_role(label: str, expected: str):
     taxonomy = build_taxonomy(_merged(DATA_SOURCE / "vt" / "local" / CONFIG_FILE).roles)
     assert parse_label(label, taxonomy).role == expected
+
+
+def test_assistant_judge_is_a_board_member_in_vermont_counties_only():
+    """Vermont's wording (Vt. Const. ch. II § 50), so it must not reach another state or a city."""
+    vermont_county = build_taxonomy(_merged(DATA_SOURCE / "vt" / "counties" / CONFIG_FILE).roles)
+    vermont_town = build_taxonomy(_merged(DATA_SOURCE / "vt" / "local" / CONFIG_FILE).roles)
+    county_alone = build_taxonomy(merged_config(_level_file(JurisdictionLevel.COUNTIES), None).roles)
+
+    assert parse_label("Assistant Judge", vermont_county).role == "Member"
+    assert resolve_role("Assistant Judge", vermont_town) is None
+    assert resolve_role("Assistant Judge", county_alone) is None
