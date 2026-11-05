@@ -1,0 +1,34 @@
+# A board of commissioners governs 30 counties (ORS 203.240, or a charter) and a county court the
+# other 6, a county judge and two commissioners (ORS 203.111): their form is saved per county.
+# Not collected: the district attorney, a state office elected per county (ORS 8.610), and the
+# surveyor, an appointed technical office (ORS 204.005(2)).
+roles:
+- id: sheriff
+  label: Sheriff
+  is_unique: true
+  selection_method: elected_by_voters
+  aliases:
+  - County Sheriff
+government_forms:
+  commission:
+    suffixes: [county]
+    organizations:
+      - {name: Board of County Commissioners, role_labels: [Commissioner, Chair, Vice Chair]}
+      - {name: County Officers, role_labels: [Sheriff, County Clerk, County Assessor, County Treasurer]}
+  county_court:
+    organizations:
+      - {name: County Court, role_labels: [County Judge, Commissioner]}
+      - {name: County Officers, role_labels: [Sheriff, County Clerk, County Assessor, County Treasurer]}
+governing_law:
+  charter_terms: [Charter, Home Rule Charter]
+  classifications:
+    county:
+      lsad: [county]
+      # Art. VI § 10: a charter prescribes the county's officers, so a charter county reads its
+      # charter alone; the 27 without one read ORS 203 and 204.
+      governed_by: charter_else_general_law
+      general_law:
+        # ORS 203: the county court, the board of commissioners, county charters.
+        - https://www.oregonlegislature.gov/bills_laws/ors/ors203.html
+        # ORS 204: the elected county officers (204.005) and their terms.
+        - https://www.oregonlegislature.gov/bills_laws/ors/ors204.html

@@ -10,7 +10,7 @@ from shared.schemas import JurisdictionLevel
 from shared.utils.government_forms import name_suffix
 from shared.utils.layered_config import ConfigFile, allowed_classifications, check_roles_distinct_across, merged_config
 from shared.utils.label_parser import parse_label
-from shared.utils.taxonomy import build_taxonomy, resolve_role
+from shared.utils.taxonomy import build_taxonomy, resolve_role, role_labels_by_role_id
 
 DATA_SOURCE = Path(__file__).parent.parent / "data_source"
 LEVELS = [JurisdictionLevel.LOCAL, JurisdictionLevel.COUNTIES]
@@ -18,7 +18,9 @@ CONFIG_FILE = "config.yml"
 JURISDICTIONS_FILE = "jurisdictions.yml"
 INACTIVE = "inactive"
 # Suffixes a state's collectors run for without a form of the state's own, each with why.
-UNCOVERED_SUFFIXES: dict[str, dict[str, str]] = {}
+UNCOVERED_SUFFIXES: dict[str, dict[str, str]] = {
+    "or/local": {"city": "law block only, until Oregon's city forms", "town": "law block only, until Oregon's city forms"},
+}
 
 
 def _load(path: Path) -> ConfigFile:
@@ -158,6 +160,21 @@ def test_vermont_office_labels_parse_to_their_own_role(label: str, expected: str
     assert parse_label(label, taxonomy).role == expected
 
 
+# Oregon's county officers (ORS 204.005) and governing bodies, as the counties' own pages write them.
+OR_COUNTY_LABELS = {
+    "County Judge": "County Judge", "Wheeler County Judge": "County Judge",
+    "County Commissioner": "Member", "Commissioner, Pos 1": "Member", "Commission Chair": "Chair",
+    "Sheriff": "Sheriff", "County Sheriff": "Sheriff",
+    "County Clerk": "Clerk", "County Treasurer": "Treasurer", "Assessor": "Assessor", "County Assessor": "Assessor",
+}
+
+
+@pytest.mark.parametrize("label,expected", OR_COUNTY_LABELS.items())
+def test_oregon_county_labels_parse_to_their_own_role(label: str, expected: str):
+    taxonomy = build_taxonomy(_merged(DATA_SOURCE / "or" / "counties" / CONFIG_FILE).roles)
+    assert parse_label(label, taxonomy).role == expected
+
+
 def test_assistant_judge_is_a_board_member_in_vermont_counties_only():
     """Vermont's wording (Vt. Const. ch. II § 50), so it must not reach another state or a city."""
     vermont_county = build_taxonomy(_merged(DATA_SOURCE / "vt" / "counties" / CONFIG_FILE).roles)
@@ -167,3 +184,11 @@ def test_assistant_judge_is_a_board_member_in_vermont_counties_only():
     assert parse_label("Assistant Judge", vermont_county).role == "Member"
     assert resolve_role("Assistant Judge", vermont_town) is None
     assert resolve_role("Assistant Judge", county_alone) is None
+
+
+@pytest.mark.parametrize("government_form", ["mayor_council", "council_manager"])
+def test_a_council_post_is_named_council_member_with_alder_listed(government_form: str):
+    merged = merged_config(_level_file(JurisdictionLevel.LOCAL), None)
+    form = next(config for name, config in merged.level_government_forms.items() if name.value == government_form)
+    council = next(organization for organization in form.organizations if organization.name == "Council")
+    assert role_labels_by_role_id(council.role_labels, build_taxonomy(merged.roles))["member"] == "Council Member"
