@@ -6,37 +6,9 @@ tools: Read, Edit, Write, Bash, Glob, Grep
 
 # Add a New State (steps 1-4)
 
-Covers the manual prep before the full `mise run setup-state` run. Full reference: `DEVELOPMENT.md` → "Adding a new state". This skill only does steps 1-4; stop after the dry-run and hand back to the user for step 5 onward (they'll want to review results before the full run, OCD-ID validation, the civicpatch.org map generation trigger, etc.).
+Covers the manual prep before the full `mise run setup-state` run. Full reference: `DEVELOPMENT.md` → "Adding a new state". Stop after the dry-run and hand back to the user: they review results before the full run. The law research, the offices config and the maintainer steps are civicpatch-tools' `configure-state-offices` skill.
 
 Ask the user for the two-letter state code and full name if not given (e.g. `va` / Virginia).
-
-## What to collect
-
-Only legislative and executive bodies (agreed 2026-10-30):
-1. **Research lists the legislative and executive organizations the state's law establishes**
-   (general law, then charter, then bylaws and ordinances) and only the roles the law names in
-   them, each organization labelled `legislature` or `executive`. Courts and special-purpose or
-   advisory boards (library, cemetery, parks, planning, budget) are not listed. Pipeline 2 asks
-   about each listed role per place and records `established` and `filled_by`.
-2. **Presiding offices the members choose** (council president, chair) are member roles on a
-   member's post, not posts of their own.
-3. **Every other role is a post that carries its selection method**, as the law read set it for
-   the place: elected officials are the posts `elected_by_voters`; an appointed manager is a
-   post `appointed`, kept in the data and filtered out of the elected view.
-4. **The law names it but not how it is filled (`not_stated`): dropped.**
-5. **Being named in the law, or even elected, is not enough: read what the office does** (added
-   2026-11-03). An office that only carries out tasks is not listed, however old its title. Ask of
-   its duties statute: does it decide policy, ordinances, budgets or taxes, or run the government
-   day to day? Can a town simply vote to abolish it? Vermont's constable is named and usually
-   elected, but its duties are serving papers and destroying animals (24 V.S.A. § 1936a(b)), a town
-   may bar its law enforcement (§ 1936a(a)) and may eliminate it (17 V.S.A. § 2651a(d)): not listed.
-   Keep its role in the config so its title still parses; just leave it out of every form.
-
-State offices elected locally (district attorney) are not the jurisdiction's and are not listed.
-Where an office is elected in some places and appointed in others, list it; the law read decides
-per place.
-
-Cite the statute or charter section for each organization and role in the config.
 
 ## Step 1 — Register the state
 
@@ -60,6 +32,8 @@ Add the config block (match existing indentation/style exactly, including any qu
 
 FIPS codes: look up the standard 2-digit state FIPS if not already known — don't guess.
 
+If the team Drive has no Google Civic export for the state (step 3), set `"validation_sources": []` with a comment saying so (Oregon).
+
 ## Step 2 — Fit `local_wiki` to the list page
 
 **There is no per-state scraper.** `scripts/jurisdictions/scrapers/municipalities.py` handles every state; `local_wiki` supplies only that state's deviations from the defaults. Read `municipalities.py` before doing anything here — it is ~60 lines and is the whole contract.
@@ -69,7 +43,7 @@ FIPS codes: look up the standard 2-digit state FIPS if not already known — don
 | `table_index` | `0` | the municipality table isn't the page's first wikitable |
 | `rows_to_skip` | `1` | the header spans two rows (usually land area splitting into sq mi / km²) |
 | `entry_column` | `0` | the place name isn't the first column |
-| `title` | `List_of_municipalities_in_<State_Name>` | that title is a disambiguation page (Georgia: the country vs the U.S. state) |
+| `title` | `List_of_municipalities_in_<State_Name>` | that title is a disambiguation page (Georgia: the country vs the U.S. state), or the page has another name (`List_of_cities_in_Oregon`) |
 | `parser` | `"table"` | `"bullet_list"` — the page has no wikitable, just per-letter `div.div-col > ul > li` bullets (North Carolina) |
 
 `{}` means all defaults. Unknown keys raise a `ValueError` at run time rather than being silently ignored, so a typo surfaces immediately.
@@ -113,6 +87,8 @@ Tell the user to save it as `scripts/track_progress/google_data/<state>_all_raw.
 ls scripts/track_progress/google_data/<state>_all_raw.json
 ```
 
+With `validation_sources: []` there is nothing to fetch, and `local.py`'s preflight passes without it.
+
 ## Step 4 — Dry-run
 
 This repo no longer touches geometry at all — which counties contain a place is worked out by civicpatch.org's boundary overlay and stored there — so nothing here needs shapefiles or a prior county run. Still run the three levels in order; each writes its own `jurisdictions.yml`.
@@ -152,7 +128,8 @@ These commands assume mise's env (`PYTHONPATH=.` plus `.env`, which holds `CENSU
 What to check instead:
 - the first N entries (the ones actually fetched) have `url:` and `wiki_url:` populated — if even those are unmatched, `local_wiki` is wrong, go back to step 2;
 - no `No Wikipedia URL found for:` warnings, which mean `entry_column` points at a cell with no link;
-- the counties file, where a high `no_wiki_match` count *is* a real failure — county GEOIDs come from the table, so they are not subject to the limit artifact.
+- the counties file, where a high `no_wiki_match` count *is* a real failure — county GEOIDs come from the table, so they are not subject to the limit artifact;
+- the suffixes on `name` (`Lakeview town`): Census may use one the state's law doesn't (9 Oregon "towns" in a cities-only state). Note every suffix; the config's `suffixes` must cover each one.
 
 Only a run without `--limit` tells you the fit across the whole state.
 
@@ -160,4 +137,4 @@ Only a run without `--limit` tells you the fit across the whole state.
 
 ## Handoff
 
-Once the dry-run looks clean, summarize what was done (config entry, `local_wiki` values and why, dry-run warning count) and point the user at DEVELOPMENT.md step 5 (`mise run setup-state -- --state <state>`) for the full run — don't run it yourself as part of this skill. Boundaries and pmtiles come later and elsewhere: after the full run syncs, a maintainer triggers `GenerateMapsWorkflow` on civicpatch.org.
+Once the dry-run looks clean, summarize what was done (config entry, `local_wiki` values and why, dry-run warning count, the suffixes seen) and point the user at DEVELOPMENT.md step 5 (`mise run setup-state -- --state <state>`) for the full run — don't run it yourself as part of this skill. Then continue with civicpatch-tools' `configure-state-offices` skill.
