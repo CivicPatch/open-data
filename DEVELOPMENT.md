@@ -86,11 +86,12 @@ State → counties → local (ACS + scraper + validation).
 uv run python scripts/ocdids/fix.py --state va
 ```
 
-**7. Push**, then trigger OD sync on civicpatch.org: `POST /admin/od_sync`.
+**7. Merge to main.** No manual sync: civicpatch.org reads open-data's jurisdictions every hour,
+and `post_merge_config.yml` syncs any changed `config.yml`, level files first.
 
-**8. Generate the state's maps.** Everything geo moved to civicpatch.org — trigger
-`GenerateMapsWorkflow` for `va` there (Temporal UI / a manual script; there is no admin-page
-control). It is not optional: besides the pmtiles it is what fills `meta_parent_ocdids`, so
+**8. Generate the state's maps.** Everything geo moved to civicpatch.org: run
+`mise run generate-maps -- prod va` from civicpatch-tools, once per new state; a yearly schedule
+regenerates every state. It is not optional: besides the pmtiles it is what fills `meta_parent_ocdids`, so
 until it runs the state's municipalities have no containing county and the coverage map cannot
 count them. Chains straight into rebuilding the national `states.pmtiles` overview, so there is
 no separate "rebuild the overview" step.
