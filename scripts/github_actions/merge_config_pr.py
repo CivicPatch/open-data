@@ -85,11 +85,11 @@ def _merge(session: requests.Session, base: str, number: str, head_sha: str) -> 
     return response.json()["sha"]
 
 
-def _sync_civicpatch(commit_sha: str, number: str, paths: list[str]) -> None:
+def sync_civicpatch(commit_sha: str, pull_request_number: int | None, paths: list[str]) -> None:
     response = requests.post(
         f"{os.environ['CIVICPATCH_ORG_URL']}/api/admin/jurisdiction_configs/sync",
         headers={"Authorization": os.environ["SERVICE_API_KEY"]},
-        json={"commit_sha": commit_sha, "pull_request_number": int(number), "paths": paths},
+        json={"commit_sha": commit_sha, "pull_request_number": pull_request_number, "paths": paths},
         timeout=60,
     )
     response.raise_for_status()
@@ -116,7 +116,7 @@ def main() -> int:
 
     commit_sha = _merge(session, base, number, head_sha)
     print(f"Merged PR #{number} as {commit_sha}.")
-    _sync_civicpatch(commit_sha, number, paths)
+    sync_civicpatch(commit_sha, int(number), paths)
     print(f"civicpatch.org synced {len(paths)} config file(s).")
     return 0
 
