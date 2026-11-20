@@ -398,4 +398,5 @@ if __name__ == "__main__":
     preflight_check(args.state)
     pull_jurisdiction_data(args.state, limit=args.limit)
     run_validation_transforms(args.state)
-    compare_run_state(args.state)
+    if "google" in state_configs[args.state].get("validation_sources", ["google"]):
+        compare_run_state(args.state)
