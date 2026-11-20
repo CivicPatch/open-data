@@ -176,10 +176,10 @@ def test_oregon_county_labels_parse_to_their_own_role(label: str, expected: str)
 
 
 # Maine's town and plantation offices (30-A §§ 2526, 7007), as their own pages write them. A plantation's ranked
-# assessors sit on its select board; a town's tax assessor does not.
+# assessors are assessors, which only its Board of Assessors lists.
 ME_LOCAL_LABELS = {
     "Select Board Member": "Member", "Selectman": "Member", "Selectperson": "Member",
-    "First Assessor": "Member", "Second Assessor": "Member", "Third Assessor": "Member",
+    "First Assessor": "Assessor", "Second Assessor": "Assessor", "Third Assessor": "Assessor",
     "Assessor": "Assessor", "Town Manager": "City Manager", "City Administrator": "City Manager",
     "Town Clerk": "Clerk", "Town Treasurer": "Treasurer", "Moderator": "Moderator",
 }
