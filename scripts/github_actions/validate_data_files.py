@@ -20,10 +20,12 @@ import sys
 
 import yaml
 
-from shared.schemas import Official
+from shared.schemas import OpenStatesPersonRecord
 
 # Enough to see the shape of the problem without burying the log in one bad file.
 MAX_ERRORS_SHOWN = 5
+# civicpatch.org's open-data sink drops `jurisdiction_ocdid` from each record (each role carries it).
+UNPUBLISHED_JURISDICTION = {"jurisdiction_ocdid": ""}
 
 
 def validate_file(file_path: str) -> list[str]:
@@ -46,7 +48,7 @@ def validate_file(file_path: str) -> list[str]:
             errors.append(f"{file_path}[{index}]: expected a mapping, got {type(person).__name__}")
             continue
         try:
-            Official(**person)
+            OpenStatesPersonRecord(**{**UNPUBLISHED_JURISDICTION, **person})
         except Exception as e:
             name = person.get("name", "Unknown")
             errors.append(f"{file_path}[{index}] ({name}): {e}")

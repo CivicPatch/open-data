@@ -1,0 +1,67 @@
+# New York's towns run under the Town Law: a town board of the supervisor and council members (TWN §§ 20, 60), the
+# supervisor a voting member, not a separate executive; a town manager where a local law made one (TWN § 58).
+# Villages run under the Village Law: a board of trustees of the mayor and trustees, the mayor its chief executive
+# (VIL §§ 3-301, 4-400, 4-412); a village manager or administrator by local law (MHRL § 10). Every city has its own
+# charter: mayor-council (46 of 62), council-manager (13) or commission (3) (DOS Local Government Handbook, 2018,
+# p. 62); a city's form is saved per city where it isn't mayor-council.
+# Not collected: town and village clerks, treasurers, assessors, receivers of taxes and highway superintendents,
+# who carry out tasks and may be made appointive or abolished by local law (TWN § 20; VIL § 3-301); city
+# comptrollers; town, village and city justices, courts; New York City's borough presidents, who propose and review
+# but don't decide (Handbook p. 67).
+role_aliases:
+  city-manager: [Village Administrator, Town Administrator]
+government_forms:
+  township_board:
+    suffixes: [town]
+    organizations:
+      - {name: Town Board, role_labels: [Supervisor, Council Member, Deputy Supervisor]}
+      - {name: Town Officers, role_labels: [Town Manager]}
+  village_board:
+    suffixes: [village]
+    organizations:
+      - {name: Board of Trustees, role_labels: [Mayor, Trustee, Deputy Mayor]}
+      - {name: Village Officers, role_labels: [Village Manager]}
+  mayor_council:
+    suffixes: [city]
+    organizations:
+      - {name: City Council, role_labels: [Council Member, President, Chair, Vice Chair]}
+      - {name: Office of the Mayor, role_labels: [Mayor]}
+      - {name: City Officers, role_labels: [City Manager]}
+  council_manager:
+    organizations:
+      - {name: City Council, role_labels: [Council Member, Mayor, President, Chair, Vice Chair]}
+      - {name: City Officers, role_labels: [City Manager]}
+  commission:
+    organizations:
+      - {name: City Council, role_labels: [Commissioner, Mayor]}
+      - {name: City Officers, role_labels: [City Manager]}
+governing_law:
+  charter_terms: [Charter]
+  classifications:
+    # No town charter (MHRL § 2); the Town Law as changed by the town's own local laws (MHRL § 10(1)(ii)(d)(3)).
+    town:
+      lsad: [town]
+      governed_by: general_law
+      general_law:
+        - https://www.nysenate.gov/legislation/laws/TWN/20
+        - https://www.nysenate.gov/legislation/laws/TWN/60
+        - https://www.nysenate.gov/legislation/laws/TWN/52
+        - https://www.nysenate.gov/legislation/laws/TWN/58
+        - https://www.nysenate.gov/legislation/laws/TWN/58-A
+    # The Village Law as changed by local law (MHRL § 10(1)(ii)(e)(3)); 12 charter villages read it where their
+    # charter is silent (Handbook p. 83).
+    village:
+      lsad: [village]
+      governed_by: general_law
+      general_law:
+        - https://www.nysenate.gov/legislation/laws/VIL/3-301
+        - https://www.nysenate.gov/legislation/laws/VIL/4-400
+        - https://www.nysenate.gov/legislation/laws/VIL/4-412
+    # Each city by its own charter; no general-law city form (Handbook p. 59; GCT § 20).
+    city:
+      lsad: [city]
+      governed_by: charter
+    # New York City's five boroughs: the city's charter governs them; none has a government of its own.
+    borough:
+      lsad: [borough]
+      governed_by: charter

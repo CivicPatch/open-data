@@ -18,7 +18,9 @@ CONFIG_FILE = "config.yml"
 JURISDICTIONS_FILE = "jurisdictions.yml"
 INACTIVE = "inactive"
 # Suffixes a state's collectors run for without a form of the state's own, each with why.
-UNCOVERED_SUFFIXES: dict[str, dict[str, str]] = {}
+UNCOVERED_SUFFIXES: dict[str, dict[str, str]] = {
+    "ny/local": {"borough": "New York City's boroughs have no government of their own; the city's is collected"},
+}
 
 
 def _load(path: Path) -> ConfigFile:
@@ -186,6 +188,22 @@ ME_LOCAL_LABELS = {
 @pytest.mark.parametrize("label,expected", ME_LOCAL_LABELS.items())
 def test_maine_local_labels_parse_to_their_own_role(label: str, expected: str):
     taxonomy = build_taxonomy(_merged(DATA_SOURCE / "me" / "local" / CONFIG_FILE).roles)
+    assert parse_label(label, taxonomy).role == expected
+
+
+# New York's town, village and city offices (TWN § 20, VIL § 3-301), as their own pages write them.
+NY_LOCAL_LABELS = {
+    "Town Supervisor": "Supervisor", "Deputy Supervisor": "Deputy Supervisor", "Council Member": "Member",
+    "Town Council Member": "Member", "Trustee": "Member", "Village Trustee": "Member", "Mayor": "Mayor",
+    "Deputy Mayor": "Deputy Mayor", "Town Manager": "City Manager", "Village Manager": "City Manager",
+    "Village Administrator": "City Manager", "City Manager": "City Manager", "Commissioner": "Member",
+    "Town Clerk": "Clerk",
+}
+
+
+@pytest.mark.parametrize("label,expected", NY_LOCAL_LABELS.items())
+def test_new_york_local_labels_parse_to_their_own_role(label: str, expected: str):
+    taxonomy = build_taxonomy(_merged(DATA_SOURCE / "ny" / "local" / CONFIG_FILE).roles)
     assert parse_label(label, taxonomy).role == expected
 
 

@@ -10,7 +10,8 @@ Usage:
 import sys
 import yaml
 
-from shared.schemas import Official
+from shared.schemas import OpenStatesPersonRecord
+from scripts.github_actions.validate_data_files import UNPUBLISHED_JURISDICTION
 from scripts.ocdids.parse import jurisdiction_to_file
 
 
@@ -24,13 +25,14 @@ def validate_file(file_path, jurisdiction_ocdid):
         with open(file_path) as f:
             data = yaml.safe_load(f)
 
-        people = [p for p in data if p["jurisdiction_ocdid"] == jurisdiction_ocdid]
+        # A file holds one jurisdiction's people; records no longer name it.
+        people = data
         valid_count = 0
         errors = []
 
         for i, person_data in enumerate(people):
             try:
-                Official(**person_data)  # Validate with Pydantic
+                OpenStatesPersonRecord(**{**UNPUBLISHED_JURISDICTION, **person_data})
                 valid_count += 1
             except Exception as e:
                 name = person_data.get("name", "Unknown")
