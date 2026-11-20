@@ -220,6 +220,20 @@ def test_maine_county_labels_parse_to_their_own_role(label: str, expected: str):
     assert parse_label(label, taxonomy).role == expected
 
 
+# New York's county offices (CNT §§ 150, 150-a; MHRL § 33), as county pages write them.
+NY_COUNTY_LABELS = {
+    "Legislator": "Member", "County Legislator": "Member", "Supervisor": "Supervisor", "Chair": "Chair",
+    "Chairman": "Chair", "Vice Chairman": "Vice Chair", "County Executive": "County Executive",
+    "County Manager": "County Manager", "County Administrator": "County Manager", "County Clerk": "Clerk",
+}
+
+
+@pytest.mark.parametrize("label,expected", NY_COUNTY_LABELS.items())
+def test_new_york_county_labels_parse_to_their_own_role(label: str, expected: str):
+    taxonomy = build_taxonomy(_merged(DATA_SOURCE / "ny" / "counties" / CONFIG_FILE).roles)
+    assert parse_label(label, taxonomy).role == expected
+
+
 def test_assistant_judge_is_a_board_member_in_vermont_counties_only():
     """Vermont's wording (Vt. Const. ch. II § 50), so it must not reach another state or a city."""
     vermont_county = build_taxonomy(_merged(DATA_SOURCE / "vt" / "counties" / CONFIG_FILE).roles)
