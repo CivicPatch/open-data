@@ -173,6 +173,35 @@ def test_oregon_county_labels_parse_to_their_own_role(label: str, expected: str)
     assert parse_label(label, taxonomy).role == expected
 
 
+# Maine's town and plantation offices (30-A §§ 2526, 7007), as their own pages write them. A plantation's ranked
+# assessors sit on its select board; a town's tax assessor does not.
+ME_LOCAL_LABELS = {
+    "Select Board Member": "Member", "Selectman": "Member", "Selectperson": "Member",
+    "First Assessor": "Member", "Second Assessor": "Member", "Third Assessor": "Member",
+    "Assessor": "Assessor", "Town Manager": "City Manager", "City Administrator": "City Manager",
+    "Town Clerk": "Clerk", "Town Treasurer": "Treasurer", "Moderator": "Moderator",
+}
+
+
+@pytest.mark.parametrize("label,expected", ME_LOCAL_LABELS.items())
+def test_maine_local_labels_parse_to_their_own_role(label: str, expected: str):
+    taxonomy = build_taxonomy(_merged(DATA_SOURCE / "me" / "local" / CONFIG_FILE).roles)
+    assert parse_label(label, taxonomy).role == expected
+
+
+ME_COUNTY_LABELS = {
+    "County Commissioner": "Member", "Commissioner, District 1": "Member", "Chair": "Chair",
+    "County Manager": "County Manager", "County Administrator": "County Manager",
+    "County Treasurer": "Treasurer",
+}
+
+
+@pytest.mark.parametrize("label,expected", ME_COUNTY_LABELS.items())
+def test_maine_county_labels_parse_to_their_own_role(label: str, expected: str):
+    taxonomy = build_taxonomy(_merged(DATA_SOURCE / "me" / "counties" / CONFIG_FILE).roles)
+    assert parse_label(label, taxonomy).role == expected
+
+
 def test_assistant_judge_is_a_board_member_in_vermont_counties_only():
     """Vermont's wording (Vt. Const. ch. II § 50), so it must not reach another state or a city."""
     vermont_county = build_taxonomy(_merged(DATA_SOURCE / "vt" / "counties" / CONFIG_FILE).roles)

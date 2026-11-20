@@ -1,4 +1,32 @@
+# Every Maine county is governed by a board of commissioners elected by district: 3 (30-A § 61), York 5
+# (§ 61-A), and as many as § 67 draws districts (Androscoggin 7; Cumberland, Franklin, Somerset 5). The board
+# may hire an administrator; Cumberland and York must hire a manager (§ 82). A charter may replace these
+# (§§ 1351, 1352); none is known.
+# Not collected: the treasurer, sheriff and registers of deeds and probate, who carry out tasks (§§ 151, 371-B;
+# 33 M.R.S. § 601); the judge of probate, a court (4 M.R.S. § 301); the district attorney, a state office (§ 251);
+# budget committees.
+roles:
+- id: county-manager
+  label: County Manager
+  is_unique: true
+  selection_method: appointed
+  aliases:
+  - County Administrator
 government_forms:
   commission:
+    suffixes: [county]
     organizations:
-      - {name: Board of County Commissioners, role_labels: [Commissioner, Chair]}
+      - {name: Board of County Commissioners, role_labels: [Commissioner, Chair, Vice Chair]}
+      - {name: County Officers, role_labels: [County Manager]}
+governing_law:
+  charter_terms: [Charter]
+  classifications:
+    # § 1352(1): the general law on commissioners and officers does not apply where a charter provides for it.
+    county:
+      lsad: [county]
+      governed_by: charter_or_general_law
+      general_law:
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec61.html
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec61-A.html
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec67.html
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec82.html
