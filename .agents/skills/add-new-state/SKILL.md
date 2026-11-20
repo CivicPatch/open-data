@@ -1,7 +1,6 @@
 ---
 name: add-new-state
 description: Register a new state and fit its Wikipedia list-page config (steps 1-4 of "Adding a new state" in DEVELOPMENT.md) — config entry, local_wiki coordinates, Google Civic data fetch, and dry-run smoke test. Use when the user asks to set up, onboard, or add a new state to the pipeline.
-tools: Read, Edit, Write, Bash, Glob, Grep
 ---
 
 # Add a New State (steps 1-4)
