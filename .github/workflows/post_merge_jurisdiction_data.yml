@@ -80,17 +80,3 @@ jobs:
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Call od_sync
-        env:
-          SERVICE_API_KEY: ${{ secrets.SERVICE_API_KEY }}
-          CIVICPATCH_ORG_URL: ${{ vars.CIVICPATCH_ORG_URL }}
-          JURISDICTION_OCDIDS: ${{ steps.process.outputs.jurisdiction_ocdids }}
-        run: |
-          set -euo pipefail
-          echo "Updated jurisdiction OCDIDs: $JURISDICTION_OCDIDS"
-          curl -X POST "$CIVICPATCH_ORG_URL/api/admin/od_sync" \
-            -H "Content-Type: application/json" \
-            -H "Authorization: $SERVICE_API_KEY" \
-            --fail-with-body \
-            -d "$(jq -n --argjson ocdids "$JURISDICTION_OCDIDS" '{jurisdiction_ocdids: $ocdids}')"
