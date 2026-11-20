@@ -10,7 +10,7 @@ from shared.schemas import JurisdictionLevel
 from shared.utils.government_forms import name_suffix
 from shared.utils.layered_config import ConfigFile, allowed_classifications, check_roles_distinct_across, merged_config
 from shared.utils.label_parser import parse_label
-from shared.utils.taxonomy import build_taxonomy, resolve_role, role_labels_by_role_id
+from shared.utils.taxonomy import build_taxonomy, resolve_role
 
 DATA_SOURCE = Path(__file__).parent.parent / "data_source"
 LEVELS = [JurisdictionLevel.LOCAL, JurisdictionLevel.COUNTIES]
@@ -218,4 +218,8 @@ def test_a_council_post_is_named_council_member_with_alder_listed(government_for
     merged = merged_config(_level_file(JurisdictionLevel.LOCAL), None)
     form = next(config for name, config in merged.level_government_forms.items() if name.value == government_form)
     council = next(organization for organization in form.organizations if organization.name == "Council")
-    assert role_labels_by_role_id(council.role_labels, build_taxonomy(merged.roles))["member"] == "Council Member"
+    taxonomy = build_taxonomy(merged.roles)
+    member_labels = [label for label in council.role_labels if resolve_role(label, taxonomy) == "Member"]
+    # civicpatch.org's organization_derivation names a post by the first label for its role.
+    assert member_labels[0] == "Council Member"
+    assert "Alder" in member_labels
