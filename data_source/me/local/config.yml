@@ -1,0 +1,58 @@
+# Maine's towns are town meeting with an elected select board, a town manager where adopted (30-A §§ 2526(4),
+# 2631-2636), or a council by charter; a town's name never tells which. Every city has a charter: council-manager,
+# or mayor-council where the mayor administers (Westbrook). A plantation's 3 elected assessors "are considered the
+# members of the select board of the plantation" (30-A §§ 7001(4), 7007).
+# Not collected: the moderator, chosen per meeting (§ 2524); the clerk, treasurer, tax collector, town assessors,
+# overseers, road commissioners and constables, who carry out tasks (§§ 2526, 2673); the school committee; an
+# administrative assistant, which no statute provides.
+role_aliases:
+  # A plantation's assessors by rank; a bare "Assessor" stays a town's tax assessor, which no form lists.
+  member: [First Assessor, Second Assessor, Third Assessor]
+government_forms:
+  open_town_meeting:
+    suffixes: [town, plantation]
+    organizations:
+      - {name: Select Board, role_labels: [Select Board Member, Chair, Vice Chair]}
+      - {name: Town Officers, role_labels: [Town Manager]}
+  council_manager:
+    suffixes: [town, city]
+    organizations:
+      - {name: "{lsad} Council", role_labels: [Council Member, Mayor, President, Chair, Vice Chair]}
+      - {name: "{lsad} Officers", role_labels: [City Manager]}
+  mayor_council:
+    suffixes: [city]
+    organizations:
+      - {name: City Council, role_labels: [Council Member, President, Chair, Vice Chair]}
+      - {name: Office of the Mayor, role_labels: [Mayor]}
+      - {name: City Officers, role_labels: [City Manager]}
+governing_law:
+  charter_terms: [Charter]
+  classifications:
+    # §§ 2526, 2601(1) apply "unless otherwise provided by charter".
+    town:
+      lsad: [town]
+      governed_by: charter_or_general_law
+      general_law:
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec2001.html
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec2526.html
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec2601.html
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec2631.html
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec2632.html
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec2635.html
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec2636.html
+    # Every city has a charter; § 2001(10)(B) names its municipal officers and § 2601(1) fills its silence.
+    city:
+      lsad: [city]
+      governed_by: charter_or_general_law
+      general_law:
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec2001.html
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec2601.html
+    # No home rule, so no charter; town law applies "as far as applicable" (§ 7006).
+    plantation:
+      lsad: [plantation]
+      governed_by: general_law
+      general_law:
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec7001.html
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec7006.html
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec7007.html
+        - https://legislature.maine.gov/statutes/30-A/title30-Asec2526.html

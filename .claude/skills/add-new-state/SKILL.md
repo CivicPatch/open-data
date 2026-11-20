@@ -6,7 +6,7 @@ tools: Read, Edit, Write, Bash, Glob, Grep
 
 # Add a New State (steps 1-4)
 
-Covers the manual prep before the full `mise run setup-state` run. Full reference: `DEVELOPMENT.md` → "Adding a new state". Stop after the dry-run and hand back to the user: they review results before the full run. The law research, the offices config and the maintainer steps are civicpatch-tools' `configure-state-offices` skill.
+Covers the manual prep before the full `mise run setup-state` run. Full reference: `DEVELOPMENT.md` → "Adding a new state". Stop after the dry-run and hand back to the user: they review results before the full run. The law research, the offices config and the maintainer steps are civicpatch-tools' `state-offices` skill.
 
 Ask the user for the two-letter state code and full name if not given (e.g. `va` / Virginia).
 
@@ -137,4 +137,4 @@ Only a run without `--limit` tells you the fit across the whole state.
 
 ## Handoff
 
-Once the dry-run looks clean, summarize what was done (config entry, `local_wiki` values and why, dry-run warning count, the suffixes seen) and point the user at DEVELOPMENT.md step 5 (`mise run setup-state -- --state <state>`) for the full run — don't run it yourself as part of this skill. Then continue with civicpatch-tools' `configure-state-offices` skill.
+Once the dry-run looks clean, summarize what was done (config entry, `local_wiki` values and why, dry-run warning count, the suffixes seen) and point the user at DEVELOPMENT.md step 5 (`mise run setup-state -- --state <state>`) for the full run — don't run it yourself as part of this skill. Then continue with civicpatch-tools' `state-offices` skill.

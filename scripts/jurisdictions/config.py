@@ -112,6 +112,15 @@ state_configs = {
         "local_wiki": {"rows_to_skip": 2},
         "validation_sources": ["google"],
     },
+    "ny": {
+        "fips": "36",
+        "name": "New York",
+        # towns are county subdivisions; cities and villages are places
+        "pull_from_census": ["places", "county_subdivisions"],
+        # two-row header: land area splits into sq mi / km²; the table lists cities and villages
+        "local_wiki": {"rows_to_skip": 2},
+        "validation_sources": ["google"],
+    },
     "nm": {
         "fips": "35",
         "name": "New Mexico",
