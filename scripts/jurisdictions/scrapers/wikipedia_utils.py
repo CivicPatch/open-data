@@ -174,6 +174,9 @@ def get_entries(
             select_table=select_table,
         )
 
+    # Infobox GEOID -> every page that gave it; two pages on one GEOID match neither.
+    infobox_claims: Dict[str, List[str]] = {}
+
     fetched = 0
     for entry_text, wiki_url, table_geoid in extract_refs(soup, warnings):
         # Always record name → wiki_url regardless of limit or cache
@@ -223,10 +226,16 @@ def get_entries(
         elif entry:
             if entry["geoid"]:
                 entries_by_geoid[entry["geoid"]] = entry
+                infobox_claims.setdefault(entry["geoid"], []).append(entry["wiki_url"])
             else:
                 warnings.append(f"No GEOID found in infobox for: {entry_text} ({entry.get('wiki_url', '?')})")
         else:
             warnings.append(f"Failed to retrieve entry for {wiki_url}")
+
+    for geoid, wiki_urls in infobox_claims.items():
+        if len(wiki_urls) > 1:
+            del entries_by_geoid[geoid]
+            warnings.append(f"GEOID {geoid} is in more than one infobox, matched to neither: {', '.join(wiki_urls)}")
 
     return entries_by_geoid, table_name_to_wiki_url, warnings
 

@@ -250,6 +250,39 @@ class TestCellText:
         assert _cell_text(None) == ""
 
 
+# ── get_entries: infobox-sourced GEOIDs ───────────────────────────────────────
+
+TOWN_LIST_HTML = """
+<table class="wikitable">
+  <tr><th>Name</th></tr>
+  <tr><td><a href="/wiki/Lewiston,_Maine">Lewiston</a></td></tr>
+  <tr><td><a href="/wiki/Mechanic_Falls,_Maine">Mechanic Falls</a></td></tr>
+  <tr><td><a href="/wiki/Auburn,_Maine">Auburn</a></td></tr>
+</table>
+"""
+
+
+def _town_infobox(fips: str) -> str:
+    return f'<table class="infobox"><tr><th>FIPS code</th><td>{fips}</td></tr></table>'
+
+
+class TestGetEntriesInfoboxGeoid:
+    def test_two_pages_giving_one_geoid_match_neither(self):
+        # Wikipedia's Mechanic Falls infobox gives Lewiston's FIPS code.
+        responses = [
+            _fake_parse(TOWN_LIST_HTML),
+            _fake_parse(_town_infobox("23-38740")),
+            _fake_parse(_town_infobox("23-38740")),
+            _fake_parse(_town_infobox("23-02060")),
+        ]
+        with patch("scripts.jurisdictions.scrapers.wikipedia_utils.requests.get", side_effect=responses), \
+             patch("scripts.jurisdictions.scrapers.wikipedia_utils.time.sleep"):
+            entries, _, warnings = get_entries(title="T", table_index=0, rows_to_skip=1, entry_column=0)
+
+        assert set(entries) == {"2302060"}
+        assert any("2338740" in w and "Lewiston,_Maine" in w and "Mechanic_Falls,_Maine" in w for w in warnings)
+
+
 # ── get_entries: table-sourced GEOIDs ─────────────────────────────────────────
 
 COUNTY_LIST_HTML = """
