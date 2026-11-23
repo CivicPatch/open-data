@@ -1,4 +1,5 @@
 import pytest
+from scripts.jurisdictions import local
 from scripts.jurisdictions.local import (
     create_geoid,
     census_row,
@@ -122,3 +123,44 @@ class TestGetApiDataByGeoid:
         result = get_api_data_by_geoid("wa", "53", rows, 1, "place")
         assert "ocdid_collision" not in result["5311111"]
         assert "ocdid_collision" not in result["5322222"]
+
+
+# ── _fetch_census_jurisdictions ───────────────────────────────────────────────
+
+ACS_PLACES = [
+    ["NAME", "B01003_001E", "state", "place"],
+    ["Mountain House CDP, California", "25513", "06", "49582"],
+    ["La Cañada Flintridge city, California", "19935", "06", "39003"],
+]
+GAZETTEER_PLACES = (
+    "USPS|GEOID|GEOIDFQ|ANSICODE|NAME|LSAD|FUNCSTAT|ALAND|AWATER|ALAND_SQMI|AWATER_SQMI|INTPTLAT|INTPTLONG\n"
+    "CA|0649582|1600000US0649582|02832399|Mountain House city|25|A|19259222|11895|7.436|0.005|37.779716|-121.537195\n"
+    "CA|0639003|1600000US0639003|02411565|La Cañada Flintridge city|25|A|22354266|42498|8.631|0.016|34.20969|-118.200139\n"
+)
+
+
+class _CensusResponse:
+    def __init__(self, url: str):
+        self.status_code = 200
+        # The Gazetteer is UTF-8 served as text/plain with no charset, so requests' .text decodes it as Latin-1.
+        self.content = b"" if "api.census.gov" in url else GAZETTEER_PLACES.encode("utf-8")
+        self.text = self.content.decode("iso-8859-1")
+
+    def json(self):
+        return ACS_PLACES
+
+
+def _fetch_places(monkeypatch):
+    monkeypatch.setenv("CENSUS_API_KEY", "test-key")
+    monkeypatch.setattr(local.requests, "get", _CensusResponse)
+    jurisdictions, _warnings = local._fetch_census_jurisdictions("ca", "06", local._PLACE)
+    return {j.geoid: j for j in jurisdictions}
+
+
+class TestFetchCensusJurisdictions:
+    def test_name_comes_from_the_gazetteer_and_population_from_acs(self, monkeypatch):
+        mountain_house = _fetch_places(monkeypatch)["0649582"]
+        assert (mountain_house.name, mountain_house.population) == ("Mountain House city", 25513)
+
+    def test_the_gazetteer_is_read_as_utf8(self, monkeypatch):
+        assert _fetch_places(monkeypatch)["0639003"].name == "La Cañada Flintridge city"

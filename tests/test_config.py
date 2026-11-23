@@ -234,6 +234,36 @@ def test_new_york_county_labels_parse_to_their_own_role(label: str, expected: st
     assert parse_label(label, taxonomy).role == expected
 
 
+# California's city and town offices (Gov. Code §§ 36801, 34903, 34855), as their own pages write them.
+CA_LOCAL_LABELS = {
+    "Council Member": "Member", "Councilmember": "Member", "Mayor": "Mayor", "Mayor Pro Tem": "Mayor Pro Tempore",
+    "Vice Mayor": "Vice Mayor", "Council President": "President", "City Manager": "City Manager",
+    "Town Manager": "City Manager", "City Clerk": "Clerk",
+}
+
+
+@pytest.mark.parametrize("label,expected", CA_LOCAL_LABELS.items())
+def test_california_local_labels_parse_to_their_own_role(label: str, expected: str):
+    taxonomy = build_taxonomy(_merged(DATA_SOURCE / "ca" / "local" / CONFIG_FILE).roles)
+    assert parse_label(label, taxonomy).role == expected
+
+
+# California's county offices (Gov. Code §§ 25000, 25020, 24000(t)), as the counties' own pages write them. An
+# appointed chief titled "County Executive" (Sacramento) is the elected County Executive's label, so it can't be here.
+CA_COUNTY_LABELS = {
+    "Supervisor": "Supervisor", "Supervisor, District 3": "Supervisor", "Chair": "Chair", "Vice Chair": "Vice Chair",
+    "County Administrator": "County Manager", "County Administrative Officer": "County Manager",
+    "County Executive Officer": "County Manager", "Chief Administrative Officer": "County Manager",
+    "Chief Executive Officer": "County Manager",
+}
+
+
+@pytest.mark.parametrize("label,expected", CA_COUNTY_LABELS.items())
+def test_california_county_labels_parse_to_their_own_role(label: str, expected: str):
+    taxonomy = build_taxonomy(_merged(DATA_SOURCE / "ca" / "counties" / CONFIG_FILE).roles)
+    assert parse_label(label, taxonomy).role == expected
+
+
 def test_assistant_judge_is_a_board_member_in_vermont_counties_only():
     """Vermont's wording (Vt. Const. ch. II § 50), so it must not reach another state or a city."""
     vermont_county = build_taxonomy(_merged(DATA_SOURCE / "vt" / "counties" / CONFIG_FILE).roles)

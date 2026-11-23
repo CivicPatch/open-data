@@ -207,7 +207,8 @@ def _fetch_census_jurisdictions(
     if api_response.status_code != 200 or codes_response.status_code != 200:
         return jurisdictions, warnings
 
-    codes_reader = csv.reader(io.StringIO(codes_response.text), delimiter="|")
+    # Served as text/plain with no charset, which requests' .text decodes as Latin-1; the file is UTF-8.
+    codes_reader = csv.reader(io.StringIO(codes_response.content.decode("utf-8")), delimiter="|")
     _header = next(codes_reader)
     codes_data = list(codes_reader)
 
@@ -233,7 +234,8 @@ def _fetch_census_jurisdictions(
             continue
         jurisdictions.append(Jurisdiction(
             id=api_data["jurisdiction_ocdid"],
-            name=api_data["friendly_name"],
+            # The Gazetteer's NAME, not ACS's: ACS's lags an incorporation or a rename.
+            name=name,
             url=None,
             population=population,
             geoid=geoid,
