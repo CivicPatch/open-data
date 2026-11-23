@@ -170,8 +170,8 @@ def local_header(state: str, fips: str, state_name: str, pull_from_census: list[
         f"Census sources for this state: {', '.join(pull_from_census)}\n"
         "\n"
         "Sources:\n"
-        + _block("  name, population — Census ACS 5-year:", acs_calls)
-        + _block("  geoid, funcstat — Census Gazetteer (tab-separated; funcstat filtered\n"
+        + _block("  population — Census ACS 5-year:", acs_calls)
+        + _block("  name, geoid, funcstat — Census Gazetteer (tab-separated; funcstat filtered\n"
                  "  to A/B/C/G, zero-population entries skipped):", gaz_files)
         + _block("  url, wiki_url — Wikipedia list page:", [f"{WIKI_URL}/{wiki_page}"])
         + _block("  Generated artifacts:", [

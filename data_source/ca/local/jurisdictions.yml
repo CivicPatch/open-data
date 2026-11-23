@@ -6,14 +6,15 @@
 #   name               - Common name including LSAD suffix (e.g. 'Newark city'); updated each run.
 #   url                - Official government website (from the Wikipedia infobox); only written if
 #                        absent — existing values are never overwritten by scripts.
+#   extras             - Non-standard fields, as in the OCD jurisdiction schema.
+#                        extras.government_form: form of government (e.g. mayor_council);
+#                        overrides the config files, needed only where they allow more than one
+#                        form. Never written by scripts.
 #   wiki_url           - Wikipedia page URL for this jurisdiction.
 #   population         - ACS 5-year population estimate; updated on every run.
 #   geoid              - Census FIPS GEOID; stable identifier used to match jurisdictions across
 #                        runs — never changes for an incorporated place.
 #   status             - Lifecycle: absent = active, 'inactive' = dropped from census.
-#   parent_ocdids      - Containing jurisdictions, from a boundary overlay against the county map:
-#                        every county the place materially overlaps (largest share first — a place
-#                        may straddle a county line), then the state. Replaced on every run.
 #   issues             - Per-jurisdiction problems: ocdid_collision, no_wiki_match,
 #                        geoid_mismatch. Replaced on every run.
 #   generated_comments - Script-generated notes (e.g. wiki URL candidates). Replaced each run.
@@ -23,19 +24,15 @@
 # Census sources for this state: places
 
 # Sources:
-#   name, population — Census ACS 5-year:
+#   population — Census ACS 5-year:
 #     curl "https://api.census.gov/data/2024/acs/acs5?get=NAME,B01003_001E&for=place:*&in=state:06&key=$CENSUS_API_KEY"
-#   geoid, funcstat — Census Gazetteer (tab-separated; funcstat filtered
+#   name, geoid, funcstat — Census Gazetteer (tab-separated; funcstat filtered
 #   to A/B/C/G, zero-population entries skipped):
 #     https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_gaz_place_06.txt
 #   url, wiki_url — Wikipedia list page:
 #     https://en.wikipedia.org/wiki/List_of_municipalities_in_California
-#   Boundary geometry:
-#     https://www2.census.gov/geo/tiger/TIGER2025/PLACE/tl_2025_06_place.zip
 #   Generated artifacts:
 #     scripts/jurisdictions/scrapers/cache/ca_wikipedia.json  (cached infobox scrapes)
-#     data/.maps/ca/local.geojson
-#     data_source/ca/counties/jurisdictions.yml  (county OCD-IDs for the spatial join)
 #     data_source/ca/local/validation/  (external comparison sources)
 jurisdictions:
 - id: ocd-jurisdiction/country:us/state:ca/place:los_angeles/government
@@ -647,8 +644,6 @@ jurisdictions:
   name: Burbank city
   population: 104546
   geoid: '0608954'
-  issues:
-  - ocdid_collision
   url: http://burbankca.gov
   wiki_url: https://en.wikipedia.org/wiki/Burbank,_California
   parent_ocdids:
@@ -955,8 +950,6 @@ jurisdictions:
   name: Mountain View city
   population: 83732
   geoid: '0649670'
-  issues:
-  - ocdid_collision
   url: https://mountainview.gov
   wiki_url: https://en.wikipedia.org/wiki/Mountain_View,_California
   parent_ocdids:
@@ -2433,8 +2426,6 @@ jurisdictions:
   name: El Cerrito city
   population: 25994
   geoid: '0621796'
-  issues:
-  - ocdid_collision
   url: https://elcerrito.gov
   wiki_url: https://en.wikipedia.org/wiki/El_Cerrito,_California
   parent_ocdids:
@@ -2468,7 +2459,7 @@ jurisdictions:
   - ocd-jurisdiction/country:us/state:ca/county:fresno/government
   - ocd-jurisdiction/country:us/state:ca/government
 - id: ocd-jurisdiction/country:us/state:ca/place:mountain_house/government
-  name: Mountain House CDP
+  name: Mountain House city
   population: 25513
   geoid: '0649582'
   url: https://www.mountainhouseca.gov/
@@ -2705,8 +2696,6 @@ jurisdictions:
   name: Greenfield city
   population: 20232
   geoid: '0630994'
-  issues:
-  - ocdid_collision
   url: https://www.greenfieldca.gov/
   wiki_url: https://en.wikipedia.org/wiki/Greenfield,_California
   parent_ocdids:
@@ -3465,8 +3454,6 @@ jurisdictions:
   name: Live Oak city
   population: 9347
   geoid: '0641936'
-  issues:
-  - ocdid_collision
   url: http://www.liveoakcity.org
   wiki_url: https://en.wikipedia.org/wiki/Live_Oak,_Sutter_County,_California
   parent_ocdids:
@@ -3638,8 +3625,6 @@ jurisdictions:
   name: Fairfax town
   population: 7516
   geoid: '0623168'
-  issues:
-  - ocdid_collision
   url: https://townoffairfaxca.gov/
   wiki_url: https://en.wikipedia.org/wiki/Fairfax,_California
   parent_ocdids:
@@ -3676,8 +3661,6 @@ jurisdictions:
   name: Paradise town
   population: 7392
   geoid: '0655520'
-  issues:
-  - ocdid_collision
   url: https://www.paradiseca.gov/
   wiki_url: https://en.wikipedia.org/wiki/Paradise,_California
   parent_ocdids:
@@ -4218,8 +4201,6 @@ jurisdictions:
   name: Rolling Hills city
   population: 1509
   geoid: '0662602'
-  issues:
-  - ocdid_collision
   url: http://www.rolling-hills.org
   wiki_url: https://en.wikipedia.org/wiki/Rolling_Hills,_California
   parent_ocdids:
@@ -5214,7 +5195,7 @@ warnings:
 - "place: skipping 'Pine Mountain Club CDP' (funcstat 'S')"
 - "place: skipping 'Pine Mountain Lake CDP' (funcstat 'S')"
 - "place: skipping 'Pine Valley CDP' (funcstat 'S')"
-- "place: skipping 'PiÃ±on Hills CDP' (funcstat 'S')"
+- "place: skipping 'Piñon Hills CDP' (funcstat 'S')"
 - "place: skipping 'Pioneer CDP' (funcstat 'S')"
 - "place: skipping 'Piru CDP' (funcstat 'S')"
 - "place: skipping 'Pixley CDP' (funcstat 'S')"

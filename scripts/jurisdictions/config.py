@@ -17,7 +17,7 @@ state_configs = {
         "pull_from_census": ["places"],
         # table 0 is the two-row †/‡ legend key, not the municipality list
         "local_wiki": {"table_index": 1},
-        "validation_sources": ["google"],
+        "validation_sources": [],
     },
     "co": {
         "fips": "08",
