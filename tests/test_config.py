@@ -113,6 +113,22 @@ def _merged(state_file: Path):
     return merged_config(_level_file(state_file.parent.name), _load(state_file))
 
 
+# A form's officers organization: what a form's first organization must never be.
+OFFICERS_WORDS = ("officers", "office of")
+
+
+@pytest.mark.parametrize("config_file", [*(DATA_SOURCE / level / CONFIG_FILE for level in LEVELS), *_state_files()], ids=str)
+def test_every_forms_first_organization_is_its_governing_body(config_file: Path):
+    """Pipeline 2 reads the first organization as the body that governs: its presiding question, and
+    the check that a charter is quoted for it."""
+    wrong = []
+    for form, form_config in _load(config_file).government_forms.items():
+        first = form_config.organizations[0].name if form_config.organizations else ""
+        if any(word in first.lower() for word in OFFICERS_WORDS):
+            wrong.append((form.value, first))
+    assert wrong == [], f"a form lists its officers before its governing body: {wrong}"
+
+
 @pytest.mark.parametrize("state_file", _state_files(), ids=_state_level)
 def test_every_role_label_a_state_form_names_is_a_role(state_file: Path):
     """`role_asks` and the organization derivation skip a label naming no role, silently."""
